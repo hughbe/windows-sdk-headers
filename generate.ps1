@@ -7,3 +7,6 @@ if (!(Test-Path $path)) {
 
 echo $path
 Copy-Item -Path $path -Destination "." -Recurse
+
+// Update latest
+Remove-Item "Include/latest" -Recurse
