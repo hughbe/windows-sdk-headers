@@ -1110,3 +1110,35 @@ typedef struct _MFT_STREAM_STATE_PARAM
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
 #pragma endregion
+
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
+
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+
+//
+// Attributes that can be used by an IMFInputTrustAuthority Decrypter.
+//
+// An implementation of a Content Decryption Module may include an implementation of 
+// IMFInputTrustAuthority. The IMFInputTrustAuthority object is accessed through 
+// IMFContentDecryptionModule::CreateTrustedInput.
+//
+
+// MFT_POLICY_SET_AWARE
+// Data type: UINT32 (treat as BOOL)
+// If nonzero, indicates that this IMFTransform wants to receive MEPolicySet completion notifications
+// {5A633B19-CC39-4FA8-8CA5-59981B7A0018}
+cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_POLICY_SET_AWARE = { 0x5a633b19, 0xcc39, 0x4fa8, { 0x8c, 0xa5, 0x59, 0x98, 0x1b, 0x7a, 0x0, 0x18 } };" )
+
+// MFT_USING_HARDWARE_DRM
+// Data type: UINT32 (treat as BOOL)
+// If an MFT decrypter specifies this attribute set to 1, then it is using HARDWARE DRM.
+// If an MFT decrypter specifies this attribute set to 0, then it is not using HARDWARE DRM.
+// If an MFT decrypter does not specify this attribute or specifies it with a different value,
+// then it does not (or is unable to) indicate whether it is using HARDWARE DRM or not.
+cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_USING_HARDWARE_DRM = { 0x34faa77d, 0xd79e, 0x4957, { 0xb8, 0xce, 0x36, 0x2b, 0x26, 0x84, 0x99, 0x6c } }; " )
+
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+#pragma endregion
+
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB) ")

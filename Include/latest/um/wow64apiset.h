@@ -190,6 +190,36 @@ IsWow64GuestMachineSupported(
 
 #endif // _WIN32_WINNT >= 0x0A00
 
+#if (_WIN32_WINNT >= 0x0600)
+
+WINBASEAPI
+BOOL
+WINAPI
+Wow64GetThreadContext(
+    _In_ HANDLE hThread,
+    _Inout_ PWOW64_CONTEXT lpContext
+    );
+
+
+WINBASEAPI
+BOOL
+WINAPI
+Wow64SetThreadContext(
+    _In_ HANDLE hThread,
+    _In_ CONST WOW64_CONTEXT* lpContext
+    );
+
+
+WINBASEAPI
+DWORD
+WINAPI
+Wow64SuspendThread(
+    _In_ HANDLE hThread
+    );
+
+
+#endif // (_WIN32_WINNT >= 0x0600)
+
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 

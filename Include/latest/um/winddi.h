@@ -4631,7 +4631,7 @@ BOOL APIENTRY EngGetFilePath(
             WCHAR (*pDest)[MAX_PATH+1]
     );
 
-#if defined(_M_AMD64) && (NTDDI_VERSION >= NTDDI_VISTA)
+#if defined(_M_AMD64) && (NTDDI_VERSION >= NTDDI_VISTA) && !defined(_CONTRACT_GEN)
 
 _Check_return_ 
 _Success_(((pBuffer != NULL && cjBufferSize != 0) && return == 1) ||

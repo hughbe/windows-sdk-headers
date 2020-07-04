@@ -1,26 +1,26 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Storage.0.h"
+#ifndef WINRT_Windows_Media_Playlists_1_H
+#define WINRT_Windows_Media_Playlists_1_H
 #include "winrt/impl/Windows.Media.Playlists.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Media::Playlists {
-
-struct WINRT_EBO IPlaylist :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPlaylist>
+namespace winrt::Windows::Media::Playlists
 {
-    IPlaylist(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPlaylistStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPlaylistStatics>
-{
-    IPlaylistStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IPlaylist :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPlaylist>
+    {
+        IPlaylist(std::nullptr_t = nullptr) noexcept {}
+        IPlaylist(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPlaylistStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPlaylistStatics>
+    {
+        IPlaylistStatics(std::nullptr_t = nullptr) noexcept {}
+        IPlaylistStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

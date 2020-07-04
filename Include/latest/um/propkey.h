@@ -4038,6 +4038,14 @@ DEFINE_PROPERTYKEY(PKEY_Devices_CategoryIds, 0x78C34FC8, 0x104A, 0x4ACA, 0x9E, 0
 DEFINE_PROPERTYKEY(PKEY_Devices_CategoryPlural, 0x78C34FC8, 0x104A, 0x4ACA, 0x9E, 0xA4, 0x52, 0x4D, 0x52, 0x99, 0x6E, 0x57, 92);
 #define INIT_PKEY_Devices_CategoryPlural { { 0x78C34FC8, 0x104A, 0x4ACA, 0x9E, 0xA4, 0x52, 0x4D, 0x52, 0x99, 0x6E, 0x57 }, 92 }
 
+//  Name:     System.Devices.ChallengeAep -- PKEY_Devices_ChallengeAep
+//  Type:     Boolean -- VT_BOOL
+//  FormatID: {0774315E-B714-48EC-8DE8-8125C077AC11}, 2
+//
+//  Enable or Disable device presence challenging behavior for AEPs
+DEFINE_PROPERTYKEY(PKEY_Devices_ChallengeAep, 0x0774315E, 0xB714, 0x48EC, 0x8D, 0xE8, 0x81, 0x25, 0xC0, 0x77, 0xAC, 0x11, 2);
+#define INIT_PKEY_Devices_ChallengeAep { { 0x0774315E, 0xB714, 0x48EC, 0x8D, 0xE8, 0x81, 0x25, 0xC0, 0x77, 0xAC, 0x11 }, 2 }
+
 //  Name:     System.Devices.ChargingState -- PKEY_Devices_ChargingState
 //  Type:     Byte -- VT_UI1
 //  FormatID: {49CD1F76-5626-4B17-A4E8-18B4AA1A2213}, 11

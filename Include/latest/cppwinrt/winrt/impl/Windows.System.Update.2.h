@@ -1,62 +1,53 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_System_Update_2_H
+#define WINRT_Windows_System_Update_2_H
+#include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.System.Update.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::System::Update {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::System::Update {
-
-struct WINRT_EBO SystemUpdateItem :
-    Windows::System::Update::ISystemUpdateItem
+namespace winrt::Windows::System::Update
 {
-    SystemUpdateItem(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO SystemUpdateLastErrorInfo :
-    Windows::System::Update::ISystemUpdateLastErrorInfo
-{
-    SystemUpdateLastErrorInfo(std::nullptr_t) noexcept {}
-};
-
-struct SystemUpdateManager
-{
-    SystemUpdateManager() = delete;
-    static bool IsSupported();
-    static Windows::System::Update::SystemUpdateManagerState State();
-    static winrt::event_token StateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
-    using StateChanged_revoker = impl::factory_event_revoker<Windows::System::Update::ISystemUpdateManagerStatics, &impl::abi_t<Windows::System::Update::ISystemUpdateManagerStatics>::remove_StateChanged>;
-    static StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
-    static void StateChanged(winrt::event_token const& token);
-    static double DownloadProgress();
-    static double InstallProgress();
-    static Windows::Foundation::TimeSpan UserActiveHoursStart();
-    static Windows::Foundation::TimeSpan UserActiveHoursEnd();
-    static int32_t UserActiveHoursMax();
-    static bool TrySetUserActiveHours(Windows::Foundation::TimeSpan const& start, Windows::Foundation::TimeSpan const& end);
-    static Windows::Foundation::DateTime LastUpdateCheckTime();
-    static Windows::Foundation::DateTime LastUpdateInstallTime();
-    static Windows::System::Update::SystemUpdateLastErrorInfo LastErrorInfo();
-    static Windows::Foundation::Collections::IVectorView<hstring> GetAutomaticRebootBlockIds();
-    static Windows::Foundation::IAsyncOperation<bool> BlockAutomaticRebootAsync(param::hstring const& lockId);
-    static Windows::Foundation::IAsyncOperation<bool> UnblockAutomaticRebootAsync(param::hstring const& lockId);
-    static winrt::hresult ExtendedError();
-    static Windows::Foundation::Collections::IVectorView<Windows::System::Update::SystemUpdateItem> GetUpdateItems();
-    static Windows::System::Update::SystemUpdateAttentionRequiredReason AttentionRequiredReason();
-    static bool SetFlightRing(param::hstring const& flightRing);
-    static hstring GetFlightRing();
-    static void StartInstall(Windows::System::Update::SystemUpdateStartInstallAction const& action);
-    static void RebootToCompleteInstall();
-    static void StartCancelUpdates();
-};
-
+    struct __declspec(empty_bases) SystemUpdateItem : Windows::System::Update::ISystemUpdateItem
+    {
+        SystemUpdateItem(std::nullptr_t) noexcept {}
+        SystemUpdateItem(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::Update::ISystemUpdateItem(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) SystemUpdateLastErrorInfo : Windows::System::Update::ISystemUpdateLastErrorInfo
+    {
+        SystemUpdateLastErrorInfo(std::nullptr_t) noexcept {}
+        SystemUpdateLastErrorInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::Update::ISystemUpdateLastErrorInfo(ptr, take_ownership_from_abi) {}
+    };
+    struct SystemUpdateManager
+    {
+        SystemUpdateManager() = delete;
+        static auto IsSupported();
+        [[nodiscard]] static auto State();
+        static auto StateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        using StateChanged_revoker = impl::factory_event_revoker<Windows::System::Update::ISystemUpdateManagerStatics, &impl::abi_t<Windows::System::Update::ISystemUpdateManagerStatics>::remove_StateChanged>;
+        static StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        static auto StateChanged(winrt::event_token const& token);
+        [[nodiscard]] static auto DownloadProgress();
+        [[nodiscard]] static auto InstallProgress();
+        [[nodiscard]] static auto UserActiveHoursStart();
+        [[nodiscard]] static auto UserActiveHoursEnd();
+        [[nodiscard]] static auto UserActiveHoursMax();
+        static auto TrySetUserActiveHours(Windows::Foundation::TimeSpan const& start, Windows::Foundation::TimeSpan const& end);
+        [[nodiscard]] static auto LastUpdateCheckTime();
+        [[nodiscard]] static auto LastUpdateInstallTime();
+        [[nodiscard]] static auto LastErrorInfo();
+        static auto GetAutomaticRebootBlockIds();
+        static auto BlockAutomaticRebootAsync(param::hstring const& lockId);
+        static auto UnblockAutomaticRebootAsync(param::hstring const& lockId);
+        [[nodiscard]] static auto ExtendedError();
+        static auto GetUpdateItems();
+        [[nodiscard]] static auto AttentionRequiredReason();
+        static auto SetFlightRing(param::hstring const& flightRing);
+        static auto GetFlightRing();
+        static auto StartInstall(Windows::System::Update::SystemUpdateStartInstallAction const& action);
+        static auto RebootToCompleteInstall();
+        static auto StartCancelUpdates();
+    };
 }
+#endif

@@ -120,6 +120,7 @@
 #define FACILITY_WPN                     62
 #define FACILITY_WINDOWS_STORE           63
 #define FACILITY_INPUT                   64
+#define FACILITY_QUIC                    65
 #define FACILITY_EAP                     66
 #define FACILITY_WINDOWS_DEFENDER        80
 #define FACILITY_OPC                     81
@@ -171,6 +172,7 @@
 #define FACILITY_DEPLOYMENT_SERVICES_CONTENT_PROVIDER 293
 #define FACILITY_LINGUISTIC_SERVICES     305
 #define FACILITY_AUDIOSTREAMING          1094
+#define FACILITY_TTD                     1490
 #define FACILITY_ACCELERATOR             1536
 #define FACILITY_WMAAECMA                1996
 #define FACILITY_DIRECTMUSIC             2168
@@ -181,6 +183,7 @@
 #define FACILITY_DIRECT3D11_DEBUG        2173
 #define FACILITY_DIRECT3D12              2174
 #define FACILITY_DIRECT3D12_DEBUG        2175
+#define FACILITY_DXCORE                  2176
 #define FACILITY_LEAP                    2184
 #define FACILITY_AUDCLNT                 2185
 #define FACILITY_WINCODEC_DWRITE_DWM     2200
@@ -3203,6 +3206,96 @@
 #define ERROR_NO_SUCH_DEVICE             433L
 
 //
+// MessageId: ERROR_CLOUD_FILE_DEHYDRATION_DISALLOWED
+//
+// MessageText:
+//
+// Dehydration of the cloud file is disallowed by the cloud sync provider.
+//
+#define ERROR_CLOUD_FILE_DEHYDRATION_DISALLOWED 434L
+
+//
+// MessageId: ERROR_FILE_SNAP_IN_PROGRESS
+//
+// MessageText:
+//
+// A file snapshot operation was attempted when one is already in progress.
+//
+#define ERROR_FILE_SNAP_IN_PROGRESS      435L
+
+//
+// MessageId: ERROR_FILE_SNAP_USER_SECTION_NOT_SUPPORTED
+//
+// MessageText:
+//
+// A snapshot of the file cannot be taken because a user-mapped section is present.
+//
+#define ERROR_FILE_SNAP_USER_SECTION_NOT_SUPPORTED 436L
+
+//
+// MessageId: ERROR_FILE_SNAP_MODIFY_NOT_SUPPORTED
+//
+// MessageText:
+//
+// The file snapshot operation was terminated because one of the files was modified in a way incompatible with a snapshot operation.  Please try again.
+//
+#define ERROR_FILE_SNAP_MODIFY_NOT_SUPPORTED 437L
+
+//
+// MessageId: ERROR_FILE_SNAP_IO_NOT_COORDINATED
+//
+// MessageText:
+//
+// An I/O request could not be coordinated with a file snapshot operation.
+//
+#define ERROR_FILE_SNAP_IO_NOT_COORDINATED 438L
+
+//
+// MessageId: ERROR_FILE_SNAP_UNEXPECTED_ERROR
+//
+// MessageText:
+//
+// An unexpected error occurred while processing a file snapshot operation.
+//
+#define ERROR_FILE_SNAP_UNEXPECTED_ERROR 439L
+
+//
+// MessageId: ERROR_FILE_SNAP_INVALID_PARAMETER
+//
+// MessageText:
+//
+// A file snapshot operation received an invalid parameter.
+//
+#define ERROR_FILE_SNAP_INVALID_PARAMETER 440L
+
+//
+// MessageId: ERROR_UNSATISFIED_DEPENDENCIES
+//
+// MessageText:
+//
+// The operation could not be completed due to one or more unsatisfied dependencies.
+//
+#define ERROR_UNSATISFIED_DEPENDENCIES   441L
+
+//
+// MessageId: ERROR_CASE_SENSITIVE_PATH
+//
+// MessageText:
+//
+// The file cannot be opened because the path has a case-sensitive directory.
+//
+#define ERROR_CASE_SENSITIVE_PATH        442L
+
+//
+// MessageId: ERROR_UNEXPECTED_NTCACHEMANAGER_ERROR
+//
+// MessageText:
+//
+// The filesystem couldn't handle one of the CacheManager's callback error codes.
+//
+#define ERROR_UNEXPECTED_NTCACHEMANAGER_ERROR 443L
+
+//
 // **** Available SYSTEM error codes ****
 //
 
@@ -3313,6 +3406,15 @@
 #define ERROR_CAPAUTHZ_SCCD_NO_CAPABILITY_MATCH 460L
 
 //
+// MessageId: ERROR_CIMFS_IMAGE_CORRUPT
+//
+// MessageText:
+//
+// The CimFS image is corrupt.
+//
+#define ERROR_CIMFS_IMAGE_CORRUPT        470L
+
+//
 // **** Available SYSTEM error codes ****
 //
 //
@@ -3361,13 +3463,13 @@
 #define ERROR_INVALID_ADDRESS            487L
 
 //
-// MessageId: ERROR_VRF_CFG_ENABLED
+// MessageId: ERROR_VRF_CFG_AND_IO_ENABLED
 //
 // MessageText:
 //
-// Driver Verifier Volatile settings cannot be set when CFG is enabled.
+// Driver Verifier Volatile settings cannot be set when CFG and IO are enabled.
 //
-#define ERROR_VRF_CFG_ENABLED            1183L
+#define ERROR_VRF_CFG_AND_IO_ENABLED     1183L
 
 //
 // MessageId: ERROR_PARTITION_TERMINATING
@@ -10162,6 +10264,15 @@
 //
 #define ERROR_CROSS_PARTITION_VIOLATION  1661L
 
+//
+// MessageId: ERROR_RETURN_ADDRESS_HIJACK_ATTEMPT
+//
+// MessageText:
+//
+// A return address hijack is being attempted. This is supported by the operating system when user-mode shadow stacks are enabled.
+//
+#define ERROR_RETURN_ADDRESS_HIJACK_ATTEMPT 1662L
+
 
 ///////////////////////////////////////////////////
 //                                               //
@@ -15631,6 +15742,7 @@
 //
 #define ERROR_CLUSTERSET_MANAGEMENT_CLUSTER_UNREACHABLE 5999L
 
+// Cluster error codes continue at 6250
 
 ///////////////////////////////////////////////////
 //                                               //
@@ -15894,10 +16006,29 @@
 
 ///////////////////////////////////////////////////
 //                                               //
+//             Cluster Error codes               //
+//                                               //
+//                 6250 to 6349                  //
+///////////////////////////////////////////////////
+
+//
+// MessageId: ERROR_CLUSTER_OBJECT_IS_CLUSTER_SET_VM
+//
+// MessageText:
+//
+// 
+// The object cannot be deleted from the local cluster because it is registered with the cluster set.
+//
+#define ERROR_CLUSTER_OBJECT_IS_CLUSTER_SET_VM 6250L
+
+
+///////////////////////////////////////////////////
+//                                               //
 //                  Available                    //
 //                                               //
-//                 6250 to 6599                  //
+//                 6350 to 6599                  //
 ///////////////////////////////////////////////////
+
 
 ///////////////////////////////////////////////////
 //                                               //
@@ -28160,7 +28291,7 @@
 //
 // MessageText:
 //
-// The deployment operation failed because the volume is offline.
+// The deployment operation failed because the volume is offline. For a package update, the volume refers to the installed volume of all package versions.
 //
 #define ERROR_INSTALL_VOLUME_OFFLINE     15629L
 
@@ -28406,6 +28537,69 @@
 // The package installation failed because administrator privileges are required. Please contact an administrator to install this package.
 //
 #define ERROR_PACKAGED_SERVICE_REQUIRES_ADMIN_PRIVILEGES 15656L
+
+//
+// MessageId: ERROR_REDIRECTION_TO_DEFAULT_ACCOUNT_NOT_ALLOWED
+//
+// MessageText:
+//
+// The package deployment failed because the operation would have redirected to default account, when the caller said not to do so.
+//
+#define ERROR_REDIRECTION_TO_DEFAULT_ACCOUNT_NOT_ALLOWED 15657L
+
+//
+// MessageId: ERROR_PACKAGE_LACKS_CAPABILITY_TO_DEPLOY_ON_HOST
+//
+// MessageText:
+//
+// The package deployment failed because the package requires a capability to natively target this host.
+//
+#define ERROR_PACKAGE_LACKS_CAPABILITY_TO_DEPLOY_ON_HOST 15658L
+
+//
+// MessageId: ERROR_UNSIGNED_PACKAGE_INVALID_CONTENT
+//
+// MessageText:
+//
+// The package deployment failed because its content is not valid for an unsigned package.
+//
+#define ERROR_UNSIGNED_PACKAGE_INVALID_CONTENT 15659L
+
+//
+// MessageId: ERROR_UNSIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE
+//
+// MessageText:
+//
+// The package deployment failed because its publisher is not in the unsigned namespace.
+//
+#define ERROR_UNSIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE 15660L
+
+//
+// MessageId: ERROR_SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE
+//
+// MessageText:
+//
+// The package deployment failed because its publisher is not in the signed namespace.
+//
+#define ERROR_SIGNED_PACKAGE_INVALID_PUBLISHER_NAMESPACE 15661L
+
+//
+// MessageId: ERROR_PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED
+//
+// MessageText:
+//
+// The package deployment failed because its publisher is not in the signed namespace.
+//
+#define ERROR_PACKAGE_EXTERNAL_LOCATION_NOT_ALLOWED 15662L
+
+//
+// MessageId: ERROR_INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY
+//
+// MessageText:
+//
+// A host runtime dependency resolving to a package with full trust content requires the main package to have the runFullTrust capability.
+//
+#define ERROR_INSTALL_FULLTRUST_HOSTRUNTIME_REQUIRES_MAIN_PACKAGE_FULLTRUST_CAPABILITY 15663L
 
 //////////////////////////
 //                      //
@@ -41656,6 +41850,24 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define ERROR_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED _HRESULT_TYPEDEF_(0xC0262013L)
 
 //
+// MessageId: ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE
+//
+// MessageText:
+//
+// Failed to send Create Vail Super Wet Ink message.
+//
+#define ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_CREATE_SUPERWETINK_MESSAGE _HRESULT_TYPEDEF_(0xC0262014L)
+
+//
+// MessageId: ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE
+//
+// MessageText:
+//
+// Failed to send Destroy Vail Super Wet Ink message.
+//
+#define ERROR_GRAPHICS_VAIL_FAILED_TO_SEND_DESTROY_SUPERWETINK_MESSAGE _HRESULT_TYPEDEF_(0xC0262015L)
+
+//
 // Video Memory Manager (VidMM) subsystem errors {0x2100..0x21ff}
 //
 //
@@ -43507,6 +43719,9 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // 0x0100 - 0x01ff     TPM API errors (tpmapi.lib)
 // 0x0200 - 0x02ff     TBS internal errors (tbssvc.dll)
 // 0x0300 - 0x03ff     TPM Physical Presence errors
+// 0x0400 - 0x04ff     TPM vendor specific hardware errors
+// 0x0500 - 0x05ff     Misc TPM error codes
+// 0x0600 - 0x06ff     TPM task and core provisioning errors
 //
 //
 // TPM hardware error codes {0x0000..0x08ff}
@@ -45842,6 +46057,24 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define TPMAPI_E_SEALING_KEY_CHANGED     _HRESULT_TYPEDEF_(0x8029012CL)
 
 //
+// MessageId: TPMAPI_E_INVALID_TPM_VERSION
+//
+// MessageText:
+//
+// The TPM version is invalid.
+//
+#define TPMAPI_E_INVALID_TPM_VERSION     _HRESULT_TYPEDEF_(0x8029012DL)
+
+//
+// MessageId: TPMAPI_E_INVALID_POLICYAUTH_BLOB_TYPE
+//
+// MessageText:
+//
+// The policy authorization blob type is invalid.
+//
+#define TPMAPI_E_INVALID_POLICYAUTH_BLOB_TYPE _HRESULT_TYPEDEF_(0x8029012EL)
+
+//
 // TBS implementation error codes {0x0200..0x02ff}
 //
 //
@@ -46463,6 +46696,33 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define TPM_E_PCP_UNSUPPORTED_PSS_SALT   _HRESULT_TYPEDEF_(0x40290423L)
 
 //
+// MessageId: TPM_E_PCP_PLATFORM_CLAIM_MAY_BE_OUTDATED
+//
+// MessageText:
+//
+// Validation of the platform claim failed.
+//
+#define TPM_E_PCP_PLATFORM_CLAIM_MAY_BE_OUTDATED _HRESULT_TYPEDEF_(0x40290424L)
+
+//
+// MessageId: TPM_E_PCP_PLATFORM_CLAIM_OUTDATED
+//
+// MessageText:
+//
+// The requested platform claim is for a previous boot.
+//
+#define TPM_E_PCP_PLATFORM_CLAIM_OUTDATED _HRESULT_TYPEDEF_(0x40290425L)
+
+//
+// MessageId: TPM_E_PCP_PLATFORM_CLAIM_REBOOT
+//
+// MessageText:
+//
+// The platform claim is for a previous boot, and cannot be created without reboot.
+//
+#define TPM_E_PCP_PLATFORM_CLAIM_REBOOT  _HRESULT_TYPEDEF_(0x40290426L)
+
+//
 // Misc error codes in TPM code {0x0500..0x05ff}
 //
 //
@@ -46473,6 +46733,36 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // TPM related network operations are blocked as Zero Exhaust mode is enabled on client.
 //
 #define TPM_E_ZERO_EXHAUST_ENABLED       _HRESULT_TYPEDEF_(0x80290500L)
+
+//
+// Error codes in TPM task and core provisioning code {0x0600..0x06ff}
+//
+//
+// MessageId: TPM_E_PROVISIONING_INCOMPLETE
+//
+// MessageText:
+//
+// TPM provisioning did not run to completion.
+//
+#define TPM_E_PROVISIONING_INCOMPLETE    _HRESULT_TYPEDEF_(0x80290600L)
+
+//
+// MessageId: TPM_E_INVALID_OWNER_AUTH
+//
+// MessageText:
+//
+// An invalid owner authorization value was specified.
+//
+#define TPM_E_INVALID_OWNER_AUTH         _HRESULT_TYPEDEF_(0x80290601L)
+
+//
+// MessageId: TPM_E_TOO_MUCH_DATA
+//
+// MessageText:
+//
+// TPM command returned too much data.
+//
+#define TPM_E_TOO_MUCH_DATA              _HRESULT_TYPEDEF_(0x80290602L)
 
 //
 // If the application is designed to use TCG defined TPM return codes
@@ -48670,7 +48960,7 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// Recovery Password Rotation cannot be performed because Active Directory Backup policy is not set to Required for OS drive.
+// BitLocker recovery password rotation cannot be performed because backup policy for BitLocker recovery information is not set to required for the OS drive.
 //
 #define FVE_E_AD_BACKUP_REQUIRED_POLICY_NOT_SET_OS_DRIVE _HRESULT_TYPEDEF_(0x803100DAL)
 
@@ -48679,7 +48969,7 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// Recovery Password Rotation cannot be performed because Active Directory Backup policy is not set to Required for Fixed drive.
+// BitLocker recovery password rotation cannot be performed because backup policy for BitLocker recovery information is not set to required for fixed data drives.
 //
 #define FVE_E_AD_BACKUP_REQUIRED_POLICY_NOT_SET_FIXED_DRIVE _HRESULT_TYPEDEF_(0x803100DBL)
 
@@ -48688,7 +48978,7 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// Recovery Password Rotation cannot be performed because Active Directory Backup policy is not set to Required for Removable drive.
+// BitLocker recovery password rotation cannot be performed because backup policy for BitLocker recovery information is not set to required for removable data drives
 //
 #define FVE_E_AD_BACKUP_REQUIRED_POLICY_NOT_SET_REMOVABLE_DRIVE _HRESULT_TYPEDEF_(0x803100DCL)
 
@@ -48697,7 +48987,7 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// Bitlocker Recovery Password rotation not supported.
+// BitLocker recovery password rotation not supported.
 //
 #define FVE_E_KEY_ROTATION_NOT_SUPPORTED _HRESULT_TYPEDEF_(0x803100DDL)
 
@@ -48706,7 +48996,7 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// An Instance of Server issued recovery password rotation already in Progress. No second RotateRecoveryPasswords request allowed within 1 hour interval.
+// A server issued BitLocker recovery password rotation was denied because requests must be 15 minutes apart.
 //
 #define FVE_E_EXECUTE_REQUEST_SENT_TOO_SOON _HRESULT_TYPEDEF_(0x803100DEL)
 
@@ -48715,7 +49005,7 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// Recovery Passwords Key Rotation is not Enabled.
+// BitLocker recovery password key rotation policy is not enabled.
 //
 #define FVE_E_KEY_ROTATION_NOT_ENABLED   _HRESULT_TYPEDEF_(0x803100DFL)
 
@@ -48724,9 +49014,18 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// Recovery Passwords Rotation could not be performed because the device is not joined to AAD or Hybrid.
+// BitLocker recovery password key rotation could not be performed because the device is neither Azure AD joined nor Hybrid Azure AD joined.
 //
 #define FVE_E_DEVICE_NOT_JOINED          _HRESULT_TYPEDEF_(0x803100E0L)
+
+//
+// MessageId: FVE_E_AAD_ENDPOINT_BUSY
+//
+// MessageText:
+//
+// BitLocker recovery key backup endpoint is busy and cannot perform requested operation. Please retry after sometime.
+//
+#define FVE_E_AAD_ENDPOINT_BUSY          _HRESULT_TYPEDEF_(0x803100E1L)
 
 //
 // =======================================================
@@ -50588,6 +50887,24 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define ERROR_HV_INSUFFICIENT_ROOT_MEMORY _NDIS_ERROR_TYPEDEF_(0xC0350073L)
 
 //
+// MessageId: ERROR_HV_EVENT_BUFFER_ALREADY_FREED
+//
+// MessageText:
+//
+// The provided event log buffer was already marked as freed.
+//
+#define ERROR_HV_EVENT_BUFFER_ALREADY_FREED _NDIS_ERROR_TYPEDEF_(0xC0350074L)
+
+//
+// MessageId: ERROR_HV_INSUFFICIENT_CONTIGUOUS_MEMORY
+//
+// MessageText:
+//
+// There is not enough contiguous memory in the partition's pool to complete the operation.
+//
+#define ERROR_HV_INSUFFICIENT_CONTIGUOUS_MEMORY _NDIS_ERROR_TYPEDEF_(0xC0350075L)
+
+//
 // MessageId: ERROR_HV_NOT_PRESENT
 //
 // MessageText:
@@ -51411,6 +51728,33 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define HCS_E_GUEST_CRITICAL_ERROR       _HRESULT_TYPEDEF_(0x8037011CL)
 
 //
+// MessageId: HCS_E_PROCESS_INFO_NOT_AVAILABLE
+//
+// MessageText:
+//
+// The process information is not available.
+//
+#define HCS_E_PROCESS_INFO_NOT_AVAILABLE _HRESULT_TYPEDEF_(0x8037011DL)
+
+//
+// MessageId: HCS_E_SERVICE_DISCONNECT
+//
+// MessageText:
+//
+// The host compute system service has disconnected unexpectedly.
+//
+#define HCS_E_SERVICE_DISCONNECT         _HRESULT_TYPEDEF_(0x8037011EL)
+
+//
+// MessageId: HCS_E_PROCESS_ALREADY_STOPPED
+//
+// MessageText:
+//
+// The process has already exited.
+//
+#define HCS_E_PROCESS_ALREADY_STOPPED    _HRESULT_TYPEDEF_(0x8037011FL)
+
+//
 // Virtual networking errors (0x0200-0x02ff)
 //
 //
@@ -51528,6 +51872,15 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define WHV_E_INVALID_VP_REGISTER_NAME   _HRESULT_TYPEDEF_(0x80370309L)
 
 //
+// MessageId: WHV_E_UNSUPPORTED_PROCESSOR_CONFIG
+//
+// MessageText:
+//
+// The Windows Hypervisor Platform is not supported due to a processor limitation.
+//
+#define WHV_E_UNSUPPORTED_PROCESSOR_CONFIG _HRESULT_TYPEDEF_(0x80370310L)
+
+//
 // Virtual storage error codes (0x0400-0x04ff)
 //
 //
@@ -51547,6 +51900,92 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // Cannot restore this virtual machine because the vSMB saved state data cannot be read. Delete the saved state data and then try to start the virtual machine.
 //
 #define ERROR_VSMB_SAVED_STATE_CORRUPT   _NDIS_ERROR_TYPEDEF_(0xC0370401L)
+
+
+//
+// VmSavedStateDumpProvider error codes (0x0500-0x05ff)
+//
+
+//
+// MessageId: VM_SAVED_STATE_DUMP_E_PARTITION_STATE_NOT_FOUND
+//
+// MessageText:
+//
+// Partition state blob not found. Make sure the virtual machine is saved for this content to be included in the saved state file(s).
+//
+#define VM_SAVED_STATE_DUMP_E_PARTITION_STATE_NOT_FOUND _HRESULT_TYPEDEF_(0xC0370500L)
+
+//
+// MessageId: VM_SAVED_STATE_DUMP_E_GUEST_MEMORY_NOT_FOUND
+//
+// MessageText:
+//
+// Guest memory not found. Make sure the virtual machine is saved for this content to be included in the saved state file(s).
+//
+#define VM_SAVED_STATE_DUMP_E_GUEST_MEMORY_NOT_FOUND _HRESULT_TYPEDEF_(0xC0370501L)
+
+//
+// MessageId: VM_SAVED_STATE_DUMP_E_NO_VP_FOUND_IN_PARTITION_STATE
+//
+// MessageText:
+//
+// No virtual processor information found in the saved partition blob. Make sure the virtual machine is saved successfully for this content to be included in the partition state.
+//
+#define VM_SAVED_STATE_DUMP_E_NO_VP_FOUND_IN_PARTITION_STATE _HRESULT_TYPEDEF_(0xC0370502L)
+
+//
+// MessageId: VM_SAVED_STATE_DUMP_E_NESTED_VIRTUALIZATION_NOT_SUPPORTED
+//
+// MessageText:
+//
+// A virtual processor has been detected to have nested virtualization enabled. Nested Virtualization is not supported yet by VmSavedStateDumpProvider.
+//
+#define VM_SAVED_STATE_DUMP_E_NESTED_VIRTUALIZATION_NOT_SUPPORTED _HRESULT_TYPEDEF_(0xC0370503L)
+
+//
+// MessageId: VM_SAVED_STATE_DUMP_E_WINDOWS_KERNEL_IMAGE_NOT_FOUND
+//
+// MessageText:
+//
+// The Windows kernel image address could not be found in the virtual machine saved state.
+//
+#define VM_SAVED_STATE_DUMP_E_WINDOWS_KERNEL_IMAGE_NOT_FOUND _HRESULT_TYPEDEF_(0xC0370504L)
+
+//
+// MessageId: VM_SAVED_STATE_DUMP_E_PXE_NOT_PRESENT
+//
+// MessageText:
+//
+// Failed to read Page Map Level 4 entry (pxe) for a virtual address.
+//
+#define VM_SAVED_STATE_DUMP_E_PXE_NOT_PRESENT _HRESULT_TYPEDEF_(0xC0370505L)
+
+//
+// MessageId: VM_SAVED_STATE_DUMP_E_PDPTE_NOT_PRESENT
+//
+// MessageText:
+//
+// Failed to read Page Directory Page Table entry (pdpte) for a virtual address.
+//
+#define VM_SAVED_STATE_DUMP_E_PDPTE_NOT_PRESENT _HRESULT_TYPEDEF_(0xC0370506L)
+
+//
+// MessageId: VM_SAVED_STATE_DUMP_E_PDE_NOT_PRESENT
+//
+// MessageText:
+//
+// Failed to read Page Directory entry (pde) for a virtual address.
+//
+#define VM_SAVED_STATE_DUMP_E_PDE_NOT_PRESENT _HRESULT_TYPEDEF_(0xC0370507L)
+
+//
+// MessageId: VM_SAVED_STATE_DUMP_E_PTE_NOT_PRESENT
+//
+// MessageText:
+//
+// Failed to read Page Table entry (pte) for a virtual address.
+//
+#define VM_SAVED_STATE_DUMP_E_PTE_NOT_PRESENT _HRESULT_TYPEDEF_(0xC0370508L)
 
 
 //
@@ -53271,6 +53710,69 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // An address provided is invalid or reserved.
 //
 #define HCN_E_ADDR_INVALID_OR_RESERVED   _HRESULT_TYPEDEF_(0x803B002FL)
+
+//
+// MessageId: HCN_E_INVALID_PREFIX
+//
+// MessageText:
+//
+// The prefix provided is invalid.
+//
+#define HCN_E_INVALID_PREFIX             _HRESULT_TYPEDEF_(0x803B0030L)
+
+//
+// MessageId: HCN_E_OBJECT_USED_AFTER_UNLOAD
+//
+// MessageText:
+//
+// A call was performed against an object that was torn down.
+//
+#define HCN_E_OBJECT_USED_AFTER_UNLOAD   _HRESULT_TYPEDEF_(0x803B0031L)
+
+//
+// MessageId: HCN_E_INVALID_SUBNET
+//
+// MessageText:
+//
+// The provided subnet configuration is invalid or missing parameters.
+//
+#define HCN_E_INVALID_SUBNET             _HRESULT_TYPEDEF_(0x803B0032L)
+
+//
+// MessageId: HCN_E_INVALID_IP_SUBNET
+//
+// MessageText:
+//
+// The provided IP subnet configuration is invalid or missing parameters.
+//
+#define HCN_E_INVALID_IP_SUBNET          _HRESULT_TYPEDEF_(0x803B0033L)
+
+//
+// MessageId: HCN_E_ENDPOINT_NOT_ATTACHED
+//
+// MessageText:
+//
+// The endpoint must be attached to complete the operation.
+//
+#define HCN_E_ENDPOINT_NOT_ATTACHED      _HRESULT_TYPEDEF_(0x803B0034L)
+
+//
+// MessageId: HCN_E_ENDPOINT_NOT_LOCAL
+//
+// MessageText:
+//
+// The endpoint must be local to complete the operation.
+//
+#define HCN_E_ENDPOINT_NOT_LOCAL         _HRESULT_TYPEDEF_(0x803B0035L)
+
+//
+// MessageId: HCN_INTERFACEPARAMETERS_ALREADY_APPLIED
+//
+// MessageText:
+//
+// Cannot apply more than one InterfaceParameters policy.
+//
+#define HCN_INTERFACEPARAMETERS_ALREADY_APPLIED _HRESULT_TYPEDEF_(0x803B0036L)
 
 //
 // =======================================================
@@ -56148,6 +56650,20 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // The operation failed because the compositor is not in control of the output.
 //
 #define DXGI_ERROR_NON_COMPOSITED_UI     _HRESULT_TYPEDEF_(0x887A0032L)
+
+
+//
+// DXCore error codes
+//
+
+//
+// MessageId: DXCORE_ERROR_EVENT_NOT_UNREGISTERED
+//
+// MessageText:
+//
+// The application failed to unregister from an event it registered for.
+//
+#define DXCORE_ERROR_EVENT_NOT_UNREGISTERED _HRESULT_TYPEDEF_(0x88800001L)
 
 
 //
@@ -61889,15 +62405,6 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define UTC_E_BINARY_MISSING             _HRESULT_TYPEDEF_(0x87C51034L)
 
 //
-// MessageId: UTC_E_NETWORK_CAPTURE_NOT_ALLOWED
-//
-// MessageText:
-//
-// A network capture trace is not allowed.
-//
-#define UTC_E_NETWORK_CAPTURE_NOT_ALLOWED _HRESULT_TYPEDEF_(0x87C51035L)
-
-//
 // MessageId: UTC_E_FAILED_TO_RESOLVE_CONTAINER_ID
 //
 // MessageText:
@@ -62234,5 +62741,26 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // The size of the buffer provided for a bound variable is invalid.
 //
 #define WINML_ERR_SIZE_MISMATCH          _HRESULT_TYPEDEF_(0x88900004L)
+
+//
+// QUIC
+//
+//
+// MessageId: ERROR_QUIC_HANDSHAKE_FAILURE
+//
+// MessageText:
+//
+// The QUIC connection handshake failed.
+//
+#define ERROR_QUIC_HANDSHAKE_FAILURE     _HRESULT_TYPEDEF_(0x80410000L)
+
+//
+// MessageId: ERROR_QUIC_VER_NEG_FAILURE
+//
+// MessageText:
+//
+// The QUIC connection failed to negotiate a compatible protocol version.
+//
+#define ERROR_QUIC_VER_NEG_FAILURE       _HRESULT_TYPEDEF_(0x80410001L)
 
 #endif//_WINERROR_

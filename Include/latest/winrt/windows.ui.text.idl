@@ -82,6 +82,8 @@ namespace Windows
 
             typedef enum RangeGravity RangeGravity;
 
+            typedef enum RichEditMathMode RichEditMathMode;
+
             typedef enum SelectionOptions SelectionOptions;
 
             typedef enum SelectionType SelectionType;
@@ -123,6 +125,8 @@ namespace Windows
             interface ITextDocument2;
 
             interface ITextDocument3;
+
+            interface ITextDocument4;
 
             interface ITextParagraphFormat;
 
@@ -355,6 +359,13 @@ namespace Windows
                 Forward    = 2,
                 Inward     = 3,
                 Outward    = 4
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum RichEditMathMode
+            {
+                NoMath   = 0,
+                MathOnly = 1
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -758,6 +769,16 @@ namespace Windows
                 HRESULT ClearUndoRedoHistory();
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Text.RichEditTextDocument)]
+            [uuid(619C20F2-CB3B-4521-981F-2865B1B93F04)]
+            interface ITextDocument4 : IInspectable
+            {
+                HRESULT SetMath([in] HSTRING value);
+                HRESULT GetMath([out] HSTRING* value);
+                HRESULT SetMathMode([in] Windows.UI.Text.RichEditMathMode mode);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [uuid(2CF8CFA6-4676-498A-93F5-BBDBFC0BD883)]
             interface ITextParagraphFormat : IInspectable
@@ -912,6 +933,7 @@ namespace Windows
             {
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Text.ITextDocument2;
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)] interface Windows.UI.Text.ITextDocument3;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Text.ITextDocument4;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] [default] interface Windows.UI.Text.ITextDocument;
             }
 

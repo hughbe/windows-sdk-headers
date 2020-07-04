@@ -1447,6 +1447,8 @@ const long AnnotationType_CircularReferenceError	=	60022;
 
 const long AnnotationType_Mathematics	=	60023;
 
+const long AnnotationType_Sensitive	=	60024;
+
 #endif /* __UIA_AnnotationTypes_MODULE_DEFINED__ */
 
 

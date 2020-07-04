@@ -37,34 +37,34 @@ typedef struct DECLSPEC_CACHEALIGN _NET_RING
     // Use the identity:  (x % NumberOfElements) == (x & ElementIndexMask)
     UINT32 ElementIndexMask;
 
-    // Index of the first element owned by the NetAdapter.
-    UINT32 BeginIndex;
-
-    // The NIC driver may optionally use this to track which elements have been consumed.
-    UINT32 NextIndex;
-
     // Index of the end of the range of elements owned by the NetAdapter.
     UINT32 EndIndex;
 
     union {
         UINT32 OSReserved0;
         // Reserved for the operating system.
-        void * OSReserved2[3];
+        void * OSReserved2[4];
     } DUMMYUNIONNAME;
 
+    // Index of the first element owned by the NetAdapter.
+    UINT32 BeginIndex;
+
+    // The NIC driver may optionally use this to track which elements have been consumed.
+    UINT32 NextIndex;
+
     // Available for the NIC driver to use in any way.
-    void * NetAdapterScratch[2];
+    void * Scratch;
 
     // Storage for element 0 in the ring buffer.
     // Use NetRingGetElementAtIndex to access elements.
-    DECLSPEC_ALIGN(64)
+    DECLSPEC_CACHEALIGN
     _Field_size_(NumberOfElements * ElementStride)
     unsigned char
         Buffer[ANYSIZE_ARRAY];
 
 } NET_RING;
 
-C_ASSERT(FIELD_OFFSET(NET_RING, Buffer) == 64);
+C_ASSERT(FIELD_OFFSET(NET_RING, Buffer) == SYSTEM_CACHE_ALIGNMENT_SIZE);
 
 #pragma warning(pop)
 
@@ -98,6 +98,17 @@ NetRingGetElementAtIndex(
     return (void *)(Ring->Buffer + (SIZE_T)Index * Ring->ElementStride);
 }
 
+inline
+UINT32
+NetRingAdvanceIndex(
+    _In_ NET_RING const * Ring,
+    _In_ UINT32 Index,
+    _In_ INT32 Distance
+)
+{
+    return (Index + Distance) & Ring->ElementIndexMask;
+}
+
 /*++
 
 Routine Description:
@@ -122,7 +133,7 @@ NetRingIncrementIndex(
     _In_ UINT32 Index
 )
 {
-    return (Index + 1) & Ring->ElementIndexMask;
+    return NetRingAdvanceIndex(Ring, Index, 1);
 }
 
 inline

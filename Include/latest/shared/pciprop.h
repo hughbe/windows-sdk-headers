@@ -490,16 +490,16 @@ DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_AriSupport, 30);
 // This property indicates the status of ACS support of not only the
 // current device, but the whole heirarchy up to the express root port.
 // Supported indicates that the device is a multifunction device that
-// impelements a capability struct, and also each device up the the 
-// hierarchy implements ACS also. SingleFunctionSupported indicates 
-// that ACS is supported up the hierarchy, and since the device is 
-// single function, it is compatible by not implementing ACS. 
+// impelements a capability struct, and also each device up the the
+// hierarchy implements ACS also. SingleFunctionSupported indicates
+// that ACS is supported up the hierarchy, and since the device is
+// single function, it is compatible by not implementing ACS.
 // NoP2PSupported indicates that the device is multifunction, does not
-// implement an ACS header, but does not support peer-to-peer (P2P), 
-// and ACS is supported up the hierarchy. NotSupported indicates 
-// that somewhere along the hierarchy ACS is not supported or the 
+// implement an ACS header, but does not support peer-to-peer (P2P),
+// and ACS is supported up the hierarchy. NotSupported indicates
+// that somewhere along the hierarchy ACS is not supported or the
 // device is multifunction and does not implement ACS.
-// 
+//
 
 #define DevProp_PciDevice_AcsCompatibleUpHierarchy_NotSupported             0x0
 #define DevProp_PciDevice_AcsCompatibleUpHierarchy_SingleFunctionSupported  0x1
@@ -509,7 +509,7 @@ DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_AriSupport, 30);
 DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_AcsCompatibleUpHierarchy, 31);
 
 //
-// This property contains the actual value of the ACS capability register 
+// This property contains the actual value of the ACS capability register
 // on the device. If the device does not implement an ACS capability
 // struct, the value will be zero.
 //
@@ -533,6 +533,12 @@ DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_RequiresReservedMemoryRegion, 34);
 //
 
 DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_AtomicsSupported, 35);
+
+//
+// This property contains bitmask of the supported ASPM and PM link sub states.
+//
+
+DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_SupportedLinkSubState, 36);
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

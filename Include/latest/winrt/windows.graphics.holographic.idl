@@ -130,6 +130,8 @@ namespace Windows
 
             typedef struct HolographicAdapterId HolographicAdapterId;
 
+            typedef struct HolographicFrameId HolographicFrameId;
+
             typedef struct HolographicStereoTransform HolographicStereoTransform;
 
             interface IHolographicCamera;
@@ -168,11 +170,19 @@ namespace Windows
 
             interface IHolographicFrame2;
 
+            interface IHolographicFrame3;
+
             interface IHolographicFramePrediction;
 
             interface IHolographicFramePresentationMonitor;
 
             interface IHolographicFramePresentationReport;
+
+            interface IHolographicFrameRenderingReport;
+
+            interface IHolographicFrameScanoutMonitor;
+
+            interface IHolographicFrameScanoutReport;
 
             interface IHolographicQuadLayer;
 
@@ -185,6 +195,8 @@ namespace Windows
             interface IHolographicSpace;
 
             interface IHolographicSpace2;
+
+            interface IHolographicSpace3;
 
             interface IHolographicSpaceCameraAddedEventArgs;
 
@@ -216,6 +228,12 @@ namespace Windows
 
             runtimeclass HolographicFramePresentationReport;
 
+            runtimeclass HolographicFrameRenderingReport;
+
+            runtimeclass HolographicFrameScanoutMonitor;
+
+            runtimeclass HolographicFrameScanoutReport;
+
             runtimeclass HolographicQuadLayer;
 
             runtimeclass HolographicQuadLayerUpdateParameters;
@@ -246,6 +264,8 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFramePresentationReport*>;
 
+                interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicFrameScanoutReport*>;
+
                 interface Windows.Foundation.Collections.IIterable<Windows.Graphics.Holographic.HolographicQuadLayer*>;
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCamera*>;
@@ -253,6 +273,8 @@ namespace Windows
                 interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicCameraPose*>;
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFramePresentationReport*>;
+
+                interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicFrameScanoutReport*>;
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Graphics.Holographic.HolographicQuadLayer*>;
 
@@ -262,7 +284,11 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport*>;
 
+                interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFrameScanoutReport*>;
+
                 interface Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicQuadLayer*>;
+
+                interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport*>;
 
                 interface Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicQuadLayer*>;
 
@@ -327,6 +353,12 @@ namespace Windows
             {
                 UINT32 LowPart;
                 INT32 HighPart;
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            struct HolographicFrameId
+            {
+                UINT64 Value;
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -535,6 +567,14 @@ namespace Windows
                 HRESULT GetQuadLayerUpdateParameters([in] Windows.Graphics.Holographic.HolographicQuadLayer* layer, [out] [retval] Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Graphics.Holographic.HolographicFrame)]
+            [uuid(E5E964C9-8A27-55D3-9F98-94530D369052)]
+            interface IHolographicFrame3 : IInspectable
+            {
+                [propget] HRESULT Id([out] [retval] Windows.Graphics.Holographic.HolographicFrameId* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             [exclusiveto(Windows.Graphics.Holographic.HolographicFramePrediction)]
             [uuid(520F4DE1-5C0A-4E79-A81E-6ABE02BB2739)]
@@ -545,25 +585,61 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
+            [deprecated("Use HolographicFrameScanoutMonitor instead of HolographicFramePresentationMonitor. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [exclusiveto(Windows.Graphics.Holographic.HolographicFramePresentationMonitor)]
             [uuid(CA87256C-6FAE-428E-BB83-25DFEE51136B)]
             interface IHolographicFramePresentationMonitor : IInspectable
                 requires
                     Windows.Foundation.IClosable
             {
-                HRESULT ReadReports([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport*>** result);
+                [deprecated("Use HolographicFrameScanoutMonitor instead of HolographicFramePresentationMonitor. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT ReadReports([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Graphics.Holographic.HolographicFramePresentationReport*>** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
+            [deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [exclusiveto(Windows.Graphics.Holographic.HolographicFramePresentationReport)]
             [uuid(80BAF614-F2F4-4C8A-8DE3-065C78F6D5DE)]
             interface IHolographicFramePresentationReport : IInspectable
             {
-                [propget] HRESULT CompositorGpuDuration([out] [retval] Windows.Foundation.TimeSpan* value);
-                [propget] HRESULT AppGpuDuration([out] [retval] Windows.Foundation.TimeSpan* value);
-                [propget] HRESULT AppGpuOverrun([out] [retval] Windows.Foundation.TimeSpan* value);
-                [propget] HRESULT MissedPresentationOpportunityCount([out] [retval] UINT32* value);
-                [propget] HRESULT PresentationCount([out] [retval] UINT32* value);
+                [deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT CompositorGpuDuration([out] [retval] Windows.Foundation.TimeSpan* value);
+                [deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT AppGpuDuration([out] [retval] Windows.Foundation.TimeSpan* value);
+                [deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT AppGpuOverrun([out] [retval] Windows.Foundation.TimeSpan* value);
+                [deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT MissedPresentationOpportunityCount([out] [retval] UINT32* value);
+                [deprecated("Use IHolographicFrameScanoutReport instead of IHolographicFramePresentationReport. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT PresentationCount([out] [retval] UINT32* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Graphics.Holographic.HolographicFrameRenderingReport)]
+            [uuid(05F32DE4-E384-51B3-B934-F0D3A0F78606)]
+            interface IHolographicFrameRenderingReport : IInspectable
+            {
+                [propget] HRESULT FrameId([out] [retval] Windows.Graphics.Holographic.HolographicFrameId* value);
+                [propget] HRESULT MissedLatchCount([out] [retval] UINT32* value);
+                [propget] HRESULT SystemRelativeFrameReadyTime([out] [retval] Windows.Foundation.TimeSpan* value);
+                [propget] HRESULT SystemRelativeActualGpuFinishTime([out] [retval] Windows.Foundation.TimeSpan* value);
+                [propget] HRESULT SystemRelativeTargetLatchTime([out] [retval] Windows.Foundation.TimeSpan* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Graphics.Holographic.HolographicFrameScanoutMonitor)]
+            [uuid(7E83EFA9-843C-5401-8095-9BC1B8B08638)]
+            interface IHolographicFrameScanoutMonitor : IInspectable
+                requires
+                    Windows.Foundation.IClosable
+            {
+                HRESULT ReadReports([out] [retval] Windows.Foundation.Collections.IVector<Windows.Graphics.Holographic.HolographicFrameScanoutReport*>** result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Graphics.Holographic.HolographicFrameScanoutReport)]
+            [uuid(0EBBE606-03A0-5CA0-B46E-BBA068D7233F)]
+            interface IHolographicFrameScanoutReport : IInspectable
+            {
+                [propget] HRESULT RenderingReport([out] [retval] Windows.Graphics.Holographic.HolographicFrameRenderingReport** value);
+                [propget] HRESULT MissedScanoutCount([out] [retval] UINT32* value);
+                [propget] HRESULT SystemRelativeLatchTime([out] [retval] Windows.Foundation.TimeSpan* value);
+                [propget] HRESULT SystemRelativeScanoutStartTime([out] [retval] Windows.Foundation.TimeSpan* value);
+                [propget] HRESULT SystemRelativePhotonTime([out] [retval] Windows.Foundation.TimeSpan* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
@@ -630,7 +706,15 @@ namespace Windows
                 [eventremove] HRESULT UserPresenceChanged([in] EventRegistrationToken token);
                 HRESULT WaitForNextFrameReady();
                 HRESULT WaitForNextFrameReadyWithHeadStart([in] Windows.Foundation.TimeSpan requestedHeadStartDuration);
-                HRESULT CreateFramePresentationMonitor([in] UINT32 maxQueuedReports, [out] [retval] Windows.Graphics.Holographic.HolographicFramePresentationMonitor** result);
+                [deprecated("Use CreateFrameScanoutMonitor instead of CreateFramePresentationMonitor. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT CreateFramePresentationMonitor([in] UINT32 maxQueuedReports, [out] [retval] Windows.Graphics.Holographic.HolographicFramePresentationMonitor** result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Graphics.Holographic.HolographicSpace)]
+            [uuid(DF1733D1-F224-587E-8D71-1E8FC8F07B1F)]
+            interface IHolographicSpace3 : IInspectable
+            {
+                HRESULT CreateFrameScanoutMonitor([in] UINT32 maxQueuedReports, [out] [retval] Windows.Graphics.Holographic.HolographicFrameScanoutMonitor** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -754,6 +838,7 @@ namespace Windows
             {
                 [default] interface Windows.Graphics.Holographic.IHolographicFrame;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Graphics.Holographic.IHolographicFrame2;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Graphics.Holographic.IHolographicFrame3;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
@@ -765,6 +850,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
+            [deprecated("Use HolographicFrameScanoutMonitor instead of HolographicFramePresentationMonitor. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [marshaling_behavior(agile)]
             runtimeclass HolographicFramePresentationMonitor
             {
@@ -773,10 +859,33 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
+            [deprecated("Use HolographicFrameScanoutReport instead of HolographicFramePresentationReport. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [marshaling_behavior(agile)]
             runtimeclass HolographicFramePresentationReport
             {
                 [default] interface Windows.Graphics.Holographic.IHolographicFramePresentationReport;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass HolographicFrameRenderingReport
+            {
+                [default] interface Windows.Graphics.Holographic.IHolographicFrameRenderingReport;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass HolographicFrameScanoutMonitor
+            {
+                [default] interface Windows.Graphics.Holographic.IHolographicFrameScanoutMonitor;
+                interface Windows.Foundation.IClosable;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass HolographicFrameScanoutReport
+            {
+                [default] interface Windows.Graphics.Holographic.IHolographicFrameScanoutReport;
             }
 
             [activatable(Windows.Graphics.Holographic.IHolographicQuadLayerFactory, Windows.Foundation.UniversalApiContract, 5.0)]
@@ -808,6 +917,7 @@ namespace Windows
             {
                 [default] interface Windows.Graphics.Holographic.IHolographicSpace;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Graphics.Holographic.IHolographicSpace2;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Graphics.Holographic.IHolographicSpace3;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]

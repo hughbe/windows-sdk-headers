@@ -1,50 +1,38 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Media_Ocr_2_H
+#define WINRT_Windows_Media_Ocr_2_H
 #include "winrt/impl/Windows.Globalization.1.h"
-#include "winrt/impl/Windows.Graphics.Imaging.1.h"
 #include "winrt/impl/Windows.Media.Ocr.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Media::Ocr {
-
+namespace winrt::Windows::Media::Ocr
+{
+    struct __declspec(empty_bases) OcrEngine : Windows::Media::Ocr::IOcrEngine
+    {
+        OcrEngine(std::nullptr_t) noexcept {}
+        OcrEngine(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Ocr::IOcrEngine(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto MaxImageDimension();
+        [[nodiscard]] static auto AvailableRecognizerLanguages();
+        static auto IsLanguageSupported(Windows::Globalization::Language const& language);
+        static auto TryCreateFromLanguage(Windows::Globalization::Language const& language);
+        static auto TryCreateFromUserProfileLanguages();
+    };
+    struct __declspec(empty_bases) OcrLine : Windows::Media::Ocr::IOcrLine
+    {
+        OcrLine(std::nullptr_t) noexcept {}
+        OcrLine(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Ocr::IOcrLine(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) OcrResult : Windows::Media::Ocr::IOcrResult
+    {
+        OcrResult(std::nullptr_t) noexcept {}
+        OcrResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Ocr::IOcrResult(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) OcrWord : Windows::Media::Ocr::IOcrWord
+    {
+        OcrWord(std::nullptr_t) noexcept {}
+        OcrWord(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Ocr::IOcrWord(ptr, take_ownership_from_abi) {}
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Media::Ocr {
-
-struct WINRT_EBO OcrEngine :
-    Windows::Media::Ocr::IOcrEngine
-{
-    OcrEngine(std::nullptr_t) noexcept {}
-    static uint32_t MaxImageDimension();
-    static Windows::Foundation::Collections::IVectorView<Windows::Globalization::Language> AvailableRecognizerLanguages();
-    static bool IsLanguageSupported(Windows::Globalization::Language const& language);
-    static Windows::Media::Ocr::OcrEngine TryCreateFromLanguage(Windows::Globalization::Language const& language);
-    static Windows::Media::Ocr::OcrEngine TryCreateFromUserProfileLanguages();
-};
-
-struct WINRT_EBO OcrLine :
-    Windows::Media::Ocr::IOcrLine
-{
-    OcrLine(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO OcrResult :
-    Windows::Media::Ocr::IOcrResult
-{
-    OcrResult(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO OcrWord :
-    Windows::Media::Ocr::IOcrWord
-{
-    OcrWord(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

@@ -143,6 +143,8 @@ namespace Windows
 
             interface ILearningModelSessionOptions;
 
+            interface ILearningModelSessionOptions2;
+
             interface ILearningModelStatics;
 
             interface IMapFeatureDescriptor;
@@ -312,7 +314,7 @@ namespace Windows
     {
         namespace MachineLearning
         {
-            [contractversion(2.0)]
+            [contractversion(3.0)]
             apicontract MachineLearningContract
             {
             }
@@ -514,6 +516,15 @@ namespace Windows
             {
                 [propget] HRESULT BatchSizeOverride([out] [retval] UINT32* value);
                 [propput] HRESULT BatchSizeOverride([in] UINT32 value);
+            }
+
+            [contract(Windows.AI.MachineLearning.MachineLearningContract, 3.0)]
+            [exclusiveto(Windows.AI.MachineLearning.LearningModelSessionOptions)]
+            [uuid(6FCD1DC4-175F-5BD2-8DE5-2F2006A25ADF)]
+            interface ILearningModelSessionOptions2 : IInspectable
+            {
+                [propget] HRESULT CloseModelOnSessionCreation([out] [retval] boolean* value);
+                [propput] HRESULT CloseModelOnSessionCreation([in] boolean value);
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]
@@ -1004,6 +1015,7 @@ namespace Windows
             runtimeclass LearningModelSessionOptions
             {
                 [default] interface Windows.AI.MachineLearning.ILearningModelSessionOptions;
+                [contract(Windows.AI.MachineLearning.MachineLearningContract, 3.0)] interface Windows.AI.MachineLearning.ILearningModelSessionOptions2;
             }
 
             [contract(Windows.AI.MachineLearning.MachineLearningContract, 1.0)]

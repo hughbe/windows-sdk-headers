@@ -84,7 +84,7 @@ namespace Windows
                 {
                     [propget] HRESULT Compositor([out] [retval] Windows.UI.Composition.Compositor** value);
                     HRESULT Commit();
-                    HRESULT EnsurePreviousCommitCompletedAsync([out] [retval] Windows.Foundation.IAsyncAction** action);
+                    HRESULT EnsurePreviousCommitCompletedAsync([out] [retval] Windows.Foundation.IAsyncAction** operation);
                     [eventadd] HRESULT CommitNeeded([in] Windows.Foundation.TypedEventHandler<Windows.UI.Composition.Core.CompositorController*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
                     [eventremove] HRESULT CommitNeeded([in] EventRegistrationToken token);
                 }

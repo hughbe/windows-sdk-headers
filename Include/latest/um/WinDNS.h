@@ -61,12 +61,6 @@ typedef DWORD   IP4_ADDRESS, *PIP4_ADDRESS;
 
 #define IP4_ADDRESS_STRING_BUFFER_LENGTH    (16)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 //
 //  IP Address Array type
 //
@@ -81,12 +75,6 @@ typedef struct  _IP4_ARRAY
 #endif
 }
 IP4_ARRAY, *PIP4_ARRAY;
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 //  IPv6 Address
@@ -125,12 +113,6 @@ typedef union
 IP6_ADDRESS, *PIP6_ADDRESS;
 
 #endif // MIDL_PASS
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //
 //  DNS Address structures representing both IPv4 and IPv6 addresses.
@@ -281,7 +263,6 @@ DNS_ADDR_ARRAY, *PDNS_ADDR_ARRAY;
 
 #define DNS_MAX_NAME_LENGTH             (255)
 #define DNS_MAX_LABEL_LENGTH            (63)
-
 #define DNS_MAX_NAME_BUFFER_LENGTH      (256)
 #define DNS_MAX_LABEL_BUFFER_LENGTH     (64)
 
@@ -964,8 +945,6 @@ DnsQueryConfig(
     _Inout_                                   PDWORD              pBufLen
     );
 
-
-
 //
 //  DNS resource record structure
 //
@@ -1617,25 +1596,9 @@ DNS_SECTION;
 //  properly aligned unpacked.
 //
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 #ifdef MIDL_PASS
 
 #define PDNS_RECORD     PVOID
-
-#endif // MIDL_PASS
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
-#ifdef MIDL_PASS
 #define PDNS_RECORDA    PVOID
 #define PDNS_RECORDW    PVOID
 
@@ -1857,7 +1820,6 @@ typedef DNS_RECORD_OPTA     DNS_RECORD_OPT, *PDNS_RECORD_OPT;
 #endif  // PRIVATE_DNS_RECORD
 
 
-
 //
 //  Resource record set building
 //
@@ -2023,6 +1985,12 @@ DnsRecordSetDetach(
     _Inout_         PDNS_RECORD     pRecordList
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 //
 //  Free structures returned from dnsapi.dll
 //
@@ -2046,6 +2014,12 @@ DnsFree(
     _Pre_opt_valid_ _Frees_ptr_opt_    PVOID    pData,
     _In_        DNS_FREE_TYPE   FreeType
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 //  Backward compatibility with Win2K, do not use for XP+ applications
@@ -2145,7 +2119,6 @@ DnsQuery_W(
 #else
 #define DnsQuery DnsQuery_A
 #endif
-
 
 #if !defined ( USE_PRIVATE_DNS_ADDR ) || defined (MIDL_PASS)
 
@@ -2761,12 +2734,6 @@ DnsConnectionDeletePolicyEntries(
     _In_ DNS_CONNECTION_POLICY_TAG PolicyEntryTag
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 #ifdef __midl
 typedef[string] wchar_t *DNSSD_RPC_STRING;
 #endif
@@ -2816,8 +2783,8 @@ DnsServiceConstructInstance(
     _In_ WORD wPriority,
     _In_ WORD wWeight,
     _In_ DWORD dwPropertiesCount,
-    __in_ecount(dwPropertiesCount) PCWSTR *keys,
-    __in_ecount(dwPropertiesCount) PCWSTR *values
+    _In_reads_(dwPropertiesCount) PCWSTR *keys,
+    _In_reads_(dwPropertiesCount) PCWSTR *values
     );
 
 PDNS_SERVICE_INSTANCE

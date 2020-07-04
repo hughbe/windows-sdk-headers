@@ -487,7 +487,7 @@ typedef enum
 #define WMIGUID_ALL_ACCESS_RS1 (WMIGUID_ALL_ACCESS_WINXP | \
                                 TRACELOG_JOIN_GROUP)
                                   
-#if (NTDDI_VERSION >= NTDDI_RS1)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS1)
 
 #define WMIGUID_ALL_ACCESS WMIGUID_ALL_ACCESS_RS1
 

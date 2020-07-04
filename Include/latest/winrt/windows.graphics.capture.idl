@@ -99,6 +99,8 @@ namespace Windows
 
             interface IGraphicsCaptureSession;
 
+            interface IGraphicsCaptureSession2;
+
             interface IGraphicsCaptureSessionStatics;
 
             runtimeclass Direct3D11CaptureFrame;
@@ -214,6 +216,15 @@ namespace Windows
                 HRESULT StartCapture();
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Graphics.Capture.GraphicsCaptureSession)]
+            [uuid(2C39AE40-7D2E-5044-804E-8B6799D4CF9E)]
+            interface IGraphicsCaptureSession2 : IInspectable
+            {
+                [propget] HRESULT IsCursorCaptureEnabled([out] [retval] boolean* value);
+                [propput] HRESULT IsCursorCaptureEnabled([in] boolean value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [exclusiveto(Windows.Graphics.Capture.GraphicsCaptureSession)]
             [uuid(2224A540-5974-49AA-B232-0882536F4CB5)]
@@ -266,6 +277,7 @@ namespace Windows
             runtimeclass GraphicsCaptureSession
             {
                 [default] interface Windows.Graphics.Capture.IGraphicsCaptureSession;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Graphics.Capture.IGraphicsCaptureSession2;
                 interface Windows.Foundation.IClosable;
             }
         }

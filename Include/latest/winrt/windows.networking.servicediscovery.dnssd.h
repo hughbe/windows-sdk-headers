@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.networking.servicediscovery.dnssd.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,125 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
 #define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
@@ -218,38 +102,6 @@
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
 #define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -279,7 +131,8 @@ namespace ABI {
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult
 
 #endif // ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_FWD_DEFINED__
@@ -295,7 +148,8 @@ namespace ABI {
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance
 
 #endif // ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_FWD_DEFINED__
@@ -311,7 +165,8 @@ namespace ABI {
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstanceFactory
 
 #endif // ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_FWD_DEFINED__
@@ -327,7 +182,8 @@ namespace ABI {
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher
 
 #endif // ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_FWD_DEFINED__
@@ -340,12 +196,153 @@ namespace ABI {
         namespace Networking {
             namespace ServiceDiscovery {
                 namespace Dnssd {
+                    class DnssdRegistrationResult;
+                } /* Dnssd */
+            } /* ServiceDiscovery */
+        } /* Networking */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE
+#define DEF___FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("0c251e73-52c9-5026-a875-f685a50cbffd"))
+IAsyncOperation<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t;
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("f3632f52-894a-5345-9be6-8389751c5189"))
+IAsyncOperationCompletedHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#ifndef DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#define DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("60310303-49c5-52e6-abc6-a9b36eccc716"))
+IKeyValuePair<HSTRING, HSTRING> : IKeyValuePair_impl<HSTRING, HSTRING>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IKeyValuePair`2<String, String>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IKeyValuePair<HSTRING, HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
+#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE */
+
+
+
+#ifndef DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#define DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("05eb86f1-7140-5517-b88d-cbaebe57e6b1"))
+IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair_2_HSTRING_HSTRING*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, String>>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE */
+
+
+
+#ifndef DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#define DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b"))
+IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair_2_HSTRING_HSTRING*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, String>>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Networking {
+            namespace ServiceDiscovery {
+                namespace Dnssd {
                     class DnssdServiceInstance;
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -355,11 +352,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("bc0cca83-44e5-5544-ab5b-e09d66f5fd5f"))
-IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>> 
+IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>"; 
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -367,17 +364,12 @@ IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanc
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t;
 #define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
-//#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -387,11 +379,11 @@ typedef IIterator<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServic
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("1de3a3e5-387e-5328-b864-3f0e3475d343"))
-IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>> 
+IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>"; 
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -399,16 +391,61 @@ IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanc
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t;
 #define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
-//#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#ifndef DEF___FIMapView_2_HSTRING_HSTRING_USE
+#define DEF___FIMapView_2_HSTRING_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("ac7f26f2-feb7-5b2a-8ac4-345bc62caede"))
+IMapView<HSTRING, HSTRING> : IMapView_impl<HSTRING, HSTRING>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IMapView`2<String, String>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IMapView<HSTRING, HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
+#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIMapView_2_HSTRING_HSTRING_USE */
+
+
+
+#ifndef DEF___FIMap_2_HSTRING_HSTRING_USE
+#define DEF___FIMap_2_HSTRING_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("f6d1f700-49c2-52ae-8154-826f9908773c"))
+IMap<HSTRING, HSTRING> : IMap_impl<HSTRING, HSTRING>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IMap`2<String, String>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IMap<HSTRING, HSTRING> __FIMap_2_HSTRING_HSTRING_t;
+#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIMap_2_HSTRING_HSTRING_USE */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -419,11 +456,11 @@ typedef IIterable<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServic
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("f75ff82a-7e10-5cf6-8064-6ae585e0bd8d"))
-IVectorView<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>> 
+IVectorView<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>"; 
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -431,89 +468,10 @@ IVectorView<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInsta
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t;
 #define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
-//#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-namespace ABI {
-    namespace Windows {
-        namespace Networking {
-            namespace ServiceDiscovery {
-                namespace Dnssd {
-                    class DnssdRegistrationResult;
-                } /* Dnssd */
-            } /* ServiceDiscovery */
-        } /* Networking */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("f3632f52-894a-5345-9be6-8389751c5189"))
-IAsyncOperationCompletedHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE
-#define DEF___FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("0c251e73-52c9-5026-a875-f685a50cbffd"))
-IAsyncOperation<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult*> __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t;
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>
-//#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdRegistrationResult*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_USE */
-
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -526,9 +484,8 @@ namespace ABI {
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
-
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -538,30 +495,24 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("6a6cc5d5-9f43-545a-91d7-3a40055475da"))
-ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*,IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*>,IInspectable*> 
+ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*, IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*>, IInspectable*>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher, Object>"; 
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher, Object>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*,IInspectable*> __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_t;
+typedef ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*, IInspectable*> __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*,IInspectable*>
-//#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*,IInspectable*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -572,178 +523,25 @@ typedef ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::Dn
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("e617711e-cdd5-5975-8fb3-8eaaaed24e7b"))
-ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*,ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>> 
+ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher, Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>"; 
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher, Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*,ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t;
+typedef ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher*, ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance*> __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t;
 #define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*,ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
-//#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceWatcher*,ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#ifndef DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#define DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("60310303-49c5-52e6-abc6-a9b36eccc716"))
-IKeyValuePair<HSTRING,HSTRING> : IKeyValuePair_impl<HSTRING,HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IKeyValuePair`2<String, String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IKeyValuePair<HSTRING,HSTRING> __FIKeyValuePair_2_HSTRING_HSTRING_t;
-#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
-//#define __FIKeyValuePair_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIKeyValuePair_2_HSTRING_HSTRING_USE */
-
-
-
-
-
-#ifndef DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#define DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("05eb86f1-7140-5517-b88d-cbaebe57e6b1"))
-IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterator_impl<__FIKeyValuePair_2_HSTRING_HSTRING*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, String>>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
-//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_USE */
-
-
-
-
-
-#ifndef DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#define DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b"))
-IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> : IIterable_impl<__FIKeyValuePair_2_HSTRING_HSTRING*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, String>>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<__FIKeyValuePair_2_HSTRING_HSTRING*> __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t;
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
-//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,HSTRING>*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_USE */
-
-
-
-
-#ifndef DEF___FIMapView_2_HSTRING_HSTRING_USE
-#define DEF___FIMapView_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("ac7f26f2-feb7-5b2a-8ac4-345bc62caede"))
-IMapView<HSTRING,HSTRING> : IMapView_impl<HSTRING,HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IMapView`2<String, String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IMapView<HSTRING,HSTRING> __FIMapView_2_HSTRING_HSTRING_t;
-#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIMapView_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
-//#define __FIMapView_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IMapView<HSTRING,HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIMapView_2_HSTRING_HSTRING_USE */
-
-
-
-
-#ifndef DEF___FIMap_2_HSTRING_HSTRING_USE
-#define DEF___FIMap_2_HSTRING_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("f6d1f700-49c2-52ae-8154-826f9908773c"))
-IMap<HSTRING,HSTRING> : IMap_impl<HSTRING,HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IMap`2<String, String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IMap<HSTRING,HSTRING> __FIMap_2_HSTRING_HSTRING_t;
-#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIMap_2_HSTRING_HSTRING ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
-//#define __FIMap_2_HSTRING_HSTRING_t ABI::Windows::Foundation::Collections::IMap<HSTRING,HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIMap_2_HSTRING_HSTRING_USE */
-
-
-
-
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -752,14 +550,11 @@ namespace ABI {
         namespace Foundation {
             interface IStringable;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
-
-
-
-
 
 namespace ABI {
     namespace Windows {
@@ -768,7 +563,8 @@ namespace ABI {
                 class NetworkAdapter;
             } /* Connectivity */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
@@ -779,21 +575,19 @@ namespace ABI {
                 interface INetworkAdapter;
             } /* Connectivity */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter ABI::Windows::Networking::Connectivity::INetworkAdapter
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
-
-
-
-
 
 namespace ABI {
     namespace Windows {
         namespace Networking {
             class HostName;
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -802,13 +596,11 @@ namespace ABI {
         namespace Networking {
             interface IHostName;
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CIHostName ABI::Windows::Networking::IHostName
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
-
-
-
 
 namespace ABI {
     namespace Windows {
@@ -817,7 +609,8 @@ namespace ABI {
                 class DatagramSocket;
             } /* Sockets */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
@@ -828,11 +621,11 @@ namespace ABI {
                 interface IDatagramSocket;
             } /* Sockets */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket ABI::Windows::Networking::Sockets::IDatagramSocket
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
-
 
 namespace ABI {
     namespace Windows {
@@ -841,7 +634,8 @@ namespace ABI {
                 class StreamSocketListener;
             } /* Sockets */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
@@ -852,69 +646,35 @@ namespace ABI {
                 interface IStreamSocketListener;
             } /* Sockets */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener ABI::Windows::Networking::Sockets::IStreamSocketListener
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
 
-
-
-
-
 namespace ABI {
     namespace Windows {
         namespace Networking {
             namespace ServiceDiscovery {
                 namespace Dnssd {
-                    
                     typedef enum DnssdRegistrationStatus : int DnssdRegistrationStatus;
-                    
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Networking {
             namespace ServiceDiscovery {
                 namespace Dnssd {
-                    
                     typedef enum DnssdServiceWatcherStatus : int DnssdServiceWatcherStatus;
-                    
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Networking {
-            namespace ServiceDiscovery {
-                namespace Dnssd {
-                    class DnssdServiceInstanceCollection;
-                } /* Dnssd */
-            } /* ServiceDiscovery */
-        } /* Networking */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -922,16 +682,13 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Networking {
             namespace ServiceDiscovery {
                 namespace Dnssd {
-                    /* [v1_enum, contract] */
                     enum DnssdRegistrationStatus : int
                     {
                         DnssdRegistrationStatus_Success = 0,
@@ -939,13 +696,12 @@ namespace ABI {
                         DnssdRegistrationStatus_ServerError = 2,
                         DnssdRegistrationStatus_SecurityError = 3,
                     };
-                    
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -953,16 +709,13 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Networking {
             namespace ServiceDiscovery {
                 namespace Dnssd {
-                    /* [v1_enum, contract] */
                     enum DnssdServiceWatcherStatus : int
                     {
                         DnssdServiceWatcherStatus_Created = 0,
@@ -972,13 +725,12 @@ namespace ABI {
                         DnssdServiceWatcherStatus_Stopped = 4,
                         DnssdServiceWatcherStatus_Aborted = 5,
                     };
-                    
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -986,9 +738,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1000,34 +750,31 @@ namespace ABI {
         namespace Networking {
             namespace ServiceDiscovery {
                 namespace Dnssd {
-                    /* [object, uuid("3D786AD2-E606-5350-73EA-7E97F066162F"), exclusiveto, contract] */
-                    MIDL_INTERFACE("3D786AD2-E606-5350-73EA-7E97F066162F")
+                    MIDL_INTERFACE("3d786ad2-e606-5350-73ea-7e97f066162f")
                     IDnssdRegistrationResult : public IInspectable
                     {
                     public:
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Status(
-                            /* [retval, out] */__RPC__out ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationStatus * value
+                        virtual HRESULT STDMETHODCALLTYPE get_Status(
+                            ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationStatus* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IPAddress(
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::IHostName * * value
+                        virtual HRESULT STDMETHODCALLTYPE get_IPAddress(
+                            ABI::Windows::Networking::IHostName** value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HasInstanceNameChanged(
-                            /* [retval, out] */__RPC__out ::boolean * value
+                        virtual HRESULT STDMETHODCALLTYPE get_HasInstanceNameChanged(
+                            boolean* value
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IDnssdRegistrationResult=_uuidof(IDnssdRegistrationResult);
-                    
+                    extern MIDL_CONST_ID IID& IID_IDnssdRegistrationResult = _uuidof(IDnssdRegistrationResult);
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1035,9 +782,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CID
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1049,76 +794,73 @@ namespace ABI {
         namespace Networking {
             namespace ServiceDiscovery {
                 namespace Dnssd {
-                    /* [object, uuid("E246DB7E-98A5-4CA1-B9E4-C253D33C35FF"), exclusiveto, contract] */
-                    MIDL_INTERFACE("E246DB7E-98A5-4CA1-B9E4-C253D33C35FF")
+                    MIDL_INTERFACE("e246db7e-98a5-4ca1-b9e4-c253d33c35ff")
                     IDnssdServiceInstance : public IInspectable
                     {
                     public:
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DnssdServiceInstanceName(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_DnssdServiceInstanceName(
+                            HSTRING* value
                             ) = 0;
-                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DnssdServiceInstanceName(
-                            /* [in] */__RPC__in HSTRING value
+                        virtual HRESULT STDMETHODCALLTYPE put_DnssdServiceInstanceName(
+                            HSTRING value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HostName(
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::IHostName * * value
+                        virtual HRESULT STDMETHODCALLTYPE get_HostName(
+                            ABI::Windows::Networking::IHostName** value
                             ) = 0;
-                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_HostName(
-                            /* [in] */__RPC__in_opt ABI::Windows::Networking::IHostName * value
+                        virtual HRESULT STDMETHODCALLTYPE put_HostName(
+                            ABI::Windows::Networking::IHostName* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Port(
-                            /* [retval, out] */__RPC__out UINT16 * value
+                        virtual HRESULT STDMETHODCALLTYPE get_Port(
+                            UINT16* value
                             ) = 0;
-                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Port(
-                            /* [in] */UINT16 value
+                        virtual HRESULT STDMETHODCALLTYPE put_Port(
+                            UINT16 value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Priority(
-                            /* [retval, out] */__RPC__out UINT16 * value
+                        virtual HRESULT STDMETHODCALLTYPE get_Priority(
+                            UINT16* value
                             ) = 0;
-                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Priority(
-                            /* [in] */UINT16 value
+                        virtual HRESULT STDMETHODCALLTYPE put_Priority(
+                            UINT16 value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Weight(
-                            /* [retval, out] */__RPC__out UINT16 * value
+                        virtual HRESULT STDMETHODCALLTYPE get_Weight(
+                            UINT16* value
                             ) = 0;
-                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Weight(
-                            /* [in] */UINT16 value
+                        virtual HRESULT STDMETHODCALLTYPE put_Weight(
+                            UINT16 value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TextAttributes(
-                            /* [retval, out] */__RPC__deref_out_opt __FIMap_2_HSTRING_HSTRING * * value
+                        virtual HRESULT STDMETHODCALLTYPE get_TextAttributes(
+                            __FIMap_2_HSTRING_HSTRING** value
                             ) = 0;
-                        /* [overload] */virtual HRESULT STDMETHODCALLTYPE RegisterStreamSocketListenerAsync1(
-                            /* [in] */__RPC__in_opt ABI::Windows::Networking::Sockets::IStreamSocketListener * socket,
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * * result
+                        virtual HRESULT STDMETHODCALLTYPE RegisterStreamSocketListenerAsync1(
+                            ABI::Windows::Networking::Sockets::IStreamSocketListener* socket,
+                            __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult** result
                             ) = 0;
-                        /* [overload] */virtual HRESULT STDMETHODCALLTYPE RegisterStreamSocketListenerAsync2(
-                            /* [in] */__RPC__in_opt ABI::Windows::Networking::Sockets::IStreamSocketListener * socket,
-                            /* [in] */__RPC__in_opt ABI::Windows::Networking::Connectivity::INetworkAdapter * adapter,
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * * result
+                        virtual HRESULT STDMETHODCALLTYPE RegisterStreamSocketListenerAsync2(
+                            ABI::Windows::Networking::Sockets::IStreamSocketListener* socket,
+                            ABI::Windows::Networking::Connectivity::INetworkAdapter* adapter,
+                            __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult** result
                             ) = 0;
-                        /* [overload] */virtual HRESULT STDMETHODCALLTYPE RegisterDatagramSocketAsync1(
-                            /* [in] */__RPC__in_opt ABI::Windows::Networking::Sockets::IDatagramSocket * socket,
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * * result
+                        virtual HRESULT STDMETHODCALLTYPE RegisterDatagramSocketAsync1(
+                            ABI::Windows::Networking::Sockets::IDatagramSocket* socket,
+                            __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult** result
                             ) = 0;
-                        /* [overload] */virtual HRESULT STDMETHODCALLTYPE RegisterDatagramSocketAsync2(
-                            /* [in] */__RPC__in_opt ABI::Windows::Networking::Sockets::IDatagramSocket * socket,
-                            /* [in] */__RPC__in_opt ABI::Windows::Networking::Connectivity::INetworkAdapter * adapter,
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * * result
+                        virtual HRESULT STDMETHODCALLTYPE RegisterDatagramSocketAsync2(
+                            ABI::Windows::Networking::Sockets::IDatagramSocket* socket,
+                            ABI::Windows::Networking::Connectivity::INetworkAdapter* adapter,
+                            __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult** result
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IDnssdServiceInstance=_uuidof(IDnssdServiceInstance);
-                    
+                    extern MIDL_CONST_ID IID& IID_IDnssdServiceInstance = _uuidof(IDnssdServiceInstance);
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1126,9 +868,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CID
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1140,31 +880,28 @@ namespace ABI {
         namespace Networking {
             namespace ServiceDiscovery {
                 namespace Dnssd {
-                    /* [object, uuid("6CB061A1-C478-4331-9684-4AF2186C0A2B"), exclusiveto, contract] */
-                    MIDL_INTERFACE("6CB061A1-C478-4331-9684-4AF2186C0A2B")
+                    MIDL_INTERFACE("6cb061a1-c478-4331-9684-4af2186c0a2b")
                     IDnssdServiceInstanceFactory : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE Create(
-                            /* [in] */__RPC__in HSTRING dnssdServiceInstanceName,
-                            /* [in] */__RPC__in_opt ABI::Windows::Networking::IHostName * hostName,
-                            /* [in] */UINT16 port,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance * * result
+                            HSTRING dnssdServiceInstanceName,
+                            ABI::Windows::Networking::IHostName* hostName,
+                            UINT16 port,
+                            ABI::Windows::Networking::ServiceDiscovery::Dnssd::IDnssdServiceInstance** result
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IDnssdServiceInstanceFactory=_uuidof(IDnssdServiceInstanceFactory);
-                    
+                    extern MIDL_CONST_ID IID& IID_IDnssdServiceInstanceFactory = _uuidof(IDnssdServiceInstanceFactory);
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1172,9 +909,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CID
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1186,58 +921,54 @@ namespace ABI {
         namespace Networking {
             namespace ServiceDiscovery {
                 namespace Dnssd {
-                    /* [object, uuid("CC34D9C1-DB7D-4B69-983D-C6F83F205682"), exclusiveto, contract] */
-                    MIDL_INTERFACE("CC34D9C1-DB7D-4B69-983D-C6F83F205682")
+                    MIDL_INTERFACE("cc34d9c1-db7d-4b69-983d-c6f83f205682")
                     IDnssdServiceWatcher : public IInspectable
                     {
                     public:
-                        /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Added(
-                            /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * handler,
-                            /* [retval, out] */__RPC__out EventRegistrationToken * token
+                        virtual HRESULT STDMETHODCALLTYPE add_Added(
+                            __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* handler,
+                            EventRegistrationToken* token
                             ) = 0;
-                        /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_Added(
-                            /* [in] */EventRegistrationToken token
+                        virtual HRESULT STDMETHODCALLTYPE remove_Added(
+                            EventRegistrationToken token
                             ) = 0;
-                        /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_EnumerationCompleted(
-                            /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * handler,
-                            /* [retval, out] */__RPC__out EventRegistrationToken * token
+                        virtual HRESULT STDMETHODCALLTYPE add_EnumerationCompleted(
+                            __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable* handler,
+                            EventRegistrationToken* token
                             ) = 0;
-                        /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_EnumerationCompleted(
-                            /* [in] */EventRegistrationToken token
+                        virtual HRESULT STDMETHODCALLTYPE remove_EnumerationCompleted(
+                            EventRegistrationToken token
                             ) = 0;
-                        /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Stopped(
-                            /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * handler,
-                            /* [retval, out] */__RPC__out EventRegistrationToken * token
+                        virtual HRESULT STDMETHODCALLTYPE add_Stopped(
+                            __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable* handler,
+                            EventRegistrationToken* token
                             ) = 0;
-                        /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_Stopped(
-                            /* [in] */EventRegistrationToken token
+                        virtual HRESULT STDMETHODCALLTYPE remove_Stopped(
+                            EventRegistrationToken token
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Status(
-                            /* [retval, out] */__RPC__out ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcherStatus * status
+                        virtual HRESULT STDMETHODCALLTYPE get_Status(
+                            ABI::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcherStatus* status
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE Start(void) = 0;
                         virtual HRESULT STDMETHODCALLTYPE Stop(void) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IDnssdServiceWatcher=_uuidof(IDnssdServiceWatcher);
-                    
+                    extern MIDL_CONST_ID IID& IID_IDnssdServiceWatcher = _uuidof(IDnssdServiceWatcher);
                 } /* Dnssd */
             } /* ServiceDiscovery */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1252,20 +983,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CID
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdRegistrationResult_DEFINED
 #define RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdRegistrationResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_ServiceDiscovery_Dnssd_DnssdRegistrationResult[] = L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstanceFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1280,13 +1008,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstance_DEFINED
 #define RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstance_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstance[] = L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1294,29 +1020,25 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Class implements the following interfaces:
- *    Windows.Foundation.Collections.IVectorView_1_Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance ** Default Interface **
- *    Windows.Foundation.Collections.IIterable_1_Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance
+ *    Windows.Foundation.Collections.IVectorView`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance> ** Default Interface **
+ *    Windows.Foundation.Collections.IIterable`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstanceCollection_DEFINED
 #define RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstanceCollection_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstanceCollection[] = L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher ** Default Interface **
@@ -1325,16 +1047,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceWatcher_DEFINED
 #define RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceWatcher_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceWatcher[] = L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -1366,6 +1083,339 @@ typedef interface __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdS
 
 // Collection interface definitions
 
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
+
+typedef struct __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl;
+
+interface __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* This,
+        __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if !defined(____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIKeyValuePair_2_HSTRING_HSTRING __FIKeyValuePair_2_HSTRING_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIKeyValuePair_2_HSTRING_HSTRING;
+
+typedef struct __FIKeyValuePair_2_HSTRING_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIKeyValuePair_2_HSTRING_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIKeyValuePair_2_HSTRING_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIKeyValuePair_2_HSTRING_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIKeyValuePair_2_HSTRING_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIKeyValuePair_2_HSTRING_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIKeyValuePair_2_HSTRING_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Key)(__FIKeyValuePair_2_HSTRING_HSTRING* This,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_Value)(__FIKeyValuePair_2_HSTRING_HSTRING* This,
+        HSTRING* result);
+
+    END_INTERFACE
+} __FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
+
+interface __FIKeyValuePair_2_HSTRING_HSTRING
+{
+    CONST_VTBL struct __FIKeyValuePair_2_HSTRING_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_get_Key(This, result) \
+    ((This)->lpVtbl->get_Key(This, result))
+
+#define __FIKeyValuePair_2_HSTRING_HSTRING_get_Value(This, result) \
+    ((This)->lpVtbl->get_Value(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+#if !defined(____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING;
+
+typedef struct __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        __FIKeyValuePair_2_HSTRING_HSTRING** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        UINT32 itemsLength,
+        __FIKeyValuePair_2_HSTRING_HSTRING** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
+
+interface __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING
+{
+    CONST_VTBL struct __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+#if !defined(____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING;
+
+typedef struct __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING* This,
+        __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING** result);
+
+    END_INTERFACE
+} __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
+
+interface __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
+{
+    CONST_VTBL struct __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_INTERFACE_DEFINED__
@@ -1379,80 +1429,73 @@ typedef struct __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__C
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance** items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl;
 
 interface __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_INTERFACE_DEFINED__)
@@ -1463,70 +1506,237 @@ typedef interface __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance;
 
-typedef  struct __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl
+typedef struct __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        __FIIterator_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance** result);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl;
 
 interface __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterable_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+typedef interface __FIMapView_2_HSTRING_HSTRING __FIMapView_2_HSTRING_HSTRING;
+
+#if !defined(____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIMapView_2_HSTRING_HSTRING __FIMapView_2_HSTRING_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIMapView_2_HSTRING_HSTRING;
+
+typedef struct __FIMapView_2_HSTRING_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIMapView_2_HSTRING_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIMapView_2_HSTRING_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIMapView_2_HSTRING_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIMapView_2_HSTRING_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIMapView_2_HSTRING_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIMapView_2_HSTRING_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Lookup)(__FIMapView_2_HSTRING_HSTRING* This,
+        HSTRING key,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIMapView_2_HSTRING_HSTRING* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* HasKey)(__FIMapView_2_HSTRING_HSTRING* This,
+        HSTRING key,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* Split)(__FIMapView_2_HSTRING_HSTRING* This,
+        __FIMapView_2_HSTRING_HSTRING** first,
+        __FIMapView_2_HSTRING_HSTRING** second);
+
+    END_INTERFACE
+} __FIMapView_2_HSTRING_HSTRINGVtbl;
+
+interface __FIMapView_2_HSTRING_HSTRING
+{
+    CONST_VTBL struct __FIMapView_2_HSTRING_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIMapView_2_HSTRING_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIMapView_2_HSTRING_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIMapView_2_HSTRING_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIMapView_2_HSTRING_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIMapView_2_HSTRING_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIMapView_2_HSTRING_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIMapView_2_HSTRING_HSTRING_Lookup(This, key, result) \
+    ((This)->lpVtbl->Lookup(This, key, result))
+
+#define __FIMapView_2_HSTRING_HSTRING_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIMapView_2_HSTRING_HSTRING_HasKey(This, key, result) \
+    ((This)->lpVtbl->HasKey(This, key, result))
+
+#define __FIMapView_2_HSTRING_HSTRING_Split(This, first, second) \
+    ((This)->lpVtbl->Split(This, first, second))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+#if !defined(____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
+#define ____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIMap_2_HSTRING_HSTRING __FIMap_2_HSTRING_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIMap_2_HSTRING_HSTRING;
+
+typedef struct __FIMap_2_HSTRING_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIMap_2_HSTRING_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIMap_2_HSTRING_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIMap_2_HSTRING_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIMap_2_HSTRING_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIMap_2_HSTRING_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIMap_2_HSTRING_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Lookup)(__FIMap_2_HSTRING_HSTRING* This,
+        HSTRING key,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIMap_2_HSTRING_HSTRING* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* HasKey)(__FIMap_2_HSTRING_HSTRING* This,
+        HSTRING key,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetView)(__FIMap_2_HSTRING_HSTRING* This,
+        __FIMapView_2_HSTRING_HSTRING** result);
+    HRESULT (STDMETHODCALLTYPE* Insert)(__FIMap_2_HSTRING_HSTRING* This,
+        HSTRING key,
+        HSTRING value,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* Remove)(__FIMap_2_HSTRING_HSTRING* This,
+        HSTRING key);
+    HRESULT (STDMETHODCALLTYPE* Clear)(__FIMap_2_HSTRING_HSTRING* This);
+
+    END_INTERFACE
+} __FIMap_2_HSTRING_HSTRINGVtbl;
+
+interface __FIMap_2_HSTRING_HSTRING
+{
+    CONST_VTBL struct __FIMap_2_HSTRING_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIMap_2_HSTRING_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIMap_2_HSTRING_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIMap_2_HSTRING_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIMap_2_HSTRING_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIMap_2_HSTRING_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIMap_2_HSTRING_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIMap_2_HSTRING_HSTRING_Lookup(This, key, result) \
+    ((This)->lpVtbl->Lookup(This, key, result))
+
+#define __FIMap_2_HSTRING_HSTRING_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIMap_2_HSTRING_HSTRING_HasKey(This, key, result) \
+    ((This)->lpVtbl->HasKey(This, key, result))
+
+#define __FIMap_2_HSTRING_HSTRING_GetView(This, result) \
+    ((This)->lpVtbl->GetView(This, result))
+
+#define __FIMap_2_HSTRING_HSTRING_Insert(This, key, value, result) \
+    ((This)->lpVtbl->Insert(This, key, value, result))
+
+#define __FIMap_2_HSTRING_HSTRING_Remove(This, key) \
+    ((This)->lpVtbl->Remove(This, key))
+
+#define __FIMap_2_HSTRING_HSTRING_Clear(This) \
+    ((This)->lpVtbl->Clear(This))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_INTERFACE_DEFINED__)
@@ -1541,219 +1751,77 @@ typedef struct __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd_
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        UINT32 index,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance** items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-            /* [in] */ __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl;
 
 interface __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
-
-
 
 #endif // ____FIVectorView_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult;
-
-typedef struct __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl;
-
-interface __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_INTERFACE_DEFINED__)
@@ -1767,44 +1835,42 @@ EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CNetworking__CServiceDis
 typedef struct __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectableVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * sender,/* [in] */ __RPC__in_opt IInspectable * e);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable* This,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* sender,
+        IInspectable* args);
+
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectableVtbl;
 
 interface __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectableVtbl *lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectableVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
+#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_Invoke(This,sender,e)	\
-    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_Invoke(This, sender, args) \
+    ((This)->lpVtbl->Invoke(This, sender, args))
+
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1819,431 +1885,43 @@ EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CNetworking__CServiceDis
 typedef struct __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * e);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* This,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* sender,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* args);
+
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl;
 
 interface __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl *lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstanceVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
+#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Invoke(This,sender,e)	\
-    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#define __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_Invoke(This, sender, args) \
+    ((This)->lpVtbl->Invoke(This, sender, args))
+
 #endif /* COBJMACROS */
-
-
 
 #endif // ____FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#if !defined(____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIKeyValuePair_2_HSTRING_HSTRING __FIKeyValuePair_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIKeyValuePair_2_HSTRING_HSTRING;
-
-typedef struct __FIKeyValuePair_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This,
-            /* [out] */ __RPC__out ULONG *iidCount,
-            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *key);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt HSTRING *value);
-    END_INTERFACE
-} __FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
-
-interface __FIKeyValuePair_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIKeyValuePair_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_get_Key(This,key)	\
-    ( (This)->lpVtbl -> get_Key(This,key) ) 
-
-#define __FIKeyValuePair_2_HSTRING_HSTRING_get_Value(This,value)	\
-    ( (This)->lpVtbl -> get_Value(This,value) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING;
-
-typedef struct __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out __FIKeyValuePair_2_HSTRING_HSTRING * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __FIKeyValuePair_2_HSTRING_HSTRING * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    END_INTERFACE
-} __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
-
-interface __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING;
-
-typedef  struct __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1___FIKeyValuePair_2_HSTRING_HSTRING **first);
-
-    END_INTERFACE
-} __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl;
-
-interface __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterable_1___FIKeyValuePair_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-
-#if !defined(____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIMapView_2_HSTRING_HSTRING __FIMapView_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIMapView_2_HSTRING_HSTRING;
-
-typedef struct __FIMapView_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,/* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in HSTRING key,
-        /* [retval][out] */ __RPC__deref_out_opt HSTRING *value);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out unsigned int *size);
-    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This, /* [in] */ __RPC__in HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
-    HRESULT ( STDMETHODCALLTYPE *Split )(__RPC__in __FIMapView_2_HSTRING_HSTRING * This,/* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING **firstPartition,
-        /* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING **secondPartition);
-    END_INTERFACE
-} __FIMapView_2_HSTRING_HSTRINGVtbl;
-
-interface __FIMapView_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIMapView_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIMapView_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIMapView_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIMapView_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIMapView_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIMapView_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIMapView_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIMapView_2_HSTRING_HSTRING_Lookup(This,key,value)	\
-    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
-#define __FIMapView_2_HSTRING_HSTRING_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-#define __FIMapView_2_HSTRING_HSTRING_HasKey(This,key,found)	\
-    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
-#define __FIMapView_2_HSTRING_HSTRING_Split(This,firstPartition,secondPartition)	\
-    ( (This)->lpVtbl -> Split(This,firstPartition,secondPartition) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIMapView_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-
-#if !defined(____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__)
-#define ____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIMap_2_HSTRING_HSTRING __FIMap_2_HSTRING_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIMap_2_HSTRING_HSTRING;
-
-typedef struct __FIMap_2_HSTRING_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMap_2_HSTRING_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMap_2_HSTRING_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
-        /* [in] */ HSTRING key,
-        /* [retval][out] */ __RPC__deref_out_opt HSTRING **value);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__out unsigned int *size);
-    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [in] */ HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
-    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIMap_2_HSTRING_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_HSTRING **view);
-    HRESULT ( STDMETHODCALLTYPE *Insert )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,
-        /* [in] */ HSTRING key,
-        /* [in] */ __RPC__in_opt HSTRING *value,
-        /* [retval][out] */ __RPC__out boolean *replaced);
-    HRESULT ( STDMETHODCALLTYPE *Remove )(__RPC__in __FIMap_2_HSTRING_HSTRING * This,/* [in] */ HSTRING key);
-    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIMap_2_HSTRING_HSTRING * This);
-    END_INTERFACE
-} __FIMap_2_HSTRING_HSTRINGVtbl;
-
-interface __FIMap_2_HSTRING_HSTRING
-{
-    CONST_VTBL struct __FIMap_2_HSTRING_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIMap_2_HSTRING_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIMap_2_HSTRING_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIMap_2_HSTRING_HSTRING_Lookup(This,key,value)	\
-    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_HasKey(This,key,found)	\
-    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_GetView(This,view)	\
-    ( (This)->lpVtbl -> GetView(This,view) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_Insert(This,key,value,replaced)	\
-    ( (This)->lpVtbl -> Insert(This,key,value,replaced) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_Remove(This,key)	\
-    ( (This)->lpVtbl -> Remove(This,key) ) 
-
-#define __FIMap_2_HSTRING_HSTRING_Clear(This)	\
-    ( (This)->lpVtbl -> Clear(This) ) 
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIMap_2_HSTRING_HSTRING_INTERFACE_DEFINED__
-
-
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
@@ -2251,19 +1929,11 @@ typedef interface __x_ABI_CWindows_CFoundation_CIStringable __x_ABI_CWindows_CFo
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 
-
-
-
-
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter;
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
-
-
-
-
 
 #ifndef ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
@@ -2271,15 +1941,11 @@ typedef interface __x_ABI_CWindows_CNetworking_CIHostName __x_ABI_CWindows_CNetw
 
 #endif // ____x_ABI_CWindows_CNetworking_CIHostName_FWD_DEFINED__
 
-
-
-
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket;
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket_FWD_DEFINED__
-
 
 #ifndef ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
@@ -2287,33 +1953,9 @@ typedef interface __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener _
 
 #endif // ____x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener_FWD_DEFINED__
 
-
-
-
-
-
 typedef enum __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationStatus __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationStatus;
 
-
 typedef enum __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcherStatus __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcherStatus;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -2321,11 +1963,8 @@ typedef enum __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdService
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationStatus
 {
     DnssdRegistrationStatus_Success = 0,
@@ -2335,18 +1974,14 @@ enum __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationSta
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcherStatus
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcherStatus
 {
     DnssdServiceWatcherStatus_Created = 0,
@@ -2358,113 +1993,84 @@ enum __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcherS
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Interface Windows.Networking.ServiceDiscovery.Dnssd.IDnssdRegistrationResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_ServiceDiscovery_Dnssd_IDnssdRegistrationResult[] = L"Windows.Networking.ServiceDiscovery.Dnssd.IDnssdRegistrationResult";
-/* [object, uuid("3D786AD2-E606-5350-73EA-7E97F066162F"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Status)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult* This,
+        enum __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationStatus* value);
+    HRESULT (STDMETHODCALLTYPE* get_IPAddress)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult* This,
+        __x_ABI_CWindows_CNetworking_CIHostName** value);
+    HRESULT (STDMETHODCALLTYPE* get_HasInstanceNameChanged)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult* This,
+        boolean* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Status )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationStatus * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IPAddress )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CNetworking_CIHostName * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HasInstanceNameChanged )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResultVtbl;
 
 interface __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult
 {
-    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResultVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_get_Status(This,value) \
-    ( (This)->lpVtbl->get_Status(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_get_Status(This, value) \
+    ((This)->lpVtbl->get_Status(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_get_IPAddress(This,value) \
-    ( (This)->lpVtbl->get_IPAddress(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_get_IPAddress(This, value) \
+    ((This)->lpVtbl->get_IPAddress(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_get_HasInstanceNameChanged(This,value) \
-    ( (This)->lpVtbl->get_HasInstanceNameChanged(This,value) )
-
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_get_HasInstanceNameChanged(This, value) \
+    ((This)->lpVtbl->get_HasInstanceNameChanged(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdRegistrationResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2472,196 +2078,144 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CID
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_ServiceDiscovery_Dnssd_IDnssdServiceInstance[] = L"Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance";
-/* [object, uuid("E246DB7E-98A5-4CA1-B9E4-C253D33C35FF"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_DnssdServiceInstanceName)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* put_DnssdServiceInstanceName)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_HostName)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        __x_ABI_CWindows_CNetworking_CIHostName** value);
+    HRESULT (STDMETHODCALLTYPE* put_HostName)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        __x_ABI_CWindows_CNetworking_CIHostName* value);
+    HRESULT (STDMETHODCALLTYPE* get_Port)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        UINT16* value);
+    HRESULT (STDMETHODCALLTYPE* put_Port)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        UINT16 value);
+    HRESULT (STDMETHODCALLTYPE* get_Priority)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        UINT16* value);
+    HRESULT (STDMETHODCALLTYPE* put_Priority)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        UINT16 value);
+    HRESULT (STDMETHODCALLTYPE* get_Weight)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        UINT16* value);
+    HRESULT (STDMETHODCALLTYPE* put_Weight)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        UINT16 value);
+    HRESULT (STDMETHODCALLTYPE* get_TextAttributes)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        __FIMap_2_HSTRING_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* RegisterStreamSocketListenerAsync1)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener* socket,
+        __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult** result);
+    HRESULT (STDMETHODCALLTYPE* RegisterStreamSocketListenerAsync2)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener* socket,
+        __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter* adapter,
+        __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult** result);
+    HRESULT (STDMETHODCALLTYPE* RegisterDatagramSocketAsync1)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket* socket,
+        __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult** result);
+    HRESULT (STDMETHODCALLTYPE* RegisterDatagramSocketAsync2)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance* This,
+        __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket* socket,
+        __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter* adapter,
+        __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult** result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DnssdServiceInstanceName )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_DnssdServiceInstanceName )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [in] */__RPC__in HSTRING value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HostName )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CNetworking_CIHostName * * value
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_HostName )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CNetworking_CIHostName * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Port )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [retval, out] */__RPC__out UINT16 * value
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Port )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [in] */UINT16 value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Priority )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [retval, out] */__RPC__out UINT16 * value
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Priority )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [in] */UINT16 value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Weight )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [retval, out] */__RPC__out UINT16 * value
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Weight )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [in] */UINT16 value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TextAttributes )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIMap_2_HSTRING_HSTRING * * value
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *RegisterStreamSocketListenerAsync1 )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener * socket,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * * result
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *RegisterStreamSocketListenerAsync2 )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIStreamSocketListener * socket,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter * adapter,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * * result
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *RegisterDatagramSocketAsync1 )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket * socket,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * * result
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *RegisterDatagramSocketAsync2 )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CNetworking_CSockets_CIDatagramSocket * socket,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter * adapter,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdRegistrationResult * * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceVtbl;
 
 interface __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance
 {
-    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_DnssdServiceInstanceName(This,value) \
-    ( (This)->lpVtbl->get_DnssdServiceInstanceName(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_DnssdServiceInstanceName(This, value) \
+    ((This)->lpVtbl->get_DnssdServiceInstanceName(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_DnssdServiceInstanceName(This,value) \
-    ( (This)->lpVtbl->put_DnssdServiceInstanceName(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_DnssdServiceInstanceName(This, value) \
+    ((This)->lpVtbl->put_DnssdServiceInstanceName(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_HostName(This,value) \
-    ( (This)->lpVtbl->get_HostName(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_HostName(This, value) \
+    ((This)->lpVtbl->get_HostName(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_HostName(This,value) \
-    ( (This)->lpVtbl->put_HostName(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_HostName(This, value) \
+    ((This)->lpVtbl->put_HostName(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_Port(This,value) \
-    ( (This)->lpVtbl->get_Port(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_Port(This, value) \
+    ((This)->lpVtbl->get_Port(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_Port(This,value) \
-    ( (This)->lpVtbl->put_Port(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_Port(This, value) \
+    ((This)->lpVtbl->put_Port(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_Priority(This,value) \
-    ( (This)->lpVtbl->get_Priority(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_Priority(This, value) \
+    ((This)->lpVtbl->get_Priority(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_Priority(This,value) \
-    ( (This)->lpVtbl->put_Priority(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_Priority(This, value) \
+    ((This)->lpVtbl->put_Priority(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_Weight(This,value) \
-    ( (This)->lpVtbl->get_Weight(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_Weight(This, value) \
+    ((This)->lpVtbl->get_Weight(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_Weight(This,value) \
-    ( (This)->lpVtbl->put_Weight(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_put_Weight(This, value) \
+    ((This)->lpVtbl->put_Weight(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_TextAttributes(This,value) \
-    ( (This)->lpVtbl->get_TextAttributes(This,value) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_get_TextAttributes(This, value) \
+    ((This)->lpVtbl->get_TextAttributes(This, value))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_RegisterStreamSocketListenerAsync1(This,socket,result) \
-    ( (This)->lpVtbl->RegisterStreamSocketListenerAsync1(This,socket,result) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_RegisterStreamSocketListenerAsync1(This, socket, result) \
+    ((This)->lpVtbl->RegisterStreamSocketListenerAsync1(This, socket, result))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_RegisterStreamSocketListenerAsync2(This,socket,adapter,result) \
-    ( (This)->lpVtbl->RegisterStreamSocketListenerAsync2(This,socket,adapter,result) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_RegisterStreamSocketListenerAsync2(This, socket, adapter, result) \
+    ((This)->lpVtbl->RegisterStreamSocketListenerAsync2(This, socket, adapter, result))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_RegisterDatagramSocketAsync1(This,socket,result) \
-    ( (This)->lpVtbl->RegisterDatagramSocketAsync1(This,socket,result) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_RegisterDatagramSocketAsync1(This, socket, result) \
+    ((This)->lpVtbl->RegisterDatagramSocketAsync1(This, socket, result))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_RegisterDatagramSocketAsync2(This,socket,adapter,result) \
-    ( (This)->lpVtbl->RegisterDatagramSocketAsync2(This,socket,adapter,result) )
-
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_RegisterDatagramSocketAsync2(This, socket, adapter, result) \
+    ((This)->lpVtbl->RegisterDatagramSocketAsync2(This, socket, adapter, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2669,95 +2223,71 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CID
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_ServiceDiscovery_Dnssd_IDnssdServiceInstanceFactory[] = L"Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstanceFactory";
-/* [object, uuid("6CB061A1-C478-4331-9684-4AF2186C0A2B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactoryVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory* This,
+        HSTRING dnssdServiceInstanceName,
+        __x_ABI_CWindows_CNetworking_CIHostName* hostName,
+        UINT16 port,
+        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance** result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *Create )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory * This,
-        /* [in] */__RPC__in HSTRING dnssdServiceInstanceName,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CNetworking_CIHostName * hostName,
-        /* [in] */UINT16 port,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance * * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactoryVtbl;
 
 interface __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory
 {
-    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactoryVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactoryVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_Create(This,dnssdServiceInstanceName,hostName,port,result) \
-    ( (This)->lpVtbl->Create(This,dnssdServiceInstanceName,hostName,port,result) )
-
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_Create(This, dnssdServiceInstanceName, hostName, port, result) \
+    ((This)->lpVtbl->Create(This, dnssdServiceInstanceName, hostName, port, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstanceFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2765,156 +2295,115 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CID
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Networking_ServiceDiscovery_Dnssd_IDnssdServiceWatcher[] = L"Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher";
-/* [object, uuid("CC34D9C1-DB7D-4B69-983D-C6F83F205682"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcherVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* add_Added)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance* handler,
+        EventRegistrationToken* token);
+    HRESULT (STDMETHODCALLTYPE* remove_Added)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        EventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_EnumerationCompleted)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable* handler,
+        EventRegistrationToken* token);
+    HRESULT (STDMETHODCALLTYPE* remove_EnumerationCompleted)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        EventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_Stopped)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable* handler,
+        EventRegistrationToken* token);
+    HRESULT (STDMETHODCALLTYPE* remove_Stopped)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        EventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_Status)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This,
+        enum __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcherStatus* status);
+    HRESULT (STDMETHODCALLTYPE* Start)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This);
+    HRESULT (STDMETHODCALLTYPE* Stop)(__x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher* This);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_Added )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceInstance * handler,
-        /* [retval, out] */__RPC__out EventRegistrationToken * token
-        );
-    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_Added )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-        /* [in] */EventRegistrationToken token
-        );
-    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_EnumerationCompleted )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * handler,
-        /* [retval, out] */__RPC__out EventRegistrationToken * token
-        );
-    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_EnumerationCompleted )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-        /* [in] */EventRegistrationToken token
-        );
-    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_Stopped )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CNetworking__CServiceDiscovery__CDnssd__CDnssdServiceWatcher_IInspectable * handler,
-        /* [retval, out] */__RPC__out EventRegistrationToken * token
-        );
-    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_Stopped )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-        /* [in] */EventRegistrationToken token
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Status )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcherStatus * status
-        );
-    HRESULT ( STDMETHODCALLTYPE *Start )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This
-        );
-    HRESULT ( STDMETHODCALLTYPE *Stop )(
-        __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher * This
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcherVtbl;
 
 interface __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher
 {
-    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcherVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcherVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_add_Added(This,handler,token) \
-    ( (This)->lpVtbl->add_Added(This,handler,token) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_add_Added(This, handler, token) \
+    ((This)->lpVtbl->add_Added(This, handler, token))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_remove_Added(This,token) \
-    ( (This)->lpVtbl->remove_Added(This,token) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_remove_Added(This, token) \
+    ((This)->lpVtbl->remove_Added(This, token))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_add_EnumerationCompleted(This,handler,token) \
-    ( (This)->lpVtbl->add_EnumerationCompleted(This,handler,token) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_add_EnumerationCompleted(This, handler, token) \
+    ((This)->lpVtbl->add_EnumerationCompleted(This, handler, token))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_remove_EnumerationCompleted(This,token) \
-    ( (This)->lpVtbl->remove_EnumerationCompleted(This,token) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_remove_EnumerationCompleted(This, token) \
+    ((This)->lpVtbl->remove_EnumerationCompleted(This, token))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_add_Stopped(This,handler,token) \
-    ( (This)->lpVtbl->add_Stopped(This,handler,token) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_add_Stopped(This, handler, token) \
+    ((This)->lpVtbl->add_Stopped(This, handler, token))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_remove_Stopped(This,token) \
-    ( (This)->lpVtbl->remove_Stopped(This,token) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_remove_Stopped(This, token) \
+    ((This)->lpVtbl->remove_Stopped(This, token))
 
-#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_get_Status(This,status) \
-    ( (This)->lpVtbl->get_Status(This,status) )
+#define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_get_Status(This, status) \
+    ((This)->lpVtbl->get_Status(This, status))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_Start(This) \
-    ( (This)->lpVtbl->Start(This) )
+    ((This)->lpVtbl->Start(This))
 
 #define __x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_Stop(This) \
-    ( (This)->lpVtbl->Stop(This) )
-
+    ((This)->lpVtbl->Stop(This))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher;
 #endif /* !defined(____x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2929,20 +2418,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CNetworking_CServiceDiscovery_CDnssd_CID
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdRegistrationResult_DEFINED
 #define RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdRegistrationResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_ServiceDiscovery_Dnssd_DnssdRegistrationResult[] = L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstanceFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2957,13 +2443,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstance_DEFINED
 #define RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstance_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstance[] = L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2971,29 +2455,25 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Class implements the following interfaces:
- *    Windows.Foundation.Collections.IVectorView_1_Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance ** Default Interface **
- *    Windows.Foundation.Collections.IIterable_1_Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance
+ *    Windows.Foundation.Collections.IVectorView`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance> ** Default Interface **
+ *    Windows.Foundation.Collections.IIterable`1<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstanceCollection_DEFINED
 #define RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstanceCollection_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceInstanceCollection[] = L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstanceCollection";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher ** Default Interface **
@@ -3002,16 +2482,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceWatcher_DEFINED
 #define RUNTIMECLASS_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceWatcher_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Networking_ServiceDiscovery_Dnssd_DnssdServiceWatcher[] = L"Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

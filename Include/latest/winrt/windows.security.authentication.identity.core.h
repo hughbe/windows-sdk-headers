@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.security.authentication.identity.core.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,33 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -146,7 +122,8 @@ namespace ABI {
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_FWD_DEFINED__
@@ -164,7 +141,8 @@ namespace ABI {
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticatorStatics
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_FWD_DEFINED__
@@ -182,7 +160,8 @@ namespace ABI {
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_FWD_DEFINED__
@@ -200,7 +179,8 @@ namespace ABI {
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_FWD_DEFINED__
@@ -218,7 +198,8 @@ namespace ABI {
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_FWD_DEFINED__
@@ -236,7 +217,8 @@ namespace ABI {
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_FWD_DEFINED__
@@ -250,154 +232,13 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        class MicrosoftAccountMultiFactorSessionInfo;
-                    } /* Core */
-                } /* Identity */
-            } /* Authentication */
-        } /* Security */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-#ifndef DEF___FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
-#define DEF___FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("fd6d2ade-0fd3-5cd0-b86e-d24ad9a2092c"))
-IIterator<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t;
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>
-//#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-#ifndef DEF___FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
-#define DEF___FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("85a662c8-8a5d-59a8-9f73-ee237393c55c"))
-IIterable<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t;
-#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>
-//#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-#ifndef DEF___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
-#define DEF___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("6abe486b-ea5e-5fda-9121-79d8a785c465"))
-IVectorView<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t;
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>
-//#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-namespace ABI {
-    namespace Windows {
-        namespace Security {
-            namespace Authentication {
-                namespace Identity {
-                    namespace Core {
                         class MicrosoftAccountMultiFactorGetSessionsResult;
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("cecbb0ca-0a27-57d4-a35d-4998f199dac9"))
-IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -407,11 +248,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("544cc4e9-a3da-5398-a308-e332a58961f6"))
-IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>> 
+IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -419,14 +260,37 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::Microsof
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("cecbb0ca-0a27-57d4-a35d-4998f199dac9"))
+IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorGetSessionsResult*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -441,40 +305,8 @@ namespace ABI {
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("02e84540-f4a1-589f-9360-a0502e6dc9c0"))
-IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -484,11 +316,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("ae63588e-1fc2-58a3-af36-6f67b8922be7"))
-IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>> 
+IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -496,14 +328,37 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::Microsof
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("02e84540-f4a1-589f-9360-a0502e6dc9c0"))
+IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorOneTimeCodedInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -513,43 +368,15 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        enum MicrosoftAccountMultiFactorServiceResponse : int;
+                        typedef enum MicrosoftAccountMultiFactorServiceResponse : int MicrosoftAccountMultiFactorServiceResponse;
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("8d7f8240-81cf-5896-95fa-e7b223f769f9"))
-IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE */
-
-
-
-
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 #ifndef DEF___FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE
 #define DEF___FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE
@@ -557,11 +384,11 @@ typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authenticat
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("05953b8e-5adb-51b9-a94a-ad030030b8e3"))
-IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> : IAsyncOperation_impl<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> 
+IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> : IAsyncOperation_impl<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -569,15 +396,39 @@ IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Core::Mic
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("8d7f8240-81cf-5896-95fa-e7b223f769f9"))
+IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 namespace ABI {
     namespace Windows {
@@ -590,40 +441,8 @@ namespace ABI {
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("6cc53e8c-d0e4-5ded-94f4-7c73b132d2a4"))
-IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -633,11 +452,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("989f4c21-ef69-56ad-ba8c-e5d25a3c624e"))
-IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>> 
+IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -645,14 +464,37 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::Microsof
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("6cc53e8c-d0e4-5ded-94f4-7c73b132d2a4"))
+IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -663,11 +505,11 @@ typedef IAsyncOperation<ABI::Windows::Security::Authentication::Identity::Core::
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
-IIterator<HSTRING> : IIterator_impl<HSTRING> 
+IIterator<HSTRING> : IIterator_impl<HSTRING>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterator`1<String>"; 
+        return L"Windows.Foundation.Collections.IIterator`1<String>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -675,14 +517,10 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
-//#define __FIIterator_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterator<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_HSTRING_USE */
-
 
 
 
@@ -692,11 +530,11 @@ typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
-IIterable<HSTRING> : IIterable_impl<HSTRING> 
+IIterable<HSTRING> : IIterable_impl<HSTRING>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterable`1<String>"; 
+        return L"Windows.Foundation.Collections.IIterable`1<String>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -704,15 +542,79 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
-//#define __FIIterable_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterable<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_HSTRING_USE */
 
 
+namespace ABI {
+    namespace Windows {
+        namespace Security {
+            namespace Authentication {
+                namespace Identity {
+                    namespace Core {
+                        class MicrosoftAccountMultiFactorSessionInfo;
+                    } /* Core */
+                } /* Identity */
+            } /* Authentication */
+        } /* Security */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#ifndef DEF___FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
+#define DEF___FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("fd6d2ade-0fd3-5cd0-b86e-d24ad9a2092c"))
+IIterator<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t;
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#ifndef DEF___FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
+#define DEF___FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("85a662c8-8a5d-59a8-9f73-ee237393c55c"))
+IIterable<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t;
+#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 
 #ifndef DEF___FIVectorView_1_HSTRING_USE
@@ -721,11 +623,11 @@ typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
-IVectorView<HSTRING> : IVectorView_impl<HSTRING> 
+IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<String>"; 
+        return L"Windows.Foundation.Collections.IVectorView`1<String>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -733,38 +635,54 @@ IVectorView<HSTRING> : IVectorView_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 #define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
-//#define __FIVectorView_1_HSTRING_t ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_HSTRING_USE */
 
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+#ifndef DEF___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
+#define DEF___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("6abe486b-ea5e-5fda-9121-79d8a785c465"))
+IVectorView<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*, ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo*> __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t;
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct DateTime DateTime;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct TimeSpan TimeSpan;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -772,14 +690,13 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        
                         typedef enum MicrosoftAccountMultiFactorAuthenticationType : int MicrosoftAccountMultiFactorAuthenticationType;
-                        
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -787,29 +704,13 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        
-                        typedef enum MicrosoftAccountMultiFactorServiceResponse : int MicrosoftAccountMultiFactorServiceResponse;
-                        
-                    } /* Core */
-                } /* Identity */
-            } /* Authentication */
-        } /* Security */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Security {
-            namespace Authentication {
-                namespace Identity {
-                    namespace Core {
-                        
                         typedef enum MicrosoftAccountMultiFactorSessionApprovalStatus : int MicrosoftAccountMultiFactorSessionApprovalStatus;
-                        
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -817,20 +718,13 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        
                         typedef enum MicrosoftAccountMultiFactorSessionAuthenticationStatus : int MicrosoftAccountMultiFactorSessionAuthenticationStatus;
-                        
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -843,24 +737,8 @@ namespace ABI {
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -868,9 +746,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
@@ -878,20 +754,18 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [v1_enum, contract] */
                         enum MicrosoftAccountMultiFactorAuthenticationType : int
                         {
                             MicrosoftAccountMultiFactorAuthenticationType_User = 0,
                             MicrosoftAccountMultiFactorAuthenticationType_Device = 1,
                         };
-                        
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -899,9 +773,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
@@ -909,7 +781,6 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [v1_enum, contract] */
                         enum MicrosoftAccountMultiFactorServiceResponse : int
                         {
                             MicrosoftAccountMultiFactorServiceResponse_Success = 0,
@@ -935,14 +806,13 @@ namespace ABI {
                             MicrosoftAccountMultiFactorServiceResponse_UIRequired = 20,
                             MicrosoftAccountMultiFactorServiceResponse_DeviceIdChanged = 21,
                         };
-                        
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -950,9 +820,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
@@ -960,21 +828,19 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [v1_enum, contract] */
                         enum MicrosoftAccountMultiFactorSessionApprovalStatus : int
                         {
                             MicrosoftAccountMultiFactorSessionApprovalStatus_Pending = 0,
                             MicrosoftAccountMultiFactorSessionApprovalStatus_Approved = 1,
                             MicrosoftAccountMultiFactorSessionApprovalStatus_Denied = 2,
                         };
-                        
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -982,9 +848,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
@@ -992,20 +856,18 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [v1_enum, contract] */
                         enum MicrosoftAccountMultiFactorSessionAuthenticationStatus : int
                         {
                             MicrosoftAccountMultiFactorSessionAuthenticationStatus_Authenticated = 0,
                             MicrosoftAccountMultiFactorSessionAuthenticationStatus_Unauthenticated = 1,
                         };
-                        
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1013,9 +875,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1028,76 +888,73 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [object, uuid("0FD340A5-F574-4320-A08E-0A19A82322AA"), exclusiveto, contract] */
-                        MIDL_INTERFACE("0FD340A5-F574-4320-A08E-0A19A82322AA")
+                        MIDL_INTERFACE("0fd340a5-f574-4320-a08e-0a19a82322aa")
                         IMicrosoftAccountMultiFactorAuthenticationManager : public IInspectable
                         {
                         public:
                             virtual HRESULT STDMETHODCALLTYPE GetOneTimePassCodeAsync(
-                                /* [in] */__RPC__in HSTRING userAccountId,
-                                /* [in] */UINT32 codeLength,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * * asyncOperation
+                                HSTRING userAccountId,
+                                UINT32 codeLength,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo** asyncOperation
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE AddDeviceAsync(
-                                /* [in] */__RPC__in HSTRING userAccountId,
-                                /* [in] */__RPC__in HSTRING authenticationToken,
-                                /* [in] */__RPC__in HSTRING wnsChannelId,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
+                                HSTRING userAccountId,
+                                HSTRING authenticationToken,
+                                HSTRING wnsChannelId,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE RemoveDeviceAsync(
-                                /* [in] */__RPC__in HSTRING userAccountId,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
+                                HSTRING userAccountId,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE UpdateWnsChannelAsync(
-                                /* [in] */__RPC__in HSTRING userAccountId,
-                                /* [in] */__RPC__in HSTRING channelUri,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
+                                HSTRING userAccountId,
+                                HSTRING channelUri,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetSessionsAsync(
-                                /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * userAccountIdList,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * * asyncOperation
+                                __FIIterable_1_HSTRING* userAccountIdList,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult** asyncOperation
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetSessionsAndUnregisteredAccountsAsync(
-                                /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * userAccountIdList,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * * asyncOperation
+                                __FIIterable_1_HSTRING* userAccountIdList,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo** asyncOperation
                                 ) = 0;
-                            /* [overload] */virtual HRESULT STDMETHODCALLTYPE ApproveSessionUsingAuthSessionInfoAsync(
-                                /* [in] */ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus sessionAuthentictionStatus,
-                                /* [in] */__RPC__in_opt ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo * authenticationSessionInfo,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
+                            virtual HRESULT STDMETHODCALLTYPE ApproveSessionUsingAuthSessionInfoAsync(
+                                ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus sessionAuthentictionStatus,
+                                ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo* authenticationSessionInfo,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation
                                 ) = 0;
-                            /* [overload] */virtual HRESULT STDMETHODCALLTYPE ApproveSessionAsync(
-                                /* [in] */ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus sessionAuthentictionStatus,
-                                /* [in] */__RPC__in HSTRING userAccountId,
-                                /* [in] */__RPC__in HSTRING sessionId,
-                                /* [in] */ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType sessionAuthenticationType,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
+                            virtual HRESULT STDMETHODCALLTYPE ApproveSessionAsync(
+                                ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus sessionAuthentictionStatus,
+                                HSTRING userAccountId,
+                                HSTRING sessionId,
+                                ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType sessionAuthenticationType,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation
                                 ) = 0;
-                            /* [overload] */virtual HRESULT STDMETHODCALLTYPE DenySessionUsingAuthSessionInfoAsync(
-                                /* [in] */__RPC__in_opt ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo * authenticationSessionInfo,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
+                            virtual HRESULT STDMETHODCALLTYPE DenySessionUsingAuthSessionInfoAsync(
+                                ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorSessionInfo* authenticationSessionInfo,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation
                                 ) = 0;
-                            /* [overload] */virtual HRESULT STDMETHODCALLTYPE DenySessionAsync(
-                                /* [in] */__RPC__in HSTRING userAccountId,
-                                /* [in] */__RPC__in HSTRING sessionId,
-                                /* [in] */ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType sessionAuthenticationType,
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
+                            virtual HRESULT STDMETHODCALLTYPE DenySessionAsync(
+                                HSTRING userAccountId,
+                                HSTRING sessionId,
+                                ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType sessionAuthenticationType,
+                                __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorAuthenticationManager=_uuidof(IMicrosoftAccountMultiFactorAuthenticationManager);
-                        
+                        extern MIDL_CONST_ID IID& IID_IMicrosoftAccountMultiFactorAuthenticationManager = _uuidof(IMicrosoftAccountMultiFactorAuthenticationManager);
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1105,9 +962,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1120,29 +975,26 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [object, uuid("D964C2E6-F446-4C71-8B79-6EA4024AA9B8"), exclusiveto, contract] */
-                        MIDL_INTERFACE("D964C2E6-F446-4C71-8B79-6EA4024AA9B8")
+                        MIDL_INTERFACE("d964c2e6-f446-4c71-8b79-6ea4024aa9b8")
                         IMicrosoftAccountMultiFactorAuthenticatorStatics : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Current(
-                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Current(
+                                ABI::Windows::Security::Authentication::Identity::Core::IMicrosoftAccountMultiFactorAuthenticationManager** value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorAuthenticatorStatics=_uuidof(IMicrosoftAccountMultiFactorAuthenticatorStatics);
-                        
+                        extern MIDL_CONST_ID IID& IID_IMicrosoftAccountMultiFactorAuthenticatorStatics = _uuidof(IMicrosoftAccountMultiFactorAuthenticatorStatics);
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1150,9 +1002,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1165,32 +1015,29 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [object, uuid("4E23A9A0-E9FA-497A-95DE-6D5747BF974C"), exclusiveto, contract] */
-                        MIDL_INTERFACE("4E23A9A0-E9FA-497A-95DE-6D5747BF974C")
+                        MIDL_INTERFACE("4e23a9a0-e9fa-497a-95de-6d5747bf974c")
                         IMicrosoftAccountMultiFactorGetSessionsResult : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Sessions(
-                                /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Sessions(
+                                __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo** value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ServiceResponse(
-                                /* [retval, out] */__RPC__out ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse * value
+                            virtual HRESULT STDMETHODCALLTYPE get_ServiceResponse(
+                                ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorGetSessionsResult=_uuidof(IMicrosoftAccountMultiFactorGetSessionsResult);
-                        
+                        extern MIDL_CONST_ID IID& IID_IMicrosoftAccountMultiFactorGetSessionsResult = _uuidof(IMicrosoftAccountMultiFactorGetSessionsResult);
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1198,9 +1045,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1213,38 +1058,35 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [object, uuid("82BA264B-D87C-4668-A976-40CFAE547D08"), exclusiveto, contract] */
-                        MIDL_INTERFACE("82BA264B-D87C-4668-A976-40CFAE547D08")
+                        MIDL_INTERFACE("82ba264b-d87c-4668-a976-40cfae547d08")
                         IMicrosoftAccountMultiFactorOneTimeCodedInfo : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Code(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Code(
+                                HSTRING* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TimeInterval(
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
+                            virtual HRESULT STDMETHODCALLTYPE get_TimeInterval(
+                                ABI::Windows::Foundation::TimeSpan* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TimeToLive(
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
+                            virtual HRESULT STDMETHODCALLTYPE get_TimeToLive(
+                                ABI::Windows::Foundation::TimeSpan* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ServiceResponse(
-                                /* [retval, out] */__RPC__out ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse * value
+                            virtual HRESULT STDMETHODCALLTYPE get_ServiceResponse(
+                                ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorOneTimeCodedInfo=_uuidof(IMicrosoftAccountMultiFactorOneTimeCodedInfo);
-                        
+                        extern MIDL_CONST_ID IID& IID_IMicrosoftAccountMultiFactorOneTimeCodedInfo = _uuidof(IMicrosoftAccountMultiFactorOneTimeCodedInfo);
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1252,9 +1094,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1267,47 +1107,44 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [object, uuid("5F7EABB4-A278-4635-B765-B494EB260AF4"), exclusiveto, contract] */
-                        MIDL_INTERFACE("5F7EABB4-A278-4635-B765-B494EB260AF4")
+                        MIDL_INTERFACE("5f7eabb4-a278-4635-b765-b494eb260af4")
                         IMicrosoftAccountMultiFactorSessionInfo : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UserAccountId(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_UserAccountId(
+                                HSTRING* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SessionId(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_SessionId(
+                                HSTRING* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisplaySessionId(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_DisplaySessionId(
+                                HSTRING* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ApprovalStatus(
-                                /* [retval, out] */__RPC__out ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus * value
+                            virtual HRESULT STDMETHODCALLTYPE get_ApprovalStatus(
+                                ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionApprovalStatus* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AuthenticationType(
-                                /* [retval, out] */__RPC__out ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType * value
+                            virtual HRESULT STDMETHODCALLTYPE get_AuthenticationType(
+                                ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RequestTime(
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
+                            virtual HRESULT STDMETHODCALLTYPE get_RequestTime(
+                                ABI::Windows::Foundation::DateTime* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExpirationTime(
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
+                            virtual HRESULT STDMETHODCALLTYPE get_ExpirationTime(
+                                ABI::Windows::Foundation::DateTime* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorSessionInfo=_uuidof(IMicrosoftAccountMultiFactorSessionInfo);
-                        
+                        extern MIDL_CONST_ID IID& IID_IMicrosoftAccountMultiFactorSessionInfo = _uuidof(IMicrosoftAccountMultiFactorSessionInfo);
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1315,9 +1152,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1330,42 +1165,38 @@ namespace ABI {
             namespace Authentication {
                 namespace Identity {
                     namespace Core {
-                        /* [object, uuid("AA7EC5FB-DA3F-4088-A20D-5618AFADB2E5"), exclusiveto, contract] */
-                        MIDL_INTERFACE("AA7EC5FB-DA3F-4088-A20D-5618AFADB2E5")
+                        MIDL_INTERFACE("aa7ec5fb-da3f-4088-a20d-5618afadb2e5")
                         IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Sessions(
-                                /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Sessions(
+                                __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo** value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_UnregisteredAccounts(
-                                /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_UnregisteredAccounts(
+                                __FIVectorView_1_HSTRING** value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ServiceResponse(
-                                /* [retval, out] */__RPC__out ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse * value
+                            virtual HRESULT STDMETHODCALLTYPE get_ServiceResponse(
+                                ABI::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorServiceResponse* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo=_uuidof(IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo);
-                        
+                        extern MIDL_CONST_ID IID& IID_IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo = _uuidof(IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo);
                     } /* Core */
                 } /* Identity */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticatorStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1379,20 +1210,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorAuthenticationManager_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorAuthenticationManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorAuthenticationManager[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult ** Default Interface **
@@ -1403,20 +1231,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorGetSessionsResult_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorGetSessionsResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorGetSessionsResult[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo ** Default Interface **
@@ -1427,20 +1252,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorOneTimeCodedInfo_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorOneTimeCodedInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorOneTimeCodedInfo[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo ** Default Interface **
@@ -1451,20 +1273,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorSessionInfo_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorSessionInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorSessionInfo[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ** Default Interface **
@@ -1475,17 +1294,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -1529,328 +1342,7 @@ typedef interface __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIM
 
 // Collection interface definitions
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-#if !defined(____FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__)
-#define ____FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
-
-typedef struct __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    END_INTERFACE
-} __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl;
-
-interface __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo
-{
-    CONST_VTBL struct __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-#if !defined(____FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__)
-#define ____FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
-
-typedef  struct __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo **first);
-
-    END_INTERFACE
-} __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl;
-
-interface __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo
-{
-    CONST_VTBL struct __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-#if !defined(____FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
-
-typedef struct __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-            /* [in] */ __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
-} __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl;
-
-interface __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo
-{
-    CONST_VTBL struct __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__
-
 typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__)
@@ -1864,108 +1356,118 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSecurity__CAuthentication_
 typedef struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult** result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult * *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl;
 
 interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
 
-
 #endif // ____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo;
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo;
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult;
 
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* This,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult* asyncInfo,
+        AsyncStatus asyncStatus);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo *asyncInfo, /* [in] */ AsyncStatus status);
     END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl;
+} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl;
 
-interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo
+interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult
 {
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
 #endif /* COBJMACROS */
 
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__
-
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo;
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__)
@@ -1979,107 +1481,122 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSecurity__CAuthentication_
 typedef struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo** result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl;
 
 interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
 
-
 #endif // ____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse;
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_INTERFACE_DEFINED__
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse;
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse;
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo;
 
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo* asyncInfo,
+        AsyncStatus asyncStatus);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse *asyncInfo, /* [in] */ AsyncStatus status);
     END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl;
+} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl;
 
-interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse
+interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo
 {
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
 #endif /* COBJMACROS */
 
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_INTERFACE_DEFINED__
+typedef enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse;
 
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse;
 
-
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_INTERFACE_DEFINED__)
 #define ____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_INTERFACE_DEFINED__
 
@@ -2091,107 +1608,118 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSecurity__CAuthentication_
 typedef struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse* result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl;
 
 interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
 
-
 #endif // ____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_INTERFACE_DEFINED__
-
-
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse;
 
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* This,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse* asyncInfo,
+        AsyncStatus asyncStatus);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo *asyncInfo, /* [in] */ AsyncStatus status);
     END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl;
+} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl;
 
-interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
+interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse
 {
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponseVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
 #endif /* COBJMACROS */
 
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__
-
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__)
@@ -2205,56 +1733,115 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSecurity__CAuthentication_
 typedef struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo** result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl;
 
 interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
 
-
 #endif // ____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 #if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
@@ -2269,78 +1856,72 @@ typedef struct __FIIterator_1_HSTRINGVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_HSTRING * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_HSTRING * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_HSTRING* This,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_HSTRING* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_HSTRING* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_HSTRING* This,
+        UINT32 itemsLength,
+        HSTRING* items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_HSTRINGVtbl;
 
 interface __FIIterator_1_HSTRING
 {
-    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_HSTRING_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_HSTRING_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_HSTRING_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_HSTRING_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_HSTRING_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_HSTRING_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_HSTRING_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_HSTRING_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
-
 
 #if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
 #define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
@@ -2350,68 +1931,204 @@ typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_HSTRING;
 
-typedef  struct __FIIterable_1_HSTRINGVtbl
+typedef struct __FIIterable_1_HSTRINGVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_HSTRING * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_HSTRING **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_HSTRING* This,
+        __FIIterator_1_HSTRING** result);
 
     END_INTERFACE
 } __FIIterable_1_HSTRINGVtbl;
 
 interface __FIIterable_1_HSTRING
 {
-    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_HSTRING_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_HSTRING_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+#if !defined(____FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
+
+typedef struct __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl;
+
+interface __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+#if !defined(____FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
+
+typedef struct __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        __FIIterator_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo** result);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl;
+
+interface __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 #if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
@@ -2425,146 +2142,171 @@ typedef struct __FIVectorView_1_HSTRINGVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_HSTRING* This,
+        UINT32 index,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_HSTRING* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_HSTRING* This,
+        HSTRING value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_HSTRING* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        HSTRING* items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_HSTRING * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_HSTRING * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out HSTRING *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [in] */ HSTRING item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_HSTRINGVtbl;
 
 interface __FIVectorView_1_HSTRING
 {
-    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_HSTRING_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_HSTRING_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_HSTRING_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_HSTRING_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_HSTRING_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_HSTRING_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_HSTRING_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_HSTRING_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+#if !defined(____FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
 
+typedef interface __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
 
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo;
+
+typedef struct __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        UINT32 index,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl;
+
+interface __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 typedef struct __x_ABI_CWindows_CFoundation_CDateTime __x_ABI_CWindows_CFoundation_CDateTime;
 
-
 typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
-
-
-
-
 
 typedef enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorAuthenticationType __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorAuthenticationType;
 
-
-typedef enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse;
-
-
 typedef enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionApprovalStatus __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionApprovalStatus;
 
-
 typedef enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionAuthenticationStatus __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionAuthenticationStatus;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -2572,11 +2314,8 @@ typedef enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicroso
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorAuthenticationType
 {
     MicrosoftAccountMultiFactorAuthenticationType_User = 0,
@@ -2584,18 +2323,14 @@ enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccoun
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Struct Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse
 {
     MicrosoftAccountMultiFactorServiceResponse_Success = 0,
@@ -2623,18 +2358,14 @@ enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccoun
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Struct Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionApprovalStatus
 {
     MicrosoftAccountMultiFactorSessionApprovalStatus_Pending = 0,
@@ -2643,18 +2374,14 @@ enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccoun
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Struct Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionAuthenticationStatus
 {
     MicrosoftAccountMultiFactorSessionAuthenticationStatus_Authenticated = 0,
@@ -2662,182 +2389,139 @@ enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccoun
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Interface Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorAuthenticationManager[] = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticationManager";
-/* [object, uuid("0FD340A5-F574-4320-A08E-0A19A82322AA"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManagerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetOneTimePassCodeAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        HSTRING userAccountId,
+        UINT32 codeLength,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo** asyncOperation);
+    HRESULT (STDMETHODCALLTYPE* AddDeviceAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        HSTRING userAccountId,
+        HSTRING authenticationToken,
+        HSTRING wnsChannelId,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation);
+    HRESULT (STDMETHODCALLTYPE* RemoveDeviceAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        HSTRING userAccountId,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation);
+    HRESULT (STDMETHODCALLTYPE* UpdateWnsChannelAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        HSTRING userAccountId,
+        HSTRING channelUri,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation);
+    HRESULT (STDMETHODCALLTYPE* GetSessionsAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        __FIIterable_1_HSTRING* userAccountIdList,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult** asyncOperation);
+    HRESULT (STDMETHODCALLTYPE* GetSessionsAndUnregisteredAccountsAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        __FIIterable_1_HSTRING* userAccountIdList,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo** asyncOperation);
+    HRESULT (STDMETHODCALLTYPE* ApproveSessionUsingAuthSessionInfoAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionAuthenticationStatus sessionAuthentictionStatus,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* authenticationSessionInfo,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation);
+    HRESULT (STDMETHODCALLTYPE* ApproveSessionAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionAuthenticationStatus sessionAuthentictionStatus,
+        HSTRING userAccountId,
+        HSTRING sessionId,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorAuthenticationType sessionAuthenticationType,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation);
+    HRESULT (STDMETHODCALLTYPE* DenySessionUsingAuthSessionInfoAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* authenticationSessionInfo,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation);
+    HRESULT (STDMETHODCALLTYPE* DenySessionAsync)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager* This,
+        HSTRING userAccountId,
+        HSTRING sessionId,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorAuthenticationType sessionAuthenticationType,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse** asyncOperation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetOneTimePassCodeAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__RPC__in HSTRING userAccountId,
-        /* [in] */UINT32 codeLength,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorOneTimeCodedInfo * * asyncOperation
-        );
-    HRESULT ( STDMETHODCALLTYPE *AddDeviceAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__RPC__in HSTRING userAccountId,
-        /* [in] */__RPC__in HSTRING authenticationToken,
-        /* [in] */__RPC__in HSTRING wnsChannelId,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
-        );
-    HRESULT ( STDMETHODCALLTYPE *RemoveDeviceAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__RPC__in HSTRING userAccountId,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
-        );
-    HRESULT ( STDMETHODCALLTYPE *UpdateWnsChannelAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__RPC__in HSTRING userAccountId,
-        /* [in] */__RPC__in HSTRING channelUri,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetSessionsAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * userAccountIdList,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorGetSessionsResult * * asyncOperation
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetSessionsAndUnregisteredAccountsAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * userAccountIdList,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * * asyncOperation
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *ApproveSessionUsingAuthSessionInfoAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionAuthenticationStatus sessionAuthentictionStatus,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * authenticationSessionInfo,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *ApproveSessionAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionAuthenticationStatus sessionAuthentictionStatus,
-        /* [in] */__RPC__in HSTRING userAccountId,
-        /* [in] */__RPC__in HSTRING sessionId,
-        /* [in] */__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorAuthenticationType sessionAuthenticationType,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *DenySessionUsingAuthSessionInfoAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * authenticationSessionInfo,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *DenySessionAsync )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * This,
-        /* [in] */__RPC__in HSTRING userAccountId,
-        /* [in] */__RPC__in HSTRING sessionId,
-        /* [in] */__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorAuthenticationType sessionAuthenticationType,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorServiceResponse * * asyncOperation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManagerVtbl;
 
 interface __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManagerVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManagerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetOneTimePassCodeAsync(This,userAccountId,codeLength,asyncOperation) \
-    ( (This)->lpVtbl->GetOneTimePassCodeAsync(This,userAccountId,codeLength,asyncOperation) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetOneTimePassCodeAsync(This, userAccountId, codeLength, asyncOperation) \
+    ((This)->lpVtbl->GetOneTimePassCodeAsync(This, userAccountId, codeLength, asyncOperation))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_AddDeviceAsync(This,userAccountId,authenticationToken,wnsChannelId,asyncOperation) \
-    ( (This)->lpVtbl->AddDeviceAsync(This,userAccountId,authenticationToken,wnsChannelId,asyncOperation) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_AddDeviceAsync(This, userAccountId, authenticationToken, wnsChannelId, asyncOperation) \
+    ((This)->lpVtbl->AddDeviceAsync(This, userAccountId, authenticationToken, wnsChannelId, asyncOperation))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_RemoveDeviceAsync(This,userAccountId,asyncOperation) \
-    ( (This)->lpVtbl->RemoveDeviceAsync(This,userAccountId,asyncOperation) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_RemoveDeviceAsync(This, userAccountId, asyncOperation) \
+    ((This)->lpVtbl->RemoveDeviceAsync(This, userAccountId, asyncOperation))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_UpdateWnsChannelAsync(This,userAccountId,channelUri,asyncOperation) \
-    ( (This)->lpVtbl->UpdateWnsChannelAsync(This,userAccountId,channelUri,asyncOperation) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_UpdateWnsChannelAsync(This, userAccountId, channelUri, asyncOperation) \
+    ((This)->lpVtbl->UpdateWnsChannelAsync(This, userAccountId, channelUri, asyncOperation))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetSessionsAsync(This,userAccountIdList,asyncOperation) \
-    ( (This)->lpVtbl->GetSessionsAsync(This,userAccountIdList,asyncOperation) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetSessionsAsync(This, userAccountIdList, asyncOperation) \
+    ((This)->lpVtbl->GetSessionsAsync(This, userAccountIdList, asyncOperation))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetSessionsAndUnregisteredAccountsAsync(This,userAccountIdList,asyncOperation) \
-    ( (This)->lpVtbl->GetSessionsAndUnregisteredAccountsAsync(This,userAccountIdList,asyncOperation) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_GetSessionsAndUnregisteredAccountsAsync(This, userAccountIdList, asyncOperation) \
+    ((This)->lpVtbl->GetSessionsAndUnregisteredAccountsAsync(This, userAccountIdList, asyncOperation))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_ApproveSessionUsingAuthSessionInfoAsync(This,sessionAuthentictionStatus,authenticationSessionInfo,asyncOperation) \
-    ( (This)->lpVtbl->ApproveSessionUsingAuthSessionInfoAsync(This,sessionAuthentictionStatus,authenticationSessionInfo,asyncOperation) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_ApproveSessionUsingAuthSessionInfoAsync(This, sessionAuthentictionStatus, authenticationSessionInfo, asyncOperation) \
+    ((This)->lpVtbl->ApproveSessionUsingAuthSessionInfoAsync(This, sessionAuthentictionStatus, authenticationSessionInfo, asyncOperation))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_ApproveSessionAsync(This,sessionAuthentictionStatus,userAccountId,sessionId,sessionAuthenticationType,asyncOperation) \
-    ( (This)->lpVtbl->ApproveSessionAsync(This,sessionAuthentictionStatus,userAccountId,sessionId,sessionAuthenticationType,asyncOperation) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_ApproveSessionAsync(This, sessionAuthentictionStatus, userAccountId, sessionId, sessionAuthenticationType, asyncOperation) \
+    ((This)->lpVtbl->ApproveSessionAsync(This, sessionAuthentictionStatus, userAccountId, sessionId, sessionAuthenticationType, asyncOperation))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_DenySessionUsingAuthSessionInfoAsync(This,authenticationSessionInfo,asyncOperation) \
-    ( (This)->lpVtbl->DenySessionUsingAuthSessionInfoAsync(This,authenticationSessionInfo,asyncOperation) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_DenySessionUsingAuthSessionInfoAsync(This, authenticationSessionInfo, asyncOperation) \
+    ((This)->lpVtbl->DenySessionUsingAuthSessionInfoAsync(This, authenticationSessionInfo, asyncOperation))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_DenySessionAsync(This,userAccountId,sessionId,sessionAuthenticationType,asyncOperation) \
-    ( (This)->lpVtbl->DenySessionAsync(This,userAccountId,sessionId,sessionAuthenticationType,asyncOperation) )
-
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_DenySessionAsync(This, userAccountId, sessionId, sessionAuthenticationType, asyncOperation) \
+    ((This)->lpVtbl->DenySessionAsync(This, userAccountId, sessionId, sessionAuthenticationType, asyncOperation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -2845,92 +2529,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorAuthenticatorStatics[] = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticatorStatics";
-/* [object, uuid("D964C2E6-F446-4C71-8B79-6EA4024AA9B8"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Current )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticationManager * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStaticsVtbl;
 
 interface __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_get_Current(This,value) \
-    ( (This)->lpVtbl->get_Current(This,value) )
-
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_get_Current(This, value) \
+    ((This)->lpVtbl->get_Current(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorAuthenticatorStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -2938,99 +2598,73 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorGetSessionsResult[] = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult";
-/* [object, uuid("4E23A9A0-E9FA-497A-95DE-6D5747BF974C"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Sessions)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult* This,
+        __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo** value);
+    HRESULT (STDMETHODCALLTYPE* get_ServiceResponse)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult* This,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Sessions )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ServiceResponse )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResultVtbl;
 
 interface __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResultVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_get_Sessions(This,value) \
-    ( (This)->lpVtbl->get_Sessions(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_get_Sessions(This, value) \
+    ((This)->lpVtbl->get_Sessions(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_get_ServiceResponse(This,value) \
-    ( (This)->lpVtbl->get_ServiceResponse(This,value) )
-
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_get_ServiceResponse(This, value) \
+    ((This)->lpVtbl->get_ServiceResponse(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorGetSessionsResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -3038,113 +2672,83 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorOneTimeCodedInfo[] = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo";
-/* [object, uuid("82BA264B-D87C-4668-A976-40CFAE547D08"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Code)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_TimeInterval)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
+    HRESULT (STDMETHODCALLTYPE* get_TimeToLive)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
+    HRESULT (STDMETHODCALLTYPE* get_ServiceResponse)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo* This,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Code )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TimeInterval )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TimeToLive )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ServiceResponse )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl;
 
 interface __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_get_Code(This,value) \
-    ( (This)->lpVtbl->get_Code(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_get_Code(This, value) \
+    ((This)->lpVtbl->get_Code(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_get_TimeInterval(This,value) \
-    ( (This)->lpVtbl->get_TimeInterval(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_get_TimeInterval(This, value) \
+    ((This)->lpVtbl->get_TimeInterval(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_get_TimeToLive(This,value) \
-    ( (This)->lpVtbl->get_TimeToLive(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_get_TimeToLive(This, value) \
+    ((This)->lpVtbl->get_TimeToLive(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_get_ServiceResponse(This,value) \
-    ( (This)->lpVtbl->get_ServiceResponse(This,value) )
-
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_get_ServiceResponse(This, value) \
+    ((This)->lpVtbl->get_ServiceResponse(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorOneTimeCodedInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -3152,134 +2756,98 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorSessionInfo[] = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo";
-/* [object, uuid("5F7EABB4-A278-4635-B765-B494EB260AF4"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfoVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_UserAccountId)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_SessionId)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_DisplaySessionId)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_ApprovalStatus)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionApprovalStatus* value);
+    HRESULT (STDMETHODCALLTYPE* get_AuthenticationType)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorAuthenticationType* value);
+    HRESULT (STDMETHODCALLTYPE* get_RequestTime)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        struct __x_ABI_CWindows_CFoundation_CDateTime* value);
+    HRESULT (STDMETHODCALLTYPE* get_ExpirationTime)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo* This,
+        struct __x_ABI_CWindows_CFoundation_CDateTime* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_UserAccountId )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SessionId )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DisplaySessionId )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ApprovalStatus )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorSessionApprovalStatus * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_AuthenticationType )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorAuthenticationType * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RequestTime )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CDateTime * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExpirationTime )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CDateTime * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfoVtbl;
 
 interface __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfoVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_UserAccountId(This,value) \
-    ( (This)->lpVtbl->get_UserAccountId(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_UserAccountId(This, value) \
+    ((This)->lpVtbl->get_UserAccountId(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_SessionId(This,value) \
-    ( (This)->lpVtbl->get_SessionId(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_SessionId(This, value) \
+    ((This)->lpVtbl->get_SessionId(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_DisplaySessionId(This,value) \
-    ( (This)->lpVtbl->get_DisplaySessionId(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_DisplaySessionId(This, value) \
+    ((This)->lpVtbl->get_DisplaySessionId(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_ApprovalStatus(This,value) \
-    ( (This)->lpVtbl->get_ApprovalStatus(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_ApprovalStatus(This, value) \
+    ((This)->lpVtbl->get_ApprovalStatus(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_AuthenticationType(This,value) \
-    ( (This)->lpVtbl->get_AuthenticationType(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_AuthenticationType(This, value) \
+    ((This)->lpVtbl->get_AuthenticationType(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_RequestTime(This,value) \
-    ( (This)->lpVtbl->get_RequestTime(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_RequestTime(This, value) \
+    ((This)->lpVtbl->get_RequestTime(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_ExpirationTime(This,value) \
-    ( (This)->lpVtbl->get_ExpirationTime(This,value) )
-
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_get_ExpirationTime(This, value) \
+    ((This)->lpVtbl->get_ExpirationTime(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorSessionInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -3287,113 +2855,84 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Security_Authentication_Identity_Core_IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo[] = L"Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo";
-/* [object, uuid("AA7EC5FB-DA3F-4088-A20D-5618AFADB2E5"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Sessions)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo** value);
+    HRESULT (STDMETHODCALLTYPE* get_UnregisteredAccounts)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        __FIVectorView_1_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* get_ServiceResponse)(__x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* This,
+        enum __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Sessions )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CSecurity__CAuthentication__CIdentity__CCore__CMicrosoftAccountMultiFactorSessionInfo * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_UnregisteredAccounts )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ServiceResponse )(
-        __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CMicrosoftAccountMultiFactorServiceResponse * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl;
 
 interface __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_Sessions(This,value) \
-    ( (This)->lpVtbl->get_Sessions(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_Sessions(This, value) \
+    ((This)->lpVtbl->get_Sessions(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_UnregisteredAccounts(This,value) \
-    ( (This)->lpVtbl->get_UnregisteredAccounts(This,value) )
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_UnregisteredAccounts(This, value) \
+    ((This)->lpVtbl->get_UnregisteredAccounts(This, value))
 
-#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_ServiceResponse(This,value) \
-    ( (This)->lpVtbl->get_ServiceResponse(This,value) )
-
+#define __x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_get_ServiceResponse(This, value) \
+    ((This)->lpVtbl->get_ServiceResponse(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo;
 #endif /* !defined(____x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCore_CIMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorAuthenticatorStatics interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -3407,20 +2946,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSecurity_CAuthentication_CIdentity_CCor
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorAuthenticationManager_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorAuthenticationManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorAuthenticationManager[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorGetSessionsResult ** Default Interface **
@@ -3431,20 +2967,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorGetSessionsResult_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorGetSessionsResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorGetSessionsResult[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorOneTimeCodedInfo ** Default Interface **
@@ -3455,20 +2988,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorOneTimeCodedInfo_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorOneTimeCodedInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorOneTimeCodedInfo[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorSessionInfo ** Default Interface **
@@ -3479,20 +3009,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorSessionInfo_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorSessionInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorSessionInfo[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Security.Authentication.Identity.Core.IMicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo ** Default Interface **
@@ -3503,17 +3030,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_DEFINED
 #define RUNTIMECLASS_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Security_Authentication_Identity_Core_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo[] = L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

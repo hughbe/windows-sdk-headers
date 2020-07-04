@@ -16,16 +16,10 @@ namespace ABI {
 
 namespace Windows {
 namespace UI {
-namespace Internal {
-namespace Input {
-    interface IInputSite;
-}}}}
-
-namespace Windows {
-namespace UI {
 namespace Composition {
 
 typedef interface ICompositionDrawingSurfaceInterop ICompositionDrawingSurfaceInterop;
+typedef interface ICompositionDrawingSurfaceInterop2 ICompositionDrawingSurfaceInterop2;
 typedef interface ICompositorInterop ICompositorInterop;
 
 
@@ -61,6 +55,17 @@ DECLARE_INTERFACE_IID_(ICompositionDrawingSurfaceInterop, IUnknown, "FD04E6E3-FE
         ) PURE;
 };
 
+#undef INTERFACE
+#define INTERFACE ICompositionDrawingSurfaceInterop2
+DECLARE_INTERFACE_IID_(ICompositionDrawingSurfaceInterop2, ICompositionDrawingSurfaceInterop, "41E64AAE-98C0-4239-8E95-A330DD6AA18B")
+{
+    IFACEMETHOD(CopySurface)(
+        _In_ IUnknown* destinationResource,
+        _In_ int destinationOffsetX,
+        _In_ int destinationOffsetY,
+        _In_opt_ const RECT * sourceRectangle
+        ) PURE;
+};
 
 #undef INTERFACE
 #define INTERFACE ICompositionGraphicsDeviceInterop

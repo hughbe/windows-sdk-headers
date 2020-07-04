@@ -2306,6 +2306,33 @@ cpp_quote("#endif /* (NTDDI_VERSION >= NTDDI_WIN10_RS3) */ ")
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINBLUE) ")
 
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
+
+[
+    object,
+    local,
+    uuid(604D33D7-CF23-41d5-8224-5BBBB1A87475)
+]
+/// <summary> 
+/// Configuration interface for Video Renderer Effects 
+/// </summary> 
+interface IMFVideoRendererEffectControl : IUnknown
+{
+    /// <summary> 
+    /// When the Renderer Effect requests a communication channel using the 
+    /// MF_VIDEO_RENDERER_EFFECT_APP_SERVICE_NAME MFT attribute, this method will 
+    /// be called asynchronously by the platform on successful establishment of the requested 
+    /// communication channel. The Video Renderer Effect's App Service implements this 
+    /// interface. 
+    /// </summary> 
+    /// <param name=pAppServiceConnection> 
+    /// IUnknown of the app service connection object. 
+    /// </param> 
+    HRESULT OnAppServiceConnectionEstablished([in, annotation("_In_")] IUnknown* pAppServiceConnection);
+};
+
+cpp_quote("#endif // (WINVER >= NTDDI_WIN10_VB) ")
+
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
@@ -10201,6 +10228,18 @@ cpp_quote( "EXTERN_GUID( MFCONNECTOR_TRANSPORT_AGNOSTIC_DIGITAL_MODE_B, 0x57cd59
 cpp_quote( "" )
 
 
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
+
+// MF_POLICY_ID
+// Data type: UINT32 (treat as BOOL)
+// An identifier that can be set on an IMFOutputPolicy.
+// The value can be recieved from the MEPolicySet media event. It is stored as a VT_UI4
+// type payload in the MEPolicySet event.
+// {B160C24D-C059-48F1-A901-9EE298A9A8C3}
+cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MF_POLICY_ID = { 0xb160c24d, 0xc059, 0x48f1, { 0xa9, 0x1, 0x9e, 0xe2, 0x98, 0xa9, 0xa8, 0xc3 } };" )
+
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
+
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -12051,6 +12090,41 @@ cpp_quote( "EXTERN_GUID( MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ROLE, 0xbc9d1
 // Contains a device Id for a provider
 cpp_quote( "EXTERN_GUID( MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_PROVIDER_DEVICE_ID, 0x36689d42, 0xa06c, 0x40ae, 0x84, 0xcf, 0xf5, 0xa0, 0x34, 0x6, 0x7c, 0xc4);" )
 
+// MF_DEVSOURCE_ATTRIBUTE_SOURCE_XADDRESS 
+// {BCA0BE52-C327-44C7-9B7D-7FA8D9B5BCDA} 
+// Data type: STRING 
+// Contains a XADDRESS of KSCATEGORY_NETWORK_CAMERA that 
+// can be obtained from the PKEY_PNPX_XAddrs from a KSCATEGORY_NETWORK_CAMERA 
+// or Web Services on Devices (WSD) xaddrs parameter, currently only supports ONVIF cameras.
+cpp_quote("EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_XADDRESS, 0xbca0be52, 0xc327, 0x44c7, 0x9b, 0x7d, 0x7f, 0xa8, 0xd9, 0xb5, 0xbc, 0xda);")
+
+// MF_DEVSOURCE_ATTRIBUTE_SOURCE_RTSP_URL 
+// {9D7B40D2-3617-4043-93E3-8D6DA9BB3492} 
+// Data type: STRING 
+// Currently only RTSP urls are supported as an initialization parameter. 
+cpp_quote("EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_STREAM_URL, 0x9d7b40d2, 0x3617, 0x4043, 0x93, 0xe3, 0x8d, 0x6d, 0xa9, 0xbb, 0x34, 0x92);")
+
+// MF_DEVSOURCE_ATTRIBUTE_SOURCE_USERNAME 
+// {05D01ADD-949F-46EB-BC8E-8B0D2B32D79D} 
+// Data type: STRING 
+// Attribute contains a username to use for authentication. 
+cpp_quote("EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_USERNAME,0x5d01add, 0x949f, 0x46eb, 0xbc, 0x8e, 0x8b, 0xd, 0x2b, 0x32, 0xd7, 0x9d);")
+
+// MF_DEVSOURCE_ATTRIBUTE_SOURCE_PASSWORD 
+// {A0FD7E16-42D9-49DF-84C0-E82C5EAB8874} 
+// Data type: STRING 
+// Attribute contains a password to use for authentication. 
+cpp_quote("EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_PASSWORD, 0xa0fd7e16, 0x42d9, 0x49df, 0x84, 0xc0, 0xe8, 0x2c, 0x5e, 0xab, 0x88, 0x74);")
+
+
+// {7A213AA7-866F-414A-8C1A-275C7283A395} 
+// CLSID_FrameServerNetworkCameraSource 
+// CLSID for KSCATEGORY_NETWORK_CAMERA Source that controls the MediaSource, 
+// provides functionality to stream and control KSCATEGORY_NETWORK_CAMERA. 
+// CLSID_FrameServerNetworkCameraSource is only supported using the Windows service FrameServer 
+// and requires FrameServer for control and media flow, all other uses are not supported.
+cpp_quote("EXTERN_GUID(CLSID_FrameServerNetworkCameraSource, 0x7a213aa7, 0x866f, 0x414a, 0x8c, 0x1a, 0x27, 0x5c, 0x72, 0x83, 0xa3, 0x95);")
+
 /////////////////////////////////////////////////////////////////////////////
 
 //
@@ -13546,5 +13620,298 @@ cpp_quote("    );")
 
 cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5) ")
 
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// IMFExtendedCameraControl Interface
+//
+///////////////////////////////////////////////////////////////////////////////
+[
+    object,
+    uuid(38E33520-FCA1-4845-A27A-68B7C6AB3789),
+    helpstring("IMFExtendedCameraControl Interface"),
+    local
+]
+/// <summary>
+/// This interface is used to configure the camera's extended properties.
+/// </summary>
+interface IMFExtendedCameraControl : IUnknown
+{
+    /// <summary>
+    /// Queries for property capabilities.
+    /// </summary>
+    /// <return>
+    /// ULONGLONG mapping to property capabilities (KSCAMERA_EXTENDEDPROP_*) defined in ksmedia.h
+    /// </return>
+    ULONGLONG GetCapabilities();
+
+    /// <summary>
+    /// Sets the property flags.
+    /// </summary>  
+    /// <param name="ulFlags">
+    /// ULONGLONG mapping to property flags (KSCAMERA_EXTENDEDPROP_*) defined in ksmedia.h
+    /// </param>
+    HRESULT SetFlags([in, annotation("_In_")] ULONGLONG ulFlags);
+
+    /// <summary>
+    /// Queries for property flags.
+    /// </summary>
+    /// <return>
+    /// ULONGLONG mapping to property flags (KSCAMERA_EXTENDEDPROP_*) defined in ksmedia.h
+    /// </return>
+    ULONGLONG GetFlags();
+
+    /// <summary>
+    /// Locks the internal payload buffer for query/changes.
+    /// </summary>  
+    /// <param name="ppPayload">
+    /// BYTE pointer to the buffer containing the raw payload.
+    /// Caller should not free the buffer but instead call UnlockPayload
+    /// </param>
+    /// <param name="pulPayload">
+    /// Size of the payload.
+    /// </param>
+    HRESULT LockPayload([out, annotation("_Outptr_result_buffer_(*pulPayload)")] BYTE** ppPayload, [out, annotation("_Out_")] ULONG* pulPayload);
+
+    /// <summary>
+    /// Unlocks the raw payload contained in this control.
+    /// </summary>  
+    HRESULT UnlockPayload();
+
+    /// <summary>
+    /// Commits the configured control settings to the camera driver.
+    /// </summary>
+    HRESULT CommitSettings();
+};
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// IMFExtendedCameraController Interface
+//
+///////////////////////////////////////////////////////////////////////////////
+[
+    object,
+    uuid(B91EBFEE-CA03-4AF4-8A82-A31752F4A0FC),
+    helpstring("IMFExtendedCameraController Interface"),
+    local
+]
+/// <summary>
+/// This interface is used to configure the camera's extended properties.
+/// </summary>
+interface IMFExtendedCameraController : IUnknown
+{
+    /// <summary>
+    /// Allows an app to get the current camera's extended property controls
+    /// </summary>
+    /// <param name = "dwStreamIndex">
+    /// Indicates stream index to use for this property.
+    /// MF_CAPTURE_ENGINE_MEDIASOURCE indicates a filter level property.
+    /// </param>
+    /// <param name = "ulPropertyId">
+    /// ID index for identifying the property within KSPROPERTYSETID_ExtendedCameraControl.
+    /// </param>
+    /// <param name = "ppControl">
+    /// IMFExtendedCameraControl pointer, representing the control.
+    /// </param>
+    HRESULT GetExtendedCameraControl(
+        [in, annotation("_In_")] DWORD dwStreamIndex,
+        [in, annotation("_In_")] ULONG ulPropertyId,
+        [out, annotation("_COM_Outptr_")] IMFExtendedCameraControl** ppControl);
+};
+
+
+[
+    object,
+    uuid(F25362EA-2C0E-447F-81E2-755914CDC0C3),
+    helpstring("IMFRelativePanelReport Interface"),
+    local
+]
+/// <summary>
+/// This interface is used to retrieve the relative panel current value.
+/// </summary>
+interface IMFRelativePanelReport : IUnknown
+{
+    /// <summary>
+    /// Allows an app to get the current relative panel value
+    /// </summary>
+    /// <param name = "panel"> 
+    /// Indicates the panel associated with the camera's relative facing to the displayRegion, using a 
+    /// value from the ACPI_PLD_PANEL enumeration. Only the enumeration values of AcpiPldPanelFront, 
+    /// AcpiPldPanelBack, and AcpiPldPanelUnknown are expected. 
+    /// </param>
+    HRESULT GetRelativePanel(
+        [out, annotation("_Out_")] ULONG* panel
+    );
+};
+
+[
+    object,
+    uuid(421AF7F6-573E-4AD0-8FDA-2E57CEDB18C6),
+    helpstring("IMFRelativePanelWatcher Interface"),
+    local
+]
+/// <summary>
+/// This interface is used to control a IMFAsyncCallback, with an IMFAsyncResult to retrieve a report of its value.
+/// </summary>
+interface IMFRelativePanelWatcher : IMFShutdown
+{
+    HRESULT BeginGetReport([in, annotation("_In_")] IMFAsyncCallback* pCallback, [in, annotation("_In_opt_")] IUnknown* pState);
+
+    HRESULT EndGetReport([in, annotation("_In_")] IMFAsyncResult* pResult, [out, annotation("_COM_Outptr_")] IMFRelativePanelReport** ppRelativePanelReport);
+
+    /// <summary>
+    /// Allows an app to retrieve the report of the current relative panel value
+    /// </summary>
+    /// <param name = "ppRelativePanelReport">
+    /// IMFRelativePanelReport pointer, representing the panel value.
+    /// </param>
+    HRESULT GetReport(
+        [out, annotation("_COM_Outptr_")] IMFRelativePanelReport** ppRelativePanelReport
+        );
+};
+
+/// <summary>
+/// Allows an app to create a Relative Panel Watcher
+/// </summary>
+/// <param name = "videoDeviceId">
+/// string symbolic link name of the video capture device
+/// </param>
+/// <param name = "displayMonitorDeviceId">
+/// string symbolic link name of the display monitor device
+/// </param>
+/// <param name = "ppRelativePanelWatcher"
+/// IMFRelativePanelWatcher pointer, representing the watcher
+/// </param>
+cpp_quote("")
+cpp_quote("STDAPI")
+cpp_quote("MFCreateRelativePanelWatcher(")
+cpp_quote("    _In_ PCWSTR videoDeviceId,")
+cpp_quote("    _In_ PCWSTR displayMonitorDeviceId,")
+cpp_quote("    _COM_Outptr_ IMFRelativePanelWatcher** ppRelativePanelWatcher")
+cpp_quote("    );")
+
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
+
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+
+[
+    object,
+    local,
+    uuid(725B77C7-CA9F-4FE5-9D72-9946BF9B3C70),
+    helpstring("IMFVideoCaptureSampleAllocator Interface"),
+    pointer_default(unique)
+]
+/// <summary>
+/// The IMFVideoCaptureSampleAllocator interface is a specialized
+/// sample allocator for video capture devices.
+/// </summary>
+interface IMFVideoCaptureSampleAllocator : IMFVideoSampleAllocator
+{
+    /// <param name="cbSampleSize">
+    /// Sample size in bytes.
+    /// The actual sample size used by the allocator is the maximum of
+    /// the size required by pMediaType and cbSampleSize.
+    /// </param>
+    /// <param name="cbCaptureMetadataSize">
+    /// Capture metadata size in bytes. Applies only to callers that want to
+    /// to include additional metadata with the captured frames. The metadata size
+    /// should include the size of a KSCAMERA_METADATA_ITEMHEADER in addition to
+    /// the size of the metadata payload itself.
+    /// </param>
+    /// <param name="cbAlignment">
+    /// Buffer alignment size in bytes.
+    /// The default and minimum alignment size is 4KB. Custom alignment sizes
+    /// less than 4KB will be treated as 4KB.
+    /// </param>
+    /// <param name="cMinimumSamples">
+    /// Minimum number of pre-allocated samples.
+    /// This method will fail if the allocator cannot pre-allocate the specified
+    /// minimum number of samples.
+    /// </param>
+    /// <param name="pAttributes">
+    /// Optional parameter. An IMFAttributes store with additional configuration
+    /// attributes for the sample allocator. The attributes that are accepted
+    /// are the same as for IMFVideoSampleAllocatorEx::InitializeSampleAllocatorEx.
+    /// (See online documentation for that API for more details.)
+    /// </param>
+    /// <param name="pMediaType">
+    /// The IMFMediaType for which samples will be allocator. The sample
+    /// allocator uses this parameter to calculate the minimum required size
+    /// for the media samples.
+    /// </param>
+    HRESULT InitializeCaptureSampleAllocator(
+        [in, annotation("_In_")] DWORD cbSampleSize,
+        [in, annotation("_In_")] DWORD cbCaptureMetadataSize,
+        [in, annotation("_In_")] DWORD cbAlignment,
+        [in, annotation("_In_")] DWORD cMinimumSamples,
+        [in, annotation("_In_opt_")] IMFAttributes *pAttributes,
+        [in, annotation("_In_")] IMFMediaType *pMediaType
+    );
+};
+
+/// <summary>
+///     The enumeration type defines video capture sample allocator mode
+/// </summary>
+typedef enum MFSampleAllocatorUsage
+{
+    MFSampleAllocatorUsage_UsesProvidedAllocator = 0,
+    MFSampleAllocatorUsage_UsesCustomAllocator,
+    MFSampleAllocatorUsage_DoesNotAllocate
+} MFSampleAllocatorUsage;
+
+[
+    object,
+    uuid(DA62B958-3A38-4A97-BD27-149C640C0771),
+    helpstring("IMFSampleAllocatorControl Interface"),
+    local
+]
+/// <summary>
+/// An enumeration that specifies how an object that implements
+/// IMFSampleAllocatorControl uses a sample allocator.
+/// </summary>
+interface IMFSampleAllocatorControl : IUnknown
+{
+    /// <summary>
+    /// Sets the default sample allocator to use for the specified output stream.
+    /// When this allocator is in use, the sample allocator usage value is
+    /// MFSampleAllocatorUsage_UsesProvidedAllocator.
+    /// </summary>
+    /// <param name="dwOutputStreamID">
+    /// The ID of the output stream that the pAllocator parameter applies to.
+    /// </param>
+    /// <param name="pAllocator">
+    /// Provides a sample allocator to use for the specified output stream. The
+    /// allocator must support one of the MF allocator interfaces, such as,
+    /// IMFVideoCaptureSampleAllocator or IMFVideoSampleAllocatorEx.
+    /// </param>
+    HRESULT SetDefaultAllocator(
+        [in, annotation("_In_")] DWORD dwOutputStreamID,
+        [in, annotation("_In_")] IUnknown *pAllocator
+    );
+
+    /// <summary>
+    /// Retrieves the sample allocator usage for the specified output stream.
+    /// </summary>
+    /// <param name="dwOutputStreamID">
+    /// The ID of the output stream whose sample allocator usage is requested.
+    /// </param>
+    /// <param name="pdwInputStreamID">
+    /// If the allocator usage is MFSampleAllocatorUsage_DoesNotAllocate,
+    /// then this output parameter is set to the ID of the input stream that
+    /// the output samples are coming from.
+    /// For all other allocator usage values, this parameter shall be ignored.
+    /// </param>
+    /// <param name="peUsage">
+    /// The sample allocator usage of the specified output stream.
+    /// </param>
+    HRESULT GetAllocatorUsage(
+        [in, annotation("_In_")] DWORD dwOutputStreamID,
+        [out, annotation("_Out_")] DWORD* pdwInputStreamID,
+        [out, annotation("_Out_")] MFSampleAllocatorUsage* peUsage
+    );
+};
+
 #pragma endregion // Application Family  

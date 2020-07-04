@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.media.protection.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,165 +87,17 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
 
 #if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
 #define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -275,7 +123,8 @@ namespace ABI {
                 interface IComponentLoadFailedEventHandler;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler ABI::Windows::Media::Protection::IComponentLoadFailedEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_FWD_DEFINED__
@@ -289,7 +138,8 @@ namespace ABI {
                 interface IRebootNeededEventHandler;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler ABI::Windows::Media::Protection::IRebootNeededEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_FWD_DEFINED__
@@ -303,7 +153,8 @@ namespace ABI {
                 interface IServiceRequestedEventHandler;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler ABI::Windows::Media::Protection::IServiceRequestedEventHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_FWD_DEFINED__
@@ -317,7 +168,8 @@ namespace ABI {
                 interface IComponentLoadFailedEventArgs;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs ABI::Windows::Media::Protection::IComponentLoadFailedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_FWD_DEFINED__
@@ -331,7 +183,8 @@ namespace ABI {
                 interface IComponentRenewalStatics;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics ABI::Windows::Media::Protection::IComponentRenewalStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_FWD_DEFINED__
@@ -345,7 +198,8 @@ namespace ABI {
                 interface IHdcpSession;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession ABI::Windows::Media::Protection::IHdcpSession
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_FWD_DEFINED__
@@ -359,7 +213,8 @@ namespace ABI {
                 interface IMediaProtectionManager;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager ABI::Windows::Media::Protection::IMediaProtectionManager
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_FWD_DEFINED__
@@ -373,7 +228,8 @@ namespace ABI {
                 interface IMediaProtectionPMPServer;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer ABI::Windows::Media::Protection::IMediaProtectionPMPServer
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_FWD_DEFINED__
@@ -387,7 +243,8 @@ namespace ABI {
                 interface IMediaProtectionPMPServerFactory;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory ABI::Windows::Media::Protection::IMediaProtectionPMPServerFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_FWD_DEFINED__
@@ -401,7 +258,8 @@ namespace ABI {
                 interface IMediaProtectionServiceCompletion;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion ABI::Windows::Media::Protection::IMediaProtectionServiceCompletion
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_FWD_DEFINED__
@@ -415,7 +273,8 @@ namespace ABI {
                 interface IMediaProtectionServiceRequest;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest ABI::Windows::Media::Protection::IMediaProtectionServiceRequest
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_FWD_DEFINED__
@@ -429,7 +288,8 @@ namespace ABI {
                 interface IProtectionCapabilities;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities ABI::Windows::Media::Protection::IProtectionCapabilities
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_FWD_DEFINED__
@@ -443,7 +303,8 @@ namespace ABI {
                 interface IRevocationAndRenewalInformation;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation ABI::Windows::Media::Protection::IRevocationAndRenewalInformation
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_FWD_DEFINED__
@@ -457,7 +318,8 @@ namespace ABI {
                 interface IRevocationAndRenewalItem;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem ABI::Windows::Media::Protection::IRevocationAndRenewalItem
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_FWD_DEFINED__
@@ -471,7 +333,8 @@ namespace ABI {
                 interface IServiceRequestedEventArgs;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs ABI::Windows::Media::Protection::IServiceRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_FWD_DEFINED__
@@ -485,7 +348,8 @@ namespace ABI {
                 interface IServiceRequestedEventArgs2;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2 ABI::Windows::Media::Protection::IServiceRequestedEventArgs2
 
 #endif // ____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_FWD_DEFINED__
@@ -497,11 +361,166 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
+                typedef enum HdcpSetProtectionResult : int HdcpSetProtectionResult;
+            } /* Protection */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE
+#define DEF___FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("5061ee0f-899a-569c-a0a3-c2566eb88142"))
+IAsyncOperation<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> : IAsyncOperation_impl<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.HdcpSetProtectionResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t;
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("19344a58-a5c1-5168-803e-632771628143"))
+IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.Protection.HdcpSetProtectionResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Protection {
+                typedef enum RenewalStatus : int RenewalStatus;
+            } /* Protection */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
+#define DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("ec067827-67d9-59a6-a57b-3e7ca12b89c1"))
+IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Protection::RenewalStatus, UINT32> : IAsyncOperationWithProgressCompletedHandler_impl<enum ABI::Windows::Media::Protection::RenewalStatus, UINT32>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<Windows.Media.Protection.RenewalStatus, UInt32>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Protection::RenewalStatus, UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t;
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE */
+
+#endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
+#define DEF___FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("595dcc09-9ad3-5094-800a-0883cce1ef01"))
+IAsyncOperationWithProgress<enum ABI::Windows::Media::Protection::RenewalStatus, UINT32> : IAsyncOperationWithProgress_impl<enum ABI::Windows::Media::Protection::RenewalStatus, UINT32>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Media.Protection.RenewalStatus, UInt32>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationWithProgress<enum ABI::Windows::Media::Protection::RenewalStatus, UINT32> __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t;
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE */
+
+#endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
+#define DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("b9da4aa0-26e0-5d69-a0c8-05716a406235"))
+IAsyncOperationProgressHandler<enum ABI::Windows::Media::Protection::RenewalStatus, UINT32> : IAsyncOperationProgressHandler_impl<enum ABI::Windows::Media::Protection::RenewalStatus, UINT32>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationProgressHandler`2<Windows.Media.Protection.RenewalStatus, UInt32>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationProgressHandler<enum ABI::Windows::Media::Protection::RenewalStatus, UINT32> __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t;
+#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE */
+
+#endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Protection {
                 class RevocationAndRenewalItem;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -511,11 +530,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("dfb9655c-8b22-511f-8eaf-3aea7521802b"))
-IIterator<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::RevocationAndRenewalItem*, ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>> 
+IIterator<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::RevocationAndRenewalItem*, ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Media.Protection.RevocationAndRenewalItem>"; 
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Media.Protection.RevocationAndRenewalItem>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -523,17 +542,12 @@ IIterator<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IIterato
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t;
 #define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
-//#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -543,11 +557,11 @@ typedef IIterator<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("07015868-578c-556b-8a35-4039a35d1d92"))
-IIterable<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::RevocationAndRenewalItem*, ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>> 
+IIterable<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::RevocationAndRenewalItem*, ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Media.Protection.RevocationAndRenewalItem>"; 
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Media.Protection.RevocationAndRenewalItem>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -555,17 +569,12 @@ IIterable<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IIterabl
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t;
 #define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
-//#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -575,11 +584,11 @@ typedef IIterable<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("4a8793e2-33b8-5850-9943-6a94375caa89"))
-IVectorView<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::RevocationAndRenewalItem*, ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>> 
+IVectorView<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::RevocationAndRenewalItem*, ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Media.Protection.RevocationAndRenewalItem>"; 
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Media.Protection.RevocationAndRenewalItem>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -587,17 +596,12 @@ IVectorView<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IVecto
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t;
 #define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
-//#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -607,11 +611,11 @@ typedef IVectorView<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> 
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("3623cc0c-c765-57fb-967d-c7cb6097bd78"))
-IVector<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::RevocationAndRenewalItem*, ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>> 
+IVector<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::RevocationAndRenewalItem*, ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IVector`1<Windows.Media.Protection.RevocationAndRenewalItem>"; 
+        return L"Windows.Foundation.Collections.IVector`1<Windows.Media.Protection.RevocationAndRenewalItem>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -619,14 +623,10 @@ IVector<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> : IVector_im
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::Protection::RevocationAndRenewalItem*> __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t;
 #define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
-//#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_t ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::Protection::IRevocationAndRenewalItem*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_USE */
-
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -634,177 +634,13 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                enum RenewalStatus : int;
+                typedef enum HdcpProtection : int HdcpProtection;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
-
-#ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
-#define DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("b9da4aa0-26e0-5d69-a0c8-05716a406235"))
-IAsyncOperationProgressHandler<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> : IAsyncOperationProgressHandler_impl<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationProgressHandler`2<Windows.Media.Protection.RenewalStatus, UInt32>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationProgressHandler<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t;
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Protection::RenewalStatus,UINT32>
-//#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Protection::RenewalStatus,UINT32>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE */
-
-
-
-
-
-#ifndef DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
-#define DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("ec067827-67d9-59a6-a57b-3e7ca12b89c1"))
-IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> : IAsyncOperationWithProgressCompletedHandler_impl<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<Windows.Media.Protection.RenewalStatus, UInt32>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t;
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Protection::RenewalStatus,UINT32>
-//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Protection::RenewalStatus,UINT32>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE */
-
-
-
-
-
-#ifndef DEF___FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
-#define DEF___FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("595dcc09-9ad3-5094-800a-0883cce1ef01"))
-IAsyncOperationWithProgress<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> : IAsyncOperationWithProgress_impl<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Media.Protection.RenewalStatus, UInt32>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationWithProgress<enum ABI::Windows::Media::Protection::RenewalStatus,UINT32> __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t;
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Protection::RenewalStatus,UINT32>
-//#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_t ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Protection::RenewalStatus,UINT32>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_USE */
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Protection {
-                enum HdcpSetProtectionResult : int;
-            } /* Protection */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("19344a58-a5c1-5168-803e-632771628143"))
-IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.Protection.HdcpSetProtectionResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::HdcpSetProtectionResult>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Protection::HdcpSetProtectionResult>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE */
-
-
-
-
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE
-#define DEF___FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("5061ee0f-899a-569c-a0a3-c2566eb88142"))
-IAsyncOperation<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> : IAsyncOperation_impl<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.Protection.HdcpSetProtectionResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<enum ABI::Windows::Media::Protection::HdcpSetProtectionResult> __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t;
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Protection::HdcpSetProtectionResult>
-//#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Protection::HdcpSetProtectionResult>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_USE */
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Protection {
-                enum HdcpProtection : int;
-            } /* Protection */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 #ifndef DEF___FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_USE
 #define DEF___FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_USE
@@ -812,11 +648,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("8e330979-2fef-5d68-88aa-a9ee6697d117"))
-IReference<enum ABI::Windows::Media::Protection::HdcpProtection> : IReference_impl<enum ABI::Windows::Media::Protection::HdcpProtection> 
+IReference<enum ABI::Windows::Media::Protection::HdcpProtection> : IReference_impl<enum ABI::Windows::Media::Protection::HdcpProtection>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IReference`1<Windows.Media.Protection.HdcpProtection>"; 
+        return L"Windows.Foundation.IReference`1<Windows.Media.Protection.HdcpProtection>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -824,15 +660,12 @@ IReference<enum ABI::Windows::Media::Protection::HdcpProtection> : IReference_im
 // correct parameterized interface specialization.
 typedef IReference<enum ABI::Windows::Media::Protection::HdcpProtection> __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_t;
 #define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection ABI::Windows::Foundation::__FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection ABI::Windows::Foundation::IReference<ABI::Windows::Media::Protection::HdcpProtection>
-//#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_t ABI::Windows::Foundation::IReference<ABI::Windows::Media::Protection::HdcpProtection>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_USE */
 
-
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 namespace ABI {
     namespace Windows {
@@ -841,9 +674,8 @@ namespace ABI {
                 class HdcpSession;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
-
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
@@ -853,30 +685,24 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("f82ae043-54fb-5366-a607-19b68e6bab8c"))
-ITypedEventHandler<ABI::Windows::Media::Protection::HdcpSession*,IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::HdcpSession*, ABI::Windows::Media::Protection::IHdcpSession*>,IInspectable*> 
+ITypedEventHandler<ABI::Windows::Media::Protection::HdcpSession*, IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Protection::HdcpSession*, ABI::Windows::Media::Protection::IHdcpSession*>, IInspectable*>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Media.Protection.HdcpSession, Object>"; 
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Media.Protection.HdcpSession, Object>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Media::Protection::HdcpSession*,IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_t;
+typedef ITypedEventHandler<ABI::Windows::Media::Protection::HdcpSession*, IInspectable*> __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Protection::IHdcpSession*,IInspectable*>
-//#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Media::Protection::IHdcpSession*,IInspectable*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
-
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -887,14 +713,11 @@ namespace ABI {
                 interface IPropertySet;
             } /* Collections */
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
-
-
-
-
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -903,14 +726,24 @@ namespace ABI {
         namespace Foundation {
             interface IClosable;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            interface IPropertyValue;
+        } /* Foundation */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CFoundation_CIPropertyValue ABI::Windows::Foundation::IPropertyValue
 
-
-
+#endif // ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
 
 namespace ABI {
     namespace Windows {
@@ -919,7 +752,8 @@ namespace ABI {
                 class MediaPlaybackItem;
             } /* Playback */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
@@ -930,97 +764,31 @@ namespace ABI {
                 interface IMediaPlaybackItem;
             } /* Playback */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem ABI::Windows::Media::Playback::IMediaPlaybackItem
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
 
-
-
-
-
-
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                
-                typedef enum GraphicsTrustStatus : int GraphicsTrustStatus;
-                
-            } /* Protection */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Protection {
-                
-                typedef enum HdcpProtection : int HdcpProtection;
-                
-            } /* Protection */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Protection {
-                
-                typedef enum HdcpSetProtectionResult : int HdcpSetProtectionResult;
-                
-            } /* Protection */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Protection {
-                
                 typedef enum ProtectionCapabilityResult : int ProtectionCapabilityResult;
-                
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                
-                typedef enum RenewalStatus : int RenewalStatus;
-                
-            } /* Protection */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Protection {
-                
                 typedef enum RevocationAndRenewalReasons : unsigned int RevocationAndRenewalReasons;
-                
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1029,10 +797,8 @@ namespace ABI {
                 class ComponentLoadFailedEventArgs;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1041,8 +807,8 @@ namespace ABI {
                 class MediaProtectionManager;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1051,8 +817,8 @@ namespace ABI {
                 class MediaProtectionPMPServer;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1061,18 +827,8 @@ namespace ABI {
                 class MediaProtectionServiceCompletion;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Protection {
-                class ProtectionCapabilities;
-            } /* Protection */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1081,9 +837,8 @@ namespace ABI {
                 class RevocationAndRenewalInformation;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1092,17 +847,8 @@ namespace ABI {
                 class ServiceRequestedEventArgs;
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -1110,15 +856,12 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [v1_enum, contract] */
                 enum GraphicsTrustStatus : int
                 {
                     GraphicsTrustStatus_TrustNotRequired = 0,
@@ -1128,12 +871,11 @@ namespace ABI {
                     GraphicsTrustStatus_DriverSigningFailure = 4,
                     GraphicsTrustStatus_UnknownFailure = 5,
                 };
-                
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1141,27 +883,23 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [v1_enum, contract] */
                 enum HdcpProtection : int
                 {
                     HdcpProtection_Off = 0,
                     HdcpProtection_On = 1,
                     HdcpProtection_OnWithTypeEnforcement = 2,
                 };
-                
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1169,15 +907,12 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [v1_enum, contract] */
                 enum HdcpSetProtectionResult : int
                 {
                     HdcpSetProtectionResult_Success = 0,
@@ -1185,12 +920,11 @@ namespace ABI {
                     HdcpSetProtectionResult_NotSupported = 2,
                     HdcpSetProtectionResult_UnknownFailure = 3,
                 };
-                
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1198,27 +932,23 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [v1_enum, contract] */
                 enum ProtectionCapabilityResult : int
                 {
                     ProtectionCapabilityResult_NotSupported = 0,
                     ProtectionCapabilityResult_Maybe = 1,
                     ProtectionCapabilityResult_Probably = 2,
                 };
-                
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
-
 
 /*
  *
@@ -1226,15 +956,12 @@ namespace ABI {
  *
  * Introduced to Windows.Media.Protection.ProtectionRenewalContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [v1_enum, contract] */
                 enum RenewalStatus : int
                 {
                     RenewalStatus_NotStarted = 0,
@@ -1243,12 +970,11 @@ namespace ABI {
                     RenewalStatus_AppComponentsMayNeedUpdating = 3,
                     RenewalStatus_NoComponentsFound = 4,
                 };
-                
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1256,15 +982,12 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [v1_enum, flags, contract] */
                 enum RevocationAndRenewalReasons : unsigned int
                 {
                     RevocationAndRenewalReasons_UserModeComponentLoad = 0x1,
@@ -1283,21 +1006,19 @@ namespace ABI {
                     RevocationAndRenewalReasons_ComponentSignedWithTestCertificate = 0x1000000,
                     RevocationAndRenewalReasons_EncryptionFailure = 0x10000000,
                 };
-                
+
                 DEFINE_ENUM_FLAG_OPERATORS(RevocationAndRenewalReasons)
-                
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Delegate Windows.Media.Protection.ComponentLoadFailedEventHandler
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1307,35 +1028,31 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("95DA643C-6DB9-424B-86CA-091AF432081C"), contract] */
-                MIDL_INTERFACE("95DA643C-6DB9-424B-86CA-091AF432081C")
+                MIDL_INTERFACE("95da643c-6db9-424b-86ca-091af432081c")
                 IComponentLoadFailedEventHandler : public IUnknown
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Invoke(
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::IMediaProtectionManager * sender,
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::IComponentLoadFailedEventArgs * e
+                        ABI::Windows::Media::Protection::IMediaProtectionManager* sender,
+                        ABI::Windows::Media::Protection::IComponentLoadFailedEventArgs* e
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IComponentLoadFailedEventHandler=_uuidof(IComponentLoadFailedEventHandler);
-                
+                extern MIDL_CONST_ID IID& IID_IComponentLoadFailedEventHandler = _uuidof(IComponentLoadFailedEventHandler);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Delegate Windows.Media.Protection.RebootNeededEventHandler
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1345,34 +1062,30 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("64E12A45-973B-4A3A-B260-91898A49A82C"), contract] */
-                MIDL_INTERFACE("64E12A45-973B-4A3A-B260-91898A49A82C")
+                MIDL_INTERFACE("64e12a45-973b-4a3a-b260-91898a49a82c")
                 IRebootNeededEventHandler : public IUnknown
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Invoke(
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::IMediaProtectionManager * sender
+                        ABI::Windows::Media::Protection::IMediaProtectionManager* sender
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IRebootNeededEventHandler=_uuidof(IRebootNeededEventHandler);
-                
+                extern MIDL_CONST_ID IID& IID_IRebootNeededEventHandler = _uuidof(IRebootNeededEventHandler);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Delegate Windows.Media.Protection.ServiceRequestedEventHandler
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1382,28 +1095,25 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("D2D690BA-CAC9-48E1-95C0-D38495A84055"), contract] */
-                MIDL_INTERFACE("D2D690BA-CAC9-48E1-95C0-D38495A84055")
+                MIDL_INTERFACE("d2d690ba-cac9-48e1-95c0-d38495a84055")
                 IServiceRequestedEventHandler : public IUnknown
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Invoke(
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::IMediaProtectionManager * sender,
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::IServiceRequestedEventArgs * e
+                        ABI::Windows::Media::Protection::IMediaProtectionManager* sender,
+                        ABI::Windows::Media::Protection::IServiceRequestedEventArgs* e
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IServiceRequestedEventHandler=_uuidof(IServiceRequestedEventHandler);
-                
+                extern MIDL_CONST_ID IID& IID_IServiceRequestedEventHandler = _uuidof(IServiceRequestedEventHandler);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1411,9 +1121,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEve
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ComponentLoadFailedEventArgs
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1424,30 +1132,27 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("95972E93-7746-417E-8495-F031BBC5862C"), exclusiveto, contract] */
-                MIDL_INTERFACE("95972E93-7746-417E-8495-F031BBC5862C")
+                MIDL_INTERFACE("95972e93-7746-417e-8495-f031bbc5862c")
                 IComponentLoadFailedEventArgs : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Information(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Protection::IRevocationAndRenewalInformation * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Information(
+                        ABI::Windows::Media::Protection::IRevocationAndRenewalInformation** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Completion(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Protection::IMediaProtectionServiceCompletion * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Completion(
+                        ABI::Windows::Media::Protection::IMediaProtectionServiceCompletion** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IComponentLoadFailedEventArgs=_uuidof(IComponentLoadFailedEventArgs);
-                
+                extern MIDL_CONST_ID IID& IID_IComponentLoadFailedEventArgs = _uuidof(IComponentLoadFailedEventArgs);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1455,9 +1160,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailed
  *
  * Introduced to Windows.Media.Protection.ProtectionRenewalContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ComponentRenewal
- *
  *
  */
 #if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
@@ -1468,28 +1171,25 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("6FFBCD67-B795-48C5-8B7B-A7C4EFE202E3"), exclusiveto, contract] */
-                MIDL_INTERFACE("6FFBCD67-B795-48C5-8B7B-A7C4EFE202E3")
+                MIDL_INTERFACE("6ffbcd67-b795-48c5-8b7b-a7c4efe202e3")
                 IComponentRenewalStatics : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE RenewSystemComponentsAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::IRevocationAndRenewalInformation * information,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * * operation
+                        ABI::Windows::Media::Protection::IRevocationAndRenewalInformation* information,
+                        __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32** operation
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IComponentRenewalStatics=_uuidof(IComponentRenewalStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IComponentRenewalStatics = _uuidof(IComponentRenewalStatics);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1497,13 +1197,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalSta
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.HdcpSession
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.Foundation.IClosable
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1514,42 +1211,39 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("718845E9-64D7-426D-809B-1BE461941A2A"), exclusiveto, contract] */
-                MIDL_INTERFACE("718845E9-64D7-426D-809B-1BE461941A2A")
+                MIDL_INTERFACE("718845e9-64d7-426d-809b-1be461941a2a")
                 IHdcpSession : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsEffectiveProtectionAtLeast(
-                        /* [in] */ABI::Windows::Media::Protection::HdcpProtection protection,
-                        /* [retval, out] */__RPC__out ::boolean * value
+                        ABI::Windows::Media::Protection::HdcpProtection protection,
+                        boolean* value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetEffectiveProtection(
-                        /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * * value
+                        __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetDesiredMinProtectionAsync(
-                        /* [in] */ABI::Windows::Media::Protection::HdcpProtection protection,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * * value
+                        ABI::Windows::Media::Protection::HdcpProtection protection,
+                        __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult** value
                         ) = 0;
-                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ProtectionChanged(
-                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * handler,
-                        /* [retval, out] */__RPC__out EventRegistrationToken * token
+                    virtual HRESULT STDMETHODCALLTYPE add_ProtectionChanged(
+                        __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable* handler,
+                        EventRegistrationToken* token
                         ) = 0;
-                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_ProtectionChanged(
-                        /* [in] */EventRegistrationToken token
+                    virtual HRESULT STDMETHODCALLTYPE remove_ProtectionChanged(
+                        EventRegistrationToken token
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IHdcpSession=_uuidof(IHdcpSession);
-                
+                extern MIDL_CONST_ID IID& IID_IHdcpSession = _uuidof(IHdcpSession);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIHdcpSession;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1557,9 +1251,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIHdcpSession;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.MediaProtectionManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1570,48 +1262,45 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("45694947-C741-434B-A79E-474C12D93D2F"), exclusiveto, contract] */
-                MIDL_INTERFACE("45694947-C741-434B-A79E-474C12D93D2F")
+                MIDL_INTERFACE("45694947-c741-434b-a79e-474c12d93d2f")
                 IMediaProtectionManager : public IInspectable
                 {
                 public:
-                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ServiceRequested(
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::IServiceRequestedEventHandler  * handler,
-                        /* [retval, out] */__RPC__out EventRegistrationToken * cookie
+                    virtual HRESULT STDMETHODCALLTYPE add_ServiceRequested(
+                        ABI::Windows::Media::Protection::IServiceRequestedEventHandler* handler,
+                        EventRegistrationToken* cookie
                         ) = 0;
-                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_ServiceRequested(
-                        /* [in] */EventRegistrationToken cookie
+                    virtual HRESULT STDMETHODCALLTYPE remove_ServiceRequested(
+                        EventRegistrationToken cookie
                         ) = 0;
-                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_RebootNeeded(
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::IRebootNeededEventHandler  * handler,
-                        /* [retval, out] */__RPC__out EventRegistrationToken * cookie
+                    virtual HRESULT STDMETHODCALLTYPE add_RebootNeeded(
+                        ABI::Windows::Media::Protection::IRebootNeededEventHandler* handler,
+                        EventRegistrationToken* cookie
                         ) = 0;
-                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_RebootNeeded(
-                        /* [in] */EventRegistrationToken cookie
+                    virtual HRESULT STDMETHODCALLTYPE remove_RebootNeeded(
+                        EventRegistrationToken cookie
                         ) = 0;
-                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ComponentLoadFailed(
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Protection::IComponentLoadFailedEventHandler  * handler,
-                        /* [retval, out] */__RPC__out EventRegistrationToken * cookie
+                    virtual HRESULT STDMETHODCALLTYPE add_ComponentLoadFailed(
+                        ABI::Windows::Media::Protection::IComponentLoadFailedEventHandler* handler,
+                        EventRegistrationToken* cookie
                         ) = 0;
-                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_ComponentLoadFailed(
-                        /* [in] */EventRegistrationToken cookie
+                    virtual HRESULT STDMETHODCALLTYPE remove_ComponentLoadFailed(
+                        EventRegistrationToken cookie
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Properties(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Properties(
+                        ABI::Windows::Foundation::Collections::IPropertySet** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IMediaProtectionManager=_uuidof(IMediaProtectionManager);
-                
+                extern MIDL_CONST_ID IID& IID_IMediaProtectionManager = _uuidof(IMediaProtectionManager);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1619,9 +1308,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionMana
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.MediaProtectionPMPServer
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1632,27 +1319,24 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("0C111226-7B26-4D31-95BB-9C1B08EF7FC0"), exclusiveto, contract] */
-                MIDL_INTERFACE("0C111226-7B26-4D31-95BB-9C1B08EF7FC0")
+                MIDL_INTERFACE("0c111226-7b26-4d31-95bb-9c1b08ef7fc0")
                 IMediaProtectionPMPServer : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Properties(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::Collections::IPropertySet * * ppProperties
+                    virtual HRESULT STDMETHODCALLTYPE get_Properties(
+                        ABI::Windows::Foundation::Collections::IPropertySet** ppProperties
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IMediaProtectionPMPServer=_uuidof(IMediaProtectionPMPServer);
-                
+                extern MIDL_CONST_ID IID& IID_IMediaProtectionPMPServer = _uuidof(IMediaProtectionPMPServer);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1660,9 +1344,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPS
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.MediaProtectionPMPServer
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1673,28 +1355,25 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("602C8E5E-F7D2-487E-AF91-DBC4252B2182"), exclusiveto, contract] */
-                MIDL_INTERFACE("602C8E5E-F7D2-487E-AF91-DBC4252B2182")
+                MIDL_INTERFACE("602c8e5e-f7d2-487e-af91-dbc4252b2182")
                 IMediaProtectionPMPServerFactory : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE CreatePMPServer(
-                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::Collections::IPropertySet * pProperties,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Protection::IMediaProtectionPMPServer * * ppObject
+                        ABI::Windows::Foundation::Collections::IPropertySet* pProperties,
+                        ABI::Windows::Media::Protection::IMediaProtectionPMPServer** ppObject
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IMediaProtectionPMPServerFactory=_uuidof(IMediaProtectionPMPServerFactory);
-                
+                extern MIDL_CONST_ID IID& IID_IMediaProtectionPMPServerFactory = _uuidof(IMediaProtectionPMPServerFactory);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1702,9 +1381,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPS
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.MediaProtectionServiceCompletion
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1715,34 +1392,30 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("8B5CCA18-CFD5-44EE-A2ED-DF76010C14B5"), exclusiveto, contract] */
-                MIDL_INTERFACE("8B5CCA18-CFD5-44EE-A2ED-DF76010C14B5")
+                MIDL_INTERFACE("8b5cca18-cfd5-44ee-a2ed-df76010c14b5")
                 IMediaProtectionServiceCompletion : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE Complete(
-                        /* [in] */::boolean success
+                        boolean success
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IMediaProtectionServiceCompletion=_uuidof(IMediaProtectionServiceCompletion);
-                
+                extern MIDL_CONST_ID IID& IID_IMediaProtectionServiceCompletion = _uuidof(IMediaProtectionServiceCompletion);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Interface Windows.Media.Protection.IMediaProtectionServiceRequest
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1753,30 +1426,27 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("B1DE0EA6-2094-478D-87A4-8B95200F85C6"), contract] */
-                MIDL_INTERFACE("B1DE0EA6-2094-478D-87A4-8B95200F85C6")
+                MIDL_INTERFACE("b1de0ea6-2094-478d-87a4-8b95200f85c6")
                 IMediaProtectionServiceRequest : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProtectionSystem(
-                        /* [retval, out] */__RPC__out GUID * system
+                    virtual HRESULT STDMETHODCALLTYPE get_ProtectionSystem(
+                        GUID* system
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Type(
-                        /* [retval, out] */__RPC__out GUID * type
+                    virtual HRESULT STDMETHODCALLTYPE get_Type(
+                        GUID* type
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IMediaProtectionServiceRequest=_uuidof(IMediaProtectionServiceRequest);
-                
+                extern MIDL_CONST_ID IID& IID_IMediaProtectionServiceRequest = _uuidof(IMediaProtectionServiceRequest);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1784,9 +1454,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServ
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ProtectionCapabilities
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1797,29 +1465,26 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("C7AC5D7E-7480-4D29-A464-7BCD913DD8E4"), exclusiveto, contract] */
-                MIDL_INTERFACE("C7AC5D7E-7480-4D29-A464-7BCD913DD8E4")
+                MIDL_INTERFACE("c7ac5d7e-7480-4d29-a464-7bcd913dd8e4")
                 IProtectionCapabilities : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE IsTypeSupported(
-                        /* [in] */__RPC__in HSTRING type,
-                        /* [in] */__RPC__in HSTRING keySystem,
-                        /* [retval, out] */__RPC__out ABI::Windows::Media::Protection::ProtectionCapabilityResult * value
+                        HSTRING type,
+                        HSTRING keySystem,
+                        ABI::Windows::Media::Protection::ProtectionCapabilityResult* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IProtectionCapabilities=_uuidof(IProtectionCapabilities);
-                
+                extern MIDL_CONST_ID IID& IID_IProtectionCapabilities = _uuidof(IProtectionCapabilities);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
-
 
 /*
  *
@@ -1827,9 +1492,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilit
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.RevocationAndRenewalInformation
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1840,27 +1503,24 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("F3A1937B-2501-439E-A6E7-6FC95E175FCF"), exclusiveto, contract] */
-                MIDL_INTERFACE("F3A1937B-2501-439E-A6E7-6FC95E175FCF")
+                MIDL_INTERFACE("f3a1937b-2501-439e-a6e7-6fc95e175fcf")
                 IRevocationAndRenewalInformation : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Items(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * * items
+                    virtual HRESULT STDMETHODCALLTYPE get_Items(
+                        __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem** items
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IRevocationAndRenewalInformation=_uuidof(IRevocationAndRenewalInformation);
-                
+                extern MIDL_CONST_ID IID& IID_IRevocationAndRenewalInformation = _uuidof(IRevocationAndRenewalInformation);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1868,9 +1528,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewa
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.RevocationAndRenewalItem
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1881,39 +1539,36 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("3099C20C-3CF0-49EA-902D-CAF32D2DDE2C"), exclusiveto, contract] */
-                MIDL_INTERFACE("3099C20C-3CF0-49EA-902D-CAF32D2DDE2C")
+                MIDL_INTERFACE("3099c20c-3cf0-49ea-902d-caf32d2dde2c")
                 IRevocationAndRenewalItem : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Reasons(
-                        /* [retval, out] */__RPC__out ABI::Windows::Media::Protection::RevocationAndRenewalReasons * reasons
+                    virtual HRESULT STDMETHODCALLTYPE get_Reasons(
+                        ABI::Windows::Media::Protection::RevocationAndRenewalReasons* reasons
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HeaderHash(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_HeaderHash(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PublicKeyHash(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_PublicKeyHash(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Name(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * name
+                    virtual HRESULT STDMETHODCALLTYPE get_Name(
+                        HSTRING* name
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RenewalId(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_RenewalId(
+                        HSTRING* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IRevocationAndRenewalItem=_uuidof(IRevocationAndRenewalItem);
-                
+                extern MIDL_CONST_ID IID& IID_IRevocationAndRenewalItem = _uuidof(IRevocationAndRenewalItem);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1921,9 +1576,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewa
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ServiceRequestedEventArgs
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1934,30 +1587,27 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("34283BAF-ABB4-4FC1-BD89-93F106573A49"), exclusiveto, contract] */
-                MIDL_INTERFACE("34283BAF-ABB4-4FC1-BD89-93F106573A49")
+                MIDL_INTERFACE("34283baf-abb4-4fc1-bd89-93f106573a49")
                 IServiceRequestedEventArgs : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Request(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Protection::IMediaProtectionServiceRequest * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Request(
+                        ABI::Windows::Media::Protection::IMediaProtectionServiceRequest** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Completion(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Protection::IMediaProtectionServiceCompletion * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Completion(
+                        ABI::Windows::Media::Protection::IMediaProtectionServiceCompletion** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IServiceRequestedEventArgs=_uuidof(IServiceRequestedEventArgs);
-                
+                extern MIDL_CONST_ID IID& IID_IServiceRequestedEventArgs = _uuidof(IServiceRequestedEventArgs);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1965,9 +1615,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEve
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ServiceRequestedEventArgs
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1978,34 +1626,30 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Protection {
-                /* [object, uuid("553C69D6-FAFE-4128-8DFA-130E398A13A7"), exclusiveto, contract] */
-                MIDL_INTERFACE("553C69D6-FAFE-4128-8DFA-130E398A13A7")
+                MIDL_INTERFACE("553c69d6-fafe-4128-8dfa-130e398a13a7")
                 IServiceRequestedEventArgs2 : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MediaPlaybackItem(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::Playback::IMediaPlaybackItem * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_MediaPlaybackItem(
+                        ABI::Windows::Media::Playback::IMediaPlaybackItem** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IServiceRequestedEventArgs2=_uuidof(IServiceRequestedEventArgs2);
-                
+                extern MIDL_CONST_ID IID& IID_IServiceRequestedEventArgs2 = _uuidof(IServiceRequestedEventArgs2);
             } /* Protection */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Media.Protection.ComponentLoadFailedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IComponentLoadFailedEventArgs ** Default Interface **
@@ -2014,20 +1658,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEve
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_ComponentLoadFailedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_ComponentLoadFailedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_ComponentLoadFailedEventArgs[] = L"Windows.Media.Protection.ComponentLoadFailedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.ComponentRenewal
  *
  * Introduced to Windows.Media.Protection.ProtectionRenewalContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.Protection.IComponentRenewalStatics interface starting with version 1.0 of the Windows.Media.Protection.ProtectionRenewalContract API contract
@@ -2040,13 +1681,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.HdcpSession
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2061,20 +1700,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_HdcpSession_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_HdcpSession_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_HdcpSession[] = L"Windows.Media.Protection.HdcpSession";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Media.Protection.MediaProtectionManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2088,20 +1724,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_MediaProtectionManager_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_MediaProtectionManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_MediaProtectionManager[] = L"Windows.Media.Protection.MediaProtectionManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.MediaProtectionPMPServer
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.Media.Protection.IMediaProtectionPMPServerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2115,20 +1748,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_MediaProtectionPMPServer_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_MediaProtectionPMPServer_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_MediaProtectionPMPServer[] = L"Windows.Media.Protection.MediaProtectionPMPServer";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.MediaProtectionServiceCompletion
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IMediaProtectionServiceCompletion ** Default Interface **
@@ -2137,20 +1767,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_MediaProtectionServiceCompletion_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_MediaProtectionServiceCompletion_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_MediaProtectionServiceCompletion[] = L"Windows.Media.Protection.MediaProtectionServiceCompletion";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.ProtectionCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2164,20 +1791,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_ProtectionCapabilities_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_ProtectionCapabilities_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_ProtectionCapabilities[] = L"Windows.Media.Protection.ProtectionCapabilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
-
 /*
  *
  * Class Windows.Media.Protection.RevocationAndRenewalInformation
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IRevocationAndRenewalInformation ** Default Interface **
@@ -2186,20 +1810,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_RevocationAndRenewalInformation_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_RevocationAndRenewalInformation_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_RevocationAndRenewalInformation[] = L"Windows.Media.Protection.RevocationAndRenewalInformation";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.RevocationAndRenewalItem
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IRevocationAndRenewalItem ** Default Interface **
@@ -2208,20 +1829,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_RevocationAndRenewalItem_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_RevocationAndRenewalItem_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_RevocationAndRenewalItem[] = L"Windows.Media.Protection.RevocationAndRenewalItem";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.ServiceRequestedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IServiceRequestedEventArgs ** Default Interface **
@@ -2231,15 +1849,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_ServiceRequestedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_ServiceRequestedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_ServiceRequestedEventArgs[] = L"Windows.Media.Protection.ServiceRequestedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -2343,6 +1957,321 @@ typedef interface __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArg
 
 // Collection interface definitions
 
+typedef enum __x_ABI_CWindows_CMedia_CProtection_CHdcpSetProtectionResult __x_ABI_CWindows_CMedia_CProtection_CHdcpSetProtectionResult;
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+#if !defined(____FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
+
+typedef struct __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This,
+        enum __x_ABI_CWindows_CMedia_CProtection_CHdcpSetProtectionResult* result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl;
+
+interface __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* This,
+        __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+typedef enum __x_ABI_CWindows_CMedia_CProtection_CRenewalStatus __x_ABI_CWindows_CMedia_CProtection_CRenewalStatus;
+
+typedef interface __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
+
+#if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
+
+typedef struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl;
+
+interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
+#endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
+
+typedef struct __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Progress)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Progress)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32** result);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        enum __x_ABI_CWindows_CMedia_CProtection_CRenewalStatus* result);
+
+    END_INTERFACE
+} __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl;
+
+interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32
+{
+    CONST_VTBL struct __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_put_Progress(This, handler) \
+    ((This)->lpVtbl->put_Progress(This, handler))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_get_Progress(This, result) \
+    ((This)->lpVtbl->get_Progress(This, result))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
+#endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
+
+typedef struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* This,
+        __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32* asyncInfo,
+        UINT32 progressInfo);
+
+    END_INTERFACE
+} __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl;
+
+interface __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32
+{
+    CONST_VTBL struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Invoke(This, asyncInfo, progressInfo) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, progressInfo))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
+#endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_INTERFACE_DEFINED__
@@ -2356,80 +2285,73 @@ typedef struct __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewa
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem** items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl;
 
 interface __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_INTERFACE_DEFINED__)
@@ -2440,70 +2362,60 @@ typedef interface __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRen
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem;
 
-typedef  struct __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl
+typedef struct __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        __FIIterator_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem** result);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl;
 
 interface __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterable_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_INTERFACE_DEFINED__)
@@ -2518,103 +2430,77 @@ typedef struct __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRene
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32 index,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem** items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-            /* [in] */ __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl;
 
 interface __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_INTERFACE_DEFINED__)
@@ -2629,414 +2515,122 @@ typedef struct __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalI
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [out] */ __RPC__deref_out_opt __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ unsigned int index,
-        /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * *item);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-        __RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [retval][out] */ __RPC__out unsigned int *size);
-
-    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [retval][out] */ __RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem **view);
-
-    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * item,
-        /* [out] */ __RPC__out unsigned int *index,
-        /* [retval][out] */ __RPC__out boolean *found);
-
-    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * item);
-
-    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * item);
-
-    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [in] */ unsigned int index);
-    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This, /* [in] */ __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * item);
-    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ unsigned int startIndex,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * This,
-        /* [in] */ unsigned int count,
-        /* [size_is][in] */ __RPC__in_ecount_full(count) __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * *value);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32 index,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* GetView)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        __FIVectorView_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem** result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* SetAt)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32 index,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* value);
+    HRESULT (STDMETHODCALLTYPE* InsertAt)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32 index,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAt)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32 index);
+    HRESULT (STDMETHODCALLTYPE* Append)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    HRESULT (STDMETHODCALLTYPE* Clear)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem** items,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(__FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem** items);
 
     END_INTERFACE
 } __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl;
 
 interface __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem
 {
-    CONST_VTBL struct __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl *lpVtbl;
+    CONST_VTBL struct __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItemVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetView(This, result) \
+    ((This)->lpVtbl->GetView(This, result))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_SetAt(This, index, value) \
+    ((This)->lpVtbl->SetAt(This, index, value))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetView(This,view)	\
-    ( (This)->lpVtbl -> GetView(This,view) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_InsertAt(This, index, value) \
+    ((This)->lpVtbl->InsertAt(This, index, value))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_RemoveAt(This, index) \
+    ((This)->lpVtbl->RemoveAt(This, index))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_SetAt(This,index,item)	\
-    ( (This)->lpVtbl -> SetAt(This,index,item) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Append(This, value) \
+    ((This)->lpVtbl->Append(This, value))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_InsertAt(This,index,item)	\
-    ( (This)->lpVtbl -> InsertAt(This,index,item) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_RemoveAtEnd(This) \
+    ((This)->lpVtbl->RemoveAtEnd(This))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_RemoveAt(This,index)	\
-    ( (This)->lpVtbl -> RemoveAt(This,index) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Clear(This) \
+    ((This)->lpVtbl->Clear(This))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Append(This,item)	\
-    ( (This)->lpVtbl -> Append(This,item) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_RemoveAtEnd(This)	\
-    ( (This)->lpVtbl -> RemoveAtEnd(This) ) 
-
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_Clear(This)	\
-    ( (This)->lpVtbl -> Clear(This) ) 
-
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
-
-#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_ReplaceAll(This,count,value)	\
-    ( (This)->lpVtbl -> ReplaceAll(This,count,value) ) 
+#define __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_ReplaceAll(This, itemsLength, items) \
+    ((This)->lpVtbl->ReplaceAll(This, itemsLength, items))
 
 #endif /* COBJMACROS */
-
-
 
 #endif // ____FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-enum __x_ABI_CWindows_CMedia_CProtection_CRenewalStatus;
-#if !defined(____FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
+typedef enum __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection;
 
-typedef interface __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
-
-typedef interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
-
-typedef struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 *asyncInfo, /* [in] */ unsigned int progressInfo);
-    END_INTERFACE
-} __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl;
-
-interface __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32
-{
-    CONST_VTBL struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Invoke(This,asyncInfo,progressInfo)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,progressInfo) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
-
-//  Forward declare the async operation.
-typedef interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
-
-typedef struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl;
-
-interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32
-{
-    CONST_VTBL struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32;
-
-typedef struct __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 **handler);
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt enum __x_ABI_CWindows_CMedia_CProtection_CRenewalStatus *results);
-    END_INTERFACE
-} __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl;
-
-interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32
-{
-    CONST_VTBL struct __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32Vtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_put_Progress(This,handler)	\
-    ( (This)->lpVtbl -> put_Progress(This,handler) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_get_Progress(This,handler)	\
-    ( (This)->lpVtbl -> get_Progress(This,handler) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32_INTERFACE_DEFINED__
-
-
-enum __x_ABI_CWindows_CMedia_CProtection_CHdcpSetProtectionResult;
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult;
-
-typedef struct __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CMedia_CProtection_CHdcpSetProtectionResult *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl;
-
-interface __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult_INTERFACE_DEFINED__
-
-
-enum __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection;
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_INTERFACE_DEFINED__)
 #define ____FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_INTERFACE_DEFINED__
 
@@ -3048,52 +2642,57 @@ EXTERN_C const IID IID___FIReference_1_Windows__CMedia__CProtection__CHdcpProtec
 typedef struct __FIReference_1_Windows__CMedia__CProtection__CHdcpProtectionVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * This );
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * This );
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * This, 
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIReference_1_Windows__CMedia__CProtection__CHdcpProtection* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIReference_1_Windows__CMedia__CProtection__CHdcpProtection* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIReference_1_Windows__CMedia__CProtection__CHdcpProtection* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIReference_1_Windows__CMedia__CProtection__CHdcpProtection* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIReference_1_Windows__CMedia__CProtection__CHdcpProtection* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIReference_1_Windows__CMedia__CProtection__CHdcpProtection* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Value)(__FIReference_1_Windows__CMedia__CProtection__CHdcpProtection* This,
+        enum __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection* result);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection *value);
     END_INTERFACE
 } __FIReference_1_Windows__CMedia__CProtection__CHdcpProtectionVtbl;
 
 interface __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection
 {
-    CONST_VTBL struct __FIReference_1_Windows__CMedia__CProtection__CHdcpProtectionVtbl *lpVtbl;
+    CONST_VTBL struct __FIReference_1_Windows__CMedia__CProtection__CHdcpProtectionVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_get_Value(This,value)	\
-    ( (This)->lpVtbl -> get_Value(This,value) ) 
+#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_get_Value(This, result) \
+    ((This)->lpVtbl->get_Value(This, result))
+
 #endif /* COBJMACROS */
 
-
 #endif // ____FIReference_1_Windows__CMedia__CProtection__CHdcpProtection_INTERFACE_DEFINED__
-
-
-
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_INTERFACE_DEFINED__)
@@ -3107,43 +2706,42 @@ EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CMedia__CProtection__CHd
 typedef struct __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectableVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * sender,/* [in] */ __RPC__in_opt IInspectable * e);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* sender,
+        IInspectable* args);
+
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectableVtbl;
 
 interface __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectableVtbl *lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectableVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
+#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_Invoke(This,sender,e)	\
-    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#define __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_Invoke(This, sender, args) \
+    ((This)->lpVtbl->Invoke(This, sender, args))
+
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -3151,19 +2749,17 @@ typedef interface __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet __x_AB
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 
-
-
-
-
 #ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CFoundation_CIClosable __x_ABI_CWindows_CFoundation_CIClosable;
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CFoundation_CIPropertyValue __x_ABI_CWindows_CFoundation_CIPropertyValue;
 
-
-
+#endif // ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
@@ -3171,63 +2767,9 @@ typedef interface __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem __x_ABI_
 
 #endif // ____x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem_FWD_DEFINED__
 
-
-
-
-
-
-
-typedef enum __x_ABI_CWindows_CMedia_CProtection_CGraphicsTrustStatus __x_ABI_CWindows_CMedia_CProtection_CGraphicsTrustStatus;
-
-
-typedef enum __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection;
-
-
-typedef enum __x_ABI_CWindows_CMedia_CProtection_CHdcpSetProtectionResult __x_ABI_CWindows_CMedia_CProtection_CHdcpSetProtectionResult;
-
-
 typedef enum __x_ABI_CWindows_CMedia_CProtection_CProtectionCapabilityResult __x_ABI_CWindows_CMedia_CProtection_CProtectionCapabilityResult;
 
-
-typedef enum __x_ABI_CWindows_CMedia_CProtection_CRenewalStatus __x_ABI_CWindows_CMedia_CProtection_CRenewalStatus;
-
-
 typedef enum __x_ABI_CWindows_CMedia_CProtection_CRevocationAndRenewalReasons __x_ABI_CWindows_CMedia_CProtection_CRevocationAndRenewalReasons;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -3235,11 +2777,8 @@ typedef enum __x_ABI_CWindows_CMedia_CProtection_CRevocationAndRenewalReasons __
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CMedia_CProtection_CGraphicsTrustStatus
 {
     GraphicsTrustStatus_TrustNotRequired = 0,
@@ -3251,18 +2790,14 @@ enum __x_ABI_CWindows_CMedia_CProtection_CGraphicsTrustStatus
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.Media.Protection.HdcpProtection
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection
 {
     HdcpProtection_Off = 0,
@@ -3271,18 +2806,14 @@ enum __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Struct Windows.Media.Protection.HdcpSetProtectionResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CMedia_CProtection_CHdcpSetProtectionResult
 {
     HdcpSetProtectionResult_Success = 0,
@@ -3292,18 +2823,14 @@ enum __x_ABI_CWindows_CMedia_CProtection_CHdcpSetProtectionResult
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Struct Windows.Media.Protection.ProtectionCapabilityResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CMedia_CProtection_CProtectionCapabilityResult
 {
     ProtectionCapabilityResult_NotSupported = 0,
@@ -3312,18 +2839,14 @@ enum __x_ABI_CWindows_CMedia_CProtection_CProtectionCapabilityResult
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
-
 /*
  *
  * Struct Windows.Media.Protection.RenewalStatus
  *
  * Introduced to Windows.Media.Protection.ProtectionRenewalContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CMedia_CProtection_CRenewalStatus
 {
     RenewalStatus_NotStarted = 0,
@@ -3334,18 +2857,14 @@ enum __x_ABI_CWindows_CMedia_CProtection_CRenewalStatus
 };
 #endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.Media.Protection.RevocationAndRenewalReasons
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, flags, contract] */
 enum __x_ABI_CWindows_CMedia_CProtection_CRevocationAndRenewalReasons
 {
     RevocationAndRenewalReasons_UserModeComponentLoad = 0x1,
@@ -3366,68 +2885,56 @@ enum __x_ABI_CWindows_CMedia_CProtection_CRevocationAndRenewalReasons
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Delegate Windows.Media.Protection.ComponentLoadFailedEventHandler
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_INTERFACE_DEFINED__
-/* [object, uuid("95DA643C-6DB9-424B-86CA-091AF432081C"), contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandlerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject);
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* sender,
+        __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs* e);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler * This);
-HRESULT ( STDMETHODCALLTYPE *Invoke )(
-        __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * sender,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs * e
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandlerVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandlerVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandlerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_Invoke(This,sender,e) \
-    ( (This)->lpVtbl->Invoke(This,sender,e) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_Invoke(This, sender, e) \
+    ((This)->lpVtbl->Invoke(This, sender, e))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -3435,60 +2942,49 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailed
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_INTERFACE_DEFINED__
-/* [object, uuid("64E12A45-973B-4A3A-B260-91898A49A82C"), contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandlerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject);
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* sender);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler * This);
-HRESULT ( STDMETHODCALLTYPE *Invoke )(
-        __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * sender
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandlerVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandlerVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandlerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_Invoke(This,sender) \
-    ( (This)->lpVtbl->Invoke(This,sender) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_Invoke(This, sender) \
+    ((This)->lpVtbl->Invoke(This, sender))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -3496,61 +2992,50 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHa
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_INTERFACE_DEFINED__
-/* [object, uuid("D2D690BA-CAC9-48E1-95C0-D38495A84055"), contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandlerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject);
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* sender,
+        __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs* e);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler * This);
-HRESULT ( STDMETHODCALLTYPE *Invoke )(
-        __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * sender,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs * e
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandlerVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandlerVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandlerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_Invoke(This,sender,e) \
-    ( (This)->lpVtbl->Invoke(This,sender,e) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_Invoke(This, sender, e) \
+    ((This)->lpVtbl->Invoke(This, sender, e))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -3558,99 +3043,73 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEve
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ComponentLoadFailedEventArgs
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IComponentLoadFailedEventArgs[] = L"Windows.Media.Protection.IComponentLoadFailedEventArgs";
-/* [object, uuid("95972E93-7746-417E-8495-F031BBC5862C"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Information)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation** value);
+    HRESULT (STDMETHODCALLTYPE* get_Completion)(__x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Information )(
-        __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Completion )(
-        __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgsVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_get_Information(This,value) \
-    ( (This)->lpVtbl->get_Information(This,value) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_get_Information(This, value) \
+    ((This)->lpVtbl->get_Information(This, value))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_get_Completion(This,value) \
-    ( (This)->lpVtbl->get_Completion(This,value) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_get_Completion(This, value) \
+    ((This)->lpVtbl->get_Completion(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -3658,93 +3117,69 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailed
  *
  * Introduced to Windows.Media.Protection.ProtectionRenewalContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ComponentRenewal
- *
  *
  */
 #if WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IComponentRenewalStatics[] = L"Windows.Media.Protection.IComponentRenewalStatics";
-/* [object, uuid("6FFBCD67-B795-48C5-8B7B-A7C4EFE202E3"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* RenewSystemComponentsAsync)(__x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation* information,
+        __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32** operation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *RenewSystemComponentsAsync )(
-        __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation * information,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CProtection__CRenewalStatus_UINT32 * * operation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStaticsVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_RenewSystemComponentsAsync(This,information,operation) \
-    ( (This)->lpVtbl->RenewSystemComponentsAsync(This,information,operation) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_RenewSystemComponentsAsync(This, information, operation) \
+    ((This)->lpVtbl->RenewSystemComponentsAsync(This, information, operation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -3752,127 +3187,94 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIComponentRenewalSta
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.HdcpSession
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.Foundation.IClosable
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IHdcpSession[] = L"Windows.Media.Protection.IHdcpSession";
-/* [object, uuid("718845E9-64D7-426D-809B-1BE461941A2A"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIHdcpSessionVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* IsEffectiveProtectionAtLeast)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This,
+        enum __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection protection,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* GetEffectiveProtection)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This,
+        __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection** value);
+    HRESULT (STDMETHODCALLTYPE* SetDesiredMinProtectionAsync)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This,
+        enum __x_ABI_CWindows_CMedia_CProtection_CHdcpProtection protection,
+        __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult** value);
+    HRESULT (STDMETHODCALLTYPE* add_ProtectionChanged)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This,
+        __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable* handler,
+        EventRegistrationToken* token);
+    HRESULT (STDMETHODCALLTYPE* remove_ProtectionChanged)(__x_ABI_CWindows_CMedia_CProtection_CIHdcpSession* This,
+        EventRegistrationToken token);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *IsEffectiveProtectionAtLeast )(
-        __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This,
-        /* [in] */__x_ABI_CWindows_CMedia_CProtection_CHdcpProtection protection,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetEffectiveProtection )(
-        __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CMedia__CProtection__CHdcpProtection * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetDesiredMinProtectionAsync )(
-        __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This,
-        /* [in] */__x_ABI_CWindows_CMedia_CProtection_CHdcpProtection protection,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CProtection__CHdcpSetProtectionResult * * value
-        );
-    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_ProtectionChanged )(
-        __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This,
-        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CMedia__CProtection__CHdcpSession_IInspectable * handler,
-        /* [retval, out] */__RPC__out EventRegistrationToken * token
-        );
-    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_ProtectionChanged )(
-        __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession * This,
-        /* [in] */EventRegistrationToken token
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIHdcpSessionVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIHdcpSessionVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIHdcpSessionVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_IsEffectiveProtectionAtLeast(This,protection,value) \
-    ( (This)->lpVtbl->IsEffectiveProtectionAtLeast(This,protection,value) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_IsEffectiveProtectionAtLeast(This, protection, value) \
+    ((This)->lpVtbl->IsEffectiveProtectionAtLeast(This, protection, value))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_GetEffectiveProtection(This,value) \
-    ( (This)->lpVtbl->GetEffectiveProtection(This,value) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_GetEffectiveProtection(This, value) \
+    ((This)->lpVtbl->GetEffectiveProtection(This, value))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_SetDesiredMinProtectionAsync(This,protection,value) \
-    ( (This)->lpVtbl->SetDesiredMinProtectionAsync(This,protection,value) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_SetDesiredMinProtectionAsync(This, protection, value) \
+    ((This)->lpVtbl->SetDesiredMinProtectionAsync(This, protection, value))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_add_ProtectionChanged(This,handler,token) \
-    ( (This)->lpVtbl->add_ProtectionChanged(This,handler,token) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_add_ProtectionChanged(This, handler, token) \
+    ((This)->lpVtbl->add_ProtectionChanged(This, handler, token))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_remove_ProtectionChanged(This,token) \
-    ( (This)->lpVtbl->remove_ProtectionChanged(This,token) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_remove_ProtectionChanged(This, token) \
+    ((This)->lpVtbl->remove_ProtectionChanged(This, token))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIHdcpSession;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIHdcpSession_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -3880,137 +3282,101 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIHdcpSession;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.MediaProtectionManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IMediaProtectionManager[] = L"Windows.Media.Protection.IMediaProtectionManager";
-/* [object, uuid("45694947-C741-434B-A79E-474C12D93D2F"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManagerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* add_ServiceRequested)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler* handler,
+        EventRegistrationToken* cookie);
+    HRESULT (STDMETHODCALLTYPE* remove_ServiceRequested)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        EventRegistrationToken cookie);
+    HRESULT (STDMETHODCALLTYPE* add_RebootNeeded)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler* handler,
+        EventRegistrationToken* cookie);
+    HRESULT (STDMETHODCALLTYPE* remove_RebootNeeded)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        EventRegistrationToken cookie);
+    HRESULT (STDMETHODCALLTYPE* add_ComponentLoadFailed)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler* handler,
+        EventRegistrationToken* cookie);
+    HRESULT (STDMETHODCALLTYPE* remove_ComponentLoadFailed)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        EventRegistrationToken cookie);
+    HRESULT (STDMETHODCALLTYPE* get_Properties)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager* This,
+        __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_ServiceRequested )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventHandler  * handler,
-        /* [retval, out] */__RPC__out EventRegistrationToken * cookie
-        );
-    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_ServiceRequested )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-        /* [in] */EventRegistrationToken cookie
-        );
-    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_RebootNeeded )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIRebootNeededEventHandler  * handler,
-        /* [retval, out] */__RPC__out EventRegistrationToken * cookie
-        );
-    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_RebootNeeded )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-        /* [in] */EventRegistrationToken cookie
-        );
-    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_ComponentLoadFailed )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CProtection_CIComponentLoadFailedEventHandler  * handler,
-        /* [retval, out] */__RPC__out EventRegistrationToken * cookie
-        );
-    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_ComponentLoadFailed )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-        /* [in] */EventRegistrationToken cookie
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Properties )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManagerVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManagerVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManagerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_add_ServiceRequested(This,handler,cookie) \
-    ( (This)->lpVtbl->add_ServiceRequested(This,handler,cookie) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_add_ServiceRequested(This, handler, cookie) \
+    ((This)->lpVtbl->add_ServiceRequested(This, handler, cookie))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_remove_ServiceRequested(This,cookie) \
-    ( (This)->lpVtbl->remove_ServiceRequested(This,cookie) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_remove_ServiceRequested(This, cookie) \
+    ((This)->lpVtbl->remove_ServiceRequested(This, cookie))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_add_RebootNeeded(This,handler,cookie) \
-    ( (This)->lpVtbl->add_RebootNeeded(This,handler,cookie) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_add_RebootNeeded(This, handler, cookie) \
+    ((This)->lpVtbl->add_RebootNeeded(This, handler, cookie))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_remove_RebootNeeded(This,cookie) \
-    ( (This)->lpVtbl->remove_RebootNeeded(This,cookie) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_remove_RebootNeeded(This, cookie) \
+    ((This)->lpVtbl->remove_RebootNeeded(This, cookie))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_add_ComponentLoadFailed(This,handler,cookie) \
-    ( (This)->lpVtbl->add_ComponentLoadFailed(This,handler,cookie) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_add_ComponentLoadFailed(This, handler, cookie) \
+    ((This)->lpVtbl->add_ComponentLoadFailed(This, handler, cookie))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_remove_ComponentLoadFailed(This,cookie) \
-    ( (This)->lpVtbl->remove_ComponentLoadFailed(This,cookie) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_remove_ComponentLoadFailed(This, cookie) \
+    ((This)->lpVtbl->remove_ComponentLoadFailed(This, cookie))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_get_Properties(This,value) \
-    ( (This)->lpVtbl->get_Properties(This,value) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_get_Properties(This, value) \
+    ((This)->lpVtbl->get_Properties(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4018,92 +3384,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionMana
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.MediaProtectionPMPServer
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IMediaProtectionPMPServer[] = L"Windows.Media.Protection.IMediaProtectionPMPServer";
-/* [object, uuid("0C111226-7B26-4D31-95BB-9C1B08EF7FC0"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Properties)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer* This,
+        __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet** ppProperties);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Properties )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet * * ppProperties
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_get_Properties(This,ppProperties) \
-    ( (This)->lpVtbl->get_Properties(This,ppProperties) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_get_Properties(This, ppProperties) \
+    ((This)->lpVtbl->get_Properties(This, ppProperties))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4111,93 +3453,69 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPS
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.MediaProtectionPMPServer
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IMediaProtectionPMPServerFactory[] = L"Windows.Media.Protection.IMediaProtectionPMPServerFactory";
-/* [object, uuid("602C8E5E-F7D2-487E-AF91-DBC4252B2182"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactoryVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreatePMPServer)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory* This,
+        __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet* pProperties,
+        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer** ppObject);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *CreatePMPServer )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet * pProperties,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServer * * ppObject
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactoryVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactoryVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactoryVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_CreatePMPServer(This,pProperties,ppObject) \
-    ( (This)->lpVtbl->CreatePMPServer(This,pProperties,ppObject) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_CreatePMPServer(This, pProperties, ppObject) \
+    ((This)->lpVtbl->CreatePMPServer(This, pProperties, ppObject))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPServerFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4205,92 +3523,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionPMPS
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.MediaProtectionServiceCompletion
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IMediaProtectionServiceCompletion[] = L"Windows.Media.Protection.IMediaProtectionServiceCompletion";
-/* [object, uuid("8B5CCA18-CFD5-44EE-A2ED-DF76010C14B5"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletionVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Complete)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion* This,
+        boolean success);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *Complete )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion * This,
-        /* [in] */boolean success
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletionVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletionVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletionVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_Complete(This,success) \
-    ( (This)->lpVtbl->Complete(This,success) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_Complete(This, success) \
+    ((This)->lpVtbl->Complete(This, success))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4298,96 +3592,71 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServ
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IMediaProtectionServiceRequest[] = L"Windows.Media.Protection.IMediaProtectionServiceRequest";
-/* [object, uuid("B1DE0EA6-2094-478D-87A4-8B95200F85C6"), contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequestVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ProtectionSystem)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest* This,
+        GUID* system);
+    HRESULT (STDMETHODCALLTYPE* get_Type)(__x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest* This,
+        GUID* type);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ProtectionSystem )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest * This,
-        /* [retval, out] */__RPC__out GUID * system
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Type )(
-        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest * This,
-        /* [retval, out] */__RPC__out GUID * type
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequestVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequestVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequestVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_get_ProtectionSystem(This,system) \
-    ( (This)->lpVtbl->get_ProtectionSystem(This,system) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_get_ProtectionSystem(This, system) \
+    ((This)->lpVtbl->get_ProtectionSystem(This, system))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_get_Type(This,type) \
-    ( (This)->lpVtbl->get_Type(This,type) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_get_Type(This, type) \
+    ((This)->lpVtbl->get_Type(This, type))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4395,94 +3664,70 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServ
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ProtectionCapabilities
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IProtectionCapabilities[] = L"Windows.Media.Protection.IProtectionCapabilities";
-/* [object, uuid("C7AC5D7E-7480-4D29-A464-7BCD913DD8E4"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilitiesVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* IsTypeSupported)(__x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities* This,
+        HSTRING type,
+        HSTRING keySystem,
+        enum __x_ABI_CWindows_CMedia_CProtection_CProtectionCapabilityResult* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *IsTypeSupported )(
-        __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities * This,
-        /* [in] */__RPC__in HSTRING type,
-        /* [in] */__RPC__in HSTRING keySystem,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CMedia_CProtection_CProtectionCapabilityResult * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilitiesVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilitiesVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilitiesVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_IsTypeSupported(This,type,keySystem,value) \
-    ( (This)->lpVtbl->IsTypeSupported(This,type,keySystem,value) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_IsTypeSupported(This, type, keySystem, value) \
+    ((This)->lpVtbl->IsTypeSupported(This, type, keySystem, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
-
 
 /*
  *
@@ -4490,92 +3735,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIProtectionCapabilit
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.RevocationAndRenewalInformation
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IRevocationAndRenewalInformation[] = L"Windows.Media.Protection.IRevocationAndRenewalInformation";
-/* [object, uuid("F3A1937B-2501-439E-A6E7-6FC95E175FCF"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformationVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Items)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation* This,
+        __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem** items);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Items )(
-        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CMedia__CProtection__CRevocationAndRenewalItem * * items
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformationVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformationVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformationVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_get_Items(This,items) \
-    ( (This)->lpVtbl->get_Items(This,items) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_get_Items(This, items) \
+    ((This)->lpVtbl->get_Items(This, items))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalInformation_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4583,120 +3804,88 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewa
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.RevocationAndRenewalItem
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IRevocationAndRenewalItem[] = L"Windows.Media.Protection.IRevocationAndRenewalItem";
-/* [object, uuid("3099C20C-3CF0-49EA-902D-CAF32D2DDE2C"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItemVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Reasons)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This,
+        enum __x_ABI_CWindows_CMedia_CProtection_CRevocationAndRenewalReasons* reasons);
+    HRESULT (STDMETHODCALLTYPE* get_HeaderHash)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_PublicKeyHash)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_Name)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This,
+        HSTRING* name);
+    HRESULT (STDMETHODCALLTYPE* get_RenewalId)(__x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem* This,
+        HSTRING* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Reasons )(
-        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CMedia_CProtection_CRevocationAndRenewalReasons * reasons
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HeaderHash )(
-        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PublicKeyHash )(
-        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Name )(
-        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * name
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RenewalId )(
-        __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItemVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItemVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItemVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_Reasons(This,reasons) \
-    ( (This)->lpVtbl->get_Reasons(This,reasons) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_Reasons(This, reasons) \
+    ((This)->lpVtbl->get_Reasons(This, reasons))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_HeaderHash(This,value) \
-    ( (This)->lpVtbl->get_HeaderHash(This,value) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_HeaderHash(This, value) \
+    ((This)->lpVtbl->get_HeaderHash(This, value))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_PublicKeyHash(This,value) \
-    ( (This)->lpVtbl->get_PublicKeyHash(This,value) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_PublicKeyHash(This, value) \
+    ((This)->lpVtbl->get_PublicKeyHash(This, value))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_Name(This,name) \
-    ( (This)->lpVtbl->get_Name(This,name) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_Name(This, name) \
+    ((This)->lpVtbl->get_Name(This, name))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_RenewalId(This,value) \
-    ( (This)->lpVtbl->get_RenewalId(This,value) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_get_RenewalId(This, value) \
+    ((This)->lpVtbl->get_RenewalId(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewalItem_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4704,99 +3893,73 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIRevocationAndRenewa
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ServiceRequestedEventArgs
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IServiceRequestedEventArgs[] = L"Windows.Media.Protection.IServiceRequestedEventArgs";
-/* [object, uuid("34283BAF-ABB4-4FC1-BD89-93F106573A49"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Request)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest** value);
+    HRESULT (STDMETHODCALLTYPE* get_Completion)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs* This,
+        __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Request )(
-        __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceRequest * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Completion )(
-        __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CProtection_CIMediaProtectionServiceCompletion * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgsVtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_get_Request(This,value) \
-    ( (This)->lpVtbl->get_Request(This,value) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_get_Request(This, value) \
+    ((This)->lpVtbl->get_Request(This, value))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_get_Completion(This,value) \
-    ( (This)->lpVtbl->get_Completion(This,value) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_get_Completion(This, value) \
+    ((This)->lpVtbl->get_Completion(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4804,99 +3967,74 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEve
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Protection.ServiceRequestedEventArgs
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Protection_IServiceRequestedEventArgs2[] = L"Windows.Media.Protection.IServiceRequestedEventArgs2";
-/* [object, uuid("553C69D6-FAFE-4128-8DFA-130E398A13A7"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_MediaPlaybackItem)(__x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2* This,
+        __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MediaPlaybackItem )(
-        __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2 * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CPlayback_CIMediaPlaybackItem * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2Vtbl;
 
 interface __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_get_MediaPlaybackItem(This,value) \
-    ( (This)->lpVtbl->get_MediaPlaybackItem(This,value) )
-
+#define __x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_get_MediaPlaybackItem(This, value) \
+    ((This)->lpVtbl->get_MediaPlaybackItem(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEventArgs2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Media.Protection.ComponentLoadFailedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IComponentLoadFailedEventArgs ** Default Interface **
@@ -4905,20 +4043,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CProtection_CIServiceRequestedEve
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_ComponentLoadFailedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_ComponentLoadFailedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_ComponentLoadFailedEventArgs[] = L"Windows.Media.Protection.ComponentLoadFailedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.ComponentRenewal
  *
  * Introduced to Windows.Media.Protection.ProtectionRenewalContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.Protection.IComponentRenewalStatics interface starting with version 1.0 of the Windows.Media.Protection.ProtectionRenewalContract API contract
@@ -4931,13 +4066,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.HdcpSession
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -4952,20 +4085,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_HdcpSession_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_HdcpSession_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_HdcpSession[] = L"Windows.Media.Protection.HdcpSession";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.Media.Protection.MediaProtectionManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -4979,20 +4109,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_MediaProtectionManager_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_MediaProtectionManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_MediaProtectionManager[] = L"Windows.Media.Protection.MediaProtectionManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.MediaProtectionPMPServer
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.Media.Protection.IMediaProtectionPMPServerFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -5006,20 +4133,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_MediaProtectionPMPServer_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_MediaProtectionPMPServer_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_MediaProtectionPMPServer[] = L"Windows.Media.Protection.MediaProtectionPMPServer";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.MediaProtectionServiceCompletion
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IMediaProtectionServiceCompletion ** Default Interface **
@@ -5028,20 +4152,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_MediaProtectionServiceCompletion_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_MediaProtectionServiceCompletion_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_MediaProtectionServiceCompletion[] = L"Windows.Media.Protection.MediaProtectionServiceCompletion";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.ProtectionCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -5055,20 +4176,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_ProtectionCapabilities_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_ProtectionCapabilities_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_ProtectionCapabilities[] = L"Windows.Media.Protection.ProtectionCapabilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 
-
 /*
  *
  * Class Windows.Media.Protection.RevocationAndRenewalInformation
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IRevocationAndRenewalInformation ** Default Interface **
@@ -5077,20 +4195,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_RevocationAndRenewalInformation_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_RevocationAndRenewalInformation_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_RevocationAndRenewalInformation[] = L"Windows.Media.Protection.RevocationAndRenewalInformation";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.RevocationAndRenewalItem
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IRevocationAndRenewalItem ** Default Interface **
@@ -5099,20 +4214,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_RevocationAndRenewalItem_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_RevocationAndRenewalItem_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_RevocationAndRenewalItem[] = L"Windows.Media.Protection.RevocationAndRenewalItem";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Protection.ServiceRequestedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Protection.IServiceRequestedEventArgs ** Default Interface **
@@ -5122,15 +4234,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Protection_ServiceRequestedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Media_Protection_ServiceRequestedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Protection_ServiceRequestedEventArgs[] = L"Windows.Media.Protection.ServiceRequestedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

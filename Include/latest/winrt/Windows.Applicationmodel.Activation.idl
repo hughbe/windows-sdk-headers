@@ -1039,13 +1039,14 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [deprecated("IFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [uuid(F0FA3F3A-D4E8-4AD3-9C34-2308F32FCEC9)]
             interface IFileOpenPickerContinuationEventArgs : IInspectable
                 requires
                     Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs,
                     Windows.ApplicationModel.Activation.IActivatedEventArgs
             {
-                [propget] HRESULT Files([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile*>** value);
+                [deprecated("IFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT Files([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile*>** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1066,23 +1067,25 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [deprecated("IFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [uuid(2C846FE1-3BAD-4F33-8C8B-E46FAE824B4B)]
             interface IFileSavePickerContinuationEventArgs : IInspectable
                 requires
                     Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs,
                     Windows.ApplicationModel.Activation.IActivatedEventArgs
             {
-                [propget] HRESULT File([out] [retval] Windows.Storage.StorageFile** value);
+                [deprecated("IFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT File([out] [retval] Windows.Storage.StorageFile** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [deprecated("IFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [uuid(51882366-9F4B-498F-BEB0-42684F6E1C29)]
             interface IFolderPickerContinuationEventArgs : IInspectable
                 requires
                     Windows.ApplicationModel.Activation.IContinuationActivatedEventArgs,
                     Windows.ApplicationModel.Activation.IActivatedEventArgs
             {
-                [propget] HRESULT Folder([out] [retval] Windows.Storage.StorageFolder** value);
+                [deprecated("IFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT Folder([out] [retval] Windows.Storage.StorageFolder** value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1534,6 +1537,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [deprecated("FileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [marshaling_behavior(agile)]
             runtimeclass FileOpenPickerContinuationEventArgs
             {
@@ -1554,6 +1558,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [deprecated("FileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [marshaling_behavior(agile)]
             runtimeclass FileSavePickerContinuationEventArgs
             {
@@ -1564,6 +1569,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [deprecated("FolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [marshaling_behavior(agile)]
             runtimeclass FolderPickerContinuationEventArgs
             {

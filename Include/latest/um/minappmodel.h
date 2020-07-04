@@ -10,8 +10,8 @@
 
 #include <winapifamily.h>
 
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 //
 // These constants define the lengths of various portions of a package
@@ -25,7 +25,7 @@
 #define PACKAGE_VERSION_MAX_LENGTH          23 /* "a.b.c.d" where abcd=65535 */
 #define PACKAGE_NAME_MIN_LENGTH             3
 #define PACKAGE_NAME_MAX_LENGTH             50
-#define PACKAGE_PUBLISHER_MIN_LENGTH        4  /* "CN=x" */
+#define PACKAGE_PUBLISHER_MIN_LENGTH        3  /* "S=x" */
 #define PACKAGE_PUBLISHER_MAX_LENGTH        8192
 #define PACKAGE_PUBLISHERID_MIN_LENGTH      13
 #define PACKAGE_PUBLISHERID_MAX_LENGTH      13
@@ -72,5 +72,5 @@
                                                      PACKAGE_RELATIVE_APPLICATION_ID_MAX_LENGTH)
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion

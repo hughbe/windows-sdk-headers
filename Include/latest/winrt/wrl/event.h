@@ -236,7 +236,7 @@ template<typename TDelegateInterface, typename ...TArgs>
 class DelegateArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArgs...)>
 {
     template<typename TDelegateInterface, typename TCallback, DelegateCheckMode checkMode, typename... TArgs>
-    struct DelegateInvokeHelper WrlSealed : public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>, RemoveReference<TCallback>::Type
+    struct DelegateInvokeHelper WrlFinal : public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>, RemoveReference<TCallback>::Type
     {
         DelegateInvokeHelper(TCallback&& callback) throw() : RemoveReference<TCallback>::Type(Details::Forward<TCallback>(callback)) {}
 
@@ -288,7 +288,7 @@ HRESULT CreateAgileHelper(_In_ TDelegateInterface* delegateInterface, _COM_Outpt
 
     using DelegateHelper = DelegateArgTraitsHelper<TDelegateInterface>;
 
-    auto callback = typename DelegateHelper::Traits::template Callback<Implements<RuntimeClassFlags<ClassicCom>, TDelegateInterface, FtmBase>, typename DelegateHelper::Interface>(
+    auto callback = DelegateHelper::Traits::template Callback<Implements<RuntimeClassFlags<ClassicCom>, TDelegateInterface, FtmBase>, typename DelegateHelper::Interface>(
         [delegateAsAgile = Move(delegateAsAgile)](auto&&... args)
     { 
         ComPtr<TDelegateInterface> localDelegate;
@@ -438,7 +438,7 @@ namespace Details
 // EventTargetArray is used to keep array of event targets. This array is fixed-length.
 // Every time element is added/removed from array EventSource allocate new array. This array
 // is optimize-for-invoke lock strategy in EventSource
-class EventTargetArray WrlSealed : public ::Microsoft::WRL::RuntimeClass< ::Microsoft::WRL::RuntimeClassFlags<ClassicCom>, IUnknown >
+class EventTargetArray WrlFinal : public ::Microsoft::WRL::RuntimeClass< ::Microsoft::WRL::RuntimeClassFlags<ClassicCom>, IUnknown >
 {
     public:
         EventTargetArray() throw() : begin_(nullptr), end_(nullptr), bucketAssists_(nullptr)

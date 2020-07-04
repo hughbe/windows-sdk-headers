@@ -62,6 +62,15 @@ extern "C" {            /* Assume C declarations for C++ */
 #endif  /* __cplusplus */
 
 
+#pragma region Desktop Family or Gaming Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+
+SHSTDAPI_(LPWSTR *)  CommandLineToArgvW(_In_ LPCWSTR lpCmdLine, _Out_ int* pNumArgs);
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
@@ -100,7 +109,6 @@ SHSTDAPI_(HINSTANCE) FindExecutableW(_In_ LPCWSTR lpFile, _In_opt_ LPCWSTR lpDir
 #else
 #define FindExecutable  FindExecutableA
 #endif // !UNICODE
-SHSTDAPI_(LPWSTR *)  CommandLineToArgvW(_In_ LPCWSTR lpCmdLine, _Out_ int* pNumArgs);
 
 SHSTDAPI_(INT) ShellAboutA(_In_opt_ HWND hWnd, _In_ LPCSTR szApp, _In_opt_ LPCSTR szOtherStuff, _In_opt_ HICON hIcon);
 SHSTDAPI_(INT) ShellAboutW(_In_opt_ HWND hWnd, _In_ LPCWSTR szApp, _In_opt_ LPCWSTR szOtherStuff, _In_opt_ HICON hIcon);

@@ -1,596 +1,517 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Graphics.Imaging.1.h"
-#include "winrt/impl/Windows.Storage.1.h"
-#include "winrt/impl/Windows.Storage.Streams.1.h"
+#ifndef WINRT_Windows_Devices_PointOfService_2_H
+#define WINRT_Windows_Devices_PointOfService_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
+#include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Devices.PointOfService.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::PointOfService {
-
-struct SizeUInt32
+namespace winrt::Windows::Devices::PointOfService
 {
-    uint32_t Width;
-    uint32_t Height;
-};
-
-inline bool operator==(SizeUInt32 const& left, SizeUInt32 const& right) noexcept
-{
-    return left.Width == right.Width && left.Height == right.Height;
+    struct SizeUInt32
+    {
+        uint32_t Width;
+        uint32_t Height;
+    };
+    inline bool operator==(SizeUInt32 const& left, SizeUInt32 const& right) noexcept
+    {
+        return left.Width == right.Width && left.Height == right.Height;
+    }
+    inline bool operator!=(SizeUInt32 const& left, SizeUInt32 const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct __declspec(empty_bases) BarcodeScanner : Windows::Devices::PointOfService::IBarcodeScanner,
+        impl::require<BarcodeScanner, Windows::Devices::PointOfService::IBarcodeScanner2, Windows::Foundation::IClosable>
+    {
+        BarcodeScanner(std::nullptr_t) noexcept {}
+        BarcodeScanner(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IBarcodeScanner(ptr, take_ownership_from_abi) {}
+        static auto GetDefaultAsync();
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDeviceSelector();
+        static auto GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
+    };
+    struct __declspec(empty_bases) BarcodeScannerCapabilities : Windows::Devices::PointOfService::IBarcodeScannerCapabilities,
+        impl::require<BarcodeScannerCapabilities, Windows::Devices::PointOfService::IBarcodeScannerCapabilities1, Windows::Devices::PointOfService::IBarcodeScannerCapabilities2>
+    {
+        BarcodeScannerCapabilities(std::nullptr_t) noexcept {}
+        BarcodeScannerCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IBarcodeScannerCapabilities(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) BarcodeScannerDataReceivedEventArgs : Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs
+    {
+        BarcodeScannerDataReceivedEventArgs(std::nullptr_t) noexcept {}
+        BarcodeScannerDataReceivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) BarcodeScannerErrorOccurredEventArgs : Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs
+    {
+        BarcodeScannerErrorOccurredEventArgs(std::nullptr_t) noexcept {}
+        BarcodeScannerErrorOccurredEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) BarcodeScannerImagePreviewReceivedEventArgs : Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs
+    {
+        BarcodeScannerImagePreviewReceivedEventArgs(std::nullptr_t) noexcept {}
+        BarcodeScannerImagePreviewReceivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) BarcodeScannerReport : Windows::Devices::PointOfService::IBarcodeScannerReport
+    {
+        BarcodeScannerReport(std::nullptr_t) noexcept {}
+        BarcodeScannerReport(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IBarcodeScannerReport(ptr, take_ownership_from_abi) {}
+        BarcodeScannerReport(uint32_t scanDataType, Windows::Storage::Streams::IBuffer const& scanData, Windows::Storage::Streams::IBuffer const& scanDataLabel);
+    };
+    struct __declspec(empty_bases) BarcodeScannerStatusUpdatedEventArgs : Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs
+    {
+        BarcodeScannerStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
+        BarcodeScannerStatusUpdatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct BarcodeSymbologies
+    {
+        BarcodeSymbologies() = delete;
+        [[nodiscard]] static auto Unknown();
+        [[nodiscard]] static auto Ean8();
+        [[nodiscard]] static auto Ean8Add2();
+        [[nodiscard]] static auto Ean8Add5();
+        [[nodiscard]] static auto Eanv();
+        [[nodiscard]] static auto EanvAdd2();
+        [[nodiscard]] static auto EanvAdd5();
+        [[nodiscard]] static auto Ean13();
+        [[nodiscard]] static auto Ean13Add2();
+        [[nodiscard]] static auto Ean13Add5();
+        [[nodiscard]] static auto Isbn();
+        [[nodiscard]] static auto IsbnAdd5();
+        [[nodiscard]] static auto Ismn();
+        [[nodiscard]] static auto IsmnAdd2();
+        [[nodiscard]] static auto IsmnAdd5();
+        [[nodiscard]] static auto Issn();
+        [[nodiscard]] static auto IssnAdd2();
+        [[nodiscard]] static auto IssnAdd5();
+        [[nodiscard]] static auto Ean99();
+        [[nodiscard]] static auto Ean99Add2();
+        [[nodiscard]] static auto Ean99Add5();
+        [[nodiscard]] static auto Upca();
+        [[nodiscard]] static auto UpcaAdd2();
+        [[nodiscard]] static auto UpcaAdd5();
+        [[nodiscard]] static auto Upce();
+        [[nodiscard]] static auto UpceAdd2();
+        [[nodiscard]] static auto UpceAdd5();
+        [[nodiscard]] static auto UpcCoupon();
+        [[nodiscard]] static auto TfStd();
+        [[nodiscard]] static auto TfDis();
+        [[nodiscard]] static auto TfInt();
+        [[nodiscard]] static auto TfInd();
+        [[nodiscard]] static auto TfMat();
+        [[nodiscard]] static auto TfIata();
+        [[nodiscard]] static auto Gs1DatabarType1();
+        [[nodiscard]] static auto Gs1DatabarType2();
+        [[nodiscard]] static auto Gs1DatabarType3();
+        [[nodiscard]] static auto Code39();
+        [[nodiscard]] static auto Code39Ex();
+        [[nodiscard]] static auto Trioptic39();
+        [[nodiscard]] static auto Code32();
+        [[nodiscard]] static auto Pzn();
+        [[nodiscard]] static auto Code93();
+        [[nodiscard]] static auto Code93Ex();
+        [[nodiscard]] static auto Code128();
+        [[nodiscard]] static auto Gs1128();
+        [[nodiscard]] static auto Gs1128Coupon();
+        [[nodiscard]] static auto UccEan128();
+        [[nodiscard]] static auto Sisac();
+        [[nodiscard]] static auto Isbt();
+        [[nodiscard]] static auto Codabar();
+        [[nodiscard]] static auto Code11();
+        [[nodiscard]] static auto Msi();
+        [[nodiscard]] static auto Plessey();
+        [[nodiscard]] static auto Telepen();
+        [[nodiscard]] static auto Code16k();
+        [[nodiscard]] static auto CodablockA();
+        [[nodiscard]] static auto CodablockF();
+        [[nodiscard]] static auto Codablock128();
+        [[nodiscard]] static auto Code49();
+        [[nodiscard]] static auto Aztec();
+        [[nodiscard]] static auto DataCode();
+        [[nodiscard]] static auto DataMatrix();
+        [[nodiscard]] static auto HanXin();
+        [[nodiscard]] static auto Maxicode();
+        [[nodiscard]] static auto MicroPdf417();
+        [[nodiscard]] static auto MicroQr();
+        [[nodiscard]] static auto Pdf417();
+        [[nodiscard]] static auto Qr();
+        [[nodiscard]] static auto MsTag();
+        [[nodiscard]] static auto Ccab();
+        [[nodiscard]] static auto Ccc();
+        [[nodiscard]] static auto Tlc39();
+        [[nodiscard]] static auto AusPost();
+        [[nodiscard]] static auto CanPost();
+        [[nodiscard]] static auto ChinaPost();
+        [[nodiscard]] static auto DutchKix();
+        [[nodiscard]] static auto InfoMail();
+        [[nodiscard]] static auto ItalianPost25();
+        [[nodiscard]] static auto ItalianPost39();
+        [[nodiscard]] static auto JapanPost();
+        [[nodiscard]] static auto KoreanPost();
+        [[nodiscard]] static auto SwedenPost();
+        [[nodiscard]] static auto UkPost();
+        [[nodiscard]] static auto UsIntelligent();
+        [[nodiscard]] static auto UsIntelligentPkg();
+        [[nodiscard]] static auto UsPlanet();
+        [[nodiscard]] static auto UsPostNet();
+        [[nodiscard]] static auto Us4StateFics();
+        [[nodiscard]] static auto OcrA();
+        [[nodiscard]] static auto OcrB();
+        [[nodiscard]] static auto Micr();
+        [[nodiscard]] static auto ExtendedBase();
+        static auto GetName(uint32_t scanDataType);
+        [[nodiscard]] static auto Gs1DWCode();
+    };
+    struct __declspec(empty_bases) BarcodeSymbologyAttributes : Windows::Devices::PointOfService::IBarcodeSymbologyAttributes
+    {
+        BarcodeSymbologyAttributes(std::nullptr_t) noexcept {}
+        BarcodeSymbologyAttributes(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IBarcodeSymbologyAttributes(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CashDrawer : Windows::Devices::PointOfService::ICashDrawer,
+        impl::require<CashDrawer, Windows::Foundation::IClosable>
+    {
+        CashDrawer(std::nullptr_t) noexcept {}
+        CashDrawer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ICashDrawer(ptr, take_ownership_from_abi) {}
+        static auto GetDefaultAsync();
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDeviceSelector();
+        static auto GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
+    };
+    struct __declspec(empty_bases) CashDrawerCapabilities : Windows::Devices::PointOfService::ICashDrawerCapabilities
+    {
+        CashDrawerCapabilities(std::nullptr_t) noexcept {}
+        CashDrawerCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ICashDrawerCapabilities(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CashDrawerCloseAlarm : Windows::Devices::PointOfService::ICashDrawerCloseAlarm
+    {
+        CashDrawerCloseAlarm(std::nullptr_t) noexcept {}
+        CashDrawerCloseAlarm(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ICashDrawerCloseAlarm(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CashDrawerClosedEventArgs : Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs
+    {
+        CashDrawerClosedEventArgs(std::nullptr_t) noexcept {}
+        CashDrawerClosedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CashDrawerEventSource : Windows::Devices::PointOfService::ICashDrawerEventSource
+    {
+        CashDrawerEventSource(std::nullptr_t) noexcept {}
+        CashDrawerEventSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ICashDrawerEventSource(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CashDrawerOpenedEventArgs : Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs
+    {
+        CashDrawerOpenedEventArgs(std::nullptr_t) noexcept {}
+        CashDrawerOpenedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CashDrawerStatus : Windows::Devices::PointOfService::ICashDrawerStatus
+    {
+        CashDrawerStatus(std::nullptr_t) noexcept {}
+        CashDrawerStatus(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ICashDrawerStatus(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CashDrawerStatusUpdatedEventArgs : Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs
+    {
+        CashDrawerStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
+        CashDrawerStatusUpdatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedBarcodeScanner : Windows::Devices::PointOfService::IClaimedBarcodeScanner,
+        impl::require<ClaimedBarcodeScanner, Windows::Devices::PointOfService::IClaimedBarcodeScanner1, Windows::Devices::PointOfService::IClaimedBarcodeScanner2, Windows::Devices::PointOfService::IClaimedBarcodeScanner3, Windows::Devices::PointOfService::IClaimedBarcodeScanner4, Windows::Foundation::IClosable>
+    {
+        ClaimedBarcodeScanner(std::nullptr_t) noexcept {}
+        ClaimedBarcodeScanner(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedBarcodeScanner(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedBarcodeScannerClosedEventArgs : Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs
+    {
+        ClaimedBarcodeScannerClosedEventArgs(std::nullptr_t) noexcept {}
+        ClaimedBarcodeScannerClosedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedCashDrawer : Windows::Devices::PointOfService::IClaimedCashDrawer,
+        impl::require<ClaimedCashDrawer, Windows::Devices::PointOfService::IClaimedCashDrawer2, Windows::Foundation::IClosable>
+    {
+        ClaimedCashDrawer(std::nullptr_t) noexcept {}
+        ClaimedCashDrawer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedCashDrawer(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedCashDrawerClosedEventArgs : Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs
+    {
+        ClaimedCashDrawerClosedEventArgs(std::nullptr_t) noexcept {}
+        ClaimedCashDrawerClosedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedJournalPrinter : Windows::Devices::PointOfService::IClaimedJournalPrinter,
+        impl::require<ClaimedJournalPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
+    {
+        ClaimedJournalPrinter(std::nullptr_t) noexcept {}
+        ClaimedJournalPrinter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedJournalPrinter(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedLineDisplay : Windows::Devices::PointOfService::IClaimedLineDisplay,
+        impl::require<ClaimedLineDisplay, Windows::Devices::PointOfService::IClaimedLineDisplay2, Windows::Devices::PointOfService::IClaimedLineDisplay3, Windows::Foundation::IClosable>
+    {
+        ClaimedLineDisplay(std::nullptr_t) noexcept {}
+        ClaimedLineDisplay(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedLineDisplay(ptr, take_ownership_from_abi) {}
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDeviceSelector();
+        static auto GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
+    };
+    struct __declspec(empty_bases) ClaimedLineDisplayClosedEventArgs : Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs
+    {
+        ClaimedLineDisplayClosedEventArgs(std::nullptr_t) noexcept {}
+        ClaimedLineDisplayClosedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedMagneticStripeReader : Windows::Devices::PointOfService::IClaimedMagneticStripeReader,
+        impl::require<ClaimedMagneticStripeReader, Windows::Devices::PointOfService::IClaimedMagneticStripeReader2, Windows::Foundation::IClosable>
+    {
+        ClaimedMagneticStripeReader(std::nullptr_t) noexcept {}
+        ClaimedMagneticStripeReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedMagneticStripeReader(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedMagneticStripeReaderClosedEventArgs : Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs
+    {
+        ClaimedMagneticStripeReaderClosedEventArgs(std::nullptr_t) noexcept {}
+        ClaimedMagneticStripeReaderClosedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedPosPrinter : Windows::Devices::PointOfService::IClaimedPosPrinter,
+        impl::require<ClaimedPosPrinter, Windows::Devices::PointOfService::IClaimedPosPrinter2, Windows::Foundation::IClosable>
+    {
+        ClaimedPosPrinter(std::nullptr_t) noexcept {}
+        ClaimedPosPrinter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedPosPrinter(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedPosPrinterClosedEventArgs : Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs
+    {
+        ClaimedPosPrinterClosedEventArgs(std::nullptr_t) noexcept {}
+        ClaimedPosPrinterClosedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedReceiptPrinter : Windows::Devices::PointOfService::IClaimedReceiptPrinter,
+        impl::require<ClaimedReceiptPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
+    {
+        ClaimedReceiptPrinter(std::nullptr_t) noexcept {}
+        ClaimedReceiptPrinter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedReceiptPrinter(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ClaimedSlipPrinter : Windows::Devices::PointOfService::IClaimedSlipPrinter,
+        impl::require<ClaimedSlipPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
+    {
+        ClaimedSlipPrinter(std::nullptr_t) noexcept {}
+        ClaimedSlipPrinter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IClaimedSlipPrinter(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) JournalPrintJob : Windows::Devices::PointOfService::IPosPrinterJob,
+        impl::require<JournalPrintJob, Windows::Devices::PointOfService::IJournalPrintJob>
+    {
+        JournalPrintJob(std::nullptr_t) noexcept {}
+        JournalPrintJob(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IPosPrinterJob(ptr, take_ownership_from_abi) {}
+        using impl::consume_t<JournalPrintJob, Windows::Devices::PointOfService::IJournalPrintJob>::Print;
+        using Windows::Devices::PointOfService::IPosPrinterJob::Print;
+    };
+    struct __declspec(empty_bases) JournalPrinterCapabilities : Windows::Devices::PointOfService::IJournalPrinterCapabilities,
+        impl::require<JournalPrinterCapabilities, Windows::Devices::PointOfService::IJournalPrinterCapabilities2, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>
+    {
+        JournalPrinterCapabilities(std::nullptr_t) noexcept {}
+        JournalPrinterCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IJournalPrinterCapabilities(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplay : Windows::Devices::PointOfService::ILineDisplay,
+        impl::require<LineDisplay, Windows::Devices::PointOfService::ILineDisplay2, Windows::Foundation::IClosable>
+    {
+        LineDisplay(std::nullptr_t) noexcept {}
+        LineDisplay(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplay(ptr, take_ownership_from_abi) {}
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDefaultAsync();
+        static auto GetDeviceSelector();
+        static auto GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
+        [[nodiscard]] static auto StatisticsCategorySelector();
+    };
+    struct __declspec(empty_bases) LineDisplayAttributes : Windows::Devices::PointOfService::ILineDisplayAttributes
+    {
+        LineDisplayAttributes(std::nullptr_t) noexcept {}
+        LineDisplayAttributes(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayAttributes(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplayCapabilities : Windows::Devices::PointOfService::ILineDisplayCapabilities
+    {
+        LineDisplayCapabilities(std::nullptr_t) noexcept {}
+        LineDisplayCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayCapabilities(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplayCursor : Windows::Devices::PointOfService::ILineDisplayCursor
+    {
+        LineDisplayCursor(std::nullptr_t) noexcept {}
+        LineDisplayCursor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayCursor(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplayCursorAttributes : Windows::Devices::PointOfService::ILineDisplayCursorAttributes
+    {
+        LineDisplayCursorAttributes(std::nullptr_t) noexcept {}
+        LineDisplayCursorAttributes(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayCursorAttributes(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplayCustomGlyphs : Windows::Devices::PointOfService::ILineDisplayCustomGlyphs
+    {
+        LineDisplayCustomGlyphs(std::nullptr_t) noexcept {}
+        LineDisplayCustomGlyphs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayCustomGlyphs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplayMarquee : Windows::Devices::PointOfService::ILineDisplayMarquee
+    {
+        LineDisplayMarquee(std::nullptr_t) noexcept {}
+        LineDisplayMarquee(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayMarquee(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplayStatisticsCategorySelector : Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector
+    {
+        LineDisplayStatisticsCategorySelector(std::nullptr_t) noexcept {}
+        LineDisplayStatisticsCategorySelector(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplayStatusUpdatedEventArgs : Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs
+    {
+        LineDisplayStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
+        LineDisplayStatusUpdatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplayStoredBitmap : Windows::Devices::PointOfService::ILineDisplayStoredBitmap
+    {
+        LineDisplayStoredBitmap(std::nullptr_t) noexcept {}
+        LineDisplayStoredBitmap(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayStoredBitmap(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LineDisplayWindow : Windows::Devices::PointOfService::ILineDisplayWindow,
+        impl::require<LineDisplayWindow, Windows::Devices::PointOfService::ILineDisplayWindow2, Windows::Foundation::IClosable>
+    {
+        LineDisplayWindow(std::nullptr_t) noexcept {}
+        LineDisplayWindow(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ILineDisplayWindow(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) MagneticStripeReader : Windows::Devices::PointOfService::IMagneticStripeReader,
+        impl::require<MagneticStripeReader, Windows::Foundation::IClosable>
+    {
+        MagneticStripeReader(std::nullptr_t) noexcept {}
+        MagneticStripeReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IMagneticStripeReader(ptr, take_ownership_from_abi) {}
+        static auto GetDefaultAsync();
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDeviceSelector();
+        static auto GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
+    };
+    struct __declspec(empty_bases) MagneticStripeReaderAamvaCardDataReceivedEventArgs : Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs
+    {
+        MagneticStripeReaderAamvaCardDataReceivedEventArgs(std::nullptr_t) noexcept {}
+        MagneticStripeReaderAamvaCardDataReceivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) MagneticStripeReaderBankCardDataReceivedEventArgs : Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs
+    {
+        MagneticStripeReaderBankCardDataReceivedEventArgs(std::nullptr_t) noexcept {}
+        MagneticStripeReaderBankCardDataReceivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) MagneticStripeReaderCapabilities : Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities
+    {
+        MagneticStripeReaderCapabilities(std::nullptr_t) noexcept {}
+        MagneticStripeReaderCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities(ptr, take_ownership_from_abi) {}
+    };
+    struct MagneticStripeReaderCardTypes
+    {
+        MagneticStripeReaderCardTypes() = delete;
+        [[nodiscard]] static auto Unknown();
+        [[nodiscard]] static auto Bank();
+        [[nodiscard]] static auto Aamva();
+        [[nodiscard]] static auto ExtendedBase();
+    };
+    struct MagneticStripeReaderEncryptionAlgorithms
+    {
+        MagneticStripeReaderEncryptionAlgorithms() = delete;
+        [[nodiscard]] static auto None();
+        [[nodiscard]] static auto TripleDesDukpt();
+        [[nodiscard]] static auto ExtendedBase();
+    };
+    struct __declspec(empty_bases) MagneticStripeReaderErrorOccurredEventArgs : Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs
+    {
+        MagneticStripeReaderErrorOccurredEventArgs(std::nullptr_t) noexcept {}
+        MagneticStripeReaderErrorOccurredEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) MagneticStripeReaderReport : Windows::Devices::PointOfService::IMagneticStripeReaderReport
+    {
+        MagneticStripeReaderReport(std::nullptr_t) noexcept {}
+        MagneticStripeReaderReport(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IMagneticStripeReaderReport(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) MagneticStripeReaderStatusUpdatedEventArgs : Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs
+    {
+        MagneticStripeReaderStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
+        MagneticStripeReaderStatusUpdatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) MagneticStripeReaderTrackData : Windows::Devices::PointOfService::IMagneticStripeReaderTrackData
+    {
+        MagneticStripeReaderTrackData(std::nullptr_t) noexcept {}
+        MagneticStripeReaderTrackData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IMagneticStripeReaderTrackData(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs : Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs
+    {
+        MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs(std::nullptr_t) noexcept {}
+        MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PosPrinter : Windows::Devices::PointOfService::IPosPrinter,
+        impl::require<PosPrinter, Windows::Devices::PointOfService::IPosPrinter2, Windows::Foundation::IClosable>
+    {
+        PosPrinter(std::nullptr_t) noexcept {}
+        PosPrinter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IPosPrinter(ptr, take_ownership_from_abi) {}
+        static auto GetDefaultAsync();
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDeviceSelector();
+        static auto GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
+    };
+    struct __declspec(empty_bases) PosPrinterCapabilities : Windows::Devices::PointOfService::IPosPrinterCapabilities
+    {
+        PosPrinterCapabilities(std::nullptr_t) noexcept {}
+        PosPrinterCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IPosPrinterCapabilities(ptr, take_ownership_from_abi) {}
+    };
+    struct PosPrinterCharacterSetIds
+    {
+        PosPrinterCharacterSetIds() = delete;
+        [[nodiscard]] static auto Utf16LE();
+        [[nodiscard]] static auto Ascii();
+        [[nodiscard]] static auto Ansi();
+    };
+    struct __declspec(empty_bases) PosPrinterFontProperty : Windows::Devices::PointOfService::IPosPrinterFontProperty
+    {
+        PosPrinterFontProperty(std::nullptr_t) noexcept {}
+        PosPrinterFontProperty(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IPosPrinterFontProperty(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PosPrinterPrintOptions : Windows::Devices::PointOfService::IPosPrinterPrintOptions
+    {
+        PosPrinterPrintOptions(std::nullptr_t) noexcept {}
+        PosPrinterPrintOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IPosPrinterPrintOptions(ptr, take_ownership_from_abi) {}
+        PosPrinterPrintOptions();
+    };
+    struct __declspec(empty_bases) PosPrinterReleaseDeviceRequestedEventArgs : Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs
+    {
+        PosPrinterReleaseDeviceRequestedEventArgs(std::nullptr_t) noexcept {}
+        PosPrinterReleaseDeviceRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PosPrinterStatus : Windows::Devices::PointOfService::IPosPrinterStatus
+    {
+        PosPrinterStatus(std::nullptr_t) noexcept {}
+        PosPrinterStatus(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IPosPrinterStatus(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PosPrinterStatusUpdatedEventArgs : Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs
+    {
+        PosPrinterStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
+        PosPrinterStatusUpdatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ReceiptPrintJob : Windows::Devices::PointOfService::IReceiptPrintJob,
+        impl::require<ReceiptPrintJob, Windows::Devices::PointOfService::IReceiptPrintJob2, Windows::Devices::PointOfService::IPosPrinterJob, Windows::Devices::PointOfService::IReceiptOrSlipJob>
+    {
+        ReceiptPrintJob(std::nullptr_t) noexcept {}
+        ReceiptPrintJob(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IReceiptPrintJob(ptr, take_ownership_from_abi) {}
+        using impl::consume_t<ReceiptPrintJob, Windows::Devices::PointOfService::IPosPrinterJob>::Print;
+        using impl::consume_t<ReceiptPrintJob, Windows::Devices::PointOfService::IReceiptPrintJob2>::Print;
+    };
+    struct __declspec(empty_bases) ReceiptPrinterCapabilities : Windows::Devices::PointOfService::IReceiptPrinterCapabilities,
+        impl::require<ReceiptPrinterCapabilities, Windows::Devices::PointOfService::IReceiptPrinterCapabilities2, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>
+    {
+        ReceiptPrinterCapabilities(std::nullptr_t) noexcept {}
+        ReceiptPrinterCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IReceiptPrinterCapabilities(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) SlipPrintJob : Windows::Devices::PointOfService::IReceiptOrSlipJob,
+        impl::require<SlipPrintJob, Windows::Devices::PointOfService::ISlipPrintJob>
+    {
+        SlipPrintJob(std::nullptr_t) noexcept {}
+        SlipPrintJob(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IReceiptOrSlipJob(ptr, take_ownership_from_abi) {}
+        using Windows::Devices::PointOfService::IReceiptOrSlipJob::Print;
+        using impl::consume_t<SlipPrintJob, Windows::Devices::PointOfService::ISlipPrintJob>::Print;
+    };
+    struct __declspec(empty_bases) SlipPrinterCapabilities : Windows::Devices::PointOfService::ISlipPrinterCapabilities,
+        impl::require<SlipPrinterCapabilities, Windows::Devices::PointOfService::ISlipPrinterCapabilities2, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>
+    {
+        SlipPrinterCapabilities(std::nullptr_t) noexcept {}
+        SlipPrinterCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::ISlipPrinterCapabilities(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) UnifiedPosErrorData : Windows::Devices::PointOfService::IUnifiedPosErrorData
+    {
+        UnifiedPosErrorData(std::nullptr_t) noexcept {}
+        UnifiedPosErrorData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::PointOfService::IUnifiedPosErrorData(ptr, take_ownership_from_abi) {}
+        UnifiedPosErrorData(param::hstring const& message, Windows::Devices::PointOfService::UnifiedPosErrorSeverity const& severity, Windows::Devices::PointOfService::UnifiedPosErrorReason const& reason, uint32_t extendedReason);
+    };
 }
-
-inline bool operator!=(SizeUInt32 const& left, SizeUInt32 const& right) noexcept
-{
-    return !(left == right);
-}
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::PointOfService {
-
-struct WINRT_EBO BarcodeScanner :
-    Windows::Devices::PointOfService::IBarcodeScanner,
-    impl::require<BarcodeScanner, Windows::Devices::PointOfService::IBarcodeScanner2, Windows::Foundation::IClosable>
-{
-    BarcodeScanner(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::BarcodeScanner> GetDefaultAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::BarcodeScanner> FromIdAsync(param::hstring const& deviceId);
-    static hstring GetDeviceSelector();
-    static hstring GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
-};
-
-struct WINRT_EBO BarcodeScannerCapabilities :
-    Windows::Devices::PointOfService::IBarcodeScannerCapabilities,
-    impl::require<BarcodeScannerCapabilities, Windows::Devices::PointOfService::IBarcodeScannerCapabilities1, Windows::Devices::PointOfService::IBarcodeScannerCapabilities2>
-{
-    BarcodeScannerCapabilities(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO BarcodeScannerDataReceivedEventArgs :
-    Windows::Devices::PointOfService::IBarcodeScannerDataReceivedEventArgs
-{
-    BarcodeScannerDataReceivedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO BarcodeScannerErrorOccurredEventArgs :
-    Windows::Devices::PointOfService::IBarcodeScannerErrorOccurredEventArgs
-{
-    BarcodeScannerErrorOccurredEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO BarcodeScannerImagePreviewReceivedEventArgs :
-    Windows::Devices::PointOfService::IBarcodeScannerImagePreviewReceivedEventArgs
-{
-    BarcodeScannerImagePreviewReceivedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO BarcodeScannerReport :
-    Windows::Devices::PointOfService::IBarcodeScannerReport
-{
-    BarcodeScannerReport(std::nullptr_t) noexcept {}
-    BarcodeScannerReport(uint32_t scanDataType, Windows::Storage::Streams::IBuffer const& scanData, Windows::Storage::Streams::IBuffer const& scanDataLabel);
-};
-
-struct WINRT_EBO BarcodeScannerStatusUpdatedEventArgs :
-    Windows::Devices::PointOfService::IBarcodeScannerStatusUpdatedEventArgs
-{
-    BarcodeScannerStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct BarcodeSymbologies
-{
-    BarcodeSymbologies() = delete;
-    static uint32_t Unknown();
-    static uint32_t Ean8();
-    static uint32_t Ean8Add2();
-    static uint32_t Ean8Add5();
-    static uint32_t Eanv();
-    static uint32_t EanvAdd2();
-    static uint32_t EanvAdd5();
-    static uint32_t Ean13();
-    static uint32_t Ean13Add2();
-    static uint32_t Ean13Add5();
-    static uint32_t Isbn();
-    static uint32_t IsbnAdd5();
-    static uint32_t Ismn();
-    static uint32_t IsmnAdd2();
-    static uint32_t IsmnAdd5();
-    static uint32_t Issn();
-    static uint32_t IssnAdd2();
-    static uint32_t IssnAdd5();
-    static uint32_t Ean99();
-    static uint32_t Ean99Add2();
-    static uint32_t Ean99Add5();
-    static uint32_t Upca();
-    static uint32_t UpcaAdd2();
-    static uint32_t UpcaAdd5();
-    static uint32_t Upce();
-    static uint32_t UpceAdd2();
-    static uint32_t UpceAdd5();
-    static uint32_t UpcCoupon();
-    static uint32_t TfStd();
-    static uint32_t TfDis();
-    static uint32_t TfInt();
-    static uint32_t TfInd();
-    static uint32_t TfMat();
-    static uint32_t TfIata();
-    static uint32_t Gs1DatabarType1();
-    static uint32_t Gs1DatabarType2();
-    static uint32_t Gs1DatabarType3();
-    static uint32_t Code39();
-    static uint32_t Code39Ex();
-    static uint32_t Trioptic39();
-    static uint32_t Code32();
-    static uint32_t Pzn();
-    static uint32_t Code93();
-    static uint32_t Code93Ex();
-    static uint32_t Code128();
-    static uint32_t Gs1128();
-    static uint32_t Gs1128Coupon();
-    static uint32_t UccEan128();
-    static uint32_t Sisac();
-    static uint32_t Isbt();
-    static uint32_t Codabar();
-    static uint32_t Code11();
-    static uint32_t Msi();
-    static uint32_t Plessey();
-    static uint32_t Telepen();
-    static uint32_t Code16k();
-    static uint32_t CodablockA();
-    static uint32_t CodablockF();
-    static uint32_t Codablock128();
-    static uint32_t Code49();
-    static uint32_t Aztec();
-    static uint32_t DataCode();
-    static uint32_t DataMatrix();
-    static uint32_t HanXin();
-    static uint32_t Maxicode();
-    static uint32_t MicroPdf417();
-    static uint32_t MicroQr();
-    static uint32_t Pdf417();
-    static uint32_t Qr();
-    static uint32_t MsTag();
-    static uint32_t Ccab();
-    static uint32_t Ccc();
-    static uint32_t Tlc39();
-    static uint32_t AusPost();
-    static uint32_t CanPost();
-    static uint32_t ChinaPost();
-    static uint32_t DutchKix();
-    static uint32_t InfoMail();
-    static uint32_t ItalianPost25();
-    static uint32_t ItalianPost39();
-    static uint32_t JapanPost();
-    static uint32_t KoreanPost();
-    static uint32_t SwedenPost();
-    static uint32_t UkPost();
-    static uint32_t UsIntelligent();
-    static uint32_t UsIntelligentPkg();
-    static uint32_t UsPlanet();
-    static uint32_t UsPostNet();
-    static uint32_t Us4StateFics();
-    static uint32_t OcrA();
-    static uint32_t OcrB();
-    static uint32_t Micr();
-    static uint32_t ExtendedBase();
-    static hstring GetName(uint32_t scanDataType);
-    static uint32_t Gs1DWCode();
-};
-
-struct WINRT_EBO BarcodeSymbologyAttributes :
-    Windows::Devices::PointOfService::IBarcodeSymbologyAttributes
-{
-    BarcodeSymbologyAttributes(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO CashDrawer :
-    Windows::Devices::PointOfService::ICashDrawer,
-    impl::require<CashDrawer, Windows::Foundation::IClosable>
-{
-    CashDrawer(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::CashDrawer> GetDefaultAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::CashDrawer> FromIdAsync(param::hstring const& deviceId);
-    static hstring GetDeviceSelector();
-    static hstring GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
-};
-
-struct WINRT_EBO CashDrawerCapabilities :
-    Windows::Devices::PointOfService::ICashDrawerCapabilities
-{
-    CashDrawerCapabilities(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO CashDrawerCloseAlarm :
-    Windows::Devices::PointOfService::ICashDrawerCloseAlarm
-{
-    CashDrawerCloseAlarm(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO CashDrawerClosedEventArgs :
-    Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs
-{
-    CashDrawerClosedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO CashDrawerEventSource :
-    Windows::Devices::PointOfService::ICashDrawerEventSource
-{
-    CashDrawerEventSource(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO CashDrawerOpenedEventArgs :
-    Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs
-{
-    CashDrawerOpenedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO CashDrawerStatus :
-    Windows::Devices::PointOfService::ICashDrawerStatus
-{
-    CashDrawerStatus(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO CashDrawerStatusUpdatedEventArgs :
-    Windows::Devices::PointOfService::ICashDrawerStatusUpdatedEventArgs
-{
-    CashDrawerStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedBarcodeScanner :
-    Windows::Devices::PointOfService::IClaimedBarcodeScanner,
-    impl::require<ClaimedBarcodeScanner, Windows::Devices::PointOfService::IClaimedBarcodeScanner1, Windows::Devices::PointOfService::IClaimedBarcodeScanner2, Windows::Devices::PointOfService::IClaimedBarcodeScanner3, Windows::Devices::PointOfService::IClaimedBarcodeScanner4, Windows::Foundation::IClosable>
-{
-    ClaimedBarcodeScanner(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedBarcodeScannerClosedEventArgs :
-    Windows::Devices::PointOfService::IClaimedBarcodeScannerClosedEventArgs
-{
-    ClaimedBarcodeScannerClosedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedCashDrawer :
-    Windows::Devices::PointOfService::IClaimedCashDrawer,
-    impl::require<ClaimedCashDrawer, Windows::Devices::PointOfService::IClaimedCashDrawer2, Windows::Foundation::IClosable>
-{
-    ClaimedCashDrawer(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedCashDrawerClosedEventArgs :
-    Windows::Devices::PointOfService::IClaimedCashDrawerClosedEventArgs
-{
-    ClaimedCashDrawerClosedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedJournalPrinter :
-    Windows::Devices::PointOfService::IClaimedJournalPrinter,
-    impl::require<ClaimedJournalPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
-{
-    ClaimedJournalPrinter(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedLineDisplay :
-    Windows::Devices::PointOfService::IClaimedLineDisplay,
-    impl::require<ClaimedLineDisplay, Windows::Devices::PointOfService::IClaimedLineDisplay2, Windows::Devices::PointOfService::IClaimedLineDisplay3, Windows::Foundation::IClosable>
-{
-    ClaimedLineDisplay(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::ClaimedLineDisplay> FromIdAsync(param::hstring const& deviceId);
-    static hstring GetDeviceSelector();
-    static hstring GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
-};
-
-struct WINRT_EBO ClaimedLineDisplayClosedEventArgs :
-    Windows::Devices::PointOfService::IClaimedLineDisplayClosedEventArgs
-{
-    ClaimedLineDisplayClosedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedMagneticStripeReader :
-    Windows::Devices::PointOfService::IClaimedMagneticStripeReader,
-    impl::require<ClaimedMagneticStripeReader, Windows::Devices::PointOfService::IClaimedMagneticStripeReader2, Windows::Foundation::IClosable>
-{
-    ClaimedMagneticStripeReader(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedMagneticStripeReaderClosedEventArgs :
-    Windows::Devices::PointOfService::IClaimedMagneticStripeReaderClosedEventArgs
-{
-    ClaimedMagneticStripeReaderClosedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedPosPrinter :
-    Windows::Devices::PointOfService::IClaimedPosPrinter,
-    impl::require<ClaimedPosPrinter, Windows::Devices::PointOfService::IClaimedPosPrinter2, Windows::Foundation::IClosable>
-{
-    ClaimedPosPrinter(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedPosPrinterClosedEventArgs :
-    Windows::Devices::PointOfService::IClaimedPosPrinterClosedEventArgs
-{
-    ClaimedPosPrinterClosedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedReceiptPrinter :
-    Windows::Devices::PointOfService::IClaimedReceiptPrinter,
-    impl::require<ClaimedReceiptPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
-{
-    ClaimedReceiptPrinter(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ClaimedSlipPrinter :
-    Windows::Devices::PointOfService::IClaimedSlipPrinter,
-    impl::require<ClaimedSlipPrinter, Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>
-{
-    ClaimedSlipPrinter(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO JournalPrintJob :
-    Windows::Devices::PointOfService::IPosPrinterJob,
-    impl::require<JournalPrintJob, Windows::Devices::PointOfService::IJournalPrintJob>
-{
-    JournalPrintJob(std::nullptr_t) noexcept {}
-    using impl::consume_t<JournalPrintJob, Windows::Devices::PointOfService::IJournalPrintJob>::Print;
-    using Windows::Devices::PointOfService::IPosPrinterJob::Print;
-};
-
-struct WINRT_EBO JournalPrinterCapabilities :
-    Windows::Devices::PointOfService::IJournalPrinterCapabilities,
-    impl::require<JournalPrinterCapabilities, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::IJournalPrinterCapabilities2>
-{
-    JournalPrinterCapabilities(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplay :
-    Windows::Devices::PointOfService::ILineDisplay,
-    impl::require<LineDisplay, Windows::Devices::PointOfService::ILineDisplay2, Windows::Foundation::IClosable>
-{
-    LineDisplay(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplay> FromIdAsync(param::hstring const& deviceId);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::LineDisplay> GetDefaultAsync();
-    static hstring GetDeviceSelector();
-    static hstring GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
-    static Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector StatisticsCategorySelector();
-};
-
-struct WINRT_EBO LineDisplayAttributes :
-    Windows::Devices::PointOfService::ILineDisplayAttributes
-{
-    LineDisplayAttributes(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplayCapabilities :
-    Windows::Devices::PointOfService::ILineDisplayCapabilities
-{
-    LineDisplayCapabilities(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplayCursor :
-    Windows::Devices::PointOfService::ILineDisplayCursor
-{
-    LineDisplayCursor(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplayCursorAttributes :
-    Windows::Devices::PointOfService::ILineDisplayCursorAttributes
-{
-    LineDisplayCursorAttributes(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplayCustomGlyphs :
-    Windows::Devices::PointOfService::ILineDisplayCustomGlyphs
-{
-    LineDisplayCustomGlyphs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplayMarquee :
-    Windows::Devices::PointOfService::ILineDisplayMarquee
-{
-    LineDisplayMarquee(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplayStatisticsCategorySelector :
-    Windows::Devices::PointOfService::ILineDisplayStatisticsCategorySelector
-{
-    LineDisplayStatisticsCategorySelector(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplayStatusUpdatedEventArgs :
-    Windows::Devices::PointOfService::ILineDisplayStatusUpdatedEventArgs
-{
-    LineDisplayStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplayStoredBitmap :
-    Windows::Devices::PointOfService::ILineDisplayStoredBitmap
-{
-    LineDisplayStoredBitmap(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LineDisplayWindow :
-    Windows::Devices::PointOfService::ILineDisplayWindow,
-    impl::require<LineDisplayWindow, Windows::Devices::PointOfService::ILineDisplayWindow2, Windows::Foundation::IClosable>
-{
-    LineDisplayWindow(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO MagneticStripeReader :
-    Windows::Devices::PointOfService::IMagneticStripeReader,
-    impl::require<MagneticStripeReader, Windows::Foundation::IClosable>
-{
-    MagneticStripeReader(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::MagneticStripeReader> GetDefaultAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::MagneticStripeReader> FromIdAsync(param::hstring const& deviceId);
-    static hstring GetDeviceSelector();
-    static hstring GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
-};
-
-struct WINRT_EBO MagneticStripeReaderAamvaCardDataReceivedEventArgs :
-    Windows::Devices::PointOfService::IMagneticStripeReaderAamvaCardDataReceivedEventArgs
-{
-    MagneticStripeReaderAamvaCardDataReceivedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO MagneticStripeReaderBankCardDataReceivedEventArgs :
-    Windows::Devices::PointOfService::IMagneticStripeReaderBankCardDataReceivedEventArgs
-{
-    MagneticStripeReaderBankCardDataReceivedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO MagneticStripeReaderCapabilities :
-    Windows::Devices::PointOfService::IMagneticStripeReaderCapabilities
-{
-    MagneticStripeReaderCapabilities(std::nullptr_t) noexcept {}
-};
-
-struct MagneticStripeReaderCardTypes
-{
-    MagneticStripeReaderCardTypes() = delete;
-    static uint32_t Unknown();
-    static uint32_t Bank();
-    static uint32_t Aamva();
-    static uint32_t ExtendedBase();
-};
-
-struct MagneticStripeReaderEncryptionAlgorithms
-{
-    MagneticStripeReaderEncryptionAlgorithms() = delete;
-    static uint32_t None();
-    static uint32_t TripleDesDukpt();
-    static uint32_t ExtendedBase();
-};
-
-struct WINRT_EBO MagneticStripeReaderErrorOccurredEventArgs :
-    Windows::Devices::PointOfService::IMagneticStripeReaderErrorOccurredEventArgs
-{
-    MagneticStripeReaderErrorOccurredEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO MagneticStripeReaderReport :
-    Windows::Devices::PointOfService::IMagneticStripeReaderReport
-{
-    MagneticStripeReaderReport(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO MagneticStripeReaderStatusUpdatedEventArgs :
-    Windows::Devices::PointOfService::IMagneticStripeReaderStatusUpdatedEventArgs
-{
-    MagneticStripeReaderStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO MagneticStripeReaderTrackData :
-    Windows::Devices::PointOfService::IMagneticStripeReaderTrackData
-{
-    MagneticStripeReaderTrackData(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs :
-    Windows::Devices::PointOfService::IMagneticStripeReaderVendorSpecificCardDataReceivedEventArgs
-{
-    MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO PosPrinter :
-    Windows::Devices::PointOfService::IPosPrinter,
-    impl::require<PosPrinter, Windows::Devices::PointOfService::IPosPrinter2, Windows::Foundation::IClosable>
-{
-    PosPrinter(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::PosPrinter> GetDefaultAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::PointOfService::PosPrinter> FromIdAsync(param::hstring const& deviceId);
-    static hstring GetDeviceSelector();
-    static hstring GetDeviceSelector(Windows::Devices::PointOfService::PosConnectionTypes const& connectionTypes);
-};
-
-struct WINRT_EBO PosPrinterCapabilities :
-    Windows::Devices::PointOfService::IPosPrinterCapabilities
-{
-    PosPrinterCapabilities(std::nullptr_t) noexcept {}
-};
-
-struct PosPrinterCharacterSetIds
-{
-    PosPrinterCharacterSetIds() = delete;
-    static uint32_t Utf16LE();
-    static uint32_t Ascii();
-    static uint32_t Ansi();
-};
-
-struct WINRT_EBO PosPrinterFontProperty :
-    Windows::Devices::PointOfService::IPosPrinterFontProperty
-{
-    PosPrinterFontProperty(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO PosPrinterPrintOptions :
-    Windows::Devices::PointOfService::IPosPrinterPrintOptions
-{
-    PosPrinterPrintOptions(std::nullptr_t) noexcept {}
-    PosPrinterPrintOptions();
-};
-
-struct WINRT_EBO PosPrinterReleaseDeviceRequestedEventArgs :
-    Windows::Devices::PointOfService::IPosPrinterReleaseDeviceRequestedEventArgs
-{
-    PosPrinterReleaseDeviceRequestedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO PosPrinterStatus :
-    Windows::Devices::PointOfService::IPosPrinterStatus
-{
-    PosPrinterStatus(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO PosPrinterStatusUpdatedEventArgs :
-    Windows::Devices::PointOfService::IPosPrinterStatusUpdatedEventArgs
-{
-    PosPrinterStatusUpdatedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ReceiptPrintJob :
-    Windows::Devices::PointOfService::IReceiptPrintJob,
-    impl::require<ReceiptPrintJob, Windows::Devices::PointOfService::IPosPrinterJob, Windows::Devices::PointOfService::IReceiptOrSlipJob, Windows::Devices::PointOfService::IReceiptPrintJob2>
-{
-    ReceiptPrintJob(std::nullptr_t) noexcept {}
-    using impl::consume_t<ReceiptPrintJob, Windows::Devices::PointOfService::IPosPrinterJob>::Print;
-    using impl::consume_t<ReceiptPrintJob, Windows::Devices::PointOfService::IReceiptPrintJob2>::Print;
-};
-
-struct WINRT_EBO ReceiptPrinterCapabilities :
-    Windows::Devices::PointOfService::IReceiptPrinterCapabilities,
-    impl::require<ReceiptPrinterCapabilities, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities, Windows::Devices::PointOfService::IReceiptPrinterCapabilities2>
-{
-    ReceiptPrinterCapabilities(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO SlipPrintJob :
-    Windows::Devices::PointOfService::IReceiptOrSlipJob,
-    impl::require<SlipPrintJob, Windows::Devices::PointOfService::ISlipPrintJob>
-{
-    SlipPrintJob(std::nullptr_t) noexcept {}
-    using impl::consume_t<SlipPrintJob, Windows::Devices::PointOfService::ISlipPrintJob>::Print;
-    using Windows::Devices::PointOfService::IReceiptOrSlipJob::Print;
-};
-
-struct WINRT_EBO SlipPrinterCapabilities :
-    Windows::Devices::PointOfService::ISlipPrinterCapabilities,
-    impl::require<SlipPrinterCapabilities, Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities, Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities, Windows::Devices::PointOfService::ISlipPrinterCapabilities2>
-{
-    SlipPrinterCapabilities(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO UnifiedPosErrorData :
-    Windows::Devices::PointOfService::IUnifiedPosErrorData
-{
-    UnifiedPosErrorData(std::nullptr_t) noexcept {}
-    UnifiedPosErrorData(param::hstring const& message, Windows::Devices::PointOfService::UnifiedPosErrorSeverity const& severity, Windows::Devices::PointOfService::UnifiedPosErrorReason const& reason, uint32_t extendedReason);
-};
-
-}
+#endif

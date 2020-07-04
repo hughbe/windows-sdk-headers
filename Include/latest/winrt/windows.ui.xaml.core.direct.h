@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.ui.xaml.core.direct.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,165 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION)
 #define WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION 0x20000
@@ -284,7 +128,8 @@ namespace ABI {
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect ABI::Windows::UI::Xaml::Core::Direct::IXamlDirect
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_FWD_DEFINED__
@@ -302,7 +147,8 @@ namespace ABI {
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_FWD_DEFINED__
@@ -320,122 +166,104 @@ namespace ABI {
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C++)
 
+// Collection interface definitions
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct DateTime DateTime;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct Point Point;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct Rect Rect;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct Size Size;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct TimeSpan TimeSpan;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
-            
             typedef struct Color Color;
-            
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
-                
                 typedef struct CornerRadius CornerRadius;
-                
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
-                
                 typedef struct Duration Duration;
-                
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
-                
                 typedef struct GridLength GridLength;
-                
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 namespace Media {
-                    
                     typedef struct Matrix Matrix;
-                    
                 } /* Media */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -443,34 +271,23 @@ namespace ABI {
             namespace Xaml {
                 namespace Media {
                     namespace Media3D {
-                        
                         typedef struct Matrix3D Matrix3D;
-                        
                     } /* Media3D */
                 } /* Media */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
-                
                 typedef struct Thickness Thickness;
-                
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -478,14 +295,13 @@ namespace ABI {
             namespace Xaml {
                 namespace Core {
                     namespace Direct {
-                        
                         typedef enum XamlEventIndex : int XamlEventIndex;
-                        
                     } /* Direct */
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -493,14 +309,13 @@ namespace ABI {
             namespace Xaml {
                 namespace Core {
                     namespace Direct {
-                        
                         typedef enum XamlPropertyIndex : int XamlPropertyIndex;
-                        
                     } /* Direct */
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -508,17 +323,13 @@ namespace ABI {
             namespace Xaml {
                 namespace Core {
                     namespace Direct {
-                        
                         typedef enum XamlTypeIndex : int XamlTypeIndex;
-                        
                     } /* Direct */
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -531,15 +342,8 @@ namespace ABI {
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -547,9 +351,7 @@ namespace ABI {
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
@@ -557,7 +359,6 @@ namespace ABI {
             namespace Xaml {
                 namespace Core {
                     namespace Direct {
-                        /* [v1_enum, contract] */
                         enum XamlEventIndex : int
                         {
                             XamlEventIndex_FrameworkElement_DataContextChanged = 16,
@@ -699,14 +500,13 @@ namespace ABI {
                             XamlEventIndex_DatePicker_SelectedDateChanged = 322,
                             XamlEventIndex_TimePicker_SelectedTimeChanged = 323,
                         };
-                        
                     } /* Direct */
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -714,9 +514,7 @@ namespace ABI {
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
@@ -724,7 +522,6 @@ namespace ABI {
             namespace Xaml {
                 namespace Core {
                     namespace Direct {
-                        /* [v1_enum, contract] */
                         enum XamlPropertyIndex : int
                         {
                             XamlPropertyIndex_AutomationProperties_AcceleratorKey = 5,
@@ -2234,10 +2031,8 @@ namespace ABI {
                             XamlPropertyIndex_PathIconSource_Data = 2122,
                             XamlPropertyIndex_SymbolIconSource_Symbol = 2123,
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_UIElement_Shadow = 2130,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_IconSourceElement_IconSource = 2131,
                             XamlPropertyIndex_PasswordBox_CanPasteClipboardContent = 2137,
                             XamlPropertyIndex_TextBox_CanPasteClipboardContent = 2138,
@@ -2310,10 +2105,8 @@ namespace ABI {
                             XamlPropertyIndex_StandardUICommand_Kind = 2275,
                             XamlPropertyIndex_UIElement_CanBeScrollAnchor = 2276,
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_ThemeShadow_Receivers = 2279,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_ScrollContentPresenter_SizesContentToTemplatedParent = 2280,
                             XamlPropertyIndex_ComboBox_TextBoxStyle = 2281,
                             XamlPropertyIndex_Frame_IsNavigationStackEnabled = 2282,
@@ -2336,74 +2129,49 @@ namespace ABI {
                             XamlPropertyIndex_DatePicker_SelectedDate = 2355,
                             XamlPropertyIndex_TimePicker_SelectedTime = 2356,
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_AppBarTemplateSettings_NegativeCompactVerticalDelta = 2367,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_AppBarTemplateSettings_NegativeHiddenVerticalDelta = 2368,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_AppBarTemplateSettings_NegativeMinimalVerticalDelta = 2369,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_FlyoutBase_ShouldConstrainToRootBounds = 2378,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_Popup_ShouldConstrainToRootBounds = 2379,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_FlyoutPresenter_IsDefaultShadowEnabled = 2380,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_MenuFlyoutPresenter_IsDefaultShadowEnabled = 2381,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_UIElement_ActualOffset = 2382,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_UIElement_ActualSize = 2383,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentCompactYTranslation = 2384,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentHiddenYTranslation = 2385,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentMinimalYTranslation = 2386,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                         };
-                        
                     } /* Direct */
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2411,9 +2179,7 @@ namespace ABI {
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
@@ -2421,7 +2187,6 @@ namespace ABI {
             namespace Xaml {
                 namespace Core {
                     namespace Direct {
-                        /* [v1_enum, contract] */
                         enum XamlTypeIndex : int
                         {
                             XamlTypeIndex_AutoSuggestBoxSuggestionChosenEventArgs = 34,
@@ -2673,20 +2438,17 @@ namespace ABI {
                             XamlTypeIndex_ColorPaletteResources = 952,
                             XamlTypeIndex_StandardUICommand = 961,
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlTypeIndex_ThemeShadow = 964,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-                            
                             XamlTypeIndex_XamlUICommand = 969,
                         };
-                        
                     } /* Direct */
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2694,9 +2456,7 @@ namespace ABI {
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Core.Direct.XamlDirect
- *
  *
  */
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
@@ -2709,285 +2469,281 @@ namespace ABI {
             namespace Xaml {
                 namespace Core {
                     namespace Direct {
-                        /* [object, uuid("5FFA1295-ADD2-590F-A051-70989B866ADE"), exclusiveto, contract] */
-                        MIDL_INTERFACE("5FFA1295-ADD2-590F-A051-70989B866ADE")
+                        MIDL_INTERFACE("5ffa1295-add2-590f-a051-70989b866ade")
                         IXamlDirect : public IInspectable
                         {
                         public:
                             virtual HRESULT STDMETHODCALLTYPE GetObject(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [retval, out] */__RPC__deref_out_opt IInspectable * * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                IInspectable** result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetXamlDirectObject(
-                                /* [in] */__RPC__in_opt IInspectable * object,
-                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * * result
+                                IInspectable* object,
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject** result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE CreateInstance(
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlTypeIndex typeIndex,
-                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * * result
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlTypeIndex typeIndex,
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject** result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetObjectProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */__RPC__in_opt IInspectable * value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                IInspectable* value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetXamlDirectObjectProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetBooleanProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */::boolean value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                boolean value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetDoubleProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */DOUBLE value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                DOUBLE value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetInt32Property(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */INT32 value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                INT32 value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetStringProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */__RPC__in HSTRING value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                HSTRING value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetDateTimeProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::Foundation::DateTime value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::DateTime value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetPointProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::Foundation::Point value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::Point value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetRectProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::Foundation::Rect value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::Rect value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetSizeProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::Foundation::Size value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::Size value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetTimeSpanProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::Foundation::TimeSpan value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::TimeSpan value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetColorProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::UI::Color value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Color value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetCornerRadiusProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::UI::Xaml::CornerRadius value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::CornerRadius value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetDurationProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::UI::Xaml::Duration value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Duration value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetGridLengthProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::UI::Xaml::GridLength value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::GridLength value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetThicknessProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::UI::Xaml::Thickness value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Thickness value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetMatrixProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::UI::Xaml::Media::Matrix value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Media::Matrix value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetMatrix3DProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */ABI::Windows::UI::Xaml::Media::Media3D::Matrix3D value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Media::Media3D::Matrix3D value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetEnumProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [in] */UINT32 value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                UINT32 value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetObjectProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__deref_out_opt IInspectable * * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                IInspectable** result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetXamlDirectObjectProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject** result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetBooleanProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ::boolean * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                boolean* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetDoubleProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out DOUBLE * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                DOUBLE* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetInt32Property(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out INT32 * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                INT32* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetStringProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                HSTRING* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetDateTimeProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::DateTime* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetPointProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::Point * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::Point* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetRectProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::Rect* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetSizeProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::Size * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::Size* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetTimeSpanProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::Foundation::TimeSpan* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetColorProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Color * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Color* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetCornerRadiusProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::CornerRadius * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::CornerRadius* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetDurationProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Duration * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Duration* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetGridLengthProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::GridLength * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::GridLength* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetThicknessProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Thickness * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Thickness* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetMatrixProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Media::Matrix * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Media::Matrix* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetMatrix3DProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Xaml::Media::Media3D::Matrix3D * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                ABI::Windows::UI::Xaml::Media::Media3D::Matrix3D* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetEnumProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
-                                /* [retval, out] */__RPC__out UINT32 * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex,
+                                UINT32* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE ClearProperty(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex propertyIndex
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetCollectionCount(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [retval, out] */__RPC__out UINT32 * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                UINT32* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetXamlDirectObjectFromCollectionAt(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */UINT32 index,
-                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                UINT32 index,
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject** result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE AddToCollection(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE InsertIntoCollectionAt(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */UINT32 index,
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * value
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                UINT32 index,
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE RemoveFromCollection(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * value,
-                                /* [retval, out] */__RPC__out ::boolean * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* value,
+                                boolean* result
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE RemoveFromCollectionAt(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */UINT32 index
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                UINT32 index
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE ClearCollection(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject
                                 ) = 0;
-                            /* [overload, default_overload] */virtual HRESULT STDMETHODCALLTYPE AddEventHandler(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlEventIndex eventIndex,
-                                /* [in] */__RPC__in_opt IInspectable * handler
+                            virtual HRESULT STDMETHODCALLTYPE AddEventHandler(
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlEventIndex eventIndex,
+                                IInspectable* handler
                                 ) = 0;
-                            /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddEventHandler_HandledEventsToo(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlEventIndex eventIndex,
-                                /* [in] */__RPC__in_opt IInspectable * handler,
-                                /* [in] */::boolean handledEventsToo
+                            virtual HRESULT STDMETHODCALLTYPE AddEventHandler_HandledEventsToo(
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlEventIndex eventIndex,
+                                IInspectable* handler,
+                                boolean handledEventsToo
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE RemoveEventHandler(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject * xamlDirectObject,
-                                /* [in] */ABI::Windows::UI::Xaml::Core::Direct::XamlEventIndex eventIndex,
-                                /* [in] */__RPC__in_opt IInspectable * handler
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirectObject* xamlDirectObject,
+                                ABI::Windows::UI::Xaml::Core::Direct::XamlEventIndex eventIndex,
+                                IInspectable* handler
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IXamlDirect=_uuidof(IXamlDirect);
-                        
+                        extern MIDL_CONST_ID IID& IID_IXamlDirect = _uuidof(IXamlDirect);
                     } /* Direct */
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_INTERFACE_DEFINED__) */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Interface Windows.UI.Xaml.Core.Direct.IXamlDirectObject
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
- *
  *
  */
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
@@ -3000,26 +2756,23 @@ namespace ABI {
             namespace Xaml {
                 namespace Core {
                     namespace Direct {
-                        /* [object, uuid("10614A82-CEE4-4645-BA25-D071CE778355"), contract] */
-                        MIDL_INTERFACE("10614A82-CEE4-4645-BA25-D071CE778355")
+                        MIDL_INTERFACE("10614a82-cee4-4645-ba25-d071ce778355")
                         IXamlDirectObject : public IInspectable
                         {
                         public:
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IXamlDirectObject=_uuidof(IXamlDirectObject);
-                        
+                        extern MIDL_CONST_ID IID& IID_IXamlDirectObject = _uuidof(IXamlDirectObject);
                     } /* Direct */
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_INTERFACE_DEFINED__) */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -3027,9 +2780,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObje
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Core.Direct.XamlDirect
- *
  *
  */
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
@@ -3042,36 +2793,32 @@ namespace ABI {
             namespace Xaml {
                 namespace Core {
                     namespace Direct {
-                        /* [object, uuid("321887CC-14E4-5C6F-878D-FBB604AD7D17"), exclusiveto, contract] */
-                        MIDL_INTERFACE("321887CC-14E4-5C6F-878D-FBB604AD7D17")
+                        MIDL_INTERFACE("321887cc-14e4-5c6f-878d-fbb604ad7d17")
                         IXamlDirectStatics : public IInspectable
                         {
                         public:
                             virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Core::Direct::IXamlDirect * * result
+                                ABI::Windows::UI::Xaml::Core::Direct::IXamlDirect** result
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IXamlDirectStatics=_uuidof(IXamlDirectStatics);
-                        
+                        extern MIDL_CONST_ID IID& IID_IXamlDirectStatics = _uuidof(IXamlDirectStatics);
                     } /* Direct */
                 } /* Core */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.UI.Xaml.Core.Direct.XamlDirect
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Xaml.Core.Direct.IXamlDirectStatics interface starting with version 1.0 of the Windows.UI.Xaml.Core.Direct.XamlDirectContract API contract
@@ -3085,17 +2832,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStat
  *
  */
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Core_Direct_XamlDirect_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Core_Direct_XamlDirect_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Core_Direct_XamlDirect[] = L"Windows.UI.Xaml.Core.Direct.XamlDirect";
 #endif
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -3117,81 +2858,39 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics _
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C)
+
+// Collection interface definitions
 
 typedef struct __x_ABI_CWindows_CFoundation_CDateTime __x_ABI_CWindows_CFoundation_CDateTime;
 
-
 typedef struct __x_ABI_CWindows_CFoundation_CPoint __x_ABI_CWindows_CFoundation_CPoint;
-
 
 typedef struct __x_ABI_CWindows_CFoundation_CRect __x_ABI_CWindows_CFoundation_CRect;
 
-
 typedef struct __x_ABI_CWindows_CFoundation_CSize __x_ABI_CWindows_CFoundation_CSize;
-
 
 typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
 
-
-
-
 typedef struct __x_ABI_CWindows_CUI_CColor __x_ABI_CWindows_CUI_CColor;
-
-
-
 
 typedef struct __x_ABI_CWindows_CUI_CXaml_CCornerRadius __x_ABI_CWindows_CUI_CXaml_CCornerRadius;
 
-
 typedef struct __x_ABI_CWindows_CUI_CXaml_CDuration __x_ABI_CWindows_CUI_CXaml_CDuration;
-
 
 typedef struct __x_ABI_CWindows_CUI_CXaml_CGridLength __x_ABI_CWindows_CUI_CXaml_CGridLength;
 
-
-
-
-
 typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CMatrix __x_ABI_CWindows_CUI_CXaml_CMedia_CMatrix;
-
-
-
-
-
 
 typedef struct __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CMatrix3D __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CMatrix3D;
 
-
-
-
-
-
-
 typedef struct __x_ABI_CWindows_CUI_CXaml_CThickness __x_ABI_CWindows_CUI_CXaml_CThickness;
-
-
-
-
-
 
 typedef enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex;
 
-
 typedef enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex;
 
-
 typedef enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlTypeIndex __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlTypeIndex;
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -3199,11 +2898,8 @@ typedef enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlTypeIndex __x_ABI_CWi
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex
 {
     XamlEventIndex_FrameworkElement_DataContextChanged = 16,
@@ -3347,18 +3043,14 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex
 };
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.UI.Xaml.Core.Direct.XamlPropertyIndex
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex
 {
     XamlPropertyIndex_AutomationProperties_AcceleratorKey = 5,
@@ -4868,10 +4560,8 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex
     XamlPropertyIndex_PathIconSource_Data = 2122,
     XamlPropertyIndex_SymbolIconSource_Symbol = 2123,
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_UIElement_Shadow = 2130,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_IconSourceElement_IconSource = 2131,
     XamlPropertyIndex_PasswordBox_CanPasteClipboardContent = 2137,
     XamlPropertyIndex_TextBox_CanPasteClipboardContent = 2138,
@@ -4944,10 +4634,8 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex
     XamlPropertyIndex_StandardUICommand_Kind = 2275,
     XamlPropertyIndex_UIElement_CanBeScrollAnchor = 2276,
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_ThemeShadow_Receivers = 2279,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_ScrollContentPresenter_SizesContentToTemplatedParent = 2280,
     XamlPropertyIndex_ComboBox_TextBoxStyle = 2281,
     XamlPropertyIndex_Frame_IsNavigationStackEnabled = 2282,
@@ -4970,68 +4658,43 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex
     XamlPropertyIndex_DatePicker_SelectedDate = 2355,
     XamlPropertyIndex_TimePicker_SelectedTime = 2356,
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_AppBarTemplateSettings_NegativeCompactVerticalDelta = 2367,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_AppBarTemplateSettings_NegativeHiddenVerticalDelta = 2368,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_AppBarTemplateSettings_NegativeMinimalVerticalDelta = 2369,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_FlyoutBase_ShouldConstrainToRootBounds = 2378,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_Popup_ShouldConstrainToRootBounds = 2379,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_FlyoutPresenter_IsDefaultShadowEnabled = 2380,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_MenuFlyoutPresenter_IsDefaultShadowEnabled = 2381,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_UIElement_ActualOffset = 2382,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_UIElement_ActualSize = 2383,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentCompactYTranslation = 2384,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentHiddenYTranslation = 2385,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlPropertyIndex_CommandBarTemplateSettings_OverflowContentMinimalYTranslation = 2386,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
 };
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5039,11 +4702,8 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlTypeIndex
 {
     XamlTypeIndex_AutoSuggestBoxSuggestionChosenEventArgs = 34,
@@ -5295,14 +4955,11 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlTypeIndex
     XamlTypeIndex_ColorPaletteResources = 952,
     XamlTypeIndex_StandardUICommand = 961,
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlTypeIndex_ThemeShadow = 964,
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x20000
-    
     XamlTypeIndex_XamlUICommand = 969,
 };
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5310,545 +4967,419 @@ enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlTypeIndex
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Core.Direct.XamlDirect
- *
  *
  */
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Core_Direct_IXamlDirect[] = L"Windows.UI.Xaml.Core.Direct.IXamlDirect";
-/* [object, uuid("5FFA1295-ADD2-590F-A051-70989B866ADE"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetObject)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        IInspectable** result);
+    HRESULT (STDMETHODCALLTYPE* GetXamlDirectObject)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        IInspectable* object,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject** result);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlTypeIndex typeIndex,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject** result);
+    HRESULT (STDMETHODCALLTYPE* SetObjectProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        IInspectable* value);
+    HRESULT (STDMETHODCALLTYPE* SetXamlDirectObjectProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* value);
+    HRESULT (STDMETHODCALLTYPE* SetBooleanProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        boolean value);
+    HRESULT (STDMETHODCALLTYPE* SetDoubleProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* SetInt32Property)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        INT32 value);
+    HRESULT (STDMETHODCALLTYPE* SetStringProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* SetDateTimeProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CDateTime value);
+    HRESULT (STDMETHODCALLTYPE* SetPointProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CPoint value);
+    HRESULT (STDMETHODCALLTYPE* SetRectProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CRect value);
+    HRESULT (STDMETHODCALLTYPE* SetSizeProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CSize value);
+    HRESULT (STDMETHODCALLTYPE* SetTimeSpanProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan value);
+    HRESULT (STDMETHODCALLTYPE* SetColorProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* SetCornerRadiusProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CCornerRadius value);
+    HRESULT (STDMETHODCALLTYPE* SetDurationProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CDuration value);
+    HRESULT (STDMETHODCALLTYPE* SetGridLengthProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CGridLength value);
+    HRESULT (STDMETHODCALLTYPE* SetThicknessProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CThickness value);
+    HRESULT (STDMETHODCALLTYPE* SetMatrixProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CMedia_CMatrix value);
+    HRESULT (STDMETHODCALLTYPE* SetMatrix3DProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CMatrix3D value);
+    HRESULT (STDMETHODCALLTYPE* SetEnumProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        UINT32 value);
+    HRESULT (STDMETHODCALLTYPE* GetObjectProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        IInspectable** result);
+    HRESULT (STDMETHODCALLTYPE* GetXamlDirectObjectProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject** result);
+    HRESULT (STDMETHODCALLTYPE* GetBooleanProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetDoubleProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        DOUBLE* result);
+    HRESULT (STDMETHODCALLTYPE* GetInt32Property)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        INT32* result);
+    HRESULT (STDMETHODCALLTYPE* GetStringProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* GetDateTimeProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CDateTime* result);
+    HRESULT (STDMETHODCALLTYPE* GetPointProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CPoint* result);
+    HRESULT (STDMETHODCALLTYPE* GetRectProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CRect* result);
+    HRESULT (STDMETHODCALLTYPE* GetSizeProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CSize* result);
+    HRESULT (STDMETHODCALLTYPE* GetTimeSpanProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan* result);
+    HRESULT (STDMETHODCALLTYPE* GetColorProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CColor* result);
+    HRESULT (STDMETHODCALLTYPE* GetCornerRadiusProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CCornerRadius* result);
+    HRESULT (STDMETHODCALLTYPE* GetDurationProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CDuration* result);
+    HRESULT (STDMETHODCALLTYPE* GetGridLengthProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CGridLength* result);
+    HRESULT (STDMETHODCALLTYPE* GetThicknessProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CThickness* result);
+    HRESULT (STDMETHODCALLTYPE* GetMatrixProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CMedia_CMatrix* result);
+    HRESULT (STDMETHODCALLTYPE* GetMatrix3DProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        struct __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CMatrix3D* result);
+    HRESULT (STDMETHODCALLTYPE* GetEnumProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* ClearProperty)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex);
+    HRESULT (STDMETHODCALLTYPE* GetCollectionCount)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* GetXamlDirectObjectFromCollectionAt)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        UINT32 index,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject** result);
+    HRESULT (STDMETHODCALLTYPE* AddToCollection)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* value);
+    HRESULT (STDMETHODCALLTYPE* InsertIntoCollectionAt)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        UINT32 index,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveFromCollection)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* value,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* RemoveFromCollectionAt)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        UINT32 index);
+    HRESULT (STDMETHODCALLTYPE* ClearCollection)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject);
+    HRESULT (STDMETHODCALLTYPE* AddEventHandler)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex eventIndex,
+        IInspectable* handler);
+    HRESULT (STDMETHODCALLTYPE* AddEventHandler_HandledEventsToo)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex eventIndex,
+        IInspectable* handler,
+        boolean handledEventsToo);
+    HRESULT (STDMETHODCALLTYPE* RemoveEventHandler)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* xamlDirectObject,
+        enum __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex eventIndex,
+        IInspectable* handler);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetObject )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [retval, out] */__RPC__deref_out_opt IInspectable * * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetXamlDirectObject )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt IInspectable * object,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlTypeIndex typeIndex,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetObjectProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__RPC__in_opt IInspectable * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetXamlDirectObjectProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetBooleanProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */boolean value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetDoubleProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */DOUBLE value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetInt32Property )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */INT32 value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetStringProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__RPC__in HSTRING value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetDateTimeProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CFoundation_CDateTime value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetPointProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CFoundation_CPoint value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetRectProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CFoundation_CRect value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetSizeProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CFoundation_CSize value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetTimeSpanProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CFoundation_CTimeSpan value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetColorProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CUI_CColor value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetCornerRadiusProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCornerRadius value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetDurationProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CDuration value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetGridLengthProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CGridLength value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetThicknessProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CThickness value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetMatrixProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CMedia_CMatrix value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetMatrix3DProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CMatrix3D value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetEnumProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [in] */UINT32 value
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetObjectProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__deref_out_opt IInspectable * * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetXamlDirectObjectProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetBooleanProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out boolean * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetDoubleProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out DOUBLE * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetInt32Property )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out INT32 * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetStringProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetDateTimeProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CDateTime * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetPointProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CPoint * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetRectProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CRect * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetSizeProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CSize * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetTimeSpanProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetColorProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CColor * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetCornerRadiusProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CXaml_CCornerRadius * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetDurationProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CXaml_CDuration * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetGridLengthProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CXaml_CGridLength * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetThicknessProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CXaml_CThickness * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetMatrixProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CMatrix * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetMatrix3DProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CXaml_CMedia_CMedia3D_CMatrix3D * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetEnumProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex,
-        /* [retval, out] */__RPC__out UINT32 * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *ClearProperty )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlPropertyIndex propertyIndex
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetCollectionCount )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [retval, out] */__RPC__out UINT32 * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetXamlDirectObjectFromCollectionAt )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */UINT32 index,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *AddToCollection )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *InsertIntoCollectionAt )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */UINT32 index,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *RemoveFromCollection )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * value,
-        /* [retval, out] */__RPC__out boolean * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *RemoveFromCollectionAt )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */UINT32 index
-        );
-    HRESULT ( STDMETHODCALLTYPE *ClearCollection )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject
-        );
-    /* [overload, default_overload] */HRESULT ( STDMETHODCALLTYPE *AddEventHandler )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex eventIndex,
-        /* [in] */__RPC__in_opt IInspectable * handler
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *AddEventHandler_HandledEventsToo )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex eventIndex,
-        /* [in] */__RPC__in_opt IInspectable * handler,
-        /* [in] */boolean handledEventsToo
-        );
-    HRESULT ( STDMETHODCALLTYPE *RemoveEventHandler )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * xamlDirectObject,
-        /* [in] */__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CXamlEventIndex eventIndex,
-        /* [in] */__RPC__in_opt IInspectable * handler
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetObject(This,xamlDirectObject,result) \
-    ( (This)->lpVtbl->GetObject(This,xamlDirectObject,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetObject(This, xamlDirectObject, result) \
+    ((This)->lpVtbl->GetObject(This, xamlDirectObject, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetXamlDirectObject(This,object,result) \
-    ( (This)->lpVtbl->GetXamlDirectObject(This,object,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetXamlDirectObject(This, object, result) \
+    ((This)->lpVtbl->GetXamlDirectObject(This, object, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_CreateInstance(This,typeIndex,result) \
-    ( (This)->lpVtbl->CreateInstance(This,typeIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_CreateInstance(This, typeIndex, result) \
+    ((This)->lpVtbl->CreateInstance(This, typeIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetObjectProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetObjectProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetObjectProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetObjectProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetXamlDirectObjectProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetXamlDirectObjectProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetXamlDirectObjectProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetXamlDirectObjectProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetBooleanProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetBooleanProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetBooleanProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetBooleanProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetDoubleProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetDoubleProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetDoubleProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetDoubleProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetInt32Property(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetInt32Property(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetInt32Property(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetInt32Property(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetStringProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetStringProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetStringProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetStringProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetDateTimeProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetDateTimeProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetDateTimeProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetDateTimeProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetPointProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetPointProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetPointProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetPointProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetRectProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetRectProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetRectProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetRectProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetSizeProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetSizeProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetSizeProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetSizeProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetTimeSpanProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetTimeSpanProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetTimeSpanProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetTimeSpanProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetColorProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetColorProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetColorProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetColorProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetCornerRadiusProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetCornerRadiusProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetCornerRadiusProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetCornerRadiusProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetDurationProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetDurationProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetDurationProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetDurationProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetGridLengthProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetGridLengthProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetGridLengthProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetGridLengthProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetThicknessProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetThicknessProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetThicknessProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetThicknessProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetMatrixProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetMatrixProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetMatrixProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetMatrixProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetMatrix3DProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetMatrix3DProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetMatrix3DProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetMatrix3DProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetEnumProperty(This,xamlDirectObject,propertyIndex,value) \
-    ( (This)->lpVtbl->SetEnumProperty(This,xamlDirectObject,propertyIndex,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_SetEnumProperty(This, xamlDirectObject, propertyIndex, value) \
+    ((This)->lpVtbl->SetEnumProperty(This, xamlDirectObject, propertyIndex, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetObjectProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetObjectProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetObjectProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetObjectProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetXamlDirectObjectProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetXamlDirectObjectProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetXamlDirectObjectProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetXamlDirectObjectProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetBooleanProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetBooleanProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetBooleanProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetBooleanProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetDoubleProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetDoubleProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetDoubleProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetDoubleProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetInt32Property(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetInt32Property(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetInt32Property(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetInt32Property(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetStringProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetStringProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetStringProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetStringProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetDateTimeProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetDateTimeProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetDateTimeProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetDateTimeProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetPointProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetPointProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetPointProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetPointProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetRectProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetRectProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetRectProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetRectProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetSizeProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetSizeProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetSizeProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetSizeProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetTimeSpanProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetTimeSpanProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetTimeSpanProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetTimeSpanProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetColorProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetColorProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetColorProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetColorProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetCornerRadiusProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetCornerRadiusProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetCornerRadiusProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetCornerRadiusProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetDurationProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetDurationProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetDurationProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetDurationProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetGridLengthProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetGridLengthProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetGridLengthProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetGridLengthProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetThicknessProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetThicknessProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetThicknessProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetThicknessProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetMatrixProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetMatrixProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetMatrixProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetMatrixProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetMatrix3DProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetMatrix3DProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetMatrix3DProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetMatrix3DProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetEnumProperty(This,xamlDirectObject,propertyIndex,result) \
-    ( (This)->lpVtbl->GetEnumProperty(This,xamlDirectObject,propertyIndex,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetEnumProperty(This, xamlDirectObject, propertyIndex, result) \
+    ((This)->lpVtbl->GetEnumProperty(This, xamlDirectObject, propertyIndex, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_ClearProperty(This,xamlDirectObject,propertyIndex) \
-    ( (This)->lpVtbl->ClearProperty(This,xamlDirectObject,propertyIndex) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_ClearProperty(This, xamlDirectObject, propertyIndex) \
+    ((This)->lpVtbl->ClearProperty(This, xamlDirectObject, propertyIndex))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetCollectionCount(This,xamlDirectObject,result) \
-    ( (This)->lpVtbl->GetCollectionCount(This,xamlDirectObject,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetCollectionCount(This, xamlDirectObject, result) \
+    ((This)->lpVtbl->GetCollectionCount(This, xamlDirectObject, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetXamlDirectObjectFromCollectionAt(This,xamlDirectObject,index,result) \
-    ( (This)->lpVtbl->GetXamlDirectObjectFromCollectionAt(This,xamlDirectObject,index,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_GetXamlDirectObjectFromCollectionAt(This, xamlDirectObject, index, result) \
+    ((This)->lpVtbl->GetXamlDirectObjectFromCollectionAt(This, xamlDirectObject, index, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_AddToCollection(This,xamlDirectObject,value) \
-    ( (This)->lpVtbl->AddToCollection(This,xamlDirectObject,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_AddToCollection(This, xamlDirectObject, value) \
+    ((This)->lpVtbl->AddToCollection(This, xamlDirectObject, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_InsertIntoCollectionAt(This,xamlDirectObject,index,value) \
-    ( (This)->lpVtbl->InsertIntoCollectionAt(This,xamlDirectObject,index,value) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_InsertIntoCollectionAt(This, xamlDirectObject, index, value) \
+    ((This)->lpVtbl->InsertIntoCollectionAt(This, xamlDirectObject, index, value))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_RemoveFromCollection(This,xamlDirectObject,value,result) \
-    ( (This)->lpVtbl->RemoveFromCollection(This,xamlDirectObject,value,result) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_RemoveFromCollection(This, xamlDirectObject, value, result) \
+    ((This)->lpVtbl->RemoveFromCollection(This, xamlDirectObject, value, result))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_RemoveFromCollectionAt(This,xamlDirectObject,index) \
-    ( (This)->lpVtbl->RemoveFromCollectionAt(This,xamlDirectObject,index) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_RemoveFromCollectionAt(This, xamlDirectObject, index) \
+    ((This)->lpVtbl->RemoveFromCollectionAt(This, xamlDirectObject, index))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_ClearCollection(This,xamlDirectObject) \
-    ( (This)->lpVtbl->ClearCollection(This,xamlDirectObject) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_ClearCollection(This, xamlDirectObject) \
+    ((This)->lpVtbl->ClearCollection(This, xamlDirectObject))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_AddEventHandler(This,xamlDirectObject,eventIndex,handler) \
-    ( (This)->lpVtbl->AddEventHandler(This,xamlDirectObject,eventIndex,handler) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_AddEventHandler(This, xamlDirectObject, eventIndex, handler) \
+    ((This)->lpVtbl->AddEventHandler(This, xamlDirectObject, eventIndex, handler))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_AddEventHandler_HandledEventsToo(This,xamlDirectObject,eventIndex,handler,handledEventsToo) \
-    ( (This)->lpVtbl->AddEventHandler_HandledEventsToo(This,xamlDirectObject,eventIndex,handler,handledEventsToo) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_AddEventHandler_HandledEventsToo(This, xamlDirectObject, eventIndex, handler, handledEventsToo) \
+    ((This)->lpVtbl->AddEventHandler_HandledEventsToo(This, xamlDirectObject, eventIndex, handler, handledEventsToo))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_RemoveEventHandler(This,xamlDirectObject,eventIndex,handler) \
-    ( (This)->lpVtbl->RemoveEventHandler(This,xamlDirectObject,eventIndex,handler) )
-
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_RemoveEventHandler(This, xamlDirectObject, eventIndex, handler) \
+    ((This)->lpVtbl->RemoveEventHandler(This, xamlDirectObject, eventIndex, handler))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect_INTERFACE_DEFINED__) */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5856,82 +5387,61 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect;
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  */
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Core_Direct_IXamlDirectObject[] = L"Windows.UI.Xaml.Core.Direct.IXamlDirectObject";
-/* [object, uuid("10614A82-CEE4-4645-BA25-D071CE778355"), contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObjectVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject* This,
+        TrustLevel* trustLevel);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-END_INTERFACE
-    
+    END_INTERFACE
 } __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObjectVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObjectVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObjectVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
-
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObject_INTERFACE_DEFINED__) */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5939,99 +5449,74 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectObje
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Core.Direct.XamlDirect
- *
  *
  */
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Core_Direct_IXamlDirectStatics[] = L"Windows.UI.Xaml.Core.Direct.IXamlDirectStatics";
-/* [object, uuid("321887CC-14E4-5C6F-878D-FBB604AD7D17"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics* This,
+        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect** result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetDefault )(
-        __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirect * * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStaticsVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_GetDefault(This,result) \
-    ( (This)->lpVtbl->GetDefault(This,result) )
-
+#define __x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_GetDefault(This, result) \
+    ((This)->lpVtbl->GetDefault(This, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.UI.Xaml.Core.Direct.XamlDirect
  *
  * Introduced to Windows.UI.Xaml.Core.Direct.XamlDirectContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Xaml.Core.Direct.IXamlDirectStatics interface starting with version 1.0 of the Windows.UI.Xaml.Core.Direct.XamlDirectContract API contract
@@ -6045,17 +5530,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CCore_CDirect_CIXamlDirectStat
  *
  */
 #if WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Core_Direct_XamlDirect_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Core_Direct_XamlDirect_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Core_Direct_XamlDirect[] = L"Windows.UI.Xaml.Core.Direct.XamlDirect";
 #endif
 #endif // WINDOWS_UI_XAML_CORE_DIRECT_XAMLDIRECTCONTRACT_VERSION >= 0x10000
-
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

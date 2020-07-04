@@ -1317,7 +1317,6 @@ ParseNetworkString(
 
 #endif
 
-
 #endif // (NTDDI_VERSION >= NTDDI_VISTA)
 
 #if (NTDDI_VERSION >= NTDDI_VISTA)

@@ -1,33 +1,33 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Foundation.Collections.0.h"
+#ifndef WINRT_Windows_Management_Update_1_H
+#define WINRT_Windows_Management_Update_1_H
 #include "winrt/impl/Windows.Management.Update.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Management::Update {
-
-struct WINRT_EBO IPreviewBuildsManager :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPreviewBuildsManager>
+namespace winrt::Windows::Management::Update
 {
-    IPreviewBuildsManager(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPreviewBuildsManagerStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPreviewBuildsManagerStatics>
-{
-    IPreviewBuildsManagerStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPreviewBuildsState :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPreviewBuildsState>
-{
-    IPreviewBuildsState(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IPreviewBuildsManager :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPreviewBuildsManager>
+    {
+        IPreviewBuildsManager(std::nullptr_t = nullptr) noexcept {}
+        IPreviewBuildsManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPreviewBuildsManagerStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPreviewBuildsManagerStatics>
+    {
+        IPreviewBuildsManagerStatics(std::nullptr_t = nullptr) noexcept {}
+        IPreviewBuildsManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPreviewBuildsState :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPreviewBuildsState>
+    {
+        IPreviewBuildsState(std::nullptr_t = nullptr) noexcept {}
+        IPreviewBuildsState(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

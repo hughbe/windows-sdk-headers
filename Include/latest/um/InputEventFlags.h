@@ -7,7 +7,7 @@
 enum InputEventFlag
 {
     InputEventFlag_None             = 0x0000,
-    
+
     InputEventFlag_Down             = 0x0001,
     InputEventFlag_Move             = 0x0002,
     InputEventFlag_Hold             = 0x0002,
@@ -33,7 +33,7 @@ enum InputEventFlag
 
     InputEventFlag_Empty            = 0x1000,
     InputEventFlag_Invalid          = 0x2000,
-    
+
     InputEventFlag_TestInjection    = 0x4000,
     InputEventFlag_TestSync         = 0x8000,
 };
@@ -42,4 +42,6 @@ enum InputEventFlag2
 {
     InputEventFlag2_None                    = 0x00000000,
     InputEventFlag2_InputServiceInjection   = 0x00000001,
+
+    InputEventFlag2_RawCustomText           = 0x00000002,
 };

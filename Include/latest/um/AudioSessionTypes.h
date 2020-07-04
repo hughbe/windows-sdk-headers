@@ -20,6 +20,7 @@
 #define MIDL_ANYSIZE_ARRAY ANYSIZE_ARRAY
 #endif  // defined(__midl)
 
+
 //-------------------------------------------------------------------------
 // Description: AudioClient share mode
 //                                   

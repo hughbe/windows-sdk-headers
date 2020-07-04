@@ -172,6 +172,69 @@ typedef interface IAppxManifestReader6 IAppxManifestReader6;
 #endif 	/* __IAppxManifestReader6_FWD_DEFINED__ */
 
 
+#ifndef __IAppxManifestReader7_FWD_DEFINED__
+#define __IAppxManifestReader7_FWD_DEFINED__
+typedef interface IAppxManifestReader7 IAppxManifestReader7;
+
+#endif 	/* __IAppxManifestReader7_FWD_DEFINED__ */
+
+
+#ifndef __IAppxManifestDriverDependenciesEnumerator_FWD_DEFINED__
+#define __IAppxManifestDriverDependenciesEnumerator_FWD_DEFINED__
+typedef interface IAppxManifestDriverDependenciesEnumerator IAppxManifestDriverDependenciesEnumerator;
+
+#endif 	/* __IAppxManifestDriverDependenciesEnumerator_FWD_DEFINED__ */
+
+
+#ifndef __IAppxManifestDriverDependency_FWD_DEFINED__
+#define __IAppxManifestDriverDependency_FWD_DEFINED__
+typedef interface IAppxManifestDriverDependency IAppxManifestDriverDependency;
+
+#endif 	/* __IAppxManifestDriverDependency_FWD_DEFINED__ */
+
+
+#ifndef __IAppxManifestDriverConstraintsEnumerator_FWD_DEFINED__
+#define __IAppxManifestDriverConstraintsEnumerator_FWD_DEFINED__
+typedef interface IAppxManifestDriverConstraintsEnumerator IAppxManifestDriverConstraintsEnumerator;
+
+#endif 	/* __IAppxManifestDriverConstraintsEnumerator_FWD_DEFINED__ */
+
+
+#ifndef __IAppxManifestDriverConstraint_FWD_DEFINED__
+#define __IAppxManifestDriverConstraint_FWD_DEFINED__
+typedef interface IAppxManifestDriverConstraint IAppxManifestDriverConstraint;
+
+#endif 	/* __IAppxManifestDriverConstraint_FWD_DEFINED__ */
+
+
+#ifndef __IAppxManifestOSPackageDependenciesEnumerator_FWD_DEFINED__
+#define __IAppxManifestOSPackageDependenciesEnumerator_FWD_DEFINED__
+typedef interface IAppxManifestOSPackageDependenciesEnumerator IAppxManifestOSPackageDependenciesEnumerator;
+
+#endif 	/* __IAppxManifestOSPackageDependenciesEnumerator_FWD_DEFINED__ */
+
+
+#ifndef __IAppxManifestOSPackageDependency_FWD_DEFINED__
+#define __IAppxManifestOSPackageDependency_FWD_DEFINED__
+typedef interface IAppxManifestOSPackageDependency IAppxManifestOSPackageDependency;
+
+#endif 	/* __IAppxManifestOSPackageDependency_FWD_DEFINED__ */
+
+
+#ifndef __IAppxManifestHostRuntimeDependenciesEnumerator_FWD_DEFINED__
+#define __IAppxManifestHostRuntimeDependenciesEnumerator_FWD_DEFINED__
+typedef interface IAppxManifestHostRuntimeDependenciesEnumerator IAppxManifestHostRuntimeDependenciesEnumerator;
+
+#endif 	/* __IAppxManifestHostRuntimeDependenciesEnumerator_FWD_DEFINED__ */
+
+
+#ifndef __IAppxManifestHostRuntimeDependency_FWD_DEFINED__
+#define __IAppxManifestHostRuntimeDependency_FWD_DEFINED__
+typedef interface IAppxManifestHostRuntimeDependency IAppxManifestHostRuntimeDependency;
+
+#endif 	/* __IAppxManifestHostRuntimeDependency_FWD_DEFINED__ */
+
+
 #ifndef __IAppxManifestOptionalPackageInfo_FWD_DEFINED__
 #define __IAppxManifestOptionalPackageInfo_FWD_DEFINED__
 typedef interface IAppxManifestOptionalPackageInfo IAppxManifestOptionalPackageInfo;
@@ -247,6 +310,13 @@ typedef interface IAppxManifestPackageDependency IAppxManifestPackageDependency;
 typedef interface IAppxManifestPackageDependency2 IAppxManifestPackageDependency2;
 
 #endif 	/* __IAppxManifestPackageDependency2_FWD_DEFINED__ */
+
+
+#ifndef __IAppxManifestPackageDependency3_FWD_DEFINED__
+#define __IAppxManifestPackageDependency3_FWD_DEFINED__
+typedef interface IAppxManifestPackageDependency3 IAppxManifestPackageDependency3;
+
+#endif 	/* __IAppxManifestPackageDependency3_FWD_DEFINED__ */
 
 
 #ifndef __IAppxManifestResourcesEnumerator_FWD_DEFINED__
@@ -380,6 +450,13 @@ typedef interface IAppxBundleManifestPackageInfo2 IAppxBundleManifestPackageInfo
 typedef interface IAppxBundleManifestPackageInfo3 IAppxBundleManifestPackageInfo3;
 
 #endif 	/* __IAppxBundleManifestPackageInfo3_FWD_DEFINED__ */
+
+
+#ifndef __IAppxBundleManifestPackageInfo4_FWD_DEFINED__
+#define __IAppxBundleManifestPackageInfo4_FWD_DEFINED__
+typedef interface IAppxBundleManifestPackageInfo4 IAppxBundleManifestPackageInfo4;
+
+#endif 	/* __IAppxBundleManifestPackageInfo4_FWD_DEFINED__ */
 
 
 #ifndef __IAppxBundleManifestOptionalBundleInfoEnumerator_FWD_DEFINED__
@@ -717,6 +794,15 @@ enum APPX_PACKAGING_CONTEXT_CHANGE_TYPE
         APPX_PACKAGING_CONTEXT_CHANGE_TYPE_DETAILS	= 2,
         APPX_PACKAGING_CONTEXT_CHANGE_TYPE_END	= 3
     } 	APPX_PACKAGING_CONTEXT_CHANGE_TYPE;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2959,6 +3045,876 @@ EXTERN_C const IID IID_IAppxManifestReader6;
 #endif 	/* __IAppxManifestReader6_INTERFACE_DEFINED__ */
 
 
+#ifndef __IAppxManifestReader7_INTERFACE_DEFINED__
+#define __IAppxManifestReader7_INTERFACE_DEFINED__
+
+/* interface IAppxManifestReader7 */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestReader7;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("8EFE6F27-0CE0-4988-B32D-738EB63DB3B7")
+    IAppxManifestReader7 : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetDriverDependencies( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestDriverDependenciesEnumerator **driverDependencies) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetOSPackageDependencies( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestOSPackageDependenciesEnumerator **osPackageDependencies) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetHostRuntimeDependencies( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestHostRuntimeDependenciesEnumerator **hostRuntimeDependencies) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestReader7Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestReader7 * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestReader7 * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestReader7 * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetDriverDependencies )( 
+            __RPC__in IAppxManifestReader7 * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestDriverDependenciesEnumerator **driverDependencies);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetOSPackageDependencies )( 
+            __RPC__in IAppxManifestReader7 * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestOSPackageDependenciesEnumerator **osPackageDependencies);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetHostRuntimeDependencies )( 
+            __RPC__in IAppxManifestReader7 * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestHostRuntimeDependenciesEnumerator **hostRuntimeDependencies);
+        
+        END_INTERFACE
+    } IAppxManifestReader7Vtbl;
+
+    interface IAppxManifestReader7
+    {
+        CONST_VTBL struct IAppxManifestReader7Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestReader7_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestReader7_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestReader7_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestReader7_GetDriverDependencies(This,driverDependencies)	\
+    ( (This)->lpVtbl -> GetDriverDependencies(This,driverDependencies) ) 
+
+#define IAppxManifestReader7_GetOSPackageDependencies(This,osPackageDependencies)	\
+    ( (This)->lpVtbl -> GetOSPackageDependencies(This,osPackageDependencies) ) 
+
+#define IAppxManifestReader7_GetHostRuntimeDependencies(This,hostRuntimeDependencies)	\
+    ( (This)->lpVtbl -> GetHostRuntimeDependencies(This,hostRuntimeDependencies) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestReader7_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxManifestDriverDependenciesEnumerator_INTERFACE_DEFINED__
+#define __IAppxManifestDriverDependenciesEnumerator_INTERFACE_DEFINED__
+
+/* interface IAppxManifestDriverDependenciesEnumerator */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestDriverDependenciesEnumerator;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("FE039DB2-467f-4755-8404-8F5EB6865B33")
+    IAppxManifestDriverDependenciesEnumerator : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetCurrent( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestDriverDependency **driverDependency) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetHasCurrent( 
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE MoveNext( 
+            /* [retval][out] */ __RPC__out BOOL *hasNext) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestDriverDependenciesEnumeratorVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestDriverDependenciesEnumerator * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestDriverDependenciesEnumerator * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestDriverDependenciesEnumerator * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
+            __RPC__in IAppxManifestDriverDependenciesEnumerator * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestDriverDependency **driverDependency);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetHasCurrent )( 
+            __RPC__in IAppxManifestDriverDependenciesEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent);
+        
+        HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
+            __RPC__in IAppxManifestDriverDependenciesEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasNext);
+        
+        END_INTERFACE
+    } IAppxManifestDriverDependenciesEnumeratorVtbl;
+
+    interface IAppxManifestDriverDependenciesEnumerator
+    {
+        CONST_VTBL struct IAppxManifestDriverDependenciesEnumeratorVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestDriverDependenciesEnumerator_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestDriverDependenciesEnumerator_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestDriverDependenciesEnumerator_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestDriverDependenciesEnumerator_GetCurrent(This,driverDependency)	\
+    ( (This)->lpVtbl -> GetCurrent(This,driverDependency) ) 
+
+#define IAppxManifestDriverDependenciesEnumerator_GetHasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> GetHasCurrent(This,hasCurrent) ) 
+
+#define IAppxManifestDriverDependenciesEnumerator_MoveNext(This,hasNext)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasNext) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestDriverDependenciesEnumerator_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxManifestDriverDependency_INTERFACE_DEFINED__
+#define __IAppxManifestDriverDependency_INTERFACE_DEFINED__
+
+/* interface IAppxManifestDriverDependency */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestDriverDependency;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("1210CB94-5A92-4602-BE24-79F318AF4AF9")
+    IAppxManifestDriverDependency : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetDriverConstraints( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestDriverConstraintsEnumerator **driverConstraints) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestDriverDependencyVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestDriverDependency * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestDriverDependency * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestDriverDependency * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetDriverConstraints )( 
+            __RPC__in IAppxManifestDriverDependency * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestDriverConstraintsEnumerator **driverConstraints);
+        
+        END_INTERFACE
+    } IAppxManifestDriverDependencyVtbl;
+
+    interface IAppxManifestDriverDependency
+    {
+        CONST_VTBL struct IAppxManifestDriverDependencyVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestDriverDependency_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestDriverDependency_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestDriverDependency_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestDriverDependency_GetDriverConstraints(This,driverConstraints)	\
+    ( (This)->lpVtbl -> GetDriverConstraints(This,driverConstraints) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestDriverDependency_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxManifestDriverConstraintsEnumerator_INTERFACE_DEFINED__
+#define __IAppxManifestDriverConstraintsEnumerator_INTERFACE_DEFINED__
+
+/* interface IAppxManifestDriverConstraintsEnumerator */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestDriverConstraintsEnumerator;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("D402B2D1-F600-49E0-95E6-975D8DA13D89")
+    IAppxManifestDriverConstraintsEnumerator : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetCurrent( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestDriverConstraint **driverConstraint) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetHasCurrent( 
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE MoveNext( 
+            /* [retval][out] */ __RPC__out BOOL *hasNext) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestDriverConstraintsEnumeratorVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestDriverConstraintsEnumerator * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestDriverConstraintsEnumerator * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestDriverConstraintsEnumerator * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
+            __RPC__in IAppxManifestDriverConstraintsEnumerator * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestDriverConstraint **driverConstraint);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetHasCurrent )( 
+            __RPC__in IAppxManifestDriverConstraintsEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent);
+        
+        HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
+            __RPC__in IAppxManifestDriverConstraintsEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasNext);
+        
+        END_INTERFACE
+    } IAppxManifestDriverConstraintsEnumeratorVtbl;
+
+    interface IAppxManifestDriverConstraintsEnumerator
+    {
+        CONST_VTBL struct IAppxManifestDriverConstraintsEnumeratorVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestDriverConstraintsEnumerator_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestDriverConstraintsEnumerator_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestDriverConstraintsEnumerator_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestDriverConstraintsEnumerator_GetCurrent(This,driverConstraint)	\
+    ( (This)->lpVtbl -> GetCurrent(This,driverConstraint) ) 
+
+#define IAppxManifestDriverConstraintsEnumerator_GetHasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> GetHasCurrent(This,hasCurrent) ) 
+
+#define IAppxManifestDriverConstraintsEnumerator_MoveNext(This,hasNext)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasNext) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestDriverConstraintsEnumerator_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxManifestDriverConstraint_INTERFACE_DEFINED__
+#define __IAppxManifestDriverConstraint_INTERFACE_DEFINED__
+
+/* interface IAppxManifestDriverConstraint */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestDriverConstraint;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("C031BEE4-BBCC-48EA-A237-C34045C80A07")
+    IAppxManifestDriverConstraint : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetName( 
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *name) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetMinVersion( 
+            /* [retval][out] */ __RPC__out UINT64 *minVersion) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetMinDate( 
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *minDate) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestDriverConstraintVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestDriverConstraint * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestDriverConstraint * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestDriverConstraint * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetName )( 
+            __RPC__in IAppxManifestDriverConstraint * This,
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *name);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetMinVersion )( 
+            __RPC__in IAppxManifestDriverConstraint * This,
+            /* [retval][out] */ __RPC__out UINT64 *minVersion);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetMinDate )( 
+            __RPC__in IAppxManifestDriverConstraint * This,
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *minDate);
+        
+        END_INTERFACE
+    } IAppxManifestDriverConstraintVtbl;
+
+    interface IAppxManifestDriverConstraint
+    {
+        CONST_VTBL struct IAppxManifestDriverConstraintVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestDriverConstraint_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestDriverConstraint_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestDriverConstraint_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestDriverConstraint_GetName(This,name)	\
+    ( (This)->lpVtbl -> GetName(This,name) ) 
+
+#define IAppxManifestDriverConstraint_GetMinVersion(This,minVersion)	\
+    ( (This)->lpVtbl -> GetMinVersion(This,minVersion) ) 
+
+#define IAppxManifestDriverConstraint_GetMinDate(This,minDate)	\
+    ( (This)->lpVtbl -> GetMinDate(This,minDate) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestDriverConstraint_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxManifestOSPackageDependenciesEnumerator_INTERFACE_DEFINED__
+#define __IAppxManifestOSPackageDependenciesEnumerator_INTERFACE_DEFINED__
+
+/* interface IAppxManifestOSPackageDependenciesEnumerator */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestOSPackageDependenciesEnumerator;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("B84E2FC3-F8EC-4BC1-8AE2-156346F5FFEA")
+    IAppxManifestOSPackageDependenciesEnumerator : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetCurrent( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestOSPackageDependency **osPackageDependency) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetHasCurrent( 
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE MoveNext( 
+            /* [retval][out] */ __RPC__out BOOL *hasNext) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestOSPackageDependenciesEnumeratorVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestOSPackageDependenciesEnumerator * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestOSPackageDependenciesEnumerator * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestOSPackageDependenciesEnumerator * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
+            __RPC__in IAppxManifestOSPackageDependenciesEnumerator * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestOSPackageDependency **osPackageDependency);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetHasCurrent )( 
+            __RPC__in IAppxManifestOSPackageDependenciesEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent);
+        
+        HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
+            __RPC__in IAppxManifestOSPackageDependenciesEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasNext);
+        
+        END_INTERFACE
+    } IAppxManifestOSPackageDependenciesEnumeratorVtbl;
+
+    interface IAppxManifestOSPackageDependenciesEnumerator
+    {
+        CONST_VTBL struct IAppxManifestOSPackageDependenciesEnumeratorVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestOSPackageDependenciesEnumerator_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestOSPackageDependenciesEnumerator_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestOSPackageDependenciesEnumerator_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestOSPackageDependenciesEnumerator_GetCurrent(This,osPackageDependency)	\
+    ( (This)->lpVtbl -> GetCurrent(This,osPackageDependency) ) 
+
+#define IAppxManifestOSPackageDependenciesEnumerator_GetHasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> GetHasCurrent(This,hasCurrent) ) 
+
+#define IAppxManifestOSPackageDependenciesEnumerator_MoveNext(This,hasNext)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasNext) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestOSPackageDependenciesEnumerator_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxManifestOSPackageDependency_INTERFACE_DEFINED__
+#define __IAppxManifestOSPackageDependency_INTERFACE_DEFINED__
+
+/* interface IAppxManifestOSPackageDependency */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestOSPackageDependency;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("154995EE-54A6-4F14-AC97-D8CF0519644B")
+    IAppxManifestOSPackageDependency : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetName( 
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *name) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetVersion( 
+            /* [retval][out] */ __RPC__out UINT64 *version) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestOSPackageDependencyVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestOSPackageDependency * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestOSPackageDependency * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestOSPackageDependency * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetName )( 
+            __RPC__in IAppxManifestOSPackageDependency * This,
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *name);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetVersion )( 
+            __RPC__in IAppxManifestOSPackageDependency * This,
+            /* [retval][out] */ __RPC__out UINT64 *version);
+        
+        END_INTERFACE
+    } IAppxManifestOSPackageDependencyVtbl;
+
+    interface IAppxManifestOSPackageDependency
+    {
+        CONST_VTBL struct IAppxManifestOSPackageDependencyVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestOSPackageDependency_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestOSPackageDependency_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestOSPackageDependency_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestOSPackageDependency_GetName(This,name)	\
+    ( (This)->lpVtbl -> GetName(This,name) ) 
+
+#define IAppxManifestOSPackageDependency_GetVersion(This,version)	\
+    ( (This)->lpVtbl -> GetVersion(This,version) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestOSPackageDependency_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxManifestHostRuntimeDependenciesEnumerator_INTERFACE_DEFINED__
+#define __IAppxManifestHostRuntimeDependenciesEnumerator_INTERFACE_DEFINED__
+
+/* interface IAppxManifestHostRuntimeDependenciesEnumerator */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestHostRuntimeDependenciesEnumerator;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("6427A646-7F49-433E-B1A6-0DA309F6885A")
+    IAppxManifestHostRuntimeDependenciesEnumerator : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetCurrent( 
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestHostRuntimeDependency **hostRuntimeDependency) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetHasCurrent( 
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE MoveNext( 
+            /* [retval][out] */ __RPC__out BOOL *hasNext) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestHostRuntimeDependenciesEnumeratorVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestHostRuntimeDependenciesEnumerator * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestHostRuntimeDependenciesEnumerator * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestHostRuntimeDependenciesEnumerator * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetCurrent )( 
+            __RPC__in IAppxManifestHostRuntimeDependenciesEnumerator * This,
+            /* [retval][out] */ __RPC__deref_out_opt IAppxManifestHostRuntimeDependency **hostRuntimeDependency);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetHasCurrent )( 
+            __RPC__in IAppxManifestHostRuntimeDependenciesEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasCurrent);
+        
+        HRESULT ( STDMETHODCALLTYPE *MoveNext )( 
+            __RPC__in IAppxManifestHostRuntimeDependenciesEnumerator * This,
+            /* [retval][out] */ __RPC__out BOOL *hasNext);
+        
+        END_INTERFACE
+    } IAppxManifestHostRuntimeDependenciesEnumeratorVtbl;
+
+    interface IAppxManifestHostRuntimeDependenciesEnumerator
+    {
+        CONST_VTBL struct IAppxManifestHostRuntimeDependenciesEnumeratorVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestHostRuntimeDependenciesEnumerator_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestHostRuntimeDependenciesEnumerator_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestHostRuntimeDependenciesEnumerator_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestHostRuntimeDependenciesEnumerator_GetCurrent(This,hostRuntimeDependency)	\
+    ( (This)->lpVtbl -> GetCurrent(This,hostRuntimeDependency) ) 
+
+#define IAppxManifestHostRuntimeDependenciesEnumerator_GetHasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> GetHasCurrent(This,hasCurrent) ) 
+
+#define IAppxManifestHostRuntimeDependenciesEnumerator_MoveNext(This,hasNext)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasNext) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestHostRuntimeDependenciesEnumerator_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxManifestHostRuntimeDependency_INTERFACE_DEFINED__
+#define __IAppxManifestHostRuntimeDependency_INTERFACE_DEFINED__
+
+/* interface IAppxManifestHostRuntimeDependency */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestHostRuntimeDependency;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("3455D234-8414-410D-95C7-7B35255B8391")
+    IAppxManifestHostRuntimeDependency : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetName( 
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *name) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetPublisher( 
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *publisher) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetMinVersion( 
+            /* [retval][out] */ __RPC__out UINT64 *minVersion) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestHostRuntimeDependencyVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestHostRuntimeDependency * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestHostRuntimeDependency * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestHostRuntimeDependency * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetName )( 
+            __RPC__in IAppxManifestHostRuntimeDependency * This,
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *name);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetPublisher )( 
+            __RPC__in IAppxManifestHostRuntimeDependency * This,
+            /* [retval][string][out] */ __RPC__deref_out_opt_string LPWSTR *publisher);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetMinVersion )( 
+            __RPC__in IAppxManifestHostRuntimeDependency * This,
+            /* [retval][out] */ __RPC__out UINT64 *minVersion);
+        
+        END_INTERFACE
+    } IAppxManifestHostRuntimeDependencyVtbl;
+
+    interface IAppxManifestHostRuntimeDependency
+    {
+        CONST_VTBL struct IAppxManifestHostRuntimeDependencyVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestHostRuntimeDependency_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestHostRuntimeDependency_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestHostRuntimeDependency_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestHostRuntimeDependency_GetName(This,name)	\
+    ( (This)->lpVtbl -> GetName(This,name) ) 
+
+#define IAppxManifestHostRuntimeDependency_GetPublisher(This,publisher)	\
+    ( (This)->lpVtbl -> GetPublisher(This,publisher) ) 
+
+#define IAppxManifestHostRuntimeDependency_GetMinVersion(This,minVersion)	\
+    ( (This)->lpVtbl -> GetMinVersion(This,minVersion) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestHostRuntimeDependency_INTERFACE_DEFINED__ */
+
+
 #ifndef __IAppxManifestOptionalPackageInfo_INTERFACE_DEFINED__
 #define __IAppxManifestOptionalPackageInfo_INTERFACE_DEFINED__
 
@@ -4133,6 +5089,86 @@ EXTERN_C const IID IID_IAppxManifestPackageDependency2;
 
 
 #endif 	/* __IAppxManifestPackageDependency2_INTERFACE_DEFINED__ */
+
+
+#ifndef __IAppxManifestPackageDependency3_INTERFACE_DEFINED__
+#define __IAppxManifestPackageDependency3_INTERFACE_DEFINED__
+
+/* interface IAppxManifestPackageDependency3 */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxManifestPackageDependency3;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("1AC56374-6198-4D6B-92E4-749D5AB8A895")
+    IAppxManifestPackageDependency3 : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetIsOptional( 
+            /* [retval][out] */ __RPC__out BOOL *isOptional) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxManifestPackageDependency3Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxManifestPackageDependency3 * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxManifestPackageDependency3 * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxManifestPackageDependency3 * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIsOptional )( 
+            __RPC__in IAppxManifestPackageDependency3 * This,
+            /* [retval][out] */ __RPC__out BOOL *isOptional);
+        
+        END_INTERFACE
+    } IAppxManifestPackageDependency3Vtbl;
+
+    interface IAppxManifestPackageDependency3
+    {
+        CONST_VTBL struct IAppxManifestPackageDependency3Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxManifestPackageDependency3_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxManifestPackageDependency3_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxManifestPackageDependency3_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxManifestPackageDependency3_GetIsOptional(This,isOptional)	\
+    ( (This)->lpVtbl -> GetIsOptional(This,isOptional) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxManifestPackageDependency3_INTERFACE_DEFINED__ */
 
 
 #ifndef __IAppxManifestResourcesEnumerator_INTERFACE_DEFINED__
@@ -6025,6 +7061,86 @@ EXTERN_C const IID IID_IAppxBundleManifestPackageInfo3;
 #endif 	/* __IAppxBundleManifestPackageInfo3_INTERFACE_DEFINED__ */
 
 
+#ifndef __IAppxBundleManifestPackageInfo4_INTERFACE_DEFINED__
+#define __IAppxBundleManifestPackageInfo4_INTERFACE_DEFINED__
+
+/* interface IAppxBundleManifestPackageInfo4 */
+/* [ref][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAppxBundleManifestPackageInfo4;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("5DA6F13D-A8A7-4532-857C-1393D659371D")
+    IAppxBundleManifestPackageInfo4 : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetIsStub( 
+            /* [retval][out] */ __RPC__out BOOL *isStub) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAppxBundleManifestPackageInfo4Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IAppxBundleManifestPackageInfo4 * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IAppxBundleManifestPackageInfo4 * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IAppxBundleManifestPackageInfo4 * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIsStub )( 
+            __RPC__in IAppxBundleManifestPackageInfo4 * This,
+            /* [retval][out] */ __RPC__out BOOL *isStub);
+        
+        END_INTERFACE
+    } IAppxBundleManifestPackageInfo4Vtbl;
+
+    interface IAppxBundleManifestPackageInfo4
+    {
+        CONST_VTBL struct IAppxBundleManifestPackageInfo4Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAppxBundleManifestPackageInfo4_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAppxBundleManifestPackageInfo4_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAppxBundleManifestPackageInfo4_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAppxBundleManifestPackageInfo4_GetIsStub(This,isStub)	\
+    ( (This)->lpVtbl -> GetIsStub(This,isStub) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAppxBundleManifestPackageInfo4_INTERFACE_DEFINED__ */
+
+
 #ifndef __IAppxBundleManifestOptionalBundleInfoEnumerator_INTERFACE_DEFINED__
 #define __IAppxBundleManifestOptionalBundleInfoEnumerator_INTERFACE_DEFINED__
 
@@ -6971,7 +8087,7 @@ EXTERN_C const IID IID_IAppxPackagingDiagnosticEventSinkManager;
 #endif 	/* __IAppxPackagingDiagnosticEventSinkManager_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_appxpackaging_0000_0059 */
+/* interface __MIDL_itf_appxpackaging_0000_0070 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -7019,8 +8135,8 @@ typedef struct APPX_ENCRYPTED_EXEMPTIONS
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0059_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0059_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0070_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0070_v0_0_s_ifspec;
 
 #ifndef __IAppxEncryptionFactory_INTERFACE_DEFINED__
 #define __IAppxEncryptionFactory_INTERFACE_DEFINED__
@@ -7902,7 +9018,7 @@ EXTERN_C const IID IID_IAppxEncryptedBundleWriter2;
 #endif 	/* __IAppxEncryptedBundleWriter2_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_appxpackaging_0000_0067 */
+/* interface __MIDL_itf_appxpackaging_0000_0078 */
 /* [local] */ 
 
 typedef /* [v1_enum] */ 
@@ -7922,8 +9038,8 @@ enum APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTIONS
 DEFINE_ENUM_FLAG_OPERATORS(APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTIONS);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0067_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0067_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0078_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0078_v0_0_s_ifspec;
 
 #ifndef __IAppxEncryptedBundleWriter3_INTERFACE_DEFINED__
 #define __IAppxEncryptedBundleWriter3_INTERFACE_DEFINED__
@@ -8181,15 +9297,15 @@ EXTERN_C const IID IID_IAppxPackageEditor;
 #endif 	/* __IAppxPackageEditor_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_appxpackaging_0000_0069 */
+/* interface __MIDL_itf_appxpackaging_0000_0080 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0069_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0069_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0080_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0080_v0_0_s_ifspec;
 
 
 #ifndef __APPXPACKAGING_LIBRARY_DEFINED__
@@ -8250,14 +9366,14 @@ AppxPackageEditor;
 #endif
 #endif /* __APPXPACKAGING_LIBRARY_DEFINED__ */
 
-/* interface __MIDL_itf_appxpackaging_0000_0070 */
+/* interface __MIDL_itf_appxpackaging_0000_0081 */
 /* [local] */ 
 
 #endif // (NTDDI >= NTDDI_WIN7)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0070_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0070_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0081_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_appxpackaging_0000_0081_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

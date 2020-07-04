@@ -1,79 +1,77 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.ApplicationModel.DataTransfer.0.h"
-#include "winrt/impl/Windows.ApplicationModel.DataTransfer.DragDrop.0.h"
-#include "winrt/impl/Windows.Graphics.Imaging.0.h"
+#ifndef WINRT_Windows_ApplicationModel_DataTransfer_DragDrop_Core_1_H
+#define WINRT_Windows_ApplicationModel_DataTransfer_DragDrop_Core_1_H
 #include "winrt/impl/Windows.ApplicationModel.DataTransfer.DragDrop.Core.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core {
-
-struct WINRT_EBO ICoreDragDropManager :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICoreDragDropManager>
+namespace winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 {
-    ICoreDragDropManager(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICoreDragDropManagerStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICoreDragDropManagerStatics>
-{
-    ICoreDragDropManagerStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICoreDragInfo :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICoreDragInfo>
-{
-    ICoreDragInfo(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICoreDragInfo2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICoreDragInfo2>,
-    impl::require<ICoreDragInfo2, Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragInfo>
-{
-    ICoreDragInfo2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICoreDragOperation :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICoreDragOperation>
-{
-    ICoreDragOperation(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICoreDragOperation2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICoreDragOperation2>,
-    impl::require<ICoreDragOperation2, Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragOperation>
-{
-    ICoreDragOperation2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICoreDragUIOverride :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICoreDragUIOverride>
-{
-    ICoreDragUIOverride(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICoreDropOperationTarget :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICoreDropOperationTarget>
-{
-    ICoreDropOperationTarget(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICoreDropOperationTargetRequestedEventArgs :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICoreDropOperationTargetRequestedEventArgs>
-{
-    ICoreDropOperationTargetRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) ICoreDragDropManager :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreDragDropManager>
+    {
+        ICoreDragDropManager(std::nullptr_t = nullptr) noexcept {}
+        ICoreDragDropManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICoreDragDropManagerStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreDragDropManagerStatics>
+    {
+        ICoreDragDropManagerStatics(std::nullptr_t = nullptr) noexcept {}
+        ICoreDragDropManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICoreDragInfo :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreDragInfo>
+    {
+        ICoreDragInfo(std::nullptr_t = nullptr) noexcept {}
+        ICoreDragInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICoreDragInfo2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreDragInfo2>,
+        impl::require<Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragInfo2, Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragInfo>
+    {
+        ICoreDragInfo2(std::nullptr_t = nullptr) noexcept {}
+        ICoreDragInfo2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICoreDragOperation :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreDragOperation>
+    {
+        ICoreDragOperation(std::nullptr_t = nullptr) noexcept {}
+        ICoreDragOperation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICoreDragOperation2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreDragOperation2>,
+        impl::require<Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragOperation2, Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDragOperation>
+    {
+        ICoreDragOperation2(std::nullptr_t = nullptr) noexcept {}
+        ICoreDragOperation2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICoreDragUIOverride :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreDragUIOverride>
+    {
+        ICoreDragUIOverride(std::nullptr_t = nullptr) noexcept {}
+        ICoreDragUIOverride(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICoreDropOperationTarget :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreDropOperationTarget>
+    {
+        ICoreDropOperationTarget(std::nullptr_t = nullptr) noexcept {}
+        ICoreDropOperationTarget(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICoreDropOperationTargetRequestedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICoreDropOperationTargetRequestedEventArgs>
+    {
+        ICoreDropOperationTargetRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ICoreDropOperationTargetRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

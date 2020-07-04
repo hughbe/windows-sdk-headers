@@ -217,6 +217,7 @@ extern "C" {
 #define IOCTL_STORAGE_PERSISTENT_RESERVE_IN   CTL_CODE(IOCTL_STORAGE_BASE, 0x0406, METHOD_BUFFERED, FILE_READ_ACCESS)
 #define IOCTL_STORAGE_PERSISTENT_RESERVE_OUT  CTL_CODE(IOCTL_STORAGE_BASE, 0x0407, METHOD_BUFFERED, FILE_READ_ACCESS | FILE_WRITE_ACCESS)
 
+
 #define IOCTL_STORAGE_GET_DEVICE_NUMBER       CTL_CODE(IOCTL_STORAGE_BASE, 0x0420, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
 //
@@ -371,6 +372,11 @@ extern "C" {
 // IOCTL_STORAGE_REMOVE_ELEMENT_AND_TRUNCATE IOCTL to remove and truncate element from device.
 //
 #define IOCTL_STORAGE_REMOVE_ELEMENT_AND_TRUNCATE    CTL_CODE(IOCTL_STORAGE_BASE, 0x0730, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+//
+// IOCTL_STORAGE_GET_DEVICE_INTERNAL_LOG IOCTL to get device internal status data.
+//
+#define IOCTL_STORAGE_GET_DEVICE_INTERNAL_LOG    CTL_CODE(IOCTL_STORAGE_BASE, 0x0731, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
 
 //
@@ -550,6 +556,7 @@ typedef struct _STORAGE_DEVICE_NUMBER_EX {
 typedef struct _STORAGE_BUS_RESET_REQUEST {
     UCHAR PathId;
 } STORAGE_BUS_RESET_REQUEST, *PSTORAGE_BUS_RESET_REQUEST;
+
 
 //
 // Break reservation is sent to the Adapter/FDO with the given lun information.
@@ -866,6 +873,8 @@ typedef struct _STORAGE_FAILURE_PREDICTION_CONFIG {
 #define STORAGE_FAILURE_PREDICTION_CONFIG_V1 1
 
 // end_ntminitape
+
+
 
 //
 // Property Query Structures
@@ -2931,6 +2940,7 @@ typedef ULONG DEVICE_DATA_MANAGEMENT_SET_ACTION, DEVICE_DSM_ACTION;
 #define DeviceDsmAction_LostQuery               (0x0000001Au | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_GetFreeSpace            (0x0000001Bu | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_ConversionQuery         (0x0000001Cu | DeviceDsmActionFlag_NonDestructive)
+#define DeviceDsmAction_VdtSet                  (0x0000001Du)
 
 //
 // DEVICE_DSM_INPUT.Flags
@@ -4413,6 +4423,27 @@ typedef struct _DEVICE_DSM_CONVERSION_OUTPUT {
 
 ////////////////////////////////////////////////////////////////////////////////
 //
+// DeviceDsmAction_VdtSet
+//
+
+//
+// SingleRange    - No
+// ParameterBlock - No
+// Output         - No
+// OutputBlock    - No
+//
+
+#define DeviceDsmDefinition_VdtSet {DeviceDsmAction_VdtSet, \
+                                    FALSE,                  \
+                                    0,                      \
+                                    0,                      \
+                                    FALSE,                  \
+                                    0,                      \
+                                    0}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
 // Dsm helper routines
 //
 
@@ -5187,6 +5218,65 @@ typedef struct _REMOVE_ELEMENT_AND_TRUNCATE_REQUEST {
     ULONG Reserved;
 
 } REMOVE_ELEMENT_AND_TRUNCATE_REQUEST, *PREMOVE_ELEMENT_AND_TRUNCATE_REQUEST;
+
+//
+// IOCTL_STORAGE_GET_DEVICE_INTERNAL_LOG
+//
+// Input:
+//       GET_DEVICE_INTERNAL_STATUS_DATA_REQUEST
+// Output:
+//       DEVICE_INTERNAL_STATUS_DATA
+//
+
+#define ERROR_HISTORY_DIRECTORY_ENTRY_DEFAULT_COUNT    8
+
+typedef enum _DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE {
+    DeviceInternalStatusDataRequestTypeUndefined = 0,
+    DeviceCurrentInternalStatusDataHeader,
+    DeviceCurrentInternalStatusData
+} DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE, *PDEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE;
+
+typedef enum _DEVICE_INTERNAL_STATUS_DATA_SET {
+    DeviceStatusDataSetUndefined = 0,
+    DeviceStatusDataSet1,
+    DeviceStatusDataSet2,
+    DeviceStatusDataSet3,
+    DeviceStatusDataSet4,
+    DeviceStatusDataSetMax
+} DEVICE_INTERNAL_STATUS_DATA_SET, *PDEVICE_INTERNAL_STATUS_DATA_SET;
+
+typedef struct _GET_DEVICE_INTERNAL_STATUS_DATA_REQUEST {
+
+    ULONG Version;
+    ULONG Size;
+
+    DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE RequestDataType;
+    DEVICE_INTERNAL_STATUS_DATA_SET RequestDataSet;
+
+} GET_DEVICE_INTERNAL_STATUS_DATA_REQUEST, *PGET_DEVICE_INTERNAL_STATUS_DATA_REQUEST;
+
+typedef struct _DEVICE_INTERNAL_STATUS_DATA {
+
+    // Size of this structure.
+    ULONG Version;
+
+    // Whole size of the structure and the associated data buffer.
+    ULONG Size;
+
+    ULONGLONG T10VendorId;
+
+    ULONG DataSet1Length;
+    ULONG DataSet2Length;
+    ULONG DataSet3Length;
+    ULONG DataSet4Length;
+
+    UCHAR StatusDataVersion;
+    UCHAR Reserved[3];
+    UCHAR ReasonIdentifier[128];
+    ULONG StatusDataLength;
+    UCHAR StatusData[ANYSIZE_ARRAY];
+
+} DEVICE_INTERNAL_STATUS_DATA, *PDEVICE_INTERNAL_STATUS_DATA;
 
 
 #pragma warning(push)
@@ -5969,8 +6059,12 @@ typedef struct _STORAGE_EVENT_NOTIFICATION {
 
 
 #define READ_COPY_NUMBER_KEY                    0x52434e00  // 'RCN'
+#define READ_COPY_NUMBER_BYPASS_CACHE_FLAG      0x00000100
 
-#define IsKeyReadCopyNumber(_k)                 (((_k) & 0xFFFFFF00) == READ_COPY_NUMBER_KEY)
+#define IsKeyReadCopyNumber(_k)                 (((_k) & 0xFFFFFE00) == READ_COPY_NUMBER_KEY)
+
+#define IsKeyReadCopyNumberBypassCache(_k)      ((_k) & READ_COPY_NUMBER_BYPASS_CACHE_FLAG)
+#define SetReadCopyNumberBypassCacheToKey(_k)   ((_k) |= READ_COPY_NUMBER_BYPASS_CACHE_FLAG)
 
 #define ReadCopyNumberToKey(_c)                 (READ_COPY_NUMBER_KEY | (UCHAR)(_c))
 #define ReadCopyNumberFromKey(_k)               (UCHAR)((_k) & 0x000000FF)
@@ -6304,6 +6398,7 @@ typedef struct _STORAGE_PROTOCOL_COMMAND {
 #define STORAGE_PROTOCOL_STATUS_BUSY                    0x5
 #define STORAGE_PROTOCOL_STATUS_DATA_OVERRUN            0x6
 #define STORAGE_PROTOCOL_STATUS_INSUFFICIENT_RESOURCES  0x7
+#define STORAGE_PROTOCOL_STATUS_THROTTLED_REQUEST       0x8
 
 #define STORAGE_PROTOCOL_STATUS_NOT_SUPPORTED           0xFF
 

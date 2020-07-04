@@ -78,7 +78,7 @@ RoResolveRestrictedErrorInfoReference(
 
 STDAPI
 SetRestrictedErrorInfo(
-    _In_ IRestrictedErrorInfo* pRestrictedErrorInfo
+    _In_opt_ IRestrictedErrorInfo* pRestrictedErrorInfo
     );
 
 

@@ -42,6 +42,7 @@ const unsigned LOCATIONTYPE_ABSOLUTE = 0x00000002;
 const unsigned LOCATIONTYPE_COMPRESSED = 0x00000004;
 const unsigned LOCATIONTYPE_IGNORE = 0x00000008;
 const unsigned LOCATIONTYPE_DUPLICATE = 0x00000010;
+const unsigned LOCATIONTYPE_INTERMEDIATE = 0x00000020;
 const unsigned LOCATIONTYPE__MASK_TYPE = 0xFFFF0000;
 
 typedef enum
@@ -140,6 +141,13 @@ cpp_quote("#define DPX_OPTION_TELEMETRY_CORRELATION_VECTOR L\"Telemetry_correlat
 
 #define DPX_OPTION_HASH_TYPE L"cix_hash_type"
 cpp_quote( "#define DPX_OPTION_HASH_TYPE L\"cix_hash_type\"" )
+
+#define DPX_OPTION_HARDLINK_ASSETS L"hardlink_assets"
+cpp_quote("#define DPX_OPTION_HARDLINK_ASSETS L\"hardlink_assets\"")
+
+#define DPX_OPTION_COMPLETE_SELF_COPIES L"complete_self_copies"
+cpp_quote("#define DPX_OPTION_COMPLETE_SELF_COPIES L\"complete_self_copies\"")
+
 
 [ uuid( ddc1b711-0e55-452f-838e-d1505b866e2b ), object, pointer_default( unique ) ]
 interface IDpxJob : IUnknown

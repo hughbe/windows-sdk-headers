@@ -33,6 +33,10 @@
 #endif
 #endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
@@ -1395,6 +1399,10 @@ MiniDumpReadDumpStream(
 #pragma region Desktop Family or Games Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
+#ifdef __cplusplus
+}
+#endif
+
 #if defined(_MSC_VER)
 #if _MSC_VER >= 800
 #if _MSC_VER >= 1200
@@ -1407,10 +1415,6 @@ MiniDumpReadDumpStream(
 #endif
 
 #include <poppack.h>
-
-#ifdef __cplusplus
-}
-#endif
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
 #pragma endregion

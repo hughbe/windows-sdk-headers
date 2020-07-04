@@ -1882,16 +1882,13 @@ typedef enum FWPS_FIELDS_INBOUND_RESERVED2_
    FWPS_FIELD_INBOUND_RESERVED2_RESERVED11,
    FWPS_FIELD_INBOUND_RESERVED2_RESERVED12,
 
-//
-// TODO: This needs to be changed to NTDDI version for 19H1 when it is defined.
-// #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-//
+#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 
    FWPS_FIELD_INBOUND_RESERVED2_RESERVED13,
    FWPS_FIELD_INBOUND_RESERVED2_RESERVED14,
    FWPS_FIELD_INBOUND_RESERVED2_RESERVED15,
 
-// #endif
+#endif
 
    FWPS_FIELD_INBOUND_RESERVED2_MAX,
 } FWPS_FIELDS_INBOUND_RESERVED2;
@@ -2000,9 +1997,9 @@ typedef enum {
     IpDiscardAllocationFailure,
 
     //
-    // IPSNPI discard reasons
+    // IPSNPI discard reasons.
     //
-    IpDiscardIPSNPIDrop,
+    IpDiscardIpsnpiClientDrop,
 
     //
     // Discard reasons common to all paths.
@@ -2012,6 +2009,20 @@ typedef enum {
     IpDiscardAncillaryDataFailure,
     IpDiscardRawDataFailure,
     IpDiscardSessionStateFailure,
+
+    IpDiscardIpsnpiAllocationFailure,
+    IpDiscardIpsnpiModifiedButNotForwarded,
+    IpDiscardIpsnpiNoNextHop,
+    IpDiscardIpsnpiNoCompartment,
+    IpDiscardIpsnpiNoInterface,
+    IpDiscardIpsnpiNoSubInterface,
+    IpDiscardIpsnpiInterfaceDisabled,
+    IpDiscardIpsnpiSegmentationFailed,
+    IpDiscardIpsnpiNoEthernetHeader,
+    IpDiscardIpsnpiUnexpectedFragment,
+    IpDiscardIpsnpiUnsupportedInterfaceType,
+    IpDiscardIpsnpiInvalidLsoInfo,
+    IpDiscardIpsnpiInvalidUsoInfo,
 
     IpDiscardMax
 } IP_DISCARD_REASON, *PIP_DISCARD_REASON;

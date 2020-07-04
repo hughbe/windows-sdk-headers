@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.applicationmodel.datatransfer.dragdrop.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,33 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -131,44 +107,22 @@
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 /* Forward Declarations */
+// Parameterized interface forward declarations (C++)
 
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace DataTransfer {
-                namespace DragDrop {
-                    
-                    typedef enum DragDropModifiers : unsigned int DragDropModifiers;
-                    
-                } /* DragDrop */
-            } /* DataTransfer */
-        } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
+// Collection interface definitions
 /*
  *
  * Struct Windows.ApplicationModel.DataTransfer.DragDrop.DragDropModifiers
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace DataTransfer {
                 namespace DragDrop {
-                    /* [v1_enum, flags, contract] */
                     enum DragDropModifiers : unsigned int
                     {
                         DragDropModifiers_None = 0,
@@ -179,31 +133,20 @@ namespace ABI {
                         DragDropModifiers_MiddleButton = 0x10,
                         DragDropModifiers_RightButton = 0x20,
                     };
-                    
+
                     DEFINE_ENUM_FLAG_OPERATORS(DragDropModifiers)
-                    
                 } /* DragDrop */
             } /* DataTransfer */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
+// Parameterized interface forward declarations (C)
 
-
-
-
-typedef enum __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CDragDropModifiers __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CDragDropModifiers;
-
-
-
-
-
+// Collection interface definitions
 
 /*
  *
@@ -211,11 +154,8 @@ typedef enum __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CDragDro
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, flags, contract] */
 enum __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CDragDropModifiers
 {
     DragDropModifiers_None = 0,
@@ -227,10 +167,6 @@ enum __x_ABI_CWindows_CApplicationModel_CDataTransfer_CDragDrop_CDragDropModifie
     DragDropModifiers_RightButton = 0x20,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

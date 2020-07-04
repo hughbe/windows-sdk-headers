@@ -1,460 +1,415 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Foundation.1.h"
-#include "winrt/impl/Windows.UI.Core.1.h"
-#include "winrt/impl/Windows.UI.Text.1.h"
-#include "winrt/impl/Windows.UI.Xaml.1.h"
-#include "winrt/impl/Windows.UI.Xaml.Input.1.h"
-#include "winrt/impl/Windows.UI.Xaml.Media.1.h"
+#ifndef WINRT_Windows_UI_Xaml_Documents_2_H
+#define WINRT_Windows_UI_Xaml_Documents_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.UI.Composition.1.h"
+#include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Documents.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Documents {
-
-struct TextRange
+namespace winrt::Windows::UI::Xaml::Documents
 {
-    int32_t StartIndex;
-    int32_t Length;
-};
-
-inline bool operator==(TextRange const& left, TextRange const& right) noexcept
-{
-    return left.StartIndex == right.StartIndex && left.Length == right.Length;
+    struct TextRange
+    {
+        int32_t StartIndex;
+        int32_t Length;
+    };
+    inline bool operator==(TextRange const& left, TextRange const& right) noexcept
+    {
+        return left.StartIndex == right.StartIndex && left.Length == right.Length;
+    }
+    inline bool operator!=(TextRange const& left, TextRange const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct __declspec(empty_bases) Block : Windows::UI::Xaml::Documents::IBlock,
+        impl::base<Block, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Block, Windows::UI::Xaml::Documents::IBlock2, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Block(std::nullptr_t) noexcept {}
+        Block(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IBlock(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto TextAlignmentProperty();
+        [[nodiscard]] static auto LineHeightProperty();
+        [[nodiscard]] static auto LineStackingStrategyProperty();
+        [[nodiscard]] static auto MarginProperty();
+        [[nodiscard]] static auto HorizontalTextAlignmentProperty();
+    };
+    struct __declspec(empty_bases) BlockCollection : Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Block>
+    {
+        BlockCollection(std::nullptr_t) noexcept {}
+        BlockCollection(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Block>(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) Bold : Windows::UI::Xaml::Documents::IBold,
+        impl::base<Bold, Windows::UI::Xaml::Documents::Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Bold, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Bold(std::nullptr_t) noexcept {}
+        Bold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IBold(ptr, take_ownership_from_abi) {}
+        Bold();
+    };
+    struct __declspec(empty_bases) ContactContentLinkProvider : Windows::UI::Xaml::Documents::IContactContentLinkProvider,
+        impl::base<ContactContentLinkProvider, Windows::UI::Xaml::Documents::ContentLinkProvider, Windows::UI::Xaml::DependencyObject>,
+        impl::require<ContactContentLinkProvider, Windows::UI::Xaml::Documents::IContentLinkProvider, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        ContactContentLinkProvider(std::nullptr_t) noexcept {}
+        ContactContentLinkProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IContactContentLinkProvider(ptr, take_ownership_from_abi) {}
+        ContactContentLinkProvider();
+    };
+    struct __declspec(empty_bases) ContentLink : Windows::UI::Xaml::Documents::IContentLink,
+        impl::base<ContentLink, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<ContentLink, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        ContentLink(std::nullptr_t) noexcept {}
+        ContentLink(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IContentLink(ptr, take_ownership_from_abi) {}
+        ContentLink();
+        [[nodiscard]] static auto BackgroundProperty();
+        [[nodiscard]] static auto CursorProperty();
+        [[nodiscard]] static auto XYFocusLeftProperty();
+        [[nodiscard]] static auto XYFocusRightProperty();
+        [[nodiscard]] static auto XYFocusUpProperty();
+        [[nodiscard]] static auto XYFocusDownProperty();
+        [[nodiscard]] static auto ElementSoundModeProperty();
+        [[nodiscard]] static auto FocusStateProperty();
+        [[nodiscard]] static auto XYFocusUpNavigationStrategyProperty();
+        [[nodiscard]] static auto XYFocusDownNavigationStrategyProperty();
+        [[nodiscard]] static auto XYFocusLeftNavigationStrategyProperty();
+        [[nodiscard]] static auto XYFocusRightNavigationStrategyProperty();
+        [[nodiscard]] static auto IsTabStopProperty();
+        [[nodiscard]] static auto TabIndexProperty();
+    };
+    struct __declspec(empty_bases) ContentLinkInvokedEventArgs : Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs
+    {
+        ContentLinkInvokedEventArgs(std::nullptr_t) noexcept {}
+        ContentLinkInvokedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ContentLinkProvider : Windows::UI::Xaml::Documents::IContentLinkProvider,
+        impl::base<ContentLinkProvider, Windows::UI::Xaml::DependencyObject>,
+        impl::require<ContentLinkProvider, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        ContentLinkProvider(std::nullptr_t) noexcept {}
+        ContentLinkProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IContentLinkProvider(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ContentLinkProviderCollection : Windows::UI::Xaml::Documents::IContentLinkProviderCollection,
+        impl::require<ContentLinkProviderCollection, Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::Documents::ContentLinkProvider>, Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::ContentLinkProvider>>
+    {
+        ContentLinkProviderCollection(std::nullptr_t) noexcept {}
+        ContentLinkProviderCollection(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IContentLinkProviderCollection(ptr, take_ownership_from_abi) {}
+        ContentLinkProviderCollection();
+    };
+    struct __declspec(empty_bases) Glyphs : Windows::UI::Xaml::Documents::IGlyphs,
+        impl::base<Glyphs, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Glyphs, Windows::UI::Xaml::Documents::IGlyphs2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Glyphs(std::nullptr_t) noexcept {}
+        Glyphs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IGlyphs(ptr, take_ownership_from_abi) {}
+        Glyphs();
+        [[nodiscard]] static auto UnicodeStringProperty();
+        [[nodiscard]] static auto IndicesProperty();
+        [[nodiscard]] static auto FontUriProperty();
+        [[nodiscard]] static auto StyleSimulationsProperty();
+        [[nodiscard]] static auto FontRenderingEmSizeProperty();
+        [[nodiscard]] static auto OriginXProperty();
+        [[nodiscard]] static auto OriginYProperty();
+        [[nodiscard]] static auto FillProperty();
+        [[nodiscard]] static auto IsColorFontEnabledProperty();
+        [[nodiscard]] static auto ColorFontPaletteIndexProperty();
+    };
+    struct __declspec(empty_bases) Hyperlink : Windows::UI::Xaml::Documents::IHyperlink,
+        impl::base<Hyperlink, Windows::UI::Xaml::Documents::Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Hyperlink, Windows::UI::Xaml::Documents::IHyperlink2, Windows::UI::Xaml::Documents::IHyperlink3, Windows::UI::Xaml::Documents::IHyperlink4, Windows::UI::Xaml::Documents::IHyperlink5, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Hyperlink(std::nullptr_t) noexcept {}
+        Hyperlink(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IHyperlink(ptr, take_ownership_from_abi) {}
+        Hyperlink();
+        [[nodiscard]] static auto NavigateUriProperty();
+        [[nodiscard]] static auto UnderlineStyleProperty();
+        [[nodiscard]] static auto XYFocusLeftProperty();
+        [[nodiscard]] static auto XYFocusRightProperty();
+        [[nodiscard]] static auto XYFocusUpProperty();
+        [[nodiscard]] static auto XYFocusDownProperty();
+        [[nodiscard]] static auto ElementSoundModeProperty();
+        [[nodiscard]] static auto FocusStateProperty();
+        [[nodiscard]] static auto XYFocusUpNavigationStrategyProperty();
+        [[nodiscard]] static auto XYFocusDownNavigationStrategyProperty();
+        [[nodiscard]] static auto XYFocusLeftNavigationStrategyProperty();
+        [[nodiscard]] static auto XYFocusRightNavigationStrategyProperty();
+        [[nodiscard]] static auto IsTabStopProperty();
+        [[nodiscard]] static auto TabIndexProperty();
+    };
+    struct __declspec(empty_bases) HyperlinkClickEventArgs : Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs,
+        impl::base<HyperlinkClickEventArgs, Windows::UI::Xaml::RoutedEventArgs>,
+        impl::require<HyperlinkClickEventArgs, Windows::UI::Xaml::IRoutedEventArgs>
+    {
+        HyperlinkClickEventArgs(std::nullptr_t) noexcept {}
+        HyperlinkClickEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) Inline : Windows::UI::Xaml::Documents::IInline,
+        impl::base<Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Inline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Inline(std::nullptr_t) noexcept {}
+        Inline(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IInline(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) InlineCollection : Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Inline>
+    {
+        InlineCollection(std::nullptr_t) noexcept {}
+        InlineCollection(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Inline>(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) InlineUIContainer : Windows::UI::Xaml::Documents::IInlineUIContainer,
+        impl::base<InlineUIContainer, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<InlineUIContainer, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        InlineUIContainer(std::nullptr_t) noexcept {}
+        InlineUIContainer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IInlineUIContainer(ptr, take_ownership_from_abi) {}
+        InlineUIContainer();
+    };
+    struct __declspec(empty_bases) Italic : Windows::UI::Xaml::Documents::IItalic,
+        impl::base<Italic, Windows::UI::Xaml::Documents::Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Italic, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Italic(std::nullptr_t) noexcept {}
+        Italic(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IItalic(ptr, take_ownership_from_abi) {}
+        Italic();
+    };
+    struct __declspec(empty_bases) LineBreak : Windows::UI::Xaml::Documents::ILineBreak,
+        impl::base<LineBreak, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<LineBreak, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        LineBreak(std::nullptr_t) noexcept {}
+        LineBreak(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::ILineBreak(ptr, take_ownership_from_abi) {}
+        LineBreak();
+    };
+    struct __declspec(empty_bases) Paragraph : Windows::UI::Xaml::Documents::IParagraph,
+        impl::base<Paragraph, Windows::UI::Xaml::Documents::Block, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Paragraph, Windows::UI::Xaml::Documents::IBlock, Windows::UI::Xaml::Documents::IBlock2, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Paragraph(std::nullptr_t) noexcept {}
+        Paragraph(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IParagraph(ptr, take_ownership_from_abi) {}
+        Paragraph();
+        [[nodiscard]] static auto TextIndentProperty();
+    };
+    struct __declspec(empty_bases) PlaceContentLinkProvider : Windows::UI::Xaml::Documents::IPlaceContentLinkProvider,
+        impl::base<PlaceContentLinkProvider, Windows::UI::Xaml::Documents::ContentLinkProvider, Windows::UI::Xaml::DependencyObject>,
+        impl::require<PlaceContentLinkProvider, Windows::UI::Xaml::Documents::IContentLinkProvider, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        PlaceContentLinkProvider(std::nullptr_t) noexcept {}
+        PlaceContentLinkProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IPlaceContentLinkProvider(ptr, take_ownership_from_abi) {}
+        PlaceContentLinkProvider();
+    };
+    struct __declspec(empty_bases) Run : Windows::UI::Xaml::Documents::IRun,
+        impl::base<Run, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Run, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Run(std::nullptr_t) noexcept {}
+        Run(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IRun(ptr, take_ownership_from_abi) {}
+        Run();
+        [[nodiscard]] static auto FlowDirectionProperty();
+    };
+    struct __declspec(empty_bases) Span : Windows::UI::Xaml::Documents::ISpan,
+        impl::base<Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Span, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Span(std::nullptr_t) noexcept {}
+        Span(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::ISpan(ptr, take_ownership_from_abi) {}
+        Span();
+    };
+    struct __declspec(empty_bases) TextElement : Windows::UI::Xaml::Documents::ITextElement,
+        impl::base<TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<TextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        TextElement(std::nullptr_t) noexcept {}
+        TextElement(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::ITextElement(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto FontSizeProperty();
+        [[nodiscard]] static auto FontFamilyProperty();
+        [[nodiscard]] static auto FontWeightProperty();
+        [[nodiscard]] static auto FontStyleProperty();
+        [[nodiscard]] static auto FontStretchProperty();
+        [[nodiscard]] static auto CharacterSpacingProperty();
+        [[nodiscard]] static auto ForegroundProperty();
+        [[nodiscard]] static auto LanguageProperty();
+        [[nodiscard]] static auto IsTextScaleFactorEnabledProperty();
+        [[nodiscard]] static auto AllowFocusOnInteractionProperty();
+        [[nodiscard]] static auto AccessKeyProperty();
+        [[nodiscard]] static auto ExitDisplayModeOnAccessKeyInvokedProperty();
+        [[nodiscard]] static auto TextDecorationsProperty();
+        [[nodiscard]] static auto IsAccessKeyScopeProperty();
+        [[nodiscard]] static auto AccessKeyScopeOwnerProperty();
+        [[nodiscard]] static auto KeyTipPlacementModeProperty();
+        [[nodiscard]] static auto KeyTipHorizontalOffsetProperty();
+        [[nodiscard]] static auto KeyTipVerticalOffsetProperty();
+    };
+    struct __declspec(empty_bases) TextHighlighter : Windows::UI::Xaml::Documents::ITextHighlighter
+    {
+        TextHighlighter(std::nullptr_t) noexcept {}
+        TextHighlighter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::ITextHighlighter(ptr, take_ownership_from_abi) {}
+        TextHighlighter();
+        [[nodiscard]] static auto ForegroundProperty();
+        [[nodiscard]] static auto BackgroundProperty();
+    };
+    struct __declspec(empty_bases) TextHighlighterBase : Windows::UI::Xaml::Documents::ITextHighlighterBase,
+        impl::base<TextHighlighterBase, Windows::UI::Xaml::DependencyObject>,
+        impl::require<TextHighlighterBase, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        TextHighlighterBase(std::nullptr_t) noexcept {}
+        TextHighlighterBase(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::ITextHighlighterBase(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) TextPointer : Windows::UI::Xaml::Documents::ITextPointer
+    {
+        TextPointer(std::nullptr_t) noexcept {}
+        TextPointer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::ITextPointer(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) Typography : Windows::UI::Xaml::Documents::ITypography
+    {
+        Typography(std::nullptr_t) noexcept {}
+        Typography(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::ITypography(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto AnnotationAlternatesProperty();
+        static auto GetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value);
+        [[nodiscard]] static auto EastAsianExpertFormsProperty();
+        static auto GetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto EastAsianLanguageProperty();
+        static auto GetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianLanguage const& value);
+        [[nodiscard]] static auto EastAsianWidthsProperty();
+        static auto GetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianWidths const& value);
+        [[nodiscard]] static auto StandardLigaturesProperty();
+        static auto GetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto ContextualLigaturesProperty();
+        static auto GetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto DiscretionaryLigaturesProperty();
+        static auto GetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto HistoricalLigaturesProperty();
+        static auto GetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StandardSwashesProperty();
+        static auto GetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value);
+        [[nodiscard]] static auto ContextualSwashesProperty();
+        static auto GetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value);
+        [[nodiscard]] static auto ContextualAlternatesProperty();
+        static auto GetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticAlternatesProperty();
+        static auto GetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value);
+        [[nodiscard]] static auto StylisticSet1Property();
+        static auto GetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet2Property();
+        static auto GetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet3Property();
+        static auto GetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet4Property();
+        static auto GetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet5Property();
+        static auto GetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet6Property();
+        static auto GetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet7Property();
+        static auto GetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet8Property();
+        static auto GetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet9Property();
+        static auto GetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet10Property();
+        static auto GetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet11Property();
+        static auto GetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet12Property();
+        static auto GetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet13Property();
+        static auto GetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet14Property();
+        static auto GetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet15Property();
+        static auto GetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet16Property();
+        static auto GetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet17Property();
+        static auto GetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet18Property();
+        static auto GetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet19Property();
+        static auto GetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto StylisticSet20Property();
+        static auto GetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto CapitalsProperty();
+        static auto GetCapitals(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetCapitals(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontCapitals const& value);
+        [[nodiscard]] static auto CapitalSpacingProperty();
+        static auto GetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto KerningProperty();
+        static auto GetKerning(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetKerning(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto CaseSensitiveFormsProperty();
+        static auto GetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto HistoricalFormsProperty();
+        static auto GetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto FractionProperty();
+        static auto GetFraction(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetFraction(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontFraction const& value);
+        [[nodiscard]] static auto NumeralStyleProperty();
+        static auto GetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralStyle const& value);
+        [[nodiscard]] static auto NumeralAlignmentProperty();
+        static auto GetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralAlignment const& value);
+        [[nodiscard]] static auto SlashedZeroProperty();
+        static auto GetSlashedZero(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetSlashedZero(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto MathematicalGreekProperty();
+        static auto GetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element, bool value);
+        [[nodiscard]] static auto VariantsProperty();
+        static auto GetVariants(Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetVariants(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontVariants const& value);
+    };
+    struct __declspec(empty_bases) Underline : Windows::UI::Xaml::Documents::IUnderline,
+        impl::base<Underline, Windows::UI::Xaml::Documents::Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
+        impl::require<Underline, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        Underline(std::nullptr_t) noexcept {}
+        Underline(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Documents::IUnderline(ptr, take_ownership_from_abi) {}
+        Underline();
+    };
+    template <typename D>
+    class ITextElementOverridesT
+    {
+        D& shim() noexcept { return *static_cast<D*>(this); }
+        D const& shim() const noexcept { return *static_cast<const D*>(this); }
+    public:
+        using ITextElementOverrides = winrt::Windows::UI::Xaml::Documents::ITextElementOverrides;
+        auto OnDisconnectVisualChildren() const;
+    };
 }
-
-inline bool operator!=(TextRange const& left, TextRange const& right) noexcept
-{
-    return !(left == right);
-}
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Documents {
-
-struct WINRT_EBO Block :
-    Windows::UI::Xaml::Documents::IBlock,
-    impl::base<Block, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Block, Windows::UI::Xaml::Documents::IBlock2, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    Block(std::nullptr_t) noexcept {}
-    static Windows::UI::Xaml::DependencyProperty TextAlignmentProperty();
-    static Windows::UI::Xaml::DependencyProperty LineHeightProperty();
-    static Windows::UI::Xaml::DependencyProperty LineStackingStrategyProperty();
-    static Windows::UI::Xaml::DependencyProperty MarginProperty();
-    static Windows::UI::Xaml::DependencyProperty HorizontalTextAlignmentProperty();
-};
-
-struct WINRT_EBO BlockCollection :
-    Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Block>
-{
-    BlockCollection(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO Bold :
-    Windows::UI::Xaml::Documents::IBold,
-    impl::base<Bold, Windows::UI::Xaml::Documents::Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Bold, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    Bold(std::nullptr_t) noexcept {}
-    Bold();
-};
-
-struct WINRT_EBO ContactContentLinkProvider :
-    Windows::UI::Xaml::Documents::IContactContentLinkProvider,
-    impl::base<ContactContentLinkProvider, Windows::UI::Xaml::Documents::ContentLinkProvider, Windows::UI::Xaml::DependencyObject>,
-    impl::require<ContactContentLinkProvider, Windows::UI::Xaml::Documents::IContentLinkProvider, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    ContactContentLinkProvider(std::nullptr_t) noexcept {}
-    ContactContentLinkProvider();
-};
-
-struct WINRT_EBO ContentLink :
-    Windows::UI::Xaml::Documents::IContentLink,
-    impl::base<ContentLink, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<ContentLink, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    ContentLink(std::nullptr_t) noexcept {}
-    ContentLink();
-    static Windows::UI::Xaml::DependencyProperty BackgroundProperty();
-    static Windows::UI::Xaml::DependencyProperty CursorProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusLeftProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusRightProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusUpProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusDownProperty();
-    static Windows::UI::Xaml::DependencyProperty ElementSoundModeProperty();
-    static Windows::UI::Xaml::DependencyProperty FocusStateProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusUpNavigationStrategyProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusDownNavigationStrategyProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusLeftNavigationStrategyProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusRightNavigationStrategyProperty();
-    static Windows::UI::Xaml::DependencyProperty IsTabStopProperty();
-    static Windows::UI::Xaml::DependencyProperty TabIndexProperty();
-};
-
-struct WINRT_EBO ContentLinkInvokedEventArgs :
-    Windows::UI::Xaml::Documents::IContentLinkInvokedEventArgs
-{
-    ContentLinkInvokedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ContentLinkProvider :
-    Windows::UI::Xaml::Documents::IContentLinkProvider,
-    impl::base<ContentLinkProvider, Windows::UI::Xaml::DependencyObject>,
-    impl::require<ContentLinkProvider, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    ContentLinkProvider(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ContentLinkProviderCollection :
-    Windows::UI::Xaml::Documents::IContentLinkProviderCollection,
-    impl::require<ContentLinkProviderCollection, Windows::Foundation::Collections::IIterable<Windows::UI::Xaml::Documents::ContentLinkProvider>, Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::ContentLinkProvider>>
-{
-    ContentLinkProviderCollection(std::nullptr_t) noexcept {}
-    ContentLinkProviderCollection();
-};
-
-struct WINRT_EBO Glyphs :
-    Windows::UI::Xaml::Documents::IGlyphs,
-    impl::base<Glyphs, Windows::UI::Xaml::FrameworkElement, Windows::UI::Xaml::UIElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Glyphs, Windows::UI::Composition::IAnimationObject, Windows::UI::Composition::IVisualElement, Windows::UI::Xaml::Documents::IGlyphs2, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2, Windows::UI::Xaml::IFrameworkElement, Windows::UI::Xaml::IFrameworkElement2, Windows::UI::Xaml::IFrameworkElement3, Windows::UI::Xaml::IFrameworkElement4, Windows::UI::Xaml::IFrameworkElement6, Windows::UI::Xaml::IFrameworkElement7, Windows::UI::Xaml::IFrameworkElementOverrides, Windows::UI::Xaml::IFrameworkElementOverrides2, Windows::UI::Xaml::IFrameworkElementProtected7, Windows::UI::Xaml::IUIElement, Windows::UI::Xaml::IUIElement10, Windows::UI::Xaml::IUIElement2, Windows::UI::Xaml::IUIElement3, Windows::UI::Xaml::IUIElement4, Windows::UI::Xaml::IUIElement5, Windows::UI::Xaml::IUIElement7, Windows::UI::Xaml::IUIElement8, Windows::UI::Xaml::IUIElement9, Windows::UI::Xaml::IUIElementOverrides, Windows::UI::Xaml::IUIElementOverrides7, Windows::UI::Xaml::IUIElementOverrides8, Windows::UI::Xaml::IUIElementOverrides9>
-{
-    Glyphs(std::nullptr_t) noexcept {}
-    Glyphs();
-    static Windows::UI::Xaml::DependencyProperty UnicodeStringProperty();
-    static Windows::UI::Xaml::DependencyProperty IndicesProperty();
-    static Windows::UI::Xaml::DependencyProperty FontUriProperty();
-    static Windows::UI::Xaml::DependencyProperty StyleSimulationsProperty();
-    static Windows::UI::Xaml::DependencyProperty FontRenderingEmSizeProperty();
-    static Windows::UI::Xaml::DependencyProperty OriginXProperty();
-    static Windows::UI::Xaml::DependencyProperty OriginYProperty();
-    static Windows::UI::Xaml::DependencyProperty FillProperty();
-    static Windows::UI::Xaml::DependencyProperty IsColorFontEnabledProperty();
-    static Windows::UI::Xaml::DependencyProperty ColorFontPaletteIndexProperty();
-};
-
-struct WINRT_EBO Hyperlink :
-    Windows::UI::Xaml::Documents::IHyperlink,
-    impl::base<Hyperlink, Windows::UI::Xaml::Documents::Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Hyperlink, Windows::UI::Xaml::Documents::IHyperlink2, Windows::UI::Xaml::Documents::IHyperlink3, Windows::UI::Xaml::Documents::IHyperlink4, Windows::UI::Xaml::Documents::IHyperlink5, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    Hyperlink(std::nullptr_t) noexcept {}
-    Hyperlink();
-    static Windows::UI::Xaml::DependencyProperty NavigateUriProperty();
-    static Windows::UI::Xaml::DependencyProperty UnderlineStyleProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusLeftProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusRightProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusUpProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusDownProperty();
-    static Windows::UI::Xaml::DependencyProperty ElementSoundModeProperty();
-    static Windows::UI::Xaml::DependencyProperty FocusStateProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusUpNavigationStrategyProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusDownNavigationStrategyProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusLeftNavigationStrategyProperty();
-    static Windows::UI::Xaml::DependencyProperty XYFocusRightNavigationStrategyProperty();
-    static Windows::UI::Xaml::DependencyProperty IsTabStopProperty();
-    static Windows::UI::Xaml::DependencyProperty TabIndexProperty();
-};
-
-struct WINRT_EBO HyperlinkClickEventArgs :
-    Windows::UI::Xaml::Documents::IHyperlinkClickEventArgs,
-    impl::base<HyperlinkClickEventArgs, Windows::UI::Xaml::RoutedEventArgs>,
-    impl::require<HyperlinkClickEventArgs, Windows::UI::Xaml::IRoutedEventArgs>
-{
-    HyperlinkClickEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO Inline :
-    Windows::UI::Xaml::Documents::IInline,
-    impl::base<Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Inline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    Inline(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO InlineCollection :
-    Windows::Foundation::Collections::IVector<Windows::UI::Xaml::Documents::Inline>
-{
-    InlineCollection(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO InlineUIContainer :
-    Windows::UI::Xaml::Documents::IInlineUIContainer,
-    impl::base<InlineUIContainer, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<InlineUIContainer, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    InlineUIContainer(std::nullptr_t) noexcept {}
-    InlineUIContainer();
-};
-
-struct WINRT_EBO Italic :
-    Windows::UI::Xaml::Documents::IItalic,
-    impl::base<Italic, Windows::UI::Xaml::Documents::Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Italic, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    Italic(std::nullptr_t) noexcept {}
-    Italic();
-};
-
-struct WINRT_EBO LineBreak :
-    Windows::UI::Xaml::Documents::ILineBreak,
-    impl::base<LineBreak, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<LineBreak, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    LineBreak(std::nullptr_t) noexcept {}
-    LineBreak();
-};
-
-struct WINRT_EBO Paragraph :
-    Windows::UI::Xaml::Documents::IParagraph,
-    impl::base<Paragraph, Windows::UI::Xaml::Documents::Block, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Paragraph, Windows::UI::Xaml::Documents::IBlock, Windows::UI::Xaml::Documents::IBlock2, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    Paragraph(std::nullptr_t) noexcept {}
-    Paragraph();
-    static Windows::UI::Xaml::DependencyProperty TextIndentProperty();
-};
-
-struct WINRT_EBO PlaceContentLinkProvider :
-    Windows::UI::Xaml::Documents::IPlaceContentLinkProvider,
-    impl::base<PlaceContentLinkProvider, Windows::UI::Xaml::Documents::ContentLinkProvider, Windows::UI::Xaml::DependencyObject>,
-    impl::require<PlaceContentLinkProvider, Windows::UI::Xaml::Documents::IContentLinkProvider, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    PlaceContentLinkProvider(std::nullptr_t) noexcept {}
-    PlaceContentLinkProvider();
-};
-
-struct WINRT_EBO Run :
-    Windows::UI::Xaml::Documents::IRun,
-    impl::base<Run, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Run, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    Run(std::nullptr_t) noexcept {}
-    Run();
-    static Windows::UI::Xaml::DependencyProperty FlowDirectionProperty();
-};
-
-struct WINRT_EBO Span :
-    Windows::UI::Xaml::Documents::ISpan,
-    impl::base<Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Span, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    Span(std::nullptr_t) noexcept {}
-    Span();
-};
-
-struct WINRT_EBO TextElement :
-    Windows::UI::Xaml::Documents::ITextElement,
-    impl::base<TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<TextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    TextElement(std::nullptr_t) noexcept {}
-    static Windows::UI::Xaml::DependencyProperty FontSizeProperty();
-    static Windows::UI::Xaml::DependencyProperty FontFamilyProperty();
-    static Windows::UI::Xaml::DependencyProperty FontWeightProperty();
-    static Windows::UI::Xaml::DependencyProperty FontStyleProperty();
-    static Windows::UI::Xaml::DependencyProperty FontStretchProperty();
-    static Windows::UI::Xaml::DependencyProperty CharacterSpacingProperty();
-    static Windows::UI::Xaml::DependencyProperty ForegroundProperty();
-    static Windows::UI::Xaml::DependencyProperty LanguageProperty();
-    static Windows::UI::Xaml::DependencyProperty IsTextScaleFactorEnabledProperty();
-    static Windows::UI::Xaml::DependencyProperty AllowFocusOnInteractionProperty();
-    static Windows::UI::Xaml::DependencyProperty AccessKeyProperty();
-    static Windows::UI::Xaml::DependencyProperty ExitDisplayModeOnAccessKeyInvokedProperty();
-    static Windows::UI::Xaml::DependencyProperty TextDecorationsProperty();
-    static Windows::UI::Xaml::DependencyProperty IsAccessKeyScopeProperty();
-    static Windows::UI::Xaml::DependencyProperty AccessKeyScopeOwnerProperty();
-    static Windows::UI::Xaml::DependencyProperty KeyTipPlacementModeProperty();
-    static Windows::UI::Xaml::DependencyProperty KeyTipHorizontalOffsetProperty();
-    static Windows::UI::Xaml::DependencyProperty KeyTipVerticalOffsetProperty();
-};
-
-struct WINRT_EBO TextHighlighter :
-    Windows::UI::Xaml::Documents::ITextHighlighter
-{
-    TextHighlighter(std::nullptr_t) noexcept {}
-    TextHighlighter();
-    static Windows::UI::Xaml::DependencyProperty ForegroundProperty();
-    static Windows::UI::Xaml::DependencyProperty BackgroundProperty();
-};
-
-struct WINRT_EBO TextHighlighterBase :
-    Windows::UI::Xaml::Documents::ITextHighlighterBase,
-    impl::base<TextHighlighterBase, Windows::UI::Xaml::DependencyObject>,
-    impl::require<TextHighlighterBase, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    TextHighlighterBase(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO TextPointer :
-    Windows::UI::Xaml::Documents::ITextPointer
-{
-    TextPointer(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO Typography :
-    Windows::UI::Xaml::Documents::ITypography
-{
-    Typography(std::nullptr_t) noexcept {}
-    static Windows::UI::Xaml::DependencyProperty AnnotationAlternatesProperty();
-    static int32_t GetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetAnnotationAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value);
-    static Windows::UI::Xaml::DependencyProperty EastAsianExpertFormsProperty();
-    static bool GetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetEastAsianExpertForms(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty EastAsianLanguageProperty();
-    static Windows::UI::Xaml::FontEastAsianLanguage GetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetEastAsianLanguage(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianLanguage const& value);
-    static Windows::UI::Xaml::DependencyProperty EastAsianWidthsProperty();
-    static Windows::UI::Xaml::FontEastAsianWidths GetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetEastAsianWidths(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontEastAsianWidths const& value);
-    static Windows::UI::Xaml::DependencyProperty StandardLigaturesProperty();
-    static bool GetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStandardLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty ContextualLigaturesProperty();
-    static bool GetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetContextualLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty DiscretionaryLigaturesProperty();
-    static bool GetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetDiscretionaryLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty HistoricalLigaturesProperty();
-    static bool GetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetHistoricalLigatures(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StandardSwashesProperty();
-    static int32_t GetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStandardSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value);
-    static Windows::UI::Xaml::DependencyProperty ContextualSwashesProperty();
-    static int32_t GetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetContextualSwashes(Windows::UI::Xaml::DependencyObject const& element, int32_t value);
-    static Windows::UI::Xaml::DependencyProperty ContextualAlternatesProperty();
-    static bool GetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetContextualAlternates(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticAlternatesProperty();
-    static int32_t GetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticAlternates(Windows::UI::Xaml::DependencyObject const& element, int32_t value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet1Property();
-    static bool GetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet1(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet2Property();
-    static bool GetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet2(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet3Property();
-    static bool GetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet3(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet4Property();
-    static bool GetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet4(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet5Property();
-    static bool GetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet5(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet6Property();
-    static bool GetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet6(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet7Property();
-    static bool GetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet7(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet8Property();
-    static bool GetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet8(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet9Property();
-    static bool GetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet9(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet10Property();
-    static bool GetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet10(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet11Property();
-    static bool GetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet11(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet12Property();
-    static bool GetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet12(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet13Property();
-    static bool GetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet13(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet14Property();
-    static bool GetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet14(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet15Property();
-    static bool GetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet15(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet16Property();
-    static bool GetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet16(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet17Property();
-    static bool GetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet17(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet18Property();
-    static bool GetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet18(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet19Property();
-    static bool GetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet19(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty StylisticSet20Property();
-    static bool GetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetStylisticSet20(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty CapitalsProperty();
-    static Windows::UI::Xaml::FontCapitals GetCapitals(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetCapitals(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontCapitals const& value);
-    static Windows::UI::Xaml::DependencyProperty CapitalSpacingProperty();
-    static bool GetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetCapitalSpacing(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty KerningProperty();
-    static bool GetKerning(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetKerning(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty CaseSensitiveFormsProperty();
-    static bool GetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetCaseSensitiveForms(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty HistoricalFormsProperty();
-    static bool GetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetHistoricalForms(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty FractionProperty();
-    static Windows::UI::Xaml::FontFraction GetFraction(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetFraction(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontFraction const& value);
-    static Windows::UI::Xaml::DependencyProperty NumeralStyleProperty();
-    static Windows::UI::Xaml::FontNumeralStyle GetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetNumeralStyle(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralStyle const& value);
-    static Windows::UI::Xaml::DependencyProperty NumeralAlignmentProperty();
-    static Windows::UI::Xaml::FontNumeralAlignment GetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetNumeralAlignment(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontNumeralAlignment const& value);
-    static Windows::UI::Xaml::DependencyProperty SlashedZeroProperty();
-    static bool GetSlashedZero(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetSlashedZero(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty MathematicalGreekProperty();
-    static bool GetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetMathematicalGreek(Windows::UI::Xaml::DependencyObject const& element, bool value);
-    static Windows::UI::Xaml::DependencyProperty VariantsProperty();
-    static Windows::UI::Xaml::FontVariants GetVariants(Windows::UI::Xaml::DependencyObject const& element);
-    static void SetVariants(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::FontVariants const& value);
-};
-
-struct WINRT_EBO Underline :
-    Windows::UI::Xaml::Documents::IUnderline,
-    impl::base<Underline, Windows::UI::Xaml::Documents::Span, Windows::UI::Xaml::Documents::Inline, Windows::UI::Xaml::Documents::TextElement, Windows::UI::Xaml::DependencyObject>,
-    impl::require<Underline, Windows::UI::Xaml::Documents::IInline, Windows::UI::Xaml::Documents::ISpan, Windows::UI::Xaml::Documents::ITextElement, Windows::UI::Xaml::Documents::ITextElement2, Windows::UI::Xaml::Documents::ITextElement3, Windows::UI::Xaml::Documents::ITextElement4, Windows::UI::Xaml::Documents::ITextElement5, Windows::UI::Xaml::Documents::ITextElementOverrides, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
-{
-    Underline(std::nullptr_t) noexcept {}
-    Underline();
-};
-
-template <typename D>
-class ITextElementOverridesT
-{
-    D& shim() noexcept { return *static_cast<D*>(this); }
-    D const& shim() const noexcept { return *static_cast<const D*>(this); }
-
-public:
-
-    using ITextElementOverrides = winrt::Windows::UI::Xaml::Documents::ITextElementOverrides;
-
-    void OnDisconnectVisualChildren() const;
-};
-
-}
+#endif

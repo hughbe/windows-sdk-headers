@@ -208,7 +208,13 @@ namespace Windows
 
             interface IUISettings5;
 
+            interface IUISettings6;
+
+            interface IUISettingsAnimationsEnabledChangedEventArgs;
+
             interface IUISettingsAutoHideScrollBarsChangedEventArgs;
+
+            interface IUISettingsMessageDurationChangedEventArgs;
 
             interface IUIViewSettings;
 
@@ -246,7 +252,11 @@ namespace Windows
 
             runtimeclass UISettings;
 
+            runtimeclass UISettingsAnimationsEnabledChangedEventArgs;
+
             runtimeclass UISettingsAutoHideScrollBarsChangedEventArgs;
+
+            runtimeclass UISettingsMessageDurationChangedEventArgs;
 
             runtimeclass UIViewSettings;
 
@@ -278,7 +288,11 @@ namespace Windows
 
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings*, IInspectable*>;
 
+                interface Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings*, Windows.UI.ViewManagement.UISettingsAnimationsEnabledChangedEventArgs*>;
+
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings*, Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings*, Windows.UI.ViewManagement.UISettingsMessageDurationChangedEventArgs*>;
             }
         }
     }
@@ -900,10 +914,35 @@ namespace Windows
                 [eventremove] HRESULT AutoHideScrollBarsChanged([in] EventRegistrationToken token);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.ViewManagement.UISettings)]
+            [uuid(AEF19BD7-FE31-5A04-ADA4-469AAEC6DFA9)]
+            interface IUISettings6 : IInspectable
+            {
+                [eventadd] HRESULT AnimationsEnabledChanged([in] Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings*, Windows.UI.ViewManagement.UISettingsAnimationsEnabledChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT AnimationsEnabledChanged([in] EventRegistrationToken token);
+                [eventadd] HRESULT MessageDurationChanged([in] Windows.Foundation.TypedEventHandler<Windows.UI.ViewManagement.UISettings*, Windows.UI.ViewManagement.UISettingsMessageDurationChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT MessageDurationChanged([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.ViewManagement.UISettingsAnimationsEnabledChangedEventArgs)]
+            [uuid(0C7B4B3D-2EA1-533E-894D-415BC5243C29)]
+            interface IUISettingsAnimationsEnabledChangedEventArgs : IInspectable
+            {
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 8.0)]
             [exclusiveto(Windows.UI.ViewManagement.UISettingsAutoHideScrollBarsChangedEventArgs)]
             [uuid(87AFD4B2-9146-5F02-8F6B-06D454174C0F)]
             interface IUISettingsAutoHideScrollBarsChangedEventArgs : IInspectable
+            {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.ViewManagement.UISettingsMessageDurationChangedEventArgs)]
+            [uuid(338AAD52-4A5D-5B59-8002-D930F608FD6E)]
+            interface IUISettingsMessageDurationChangedEventArgs : IInspectable
             {
             }
 
@@ -1069,6 +1108,14 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.UI.ViewManagement.IUISettings3;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.ViewManagement.IUISettings4;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IUISettings5;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.ViewManagement.IUISettings6;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass UISettingsAnimationsEnabledChangedEventArgs
+            {
+                [default] interface Windows.UI.ViewManagement.IUISettingsAnimationsEnabledChangedEventArgs;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 8.0)]
@@ -1076,6 +1123,13 @@ namespace Windows
             runtimeclass UISettingsAutoHideScrollBarsChangedEventArgs
             {
                 [default] interface Windows.UI.ViewManagement.IUISettingsAutoHideScrollBarsChangedEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass UISettingsMessageDurationChangedEventArgs
+            {
+                [default] interface Windows.UI.ViewManagement.IUISettingsMessageDurationChangedEventArgs;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

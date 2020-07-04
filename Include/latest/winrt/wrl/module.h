@@ -77,7 +77,7 @@ struct CreatorMap
         const wchar_t* (STDMETHODCALLTYPE *getRuntimeName)();
     } activationId;
     // Trust level for WinRT otherwise nullptr
-    TrustLevel (STDMETHODCALLTYPE *getTrustLevel)();
+    ::TrustLevel (STDMETHODCALLTYPE *getTrustLevel)();
     // Factory cache, group id data members
     FactoryCache* factoryCache;
     const wchar_t* serverName;
@@ -1121,7 +1121,7 @@ public:
         return E_ILLEGAL_METHOD_CALL;
     }
     // Factory trust level is the same as RuntimeClass that it is exposing
-    STDMETHOD(GetTrustLevel)(_Out_ TrustLevel* trustLvl)
+    STDMETHOD(GetTrustLevel)(_Out_ ::TrustLevel* trustLvl)
     {
         if (entry_ != nullptr)
         {
@@ -1130,7 +1130,7 @@ public:
         else
         {
             __WRL_ASSERT__(false && "Use 'InspectableClassStatic' on static ONLY factories or override 'GetTrustLevel' method to set trust level.");
-            *trustLvl = TrustLevel::FullTrust;
+            *trustLvl = ::TrustLevel::FullTrust;
         }
 
         return S_OK;
@@ -1204,9 +1204,8 @@ public:
     }
 };
 
-// Enable 'sealed' optimizations on default class factory
 template<typename Base, FactoryCacheFlags cacheFlagValue = FactoryCacheDefault>
-class SimpleSealedActivationFactory WrlSealed : public SimpleActivationFactory<Base, cacheFlagValue>
+class SimpleSealedActivationFactory WrlFinal : public SimpleActivationFactory<Base, cacheFlagValue>
 {
 };
 
@@ -1229,7 +1228,7 @@ public:
 
 // Agile alternative to SimpleSealedActivationFactory
 template<typename Base, FactoryCacheFlags cacheFlagValue = FactoryCacheDefault>
-class SimpleSealedAgileActivationFactory WrlSealed : public SimpleAgileActivationFactory<Base, cacheFlagValue>
+class SimpleSealedAgileActivationFactory WrlFinal : public SimpleAgileActivationFactory<Base, cacheFlagValue>
 {
 };
 
@@ -1320,7 +1319,7 @@ class SimpleSealedAgileActivationFactory WrlSealed : public SimpleAgileActivatio
             static_assert(!__is_base_of(ActivationFactoryT::FirstInterface, ::Microsoft::WRL::Details::Nil), "ActivationFactory with 'InspectableClassStatic' macro requires to specify custom interfaces"); \
             return runtimeClassName; \
         } \
-        static TrustLevel STDMETHODCALLTYPE InternalGetTrustLevelStatic() throw() \
+        static ::TrustLevel STDMETHODCALLTYPE InternalGetTrustLevelStatic() throw() \
         { \
             return trustLevel; \
         } \
@@ -1329,7 +1328,7 @@ class SimpleSealedAgileActivationFactory WrlSealed : public SimpleAgileActivatio
             *runtimeName = nullptr; \
             return E_ILLEGAL_METHOD_CALL; \
         } \
-        STDMETHOD(GetTrustLevel)(_Out_ TrustLevel* trustLvl) \
+        STDMETHOD(GetTrustLevel)(_Out_ ::TrustLevel* trustLvl) \
         { \
             *trustLvl = trustLevel; \
             return S_OK; \
@@ -1395,6 +1394,58 @@ namespace Details
 // Forwarding declaration of DefaultModule<>
 template<ModuleType moduleType>
 class DefaultModule;
+
+// Discriminator value for separate static storage instances for each usage. Each usage of StaticStorage
+// should have a unique entry.
+enum class StorageInstance {
+    InProcCreate,
+    OutOfProcCreate,
+    OutOfProcCallbackBuffer1,
+    OutOfProcCallbackBuffer2
+};
+
+// StaticStorage instances can be used in place of statics to avoid the DllMain thread
+// attach penalty associated with using magic statics in a DLL. StaticStorage *does not* perform static
+// initialization. The calling code is responsible for initialization. The type discriminator parameter on
+// StaticStorage can further be used to ensure that each instantiation of a template gets a unique
+// instance of static storage. If using a template function within a template class, be sure to account
+// for both the class & function template parameters in the discriminator.
+template <typename StorageT, StorageInstance instance, typename discriminator = int>
+class alignas(alignof(StorageT)) StaticStorage
+{
+    BYTE data_[sizeof(StorageT)];
+    bool initialized_;
+
+    static StaticStorage instance_;
+
+public:
+
+    StaticStorage()
+        // we can't force static construction ordering, and it's zero - init'd in the binary, so don't explicitly zero - out.
+        // : initialized_{},
+        // data_{} - 
+    {
+    }
+
+    ~StaticStorage()
+    {
+        if (initialized_)
+        {
+            reinterpret_cast<StorageT*>(data_)->~StorageT();
+            initialized_ = false;
+        }
+    };
+
+    static StorageT* Data()
+    {
+        instance_.initialized_ = true;
+        return reinterpret_cast<StorageT*>(instance_.data_);
+    }
+};
+
+template <typename StorageT, StorageInstance instance, typename discriminator>
+__declspec(selectany) typename StaticStorage<StorageT, instance, discriminator> StaticStorage<StorageT, instance, discriminator>::instance_ = {};
+
 } // namespace Details
 
 // Forwarding declaraton of Module<>
@@ -1444,11 +1495,8 @@ private:
 #ifndef __WRL_DISABLE_STATIC_INITIALIZE__
     static bool StaticInitialize()
     {
-        auto &moduleRef = ModuleT::Create();
-        __WRL_ASSERT__(&moduleRef != nullptr && "Must always be valid address");
-        return nullptr != &moduleRef;
+        return nullptr != &ModuleT::Create();
     }
-
     static bool isInitialized;
 #endif
 protected:
@@ -1458,6 +1506,11 @@ protected:
         VerifyEntries();
 #endif
     }
+
+    // inproc module should be a single v-table.
+
+    static INIT_ONCE initOnceInProc_;
+
 public:
     virtual ~Module() throw()
     {
@@ -1470,8 +1523,26 @@ public:
 
     static ModuleT& Create() throw()
     {
+#ifdef __WRL_ENABLE_FUNCTION_STATICS__
+        // Enabling function statics may incur a performance penalty, but avoids a dependency
+        // on InitOnceExecuteOnce, which may not be available on some older operating systems.
+        // This has the disadvantage of requiring thread attach calls to DllMain, which could
+        // increase working set.
         static ModuleT moduleSingleton;
         return moduleSingleton;
+#else
+        typedef Details::StaticStorage<ModuleT, Details::StorageInstance::InProcCreate> InprocInstanceStorage;
+        InitOnceExecuteOnce(
+            &initOnceInProc_,
+            [](PINIT_ONCE, PVOID, PVOID*) -> BOOL
+                {
+                    new (InprocInstanceStorage::Data()) ModuleT();
+                    return TRUE;
+                },
+            nullptr,
+            nullptr);
+        return *InprocInstanceStorage::Data();
+#endif
     }
     
     static ModuleT& GetModule() throw()
@@ -1543,20 +1614,16 @@ public:
 
 #pragma warning(pop) // C6388
 
+// Trigger static initialization unless explicitly disabled. Static initialization can be disabled
+// to avoid dependencies on C++ constructors when using a DllEntry point other than the Crt startup
+// entry point.
 #ifndef __WRL_DISABLE_STATIC_INITIALIZE__
-// The Module<> requires static initialization thus the warning is triggered when the entry point has been changed
-// The isInitialized variable is required to perform static initialization in single thread CRT initialization
-// code and trigger following warning:
-//   warning LNK4210: .CRT section exists; there may be unhandled static initializes or terminators
-// when the non CRT entry point was defined.
-// In case that no CRT initialization is possible then it's required to inherit from Module<> and 
-// create/destroy object with new/delete in DllMain/wMain.
-
 template<typename ModuleT>
 __declspec(selectany) bool Module<InProc, ModuleT>::isInitialized = Module<InProc, ModuleT>::StaticInitialize();
-
 #endif
 
+template<typename ModuleT>
+__declspec(selectany) INIT_ONCE Module<InProc, ModuleT>::initOnceInProc_ = {};
 
 #pragma warning(push)
 // PREFAST: '*ppIFactory' might not be '0': this does not adhere to the specification for the function
@@ -1595,6 +1662,9 @@ private:
     {
         return 0;
     }
+
+    template <typename a, typename b>
+    struct WrlPair {};
 
 protected:
     // Generic notification handler interface required to fire
@@ -1688,6 +1758,8 @@ protected:
         return S_OK;
     }
 
+    static INIT_ONCE initOnceOutOfProc_;
+
 public:
     virtual ~OutOfProcModuleBase() throw()
     {
@@ -1700,38 +1772,62 @@ public:
 
     static ModuleT& Create() throw()
     {
+#ifdef __WRL_ENABLE_FUNCTION_STATICS__
         static ModuleT moduleSingleton;
         return moduleSingleton;
+#else
+        typedef Details::StaticStorage<ModuleT, Details::StorageInstance::OutOfProcCreate> OutofprocInstanceStorage;
+        InitOnceExecuteOnce(
+            &initOnceOutOfProc_,
+            [](PINIT_ONCE, PVOID, PVOID*) -> BOOL
+            {
+                new (OutofprocInstanceStorage::Data()) ModuleT();
+                return TRUE;
+            },
+            nullptr,
+            nullptr);
+        return *OutofprocInstanceStorage::Data();
+#endif
     }
+
 
     template<typename T>
     static ModuleT& Create(T callback) throw()
     {
+        typedef Details::StaticStorage<
+            GenericReleaseNotifier<T>,
+            Details::StorageInstance::OutOfProcCallbackBuffer1,
+            ModuleT> CallbackStorage;
+
         auto &moduleRef = Create();
-        static char callbackBuffer[sizeof(GenericReleaseNotifier<T>)];
 
         // Module was already initialized
         __WRL_ASSERT__(moduleRef.releaseNotifier_ == nullptr);
 
         if (moduleRef.releaseNotifier_ == nullptr)
         {
-            moduleRef.releaseNotifier_ = new (&callbackBuffer) GenericReleaseNotifier<T>(callback, false);
+            moduleRef.releaseNotifier_ = new (CallbackStorage::Data()) GenericReleaseNotifier<T>(callback, false);
         }
         return moduleRef;
     }
 
+
     template<typename T>
     static ModuleT& Create(_In_ T* object, _In_ void (T::* method)()) throw()
     {
+        typedef Details::StaticStorage<
+            MethodReleaseNotifier<T>,
+            Details::StorageInstance::OutOfProcCallbackBuffer2,
+            ModuleT> CallbackStorage;
+
         auto &moduleRef = Create();
-        static char callbackBuffer[sizeof(MethodReleaseNotifier<T>)];
 
         // Module was already created initialized
         __WRL_ASSERT__(moduleRef.releaseNotifier_ == nullptr);
 
         if (moduleRef.releaseNotifier_ == nullptr)
         {
-            moduleRef.releaseNotifier_ = new (&callbackBuffer) MethodReleaseNotifier<T>(object, method, false);
+            moduleRef.releaseNotifier_ = new (CallbackStorage::Data()) MethodReleaseNotifier<T>(object, method, false);
         }
         return moduleRef;
     }
@@ -1742,6 +1838,9 @@ public:
         return moduleRef;
     }
 };
+
+template<typename ModuleT>
+__declspec(selectany) INIT_ONCE OutOfProcModuleBase<ModuleT>::initOnceOutOfProc_ = {};
 
 } // Details
 
@@ -1836,7 +1935,7 @@ public:
         {
             count_->DecrementApplicationUseCount();
             ref = Super::DecrementObjectCount();
-            if (ref == 0)
+            if (ref == 0 && Super::releaseNotifier_)
             {
                 Super::releaseNotifier_->Invoke();
             }
@@ -1972,7 +2071,7 @@ public:
     STDMETHOD_(unsigned long, DecrementObjectCount)()
     {
         auto ref = ::CoReleaseServerProcess();
-        if (ref == 0)
+        if (ref == 0 && __super::releaseNotifier_)
         {
             __super::releaseNotifier_->Invoke();
         }

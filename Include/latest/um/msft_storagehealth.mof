@@ -78,6 +78,9 @@ class MSFT_StorageHealth : MSFT_StorageObject
         [In, Required, EmbeddedInstance("MSFT_StorageFaultDomain")]
         String TargetObject,
 
+        [In]
+        Boolean ValidateMaintenanceMode,
+
         [In, Required]
         Boolean EnableMaintenanceMode,
 

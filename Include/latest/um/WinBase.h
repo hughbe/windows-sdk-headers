@@ -1,4 +1,4 @@
-//@[contract("winbase"), comment("MVI_tracked - https://osgwiki.com/wiki/Microsoft_Virus_Initiative")];
+//@[contract("ntoskrnl-winbase"), comment("MVI_tracked - https://osgwiki.com/wiki/Microsoft_Virus_Initiative")];
 
 #include <winapifamily.h>
 
@@ -97,8 +97,8 @@ extern "C" {
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #define Yield()
 
@@ -115,20 +115,7 @@ extern "C" {
 #define WAIT_IO_COMPLETION                  STATUS_USER_APC
 
 #define SecureZeroMemory RtlSecureZeroMemory
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 #define CaptureStackBackTrace RtlCaptureStackBackTrace
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
 // File creation flags must start at the high end since they
@@ -224,14 +211,33 @@ extern "C" {
 #define COPY_FILE_IGNORE_EDP_BLOCK                   0x00400000
 #define COPY_FILE_IGNORE_SOURCE_ENCRYPTION           0x00800000
 
-// If either source or target is an SMB share, compression
-// will be requested on all READs and WRITEs.
-#define COPY_FILE_REQUEST_COMPRESSED_TRAFFIC     0x01000000
-
 // Don't request WRITE_DAC for the destination file access.
 #define COPY_FILE_DONT_REQUEST_DEST_WRITE_DAC    0x02000000
 
+// If either source or target is an SMB share, compression
+// will be requested on all READs and WRITEs.
+#define COPY_FILE_REQUEST_COMPRESSED_TRAFFIC     0x10000000
+
 #endif
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+
+//
+//  Additional flags for CopyFileEx() and CopyFile2().
+//
+
+#define COPY_FILE_OPEN_AND_COPY_REPARSE_POINT    0x00200000
+#define COPY_FILE_DIRECTORY                      0x00000080
+#define COPY_FILE_SKIP_ALTERNATE_STREAMS         0x00008000
+#define COPY_FILE_DISABLE_PRE_ALLOCATION         0x04000000
+
+//
+//  Additional flags for CopyFile2().
+//
+
+#define COPY_FILE_ENABLE_LOW_FREE_SPACE_MODE     0x08000000
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 #endif /* _WIN32_WINNT >= 0x0400 */
 
@@ -326,6 +332,12 @@ typedef LPVOID (WINAPI *PFIBER_CALLOUT_ROUTINE)(
 
 #define FAIL_FAST_GENERATE_EXCEPTION_ADDRESS    0x1
 #define FAIL_FAST_NO_HARD_ERROR_DLG             0x2
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #if defined(_X86_)
 typedef PLDT_ENTRY LPLDT_ENTRY;
@@ -540,9 +552,11 @@ typedef struct _COMMCONFIG {
     WCHAR wcProviderData[1];    /* provider-specific data */
 } COMMCONFIG,*LPCOMMCONFIG;
 
-//
-//
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
 
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #define FreeModule(hLibModule) FreeLibrary((hLibModule))
 #define MakeProcInstance(lpProc,hInstance) (lpProc)
@@ -575,6 +589,12 @@ typedef struct _COMMCONFIG {
 #define GMEM_DISCARDED      0x4000
 #define GMEM_LOCKCOUNT      0x00FF
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 typedef struct _MEMORYSTATUS {
     DWORD dwLength;
     DWORD dwMemoryLoad;
@@ -585,6 +605,12 @@ typedef struct _MEMORYSTATUS {
     SIZE_T dwTotalVirtual;
     SIZE_T dwAvailVirtual;
 } MEMORYSTATUS, *LPMEMORYSTATUS;
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Process dwCreationFlag values
@@ -666,6 +692,12 @@ typedef struct _MEMORYSTATUS {
 #define FILE_NAME_NORMALIZED 0x0  //default
 #define FILE_NAME_OPENED     0x8
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 //
 // JIT Debugging Info. This structure is defined to have constant size in
 // both the emulated and native environment.
@@ -684,6 +716,12 @@ typedef struct _JIT_DEBUG_INFO {
 typedef JIT_DEBUG_INFO JIT_DEBUG_INFO32, *LPJIT_DEBUG_INFO32;
 typedef JIT_DEBUG_INFO JIT_DEBUG_INFO64, *LPJIT_DEBUG_INFO64;
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 #if !defined(MIDL_PASS)
 typedef PEXCEPTION_RECORD LPEXCEPTION_RECORD;
 typedef PEXCEPTION_POINTERS LPEXCEPTION_POINTERS;
@@ -697,6 +735,11 @@ typedef PEXCEPTION_POINTERS LPEXCEPTION_POINTERS;
 #define DRIVE_CDROM       5
 #define DRIVE_RAMDISK     6
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #ifndef _MAC
 #define GetFreeSpace(w)                 (0x100000L)
@@ -704,6 +747,11 @@ typedef PEXCEPTION_POINTERS LPEXCEPTION_POINTERS;
 WINBASEAPI DWORD WINAPI GetFreeSpace(_In_ UINT);
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #define FILE_TYPE_UNKNOWN   0x0000
 #define FILE_TYPE_DISK      0x0001
@@ -716,6 +764,12 @@ WINBASEAPI DWORD WINAPI GetFreeSpace(_In_ UINT);
 #define STD_OUTPUT_HANDLE   ((DWORD)-11)
 #define STD_ERROR_HANDLE    ((DWORD)-12)
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 #define NOPARITY            0
 #define ODDPARITY           1
 #define EVENPARITY          2
@@ -727,7 +781,20 @@ WINBASEAPI DWORD WINAPI GetFreeSpace(_In_ UINT);
 #define TWOSTOPBITS         2
 
 #define IGNORE              0       // Ignore signal
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or OneCore or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 #define INFINITE            0xFFFFFFFF  // Infinite timeout
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
 // Baud rates at which the communication device operates
@@ -870,6 +937,12 @@ WINBASEAPI DWORD WINAPI GetFreeSpace(_In_ UINT);
 #define S_SERDSR      (-15) // Invalid source
 #define S_SERDST      (-16) // Invalid state
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 #define NMPWAIT_WAIT_FOREVER            0xffffffff
 #define NMPWAIT_NOWAIT                  0x00000001
 #define NMPWAIT_USE_DEFAULT_WAIT        0x00000000
@@ -914,7 +987,7 @@ typedef struct _OFSTRUCT {
 #define MAKEINTATOM(i)  (LPTSTR)((ULONG_PTR)((WORD)(i)))
 #define INVALID_ATOM ((ATOM)0)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -953,8 +1026,8 @@ wWinMain(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Success_(return != NULL)
@@ -967,11 +1040,11 @@ GlobalAlloc(
     _In_ SIZE_T dwBytes
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Ret_reallocated_bytes_(hMem, dwBytes)
@@ -984,11 +1057,11 @@ GlobalReAlloc (
     _In_ UINT uFlags
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 SIZE_T
@@ -1012,7 +1085,7 @@ GlobalLock (
     _In_ HGLOBAL hMem
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1036,8 +1109,8 @@ GlobalHandle (
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Ret_maybenull_
@@ -1048,7 +1121,7 @@ GlobalFree(
     _Frees_ptr_opt_ HGLOBAL hMem
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1100,8 +1173,8 @@ GlobalMemoryStatus(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Success_(return != NULL)
@@ -1125,11 +1198,11 @@ LocalReAlloc(
     _In_ UINT uFlags
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)*/
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)*/
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Ret_maybenull_
@@ -1139,7 +1212,7 @@ LocalLock(
     _In_ HLOCAL hMem
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1156,8 +1229,8 @@ LocalHandle(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 BOOL
@@ -1166,11 +1239,11 @@ LocalUnlock(
     _In_ HLOCAL hMem
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Desktop or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 SIZE_T
@@ -1178,6 +1251,12 @@ WINAPI
 LocalSize(
     _In_ HLOCAL hMem
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 WINBASEAPI
 UINT
@@ -1189,8 +1268,8 @@ LocalFlags(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Success_(return==0)
@@ -1201,7 +1280,7 @@ LocalFree(
     _Frees_ptr_opt_ HLOCAL hMem
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1304,8 +1383,8 @@ GetLongPathNameTransactedW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 BOOL
@@ -1324,7 +1403,7 @@ SetProcessAffinityMask(
     _In_ DWORD_PTR dwProcessAffinityMask
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1379,8 +1458,8 @@ FatalExit(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 BOOL
@@ -1392,7 +1471,7 @@ SetEnvironmentStringsA(
 #define SetEnvironmentStrings  SetEnvironmentStringsA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #if(_WIN32_WINNT >= 0x0400)
@@ -1401,8 +1480,8 @@ SetEnvironmentStringsA(
 // Fiber begin
 //
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #define FIBER_FLAG_FLOAT_SWITCH 0x1     // context switch floating point
 
@@ -1452,11 +1531,11 @@ ConvertThreadToFiberEx(
     _In_     DWORD dwFlags
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Ret_maybenull_
@@ -1476,7 +1555,7 @@ ConvertThreadToFiber(
     _In_opt_ LPVOID lpParameter
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 //
@@ -1661,8 +1740,8 @@ GetUmsSystemThreadInformation(
 
 #endif /* _WIN32_WINNT >= 0x0400 */
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 DWORD_PTR
@@ -1672,7 +1751,7 @@ SetThreadAffinityMask(
     _In_ DWORD_PTR dwThreadAffinityMask
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1804,8 +1883,8 @@ typedef VOID (WINAPI* PRESTORE_LAST_ERROR)(DWORD);
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (_WIN32_WINNT >= 0x0600)
 
@@ -1835,7 +1914,7 @@ SetFileCompletionNotificationModes(
 
 #endif // _WIN32_WINNT >= 0x0600
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1847,26 +1926,6 @@ SetFileCompletionNotificationModes(
 #define SEM_NOOPENFILEERRORBOX      0x8000
 
 #if !defined(MIDL_PASS)
-
-#if (_WIN32_WINNT >= 0x0600)
-
-WINBASEAPI
-BOOL
-WINAPI
-Wow64GetThreadContext(
-    _In_    HANDLE hThread,
-    _Inout_ PWOW64_CONTEXT lpContext
-    );
-
-WINBASEAPI
-BOOL
-WINAPI
-Wow64SetThreadContext(
-    _In_ HANDLE hThread,
-    _In_ CONST WOW64_CONTEXT *lpContext
-    );
-
-#endif // (_WIN32_WINNT >= 0x0600)
 
 #if (_WIN32_WINNT >= 0x0601)
 
@@ -1882,17 +1941,6 @@ Wow64GetThreadSelectorEntry(
 #endif // (_WIN32_WINNT >= 0x0601)
 
 #endif // !defined(MIDL_PASS)
-
-#if (_WIN32_WINNT >= 0x0600)
-
-WINBASEAPI
-DWORD
-WINAPI
-Wow64SuspendThread(
-    _In_ HANDLE hThread
-    );
-
-#endif // (_WIN32_WINNT >= 0x0600)
 
 WINBASEAPI
 BOOL
@@ -2317,8 +2365,8 @@ SetTapeParameters(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 int
@@ -2329,7 +2377,7 @@ MulDiv(
     _In_ int nDenominator
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -2690,8 +2738,8 @@ CloseEncryptedFileRaw(
 // _l Compat Functions
 //
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 int
@@ -2732,6 +2780,12 @@ lstrcmpiW(
 #else
 #define lstrcmpi  lstrcmpiA
 #endif // !UNICODE
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #if defined(DEPRECATE_SUPPORTED)
 #pragma warning(push)
@@ -2812,6 +2866,12 @@ lstrcatW(
 #pragma warning(pop)
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 WINBASEAPI
 int
 WINAPI
@@ -2830,7 +2890,7 @@ lstrlenW(
 #define lstrlen  lstrlenA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -2925,8 +2985,8 @@ IsTextUnicode(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if(_WIN32_WINNT >= 0x0400)
 WINBASEAPI
@@ -2940,7 +3000,7 @@ SignalObjectAndWait(
     );
 #endif /* _WIN32_WINNT >= 0x0400 */
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -3050,6 +3110,12 @@ typedef struct _WIN32_STREAM_ID {
 #endif /* WINVER >= 0x0600 */
 
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 #if (_WIN32_WINNT >= 0x0600)
 
 typedef struct _STARTUPINFOEXA {
@@ -3070,13 +3136,19 @@ typedef LPSTARTUPINFOEXA LPSTARTUPINFOEX;
 
 #endif // (_WIN32_WINNT >= 0x0600)
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
 #define SHUTDOWN_NORETRY                0x00000001
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Ret_maybenull_
@@ -3105,11 +3177,11 @@ CreateSemaphoreA(
 #define CreateSemaphore  CreateSemaphoreA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Ret_maybenull_
@@ -3124,13 +3196,13 @@ OpenSemaphoreA(
 #define OpenSemaphore  OpenSemaphoreA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #if (_WIN32_WINNT >= 0x0400) || (_WIN32_WINDOWS > 0x0400)
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Ret_maybenull_
@@ -3192,14 +3264,14 @@ CreateWaitableTimerExA(
 
 #endif /* (_WIN32_WINNT >= 0x0600) */
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 
 #endif /* (_WIN32_WINNT >= 0x0400) || (_WIN32_WINDOWS > 0x0400) */
 
 #pragma endregion
 
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 _Ret_maybenull_
@@ -3216,6 +3288,12 @@ CreateFileMappingA(
 #ifndef UNICODE
 #define CreateFileMapping  CreateFileMappingA
 #endif
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #if _WIN32_WINNT >= 0x0600
 
@@ -3237,7 +3315,13 @@ CreateFileMappingNumaA(
 #define CreateFileMappingNuma  CreateFileMappingNumaA
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
 #endif // _WIN32_WINNT >= 0x0600
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 HANDLE
@@ -3251,7 +3335,7 @@ OpenFileMappingA(
 #define OpenFileMapping  OpenFileMappingA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -3279,8 +3363,8 @@ GetLogicalDriveStringsA(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (_WIN32_WINNT >= 0x0602)
 
@@ -3295,7 +3379,7 @@ LoadPackagedLibrary (
 
 #endif // _WIN32_WINNT >= 0x0602
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #if (_WIN32_WINNT >= 0x0600)
@@ -3330,8 +3414,8 @@ LoadPackagedLibrary (
 
 #endif // _WIN32_WINNT >= 0x0600
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (_WIN32_WINNT >= 0x0600)
 
@@ -3362,6 +3446,12 @@ QueryFullProcessImageNameW(
 #endif // !UNICODE
 
 #endif // _WIN32_WINNT >= 0x0600
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (_WIN32_WINNT >= 0x0600)
 
@@ -3697,6 +3787,16 @@ typedef enum _PROC_THREAD_ATTRIBUTE_NUM {
 #define PROCESS_CREATION_MITIGATION_POLICY2_SPECULATIVE_STORE_BYPASS_DISABLE_ALWAYS_OFF    (0x00000002ui64 << 24)
 #define PROCESS_CREATION_MITIGATION_POLICY2_SPECULATIVE_STORE_BYPASS_DISABLE_RESERVED      (0x00000003ui64 << 24)
 
+//
+// Define the user-mode shadow stack mitigation policy options.
+//
+
+#define PROCESS_CREATION_MITIGATION_POLICY2_CET_USER_SHADOW_STACKS_MASK                    (0x00000003ui64 << 28)
+#define PROCESS_CREATION_MITIGATION_POLICY2_CET_USER_SHADOW_STACKS_DEFER                   (0x00000000ui64 << 28)
+#define PROCESS_CREATION_MITIGATION_POLICY2_CET_USER_SHADOW_STACKS_ALWAYS_ON               (0x00000001ui64 << 28)
+#define PROCESS_CREATION_MITIGATION_POLICY2_CET_USER_SHADOW_STACKS_ALWAYS_OFF              (0x00000002ui64 << 28)
+#define PROCESS_CREATION_MITIGATION_POLICY2_CET_USER_SHADOW_STACKS_RESERVED                (0x00000003ui64 << 28)
+
 #endif // _WIN32_WINNT_WINTHRESHOLD
 #endif // _WIN32_WINNT_WINBLUE
 #endif // _WIN32_WINNT_WIN8
@@ -3762,12 +3862,18 @@ typedef enum _PROC_THREAD_ATTRIBUTE_NUM {
 
 #endif // NTDDI_WIN10_19H1
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 VOID
@@ -3778,6 +3884,12 @@ GetStartupInfoA(
 #ifndef UNICODE
 #define GetStartupInfo  GetStartupInfoA
 #endif
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #if defined(_M_CEE)
 #undef GetEnvironmentVariable
@@ -4865,12 +4977,6 @@ SetDllDirectoryW(
 #endif // !UNICODE
 #endif // _WIN32_WINNT >= 0x0502
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-
 #if _WIN32_WINNT >= 0x0502
 WINBASEAPI
 _Success_(return != 0 && return < nBufferLength)
@@ -4896,6 +5002,12 @@ GetDllDirectoryW(
 
 #endif // _WIN32_WINNT >= 0x0502
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
 #define BASE_SEARCH_PATH_ENABLE_SAFE_SEARCHMODE 0x1
 #define BASE_SEARCH_PATH_DISABLE_SAFE_SEARCHMODE 0x10000
 #define BASE_SEARCH_PATH_PERMANENT 0x8000
@@ -4911,8 +5023,8 @@ SetSearchPathMode (
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 #if defined(_M_CEE)
 #undef CreateDirectory
@@ -4934,11 +5046,11 @@ CreateDirectory(
 }
 #endif  /* _M_CEE */
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 BOOL
@@ -4962,7 +5074,7 @@ CreateDirectoryExW(
 #define CreateDirectoryEx  CreateDirectoryExA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -5131,8 +5243,8 @@ CreateFileTransactedW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #if _WIN32_WINNT >= 0x0502
 
@@ -5148,7 +5260,7 @@ ReOpenFile(
 
 #endif // _WIN32_WINNT >= 0x0502
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 
@@ -5354,8 +5466,8 @@ FindFirstFileTransactedW(
 
 #endif /* _WIN32_WINNT >= 0x0400 */
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 WINBASEAPI
@@ -5402,13 +5514,13 @@ CopyFile(
 }
 #endif  /* _M_CEE */
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #if(_WIN32_WINNT >= 0x0400)
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 typedef
 DWORD
@@ -5454,7 +5566,7 @@ CopyFileExW(
 #define CopyFileEx  CopyFileExA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -5497,8 +5609,8 @@ CopyFileTransactedW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // TODO: Win7 for now, when we roll over the version number this needs to be updated.
@@ -5635,7 +5747,7 @@ CopyFile2(
 
 #endif // _WIN32_WINNT >= 0x0601
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif /* _WIN32_WINNT >= 0x0400 */
@@ -5714,8 +5826,8 @@ MoveFileExW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #if (_WIN32_WINNT >= 0x0500)
 WINBASEAPI
@@ -5745,7 +5857,7 @@ MoveFileWithProgressW(
 #endif // !UNICODE
 #endif // (_WIN32_WINNT >= 0x0500)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -5784,8 +5896,8 @@ MoveFileTransactedW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Application Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 #define MOVEFILE_REPLACE_EXISTING       0x00000001
 #define MOVEFILE_COPY_ALLOWED           0x00000002
@@ -5796,7 +5908,7 @@ MoveFileTransactedW(
 #define MOVEFILE_FAIL_IF_NOT_TRACKABLE  0x00000020
 #endif // (_WIN32_WINNT >= 0x0500)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -5806,8 +5918,8 @@ MoveFileTransactedW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (_WIN32_WINNT >= 0x0500)
 
@@ -5840,12 +5952,6 @@ ReplaceFileW(
 #endif // !UNICODE
 #endif // (_WIN32_WINNT >= 0x0500)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 #if (_WIN32_WINNT >= 0x0500)
 //
 // API call to create hard links.
@@ -5875,7 +5981,7 @@ CreateHardLinkW(
 
 #endif // (_WIN32_WINNT >= 0x0500)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -5941,8 +6047,8 @@ FindFirstFileNameTransactedW (
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 HANDLE
@@ -5961,7 +6067,7 @@ CreateNamedPipeA(
 #define CreateNamedPipe  CreateNamedPipeA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -6000,6 +6106,12 @@ CallNamedPipeA(
 #define CallNamedPipe  CallNamedPipeA
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 WINBASEAPI
 BOOL
 WINAPI
@@ -6011,7 +6123,7 @@ WaitNamedPipeA(
 #define WaitNamedPipe  WaitNamedPipeA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #if (_WIN32_WINNT >= 0x0600)
@@ -6191,12 +6303,24 @@ CloseEventLog (
     _In_ HANDLE hEventLog
     );
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+
 WINADVAPI
 BOOL
 WINAPI
 DeregisterEventSource (
     _In_ HANDLE hEventLog
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 WINADVAPI
 BOOL
@@ -6242,6 +6366,12 @@ OpenEventLogW (
 #define OpenEventLog  OpenEventLogA
 #endif // !UNICODE
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+
 WINADVAPI
 HANDLE
 WINAPI
@@ -6262,6 +6392,11 @@ RegisterEventSourceW (
 #define RegisterEventSource  RegisterEventSourceA
 #endif // !UNICODE
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 WINADVAPI
 HANDLE
 WINAPI
@@ -6312,6 +6447,12 @@ ReadEventLogW (
 #define ReadEventLog  ReadEventLogA
 #endif // !UNICODE
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+
 WINADVAPI
 BOOL
 WINAPI
@@ -6346,6 +6487,11 @@ ReportEventW (
 #define ReportEvent  ReportEventA
 #endif // !UNICODE
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#pragma endregion
+
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #define EVENTLOG_FULL_INFO      0
 
@@ -6921,8 +7067,8 @@ LookupAccountSidLocalW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINADVAPI
 BOOL
@@ -6996,7 +7142,7 @@ LookupPrivilegeDisplayNameW(
 #define LookupPrivilegeDisplayName  LookupPrivilegeDisplayNameA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -7113,8 +7259,8 @@ SetDefaultCommConfigW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #ifndef _MAC
 #define MAX_COMPUTERNAME_LENGTH 15
@@ -7144,7 +7290,7 @@ GetComputerNameW (
 #define GetComputerName  GetComputerNameA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -7311,7 +7457,6 @@ LogonUserExW (
 #define LOGON_NETCREDENTIALS_ONLY       0x00000002
 #define LOGON_ZERO_PASSWORD_BUFFER      0x80000000
 
-//@[comment("MVI_tracked")]
 WINADVAPI
 _Must_inspect_result_ BOOL
 WINAPI
@@ -7667,6 +7812,12 @@ GetCurrentHwProfileW (
 #endif // !UNICODE
 #endif /* _WIN32_WINNT >= 0x0400 */
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or Gaming Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+
 WINBASEAPI
 BOOL
 WINAPI
@@ -7689,8 +7840,7 @@ VerifyVersionInfoW(
 #define VerifyVersionInfo  VerifyVersionInfoA
 #endif // !UNICODE
 
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 // DOS and OS/2 Compatible Error Code definitions returned by the Win32 Base
@@ -7846,8 +7996,8 @@ CreateJobSet (
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 HANDLE
@@ -7872,7 +8022,7 @@ FindNextVolumeA(
 #define FindNextVolume FindNextVolumeA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -7984,6 +8134,12 @@ GetVolumeNameForVolumeMountPointA(
     _In_ DWORD cchBufferLength
 );
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 WINBASEAPI
 BOOL
 WINAPI
@@ -7996,7 +8152,7 @@ GetVolumePathNameA(
 #define GetVolumePathName  GetVolumePathNameA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif
@@ -8585,8 +8741,8 @@ ApplicationRecoveryFinished(
 
 #if (_WIN32_WINNT >= 0x0600)
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 typedef struct _FILE_BASIC_INFO {
     LARGE_INTEGER CreationTime;
@@ -8894,7 +9050,7 @@ GetFileInformationByHandleEx(
     _In_  DWORD dwBufferSize
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -9072,8 +9228,8 @@ RemoveSecureMemoryCacheCallback(
 
 #if (NTDDI_VERSION >= NTDDI_WIN7SP1)
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 _Must_inspect_result_
 WINBASEAPI
@@ -9085,11 +9241,11 @@ CopyContext(
     _In_ PCONTEXT Source
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 _Success_(return != FALSE)
 WINBASEAPI
@@ -9101,6 +9257,12 @@ InitializeContext(
     _Out_ PCONTEXT* Context,
     _Inout_ PDWORD ContextLength
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
@@ -9118,13 +9280,13 @@ InitializeContext2(
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #if defined(_AMD64_) || defined(_X86_)
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 DWORD64
@@ -9152,12 +9314,6 @@ LocateXStateFeature(
     _Out_opt_ PDWORD Length
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 _Must_inspect_result_
 WINBASEAPI
 BOOL
@@ -9167,7 +9323,7 @@ SetXStateFeaturesMask(
     _In_ DWORD64 FeatureMask
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #endif /* defined(_AMD64_) || defined(_X86_) */

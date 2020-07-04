@@ -1230,6 +1230,7 @@ enum SymTagEnum
 #define SYMFLAG_FUNC_NO_RETURN      0x00100000
 #define SYMFLAG_SYNTHETIC_ZEROBASE  0x00200000
 #define SYMFLAG_PUBLIC_CODE         0x00400000
+#define SYMFLAG_REGREL_ALIASINDIR   0x00800000
 
 // this resets SymNext/Prev to the beginning
 // of the module passed in the address field
@@ -4167,6 +4168,10 @@ RangeMapWrite(
 
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(NONGAMESPARTITIONS | WINAPI_PARTITION_GAMES)
+
+#ifdef __cplusplus
+}
+#endif
 
 #include <poppack.h>
 

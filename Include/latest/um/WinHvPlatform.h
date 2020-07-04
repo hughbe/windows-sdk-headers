@@ -201,6 +201,9 @@ WHvSetVirtualProcessorRegisters(
     );
 
 
+#if defined(NTDDI_VERSION) && (NTDDI_VERSION >= NTDDI_WIN10_VB)
+#pragma deprecated("WHvGetVirtualProcessorInterruptControllerState is deprecated; use WHvGetVirtualProcessorInterruptControllerState2")
+#endif
 HRESULT
 WINAPI
 WHvGetVirtualProcessorInterruptControllerState(
@@ -212,6 +215,9 @@ WHvGetVirtualProcessorInterruptControllerState(
     );
 
 
+#if defined(NTDDI_VERSION) && (NTDDI_VERSION >= NTDDI_WIN10_VB)
+#pragma deprecated("WHvSetVirtualProcessorInterruptControllerState is deprecated; use WHvSetVirtualProcessorInterruptControllerState2")
+#endif
 HRESULT
 WINAPI
 WHvSetVirtualProcessorInterruptControllerState(
@@ -286,6 +292,44 @@ WHvGetVirtualProcessorCounters(
     );
 
 
+HRESULT
+WINAPI
+WHvGetVirtualProcessorInterruptControllerState2(
+    _In_ WHV_PARTITION_HANDLE Partition,
+    _In_ UINT32 VpIndex,
+    _Out_writes_bytes_to_(StateSize,*WrittenSize) VOID* State,
+    _In_ UINT32 StateSize,
+    _Out_opt_ UINT32* WrittenSize
+    );
+
+
+HRESULT
+WINAPI
+WHvSetVirtualProcessorInterruptControllerState2(
+    _In_ WHV_PARTITION_HANDLE Partition,
+    _In_ UINT32 VpIndex,
+    _In_reads_bytes_(StateSize) const VOID* State,
+    _In_ UINT32 StateSize
+    );
+
+
+HRESULT
+WINAPI
+WHvRegisterPartitionDoorbellEvent(
+    _In_ WHV_PARTITION_HANDLE Partition,
+    _In_ const WHV_DOORBELL_MATCH_DATA* MatchData,
+    _In_ HANDLE EventHandle
+    );
+
+
+HRESULT
+WINAPI
+WHvUnregisterPartitionDoorbellEvent(
+    _In_ WHV_PARTITION_HANDLE Partition,
+    _In_ const WHV_DOORBELL_MATCH_DATA* MatchData
+    );
+
+
 #ifdef __cplusplus
 }
 #endif
@@ -299,8 +343,8 @@ WHvGetVirtualProcessorCounters(
 
 
 
-#ifndef ext_ms_win_hyperv_hvplatform_l1_1_2_query_routines
-#define ext_ms_win_hyperv_hvplatform_l1_1_2_query_routines
+#ifndef ext_ms_win_hyperv_hvplatform_l1_1_3_query_routines
+#define ext_ms_win_hyperv_hvplatform_l1_1_3_query_routines
 
 
 
@@ -414,11 +458,23 @@ IsWHvSetVirtualProcessorRegistersPresent(
     VOID
     );
 
+#if defined(NTDDI_VERSION) && (NTDDI_VERSION >= NTDDI_WIN10_VB)
+
+
+#endif
+
+
 BOOLEAN
 __stdcall
 IsWHvGetVirtualProcessorInterruptControllerStatePresent(
     VOID
     );
+
+#if defined(NTDDI_VERSION) && (NTDDI_VERSION >= NTDDI_WIN10_VB)
+
+
+#endif
+
 
 BOOLEAN
 __stdcall
@@ -459,6 +515,30 @@ IsWHvGetPartitionCountersPresent(
 BOOLEAN
 __stdcall
 IsWHvGetVirtualProcessorCountersPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsWHvGetVirtualProcessorInterruptControllerState2Present(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsWHvSetVirtualProcessorInterruptControllerState2Present(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsWHvRegisterPartitionDoorbellEventPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsWHvUnregisterPartitionDoorbellEventPresent(
     VOID
     );
 

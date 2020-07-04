@@ -121,6 +121,7 @@ typedef enum _PNP_VETO_TYPE {
 #define CM_PROB_DEVICE_RESET               (0x00000036)   // Device is being reset
 #define CM_PROB_CONSOLE_LOCKED             (0x00000037)   // Device is blocked while console is locked
 #define CM_PROB_NEED_CLASS_CONFIG          (0x00000038)   // Device needs extended class configuration to start
+#define CM_PROB_GUEST_ASSIGNMENT_FAILED    (0x00000039)   // Assignment to guest partition failed
 
 #define NUM_CM_PROB_V1                     (0x00000025)
 #define NUM_CM_PROB_V2                     (0x00000032)
@@ -130,8 +131,13 @@ typedef enum _PNP_VETO_TYPE {
 #define NUM_CM_PROB_V6                     (0x00000036)
 #define NUM_CM_PROB_V7                     (0x00000037)
 #define NUM_CM_PROB_V8                     (0x00000039)
+#define NUM_CM_PROB_V9                     (0x0000003A)
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+
+#define NUM_CM_PROB NUM_CM_PROB_V9
+
+#elif (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 
 #define NUM_CM_PROB NUM_CM_PROB_V8
 
@@ -284,22 +290,45 @@ typedef enum _PNP_VETO_TYPE {
 //
 // Device panel sides
 //
-#define CM_DEVICE_PANEL_SIDE_UNKNOWN    (0x00000000)
-#define CM_DEVICE_PANEL_SIDE_TOP        (0x00000001)
-#define CM_DEVICE_PANEL_SIDE_BOTTOM     (0x00000002)
-#define CM_DEVICE_PANEL_SIDE_LEFT       (0x00000003)
-#define CM_DEVICE_PANEL_SIDE_RIGHT      (0x00000004)
-#define CM_DEVICE_PANEL_SIDE_FRONT      (0x00000005)
-#define CM_DEVICE_PANEL_SIDE_BACK       (0x00000006)
+#define CM_DEVICE_PANEL_SIDE_UNKNOWN            (0x00000000)
+#define CM_DEVICE_PANEL_SIDE_TOP                (0x00000001)
+#define CM_DEVICE_PANEL_SIDE_BOTTOM             (0x00000002)
+#define CM_DEVICE_PANEL_SIDE_LEFT               (0x00000003)
+#define CM_DEVICE_PANEL_SIDE_RIGHT              (0x00000004)
+#define CM_DEVICE_PANEL_SIDE_FRONT              (0x00000005)
+#define CM_DEVICE_PANEL_SIDE_BACK               (0x00000006)
 
 //
 // Device panel edges
 //
-#define CM_DEVICE_PANEL_EDGE_UNKNOWN    (0x00000000)
-#define CM_DEVICE_PANEL_EDGE_TOP        (0x00000001)
-#define CM_DEVICE_PANEL_EDGE_BOTTOM     (0x00000002)
-#define CM_DEVICE_PANEL_EDGE_LEFT       (0x00000003)
-#define CM_DEVICE_PANEL_EDGE_RIGHT      (0x00000004)
+#define CM_DEVICE_PANEL_EDGE_UNKNOWN            (0x00000000)
+#define CM_DEVICE_PANEL_EDGE_TOP                (0x00000001)
+#define CM_DEVICE_PANEL_EDGE_BOTTOM             (0x00000002)
+#define CM_DEVICE_PANEL_EDGE_LEFT               (0x00000003)
+#define CM_DEVICE_PANEL_EDGE_RIGHT              (0x00000004)
+                                        
+//
+// Device panel shapes
+//
+#define CM_DEVICE_PANEL_SHAPE_UNKNOWN           (0x00000000)
+#define CM_DEVICE_PANEL_SHAPE_RECTANGLE         (0x00000001)
+#define CM_DEVICE_PANEL_SHAPE_OVAL              (0x00000002)
+
+//
+// Device panel orientations
+//
+#define CM_DEVICE_PANEL_ORIENTATION_HORIZONTAL  (0x00000000)
+#define CM_DEVICE_PANEL_ORIENTATION_VERTICAL    (0x00000001)
+
+//
+// Device panel joint types
+//
+#define CM_DEVICE_PANEL_JOINT_TYPE_UNKNOWN      (0x00000000)
+#define CM_DEVICE_PANEL_JOINT_TYPE_PLANAR       (0x00000001)
+#define CM_DEVICE_PANEL_JOINT_TYPE_HINGE        (0x00000002)
+#define CM_DEVICE_PANEL_JOINT_TYPE_PIVOT        (0x00000003)
+#define CM_DEVICE_PANEL_JOINT_TYPE_SWIVEL       (0x00000004)
+
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion

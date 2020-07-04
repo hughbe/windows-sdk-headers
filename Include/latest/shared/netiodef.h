@@ -435,7 +435,8 @@ C_ASSERT(sizeof(IPV4_HEADER) == 20);
 
 #define IP_VER_MASK 0xF0 // Version is high 4 bits of ip4_ver_hlen.
 #define IPV4_VERSION 4
-#define IPV4_DEFAULT_VERHLEN ((IPV4_VERSION << 4) | \
+#define IPV4_VERSION_BYTE (IPV4_VERSION << 4)
+#define IPV4_DEFAULT_VERHLEN ((IPV4_VERSION_BYTE) | \
                               (sizeof(IPV4_HEADER) / sizeof(UINT32)))
 
 #define MAX_IPV4_PACKET     65535
@@ -849,7 +850,14 @@ typedef struct _IGMPV3_REPORT_HEADER_ {
 // network-layer services all need access to this structure.
 //
 typedef struct _IPV6_HEADER {
-    UINT32 VersionClassFlow;// 4 bits Version, 8 Traffic Class, 20 Flow Label.
+    union {
+        UINT32 VersionClassFlow; // 4 bits Version, 8 Traffic Class, 20 Flow Label.
+        struct { // Convenience structure to access Version field only.
+            UINT32 : 4;
+            UINT32 Version : 4;
+            UINT32 : 24;
+        };
+    };
     UINT16 PayloadLength;   // Zero indicates Jumbo Payload hop-by-hop option.
     UINT8 NextHeader;       // Values are superset of IPv4's Protocol field.
     UINT8 HopLimit;
@@ -1421,7 +1429,7 @@ typedef struct nd_opt_rdnss {
 
 //
 // Minimum length in bytes of the RDNSS option if there is
-// atleast one IPv6 address (3 * 8 = 24 octets).
+// at least one IPv6 address (3 * 8 = 24 octets).
 //
 #define ND_OPT_RDNSS_MIN_LEN 24
 

@@ -88,6 +88,25 @@ DECLARE_HANDLE(PRJ_NAMESPACE_VIRTUALIZATION_CONTEXT);
 
 DECLARE_HANDLE(PRJ_DIR_ENTRY_BUFFER_HANDLE);
 
+typedef enum PRJ_EXT_INFO_TYPE {
+    PRJ_EXT_INFO_TYPE_SYMLINK = 1
+} PRJ_EXT_INFO_TYPE;
+
+
+typedef struct PRJ_EXTENDED_INFO {
+
+    PRJ_EXT_INFO_TYPE InfoType;
+
+    ULONG NextInfoOffset;
+
+    union {
+        struct {
+            PCWSTR TargetName;
+        } Symlink;
+    } DUMMYUNIONNAME;
+
+} PRJ_EXTENDED_INFO;
+
 //
 //  Forward declaration.
 //
@@ -218,6 +237,15 @@ PrjWritePlaceholderInfo(
     _In_ PCWSTR destinationFileName,
     _In_reads_bytes_(placeholderInfoSize) const PRJ_PLACEHOLDER_INFO* placeholderInfo,
     _In_ UINT32 placeholderInfoSize
+    );
+
+STDAPI
+PrjWritePlaceholderInfo2(
+    _In_ PRJ_NAMESPACE_VIRTUALIZATION_CONTEXT namespaceVirtualizationContext,
+    _In_ PCWSTR destinationFileName,
+    _In_reads_bytes_(placeholderInfoSize) const PRJ_PLACEHOLDER_INFO* placeholderInfo,
+    _In_ UINT32 placeholderInfoSize,
+    _In_opt_ const PRJ_EXTENDED_INFO* ExtendedInfo
     );
 
 typedef enum PRJ_UPDATE_TYPES
@@ -458,6 +486,14 @@ PrjFillDirEntryBuffer(
     _In_ PCWSTR fileName,
     _In_opt_ PRJ_FILE_BASIC_INFO* fileBasicInfo,
     _In_ PRJ_DIR_ENTRY_BUFFER_HANDLE dirEntryBufferHandle
+    );
+
+STDAPI
+PrjFillDirEntryBuffer2(
+    _In_ PRJ_DIR_ENTRY_BUFFER_HANDLE dirEntryBufferHandle,
+    _In_ PCWSTR fileName,
+    _In_opt_ PRJ_FILE_BASIC_INFO* fileBasicInfo,
+    _In_opt_ PRJ_EXTENDED_INFO* extendedInfo
     );
 
 STDAPI_(BOOLEAN)

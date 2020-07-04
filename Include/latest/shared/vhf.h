@@ -17,10 +17,6 @@ Revision History:
 #ifndef __VHF_H__
 #define __VHF_H__
 
-#ifndef _KERNEL_MODE
-#error User Mode Support is currently not implemented
-#endif
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -99,7 +95,7 @@ typedef struct _VHF_CONFIG {
 #ifdef _KERNEL_MODE
     PDEVICE_OBJECT                      DeviceObject;
 #else
-    PVOID                               Reserved;
+    HANDLE                              FileHandle;
 #endif
 
     USHORT                              VendorID;
@@ -137,6 +133,9 @@ VHF_CONFIG_INIT(
 #ifdef _KERNEL_MODE
     _In_
         PDEVICE_OBJECT  DeviceObject,
+#else
+    _In_
+        HANDLE          FileHandle,
 #endif
     _In_
         USHORT          ReportDescriptorLength,
@@ -153,7 +152,7 @@ VHF_CONFIG_INIT(
 #ifdef _KERNEL_MODE
     Config->DeviceObject                        = DeviceObject;
 #else
-    Config->Reserved                            = 0;
+    Config->FileHandle                          = FileHandle;
 #endif
 
     Config->VendorID                            = 0;

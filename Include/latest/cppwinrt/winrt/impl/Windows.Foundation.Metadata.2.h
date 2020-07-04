@@ -1,34 +1,26 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Foundation_Metadata_2_H
+#define WINRT_Windows_Foundation_Metadata_2_H
 #include "winrt/impl/Windows.Foundation.Metadata.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Foundation::Metadata {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Foundation::Metadata {
-
-struct ApiInformation
+namespace winrt::Windows::Foundation::Metadata
 {
-    ApiInformation() = delete;
-    static bool IsTypePresent(param::hstring const& typeName);
-    static bool IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName);
-    static bool IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName, uint32_t inputParameterCount);
-    static bool IsEventPresent(param::hstring const& typeName, param::hstring const& eventName);
-    static bool IsPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName);
-    static bool IsReadOnlyPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName);
-    static bool IsWriteablePropertyPresent(param::hstring const& typeName, param::hstring const& propertyName);
-    static bool IsEnumNamedValuePresent(param::hstring const& enumTypeName, param::hstring const& valueName);
-    static bool IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion);
-    static bool IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion, uint16_t minorVersion);
-};
-
+    struct ApiInformation
+    {
+        ApiInformation() = delete;
+        static auto IsTypePresent(param::hstring const& typeName);
+        static auto IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName);
+        static auto IsMethodPresent(param::hstring const& typeName, param::hstring const& methodName, uint32_t inputParameterCount);
+        static auto IsEventPresent(param::hstring const& typeName, param::hstring const& eventName);
+        static auto IsPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName);
+        static auto IsReadOnlyPropertyPresent(param::hstring const& typeName, param::hstring const& propertyName);
+        static auto IsWriteablePropertyPresent(param::hstring const& typeName, param::hstring const& propertyName);
+        static auto IsEnumNamedValuePresent(param::hstring const& enumTypeName, param::hstring const& valueName);
+        static auto IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion);
+        static auto IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion, uint16_t minorVersion);
+    };
 }
+#endif

@@ -27,6 +27,9 @@ extern "C"
 
 #include <pshpack8.h>
 
+#pragma warning (push)
+#pragma warning (disable : 4201) // nonstandard extension used: nameless struct/union
+
 //////////////////////////////////////////////////////////////////////////////
 //
 // Softpub Policy Provider defines
@@ -322,6 +325,8 @@ typedef struct CONFIG_CI_PROV_INFO_
     _Field_size_(dwPolicies) CRYPT_DATA_BLOB *pPolicies;
     CONFIG_CI_PROV_INFO_RESULT result;
 } CONFIG_CI_PROV_INFO;
+
+#pragma warning (pop)
 
 #include <poppack.h>
 

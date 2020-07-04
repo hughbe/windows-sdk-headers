@@ -1,142 +1,168 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Foundation.0.h"
-#include "winrt/impl/Windows.Storage.0.h"
-#include "winrt/impl/Windows.Storage.Streams.0.h"
+#ifndef WINRT_Windows_Storage_Provider_1_H
+#define WINRT_Windows_Storage_Provider_1_H
 #include "winrt/impl/Windows.Storage.Provider.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Storage::Provider {
-
-struct WINRT_EBO ICachedFileUpdaterStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICachedFileUpdaterStatics>
+namespace winrt::Windows::Storage::Provider
 {
-    ICachedFileUpdaterStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICachedFileUpdaterUI :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICachedFileUpdaterUI>
-{
-    ICachedFileUpdaterUI(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICachedFileUpdaterUI2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICachedFileUpdaterUI2>,
-    impl::require<ICachedFileUpdaterUI2, Windows::Storage::Provider::ICachedFileUpdaterUI>
-{
-    ICachedFileUpdaterUI2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IFileUpdateRequest :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IFileUpdateRequest>
-{
-    IFileUpdateRequest(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IFileUpdateRequest2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IFileUpdateRequest2>,
-    impl::require<IFileUpdateRequest2, Windows::Storage::Provider::IFileUpdateRequest>
-{
-    IFileUpdateRequest2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IFileUpdateRequestDeferral :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IFileUpdateRequestDeferral>
-{
-    IFileUpdateRequestDeferral(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IFileUpdateRequestedEventArgs :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IFileUpdateRequestedEventArgs>
-{
-    IFileUpdateRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderGetContentInfoForPathResult :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderGetContentInfoForPathResult>
-{
-    IStorageProviderGetContentInfoForPathResult(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderGetPathForContentUriResult :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderGetPathForContentUriResult>
-{
-    IStorageProviderGetPathForContentUriResult(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderItemPropertiesStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderItemPropertiesStatics>
-{
-    IStorageProviderItemPropertiesStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderItemProperty :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderItemProperty>
-{
-    IStorageProviderItemProperty(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderItemPropertyDefinition :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderItemPropertyDefinition>
-{
-    IStorageProviderItemPropertyDefinition(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderItemPropertySource :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderItemPropertySource>
-{
-    IStorageProviderItemPropertySource(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderPropertyCapabilities :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderPropertyCapabilities>
-{
-    IStorageProviderPropertyCapabilities(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderSyncRootInfo :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderSyncRootInfo>
-{
-    IStorageProviderSyncRootInfo(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderSyncRootInfo2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderSyncRootInfo2>
-{
-    IStorageProviderSyncRootInfo2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderSyncRootManagerStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderSyncRootManagerStatics>
-{
-    IStorageProviderSyncRootManagerStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IStorageProviderUriSource :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IStorageProviderUriSource>
-{
-    IStorageProviderUriSource(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) ICachedFileUpdaterStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICachedFileUpdaterStatics>
+    {
+        ICachedFileUpdaterStatics(std::nullptr_t = nullptr) noexcept {}
+        ICachedFileUpdaterStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICachedFileUpdaterUI :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICachedFileUpdaterUI>
+    {
+        ICachedFileUpdaterUI(std::nullptr_t = nullptr) noexcept {}
+        ICachedFileUpdaterUI(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICachedFileUpdaterUI2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICachedFileUpdaterUI2>,
+        impl::require<Windows::Storage::Provider::ICachedFileUpdaterUI2, Windows::Storage::Provider::ICachedFileUpdaterUI>
+    {
+        ICachedFileUpdaterUI2(std::nullptr_t = nullptr) noexcept {}
+        ICachedFileUpdaterUI2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IFileUpdateRequest :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IFileUpdateRequest>
+    {
+        IFileUpdateRequest(std::nullptr_t = nullptr) noexcept {}
+        IFileUpdateRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IFileUpdateRequest2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IFileUpdateRequest2>,
+        impl::require<Windows::Storage::Provider::IFileUpdateRequest2, Windows::Storage::Provider::IFileUpdateRequest>
+    {
+        IFileUpdateRequest2(std::nullptr_t = nullptr) noexcept {}
+        IFileUpdateRequest2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IFileUpdateRequestDeferral :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IFileUpdateRequestDeferral>
+    {
+        IFileUpdateRequestDeferral(std::nullptr_t = nullptr) noexcept {}
+        IFileUpdateRequestDeferral(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IFileUpdateRequestedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IFileUpdateRequestedEventArgs>
+    {
+        IFileUpdateRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IFileUpdateRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderFileTypeInfo :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderFileTypeInfo>
+    {
+        IStorageProviderFileTypeInfo(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderFileTypeInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderFileTypeInfoFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderFileTypeInfoFactory>
+    {
+        IStorageProviderFileTypeInfoFactory(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderFileTypeInfoFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderGetContentInfoForPathResult :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderGetContentInfoForPathResult>
+    {
+        IStorageProviderGetContentInfoForPathResult(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderGetContentInfoForPathResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderGetPathForContentUriResult :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderGetPathForContentUriResult>
+    {
+        IStorageProviderGetPathForContentUriResult(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderGetPathForContentUriResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderItemPropertiesStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderItemPropertiesStatics>
+    {
+        IStorageProviderItemPropertiesStatics(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderItemPropertiesStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderItemProperty :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderItemProperty>
+    {
+        IStorageProviderItemProperty(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderItemProperty(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderItemPropertyDefinition :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderItemPropertyDefinition>
+    {
+        IStorageProviderItemPropertyDefinition(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderItemPropertyDefinition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderItemPropertySource :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderItemPropertySource>
+    {
+        IStorageProviderItemPropertySource(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderItemPropertySource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderPropertyCapabilities :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderPropertyCapabilities>
+    {
+        IStorageProviderPropertyCapabilities(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderPropertyCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderSyncRootInfo :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderSyncRootInfo>
+    {
+        IStorageProviderSyncRootInfo(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderSyncRootInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderSyncRootInfo2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderSyncRootInfo2>
+    {
+        IStorageProviderSyncRootInfo2(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderSyncRootInfo2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderSyncRootInfo3 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderSyncRootInfo3>
+    {
+        IStorageProviderSyncRootInfo3(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderSyncRootInfo3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderSyncRootManagerStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderSyncRootManagerStatics>
+    {
+        IStorageProviderSyncRootManagerStatics(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderSyncRootManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderSyncRootManagerStatics2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderSyncRootManagerStatics2>
+    {
+        IStorageProviderSyncRootManagerStatics2(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderSyncRootManagerStatics2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderUriSource :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderUriSource>
+    {
+        IStorageProviderUriSource(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderUriSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

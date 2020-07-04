@@ -927,6 +927,8 @@ typedef struct _EVENT_TRACE_PROPERTIES_V2 {
         struct {
             ULONG Wow : 1; // Logger was started by a WOW64 process (output only).
             ULONG QpcDeltaTracking : 1; // QPC delta tracking events are enabled.
+            ULONG LargeMdlPages : 1; // Buffers allocated via large MDL pages.
+            ULONG ExcludeKernelStack : 1; // Exclude kernel stack from stack walk.
         } DUMMYSTRUCTNAME;
         ULONG64 V2Options;
     } DUMMYUNIONNAME3;
@@ -1093,6 +1095,12 @@ typedef VOID (WINAPI *PEVENT_CALLBACK)( PEVENT_TRACE pEvent );
 
 typedef VOID (WINAPI *PEVENT_RECORD_CALLBACK) (PEVENT_RECORD EventRecord);
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 //
 // Prototype for service request callback. Data providers register with WMI
 // by passing a service request callback function that is called for all
@@ -1108,6 +1116,12 @@ WINAPI
     _Inout_ ULONG *BufferSize,
     _Inout_ PVOID Buffer
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #if _MSC_VER >= 1200
 #pragma warning(push)

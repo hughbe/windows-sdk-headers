@@ -389,6 +389,13 @@ typedef interface IMFMediaKeySession2 IMFMediaKeySession2;
 #endif 	/* __IMFMediaKeySession2_FWD_DEFINED__ */
 
 
+#ifndef __IMFMediaEngineClassFactory4_FWD_DEFINED__
+#define __IMFMediaEngineClassFactory4_FWD_DEFINED__
+typedef interface IMFMediaEngineClassFactory4 IMFMediaEngineClassFactory4;
+
+#endif 	/* __IMFMediaEngineClassFactory4_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "unknwn.h"
 #include "mfidl.h"
@@ -8782,7 +8789,97 @@ EXTERN_C const IID IID_IMFMediaKeySession2;
 #endif 	/* __IMFMediaKeySession2_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfmediaengine_0000_0050 */
+#ifndef __IMFMediaEngineClassFactory4_INTERFACE_DEFINED__
+#define __IMFMediaEngineClassFactory4_INTERFACE_DEFINED__
+
+/* interface IMFMediaEngineClassFactory4 */
+/* [local][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFMediaEngineClassFactory4;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("fbe256c1-43cf-4a9b-8cb8-ce8632a34186")
+    IMFMediaEngineClassFactory4 : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE CreateContentDecryptionModuleFactory( 
+            /* [annotation][in] */ 
+            _In_  LPCWSTR keySystem,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _Outptr_  LPVOID *ppvObject) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFMediaEngineClassFactory4Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFMediaEngineClassFactory4 * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFMediaEngineClassFactory4 * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFMediaEngineClassFactory4 * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *CreateContentDecryptionModuleFactory )( 
+            IMFMediaEngineClassFactory4 * This,
+            /* [annotation][in] */ 
+            _In_  LPCWSTR keySystem,
+            /* [annotation][in] */ 
+            _In_  REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _Outptr_  LPVOID *ppvObject);
+        
+        END_INTERFACE
+    } IMFMediaEngineClassFactory4Vtbl;
+
+    interface IMFMediaEngineClassFactory4
+    {
+        CONST_VTBL struct IMFMediaEngineClassFactory4Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFMediaEngineClassFactory4_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFMediaEngineClassFactory4_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFMediaEngineClassFactory4_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFMediaEngineClassFactory4_CreateContentDecryptionModuleFactory(This,keySystem,riid,ppvObject)	\
+    ( (This)->lpVtbl -> CreateContentDecryptionModuleFactory(This,keySystem,riid,ppvObject) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFMediaEngineClassFactory4_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_mfmediaengine_0000_0051 */
 /* [local] */ 
 
 #endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) 
@@ -8790,8 +8887,8 @@ EXTERN_C const IID IID_IMFMediaKeySession2;
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfmediaengine_0000_0050_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfmediaengine_0000_0050_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfmediaengine_0000_0051_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfmediaengine_0000_0051_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

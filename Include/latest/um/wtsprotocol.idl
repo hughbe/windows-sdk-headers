@@ -1254,5 +1254,32 @@ interface IWRdsWddmIddProps : IUnknown
         );
 };
 
+
+
+//
+// Following interfaces are for Windows 10 20H1
+//
+interface IWRdsProtocolConnectionSettings;
+
+[
+    object,
+    uuid(83FCF5D3-F6F4-EA94-9CD2-32F280E1E510),
+    pointer_default(unique)
+]
+interface IWRdsProtocolConnectionSettings : IUnknown
+{
+    HRESULT
+    SetConnectionSetting(
+        [in]                                    GUID                PropertyID,
+        [in]                                    PWTS_PROPERTY_VALUE pPropertyEntriesIn
+        );
+
+    HRESULT
+    GetConnectionSetting(
+        [in]                                    GUID                PropertyID,
+        [out]                                   PWTS_PROPERTY_VALUE pPropertyEntriesOut
+        );
+
+};
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion

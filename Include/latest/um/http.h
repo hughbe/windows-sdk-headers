@@ -577,6 +577,8 @@ typedef struct _HTTP_REQUEST_TOKEN_BINDING_INFO
 #define HTTP_LOG_FIELD_HOST                  0x00100000
 #define HTTP_LOG_FIELD_SUB_STATUS            0x00200000
 #define HTTP_LOG_FIELD_STREAM_ID             0x08000000
+#define HTTP_LOG_FIELD_STREAM_ID_EX          0x10000000
+#define HTTP_LOG_FIELD_TRANSPORT_TYPE        0x20000000
 
 //
 // Fields that are used only for error logging.
@@ -870,6 +872,13 @@ typedef struct _HTTP_PROTECTION_LEVEL_INFO
 // HTTP_SEND_RESPONSE_FLAG_OPAQUE - Specifies that the request/response is not
 // HTTP compliant and all subsequent bytes should be treated as entity-body.
 //
+// HTTP_SEND_RESPONSE_FLAG_GOAWAY - A flag that must always be specified with
+// HTTP_SEND_RESPONSE_FLAG_DISCONNECT. For pure HTTP/1.x connections, that is
+// connections that don't do HTTP/2 and HTTP/3, this behaves the same as
+// HTTP_SEND_RESPONSE_FLAG_DISCONNECT. For HTTP/2 and HTTP/3, this results in
+// sending a GOAWAY frame and will cause the client to move to a different
+// connection.
+//
 
 #define HTTP_SEND_RESPONSE_FLAG_DISCONNECT          0x00000001
 #define HTTP_SEND_RESPONSE_FLAG_MORE_DATA           0x00000002
@@ -877,6 +886,7 @@ typedef struct _HTTP_PROTECTION_LEVEL_INFO
 #define HTTP_SEND_RESPONSE_FLAG_ENABLE_NAGLING      0x00000008
 #define HTTP_SEND_RESPONSE_FLAG_PROCESS_RANGES      0x00000020
 #define HTTP_SEND_RESPONSE_FLAG_OPAQUE              0x00000040
+#define HTTP_SEND_RESPONSE_FLAG_GOAWAY              0x00000100
 
 
 //
@@ -953,6 +963,7 @@ typedef struct _HTTP_VERSION
 #define HTTP_VERSION_1_0        { 1, 0 }
 #define HTTP_VERSION_1_1        { 1, 1 }
 #define HTTP_VERSION_2_0        { 2, 0 }
+#define HTTP_VERSION_3_0        { 3, 0 }
 
 #define HTTP_SET_VERSION(version, major, minor)             \
 do {                                                        \
@@ -1586,6 +1597,9 @@ typedef enum  _HTTP_REQUEST_TIMING_TYPE
     HttpRequestTimingTypeRequestReturnedAfterDelegation,
     HttpRequestTimingTypeRequestQueuedForIO,
     HttpRequestTimingTypeRequestDeliveredForIO,
+    HttpRequestTimingTypeHttp3StreamStart,
+    HttpRequestTimingTypeHttp3HeaderDecodeStart,
+    HttpRequestTimingTypeHttp3HeaderDecodeEnd,
     HttpRequestTimingTypeMax
 
 } HTTP_REQUEST_TIMING_TYPE, *PHTTP_REQUEST_TIMING_TYPE;
@@ -1617,7 +1631,9 @@ typedef enum _HTTP_REQUEST_INFO_TYPE
     HttpRequestInfoTypeSslTokenBinding,
     HttpRequestInfoTypeRequestTiming,
     HttpRequestInfoTypeTcpInfoV0,
-    HttpRequestInfoTypeRequestSizing
+    HttpRequestInfoTypeRequestSizing,
+    HttpRequestInfoTypeQuicStats,
+    HttpRequestInfoTypeTcpInfoV1,
 
 } HTTP_REQUEST_INFO_TYPE, *PHTTP_REQUEST_INFO_TYPE;
 
@@ -2248,6 +2264,7 @@ typedef enum _HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE
 {
     ExParamTypeHttp2Window,
     ExParamTypeHttp2SettingsLimits,
+    ExParamTypeHttpPerformance,
     ExParamTypeMax
 } HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE, *PHTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE;
 
@@ -2275,6 +2292,34 @@ typedef struct _HTTP2_SETTINGS_LIMITS_PARAM
     DWORD Http2MaxSettingsPerMinute;
 } HTTP2_SETTINGS_LIMITS_PARAM, *PHTTP2_SETTINGS_LIMITS_PARAM;
 
+typedef struct _HTTP_PERFORMANCE_PARAM
+{
+    //
+    // The knob to enable/disable buffering synchronous sends.
+    //
+
+    ULONGLONG SendBufferingFlags;
+
+    //
+    // The knob to enable aggressive ICW.
+    //
+
+    BOOLEAN EnableAggressiveICW;
+
+    //
+    // The maximum send buffer size for connections on this binding.
+    //
+
+    ULONG MaxBufferedSendBytes;
+
+    //
+    // The maximum number of concurrent streams on an http/2 connection.
+    //
+
+    ULONG MaxConcurrentClientStreams;
+
+} HTTP_PERFORMANCE_PARAM, *PHTTP_PERFORMANCE_PARAM;
+
 //
 // This defines the exteded params for the ssl config record.
 //
@@ -2301,6 +2346,7 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_PARAM_EX
     {
         HTTP2_WINDOW_SIZE_PARAM Http2WindowSizeParam;
         HTTP2_SETTINGS_LIMITS_PARAM Http2SettingsLimitsParam;
+        HTTP_PERFORMANCE_PARAM HttpPerformanceParam;
     };
 } HTTP_SERVICE_CONFIG_SSL_PARAM_EX, *PHTTP_SERVICE_CONFIG_SSL_PARAM_EX;
 
@@ -2561,6 +2607,50 @@ typedef struct {
     HTTP_SERVICE_CONFIG_CACHE_KEY       KeyDesc;
     HTTP_SERVICE_CONFIG_CACHE_PARAM     ParamDesc;
 } HTTP_SERVICE_CONFIG_CACHE_SET, *PHTTP_SERVICE_CONFIG_CACHE_SET;
+
+//
+// Input types for HttpQueryRequestProperty. Only types are public and not the API
+// so that IIS need not have their own types for public usage.
+//
+
+typedef enum _HTTP_REQUEST_PROPERTY
+{
+    HttpRequestPropertyIsb,
+    HttpRequestPropertyTcpInfoV0,
+    HttpRequestPropertyQuicStats,
+    HttpRequestPropertyTcpInfoV1,
+    HttpRequestPropertySni,
+} HTTP_REQUEST_PROPERTY, *PHTTP_REQUEST_PROPERTY;
+
+typedef struct _HTTP_QUERY_REQUEST_QUALIFIER_TCP
+{
+    ULONGLONG Freshness;
+} HTTP_QUERY_REQUEST_QUALIFIER_TCP, *PHTTP_QUERY_REQUEST_QUALIFIER_TCP;
+
+typedef struct _HTTP_QUERY_REQUEST_QUALIFIER_QUIC
+{
+    ULONGLONG Freshness;
+} HTTP_QUERY_REQUEST_QUALIFIER_QUIC, *PHTTP_QUERY_REQUEST_QUALIFIER_QUIC;
+
+#define HTTP_REQUEST_PROPERTY_SNI_HOST_MAX_LENGTH 255
+
+//
+// Flags inside HTTP_REQUEST_PROPERTY_SNI can have following values:
+// - HTTP_REQUEST_PROPERTY_SNI_FLAG_SNI_USED: Indicates that SNI was used for succesful
+//   endpoint lookup during handshake. If client sent the SNI but Http.sys still decided to
+//   use IP endpoint binding then this flag will not be set.
+// - HTTP_REQUEST_PROPERTY_SNI_FLAG_NO_SNI: Indicates that client did not send the SNI.
+//   If this flag is set, HTTP_REQUEST_PROPERTY_SNI_FLAG_SNI_USED can not be set.
+//
+
+#define HTTP_REQUEST_PROPERTY_SNI_FLAG_SNI_USED 0x00000001
+#define HTTP_REQUEST_PROPERTY_SNI_FLAG_NO_SNI   0x00000002
+
+typedef struct _HTTP_REQUEST_PROPERTY_SNI
+{
+    WCHAR Hostname[HTTP_REQUEST_PROPERTY_SNI_HOST_MAX_LENGTH + 1];
+    ULONG Flags;
+} HTTP_REQUEST_PROPERTY_SNI, *PHTTP_REQUEST_PROPERTY_SNI;
 
 
 //

@@ -328,6 +328,7 @@ struct sqlite3_api_routines {
   int (SQLITE_APICALL *str_errcode)(sqlite3_str*);
   int (SQLITE_APICALL *str_length)(sqlite3_str*);
   char *(SQLITE_APICALL *str_value)(sqlite3_str*);
+  /* Version 3.25.0 and later */
   int (SQLITE_APICALL *create_window_function)(sqlite3*,const char*,int,int,void*,
                             void (SQLITE_APICALL *xStep)(sqlite3_context*,int,sqlite3_value**),
                             void (SQLITE_APICALL *xFinal)(sqlite3_context*),
@@ -335,6 +336,13 @@ struct sqlite3_api_routines {
                             void (SQLITE_APICALL *xInv)(sqlite3_context*,int,sqlite3_value**),
                             void(SQLITE_APICALL *xDestroy)(void*));
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_19H1 */
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+  /* Version 3.26.0 and later */
+  const char *(SQLITE_APICALL *normalized_sql)(sqlite3_stmt*);
+  /* Version 3.28.0 and later */
+  int (SQLITE_APICALL *stmt_isexplain)(sqlite3_stmt*);
+  int (SQLITE_APICALL *value_frombind)(sqlite3_value*);
+#endif /* NTDDI_VERSION >= NTDDI_WIN10_VB */
 };
 
 #if NTDDI_VERSION >= NTDDI_WIN10_RS2
@@ -637,6 +645,13 @@ typedef int (SQLITE_APICALL *sqlite3_loadext_entry)(
 /* Version 3.25.0 and later */
 #define sqlite3_create_window_function sqlite3_api->create_window_function
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_19H1 */
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+/* Version 3.26.0 and later */
+#define sqlite3_normalized_sql         sqlite3_api->normalized_sql
+/* Version 3.28.0 and later */
+#define sqlite3_stmt_isexplain         sqlite3_api->isexplain
+#define sqlite3_value_frombind         sqlite3_api->frombind
+#endif /* NTDDI_VERSION >= NTDDI_WIN10_VB */
 #endif /* !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION) */
 
 #if !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION)

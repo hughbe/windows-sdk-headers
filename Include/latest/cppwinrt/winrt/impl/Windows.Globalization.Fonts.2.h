@@ -1,33 +1,23 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.UI.Text.1.h"
+#ifndef WINRT_Windows_Globalization_Fonts_2_H
+#define WINRT_Windows_Globalization_Fonts_2_H
 #include "winrt/impl/Windows.Globalization.Fonts.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Globalization::Fonts {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Globalization::Fonts {
-
-struct WINRT_EBO LanguageFont :
-    Windows::Globalization::Fonts::ILanguageFont
+namespace winrt::Windows::Globalization::Fonts
 {
-    LanguageFont(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LanguageFontGroup :
-    Windows::Globalization::Fonts::ILanguageFontGroup
-{
-    LanguageFontGroup(std::nullptr_t) noexcept {}
-    LanguageFontGroup(param::hstring const& languageTag);
-};
-
+    struct __declspec(empty_bases) LanguageFont : Windows::Globalization::Fonts::ILanguageFont
+    {
+        LanguageFont(std::nullptr_t) noexcept {}
+        LanguageFont(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::Fonts::ILanguageFont(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LanguageFontGroup : Windows::Globalization::Fonts::ILanguageFontGroup
+    {
+        LanguageFontGroup(std::nullptr_t) noexcept {}
+        LanguageFontGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::Fonts::ILanguageFontGroup(ptr, take_ownership_from_abi) {}
+        LanguageFontGroup(param::hstring const& languageTag);
+    };
 }
+#endif

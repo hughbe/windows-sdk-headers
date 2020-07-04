@@ -339,6 +339,8 @@ namespace Windows
 
             interface IBackgroundTaskBuilder4;
 
+            interface IBackgroundTaskBuilder5;
+
             interface IBackgroundTaskCompletedEventArgs;
 
             interface IBackgroundTaskDeferral;
@@ -371,7 +373,11 @@ namespace Windows
 
             interface IBluetoothLEAdvertisementPublisherTrigger;
 
+            interface IBluetoothLEAdvertisementPublisherTrigger2;
+
             interface IBluetoothLEAdvertisementWatcherTrigger;
+
+            interface IBluetoothLEAdvertisementWatcherTrigger2;
 
             interface ICachedFileUpdaterTrigger;
 
@@ -1036,6 +1042,14 @@ namespace Windows
                 [propput] HRESULT TaskGroup([in] Windows.ApplicationModel.Background.BackgroundTaskRegistrationGroup* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.Background.BackgroundTaskBuilder)]
+            [uuid(077103F6-99F5-4AF4-BCAD-4731D0330D43)]
+            interface IBackgroundTaskBuilder5 : IInspectable
+            {
+                HRESULT SetTaskEntryPointClsid([in] GUID TaskEntryPoint);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs)]
             [uuid(565D25CF-F209-48F4-9967-2B184F7BFBF0)]
@@ -1188,6 +1202,21 @@ namespace Windows
                 [propget] HRESULT Advertisement([out] [retval] Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.Background.BluetoothLEAdvertisementPublisherTrigger)]
+            [uuid(AA28D064-38F4-597D-B597-4E55588C6503)]
+            interface IBluetoothLEAdvertisementPublisherTrigger2 : IInspectable
+            {
+                [propget] HRESULT PreferredTransmitPowerLevelInDBm([out] [retval] Windows.Foundation.IReference<INT16>** value);
+                [propput] HRESULT PreferredTransmitPowerLevelInDBm([in] Windows.Foundation.IReference<INT16>* value);
+                [propget] HRESULT UseExtendedFormat([out] [retval] boolean* value);
+                [propput] HRESULT UseExtendedFormat([in] boolean value);
+                [propget] HRESULT IsAnonymous([out] [retval] boolean* value);
+                [propput] HRESULT IsAnonymous([in] boolean value);
+                [propget] HRESULT IncludeTransmitPowerLevel([out] [retval] boolean* value);
+                [propput] HRESULT IncludeTransmitPowerLevel([in] boolean value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger)]
             [uuid(1AAB1819-BCE1-48EB-A827-59FB7CEE52A6)]
@@ -1203,6 +1232,15 @@ namespace Windows
                 [propput] HRESULT SignalStrengthFilter([in] Windows.Devices.Bluetooth.BluetoothSignalStrengthFilter* value);
                 [propget] HRESULT AdvertisementFilter([out] [retval] Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter** value);
                 [propput] HRESULT AdvertisementFilter([in] Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementFilter* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.Background.BluetoothLEAdvertisementWatcherTrigger)]
+            [uuid(39B56799-EB39-5AB6-9932-AA9E4549604D)]
+            interface IBluetoothLEAdvertisementWatcherTrigger2 : IInspectable
+            {
+                [propget] HRESULT AllowExtendedAdvertisements([out] [retval] boolean* value);
+                [propput] HRESULT AllowExtendedAdvertisements([in] boolean value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1581,6 +1619,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+            [deprecated("SecondaryAuthenticationFactorAuthenticationTrigger is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [exclusiveto(Windows.ApplicationModel.Background.SecondaryAuthenticationFactorAuthenticationTrigger)]
             [uuid(F237F327-5181-4F24-96A7-700A4E5FAC62)]
             interface ISecondaryAuthenticationFactorAuthenticationTrigger : IInspectable
@@ -1825,6 +1864,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder2;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder3;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder4;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.ApplicationModel.Background.IBackgroundTaskBuilder5;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1888,6 +1928,7 @@ namespace Windows
             {
                 [default] interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger;
                 interface Windows.ApplicationModel.Background.IBackgroundTrigger;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementPublisherTrigger2;
             }
 
             [activatable(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1898,6 +1939,7 @@ namespace Windows
             {
                 [default] interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger;
                 interface Windows.ApplicationModel.Background.IBackgroundTrigger;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.ApplicationModel.Background.IBluetoothLEAdvertisementWatcherTrigger2;
             }
 
             [activatable(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2240,6 +2282,7 @@ namespace Windows
 
             [activatable(Windows.Foundation.UniversalApiContract, 3.0)]
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+            [deprecated("SecondaryAuthenticationFactorAuthenticationTrigger is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [marshaling_behavior(standard)]
             [threading(mta)]
             runtimeclass SecondaryAuthenticationFactorAuthenticationTrigger

@@ -64,7 +64,7 @@ DEFINE_GUID(GUID_DEVINTERFACE_IPPUSB_PRINT, 0xf2f40381, 0xf46d, 0x4e51, 0xbc, 0x
                                                    FILE_ANY_ACCESS)
 
 //
-// Retrieve the current printer protocol code (i.e. USB_PRINTER_PROTOCOL_IPOPOVERUSB)
+// Retrieve the current printer protocol code (i.e. USB_PRINTER_PROTOCOL_IPPOVERUSB)
 //
 #define IOCTL_USBPRINT_GET_PROTOCOL       CTL_CODE(FILE_DEVICE_UNKNOWN,  \
                                                    USBPRINT_IOCTL_INDEX+17,\
@@ -72,7 +72,7 @@ DEFINE_GUID(GUID_DEVINTERFACE_IPPUSB_PRINT, 0xf2f40381, 0xf46d, 0x4e51, 0xbc, 0x
                                                    FILE_ANY_ACCESS)
 
 //
-// Set the current printer protocol code (i.e. USB_PRINTER_PROTOCOL_IPOPOVERUSB). This will cause a device interface switch.
+// Set the current printer protocol code (i.e. USB_PRINTER_PROTOCOL_IPPOVERUSB).
 //
 #define IOCTL_USBPRINT_SET_PROTOCOL       CTL_CODE(FILE_DEVICE_UNKNOWN,  \
                                                    USBPRINT_IOCTL_INDEX+18,\
@@ -84,14 +84,6 @@ DEFINE_GUID(GUID_DEVINTERFACE_IPPUSB_PRINT, 0xf2f40381, 0xf46d, 0x4e51, 0xbc, 0x
 //
 #define IOCTL_USBPRINT_GET_INTERFACE_TYPE    CTL_CODE(FILE_DEVICE_UNKNOWN,  \
                                                       USBPRINT_IOCTL_INDEX+19,\
-                                                      METHOD_BUFFERED,  \
-                                                      FILE_ANY_ACCESS)
-
-//
-// Cause the interface's child device to appear and trigger printer driver pnp matching
-//
-#define IOCTL_USBPRINT_ADD_CHILD_DEVICE     CTL_CODE(FILE_DEVICE_UNKNOWN,  \
-                                                      USBPRINT_IOCTL_INDEX+20,\
                                                       METHOD_BUFFERED,  \
                                                       FILE_ANY_ACCESS)
 

@@ -81,6 +81,8 @@ namespace Windows
 
         interface ILanguage2;
 
+        interface ILanguage3;
+
         interface ILanguageExtensionSubtags;
 
         interface ILanguageFactory;
@@ -88,6 +90,8 @@ namespace Windows
         interface ILanguageStatics;
 
         interface ILanguageStatics2;
+
+        interface ILanguageStatics3;
 
         interface INumeralSystemIdentifiersStatics;
 
@@ -628,6 +632,14 @@ namespace Windows
             [propget] HRESULT LayoutDirection([out] [retval] Windows.Globalization.LanguageLayoutDirection* value);
         }
 
+        [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+        [exclusiveto(Windows.Globalization.Language)]
+        [uuid(C6AF3D10-641A-5BA4-BB43-5E12AED75954)]
+        interface ILanguage3 : IInspectable
+        {
+            [propget] HRESULT AbbreviatedName([out] [retval] HSTRING* value);
+        }
+
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
         [exclusiveto(Windows.Globalization.Language)]
         [uuid(7D7DAF45-368D-4364-852B-DEC927037B85)]
@@ -659,6 +671,14 @@ namespace Windows
         interface ILanguageStatics2 : IInspectable
         {
             HRESULT TrySetInputMethodLanguageTag([in] HSTRING languageTag, [out] [retval] boolean* result);
+        }
+
+        [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+        [exclusiveto(Windows.Globalization.Language)]
+        [uuid(D15ECB5A-71DE-5752-9542-FAC5B4F27261)]
+        interface ILanguageStatics3 : IInspectable
+        {
+            HRESULT GetMuiCompatibleLanguageListFromLanguageTags([in] Windows.Foundation.Collections.IIterable<HSTRING>* languageTags, [out] [retval] Windows.Foundation.Collections.IVector<HSTRING>** result);
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -824,12 +844,14 @@ namespace Windows
         [marshaling_behavior(agile)]
         [static(Windows.Globalization.ILanguageStatics, Windows.Foundation.UniversalApiContract, 1.0)]
         [static(Windows.Globalization.ILanguageStatics2, Windows.Foundation.UniversalApiContract, 1.0)]
+        [static(Windows.Globalization.ILanguageStatics3, Windows.Foundation.UniversalApiContract, 10.0)]
         [threading(both)]
         runtimeclass Language
         {
             [contract(Windows.Foundation.UniversalApiContract, 1.0)] [default] interface Windows.Globalization.ILanguage;
             [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Globalization.ILanguageExtensionSubtags;
             [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Globalization.ILanguage2;
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Globalization.ILanguage3;
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]

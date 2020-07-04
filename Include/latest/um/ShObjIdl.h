@@ -739,13 +739,6 @@ typedef interface IAccessibilityDockingService IAccessibilityDockingService;
 #endif 	/* __IAccessibilityDockingService_FWD_DEFINED__ */
 
 
-#ifndef __IBannerNotificationHandler_FWD_DEFINED__
-#define __IBannerNotificationHandler_FWD_DEFINED__
-typedef interface IBannerNotificationHandler IBannerNotificationHandler;
-
-#endif 	/* __IBannerNotificationHandler_FWD_DEFINED__ */
-
-
 #ifndef __IStorageProviderBanners_FWD_DEFINED__
 #define __IStorageProviderBanners_FWD_DEFINED__
 typedef interface IStorageProviderBanners IStorageProviderBanners;
@@ -7697,104 +7690,6 @@ EXTERN_C const IID IID_IAccessibilityDockingService;
 extern RPC_IF_HANDLE __MIDL_itf_shobjidl_0000_0053_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_shobjidl_0000_0053_v0_0_s_ifspec;
 
-#ifndef __IBannerNotificationHandler_INTERFACE_DEFINED__
-#define __IBannerNotificationHandler_INTERFACE_DEFINED__
-
-/* interface IBannerNotificationHandler */
-/* [unique][uuid][object] */ 
-
-typedef /* [v1_enum] */ 
-enum BANNER_NOTIFICATION_EVENT
-    {
-        BNE_Rendered	= 0,
-        BNE_Hovered	= ( BNE_Rendered + 1 ) ,
-        BNE_Closed	= ( BNE_Hovered + 1 ) ,
-        BNE_Dismissed	= ( BNE_Closed + 1 ) ,
-        BNE_Button1Clicked	= ( BNE_Dismissed + 1 ) ,
-        BNE_Button2Clicked	= ( BNE_Button1Clicked + 1 ) 
-    } 	BANNER_NOTIFICATION_EVENT;
-
-typedef struct BANNER_NOTIFICATION
-    {
-    BANNER_NOTIFICATION_EVENT event;
-    LPCWSTR providerIdentity;
-    LPCWSTR contentId;
-    } 	BANNER_NOTIFICATION;
-
-
-EXTERN_C const IID IID_IBannerNotificationHandler;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("8d7b2ba7-db05-46a8-823c-d2b6de08ee91")
-    IBannerNotificationHandler : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE OnBannerEvent( 
-            /* [in] */ __RPC__in const BANNER_NOTIFICATION *notification) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IBannerNotificationHandlerVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IBannerNotificationHandler * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IBannerNotificationHandler * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IBannerNotificationHandler * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *OnBannerEvent )( 
-            __RPC__in IBannerNotificationHandler * This,
-            /* [in] */ __RPC__in const BANNER_NOTIFICATION *notification);
-        
-        END_INTERFACE
-    } IBannerNotificationHandlerVtbl;
-
-    interface IBannerNotificationHandler
-    {
-        CONST_VTBL struct IBannerNotificationHandlerVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IBannerNotificationHandler_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IBannerNotificationHandler_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IBannerNotificationHandler_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IBannerNotificationHandler_OnBannerEvent(This,notification)	\
-    ( (This)->lpVtbl -> OnBannerEvent(This,notification) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IBannerNotificationHandler_INTERFACE_DEFINED__ */
-
-
 #ifndef __IStorageProviderBanners_INTERFACE_DEFINED__
 #define __IStorageProviderBanners_INTERFACE_DEFINED__
 
@@ -7915,7 +7810,7 @@ EXTERN_C const IID IID_IStorageProviderBanners;
 #endif 	/* __IStorageProviderBanners_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_shobjidl_0000_0055 */
+/* interface __MIDL_itf_shobjidl_0000_0054 */
 /* [local] */ 
 
 #endif // NTDDI_WIN10_RS4
@@ -7926,8 +7821,8 @@ EXTERN_C const IID IID_IStorageProviderBanners;
 #endif
 
 
-extern RPC_IF_HANDLE __MIDL_itf_shobjidl_0000_0055_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_shobjidl_0000_0055_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_shobjidl_0000_0054_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_shobjidl_0000_0054_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

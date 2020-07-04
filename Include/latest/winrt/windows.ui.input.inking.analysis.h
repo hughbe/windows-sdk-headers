@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.ui.input.inking.analysis.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,165 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -279,7 +123,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkBullet
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_FWD_DEFINED__
@@ -297,7 +142,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkDrawing
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_FWD_DEFINED__
@@ -315,7 +161,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisInkWord
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_FWD_DEFINED__
@@ -333,7 +180,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisLine
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_FWD_DEFINED__
@@ -351,7 +199,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisListItem
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_FWD_DEFINED__
@@ -369,7 +218,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_FWD_DEFINED__
@@ -387,7 +237,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisParagraph
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_FWD_DEFINED__
@@ -405,7 +256,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_FWD_DEFINED__
@@ -423,7 +275,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_FWD_DEFINED__
@@ -441,7 +294,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisWritingRegion
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_FWD_DEFINED__
@@ -459,7 +313,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer ABI::Windows::UI::Input::Inking::Analysis::IInkAnalyzer
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_FWD_DEFINED__
@@ -477,7 +332,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory ABI::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_FWD_DEFINED__
@@ -485,102 +341,6 @@ namespace ABI {
 // Parameterized interface forward declarations (C++)
 
 // Collection interface definitions
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
-#define DEF___FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("ad35ed5c-5f8c-5a68-a6e1-67f209a05ea7"))
-IIterator<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> : IIterator_impl<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t;
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
-//#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
-#define DEF___FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("784f069e-badd-5258-bd8f-42ce205cc95a"))
-IIterable<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> : IIterable_impl<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t;
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
-//#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
-#define DEF___FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("2b3fee11-53b5-55b0-8d71-c40b427de029"))
-IVectorView<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> : IVectorView_impl<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t;
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
-//#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 namespace ABI {
     namespace Windows {
         namespace UI {
@@ -592,40 +352,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("a7ef2666-6fc4-568f-bbf3-19c1036a26bf"))
-IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*, ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.UI.Input.Inking.Analysis.InkAnalysisResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
@@ -635,11 +363,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysi
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("2c46d1bd-6dbb-5007-ba85-3d0106bddf50"))
-IAsyncOperation<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*, ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>> 
+IAsyncOperation<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*, ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.UI.Input.Inking.Analysis.InkAnalysisResult>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.UI.Input.Inking.Analysis.InkAnalysisResult>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -647,113 +375,39 @@ IAsyncOperation<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> :
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t;
 #define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>
-//#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-namespace ABI {
-    namespace Windows {
-        namespace Foundation {
-            struct Point;
-            
-        } /* Foundation */
-    } /* Windows */} /* ABI */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
-#ifndef DEF___FIIterator_1_Windows__CFoundation__CPoint_USE
-#define DEF___FIIterator_1_Windows__CFoundation__CPoint_USE
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("c602b59e-0a8e-5e99-b478-2b564585278d"))
-IIterator<struct ABI::Windows::Foundation::Point> : IIterator_impl<struct ABI::Windows::Foundation::Point> 
+struct __declspec(uuid("a7ef2666-6fc4-568f-bbf3-19c1036a26bf"))
+IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*, ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisResult*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Point>"; 
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.UI.Input.Inking.Analysis.InkAnalysisResult>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IIterator<struct ABI::Windows::Foundation::Point> __FIIterator_1_Windows__CFoundation__CPoint_t;
-#define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CPoint_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperationCompletedHandler<ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisResult*> __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Point>
-//#define __FIIterator_1_Windows__CFoundation__CPoint_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Point>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CFoundation__CPoint_USE */
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_USE */
 
-
-
-
-
-#ifndef DEF___FIIterable_1_Windows__CFoundation__CPoint_USE
-#define DEF___FIIterable_1_Windows__CFoundation__CPoint_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("c192280d-3a09-5423-9dc5-67b83ebde41d"))
-IIterable<struct ABI::Windows::Foundation::Point> : IIterable_impl<struct ABI::Windows::Foundation::Point> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Point>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<struct ABI::Windows::Foundation::Point> __FIIterable_1_Windows__CFoundation__CPoint_t;
-#define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CPoint_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Point>
-//#define __FIIterable_1_Windows__CFoundation__CPoint_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Point>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CFoundation__CPoint_USE */
-
-
-
-
-
-#ifndef DEF___FIVectorView_1_Windows__CFoundation__CPoint_USE
-#define DEF___FIVectorView_1_Windows__CFoundation__CPoint_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("0b7b4c9d-182f-582a-bddb-42b1aac30cad"))
-IVectorView<struct ABI::Windows::Foundation::Point> : IVectorView_impl<struct ABI::Windows::Foundation::Point> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Point>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<struct ABI::Windows::Foundation::Point> __FIVectorView_1_Windows__CFoundation__CPoint_t;
-#define __FIVectorView_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CPoint_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Point>
-//#define __FIVectorView_1_Windows__CFoundation__CPoint_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Foundation::Point>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CFoundation__CPoint_USE */
-
-
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 
 #ifndef DEF___FIIterator_1_HSTRING_USE
@@ -762,11 +416,11 @@ typedef IVectorView<struct ABI::Windows::Foundation::Point> __FIVectorView_1_Win
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
-IIterator<HSTRING> : IIterator_impl<HSTRING> 
+IIterator<HSTRING> : IIterator_impl<HSTRING>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterator`1<String>"; 
+        return L"Windows.Foundation.Collections.IIterator`1<String>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -774,14 +428,10 @@ IIterator<HSTRING> : IIterator_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 #define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
-//#define __FIIterator_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterator<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_HSTRING_USE */
-
 
 
 
@@ -791,11 +441,11 @@ typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
-IIterable<HSTRING> : IIterable_impl<HSTRING> 
+IIterable<HSTRING> : IIterable_impl<HSTRING>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterable`1<String>"; 
+        return L"Windows.Foundation.Collections.IIterable`1<String>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -803,43 +453,10 @@ IIterable<HSTRING> : IIterable_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
 #define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
-//#define __FIIterable_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterable<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_HSTRING_USE */
-
-
-
-
-#ifndef DEF___FIVectorView_1_HSTRING_USE
-#define DEF___FIVectorView_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
-IVectorView<HSTRING> : IVectorView_impl<HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
-#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
-//#define __FIVectorView_1_HSTRING_t ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_HSTRING_USE */
-
 
 
 
@@ -849,11 +466,11 @@ typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("f06a2739-9443-5ef0-b284-dc5aff3e7d10"))
-IIterator<UINT32> : IIterator_impl<UINT32> 
+IIterator<UINT32> : IIterator_impl<UINT32>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterator`1<UInt32>"; 
+        return L"Windows.Foundation.Collections.IIterator`1<UInt32>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -861,14 +478,10 @@ IIterator<UINT32> : IIterator_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterator<UINT32> __FIIterator_1_UINT32_t;
 #define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterator_1_UINT32_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_UINT32 ABI::Windows::Foundation::Collections::IIterator<UINT32>
-//#define __FIIterator_1_UINT32_t ABI::Windows::Foundation::Collections::IIterator<UINT32>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_UINT32_USE */
-
 
 
 
@@ -878,11 +491,11 @@ typedef IIterator<UINT32> __FIIterator_1_UINT32_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("421d4b91-b13b-5f37-ae54-b5249bd80539"))
-IIterable<UINT32> : IIterable_impl<UINT32> 
+IIterable<UINT32> : IIterable_impl<UINT32>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterable`1<UInt32>"; 
+        return L"Windows.Foundation.Collections.IIterable`1<UInt32>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -890,44 +503,127 @@ IIterable<UINT32> : IIterable_impl<UINT32>
 // correct parameterized interface specialization.
 typedef IIterable<UINT32> __FIIterable_1_UINT32_t;
 #define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::__FIIterable_1_UINT32_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_UINT32 ABI::Windows::Foundation::Collections::IIterable<UINT32>
-//#define __FIIterable_1_UINT32_t ABI::Windows::Foundation::Collections::IIterable<UINT32>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_UINT32_USE */
 
 
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            typedef struct Point Point;
+        } /* Foundation */
+    } /* Windows */
+} /* ABI */
 
+#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FIVectorView_1_UINT32_USE
-#define DEF___FIVectorView_1_UINT32_USE
+#ifndef DEF___FIIterator_1_Windows__CFoundation__CPoint_USE
+#define DEF___FIIterator_1_Windows__CFoundation__CPoint_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("e5ce1a07-8d33-5007-ba64-7d2508ccf85c"))
-IVectorView<UINT32> : IVectorView_impl<UINT32> 
+struct __declspec(uuid("c602b59e-0a8e-5e99-b478-2b564585278d"))
+IIterator<struct ABI::Windows::Foundation::Point> : IIterator_impl<struct ABI::Windows::Foundation::Point>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<UInt32>"; 
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Point>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IVectorView<UINT32> __FIVectorView_1_UINT32_t;
-#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT32_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IIterator<struct ABI::Windows::Foundation::Point> __FIIterator_1_Windows__CFoundation__CPoint_t;
+#define __FIIterator_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CFoundation__CPoint_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::IVectorView<UINT32>
-//#define __FIVectorView_1_UINT32_t ABI::Windows::Foundation::Collections::IVectorView<UINT32>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_UINT32_USE */
+#endif /* DEF___FIIterator_1_Windows__CFoundation__CPoint_USE */
 
+#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
+#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterable_1_Windows__CFoundation__CPoint_USE
+#define DEF___FIIterable_1_Windows__CFoundation__CPoint_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("c192280d-3a09-5423-9dc5-67b83ebde41d"))
+IIterable<struct ABI::Windows::Foundation::Point> : IIterable_impl<struct ABI::Windows::Foundation::Point>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Point>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<struct ABI::Windows::Foundation::Point> __FIIterable_1_Windows__CFoundation__CPoint_t;
+#define __FIIterable_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CFoundation__CPoint_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CFoundation__CPoint_USE */
+
+#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
+#define DEF___FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("ad35ed5c-5f8c-5a68-a6e1-67f209a05ea7"))
+IIterator<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> : IIterator_impl<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t;
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
+#define DEF___FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("784f069e-badd-5258-bd8f-42ce205cc95a"))
+IIterable<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> : IIterable_impl<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t;
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 namespace ABI {
     namespace Windows {
@@ -938,7 +634,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
@@ -951,11 +648,11 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke ABI::Windows::UI::Input::Inking::IInkStroke
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -965,11 +662,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("5608d5a9-e7e4-5a0b-941f-b7fed76b35bf"))
-IIterator<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::Inking::InkStroke*, ABI::Windows::UI::Input::Inking::IInkStroke*>> 
+IIterator<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::Inking::InkStroke*, ABI::Windows::UI::Input::Inking::IInkStroke*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.UI.Input.Inking.InkStroke>"; 
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.UI.Input.Inking.InkStroke>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -977,17 +674,12 @@ IIterator<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterator_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::UI::Input::Inking::InkStroke*> __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_t;
 #define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::IInkStroke*>
-//#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::UI::Input::Inking::IInkStroke*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -997,11 +689,11 @@ typedef IIterator<ABI::Windows::UI::Input::Inking::InkStroke*> __FIIterator_1_Wi
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("bbc11401-89d0-5305-a3b3-36c887714b9b"))
-IIterable<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::Inking::InkStroke*, ABI::Windows::UI::Input::Inking::IInkStroke*>> 
+IIterable<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Input::Inking::InkStroke*, ABI::Windows::UI::Input::Inking::IInkStroke*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.UI.Input.Inking.InkStroke>"; 
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.UI.Input.Inking.InkStroke>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -1009,44 +701,124 @@ IIterable<ABI::Windows::UI::Input::Inking::InkStroke*> : IIterable_impl<ABI::Win
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::UI::Input::Inking::InkStroke*> __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_t;
 #define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::IInkStroke*>
-//#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::UI::Input::Inking::IInkStroke*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_USE */
-
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 
+#ifndef DEF___FIVectorView_1_HSTRING_USE
+#define DEF___FIVectorView_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
+IVectorView<HSTRING> : IVectorView_impl<HSTRING>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<String>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
+#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_HSTRING_USE */
+
+
+
+#ifndef DEF___FIVectorView_1_UINT32_USE
+#define DEF___FIVectorView_1_UINT32_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("e5ce1a07-8d33-5007-ba64-7d2508ccf85c"))
+IVectorView<UINT32> : IVectorView_impl<UINT32>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<UInt32>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<UINT32> __FIVectorView_1_UINT32_t;
+#define __FIVectorView_1_UINT32 ABI::Windows::Foundation::Collections::__FIVectorView_1_UINT32_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_UINT32_USE */
+
+
+#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIVectorView_1_Windows__CFoundation__CPoint_USE
+#define DEF___FIVectorView_1_Windows__CFoundation__CPoint_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("0b7b4c9d-182f-582a-bddb-42b1aac30cad"))
+IVectorView<struct ABI::Windows::Foundation::Point> : IVectorView_impl<struct ABI::Windows::Foundation::Point>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Foundation.Point>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<struct ABI::Windows::Foundation::Point> __FIVectorView_1_Windows__CFoundation__CPoint_t;
+#define __FIVectorView_1_Windows__CFoundation__CPoint ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CFoundation__CPoint_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CFoundation__CPoint_USE */
+
+#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
+#define DEF___FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("2b3fee11-53b5-55b0-8d71-c40b427de029"))
+IVectorView<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> : IVectorView_impl<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.UI.Input.Inking.Analysis.IInkAnalysisNode>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode*> __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t;
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
-            typedef struct Point Point;
-            
-        } /* Foundation */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Foundation {
-            
             typedef struct Rect Rect;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1054,14 +826,13 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        
                         typedef enum InkAnalysisDrawingKind : int InkAnalysisDrawingKind;
-                        
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1069,14 +840,13 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        
                         typedef enum InkAnalysisNodeKind : int InkAnalysisNodeKind;
-                        
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1084,14 +854,13 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        
                         typedef enum InkAnalysisStatus : int InkAnalysisStatus;
-                        
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1099,125 +868,13 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        
                         typedef enum InkAnalysisStrokeKind : int InkAnalysisStrokeKind;
-                        
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Input {
-                namespace Inking {
-                    namespace Analysis {
-                        class InkAnalysisInkBullet;
-                    } /* Analysis */
-                } /* Inking */
-            } /* Input */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Input {
-                namespace Inking {
-                    namespace Analysis {
-                        class InkAnalysisInkDrawing;
-                    } /* Analysis */
-                } /* Inking */
-            } /* Input */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Input {
-                namespace Inking {
-                    namespace Analysis {
-                        class InkAnalysisInkWord;
-                    } /* Analysis */
-                } /* Inking */
-            } /* Input */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Input {
-                namespace Inking {
-                    namespace Analysis {
-                        class InkAnalysisLine;
-                    } /* Analysis */
-                } /* Inking */
-            } /* Input */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Input {
-                namespace Inking {
-                    namespace Analysis {
-                        class InkAnalysisListItem;
-                    } /* Analysis */
-                } /* Inking */
-            } /* Input */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Input {
-                namespace Inking {
-                    namespace Analysis {
-                        class InkAnalysisNode;
-                    } /* Analysis */
-                } /* Inking */
-            } /* Input */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Input {
-                namespace Inking {
-                    namespace Analysis {
-                        class InkAnalysisParagraph;
-                    } /* Analysis */
-                } /* Inking */
-            } /* Input */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1230,22 +887,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Input {
-                namespace Inking {
-                    namespace Analysis {
-                        class InkAnalysisWritingRegion;
-                    } /* Analysis */
-                } /* Inking */
-            } /* Input */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1258,20 +901,8 @@ namespace ABI {
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -1279,9 +910,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 namespace ABI {
     namespace Windows {
@@ -1289,7 +918,6 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [v1_enum, contract] */
                         enum InkAnalysisDrawingKind : int
                         {
                             InkAnalysisDrawingKind_Drawing = 0,
@@ -1308,14 +936,13 @@ namespace ABI {
                             InkAnalysisDrawingKind_Pentagon = 13,
                             InkAnalysisDrawingKind_Hexagon = 14,
                         };
-                        
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1323,9 +950,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 namespace ABI {
     namespace Windows {
@@ -1333,7 +958,6 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [v1_enum, contract] */
                         enum InkAnalysisNodeKind : int
                         {
                             InkAnalysisNodeKind_UnclassifiedInk = 0,
@@ -1346,14 +970,13 @@ namespace ABI {
                             InkAnalysisNodeKind_InkDrawing = 7,
                             InkAnalysisNodeKind_ListItem = 8,
                         };
-                        
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1361,9 +984,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 namespace ABI {
     namespace Windows {
@@ -1371,20 +992,18 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [v1_enum, contract] */
                         enum InkAnalysisStatus : int
                         {
                             InkAnalysisStatus_Updated = 0,
                             InkAnalysisStatus_Unchanged = 1,
                         };
-                        
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1392,9 +1011,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 namespace ABI {
     namespace Windows {
@@ -1402,21 +1019,19 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [v1_enum, contract] */
                         enum InkAnalysisStrokeKind : int
                         {
                             InkAnalysisStrokeKind_Auto = 0,
                             InkAnalysisStrokeKind_Writing = 1,
                             InkAnalysisStrokeKind_Drawing = 2,
                         };
-                        
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1424,13 +1039,10 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1443,29 +1055,26 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("EE049368-6110-4136-95F9-EE809FC20030"), exclusiveto, contract] */
-                        MIDL_INTERFACE("EE049368-6110-4136-95F9-EE809FC20030")
+                        MIDL_INTERFACE("ee049368-6110-4136-95f9-ee809fc20030")
                         IInkAnalysisInkBullet : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
+                                HSTRING* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisInkBullet=_uuidof(IInkAnalysisInkBullet);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisInkBullet = _uuidof(IInkAnalysisInkBullet);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1473,13 +1082,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1492,35 +1098,32 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("6A85ED1F-1FE4-4E15-898C-8E112377E021"), exclusiveto, contract] */
-                        MIDL_INTERFACE("6A85ED1F-1FE4-4E15-898C-8E112377E021")
+                        MIDL_INTERFACE("6a85ed1f-1fe4-4e15-898c-8e112377e021")
                         IInkAnalysisInkDrawing : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DrawingKind(
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind * value
+                            virtual HRESULT STDMETHODCALLTYPE get_DrawingKind(
+                                ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisDrawingKind* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Center(
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::Point * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Center(
+                                ABI::Windows::Foundation::Point* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Points(
-                                /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CFoundation__CPoint * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Points(
+                                __FIVectorView_1_Windows__CFoundation__CPoint** value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisInkDrawing=_uuidof(IInkAnalysisInkDrawing);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisInkDrawing = _uuidof(IInkAnalysisInkDrawing);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1528,13 +1131,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1547,32 +1147,29 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("4BD228AD-83AF-4034-8F3B-F8687DFFF436"), exclusiveto, contract] */
-                        MIDL_INTERFACE("4BD228AD-83AF-4034-8F3B-F8687DFFF436")
+                        MIDL_INTERFACE("4bd228ad-83af-4034-8f3b-f8687dfff436")
                         IInkAnalysisInkWord : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
+                                HSTRING* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TextAlternates(
-                                /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_TextAlternates(
+                                __FIVectorView_1_HSTRING** value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisInkWord=_uuidof(IInkAnalysisInkWord);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisInkWord = _uuidof(IInkAnalysisInkWord);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1580,13 +1177,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisLine
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1599,32 +1193,29 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("A06D048D-2B8D-4754-AD5A-D0871193A956"), exclusiveto, contract] */
-                        MIDL_INTERFACE("A06D048D-2B8D-4754-AD5A-D0871193A956")
+                        MIDL_INTERFACE("a06d048d-2b8d-4754-ad5a-d0871193a956")
                         IInkAnalysisLine : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
+                                HSTRING* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IndentLevel(
-                                /* [retval, out] */__RPC__out INT32 * value
+                            virtual HRESULT STDMETHODCALLTYPE get_IndentLevel(
+                                INT32* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisLine=_uuidof(IInkAnalysisLine);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisLine = _uuidof(IInkAnalysisLine);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1632,13 +1223,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisListItem
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1651,36 +1239,32 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("B4E3C23F-C4C3-4C3A-A1A6-9D85547EE586"), exclusiveto, contract] */
-                        MIDL_INTERFACE("B4E3C23F-C4C3-4C3A-A1A6-9D85547EE586")
+                        MIDL_INTERFACE("b4e3c23f-c4c3-4c3a-a1a6-9d85547ee586")
                         IInkAnalysisListItem : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
+                                HSTRING* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisListItem=_uuidof(IInkAnalysisListItem);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisListItem = _uuidof(IInkAnalysisListItem);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
  * Interface Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1693,47 +1277,44 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("30831F05-5F64-4A2C-BA37-4F4887879574"), contract] */
-                        MIDL_INTERFACE("30831F05-5F64-4A2C-BA37-4F4887879574")
+                        MIDL_INTERFACE("30831f05-5f64-4a2c-ba37-4f4887879574")
                         IInkAnalysisNode : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Id(
-                                /* [retval, out] */__RPC__out UINT32 * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Id(
+                                UINT32* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Kind(
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Kind(
+                                ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BoundingRect(
-                                /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
+                            virtual HRESULT STDMETHODCALLTYPE get_BoundingRect(
+                                ABI::Windows::Foundation::Rect* value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RotatedBoundingRect(
-                                /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CFoundation__CPoint * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_RotatedBoundingRect(
+                                __FIVectorView_1_Windows__CFoundation__CPoint** value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Children(
-                                /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Children(
+                                __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode** value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Parent(
-                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Parent(
+                                ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode** value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE GetStrokeIds(
-                                /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_UINT32 * * strokeIds
+                                __FIVectorView_1_UINT32** strokeIds
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisNode=_uuidof(IInkAnalysisNode);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisNode = _uuidof(IInkAnalysisNode);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1741,13 +1322,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1760,29 +1338,26 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("D9AD045C-0CD1-4DD4-A68B-EB1F12B3D727"), exclusiveto, contract] */
-                        MIDL_INTERFACE("D9AD045C-0CD1-4DD4-A68B-EB1F12B3D727")
+                        MIDL_INTERFACE("d9ad045c-0cd1-4dd4-a68b-eb1f12b3d727")
                         IInkAnalysisParagraph : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
+                                HSTRING* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisParagraph=_uuidof(IInkAnalysisParagraph);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisParagraph = _uuidof(IInkAnalysisParagraph);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1790,9 +1365,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1805,29 +1378,26 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("8948BA79-A243-4AA3-A294-1F98BD0FF580"), exclusiveto, contract] */
-                        MIDL_INTERFACE("8948BA79-A243-4AA3-A294-1F98BD0FF580")
+                        MIDL_INTERFACE("8948ba79-a243-4aa3-a294-1f98bd0ff580")
                         IInkAnalysisResult : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Status(
-                                /* [retval, out] */__RPC__out ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisStatus * value
+                            virtual HRESULT STDMETHODCALLTYPE get_Status(
+                                ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisStatus* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisResult=_uuidof(IInkAnalysisResult);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisResult = _uuidof(IInkAnalysisResult);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1835,13 +1405,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisRoot
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1854,33 +1421,30 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("3FB6A3C4-2FDE-4061-8502-A90F32545B84"), exclusiveto, contract] */
-                        MIDL_INTERFACE("3FB6A3C4-2FDE-4061-8502-A90F32545B84")
+                        MIDL_INTERFACE("3fb6a3c4-2fde-4061-8502-a90f32545b84")
                         IInkAnalysisRoot : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
+                                HSTRING* value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE FindNodes(
-                                /* [in] */ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind nodeKind,
-                                /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * * result
+                                ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisNodeKind nodeKind,
+                                __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode** result
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisRoot=_uuidof(IInkAnalysisRoot);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisRoot = _uuidof(IInkAnalysisRoot);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1888,13 +1452,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1907,29 +1468,26 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("DD6D6231-BD16-4663-B5AE-941D3043EF5B"), exclusiveto, contract] */
-                        MIDL_INTERFACE("DD6D6231-BD16-4663-B5AE-941D3043EF5B")
+                        MIDL_INTERFACE("dd6d6231-bd16-4663-b5ae-941d3043ef5b")
                         IInkAnalysisWritingRegion : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
-                                /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                            virtual HRESULT STDMETHODCALLTYPE get_RecognizedText(
+                                HSTRING* value
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalysisWritingRegion=_uuidof(IInkAnalysisWritingRegion);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalysisWritingRegion = _uuidof(IInkAnalysisWritingRegion);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1937,9 +1495,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalyzer
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1952,62 +1508,58 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("F12B8F95-0866-4DC5-8C77-F88614DFE38C"), exclusiveto, contract] */
-                        MIDL_INTERFACE("F12B8F95-0866-4DC5-8C77-F88614DFE38C")
+                        MIDL_INTERFACE("f12b8f95-0866-4dc5-8c77-f88614dfe38c")
                         IInkAnalyzer : public IInspectable
                         {
                         public:
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AnalysisRoot(
-                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot * * value
+                            virtual HRESULT STDMETHODCALLTYPE get_AnalysisRoot(
+                                ABI::Windows::UI::Input::Inking::Analysis::IInkAnalysisRoot** value
                                 ) = 0;
-                            /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAnalyzing(
-                                /* [retval, out] */__RPC__out ::boolean * value
+                            virtual HRESULT STDMETHODCALLTYPE get_IsAnalyzing(
+                                boolean* value
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE AddDataForStroke(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Input::Inking::IInkStroke * stroke
+                                ABI::Windows::UI::Input::Inking::IInkStroke* stroke
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE AddDataForStrokes(
-                                /* [in] */__RPC__in_opt __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke * strokes
+                                __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke* strokes
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE ClearDataForAllStrokes(void) = 0;
                             virtual HRESULT STDMETHODCALLTYPE RemoveDataForStroke(
-                                /* [in] */UINT32 strokeId
+                                UINT32 strokeId
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE RemoveDataForStrokes(
-                                /* [in] */__RPC__in_opt __FIIterable_1_UINT32 * strokeIds
+                                __FIIterable_1_UINT32* strokeIds
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE ReplaceDataForStroke(
-                                /* [in] */__RPC__in_opt ABI::Windows::UI::Input::Inking::IInkStroke * stroke
+                                ABI::Windows::UI::Input::Inking::IInkStroke* stroke
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE SetStrokeDataKind(
-                                /* [in] */UINT32 strokeId,
-                                /* [in] */ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind strokeKind
+                                UINT32 strokeId,
+                                ABI::Windows::UI::Input::Inking::Analysis::InkAnalysisStrokeKind strokeKind
                                 ) = 0;
                             virtual HRESULT STDMETHODCALLTYPE AnalyzeAsync(
-                                /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * * result
+                                __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult** result
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalyzer=_uuidof(IInkAnalyzer);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalyzer = _uuidof(IInkAnalyzer);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
  * Interface Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2020,36 +1572,32 @@ namespace ABI {
             namespace Input {
                 namespace Inking {
                     namespace Analysis {
-                        /* [object, uuid("29138686-1963-49D8-9589-E14384C769E3"), contract] */
-                        MIDL_INTERFACE("29138686-1963-49D8-9589-E14384C769E3")
+                        MIDL_INTERFACE("29138686-1963-49d8-9589-e14384c769e3")
                         IInkAnalyzerFactory : public IInspectable
                         {
                         public:
                             virtual HRESULT STDMETHODCALLTYPE CreateAnalyzer(
-                                /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Input::Inking::Analysis::IInkAnalyzer * * result
+                                ABI::Windows::UI::Input::Inking::Analysis::IInkAnalyzer** result
                                 ) = 0;
-                            
                         };
 
-                        extern MIDL_CONST_ID IID & IID_IInkAnalyzerFactory=_uuidof(IInkAnalyzerFactory);
-                        
+                        extern MIDL_CONST_ID IID& IID_IInkAnalyzerFactory = _uuidof(IInkAnalyzerFactory);
                     } /* Analysis */
                 } /* Inking */
             } /* Input */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisInkBullet ** Default Interface **
@@ -2061,20 +1609,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyz
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkBullet_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkBullet_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisInkBullet[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing ** Default Interface **
@@ -2086,20 +1631,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkDrawing_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkDrawing_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisInkDrawing[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisInkWord ** Default Interface **
@@ -2111,20 +1653,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkWord_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkWord_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisInkWord[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisLine
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisLine ** Default Interface **
@@ -2136,20 +1675,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisLine_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisLine_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisLine[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisListItem
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisListItem ** Default Interface **
@@ -2161,20 +1697,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisListItem_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisListItem_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisListItem[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisNode
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisNode ** Default Interface **
@@ -2185,20 +1718,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisNode_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisNode_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisNode[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisParagraph ** Default Interface **
@@ -2210,20 +1740,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisParagraph_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisParagraph_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisParagraph[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisResult ** Default Interface **
@@ -2232,20 +1759,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisResult_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisResult[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisRoot
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisRoot ** Default Interface **
@@ -2257,20 +1781,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisRoot_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisRoot_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisRoot[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisWritingRegion ** Default Interface **
@@ -2282,20 +1803,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisWritingRegion_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisWritingRegion_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisWritingRegion[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalyzer
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2307,17 +1825,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalyzer_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalyzer_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalyzer[] = L"Windows.UI.Input.Inking.Analysis.InkAnalyzer";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -2397,328 +1909,7 @@ typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFac
 
 // Collection interface definitions
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__)
-#define ____FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
-
-typedef struct __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    END_INTERFACE
-} __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl;
-
-interface __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode
-{
-    CONST_VTBL struct __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__)
-#define ____FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
-
-typedef  struct __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode **first);
-
-    END_INTERFACE
-} __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl;
-
-interface __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode
-{
-    CONST_VTBL struct __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
-
-typedef struct __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-            /* [in] */ __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
-} __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl;
-
-interface __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode
-{
-    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_INTERFACE_DEFINED__
-
 typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_INTERFACE_DEFINED__)
@@ -2732,325 +1923,116 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnal
 typedef struct __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This,
+        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult** result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult * *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl;
 
 interface __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
-
 
 #endif // ____FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-struct __x_ABI_CWindows_CFoundation_CPoint;
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_INTERFACE_DEFINED__
 
-#if !defined(____FIIterator_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__)
-#define ____FIIterator_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_Windows__CFoundation__CPoint __FIIterator_1_Windows__CFoundation__CPoint;
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_Windows__CFoundation__CPoint;
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult;
 
-typedef struct __FIIterator_1_Windows__CFoundation__CPointVtbl
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This, /* [retval][out] */ __RPC__out struct __x_ABI_CWindows_CFoundation_CPoint *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CFoundation__CPoint * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) struct __x_ABI_CWindows_CFoundation_CPoint *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* This,
+        __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult* asyncInfo,
+        AsyncStatus asyncStatus);
 
     END_INTERFACE
-} __FIIterator_1_Windows__CFoundation__CPointVtbl;
+} __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl;
 
-interface __FIIterator_1_Windows__CFoundation__CPoint
+interface __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CFoundation__CPointVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CFoundation__CPoint_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIIterable_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__)
-#define ____FIIterable_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_Windows__CFoundation__CPoint __FIIterable_1_Windows__CFoundation__CPoint;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_Windows__CFoundation__CPoint;
-
-typedef  struct __FIIterable_1_Windows__CFoundation__CPointVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CFoundation__CPoint * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CFoundation__CPoint * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CFoundation__CPoint * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CFoundation__CPoint * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CFoundation__CPoint * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CFoundation__CPoint * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CFoundation__CPoint * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CFoundation__CPoint **first);
-
-    END_INTERFACE
-} __FIIterable_1_Windows__CFoundation__CPointVtbl;
-
-interface __FIIterable_1_Windows__CFoundation__CPoint
-{
-    CONST_VTBL struct __FIIterable_1_Windows__CFoundation__CPointVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CFoundation__CPoint_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_Windows__CFoundation__CPoint_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_Windows__CFoundation__CPoint_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-
-#define __FIIterable_1_Windows__CFoundation__CPoint_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1_Windows__CFoundation__CPoint_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1_Windows__CFoundation__CPoint_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CFoundation__CPoint_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
 
 #endif /* COBJMACROS */
 
-
-#endif // ____FIIterable_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIVectorView_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_Windows__CFoundation__CPoint __FIVectorView_1_Windows__CFoundation__CPoint;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_Windows__CFoundation__CPoint;
-
-typedef struct __FIVectorView_1_Windows__CFoundation__CPointVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out struct __x_ABI_CWindows_CFoundation_CPoint *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This,
-            /* [in] */ struct __x_ABI_CWindows_CFoundation_CPoint item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CFoundation__CPoint * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) struct __x_ABI_CWindows_CFoundation_CPoint *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
-} __FIVectorView_1_Windows__CFoundation__CPointVtbl;
-
-interface __FIVectorView_1_Windows__CFoundation__CPoint
-{
-    CONST_VTBL struct __FIVectorView_1_Windows__CFoundation__CPointVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CFoundation__CPoint_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIVectorView_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
-
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 #if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
 #define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
@@ -3064,78 +2046,72 @@ typedef struct __FIIterator_1_HSTRINGVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_HSTRING * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_HSTRING * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_HSTRING* This,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_HSTRING* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_HSTRING* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_HSTRING* This,
+        UINT32 itemsLength,
+        HSTRING* items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_HSTRINGVtbl;
 
 interface __FIIterator_1_HSTRING
 {
-    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_HSTRING_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_HSTRING_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_HSTRING_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_HSTRING_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_HSTRING_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_HSTRING_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_HSTRING_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_HSTRING_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
-
 
 #if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
 #define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
@@ -3145,176 +2121,59 @@ typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_HSTRING;
 
-typedef  struct __FIIterable_1_HSTRINGVtbl
+typedef struct __FIIterable_1_HSTRINGVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_HSTRING * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_HSTRING **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_HSTRING* This,
+        __FIIterator_1_HSTRING** result);
 
     END_INTERFACE
 } __FIIterable_1_HSTRINGVtbl;
 
 interface __FIIterable_1_HSTRING
 {
-    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_HSTRING_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_HSTRING_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
-
 
 #endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
-
-
-#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_HSTRING;
-
-typedef struct __FIVectorView_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_HSTRING * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_HSTRING * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out HSTRING *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [in] */ HSTRING item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
-} __FIVectorView_1_HSTRINGVtbl;
-
-interface __FIVectorView_1_HSTRING
-{
-    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIVectorView_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIVectorView_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIVectorView_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIVectorView_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIVectorView_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIVectorView_1_HSTRING_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_HSTRING_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_HSTRING_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_HSTRING_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
-
 
 #if !defined(____FIIterator_1_UINT32_INTERFACE_DEFINED__)
 #define ____FIIterator_1_UINT32_INTERFACE_DEFINED__
@@ -3328,78 +2187,72 @@ typedef struct __FIIterator_1_UINT32Vtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_UINT32 * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_UINT32 * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_UINT32 * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_UINT32 * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_UINT32 * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_UINT32 * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_UINT32* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_UINT32* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_UINT32* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_UINT32* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_UINT32* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_UINT32* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_UINT32* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_UINT32* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_UINT32* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_UINT32* This,
+        UINT32 itemsLength,
+        UINT32* items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_UINT32Vtbl;
 
 interface __FIIterator_1_UINT32
 {
-    CONST_VTBL struct __FIIterator_1_UINT32Vtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_UINT32Vtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_UINT32_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_UINT32_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_UINT32_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_UINT32_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_UINT32_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_UINT32_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_UINT32_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_UINT32_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_UINT32_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_UINT32_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_UINT32_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_UINT32_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_UINT32_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_UINT32_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_UINT32_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_UINT32_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_UINT32_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_UINT32_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_UINT32_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_UINT32_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_UINT32_INTERFACE_DEFINED__
-
 
 #if !defined(____FIIterable_1_UINT32_INTERFACE_DEFINED__)
 #define ____FIIterable_1_UINT32_INTERFACE_DEFINED__
@@ -3409,183 +2262,357 @@ typedef interface __FIIterable_1_UINT32 __FIIterable_1_UINT32;
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_UINT32;
 
-typedef  struct __FIIterable_1_UINT32Vtbl
+typedef struct __FIIterable_1_UINT32Vtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_UINT32 * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_UINT32 * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_UINT32 * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_UINT32 * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_UINT32 * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_UINT32 **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_UINT32* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_UINT32* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_UINT32* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_UINT32* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_UINT32* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_UINT32* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_UINT32* This,
+        __FIIterator_1_UINT32** result);
 
     END_INTERFACE
 } __FIIterable_1_UINT32Vtbl;
 
 interface __FIIterable_1_UINT32
 {
-    CONST_VTBL struct __FIIterable_1_UINT32Vtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_UINT32Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_UINT32_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_UINT32_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_UINT32_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_UINT32_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_UINT32_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_UINT32_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_UINT32_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_UINT32_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_UINT32_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_UINT32_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_UINT32_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_UINT32_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_UINT32_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_UINT32_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
-
 
 #endif // ____FIIterable_1_UINT32_INTERFACE_DEFINED__
 
+typedef struct __x_ABI_CWindows_CFoundation_CPoint __x_ABI_CWindows_CFoundation_CPoint;
 
-#if !defined(____FIVectorView_1_UINT32_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_UINT32_INTERFACE_DEFINED__
+#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterator_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
 
-typedef interface __FIVectorView_1_UINT32 __FIVectorView_1_UINT32;
+typedef interface __FIIterator_1_Windows__CFoundation__CPoint __FIIterator_1_Windows__CFoundation__CPoint;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_UINT32;
+EXTERN_C const IID IID___FIIterator_1_Windows__CFoundation__CPoint;
 
-typedef struct __FIVectorView_1_UINT32Vtbl
+typedef struct __FIIterator_1_Windows__CFoundation__CPointVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_UINT32 * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CFoundation__CPoint* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CFoundation__CPoint* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CFoundation__CPoint* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CFoundation__CPoint* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CFoundation__CPoint* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CFoundation__CPoint* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CFoundation__CPoint* This,
+        struct __x_ABI_CWindows_CFoundation_CPoint* result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CFoundation__CPoint* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CFoundation__CPoint* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CFoundation__CPoint* This,
+        UINT32 itemsLength,
+        struct __x_ABI_CWindows_CFoundation_CPoint* items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_UINT32 * This);
+    END_INTERFACE
+} __FIIterator_1_Windows__CFoundation__CPointVtbl;
 
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_UINT32 * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_UINT32 * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_UINT32 * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out unsigned int *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [in] */ unsigned int item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_UINT32 * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) unsigned int *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
-} __FIVectorView_1_UINT32Vtbl;
-
-interface __FIVectorView_1_UINT32
+interface __FIIterator_1_Windows__CFoundation__CPoint
 {
-    CONST_VTBL struct __FIVectorView_1_UINT32Vtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CFoundation__CPointVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_Windows__CFoundation__CPoint_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_UINT32_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_Windows__CFoundation__CPoint_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_UINT32_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_Windows__CFoundation__CPoint_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_UINT32_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_Windows__CFoundation__CPoint_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_Windows__CFoundation__CPoint_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_UINT32_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_Windows__CFoundation__CPoint_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_UINT32_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_Windows__CFoundation__CPoint_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIVectorView_1_UINT32_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_Windows__CFoundation__CPoint_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_Windows__CFoundation__CPoint_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIVectorView_1_UINT32_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_UINT32_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_UINT32_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_UINT32_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIIterator_1_Windows__CFoundation__CPoint_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
+#endif // ____FIIterator_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
+#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterable_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
 
-#endif // ____FIVectorView_1_UINT32_INTERFACE_DEFINED__
+typedef interface __FIIterable_1_Windows__CFoundation__CPoint __FIIterable_1_Windows__CFoundation__CPoint;
 
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CFoundation__CPoint;
+
+typedef struct __FIIterable_1_Windows__CFoundation__CPointVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CFoundation__CPoint* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CFoundation__CPoint* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CFoundation__CPoint* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CFoundation__CPoint* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CFoundation__CPoint* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CFoundation__CPoint* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CFoundation__CPoint* This,
+        __FIIterator_1_Windows__CFoundation__CPoint** result);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CFoundation__CPointVtbl;
+
+interface __FIIterable_1_Windows__CFoundation__CPoint
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CFoundation__CPointVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CFoundation__CPoint_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_Windows__CFoundation__CPoint_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_Windows__CFoundation__CPoint_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_Windows__CFoundation__CPoint_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_Windows__CFoundation__CPoint_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_Windows__CFoundation__CPoint_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_Windows__CFoundation__CPoint_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
+
+typedef struct __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl;
+
+interface __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
+
+typedef struct __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        __FIIterator_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode** result);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl;
+
+interface __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 #ifndef ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke;
 
 #endif // ____x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke_FWD_DEFINED__
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_INTERFACE_DEFINED__)
@@ -3600,80 +2627,73 @@ typedef struct __FIIterator_1_Windows__CUI__CInput__CInking__CInkStrokeVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke** items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CUI__CInput__CInking__CInkStrokeVtbl;
 
 interface __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CUI__CInput__CInking__CInkStrokeVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CUI__CInput__CInking__CInkStrokeVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_INTERFACE_DEFINED__)
@@ -3684,131 +2704,406 @@ typedef interface __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke __FII
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke;
 
-typedef  struct __FIIterable_1_Windows__CUI__CInput__CInking__CInkStrokeVtbl
+typedef struct __FIIterable_1_Windows__CUI__CInput__CInking__CInkStrokeVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke* This,
+        __FIIterator_1_Windows__CUI__CInput__CInking__CInkStroke** result);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CUI__CInput__CInking__CInkStrokeVtbl;
 
 interface __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CUI__CInput__CInking__CInkStrokeVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CUI__CInput__CInking__CInkStrokeVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
 
+typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
 
-typedef struct __x_ABI_CWindows_CFoundation_CPoint __x_ABI_CWindows_CFoundation_CPoint;
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_HSTRING;
 
+typedef struct __FIVectorView_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_HSTRING* This,
+        UINT32 index,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_HSTRING* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_HSTRING* This,
+        HSTRING value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_HSTRING* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        HSTRING* items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIVectorView_1_HSTRINGVtbl;
+
+interface __FIVectorView_1_HSTRING
+{
+    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVectorView_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVectorView_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVectorView_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVectorView_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVectorView_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVectorView_1_HSTRING_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVectorView_1_HSTRING_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVectorView_1_HSTRING_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVectorView_1_HSTRING_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
+
+#if !defined(____FIVectorView_1_UINT32_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_UINT32_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_UINT32 __FIVectorView_1_UINT32;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_UINT32;
+
+typedef struct __FIVectorView_1_UINT32Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_UINT32* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_UINT32* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_UINT32* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_UINT32* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_UINT32* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_UINT32* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_UINT32* This,
+        UINT32 index,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_UINT32* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_UINT32* This,
+        UINT32 value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_UINT32* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        UINT32* items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIVectorView_1_UINT32Vtbl;
+
+interface __FIVectorView_1_UINT32
+{
+    CONST_VTBL struct __FIVectorView_1_UINT32Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVectorView_1_UINT32_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVectorView_1_UINT32_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVectorView_1_UINT32_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVectorView_1_UINT32_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVectorView_1_UINT32_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVectorView_1_UINT32_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVectorView_1_UINT32_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVectorView_1_UINT32_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVectorView_1_UINT32_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVectorView_1_UINT32_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVectorView_1_UINT32_INTERFACE_DEFINED__
+
+#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+#if !defined(____FIVectorView_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CFoundation__CPoint __FIVectorView_1_Windows__CFoundation__CPoint;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CFoundation__CPoint;
+
+typedef struct __FIVectorView_1_Windows__CFoundation__CPointVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CFoundation__CPoint* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CFoundation__CPoint* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CFoundation__CPoint* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CFoundation__CPoint* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CFoundation__CPoint* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CFoundation__CPoint* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CFoundation__CPoint* This,
+        UINT32 index,
+        struct __x_ABI_CWindows_CFoundation_CPoint* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CFoundation__CPoint* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CFoundation__CPoint* This,
+        struct __x_ABI_CWindows_CFoundation_CPoint value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CFoundation__CPoint* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        struct __x_ABI_CWindows_CFoundation_CPoint* items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIVectorView_1_Windows__CFoundation__CPointVtbl;
+
+interface __FIVectorView_1_Windows__CFoundation__CPoint
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CFoundation__CPointVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVectorView_1_Windows__CFoundation__CPoint_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVectorView_1_Windows__CFoundation__CPoint_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode;
+
+typedef struct __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        UINT32 index,
+        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl;
+
+interface __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNodeVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 typedef struct __x_ABI_CWindows_CFoundation_CRect __x_ABI_CWindows_CFoundation_CRect;
 
-
-
-
-
-
-
-
-
-
 typedef enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisDrawingKind __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisDrawingKind;
-
 
 typedef enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisNodeKind __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisNodeKind;
 
-
 typedef enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStatus __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStatus;
 
-
 typedef enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStrokeKind __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStrokeKind;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -3816,11 +3111,8 @@ typedef enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStrokeKin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisDrawingKind
 {
     InkAnalysisDrawingKind_Drawing = 0,
@@ -3841,18 +3133,14 @@ enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisDrawingKind
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Struct Windows.UI.Input.Inking.Analysis.InkAnalysisNodeKind
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisNodeKind
 {
     InkAnalysisNodeKind_UnclassifiedInk = 0,
@@ -3867,18 +3155,14 @@ enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisNodeKind
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Struct Windows.UI.Input.Inking.Analysis.InkAnalysisStatus
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStatus
 {
     InkAnalysisStatus_Updated = 0,
@@ -3886,18 +3170,14 @@ enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStatus
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Struct Windows.UI.Input.Inking.Analysis.InkAnalysisStrokeKind
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStrokeKind
 {
     InkAnalysisStrokeKind_Auto = 0,
@@ -3906,103 +3186,77 @@ enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStrokeKind
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Interface Windows.UI.Input.Inking.Analysis.IInkAnalysisInkBullet
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkBullet[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisInkBullet";
-/* [object, uuid("EE049368-6110-4136-95F9-EE809FC20030"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBulletVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RecognizedText)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet* This,
+        HSTRING* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecognizedText )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBulletVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBulletVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBulletVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_get_RecognizedText(This,value) \
-    ( (This)->lpVtbl->get_RecognizedText(This,value) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_get_RecognizedText(This, value) \
+    ((This)->lpVtbl->get_RecognizedText(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkBullet_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4010,110 +3264,81 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkDrawing[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing";
-/* [object, uuid("6A85ED1F-1FE4-4E15-898C-8E112377E021"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawingVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_DrawingKind)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing* This,
+        enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisDrawingKind* value);
+    HRESULT (STDMETHODCALLTYPE* get_Center)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing* This,
+        struct __x_ABI_CWindows_CFoundation_CPoint* value);
+    HRESULT (STDMETHODCALLTYPE* get_Points)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing* This,
+        __FIVectorView_1_Windows__CFoundation__CPoint** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DrawingKind )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisDrawingKind * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Center )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CPoint * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Points )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CFoundation__CPoint * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawingVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawingVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawingVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_get_DrawingKind(This,value) \
-    ( (This)->lpVtbl->get_DrawingKind(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_get_DrawingKind(This, value) \
+    ((This)->lpVtbl->get_DrawingKind(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_get_Center(This,value) \
-    ( (This)->lpVtbl->get_Center(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_get_Center(This, value) \
+    ((This)->lpVtbl->get_Center(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_get_Points(This,value) \
-    ( (This)->lpVtbl->get_Points(This,value) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_get_Points(This, value) \
+    ((This)->lpVtbl->get_Points(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkDrawing_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4121,103 +3346,76 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisInkWord[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisInkWord";
-/* [object, uuid("4BD228AD-83AF-4034-8F3B-F8687DFFF436"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWordVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RecognizedText)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_TextAlternates)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord* This,
+        __FIVectorView_1_HSTRING** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecognizedText )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TextAlternates )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWordVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWordVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWordVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_get_RecognizedText(This,value) \
-    ( (This)->lpVtbl->get_RecognizedText(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_get_RecognizedText(This, value) \
+    ((This)->lpVtbl->get_RecognizedText(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_get_TextAlternates(This,value) \
-    ( (This)->lpVtbl->get_TextAlternates(This,value) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_get_TextAlternates(This, value) \
+    ((This)->lpVtbl->get_TextAlternates(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisInkWord_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4225,103 +3423,76 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisLine
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisLine[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisLine";
-/* [object, uuid("A06D048D-2B8D-4754-AD5A-D0871193A956"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLineVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RecognizedText)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_IndentLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine* This,
+        INT32* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecognizedText )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IndentLevel )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine * This,
-        /* [retval, out] */__RPC__out INT32 * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLineVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLineVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLineVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_get_RecognizedText(This,value) \
-    ( (This)->lpVtbl->get_RecognizedText(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_get_RecognizedText(This, value) \
+    ((This)->lpVtbl->get_RecognizedText(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_get_IndentLevel(This,value) \
-    ( (This)->lpVtbl->get_IndentLevel(This,value) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_get_IndentLevel(This, value) \
+    ((This)->lpVtbl->get_IndentLevel(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisLine_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4329,96 +3500,71 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisListItem
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisListItem[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisListItem";
-/* [object, uuid("B4E3C23F-C4C3-4C3A-A1A6-9D85547EE586"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItemVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RecognizedText)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem* This,
+        HSTRING* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecognizedText )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItemVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItemVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItemVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_get_RecognizedText(This,value) \
-    ( (This)->lpVtbl->get_RecognizedText(This,value) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_get_RecognizedText(This, value) \
+    ((This)->lpVtbl->get_RecognizedText(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisListItem_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4426,131 +3572,96 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisNode[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisNode";
-/* [object, uuid("30831F05-5F64-4A2C-BA37-4F4887879574"), contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNodeVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Id)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        UINT32* value);
+    HRESULT (STDMETHODCALLTYPE* get_Kind)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisNodeKind* value);
+    HRESULT (STDMETHODCALLTYPE* get_BoundingRect)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        struct __x_ABI_CWindows_CFoundation_CRect* value);
+    HRESULT (STDMETHODCALLTYPE* get_RotatedBoundingRect)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        __FIVectorView_1_Windows__CFoundation__CPoint** value);
+    HRESULT (STDMETHODCALLTYPE* get_Children)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode** value);
+    HRESULT (STDMETHODCALLTYPE* get_Parent)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode** value);
+    HRESULT (STDMETHODCALLTYPE* GetStrokeIds)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode* This,
+        __FIVectorView_1_UINT32** strokeIds);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Id )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-        /* [retval, out] */__RPC__out UINT32 * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Kind )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisNodeKind * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_BoundingRect )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CRect * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RotatedBoundingRect )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CFoundation__CPoint * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Children )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Parent )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetStrokeIds )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_UINT32 * * strokeIds
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNodeVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNodeVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNodeVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_Id(This,value) \
-    ( (This)->lpVtbl->get_Id(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_Id(This, value) \
+    ((This)->lpVtbl->get_Id(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_Kind(This,value) \
-    ( (This)->lpVtbl->get_Kind(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_Kind(This, value) \
+    ((This)->lpVtbl->get_Kind(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_BoundingRect(This,value) \
-    ( (This)->lpVtbl->get_BoundingRect(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_BoundingRect(This, value) \
+    ((This)->lpVtbl->get_BoundingRect(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_RotatedBoundingRect(This,value) \
-    ( (This)->lpVtbl->get_RotatedBoundingRect(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_RotatedBoundingRect(This, value) \
+    ((This)->lpVtbl->get_RotatedBoundingRect(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_Children(This,value) \
-    ( (This)->lpVtbl->get_Children(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_Children(This, value) \
+    ((This)->lpVtbl->get_Children(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_Parent(This,value) \
-    ( (This)->lpVtbl->get_Parent(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_get_Parent(This, value) \
+    ((This)->lpVtbl->get_Parent(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_GetStrokeIds(This,strokeIds) \
-    ( (This)->lpVtbl->GetStrokeIds(This,strokeIds) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_GetStrokeIds(This, strokeIds) \
+    ((This)->lpVtbl->GetStrokeIds(This, strokeIds))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisNode_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4558,96 +3669,71 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisParagraph[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisParagraph";
-/* [object, uuid("D9AD045C-0CD1-4DD4-A68B-EB1F12B3D727"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraphVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RecognizedText)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph* This,
+        HSTRING* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecognizedText )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraphVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraphVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraphVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_get_RecognizedText(This,value) \
-    ( (This)->lpVtbl->get_RecognizedText(This,value) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_get_RecognizedText(This, value) \
+    ((This)->lpVtbl->get_RecognizedText(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisParagraph_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4655,92 +3741,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisResult[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisResult";
-/* [object, uuid("8948BA79-A243-4AA3-A294-1F98BD0FF580"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Status)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult* This,
+        enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStatus* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Status )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStatus * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResultVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResultVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_get_Status(This,value) \
-    ( (This)->lpVtbl->get_Status(This,value) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_get_Status(This, value) \
+    ((This)->lpVtbl->get_Status(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4748,104 +3810,77 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisRoot
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisRoot[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisRoot";
-/* [object, uuid("3FB6A3C4-2FDE-4061-8502-A90F32545B84"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRootVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RecognizedText)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* FindNodes)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot* This,
+        enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisNodeKind nodeKind,
+        __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode** result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecognizedText )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *FindNodes )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot * This,
-        /* [in] */__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisNodeKind nodeKind,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CUI__CInput__CInking__CAnalysis__CIInkAnalysisNode * * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRootVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRootVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRootVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_get_RecognizedText(This,value) \
-    ( (This)->lpVtbl->get_RecognizedText(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_get_RecognizedText(This, value) \
+    ((This)->lpVtbl->get_RecognizedText(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_FindNodes(This,nodeKind,result) \
-    ( (This)->lpVtbl->FindNodes(This,nodeKind,result) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_FindNodes(This, nodeKind, result) \
+    ((This)->lpVtbl->FindNodes(This, nodeKind, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4853,96 +3888,71 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion
- *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.UI.Input.Inking.Analysis.IInkAnalysisNode
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalysisWritingRegion[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalysisWritingRegion";
-/* [object, uuid("DD6D6231-BD16-4663-B5AE-941D3043EF5B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegionVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RecognizedText)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion* This,
+        HSTRING* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecognizedText )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegionVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegionVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegionVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_get_RecognizedText(This,value) \
-    ( (This)->lpVtbl->get_RecognizedText(This,value) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_get_RecognizedText(This, value) \
+    ((This)->lpVtbl->get_RecognizedText(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisWritingRegion_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4950,155 +3960,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalys
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.Input.Inking.Analysis.InkAnalyzer
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalyzer[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalyzer";
-/* [object, uuid("F12B8F95-0866-4DC5-8C77-F88614DFE38C"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_AnalysisRoot)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot** value);
+    HRESULT (STDMETHODCALLTYPE* get_IsAnalyzing)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* AddDataForStroke)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke* stroke);
+    HRESULT (STDMETHODCALLTYPE* AddDataForStrokes)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke* strokes);
+    HRESULT (STDMETHODCALLTYPE* ClearDataForAllStrokes)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This);
+    HRESULT (STDMETHODCALLTYPE* RemoveDataForStroke)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        UINT32 strokeId);
+    HRESULT (STDMETHODCALLTYPE* RemoveDataForStrokes)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        __FIIterable_1_UINT32* strokeIds);
+    HRESULT (STDMETHODCALLTYPE* ReplaceDataForStroke)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke* stroke);
+    HRESULT (STDMETHODCALLTYPE* SetStrokeDataKind)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        UINT32 strokeId,
+        enum __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStrokeKind strokeKind);
+    HRESULT (STDMETHODCALLTYPE* AnalyzeAsync)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer* This,
+        __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult** result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_AnalysisRoot )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalysisRoot * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsAnalyzing )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *AddDataForStroke )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke * stroke
-        );
-    HRESULT ( STDMETHODCALLTYPE *AddDataForStrokes )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-        /* [in] */__RPC__in_opt __FIIterable_1_Windows__CUI__CInput__CInking__CInkStroke * strokes
-        );
-    HRESULT ( STDMETHODCALLTYPE *ClearDataForAllStrokes )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This
-        );
-    HRESULT ( STDMETHODCALLTYPE *RemoveDataForStroke )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-        /* [in] */UINT32 strokeId
-        );
-    HRESULT ( STDMETHODCALLTYPE *RemoveDataForStrokes )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-        /* [in] */__RPC__in_opt __FIIterable_1_UINT32 * strokeIds
-        );
-    HRESULT ( STDMETHODCALLTYPE *ReplaceDataForStroke )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CInput_CInking_CIInkStroke * stroke
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetStrokeDataKind )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-        /* [in] */UINT32 strokeId,
-        /* [in] */__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CInkAnalysisStrokeKind strokeKind
-        );
-    HRESULT ( STDMETHODCALLTYPE *AnalyzeAsync )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CUI__CInput__CInking__CAnalysis__CInkAnalysisResult * * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_get_AnalysisRoot(This,value) \
-    ( (This)->lpVtbl->get_AnalysisRoot(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_get_AnalysisRoot(This, value) \
+    ((This)->lpVtbl->get_AnalysisRoot(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_get_IsAnalyzing(This,value) \
-    ( (This)->lpVtbl->get_IsAnalyzing(This,value) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_get_IsAnalyzing(This, value) \
+    ((This)->lpVtbl->get_IsAnalyzing(This, value))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_AddDataForStroke(This,stroke) \
-    ( (This)->lpVtbl->AddDataForStroke(This,stroke) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_AddDataForStroke(This, stroke) \
+    ((This)->lpVtbl->AddDataForStroke(This, stroke))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_AddDataForStrokes(This,strokes) \
-    ( (This)->lpVtbl->AddDataForStrokes(This,strokes) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_AddDataForStrokes(This, strokes) \
+    ((This)->lpVtbl->AddDataForStrokes(This, strokes))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_ClearDataForAllStrokes(This) \
-    ( (This)->lpVtbl->ClearDataForAllStrokes(This) )
+    ((This)->lpVtbl->ClearDataForAllStrokes(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_RemoveDataForStroke(This,strokeId) \
-    ( (This)->lpVtbl->RemoveDataForStroke(This,strokeId) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_RemoveDataForStroke(This, strokeId) \
+    ((This)->lpVtbl->RemoveDataForStroke(This, strokeId))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_RemoveDataForStrokes(This,strokeIds) \
-    ( (This)->lpVtbl->RemoveDataForStrokes(This,strokeIds) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_RemoveDataForStrokes(This, strokeIds) \
+    ((This)->lpVtbl->RemoveDataForStrokes(This, strokeIds))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_ReplaceDataForStroke(This,stroke) \
-    ( (This)->lpVtbl->ReplaceDataForStroke(This,stroke) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_ReplaceDataForStroke(This, stroke) \
+    ((This)->lpVtbl->ReplaceDataForStroke(This, stroke))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_SetStrokeDataKind(This,strokeId,strokeKind) \
-    ( (This)->lpVtbl->SetStrokeDataKind(This,strokeId,strokeKind) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_SetStrokeDataKind(This, strokeId, strokeKind) \
+    ((This)->lpVtbl->SetStrokeDataKind(This, strokeId, strokeKind))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_AnalyzeAsync(This,result) \
-    ( (This)->lpVtbl->AnalyzeAsync(This,result) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_AnalyzeAsync(This, result) \
+    ((This)->lpVtbl->AnalyzeAsync(This, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -5106,96 +4074,72 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyz
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Input_Inking_Analysis_IInkAnalyzerFactory[] = L"Windows.UI.Input.Inking.Analysis.IInkAnalyzerFactory";
-/* [object, uuid("29138686-1963-49D8-9589-E14384C769E3"), contract] */
 typedef struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactoryVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateAnalyzer)(__x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory* This,
+        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer** result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *CreateAnalyzer )(
-        __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzer * * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactoryVtbl;
 
 interface __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactoryVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactoryVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_CreateAnalyzer(This,result) \
-    ( (This)->lpVtbl->CreateAnalyzer(This,result) )
-
+#define __x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_CreateAnalyzer(This, result) \
+    ((This)->lpVtbl->CreateAnalyzer(This, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyzerFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisInkBullet ** Default Interface **
@@ -5207,20 +4151,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CInput_CInking_CAnalysis_CIInkAnalyz
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkBullet_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkBullet_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisInkBullet[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkBullet";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisInkDrawing ** Default Interface **
@@ -5232,20 +4173,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkDrawing_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkDrawing_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisInkDrawing[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkDrawing";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisInkWord ** Default Interface **
@@ -5257,20 +4195,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkWord_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisInkWord_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisInkWord[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisInkWord";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisLine
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisLine ** Default Interface **
@@ -5282,20 +4217,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisLine_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisLine_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisLine[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisLine";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisListItem
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisListItem ** Default Interface **
@@ -5307,20 +4239,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisListItem_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisListItem_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisListItem[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisListItem";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisNode
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisNode ** Default Interface **
@@ -5331,20 +4260,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisNode_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisNode_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisNode[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisNode";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisParagraph ** Default Interface **
@@ -5356,20 +4282,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisParagraph_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisParagraph_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisParagraph[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisParagraph";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisResult ** Default Interface **
@@ -5378,20 +4301,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisResult_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisResult[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisRoot
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisRoot ** Default Interface **
@@ -5403,20 +4323,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisRoot_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisRoot_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisRoot[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisRoot";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.UI.Input.Inking.Analysis.IInkAnalysisWritingRegion ** Default Interface **
@@ -5428,20 +4345,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisWritingRegion_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalysisWritingRegion_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalysisWritingRegion[] = L"Windows.UI.Input.Inking.Analysis.InkAnalysisWritingRegion";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-
 /*
  *
  * Class Windows.UI.Input.Inking.Analysis.InkAnalyzer
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -5453,17 +4367,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalyzer_DEFINED
 #define RUNTIMECLASS_Windows_UI_Input_Inking_Analysis_InkAnalyzer_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Input_Inking_Analysis_InkAnalyzer[] = L"Windows.UI.Input.Inking.Analysis.InkAnalyzer";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

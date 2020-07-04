@@ -1089,7 +1089,7 @@ PDH_FUNCTION
 PdhFormatFromRawValue(
     _In_  DWORD                   dwCounterType,
     _In_  DWORD                   dwFormat,
-    _In_  LONGLONG              * pTimeBase,
+    _In_opt_ LONGLONG*            pTimeBase,
     _In_  PPDH_RAW_COUNTER        pRawValue1,
     _In_  PPDH_RAW_COUNTER        pRawValue2,
     _Out_ PPDH_FMT_COUNTERVALUE   pFmtValue

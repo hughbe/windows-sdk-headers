@@ -98,7 +98,7 @@ namespace Windows
                 [uuid(2831987E-1D82-4D38-B7B7-EFD11C7BC3D1)]
                 interface ICompositionDebugSettings : IInspectable
                 {
-                    [propget] HRESULT HeatMaps([out] [retval] Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps** result);
+                    [propget] HRESULT HeatMaps([out] [retval] Windows.UI.Composition.Diagnostics.CompositionDebugHeatMaps** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -111,7 +111,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)]
                 [marshaling_behavior(agile)]
-                [threading(both)]
                 runtimeclass CompositionDebugHeatMaps
                 {
                     [default] interface Windows.UI.Composition.Diagnostics.ICompositionDebugHeatMaps;

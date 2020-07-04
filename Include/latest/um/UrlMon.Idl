@@ -443,6 +443,7 @@ cpp_quote("#define INET_E_HSTS_CERTIFICATE_ERROR                _HRESULT_TYPEDEF
 cpp_quote("#define INET_E_RESERVED_2                            _HRESULT_TYPEDEF_(0x800C001FL)      ")
 cpp_quote("#define INET_E_RESERVED_3                            _HRESULT_TYPEDEF_(0x800C0020L)      ")
 cpp_quote("#define INET_E_RESERVED_4                            _HRESULT_TYPEDEF_(0x800C0021L)      ")
+cpp_quote("#define INET_E_RESERVED_5                            _HRESULT_TYPEDEF_(0x800C0022L)      ")
 cpp_quote("#define INET_E_ERROR_FIRST                           _HRESULT_TYPEDEF_(0x800C0002L)      ")
 
 // User declined download of component

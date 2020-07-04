@@ -1287,12 +1287,6 @@ typedef SECURITY_STATUS
 (SEC_ENTRY * FREE_CREDENTIALS_HANDLE_FN)(
     PCredHandle );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 KSECDDDECLSPEC
 SECURITY_STATUS SEC_ENTRY
 AddCredentialsW(
@@ -1358,7 +1352,7 @@ typedef SECURITY_STATUS
 #define ADD_CREDENTIALS_FN ADD_CREDENTIALS_FN_A
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1532,8 +1526,8 @@ SECURITY_STATUS SspiDeleteSecurityContextAsync(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 ////////////////////////////////////////////////////////////////////////
 ///
@@ -1603,11 +1597,6 @@ typedef SECURITY_STATUS
 
 #endif // ISSP_MODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 ////////////////////////////////////////////////////////////////////////
 ///
@@ -1724,12 +1713,6 @@ typedef SECURITY_STATUS
     unsigned long *,
     PTimeStamp);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 SECURITY_STATUS SEC_ENTRY
 CompleteAuthToken(
     _In_ PCtxtHandle phContext,              // Context to complete
@@ -1775,12 +1758,6 @@ typedef SECURITY_STATUS
 (SEC_ENTRY * QUERY_SECURITY_CONTEXT_TOKEN_FN)(
     PCtxtHandle, void * *);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 KSECDDDECLSPEC
 SECURITY_STATUS SEC_ENTRY
 DeleteSecurityContext(
@@ -1790,12 +1767,6 @@ DeleteSecurityContext(
 typedef SECURITY_STATUS
 (SEC_ENTRY * DELETE_SECURITY_CONTEXT_FN)(
     PCtxtHandle);
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 KSECDDDECLSPEC
 SECURITY_STATUS SEC_ENTRY
@@ -1807,13 +1778,6 @@ ApplyControlToken(
 typedef SECURITY_STATUS
 (SEC_ENTRY * APPLY_CONTROL_TOKEN_FN)(
     PCtxtHandle, PSecBufferDesc);
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 
 KSECDDDECLSPEC
 SECURITY_STATUS SEC_ENTRY
@@ -2067,11 +2031,6 @@ typedef SECURITY_STATUS
 
 // end_ntifs
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 // begin_ntifs
 ///////////////////////////////////////////////////////////////////
@@ -2113,12 +2072,6 @@ typedef SECURITY_STATUS
     unsigned long,
     unsigned long *);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 // This only exists win Win2k3 and Greater
 #define SECQOP_WRAP_NO_ENCRYPT      0x80000001
 #define SECQOP_WRAP_OOB_DATA        0x40000000
@@ -2155,12 +2108,6 @@ typedef SECURITY_STATUS
 ////    Misc.
 ////
 ///////////////////////////////////////////////////////////////////////////
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 KSECDDDECLSPEC
 SECURITY_STATUS SEC_ENTRY
@@ -2238,7 +2185,7 @@ typedef SECURITY_STATUS
 #  define QUERY_SECURITY_PACKAGE_INFO_FN QUERY_SECURITY_PACKAGE_INFO_FN_A
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -2985,12 +2932,16 @@ typedef union _SEC_WINNT_AUTH_IDENTITY_INFO {
 #define SEC_WINNT_AUTH_IDENTITY_FLAGS_PROCESS_ENCRYPTED 0x10
 
 // the credential structure is protected by local system via
-// RtlEncryptMemory(OptionFlags=IOCTL_KSEC_ENCRYPT_MEMORY_SAME_LOGON)
+// RtlEncryptMemory(OptionFlags=RTL_ENCRYPT_OPTION_SAME_LOGON)
 #define SEC_WINNT_AUTH_IDENTITY_FLAGS_SYSTEM_PROTECTED  0x20
 
 // the credential structure is encrypted by a non-system context
-// RtlEncryptMemory(OptionFlags=IOCTL_KSEC_ENCRYPT_MEMORY_SAME_LOGON)
+// RtlEncryptMemory(OptionFlags=RTL_ENCRYPT_OPTION_SAME_LOGON)
 #define SEC_WINNT_AUTH_IDENTITY_FLAGS_USER_PROTECTED    0x40
+
+// the credential structure is encrypted with
+// RtlEncryptMemory(OptionFlags=RTL_ENCRYPT_OPTION_FOR_SYSTEM)
+#define SEC_WINNT_AUTH_IDENTITY_FLAGS_SYSTEM_ENCRYPTED  0x80
 
 #define SEC_WINNT_AUTH_IDENTITY_FLAGS_RESERVED       0x10000
 #define SEC_WINNT_AUTH_IDENTITY_FLAGS_NULL_USER      0x20000
@@ -3389,6 +3340,7 @@ SspiPrepareForCredWrite(
 
 #define SEC_WINNT_AUTH_IDENTITY_ENCRYPT_SAME_LOGON        0x1
 #define SEC_WINNT_AUTH_IDENTITY_ENCRYPT_SAME_PROCESS      0x2
+#define SEC_WINNT_AUTH_IDENTITY_ENCRYPT_FOR_SYSTEM        0x4
 
 SECURITY_STATUS
 SEC_ENTRY

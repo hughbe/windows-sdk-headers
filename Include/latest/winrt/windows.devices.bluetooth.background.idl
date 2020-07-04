@@ -118,6 +118,8 @@ namespace Windows
 
                 interface IBluetoothLEAdvertisementPublisherTriggerDetails;
 
+                interface IBluetoothLEAdvertisementPublisherTriggerDetails2;
+
                 interface IBluetoothLEAdvertisementWatcherTriggerDetails;
 
                 interface IGattCharacteristicNotificationTriggerDetails;
@@ -204,6 +206,14 @@ namespace Windows
                 {
                     [propget] HRESULT Status([out] [retval] Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementPublisherStatus* value);
                     [propget] HRESULT Error([out] [retval] Windows.Devices.Bluetooth.BluetoothError* value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                [exclusiveto(Windows.Devices.Bluetooth.Background.BluetoothLEAdvertisementPublisherTriggerDetails)]
+                [uuid(D4A3D025-C601-42D6-9829-4CCB3F5CD77F)]
+                interface IBluetoothLEAdvertisementPublisherTriggerDetails2 : IInspectable
+                {
+                    [propget] HRESULT SelectedTransmitPowerLevelInDBm([out] [retval] Windows.Foundation.IReference<INT16>** value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -299,6 +309,7 @@ namespace Windows
                 runtimeclass BluetoothLEAdvertisementPublisherTriggerDetails
                 {
                     [default] interface Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails;
+                    [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Devices.Bluetooth.Background.IBluetoothLEAdvertisementPublisherTriggerDetails2;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]

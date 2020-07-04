@@ -25,6 +25,8 @@ Revision History:
 
 --*/
 
+//@[contract("wdbgexts"), comment("MVI_tracked - https://osgwiki.com/wiki/Microsoft_Virus_Initiative")];
+
 #ifndef _WDBGEXTS_
 #define _WDBGEXTS_
 
@@ -885,12 +887,13 @@ typedef struct _WDBGEXTS_MODULE_IN_RANGE {
 // reduce compatibility problems.
 //
 
-#define DBGKD_VERS_FLAG_MP         0x0001   // kernel is MP built
-#define DBGKD_VERS_FLAG_DATA       0x0002   // DebuggerDataList is valid
-#define DBGKD_VERS_FLAG_PTR64      0x0004   // native pointers are 64 bits
-#define DBGKD_VERS_FLAG_NOMM       0x0008   // No MM - don't decode PTEs
-#define DBGKD_VERS_FLAG_HSS        0x0010   // hardware stepping support
-#define DBGKD_VERS_FLAG_PARTITIONS 0x0020   // multiple OS partitions exist
+#define DBGKD_VERS_FLAG_MP          0x0001   // kernel is MP built
+#define DBGKD_VERS_FLAG_DATA        0x0002   // DebuggerDataList is valid
+#define DBGKD_VERS_FLAG_PTR64       0x0004   // native pointers are 64 bits
+#define DBGKD_VERS_FLAG_NOMM        0x0008   // No MM - don't decode PTEs
+#define DBGKD_VERS_FLAG_HSS         0x0010   // hardware stepping support
+#define DBGKD_VERS_FLAG_PARTITIONS  0x0020   // multiple OS partitions exist
+#define DBGKD_VERS_FLAG_HAL_IN_NTOS 0x0040   // HAL is linked into NTOS kernel
 
 #define KDBG_TAG    'GBDK'
 

@@ -10,6 +10,7 @@ import "AsyncInfo.idl";
 import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
+import "Windows.Devices.Enumeration.idl";
 import "Windows.Graphics.DirectX.Direct3D11.idl";
 import "Windows.Graphics.Imaging.idl";
 import "Windows.Media.idl";
@@ -20,11 +21,23 @@ import "Windows.Media.Devices.idl";
 import "Windows.Media.Effects.idl";
 import "Windows.Media.MediaProperties.idl";
 import "Windows.Security.Authentication.Web.idl";
+import "Windows.Security.Credentials.idl";
 import "Windows.Storage.idl";
 import "Windows.Storage.Streams.idl";
 import "Windows.System.idl";
+import "Windows.UI.WindowManagement.idl";
 
 // Forward Declare
+namespace Windows
+{
+    namespace Devices
+    {
+        namespace Enumeration
+        {
+            typedef enum Panel Panel;
+        }
+    }
+}
 namespace Windows
 {
     namespace Foundation
@@ -221,6 +234,16 @@ namespace Windows
 }
 namespace Windows
 {
+    namespace Security
+    {
+        namespace Credentials
+        {
+            runtimeclass PasswordCredential;
+        }
+    }
+}
+namespace Windows
+{
     namespace Storage
     {
         interface IStorageFile;
@@ -261,6 +284,16 @@ namespace Windows
         typedef enum VirtualKey VirtualKey;
 
         typedef enum VirtualKeyModifiers VirtualKeyModifiers;
+    }
+}
+namespace Windows
+{
+    namespace UI
+    {
+        namespace WindowManagement
+        {
+            runtimeclass DisplayRegion;
+        }
     }
 }
 namespace Windows
@@ -535,6 +568,8 @@ namespace Windows
 
             interface IMediaCapture6;
 
+            interface IMediaCapture7;
+
             interface IMediaCaptureDeviceExclusiveControlStatusChangedEventArgs;
 
             interface IMediaCaptureFailedEventArgs;
@@ -553,7 +588,11 @@ namespace Windows
 
             interface IMediaCaptureInitializationSettings6;
 
+            interface IMediaCaptureInitializationSettings7;
+
             interface IMediaCapturePauseResult;
+
+            interface IMediaCaptureRelativePanelWatcher;
 
             interface IMediaCaptureSettings;
 
@@ -709,6 +748,8 @@ namespace Windows
 
             runtimeclass MediaCapturePauseResult;
 
+            runtimeclass MediaCaptureRelativePanelWatcher;
+
             runtimeclass MediaCaptureSettings;
 
             runtimeclass MediaCaptureStopResult;
@@ -834,6 +875,8 @@ namespace Windows
                 interface Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCapture*, Windows.Media.Capture.MediaCaptureFocusChangedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCapture*, Windows.Media.Capture.PhotoConfirmationCapturedEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCaptureRelativePanelWatcher*, IInspectable*>;
             }
         }
     }
@@ -2365,6 +2408,14 @@ namespace Windows
                 HRESULT CreateMultiSourceFrameReaderAsync([in] Windows.Foundation.Collections.IIterable<Windows.Media.Capture.Frames.MediaFrameSource*>* inputSources, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Media.Capture.Frames.MultiSourceMediaFrameReader*>** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.Capture.MediaCapture)]
+            [uuid(9169F102-8888-541A-95BC-24E4D462542A)]
+            interface IMediaCapture7 : IInspectable
+            {
+                HRESULT CreateRelativePanelWatcher([in] Windows.Media.Capture.StreamingCaptureMode captureMode, [in] Windows.UI.WindowManagement.DisplayRegion* displayRegion, [out] [retval] Windows.Media.Capture.MediaCaptureRelativePanelWatcher** result);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
             [exclusiveto(Windows.Media.Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs)]
             [uuid(9D2F920D-A588-43C6-89D6-5AD322AF006A)]
@@ -2465,6 +2516,17 @@ namespace Windows
                 [propput] HRESULT AlwaysPlaySystemShutterSound([in] boolean value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.Capture.MediaCaptureInitializationSettings)]
+            [uuid(41546967-F58A-5D82-9EF4-ED572FB5E34E)]
+            interface IMediaCaptureInitializationSettings7 : IInspectable
+            {
+                [propget] HRESULT DeviceUriPasswordCredential([out] [retval] Windows.Security.Credentials.PasswordCredential** value);
+                [propput] HRESULT DeviceUriPasswordCredential([in] Windows.Security.Credentials.PasswordCredential* value);
+                [propget] HRESULT DeviceUri([out] [retval] Windows.Foundation.Uri** value);
+                [propput] HRESULT DeviceUri([in] Windows.Foundation.Uri* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
             [exclusiveto(Windows.Media.Capture.MediaCapturePauseResult)]
             [uuid(AEC47CA3-4477-4B04-A06F-2C1C5182FE9D)]
@@ -2472,6 +2534,18 @@ namespace Windows
             {
                 [propget] HRESULT LastFrame([out] [retval] Windows.Media.VideoFrame** value);
                 [propget] HRESULT RecordDuration([out] [retval] Windows.Foundation.TimeSpan* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.Capture.MediaCaptureRelativePanelWatcher)]
+            [uuid(7D896566-04BE-5B89-B30E-BD34A9F12DB0)]
+            interface IMediaCaptureRelativePanelWatcher : IInspectable
+            {
+                [propget] HRESULT RelativePanel([out] [retval] Windows.Devices.Enumeration.Panel* value);
+                [eventadd] HRESULT Changed([in] Windows.Foundation.TypedEventHandler<Windows.Media.Capture.MediaCaptureRelativePanelWatcher*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT Changed([in] EventRegistrationToken token);
+                HRESULT Start();
+                HRESULT Stop();
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -3098,6 +3172,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Media.Capture.IMediaCapture4;
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.Media.Capture.IMediaCapture5;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.Media.Capture.IMediaCapture6;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Media.Capture.IMediaCapture7;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
@@ -3136,6 +3211,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Media.Capture.IMediaCaptureInitializationSettings4;
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.Media.Capture.IMediaCaptureInitializationSettings5;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.Media.Capture.IMediaCaptureInitializationSettings6;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Media.Capture.IMediaCaptureInitializationSettings7;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
@@ -3144,6 +3220,14 @@ namespace Windows
             runtimeclass MediaCapturePauseResult
             {
                 [default] interface Windows.Media.Capture.IMediaCapturePauseResult;
+                interface Windows.Foundation.IClosable;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass MediaCaptureRelativePanelWatcher
+            {
+                [default] interface Windows.Media.Capture.IMediaCaptureRelativePanelWatcher;
                 interface Windows.Foundation.IClosable;
             }
 

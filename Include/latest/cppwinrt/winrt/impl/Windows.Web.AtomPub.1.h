@@ -1,55 +1,52 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Data.Xml.Dom.0.h"
-#include "winrt/impl/Windows.Foundation.0.h"
-#include "winrt/impl/Windows.Security.Credentials.0.h"
-#include "winrt/impl/Windows.Storage.Streams.0.h"
+#ifndef WINRT_Windows_Web_AtomPub_1_H
+#define WINRT_Windows_Web_AtomPub_1_H
 #include "winrt/impl/Windows.Web.Syndication.0.h"
 #include "winrt/impl/Windows.Web.AtomPub.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Web::AtomPub {
-
-struct WINRT_EBO IAtomPubClient :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IAtomPubClient>,
-    impl::require<IAtomPubClient, Windows::Web::Syndication::ISyndicationClient>
+namespace winrt::Windows::Web::AtomPub
 {
-    IAtomPubClient(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IAtomPubClientFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IAtomPubClientFactory>
-{
-    IAtomPubClientFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IResourceCollection :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IResourceCollection>,
-    impl::require<IResourceCollection, Windows::Web::Syndication::ISyndicationNode>
-{
-    IResourceCollection(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IServiceDocument :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IServiceDocument>,
-    impl::require<IServiceDocument, Windows::Web::Syndication::ISyndicationNode>
-{
-    IServiceDocument(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IWorkspace :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWorkspace>,
-    impl::require<IWorkspace, Windows::Web::Syndication::ISyndicationNode>
-{
-    IWorkspace(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IAtomPubClient :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAtomPubClient>,
+        impl::require<Windows::Web::AtomPub::IAtomPubClient, Windows::Web::Syndication::ISyndicationClient>
+    {
+        IAtomPubClient(std::nullptr_t = nullptr) noexcept {}
+        IAtomPubClient(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IAtomPubClientFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IAtomPubClientFactory>
+    {
+        IAtomPubClientFactory(std::nullptr_t = nullptr) noexcept {}
+        IAtomPubClientFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IResourceCollection :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IResourceCollection>,
+        impl::require<Windows::Web::AtomPub::IResourceCollection, Windows::Web::Syndication::ISyndicationNode>
+    {
+        IResourceCollection(std::nullptr_t = nullptr) noexcept {}
+        IResourceCollection(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IServiceDocument :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IServiceDocument>,
+        impl::require<Windows::Web::AtomPub::IServiceDocument, Windows::Web::Syndication::ISyndicationNode>
+    {
+        IServiceDocument(std::nullptr_t = nullptr) noexcept {}
+        IServiceDocument(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IWorkspace :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWorkspace>,
+        impl::require<Windows::Web::AtomPub::IWorkspace, Windows::Web::Syndication::ISyndicationNode>
+    {
+        IWorkspace(std::nullptr_t = nullptr) noexcept {}
+        IWorkspace(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

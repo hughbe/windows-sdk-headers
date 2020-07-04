@@ -11,13 +11,23 @@
 EXTERN_C_START
 
 inline
-NET_PACKET_RECEIVE_SEGMENT_COALESCENCE*
-NetExtensionGetPacketReceiveSegmentCoalescence(
+NET_PACKET_RSC *
+NetExtensionGetPacketRsc(
     NET_EXTENSION const * Extension,
     UINT32 Index
 )
 {
-    return (NET_PACKET_RECEIVE_SEGMENT_COALESCENCE *)NetExtensionGetData(Extension, Index);
+    return (NET_PACKET_RSC *)NetExtensionGetData(Extension, Index);
+}
+
+inline
+NET_PACKET_RSC_TIMESTAMP *
+NetExtensionGetPacketRscTimestamp(
+    NET_EXTENSION const * Extension,
+    UINT32 Index
+)
+{
+    return (NET_PACKET_RSC_TIMESTAMP *)NetExtensionGetData(Extension, Index);
 }
 
 EXTERN_C_END

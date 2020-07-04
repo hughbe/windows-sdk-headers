@@ -1,64 +1,61 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.ApplicationModel.DataTransfer.0.h"
-#include "winrt/impl/Windows.Foundation.0.h"
-#include "winrt/impl/Windows.Storage.Streams.0.h"
-#include "winrt/impl/Windows.System.0.h"
+#ifndef WINRT_Windows_Services_Cortana_1_H
+#define WINRT_Windows_Services_Cortana_1_H
 #include "winrt/impl/Windows.Services.Cortana.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Services::Cortana {
-
-struct WINRT_EBO ICortanaActionableInsights :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICortanaActionableInsights>
+namespace winrt::Windows::Services::Cortana
 {
-    ICortanaActionableInsights(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICortanaActionableInsightsOptions :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICortanaActionableInsightsOptions>
-{
-    ICortanaActionableInsightsOptions(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICortanaActionableInsightsStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICortanaActionableInsightsStatics>
-{
-    ICortanaActionableInsightsStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICortanaPermissionsManager :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICortanaPermissionsManager>
-{
-    ICortanaPermissionsManager(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICortanaPermissionsManagerStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICortanaPermissionsManagerStatics>
-{
-    ICortanaPermissionsManagerStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICortanaSettings :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICortanaSettings>
-{
-    ICortanaSettings(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICortanaSettingsStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICortanaSettingsStatics>
-{
-    ICortanaSettingsStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) ICortanaActionableInsights :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICortanaActionableInsights>
+    {
+        ICortanaActionableInsights(std::nullptr_t = nullptr) noexcept {}
+        ICortanaActionableInsights(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICortanaActionableInsightsOptions :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICortanaActionableInsightsOptions>
+    {
+        ICortanaActionableInsightsOptions(std::nullptr_t = nullptr) noexcept {}
+        ICortanaActionableInsightsOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICortanaActionableInsightsStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICortanaActionableInsightsStatics>
+    {
+        ICortanaActionableInsightsStatics(std::nullptr_t = nullptr) noexcept {}
+        ICortanaActionableInsightsStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICortanaPermissionsManager :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICortanaPermissionsManager>
+    {
+        ICortanaPermissionsManager(std::nullptr_t = nullptr) noexcept {}
+        ICortanaPermissionsManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICortanaPermissionsManagerStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICortanaPermissionsManagerStatics>
+    {
+        ICortanaPermissionsManagerStatics(std::nullptr_t = nullptr) noexcept {}
+        ICortanaPermissionsManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICortanaSettings :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICortanaSettings>
+    {
+        ICortanaSettings(std::nullptr_t = nullptr) noexcept {}
+        ICortanaSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICortanaSettingsStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICortanaSettingsStatics>
+    {
+        ICortanaSettingsStatics(std::nullptr_t = nullptr) noexcept {}
+        ICortanaSettingsStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

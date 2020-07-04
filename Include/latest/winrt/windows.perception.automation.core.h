@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.perception.automation.core.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,37 +87,17 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
 
 #if !defined(WINDOWS_PERCEPTION_AUTOMATION_CORE_PERCEPTIONAUTOMATIONCORECONTRACT_VERSION)
 #define WINDOWS_PERCEPTION_AUTOMATION_CORE_PERCEPTIONAUTOMATIONCORECONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_PERCEPTION_AUTOMATION_CORE_PERCEPTIONAUTOMATIONCORECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -146,12 +122,15 @@ namespace ABI {
                 } /* Core */
             } /* Automation */
         } /* Perception */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics ABI::Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics
 
 #endif // ____x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C++)
 
+// Collection interface definitions
 #ifndef ____x_ABI_CWindows_CFoundation_CIGetActivationFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIGetActivationFactory_FWD_DEFINED__
 namespace ABI {
@@ -159,22 +138,11 @@ namespace ABI {
         namespace Foundation {
             interface IGetActivationFactory;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIGetActivationFactory ABI::Windows::Foundation::IGetActivationFactory
 
 #endif // ____x_ABI_CWindows_CFoundation_CIGetActivationFactory_FWD_DEFINED__
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -182,9 +150,7 @@ namespace ABI {
  *
  * Introduced to Windows.Perception.Automation.Core.PerceptionAutomationCoreContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Perception.Automation.Core.CorePerceptionAutomation
- *
  *
  */
 #if WINDOWS_PERCEPTION_AUTOMATION_CORE_PERCEPTIONAUTOMATIONCORECONTRACT_VERSION >= 0x10000
@@ -196,35 +162,31 @@ namespace ABI {
         namespace Perception {
             namespace Automation {
                 namespace Core {
-                    /* [object, uuid("0BB04541-4CE2-4923-9A76-8187ECC59112"), exclusiveto, contract] */
-                    MIDL_INTERFACE("0BB04541-4CE2-4923-9A76-8187ECC59112")
+                    MIDL_INTERFACE("0bb04541-4ce2-4923-9a76-8187ecc59112")
                     ICorePerceptionAutomationStatics : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE SetActivationFactoryProvider(
-                            /* [in] */__RPC__in_opt ABI::Windows::Foundation::IGetActivationFactory * provider
+                            ABI::Windows::Foundation::IGetActivationFactory* provider
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_ICorePerceptionAutomationStatics=_uuidof(ICorePerceptionAutomationStatics);
-                    
+                    extern MIDL_CONST_ID IID& IID_ICorePerceptionAutomationStatics = _uuidof(ICorePerceptionAutomationStatics);
                 } /* Core */
             } /* Automation */
         } /* Perception */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_PERCEPTION_AUTOMATION_CORE_PERCEPTIONAUTOMATIONCORECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Perception.Automation.Core.CorePerceptionAutomation
  *
  * Introduced to Windows.Perception.Automation.Core.PerceptionAutomationCoreContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics interface starting with version 1.0 of the Windows.Perception.Automation.Core.PerceptionAutomationCoreContract API contract
@@ -240,10 +202,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerc
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Perception_Automation_Core_CorePerceptionAutomation[] = L"Windows.Perception.Automation.Core.CorePerceptionAutomation";
 #endif
 #endif // WINDOWS_PERCEPTION_AUTOMATION_CORE_PERCEPTIONAUTOMATIONCORECONTRACT_VERSION >= 0x10000
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -253,23 +211,15 @@ typedef interface __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptio
 
 #endif // ____x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C)
+
+// Collection interface definitions
+
 #ifndef ____x_ABI_CWindows_CFoundation_CIGetActivationFactory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIGetActivationFactory_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CFoundation_CIGetActivationFactory __x_ABI_CWindows_CFoundation_CIGetActivationFactory;
 
 #endif // ____x_ABI_CWindows_CFoundation_CIGetActivationFactory_FWD_DEFINED__
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -277,99 +227,74 @@ typedef interface __x_ABI_CWindows_CFoundation_CIGetActivationFactory __x_ABI_CW
  *
  * Introduced to Windows.Perception.Automation.Core.PerceptionAutomationCoreContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Perception.Automation.Core.CorePerceptionAutomation
- *
  *
  */
 #if WINDOWS_PERCEPTION_AUTOMATION_CORE_PERCEPTIONAUTOMATIONCORECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Perception_Automation_Core_ICorePerceptionAutomationStatics[] = L"Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics";
-/* [object, uuid("0BB04541-4CE2-4923-9A76-8187ECC59112"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* SetActivationFactoryProvider)(__x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics* This,
+        __x_ABI_CWindows_CFoundation_CIGetActivationFactory* provider);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *SetActivationFactoryProvider )(
-        __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIGetActivationFactory * provider
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStaticsVtbl;
 
 interface __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_SetActivationFactoryProvider(This,provider) \
-    ( (This)->lpVtbl->SetActivationFactoryProvider(This,provider) )
-
+#define __x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_SetActivationFactoryProvider(This, provider) \
+    ((This)->lpVtbl->SetActivationFactoryProvider(This, provider))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics;
 #endif /* !defined(____x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerceptionAutomationStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_PERCEPTION_AUTOMATION_CORE_PERCEPTIONAUTOMATIONCORECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Perception.Automation.Core.CorePerceptionAutomation
  *
  * Introduced to Windows.Perception.Automation.Core.PerceptionAutomationCoreContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Perception.Automation.Core.ICorePerceptionAutomationStatics interface starting with version 1.0 of the Windows.Perception.Automation.Core.PerceptionAutomationCoreContract API contract
@@ -385,10 +310,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CPerception_CAutomation_CCore_CICorePerc
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Perception_Automation_Core_CorePerceptionAutomation[] = L"Windows.Perception.Automation.Core.CorePerceptionAutomation";
 #endif
 #endif // WINDOWS_PERCEPTION_AUTOMATION_CORE_PERCEPTIONAUTOMATIONCORECONTRACT_VERSION >= 0x10000
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

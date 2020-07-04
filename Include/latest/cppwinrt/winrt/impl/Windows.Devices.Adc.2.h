@@ -1,35 +1,26 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Devices_Adc_2_H
+#define WINRT_Windows_Devices_Adc_2_H
 #include "winrt/impl/Windows.Devices.Adc.Provider.1.h"
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Devices.Adc.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Adc {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Adc {
-
-struct WINRT_EBO AdcChannel :
-    Windows::Devices::Adc::IAdcChannel
+namespace winrt::Windows::Devices::Adc
 {
-    AdcChannel(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AdcController :
-    Windows::Devices::Adc::IAdcController
-{
-    AdcController(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Adc::AdcController>> GetControllersAsync(Windows::Devices::Adc::Provider::IAdcProvider const& provider);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Adc::AdcController> GetDefaultAsync();
-};
-
+    struct __declspec(empty_bases) AdcChannel : Windows::Devices::Adc::IAdcChannel
+    {
+        AdcChannel(std::nullptr_t) noexcept {}
+        AdcChannel(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Adc::IAdcChannel(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AdcController : Windows::Devices::Adc::IAdcController
+    {
+        AdcController(std::nullptr_t) noexcept {}
+        AdcController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Adc::IAdcController(ptr, take_ownership_from_abi) {}
+        static auto GetControllersAsync(Windows::Devices::Adc::Provider::IAdcProvider const& provider);
+        static auto GetDefaultAsync();
+    };
 }
+#endif

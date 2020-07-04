@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.streaming.internal.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0229 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -164,11 +164,11 @@
 #endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -236,11 +236,11 @@
 #endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
 
 #if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
+#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x70000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
@@ -281,7 +281,8 @@ namespace ABI {
                 } /* Internal */
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CInternal_CIMediaRendererBrokerStatics ABI::Windows::Media::Streaming::Internal::IMediaRendererBrokerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CInternal_CIMediaRendererBrokerStatics_FWD_DEFINED__
@@ -296,7 +297,8 @@ namespace ABI {
                 class MediaRenderer;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_FWD_DEFINED__
@@ -307,7 +309,8 @@ namespace ABI {
                 interface IMediaRenderer;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer ABI::Windows::Media::Streaming::IMediaRenderer
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_FWD_DEFINED__
@@ -385,7 +388,8 @@ namespace ABI {
                 class CreateMediaRendererOperation;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 #ifndef ____x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice_FWD_DEFINED__
@@ -397,7 +401,8 @@ namespace ABI {
                 interface IBasicDevice;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice ABI::Windows::Media::Streaming::IBasicDevice
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice_FWD_DEFINED__
@@ -456,7 +461,8 @@ namespace ABI {
                 } /* Internal */
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CInternal_CIMediaRendererBrokerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CInternal_CIMediaRendererBrokerStatics_INTERFACE_DEFINED__) */

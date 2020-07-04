@@ -1,46 +1,47 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_ApplicationModel_Calls_Background_1_H
+#define WINRT_Windows_ApplicationModel_Calls_Background_1_H
 #include "winrt/impl/Windows.ApplicationModel.Calls.Background.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls::Background {
-
-struct WINRT_EBO IPhoneCallBlockedTriggerDetails :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPhoneCallBlockedTriggerDetails>
+namespace winrt::Windows::ApplicationModel::Calls::Background
 {
-    IPhoneCallBlockedTriggerDetails(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPhoneCallOriginDataRequestTriggerDetails :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPhoneCallOriginDataRequestTriggerDetails>
-{
-    IPhoneCallOriginDataRequestTriggerDetails(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPhoneIncomingCallDismissedTriggerDetails :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPhoneIncomingCallDismissedTriggerDetails>
-{
-    IPhoneIncomingCallDismissedTriggerDetails(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPhoneLineChangedTriggerDetails :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPhoneLineChangedTriggerDetails>
-{
-    IPhoneLineChangedTriggerDetails(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPhoneNewVoicemailMessageTriggerDetails :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPhoneNewVoicemailMessageTriggerDetails>
-{
-    IPhoneNewVoicemailMessageTriggerDetails(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IPhoneCallBlockedTriggerDetails :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPhoneCallBlockedTriggerDetails>
+    {
+        IPhoneCallBlockedTriggerDetails(std::nullptr_t = nullptr) noexcept {}
+        IPhoneCallBlockedTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPhoneCallOriginDataRequestTriggerDetails :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPhoneCallOriginDataRequestTriggerDetails>
+    {
+        IPhoneCallOriginDataRequestTriggerDetails(std::nullptr_t = nullptr) noexcept {}
+        IPhoneCallOriginDataRequestTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPhoneIncomingCallDismissedTriggerDetails :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPhoneIncomingCallDismissedTriggerDetails>
+    {
+        IPhoneIncomingCallDismissedTriggerDetails(std::nullptr_t = nullptr) noexcept {}
+        IPhoneIncomingCallDismissedTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPhoneLineChangedTriggerDetails :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPhoneLineChangedTriggerDetails>
+    {
+        IPhoneLineChangedTriggerDetails(std::nullptr_t = nullptr) noexcept {}
+        IPhoneLineChangedTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPhoneNewVoicemailMessageTriggerDetails :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPhoneNewVoicemailMessageTriggerDetails>
+    {
+        IPhoneNewVoicemailMessageTriggerDetails(std::nullptr_t = nullptr) noexcept {}
+        IPhoneNewVoicemailMessageTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

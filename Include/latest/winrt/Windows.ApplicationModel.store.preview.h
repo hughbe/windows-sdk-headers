@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.applicationmodel.store.preview.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,165 +87,17 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x70000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -281,7 +129,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings ABI::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_FWD_DEFINED__
@@ -297,7 +146,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics ABI::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettingsStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_FWD_DEFINED__
@@ -313,7 +163,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics ABI::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_FWD_DEFINED__
@@ -329,7 +180,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2 ABI::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics2
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_FWD_DEFINED__
@@ -345,7 +197,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 ABI::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics3
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_FWD_DEFINED__
@@ -361,7 +214,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 ABI::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics4
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_FWD_DEFINED__
@@ -377,7 +231,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 ABI::Windows::ApplicationModel::Store::Preview::IStoreConfigurationStatics5
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_FWD_DEFINED__
@@ -393,7 +248,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo ABI::Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_FWD_DEFINED__
@@ -409,7 +265,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview ABI::Windows::ApplicationModel::Store::Preview::IStorePreview
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_FWD_DEFINED__
@@ -425,7 +282,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_FWD_DEFINED__
@@ -441,7 +299,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_FWD_DEFINED__
@@ -457,7 +316,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_FWD_DEFINED__
@@ -473,7 +333,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper ABI::Windows::ApplicationModel::Store::Preview::IWebAuthenticationCoreManagerHelper
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_FWD_DEFINED__
@@ -486,358 +347,12 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    class StorePreviewProductInfo;
-                } /* Preview */
-            } /* Store */
-        } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
-#define DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("3fb16dec-73f1-5cfa-80e6-67fa232d1bef"))
-IIterator<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t;
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>
-//#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
-#define DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("a9cb4860-67d1-53c2-a621-3074b0344d49"))
-IIterable<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t;
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>
-//#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Store {
-                namespace Preview {
-                    class StorePreviewSkuInfo;
-                } /* Preview */
-            } /* Store */
-        } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
-#define DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("b6f9b421-7f54-5d26-9c37-9f9d7ac893eb"))
-IIterator<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t;
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>
-//#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
-#define DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("2c0d85d9-0df7-5de6-962e-bc8f149faf19"))
-IIterable<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t;
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>
-//#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Store {
-                namespace Preview {
-                    enum StoreSystemFeature : int;
-                } /* Preview */
-            } /* Store */
-        } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-
-#ifndef DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
-#define DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("d0455b2d-d8aa-557e-89a3-63c33e8cee99"))
-IIterator<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> : IIterator_impl<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t;
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
-//#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE */
-
-
-
-
-
-#ifndef DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
-#define DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("98a8577a-b128-5400-8d3d-58654eaaf957"))
-IIterable<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> : IIterable_impl<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t;
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
-//#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE */
-
-
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
-#define DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("fcc6add5-dc28-500f-8e24-b22d1ab56aad"))
-IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t;
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>
-//#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
-#define DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("47418723-a671-5fdc-8647-68f7d8c31416"))
-IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t;
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>
-//#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
-#ifndef DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
-#define DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("c8f90757-ebcf-5f2c-b918-6487105b0ca1"))
-IVectorView<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> : IVectorView_impl<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t;
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
-//#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE */
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Store {
-                namespace Preview {
                     class StorePreviewPurchaseResults;
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("b1ea16e7-8268-51ff-8129-dcefd493f35f"))
-IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -847,11 +362,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::P
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("9aa2af80-0dcb-5ec1-8435-0b687ed374a5"))
-IAsyncOperation<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults*>> 
+IAsyncOperation<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -859,49 +374,132 @@ IAsyncOperation<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurc
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*> __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_t;
 #define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults*>
-//#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
-#define DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("167564b0-c6f5-5143-b66f-a6f9ca69e7a2"))
-IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*> : IAsyncOperationCompletedHandler_impl<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*> 
+struct __declspec(uuid("b1ea16e7-8268-51ff-8129-dcefd493f35f"))
+IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewPurchaseResults*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>>"; 
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t;
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperationCompletedHandler<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults*> __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>*>
-//#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE */
-
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Store {
+                namespace Preview {
+                    class StorePreviewProductInfo;
+                } /* Preview */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
+#define DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("3fb16dec-73f1-5cfa-80e6-67fa232d1bef"))
+IIterator<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t;
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
+#define DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("a9cb4860-67d1-53c2-a621-3074b0344d49"))
+IIterable<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t;
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
+#define DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("fcc6add5-dc28-500f-8e24-b22d1ab56aad"))
+IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo*> __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t;
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -911,11 +509,11 @@ typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationMo
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("49c36a66-3908-51b3-8402-eb8e94c68864"))
-IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*> : IAsyncOperation_impl<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*> 
+IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*> : IAsyncOperation_impl<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -923,48 +521,134 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__C
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>*>
-//#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewProductInfo*>*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
-#define DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
+#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
+#define DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("7e7946ef-f8f0-53fd-9613-7261cb35daf4"))
-IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*> : IAsyncOperationCompletedHandler_impl<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*> 
+struct __declspec(uuid("167564b0-c6f5-5143-b66f-a6f9ca69e7a2"))
+IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*> : IAsyncOperationCompletedHandler_impl<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>>"; 
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo>>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t;
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t;
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>*>
-//#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE */
+#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Store {
+                namespace Preview {
+                    typedef enum StoreSystemFeature : int StoreSystemFeature;
+                } /* Preview */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#ifndef DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
+#define DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("d0455b2d-d8aa-557e-89a3-63c33e8cee99"))
+IIterator<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> : IIterator_impl<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t;
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
+#define DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("98a8577a-b128-5400-8d3d-58654eaaf957"))
+IIterable<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> : IIterable_impl<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t;
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
+#define DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("c8f90757-ebcf-5f2c-b918-6487105b0ca1"))
+IVectorView<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> : IVectorView_impl<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<enum ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature> __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t;
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
 #define DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
@@ -972,11 +656,11 @@ typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationMo
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("b1713163-ee1b-5290-8316-f7ebb9d53163"))
-IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*> : IAsyncOperation_impl<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*> 
+IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*> : IAsyncOperation_impl<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -984,120 +668,37 @@ IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__C
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*> __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>*>
-//#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE */
 
-
-
-
-#ifndef DEF___FIReference_1_UINT32_USE
-#define DEF___FIReference_1_UINT32_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("513ef3af-e784-5325-a91e-97c2b8111cf3"))
-IReference<UINT32> : IReference_impl<UINT32> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.IReference`1<UInt32>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IReference<UINT32> __FIReference_1_UINT32_t;
-#define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIReference_1_UINT32 ABI::Windows::Foundation::IReference<UINT32>
-//#define __FIReference_1_UINT32_t ABI::Windows::Foundation::IReference<UINT32>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIReference_1_UINT32_USE */
-
-
-
-#ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
-#define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Storage {
-            namespace Streams {
-                interface IRandomAccessStreamReference;
-            } /* Streams */
-        } /* Storage */
-    } /* Windows */} /* ABI */
-#define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
-
-#endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("60847289-ea0b-5df6-89df-f2c62cba9693"))
-IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Storage.Streams.IRandomAccessStreamReference>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE */
-
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE
-#define DEF___FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE
+#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
+#define DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("65178d50-e6a2-5d16-b244-65e9725e5a0c"))
-IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> : IAsyncOperation_impl<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> 
+struct __declspec(uuid("7e7946ef-f8f0-53fd-9613-7261cb35daf4"))
+IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*> : IAsyncOperationCompletedHandler_impl<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamReference>"; 
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StoreSystemFeature>>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t;
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
-//#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE */
-
+#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -1112,7 +713,8 @@ namespace ABI {
                 } /* Web */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
@@ -1127,43 +729,11 @@ namespace ABI {
                 } /* Web */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("deb54b22-70f2-55ab-97c0-6cbdc5ddb6f0"))
-IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*, ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -1173,11 +743,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("0a815852-7c44-5674-b3d2-fa2e4c1e46c9"))
-IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*, ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>> 
+IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*, ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -1185,30 +755,247 @@ IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::WebTokenReque
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*> __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t;
 #define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>
-//#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("deb54b22-70f2-55ab-97c0-6cbdc5ddb6f0"))
+IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*, ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequestResult*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Security.Authentication.Web.Core.WebTokenRequestResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Security::Authentication::Web::Core::WebTokenRequestResult*> __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Storage {
+            namespace Streams {
+                interface IRandomAccessStreamReference;
+            } /* Streams */
+        } /* Storage */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
+
+#endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE
+#define DEF___FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("65178d50-e6a2-5d16-b244-65e9725e5a0c"))
+IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> : IAsyncOperation_impl<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Storage.Streams.IRandomAccessStreamReference>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("60847289-ea0b-5df6-89df-f2c62cba9693"))
+IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Storage.Streams.IRandomAccessStreamReference>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Storage::Streams::IRandomAccessStreamReference*> __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Store {
+                namespace Preview {
+                    class StorePreviewSkuInfo;
+                } /* Preview */
+            } /* Store */
+        } /* ApplicationModel */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
+#define DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("b6f9b421-7f54-5d26-9c37-9f9d7ac893eb"))
+IIterator<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t;
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
+#define DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("2c0d85d9-0df7-5de6-962e-bc8f149faf19"))
+IIterable<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t;
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
+#define DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("47418723-a671-5fdc-8647-68f7d8c31416"))
+IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*, ABI::Windows::ApplicationModel::Store::Preview::IStorePreviewSkuInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo*> __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t;
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#ifndef DEF___FIReference_1_UINT32_USE
+#define DEF___FIReference_1_UINT32_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("513ef3af-e784-5325-a91e-97c2b8111cf3"))
+IReference<UINT32> : IReference_impl<UINT32>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.IReference`1<UInt32>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IReference<UINT32> __FIReference_1_UINT32_t;
+#define __FIReference_1_UINT32 ABI::Windows::Foundation::__FIReference_1_UINT32_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIReference_1_UINT32_USE */
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct DateTime DateTime;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
+#ifndef ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            interface IPropertyValue;
+        } /* Foundation */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CFoundation_CIPropertyValue ABI::Windows::Foundation::IPropertyValue
 
-
+#endif // ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
 
 namespace ABI {
     namespace Windows {
@@ -1221,7 +1008,8 @@ namespace ABI {
                 } /* Web */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest_FWD_DEFINED__
@@ -1236,17 +1024,11 @@ namespace ABI {
                 } /* Web */
             } /* Authentication */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequest
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest_FWD_DEFINED__
-
-
-
-
-
-
-
 
 namespace ABI {
     namespace Windows {
@@ -1255,7 +1037,8 @@ namespace ABI {
                 class WebAccount;
             } /* Credentials */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
@@ -1266,25 +1049,19 @@ namespace ABI {
                 interface IWebAccount;
             } /* Credentials */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount ABI::Windows::Security::Credentials::IWebAccount
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
-
-
-
-
-
-
-
-
 
 namespace ABI {
     namespace Windows {
         namespace System {
             class User;
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1293,13 +1070,11 @@ namespace ABI {
         namespace System {
             interface IUser;
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
-
-
-
 
 namespace ABI {
     namespace Windows {
@@ -1308,7 +1083,8 @@ namespace ABI {
                 class UIElement;
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -1319,92 +1095,59 @@ namespace ABI {
                 interface IUIElement;
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIUIElement ABI::Windows::UI::Xaml::IUIElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 
-
-
-
-
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    
                     typedef enum DeliveryOptimizationDownloadMode : int DeliveryOptimizationDownloadMode;
-                    
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    
                     typedef enum DeliveryOptimizationDownloadModeSource : int DeliveryOptimizationDownloadModeSource;
-                    
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    
                     typedef enum StoreLogOptions : unsigned int StoreLogOptions;
-                    
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    
                     typedef enum StorePreviewProductPurchaseStatus : int StorePreviewProductPurchaseStatus;
-                    
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Store {
-                namespace Preview {
-                    
-                    typedef enum StoreSystemFeature : int StoreSystemFeature;
-                    
-                } /* Preview */
-            } /* Store */
-        } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1415,9 +1158,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1428,23 +1170,8 @@ namespace ABI {
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -1452,16 +1179,13 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [v1_enum, contract] */
                     enum DeliveryOptimizationDownloadMode : int
                     {
                         DeliveryOptimizationDownloadMode_Simple = 0,
@@ -1471,13 +1195,12 @@ namespace ABI {
                         DeliveryOptimizationDownloadMode_Internet = 4,
                         DeliveryOptimizationDownloadMode_Bypass = 5,
                     };
-                    
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -1485,28 +1208,24 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [v1_enum, contract] */
                     enum DeliveryOptimizationDownloadModeSource : int
                     {
                         DeliveryOptimizationDownloadModeSource_Default = 0,
                         DeliveryOptimizationDownloadModeSource_Policy = 1,
                     };
-                    
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -1514,30 +1233,26 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [v1_enum, flags, contract] */
                     enum StoreLogOptions : unsigned int
                     {
                         StoreLogOptions_None = 0,
                         StoreLogOptions_TryElevate = 0x1,
                     };
-                    
+
                     DEFINE_ENUM_FLAG_OPERATORS(StoreLogOptions)
-                    
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1545,16 +1260,13 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [v1_enum, contract] */
                     enum StorePreviewProductPurchaseStatus : int
                     {
                         StorePreviewProductPurchaseStatus_Succeeded = 0,
@@ -1562,13 +1274,12 @@ namespace ABI {
                         StorePreviewProductPurchaseStatus_NotFulfilled = 2,
                         StorePreviewProductPurchaseStatus_NotPurchased = 3,
                     };
-                    
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1576,16 +1287,13 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [v1_enum, contract] */
                     enum StoreSystemFeature : int
                     {
                         StoreSystemFeature_ArchitectureX86 = 0,
@@ -1613,68 +1321,45 @@ namespace ABI {
                         StoreSystemFeature_ResolutionWvgaOrWxga = 22,
                         StoreSystemFeature_ResolutionWxgaOr720P = 23,
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_Memory4GB = 24,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_Memory6GB = 25,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_Memory8GB = 26,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_Memory12GB = 27,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_Memory16GB = 28,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_Memory20GB = 29,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_VideoMemory2GB = 30,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_VideoMemory4GB = 31,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_VideoMemory6GB = 32,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
                         StoreSystemFeature_VideoMemory1GB = 33,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                        
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                        
                         StoreSystemFeature_ArchitectureArm64 = 34,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                        
                     };
-                    
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1682,9 +1367,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1696,31 +1379,28 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("1810FDA0-E853-565E-B874-7A8A7B9A0E0F"), exclusiveto, contract] */
-                    MIDL_INTERFACE("1810FDA0-E853-565E-B874-7A8A7B9A0E0F")
+                    MIDL_INTERFACE("1810fda0-e853-565e-b874-7a8a7b9a0e0f")
                     IDeliveryOptimizationSettings : public IInspectable
                     {
                     public:
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DownloadMode(
-                            /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode * value
+                        virtual HRESULT STDMETHODCALLTYPE get_DownloadMode(
+                            ABI::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DownloadModeSource(
-                            /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource * value
+                        virtual HRESULT STDMETHODCALLTYPE get_DownloadModeSource(
+                            ABI::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource* value
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IDeliveryOptimizationSettings=_uuidof(IDeliveryOptimizationSettings);
-                    
+                    extern MIDL_CONST_ID IID& IID_IDeliveryOptimizationSettings = _uuidof(IDeliveryOptimizationSettings);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -1728,9 +1408,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeli
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1742,28 +1420,25 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("5C817CAF-AED5-5999-B4C9-8C60898BC4F3"), exclusiveto, contract] */
-                    MIDL_INTERFACE("5C817CAF-AED5-5999-B4C9-8C60898BC4F3")
+                    MIDL_INTERFACE("5c817caf-aed5-5999-b4c9-8c60898bc4f3")
                     IDeliveryOptimizationSettingsStatics : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE GetCurrentSettings(
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings * * result
+                            ABI::Windows::ApplicationModel::Store::Preview::IDeliveryOptimizationSettings** result
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IDeliveryOptimizationSettingsStatics=_uuidof(IDeliveryOptimizationSettingsStatics);
-                    
+                    extern MIDL_CONST_ID IID& IID_IDeliveryOptimizationSettingsStatics = _uuidof(IDeliveryOptimizationSettingsStatics);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -1771,9 +1446,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeli
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1785,50 +1458,47 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("728F7FC0-8628-42EC-84A2-07780EB44D8B"), exclusiveto, contract] */
-                    MIDL_INTERFACE("728F7FC0-8628-42EC-84A2-07780EB44D8B")
+                    MIDL_INTERFACE("728f7fc0-8628-42ec-84a2-07780eb44d8b")
                     IStoreConfigurationStatics : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE SetSystemConfiguration(
-                            /* [in] */__RPC__in HSTRING catalogHardwareManufacturerId,
-                            /* [in] */__RPC__in HSTRING catalogStoreContentModifierId,
-                            /* [in] */ABI::Windows::Foundation::DateTime systemConfigurationExpiration,
-                            /* [in] */__RPC__in HSTRING catalogHardwareDescriptor
+                            HSTRING catalogHardwareManufacturerId,
+                            HSTRING catalogStoreContentModifierId,
+                            ABI::Windows::Foundation::DateTime systemConfigurationExpiration,
+                            HSTRING catalogHardwareDescriptor
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetMobileOperatorConfiguration(
-                            /* [in] */__RPC__in HSTRING mobileOperatorId,
-                            /* [in] */UINT32 appDownloadLimitInMegabytes,
-                            /* [in] */UINT32 updateDownloadLimitInMegabytes
+                            HSTRING mobileOperatorId,
+                            UINT32 appDownloadLimitInMegabytes,
+                            UINT32 updateDownloadLimitInMegabytes
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStoreWebAccountId(
-                            /* [in] */__RPC__in HSTRING webAccountId
+                            HSTRING webAccountId
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE IsStoreWebAccountId(
-                            /* [in] */__RPC__in HSTRING webAccountId,
-                            /* [retval, out] */__RPC__out ::boolean * value
+                            HSTRING webAccountId,
+                            boolean* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HardwareManufacturerInfo(
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo * * value
+                        virtual HRESULT STDMETHODCALLTYPE get_HardwareManufacturerInfo(
+                            ABI::Windows::ApplicationModel::Store::Preview::IStoreHardwareManufacturerInfo** value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE FilterUnsupportedSystemFeaturesAsync(
-                            /* [in] */__RPC__in_opt __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * systemFeatures,
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * * operation
+                            __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* systemFeatures,
+                            __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature** operation
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStoreConfigurationStatics=_uuidof(IStoreConfigurationStatics);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStoreConfigurationStatics = _uuidof(IStoreConfigurationStatics);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1836,9 +1506,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
@@ -1850,31 +1518,28 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("657C4595-C8B7-4FE9-9F4C-4D71027D347E"), exclusiveto, contract] */
-                    MIDL_INTERFACE("657C4595-C8B7-4FE9-9F4C-4D71027D347E")
+                    MIDL_INTERFACE("657c4595-c8b7-4fe9-9f4c-4d71027d347e")
                     IStoreConfigurationStatics2 : public IInspectable
                     {
                     public:
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PurchasePromptingPolicy(
-                            /* [retval, out] */__RPC__deref_out_opt __FIReference_1_UINT32 * * value
+                        virtual HRESULT STDMETHODCALLTYPE get_PurchasePromptingPolicy(
+                            __FIReference_1_UINT32** value
                             ) = 0;
-                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_PurchasePromptingPolicy(
-                            /* [in] */__RPC__in_opt __FIReference_1_UINT32 * value
+                        virtual HRESULT STDMETHODCALLTYPE put_PurchasePromptingPolicy(
+                            __FIReference_1_UINT32* value
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStoreConfigurationStatics2=_uuidof(IStoreConfigurationStatics2);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStoreConfigurationStatics2 = _uuidof(IStoreConfigurationStatics2);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
-
 
 /*
  *
@@ -1882,9 +1547,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1896,53 +1559,50 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("6D45F57C-F144-4CB5-9D3F-4EB05E30B6D3"), exclusiveto, contract] */
-                    MIDL_INTERFACE("6D45F57C-F144-4CB5-9D3F-4EB05E30B6D3")
+                    MIDL_INTERFACE("6d45f57c-f144-4cb5-9d3f-4eb05e30b6d3")
                     IStoreConfigurationStatics3 : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE HasStoreWebAccount(
-                            /* [retval, out] */__RPC__out ::boolean * value
+                            boolean* value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE HasStoreWebAccountForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [retval, out] */__RPC__out ::boolean * value
+                            ABI::Windows::System::IUser* user,
+                            boolean* value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStoreLogDataAsync(
-                            /* [in] */ABI::Windows::ApplicationModel::Store::Preview::StoreLogOptions options,
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * * operation
+                            ABI::Windows::ApplicationModel::Store::Preview::StoreLogOptions options,
+                            __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference** operation
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetStoreWebAccountIdForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [in] */__RPC__in HSTRING webAccountId
+                            ABI::Windows::System::IUser* user,
+                            HSTRING webAccountId
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE IsStoreWebAccountIdForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [in] */__RPC__in HSTRING webAccountId,
-                            /* [retval, out] */__RPC__out ::boolean * value
+                            ABI::Windows::System::IUser* user,
+                            HSTRING webAccountId,
+                            boolean* value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetPurchasePromptingPolicyForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [retval, out] */__RPC__deref_out_opt __FIReference_1_UINT32 * * value
+                            ABI::Windows::System::IUser* user,
+                            __FIReference_1_UINT32** value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetPurchasePromptingPolicyForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [in] */__RPC__in_opt __FIReference_1_UINT32 * value
+                            ABI::Windows::System::IUser* user,
+                            __FIReference_1_UINT32* value
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStoreConfigurationStatics3=_uuidof(IStoreConfigurationStatics3);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStoreConfigurationStatics3 = _uuidof(IStoreConfigurationStatics3);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1950,9 +1610,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1964,53 +1622,50 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("20FF56D2-4EE3-4CF0-9B12-552C03310F75"), exclusiveto, contract] */
-                    MIDL_INTERFACE("20FF56D2-4EE3-4CF0-9B12-552C03310F75")
+                    MIDL_INTERFACE("20ff56d2-4ee3-4cf0-9b12-552c03310f75")
                     IStoreConfigurationStatics4 : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE GetStoreWebAccountId(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+                            HSTRING* result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetStoreWebAccountIdForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+                            ABI::Windows::System::IUser* user,
+                            HSTRING* result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetEnterpriseStoreWebAccountId(
-                            /* [in] */__RPC__in HSTRING webAccountId
+                            HSTRING webAccountId
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetEnterpriseStoreWebAccountIdForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [in] */__RPC__in HSTRING webAccountId
+                            ABI::Windows::System::IUser* user,
+                            HSTRING webAccountId
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetEnterpriseStoreWebAccountId(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+                            HSTRING* result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE GetEnterpriseStoreWebAccountIdForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+                            ABI::Windows::System::IUser* user,
+                            HSTRING* result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ShouldRestrictToEnterpriseStoreOnly(
-                            /* [retval, out] */__RPC__out ::boolean * result
+                            boolean* result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE ShouldRestrictToEnterpriseStoreOnlyForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [retval, out] */__RPC__out ::boolean * result
+                            ABI::Windows::System::IUser* user,
+                            boolean* result
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStoreConfigurationStatics4=_uuidof(IStoreConfigurationStatics4);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStoreConfigurationStatics4 = _uuidof(IStoreConfigurationStatics4);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -2018,9 +1673,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -2032,41 +1685,38 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("F7613191-8FA9-49DB-822B-0160E7E4E5C5"), exclusiveto, contract] */
-                    MIDL_INTERFACE("F7613191-8FA9-49DB-822B-0160E7E4E5C5")
+                    MIDL_INTERFACE("f7613191-8fa9-49db-822b-0160e7e4e5c5")
                     IStoreConfigurationStatics5 : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE IsPinToDesktopSupported(
-                            /* [retval, out] */__RPC__out ::boolean * value
+                            boolean* value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE IsPinToTaskbarSupported(
-                            /* [retval, out] */__RPC__out ::boolean * value
+                            boolean* value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE IsPinToStartSupported(
-                            /* [retval, out] */__RPC__out ::boolean * value
+                            boolean* value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE PinToDesktop(
-                            /* [in] */__RPC__in HSTRING appPackageFamilyName
+                            HSTRING appPackageFamilyName
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE PinToDesktopForUser(
-                            /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                            /* [in] */__RPC__in HSTRING appPackageFamilyName
+                            ABI::Windows::System::IUser* user,
+                            HSTRING appPackageFamilyName
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStoreConfigurationStatics5=_uuidof(IStoreConfigurationStatics5);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStoreConfigurationStatics5 = _uuidof(IStoreConfigurationStatics5);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -2074,9 +1724,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2088,37 +1736,34 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("F292DC08-C654-43AC-A21F-34801C9D3388"), exclusiveto, contract] */
-                    MIDL_INTERFACE("F292DC08-C654-43AC-A21F-34801C9D3388")
+                    MIDL_INTERFACE("f292dc08-c654-43ac-a21f-34801c9d3388")
                     IStoreHardwareManufacturerInfo : public IInspectable
                     {
                     public:
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HardwareManufacturerId(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_HardwareManufacturerId(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_StoreContentModifierId(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_StoreContentModifierId(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ModelName(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_ModelName(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ManufacturerName(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_ManufacturerName(
+                            HSTRING* value
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStoreHardwareManufacturerInfo=_uuidof(IStoreHardwareManufacturerInfo);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStoreHardwareManufacturerInfo = _uuidof(IStoreHardwareManufacturerInfo);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2126,9 +1771,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StorePreview
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2140,33 +1783,30 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("8A157241-840E-49A9-BC01-5D5B01FBC8E9"), exclusiveto, contract] */
-                    MIDL_INTERFACE("8A157241-840E-49A9-BC01-5D5B01FBC8E9")
+                    MIDL_INTERFACE("8a157241-840e-49a9-bc01-5d5b01fbc8e9")
                     IStorePreview : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE RequestProductPurchaseByProductIdAndSkuIdAsync(
-                            /* [in] */__RPC__in HSTRING productId,
-                            /* [in] */__RPC__in HSTRING skuId,
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * * requestPurchaseBySkuIdOperation
+                            HSTRING productId,
+                            HSTRING skuId,
+                            __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults** requestPurchaseBySkuIdOperation
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE LoadAddOnProductInfosAsync(
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * * loadAddOnProductInfosOperation
+                            __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo** loadAddOnProductInfosOperation
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStorePreview=_uuidof(IStorePreview);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStorePreview = _uuidof(IStorePreview);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2174,9 +1814,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2188,40 +1826,37 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("1937DBB3-6C01-4C9D-85CD-5BABAAC2B351"), exclusiveto, contract] */
-                    MIDL_INTERFACE("1937DBB3-6C01-4C9D-85CD-5BABAAC2B351")
+                    MIDL_INTERFACE("1937dbb3-6c01-4c9d-85cd-5babaac2b351")
                     IStorePreviewProductInfo : public IInspectable
                     {
                     public:
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProductId(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_ProductId(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProductType(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_ProductType(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Title(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_Title(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Description(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_Description(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SkuInfoList(
-                            /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * * value
+                        virtual HRESULT STDMETHODCALLTYPE get_SkuInfoList(
+                            __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo** value
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStorePreviewProductInfo=_uuidof(IStorePreviewProductInfo);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStorePreviewProductInfo = _uuidof(IStorePreviewProductInfo);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2229,9 +1864,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2243,28 +1876,25 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("B0DAAED1-D6C5-4E53-A043-FBA0D8E61231"), exclusiveto, contract] */
-                    MIDL_INTERFACE("B0DAAED1-D6C5-4E53-A043-FBA0D8E61231")
+                    MIDL_INTERFACE("b0daaed1-d6c5-4e53-a043-fba0d8e61231")
                     IStorePreviewPurchaseResults : public IInspectable
                     {
                     public:
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProductPurchaseStatus(
-                            /* [retval, out] */__RPC__out ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus * value
+                        virtual HRESULT STDMETHODCALLTYPE get_ProductPurchaseStatus(
+                            ABI::Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus* value
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStorePreviewPurchaseResults=_uuidof(IStorePreviewPurchaseResults);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStorePreviewPurchaseResults = _uuidof(IStorePreviewPurchaseResults);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2272,9 +1902,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2286,52 +1914,49 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("81FD76E2-0B26-48D9-98CE-27461C669D6C"), exclusiveto, contract] */
-                    MIDL_INTERFACE("81FD76E2-0B26-48D9-98CE-27461C669D6C")
+                    MIDL_INTERFACE("81fd76e2-0b26-48d9-98ce-27461c669d6c")
                     IStorePreviewSkuInfo : public IInspectable
                     {
                     public:
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ProductId(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_ProductId(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SkuId(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_SkuId(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SkuType(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_SkuType(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Title(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_Title(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Description(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_Description(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CustomDeveloperData(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_CustomDeveloperData(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrencyCode(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_CurrencyCode(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FormattedListPrice(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_FormattedListPrice(
+                            HSTRING* value
                             ) = 0;
-                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedData(
-                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                        virtual HRESULT STDMETHODCALLTYPE get_ExtendedData(
+                            HSTRING* value
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IStorePreviewSkuInfo=_uuidof(IStorePreviewSkuInfo);
-                    
+                    extern MIDL_CONST_ID IID& IID_IStorePreviewSkuInfo = _uuidof(IStorePreviewSkuInfo);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2339,9 +1964,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -2353,43 +1976,39 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Store {
                 namespace Preview {
-                    /* [object, uuid("06A50525-E715-4123-9276-9D6F865BA55F"), exclusiveto, contract] */
-                    MIDL_INTERFACE("06A50525-E715-4123-9276-9D6F865BA55F")
+                    MIDL_INTERFACE("06a50525-e715-4123-9276-9d6f865ba55f")
                     IWebAuthenticationCoreManagerHelper : public IInspectable
                     {
                     public:
-                        /* [overload] */virtual HRESULT STDMETHODCALLTYPE RequestTokenWithUIElementHostingAsync(
-                            /* [in] */__RPC__in_opt ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequest * request,
-                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * uiElement,
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * * asyncInfo
+                        virtual HRESULT STDMETHODCALLTYPE RequestTokenWithUIElementHostingAsync(
+                            ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequest* request,
+                            ABI::Windows::UI::Xaml::IUIElement* uiElement,
+                            __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult** asyncInfo
                             ) = 0;
-                        /* [overload] */virtual HRESULT STDMETHODCALLTYPE RequestTokenWithUIElementHostingAndWebAccountAsync(
-                            /* [in] */__RPC__in_opt ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequest * request,
-                            /* [in] */__RPC__in_opt ABI::Windows::Security::Credentials::IWebAccount * webAccount,
-                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * uiElement,
-                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * * asyncInfo
+                        virtual HRESULT STDMETHODCALLTYPE RequestTokenWithUIElementHostingAndWebAccountAsync(
+                            ABI::Windows::Security::Authentication::Web::Core::IWebTokenRequest* request,
+                            ABI::Windows::Security::Credentials::IWebAccount* webAccount,
+                            ABI::Windows::UI::Xaml::IUIElement* uiElement,
+                            __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult** asyncInfo
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IWebAuthenticationCoreManagerHelper=_uuidof(IWebAuthenticationCoreManagerHelper);
-                    
+                    extern MIDL_CONST_ID IID& IID_IWebAuthenticationCoreManagerHelper = _uuidof(IWebAuthenticationCoreManagerHelper);
                 } /* Preview */
             } /* Store */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2403,13 +2022,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebA
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_DeliveryOptimizationSettings_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_DeliveryOptimizationSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_DeliveryOptimizationSettings[] = L"Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -2417,13 +2034,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2433,13 +2049,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo ** Default Interface **
@@ -2450,20 +2064,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StoreHardwareManufacturerInfo_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StoreHardwareManufacturerInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_StoreHardwareManufacturerInfo[] = L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StorePreview
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStorePreview interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2480,13 +2091,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo ** Default Interface **
@@ -2497,20 +2106,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewProductInfo_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewProductInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_StorePreviewProductInfo[] = L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults ** Default Interface **
@@ -2521,20 +2127,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewPurchaseResults_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewPurchaseResults_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_StorePreviewPurchaseResults[] = L"Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo ** Default Interface **
@@ -2545,20 +2148,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewSkuInfo_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewSkuInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_StorePreviewSkuInfo[] = L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2570,10 +2170,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_WebAuthenticationCoreManagerHelper[] = L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -2659,6 +2255,131 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthen
 
 // Collection interface definitions
 
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
+
+typedef struct __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl;
+
+interface __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* This,
+        __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
@@ -2672,80 +2393,73 @@ typedef struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CSto
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo** items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl;
 
 interface __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__)
@@ -2756,390 +2470,60 @@ typedef interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__C
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
 
-typedef  struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl
+typedef struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo** result);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl;
 
 interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
-
 
 #endif // ____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__)
-#define ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo;
-
-typedef struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    END_INTERFACE
-} __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl;
-
-interface __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo
-{
-    CONST_VTBL struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__)
-#define ____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo;
-
-typedef  struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo **first);
-
-    END_INTERFACE
-} __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl;
-
-interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo
-{
-    CONST_VTBL struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature;
-#if !defined(____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
-#define ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-typedef struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    END_INTERFACE
-} __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
-
-interface __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
-{
-    CONST_VTBL struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
-#define ____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-typedef  struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature **first);
-
-    END_INTERFACE
-} __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
-
-interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
-{
-    CONST_VTBL struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__)
@@ -3154,103 +2538,966 @@ typedef struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CS
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        UINT32 index,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo** items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-            /* [in] */ __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl;
 
 interface __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
+
+typedef struct __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl;
+
+interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo
+{
+    CONST_VTBL struct __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
+
+typedef struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* This,
+        __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+typedef enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+typedef struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature* result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        UINT32 itemsLength,
+        enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature* items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
+
+interface __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+typedef struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature** result);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
+
+interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+typedef struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        UINT32 index,
+        enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature* items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
+
+interface __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+typedef struct __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
+
+interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
+{
+    CONST_VTBL struct __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
+
+typedef struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* This,
+        __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult;
+
+#endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
+
+typedef struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl;
+
+interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* This,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
+#define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference;
+
+#endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
+
+typedef struct __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl;
+
+interface __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* This,
+        __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo;
+
+typedef struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl;
+
+interface __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo;
+
+typedef struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        __FIIterator_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo** result);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl;
+
+interface __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__)
@@ -3265,552 +3512,77 @@ typedef struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CS
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        UINT32 index,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo** items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-            /* [in] */ __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl;
 
 interface __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfoVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
-
-
 
 #endif // ____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if !defined(____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-typedef struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-            /* [in] */ enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
-} __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
-
-interface __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
-{
-    CONST_VTBL struct __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults;
-
-typedef struct __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl;
-
-interface __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResultsVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
-
-typedef struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo;
-
-typedef struct __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * This, /* [retval][out] */ __RPC__out __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl;
-
-interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo
-{
-    CONST_VTBL struct __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfoVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if !defined(____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-typedef struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature;
-
-typedef struct __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * This, /* [retval][out] */ __RPC__out __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl;
-
-interface __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature
-{
-    CONST_VTBL struct __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeatureVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature_INTERFACE_DEFINED__
-
 
 #if !defined(____FIReference_1_UINT32_INTERFACE_DEFINED__)
 #define ____FIReference_1_UINT32_INTERFACE_DEFINED__
@@ -3823,299 +3595,64 @@ EXTERN_C const IID IID___FIReference_1_UINT32;
 typedef struct __FIReference_1_UINT32Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_UINT32 * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_UINT32 * This );
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_UINT32 * This );
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_UINT32 * This, 
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_UINT32 * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIReference_1_UINT32* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIReference_1_UINT32* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIReference_1_UINT32* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIReference_1_UINT32* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIReference_1_UINT32* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIReference_1_UINT32* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Value)(__FIReference_1_UINT32* This,
+        UINT32* result);
 
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_UINT32 * This, /* [retval][out] */ __RPC__out unsigned int *value);
     END_INTERFACE
 } __FIReference_1_UINT32Vtbl;
 
 interface __FIReference_1_UINT32
 {
-    CONST_VTBL struct __FIReference_1_UINT32Vtbl *lpVtbl;
+    CONST_VTBL struct __FIReference_1_UINT32Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIReference_1_UINT32_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIReference_1_UINT32_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIReference_1_UINT32_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIReference_1_UINT32_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIReference_1_UINT32_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIReference_1_UINT32_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIReference_1_UINT32_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIReference_1_UINT32_get_Value(This,value)	\
-    ( (This)->lpVtbl -> get_Value(This,value) ) 
+#define __FIReference_1_UINT32_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIReference_1_UINT32_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIReference_1_UINT32_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIReference_1_UINT32_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIReference_1_UINT32_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIReference_1_UINT32_get_Value(This, result) \
+    ((This)->lpVtbl->get_Value(This, result))
+
 #endif /* COBJMACROS */
-
 
 #endif // ____FIReference_1_UINT32_INTERFACE_DEFINED__
 
-
-#ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
-#define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference;
-
-#endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference;
-
-typedef struct __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl;
-
-interface __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReferenceVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
-#define ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult;
-
-#endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult_FWD_DEFINED__
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult;
-
-typedef struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequestResult * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl;
-
-interface __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 typedef struct __x_ABI_CWindows_CFoundation_CDateTime __x_ABI_CWindows_CFoundation_CDateTime;
 
+#ifndef ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CFoundation_CIPropertyValue __x_ABI_CWindows_CFoundation_CIPropertyValue;
 
-
+#endif // ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest_FWD_DEFINED__
@@ -4123,26 +3660,11 @@ typedef interface __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTok
 
 #endif // ____x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest_FWD_DEFINED__
 
-
-
-
-
-
-
-
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount;
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount_FWD_DEFINED__
-
-
-
-
-
-
-
-
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -4150,64 +3672,19 @@ typedef interface __x_ABI_CWindows_CSystem_CIUser __x_ABI_CWindows_CSystem_CIUse
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 
-
-
-
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CIUIElement __x_ABI_CWindows_CUI_CXaml_CIUIElement;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 
-
-
-
-
-
 typedef enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadMode __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadMode;
-
 
 typedef enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadModeSource __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadModeSource;
 
-
 typedef enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreLogOptions __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreLogOptions;
 
-
 typedef enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStorePreviewProductPurchaseStatus __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStorePreviewProductPurchaseStatus;
-
-
-typedef enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -4215,11 +3692,8 @@ typedef enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeat
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadMode
 {
     DeliveryOptimizationDownloadMode_Simple = 0,
@@ -4231,18 +3705,14 @@ enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDow
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
-
 /*
  *
  * Struct Windows.ApplicationModel.Store.Preview.DeliveryOptimizationDownloadModeSource
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadModeSource
 {
     DeliveryOptimizationDownloadModeSource_Default = 0,
@@ -4250,18 +3720,14 @@ enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDow
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
-
 /*
  *
  * Struct Windows.ApplicationModel.Store.Preview.StoreLogOptions
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-/* [v1_enum, flags, contract] */
 enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreLogOptions
 {
     StoreLogOptions_None = 0,
@@ -4269,18 +3735,14 @@ enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreLogOptions
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Struct Windows.ApplicationModel.Store.Preview.StorePreviewProductPurchaseStatus
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStorePreviewProductPurchaseStatus
 {
     StorePreviewProductPurchaseStatus_Succeeded = 0,
@@ -4290,18 +3752,14 @@ enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStorePreviewProductPurc
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.ApplicationModel.Store.Preview.StoreSystemFeature
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature
 {
     StoreSystemFeature_ArchitectureX86 = 0,
@@ -4329,63 +3787,40 @@ enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature
     StoreSystemFeature_ResolutionWvgaOrWxga = 22,
     StoreSystemFeature_ResolutionWxgaOr720P = 23,
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_Memory4GB = 24,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_Memory6GB = 25,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_Memory8GB = 26,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_Memory12GB = 27,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_Memory16GB = 28,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_Memory20GB = 29,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_VideoMemory2GB = 30,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_VideoMemory4GB = 31,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_VideoMemory6GB = 32,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     StoreSystemFeature_VideoMemory1GB = 33,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    
     StoreSystemFeature_ArchitectureArm64 = 34,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4393,99 +3828,73 @@ enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreSystemFeature
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IDeliveryOptimizationSettings[] = L"Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettings";
-/* [object, uuid("1810FDA0-E853-565E-B874-7A8A7B9A0E0F"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_DownloadMode)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings* This,
+        enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadMode* value);
+    HRESULT (STDMETHODCALLTYPE* get_DownloadModeSource)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings* This,
+        enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadModeSource* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DownloadMode )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadMode * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DownloadModeSource )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CDeliveryOptimizationDownloadModeSource * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_get_DownloadMode(This,value) \
-    ( (This)->lpVtbl->get_DownloadMode(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_get_DownloadMode(This, value) \
+    ((This)->lpVtbl->get_DownloadMode(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_get_DownloadModeSource(This,value) \
-    ( (This)->lpVtbl->get_DownloadModeSource(This,value) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_get_DownloadModeSource(This, value) \
+    ((This)->lpVtbl->get_DownloadModeSource(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -4493,92 +3902,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeli
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IDeliveryOptimizationSettingsStatics[] = L"Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics";
-/* [object, uuid("5C817CAF-AED5-5999-B4C9-8C60898BC4F3"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetCurrentSettings)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics* This,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings** result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetCurrentSettings )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettings * * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStaticsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_GetCurrentSettings(This,result) \
-    ( (This)->lpVtbl->GetCurrentSettings(This,result) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_GetCurrentSettings(This, result) \
+    ((This)->lpVtbl->GetCurrentSettings(This, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeliveryOptimizationSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -4586,134 +3971,100 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIDeli
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics[] = L"Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics";
-/* [object, uuid("728F7FC0-8628-42EC-84A2-07780EB44D8B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* SetSystemConfiguration)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        HSTRING catalogHardwareManufacturerId,
+        HSTRING catalogStoreContentModifierId,
+        struct __x_ABI_CWindows_CFoundation_CDateTime systemConfigurationExpiration,
+        HSTRING catalogHardwareDescriptor);
+    HRESULT (STDMETHODCALLTYPE* SetMobileOperatorConfiguration)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        HSTRING mobileOperatorId,
+        UINT32 appDownloadLimitInMegabytes,
+        UINT32 updateDownloadLimitInMegabytes);
+    HRESULT (STDMETHODCALLTYPE* SetStoreWebAccountId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        HSTRING webAccountId);
+    HRESULT (STDMETHODCALLTYPE* IsStoreWebAccountId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        HSTRING webAccountId,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* get_HardwareManufacturerInfo)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo** value);
+    HRESULT (STDMETHODCALLTYPE* FilterUnsupportedSystemFeaturesAsync)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics* This,
+        __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature* systemFeatures,
+        __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature** operation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *SetSystemConfiguration )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-        /* [in] */__RPC__in HSTRING catalogHardwareManufacturerId,
-        /* [in] */__RPC__in HSTRING catalogStoreContentModifierId,
-        /* [in] */__x_ABI_CWindows_CFoundation_CDateTime systemConfigurationExpiration,
-        /* [in] */__RPC__in HSTRING catalogHardwareDescriptor
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetMobileOperatorConfiguration )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-        /* [in] */__RPC__in HSTRING mobileOperatorId,
-        /* [in] */UINT32 appDownloadLimitInMegabytes,
-        /* [in] */UINT32 updateDownloadLimitInMegabytes
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetStoreWebAccountId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-        /* [in] */__RPC__in HSTRING webAccountId
-        );
-    HRESULT ( STDMETHODCALLTYPE *IsStoreWebAccountId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-        /* [in] */__RPC__in HSTRING webAccountId,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HardwareManufacturerInfo )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *FilterUnsupportedSystemFeaturesAsync )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics * This,
-        /* [in] */__RPC__in_opt __FIIterable_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * systemFeatures,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStoreSystemFeature * * operation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStaticsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_SetSystemConfiguration(This,catalogHardwareManufacturerId,catalogStoreContentModifierId,systemConfigurationExpiration,catalogHardwareDescriptor) \
-    ( (This)->lpVtbl->SetSystemConfiguration(This,catalogHardwareManufacturerId,catalogStoreContentModifierId,systemConfigurationExpiration,catalogHardwareDescriptor) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_SetSystemConfiguration(This, catalogHardwareManufacturerId, catalogStoreContentModifierId, systemConfigurationExpiration, catalogHardwareDescriptor) \
+    ((This)->lpVtbl->SetSystemConfiguration(This, catalogHardwareManufacturerId, catalogStoreContentModifierId, systemConfigurationExpiration, catalogHardwareDescriptor))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_SetMobileOperatorConfiguration(This,mobileOperatorId,appDownloadLimitInMegabytes,updateDownloadLimitInMegabytes) \
-    ( (This)->lpVtbl->SetMobileOperatorConfiguration(This,mobileOperatorId,appDownloadLimitInMegabytes,updateDownloadLimitInMegabytes) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_SetMobileOperatorConfiguration(This, mobileOperatorId, appDownloadLimitInMegabytes, updateDownloadLimitInMegabytes) \
+    ((This)->lpVtbl->SetMobileOperatorConfiguration(This, mobileOperatorId, appDownloadLimitInMegabytes, updateDownloadLimitInMegabytes))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_SetStoreWebAccountId(This,webAccountId) \
-    ( (This)->lpVtbl->SetStoreWebAccountId(This,webAccountId) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_SetStoreWebAccountId(This, webAccountId) \
+    ((This)->lpVtbl->SetStoreWebAccountId(This, webAccountId))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_IsStoreWebAccountId(This,webAccountId,value) \
-    ( (This)->lpVtbl->IsStoreWebAccountId(This,webAccountId,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_IsStoreWebAccountId(This, webAccountId, value) \
+    ((This)->lpVtbl->IsStoreWebAccountId(This, webAccountId, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_get_HardwareManufacturerInfo(This,value) \
-    ( (This)->lpVtbl->get_HardwareManufacturerInfo(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_get_HardwareManufacturerInfo(This, value) \
+    ((This)->lpVtbl->get_HardwareManufacturerInfo(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_FilterUnsupportedSystemFeaturesAsync(This,systemFeatures,operation) \
-    ( (This)->lpVtbl->FilterUnsupportedSystemFeaturesAsync(This,systemFeatures,operation) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_FilterUnsupportedSystemFeaturesAsync(This, systemFeatures, operation) \
+    ((This)->lpVtbl->FilterUnsupportedSystemFeaturesAsync(This, systemFeatures, operation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4721,99 +4072,73 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics2[] = L"Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2";
-/* [object, uuid("657C4595-C8B7-4FE9-9F4C-4D71027D347E"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_PurchasePromptingPolicy)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2* This,
+        __FIReference_1_UINT32** value);
+    HRESULT (STDMETHODCALLTYPE* put_PurchasePromptingPolicy)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2* This,
+        __FIReference_1_UINT32* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PurchasePromptingPolicy )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2 * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIReference_1_UINT32 * * value
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_PurchasePromptingPolicy )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2 * This,
-        /* [in] */__RPC__in_opt __FIReference_1_UINT32 * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2Vtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_get_PurchasePromptingPolicy(This,value) \
-    ( (This)->lpVtbl->get_PurchasePromptingPolicy(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_get_PurchasePromptingPolicy(This, value) \
+    ((This)->lpVtbl->get_PurchasePromptingPolicy(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_put_PurchasePromptingPolicy(This,value) \
-    ( (This)->lpVtbl->put_PurchasePromptingPolicy(This,value) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_put_PurchasePromptingPolicy(This, value) \
+    ((This)->lpVtbl->put_PurchasePromptingPolicy(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x20000
-
 
 /*
  *
@@ -4821,141 +4146,105 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics3[] = L"Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3";
-/* [object, uuid("6D45F57C-F144-4CB5-9D3F-4EB05E30B6D3"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* HasStoreWebAccount)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* HasStoreWebAccountForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* GetStoreLogDataAsync)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreLogOptions options,
+        __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference** operation);
+    HRESULT (STDMETHODCALLTYPE* SetStoreWebAccountIdForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        HSTRING webAccountId);
+    HRESULT (STDMETHODCALLTYPE* IsStoreWebAccountIdForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        HSTRING webAccountId,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* GetPurchasePromptingPolicyForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        __FIReference_1_UINT32** value);
+    HRESULT (STDMETHODCALLTYPE* SetPurchasePromptingPolicyForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        __FIReference_1_UINT32* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *HasStoreWebAccount )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *HasStoreWebAccountForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetStoreLogDataAsync )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-        /* [in] */__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStoreLogOptions options,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CStorage__CStreams__CIRandomAccessStreamReference * * operation
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetStoreWebAccountIdForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [in] */__RPC__in HSTRING webAccountId
-        );
-    HRESULT ( STDMETHODCALLTYPE *IsStoreWebAccountIdForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [in] */__RPC__in HSTRING webAccountId,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetPurchasePromptingPolicyForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [retval, out] */__RPC__deref_out_opt __FIReference_1_UINT32 * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetPurchasePromptingPolicyForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [in] */__RPC__in_opt __FIReference_1_UINT32 * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3Vtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_HasStoreWebAccount(This,value) \
-    ( (This)->lpVtbl->HasStoreWebAccount(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_HasStoreWebAccount(This, value) \
+    ((This)->lpVtbl->HasStoreWebAccount(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_HasStoreWebAccountForUser(This,user,value) \
-    ( (This)->lpVtbl->HasStoreWebAccountForUser(This,user,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_HasStoreWebAccountForUser(This, user, value) \
+    ((This)->lpVtbl->HasStoreWebAccountForUser(This, user, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetStoreLogDataAsync(This,options,operation) \
-    ( (This)->lpVtbl->GetStoreLogDataAsync(This,options,operation) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetStoreLogDataAsync(This, options, operation) \
+    ((This)->lpVtbl->GetStoreLogDataAsync(This, options, operation))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_SetStoreWebAccountIdForUser(This,user,webAccountId) \
-    ( (This)->lpVtbl->SetStoreWebAccountIdForUser(This,user,webAccountId) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_SetStoreWebAccountIdForUser(This, user, webAccountId) \
+    ((This)->lpVtbl->SetStoreWebAccountIdForUser(This, user, webAccountId))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_IsStoreWebAccountIdForUser(This,user,webAccountId,value) \
-    ( (This)->lpVtbl->IsStoreWebAccountIdForUser(This,user,webAccountId,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_IsStoreWebAccountIdForUser(This, user, webAccountId, value) \
+    ((This)->lpVtbl->IsStoreWebAccountIdForUser(This, user, webAccountId, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetPurchasePromptingPolicyForUser(This,user,value) \
-    ( (This)->lpVtbl->GetPurchasePromptingPolicyForUser(This,user,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_GetPurchasePromptingPolicyForUser(This, user, value) \
+    ((This)->lpVtbl->GetPurchasePromptingPolicyForUser(This, user, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_SetPurchasePromptingPolicyForUser(This,user,value) \
-    ( (This)->lpVtbl->SetPurchasePromptingPolicyForUser(This,user,value) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_SetPurchasePromptingPolicyForUser(This, user, value) \
+    ((This)->lpVtbl->SetPurchasePromptingPolicyForUser(This, user, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -4963,145 +4252,107 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics4[] = L"Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4";
-/* [object, uuid("20FF56D2-4EE3-4CF0-9B12-552C03310F75"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetStoreWebAccountId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* GetStoreWebAccountIdForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* SetEnterpriseStoreWebAccountId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        HSTRING webAccountId);
+    HRESULT (STDMETHODCALLTYPE* SetEnterpriseStoreWebAccountIdForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        HSTRING webAccountId);
+    HRESULT (STDMETHODCALLTYPE* GetEnterpriseStoreWebAccountId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* GetEnterpriseStoreWebAccountIdForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* ShouldRestrictToEnterpriseStoreOnly)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* ShouldRestrictToEnterpriseStoreOnlyForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        boolean* result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetStoreWebAccountId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetStoreWebAccountIdForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetEnterpriseStoreWebAccountId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-        /* [in] */__RPC__in HSTRING webAccountId
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetEnterpriseStoreWebAccountIdForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [in] */__RPC__in HSTRING webAccountId
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetEnterpriseStoreWebAccountId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetEnterpriseStoreWebAccountIdForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *ShouldRestrictToEnterpriseStoreOnly )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-        /* [retval, out] */__RPC__out boolean * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *ShouldRestrictToEnterpriseStoreOnlyForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [retval, out] */__RPC__out boolean * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4Vtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetStoreWebAccountId(This,result) \
-    ( (This)->lpVtbl->GetStoreWebAccountId(This,result) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetStoreWebAccountId(This, result) \
+    ((This)->lpVtbl->GetStoreWebAccountId(This, result))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetStoreWebAccountIdForUser(This,user,result) \
-    ( (This)->lpVtbl->GetStoreWebAccountIdForUser(This,user,result) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetStoreWebAccountIdForUser(This, user, result) \
+    ((This)->lpVtbl->GetStoreWebAccountIdForUser(This, user, result))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_SetEnterpriseStoreWebAccountId(This,webAccountId) \
-    ( (This)->lpVtbl->SetEnterpriseStoreWebAccountId(This,webAccountId) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_SetEnterpriseStoreWebAccountId(This, webAccountId) \
+    ((This)->lpVtbl->SetEnterpriseStoreWebAccountId(This, webAccountId))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_SetEnterpriseStoreWebAccountIdForUser(This,user,webAccountId) \
-    ( (This)->lpVtbl->SetEnterpriseStoreWebAccountIdForUser(This,user,webAccountId) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_SetEnterpriseStoreWebAccountIdForUser(This, user, webAccountId) \
+    ((This)->lpVtbl->SetEnterpriseStoreWebAccountIdForUser(This, user, webAccountId))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetEnterpriseStoreWebAccountId(This,result) \
-    ( (This)->lpVtbl->GetEnterpriseStoreWebAccountId(This,result) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetEnterpriseStoreWebAccountId(This, result) \
+    ((This)->lpVtbl->GetEnterpriseStoreWebAccountId(This, result))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetEnterpriseStoreWebAccountIdForUser(This,user,result) \
-    ( (This)->lpVtbl->GetEnterpriseStoreWebAccountIdForUser(This,user,result) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_GetEnterpriseStoreWebAccountIdForUser(This, user, result) \
+    ((This)->lpVtbl->GetEnterpriseStoreWebAccountIdForUser(This, user, result))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_ShouldRestrictToEnterpriseStoreOnly(This,result) \
-    ( (This)->lpVtbl->ShouldRestrictToEnterpriseStoreOnly(This,result) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_ShouldRestrictToEnterpriseStoreOnly(This, result) \
+    ((This)->lpVtbl->ShouldRestrictToEnterpriseStoreOnly(This, result))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_ShouldRestrictToEnterpriseStoreOnlyForUser(This,user,result) \
-    ( (This)->lpVtbl->ShouldRestrictToEnterpriseStoreOnlyForUser(This,user,result) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_ShouldRestrictToEnterpriseStoreOnlyForUser(This, user, result) \
+    ((This)->lpVtbl->ShouldRestrictToEnterpriseStoreOnlyForUser(This, user, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics4_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -5109,121 +4360,89 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreConfiguration
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStoreConfigurationStatics5[] = L"Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5";
-/* [object, uuid("F7613191-8FA9-49DB-822B-0160E7E4E5C5"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* IsPinToDesktopSupported)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* IsPinToTaskbarSupported)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* IsPinToStartSupported)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* PinToDesktop)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This,
+        HSTRING appPackageFamilyName);
+    HRESULT (STDMETHODCALLTYPE* PinToDesktopForUser)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        HSTRING appPackageFamilyName);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *IsPinToDesktopSupported )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *IsPinToTaskbarSupported )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *IsPinToStartSupported )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *PinToDesktop )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This,
-        /* [in] */__RPC__in HSTRING appPackageFamilyName
-        );
-    HRESULT ( STDMETHODCALLTYPE *PinToDesktopForUser )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [in] */__RPC__in HSTRING appPackageFamilyName
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5Vtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_IsPinToDesktopSupported(This,value) \
-    ( (This)->lpVtbl->IsPinToDesktopSupported(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_IsPinToDesktopSupported(This, value) \
+    ((This)->lpVtbl->IsPinToDesktopSupported(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_IsPinToTaskbarSupported(This,value) \
-    ( (This)->lpVtbl->IsPinToTaskbarSupported(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_IsPinToTaskbarSupported(This, value) \
+    ((This)->lpVtbl->IsPinToTaskbarSupported(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_IsPinToStartSupported(This,value) \
-    ( (This)->lpVtbl->IsPinToStartSupported(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_IsPinToStartSupported(This, value) \
+    ((This)->lpVtbl->IsPinToStartSupported(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_PinToDesktop(This,appPackageFamilyName) \
-    ( (This)->lpVtbl->PinToDesktop(This,appPackageFamilyName) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_PinToDesktop(This, appPackageFamilyName) \
+    ((This)->lpVtbl->PinToDesktop(This, appPackageFamilyName))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_PinToDesktopForUser(This,user,appPackageFamilyName) \
-    ( (This)->lpVtbl->PinToDesktopForUser(This,user,appPackageFamilyName) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_PinToDesktopForUser(This, user, appPackageFamilyName) \
+    ((This)->lpVtbl->PinToDesktopForUser(This, user, appPackageFamilyName))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreConfigurationStatics5_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -5231,113 +4450,83 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStoreHardwareManufacturerInfo[] = L"Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo";
-/* [object, uuid("F292DC08-C654-43AC-A21F-34801C9D3388"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfoVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_HardwareManufacturerId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_StoreContentModifierId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_ModelName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_ManufacturerName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo* This,
+        HSTRING* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HardwareManufacturerId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_StoreContentModifierId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ModelName )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ManufacturerName )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfoVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfoVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_get_HardwareManufacturerId(This,value) \
-    ( (This)->lpVtbl->get_HardwareManufacturerId(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_get_HardwareManufacturerId(This, value) \
+    ((This)->lpVtbl->get_HardwareManufacturerId(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_get_StoreContentModifierId(This,value) \
-    ( (This)->lpVtbl->get_StoreContentModifierId(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_get_StoreContentModifierId(This, value) \
+    ((This)->lpVtbl->get_StoreContentModifierId(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_get_ModelName(This,value) \
-    ( (This)->lpVtbl->get_ModelName(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_get_ModelName(This, value) \
+    ((This)->lpVtbl->get_ModelName(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_get_ManufacturerName(This,value) \
-    ( (This)->lpVtbl->get_ManufacturerName(This,value) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_get_ManufacturerName(This, value) \
+    ((This)->lpVtbl->get_ManufacturerName(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStoreHardwareManufacturerInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5345,101 +4534,75 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StorePreview
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStorePreview[] = L"Windows.ApplicationModel.Store.Preview.IStorePreview";
-/* [object, uuid("8A157241-840E-49A9-BC01-5D5B01FBC8E9"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* RequestProductPurchaseByProductIdAndSkuIdAsync)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview* This,
+        HSTRING productId,
+        HSTRING skuId,
+        __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults** requestPurchaseBySkuIdOperation);
+    HRESULT (STDMETHODCALLTYPE* LoadAddOnProductInfosAsync)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview* This,
+        __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo** loadAddOnProductInfosOperation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *RequestProductPurchaseByProductIdAndSkuIdAsync )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview * This,
-        /* [in] */__RPC__in HSTRING productId,
-        /* [in] */__RPC__in HSTRING skuId,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewPurchaseResults * * requestPurchaseBySkuIdOperation
-        );
-    HRESULT ( STDMETHODCALLTYPE *LoadAddOnProductInfosAsync )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewProductInfo * * loadAddOnProductInfosOperation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_RequestProductPurchaseByProductIdAndSkuIdAsync(This,productId,skuId,requestPurchaseBySkuIdOperation) \
-    ( (This)->lpVtbl->RequestProductPurchaseByProductIdAndSkuIdAsync(This,productId,skuId,requestPurchaseBySkuIdOperation) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_RequestProductPurchaseByProductIdAndSkuIdAsync(This, productId, skuId, requestPurchaseBySkuIdOperation) \
+    ((This)->lpVtbl->RequestProductPurchaseByProductIdAndSkuIdAsync(This, productId, skuId, requestPurchaseBySkuIdOperation))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_LoadAddOnProductInfosAsync(This,loadAddOnProductInfosOperation) \
-    ( (This)->lpVtbl->LoadAddOnProductInfosAsync(This,loadAddOnProductInfosOperation) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_LoadAddOnProductInfosAsync(This, loadAddOnProductInfosOperation) \
+    ((This)->lpVtbl->LoadAddOnProductInfosAsync(This, loadAddOnProductInfosOperation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreview_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5447,120 +4610,88 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStorePreviewProductInfo[] = L"Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo";
-/* [object, uuid("1937DBB3-6C01-4C9D-85CD-5BABAAC2B351"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfoVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ProductId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_ProductType)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_Title)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_Description)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_SkuInfoList)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo* This,
+        __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ProductId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ProductType )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Title )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Description )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SkuInfoList )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CApplicationModel__CStore__CPreview__CStorePreviewSkuInfo * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfoVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfoVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_ProductId(This,value) \
-    ( (This)->lpVtbl->get_ProductId(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_ProductId(This, value) \
+    ((This)->lpVtbl->get_ProductId(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_ProductType(This,value) \
-    ( (This)->lpVtbl->get_ProductType(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_ProductType(This, value) \
+    ((This)->lpVtbl->get_ProductType(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_Title(This,value) \
-    ( (This)->lpVtbl->get_Title(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_Title(This, value) \
+    ((This)->lpVtbl->get_Title(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_Description(This,value) \
-    ( (This)->lpVtbl->get_Description(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_Description(This, value) \
+    ((This)->lpVtbl->get_Description(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_SkuInfoList(This,value) \
-    ( (This)->lpVtbl->get_SkuInfoList(This,value) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_get_SkuInfoList(This, value) \
+    ((This)->lpVtbl->get_SkuInfoList(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewProductInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5568,92 +4699,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStorePreviewPurchaseResults[] = L"Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults";
-/* [object, uuid("B0DAAED1-D6C5-4E53-A043-FBA0D8E61231"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResultsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ProductPurchaseStatus)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults* This,
+        enum __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStorePreviewProductPurchaseStatus* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ProductPurchaseStatus )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CStorePreviewProductPurchaseStatus * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResultsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResultsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResultsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_get_ProductPurchaseStatus(This,value) \
-    ( (This)->lpVtbl->get_ProductPurchaseStatus(This,value) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_get_ProductPurchaseStatus(This, value) \
+    ((This)->lpVtbl->get_ProductPurchaseStatus(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewPurchaseResults_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5661,148 +4768,108 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IStorePreviewSkuInfo[] = L"Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo";
-/* [object, uuid("81FD76E2-0B26-48D9-98CE-27461C669D6C"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfoVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ProductId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_SkuId)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_SkuType)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_Title)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_Description)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_CustomDeveloperData)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_CurrencyCode)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_FormattedListPrice)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_ExtendedData)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo* This,
+        HSTRING* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ProductId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SkuId )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SkuType )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Title )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Description )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CustomDeveloperData )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CurrencyCode )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_FormattedListPrice )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExtendedData )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfoVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfoVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfoVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_ProductId(This,value) \
-    ( (This)->lpVtbl->get_ProductId(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_ProductId(This, value) \
+    ((This)->lpVtbl->get_ProductId(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_SkuId(This,value) \
-    ( (This)->lpVtbl->get_SkuId(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_SkuId(This, value) \
+    ((This)->lpVtbl->get_SkuId(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_SkuType(This,value) \
-    ( (This)->lpVtbl->get_SkuType(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_SkuType(This, value) \
+    ((This)->lpVtbl->get_SkuType(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_Title(This,value) \
-    ( (This)->lpVtbl->get_Title(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_Title(This, value) \
+    ((This)->lpVtbl->get_Title(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_Description(This,value) \
-    ( (This)->lpVtbl->get_Description(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_Description(This, value) \
+    ((This)->lpVtbl->get_Description(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_CustomDeveloperData(This,value) \
-    ( (This)->lpVtbl->get_CustomDeveloperData(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_CustomDeveloperData(This, value) \
+    ((This)->lpVtbl->get_CustomDeveloperData(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_CurrencyCode(This,value) \
-    ( (This)->lpVtbl->get_CurrencyCode(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_CurrencyCode(This, value) \
+    ((This)->lpVtbl->get_CurrencyCode(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_FormattedListPrice(This,value) \
-    ( (This)->lpVtbl->get_FormattedListPrice(This,value) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_FormattedListPrice(This, value) \
+    ((This)->lpVtbl->get_FormattedListPrice(This, value))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_ExtendedData(This,value) \
-    ( (This)->lpVtbl->get_ExtendedData(This,value) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_get_ExtendedData(This, value) \
+    ((This)->lpVtbl->get_ExtendedData(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStorePreviewSkuInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5810,111 +4877,84 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIStor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Store_Preview_IWebAuthenticationCoreManagerHelper[] = L"Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper";
-/* [object, uuid("06A50525-E715-4123-9276-9D6F865BA55F"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelperVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* RequestTokenWithUIElementHostingAsync)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest* request,
+        __x_ABI_CWindows_CUI_CXaml_CIUIElement* uiElement,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult** asyncInfo);
+    HRESULT (STDMETHODCALLTYPE* RequestTokenWithUIElementHostingAndWebAccountAsync)(__x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper* This,
+        __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest* request,
+        __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount* webAccount,
+        __x_ABI_CWindows_CUI_CXaml_CIUIElement* uiElement,
+        __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult** asyncInfo);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [overload] */HRESULT ( STDMETHODCALLTYPE *RequestTokenWithUIElementHostingAsync )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest * request,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * uiElement,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * * asyncInfo
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *RequestTokenWithUIElementHostingAndWebAccountAsync )(
-        __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSecurity_CAuthentication_CWeb_CCore_CIWebTokenRequest * request,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSecurity_CCredentials_CIWebAccount * webAccount,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * uiElement,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSecurity__CAuthentication__CWeb__CCore__CWebTokenRequestResult * * asyncInfo
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelperVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelperVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelperVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync(This,request,uiElement,asyncInfo) \
-    ( (This)->lpVtbl->RequestTokenWithUIElementHostingAsync(This,request,uiElement,asyncInfo) )
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync(This, request, uiElement, asyncInfo) \
+    ((This)->lpVtbl->RequestTokenWithUIElementHostingAsync(This, request, uiElement, asyncInfo))
 
-#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAndWebAccountAsync(This,request,webAccount,uiElement,asyncInfo) \
-    ( (This)->lpVtbl->RequestTokenWithUIElementHostingAndWebAccountAsync(This,request,webAccount,uiElement,asyncInfo) )
-
+#define __x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAndWebAccountAsync(This, request, webAccount, uiElement, asyncInfo) \
+    ((This)->lpVtbl->RequestTokenWithUIElementHostingAndWebAccountAsync(This, request, webAccount, uiElement, asyncInfo))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebAuthenticationCoreManagerHelper_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IDeliveryOptimizationSettingsStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -5928,13 +4968,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CStore_CPreview_CIWebA
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_DeliveryOptimizationSettings_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_DeliveryOptimizationSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_DeliveryOptimizationSettings[] = L"Windows.ApplicationModel.Store.Preview.DeliveryOptimizationSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -5942,13 +4980,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics5 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics4 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics2 interface starting with version 2.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStoreConfigurationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -5958,13 +4995,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Store.Preview.IStoreHardwareManufacturerInfo ** Default Interface **
@@ -5975,20 +5010,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StoreHardwareManufacturerInfo_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StoreHardwareManufacturerInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_StoreHardwareManufacturerInfo[] = L"Windows.ApplicationModel.Store.Preview.StoreHardwareManufacturerInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StorePreview
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IStorePreview interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -6005,13 +5037,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Store.Preview.IStorePreviewProductInfo ** Default Interface **
@@ -6022,20 +5052,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewProductInfo_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewProductInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_StorePreviewProductInfo[] = L"Windows.ApplicationModel.Store.Preview.StorePreviewProductInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Store.Preview.IStorePreviewPurchaseResults ** Default Interface **
@@ -6046,20 +5073,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewPurchaseResults_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewPurchaseResults_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_StorePreviewPurchaseResults[] = L"Windows.ApplicationModel.Store.Preview.StorePreviewPurchaseResults";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Store.Preview.IStorePreviewSkuInfo ** Default Interface **
@@ -6070,20 +5094,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewSkuInfo_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Store_Preview_StorePreviewSkuInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_StorePreviewSkuInfo[] = L"Windows.ApplicationModel.Store.Preview.StorePreviewSkuInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Store.Preview.IWebAuthenticationCoreManagerHelper interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -6095,10 +5116,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Store_Preview_WebAuthenticationCoreManagerHelper[] = L"Windows.ApplicationModel.Store.Preview.WebAuthenticationCoreManagerHelper";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

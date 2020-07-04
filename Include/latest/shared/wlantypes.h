@@ -43,17 +43,20 @@ typedef [v1_enum] enum _DOT11_AUTH_ALGORITHM {
 #else
 typedef enum _DOT11_AUTH_ALGORITHM {
 #endif
-    DOT11_AUTH_ALGO_80211_OPEN = 1,
-    DOT11_AUTH_ALGO_80211_SHARED_KEY = 2,
-    DOT11_AUTH_ALGO_WPA = 3,
-    DOT11_AUTH_ALGO_WPA_PSK = 4,
-    DOT11_AUTH_ALGO_WPA_NONE = 5,               // used in NatSTA only
-    DOT11_AUTH_ALGO_RSNA = 6,
-    DOT11_AUTH_ALGO_RSNA_PSK = 7,
-    DOT11_AUTH_ALGO_WPA3 = 8,
-    DOT11_AUTH_ALGO_WPA3_SAE = 9,
-    DOT11_AUTH_ALGO_IHV_START = 0x80000000,
-    DOT11_AUTH_ALGO_IHV_END = 0xffffffff
+    DOT11_AUTH_ALGO_80211_OPEN          = 1,
+    DOT11_AUTH_ALGO_80211_SHARED_KEY    = 2,
+    DOT11_AUTH_ALGO_WPA                 = 3,
+    DOT11_AUTH_ALGO_WPA_PSK             = 4,
+    DOT11_AUTH_ALGO_WPA_NONE            = 5,               // used in NatSTA only
+    DOT11_AUTH_ALGO_RSNA                = 6,
+    DOT11_AUTH_ALGO_RSNA_PSK            = 7,
+    DOT11_AUTH_ALGO_WPA3                = 8,
+    DOT11_AUTH_ALGO_WPA3_SAE            = 9,
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+    DOT11_AUTH_ALGO_OWE                 = 10,
+#endif
+    DOT11_AUTH_ALGO_IHV_START           = 0x80000000,
+    DOT11_AUTH_ALGO_IHV_END             = 0xffffffff
 } DOT11_AUTH_ALGORITHM, * PDOT11_AUTH_ALGORITHM;
 
 #define DOT11_AUTH_ALGORITHM_OPEN_SYSTEM        DOT11_AUTH_ALGO_80211_OPEN
@@ -65,7 +68,9 @@ typedef enum _DOT11_AUTH_ALGORITHM {
 #define DOT11_AUTH_ALGORITHM_RSNA_PSK           DOT11_AUTH_ALGO_RSNA_PSK
 #define DOT11_AUTH_ALGORITHM_WPA3               DOT11_AUTH_ALGO_WPA3
 #define DOT11_AUTH_ALGORITHM_WPA3_SAE           DOT11_AUTH_ALGO_WPA3_SAE
-
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+#define DOT11_AUTH_ALGORITHM_OWE                DOT11_AUTH_ALGO_OWE
+#endif
 // Cipher algorithm Ids (for little endian platform)
 #ifdef __midl
 // use the 4-byte enum
@@ -78,8 +83,13 @@ typedef enum _DOT11_CIPHER_ALGORITHM {
     DOT11_CIPHER_ALGO_TKIP = 0x02,
     DOT11_CIPHER_ALGO_CCMP = 0x04,
     DOT11_CIPHER_ALGO_WEP104 = 0x05,
-    DOT11_CIPHER_ALGO_BIP = 0x06,
-    DOT11_CIPHER_ALGO_GCMP = 0x08,
+    DOT11_CIPHER_ALGO_BIP = 0x06,                       // BIP-CMAC-128
+    DOT11_CIPHER_ALGO_GCMP = 0x08,                      // GCMP-128
+    DOT11_CIPHER_ALGO_GCMP_256 = 0x09,                  // GCMP-256
+    DOT11_CIPHER_ALGO_CCMP_256 = 0x0a,                  // CCMP-256
+    DOT11_CIPHER_ALGO_BIP_GMAC_128 = 0x0b,              // BIP-GMAC-128
+    DOT11_CIPHER_ALGO_BIP_GMAC_256 = 0x0c,              // BIP-GMAC-256
+    DOT11_CIPHER_ALGO_BIP_CMAC_256 = 0x0d,              // BIP-CMAC-256
     DOT11_CIPHER_ALGO_WPA_USE_GROUP = 0x100,
     DOT11_CIPHER_ALGO_RSN_USE_GROUP = 0x100,
     DOT11_CIPHER_ALGO_WEP = 0x101,

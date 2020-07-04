@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.ui.windowmanagement.preview.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,165 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -275,7 +119,8 @@ namespace ABI {
                 } /* Preview */
             } /* WindowManagement */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview ABI::Windows::UI::WindowManagement::Preview::IWindowManagementPreview
 
 #endif // ____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_FWD_DEFINED__
@@ -291,23 +136,22 @@ namespace ABI {
                 } /* Preview */
             } /* WindowManagement */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics ABI::Windows::UI::WindowManagement::Preview::IWindowManagementPreviewStatics
 
 #endif // ____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C++)
 
+// Collection interface definitions
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct Size Size;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -316,7 +160,8 @@ namespace ABI {
                 class AppWindow;
             } /* WindowManagement */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
@@ -327,33 +172,11 @@ namespace ABI {
                 interface IAppWindow;
             } /* WindowManagement */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow ABI::Windows::UI::WindowManagement::IAppWindow
 
 #endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
-
-
-
-
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace WindowManagement {
-                namespace Preview {
-                    class WindowManagementPreview;
-                } /* Preview */
-            } /* WindowManagement */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
 
 /*
  *
@@ -361,9 +184,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.WindowManagement.Preview.WindowManagementPreview
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
@@ -375,25 +196,22 @@ namespace ABI {
         namespace UI {
             namespace WindowManagement {
                 namespace Preview {
-                    /* [object, uuid("4EF55B0D-561D-513C-A67C-2C02B69CEF41"), exclusiveto, contract] */
-                    MIDL_INTERFACE("4EF55B0D-561D-513C-A67C-2C02B69CEF41")
+                    MIDL_INTERFACE("4ef55b0d-561d-513c-a67c-2c02b69cef41")
                     IWindowManagementPreview : public IInspectable
                     {
                     public:
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IWindowManagementPreview=_uuidof(IWindowManagementPreview);
-                    
+                    extern MIDL_CONST_ID IID& IID_IWindowManagementPreview = _uuidof(IWindowManagementPreview);
                 } /* Preview */
             } /* WindowManagement */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview;
 #endif /* !defined(____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
 
 /*
  *
@@ -401,9 +219,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowM
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.WindowManagement.Preview.WindowManagementPreview
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
@@ -415,36 +231,32 @@ namespace ABI {
         namespace UI {
             namespace WindowManagement {
                 namespace Preview {
-                    /* [object, uuid("0F9725C6-C004-5A23-8FD2-8D092CE2704A"), exclusiveto, contract] */
-                    MIDL_INTERFACE("0F9725C6-C004-5A23-8FD2-8D092CE2704A")
+                    MIDL_INTERFACE("0f9725c6-c004-5a23-8fd2-8d092ce2704a")
                     IWindowManagementPreviewStatics : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE SetPreferredMinSize(
-                            /* [in] */__RPC__in_opt ABI::Windows::UI::WindowManagement::IAppWindow * window,
-                            /* [in] */ABI::Windows::Foundation::Size preferredFrameMinSize
+                            ABI::Windows::UI::WindowManagement::IAppWindow* window,
+                            ABI::Windows::Foundation::Size preferredFrameMinSize
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IWindowManagementPreviewStatics=_uuidof(IWindowManagementPreviewStatics);
-                    
+                    extern MIDL_CONST_ID IID& IID_IWindowManagementPreviewStatics = _uuidof(IWindowManagementPreviewStatics);
                 } /* Preview */
             } /* WindowManagement */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
 
 /*
  *
  * Class Windows.UI.WindowManagement.Preview.WindowManagementPreview
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.WindowManagement.Preview.IWindowManagementPreviewStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -458,16 +270,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowM
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
 #ifndef RUNTIMECLASS_Windows_UI_WindowManagement_Preview_WindowManagementPreview_DEFINED
 #define RUNTIMECLASS_Windows_UI_WindowManagement_Preview_WindowManagementPreview_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_WindowManagement_Preview_WindowManagementPreview[] = L"Windows.UI.WindowManagement.Preview.WindowManagementPreview";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -483,11 +290,11 @@ typedef interface __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManage
 
 #endif // ____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C)
+
+// Collection interface definitions
 
 typedef struct __x_ABI_CWindows_CFoundation_CSize __x_ABI_CWindows_CFoundation_CSize;
-
-
-
 
 #ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
@@ -495,103 +302,69 @@ typedef interface __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow __x_ABI_CWi
 
 #endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*
  *
  * Interface Windows.UI.WindowManagement.Preview.IWindowManagementPreview
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.WindowManagement.Preview.WindowManagementPreview
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 #if !defined(____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_WindowManagement_Preview_IWindowManagementPreview[] = L"Windows.UI.WindowManagement.Preview.IWindowManagementPreview";
-/* [object, uuid("4EF55B0D-561D-513C-A67C-2C02B69CEF41"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview* This,
+        TrustLevel* trustLevel);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-END_INTERFACE
-    
+    END_INTERFACE
 } __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewVtbl;
 
 interface __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
-
+#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview;
 #endif /* !defined(____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreview_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
 
 /*
  *
@@ -599,100 +372,75 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowM
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
  *
- *
  * Interface is a part of the implementation of type Windows.UI.WindowManagement.Preview.WindowManagementPreview
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
 #if !defined(____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_WindowManagement_Preview_IWindowManagementPreviewStatics[] = L"Windows.UI.WindowManagement.Preview.IWindowManagementPreviewStatics";
-/* [object, uuid("0F9725C6-C004-5A23-8FD2-8D092CE2704A"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* SetPreferredMinSize)(__x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics* This,
+        __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow* window,
+        struct __x_ABI_CWindows_CFoundation_CSize preferredFrameMinSize);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *SetPreferredMinSize )(
-        __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow * window,
-        /* [in] */__x_ABI_CWindows_CFoundation_CSize preferredFrameMinSize
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStaticsVtbl;
 
 interface __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_SetPreferredMinSize(This,window,preferredFrameMinSize) \
-    ( (This)->lpVtbl->SetPreferredMinSize(This,window,preferredFrameMinSize) )
-
+#define __x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_SetPreferredMinSize(This, window, preferredFrameMinSize) \
+    ((This)->lpVtbl->SetPreferredMinSize(This, window, preferredFrameMinSize))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowManagementPreviewStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
 
 /*
  *
  * Class Windows.UI.WindowManagement.Preview.WindowManagementPreview
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.WindowManagement.Preview.IWindowManagementPreviewStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -706,16 +454,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CWindowManagement_CPreview_CIWindowM
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
 #ifndef RUNTIMECLASS_Windows_UI_WindowManagement_Preview_WindowManagementPreview_DEFINED
 #define RUNTIMECLASS_Windows_UI_WindowManagement_Preview_WindowManagementPreview_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_WindowManagement_Preview_WindowManagementPreview[] = L"Windows.UI.WindowManagement.Preview.WindowManagementPreview";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

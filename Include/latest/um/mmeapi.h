@@ -16,6 +16,12 @@
 #include <apiset.h>
 #include <apisetcconv.h>
 
+#ifdef _CONTRACT_GEN
+#include <nt.h>
+#include <ntrtl.h>
+#include <nturtl.h>
+#include <windows.h>
+#endif // _CONTRACT_GEN
 
 #include <mmsyscom.h> // mm common definitions
 
@@ -788,7 +794,7 @@ typedef WORD FAR *LPKEYARRAY;
 #define MOM_CLOSE       MM_MOM_CLOSE
 #define MOM_DONE        MM_MOM_DONE
 
-#if (WINVER >= 0x0400)
+#if(WINVER >= 0x0400)
 #define MIM_MOREDATA      MM_MIM_MOREDATA
 #define MOM_POSITIONCB    MM_MOM_POSITIONCB
 #endif /* WINVER >= 0x0400 */
@@ -797,7 +803,7 @@ typedef WORD FAR *LPKEYARRAY;
 #define MIDIMAPPER     ((UINT)-1)
 #define MIDI_MAPPER    ((UINT)-1)
 
-#if (WINVER >= 0x0400)
+#if(WINVER >= 0x0400)
 /* flags for dwFlags parm of midiInOpen() */
 #define MIDI_IO_STATUS      0x00000020L
 #endif /* WINVER >= 0x0400 */
@@ -912,7 +918,7 @@ typedef struct midioutcaps_tag {
 #define MIDICAPS_VOLUME          0x0001  /* supports volume control */
 #define MIDICAPS_LRVOLUME        0x0002  /* separate left-right volume control */
 #define MIDICAPS_CACHE           0x0004
-#if (WINVER >= 0x0400)
+#if(WINVER >= 0x0400)
 #define MIDICAPS_STREAM          0x0008  /* driver supports midiStreamOut directly */
 #endif /* WINVER >= 0x0400 */
 
@@ -1011,7 +1017,7 @@ typedef struct midihdr_tag {
 #endif
 } MIDIHDR, *PMIDIHDR, NEAR *NPMIDIHDR, FAR *LPMIDIHDR;
 
-#if (WINVER >= 0x0400)
+#if(WINVER >= 0x0400)
 typedef struct midievent_tag
 {
     DWORD       dwDeltaTime;          /* Ticks since last event */
@@ -1033,7 +1039,7 @@ typedef struct midistrmbuffver_tag
 #define MHDR_PREPARED   0x00000002       /* set if header prepared */
 #define MHDR_INQUEUE    0x00000004       /* reserved for driver */
 #define MHDR_ISSTRM     0x00000008       /* Buffer is stream buffer */
-#if (WINVER >= 0x0400)
+#if(WINVER >= 0x0400)
 /* */
 /* Type codes which go in the high byte of the event DWORD of a stream buffer */
 /* */

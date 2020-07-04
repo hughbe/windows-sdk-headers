@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.devices.background.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,33 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -140,7 +116,8 @@ namespace ABI {
                 interface IDeviceServicingDetails;
             } /* Background */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails ABI::Windows::Devices::Background::IDeviceServicingDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_FWD_DEFINED__
@@ -154,49 +131,22 @@ namespace ABI {
                 interface IDeviceUseDetails;
             } /* Background */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails ABI::Windows::Devices::Background::IDeviceUseDetails
 
 #endif // ____x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C++)
 
+// Collection interface definitions
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct TimeSpan TimeSpan;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Background {
-                class DeviceServicingDetails;
-            } /* Background */
-        } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Background {
-                class DeviceUseDetails;
-            } /* Background */
-        } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -204,9 +154,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.Background.DeviceServicingDetails
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -217,33 +165,30 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Background {
-                /* [object, uuid("4AABEE29-2344-4AC4-8527-4A8EF6905645"), exclusiveto, contract] */
-                MIDL_INTERFACE("4AABEE29-2344-4AC4-8527-4A8EF6905645")
+                MIDL_INTERFACE("4aabee29-2344-4ac4-8527-4a8ef6905645")
                 IDeviceServicingDetails : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DeviceId(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_DeviceId(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Arguments(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Arguments(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExpectedDuration(
-                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
+                    virtual HRESULT STDMETHODCALLTYPE get_ExpectedDuration(
+                        ABI::Windows::Foundation::TimeSpan* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IDeviceServicingDetails=_uuidof(IDeviceServicingDetails);
-                
+                extern MIDL_CONST_ID IID& IID_IDeviceServicingDetails = _uuidof(IDeviceServicingDetails);
             } /* Background */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -251,9 +196,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDe
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.Background.DeviceUseDetails
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -264,37 +207,33 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Background {
-                /* [object, uuid("7D565141-557E-4154-B994-E4F7A11FB323"), exclusiveto, contract] */
-                MIDL_INTERFACE("7D565141-557E-4154-B994-E4F7A11FB323")
+                MIDL_INTERFACE("7d565141-557e-4154-b994-e4f7a11fb323")
                 IDeviceUseDetails : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DeviceId(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_DeviceId(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Arguments(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Arguments(
+                        HSTRING* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IDeviceUseDetails=_uuidof(IDeviceUseDetails);
-                
+                extern MIDL_CONST_ID IID& IID_IDeviceUseDetails = _uuidof(IDeviceUseDetails);
             } /* Background */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Devices.Background.DeviceServicingDetails
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Background.IDeviceServicingDetails ** Default Interface **
@@ -305,20 +244,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails;
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_Background_DeviceServicingDetails_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Background_DeviceServicingDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Background_DeviceServicingDetails[] = L"Windows.Devices.Background.DeviceServicingDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.Background.DeviceUseDetails
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Background.IDeviceUseDetails ** Default Interface **
@@ -329,15 +265,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_Background_DeviceUseDetails_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Background_DeviceUseDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Background_DeviceUseDetails[] = L"Windows.Devices.Background.DeviceUseDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -353,19 +285,11 @@ typedef interface __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails __x_A
 
 #endif // ____x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C)
+
+// Collection interface definitions
 
 typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -373,106 +297,78 @@ typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundati
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.Background.DeviceServicingDetails
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Background_IDeviceServicingDetails[] = L"Windows.Devices.Background.IDeviceServicingDetails";
-/* [object, uuid("4AABEE29-2344-4AC4-8527-4A8EF6905645"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetailsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_DeviceId)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_Arguments)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_ExpectedDuration)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails* This,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DeviceId )(
-        __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Arguments )(
-        __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExpectedDuration )(
-        __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetailsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetailsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetailsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_get_DeviceId(This,value) \
-    ( (This)->lpVtbl->get_DeviceId(This,value) )
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_get_DeviceId(This, value) \
+    ((This)->lpVtbl->get_DeviceId(This, value))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_get_Arguments(This,value) \
-    ( (This)->lpVtbl->get_Arguments(This,value) )
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_get_Arguments(This, value) \
+    ((This)->lpVtbl->get_Arguments(This, value))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_get_ExpectedDuration(This,value) \
-    ( (This)->lpVtbl->get_ExpectedDuration(This,value) )
-
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_get_ExpectedDuration(This, value) \
+    ((This)->lpVtbl->get_ExpectedDuration(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -480,106 +376,79 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBackground_CIDeviceServicingDe
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.Background.DeviceUseDetails
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Background_IDeviceUseDetails[] = L"Windows.Devices.Background.IDeviceUseDetails";
-/* [object, uuid("7D565141-557E-4154-B994-E4F7A11FB323"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetailsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_DeviceId)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_Arguments)(__x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails* This,
+        HSTRING* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DeviceId )(
-        __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Arguments )(
-        __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetailsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetailsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetailsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_get_DeviceId(This,value) \
-    ( (This)->lpVtbl->get_DeviceId(This,value) )
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_get_DeviceId(This, value) \
+    ((This)->lpVtbl->get_DeviceId(This, value))
 
-#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_get_Arguments(This,value) \
-    ( (This)->lpVtbl->get_Arguments(This,value) )
-
+#define __x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_get_Arguments(This, value) \
+    ((This)->lpVtbl->get_Arguments(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Devices.Background.DeviceServicingDetails
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Background.IDeviceServicingDetails ** Default Interface **
@@ -590,20 +459,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CBackground_CIDeviceUseDetails;
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_Background_DeviceServicingDetails_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Background_DeviceServicingDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Background_DeviceServicingDetails[] = L"Windows.Devices.Background.DeviceServicingDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.Background.DeviceUseDetails
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Background.IDeviceUseDetails ** Default Interface **
@@ -614,15 +480,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_Background_DeviceUseDetails_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Background_DeviceUseDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Background_DeviceUseDetails[] = L"Windows.Devices.Background.DeviceUseDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

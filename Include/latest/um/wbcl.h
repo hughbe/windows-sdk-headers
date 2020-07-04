@@ -84,6 +84,16 @@ extern "C" {
 #define SIPAEV_TXT_BOOT_POL_HASH (0x0000041A)
 #define SIPAEV_TXT_RANDOM_VALUE (0x000004FE)
 #define SIPAEV_TXT_CAP_VALUE (0x000004FF)
+//----------------------------------PCR Event Types for AMD SecureLaunch
+#define SIPAEV_AMD_SL_EVENT_BASE (0x00008000)
+#define SIPAEV_AMD_SL_LOAD (0x00008001)
+#define SIPAEV_AMD_SL_PSP_FW_SPLT (0x00008002)
+#define SIPAEV_AMD_SL_TSME_RB_FUSE (0x00008003)
+#define SIPAEV_AMD_SL_PUB_KEY (0x00008004)
+#define SIPAEV_AMD_SL_SVN (0x00008005)
+#define SIPAEV_AMD_SL_LOAD_1 (0x00008006)
+#define SIPAEV_AMD_SL_SEPARATOR (0x00008007)
+
 #endif
 
 //-----------------------------Types of tagged events in WBCL file
@@ -426,7 +436,7 @@ extern "C" {
 
 // SIPAEVENTTYPE_KSR
 #define SIPAEVENT_KSR_SIGNATURE            (SIPAEVENTTYPE_KSR + \
-                                            0x001)
+                                           0x001)
 
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS3
 
@@ -446,10 +456,50 @@ extern "C" {
 #define SIPAEVENT_DRTM_STATE_AUTH           (SIPAEVENTTYPE_DRTM + \
                                             0x001)
 
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+
+//
+// SIPAEVENT_DRTM_SMM_LEVEL.
+//
+// This event is measured to PCR[20] during DRTM by TcbLaunch.exe.
+//
+// The payload for this event is a single byte of data containing one of the values
+// from the SI_DRTM_SMM_LEVEL enumeration.
+//
+
+#define SIPAEVENT_DRTM_SMM_LEVEL            (SIPAEVENTTYPE_DRTM + \
+                                            0x002)
+
+//
+// SIPAEVENT_DRTM_AMD_SMM_HASH.
+//
+// This event is measured to PCR[19] during AMD Secure Launch by TcbLaunch.exe.
+//
+// The payload for this event is the hash digest of the AMD SMM code module
+// as computed by the AMD DRTM service.
+//
+
+#define SIPAEVENT_DRTM_AMD_SMM_HASH         (SIPAEVENTTYPE_DRTM + \
+                                            0x003)
+
+//
+// SIPAEVENT_DRTM_AMD_SMM_SIGNER_KEY.
+//
+// This event is measured to PCR[20] during AMD Secure Launch by TcbLaunch.exe.
+//
+// The payload for this event is the hash digest of the AMD SMM code module
+// signer public key as reported by the AMD DRTM service.
+//
+
+#define SIPAEVENT_DRTM_AMD_SMM_SIGNER_KEY   (SIPAEVENTTYPE_DRTM + \
+                                            0x004)
+
+#endif // NTDDI_VERSION > NTDDI_WIN10_VB
+
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS5
 
 //
-#endif
+#endif // SIPAEVENTTYPE_NONMEASURED
 
 //--------------------------------------------Value Definitions
 

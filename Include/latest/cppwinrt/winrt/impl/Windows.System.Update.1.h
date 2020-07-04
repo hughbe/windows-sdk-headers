@@ -1,32 +1,33 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_System_Update_1_H
+#define WINRT_Windows_System_Update_1_H
 #include "winrt/impl/Windows.System.Update.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::System::Update {
-
-struct WINRT_EBO ISystemUpdateItem :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ISystemUpdateItem>
+namespace winrt::Windows::System::Update
 {
-    ISystemUpdateItem(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ISystemUpdateLastErrorInfo :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ISystemUpdateLastErrorInfo>
-{
-    ISystemUpdateLastErrorInfo(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ISystemUpdateManagerStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ISystemUpdateManagerStatics>
-{
-    ISystemUpdateManagerStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) ISystemUpdateItem :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ISystemUpdateItem>
+    {
+        ISystemUpdateItem(std::nullptr_t = nullptr) noexcept {}
+        ISystemUpdateItem(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ISystemUpdateLastErrorInfo :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ISystemUpdateLastErrorInfo>
+    {
+        ISystemUpdateLastErrorInfo(std::nullptr_t = nullptr) noexcept {}
+        ISystemUpdateLastErrorInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ISystemUpdateManagerStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ISystemUpdateManagerStatics>
+    {
+        ISystemUpdateManagerStatics(std::nullptr_t = nullptr) noexcept {}
+        ISystemUpdateManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

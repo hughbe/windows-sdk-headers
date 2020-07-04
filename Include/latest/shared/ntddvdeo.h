@@ -80,6 +80,7 @@ DEFINE_DEVPROPKEY(DEVPKEY_IndirectDisplay,      0xc50a3f10, 0xaa5c, 0x4247, 0xb8
 DEFINE_DEVPROPKEY(DEVPKEY_Device_TerminalLuid,  0xc50a3f10, 0xaa5c, 0x4247, 0xb8, 0x30, 0xd6, 0xa6, 0xf8, 0xea, 0xa3, 0x10, 0x02);    // DEVPROP_TYPE_BINARY
 DEFINE_DEVPROPKEY(DEVPKEY_Device_AdapterLuid,   0xc50a3f10, 0xaa5c, 0x4247, 0xb8, 0x30, 0xd6, 0xa6, 0xf8, 0xea, 0xa3, 0x10, 0x03);    // DEVPROP_TYPE_BINARY
 DEFINE_DEVPROPKEY(DEVPKEY_Device_ActivityId,    0xc50a3f10, 0xaa5c, 0x4247, 0xb8, 0x30, 0xd6, 0xa6, 0xf8, 0xea, 0xa3, 0x10, 0x04);    // DEVPROP_TYPE_BINARY
+#define DEVPKEY_DeviceInterface_TerminalLuid 	DEVPKEY_Device_TerminalLuid
 
 struct INDIRECT_DISPLAY_INFO
 {
@@ -346,11 +347,14 @@ extern "C" {
 // Mipi DCS IOCLTs must/can be handled by the monitor, oem-panel, port/miniport
 // driver
 //
-#define IOCTL_MIPI_DSI2_QUERY_CAPS \
+#define IOCTL_MIPI_DSI_QUERY_CAPS \
     CTL_CODE(FILE_DEVICE_VIDEO, 0x500, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
-#define IOCTL_MIPI_DSI2_TRANSMISSION \
+#define IOCTL_MIPI_DSI_TRANSMISSION \
     CTL_CODE(FILE_DEVICE_VIDEO, 0x501, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#define IOCTL_MIPI_DSI_RESET \
+    CTL_CODE(FILE_DEVICE_VIDEO, 0x502, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
 // Many of the video IOCTLs are modal. When ever the palette is set, or the
 // cursor is set or queried, it is done for the current mode.
@@ -517,7 +521,14 @@ typedef enum _VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE {
     VideoUpdateCursor = 13,
     VideoDisableMultiPlaneOverlay = 14,
     VideoDesktopDuplicationChange = 15,
+    VideoBlackScreenDiagnostics = 16,
 } VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE;
+
+enum BlackScreenDiagnosticsCalloutParam
+{
+    BlackScreenDiagnosticsData = 0x1,
+    BlackScreenDisplayRecovery = 0x2,
+};
 
 #define DXGK_WIN32K_PARAM_FLAG_UPDATEREGISTRY 1         // Saves the mode switch information into the registry.
 #define DXGK_WIN32K_PARAM_FLAG_MODESWITCH 2             // Performs the mode switch.
@@ -2360,12 +2371,17 @@ typedef struct _SET_ACTIVE_COLOR_PROFILE_NAME
 
 
 //
-//  IOCTL_MIPI_DSI2_QUERY_CAPS
+//  IOCTL_MIPI_DSI_QUERY_CAPS
 //
-typedef struct _MIPI_DSI2_CAPS
+typedef struct _MIPI_DSI_CAPS
 {
-    UCHAR    DSI2VersionMajor;
-    UCHAR    DSI2VersionMinor;
+    UCHAR    DSITypeMajor;
+    UCHAR    DSITypeMinor;
+
+    UCHAR    SpecVersionMajor;
+    UCHAR    SpecVersionMinor;
+    UCHAR    SpecVersionPatch;
+
     USHORT   TargetMaximumReturnPacketSize;
 
     UCHAR    ResultCodeFlags;
@@ -2382,29 +2398,29 @@ typedef struct _MIPI_DSI2_CAPS
     UCHAR    ProductLo;
     UCHAR    LengthHi;
     UCHAR    LengthLo;
-} MIPI_DSI2_CAPS, *PMIPI_DSI2_CAPS;
+} MIPI_DSI_CAPS, *PMIPI_DSI_CAPS;
 
 //
-// IOCTL_MIPI_DSI2_TRANSMISSION
+// IOCTL_MIPI_DSI_TRANSMISSION
 //
-typedef enum _DSI2_CONTROL_TRANSMISSION_MODE
+typedef enum _DSI_CONTROL_TRANSMISSION_MODE
 {
     DCT_DEFAULT = 0,
     DCT_FORCE_LOW_POWER,
     DCT_FORCE_HIGH_PERFORMANCE,
-} DSI2_CONTROL_TRANSMISSION_MODE;
+} DSI_CONTROL_TRANSMISSION_MODE;
 
-#define DSI2_PACKET_EMBEDDED_PAYLOAD_SIZE 8
+#define DSI_PACKET_EMBEDDED_PAYLOAD_SIZE 8
 
-typedef struct _MIPI_DSI2_PACKET
+typedef struct _MIPI_DSI_PACKET
 {
     union
     {
-        ULONG    DataId : 8;
+        UCHAR DataId;
         struct
         {
-            ULONG    DataType : 6;
-            ULONG    VirtualChannel : 2;
+            UCHAR DataType       :6;
+            UCHAR VirtualChannel :2;
         };
     };
 
@@ -2412,41 +2428,42 @@ typedef struct _MIPI_DSI2_PACKET
     {
         struct
         {
-            ULONG    Data0 : 8;
-            ULONG    Data1 : 8;
+            UCHAR Data0;
+            UCHAR Data1;
         };
-        ULONG    LongWriteWordCount : 16;
+        USHORT LongWriteWordCount;
     };
 
-    ULONG    EccFiller : 8;
+    UCHAR EccFiller;
 
-    UCHAR    Payload[DSI2_PACKET_EMBEDDED_PAYLOAD_SIZE];
-} MIPI_DSI2_PACKET;
+    UCHAR Payload[DSI_PACKET_EMBEDDED_PAYLOAD_SIZE];
+} MIPI_DSI_PACKET;
 
-
-typedef struct _MIPI_DSI2_TRANSMISSION
+typedef struct _MIPI_DSI_TRANSMISSION
 {
-    ULONG               TotalBufferSize;
+    ULONG TotalBufferSize;               // in
+    UCHAR PacketCount;                   // in
+    UCHAR FailedPacket;                  // out
 
     struct
     {
-        ULONG           PacketCount : 8;
-        ULONG           FailedPacket : 8;
-        ULONG           TransmissionMode : 2;
-        ULONG           ReportMipiErrors : 1;
-        ULONG           ClearMipiErrors : 1;
-        ULONG           SecondaryPort : 1;
-        ULONG           Reserved : 11;
+        USHORT TransmissionMode     : 2;  // in
+        USHORT ReportMipiErrors     : 1;  // in
+        USHORT ClearMipiErrors      : 1;  // in
+        USHORT SecondaryPort        : 1;  // in
+        USHORT ManufacturingMode    : 1;  // in
+        USHORT Reserved             :10;
     };
 
-    USHORT              ReadWordCount;
-    USHORT              FinalCommandExtraPayload;
+    USHORT ReadWordCount;                 // out
+    USHORT FinalCommandExtraPayload;      // in
 
-    USHORT              MipiErrors;
-    USHORT              HostErrors;
+    USHORT MipiErrors;                    // out
+    USHORT HostErrors;                    // out
 
-    MIPI_DSI2_PACKET    Packets[1];
-} MIPI_DSI2_TRANSMISSION;
+    _Field_size_(PacketCount)
+    MIPI_DSI_PACKET Packets[1];           // inout
+} MIPI_DSI_TRANSMISSION;
 
 //
 // Maximum PacketCount allowed.
@@ -2454,47 +2471,68 @@ typedef struct _MIPI_DSI2_TRANSMISSION
 #define MAX_PACKET_COUNT                          0x80
 
 //
-//If not known or there is no detected packet error, DSI2_INVALID_PACKET_INDEX
+//If not known or there is no detected packet error, DSI_INVALID_PACKET_INDEX
 //is set to FailedPacket.
 //
-#define DSI2_INVALID_PACKET_INDEX                  0xFF
+#define DSI_INVALID_PACKET_INDEX                  0xFF
 
 //
 // MipiErrors reported by communication with the peripheral
 //
-#define DSI2_SOT_ERROR                             0x0001
-#define DSI2_SOT_SYNC_ERROR                        0x0002
-#define DSI2_EOT_SYNC_ERROR                        0x0004
-#define DSI2_ESCAPE_MODE_ENTRY_COMMAND_ERROR       0x0008
-#define DSI2_LOW_POWER_TRANSMIT_SYNC_ERROR         0x0010
-#define DSI2_PERIPHERAL_TIMEOUT_ERROR              0x0020
-#define DSI2_FALSE_CONTROL_ERROR                   0x0040
-#define DSI2_CONTENTION_DETECTED                   0x0080
-#define DSI2_CHECKSUM_ERROR_CORRECTED              0x0100
-#define DSI2_CHECKSUM_ERROR_NOT_CORRECTED          0x0200
-#define DSI2_LONG_PACKET_PAYLOAD_CHECKSUM_ERROR    0x0400
-#define DSI2_DSI_DATA_TYPE_NOT_RECOGNIZED          0x0800
-#define DSI2_DSI_VC_ID_INVALID                     0x1000
-#define DSI2_INVALID_TRANSMISSION_LENGTH           0x2000
+#define DSI_SOT_ERROR                             0x0001
+#define DSI_SOT_SYNC_ERROR                        0x0002
+#define DSI_EOT_SYNC_ERROR                        0x0004
+#define DSI_ESCAPE_MODE_ENTRY_COMMAND_ERROR       0x0008
+#define DSI_LOW_POWER_TRANSMIT_SYNC_ERROR         0x0010
+#define DSI_PERIPHERAL_TIMEOUT_ERROR              0x0020
+#define DSI_FALSE_CONTROL_ERROR                   0x0040
+#define DSI_CONTENTION_DETECTED                   0x0080
+#define DSI_CHECKSUM_ERROR_CORRECTED              0x0100
+#define DSI_CHECKSUM_ERROR_NOT_CORRECTED          0x0200
+#define DSI_LONG_PACKET_PAYLOAD_CHECKSUM_ERROR    0x0400
+#define DSI_DSI_DATA_TYPE_NOT_RECOGNIZED          0x0800
+#define DSI_DSI_VC_ID_INVALID                     0x1000
+#define DSI_INVALID_TRANSMISSION_LENGTH           0x2000
 //      RESERVED                                        0x4000
-#define DSI2_DSI_PROTOCOL_VIOLATION                0x8000
+#define DSI_DSI_PROTOCOL_VIOLATION                0x8000
 
 //
 // HostErrors reported by the graphics driver or OS
 //
-#define HOST_DSI2_DEVICE_NOT_READY                 0x0001
-#define HOST_DSI2_INTERFACE_RESET                  0x0002
-#define HOST_DSI2_DEVICE_RESET                     0x0004
-#define HOST_DSI2_TRANSMISSION_CANCELLED           0x0010
-#define HOST_DSI2_TRANSMISSION_DROPPED             0x0020
-#define HOST_DSI2_TRANSMISSION_TIMEOUT             0x0040
-#define HOST_DSI2_INVALID_TRANSMISSION             0x0100
-#define HOST_DSI2_OS_REJECTED_PACKET               0x0200
-#define HOST_DSI2_DRIVER_REJECTED_PACKET           0x0400
-#define HOST_DSI2_BAD_TRANSMISSION_MODE            0x1000
+#define HOST_DSI_DEVICE_NOT_READY                 0x0001
+#define HOST_DSI_INTERFACE_RESET                  0x0002
+#define HOST_DSI_DEVICE_RESET                     0x0004
+#define HOST_DSI_TRANSMISSION_CANCELLED           0x0010
+#define HOST_DSI_TRANSMISSION_DROPPED             0x0020
+#define HOST_DSI_TRANSMISSION_TIMEOUT             0x0040
+#define HOST_DSI_INVALID_TRANSMISSION             0x0100
+#define HOST_DSI_OS_REJECTED_PACKET               0x0200
+#define HOST_DSI_DRIVER_REJECTED_PACKET           0x0400
+#define HOST_DSI_BAD_TRANSMISSION_MODE            0x1000
 
-typedef MIPI_DSI2_TRANSMISSION   MIPI_DSI2_TRANSMISSION_INPUT, *PMIPI_DSI2_TRANSMISSION_INPUT;
-typedef MIPI_DSI2_TRANSMISSION   MIPI_DSI2_TRANSMISSION_OUTPUT, *PMIPI_DSI2_TRANSMISSION_OUTPUT;
+typedef MIPI_DSI_TRANSMISSION   MIPI_DSI_TRANSMISSION_INPUT, *PMIPI_DSI_TRANSMISSION_INPUT;
+typedef MIPI_DSI_TRANSMISSION   MIPI_DSI_TRANSMISSION_OUTPUT, *PMIPI_DSI_TRANSMISSION_OUTPUT;
+
+//
+//  IOCTL_MIPI_DSI_RESET
+//
+typedef struct _MIPI_DSI_RESET
+{
+    ULONG Flags;                        // in
+    union
+    {
+        struct
+        {
+            ULONG MipiErrors     :16;   // out
+            ULONG ResetFailed    : 1;   // out
+            ULONG NeedModeSet    : 1;   // out
+        };
+        ULONG    Results;               // out
+    };
+} MIPI_DSI_RESET, *PMIPI_DSI_RESET;
+
+typedef MIPI_DSI_RESET MIPI_DSI_RESET_INPUT, *PMIPI_DSI_RESET_INPUT;
+typedef MIPI_DSI_RESET MIPI_DSI_RESET_OUTPUT, *PMIPI_DSI_RESET_OUTPUT;
 
 //
 // Monitor override types

@@ -96,6 +96,10 @@ namespace Windows
 
             interface IFileUpdateRequestedEventArgs;
 
+            interface IStorageProviderFileTypeInfo;
+
+            interface IStorageProviderFileTypeInfoFactory;
+
             interface IStorageProviderGetContentInfoForPathResult;
 
             interface IStorageProviderGetPathForContentUriResult;
@@ -114,7 +118,11 @@ namespace Windows
 
             interface IStorageProviderSyncRootInfo2;
 
+            interface IStorageProviderSyncRootInfo3;
+
             interface IStorageProviderSyncRootManagerStatics;
+
+            interface IStorageProviderSyncRootManagerStatics2;
 
             interface IStorageProviderUriSource;
 
@@ -127,6 +135,8 @@ namespace Windows
             runtimeclass FileUpdateRequestDeferral;
 
             runtimeclass FileUpdateRequestedEventArgs;
+
+            runtimeclass StorageProviderFileTypeInfo;
 
             runtimeclass StorageProviderGetContentInfoForPathResult;
 
@@ -154,11 +164,15 @@ namespace Windows
         {
             declare
             {
+                interface Windows.Foundation.Collections.IIterable<Windows.Storage.Provider.StorageProviderFileTypeInfo*>;
+
                 interface Windows.Foundation.Collections.IIterable<Windows.Storage.Provider.StorageProviderItemProperty*>;
 
                 interface Windows.Foundation.Collections.IIterable<Windows.Storage.Provider.StorageProviderItemPropertyDefinition*>;
 
                 interface Windows.Foundation.Collections.IIterable<Windows.Storage.Provider.StorageProviderSyncRootInfo*>;
+
+                interface Windows.Foundation.Collections.IIterator<Windows.Storage.Provider.StorageProviderFileTypeInfo*>;
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Storage.Provider.StorageProviderItemProperty*>;
 
@@ -166,9 +180,13 @@ namespace Windows
 
                 interface Windows.Foundation.Collections.IIterator<Windows.Storage.Provider.StorageProviderSyncRootInfo*>;
 
+                interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderFileTypeInfo*>;
+
                 interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderItemPropertyDefinition*>;
 
                 interface Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderSyncRootInfo*>;
+
+                interface Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderFileTypeInfo*>;
 
                 interface Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderItemPropertyDefinition*>;
 
@@ -189,7 +207,7 @@ namespace Windows
     {
         namespace Provider
         {
-            [contractversion(3.0)]
+            [contractversion(4.0)]
             apicontract CloudFilesContract
             {
             }
@@ -388,6 +406,23 @@ namespace Windows
                 [propget] HRESULT Request([out] [retval] Windows.Storage.Provider.FileUpdateRequest** value);
             }
 
+            [contract(Windows.Storage.Provider.CloudFilesContract, 4.0)]
+            [exclusiveto(Windows.Storage.Provider.StorageProviderFileTypeInfo)]
+            [uuid(1955B9C1-0184-5A88-87DF-4544F464365D)]
+            interface IStorageProviderFileTypeInfo : IInspectable
+            {
+                [propget] HRESULT FileExtension([out] [retval] HSTRING* value);
+                [propget] HRESULT IconResource([out] [retval] HSTRING* value);
+            }
+
+            [contract(Windows.Storage.Provider.CloudFilesContract, 4.0)]
+            [exclusiveto(Windows.Storage.Provider.StorageProviderFileTypeInfo)]
+            [uuid(3FA12C6F-CCE6-5D5D-80B1-389E7CF92DBF)]
+            interface IStorageProviderFileTypeInfoFactory : IInspectable
+            {
+                HRESULT CreateInstance([in] HSTRING fileExtension, [in] HSTRING iconResource, [out] [retval] Windows.Storage.Provider.StorageProviderFileTypeInfo** value);
+            }
+
             [contract(Windows.Storage.Provider.CloudFilesContract, 2.0)]
             [exclusiveto(Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult)]
             [uuid(2564711D-AA89-4D12-82E3-F72A92E33966)]
@@ -505,6 +540,14 @@ namespace Windows
                 [propput] HRESULT ProviderId([in] GUID value);
             }
 
+            [contract(Windows.Storage.Provider.CloudFilesContract, 4.0)]
+            [exclusiveto(Windows.Storage.Provider.StorageProviderSyncRootInfo)]
+            [uuid(507A6617-BEF6-56FD-855E-75ACE2E45CF5)]
+            interface IStorageProviderSyncRootInfo3 : IInspectable
+            {
+                [propget] HRESULT FallbackFileTypeInfo([out] [retval] Windows.Foundation.Collections.IVector<Windows.Storage.Provider.StorageProviderFileTypeInfo*>** value);
+            }
+
             [contract(Windows.Storage.Provider.CloudFilesContract, 1.0)]
             [exclusiveto(Windows.Storage.Provider.StorageProviderSyncRootManager)]
             [uuid(3E99FBBF-8FE3-4B40-ABC7-F6FC3D74C98E)]
@@ -515,6 +558,14 @@ namespace Windows
                 HRESULT GetSyncRootInformationForFolder([in] Windows.Storage.IStorageFolder* folder, [out] [retval] Windows.Storage.Provider.StorageProviderSyncRootInfo** result);
                 HRESULT GetSyncRootInformationForId([in] HSTRING id, [out] [retval] Windows.Storage.Provider.StorageProviderSyncRootInfo** result);
                 HRESULT GetCurrentSyncRoots([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderSyncRootInfo*>** result);
+            }
+
+            [contract(Windows.Storage.Provider.CloudFilesContract, 4.0)]
+            [exclusiveto(Windows.Storage.Provider.StorageProviderSyncRootManager)]
+            [uuid(EFB6CFEE-1374-544E-9DF1-5598D2E9CFDD)]
+            interface IStorageProviderSyncRootManagerStatics2 : IInspectable
+            {
+                HRESULT IsSupported([out] [retval] boolean* result);
             }
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 2.0)]
@@ -556,6 +607,15 @@ namespace Windows
             runtimeclass FileUpdateRequestedEventArgs
             {
                 [default] interface Windows.Storage.Provider.IFileUpdateRequestedEventArgs;
+            }
+
+            [activatable(Windows.Storage.Provider.IStorageProviderFileTypeInfoFactory, Windows.Storage.Provider.CloudFilesContract, 4.0)]
+            [contract(Windows.Storage.Provider.CloudFilesContract, 4.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass StorageProviderFileTypeInfo
+            {
+                [default] interface Windows.Storage.Provider.IStorageProviderFileTypeInfo;
             }
 
             [activatable(Windows.Storage.Provider.CloudFilesContract, 2.0)]
@@ -610,11 +670,13 @@ namespace Windows
             {
                 [default] interface Windows.Storage.Provider.IStorageProviderSyncRootInfo;
                 [contract(Windows.Storage.Provider.CloudFilesContract, 3.0)] interface Windows.Storage.Provider.IStorageProviderSyncRootInfo2;
+                [contract(Windows.Storage.Provider.CloudFilesContract, 4.0)] interface Windows.Storage.Provider.IStorageProviderSyncRootInfo3;
             }
 
             [contract(Windows.Storage.Provider.CloudFilesContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics, Windows.Storage.Provider.CloudFilesContract, 1.0)]
+            [static(Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics2, Windows.Storage.Provider.CloudFilesContract, 4.0)]
             [threading(both)]
             runtimeclass StorageProviderSyncRootManager
             {

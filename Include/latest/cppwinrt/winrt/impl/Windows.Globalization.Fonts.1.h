@@ -1,33 +1,33 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.UI.Text.0.h"
+#ifndef WINRT_Windows_Globalization_Fonts_1_H
+#define WINRT_Windows_Globalization_Fonts_1_H
 #include "winrt/impl/Windows.Globalization.Fonts.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Globalization::Fonts {
-
-struct WINRT_EBO ILanguageFont :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ILanguageFont>
+namespace winrt::Windows::Globalization::Fonts
 {
-    ILanguageFont(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ILanguageFontGroup :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ILanguageFontGroup>
-{
-    ILanguageFontGroup(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ILanguageFontGroupFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ILanguageFontGroupFactory>
-{
-    ILanguageFontGroupFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) ILanguageFont :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ILanguageFont>
+    {
+        ILanguageFont(std::nullptr_t = nullptr) noexcept {}
+        ILanguageFont(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ILanguageFontGroup :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ILanguageFontGroup>
+    {
+        ILanguageFontGroup(std::nullptr_t = nullptr) noexcept {}
+        ILanguageFontGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ILanguageFontGroupFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ILanguageFontGroupFactory>
+    {
+        ILanguageFontGroupFactory(std::nullptr_t = nullptr) noexcept {}
+        ILanguageFontGroupFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

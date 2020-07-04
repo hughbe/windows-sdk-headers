@@ -1,204 +1,190 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_UI_2_H
+#define WINRT_Windows_UI_2_H
 #include "winrt/impl/Windows.UI.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::UI {
-
-struct Color
+namespace winrt::Windows::UI
 {
-    uint8_t A;
-    uint8_t R;
-    uint8_t G;
-    uint8_t B;
-};
-
-inline bool operator==(Color const& left, Color const& right) noexcept
-{
-    return left.A == right.A && left.R == right.R && left.G == right.G && left.B == right.B;
+    struct Color
+    {
+        uint8_t A;
+        uint8_t R;
+        uint8_t G;
+        uint8_t B;
+    };
+    inline bool operator==(Color const& left, Color const& right) noexcept
+    {
+        return left.A == right.A && left.R == right.R && left.G == right.G && left.B == right.B;
+    }
+    inline bool operator!=(Color const& left, Color const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct __declspec(empty_bases) ColorHelper : Windows::UI::IColorHelper
+    {
+        ColorHelper(std::nullptr_t) noexcept {}
+        ColorHelper(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::IColorHelper(ptr, take_ownership_from_abi) {}
+        static auto FromArgb(uint8_t a, uint8_t r, uint8_t g, uint8_t b);
+        static auto ToDisplayName(Windows::UI::Color const& color);
+    };
+    struct __declspec(empty_bases) Colors : Windows::UI::IColors
+    {
+        Colors(std::nullptr_t) noexcept {}
+        Colors(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::IColors(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto AliceBlue();
+        [[nodiscard]] static auto AntiqueWhite();
+        [[nodiscard]] static auto Aqua();
+        [[nodiscard]] static auto Aquamarine();
+        [[nodiscard]] static auto Azure();
+        [[nodiscard]] static auto Beige();
+        [[nodiscard]] static auto Bisque();
+        [[nodiscard]] static auto Black();
+        [[nodiscard]] static auto BlanchedAlmond();
+        [[nodiscard]] static auto Blue();
+        [[nodiscard]] static auto BlueViolet();
+        [[nodiscard]] static auto Brown();
+        [[nodiscard]] static auto BurlyWood();
+        [[nodiscard]] static auto CadetBlue();
+        [[nodiscard]] static auto Chartreuse();
+        [[nodiscard]] static auto Chocolate();
+        [[nodiscard]] static auto Coral();
+        [[nodiscard]] static auto CornflowerBlue();
+        [[nodiscard]] static auto Cornsilk();
+        [[nodiscard]] static auto Crimson();
+        [[nodiscard]] static auto Cyan();
+        [[nodiscard]] static auto DarkBlue();
+        [[nodiscard]] static auto DarkCyan();
+        [[nodiscard]] static auto DarkGoldenrod();
+        [[nodiscard]] static auto DarkGray();
+        [[nodiscard]] static auto DarkGreen();
+        [[nodiscard]] static auto DarkKhaki();
+        [[nodiscard]] static auto DarkMagenta();
+        [[nodiscard]] static auto DarkOliveGreen();
+        [[nodiscard]] static auto DarkOrange();
+        [[nodiscard]] static auto DarkOrchid();
+        [[nodiscard]] static auto DarkRed();
+        [[nodiscard]] static auto DarkSalmon();
+        [[nodiscard]] static auto DarkSeaGreen();
+        [[nodiscard]] static auto DarkSlateBlue();
+        [[nodiscard]] static auto DarkSlateGray();
+        [[nodiscard]] static auto DarkTurquoise();
+        [[nodiscard]] static auto DarkViolet();
+        [[nodiscard]] static auto DeepPink();
+        [[nodiscard]] static auto DeepSkyBlue();
+        [[nodiscard]] static auto DimGray();
+        [[nodiscard]] static auto DodgerBlue();
+        [[nodiscard]] static auto Firebrick();
+        [[nodiscard]] static auto FloralWhite();
+        [[nodiscard]] static auto ForestGreen();
+        [[nodiscard]] static auto Fuchsia();
+        [[nodiscard]] static auto Gainsboro();
+        [[nodiscard]] static auto GhostWhite();
+        [[nodiscard]] static auto Gold();
+        [[nodiscard]] static auto Goldenrod();
+        [[nodiscard]] static auto Gray();
+        [[nodiscard]] static auto Green();
+        [[nodiscard]] static auto GreenYellow();
+        [[nodiscard]] static auto Honeydew();
+        [[nodiscard]] static auto HotPink();
+        [[nodiscard]] static auto IndianRed();
+        [[nodiscard]] static auto Indigo();
+        [[nodiscard]] static auto Ivory();
+        [[nodiscard]] static auto Khaki();
+        [[nodiscard]] static auto Lavender();
+        [[nodiscard]] static auto LavenderBlush();
+        [[nodiscard]] static auto LawnGreen();
+        [[nodiscard]] static auto LemonChiffon();
+        [[nodiscard]] static auto LightBlue();
+        [[nodiscard]] static auto LightCoral();
+        [[nodiscard]] static auto LightCyan();
+        [[nodiscard]] static auto LightGoldenrodYellow();
+        [[nodiscard]] static auto LightGreen();
+        [[nodiscard]] static auto LightGray();
+        [[nodiscard]] static auto LightPink();
+        [[nodiscard]] static auto LightSalmon();
+        [[nodiscard]] static auto LightSeaGreen();
+        [[nodiscard]] static auto LightSkyBlue();
+        [[nodiscard]] static auto LightSlateGray();
+        [[nodiscard]] static auto LightSteelBlue();
+        [[nodiscard]] static auto LightYellow();
+        [[nodiscard]] static auto Lime();
+        [[nodiscard]] static auto LimeGreen();
+        [[nodiscard]] static auto Linen();
+        [[nodiscard]] static auto Magenta();
+        [[nodiscard]] static auto Maroon();
+        [[nodiscard]] static auto MediumAquamarine();
+        [[nodiscard]] static auto MediumBlue();
+        [[nodiscard]] static auto MediumOrchid();
+        [[nodiscard]] static auto MediumPurple();
+        [[nodiscard]] static auto MediumSeaGreen();
+        [[nodiscard]] static auto MediumSlateBlue();
+        [[nodiscard]] static auto MediumSpringGreen();
+        [[nodiscard]] static auto MediumTurquoise();
+        [[nodiscard]] static auto MediumVioletRed();
+        [[nodiscard]] static auto MidnightBlue();
+        [[nodiscard]] static auto MintCream();
+        [[nodiscard]] static auto MistyRose();
+        [[nodiscard]] static auto Moccasin();
+        [[nodiscard]] static auto NavajoWhite();
+        [[nodiscard]] static auto Navy();
+        [[nodiscard]] static auto OldLace();
+        [[nodiscard]] static auto Olive();
+        [[nodiscard]] static auto OliveDrab();
+        [[nodiscard]] static auto Orange();
+        [[nodiscard]] static auto OrangeRed();
+        [[nodiscard]] static auto Orchid();
+        [[nodiscard]] static auto PaleGoldenrod();
+        [[nodiscard]] static auto PaleGreen();
+        [[nodiscard]] static auto PaleTurquoise();
+        [[nodiscard]] static auto PaleVioletRed();
+        [[nodiscard]] static auto PapayaWhip();
+        [[nodiscard]] static auto PeachPuff();
+        [[nodiscard]] static auto Peru();
+        [[nodiscard]] static auto Pink();
+        [[nodiscard]] static auto Plum();
+        [[nodiscard]] static auto PowderBlue();
+        [[nodiscard]] static auto Purple();
+        [[nodiscard]] static auto Red();
+        [[nodiscard]] static auto RosyBrown();
+        [[nodiscard]] static auto RoyalBlue();
+        [[nodiscard]] static auto SaddleBrown();
+        [[nodiscard]] static auto Salmon();
+        [[nodiscard]] static auto SandyBrown();
+        [[nodiscard]] static auto SeaGreen();
+        [[nodiscard]] static auto SeaShell();
+        [[nodiscard]] static auto Sienna();
+        [[nodiscard]] static auto Silver();
+        [[nodiscard]] static auto SkyBlue();
+        [[nodiscard]] static auto SlateBlue();
+        [[nodiscard]] static auto SlateGray();
+        [[nodiscard]] static auto Snow();
+        [[nodiscard]] static auto SpringGreen();
+        [[nodiscard]] static auto SteelBlue();
+        [[nodiscard]] static auto Tan();
+        [[nodiscard]] static auto Teal();
+        [[nodiscard]] static auto Thistle();
+        [[nodiscard]] static auto Tomato();
+        [[nodiscard]] static auto Transparent();
+        [[nodiscard]] static auto Turquoise();
+        [[nodiscard]] static auto Violet();
+        [[nodiscard]] static auto Wheat();
+        [[nodiscard]] static auto White();
+        [[nodiscard]] static auto WhiteSmoke();
+        [[nodiscard]] static auto Yellow();
+        [[nodiscard]] static auto YellowGreen();
+    };
+    struct __declspec(empty_bases) UIContentRoot : Windows::UI::IUIContentRoot
+    {
+        UIContentRoot(std::nullptr_t) noexcept {}
+        UIContentRoot(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::IUIContentRoot(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) UIContext : Windows::UI::IUIContext
+    {
+        UIContext(std::nullptr_t) noexcept {}
+        UIContext(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::IUIContext(ptr, take_ownership_from_abi) {}
+    };
 }
-
-inline bool operator!=(Color const& left, Color const& right) noexcept
-{
-    return !(left == right);
-}
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::UI {
-
-struct WINRT_EBO ColorHelper :
-    Windows::UI::IColorHelper
-{
-    ColorHelper(std::nullptr_t) noexcept {}
-    static Windows::UI::Color FromArgb(uint8_t a, uint8_t r, uint8_t g, uint8_t b);
-    static hstring ToDisplayName(Windows::UI::Color const& color);
-};
-
-struct WINRT_EBO Colors :
-    Windows::UI::IColors
-{
-    Colors(std::nullptr_t) noexcept {}
-    static Windows::UI::Color AliceBlue();
-    static Windows::UI::Color AntiqueWhite();
-    static Windows::UI::Color Aqua();
-    static Windows::UI::Color Aquamarine();
-    static Windows::UI::Color Azure();
-    static Windows::UI::Color Beige();
-    static Windows::UI::Color Bisque();
-    static Windows::UI::Color Black();
-    static Windows::UI::Color BlanchedAlmond();
-    static Windows::UI::Color Blue();
-    static Windows::UI::Color BlueViolet();
-    static Windows::UI::Color Brown();
-    static Windows::UI::Color BurlyWood();
-    static Windows::UI::Color CadetBlue();
-    static Windows::UI::Color Chartreuse();
-    static Windows::UI::Color Chocolate();
-    static Windows::UI::Color Coral();
-    static Windows::UI::Color CornflowerBlue();
-    static Windows::UI::Color Cornsilk();
-    static Windows::UI::Color Crimson();
-    static Windows::UI::Color Cyan();
-    static Windows::UI::Color DarkBlue();
-    static Windows::UI::Color DarkCyan();
-    static Windows::UI::Color DarkGoldenrod();
-    static Windows::UI::Color DarkGray();
-    static Windows::UI::Color DarkGreen();
-    static Windows::UI::Color DarkKhaki();
-    static Windows::UI::Color DarkMagenta();
-    static Windows::UI::Color DarkOliveGreen();
-    static Windows::UI::Color DarkOrange();
-    static Windows::UI::Color DarkOrchid();
-    static Windows::UI::Color DarkRed();
-    static Windows::UI::Color DarkSalmon();
-    static Windows::UI::Color DarkSeaGreen();
-    static Windows::UI::Color DarkSlateBlue();
-    static Windows::UI::Color DarkSlateGray();
-    static Windows::UI::Color DarkTurquoise();
-    static Windows::UI::Color DarkViolet();
-    static Windows::UI::Color DeepPink();
-    static Windows::UI::Color DeepSkyBlue();
-    static Windows::UI::Color DimGray();
-    static Windows::UI::Color DodgerBlue();
-    static Windows::UI::Color Firebrick();
-    static Windows::UI::Color FloralWhite();
-    static Windows::UI::Color ForestGreen();
-    static Windows::UI::Color Fuchsia();
-    static Windows::UI::Color Gainsboro();
-    static Windows::UI::Color GhostWhite();
-    static Windows::UI::Color Gold();
-    static Windows::UI::Color Goldenrod();
-    static Windows::UI::Color Gray();
-    static Windows::UI::Color Green();
-    static Windows::UI::Color GreenYellow();
-    static Windows::UI::Color Honeydew();
-    static Windows::UI::Color HotPink();
-    static Windows::UI::Color IndianRed();
-    static Windows::UI::Color Indigo();
-    static Windows::UI::Color Ivory();
-    static Windows::UI::Color Khaki();
-    static Windows::UI::Color Lavender();
-    static Windows::UI::Color LavenderBlush();
-    static Windows::UI::Color LawnGreen();
-    static Windows::UI::Color LemonChiffon();
-    static Windows::UI::Color LightBlue();
-    static Windows::UI::Color LightCoral();
-    static Windows::UI::Color LightCyan();
-    static Windows::UI::Color LightGoldenrodYellow();
-    static Windows::UI::Color LightGreen();
-    static Windows::UI::Color LightGray();
-    static Windows::UI::Color LightPink();
-    static Windows::UI::Color LightSalmon();
-    static Windows::UI::Color LightSeaGreen();
-    static Windows::UI::Color LightSkyBlue();
-    static Windows::UI::Color LightSlateGray();
-    static Windows::UI::Color LightSteelBlue();
-    static Windows::UI::Color LightYellow();
-    static Windows::UI::Color Lime();
-    static Windows::UI::Color LimeGreen();
-    static Windows::UI::Color Linen();
-    static Windows::UI::Color Magenta();
-    static Windows::UI::Color Maroon();
-    static Windows::UI::Color MediumAquamarine();
-    static Windows::UI::Color MediumBlue();
-    static Windows::UI::Color MediumOrchid();
-    static Windows::UI::Color MediumPurple();
-    static Windows::UI::Color MediumSeaGreen();
-    static Windows::UI::Color MediumSlateBlue();
-    static Windows::UI::Color MediumSpringGreen();
-    static Windows::UI::Color MediumTurquoise();
-    static Windows::UI::Color MediumVioletRed();
-    static Windows::UI::Color MidnightBlue();
-    static Windows::UI::Color MintCream();
-    static Windows::UI::Color MistyRose();
-    static Windows::UI::Color Moccasin();
-    static Windows::UI::Color NavajoWhite();
-    static Windows::UI::Color Navy();
-    static Windows::UI::Color OldLace();
-    static Windows::UI::Color Olive();
-    static Windows::UI::Color OliveDrab();
-    static Windows::UI::Color Orange();
-    static Windows::UI::Color OrangeRed();
-    static Windows::UI::Color Orchid();
-    static Windows::UI::Color PaleGoldenrod();
-    static Windows::UI::Color PaleGreen();
-    static Windows::UI::Color PaleTurquoise();
-    static Windows::UI::Color PaleVioletRed();
-    static Windows::UI::Color PapayaWhip();
-    static Windows::UI::Color PeachPuff();
-    static Windows::UI::Color Peru();
-    static Windows::UI::Color Pink();
-    static Windows::UI::Color Plum();
-    static Windows::UI::Color PowderBlue();
-    static Windows::UI::Color Purple();
-    static Windows::UI::Color Red();
-    static Windows::UI::Color RosyBrown();
-    static Windows::UI::Color RoyalBlue();
-    static Windows::UI::Color SaddleBrown();
-    static Windows::UI::Color Salmon();
-    static Windows::UI::Color SandyBrown();
-    static Windows::UI::Color SeaGreen();
-    static Windows::UI::Color SeaShell();
-    static Windows::UI::Color Sienna();
-    static Windows::UI::Color Silver();
-    static Windows::UI::Color SkyBlue();
-    static Windows::UI::Color SlateBlue();
-    static Windows::UI::Color SlateGray();
-    static Windows::UI::Color Snow();
-    static Windows::UI::Color SpringGreen();
-    static Windows::UI::Color SteelBlue();
-    static Windows::UI::Color Tan();
-    static Windows::UI::Color Teal();
-    static Windows::UI::Color Thistle();
-    static Windows::UI::Color Tomato();
-    static Windows::UI::Color Transparent();
-    static Windows::UI::Color Turquoise();
-    static Windows::UI::Color Violet();
-    static Windows::UI::Color Wheat();
-    static Windows::UI::Color White();
-    static Windows::UI::Color WhiteSmoke();
-    static Windows::UI::Color Yellow();
-    static Windows::UI::Color YellowGreen();
-};
-
-struct WINRT_EBO UIContentRoot :
-    Windows::UI::IUIContentRoot
-{
-    UIContentRoot(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO UIContext :
-    Windows::UI::IUIContext
-{
-    UIContext(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

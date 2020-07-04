@@ -58,6 +58,17 @@
 #endif
 #endif // NEGOSSP_NAME
 
+#ifndef CLOUDAP_NAME
+#define CLOUDAP_NAME_W  L"CloudAP"
+#define ClOUDAP_NAME_A  "CloudAP"
+
+#ifdef UNICODE
+#define CLOUDAP_NAME    CLOUDAP_NAME_W
+#else
+#define CLOUDAP_NAME    ClOUDAP_NAME_A
+#endif
+#endif // CLOUDAP_NAME
+
 //
 // Include the master SSPI header file
 //

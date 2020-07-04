@@ -30,8 +30,8 @@ Revision History:
 extern "C" {
 #endif
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 #if _MSC_VER >= 1200
@@ -62,11 +62,6 @@ extern "C" {
 #if (PSAPI_VERSION > 1)
 #define EnumProcessModules          K32EnumProcessModules
 #define EnumProcessModulesEx        K32EnumProcessModulesEx
-#define GetModuleBaseNameA          K32GetModuleBaseNameA
-#define GetModuleBaseNameW          K32GetModuleBaseNameW
-#define GetModuleFileNameExA        K32GetModuleFileNameExA
-#define GetModuleFileNameExW        K32GetModuleFileNameExW
-#define EmptyWorkingSet             K32EmptyWorkingSet
 #define QueryWorkingSet             K32QueryWorkingSet
 #define QueryWorkingSetEx           K32QueryWorkingSetEx
 #define InitializeProcessForWsWatch K32InitializeProcessForWsWatch
@@ -80,10 +75,32 @@ extern "C" {
 #define GetDeviceDriverFileNameA    K32GetDeviceDriverFileNameA
 #define GetDeviceDriverFileNameW    K32GetDeviceDriverFileNameW
 #define GetPerformanceInfo          K32GetPerformanceInfo
-#define EnumPageFilesW              K32EnumPageFilesW
-#define EnumPageFilesA              K32EnumPageFilesA
 #define GetProcessImageFileNameA    K32GetProcessImageFileNameA
 #define GetProcessImageFileNameW    K32GetProcessImageFileNameW
+#endif
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
+#ifndef PSAPI_VERSION
+#if (NTDDI_VERSION >= NTDDI_WIN7)
+#define PSAPI_VERSION 2
+#else
+#define PSAPI_VERSION 1
+#endif
+#endif
+
+#if (PSAPI_VERSION > 1)
+#define GetModuleBaseNameA          K32GetModuleBaseNameA
+#define GetModuleBaseNameW          K32GetModuleBaseNameW
+#define GetModuleFileNameExA        K32GetModuleFileNameExA
+#define GetModuleFileNameExW        K32GetModuleFileNameExW
+#define EmptyWorkingSet             K32EmptyWorkingSet
+#define EnumPageFilesW              K32EnumPageFilesW
+#define EnumPageFilesA              K32EnumPageFilesA
 #endif
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
@@ -124,8 +141,8 @@ EnumProcesses(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 BOOL
 WINAPI
@@ -148,7 +165,7 @@ EnumProcessModulesEx(
     );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Application Family or OneCore Family or Games Family
@@ -237,6 +254,12 @@ WINAPI
 EmptyWorkingSet(
     _In_ HANDLE hProcess
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 //
 // Working set information structures. All non-specified bits are reserved.
@@ -439,11 +462,11 @@ GetDeviceDriverFileNameW (
 #define GetDeviceDriverFileName  GetDeviceDriverFileNameA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 // Structure for GetProcessMemoryInfo()
 
@@ -488,11 +511,11 @@ GetProcessMemoryInfo(
     DWORD cb
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 typedef struct _PERFORMANCE_INFORMATION {
     DWORD cb;
@@ -517,6 +540,12 @@ GetPerformanceInfo (
     PPERFORMANCE_INFORMATION pPerformanceInformation,
     DWORD cb
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 typedef struct _ENUM_PAGE_FILE_INFORMATION {
     DWORD cb;
@@ -552,6 +581,12 @@ EnumPageFilesA (
 #define EnumPageFiles EnumPageFilesA
 #endif // !UNICODE
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 DWORD
 WINAPI
 GetProcessImageFileNameA (
@@ -579,7 +614,7 @@ GetProcessImageFileNameW (
 #endif
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #ifdef __cplusplus

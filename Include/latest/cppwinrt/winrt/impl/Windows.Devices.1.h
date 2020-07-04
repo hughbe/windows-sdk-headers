@@ -1,44 +1,40 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Devices.Adc.Provider.0.h"
-#include "winrt/impl/Windows.Devices.Gpio.Provider.0.h"
-#include "winrt/impl/Windows.Devices.I2c.Provider.0.h"
-#include "winrt/impl/Windows.Devices.Pwm.Provider.0.h"
-#include "winrt/impl/Windows.Devices.Spi.Provider.0.h"
+#ifndef WINRT_Windows_Devices_1_H
+#define WINRT_Windows_Devices_1_H
 #include "winrt/impl/Windows.Devices.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices {
-
-struct WINRT_EBO ILowLevelDevicesAggregateProvider :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ILowLevelDevicesAggregateProvider>
+namespace winrt::Windows::Devices
 {
-    ILowLevelDevicesAggregateProvider(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ILowLevelDevicesAggregateProviderFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ILowLevelDevicesAggregateProviderFactory>
-{
-    ILowLevelDevicesAggregateProviderFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ILowLevelDevicesController :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ILowLevelDevicesController>
-{
-    ILowLevelDevicesController(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ILowLevelDevicesControllerStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ILowLevelDevicesControllerStatics>
-{
-    ILowLevelDevicesControllerStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) ILowLevelDevicesAggregateProvider :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ILowLevelDevicesAggregateProvider>
+    {
+        ILowLevelDevicesAggregateProvider(std::nullptr_t = nullptr) noexcept {}
+        ILowLevelDevicesAggregateProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ILowLevelDevicesAggregateProviderFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ILowLevelDevicesAggregateProviderFactory>
+    {
+        ILowLevelDevicesAggregateProviderFactory(std::nullptr_t = nullptr) noexcept {}
+        ILowLevelDevicesAggregateProviderFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ILowLevelDevicesController :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ILowLevelDevicesController>
+    {
+        ILowLevelDevicesController(std::nullptr_t = nullptr) noexcept {}
+        ILowLevelDevicesController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ILowLevelDevicesControllerStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ILowLevelDevicesControllerStatics>
+    {
+        ILowLevelDevicesControllerStatics(std::nullptr_t = nullptr) noexcept {}
+        ILowLevelDevicesControllerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

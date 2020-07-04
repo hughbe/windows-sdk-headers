@@ -198,8 +198,8 @@
 // System DLL Init Block Structure Offset Definitions
 //
 
-#define IbCfgBitMap 0xb0
-#define IbWow64CfgBitMap 0xc0
+#define IbCfgBitMap 0xb8
+#define IbWow64CfgBitMap 0xc8
 #define IbMitigationOptionsMap 0xa0
 #define PS_MITIGATION_OPTION_BITS_PER_OPTION 0x4
 #define PS_MITIGATION_OPTION_ALWAYS_ON 0x1
@@ -321,6 +321,7 @@
 #define STATUS_WAKE_SYSTEM 0x40000294
 #define STATUS_WAKE_SYSTEM_DEBUGGER 0x80000007
 #define STATUS_SET_CONTEXT_DENIED 0xc000060a
+#define STATUS_RETURN_ADDRESS_HIJACK_ATTEMPT 0x80000033
 
 //
 // Fast Fail Code Definitions
@@ -430,7 +431,7 @@
 #define InServiceCount 0x74
 #define InDispatchCount 0x78
 #define InTrapFrame 0x88
-#define InterruptObjectLength 0xf8
+#define InterruptObjectLength 0x120
 
 //
 // Process Object Structure Offset Definitions
@@ -443,18 +444,18 @@
 #define PrDirectoryTableBase 0x28
 #define PrThreadListHead 0x38
 #define PrAffinity 0x58
-#define PrReadyListHead 0x100
-#define PrSwapListEntry 0x110
-#define PrActiveProcessors 0x118
-#define PrProcessFlags 0x1c0
-#define PrBasePriority 0x1c8
-#define PrQuantumReset 0x1c9
-#define PrCycleTime 0x260
-#define PrKernelTime 0x27c
-#define PrUserTime 0x280
-#define PrInstrumentationCallback 0x288
-#define KernelProcessObjectLength 0x298
-#define ExecutiveProcessObjectLength 0x980
+#define PrReadyListHead 0x160
+#define PrSwapListEntry 0x170
+#define PrActiveProcessors 0x178
+#define PrProcessFlags 0x280
+#define PrBasePriority 0x288
+#define PrQuantumReset 0x289
+#define PrCycleTime 0x368
+#define PrKernelTime 0x384
+#define PrUserTime 0x388
+#define PrInstrumentationCallback 0x390
+#define KernelProcessObjectLength 0x3f0
+#define ExecutiveProcessObjectLength 0xb00
 #define Win32BatchFlushCallout 0x7
 
 //
@@ -490,8 +491,8 @@
 // Thread Object Structure Offset Definitions
 //
 
-#define EtCid 0x668
-#define EtPicoContext 0x7c8
+#define EtCid 0x498
+#define EtPicoContext 0x600
 
 #define ThType 0x0
 #define ThSize 0x2
@@ -538,8 +539,11 @@
 #define KTHREAD_RESTRICTED_GUI_THREAD_MASK 0x200000
 #define KTHREAD_SYSTEM_THREAD_BIT 0xa
 #define KTHREAD_QUEUE_DEFER_PREEMPTION_BIT 0xb
-#define KTHREAD_BAM_QOS_LEVEL_MASK 0x3
+#define KTHREAD_BAM_QOS_LEVEL_MASK 0xff
 #define KTHREAD_CET_USER_SHADOW_STACK_BIT 0x14
+
+#define DEBUG_ACTIVE_ALT_SYSCALL_HANDLER 0x24
+#define PsSystemCallMapToSystem 0x1
 
 #define ThMiscFlags 0x6c
 #define ThThreadFlags 0x70
@@ -554,8 +558,8 @@
 #define ThWin32Thread 0x1c0
 #define ThStackBase 0x38
 #define ThLegoData 0x2f0
-#define KernelThreadObjectLength 0x620
-#define ExecutiveThreadObjectLength 0x838
+#define KernelThreadObjectLength 0x450
+#define ExecutiveThreadObjectLength 0x8b8
 
 
 //
@@ -729,6 +733,8 @@
 // Extended context structure offset definitions
 //
 
+#define CxxAllOffset 0x0
+#define CxxAllLength 0x4
 #define CxxLegacyOffset 0x8
 #define CxxLegacyLength 0xc
 #define CxxXStateOffset 0x10
@@ -820,8 +826,8 @@
 #define PcPrcbLock 0x9a8
 #define PcGroupSetMember 0x10e0
 #define PcFeatureBits 0x1214
-#define PcVirtualApicAssist 0x2018
-#define PcTrappedSecurityDomain 0x14a8
+#define PcVirtualApicAssist 0x2098
+#define PcTrappedSecurityDomain 0x14a0
 #define TlThread 0x0
 #define TlCpuNumber 0x8
 #define TlTrapType 0x9
@@ -856,7 +862,7 @@
 #define PcSkipTick 0x1898
 #define PcStartCycles 0x18c8
 #define PcSpBase 0x1470
-#define ProcessorControlRegisterLength 0x1ad40
+#define ProcessorControlRegisterLength 0x1d0c0
 
 //
 // Defines for user shared data
@@ -884,8 +890,8 @@
 #define PbIdleThread 0x18
 #define PbNumber 0x24
 #define PbPrcbLock 0x28
-#define PbKeSpinLockOrdering 0xbf0
-#define KI_SPINLOCK_ORDER_PRCB_LOCK 0x40
+#define PbKeSpinLockOrdering 0xbf4
+#define KI_SPINLOCK_ORDER_PRCB_LOCK 0x80
 #define PbProcessorState 0x40
 #define PbHalReserved 0x700
 #define PbMinorVersion 0x750
@@ -896,18 +902,18 @@
 #define PbPriorityState 0x30
 #define PbLockQueue 0x780
 #define PbPPLookasideList 0x900
-#define PbPPNPagedLookasideList 0x4600
-#define PbPPPagedLookasideList 0x5200
+#define PbPPNPagedLookasideList 0x6700
+#define PbPPPagedLookasideList 0x7300
 #define PbPacketBarrier 0xa00
 #define PbDeferredReadyListHead 0xa08
 #define PbLookasideIrpFloat 0xa58
-#define PbRequestMailbox 0x6380
+#define PbRequestMailbox 0x8700
 #define PbMailbox 0xa80
 #define PbDpcGate 0xb80
 #define PbWaitListHead 0xc00
 #define PbCcFastMdlReadNoWait 0x1180
 #define PbPowerState 0x1200
-#define PbSpinLockAcquireCount 0x1700
+#define PbSpinLockAcquireCount 0x1780
 #define PbSystemCalls 0xa38
 #define PbReadOperationCount 0xa5c
 #define PbWriteOperationCount 0xa60
@@ -951,11 +957,11 @@
 #define PbCopyReadNoWait 0xa4c
 #define PbCopyReadWait 0xa50
 #define PbCopyReadNoWaitMiss 0xa54
-#define PbAlignmentFixupCount 0x1430
+#define PbAlignmentFixupCount 0x1458
 #define PbExceptionDispatchCount 0xf34
 #define PbProcessorVendorString 0x890
 #define PbFeatureBits 0x894
-#define PbPanicStackBase 0x17d8
+#define PbPanicStackBase 0x1858
 
 //
 // KTHREAD state
@@ -1708,8 +1714,8 @@
 // EPROCESS
 //
 
-#define EpDebugPort 0x3d8
-#define EpSecurityDomain 0x920
+#define EpDebugPort 0x530
+#define EpSecurityDomain 0xaa0
 
 //
 // KeFeatureBits defines

@@ -2393,6 +2393,17 @@ DEFINE_GUID(MFSubtitleFormat_SSA,
 DEFINE_GUID(MFSubtitleFormat_CustomUserData,
     0x1bb3d849, 0x6614, 0x4d80, 0x88, 0x82, 0xed, 0x24, 0xaa, 0x82, 0xda, 0x92);
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+
+// {71F40E4A-1278-4442-B30D-39DD1D7722BC}      MFSubtitleFormat_PGS
+DEFINE_GUID(MFSubtitleFormat_PGS,
+    0x71f40e4a, 0x1278, 0x4442, 0xb3, 0x0d, 0x39, 0xdd, 0x1d, 0x77, 0x22, 0xbc);
+
+// {6B8E40F4-8D2C-4CED-AD91-5960E45B4433}      MFSubtitleFormat_VobSub
+DEFINE_GUID(MFSubtitleFormat_VobSub,
+    0x6b8e40f4, 0x8d2c, 0x4ced, 0xad, 0x91, 0x59, 0x60, 0xe4, 0x5b, 0x44, 0x33);
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 //
 // Binary Data MediaTypes
@@ -2711,6 +2722,19 @@ DEFINE_GUID(MF_MT_VIDEO_RENDERER_EXTENSION_PROFILE,
 DEFINE_GUID(MF_DECODER_FWD_CUSTOM_SEI_DECODE_ORDER, 0xf13bbe3c, 0x36d4, 0x410a, 0xb9, 0x85, 0x7a, 0x95, 0x1a, 0x1e, 0x62, 0x94);
 
 #endif /* (NTDDI_VERSION >= NTDDI_WIN10_RS4) */ 
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+
+// {C6052A80-6D9C-40a3-9DB8-F027A25C9AB9} 
+// Type: String 
+// Name of the App Service, as defined in the AppX manifest of the Package that contains this Video 
+// Renderer Effect. 
+// This attribute is specified by the Video Renderer Effect to request that the platforms establish 
+// a communication channel with the Video Renderer Effect's App Service. 
+DEFINE_GUID(MF_VIDEO_RENDERER_EFFECT_APP_SERVICE_NAME,
+    0xc6052a80, 0x6d9c, 0x40a3, 0x9d, 0xb8, 0xf0, 0x27, 0xa2, 0x5c, 0x9a, 0xb9);
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 //
 // AUDIO data
@@ -4424,6 +4448,24 @@ DEFINE_GUID(MF_DEVICESTREAM_ATTRIBUTE_FACEAUTH_CAPABILITY,
 //      KSCAMERA_EXTENDEDPROP_SECURE_MODE_ENABLED
 DEFINE_GUID(MF_DEVICESTREAM_ATTRIBUTE_SECURE_CAPABILITY,
 0x940FD626, 0xEA6E, 0x4684, 0x98, 0x40, 0x36, 0xBD, 0x6E, 0xC9, 0xFB, 0xEF);
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+
+// MFCombineSamples
+//  pSample - pointer to a sample to append/combine 'pSampleToAdd' to 
+//  pSampleToAdd - the sample to append 
+//  dwMaxMergedDurationInMS - indicates the maximum duration that the combined sample should be allowed to occupy 
+//  pCombined - indicates that pSampleToAdd was successfully added to the base sample
+STDAPI MFCombineSamples( _In_ IMFSample *pSample, _In_ IMFSample* pSampleToAdd, _In_ DWORD dwMaxMergedDurationInMS, _Out_ BOOL* pMerged );
+
+// MFSplitSample
+//  pSample - a single combined sample that should be split up 
+//  pOutputSamples - output array of split samples 
+//  dwOutputSampleMaxCount - maximum array size (use the BufferCount on pSample to find out an upper bound) 
+//  pdwOutputSampleCount - actual number of output samples produce
+
+STDAPI MFSplitSample( _In_ IMFSample *pSample, _Out_writes_to_(dwOutputSampleMaxCount, *pdwOutputSampleCount) IMFSample** pOutputSamples, _In_ DWORD dwOutputSampleMaxCount, _Out_ DWORD* pdwOutputSampleCount );
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion

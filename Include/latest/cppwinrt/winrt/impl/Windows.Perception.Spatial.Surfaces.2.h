@@ -1,59 +1,44 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Graphics.DirectX.1.h"
-#include "winrt/impl/Windows.Perception.Spatial.1.h"
-#include "winrt/impl/Windows.Storage.Streams.1.h"
+#ifndef WINRT_Windows_Perception_Spatial_Surfaces_2_H
+#define WINRT_Windows_Perception_Spatial_Surfaces_2_H
 #include "winrt/impl/Windows.Perception.Spatial.Surfaces.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Perception::Spatial::Surfaces {
-
+namespace winrt::Windows::Perception::Spatial::Surfaces
+{
+    struct __declspec(empty_bases) SpatialSurfaceInfo : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceInfo
+    {
+        SpatialSurfaceInfo(std::nullptr_t) noexcept {}
+        SpatialSurfaceInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceInfo(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) SpatialSurfaceMesh : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMesh
+    {
+        SpatialSurfaceMesh(std::nullptr_t) noexcept {}
+        SpatialSurfaceMesh(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMesh(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) SpatialSurfaceMeshBuffer : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshBuffer
+    {
+        SpatialSurfaceMeshBuffer(std::nullptr_t) noexcept {}
+        SpatialSurfaceMeshBuffer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshBuffer(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) SpatialSurfaceMeshOptions : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshOptions
+    {
+        SpatialSurfaceMeshOptions(std::nullptr_t) noexcept {}
+        SpatialSurfaceMeshOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshOptions(ptr, take_ownership_from_abi) {}
+        SpatialSurfaceMeshOptions();
+        [[nodiscard]] static auto SupportedVertexPositionFormats();
+        [[nodiscard]] static auto SupportedTriangleIndexFormats();
+        [[nodiscard]] static auto SupportedVertexNormalFormats();
+    };
+    struct __declspec(empty_bases) SpatialSurfaceObserver : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserver
+    {
+        SpatialSurfaceObserver(std::nullptr_t) noexcept {}
+        SpatialSurfaceObserver(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserver(ptr, take_ownership_from_abi) {}
+        SpatialSurfaceObserver();
+        static auto RequestAccessAsync();
+        static auto IsSupported();
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Perception::Spatial::Surfaces {
-
-struct WINRT_EBO SpatialSurfaceInfo :
-    Windows::Perception::Spatial::Surfaces::ISpatialSurfaceInfo
-{
-    SpatialSurfaceInfo(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO SpatialSurfaceMesh :
-    Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMesh
-{
-    SpatialSurfaceMesh(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO SpatialSurfaceMeshBuffer :
-    Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshBuffer
-{
-    SpatialSurfaceMeshBuffer(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO SpatialSurfaceMeshOptions :
-    Windows::Perception::Spatial::Surfaces::ISpatialSurfaceMeshOptions
-{
-    SpatialSurfaceMeshOptions(std::nullptr_t) noexcept {}
-    SpatialSurfaceMeshOptions();
-    static Windows::Foundation::Collections::IVectorView<Windows::Graphics::DirectX::DirectXPixelFormat> SupportedVertexPositionFormats();
-    static Windows::Foundation::Collections::IVectorView<Windows::Graphics::DirectX::DirectXPixelFormat> SupportedTriangleIndexFormats();
-    static Windows::Foundation::Collections::IVectorView<Windows::Graphics::DirectX::DirectXPixelFormat> SupportedVertexNormalFormats();
-};
-
-struct WINRT_EBO SpatialSurfaceObserver :
-    Windows::Perception::Spatial::Surfaces::ISpatialSurfaceObserver
-{
-    SpatialSurfaceObserver(std::nullptr_t) noexcept {}
-    SpatialSurfaceObserver();
-    static Windows::Foundation::IAsyncOperation<Windows::Perception::Spatial::SpatialPerceptionAccessStatus> RequestAccessAsync();
-    static bool IsSupported();
-};
-
-}
+#endif

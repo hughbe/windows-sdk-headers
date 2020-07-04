@@ -175,6 +175,7 @@ WHvEmulatorTryMmioEmulation(
 
 #endif // _WINHVEMUAPI_H_
 
+
 #ifndef ext_ms_win_hyperv_hvemulation_l1_1_0_query_routines
 #define ext_ms_win_hyperv_hvemulation_l1_1_0_query_routines
 

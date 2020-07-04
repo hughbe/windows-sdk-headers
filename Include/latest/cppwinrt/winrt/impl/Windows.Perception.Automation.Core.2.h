@@ -1,26 +1,18 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Perception_Automation_Core_2_H
+#define WINRT_Windows_Perception_Automation_Core_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Perception.Automation.Core.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Perception::Automation::Core {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Perception::Automation::Core {
-
-struct CorePerceptionAutomation
+namespace winrt::Windows::Perception::Automation::Core
 {
-    CorePerceptionAutomation() = delete;
-    static void SetActivationFactoryProvider(Windows::Foundation::IGetActivationFactory const& provider);
-};
-
+    struct CorePerceptionAutomation
+    {
+        CorePerceptionAutomation() = delete;
+        static auto SetActivationFactoryProvider(Windows::Foundation::IGetActivationFactory const& provider);
+    };
 }
+#endif

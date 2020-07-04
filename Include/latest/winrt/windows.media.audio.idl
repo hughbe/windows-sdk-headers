@@ -180,6 +180,10 @@ namespace Windows
 
             typedef enum AudioNodeEmitterShapeKind AudioNodeEmitterShapeKind;
 
+            typedef enum AudioPlaybackConnectionOpenResultStatus AudioPlaybackConnectionOpenResultStatus;
+
+            typedef enum AudioPlaybackConnectionState AudioPlaybackConnectionState;
+
             typedef enum MediaSourceAudioInputNodeCreationStatus MediaSourceAudioInputNodeCreationStatus;
 
             typedef enum MixedRealitySpatialAudioFormatPolicy MixedRealitySpatialAudioFormatPolicy;
@@ -249,6 +253,12 @@ namespace Windows
             interface IAudioNodeListener;
 
             interface IAudioNodeWithListener;
+
+            interface IAudioPlaybackConnection;
+
+            interface IAudioPlaybackConnectionOpenResult;
+
+            interface IAudioPlaybackConnectionStatics;
 
             interface IAudioStateMonitor;
 
@@ -348,6 +358,10 @@ namespace Windows
 
             runtimeclass AudioNodeListener;
 
+            runtimeclass AudioPlaybackConnection;
+
+            runtimeclass AudioPlaybackConnectionOpenResult;
+
             runtimeclass AudioStateMonitor;
 
             runtimeclass AudioSubmixNode;
@@ -412,6 +426,8 @@ namespace Windows
 
                 interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioDeviceInputNode*>;
 
+                interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult*>;
+
                 interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceInputNodeResult*>;
 
                 interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.CreateAudioDeviceOutputNodeResult*>;
@@ -435,6 +451,8 @@ namespace Windows
                 interface Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph*, IInspectable*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioGraph*, Windows.Media.Audio.AudioGraphUnrecoverableErrorOccurredEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioPlaybackConnection*, IInspectable*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioStateMonitor*, IInspectable*>;
 
@@ -511,6 +529,22 @@ namespace Windows
             {
                 Omnidirectional = 0,
                 Cone            = 1
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum AudioPlaybackConnectionOpenResultStatus
+            {
+                Success         = 0,
+                RequestTimedOut = 1,
+                DeniedBySystem  = 2,
+                UnknownFailure  = 3
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum AudioPlaybackConnectionState
+            {
+                Closed = 0,
+                Opened = 1
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -941,6 +975,39 @@ namespace Windows
             {
                 [propput] HRESULT Listener([in] Windows.Media.Audio.AudioNodeListener* value);
                 [propget] HRESULT Listener([out] [retval] Windows.Media.Audio.AudioNodeListener** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.Audio.AudioPlaybackConnection)]
+            [uuid(1A4C1DEA-CAFC-50E7-8718-EA3F81CBFA51)]
+            interface IAudioPlaybackConnection : IInspectable
+            {
+                HRESULT Start();
+                HRESULT StartAsync([out] [retval] Windows.Foundation.IAsyncAction** operation);
+                [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
+                [propget] HRESULT State([out] [retval] Windows.Media.Audio.AudioPlaybackConnectionState* value);
+                HRESULT Open([out] [retval] Windows.Media.Audio.AudioPlaybackConnectionOpenResult** result);
+                HRESULT OpenAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Media.Audio.AudioPlaybackConnectionOpenResult*>** operation);
+                [eventadd] HRESULT StateChanged([in] Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioPlaybackConnection*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT StateChanged([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.Audio.AudioPlaybackConnectionOpenResult)]
+            [uuid(4E656AEF-39F9-5FC9-A519-A5BBFD9FE921)]
+            interface IAudioPlaybackConnectionOpenResult : IInspectable
+            {
+                [propget] HRESULT Status([out] [retval] Windows.Media.Audio.AudioPlaybackConnectionOpenResultStatus* value);
+                [propget] HRESULT ExtendedError([out] [retval] HRESULT* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.Audio.AudioPlaybackConnection)]
+            [uuid(E60963A2-69E6-5FFC-9E13-824A85213DAF)]
+            interface IAudioPlaybackConnectionStatics : IInspectable
+            {
+                HRESULT GetDeviceSelector([out] [retval] HSTRING* result);
+                HRESULT TryCreateFromId([in] HSTRING id, [out] [retval] Windows.Media.Audio.AudioPlaybackConnection** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
@@ -1478,6 +1545,23 @@ namespace Windows
             runtimeclass AudioNodeListener
             {
                 [default] interface Windows.Media.Audio.IAudioNodeListener;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.Media.Audio.IAudioPlaybackConnectionStatics, Windows.Foundation.UniversalApiContract, 10.0)]
+            [threading(both)]
+            runtimeclass AudioPlaybackConnection
+            {
+                [default] interface Windows.Media.Audio.IAudioPlaybackConnection;
+                interface Windows.Foundation.IClosable;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass AudioPlaybackConnectionOpenResult
+            {
+                [default] interface Windows.Media.Audio.IAudioPlaybackConnectionOpenResult;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]

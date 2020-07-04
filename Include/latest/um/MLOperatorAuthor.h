@@ -23,7 +23,6 @@ static_assert(sizeof(bool) == 1, "Unsupported size for bool type");
 
 //! \enum MLOperatorAttributeType
 //! \brief Specifies the type of an attribute.
-//! Each attribute type numerically matches corresponding ONNX types.
 enum class MLOperatorAttributeType : uint32_t 
 {
     //! Undefined (unused)
@@ -176,7 +175,7 @@ IMLOperatorAttributes : IUnknown
         _Out_writes_(attributeElementByteSize) char* attributeElement
         ) const noexcept PURE;
 };
- 
+
 //! \interface IMLOperatorTensorShapeDescription
 //! \brief Represents the set of input and output tensor shapes of an operator.
 //! This interface is called by the factory objects registered to create kernels.
@@ -270,7 +269,7 @@ IMLOperatorKernelCreationContext : public IMLOperatorAttributes
     //! For kernels registered with MLOperatorExecutionType::D3D12, executionObject will
     //! support the ID3D12GraphicsCommandList interface.
     STDMETHOD_(void, GetExecutionInterface)(
-        _Outptr_result_maybenull_ IUnknown** executionObject
+        _COM_Outptr_result_maybenull_ IUnknown** executionObject
         ) const noexcept PURE;
 };
  
@@ -311,10 +310,10 @@ IMLOperatorTensor : IUnknown
     //! registered using MLOperatorExecutionType::D3D12.  The dataInterface
     //! object supports the ID3D12Resource interface, and is a GPU buffer.
     STDMETHOD_(void, GetDataInterface)(
-        _Outptr_result_maybenull_ IUnknown** dataInterface
+        _COM_Outptr_result_maybenull_ IUnknown** dataInterface
         ) noexcept PURE;
 };
- 
+
 //! \interface IMLOperatorKernelContext
 //! \brief Provides information about an operator's usage while kernels are being computed.
 interface DECLSPEC_UUID("82536A28-F022-4769-9D3F-8B278F84C0C3") DECLSPEC_NOVTABLE

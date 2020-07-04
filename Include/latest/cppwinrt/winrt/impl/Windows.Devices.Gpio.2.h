@@ -1,89 +1,71 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Devices.Gpio.Provider.1.h"
-#include "winrt/impl/Windows.Foundation.1.h"
+#ifndef WINRT_Windows_Devices_Gpio_2_H
+#define WINRT_Windows_Devices_Gpio_2_H
+#include "winrt/impl/Windows.Devices.Gpio.Provider.2.h"
+#include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Devices.Gpio.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Gpio {
-
-struct GpioChangeCount
+namespace winrt::Windows::Devices::Gpio
 {
-    uint64_t Count;
-    Windows::Foundation::TimeSpan RelativeTime;
-};
-
-inline bool operator==(GpioChangeCount const& left, GpioChangeCount const& right) noexcept
-{
-    return left.Count == right.Count && left.RelativeTime == right.RelativeTime;
+    struct GpioChangeCount
+    {
+        uint64_t Count;
+        Windows::Foundation::TimeSpan RelativeTime;
+    };
+    inline bool operator==(GpioChangeCount const& left, GpioChangeCount const& right) noexcept
+    {
+        return left.Count == right.Count && left.RelativeTime == right.RelativeTime;
+    }
+    inline bool operator!=(GpioChangeCount const& left, GpioChangeCount const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct GpioChangeRecord
+    {
+        Windows::Foundation::TimeSpan RelativeTime;
+        Windows::Devices::Gpio::GpioPinEdge Edge;
+    };
+    inline bool operator==(GpioChangeRecord const& left, GpioChangeRecord const& right) noexcept
+    {
+        return left.RelativeTime == right.RelativeTime && left.Edge == right.Edge;
+    }
+    inline bool operator!=(GpioChangeRecord const& left, GpioChangeRecord const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct __declspec(empty_bases) GpioChangeCounter : Windows::Devices::Gpio::IGpioChangeCounter
+    {
+        GpioChangeCounter(std::nullptr_t) noexcept {}
+        GpioChangeCounter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioChangeCounter(ptr, take_ownership_from_abi) {}
+        GpioChangeCounter(Windows::Devices::Gpio::GpioPin const& pin);
+    };
+    struct __declspec(empty_bases) GpioChangeReader : Windows::Devices::Gpio::IGpioChangeReader
+    {
+        GpioChangeReader(std::nullptr_t) noexcept {}
+        GpioChangeReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioChangeReader(ptr, take_ownership_from_abi) {}
+        GpioChangeReader(Windows::Devices::Gpio::GpioPin const& pin);
+        GpioChangeReader(Windows::Devices::Gpio::GpioPin const& pin, int32_t minCapacity);
+    };
+    struct __declspec(empty_bases) GpioController : Windows::Devices::Gpio::IGpioController
+    {
+        GpioController(std::nullptr_t) noexcept {}
+        GpioController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioController(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+        static auto GetControllersAsync(Windows::Devices::Gpio::Provider::IGpioProvider const& provider);
+        static auto GetDefaultAsync();
+    };
+    struct __declspec(empty_bases) GpioPin : Windows::Devices::Gpio::IGpioPin
+    {
+        GpioPin(std::nullptr_t) noexcept {}
+        GpioPin(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioPin(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) GpioPinValueChangedEventArgs : Windows::Devices::Gpio::IGpioPinValueChangedEventArgs
+    {
+        GpioPinValueChangedEventArgs(std::nullptr_t) noexcept {}
+        GpioPinValueChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioPinValueChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
 }
-
-inline bool operator!=(GpioChangeCount const& left, GpioChangeCount const& right) noexcept
-{
-    return !(left == right);
-}
-
-struct GpioChangeRecord
-{
-    Windows::Foundation::TimeSpan RelativeTime;
-    Windows::Devices::Gpio::GpioPinEdge Edge;
-};
-
-inline bool operator==(GpioChangeRecord const& left, GpioChangeRecord const& right) noexcept
-{
-    return left.RelativeTime == right.RelativeTime && left.Edge == right.Edge;
-}
-
-inline bool operator!=(GpioChangeRecord const& left, GpioChangeRecord const& right) noexcept
-{
-    return !(left == right);
-}
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Gpio {
-
-struct WINRT_EBO GpioChangeCounter :
-    Windows::Devices::Gpio::IGpioChangeCounter
-{
-    GpioChangeCounter(std::nullptr_t) noexcept {}
-    GpioChangeCounter(Windows::Devices::Gpio::GpioPin const& pin);
-};
-
-struct WINRT_EBO GpioChangeReader :
-    Windows::Devices::Gpio::IGpioChangeReader
-{
-    GpioChangeReader(std::nullptr_t) noexcept {}
-    GpioChangeReader(Windows::Devices::Gpio::GpioPin const& pin);
-    GpioChangeReader(Windows::Devices::Gpio::GpioPin const& pin, int32_t minCapacity);
-};
-
-struct WINRT_EBO GpioController :
-    Windows::Devices::Gpio::IGpioController
-{
-    GpioController(std::nullptr_t) noexcept {}
-    static Windows::Devices::Gpio::GpioController GetDefault();
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Gpio::GpioController>> GetControllersAsync(Windows::Devices::Gpio::Provider::IGpioProvider const& provider);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Gpio::GpioController> GetDefaultAsync();
-};
-
-struct WINRT_EBO GpioPin :
-    Windows::Devices::Gpio::IGpioPin
-{
-    GpioPin(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO GpioPinValueChangedEventArgs :
-    Windows::Devices::Gpio::IGpioPinValueChangedEventArgs
-{
-    GpioPinValueChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

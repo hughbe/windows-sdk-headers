@@ -149,6 +149,9 @@ RoGetApartmentIdentifier(
 }
 #endif
 
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 #ifdef __cplusplus
 
 namespace Windows
@@ -188,7 +191,7 @@ namespace Windows
                 }
                 else
                 {
-                    hr = pInspectable->QueryInterface(IID_INS_ARGS(instance));
+                    hr = pInspectable->QueryInterface(IID_PPV_ARGS(instance));
                     pInspectable->Release();
                 }
             }
@@ -218,7 +221,7 @@ namespace Windows
             _In_        HSTRING activatableClassId, 
             _COM_Outptr_ T**     factory)
         {
-            return RoGetActivationFactory(activatableClassId, IID_INS_ARGS(factory));
+            return RoGetActivationFactory(activatableClassId, IID_PPV_ARGS(factory));
         }
     }
 }
@@ -276,12 +279,15 @@ namespace ABI
                 _In_        HSTRING activatableClassId, 
                 _COM_Outptr_ T**     factory)
             {
-                return RoGetActivationFactory(activatableClassId, IID_INS_ARGS(factory));
+                return RoGetActivationFactory(activatableClassId, IID_PPV_ARGS(factory));
             }
         }
     }
 }
 
 #endif // __cplusplus
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
 
 #endif

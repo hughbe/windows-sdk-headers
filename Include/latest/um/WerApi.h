@@ -592,6 +592,12 @@ WerReportCloseHandle(
 //
 #define WER_MAX_LOCAL_DUMP_SUBPATH_LENGTH 64
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 HRESULT
 WINAPI
 WerRegisterFile(
@@ -605,6 +611,12 @@ WINAPI
 WerUnregisterFile(
     _In_ PCWSTR pwzFilePath
     );
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 HRESULT
 WINAPI
@@ -659,6 +671,11 @@ WerRegisterAppLocalDump(
 
 STDAPI
 WerUnregisterAppLocalDump();
+
+STDAPI
+WerSetMaxProcessHoldMilliseconds(
+    _In_ DWORD dwMilliseconds
+    );
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -740,6 +757,8 @@ typedef struct _WER_RUNTIME_EXCEPTION_INFORMATION
     EXCEPTION_RECORD exceptionRecord;
     CONTEXT context;
     PCWSTR pwszReportId;
+    BOOL bIsFatal;
+    DWORD dwReserved;
 } WER_RUNTIME_EXCEPTION_INFORMATION, *PWER_RUNTIME_EXCEPTION_INFORMATION;
 
 typedef

@@ -1,27 +1,26 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Storage.Streams.0.h"
-#include "winrt/impl/Windows.System.0.h"
+#ifndef WINRT_Windows_Management_Policies_1_H
+#define WINRT_Windows_Management_Policies_1_H
 #include "winrt/impl/Windows.Management.Policies.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Management::Policies {
-
-struct WINRT_EBO INamedPolicyData :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<INamedPolicyData>
+namespace winrt::Windows::Management::Policies
 {
-    INamedPolicyData(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO INamedPolicyStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<INamedPolicyStatics>
-{
-    INamedPolicyStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) INamedPolicyData :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<INamedPolicyData>
+    {
+        INamedPolicyData(std::nullptr_t = nullptr) noexcept {}
+        INamedPolicyData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) INamedPolicyStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<INamedPolicyStatics>
+    {
+        INamedPolicyStatics(std::nullptr_t = nullptr) noexcept {}
+        INamedPolicyStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

@@ -74,6 +74,26 @@ typedef DWORD (APIENTRY *PF_NPAddConnection3) (
     _In_     DWORD          dwFlags
     );
 
+DWORD APIENTRY
+NPAddConnection4 (
+    _In_opt_ HWND           hwndOwner,
+    _In_     LPNETRESOURCEW lpNetResource,
+    _In_reads_bytes_opt_(cbAuthBuffer) PVOID  lpAuthBuffer,
+    _In_     DWORD          cbAuthBuffer,
+    _In_     DWORD          dwFlags,
+    _In_reads_bytes_opt_(cbUseOptions) PBYTE lpUseOptions,
+    _In_     DWORD          cbUseOptions
+    );
+
+typedef DWORD (APIENTRY *PF_NPAddConnection4) (
+    _In_opt_ HWND           hwndOwner,
+    _In_     LPNETRESOURCEW lpNetResource,
+    _In_reads_bytes_opt_(cbAuthBuffer) PVOID  lpAuthBuffer,
+    _In_     DWORD          cbAuthBuffer,
+    _In_     DWORD          dwFlags,
+    _In_reads_bytes_opt_(cbUseOptions) PBYTE lpUseOptions,
+    _In_     DWORD          cbUseOptions
+    );
 
 DWORD APIENTRY
 NPCancelConnection (
@@ -209,6 +229,7 @@ typedef DWORD (APIENTRY *PF_NPCloseEnum) (
 #define WNNC_CON_CANCELCONNECTION        0x00000002
 #define WNNC_CON_GETCONNECTIONS          0x00000004
 #define WNNC_CON_ADDCONNECTION3          0x00000008
+#define WNNC_CON_ADDCONNECTION4          0x00000010
 #define WNNC_CON_GETPERFORMANCE          0x00000040
 #define WNNC_CON_DEFER                   0x00000080
 
@@ -239,7 +260,7 @@ typedef DWORD (APIENTRY *PF_NPCloseEnum) (
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN10)  
 
-#define WNNC_CF_MAXIMUM (WNNC_CF_DEFAULT | CONNECT_DEFERRED | CONNECT_COMMANDLINE | CONNECT_CMD_SAVECRED | CONNECT_CRED_RESET | CONNECT_REQUIRE_INTEGRITY | CONNECT_REQUIRE_PRIVACY | CONNECT_WRITE_THROUGH_SEMANTICS)
+#define WNNC_CF_MAXIMUM (WNNC_CF_DEFAULT | CONNECT_DEFERRED | CONNECT_COMMANDLINE | CONNECT_CMD_SAVECRED | CONNECT_CRED_RESET | CONNECT_REQUIRE_INTEGRITY | CONNECT_REQUIRE_PRIVACY | CONNECT_WRITE_THROUGH_SEMANTICS | CONNECT_COMPRESS_NETWORK_TRAFFIC)
 
 #else
 
@@ -274,6 +295,23 @@ typedef DWORD (APIENTRY *PF_NPGetUser) (
     _In_    LPWSTR  lpName,
     _Out_writes_(*lpnBufferLen) LPWSTR lpUserName,
     _Inout_ LPDWORD lpnBufferLen
+    );
+
+DWORD APIENTRY
+NPGetPersistentUseOptionsForConnection (
+    _In_    LPWSTR  lpRemotePath,
+    _In_reads_bytes_opt_(cbReadUseOptions) LPBYTE lpReadUseOptions,
+    _In_ DWORD cbReadUseOptions,
+    _Out_writes_bytes_(*lpSizeWriteUseOptions) LPBYTE lpWriteUseOptions,
+    _Inout_ LPDWORD lpSizeWriteUseOptions
+    );
+
+typedef DWORD (APIENTRY *PF_NPGetPersistentUseOptionsForConnection) (
+    _In_    LPWSTR  lpRemotePath,
+    _In_reads_bytes_(cbReadUseOptions) LPBYTE lpReadUseOptions,
+    _In_ DWORD cbReadUseOptions,
+    _Out_writes_bytes_(*lpSizeWriteUseOptions) LPBYTE lpWriteUseOptions,
+    _Inout_ LPDWORD lpSizeWriteUseOptions
     );
 
 #define WNTYPE_DRIVE    1

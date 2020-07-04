@@ -1,24 +1,21 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-
+#ifndef WINRT_Windows_Foundation_Numerics_H
+#define WINRT_Windows_Foundation_Numerics_H
 #include "winrt/base.h"
-
-#include "winrt/impl/Windows.Foundation.Numerics.2.h"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
 #include "winrt/Windows.Foundation.h"
-
-namespace winrt::impl {
-
+#include "winrt/impl/Windows.Foundation.Numerics.2.h"
+namespace winrt::impl
+{
 }
-
-WINRT_EXPORT namespace winrt::Windows::Foundation::Numerics {
-
+namespace winrt::Windows::Foundation::Numerics
+{
 }
-
-WINRT_EXPORT namespace std {
-
-
+namespace std
+{
 }
+#endif

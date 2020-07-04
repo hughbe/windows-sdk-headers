@@ -158,6 +158,13 @@ typedef interface IMFVideoProcessorControl3 IMFVideoProcessorControl3;
 #endif 	/* __IMFVideoProcessorControl3_FWD_DEFINED__ */
 
 
+#ifndef __IMFVideoRendererEffectControl_FWD_DEFINED__
+#define __IMFVideoRendererEffectControl_FWD_DEFINED__
+typedef interface IMFVideoRendererEffectControl IMFVideoRendererEffectControl;
+
+#endif 	/* __IMFVideoRendererEffectControl_FWD_DEFINED__ */
+
+
 #ifndef __IMFTopology_FWD_DEFINED__
 #define __IMFTopology_FWD_DEFINED__
 typedef interface IMFTopology IMFTopology;
@@ -905,6 +912,48 @@ typedef interface IMFExtendedCameraIntrinsicsDistortionModelArcTan IMFExtendedCa
 typedef interface IMFExtendedCameraIntrinsics IMFExtendedCameraIntrinsics;
 
 #endif 	/* __IMFExtendedCameraIntrinsics_FWD_DEFINED__ */
+
+
+#ifndef __IMFExtendedCameraControl_FWD_DEFINED__
+#define __IMFExtendedCameraControl_FWD_DEFINED__
+typedef interface IMFExtendedCameraControl IMFExtendedCameraControl;
+
+#endif 	/* __IMFExtendedCameraControl_FWD_DEFINED__ */
+
+
+#ifndef __IMFExtendedCameraController_FWD_DEFINED__
+#define __IMFExtendedCameraController_FWD_DEFINED__
+typedef interface IMFExtendedCameraController IMFExtendedCameraController;
+
+#endif 	/* __IMFExtendedCameraController_FWD_DEFINED__ */
+
+
+#ifndef __IMFRelativePanelReport_FWD_DEFINED__
+#define __IMFRelativePanelReport_FWD_DEFINED__
+typedef interface IMFRelativePanelReport IMFRelativePanelReport;
+
+#endif 	/* __IMFRelativePanelReport_FWD_DEFINED__ */
+
+
+#ifndef __IMFRelativePanelWatcher_FWD_DEFINED__
+#define __IMFRelativePanelWatcher_FWD_DEFINED__
+typedef interface IMFRelativePanelWatcher IMFRelativePanelWatcher;
+
+#endif 	/* __IMFRelativePanelWatcher_FWD_DEFINED__ */
+
+
+#ifndef __IMFVideoCaptureSampleAllocator_FWD_DEFINED__
+#define __IMFVideoCaptureSampleAllocator_FWD_DEFINED__
+typedef interface IMFVideoCaptureSampleAllocator IMFVideoCaptureSampleAllocator;
+
+#endif 	/* __IMFVideoCaptureSampleAllocator_FWD_DEFINED__ */
+
+
+#ifndef __IMFSampleAllocatorControl_FWD_DEFINED__
+#define __IMFSampleAllocatorControl_FWD_DEFINED__
+typedef interface IMFSampleAllocatorControl IMFSampleAllocatorControl;
+
+#endif 	/* __IMFSampleAllocatorControl_FWD_DEFINED__ */
 
 
 /* header files for imported files */
@@ -3807,6 +3856,98 @@ EXTERN_C const IID IID_IMFVideoProcessorControl3;
 
 #endif /* (NTDDI_VERSION >= NTDDI_WIN10_RS3) */ 
 #endif // (WINVER >= _WIN32_WINNT_WINBLUE) 
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB) 
+
+
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0017_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0017_v0_0_s_ifspec;
+
+#ifndef __IMFVideoRendererEffectControl_INTERFACE_DEFINED__
+#define __IMFVideoRendererEffectControl_INTERFACE_DEFINED__
+
+/* interface IMFVideoRendererEffectControl */
+/* [uuid][local][object] */ 
+
+
+EXTERN_C const IID IID_IMFVideoRendererEffectControl;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("604D33D7-CF23-41d5-8224-5BBBB1A87475")
+    IMFVideoRendererEffectControl : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE OnAppServiceConnectionEstablished( 
+            /* [annotation][in] */ 
+            _In_  IUnknown *pAppServiceConnection) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFVideoRendererEffectControlVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFVideoRendererEffectControl * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFVideoRendererEffectControl * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFVideoRendererEffectControl * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *OnAppServiceConnectionEstablished )( 
+            IMFVideoRendererEffectControl * This,
+            /* [annotation][in] */ 
+            _In_  IUnknown *pAppServiceConnection);
+        
+        END_INTERFACE
+    } IMFVideoRendererEffectControlVtbl;
+
+    interface IMFVideoRendererEffectControl
+    {
+        CONST_VTBL struct IMFVideoRendererEffectControlVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFVideoRendererEffectControl_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFVideoRendererEffectControl_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFVideoRendererEffectControl_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFVideoRendererEffectControl_OnAppServiceConnectionEstablished(This,pAppServiceConnection)	\
+    ( (This)->lpVtbl -> OnAppServiceConnectionEstablished(This,pAppServiceConnection) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFVideoRendererEffectControl_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_mfidl_0000_0018 */
+/* [local] */ 
+
+#endif // (WINVER >= NTDDI_WIN10_VB) 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 #endif // (WINVER >= _WIN32_WINNT_WIN8) 
@@ -3815,8 +3956,8 @@ EXTERN_C const IID IID_IMFVideoProcessorControl3;
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0017_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0017_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0018_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0018_v0_0_s_ifspec;
 
 #ifndef __IMFTopology_INTERFACE_DEFINED__
 #define __IMFTopology_INTERFACE_DEFINED__
@@ -4233,7 +4374,7 @@ EXTERN_C const IID IID_IMFTopology;
 #endif 	/* __IMFTopology_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0018 */
+/* interface __MIDL_itf_mfidl_0000_0019 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -4300,8 +4441,8 @@ enum MF_TOPOLOGY_TYPE
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0018_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0018_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0019_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0019_v0_0_s_ifspec;
 
 #ifndef __IMFTopologyNode_INTERFACE_DEFINED__
 #define __IMFTopologyNode_INTERFACE_DEFINED__
@@ -4828,7 +4969,7 @@ void __RPC_STUB IMFTopologyNode_RemoteGetInputPrefType_Stub(
 #endif 	/* __IMFTopologyNode_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0019 */
+/* interface __MIDL_itf_mfidl_0000_0020 */
 /* [local] */ 
 
 typedef 
@@ -4902,8 +5043,8 @@ STDAPI MFGetTopoNodeCurrentType(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0019_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0019_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0020_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0020_v0_0_s_ifspec;
 
 #ifndef __IMFGetService_INTERFACE_DEFINED__
 #define __IMFGetService_INTERFACE_DEFINED__
@@ -4989,7 +5130,7 @@ EXTERN_C const IID IID_IMFGetService;
 #endif 	/* __IMFGetService_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0020 */
+/* interface __MIDL_itf_mfidl_0000_0021 */
 /* [local] */ 
 
 STDAPI MFGetService(
@@ -5047,8 +5188,8 @@ typedef struct _MFCLOCK_PROPERTIES
 #define MFCLOCK_JITTER_PASSIVE      10000
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0020_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0020_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0021_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0021_v0_0_s_ifspec;
 
 #ifndef __IMFClock_INTERFACE_DEFINED__
 #define __IMFClock_INTERFACE_DEFINED__
@@ -5176,7 +5317,7 @@ EXTERN_C const IID IID_IMFClock;
 #endif 	/* __IMFClock_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0021 */
+/* interface __MIDL_itf_mfidl_0000_0022 */
 /* [local] */ 
 
 STDAPI_(MFTIME) 
@@ -5187,8 +5328,8 @@ MFGetSystemTime(
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0021_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0021_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0022_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0022_v0_0_s_ifspec;
 
 #ifndef __IMFPresentationClock_INTERFACE_DEFINED__
 #define __IMFPresentationClock_INTERFACE_DEFINED__
@@ -5375,7 +5516,7 @@ EXTERN_C const IID IID_IMFPresentationClock;
 #endif 	/* __IMFPresentationClock_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0022 */
+/* interface __MIDL_itf_mfidl_0000_0023 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
@@ -5391,8 +5532,8 @@ STDAPI MFCreatePresentationClock(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0022_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0022_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0023_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0023_v0_0_s_ifspec;
 
 #ifndef __IMFPresentationTimeSource_INTERFACE_DEFINED__
 #define __IMFPresentationTimeSource_INTERFACE_DEFINED__
@@ -5513,7 +5654,7 @@ EXTERN_C const IID IID_IMFPresentationTimeSource;
 #endif 	/* __IMFPresentationTimeSource_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0023 */
+/* interface __MIDL_itf_mfidl_0000_0024 */
 /* [local] */ 
 
 STDAPI
@@ -5522,8 +5663,8 @@ MFCreateSystemTimeSource(
     );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0023_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0023_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0024_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0024_v0_0_s_ifspec;
 
 #ifndef __IMFClockStateSink_INTERFACE_DEFINED__
 #define __IMFClockStateSink_INTERFACE_DEFINED__
@@ -5649,7 +5790,7 @@ EXTERN_C const IID IID_IMFClockStateSink;
 #endif 	/* __IMFClockStateSink_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0024 */
+/* interface __MIDL_itf_mfidl_0000_0025 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
@@ -5679,8 +5820,8 @@ DEFINE_GUID( MF_PD_ADAPTIVE_STREAMING, 0xEA0D5D97, 0x29F9, 0x488B, 0xAE, 0x6B, 0
 #endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0024_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0024_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0025_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0025_v0_0_s_ifspec;
 
 #ifndef __IMFPresentationDescriptor_INTERFACE_DEFINED__
 #define __IMFPresentationDescriptor_INTERFACE_DEFINED__
@@ -6049,7 +6190,7 @@ EXTERN_C const IID IID_IMFPresentationDescriptor;
 #endif 	/* __IMFPresentationDescriptor_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0025 */
+/* interface __MIDL_itf_mfidl_0000_0026 */
 /* [local] */ 
 
 STDAPI MFCreatePresentationDescriptor(
@@ -6086,8 +6227,8 @@ EXTERN_GUID(MF_SD_STREAM_NAME, 0x4f1b099d, 0xd314, 0x41e5, 0xa7, 0x81, 0x7f, 0xe
 EXTERN_GUID(MF_SD_MUTUALLY_EXCLUSIVE, 0x23ef79c, 0x388d, 0x487f, 0xac, 0x17, 0x69, 0x6c, 0xd6, 0xe3, 0xc6, 0xf5);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0025_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0025_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0026_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0026_v0_0_s_ifspec;
 
 #ifndef __IMFStreamDescriptor_INTERFACE_DEFINED__
 #define __IMFStreamDescriptor_INTERFACE_DEFINED__
@@ -6422,7 +6563,7 @@ EXTERN_C const IID IID_IMFStreamDescriptor;
 #endif 	/* __IMFStreamDescriptor_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0026 */
+/* interface __MIDL_itf_mfidl_0000_0027 */
 /* [local] */ 
 
 STDAPI MFCreateStreamDescriptor(
@@ -6434,8 +6575,8 @@ STDAPI MFCreateStreamDescriptor(
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0026_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0026_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0027_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0027_v0_0_s_ifspec;
 
 #ifndef __IMFMediaTypeHandler_INTERFACE_DEFINED__
 #define __IMFMediaTypeHandler_INTERFACE_DEFINED__
@@ -6632,7 +6773,7 @@ void __RPC_STUB IMFMediaTypeHandler_RemoteGetCurrentMediaType_Stub(
 #endif 	/* __IMFMediaTypeHandler_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0027 */
+/* interface __MIDL_itf_mfidl_0000_0028 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
@@ -6649,8 +6790,8 @@ enum MFTIMER_FLAGS
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0027_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0027_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0028_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0028_v0_0_s_ifspec;
 
 #ifndef __IMFTimer_INTERFACE_DEFINED__
 #define __IMFTimer_INTERFACE_DEFINED__
@@ -6750,7 +6891,7 @@ EXTERN_C const IID IID_IMFTimer;
 #endif 	/* __IMFTimer_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0028 */
+/* interface __MIDL_itf_mfidl_0000_0029 */
 /* [local] */ 
 
 EXTERN_GUID( MF_ACTIVATE_CUSTOM_VIDEO_MIXER_CLSID,          0xba491360, 0xbe50, 0x451e, 0x95, 0xab, 0x6d, 0x4a, 0xcc, 0xc7, 0xda, 0xd8 );
@@ -6760,12 +6901,12 @@ EXTERN_GUID( MF_ACTIVATE_CUSTOM_VIDEO_PRESENTER_CLSID,      0xba491364, 0xbe50, 
 EXTERN_GUID( MF_ACTIVATE_CUSTOM_VIDEO_PRESENTER_ACTIVATE,   0xba491365, 0xbe50, 0x451e, 0x95, 0xab, 0x6d, 0x4a, 0xcc, 0xc7, 0xda, 0xd8 );
 EXTERN_GUID( MF_ACTIVATE_CUSTOM_VIDEO_PRESENTER_FLAGS,      0xba491366, 0xbe50, 0x451e, 0x95, 0xab, 0x6d, 0x4a, 0xcc, 0xc7, 0xda, 0xd8 );
 
-enum __MIDL___MIDL_itf_mfidl_0000_0028_0001
+enum __MIDL___MIDL_itf_mfidl_0000_0029_0001
     {
         MF_ACTIVATE_CUSTOM_MIXER_ALLOWFAIL	= 0x1
     } ;
 
-enum __MIDL___MIDL_itf_mfidl_0000_0028_0002
+enum __MIDL___MIDL_itf_mfidl_0000_0029_0002
     {
         MF_ACTIVATE_CUSTOM_PRESENTER_ALLOWFAIL	= 0x1
     } ;
@@ -6784,8 +6925,8 @@ enum _MFSHUTDOWN_STATUS
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0028_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0028_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0029_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0029_v0_0_s_ifspec;
 
 #ifndef __IMFShutdown_INTERFACE_DEFINED__
 #define __IMFShutdown_INTERFACE_DEFINED__
@@ -6875,7 +7016,7 @@ EXTERN_C const IID IID_IMFShutdown;
 #endif 	/* __IMFShutdown_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0029 */
+/* interface __MIDL_itf_mfidl_0000_0030 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -6985,8 +7126,8 @@ MFCreateWAVEMediaSink(
 #endif // (WINVER >= _WIN32_WINNT_WINBLUE) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0029_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0029_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0030_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0030_v0_0_s_ifspec;
 
 #ifndef __IMFTopoLoader_INTERFACE_DEFINED__
 #define __IMFTopoLoader_INTERFACE_DEFINED__
@@ -7074,15 +7215,15 @@ EXTERN_C const IID IID_IMFTopoLoader;
 #endif 	/* __IMFTopoLoader_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0030 */
+/* interface __MIDL_itf_mfidl_0000_0031 */
 /* [local] */ 
 
 STDAPI MFCreateTopoLoader(
     _Outptr_ IMFTopoLoader ** ppObj );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0030_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0030_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0031_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0031_v0_0_s_ifspec;
 
 #ifndef __IMFContentProtectionManager_INTERFACE_DEFINED__
 #define __IMFContentProtectionManager_INTERFACE_DEFINED__
@@ -7207,11 +7348,11 @@ void __RPC_STUB IMFContentProtectionManager_RemoteEndEnableContent_Stub(
 #endif 	/* __IMFContentProtectionManager_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0031 */
+/* interface __MIDL_itf_mfidl_0000_0032 */
 /* [local] */ 
 
 typedef /* [public][public] */ 
-enum __MIDL___MIDL_itf_mfidl_0000_0031_0001
+enum __MIDL___MIDL_itf_mfidl_0000_0032_0001
     {
         MF_LICENSE_URL_UNTRUSTED	= 0,
         MF_LICENSE_URL_TRUSTED	= ( MF_LICENSE_URL_UNTRUSTED + 1 ) ,
@@ -7220,8 +7361,8 @@ enum __MIDL___MIDL_itf_mfidl_0000_0031_0001
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0031_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0031_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0032_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0032_v0_0_s_ifspec;
 
 #ifndef __IMFContentEnabler_INTERFACE_DEFINED__
 #define __IMFContentEnabler_INTERFACE_DEFINED__
@@ -7363,7 +7504,7 @@ EXTERN_C const IID IID_IMFContentEnabler;
 #endif 	/* __IMFContentEnabler_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0032 */
+/* interface __MIDL_itf_mfidl_0000_0033 */
 /* [local] */ 
 
 
@@ -7473,8 +7614,8 @@ typedef struct _ASFFlatSynchronisedLyrics
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0032_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0032_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0033_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0033_v0_0_s_ifspec;
 
 #ifndef __IMFMetadata_INTERFACE_DEFINED__
 #define __IMFMetadata_INTERFACE_DEFINED__
@@ -7706,7 +7847,7 @@ EXTERN_C const IID IID_IMFMetadataProvider;
 #endif 	/* __IMFMetadataProvider_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0034 */
+/* interface __MIDL_itf_mfidl_0000_0035 */
 /* [local] */ 
 
 EXTERN_GUID( MF_METADATA_PROVIDER_SERVICE, 0xdb214084, 0x58a4, 0x4d2e, 0xb8, 0x4f, 0x6f, 0x75, 0x5b, 0x2f, 0x7a, 0xd);
@@ -7730,8 +7871,8 @@ enum _MFRATE_DIRECTION
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0034_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0034_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0035_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0035_v0_0_s_ifspec;
 
 #ifndef __IMFRateSupport_INTERFACE_DEFINED__
 #define __IMFRateSupport_INTERFACE_DEFINED__
@@ -7845,14 +7986,14 @@ EXTERN_C const IID IID_IMFRateSupport;
 #endif 	/* __IMFRateSupport_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0035 */
+/* interface __MIDL_itf_mfidl_0000_0036 */
 /* [local] */ 
 
 EXTERN_GUID( MF_RATE_CONTROL_SERVICE, 0x866fa297, 0xb802, 0x4bf8, 0x9d, 0xc9, 0x5e, 0x3b, 0x6a, 0x9f, 0x53, 0xc9);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0035_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0035_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0036_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0036_v0_0_s_ifspec;
 
 #ifndef __IMFRateControl_INTERFACE_DEFINED__
 #define __IMFRateControl_INTERFACE_DEFINED__
@@ -7948,7 +8089,7 @@ EXTERN_C const IID IID_IMFRateControl;
 #endif 	/* __IMFRateControl_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0036 */
+/* interface __MIDL_itf_mfidl_0000_0037 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -7958,8 +8099,8 @@ EXTERN_C const IID IID_IMFRateControl;
 #if (WINVER >= _WIN32_WINNT_WIN7) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0036_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0036_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0037_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0037_v0_0_s_ifspec;
 
 #ifndef __IMFTimecodeTranslate_INTERFACE_DEFINED__
 #define __IMFTimecodeTranslate_INTERFACE_DEFINED__
@@ -8083,7 +8224,7 @@ EXTERN_C const IID IID_IMFTimecodeTranslate;
 #endif 	/* __IMFTimecodeTranslate_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0037 */
+/* interface __MIDL_itf_mfidl_0000_0038 */
 /* [local] */ 
 
 EXTERN_GUID( MF_TIMECODE_SERVICE, 0xa0d502a7, 0x0eb3, 0x4885, 0xb1, 0xb9, 0x9f, 0xeb, 0x0d, 0x08, 0x34, 0x54 );
@@ -8095,8 +8236,8 @@ EXTERN_GUID( MF_TIMECODE_SERVICE, 0xa0d502a7, 0x0eb3, 0x4885, 0xb1, 0xb9, 0x9f, 
 #if (WINVER >= _WIN32_WINNT_WIN8) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0037_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0037_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0038_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0038_v0_0_s_ifspec;
 
 #ifndef __IMFSeekInfo_INTERFACE_DEFINED__
 #define __IMFSeekInfo_INTERFACE_DEFINED__
@@ -8192,7 +8333,7 @@ EXTERN_C const IID IID_IMFSeekInfo;
 #endif 	/* __IMFSeekInfo_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0038 */
+/* interface __MIDL_itf_mfidl_0000_0039 */
 /* [local] */ 
 
 #endif // (WINVER >= _WIN32_WINNT_WIN8) 
@@ -8205,8 +8346,8 @@ EXTERN_C const GUID MF_SCRUBBING_SERVICE;
 #endif // (WINVER >= _WIN32_WINNT_WIN8) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0038_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0038_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0039_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0039_v0_0_s_ifspec;
 
 #ifndef __IMFSimpleAudioVolume_INTERFACE_DEFINED__
 #define __IMFSimpleAudioVolume_INTERFACE_DEFINED__
@@ -8318,7 +8459,7 @@ EXTERN_C const IID IID_IMFSimpleAudioVolume;
 #endif 	/* __IMFSimpleAudioVolume_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0039 */
+/* interface __MIDL_itf_mfidl_0000_0040 */
 /* [local] */ 
 
 EXTERN_GUID( MR_POLICY_VOLUME_SERVICE, 0x1abaa2ac, 0x9d3b, 0x47c6, 0xab, 0x48, 0xc5, 0x95, 0x6, 0xde, 0x78, 0x4d);
@@ -8327,8 +8468,8 @@ EXTERN_GUID( MR_CAPTURE_POLICY_VOLUME_SERVICE, 0x24030acd, 0x107a, 0x4265, 0x97,
 #endif // (WINVER >= _WIN32_WINNT_WIN8) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0039_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0039_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0040_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0040_v0_0_s_ifspec;
 
 #ifndef __IMFAudioStreamVolume_INTERFACE_DEFINED__
 #define __IMFAudioStreamVolume_INTERFACE_DEFINED__
@@ -8458,14 +8599,14 @@ EXTERN_C const IID IID_IMFAudioStreamVolume;
 #endif 	/* __IMFAudioStreamVolume_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0040 */
+/* interface __MIDL_itf_mfidl_0000_0041 */
 /* [local] */ 
 
 EXTERN_GUID( MR_STREAM_VOLUME_SERVICE, 0xf8b5fa2f, 0x32ef, 0x46f5, 0xb1, 0x72, 0x13, 0x21, 0x21, 0x2f, 0xb2, 0xc4);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0040_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0040_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0041_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0041_v0_0_s_ifspec;
 
 #ifndef __IMFAudioPolicy_INTERFACE_DEFINED__
 #define __IMFAudioPolicy_INTERFACE_DEFINED__
@@ -8603,14 +8744,14 @@ EXTERN_C const IID IID_IMFAudioPolicy;
 #endif 	/* __IMFAudioPolicy_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0041 */
+/* interface __MIDL_itf_mfidl_0000_0042 */
 /* [local] */ 
 
 EXTERN_GUID( MR_AUDIO_POLICY_SERVICE, 0x911fd737, 0x6775, 0x4ab0, 0xa6, 0x14, 0x29, 0x78, 0x62, 0xfd, 0xac, 0x88);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0041_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0041_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0042_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0042_v0_0_s_ifspec;
 
 #ifndef __IMFSampleGrabberSinkCallback_INTERFACE_DEFINED__
 #define __IMFSampleGrabberSinkCallback_INTERFACE_DEFINED__
@@ -8760,7 +8901,7 @@ EXTERN_C const IID IID_IMFSampleGrabberSinkCallback;
 #endif 	/* __IMFSampleGrabberSinkCallback_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0042 */
+/* interface __MIDL_itf_mfidl_0000_0043 */
 /* [local] */ 
 
 STDAPI
@@ -8774,8 +8915,8 @@ EXTERN_GUID( MF_SAMPLEGRABBERSINK_SAMPLE_TIME_OFFSET, 0x62e3d776, 0x8100, 0x4e03
 EXTERN_GUID( MF_SAMPLEGRABBERSINK_IGNORE_CLOCK, 0x0efda2c0, 0x2b69, 0x4e2e, 0xab, 0x8d, 0x46, 0xdc, 0xbf, 0xf7, 0xd2, 0x5d);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0042_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0042_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0043_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0043_v0_0_s_ifspec;
 
 #ifndef __IMFSampleGrabberSinkCallback2_INTERFACE_DEFINED__
 #define __IMFSampleGrabberSinkCallback2_INTERFACE_DEFINED__
@@ -8938,7 +9079,7 @@ EXTERN_C const IID IID_IMFSampleGrabberSinkCallback2;
 #endif 	/* __IMFSampleGrabberSinkCallback2_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0043 */
+/* interface __MIDL_itf_mfidl_0000_0044 */
 /* [local] */ 
 
 #endif // (WINVER >= _WIN32_WINNT_WIN7) 
@@ -8953,8 +9094,8 @@ EXTERN_GUID( MF_QUALITY_SERVICES, 0xb7e2be11, 0x2f96, 0x4640, 0xb5, 0x2c, 0x28, 
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0043_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0043_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0044_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0044_v0_0_s_ifspec;
 
 #ifndef __IMFWorkQueueServices_INTERFACE_DEFINED__
 #define __IMFWorkQueueServices_INTERFACE_DEFINED__
@@ -9279,14 +9420,14 @@ void __RPC_STUB IMFWorkQueueServices_RemoteEndUnregisterPlatformWorkQueueWithMMC
 #endif 	/* __IMFWorkQueueServices_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0044 */
+/* interface __MIDL_itf_mfidl_0000_0045 */
 /* [local] */ 
 
 EXTERN_GUID( MF_WORKQUEUE_SERVICES, 0x8e37d489, 0x41e0, 0x413a, 0x90, 0x68, 0x28, 0x7c, 0x88, 0x6d, 0x8d, 0xda);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0044_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0044_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0045_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0045_v0_0_s_ifspec;
 
 #ifndef __IMFWorkQueueServicesEx_INTERFACE_DEFINED__
 #define __IMFWorkQueueServicesEx_INTERFACE_DEFINED__
@@ -9519,7 +9660,7 @@ void __RPC_STUB IMFWorkQueueServicesEx_RemoteBeginRegisterPlatformWorkQueueWithM
 #endif 	/* __IMFWorkQueueServicesEx_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0045 */
+/* interface __MIDL_itf_mfidl_0000_0046 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -9568,8 +9709,8 @@ enum _MF_QUALITY_ADVISE_FLAGS
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0045_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0045_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0046_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0046_v0_0_s_ifspec;
 
 #ifndef __IMFQualityManager_INTERFACE_DEFINED__
 #define __IMFQualityManager_INTERFACE_DEFINED__
@@ -9709,7 +9850,7 @@ EXTERN_C const IID IID_IMFQualityManager;
 #endif 	/* __IMFQualityManager_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0046 */
+/* interface __MIDL_itf_mfidl_0000_0047 */
 /* [local] */ 
 
 STDAPI MFCreateStandardQualityManager(
@@ -9722,8 +9863,8 @@ EXTERN_GUID( MF_QUALITY_NOTIFY_PROCESSING_LATENCY, 0xf6b44af8, 0x604d, 0x46fe, 0
 EXTERN_GUID( MF_QUALITY_NOTIFY_SAMPLE_LAG, 0x30d15206, 0xed2a, 0x4760, 0xbe, 0x17, 0xeb, 0x4a, 0x9f, 0x12, 0x29, 0x5c );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0046_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0046_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0047_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0047_v0_0_s_ifspec;
 
 #ifndef __IMFQualityAdvise_INTERFACE_DEFINED__
 #define __IMFQualityAdvise_INTERFACE_DEFINED__
@@ -9853,7 +9994,7 @@ EXTERN_C const IID IID_IMFQualityAdvise;
 #endif 	/* __IMFQualityAdvise_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0047 */
+/* interface __MIDL_itf_mfidl_0000_0048 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -9863,8 +10004,8 @@ EXTERN_C const IID IID_IMFQualityAdvise;
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0047_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0047_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0048_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0048_v0_0_s_ifspec;
 
 #ifndef __IMFQualityAdvise2_INTERFACE_DEFINED__
 #define __IMFQualityAdvise2_INTERFACE_DEFINED__
@@ -10084,7 +10225,7 @@ EXTERN_C const IID IID_IMFQualityAdviseLimits;
 #endif 	/* __IMFQualityAdviseLimits_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0049 */
+/* interface __MIDL_itf_mfidl_0000_0050 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -10094,8 +10235,8 @@ EXTERN_C const IID IID_IMFQualityAdviseLimits;
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0049_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0049_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0050_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0050_v0_0_s_ifspec;
 
 #ifndef __IMFRealTimeClient_INTERFACE_DEFINED__
 #define __IMFRealTimeClient_INTERFACE_DEFINED__
@@ -10197,7 +10338,7 @@ EXTERN_C const IID IID_IMFRealTimeClient;
 #endif 	/* __IMFRealTimeClient_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0050 */
+/* interface __MIDL_itf_mfidl_0000_0051 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -10207,8 +10348,8 @@ EXTERN_C const IID IID_IMFRealTimeClient;
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0050_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0050_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0051_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0051_v0_0_s_ifspec;
 
 #ifndef __IMFRealTimeClientEx_INTERFACE_DEFINED__
 #define __IMFRealTimeClientEx_INTERFACE_DEFINED__
@@ -10314,7 +10455,7 @@ EXTERN_C const IID IID_IMFRealTimeClientEx;
 #endif 	/* __IMFRealTimeClientEx_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0051 */
+/* interface __MIDL_itf_mfidl_0000_0052 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -10334,8 +10475,8 @@ enum _MFSequencerTopologyFlags
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0051_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0051_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0052_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0052_v0_0_s_ifspec;
 
 #ifndef __IMFSequencerSource_INTERFACE_DEFINED__
 #define __IMFSequencerSource_INTERFACE_DEFINED__
@@ -10475,7 +10616,7 @@ EXTERN_C const IID IID_IMFSequencerSource;
 #endif 	/* __IMFSequencerSource_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0052 */
+/* interface __MIDL_itf_mfidl_0000_0053 */
 /* [local] */ 
 
 EXTERN_GUID( MF_TIME_FORMAT_SEGMENT_OFFSET, 0xc8b8be77, 0x869c, 0x431d, 0x81, 0x2e, 0x16, 0x96, 0x93, 0xf6, 0x5a, 0x39 );
@@ -10504,8 +10645,8 @@ STDAPI MFCreateAggregateSource(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0052_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0052_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0053_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0053_v0_0_s_ifspec;
 
 #ifndef __IMFMediaSourceTopologyProvider_INTERFACE_DEFINED__
 #define __IMFMediaSourceTopologyProvider_INTERFACE_DEFINED__
@@ -10669,7 +10810,7 @@ EXTERN_C const IID IID_IMFMediaSourcePresentationProvider;
 #endif 	/* __IMFMediaSourcePresentationProvider_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0054 */
+/* interface __MIDL_itf_mfidl_0000_0055 */
 /* [local] */ 
 
 EXTERN_GUID( MF_SOURCE_PRESENTATION_PROVIDER_SERVICE, 0xe002aadc, 0xf4af, 0x4ee5, 0x98, 0x47, 0x05, 0x3e, 0xdf, 0x84, 0x04, 0x26 );
@@ -10696,8 +10837,8 @@ typedef struct _MFTOPONODE_ATTRIBUTE_UPDATE
 #endif
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0054_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0054_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0055_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0055_v0_0_s_ifspec;
 
 #ifndef __IMFTopologyNodeAttributeEditor_INTERFACE_DEFINED__
 #define __IMFTopologyNodeAttributeEditor_INTERFACE_DEFINED__
@@ -10783,7 +10924,7 @@ EXTERN_C const IID IID_IMFTopologyNodeAttributeEditor;
 #endif 	/* __IMFTopologyNodeAttributeEditor_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0055 */
+/* interface __MIDL_itf_mfidl_0000_0056 */
 /* [local] */ 
 
 EXTERN_GUID( MF_TOPONODE_ATTRIBUTE_EDITOR_SERVICE, 0x65656e1a, 0x077f, 0x4472, 0x83, 0xef, 0x31, 0x6f, 0x11, 0xd5, 0x08, 0x7a );
@@ -10834,8 +10975,8 @@ typedef /* [public] */ struct _MFBYTESTREAM_BUFFERING_PARAMS
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0055_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0055_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0056_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0056_v0_0_s_ifspec;
 
 #ifndef __IMFByteStreamBuffering_INTERFACE_DEFINED__
 #define __IMFByteStreamBuffering_INTERFACE_DEFINED__
@@ -11117,11 +11258,11 @@ EXTERN_C const IID IID_IMFByteStreamTimeSeek;
 #endif 	/* __IMFByteStreamTimeSeek_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0058 */
+/* interface __MIDL_itf_mfidl_0000_0059 */
 /* [local] */ 
 
 #if (WINVER >= _WIN32_WINNT_WIN8) 
-typedef /* [public][public] */ struct __MIDL___MIDL_itf_mfidl_0000_0058_0001
+typedef /* [public][public] */ struct __MIDL___MIDL_itf_mfidl_0000_0059_0001
     {
     QWORD qwStartOffset;
     QWORD qwEndOffset;
@@ -11129,8 +11270,8 @@ typedef /* [public][public] */ struct __MIDL___MIDL_itf_mfidl_0000_0058_0001
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0058_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0058_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0059_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0059_v0_0_s_ifspec;
 
 #ifndef __IMFByteStreamCacheControl2_INTERFACE_DEFINED__
 #define __IMFByteStreamCacheControl2_INTERFACE_DEFINED__
@@ -11241,7 +11382,7 @@ EXTERN_C const IID IID_IMFByteStreamCacheControl2;
 #endif 	/* __IMFByteStreamCacheControl2_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0059 */
+/* interface __MIDL_itf_mfidl_0000_0060 */
 /* [local] */ 
 
 #endif // (WINVER >= _WIN32_WINNT_WIN8) 
@@ -11251,8 +11392,8 @@ EXTERN_C const IID IID_IMFByteStreamCacheControl2;
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0059_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0059_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0060_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0060_v0_0_s_ifspec;
 
 #ifndef __IMFNetCredential_INTERFACE_DEFINED__
 #define __IMFNetCredential_INTERFACE_DEFINED__
@@ -11665,7 +11806,7 @@ EXTERN_C const IID IID_IMFNetCredentialCache;
 #endif 	/* __IMFNetCredentialCache_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0062 */
+/* interface __MIDL_itf_mfidl_0000_0063 */
 /* [local] */ 
 
 STDAPI 
@@ -11678,8 +11819,8 @@ MFCreateCredentialCache(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0062_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0062_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0063_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0063_v0_0_s_ifspec;
 
 #ifndef __IMFSSLCertificateManager_INTERFACE_DEFINED__
 #define __IMFSSLCertificateManager_INTERFACE_DEFINED__
@@ -11833,14 +11974,14 @@ EXTERN_C const IID IID_IMFSSLCertificateManager;
 #endif 	/* __IMFSSLCertificateManager_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0063 */
+/* interface __MIDL_itf_mfidl_0000_0064 */
 /* [local] */ 
 
 EXTERN_GUID( MFNETSOURCE_SSLCERTIFICATE_MANAGER, 0x55e6cb27, 0xe69b, 0x4267, 0x94, 0x0c, 0x2d, 0x7e, 0xc5, 0xbb, 0x8a, 0x0f );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0063_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0063_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0064_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0064_v0_0_s_ifspec;
 
 #ifndef __IMFNetResourceFilter_INTERFACE_DEFINED__
 #define __IMFNetResourceFilter_INTERFACE_DEFINED__
@@ -11940,7 +12081,7 @@ EXTERN_C const IID IID_IMFNetResourceFilter;
 #endif 	/* __IMFNetResourceFilter_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0064 */
+/* interface __MIDL_itf_mfidl_0000_0065 */
 /* [local] */ 
 
 EXTERN_GUID( MFNETSOURCE_RESOURCE_FILTER, 0x815d0ff6, 0x265a, 0x4477, 0x9e, 0x46, 0x7b, 0x80, 0xad, 0x80, 0xb5, 0xfb);
@@ -11951,8 +12092,8 @@ EXTERN_GUID( MFNETSOURCE_RESOURCE_FILTER, 0x815d0ff6, 0x265a, 0x4477, 0x9e, 0x46
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0064_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0064_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0065_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0065_v0_0_s_ifspec;
 
 #ifndef __IMFSourceOpenMonitor_INTERFACE_DEFINED__
 #define __IMFSourceOpenMonitor_INTERFACE_DEFINED__
@@ -12160,7 +12301,7 @@ EXTERN_C const IID IID_IMFNetProxyLocator;
 #endif 	/* __IMFNetProxyLocator_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0066 */
+/* interface __MIDL_itf_mfidl_0000_0067 */
 /* [local] */ 
 
 STDAPI MFCreateProxyLocator(
@@ -12169,8 +12310,8 @@ STDAPI MFCreateProxyLocator(
     _Outptr_ IMFNetProxyLocator** ppProxyLocator );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0066_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0066_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0067_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0067_v0_0_s_ifspec;
 
 #ifndef __IMFNetProxyLocatorFactory_INTERFACE_DEFINED__
 #define __IMFNetProxyLocatorFactory_INTERFACE_DEFINED__
@@ -12370,7 +12511,7 @@ EXTERN_C const IID IID_IMFSaveJob;
 #endif 	/* __IMFSaveJob_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0068 */
+/* interface __MIDL_itf_mfidl_0000_0069 */
 /* [local] */ 
 
 EXTERN_GUID( MFNET_SAVEJOB_SERVICE, 0xb85a587f, 0x3d02, 0x4e52, 0x95, 0x65, 0x55, 0xd3, 0xec, 0x1e, 0x7f, 0xf7 );
@@ -12386,8 +12527,8 @@ enum _MFNETSOURCE_PROTOCOL_TYPE
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0068_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0068_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0069_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0069_v0_0_s_ifspec;
 
 #ifndef __IMFNetSchemeHandlerConfig_INTERFACE_DEFINED__
 #define __IMFNetSchemeHandlerConfig_INTERFACE_DEFINED__
@@ -12493,7 +12634,7 @@ EXTERN_C const IID IID_IMFNetSchemeHandlerConfig;
 #endif 	/* __IMFNetSchemeHandlerConfig_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0069 */
+/* interface __MIDL_itf_mfidl_0000_0070 */
 /* [local] */ 
 
 STDAPI MFCreateNetSchemePlugin(
@@ -12628,8 +12769,8 @@ enum _MFNET_PROXYSETTINGS
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0069_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0069_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0070_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0070_v0_0_s_ifspec;
 
 #ifndef __IMFSchemeHandler_INTERFACE_DEFINED__
 #define __IMFSchemeHandler_INTERFACE_DEFINED__
@@ -12751,7 +12892,7 @@ EXTERN_C const IID IID_IMFSchemeHandler;
 #endif 	/* __IMFSchemeHandler_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0070 */
+/* interface __MIDL_itf_mfidl_0000_0071 */
 /* [local] */ 
 
 #if (WINVER >= _WIN32_WINNT_WIN7) 
@@ -12759,8 +12900,8 @@ EXTERN_GUID(MF_BYTESTREAMHANDLER_ACCEPTS_SHARE_WRITE, 0xa6e1f733, 0x3001, 0x4915
 #endif // (WINVER >= _WIN32_WINNT_WIN7) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0070_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0070_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0071_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0071_v0_0_s_ifspec;
 
 #ifndef __IMFByteStreamHandler_INTERFACE_DEFINED__
 #define __IMFByteStreamHandler_INTERFACE_DEFINED__
@@ -12896,14 +13037,14 @@ EXTERN_C const IID IID_IMFByteStreamHandler;
 #endif 	/* __IMFByteStreamHandler_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0071 */
+/* interface __MIDL_itf_mfidl_0000_0072 */
 /* [local] */ 
 
 EXTERN_GUID( MF_BYTESTREAM_SERVICE, 0xab025e2b, 0x16d9, 0x4180, 0xa1, 0x27, 0xba, 0x6c, 0x70, 0x15, 0x61, 0x61 );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0071_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0071_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0072_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0072_v0_0_s_ifspec;
 
 #ifndef __IMFTrustedInput_INTERFACE_DEFINED__
 #define __IMFTrustedInput_INTERFACE_DEFINED__
@@ -12989,7 +13130,7 @@ EXTERN_C const IID IID_IMFTrustedInput;
 #endif 	/* __IMFTrustedInput_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0072 */
+/* interface __MIDL_itf_mfidl_0000_0073 */
 /* [local] */ 
 
 typedef 
@@ -13029,8 +13170,8 @@ typedef struct _MFINPUTTRUSTAUTHORITY_ACCESS_PARAMS
 EXTERN_GUID( MF_MEDIA_PROTECTION_MANAGER_PROPERTIES, 0x38BD81A9, 0xACEA, 0x4C73, 0x89, 0xB2, 0x55, 0x32, 0xC0, 0xAE, 0xCA, 0x79 );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0072_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0072_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0073_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0073_v0_0_s_ifspec;
 
 #ifndef __IMFInputTrustAuthority_INTERFACE_DEFINED__
 #define __IMFInputTrustAuthority_INTERFACE_DEFINED__
@@ -13176,14 +13317,14 @@ EXTERN_C const IID IID_IMFInputTrustAuthority;
 #endif 	/* __IMFInputTrustAuthority_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0073 */
+/* interface __MIDL_itf_mfidl_0000_0074 */
 /* [local] */ 
 
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0073_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0073_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0074_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0074_v0_0_s_ifspec;
 
 #ifndef __IMFTrustedOutput_INTERFACE_DEFINED__
 #define __IMFTrustedOutput_INTERFACE_DEFINED__
@@ -13397,14 +13538,14 @@ EXTERN_C const IID IID_IMFOutputTrustAuthority;
 #endif 	/* __IMFOutputTrustAuthority_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0075 */
+/* interface __MIDL_itf_mfidl_0000_0076 */
 /* [local] */ 
 
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0075_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0075_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0076_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0076_v0_0_s_ifspec;
 
 #ifndef __IMFOutputPolicy_INTERFACE_DEFINED__
 #define __IMFOutputPolicy_INTERFACE_DEFINED__
@@ -13763,7 +13904,7 @@ EXTERN_C const IID IID_IMFOutputPolicy;
 #endif 	/* __IMFOutputPolicy_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0076 */
+/* interface __MIDL_itf_mfidl_0000_0077 */
 /* [local] */ 
 
 #define MFOUTPUTATTRIBUTE_DIGITAL               ((DWORD) 0x00000001)
@@ -13799,10 +13940,13 @@ EXTERN_GUID( MFCONNECTOR_MIRACAST, 0x57cd5977, 0xce47, 0x11d9, 0x92, 0xdb, 0x00,
 EXTERN_GUID( MFCONNECTOR_TRANSPORT_AGNOSTIC_DIGITAL_MODE_A, 0x57cd5978, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98); 
 EXTERN_GUID( MFCONNECTOR_TRANSPORT_AGNOSTIC_DIGITAL_MODE_B, 0x57cd5979, 0xce47, 0x11d9, 0x92, 0xdb, 0x00, 0x0b, 0xdb, 0x28, 0xff, 0x98); 
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB) 
+EXTERN_C const DECLSPEC_SELECTANY GUID MF_POLICY_ID = { 0xb160c24d, 0xc059, 0x48f1, { 0xa9, 0x1, 0x9e, 0xe2, 0x98, 0xa9, 0xa8, 0xc3 } };
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0076_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0076_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0077_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0077_v0_0_s_ifspec;
 
 #ifndef __IMFOutputSchema_INTERFACE_DEFINED__
 #define __IMFOutputSchema_INTERFACE_DEFINED__
@@ -14153,7 +14297,7 @@ EXTERN_C const IID IID_IMFOutputSchema;
 #endif 	/* __IMFOutputSchema_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0077 */
+/* interface __MIDL_itf_mfidl_0000_0078 */
 /* [local] */ 
 
 
@@ -14284,8 +14428,8 @@ typedef enum _MFAudioConstriction
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0077_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0077_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0078_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0078_v0_0_s_ifspec;
 
 #ifndef __IMFSecureChannel_INTERFACE_DEFINED__
 #define __IMFSecureChannel_INTERFACE_DEFINED__
@@ -14387,7 +14531,7 @@ EXTERN_C const IID IID_IMFSecureChannel;
 #endif 	/* __IMFSecureChannel_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0078 */
+/* interface __MIDL_itf_mfidl_0000_0079 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -14407,8 +14551,8 @@ enum SAMPLE_PROTECTION_VERSION
 EXTERN_GUID( MF_SampleProtectionSalt, 0x5403deee, 0xb9ee, 0x438f, 0xaa, 0x83, 0x38, 0x4, 0x99, 0x7e, 0x56, 0x9d);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0078_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0078_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0079_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0079_v0_0_s_ifspec;
 
 #ifndef __IMFSampleProtection_INTERFACE_DEFINED__
 #define __IMFSampleProtection_INTERFACE_DEFINED__
@@ -14638,7 +14782,7 @@ EXTERN_C const IID IID_IMFMediaSinkPreroll;
 #endif 	/* __IMFMediaSinkPreroll_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0080 */
+/* interface __MIDL_itf_mfidl_0000_0081 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -14647,8 +14791,8 @@ EXTERN_C const IID IID_IMFMediaSinkPreroll;
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0080_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0080_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0081_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0081_v0_0_s_ifspec;
 
 #ifndef __IMFFinalizableMediaSink_INTERFACE_DEFINED__
 #define __IMFFinalizableMediaSink_INTERFACE_DEFINED__
@@ -14809,7 +14953,7 @@ EXTERN_C const IID IID_IMFFinalizableMediaSink;
 #endif 	/* __IMFFinalizableMediaSink_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0081 */
+/* interface __MIDL_itf_mfidl_0000_0082 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -14819,8 +14963,8 @@ EXTERN_C const IID IID_IMFFinalizableMediaSink;
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0081_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0081_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0082_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0082_v0_0_s_ifspec;
 
 #ifndef __IMFStreamingSinkConfig_INTERFACE_DEFINED__
 #define __IMFStreamingSinkConfig_INTERFACE_DEFINED__
@@ -14904,7 +15048,7 @@ EXTERN_C const IID IID_IMFStreamingSinkConfig;
 #endif 	/* __IMFStreamingSinkConfig_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0082 */
+/* interface __MIDL_itf_mfidl_0000_0083 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -14914,8 +15058,8 @@ EXTERN_C const IID IID_IMFStreamingSinkConfig;
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0082_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0082_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0083_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0083_v0_0_s_ifspec;
 
 #ifndef __IMFRemoteProxy_INTERFACE_DEFINED__
 #define __IMFRemoteProxy_INTERFACE_DEFINED__
@@ -15015,14 +15159,14 @@ EXTERN_C const IID IID_IMFRemoteProxy;
 #endif 	/* __IMFRemoteProxy_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0083 */
+/* interface __MIDL_itf_mfidl_0000_0084 */
 /* [local] */ 
 
 EXTERN_GUID( MF_REMOTE_PROXY, 0x2f00c90e, 0xd2cf, 0x4278, 0x8b, 0x6a, 0xd0, 0x77, 0xfa, 0xc3, 0xa2, 0x5f);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0083_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0083_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0084_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0084_v0_0_s_ifspec;
 
 #ifndef __IMFObjectReferenceStream_INTERFACE_DEFINED__
 #define __IMFObjectReferenceStream_INTERFACE_DEFINED__
@@ -15118,14 +15262,14 @@ EXTERN_C const IID IID_IMFObjectReferenceStream;
 #endif 	/* __IMFObjectReferenceStream_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0084 */
+/* interface __MIDL_itf_mfidl_0000_0085 */
 /* [local] */ 
 
 EXTERN_GUID( CLSID_CreateMediaExtensionObject, 0xef65a54d, 0x0788, 0x45b8, 0x8b, 0x14, 0xbc, 0x0f, 0x6a, 0x6b, 0x51, 0x37);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0084_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0084_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0085_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0085_v0_0_s_ifspec;
 
 #ifndef __IMFPMPHost_INTERFACE_DEFINED__
 #define __IMFPMPHost_INTERFACE_DEFINED__
@@ -15245,7 +15389,7 @@ void __RPC_STUB IMFPMPHost_RemoteCreateObjectByCLSID_Stub(
 #endif 	/* __IMFPMPHost_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0085 */
+/* interface __MIDL_itf_mfidl_0000_0086 */
 /* [local] */ 
 
 #if (WINVER >= _WIN32_WINNT_WIN7) 
@@ -15253,8 +15397,8 @@ EXTERN_C const GUID MF_PMP_SERVICE;
 #endif // (WINVER >= _WIN32_WINNT_WIN7) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0085_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0085_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0086_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0086_v0_0_s_ifspec;
 
 #ifndef __IMFPMPClient_INTERFACE_DEFINED__
 #define __IMFPMPClient_INTERFACE_DEFINED__
@@ -15436,7 +15580,7 @@ EXTERN_C const IID IID_IMFPMPServer;
 #endif 	/* __IMFPMPServer_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0087 */
+/* interface __MIDL_itf_mfidl_0000_0088 */
 /* [local] */ 
 
 STDAPI MFCreatePMPServer(
@@ -15445,8 +15589,8 @@ STDAPI MFCreatePMPServer(
     );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0087_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0087_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0088_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0088_v0_0_s_ifspec;
 
 #ifndef __IMFRemoteDesktopPlugin_INTERFACE_DEFINED__
 #define __IMFRemoteDesktopPlugin_INTERFACE_DEFINED__
@@ -15528,7 +15672,7 @@ EXTERN_C const IID IID_IMFRemoteDesktopPlugin;
 #endif 	/* __IMFRemoteDesktopPlugin_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0088 */
+/* interface __MIDL_itf_mfidl_0000_0089 */
 /* [local] */ 
 
 STDAPI MFCreateRemoteDesktopPlugin(
@@ -15539,8 +15683,8 @@ EXTERN_C HRESULT STDAPICALLTYPE CreateNamedPropertyStore(
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0088_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0088_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0089_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0089_v0_0_s_ifspec;
 
 #ifndef __IMFSAMIStyle_INTERFACE_DEFINED__
 #define __IMFSAMIStyle_INTERFACE_DEFINED__
@@ -15660,7 +15804,7 @@ EXTERN_C const IID IID_IMFSAMIStyle;
 #endif 	/* __IMFSAMIStyle_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0089 */
+/* interface __MIDL_itf_mfidl_0000_0090 */
 /* [local] */ 
 
 EXTERN_GUID( MF_SAMI_SERVICE, 0x49a89ae7, 0xb4d9, 0x4ef2, 0xaa, 0x5c, 0xf6, 0x5a, 0x3e, 0x5, 0xae, 0x4e );
@@ -15674,8 +15818,8 @@ EXTERN_GUID( MF_SD_SAMI_LANGUAGE, 0x36fcb98a, 0x6cd0, 0x44cb, 0xac, 0xb9, 0xa8, 
 STDAPI MFCreateSampleCopierMFT(_Outptr_ IMFTransform** ppCopierMFT);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0089_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0089_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0090_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0090_v0_0_s_ifspec;
 
 #ifndef __IMFTranscodeProfile_INTERFACE_DEFINED__
 #define __IMFTranscodeProfile_INTERFACE_DEFINED__
@@ -15819,7 +15963,7 @@ EXTERN_C const IID IID_IMFTranscodeProfile;
 #endif 	/* __IMFTranscodeProfile_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0090 */
+/* interface __MIDL_itf_mfidl_0000_0091 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -15930,8 +16074,8 @@ typedef struct _MF_TRANSCODE_SINK_INFO
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0090_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0090_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0091_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0091_v0_0_s_ifspec;
 
 #ifndef __IMFTranscodeSinkInfoProvider_INTERFACE_DEFINED__
 #define __IMFTranscodeSinkInfoProvider_INTERFACE_DEFINED__
@@ -16051,15 +16195,15 @@ EXTERN_C const IID IID_IMFTranscodeSinkInfoProvider;
 #endif 	/* __IMFTranscodeSinkInfoProvider_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0091 */
+/* interface __MIDL_itf_mfidl_0000_0092 */
 /* [local] */ 
 
  STDAPI MFCreateTranscodeSinkActivate( 
  _Outptr_ IMFActivate** ppActivate ); 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0091_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0091_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0092_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0092_v0_0_s_ifspec;
 
 #ifndef __IMFFieldOfUseMFTUnlock_INTERFACE_DEFINED__
 #define __IMFFieldOfUseMFTUnlock_INTERFACE_DEFINED__
@@ -16141,7 +16285,7 @@ EXTERN_C const IID IID_IMFFieldOfUseMFTUnlock;
 #endif 	/* __IMFFieldOfUseMFTUnlock_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0092 */
+/* interface __MIDL_itf_mfidl_0000_0093 */
 /* [local] */ 
 
 typedef struct _MFT_REGISTRATION_INFO
@@ -16159,8 +16303,8 @@ typedef struct _MFT_REGISTRATION_INFO
 EXTERN_GUID(MF_LOCAL_MFT_REGISTRATION_SERVICE, 0xddf5cf9c, 0x4506, 0x45aa, 0xab, 0xf0, 0x6d, 0x5d, 0x94, 0xdd, 0x1b, 0x4a);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0092_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0092_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0093_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0093_v0_0_s_ifspec;
 
 #ifndef __IMFLocalMFTRegistration_INTERFACE_DEFINED__
 #define __IMFLocalMFTRegistration_INTERFACE_DEFINED__
@@ -16350,7 +16494,7 @@ EXTERN_C const IID IID_IMFCapturePhotoConfirmation;
 #endif 	/* __IMFCapturePhotoConfirmation_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0094 */
+/* interface __MIDL_itf_mfidl_0000_0095 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -16360,8 +16504,8 @@ EXTERN_C const IID IID_IMFCapturePhotoConfirmation;
 #if (WINVER >= _WIN32_WINNT_WIN8) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0094_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0094_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0095_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0095_v0_0_s_ifspec;
 
 #ifndef __IMFPMPHostApp_INTERFACE_DEFINED__
 #define __IMFPMPHostApp_INTERFACE_DEFINED__
@@ -16545,15 +16689,15 @@ EXTERN_C const IID IID_IMFPMPClientApp;
 #endif 	/* __IMFPMPClientApp_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0096 */
+/* interface __MIDL_itf_mfidl_0000_0097 */
 /* [local] */ 
 
 #endif 
 #if (WINVER >= _WIN32_WINNT_WINBLUE) 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0096_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0096_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0097_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0097_v0_0_s_ifspec;
 
 #ifndef __IMFMediaStreamSourceSampleRequest_INTERFACE_DEFINED__
 #define __IMFMediaStreamSourceSampleRequest_INTERFACE_DEFINED__
@@ -16635,14 +16779,14 @@ EXTERN_C const IID IID_IMFMediaStreamSourceSampleRequest;
 #endif 	/* __IMFMediaStreamSourceSampleRequest_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0097 */
+/* interface __MIDL_itf_mfidl_0000_0098 */
 /* [local] */ 
 
 #endif 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0097_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0097_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0098_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0098_v0_0_s_ifspec;
 
 #ifndef __IMFTrackedSample_INTERFACE_DEFINED__
 #define __IMFTrackedSample_INTERFACE_DEFINED__
@@ -16728,7 +16872,7 @@ EXTERN_C const IID IID_IMFTrackedSample;
 #endif 	/* __IMFTrackedSample_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0098 */
+/* interface __MIDL_itf_mfidl_0000_0099 */
 /* [local] */ 
 
 STDAPI MFCreateTrackedSample(
@@ -16805,6 +16949,11 @@ EXTERN_GUID( MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_MAX_BUFFERS, 0x7dd9b730, 
 EXTERN_GUID( MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ENDPOINT_ID, 0x30da9258, 0xfeb9, 0x47a7, 0xa4, 0x53, 0x76, 0x3a, 0x7a, 0x8e, 0x1c, 0x5f);
 EXTERN_GUID( MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ROLE, 0xbc9d118e, 0x8c67, 0x4a18, 0x85, 0xd4, 0x12, 0xd3, 0x0, 0x40, 0x5, 0x52);
 EXTERN_GUID( MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_PROVIDER_DEVICE_ID, 0x36689d42, 0xa06c, 0x40ae, 0x84, 0xcf, 0xf5, 0xa0, 0x34, 0x6, 0x7c, 0xc4);
+EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_XADDRESS, 0xbca0be52, 0xc327, 0x44c7, 0x9b, 0x7d, 0x7f, 0xa8, 0xd9, 0xb5, 0xbc, 0xda);
+EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_STREAM_URL, 0x9d7b40d2, 0x3617, 0x4043, 0x93, 0xe3, 0x8d, 0x6d, 0xa9, 0xbb, 0x34, 0x92);
+EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_USERNAME,0x5d01add, 0x949f, 0x46eb, 0xbc, 0x8e, 0x8b, 0xd, 0x2b, 0x32, 0xd7, 0x9d);
+EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_PASSWORD, 0xa0fd7e16, 0x42d9, 0x49df, 0x84, 0xc0, 0xe8, 0x2c, 0x5e, 0xab, 0x88, 0x74);
+EXTERN_GUID(CLSID_FrameServerNetworkCameraSource, 0x7a213aa7, 0x866f, 0x414a, 0x8c, 0x1a, 0x27, 0x5c, 0x72, 0x83, 0xa3, 0x95);
 EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_GUID, 0x14dd9a1c, 0x7cff, 0x41be, 0xb1, 0xb9, 0xba, 0x1a, 0xc6, 0xec, 0xb5, 0x71);
 EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_GUID, 0x8ac3587a, 0x4ae7, 0x42d8, 0x99, 0xe0, 0x0a, 0x60, 0x13, 0xee, 0xf9, 0x0f);
 EXTERN_GUID( MF_DEVICESTREAM_IMAGE_STREAM, 0xa7ffb865, 0xe7b2, 0x43b0, 0x9f, 0x6f, 0x9a, 0xf2, 0xa0, 0xe5, 0xf, 0xc0);
@@ -16833,8 +16982,8 @@ EXTERN_GUID(MFSampleExtension_Spatial_CameraProjectionTransform , 0x47f9fcb5, 0x
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0098_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0098_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0099_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0099_v0_0_s_ifspec;
 
 #ifndef __IMFProtectedEnvironmentAccess_INTERFACE_DEFINED__
 #define __IMFProtectedEnvironmentAccess_INTERFACE_DEFINED__
@@ -17142,7 +17291,7 @@ EXTERN_C const IID IID_IMFSystemId;
 #endif 	/* __IMFSystemId_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0101 */
+/* interface __MIDL_itf_mfidl_0000_0102 */
 /* [local] */ 
 
 STDAPI MFCreateProtectedEnvironmentAccess( 
@@ -17196,8 +17345,8 @@ typedef struct _MFCONTENTPROTECTIONDEVICE_REALTIMECLIENT_DATA {
 } MFCONTENTPROTECTIONDEVICE_REALTIMECLIENT_DATA;
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0101_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0101_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0102_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0102_v0_0_s_ifspec;
 
 #ifndef __IMFContentProtectionDevice_INTERFACE_DEFINED__
 #define __IMFContentProtectionDevice_INTERFACE_DEFINED__
@@ -17313,7 +17462,7 @@ EXTERN_C const IID IID_IMFContentProtectionDevice;
 #endif 	/* __IMFContentProtectionDevice_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0102 */
+/* interface __MIDL_itf_mfidl_0000_0103 */
 /* [local] */ 
 
 STDAPI MFCreateContentProtectionDevice( 
@@ -17324,8 +17473,8 @@ STDAPI MFIsContentProtectionDeviceSupported(
    _Out_ BOOL *isSupported); 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0102_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0102_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0103_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0103_v0_0_s_ifspec;
 
 #ifndef __IMFContentDecryptorContext_INTERFACE_DEFINED__
 #define __IMFContentDecryptorContext_INTERFACE_DEFINED__
@@ -17417,7 +17566,7 @@ EXTERN_C const IID IID_IMFContentDecryptorContext;
 #endif 	/* __IMFContentDecryptorContext_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0103 */
+/* interface __MIDL_itf_mfidl_0000_0104 */
 /* [local] */ 
 
 EXTERN_GUID( MF_CONTENT_DECRYPTOR_SERVICE, 0x68a72927, 0xfc7b, 0x44ee, 0x85, 0xf4, 0x7c, 0x51, 0xbd, 0x55, 0xa6, 0x59);
@@ -17501,8 +17650,8 @@ enum _MF_CROSS_ORIGIN_POLICY
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0103_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0103_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0104_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0104_v0_0_s_ifspec;
 
 #ifndef __IMFNetCrossOriginSupport_INTERFACE_DEFINED__
 #define __IMFNetCrossOriginSupport_INTERFACE_DEFINED__
@@ -17612,14 +17761,14 @@ EXTERN_C const IID IID_IMFNetCrossOriginSupport;
 #endif 	/* __IMFNetCrossOriginSupport_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0104 */
+/* interface __MIDL_itf_mfidl_0000_0105 */
 /* [local] */ 
 
 EXTERN_GUID(MFNETSOURCE_CROSS_ORIGIN_SUPPORT, 0x9842207c, 0xb02c, 0x4271, 0xa2, 0xfc, 0x72, 0xe4, 0x93, 0x8, 0xe5, 0xc2);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0104_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0104_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0105_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0105_v0_0_s_ifspec;
 
 #ifndef __IMFHttpDownloadRequest_INTERFACE_DEFINED__
 #define __IMFHttpDownloadRequest_INTERFACE_DEFINED__
@@ -18143,7 +18292,7 @@ EXTERN_C const IID IID_IMFHttpDownloadSessionProvider;
 #endif 	/* __IMFHttpDownloadSessionProvider_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0107 */
+/* interface __MIDL_itf_mfidl_0000_0108 */
 /* [local] */ 
 
 EXTERN_GUID(MFNETSOURCE_HTTP_DOWNLOAD_SESSION_PROVIDER, 0x7d55081e, 0x307d, 0x4d6d, 0xa6, 0x63, 0xa9, 0x3b, 0xe9, 0x7c, 0x4b, 0x5c);
@@ -18172,8 +18321,8 @@ EXTERN_GUID(MF_SD_VIDEO_SPHERICAL_INITIAL_VIEWDIRECTION, 0x11d25a49, 0xbb62, 0x4
 EXTERN_GUID(MF_MEDIASOURCE_EXPOSE_ALL_STREAMS, 0xe7f250b8, 0x8fd9, 0x4a09, 0xb6, 0xc1, 0x6a, 0x31, 0x5c, 0x7c, 0x72, 0xe);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0107_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0107_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0108_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0108_v0_0_s_ifspec;
 
 #ifndef __IMFMediaSource2_INTERFACE_DEFINED__
 #define __IMFMediaSource2_INTERFACE_DEFINED__
@@ -18515,7 +18664,7 @@ EXTERN_C const IID IID_IMFMediaStream2;
 #endif 	/* __IMFMediaStream2_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0109 */
+/* interface __MIDL_itf_mfidl_0000_0110 */
 /* [local] */ 
 
 #endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) 
@@ -18534,7 +18683,7 @@ EXTERN_GUID( MF_DEVICESTREAM_REQUIRED_SDDL, 0x331AE85D, 0xC0D3, 0x49BA, 0x83, 0x
 EXTERN_GUID(MF_DEVICEMFT_SENSORPROFILE_COLLECTION, 0x36EBDC44, 0xB12C, 0x441B, 0x89, 0xF4, 0x08, 0xB2, 0xF4, 0x1A, 0x9C, 0xFC );
 EXTERN_GUID(MF_DEVICESTREAM_SENSORSTREAM_ID, 0xE35B9FE4, 0x0659, 0x4CAD, 0xBB, 0x51, 0x33, 0x16, 0x0B, 0xE7, 0xE4, 0x13 );
 typedef /* [public][public] */ 
-enum __MIDL___MIDL_itf_mfidl_0000_0109_0001
+enum __MIDL___MIDL_itf_mfidl_0000_0110_0001
     {
         MFSensorDeviceType_Unknown	= 0,
         MFSensorDeviceType_Device	= ( MFSensorDeviceType_Unknown + 1 ) ,
@@ -18544,7 +18693,7 @@ enum __MIDL___MIDL_itf_mfidl_0000_0109_0001
     } 	MFSensorDeviceType;
 
 typedef /* [public][public][public] */ 
-enum __MIDL___MIDL_itf_mfidl_0000_0109_0002
+enum __MIDL___MIDL_itf_mfidl_0000_0110_0002
     {
         MFSensorStreamType_Unknown	= 0,
         MFSensorStreamType_Input	= ( MFSensorStreamType_Unknown + 1 ) ,
@@ -18552,7 +18701,7 @@ enum __MIDL___MIDL_itf_mfidl_0000_0109_0002
     } 	MFSensorStreamType;
 
 typedef /* [public][public][public][public] */ 
-enum __MIDL___MIDL_itf_mfidl_0000_0109_0003
+enum __MIDL___MIDL_itf_mfidl_0000_0110_0003
     {
         MFSensorDeviceMode_Controller	= 0,
         MFSensorDeviceMode_Shared	= ( MFSensorDeviceMode_Controller + 1 ) 
@@ -18560,8 +18709,8 @@ enum __MIDL___MIDL_itf_mfidl_0000_0109_0003
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0109_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0109_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0110_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0110_v0_0_s_ifspec;
 
 #ifndef __IMFSensorDevice_INTERFACE_DEFINED__
 #define __IMFSensorDevice_INTERFACE_DEFINED__
@@ -19450,7 +19599,7 @@ EXTERN_C const IID IID_IMFSensorTransformFactory;
 #endif 	/* __IMFSensorTransformFactory_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0113 */
+/* interface __MIDL_itf_mfidl_0000_0114 */
 /* [local] */ 
 
 STDAPI
@@ -19467,7 +19616,7 @@ MFCreateSensorStream(
     _COM_Outptr_ IMFSensorStream** ppStream
     );
 
-typedef /* [public][public][public][public] */ struct __MIDL___MIDL_itf_mfidl_0000_0113_0001
+typedef /* [public][public][public][public] */ struct __MIDL___MIDL_itf_mfidl_0000_0114_0001
     {
     GUID Type;
     UINT32 Index;
@@ -19476,8 +19625,8 @@ typedef /* [public][public][public][public] */ struct __MIDL___MIDL_itf_mfidl_00
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0113_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0113_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0114_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0114_v0_0_s_ifspec;
 
 #ifndef __IMFSensorProfile_INTERFACE_DEFINED__
 #define __IMFSensorProfile_INTERFACE_DEFINED__
@@ -19755,7 +19904,7 @@ EXTERN_C const IID IID_IMFSensorProfileCollection;
 #endif 	/* __IMFSensorProfileCollection_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0115 */
+/* interface __MIDL_itf_mfidl_0000_0116 */
 /* [local] */ 
 
 STDAPI
@@ -19773,8 +19922,8 @@ MFCreateSensorProfileCollection(
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0115_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0115_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0116_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0116_v0_0_s_ifspec;
 
 #ifndef __IMFSensorProcessActivity_INTERFACE_DEFINED__
 #define __IMFSensorProcessActivity_INTERFACE_DEFINED__
@@ -20314,7 +20463,7 @@ EXTERN_C const IID IID_IMFSensorActivityMonitor;
 #endif 	/* __IMFSensorActivityMonitor_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0120 */
+/* interface __MIDL_itf_mfidl_0000_0121 */
 /* [local] */ 
 
 
@@ -20372,8 +20521,8 @@ typedef struct _MFExtendedCameraIntrinsic_IntrinsicModel
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0120_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0120_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0121_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0121_v0_0_s_ifspec;
 
 #ifndef __IMFExtendedCameraIntrinsicModel_INTERFACE_DEFINED__
 #define __IMFExtendedCameraIntrinsicModel_INTERFACE_DEFINED__
@@ -20819,7 +20968,7 @@ EXTERN_C const IID IID_IMFExtendedCameraIntrinsics;
 #endif 	/* __IMFExtendedCameraIntrinsics_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0124 */
+/* interface __MIDL_itf_mfidl_0000_0125 */
 /* [local] */ 
 
 DEFINE_GUID(MFStreamExtension_ExtendedCameraIntrinsics,
@@ -20837,12 +20986,720 @@ MFCreateExtendedCameraIntrinsicModel(
     _COM_Outptr_ IMFExtendedCameraIntrinsicModel** ppExtendedCameraIntrinsicModel
     );
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5) 
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB) 
+
+
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0125_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0125_v0_0_s_ifspec;
+
+#ifndef __IMFExtendedCameraControl_INTERFACE_DEFINED__
+#define __IMFExtendedCameraControl_INTERFACE_DEFINED__
+
+/* interface IMFExtendedCameraControl */
+/* [local][helpstring][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFExtendedCameraControl;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("38E33520-FCA1-4845-A27A-68B7C6AB3789")
+    IMFExtendedCameraControl : public IUnknown
+    {
+    public:
+        virtual ULONGLONG STDMETHODCALLTYPE GetCapabilities( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE SetFlags( 
+            /* [annotation][in] */ 
+            _In_  ULONGLONG ulFlags) = 0;
+        
+        virtual ULONGLONG STDMETHODCALLTYPE GetFlags( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE LockPayload( 
+            /* [annotation][out] */ 
+            _Outptr_result_buffer_(*pulPayload)  BYTE **ppPayload,
+            /* [annotation][out] */ 
+            _Out_  ULONG *pulPayload) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE UnlockPayload( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE CommitSettings( void) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFExtendedCameraControlVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFExtendedCameraControl * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFExtendedCameraControl * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFExtendedCameraControl * This);
+        
+        ULONGLONG ( STDMETHODCALLTYPE *GetCapabilities )( 
+            IMFExtendedCameraControl * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *SetFlags )( 
+            IMFExtendedCameraControl * This,
+            /* [annotation][in] */ 
+            _In_  ULONGLONG ulFlags);
+        
+        ULONGLONG ( STDMETHODCALLTYPE *GetFlags )( 
+            IMFExtendedCameraControl * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *LockPayload )( 
+            IMFExtendedCameraControl * This,
+            /* [annotation][out] */ 
+            _Outptr_result_buffer_(*pulPayload)  BYTE **ppPayload,
+            /* [annotation][out] */ 
+            _Out_  ULONG *pulPayload);
+        
+        HRESULT ( STDMETHODCALLTYPE *UnlockPayload )( 
+            IMFExtendedCameraControl * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *CommitSettings )( 
+            IMFExtendedCameraControl * This);
+        
+        END_INTERFACE
+    } IMFExtendedCameraControlVtbl;
+
+    interface IMFExtendedCameraControl
+    {
+        CONST_VTBL struct IMFExtendedCameraControlVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFExtendedCameraControl_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFExtendedCameraControl_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFExtendedCameraControl_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFExtendedCameraControl_GetCapabilities(This)	\
+    ( (This)->lpVtbl -> GetCapabilities(This) ) 
+
+#define IMFExtendedCameraControl_SetFlags(This,ulFlags)	\
+    ( (This)->lpVtbl -> SetFlags(This,ulFlags) ) 
+
+#define IMFExtendedCameraControl_GetFlags(This)	\
+    ( (This)->lpVtbl -> GetFlags(This) ) 
+
+#define IMFExtendedCameraControl_LockPayload(This,ppPayload,pulPayload)	\
+    ( (This)->lpVtbl -> LockPayload(This,ppPayload,pulPayload) ) 
+
+#define IMFExtendedCameraControl_UnlockPayload(This)	\
+    ( (This)->lpVtbl -> UnlockPayload(This) ) 
+
+#define IMFExtendedCameraControl_CommitSettings(This)	\
+    ( (This)->lpVtbl -> CommitSettings(This) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFExtendedCameraControl_INTERFACE_DEFINED__ */
+
+
+#ifndef __IMFExtendedCameraController_INTERFACE_DEFINED__
+#define __IMFExtendedCameraController_INTERFACE_DEFINED__
+
+/* interface IMFExtendedCameraController */
+/* [local][helpstring][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFExtendedCameraController;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("B91EBFEE-CA03-4AF4-8A82-A31752F4A0FC")
+    IMFExtendedCameraController : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetExtendedCameraControl( 
+            /* [annotation][in] */ 
+            _In_  DWORD dwStreamIndex,
+            /* [annotation][in] */ 
+            _In_  ULONG ulPropertyId,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IMFExtendedCameraControl **ppControl) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFExtendedCameraControllerVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFExtendedCameraController * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFExtendedCameraController * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFExtendedCameraController * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetExtendedCameraControl )( 
+            IMFExtendedCameraController * This,
+            /* [annotation][in] */ 
+            _In_  DWORD dwStreamIndex,
+            /* [annotation][in] */ 
+            _In_  ULONG ulPropertyId,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IMFExtendedCameraControl **ppControl);
+        
+        END_INTERFACE
+    } IMFExtendedCameraControllerVtbl;
+
+    interface IMFExtendedCameraController
+    {
+        CONST_VTBL struct IMFExtendedCameraControllerVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFExtendedCameraController_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFExtendedCameraController_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFExtendedCameraController_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFExtendedCameraController_GetExtendedCameraControl(This,dwStreamIndex,ulPropertyId,ppControl)	\
+    ( (This)->lpVtbl -> GetExtendedCameraControl(This,dwStreamIndex,ulPropertyId,ppControl) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFExtendedCameraController_INTERFACE_DEFINED__ */
+
+
+#ifndef __IMFRelativePanelReport_INTERFACE_DEFINED__
+#define __IMFRelativePanelReport_INTERFACE_DEFINED__
+
+/* interface IMFRelativePanelReport */
+/* [local][helpstring][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFRelativePanelReport;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("F25362EA-2C0E-447F-81E2-755914CDC0C3")
+    IMFRelativePanelReport : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetRelativePanel( 
+            /* [annotation][out] */ 
+            _Out_  ULONG *panel) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFRelativePanelReportVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFRelativePanelReport * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFRelativePanelReport * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFRelativePanelReport * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetRelativePanel )( 
+            IMFRelativePanelReport * This,
+            /* [annotation][out] */ 
+            _Out_  ULONG *panel);
+        
+        END_INTERFACE
+    } IMFRelativePanelReportVtbl;
+
+    interface IMFRelativePanelReport
+    {
+        CONST_VTBL struct IMFRelativePanelReportVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFRelativePanelReport_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFRelativePanelReport_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFRelativePanelReport_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFRelativePanelReport_GetRelativePanel(This,panel)	\
+    ( (This)->lpVtbl -> GetRelativePanel(This,panel) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFRelativePanelReport_INTERFACE_DEFINED__ */
+
+
+#ifndef __IMFRelativePanelWatcher_INTERFACE_DEFINED__
+#define __IMFRelativePanelWatcher_INTERFACE_DEFINED__
+
+/* interface IMFRelativePanelWatcher */
+/* [local][helpstring][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFRelativePanelWatcher;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("421AF7F6-573E-4AD0-8FDA-2E57CEDB18C6")
+    IMFRelativePanelWatcher : public IMFShutdown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE BeginGetReport( 
+            /* [annotation][in] */ 
+            _In_  IMFAsyncCallback *pCallback,
+            /* [annotation][in] */ 
+            _In_opt_  IUnknown *pState) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE EndGetReport( 
+            /* [annotation][in] */ 
+            _In_  IMFAsyncResult *pResult,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IMFRelativePanelReport **ppRelativePanelReport) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetReport( 
+            /* [annotation][out] */ 
+            _COM_Outptr_  IMFRelativePanelReport **ppRelativePanelReport) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFRelativePanelWatcherVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFRelativePanelWatcher * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFRelativePanelWatcher * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFRelativePanelWatcher * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *Shutdown )( 
+            IMFRelativePanelWatcher * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetShutdownStatus )( 
+            IMFRelativePanelWatcher * This,
+            /* [out] */ MFSHUTDOWN_STATUS *pStatus);
+        
+        HRESULT ( STDMETHODCALLTYPE *BeginGetReport )( 
+            IMFRelativePanelWatcher * This,
+            /* [annotation][in] */ 
+            _In_  IMFAsyncCallback *pCallback,
+            /* [annotation][in] */ 
+            _In_opt_  IUnknown *pState);
+        
+        HRESULT ( STDMETHODCALLTYPE *EndGetReport )( 
+            IMFRelativePanelWatcher * This,
+            /* [annotation][in] */ 
+            _In_  IMFAsyncResult *pResult,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IMFRelativePanelReport **ppRelativePanelReport);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetReport )( 
+            IMFRelativePanelWatcher * This,
+            /* [annotation][out] */ 
+            _COM_Outptr_  IMFRelativePanelReport **ppRelativePanelReport);
+        
+        END_INTERFACE
+    } IMFRelativePanelWatcherVtbl;
+
+    interface IMFRelativePanelWatcher
+    {
+        CONST_VTBL struct IMFRelativePanelWatcherVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFRelativePanelWatcher_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFRelativePanelWatcher_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFRelativePanelWatcher_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFRelativePanelWatcher_Shutdown(This)	\
+    ( (This)->lpVtbl -> Shutdown(This) ) 
+
+#define IMFRelativePanelWatcher_GetShutdownStatus(This,pStatus)	\
+    ( (This)->lpVtbl -> GetShutdownStatus(This,pStatus) ) 
+
+
+#define IMFRelativePanelWatcher_BeginGetReport(This,pCallback,pState)	\
+    ( (This)->lpVtbl -> BeginGetReport(This,pCallback,pState) ) 
+
+#define IMFRelativePanelWatcher_EndGetReport(This,pResult,ppRelativePanelReport)	\
+    ( (This)->lpVtbl -> EndGetReport(This,pResult,ppRelativePanelReport) ) 
+
+#define IMFRelativePanelWatcher_GetReport(This,ppRelativePanelReport)	\
+    ( (This)->lpVtbl -> GetReport(This,ppRelativePanelReport) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFRelativePanelWatcher_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_mfidl_0000_0129 */
+/* [local] */ 
+
+
+STDAPI
+MFCreateRelativePanelWatcher(
+    _In_ PCWSTR videoDeviceId,
+    _In_ PCWSTR displayMonitorDeviceId,
+    _COM_Outptr_ IMFRelativePanelWatcher** ppRelativePanelWatcher
+    );
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB) 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+
+
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0129_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0129_v0_0_s_ifspec;
+
+#ifndef __IMFVideoCaptureSampleAllocator_INTERFACE_DEFINED__
+#define __IMFVideoCaptureSampleAllocator_INTERFACE_DEFINED__
+
+/* interface IMFVideoCaptureSampleAllocator */
+/* [unique][helpstring][uuid][local][object] */ 
+
+
+EXTERN_C const IID IID_IMFVideoCaptureSampleAllocator;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("725B77C7-CA9F-4FE5-9D72-9946BF9B3C70")
+    IMFVideoCaptureSampleAllocator : public IMFVideoSampleAllocator
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE InitializeCaptureSampleAllocator( 
+            /* [annotation][in] */ 
+            _In_  DWORD cbSampleSize,
+            /* [annotation][in] */ 
+            _In_  DWORD cbCaptureMetadataSize,
+            /* [annotation][in] */ 
+            _In_  DWORD cbAlignment,
+            /* [annotation][in] */ 
+            _In_  DWORD cMinimumSamples,
+            /* [annotation][in] */ 
+            _In_opt_  IMFAttributes *pAttributes,
+            /* [annotation][in] */ 
+            _In_  IMFMediaType *pMediaType) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFVideoCaptureSampleAllocatorVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFVideoCaptureSampleAllocator * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFVideoCaptureSampleAllocator * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFVideoCaptureSampleAllocator * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *SetDirectXManager )( 
+            IMFVideoCaptureSampleAllocator * This,
+            /* [unique][in] */ IUnknown *pManager);
+        
+        HRESULT ( STDMETHODCALLTYPE *UninitializeSampleAllocator )( 
+            IMFVideoCaptureSampleAllocator * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *InitializeSampleAllocator )( 
+            IMFVideoCaptureSampleAllocator * This,
+            /* [in] */ DWORD cRequestedFrames,
+            /* [in] */ IMFMediaType *pMediaType);
+        
+        HRESULT ( STDMETHODCALLTYPE *AllocateSample )( 
+            IMFVideoCaptureSampleAllocator * This,
+            /* [out] */ IMFSample **ppSample);
+        
+        HRESULT ( STDMETHODCALLTYPE *InitializeCaptureSampleAllocator )( 
+            IMFVideoCaptureSampleAllocator * This,
+            /* [annotation][in] */ 
+            _In_  DWORD cbSampleSize,
+            /* [annotation][in] */ 
+            _In_  DWORD cbCaptureMetadataSize,
+            /* [annotation][in] */ 
+            _In_  DWORD cbAlignment,
+            /* [annotation][in] */ 
+            _In_  DWORD cMinimumSamples,
+            /* [annotation][in] */ 
+            _In_opt_  IMFAttributes *pAttributes,
+            /* [annotation][in] */ 
+            _In_  IMFMediaType *pMediaType);
+        
+        END_INTERFACE
+    } IMFVideoCaptureSampleAllocatorVtbl;
+
+    interface IMFVideoCaptureSampleAllocator
+    {
+        CONST_VTBL struct IMFVideoCaptureSampleAllocatorVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFVideoCaptureSampleAllocator_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFVideoCaptureSampleAllocator_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFVideoCaptureSampleAllocator_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFVideoCaptureSampleAllocator_SetDirectXManager(This,pManager)	\
+    ( (This)->lpVtbl -> SetDirectXManager(This,pManager) ) 
+
+#define IMFVideoCaptureSampleAllocator_UninitializeSampleAllocator(This)	\
+    ( (This)->lpVtbl -> UninitializeSampleAllocator(This) ) 
+
+#define IMFVideoCaptureSampleAllocator_InitializeSampleAllocator(This,cRequestedFrames,pMediaType)	\
+    ( (This)->lpVtbl -> InitializeSampleAllocator(This,cRequestedFrames,pMediaType) ) 
+
+#define IMFVideoCaptureSampleAllocator_AllocateSample(This,ppSample)	\
+    ( (This)->lpVtbl -> AllocateSample(This,ppSample) ) 
+
+
+#define IMFVideoCaptureSampleAllocator_InitializeCaptureSampleAllocator(This,cbSampleSize,cbCaptureMetadataSize,cbAlignment,cMinimumSamples,pAttributes,pMediaType)	\
+    ( (This)->lpVtbl -> InitializeCaptureSampleAllocator(This,cbSampleSize,cbCaptureMetadataSize,cbAlignment,cMinimumSamples,pAttributes,pMediaType) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFVideoCaptureSampleAllocator_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_mfidl_0000_0130 */
+/* [local] */ 
+
+typedef 
+enum MFSampleAllocatorUsage
+    {
+        MFSampleAllocatorUsage_UsesProvidedAllocator	= 0,
+        MFSampleAllocatorUsage_UsesCustomAllocator	= ( MFSampleAllocatorUsage_UsesProvidedAllocator + 1 ) ,
+        MFSampleAllocatorUsage_DoesNotAllocate	= ( MFSampleAllocatorUsage_UsesCustomAllocator + 1 ) 
+    } 	MFSampleAllocatorUsage;
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0130_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0130_v0_0_s_ifspec;
+
+#ifndef __IMFSampleAllocatorControl_INTERFACE_DEFINED__
+#define __IMFSampleAllocatorControl_INTERFACE_DEFINED__
+
+/* interface IMFSampleAllocatorControl */
+/* [local][helpstring][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFSampleAllocatorControl;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("DA62B958-3A38-4A97-BD27-149C640C0771")
+    IMFSampleAllocatorControl : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE SetDefaultAllocator( 
+            /* [annotation][in] */ 
+            _In_  DWORD dwOutputStreamID,
+            /* [annotation][in] */ 
+            _In_  IUnknown *pAllocator) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetAllocatorUsage( 
+            /* [annotation][in] */ 
+            _In_  DWORD dwOutputStreamID,
+            /* [annotation][out] */ 
+            _Out_  DWORD *pdwInputStreamID,
+            /* [annotation][out] */ 
+            _Out_  MFSampleAllocatorUsage *peUsage) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFSampleAllocatorControlVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFSampleAllocatorControl * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFSampleAllocatorControl * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFSampleAllocatorControl * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *SetDefaultAllocator )( 
+            IMFSampleAllocatorControl * This,
+            /* [annotation][in] */ 
+            _In_  DWORD dwOutputStreamID,
+            /* [annotation][in] */ 
+            _In_  IUnknown *pAllocator);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetAllocatorUsage )( 
+            IMFSampleAllocatorControl * This,
+            /* [annotation][in] */ 
+            _In_  DWORD dwOutputStreamID,
+            /* [annotation][out] */ 
+            _Out_  DWORD *pdwInputStreamID,
+            /* [annotation][out] */ 
+            _Out_  MFSampleAllocatorUsage *peUsage);
+        
+        END_INTERFACE
+    } IMFSampleAllocatorControlVtbl;
+
+    interface IMFSampleAllocatorControl
+    {
+        CONST_VTBL struct IMFSampleAllocatorControlVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFSampleAllocatorControl_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFSampleAllocatorControl_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFSampleAllocatorControl_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFSampleAllocatorControl_SetDefaultAllocator(This,dwOutputStreamID,pAllocator)	\
+    ( (This)->lpVtbl -> SetDefaultAllocator(This,dwOutputStreamID,pAllocator) ) 
+
+#define IMFSampleAllocatorControl_GetAllocatorUsage(This,dwOutputStreamID,pdwInputStreamID,peUsage)	\
+    ( (This)->lpVtbl -> GetAllocatorUsage(This,dwOutputStreamID,pdwInputStreamID,peUsage) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFSampleAllocatorControl_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_mfidl_0000_0131 */
+/* [local] */ 
+
 #pragma endregion 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0124_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0124_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0131_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0131_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

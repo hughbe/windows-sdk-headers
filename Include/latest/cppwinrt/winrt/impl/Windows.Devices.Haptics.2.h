@@ -1,52 +1,41 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Devices_Haptics_2_H
+#define WINRT_Windows_Devices_Haptics_2_H
 #include "winrt/impl/Windows.Devices.Haptics.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Haptics {
-
+namespace winrt::Windows::Devices::Haptics
+{
+    struct KnownSimpleHapticsControllerWaveforms
+    {
+        KnownSimpleHapticsControllerWaveforms() = delete;
+        [[nodiscard]] static auto Click();
+        [[nodiscard]] static auto BuzzContinuous();
+        [[nodiscard]] static auto RumbleContinuous();
+        [[nodiscard]] static auto Press();
+        [[nodiscard]] static auto Release();
+    };
+    struct __declspec(empty_bases) SimpleHapticsController : Windows::Devices::Haptics::ISimpleHapticsController
+    {
+        SimpleHapticsController(std::nullptr_t) noexcept {}
+        SimpleHapticsController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Haptics::ISimpleHapticsController(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) SimpleHapticsControllerFeedback : Windows::Devices::Haptics::ISimpleHapticsControllerFeedback
+    {
+        SimpleHapticsControllerFeedback(std::nullptr_t) noexcept {}
+        SimpleHapticsControllerFeedback(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Haptics::ISimpleHapticsControllerFeedback(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) VibrationDevice : Windows::Devices::Haptics::IVibrationDevice
+    {
+        VibrationDevice(std::nullptr_t) noexcept {}
+        VibrationDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Haptics::IVibrationDevice(ptr, take_ownership_from_abi) {}
+        static auto RequestAccessAsync();
+        static auto GetDeviceSelector();
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDefaultAsync();
+        static auto FindAllAsync();
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Haptics {
-
-struct KnownSimpleHapticsControllerWaveforms
-{
-    KnownSimpleHapticsControllerWaveforms() = delete;
-    static uint16_t Click();
-    static uint16_t BuzzContinuous();
-    static uint16_t RumbleContinuous();
-    static uint16_t Press();
-    static uint16_t Release();
-};
-
-struct WINRT_EBO SimpleHapticsController :
-    Windows::Devices::Haptics::ISimpleHapticsController
-{
-    SimpleHapticsController(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO SimpleHapticsControllerFeedback :
-    Windows::Devices::Haptics::ISimpleHapticsControllerFeedback
-{
-    SimpleHapticsControllerFeedback(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO VibrationDevice :
-    Windows::Devices::Haptics::IVibrationDevice
-{
-    VibrationDevice(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationAccessStatus> RequestAccessAsync();
-    static hstring GetDeviceSelector();
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationDevice> FromIdAsync(param::hstring const& deviceId);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationDevice> GetDefaultAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Haptics::VibrationDevice>> FindAllAsync();
-};
-
-}
+#endif

@@ -120,6 +120,7 @@ Notes:
 #define FACILITY_FVE_ERROR_CODE          0x21
 #define FACILITY_FWP_ERROR_CODE          0x22
 #define FACILITY_NDIS_ERROR_CODE         0x23
+#define FACILITY_QUIC_ERROR_CODE         0x24
 #define FACILITY_TPM                     0x29
 #define FACILITY_RTPM                    0x2A
 #define FACILITY_HYPERVISOR              0x35
@@ -1863,6 +1864,15 @@ Notes:
 // The action requested resulted in no work being done. Error-style clean-up has been performed.
 //
 #define STATUS_NO_WORK_DONE              ((NTSTATUS)0x80000032L)
+
+//
+// MessageId: STATUS_RETURN_ADDRESS_HIJACK_ATTEMPT
+//
+// MessageText:
+//
+// A return address hijack is being attempted. This is supported by the operating system when user-mode shadow stacks are enabled.
+//
+#define STATUS_RETURN_ADDRESS_HIJACK_ATTEMPT ((NTSTATUS)0x80000033L)
 
 //
 // MessageId: DBG_EXCEPTION_NOT_HANDLED
@@ -5950,6 +5960,15 @@ Notes:
 #define STATUS_IO_UNALIGNED_WRITE        ((NTSTATUS)0xC00001B1L)
 
 //
+// MessageId: STATUS_CONTROL_STACK_VIOLATION
+//
+// MessageText:
+//
+// An invalid address was found on the control flow stack.
+//
+#define STATUS_CONTROL_STACK_VIOLATION   ((NTSTATUS)0xC00001B2L)    //winnt
+
+//
 //  Available range of NTSTATUS codes
 //
 //
@@ -9933,13 +9952,13 @@ Notes:
 #define STATUS_STORAGE_LOST_DATA_PERSISTENCE ((NTSTATUS)0xC000049EL)
 
 //
-// MessageId: STATUS_VRF_CFG_ENABLED
+// MessageId: STATUS_VRF_CFG_AND_IO_ENABLED
 //
 // MessageText:
 //
-// Driver Verifier Volatile settings cannot be set when CFG is enabled.
+// Driver Verifier Volatile settings cannot be set when CFG and IO are enabled.
 //
-#define STATUS_VRF_CFG_ENABLED           ((NTSTATUS)0xC000049FL)
+#define STATUS_VRF_CFG_AND_IO_ENABLED    ((NTSTATUS)0xC000049FL)
 
 //
 // MessageId: STATUS_PARTITION_TERMINATING
@@ -10165,6 +10184,24 @@ Notes:
 // Encryption cannot be cleared on this file/directory because it still has an encrypted attribute.
 //
 #define STATUS_CANT_CLEAR_ENCRYPTION_FLAG ((NTSTATUS)0xC00004B8L)
+
+//
+// MessageId: STATUS_UNSATISFIED_DEPENDENCIES
+//
+// MessageText:
+//
+// The operation could not be completed due to one or more unsatisfied dependencies.
+//
+#define STATUS_UNSATISFIED_DEPENDENCIES  ((NTSTATUS)0xC00004B9L)
+
+//
+// MessageId: STATUS_CASE_SENSITIVE_PATH
+//
+// MessageText:
+//
+// The file cannot be opened because the path has a case-sensitive directory.
+//
+#define STATUS_CASE_SENSITIVE_PATH       ((NTSTATUS)0xC00004BAL)
 
 
 //     **** New SYSTEM error codes can be inserted here ****
@@ -11168,6 +11205,15 @@ Notes:
 //
 #define STATUS_EOF_ON_GHOSTED_RANGE      ((NTSTATUS)0xC000A007L)
 
+//
+// MessageId: STATUS_CC_NEEDS_CALLBACK_SECTION_DRAIN
+//
+// MessageText:
+//
+// Filesystem needs to release all the file resources and callback into Cc to drain pending section deletions, before retrying the operation.
+//
+#define STATUS_CC_NEEDS_CALLBACK_SECTION_DRAIN ((NTSTATUS)0xC000A008L)
+
 /*++
 
  MessageId's 0xa010 - 0xa07f (inclusive) are reserved for TCPIP errors.
@@ -11642,6 +11688,25 @@ Notes:
 
 /*++
 
+ MessageId's 0xc000 - 0xc0ff (inclusive) are for CimFS specific messages.
+
+--*/
+//
+// MessageId: STATUS_CIMFS_IMAGE_CORRUPT
+//
+// MessageText:
+//
+// The CimFS image is corrupted.
+//
+#define STATUS_CIMFS_IMAGE_CORRUPT       ((NTSTATUS)0xC000C001L)
+
+/*++
+
+ End of CimFS specific messages.
+
+--*/
+/*++
+
  MessageId's 0xce00 - 0xceff (inclusive) are for File System virtualization specific messages.
 
 --*/
@@ -11974,9 +12039,82 @@ Notes:
 //
 #define STATUS_CLOUD_FILE_REQUEST_TIMEOUT ((NTSTATUS)0xC000CF1FL)
 
+//
+// MessageId: STATUS_CLOUD_FILE_DEHYDRATION_DISALLOWED
+//
+// MessageText:
+//
+// Dehydration of the cloud file is disallowed by the cloud sync provider.
+//
+#define STATUS_CLOUD_FILE_DEHYDRATION_DISALLOWED ((NTSTATUS)0xC000CF20L)
+
 /*++
 
  End of Cloud Files specific messages.
+
+--*/
+/*++
+
+ MessageId's 0xf500 - 0xf5ff (inclusive) are for File Snap specific messages.
+
+--*/
+//
+// MessageId: STATUS_FILE_SNAP_IN_PROGRESS
+//
+// MessageText:
+//
+// A file snapshot operation was attempted when one is already in progress.
+//
+#define STATUS_FILE_SNAP_IN_PROGRESS     ((NTSTATUS)0xC000F500L)
+
+//
+// MessageId: STATUS_FILE_SNAP_USER_SECTION_NOT_SUPPORTED
+//
+// MessageText:
+//
+// A snapshot of the file cannot be taken because a user-mapped section is present.
+//
+#define STATUS_FILE_SNAP_USER_SECTION_NOT_SUPPORTED ((NTSTATUS)0xC000F501L)
+
+//
+// MessageId: STATUS_FILE_SNAP_MODIFY_NOT_SUPPORTED
+//
+// MessageText:
+//
+// The file snapshot operation was terminated because one of the files was modified in a way incompatible with a snapshot operation.  Please try again.
+//
+#define STATUS_FILE_SNAP_MODIFY_NOT_SUPPORTED ((NTSTATUS)0xC000F502L)
+
+//
+// MessageId: STATUS_FILE_SNAP_IO_NOT_COORDINATED
+//
+// MessageText:
+//
+// An I/O request could not be coordinated with a file snapshot operation.
+//
+#define STATUS_FILE_SNAP_IO_NOT_COORDINATED ((NTSTATUS)0xC000F503L)
+
+//
+// MessageId: STATUS_FILE_SNAP_UNEXPECTED_ERROR
+//
+// MessageText:
+//
+// An unexpected error occurred while processing a file snapshot operation.
+//
+#define STATUS_FILE_SNAP_UNEXPECTED_ERROR ((NTSTATUS)0xC000F504L)
+
+//
+// MessageId: STATUS_FILE_SNAP_INVALID_PARAMETER
+//
+// MessageText:
+//
+// A file snapshot operation received an invalid parameter.
+//
+#define STATUS_FILE_SNAP_INVALID_PARAMETER ((NTSTATUS)0xC000F505L)
+
+/*++
+
+ End of File Snap specific messages.
 
 --*/
 
@@ -21965,6 +22103,24 @@ Notes:
 #define STATUS_HV_INSUFFICIENT_ROOT_MEMORY ((NTSTATUS)0xC0350073L)
 
 //
+// MessageId: STATUS_HV_EVENT_BUFFER_ALREADY_FREED
+//
+// MessageText:
+//
+// The provided event log buffer was already marked as freed.
+//
+#define STATUS_HV_EVENT_BUFFER_ALREADY_FREED ((NTSTATUS)0xC0350074L)
+
+//
+// MessageId: STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY
+//
+// MessageText:
+//
+// There is not enough contiguous memory in the partition's pool to complete the operation.
+//
+#define STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY ((NTSTATUS)0xC0350075L)
+
+//
 // MessageId: STATUS_HV_NOT_PRESENT
 //
 // MessageText:
@@ -25110,6 +25266,29 @@ Notes:
 // The operation was not completed because the specified user was not known to the service.
 //
 #define STATUS_APPEXEC_UNKNOWN_USER      ((NTSTATUS)0xC0EC0007L)
+
+
+//
+// QUIC
+//
+
+//
+// MessageId: STATUS_QUIC_HANDSHAKE_FAILURE
+//
+// MessageText:
+//
+// The QUIC connection handshake failed.
+//
+#define STATUS_QUIC_HANDSHAKE_FAILURE    ((NTSTATUS)0xC0240000L)
+
+//
+// MessageId: STATUS_QUIC_VER_NEG_FAILURE
+//
+// MessageText:
+//
+// The QUIC connection failed to negotiate a compatible protocol version.
+//
+#define STATUS_QUIC_VER_NEG_FAILURE      ((NTSTATUS)0xC0240001L)
 
 //
 // Map a WIN32 error value into an NTSTATUS

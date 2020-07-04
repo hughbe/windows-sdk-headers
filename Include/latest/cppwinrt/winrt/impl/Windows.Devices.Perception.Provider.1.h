@@ -1,138 +1,135 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Devices.Perception.0.h"
+#ifndef WINRT_Windows_Devices_Perception_Provider_1_H
+#define WINRT_Windows_Devices_Perception_Provider_1_H
 #include "winrt/impl/Windows.Foundation.0.h"
-#include "winrt/impl/Windows.Foundation.Collections.0.h"
-#include "winrt/impl/Windows.Graphics.Imaging.0.h"
-#include "winrt/impl/Windows.Media.0.h"
 #include "winrt/impl/Windows.Devices.Perception.Provider.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Perception::Provider {
-
-struct WINRT_EBO IKnownPerceptionFrameKindStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IKnownPerceptionFrameKindStatics>
+namespace winrt::Windows::Devices::Perception::Provider
 {
-    IKnownPerceptionFrameKindStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionControlGroup :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionControlGroup>
-{
-    IPerceptionControlGroup(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionControlGroupFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionControlGroupFactory>
-{
-    IPerceptionControlGroupFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionCorrelation :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionCorrelation>
-{
-    IPerceptionCorrelation(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionCorrelationFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionCorrelationFactory>
-{
-    IPerceptionCorrelationFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionCorrelationGroup :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionCorrelationGroup>
-{
-    IPerceptionCorrelationGroup(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionCorrelationGroupFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionCorrelationGroupFactory>
-{
-    IPerceptionCorrelationGroupFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionFaceAuthenticationGroup :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionFaceAuthenticationGroup>
-{
-    IPerceptionFaceAuthenticationGroup(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionFaceAuthenticationGroupFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionFaceAuthenticationGroupFactory>
-{
-    IPerceptionFaceAuthenticationGroupFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionFrame :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionFrame>
-{
-    IPerceptionFrame(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionFrameProvider :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionFrameProvider>,
-    impl::require<IPerceptionFrameProvider, Windows::Foundation::IClosable>
-{
-    IPerceptionFrameProvider(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionFrameProviderInfo :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionFrameProviderInfo>
-{
-    IPerceptionFrameProviderInfo(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionFrameProviderManager :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionFrameProviderManager>,
-    impl::require<IPerceptionFrameProviderManager, Windows::Foundation::IClosable>
-{
-    IPerceptionFrameProviderManager(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionFrameProviderManagerServiceStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionFrameProviderManagerServiceStatics>
-{
-    IPerceptionFrameProviderManagerServiceStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionPropertyChangeRequest :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionPropertyChangeRequest>
-{
-    IPerceptionPropertyChangeRequest(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionVideoFrameAllocator :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionVideoFrameAllocator>,
-    impl::require<IPerceptionVideoFrameAllocator, Windows::Foundation::IClosable>
-{
-    IPerceptionVideoFrameAllocator(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPerceptionVideoFrameAllocatorFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPerceptionVideoFrameAllocatorFactory>
-{
-    IPerceptionVideoFrameAllocatorFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IKnownPerceptionFrameKindStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IKnownPerceptionFrameKindStatics>
+    {
+        IKnownPerceptionFrameKindStatics(std::nullptr_t = nullptr) noexcept {}
+        IKnownPerceptionFrameKindStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionControlGroup :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionControlGroup>
+    {
+        IPerceptionControlGroup(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionControlGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionControlGroupFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionControlGroupFactory>
+    {
+        IPerceptionControlGroupFactory(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionControlGroupFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionCorrelation :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionCorrelation>
+    {
+        IPerceptionCorrelation(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionCorrelation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionCorrelationFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionCorrelationFactory>
+    {
+        IPerceptionCorrelationFactory(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionCorrelationFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionCorrelationGroup :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionCorrelationGroup>
+    {
+        IPerceptionCorrelationGroup(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionCorrelationGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionCorrelationGroupFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionCorrelationGroupFactory>
+    {
+        IPerceptionCorrelationGroupFactory(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionCorrelationGroupFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionFaceAuthenticationGroup :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionFaceAuthenticationGroup>
+    {
+        IPerceptionFaceAuthenticationGroup(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionFaceAuthenticationGroup(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionFaceAuthenticationGroupFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionFaceAuthenticationGroupFactory>
+    {
+        IPerceptionFaceAuthenticationGroupFactory(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionFaceAuthenticationGroupFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionFrame :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionFrame>
+    {
+        IPerceptionFrame(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionFrame(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionFrameProvider :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionFrameProvider>,
+        impl::require<Windows::Devices::Perception::Provider::IPerceptionFrameProvider, Windows::Foundation::IClosable>
+    {
+        IPerceptionFrameProvider(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionFrameProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionFrameProviderInfo :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionFrameProviderInfo>
+    {
+        IPerceptionFrameProviderInfo(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionFrameProviderInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionFrameProviderManager :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionFrameProviderManager>,
+        impl::require<Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager, Windows::Foundation::IClosable>
+    {
+        IPerceptionFrameProviderManager(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionFrameProviderManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionFrameProviderManagerServiceStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionFrameProviderManagerServiceStatics>
+    {
+        IPerceptionFrameProviderManagerServiceStatics(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionFrameProviderManagerServiceStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionPropertyChangeRequest :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionPropertyChangeRequest>
+    {
+        IPerceptionPropertyChangeRequest(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionPropertyChangeRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionVideoFrameAllocator :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionVideoFrameAllocator>,
+        impl::require<Windows::Devices::Perception::Provider::IPerceptionVideoFrameAllocator, Windows::Foundation::IClosable>
+    {
+        IPerceptionVideoFrameAllocator(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionVideoFrameAllocator(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPerceptionVideoFrameAllocatorFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPerceptionVideoFrameAllocatorFactory>
+    {
+        IPerceptionVideoFrameAllocatorFactory(std::nullptr_t = nullptr) noexcept {}
+        IPerceptionVideoFrameAllocatorFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

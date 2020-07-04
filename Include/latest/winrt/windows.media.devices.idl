@@ -10,12 +10,23 @@ import "AsyncInfo.idl";
 import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
+import "Windows.Devices.Enumeration.idl";
 import "Windows.Media.Capture.idl";
 import "Windows.Media.Devices.Core.idl";
 import "Windows.Media.MediaProperties.idl";
 import "Windows.Storage.Streams.idl";
 
 // Forward Declare
+namespace Windows
+{
+    namespace Devices
+    {
+        namespace Enumeration
+        {
+            typedef enum Panel Panel;
+        }
+    }
+}
 namespace Windows
 {
     namespace Foundation
@@ -162,6 +173,8 @@ namespace Windows
 
             interface IAdvancedVideoCaptureDeviceController7;
 
+            interface IAdvancedVideoCaptureDeviceController8;
+
             interface IAudioDeviceController;
 
             interface IAudioDeviceModule;
@@ -221,6 +234,8 @@ namespace Windows
             interface IModuleCommandResult;
 
             interface IOpticalImageStabilizationControl;
+
+            interface IPanelBasedOptimizationControl;
 
             interface IPhotoConfirmationControl;
 
@@ -303,6 +318,8 @@ namespace Windows
             runtimeclass ModuleCommandResult;
 
             runtimeclass OpticalImageStabilizationControl;
+
+            runtimeclass PanelBasedOptimizationControl;
 
             runtimeclass PhotoConfirmationControl;
 
@@ -818,6 +835,14 @@ namespace Windows
                 [propget] HRESULT InfraredTorchControl([out] [retval] Windows.Media.Devices.InfraredTorchControl** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.Devices.VideoDeviceController)]
+            [uuid(D843F010-E7FB-595B-9A78-0E54C4532B43)]
+            interface IAdvancedVideoCaptureDeviceController8 : IInspectable
+            {
+                [propget] HRESULT PanelBasedOptimizationControl([out] [retval] Windows.Media.Devices.PanelBasedOptimizationControl** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Media.Devices.AudioDeviceController)]
             [uuid(EDD4A388-79C7-4F7C-90E8-EF934B21580A)]
@@ -1209,6 +1234,16 @@ namespace Windows
                 [propget] HRESULT SupportedModes([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Media.Devices.OpticalImageStabilizationMode>** value);
                 [propget] HRESULT Mode([out] [retval] Windows.Media.Devices.OpticalImageStabilizationMode* value);
                 [propput] HRESULT Mode([in] Windows.Media.Devices.OpticalImageStabilizationMode value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.Devices.PanelBasedOptimizationControl)]
+            [uuid(33323223-6247-5419-A5A4-3D808645D917)]
+            interface IPanelBasedOptimizationControl : IInspectable
+            {
+                [propget] HRESULT IsSupported([out] [retval] boolean* value);
+                [propget] HRESULT Panel([out] [retval] Windows.Devices.Enumeration.Panel* value);
+                [propput] HRESULT Panel([in] Windows.Devices.Enumeration.Panel value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1604,6 +1639,13 @@ namespace Windows
                 [default] interface Windows.Media.Devices.IOpticalImageStabilizationControl;
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass PanelBasedOptimizationControl
+            {
+                [default] interface Windows.Media.Devices.IPanelBasedOptimizationControl;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(standard)]
             [threading(mta)]
@@ -1667,6 +1709,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController5;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController6;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController7;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Media.Devices.IAdvancedVideoCaptureDeviceController8;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]

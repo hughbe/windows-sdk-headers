@@ -156,10 +156,10 @@ IsActiveSessionCountLimited()
 
     VersionInfo.wSuiteMask = VER_SUITE_SINGLEUSERTS;
     BOOL fSuiteSingleUserTS = VerifyVersionInfo( &VersionInfo, VER_SUITENAME, dwlConditionMask );
-		
+
     fActiveSessionCountLimited  = !(fSuiteTerminal & !fSuiteSingleUserTS);
 
-    return fActiveSessionCountLimited;
+    return fActiveSessionCountLimited != FALSE;
 }
 
 #endif // _VERSIONHELPERS_H_INCLUDED_

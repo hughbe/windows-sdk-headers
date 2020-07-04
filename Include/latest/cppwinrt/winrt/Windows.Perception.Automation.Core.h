@@ -1,54 +1,43 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-
+#ifndef WINRT_Windows_Perception_Automation_Core_H
+#define WINRT_Windows_Perception_Automation_Core_H
 #include "winrt/base.h"
-
-#include "winrt/Windows.Foundation.h"
-#include "winrt/Windows.Foundation.Collections.h"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.190620.2"), "Mismatched C++/WinRT headers.");
+#include "winrt/Windows.Perception.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Perception.Automation.Core.2.h"
-
-namespace winrt::impl {
-
-template <typename D> void consume_Windows_Perception_Automation_Core_ICorePerceptionAutomationStatics<D>::SetActivationFactoryProvider(Windows::Foundation::IGetActivationFactory const& provider) const
+namespace winrt::impl
 {
-    check_hresult(WINRT_SHIM(Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics)->SetActivationFactoryProvider(get_abi(provider)));
-}
-
-template <typename D>
-struct produce<D, Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics> : produce_base<D, Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics>
-{
-    int32_t WINRT_CALL SetActivationFactoryProvider(void* provider) noexcept final
+    template <typename D> auto consume_Windows_Perception_Automation_Core_ICorePerceptionAutomationStatics<D>::SetActivationFactoryProvider(Windows::Foundation::IGetActivationFactory const& provider) const
     {
-        try
+        check_hresult(WINRT_IMPL_SHIM(Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics)->SetActivationFactoryProvider(*(void**)(&provider)));
+    }
+    template <typename D>
+    struct produce<D, Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics> : produce_base<D, Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics>
+    {
+        int32_t __stdcall SetActivationFactoryProvider(void* provider) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            WINRT_ASSERT_DECLARATION(SetActivationFactoryProvider, WINRT_WRAP(void), Windows::Foundation::IGetActivationFactory const&);
             this->shim().SetActivationFactoryProvider(*reinterpret_cast<Windows::Foundation::IGetActivationFactory const*>(&provider));
             return 0;
         }
         catch (...) { return to_hresult(); }
-    }
-};
-
+    };
 }
-
-WINRT_EXPORT namespace winrt::Windows::Perception::Automation::Core {
-
-inline void CorePerceptionAutomation::SetActivationFactoryProvider(Windows::Foundation::IGetActivationFactory const& provider)
+namespace winrt::Windows::Perception::Automation::Core
 {
-    impl::call_factory<CorePerceptionAutomation, Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics>([&](auto&& f) { return f.SetActivationFactoryProvider(provider); });
+    inline auto CorePerceptionAutomation::SetActivationFactoryProvider(Windows::Foundation::IGetActivationFactory const& provider)
+    {
+        impl::call_factory<CorePerceptionAutomation, Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics>([&](auto&& f) { return f.SetActivationFactoryProvider(provider); });
+    }
 }
-
+namespace std
+{
+    template<> struct hash<winrt::Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics> {};
+    template<> struct hash<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation> : winrt::impl::hash_base<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation> {};
 }
-
-WINRT_EXPORT namespace std {
-
-template<> struct hash<winrt::Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics> : winrt::impl::hash_base<winrt::Windows::Perception::Automation::Core::ICorePerceptionAutomationStatics> {};
-template<> struct hash<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation> : winrt::impl::hash_base<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation> {};
-
-}
+#endif

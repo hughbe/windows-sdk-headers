@@ -402,6 +402,8 @@ typedef struct _EAP_ATTRIBUTES
 
 #define EAP_FLAG_VPN                        0x00800000
 
+#define EAP_FLAG_ONLY_EAP_TLS               0x01000000
+
 // the various states of the input fields
 #define EAP_CONFIG_INPUT_FIELD_PROPS_DEFAULT                0X00000000
 #define EAP_CONFIG_INPUT_FIELD_PROPS_NON_DISPLAYABLE        0X00000001

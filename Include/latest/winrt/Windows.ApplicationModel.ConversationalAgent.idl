@@ -11,12 +11,15 @@ import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.Media.Audio.idl";
+import "Windows.Storage.Streams.idl";
 
 // Forward Declare
 namespace Windows
 {
     namespace Foundation
     {
+        interface IAsyncAction;
+
         interface IClosable;
 
         typedef struct TimeSpan TimeSpan;
@@ -38,15 +41,43 @@ namespace Windows
 }
 namespace Windows
 {
+    namespace Storage
+    {
+        namespace Streams
+        {
+            interface IInputStream;
+        }
+    }
+}
+namespace Windows
+{
     namespace ApplicationModel
     {
         namespace ConversationalAgent
         {
+            typedef enum ActivationSignalDetectionTrainingDataFormat ActivationSignalDetectionTrainingDataFormat;
+
+            typedef enum ActivationSignalDetectorKind ActivationSignalDetectorKind;
+
+            typedef enum ActivationSignalDetectorPowerState ActivationSignalDetectorPowerState;
+
             typedef enum ConversationalAgentSessionUpdateResponse ConversationalAgentSessionUpdateResponse;
 
             typedef enum ConversationalAgentState ConversationalAgentState;
 
             typedef enum ConversationalAgentSystemStateChangeType ConversationalAgentSystemStateChangeType;
+
+            typedef enum DetectionConfigurationAvailabilityChangeKind DetectionConfigurationAvailabilityChangeKind;
+
+            typedef enum DetectionConfigurationTrainingStatus DetectionConfigurationTrainingStatus;
+
+            interface IActivationSignalDetectionConfiguration;
+
+            interface IActivationSignalDetector;
+
+            interface IConversationalAgentDetectorManager;
+
+            interface IConversationalAgentDetectorManagerStatics;
 
             interface IConversationalAgentSession;
 
@@ -60,6 +91,16 @@ namespace Windows
 
             interface IConversationalAgentSystemStateChangedEventArgs;
 
+            interface IDetectionConfigurationAvailabilityChangedEventArgs;
+
+            interface IDetectionConfigurationAvailabilityInfo;
+
+            runtimeclass ActivationSignalDetectionConfiguration;
+
+            runtimeclass ActivationSignalDetector;
+
+            runtimeclass ConversationalAgentDetectorManager;
+
             runtimeclass ConversationalAgentSession;
 
             runtimeclass ConversationalAgentSessionInterruptedEventArgs;
@@ -69,6 +110,10 @@ namespace Windows
             runtimeclass ConversationalAgentSignalDetectedEventArgs;
 
             runtimeclass ConversationalAgentSystemStateChangedEventArgs;
+
+            runtimeclass DetectionConfigurationAvailabilityChangedEventArgs;
+
+            runtimeclass DetectionConfigurationAvailabilityInfo;
         }
     }
 }
@@ -82,9 +127,43 @@ namespace Windows
         {
             declare
             {
+                interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*>;
+
+                interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat>;
+
+                interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector*>;
+
+                interface Windows.Foundation.Collections.IIterable<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState>;
+
+                interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*>;
+
+                interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat>;
+
+                interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector*>;
+
+                interface Windows.Foundation.Collections.IIterator<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState>;
+
+                interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*>;
+
+                interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat>;
+
+                interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector*>;
+
+                interface Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState>;
+
+                interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*>;
+
                 interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession*>;
 
                 interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionUpdateResponse>;
+
+                interface Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus>;
+
+                interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*>*>;
+
+                interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector*>*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*, Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession*, Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSessionInterruptedEventArgs*>;
 
@@ -103,6 +182,38 @@ namespace Windows
     {
         namespace ConversationalAgent
         {
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum ActivationSignalDetectionTrainingDataFormat
+            {
+                Voice8kHz8BitMono   = 0,
+                Voice8kHz16BitMono  = 1,
+                Voice16kHz8BitMono  = 2,
+                Voice16kHz16BitMono = 3,
+                VoiceOEMDefined     = 4,
+                Audio44kHz8BitMono  = 5,
+                Audio44kHz16BitMono = 6,
+                Audio48kHz8BitMono  = 7,
+                Audio48kHz16BitMono = 8,
+                AudioOEMDefined     = 9,
+                OtherOEMDefined     = 10
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum ActivationSignalDetectorKind
+            {
+                AudioPattern  = 0,
+                AudioImpulse  = 1,
+                HardwareEvent = 2
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum ActivationSignalDetectorPowerState
+            {
+                HighPower            = 0,
+                ConnectedLowPower    = 1,
+                DisconnectedLowPower = 2
+            };
+
             [contract(Windows.Foundation.UniversalApiContract, 8.0)]
             enum ConversationalAgentSessionUpdateResponse
             {
@@ -129,6 +240,100 @@ namespace Windows
                 IndicatorLightAvailability  = 2,
                 VoiceActivationAvailability = 3
             };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum DetectionConfigurationAvailabilityChangeKind
+            {
+                SystemResourceAccess = 0,
+                Permission           = 1,
+                LockScreenPermission = 2
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum DetectionConfigurationTrainingStatus
+            {
+                Success                     = 0,
+                FormatNotSupported          = 1,
+                VoiceTooQuiet               = 2,
+                VoiceTooLoud                = 3,
+                VoiceTooFast                = 4,
+                VoiceTooSlow                = 5,
+                VoiceQualityProblem         = 6,
+                TrainingSystemInternalError = 7
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration)]
+            [uuid(40D8BE16-5217-581C-9AB2-CE9B2F2E8E00)]
+            interface IActivationSignalDetectionConfiguration : IInspectable
+            {
+                [propget] HRESULT SignalId([out] [retval] HSTRING* value);
+                [propget] HRESULT ModelId([out] [retval] HSTRING* value);
+                [propget] HRESULT DisplayName([out] [retval] HSTRING* value);
+                [propget] HRESULT IsActive([out] [retval] boolean* value);
+                HRESULT SetEnabled([in] boolean value);
+                HRESULT SetEnabledAsync([in] boolean value, [out] [retval] Windows.Foundation.IAsyncAction** operation);
+                [propget] HRESULT AvailabilityInfo([out] [retval] Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo** value);
+                [eventadd] HRESULT AvailabilityChanged([in] Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*, Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT AvailabilityChanged([in] EventRegistrationToken token);
+                HRESULT SetModelData([in] HSTRING dataType, [in] Windows.Storage.Streams.IInputStream* data);
+                HRESULT SetModelDataAsync([in] HSTRING dataType, [in] Windows.Storage.Streams.IInputStream* data, [out] [retval] Windows.Foundation.IAsyncAction** operation);
+                HRESULT GetModelDataType([out] [retval] HSTRING* result);
+                HRESULT GetModelDataTypeAsync([out] [retval] Windows.Foundation.IAsyncOperation<HSTRING>** operation);
+                HRESULT GetModelData([out] [retval] Windows.Storage.Streams.IInputStream** result);
+                HRESULT GetModelDataAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream*>** operation);
+                HRESULT ClearModelData();
+                HRESULT ClearModelDataAsync([out] [retval] Windows.Foundation.IAsyncAction** operation);
+                [propget] HRESULT TrainingStepsCompleted([out] [retval] UINT32* value);
+                [propget] HRESULT TrainingStepsRemaining([out] [retval] UINT32* value);
+                [propget] HRESULT TrainingDataFormat([out] [retval] Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat* value);
+                HRESULT ApplyTrainingData([in] Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat trainingDataFormat, [in] Windows.Storage.Streams.IInputStream* trainingData, [out] [retval] Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus* result);
+                HRESULT ApplyTrainingDataAsync([in] Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat trainingDataFormat, [in] Windows.Storage.Streams.IInputStream* trainingData, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationTrainingStatus>** operation);
+                HRESULT ClearTrainingData();
+                HRESULT ClearTrainingDataAsync([out] [retval] Windows.Foundation.IAsyncAction** operation);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector)]
+            [uuid(B5BF345F-A4D0-5B2B-8E65-B3C55EE756FF)]
+            interface IActivationSignalDetector : IInspectable
+            {
+                [propget] HRESULT ProviderId([out] [retval] HSTRING* value);
+                [propget] HRESULT Kind([out] [retval] Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind* value);
+                [propget] HRESULT CanCreateConfigurations([out] [retval] boolean* value);
+                [propget] HRESULT SupportedModelDataTypes([out] [retval] Windows.Foundation.Collections.IVectorView<HSTRING>** value);
+                [propget] HRESULT SupportedTrainingDataFormats([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionTrainingDataFormat>** value);
+                [propget] HRESULT SupportedPowerStates([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorPowerState>** value);
+                HRESULT GetSupportedModelIdsForSignalId([in] HSTRING signalId, [out] [retval] Windows.Foundation.Collections.IVectorView<HSTRING>** result);
+                HRESULT GetSupportedModelIdsForSignalIdAsync([in] HSTRING signalId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<HSTRING>*>** operation);
+                HRESULT CreateConfiguration([in] HSTRING signalId, [in] HSTRING modelId, [in] HSTRING displayName);
+                HRESULT CreateConfigurationAsync([in] HSTRING signalId, [in] HSTRING modelId, [in] HSTRING displayName, [out] [retval] Windows.Foundation.IAsyncAction** operation);
+                HRESULT GetConfigurations([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*>** result);
+                HRESULT GetConfigurationsAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*>*>** operation);
+                HRESULT GetConfiguration([in] HSTRING signalId, [in] HSTRING modelId, [out] [retval] Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration** result);
+                HRESULT GetConfigurationAsync([in] HSTRING signalId, [in] HSTRING modelId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectionConfiguration*>** operation);
+                HRESULT RemoveConfiguration([in] HSTRING signalId, [in] HSTRING modelId);
+                HRESULT RemoveConfigurationAsync([in] HSTRING signalId, [in] HSTRING modelId, [out] [retval] Windows.Foundation.IAsyncAction** operation);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager)]
+            [uuid(DE94FBB0-597A-5DF8-8CFB-9DBB583BA3FF)]
+            interface IConversationalAgentDetectorManager : IInspectable
+            {
+                HRESULT GetAllActivationSignalDetectors([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector*>** result);
+                HRESULT GetAllActivationSignalDetectorsAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector*>*>** operation);
+                HRESULT GetActivationSignalDetectors([in] Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind kind, [out] [retval] Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector*>** result);
+                HRESULT GetActivationSignalDetectorsAsync([in] Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetectorKind kind, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.ApplicationModel.ConversationalAgent.ActivationSignalDetector*>*>** operation);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager)]
+            [uuid(36A8D283-FA0E-5693-8489-0FB2F0AB40D3)]
+            interface IConversationalAgentDetectorManagerStatics : IInspectable
+            {
+                [propget] HRESULT Default([out] [retval] Windows.ApplicationModel.ConversationalAgent.ConversationalAgentDetectorManager** value);
+            }
 
             [contract(Windows.Foundation.UniversalApiContract, 8.0)]
             [exclusiveto(Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSession)]
@@ -221,6 +426,48 @@ namespace Windows
                 [propget] HRESULT SystemStateChangeType([out] [retval] Windows.ApplicationModel.ConversationalAgent.ConversationalAgentSystemStateChangeType* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangedEventArgs)]
+            [uuid(5129C9FB-4BE8-5F14-AF2B-88D62B1B4462)]
+            interface IDetectionConfigurationAvailabilityChangedEventArgs : IInspectable
+            {
+                [propget] HRESULT Kind([out] [retval] Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityChangeKind* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.ConversationalAgent.DetectionConfigurationAvailabilityInfo)]
+            [uuid(B5AFFEB0-40F0-5398-B838-91979C2C6208)]
+            interface IDetectionConfigurationAvailabilityInfo : IInspectable
+            {
+                [propget] HRESULT IsEnabled([out] [retval] boolean* value);
+                [propget] HRESULT HasSystemResourceAccess([out] [retval] boolean* value);
+                [propget] HRESULT HasPermission([out] [retval] boolean* value);
+                [propget] HRESULT HasLockScreenPermission([out] [retval] boolean* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass ActivationSignalDetectionConfiguration
+            {
+                [default] interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetectionConfiguration;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass ActivationSignalDetector
+            {
+                [default] interface Windows.ApplicationModel.ConversationalAgent.IActivationSignalDetector;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManagerStatics, Windows.Foundation.UniversalApiContract, 10.0)]
+            [threading(both)]
+            runtimeclass ConversationalAgentDetectorManager
+            {
+                [default] interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentDetectorManager;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 8.0)]
             [marshaling_behavior(agile)]
             [static(Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSessionStatics, Windows.Foundation.UniversalApiContract, 8.0)]
@@ -257,6 +504,20 @@ namespace Windows
             runtimeclass ConversationalAgentSystemStateChangedEventArgs
             {
                 [default] interface Windows.ApplicationModel.ConversationalAgent.IConversationalAgentSystemStateChangedEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass DetectionConfigurationAvailabilityChangedEventArgs
+            {
+                [default] interface Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityChangedEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass DetectionConfigurationAvailabilityInfo
+            {
+                [default] interface Windows.ApplicationModel.ConversationalAgent.IDetectionConfigurationAvailabilityInfo;
             }
         }
     }

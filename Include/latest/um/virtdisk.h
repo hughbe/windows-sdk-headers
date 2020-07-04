@@ -188,6 +188,9 @@ typedef enum _OPEN_VIRTUAL_DISK_FLAG
     // for backing files associated with this virtual disk.
     OPEN_VIRTUAL_DISK_FLAG_NO_WRITE_HARDENING = 0x00000100,
 
+    // Open the backing store even if it is a compressed file.
+    OPEN_VIRTUAL_DISK_FLAG_SUPPORT_COMPRESSED_VOLUMES = 0x00000200,
+
 } OPEN_VIRTUAL_DISK_FLAG;
 
 #if !defined(VIRTDISK_DEFINE_FLAGS)
@@ -547,53 +550,59 @@ GetAllAttachedVirtualDiskPhysicalPaths(
 // Flags for dependent disks
 typedef enum _DEPENDENT_DISK_FLAG
 {
-    DEPENDENT_DISK_FLAG_NONE                 = 0x00000000,
+    DEPENDENT_DISK_FLAG_NONE                         = 0x00000000,
 
     //
     // Multiple files backing the virtual storage device
     //
-    DEPENDENT_DISK_FLAG_MULT_BACKING_FILES   = 0x00000001,
+    DEPENDENT_DISK_FLAG_MULT_BACKING_FILES           = 0x00000001,
 
-    DEPENDENT_DISK_FLAG_FULLY_ALLOCATED      = 0x00000002,
+    DEPENDENT_DISK_FLAG_FULLY_ALLOCATED              = 0x00000002,
 
-    DEPENDENT_DISK_FLAG_READ_ONLY            = 0x00000004,
+    DEPENDENT_DISK_FLAG_READ_ONLY                    = 0x00000004,
 
     //
-    //Backing file of the virtual storage device is not local to the machine
+    // Backing file of the virtual storage device is not local to the machine
     //
-    DEPENDENT_DISK_FLAG_REMOTE               = 0x00000008,
+    DEPENDENT_DISK_FLAG_REMOTE                       = 0x00000008,
 
     //
     // Volume is the system volume
     //
-    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME        = 0x00000010,
+    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME                = 0x00000010,
 
     //
     // Volume backing the virtual storage device file is the system volume
     //
-    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME_PARENT = 0x00000020,
+    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME_PARENT         = 0x00000020,
 
-    DEPENDENT_DISK_FLAG_REMOVABLE            = 0x00000040,
+    DEPENDENT_DISK_FLAG_REMOVABLE                    = 0x00000040,
 
     //
     // Drive letters are not assigned to the volumes
     // on the virtual disk automatically.
     //
-    DEPENDENT_DISK_FLAG_NO_DRIVE_LETTER      = 0x00000080,
+    DEPENDENT_DISK_FLAG_NO_DRIVE_LETTER              = 0x00000080,
 
-    DEPENDENT_DISK_FLAG_PARENT               = 0x00000100,
+    DEPENDENT_DISK_FLAG_PARENT                       = 0x00000100,
 
     //
     // Virtual disk is not attached on the local host
     // (instead attached on a guest VM for instance)
     //
-    DEPENDENT_DISK_FLAG_NO_HOST_DISK         = 0x00000200,
+    DEPENDENT_DISK_FLAG_NO_HOST_DISK                 = 0x00000200,
 
     //
     // Indicates the lifetime of the disk is not tied
     // to any system handles
     //
-    DEPENDENT_DISK_FLAG_PERMANENT_LIFETIME   = 0x00000400,
+    DEPENDENT_DISK_FLAG_PERMANENT_LIFETIME           = 0x00000400,
+
+    //
+    // Volume backing the virtual storage device file
+    // can be a compressed volume.
+    //
+    DEPENDENT_DISK_FLAG_SUPPORT_COMPRESSED_VOLUMES   = 0x00000800,
 
 } DEPENDENT_DISK_FLAG;
 
@@ -1164,7 +1173,9 @@ typedef enum _MIRROR_VIRTUAL_DISK_FLAG
 {
     MIRROR_VIRTUAL_DISK_FLAG_NONE                   = 0x00000000,
     MIRROR_VIRTUAL_DISK_FLAG_EXISTING_FILE          = 0x00000001,
-    MIRROR_VIRTUAL_DISK_FLAG_SKIP_MIRROR_ACTIVATION = 0x00000002
+    MIRROR_VIRTUAL_DISK_FLAG_SKIP_MIRROR_ACTIVATION = 0x00000002,
+    MIRROR_VIRTUAL_DISK_FLAG_ENABLE_SMB_COMPRESSION = 0x00000004,
+    MIRROR_VIRTUAL_DISK_FLAG_IS_LIVE_MIGRATION      = 0x00000008
 
 } MIRROR_VIRTUAL_DISK_FLAG;
 
@@ -1629,4 +1640,3 @@ DEFINE_ENUM_FLAG_OPERATORS(UNSURFACE_VIRTUAL_DISK_FLAG);
 #endif // VIRT_DISK_API_DEF
 
 // VirtDisk.h EOF
-

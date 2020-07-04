@@ -1,8 +1,6 @@
 // ComputeCore.h: ApiSet Contract for ext-ms-win-hyperv-compute-l1
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
-
-
 #pragma once
 
 #ifndef _HYPERV_COMPUTECORE_H_
@@ -28,6 +26,16 @@ extern "C" {
 HRESULT
 WINAPI
 HcsEnumerateComputeSystems(
+    _In_opt_ PCWSTR query,
+    _In_ HCS_OPERATION operation
+    );
+
+
+// Enumerates existing compute systems in a given namespace.
+HRESULT
+WINAPI
+HcsEnumerateComputeSystemsInNamespace(
+    _In_ PCWSTR idNamespace,
     _In_opt_ PCWSTR query,
     _In_ HCS_OPERATION operation
     );
@@ -173,12 +181,36 @@ HcsCreateComputeSystem(
     );
 
 
+/// Creates a new compute system in a given namespace.
+HRESULT
+WINAPI
+HcsCreateComputeSystemInNamespace(
+    _In_ PCWSTR idNamespace,
+    _In_ PCWSTR id,
+    _In_ PCWSTR configuration,
+    _In_ HCS_OPERATION operation,
+    _In_opt_ const HCS_CREATE_OPTIONS* options,
+    _Out_ HCS_SYSTEM* computeSystem
+    );
+
+
 
 
 /// Opens a handle to an existing compute system.
 HRESULT
 WINAPI
 HcsOpenComputeSystem(
+    _In_ PCWSTR id,
+    _In_ DWORD requestedAccess,
+    _Out_ HCS_SYSTEM* computeSystem
+    );
+
+
+/// Opens a handle to an existing compute system in a given namespace.
+HRESULT
+WINAPI
+HcsOpenComputeSystemInNamespace(
+    _In_ PCWSTR idNamespace,
     _In_ PCWSTR id,
     _In_ DWORD requestedAccess,
     _Out_ HCS_SYSTEM* computeSystem
@@ -225,6 +257,18 @@ HcsShutDownComputeSystem(
 HRESULT
 WINAPI
 HcsTerminateComputeSystem(
+    _In_ HCS_SYSTEM computeSystem,
+    _In_ HCS_OPERATION operation,
+    _In_opt_ PCWSTR options
+    );
+
+
+
+
+/// Forcefully terminates a compute system.
+HRESULT
+WINAPI
+HcsCrashComputeSystem(
     _In_ HCS_SYSTEM computeSystem,
     _In_ HCS_OPERATION operation,
     _In_opt_ PCWSTR options
@@ -482,6 +526,22 @@ HcsRevokeVmAccess(
     );
 
 
+// Grants VM group access (R/O) to the specified file.
+HRESULT
+WINAPI
+HcsGrantVmGroupAccess(
+    _In_ PCWSTR filePath
+    );
+
+
+// Removes VM group access for the specified file.
+HRESULT
+WINAPI
+HcsRevokeVmGroupAccess(
+    _In_ PCWSTR filePath
+    );
+
+
 #ifdef __cplusplus
 }
 #endif
@@ -492,8 +552,8 @@ HcsRevokeVmAccess(
 #endif // _HYPERV_COMPUTECORE_H_
 
 
-#ifndef ext_ms_win_hyperv_compute_l1_2_0_query_routines
-#define ext_ms_win_hyperv_compute_l1_2_0_query_routines
+#ifndef ext_ms_win_hyperv_compute_l1_2_1_query_routines
+#define ext_ms_win_hyperv_compute_l1_2_1_query_routines
 
 
 
@@ -508,6 +568,12 @@ extern "C" {
 BOOLEAN
 __stdcall
 IsHcsEnumerateComputeSystemsPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHcsEnumerateComputeSystemsInNamespacePresent(
     VOID
     );
 
@@ -603,7 +669,19 @@ IsHcsCreateComputeSystemPresent(
 
 BOOLEAN
 __stdcall
+IsHcsCreateComputeSystemInNamespacePresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
 IsHcsOpenComputeSystemPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHcsOpenComputeSystemInNamespacePresent(
     VOID
     );
 
@@ -628,6 +706,12 @@ IsHcsShutDownComputeSystemPresent(
 BOOLEAN
 __stdcall
 IsHcsTerminateComputeSystemPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHcsCrashComputeSystemPresent(
     VOID
     );
 
@@ -760,6 +844,18 @@ IsHcsGrantVmAccessPresent(
 BOOLEAN
 __stdcall
 IsHcsRevokeVmAccessPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHcsGrantVmGroupAccessPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHcsRevokeVmGroupAccessPresent(
     VOID
     );
 

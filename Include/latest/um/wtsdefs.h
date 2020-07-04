@@ -800,6 +800,24 @@ EXTERN_C const _declspec(selectany) GUID PROPERTY_TYPE_GET_FAST_RECONNECT = /* 6
 
 #endif
 
+#ifndef __midl
+
+/* -------------------------------------------------------------------
+ * IWrdsProtocolConnectionSettings GUIDs
+ * 
+ * There are the GUIDS that can be passed in to Get/Set Settings under IWrdsProtocolConnectionSettings
+ *
+ * -------------------------------------------------------------------*/
+
+EXTERN_C const _declspec(selectany) GUID CONNECTION_PROPERTY_IDLE_TIME_WARNING = /* 693f7ff5-0c4e-4d17-b8e0-1f70325e5d58*/
+{ 0x693F7FF5, 0x0C4E, 0x4D17,{ 0xB8, 0xE0, 0x1F, 0x70, 0x32, 0x5E, 0x5D, 0x58 } };
+
+EXTERN_C const _declspec(selectany) GUID CONNECTION_PROPERTY_CURSOR_BLINK_DISABLED = /* 4B150580-FEA4-4D3C-9DE4-7433A66618F7 */
+{ 0x4B150580, 0xFEA4, 0x4D3C,{ 0x9D, 0xE4, 0x74, 0x33, 0xA6, 0x66, 0x18, 0xF7 } };
+
+
+
+#endif
 
 /* -------------------------------------------------------------------
  * Licensing structures

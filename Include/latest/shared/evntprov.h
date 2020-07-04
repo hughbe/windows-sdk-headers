@@ -129,6 +129,7 @@ EVENT_FILTER_TYPE values for the Type field of EVENT_FILTER_DESCRIPTOR.
 #define EVENT_FILTER_TYPE_STACKWALK          (0x80001000) // Event IDs for stack.
 #define EVENT_FILTER_TYPE_STACKWALK_NAME     (0x80002000) // Event name for stack (TraceLogging only).
 #define EVENT_FILTER_TYPE_STACKWALK_LEVEL_KW (0x80004000) // Filter stack collection by level and keyword.
+#define EVENT_FILTER_TYPE_CONTAINER          (0x80008000) // Filter by Container ID.
 
 /*
 EVENT_DATA_DESCRIPTOR_TYPE values for the Type field of EVENT_DATA_DESCRIPTOR.

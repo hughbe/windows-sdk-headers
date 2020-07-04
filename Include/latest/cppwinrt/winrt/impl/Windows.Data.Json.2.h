@@ -1,72 +1,61 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Data_Json_2_H
+#define WINRT_Windows_Data_Json_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Data.Json.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Data::Json {
-
+namespace winrt::Windows::Data::Json
+{
+    struct __declspec(empty_bases) JsonArray : Windows::Data::Json::IJsonArray,
+        impl::require<JsonArray, Windows::Foundation::Collections::IIterable<Windows::Data::Json::IJsonValue>, Windows::Foundation::Collections::IVector<Windows::Data::Json::IJsonValue>, Windows::Foundation::IStringable>
+    {
+        JsonArray(std::nullptr_t) noexcept {}
+        JsonArray(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Data::Json::IJsonArray(ptr, take_ownership_from_abi) {}
+        JsonArray();
+        static auto Parse(param::hstring const& input);
+        static auto TryParse(param::hstring const& input, Windows::Data::Json::JsonArray& result);
+    };
+    struct JsonError
+    {
+        JsonError() = delete;
+        static auto GetJsonStatus(int32_t hresult);
+    };
+    struct __declspec(empty_bases) JsonObject : Windows::Data::Json::IJsonObject,
+        impl::require<JsonObject, Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Data::Json::IJsonValue>>, Windows::Foundation::Collections::IMap<hstring, Windows::Data::Json::IJsonValue>, Windows::Data::Json::IJsonObjectWithDefaultValues, Windows::Foundation::IStringable>
+    {
+        JsonObject(std::nullptr_t) noexcept {}
+        JsonObject(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Data::Json::IJsonObject(ptr, take_ownership_from_abi) {}
+        JsonObject();
+        using Windows::Data::Json::IJsonObject::GetNamedArray;
+        using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedArray;
+        using Windows::Data::Json::IJsonObject::GetNamedBoolean;
+        using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedBoolean;
+        using Windows::Data::Json::IJsonObject::GetNamedNumber;
+        using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedNumber;
+        using Windows::Data::Json::IJsonObject::GetNamedObject;
+        using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedObject;
+        using Windows::Data::Json::IJsonObject::GetNamedString;
+        using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedString;
+        using Windows::Data::Json::IJsonObject::GetNamedValue;
+        using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedValue;
+        static auto Parse(param::hstring const& input);
+        static auto TryParse(param::hstring const& input, Windows::Data::Json::JsonObject& result);
+    };
+    struct __declspec(empty_bases) JsonValue : Windows::Data::Json::IJsonValue,
+        impl::require<JsonValue, Windows::Foundation::IStringable>
+    {
+        JsonValue(std::nullptr_t) noexcept {}
+        JsonValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Data::Json::IJsonValue(ptr, take_ownership_from_abi) {}
+        static auto Parse(param::hstring const& input);
+        static auto TryParse(param::hstring const& input, Windows::Data::Json::JsonValue& result);
+        static auto CreateBooleanValue(bool input);
+        static auto CreateNumberValue(double input);
+        static auto CreateStringValue(param::hstring const& input);
+        static auto CreateNullValue();
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Data::Json {
-
-struct WINRT_EBO JsonArray :
-    Windows::Data::Json::IJsonArray,
-    impl::require<JsonArray, Windows::Foundation::Collections::IIterable<Windows::Data::Json::IJsonValue>, Windows::Foundation::Collections::IVector<Windows::Data::Json::IJsonValue>, Windows::Foundation::IStringable>
-{
-    JsonArray(std::nullptr_t) noexcept {}
-    JsonArray();
-    static Windows::Data::Json::JsonArray Parse(param::hstring const& input);
-    static bool TryParse(param::hstring const& input, Windows::Data::Json::JsonArray& result);
-};
-
-struct JsonError
-{
-    JsonError() = delete;
-    static Windows::Data::Json::JsonErrorStatus GetJsonStatus(int32_t hresult);
-};
-
-struct WINRT_EBO JsonObject :
-    Windows::Data::Json::IJsonObject,
-    impl::require<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues, Windows::Foundation::Collections::IIterable<Windows::Foundation::Collections::IKeyValuePair<hstring, Windows::Data::Json::IJsonValue>>, Windows::Foundation::Collections::IMap<hstring, Windows::Data::Json::IJsonValue>, Windows::Foundation::IStringable>
-{
-    JsonObject(std::nullptr_t) noexcept {}
-    JsonObject();
-    using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedArray;
-    using Windows::Data::Json::IJsonObject::GetNamedArray;
-    using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedBoolean;
-    using Windows::Data::Json::IJsonObject::GetNamedBoolean;
-    using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedNumber;
-    using Windows::Data::Json::IJsonObject::GetNamedNumber;
-    using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedObject;
-    using Windows::Data::Json::IJsonObject::GetNamedObject;
-    using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedString;
-    using Windows::Data::Json::IJsonObject::GetNamedString;
-    using impl::consume_t<JsonObject, Windows::Data::Json::IJsonObjectWithDefaultValues>::GetNamedValue;
-    using Windows::Data::Json::IJsonObject::GetNamedValue;
-    static Windows::Data::Json::JsonObject Parse(param::hstring const& input);
-    static bool TryParse(param::hstring const& input, Windows::Data::Json::JsonObject& result);
-};
-
-struct WINRT_EBO JsonValue :
-    Windows::Data::Json::IJsonValue,
-    impl::require<JsonValue, Windows::Foundation::IStringable>
-{
-    JsonValue(std::nullptr_t) noexcept {}
-    static Windows::Data::Json::JsonValue Parse(param::hstring const& input);
-    static bool TryParse(param::hstring const& input, Windows::Data::Json::JsonValue& result);
-    static Windows::Data::Json::JsonValue CreateBooleanValue(bool input);
-    static Windows::Data::Json::JsonValue CreateNumberValue(double input);
-    static Windows::Data::Json::JsonValue CreateStringValue(param::hstring const& input);
-    static Windows::Data::Json::JsonValue CreateNullValue();
-};
-
-}
+#endif

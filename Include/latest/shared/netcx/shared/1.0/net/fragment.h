@@ -11,20 +11,11 @@
 
 #pragma warning(push)
 #pragma warning(default:4820) // warn if the compiler inserted padding
-#pragma warning(disable:4201) // nonstandard extension used: nameless struct/union
 #pragma warning(disable:4214) // nonstandard extension used: bit field types other than int
-
-#if _WIN64
-#define NET_FRAGMENT_ALIGNMENT_BYTES 32
-#else
-#define NET_FRAGMENT_ALIGNMENT_BYTES 8
-#endif
 
 EXTERN_C_START
 
-typedef UINT64 LOGICAL_ADDRESS;
-
-typedef struct DECLSPEC_ALIGN(NET_FRAGMENT_ALIGNMENT_BYTES) _NET_FRAGMENT
+typedef struct _NET_FRAGMENT
 {
     UINT64
         ValidLength : 26;
@@ -39,53 +30,13 @@ typedef struct DECLSPEC_ALIGN(NET_FRAGMENT_ALIGNMENT_BYTES) _NET_FRAGMENT
         Scratch : 1;
 
     UINT64
-        Reserved0 : 1;
-
-    ULONG_PTR
         OsReserved_Bounced : 1;
-
-#ifdef _WIN64
-    ULONG_PTR
-        Reserved : 63;
-#else
-    ULONG_PTR
-        Reserved : 31;
-#endif
-
-    void *
-        VirtualAddress;
-
-    union
-    {
-        struct
-        {
-
-            void *
-                RxBufferReturnContext;
-
-        } DUMMYSTRUCTNAME;
-
-        union
-        {
-
-            MDL *
-                Mdl;
-
-            LOGICAL_ADDRESS
-                DmaLogicalAddress;
-
-        } Mapping;
-    } DUMMYUNIONNAME;
 
 } NET_FRAGMENT;
 
 EXTERN_C_END
 
-#ifdef _WIN64
-C_ASSERT(sizeof(NET_FRAGMENT) == 32);
-#else
-C_ASSERT(sizeof(NET_FRAGMENT) == 24);
-#endif
+C_ASSERT(sizeof(NET_FRAGMENT) == 8);
 
 #pragma warning(pop)
 

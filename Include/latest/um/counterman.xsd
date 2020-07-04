@@ -1,4 +1,4 @@
-<xs:schema
+﻿<xs:schema
   targetNamespace="http://schemas.microsoft.com/win/2005/12/counters"
   elementFormDefault="qualified"
   xmlns:man="http://schemas.microsoft.com/win/2005/12/counters"

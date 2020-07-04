@@ -971,6 +971,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [deprecated("WebUIFileOpenPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [marshaling_behavior(standard)]
             runtimeclass WebUIFileOpenPickerContinuationEventArgs
             {
@@ -993,6 +994,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [deprecated("WebUIFileSavePickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [marshaling_behavior(standard)]
             runtimeclass WebUIFileSavePickerContinuationEventArgs
             {
@@ -1004,6 +1006,7 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
+            [deprecated("WebUIFolderPickerContinuationEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
             [marshaling_behavior(standard)]
             runtimeclass WebUIFolderPickerContinuationEventArgs
             {

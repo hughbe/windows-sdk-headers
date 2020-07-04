@@ -2162,6 +2162,15 @@
 #define WU_E_SIH_ANOTHER_INSTANCE_RUNNING _HRESULT_TYPEDEF_(0x80245113L)
 
 //
+// MessageId: WU_E_SIH_DNSRESILIENCY_OFF
+//
+// MessageText:
+//
+// Disable DNS resiliency feature per service configuration.
+//
+#define WU_E_SIH_DNSRESILIENCY_OFF       _HRESULT_TYPEDEF_(0x80245114L)
+
+//
 // MessageId: WU_E_SIH_UNEXPECTED
 //
 // MessageText:
@@ -3365,6 +3374,15 @@
 #define WU_E_DM_HARDRESERVEID_CONFLICT   _HRESULT_TYPEDEF_(0x8024601DL)
 
 //
+// MessageId: WU_E_DM_DOSVC_REQUIRED
+//
+// MessageText:
+//
+// The update has to be downloaded via DO.
+//
+#define WU_E_DM_DOSVC_REQUIRED           _HRESULT_TYPEDEF_(0x8024601EL)
+
+//
 // MessageId: WU_E_DM_UNEXPECTED
 //
 // MessageText:
@@ -4308,5 +4326,47 @@
 // SLS response returned invalid revision number.
 //
 #define WU_E_SLS_INVALID_REVISION        _HRESULT_TYPEDEF_(0x8024B201L)
+
+//////////////////////////////////////////////////////////////////////////////
+// trust related errors - 0xB301
+////
+///////
+// trust General errors 0xB301 - 0xB3FF
+///////
+//
+// MessageId: WU_E_FILETRUST_DUALSIGNATURE_RSA
+//
+// MessageText:
+//
+// File signature validation fails to find valid RSA signature on infrastructure payload.
+//
+#define WU_E_FILETRUST_DUALSIGNATURE_RSA _HRESULT_TYPEDEF_(0x8024B301L)
+
+//
+// MessageId: WU_E_FILETRUST_DUALSIGNATURE_ECC
+//
+// MessageText:
+//
+// File signature validation fails to find valid ECC signature on infrastructure payload.
+//
+#define WU_E_FILETRUST_DUALSIGNATURE_ECC _HRESULT_TYPEDEF_(0x8024B302L)
+
+//
+// MessageId: WU_E_TRUST_SUBJECT_NOT_TRUSTED
+//
+// MessageText:
+//
+// The subject is not trusted by WU for the specified action.
+//
+#define WU_E_TRUST_SUBJECT_NOT_TRUSTED   _HRESULT_TYPEDEF_(0x8024B303L)
+
+//
+// MessageId: WU_E_TRUST_PROVIDER_UNKNOWN
+//
+// MessageText:
+//
+// Unknown trust provider for WU.
+//
+#define WU_E_TRUST_PROVIDER_UNKNOWN      _HRESULT_TYPEDEF_(0x8024B304L)
 
 #endif //_WUERROR_

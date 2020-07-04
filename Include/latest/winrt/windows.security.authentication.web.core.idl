@@ -64,6 +64,8 @@ namespace Windows
 
                     interface IWebAccountMonitor;
 
+                    interface IWebAccountMonitor2;
+
                     interface IWebAuthenticationCoreManagerStatics;
 
                     interface IWebAuthenticationCoreManagerStatics2;
@@ -211,6 +213,15 @@ namespace Windows
                         [eventremove] HRESULT Removed([in] EventRegistrationToken token);
                         [eventadd] HRESULT DefaultSignInAccountChanged([in] Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
                         [eventremove] HRESULT DefaultSignInAccountChanged([in] EventRegistrationToken token);
+                    }
+
+                    [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                    [exclusiveto(Windows.Security.Authentication.Web.Core.WebAccountMonitor)]
+                    [uuid(A7ADC1F8-24B8-4F01-9AE5-24545E71233A)]
+                    interface IWebAccountMonitor2 : IInspectable
+                    {
+                        [eventadd] HRESULT AccountPictureUpdated([in] Windows.Foundation.TypedEventHandler<Windows.Security.Authentication.Web.Core.WebAccountMonitor*, Windows.Security.Authentication.Web.Core.WebAccountEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                        [eventremove] HRESULT AccountPictureUpdated([in] EventRegistrationToken token);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -370,6 +381,7 @@ namespace Windows
                     runtimeclass WebAccountMonitor
                     {
                         [default] interface Windows.Security.Authentication.Web.Core.IWebAccountMonitor;
+                        [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Security.Authentication.Web.Core.IWebAccountMonitor2;
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 1.0)]

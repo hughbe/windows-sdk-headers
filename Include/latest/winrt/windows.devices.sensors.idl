@@ -68,6 +68,10 @@ namespace Windows
 
             interface IAccelerometer4;
 
+            interface IAccelerometer5;
+
+            interface IAccelerometerDataThreshold;
+
             interface IAccelerometerDeviceId;
 
             interface IAccelerometerReading;
@@ -112,6 +116,10 @@ namespace Windows
 
             interface IBarometer2;
 
+            interface IBarometer3;
+
+            interface IBarometerDataThreshold;
+
             interface IBarometerReading;
 
             interface IBarometerReading2;
@@ -127,6 +135,10 @@ namespace Windows
             interface ICompass2;
 
             interface ICompass3;
+
+            interface ICompass4;
+
+            interface ICompassDataThreshold;
 
             interface ICompassDeviceId;
 
@@ -147,6 +159,10 @@ namespace Windows
             interface IGyrometer2;
 
             interface IGyrometer3;
+
+            interface IGyrometer4;
+
+            interface IGyrometerDataThreshold;
 
             interface IGyrometerDeviceId;
 
@@ -174,6 +190,10 @@ namespace Windows
 
             interface IInclinometer3;
 
+            interface IInclinometer4;
+
+            interface IInclinometerDataThreshold;
+
             interface IInclinometerDeviceId;
 
             interface IInclinometerReading;
@@ -196,6 +216,10 @@ namespace Windows
 
             interface ILightSensor2;
 
+            interface ILightSensor3;
+
+            interface ILightSensorDataThreshold;
+
             interface ILightSensorDeviceId;
 
             interface ILightSensorReading;
@@ -213,6 +237,10 @@ namespace Windows
             interface IMagnetometer2;
 
             interface IMagnetometer3;
+
+            interface IMagnetometer4;
+
+            interface IMagnetometerDataThreshold;
 
             interface IMagnetometerDeviceId;
 
@@ -298,6 +326,8 @@ namespace Windows
 
             runtimeclass Accelerometer;
 
+            runtimeclass AccelerometerDataThreshold;
+
             runtimeclass AccelerometerReading;
 
             runtimeclass AccelerometerReadingChangedEventArgs;
@@ -322,17 +352,23 @@ namespace Windows
 
             runtimeclass Barometer;
 
+            runtimeclass BarometerDataThreshold;
+
             runtimeclass BarometerReading;
 
             runtimeclass BarometerReadingChangedEventArgs;
 
             runtimeclass Compass;
 
+            runtimeclass CompassDataThreshold;
+
             runtimeclass CompassReading;
 
             runtimeclass CompassReadingChangedEventArgs;
 
             runtimeclass Gyrometer;
+
+            runtimeclass GyrometerDataThreshold;
 
             runtimeclass GyrometerReading;
 
@@ -346,17 +382,23 @@ namespace Windows
 
             runtimeclass Inclinometer;
 
+            runtimeclass InclinometerDataThreshold;
+
             runtimeclass InclinometerReading;
 
             runtimeclass InclinometerReadingChangedEventArgs;
 
             runtimeclass LightSensor;
 
+            runtimeclass LightSensorDataThreshold;
+
             runtimeclass LightSensorReading;
 
             runtimeclass LightSensorReadingChangedEventArgs;
 
             runtimeclass Magnetometer;
+
+            runtimeclass MagnetometerDataThreshold;
 
             runtimeclass MagnetometerReading;
 
@@ -652,6 +694,27 @@ namespace Windows
                 [propget] HRESULT ReadingType([out] [retval] Windows.Devices.Sensors.AccelerometerReadingType* type);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.Accelerometer)]
+            [uuid(7E7E7021-DEF4-53A6-AF43-806FD538EDF6)]
+            interface IAccelerometer5 : IInspectable
+            {
+                [propget] HRESULT ReportThreshold([out] [retval] Windows.Devices.Sensors.AccelerometerDataThreshold** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.AccelerometerDataThreshold)]
+            [uuid(F92C1B68-6320-5577-879E-9942621C3DD9)]
+            interface IAccelerometerDataThreshold : IInspectable
+            {
+                [propget] HRESULT XAxisInGForce([out] [retval] DOUBLE* value);
+                [propput] HRESULT XAxisInGForce([in] DOUBLE value);
+                [propget] HRESULT YAxisInGForce([out] [retval] DOUBLE* value);
+                [propput] HRESULT YAxisInGForce([in] DOUBLE value);
+                [propget] HRESULT ZAxisInGForce([out] [retval] DOUBLE* value);
+                [propput] HRESULT ZAxisInGForce([in] DOUBLE value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.Sensors.Accelerometer)]
             [uuid(7EAC64A9-97D5-446D-AB5A-917DF9B96A2C)]
@@ -864,6 +927,23 @@ namespace Windows
                 [propget] HRESULT MaxBatchSize([out] [retval] UINT32* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.Barometer)]
+            [uuid(0E35F0EA-02B5-5A04-B03D-822084863A54)]
+            interface IBarometer3 : IInspectable
+            {
+                [propget] HRESULT ReportThreshold([out] [retval] Windows.Devices.Sensors.BarometerDataThreshold** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.BarometerDataThreshold)]
+            [uuid(076B952C-CB62-5A90-A0D1-F85E4A936394)]
+            interface IBarometerDataThreshold : IInspectable
+            {
+                [propget] HRESULT Hectopascals([out] [retval] DOUBLE* value);
+                [propput] HRESULT Hectopascals([in] DOUBLE value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.Sensors.BarometerReading)]
             [uuid(F5B9D2E6-1DF6-4A1A-A7AD-321D4F5DB247)]
@@ -937,6 +1017,23 @@ namespace Windows
                 [propput] HRESULT ReportLatency([in] UINT32 value);
                 [propget] HRESULT ReportLatency([out] [retval] UINT32* value);
                 [propget] HRESULT MaxBatchSize([out] [retval] UINT32* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.Compass)]
+            [uuid(291E7F11-EC32-5DCC-BFCB-0BB39EBA5774)]
+            interface ICompass4 : IInspectable
+            {
+                [propget] HRESULT ReportThreshold([out] [retval] Windows.Devices.Sensors.CompassDataThreshold** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.CompassDataThreshold)]
+            [uuid(D15B52B3-D39D-5EC8-B2E4-F193E6AB34ED)]
+            interface ICompassDataThreshold : IInspectable
+            {
+                [propget] HRESULT Degrees([out] [retval] DOUBLE* value);
+                [propput] HRESULT Degrees([in] DOUBLE value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1029,6 +1126,27 @@ namespace Windows
                 [propput] HRESULT ReportLatency([in] UINT32 value);
                 [propget] HRESULT ReportLatency([out] [retval] UINT32* value);
                 [propget] HRESULT MaxBatchSize([out] [retval] UINT32* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.Gyrometer)]
+            [uuid(0628A60C-4C4B-5096-94E6-C356DF68BEF7)]
+            interface IGyrometer4 : IInspectable
+            {
+                [propget] HRESULT ReportThreshold([out] [retval] Windows.Devices.Sensors.GyrometerDataThreshold** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.GyrometerDataThreshold)]
+            [uuid(8648B31E-6E52-5259-BBAD-242A69DC38C8)]
+            interface IGyrometerDataThreshold : IInspectable
+            {
+                [propget] HRESULT XAxisInDegreesPerSecond([out] [retval] DOUBLE* value);
+                [propput] HRESULT XAxisInDegreesPerSecond([in] DOUBLE value);
+                [propget] HRESULT YAxisInDegreesPerSecond([out] [retval] DOUBLE* value);
+                [propput] HRESULT YAxisInDegreesPerSecond([in] DOUBLE value);
+                [propget] HRESULT ZAxisInDegreesPerSecond([out] [retval] DOUBLE* value);
+                [propput] HRESULT ZAxisInDegreesPerSecond([in] DOUBLE value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1160,6 +1278,27 @@ namespace Windows
                 [propget] HRESULT MaxBatchSize([out] [retval] UINT32* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.Inclinometer)]
+            [uuid(43852618-8FCA-548E-BBF5-5C50412B6AA4)]
+            interface IInclinometer4 : IInspectable
+            {
+                [propget] HRESULT ReportThreshold([out] [retval] Windows.Devices.Sensors.InclinometerDataThreshold** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.InclinometerDataThreshold)]
+            [uuid(F80A4783-7BFE-545E-BB60-A0EBC47BD2FB)]
+            interface IInclinometerDataThreshold : IInspectable
+            {
+                [propget] HRESULT PitchInDegrees([out] [retval] FLOAT* value);
+                [propput] HRESULT PitchInDegrees([in] FLOAT value);
+                [propget] HRESULT RollInDegrees([out] [retval] FLOAT* value);
+                [propput] HRESULT RollInDegrees([in] FLOAT value);
+                [propget] HRESULT YawInDegrees([out] [retval] FLOAT* value);
+                [propput] HRESULT YawInDegrees([in] FLOAT value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.Sensors.Inclinometer)]
             [uuid(01E91982-41FF-4406-AE83-62210FF16FE3)]
@@ -1260,6 +1399,25 @@ namespace Windows
                 [propget] HRESULT MaxBatchSize([out] [retval] UINT32* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.LightSensor)]
+            [uuid(4876D0FF-9F4C-5F72-ADBD-A3471B063C00)]
+            interface ILightSensor3 : IInspectable
+            {
+                [propget] HRESULT ReportThreshold([out] [retval] Windows.Devices.Sensors.LightSensorDataThreshold** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.LightSensorDataThreshold)]
+            [uuid(B160AFD1-878F-5492-9F2C-33DC3AE584A3)]
+            interface ILightSensorDataThreshold : IInspectable
+            {
+                [propget] HRESULT LuxPercentage([out] [retval] FLOAT* value);
+                [propput] HRESULT LuxPercentage([in] FLOAT value);
+                [propget] HRESULT AbsoluteLux([out] [retval] FLOAT* value);
+                [propput] HRESULT AbsoluteLux([in] FLOAT value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.Sensors.LightSensor)]
             [uuid(7FEE49F8-0AFB-4F51-87F0-6C26375CE94F)]
@@ -1341,6 +1499,27 @@ namespace Windows
                 [propput] HRESULT ReportLatency([in] UINT32 value);
                 [propget] HRESULT ReportLatency([out] [retval] UINT32* value);
                 [propget] HRESULT MaxBatchSize([out] [retval] UINT32* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.Magnetometer)]
+            [uuid(DFB17901-3E0F-508F-B24B-F2BB75015F40)]
+            interface IMagnetometer4 : IInspectable
+            {
+                [propget] HRESULT ReportThreshold([out] [retval] Windows.Devices.Sensors.MagnetometerDataThreshold** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Sensors.MagnetometerDataThreshold)]
+            [uuid(D177CB01-9063-5FA5-B596-B445E9DC3401)]
+            interface IMagnetometerDataThreshold : IInspectable
+            {
+                [propget] HRESULT XAxisMicroteslas([out] [retval] FLOAT* value);
+                [propput] HRESULT XAxisMicroteslas([in] FLOAT value);
+                [propget] HRESULT YAxisMicroteslas([out] [retval] FLOAT* value);
+                [propput] HRESULT YAxisMicroteslas([in] FLOAT value);
+                [propget] HRESULT ZAxisMicroteslas([out] [retval] FLOAT* value);
+                [propput] HRESULT ZAxisMicroteslas([in] FLOAT value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1742,6 +1921,14 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.IAccelerometer2;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.IAccelerometer3;
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.Devices.Sensors.IAccelerometer4;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Devices.Sensors.IAccelerometer5;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass AccelerometerDataThreshold
+            {
+                [default] interface Windows.Devices.Sensors.IAccelerometerDataThreshold;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1844,6 +2031,14 @@ namespace Windows
             {
                 [default] interface Windows.Devices.Sensors.IBarometer;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Devices.Sensors.IBarometer2;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Devices.Sensors.IBarometer3;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass BarometerDataThreshold
+            {
+                [default] interface Windows.Devices.Sensors.IBarometerDataThreshold;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1874,6 +2069,14 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.ICompassDeviceId;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.ICompass2;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Devices.Sensors.ICompass3;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Devices.Sensors.ICompass4;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass CompassDataThreshold
+            {
+                [default] interface Windows.Devices.Sensors.ICompassDataThreshold;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1905,6 +2108,14 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.IGyrometerDeviceId;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.IGyrometer2;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Devices.Sensors.IGyrometer3;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Devices.Sensors.IGyrometer4;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass GyrometerDataThreshold
+            {
+                [default] interface Windows.Devices.Sensors.IGyrometerDataThreshold;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1962,6 +2173,14 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.IInclinometerDeviceId;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.IInclinometer2;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Devices.Sensors.IInclinometer3;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Devices.Sensors.IInclinometer4;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass InclinometerDataThreshold
+            {
+                [default] interface Windows.Devices.Sensors.IInclinometerDataThreshold;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1992,6 +2211,14 @@ namespace Windows
                 [default] interface Windows.Devices.Sensors.ILightSensor;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.ILightSensorDeviceId;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Devices.Sensors.ILightSensor2;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Devices.Sensors.ILightSensor3;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass LightSensorDataThreshold
+            {
+                [default] interface Windows.Devices.Sensors.ILightSensorDataThreshold;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2022,6 +2249,14 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.IMagnetometerDeviceId;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Devices.Sensors.IMagnetometer2;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Devices.Sensors.IMagnetometer3;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Devices.Sensors.IMagnetometer4;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass MagnetometerDataThreshold
+            {
+                [default] interface Windows.Devices.Sensors.IMagnetometerDataThreshold;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

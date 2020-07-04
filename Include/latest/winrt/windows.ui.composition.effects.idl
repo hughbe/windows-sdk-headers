@@ -103,9 +103,9 @@ namespace Windows
                 runtimeclass SceneLightingEffect
                 {
                     [default] interface Windows.UI.Composition.Effects.ISceneLightingEffect;
+                    [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.UI.Composition.Effects.ISceneLightingEffect2;
                     interface Windows.Graphics.Effects.IGraphicsEffect;
                     interface Windows.Graphics.Effects.IGraphicsEffectSource;
-                    [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.UI.Composition.Effects.ISceneLightingEffect2;
                 }
             }
         }

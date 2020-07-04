@@ -1,6 +1,6 @@
 /* Header file automatically generated from activationregistration.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0229 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -54,11 +54,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -95,7 +95,8 @@ namespace ABI {
         namespace Foundation {
             interface IActivatableClassRegistration;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIActivatableClassRegistration ABI::Windows::Foundation::IActivatableClassRegistration
 
 #endif // ____x_ABI_CWindows_CFoundation_CIActivatableClassRegistration_FWD_DEFINED__
@@ -107,7 +108,8 @@ namespace ABI {
         namespace Foundation {
             interface IDllServerActivatableClassRegistration;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDllServerActivatableClassRegistration ABI::Windows::Foundation::IDllServerActivatableClassRegistration
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDllServerActivatableClassRegistration_FWD_DEFINED__
@@ -119,7 +121,8 @@ namespace ABI {
         namespace Foundation {
             interface IExeServerActivatableClassRegistration;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIExeServerActivatableClassRegistration ABI::Windows::Foundation::IExeServerActivatableClassRegistration
 
 #endif // ____x_ABI_CWindows_CFoundation_CIExeServerActivatableClassRegistration_FWD_DEFINED__
@@ -131,7 +134,8 @@ namespace ABI {
         namespace Foundation {
             interface IExeServerRegistration;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIExeServerRegistration ABI::Windows::Foundation::IExeServerRegistration
 
 #endif // ____x_ABI_CWindows_CFoundation_CIExeServerRegistration_FWD_DEFINED__
@@ -284,7 +288,8 @@ namespace ABI {
             typedef TrustLevel RegisteredTrustLevel;
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 /*
@@ -305,7 +310,8 @@ namespace ABI {
             } RegistrationScope;
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 /*
@@ -326,7 +332,8 @@ namespace ABI {
             } ActivationType;
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 /*
@@ -347,7 +354,8 @@ namespace ABI {
             } ThreadingType;
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 /*
@@ -371,7 +379,8 @@ namespace ABI {
             } IdentityType;
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 /*
@@ -391,7 +400,8 @@ namespace ABI {
             } InstancingType;
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 /*
@@ -411,7 +421,8 @@ namespace ABI {
             } ActivateAsUser;
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 /*
@@ -451,7 +462,8 @@ namespace ABI {
             extern MIDL_CONST_ID IID & IID_IActivatableClassRegistration=_uuidof(IActivatableClassRegistration);
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIActivatableClassRegistration;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIActivatableClassRegistration_INTERFACE_DEFINED__) */
@@ -485,7 +497,8 @@ namespace ABI {
             extern MIDL_CONST_ID IID & IID_IDllServerActivatableClassRegistration=_uuidof(IDllServerActivatableClassRegistration);
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIDllServerActivatableClassRegistration;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIDllServerActivatableClassRegistration_INTERFACE_DEFINED__) */
@@ -516,7 +529,8 @@ namespace ABI {
             extern MIDL_CONST_ID IID & IID_IExeServerActivatableClassRegistration=_uuidof(IExeServerActivatableClassRegistration);
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIExeServerActivatableClassRegistration;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIExeServerActivatableClassRegistration_INTERFACE_DEFINED__) */
@@ -568,7 +582,8 @@ namespace ABI {
             extern MIDL_CONST_ID IID & IID_IExeServerRegistration=_uuidof(IExeServerRegistration);
             
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIExeServerRegistration;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIExeServerRegistration_INTERFACE_DEFINED__) */
@@ -578,7 +593,8 @@ namespace ABI {
         namespace Foundation {
             class DllServerActivatableClassRegistration;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 
@@ -602,7 +618,8 @@ namespace ABI {
         namespace Foundation {
             class ExeServerActivatableClassRegistration;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 
@@ -626,7 +643,8 @@ namespace ABI {
         namespace Foundation {
             class ExeServerRegistration;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 
