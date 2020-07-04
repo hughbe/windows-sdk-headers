@@ -6,9 +6,10 @@ if (!(Test-Path $path)) {
 }
 
 echo $path
-Copy-Item -Path $path -Destination "." -Recurse
 
-// Update latest
+Copy-Item -Path $path -Destination "." -Recurse -Force
+
+# Update latest
 Remove-Item "Include/latest" -Recurse
 $latest = Get-ChildItem -Directory "Include" | Sort-Object -Property $_.Name| Select-Object -First 1
 echo "Latest: $latest"
