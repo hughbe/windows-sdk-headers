@@ -1672,11 +1672,6 @@ enum
                                                       //  Only one of ASSOCF_INIT_FIXED_PROGID, ASSOCF_IS_PROTOCOL or ASSOCF_IS_FULL_URI can be specified at a time.
     ASSOCF_PER_MACHINE_ONLY            = 0x00008000,  //  Enforces per-machine association look-up only and avoid HKCU.
 #endif
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-    // For http/https uri associations, this enables selecting the OS default browser, that is a controlled by
-    // policy settings, instead of the default browser.
-    ASSOCF_APP_TO_APP                  = 0x00010000,
-#endif
 };
 typedef DWORD ASSOCF;
 
@@ -1705,7 +1700,7 @@ typedef enum
     ASSOCSTR_DELEGATEEXECUTE,   //  The CLSID of DelegateExecute
 #endif // _WIN32_IE_IE80
     // a string value of the uri protocol schemes, for example "http:https:ftp:file:" or "*" indicating all
-    ASSOCSTR_SUPPORTED_URI_PROTOCOLS,
+    ASSOCSTR_SUPPORTED_URI_PROTOCOLS, 
 #if (NTDDI_VERSION >= NTDDI_WIN10)
     ASSOCSTR_PROGID,            // The ProgId provided by the app associated with the file type or uri scheme based on user default settings.
     ASSOCSTR_APPID,             // The AppUserModelID of the app associated with the file type or uri scheme based on user default settings.
@@ -1745,7 +1740,7 @@ typedef enum
 // Stored under HKCR\<progId> EditFlags(REG_DWORD)
 //
 // Retrieve these values using IQueryAssociations::GetData as follows
-//
+// 
 // DWORD editFlags, size = sizeof(editFlags);
 // queryAssoc->GetData(nullptr, ASSOCDATA_EDITFLAGS, nullptr, &editFlags, &size);
 //
@@ -1754,7 +1749,7 @@ typedef enum
 
 typedef enum
 {
-    FTA_None                    = 0x00000000,
+    FTA_None                    = 0x00000000, 
     FTA_Exclude                 = 0x00000001, // used to exclude (hide) types like drvfile
     FTA_Show                    = 0x00000002, // used to show types like folder that don't have associations
     FTA_HasExtension            = 0x00000004, // type has a file name extension
@@ -1777,7 +1772,7 @@ typedef enum
     FTA_NoRecentDocs            = 0x00100000, // don't add this file type to the Recent Documents folder
     FTA_SafeForElevation        = 0x00200000, // Win8: can be launched in medium IL by a process running in AppContainer
     FTA_AlwaysUseDirectInvoke   = 0x00400000, // Win8: when downloading use the direct invoke feature even if the server headers are not provided
-} FILETYPEATTRIBUTEFLAGS;
+} FILETYPEATTRIBUTEFLAGS;             
 DEFINE_ENUM_FLAG_OPERATORS(FILETYPEATTRIBUTEFLAGS)
 
 #undef INTERFACE

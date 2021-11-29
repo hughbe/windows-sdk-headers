@@ -23,7 +23,7 @@
 #if ((defined(_WINSOCK_DEPRECATED_NO_WARNINGS) || defined(BUILD_WINDOWS)) && !defined(_WINSOCK_DEPRECATE_WARNINGS)) || defined(MIDL_PASS)
 #define _WINSOCK_DEPRECATED_BY(replacement)
 #else
-#define _WINSOCK_DEPRECATED_BY(replacement) __declspec(deprecated("Use " replacement " instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"))
+#define _WINSOCK_DEPRECATED_BY(replacement) __declspec(deprecated("Use " ## replacement ## " instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"))
 #endif
 #endif
 #if !defined(_WINSOCK_DEPRECATED)
@@ -538,7 +538,6 @@ struct  linger {
 #define MSG_INTERRUPT   0x10            /* send/recv in the interrupt context */
 
 #define MSG_MAXIOVLEN   16
-
 
 /*
  * Define constant based on rfc883, used by gethostbyxxxx() calls.

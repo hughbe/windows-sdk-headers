@@ -49,7 +49,6 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_PAGE_UNICODE                          ((USAGE) 0x10)
 #define HID_USAGE_PAGE_ALPHANUMERIC                     ((USAGE) 0x14)
 #define HID_USAGE_PAGE_SENSOR                           ((USAGE) 0x20)
-#define HID_USAGE_PAGE_LIGHTING_ILLUMINATION            ((USAGE) 0x59)
 #define HID_USAGE_PAGE_BARCODE_SCANNER                  ((USAGE) 0x8C)
 #define HID_USAGE_PAGE_WEIGHING_DEVICE                  ((USAGE) 0x8D)
 #define HID_USAGE_PAGE_MAGNETIC_STRIPE_READER           ((USAGE) 0x8E)
@@ -118,10 +117,6 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_GENERIC_DPAD_DOWN                                     ((USAGE) 0x91)
 #define HID_USAGE_GENERIC_DPAD_RIGHT                                    ((USAGE) 0x92)
 #define HID_USAGE_GENERIC_DPAD_LEFT                                     ((USAGE) 0x93)
-#define HID_USAGE_GENERIC_SYSCTL_FN                                     ((USAGE) 0x97)
-#define HID_USAGE_GENERIC_SYSCTL_FN_LOCK                                ((USAGE) 0x98)
-#define HID_USAGE_GENERIC_SYSCTL_FN_LOCK_INDICATOR                      ((USAGE) 0x99)
-#define HID_USAGE_GENERIC_SYSCTL_DISMISS_NOTIFICATION                   ((USAGE) 0x9A)
 #define HID_USAGE_GENERIC_SYSCTL_DOCK                                   ((USAGE) 0xA0)
 #define HID_USAGE_GENERIC_SYSCTL_UNDOCK                                 ((USAGE) 0xA1)
 #define HID_USAGE_GENERIC_SYSCTL_SETUP                                  ((USAGE) 0xA2)
@@ -601,9 +596,6 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_DIGITIZER_BARREL_SWITCH           ((USAGE) 0x44)
 #define HID_USAGE_DIGITIZER_ERASER                  ((USAGE) 0x45)
 #define HID_USAGE_DIGITIZER_TABLET_PICK             ((USAGE) 0x46)
-#define HID_USAGE_DIGITIZER_TRANSDUCER_SERIAL       ((USAGE) 0x5B)
-#define HID_USAGE_DIGITIZER_TRANSDUCER_VENDOR       ((USAGE) 0x92)
-#define HID_USAGE_DIGITIZER_TRANSDUCER_CONNECTED    ((USAGE) 0xA2)
 
 //
 // Simple Haptic Controller Page (0x0E)
@@ -719,55 +711,6 @@ typedef USHORT USAGE, *PUSAGE;
 //
 // Sensor Page (0x20)
 //
-
-//
-// LampArray Page (0x59)
-//
-#define HID_USAGE_LAMPARRAY                                             ((USAGE) 0x01)
-#define HID_USAGE_LAMPARRAY_ATTRBIUTES_REPORT                           ((USAGE) 0x02)
-#define HID_USAGE_LAMPARRAY_LAMP_COUNT                                  ((USAGE) 0x03)
-#define HID_USAGE_LAMPARRAY_BOUNDING_BOX_WIDTH_IN_MICROMETERS           ((USAGE) 0x04)
-#define HID_USAGE_LAMPARRAY_BOUNDING_BOX_HEIGHT_IN_MICROMETERS          ((USAGE) 0x05)
-#define HID_USAGE_LAMPARRAY_BOUNDING_BOX_DEPTH_IN_MICROMETERS           ((USAGE) 0x06)
-#define HID_USAGE_LAMPARRAY_KIND                                        ((USAGE) 0x07)
-#define HID_USAGE_LAMPARRAY_MIN_UPDATE_INTERVAL_IN_MICROSECONDS         ((USAGE) 0x08)
-
-// 0x09 - 0x1F Reserved
-
-#define HID_USAGE_LAMPARRAY_LAMP_ATTRIBUTES_REQUEST_REPORT              ((USAGE) 0x20)
-#define HID_USAGE_LAMPARRAY_LAMP_ID                                     ((USAGE) 0x21)
-#define HID_USAGE_LAMPARRAY_LAMP_ATTRIBUTES_RESPONSE_REPORT             ((USAGE) 0x22)
-#define HID_USAGE_LAMPARRAY_POSITION_X_IN_MICROMETERS                   ((USAGE) 0x23)
-#define HID_USAGE_LAMPARRAY_POSITION_Y_IN_MICROMETERS                   ((USAGE) 0x24)
-#define HID_USAGE_LAMPARRAY_POSITION_Z_IN_MICROMETERS                   ((USAGE) 0x25)
-#define HID_USAGE_LAMPARRAY_LAMP_PURPOSES                               ((USAGE) 0x26)
-#define HID_USAGE_LAMPARRAY_UPDATE_LATENCY_IN_MICROSECONDS              ((USAGE) 0x27)
-#define HID_USAGE_LAMPARRAY_RED_LEVEL_COUNT                             ((USAGE) 0x28)
-#define HID_USAGE_LAMPARRAY_GREEN_LEVEL_COUNT                           ((USAGE) 0x29)
-#define HID_USAGE_LAMPARRAY_BLUE_LEVEL_COUNT                            ((USAGE) 0x2A)
-#define HID_USAGE_LAMPARRAY_INTENSITY_LEVEL_COUNT                       ((USAGE) 0x2B)
-#define HID_USAGE_LAMPARRAY_IS_PROGRAMMABLE                             ((USAGE) 0x2C)
-#define HID_USAGE_LAMPARRAY_INPUT_BINDING                               ((USAGE) 0x2D)
-
-// 0x2E - 0x4F Reserved
-
-#define HID_USAGE_LAMPARRAY_LAMP_MULTI_UPDATE_REPORT                    ((USAGE) 0x50)
-#define HID_USAGE_LAMPARRAY_LAMP_RED_UPDATE_CHANNEL                     ((USAGE) 0x51)
-#define HID_USAGE_LAMPARRAY_LAMP_GREEN_UPDATE_CHANNEL                   ((USAGE) 0x52)
-#define HID_USAGE_LAMPARRAY_LAMP_BLUE_UPDATE_CHANNEL                    ((USAGE) 0x53)
-#define HID_USAGE_LAMPARRAY_LAMP_INTENSITY_UPDATE_CHANNEL               ((USAGE) 0x54)
-#define HID_USAGE_LAMPARRAY_LAMP_UPDATE_FLAGS                           ((USAGE) 0x55)
-
-// 0x55 - 0x5F Reserved
-
-#define HID_USAGE_LAMPARRAY_LAMP_RANGE_UPDATE_REPORT                    ((USAGE) 0x60)
-#define HID_USAGE_LAMPARRAY_LAMP_ID_START                               ((USAGE) 0x61)
-#define HID_USAGE_LAMPARRAY_LAMP_ID_END                                 ((USAGE) 0x62)
-
-// 0x63 - 0x6F Reserved
-
-#define HID_USAGE_LAMPARRAY_CONTROL_REPORT                              ((USAGE) 0x70)
-#define HID_USAGE_LAMPARRAY_AUTONOMOUS_MODE                             ((USAGE) 0x71)
 
 //
 // Camera Control Page (0x90)

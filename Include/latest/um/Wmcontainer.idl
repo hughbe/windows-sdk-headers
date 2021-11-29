@@ -7,10 +7,10 @@
 //
 cpp_quote("#include <winapifamily.h>")
 
-import "mfidl.idl";
+#pragma region Desktop Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+import "mfidl.idl";
 
 ///////////////////////////////////////////////////////////////////////////////
 // 
@@ -34,25 +34,25 @@ interface IMFASFContentInfo : IUnknown
     //  Methods for Parsing & Creating Headers
     //
     HRESULT GetHeaderSize(
-        [in]      IMFMediaBuffer *pIStartOfContent,
-        [out]     QWORD          *cbHeaderSize);
+                [in]      IMFMediaBuffer *pIStartOfContent,
+                [out]     QWORD          *cbHeaderSize  );
 
     HRESULT ParseHeader(
-        [in]      IMFMediaBuffer  *pIHeaderBuffer,
-        [in]      QWORD           cbOffsetWithinHeader);
+                [in]      IMFMediaBuffer  *pIHeaderBuffer,
+                [in]      QWORD           cbOffsetWithinHeader );
 
     HRESULT GenerateHeader(
-        [in, out] IMFMediaBuffer   *pIHeader,
-        [out]     DWORD            *pcbHeader);
+                [in, out] IMFMediaBuffer   *pIHeader,
+                [out]     DWORD            *pcbHeader );
 
     //
     //  Methods for working with ASF profiles
     //
-    HRESULT GetProfile(
-        [out]     IMFASFProfile **ppIProfile);
+    HRESULT GetProfile( 
+                [out]     IMFASFProfile **ppIProfile );
 
     HRESULT SetProfile(
-        [in]      IMFASFProfile  *pIProfile);
+                [in]      IMFASFProfile  *pIProfile );
 
 
     //
@@ -60,7 +60,7 @@ interface IMFASFContentInfo : IUnknown
     //  Generates an IMFPresentationDescriptor describing the content
     // 
     HRESULT GeneratePresentationDescriptor(
-        [out]     IMFPresentationDescriptor **ppIPresentationDescriptor);
+                [out]     IMFPresentationDescriptor **ppIPresentationDescriptor );
 
     //
     //  Methods for configuring encoding
@@ -68,469 +68,12 @@ interface IMFASFContentInfo : IUnknown
     //  encoding settings
     //
     HRESULT GetEncodingConfigurationPropertyStore(
-        [in]      WORD           wStreamNumber,
-        [out]     IPropertyStore **ppIStore);
+                [in]      WORD           wStreamNumber,
+                [out]     IPropertyStore **ppIStore );
 };
 
-cpp_quote("STDAPI MFCreateASFContentInfo( ")
-cpp_quote("        /* out */     IMFASFContentInfo     **ppIContentInfo);")
-
-
-///////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-
-interface IMFASFStreamConfig;
-interface IMFASFMutualExclusion;
-interface IMFASFStreamPrioritization;
-
-[
-    object,
-    uuid(D267BF6A-028B-4e0d-903D-43F0EF82D0D4),
-    local
-]
-interface IMFASFProfile : IMFAttributes
-{
-    HRESULT GetStreamCount(
-        [out] DWORD                   *pcStreams);
-
-    HRESULT GetStream(
-        [in]  DWORD                    dwStreamIndex,
-        [out] WORD                    *pwStreamNumber,
-        [out] IMFASFStreamConfig     **ppIStream);
-
-    HRESULT GetStreamByNumber(
-        [in]  WORD                     wStreamNumber,
-        [out] IMFASFStreamConfig     **ppIStream);
-
-    HRESULT SetStream(
-        [in]  IMFASFStreamConfig      *pIStream);
-
-    HRESULT RemoveStream(
-        [in]  WORD                     wStreamNumber);
-
-    HRESULT CreateStream(
-        [in]  IMFMediaType            *pIMediaType,
-        [out] IMFASFStreamConfig     **ppIStream);
-
-
-
-    HRESULT GetMutualExclusionCount(
-        [out] DWORD                   *pcMutexs);
-
-    HRESULT GetMutualExclusion(
-        [in]  DWORD                    dwMutexIndex,
-        [out] IMFASFMutualExclusion  **ppIMutex);
-
-    HRESULT AddMutualExclusion(
-        [in]  IMFASFMutualExclusion   *pIMutex);
-
-    HRESULT RemoveMutualExclusion(
-        [in]  DWORD                    dwMutexIndex);
-
-    HRESULT CreateMutualExclusion(
-        [out] IMFASFMutualExclusion  **ppIMutex);
-
-
-    HRESULT GetStreamPrioritization(
-        [out] IMFASFStreamPrioritization **ppIStreamPrioritization);
-
-    HRESULT AddStreamPrioritization(
-        [in]  IMFASFStreamPrioritization  *pIStreamPrioritization);
-
-    HRESULT RemoveStreamPrioritization();
-
-    HRESULT CreateStreamPrioritization(
-        [out] IMFASFStreamPrioritization **ppIStreamPrioritization);
-
-
-    HRESULT Clone(
-        [out] IMFASFProfile          **ppIProfile);
-};
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-[
-    object,
-    uuid(9E8AE8D2-DBBD-4200-9ACA-06E6DF484913),
-    local
-]
-//
-// The ASF Stream Config object will also QI for IPropertyStore.
-// This Property Store is for use when encoding and is for write-only
-// properties intended for the ASF Stream Sink's Property Store.
-// Most of these are configuration properties intended for the encoder
-// MF Transform; see wmcodecdsp.idl for the property definitions.
-// Once the ASF Media Sink has been created, these properties should be set
-// on the ASF Stream Sink object's IProperty Store interface instead;
-// setting them here will have no effect.
-//
-interface IMFASFStreamConfig : IMFAttributes
-{
-    HRESULT GetStreamType(
-        [out] GUID               *pguidStreamType);
-
-    WORD GetStreamNumber();
-
-    HRESULT SetStreamNumber(
-        [in]  WORD                wStreamNum);
-
-    HRESULT GetMediaType(
-        [out] IMFMediaType      **ppIMediaType);
-
-    HRESULT SetMediaType(
-        [in]  IMFMediaType       *pIMediaType);
-
-
-    HRESULT GetPayloadExtensionCount(
-        [out] WORD              *pcPayloadExtensions);
-
-    HRESULT GetPayloadExtension(
-        [in]  WORD               wPayloadExtensionNumber,
-        [out] GUID              *pguidExtensionSystemID,
-        [out] WORD              *pcbExtensionDataSize,
-        [out, optional, size_is(*pcbExtensionSystemInfo)] BYTE *pbExtensionSystemInfo,
-        [in, out, optional] DWORD *pcbExtensionSystemInfo);
-
-    HRESULT AddPayloadExtension(
-        [in]  GUID               guidExtensionSystemID,
-        [in]  WORD               cbExtensionDataSize,
-        [in, size_is(cbExtensionSystemInfo)] BYTE *pbExtensionSystemInfo,
-        [in]  DWORD              cbExtensionSystemInfo);
-
-    HRESULT RemoveAllPayloadExtensions();
-
-
-
-    HRESULT Clone(
-        [out] IMFASFStreamConfig  **ppIStreamConfig);
-};
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-[
-    object,
-    uuid(12558291-E399-11D5-BC2A-00B0D0F3F4AB),
-    local
-]
-interface IMFASFMutualExclusion : IUnknown
-{
-    HRESULT GetType(
-        [out]    GUID           *pguidType);
-    HRESULT SetType(
-        [in]     REFGUID         guidType);
-
-    HRESULT GetRecordCount(
-        [out]    DWORD          *pdwRecordCount);
-
-    HRESULT GetStreamsForRecord(
-        [in]     DWORD           dwRecordNumber,
-        [out]    WORD           *pwStreamNumArray,
-        [in, out] DWORD          *pcStreams);
-
-    HRESULT AddStreamForRecord(
-        [in]     DWORD           dwRecordNumber,
-        [in]     WORD            wStreamNumber);
-
-    HRESULT RemoveStreamFromRecord(
-        [in]     DWORD           dwRecordNumber,
-        [in]     WORD            wStreamNumber);
-
-    HRESULT RemoveRecord(
-        [in]     DWORD           dwRecordNumber);
-
-    HRESULT AddRecord(
-        [out]    DWORD          *pdwRecordNumber);
-
-
-
-    HRESULT Clone(
-        [out] IMFASFMutualExclusion  **ppIMutex);
-};
-
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-[
-    object,
-    uuid(699bdc27-bbaf-49ff-8e38-9c39c9b5e088),
-    local
-]
-interface IMFASFStreamPrioritization : IUnknown
-{
-    HRESULT GetStreamCount(
-        [out]    DWORD          *pdwStreamCount);
-
-    HRESULT GetStream(
-        [in]     DWORD           dwStreamIndex,
-        [out]    WORD           *pwStreamNumber,
-        [out]    WORD           *pwStreamFlags);
-
-    HRESULT AddStream(
-        [in]     WORD            wStreamNumber,
-        [in]     WORD            wStreamFlags);
-
-    HRESULT RemoveStream(
-        [in]     DWORD           dwStreamIndex);
-
-
-    HRESULT Clone(
-        [out] IMFASFStreamPrioritization  **ppIStreamPrioritization);
-};
-
-//////////////////////////////////////////////////////////////////////////////
-//
-// ASF indexing/seeking
-//
-//////////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-//
-// ASF Indexer flags
-//
-typedef enum MFASF_INDEXERFLAGS
-{
-    MFASF_INDEXER_WRITE_NEW_INDEX = 0x00000001,
-    MFASF_INDEXER_READ_FOR_REVERSEPLAYBACK = 0x00000002,
-    MFASF_INDEXER_WRITE_FOR_LIVEREAD = 0x00000004,
-
-} MFASF_INDEXER_FLAGS;
-
-//
-// Index identifier structure
-//
-typedef struct _ASF_INDEX_IDENTIFIER
-{
-    //
-    // Use the MFASFINDEXER_TYPE values defined below
-    //  GUID_NULL: Time indexing
-    //  other GUIDs: Other types of indexing not supported yet
-    //
-    GUID guidIndexType;
-
-    WORD wStreamNumber;
-
-}   ASF_INDEX_IDENTIFIER;
-
-//
-// This structure is used for describing the details of indexing corresponding
-// to a specific ASF_INDEX_IDENTIFIER
-//
-typedef struct _ASF_INDEX_DESCRIPTOR
-{
-    //
-    // Index identifier for this index
-    //
-    ASF_INDEX_IDENTIFIER    Identifier;
-
-    //
-    // Number of bytes per index entry for this index.
-    // MFASFINDEXER_PER_ENTRY_BYTES_DYNAMIC indicates that this number can vary.
-    //
-    WORD                    cPerEntryBytes;
-
-    //
-    // Optional text descriptiong of the index
-    //
-    WCHAR                   szDescription[32];
-
-    //
-    // Indexing interval.  The units of this value depend on the index type.
-    // A value of MFASFINDEXER_NO_FIXED_INTERVAL indicates that there is
-    // no fixed indexing interval.
-    //
-    DWORD                   dwInterval;
-
-}   ASF_INDEX_DESCRIPTOR;
-
-[
-    object,
-    uuid(53590F48-DC3B-4297-813F-787761AD7B3E),
-    local
-]
-interface IMFASFIndexer : IUnknown
-{
-    HRESULT SetFlags(
-        [in]    DWORD               dwFlags);
-    HRESULT GetFlags(
-        [out]   DWORD              *pdwFlags);
-
-    HRESULT Initialize(
-        [in]      IMFASFContentInfo   *pIContentInfo);
-
-    HRESULT GetIndexPosition(
-        [in]      IMFASFContentInfo   *pIContentInfo,
-        [out]     QWORD               *pcbIndexOffset);
-
-    HRESULT SetIndexByteStreams(
-        [in]      IMFByteStream    **ppIByteStreams,
-        [in]      DWORD              cByteStreams);
-
-    HRESULT GetIndexByteStreamCount(
-        [out]       DWORD          *pcByteStreams);
-
-    //
-    // For GetIndexStatus and SetIndexStatus:
-    // pbIndexDescriptor will begin with the ASF_INDEX_DESCRIPTOR structure
-    // and may have index-specific data following.
-    //
-    HRESULT GetIndexStatus(
-        [in]      ASF_INDEX_IDENTIFIER  *pIndexIdentifier,
-        [out]     BOOL                  *pfIsIndexed,
-        [out]     BYTE                  *pbIndexDescriptor,
-        [in, out]  DWORD                 *pcbIndexDescriptor);
-
-    HRESULT SetIndexStatus(
-        [in]      BYTE            *pbIndexDescriptor,
-        [in]      DWORD           cbIndexDescriptor,
-        [in]      BOOL            fGenerateIndex);
-
-
-    //
-    // GetSeekPositionForValue is the method used when seeking according to
-    // this index.
-    // Input parameters are pvarValue and pIndexIdentifier, which define,
-    // respectively, where to seek to and using which stream / index type.
-    // The main output parameter is pcbOffsetWithinData, which gives the 
-    // offset within the data segment of the ASF Data Object (i.e. from the
-    // beginning of packet 0) of the packet from which the caller should start
-    // reading.
-    // Optional output parameters are as follows:
-    //      phnsApproxTime - Specifies an approximate timestamp around where
-    //                       this stream will actually begin if the caller
-    //                       starts reading from *pcbOffsetWithinData.
-    //                       The accuracy of this value is the index interval
-    //                       of the index (usually 1sec).
-    //                       Example: Caller seeks to t=27sec.
-    //                                Nearest previous key frame is at 
-    //                                t=25.8sec.
-    //                                *phnsApproxTime will be set to 25sec.
-    //                       This parameter can be set to a non-NULL value
-    //                       only when the guidIndexType field of 
-    //                       pIndexIdentifier is GUID_NULL.  Otherwise, an
-    //                       error will be returned.
-    //                       If this information cannot be determined,
-    //                       then this value will be set to 
-    //                       MFASFINDEXER_APPROX_SEEK_TIME_UNKNOWN upon return.
-    //      pdwPayloadNumberOfStreamWithinPacket - Specifies which payload
-    //                                             in the packet at
-    //                                             *pcbOffsetWithinData 
-    //                                             the indexer is referring to
-    HRESULT GetSeekPositionForValue(
-        [in]      const PROPVARIANT     *pvarValue,
-        [in]      ASF_INDEX_IDENTIFIER  *pIndexIdentifier,
-        [out]     QWORD                 *pcbOffsetWithinData,
-        [out, optional]  MFTIME         *phnsApproxTime,
-        [out, optional]  DWORD          *pdwPayloadNumberOfStreamWithinPacket);
-
-    //
-    // The following methods are useful when generating an index
-    //
-    HRESULT GenerateIndexEntries(
-        [in]      IMFSample       *pIASFPacketSample);
-
-    HRESULT CommitIndex(
-        [in]      IMFASFContentInfo   *pIContentInfo);
-
-    HRESULT GetIndexWriteSpace(
-        [out]     QWORD           *pcbIndexWriteSpace);
-
-    HRESULT GetCompletedIndex(
-        [in]      IMFMediaBuffer  *pIIndexBuffer,
-        [in]      QWORD           cbOffsetWithinIndex);
-
-};
-
-cpp_quote("STDAPI MFCreateASFIndexer( ")
-cpp_quote("        /* out */     IMFASFIndexer         **ppIIndexer);")
-
-//
-// We will provide a default implementation of IMFByteStream that works
-// with the Indexer for read-only indexing (seeking).
-//
-// For write-mode indexing, the Indexer will automatically use default
-// IMFByteStreams, unless overridden by the user with custom byte streams.
-//
-cpp_quote("STDAPI MFCreateASFIndexerByteStream( ")
-cpp_quote("        /* in */      IMFByteStream         *pIContentByteStream,")
-cpp_quote("        /* in */      QWORD                  cbIndexStartOffset,")
-cpp_quote("        /* out */     IMFByteStream        **pIIndexByteStream);")
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////////////////
-//
-// ASF packet splitting
-//
-//////////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-[
-    object,
-    uuid(12558295-E399-11D5-BC2A-00B0D0F3F4AB),
-    local
-]
-interface IMFASFSplitter : IUnknown
-{
-
-    HRESULT Initialize(
-        [in]      IMFASFContentInfo   *pIContentInfo);
-
-    HRESULT SetFlags(
-        [in]      DWORD               dwFlags);
-
-    HRESULT GetFlags(
-        [out]     DWORD               *pdwFlags);
-
-    HRESULT SelectStreams(
-        [in]      WORD                *pwStreamNumbers,
-        [in]      WORD                 wNumStreams);
-
-    HRESULT GetSelectedStreams(
-        [out]     WORD                *pwStreamNumbers,
-        [in, out] WORD                *pwNumStreams);
-
-    HRESULT ParseData(
-        [in]      IMFMediaBuffer       *pIBuffer,
-        [in]      DWORD                cbBufferOffset,
-        [in]      DWORD                cbLength);
-
-    //
-    // pdwStatusFlags should be a combination of ASF_STATUSFLAGS
-    //
-    HRESULT GetNextSample(
-        [out]     DWORD               *pdwStatusFlags,
-        [out]     WORD                *pwStreamNumber,
-        [out]     IMFSample          **ppISample);
-
-    HRESULT Flush();
-
-    HRESULT GetLastSendTime(
-        [out]     DWORD               *pdwLastSendTime);
-
-};
-
-cpp_quote("STDAPI MFCreateASFSplitter( ")
-cpp_quote("        /* out */     IMFASFSplitter        **ppISplitter);")
-
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
-#pragma endregion
-
-#pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
-
-///////////////////////////////////////////////////////////////////////////////
-// 
-// ASF content description
-//
-///////////////////////////////////////////////////////////////////////////////
+cpp_quote( "STDAPI MFCreateASFContentInfo( "                          )
+cpp_quote( "        /* out */     IMFASFContentInfo     **ppIContentInfo);"     )
 
 //
 // Minimum number of bytes that need to be given to 
@@ -871,6 +414,77 @@ cpp_quote( "EXTERN_GUID(MF_PD_ASF_INFO_HAS_NON_AUDIO_VIDEO, 0x80e62297, 0x2296, 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+interface IMFASFStreamConfig;
+interface IMFASFMutualExclusion;
+interface IMFASFStreamPrioritization;
+
+[
+    object,
+    uuid(D267BF6A-028B-4e0d-903D-43F0EF82D0D4),
+    local
+]
+interface IMFASFProfile : IMFAttributes
+{
+    HRESULT GetStreamCount( 
+                [out] DWORD                   *pcStreams );
+
+    HRESULT GetStream( 
+                [in]  DWORD                    dwStreamIndex,
+                [out] WORD                    *pwStreamNumber,
+                [out] IMFASFStreamConfig     **ppIStream );
+
+    HRESULT GetStreamByNumber( 
+                [in]  WORD                     wStreamNumber,
+                [out] IMFASFStreamConfig     **ppIStream );
+
+    HRESULT SetStream( 
+                [in]  IMFASFStreamConfig      *pIStream );
+
+    HRESULT RemoveStream(
+                [in]  WORD                     wStreamNumber );
+
+    HRESULT CreateStream(
+                [in]  IMFMediaType            *pIMediaType,
+                [out] IMFASFStreamConfig     **ppIStream );
+
+
+
+    HRESULT GetMutualExclusionCount( 
+                [out] DWORD                   *pcMutexs );
+
+    HRESULT GetMutualExclusion(
+                [in]  DWORD                    dwMutexIndex,
+                [out] IMFASFMutualExclusion  **ppIMutex );
+
+    HRESULT AddMutualExclusion(
+                [in]  IMFASFMutualExclusion   *pIMutex );
+
+    HRESULT RemoveMutualExclusion(
+                [in]  DWORD                    dwMutexIndex );
+
+    HRESULT CreateMutualExclusion(
+                [out] IMFASFMutualExclusion  **ppIMutex );
+
+
+    HRESULT GetStreamPrioritization(
+                [out] IMFASFStreamPrioritization **ppIStreamPrioritization );
+
+    HRESULT AddStreamPrioritization(
+                [in]  IMFASFStreamPrioritization  *pIStreamPrioritization );
+
+    HRESULT RemoveStreamPrioritization( );
+
+    HRESULT CreateStreamPrioritization(
+                [out] IMFASFStreamPrioritization **ppIStreamPrioritization );
+
+
+    HRESULT Clone(
+                [out] IMFASFProfile          **ppIProfile );
+};
+
 //
 // ASF Profile attributes
 //
@@ -899,6 +513,65 @@ cpp_quote( "        /* out */     IMFASFProfile             **ppIProfile);"   )
 cpp_quote( "STDAPI MFCreatePresentationDescriptorFromASFProfile( "            )
 cpp_quote( "        /* in  */     IMFASFProfile              *pIProfile,"     )
 cpp_quote( "        /* out */     IMFPresentationDescriptor **ppIPD);"        )
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+[
+    object,
+    uuid(9E8AE8D2-DBBD-4200-9ACA-06E6DF484913),
+    local
+]
+//
+// The ASF Stream Config object will also QI for IPropertyStore.
+// This Property Store is for use when encoding and is for write-only
+// properties intended for the ASF Stream Sink's Property Store.
+// Most of these are configuration properties intended for the encoder
+// MF Transform; see wmcodecdsp.idl for the property definitions.
+// Once the ASF Media Sink has been created, these properties should be set
+// on the ASF Stream Sink object's IProperty Store interface instead;
+// setting them here will have no effect.
+//
+interface IMFASFStreamConfig : IMFAttributes
+{
+    HRESULT GetStreamType( 
+                [out] GUID               *pguidStreamType );
+
+    WORD GetStreamNumber( );
+
+    HRESULT SetStreamNumber( 
+                [in]  WORD                wStreamNum );
+
+    HRESULT GetMediaType( 
+                [out] IMFMediaType      **ppIMediaType );
+
+    HRESULT SetMediaType( 
+                [in]  IMFMediaType       *pIMediaType );
+
+
+    HRESULT GetPayloadExtensionCount( 
+                [out] WORD              *pcPayloadExtensions );
+
+    HRESULT GetPayloadExtension(
+                [in]  WORD               wPayloadExtensionNumber,
+                [out] GUID              *pguidExtensionSystemID,
+                [out] WORD              *pcbExtensionDataSize,
+                [out, optional, size_is(*pcbExtensionSystemInfo)] BYTE *pbExtensionSystemInfo,
+                [in, out, optional] DWORD *pcbExtensionSystemInfo );
+
+    HRESULT AddPayloadExtension( 
+                [in]  GUID               guidExtensionSystemID,
+                [in]  WORD               cbExtensionDataSize,
+                [in, size_is(cbExtensionSystemInfo)] BYTE *pbExtensionSystemInfo,
+                [in]  DWORD              cbExtensionSystemInfo );
+
+    HRESULT RemoveAllPayloadExtensions();
+
+
+
+    HRESULT Clone( 
+                [out] IMFASFStreamConfig  **ppIStreamConfig );
+};
 
 //
 // ASF Stream Config attributes
@@ -937,6 +610,50 @@ cpp_quote( "EXTERN_GUID(MFASFSampleExtension_PixelAspectRatio, 0x1b1ee554, 0xf9e
 cpp_quote( "EXTERN_GUID(MFASFSampleExtension_Encryption_SampleID, 0x6698B84E, 0x0AFA, 0x4330, 0xAE, 0xB2, 0x1C, 0x0A, 0x98, 0xD7, 0xA4, 0x4D);" )
 cpp_quote( "EXTERN_GUID(MFASFSampleExtension_Encryption_KeyID, 0x76376591,  0x795f,  0x4da1, 0x86, 0xed, 0x9d, 0x46, 0xec, 0xa1, 0x09, 0xa9);" )
 
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+[
+    object,
+    uuid(12558291-E399-11D5-BC2A-00B0D0F3F4AB),
+    local
+]
+interface IMFASFMutualExclusion : IUnknown
+{
+    HRESULT GetType( 
+                [out]    GUID           *pguidType );
+    HRESULT SetType( 
+                [in]     REFGUID         guidType );
+
+    HRESULT GetRecordCount( 
+                [out]    DWORD          *pdwRecordCount );
+
+    HRESULT GetStreamsForRecord(
+                [in]     DWORD           dwRecordNumber,
+                [out]    WORD           *pwStreamNumArray,
+                [in,out] DWORD          *pcStreams );
+
+    HRESULT AddStreamForRecord(
+                [in]     DWORD           dwRecordNumber,
+                [in]     WORD            wStreamNumber );
+
+    HRESULT RemoveStreamFromRecord(
+                [in]     DWORD           dwRecordNumber,
+                [in]     WORD            wStreamNumber );
+
+    HRESULT RemoveRecord(
+                [in]     DWORD           dwRecordNumber );
+
+    HRESULT AddRecord(
+                [out]    DWORD          *pdwRecordNumber );
+
+
+
+    HRESULT Clone(
+                [out] IMFASFMutualExclusion  **ppIMutex );
+};
+
+
 //
 // ASF Mutual Exclusion types
 //
@@ -944,6 +661,36 @@ cpp_quote( "EXTERN_GUID(MFASFMutexType_Language, 0x72178C2B, 0xE45B, 0x11D5, 0xB
 cpp_quote( "EXTERN_GUID(MFASFMutexType_Bitrate, 0x72178C2C, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);" )
 cpp_quote( "EXTERN_GUID(MFASFMutexType_Presentation, 0x72178C2D, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);" )
 cpp_quote( "EXTERN_GUID(MFASFMutexType_Unknown, 0x72178C2E, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);" )
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+[
+    object,
+    uuid(699bdc27-bbaf-49ff-8e38-9c39c9b5e088),
+    local
+]
+interface IMFASFStreamPrioritization : IUnknown
+{
+    HRESULT GetStreamCount( 
+                [out]    DWORD          *pdwStreamCount );
+
+    HRESULT GetStream(
+                [in]     DWORD           dwStreamIndex,
+                [out]    WORD           *pwStreamNumber,
+                [out]    WORD           *pwStreamFlags );
+
+    HRESULT AddStream(
+                [in]     WORD            wStreamNumber,
+                [in]     WORD            wStreamFlags );
+
+    HRESULT RemoveStream(
+                [in]     DWORD           dwStreamIndex );
+
+
+    HRESULT Clone(
+                [out] IMFASFStreamPrioritization  **ppIStreamPrioritization );
+};
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -964,6 +711,50 @@ typedef enum MFASF_SPLITTERFLAGS
 
 } MFASF_SPLITTERFLAGS;
 
+[
+    object,
+    uuid(12558295-E399-11D5-BC2A-00B0D0F3F4AB),
+    local
+]
+interface IMFASFSplitter : IUnknown
+{
+
+    HRESULT Initialize(
+                [in]      IMFASFContentInfo   *pIContentInfo  );
+    
+    HRESULT SetFlags(
+                [in]      DWORD               dwFlags );
+
+    HRESULT GetFlags(
+                [out]     DWORD               *pdwFlags );
+
+    HRESULT SelectStreams(
+                [in]      WORD                *pwStreamNumbers,
+                [in]      WORD                 wNumStreams );
+
+    HRESULT GetSelectedStreams(
+                [out]     WORD                *pwStreamNumbers,
+                [in, out] WORD                *pwNumStreams );
+
+    HRESULT ParseData(
+                [in]      IMFMediaBuffer       *pIBuffer,
+                [in]      DWORD                cbBufferOffset,
+                [in]      DWORD                cbLength );
+
+    //
+    // pdwStatusFlags should be a combination of ASF_STATUSFLAGS
+    //
+    HRESULT GetNextSample(
+                [out]     DWORD               *pdwStatusFlags,
+                [out]     WORD                *pwStreamNumber,
+                [out]     IMFSample          **ppISample );
+
+    HRESULT Flush( );
+
+    HRESULT GetLastSendTime(
+                [out]     DWORD               *pdwLastSendTime );
+                
+};
 
 typedef enum ASF_STATUSFLAGS
 {
@@ -981,6 +772,10 @@ typedef enum ASF_STATUSFLAGS
 // the last buffer ended.  In this case, the splitter will clear its 
 // parsing state and parse this buffer as a new ASF packet.
 cpp_quote( "EXTERN_GUID(MFASFSPLITTER_PACKET_BOUNDARY, 0xfe584a05, 0xe8d6, 0x42e3, 0xb1, 0x76, 0xf1, 0x21, 0x17, 0x5, 0xfb, 0x6f);" )
+
+cpp_quote( "STDAPI MFCreateASFSplitter( "                             )
+cpp_quote( "        /* out */     IMFASFSplitter        **ppISplitter);"        )
+
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -1058,6 +853,166 @@ cpp_quote( "        /* out */     IMFASFMultiplexer     **ppIMultiplexer);"     
 //
 //////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+//
+// ASF Indexer flags
+//
+typedef enum MFASF_INDEXERFLAGS
+{
+    MFASF_INDEXER_WRITE_NEW_INDEX   = 0x00000001,
+    MFASF_INDEXER_READ_FOR_REVERSEPLAYBACK  = 0x00000002,
+    MFASF_INDEXER_WRITE_FOR_LIVEREAD        = 0x00000004,
+    
+} MFASF_INDEXER_FLAGS;
+
+//
+// Index identifier structure
+//
+typedef struct _ASF_INDEX_IDENTIFIER
+{
+    //
+    // Use the MFASFINDEXER_TYPE values defined below
+    //  GUID_NULL: Time indexing
+    //  other GUIDs: Other types of indexing not supported yet
+    //
+    GUID guidIndexType;     
+
+    WORD wStreamNumber;
+
+}   ASF_INDEX_IDENTIFIER;
+
+//
+// This structure is used for describing the details of indexing corresponding
+// to a specific ASF_INDEX_IDENTIFIER
+//
+typedef struct _ASF_INDEX_DESCRIPTOR
+{
+    //
+    // Index identifier for this index
+    //
+    ASF_INDEX_IDENTIFIER    Identifier;
+
+    //
+    // Number of bytes per index entry for this index.
+    // MFASFINDEXER_PER_ENTRY_BYTES_DYNAMIC indicates that this number can vary.
+    //
+    WORD                    cPerEntryBytes;
+
+    //
+    // Optional text descriptiong of the index
+    //
+    WCHAR                   szDescription[ 32 ];
+
+    //
+    // Indexing interval.  The units of this value depend on the index type.
+    // A value of MFASFINDEXER_NO_FIXED_INTERVAL indicates that there is
+    // no fixed indexing interval.
+    //
+    DWORD                   dwInterval; 
+
+}   ASF_INDEX_DESCRIPTOR;
+
+[
+    object,
+    uuid(53590F48-DC3B-4297-813F-787761AD7B3E),
+    local
+]
+interface IMFASFIndexer : IUnknown
+{
+    HRESULT SetFlags(
+                [in]    DWORD               dwFlags );
+    HRESULT GetFlags(
+                [out]   DWORD              *pdwFlags );
+
+    HRESULT Initialize(
+                [in]      IMFASFContentInfo   *pIContentInfo  );
+
+    HRESULT GetIndexPosition(
+                [in]      IMFASFContentInfo   *pIContentInfo,
+                [out]     QWORD               *pcbIndexOffset );
+
+    HRESULT SetIndexByteStreams(
+                [in]      IMFByteStream    **ppIByteStreams,
+                [in]      DWORD              cByteStreams ); 
+
+    HRESULT GetIndexByteStreamCount(
+                [out]       DWORD          *pcByteStreams );
+
+    //
+    // For GetIndexStatus and SetIndexStatus:
+    // pbIndexDescriptor will begin with the ASF_INDEX_DESCRIPTOR structure
+    // and may have index-specific data following.
+    //
+    HRESULT GetIndexStatus(
+                [in]      ASF_INDEX_IDENTIFIER  *pIndexIdentifier,
+                [out]     BOOL                  *pfIsIndexed,
+                [out]     BYTE                  *pbIndexDescriptor,
+                [in,out]  DWORD                 *pcbIndexDescriptor );
+
+    HRESULT SetIndexStatus(
+                [in]      BYTE            *pbIndexDescriptor,
+                [in]      DWORD           cbIndexDescriptor,
+                [in]      BOOL            fGenerateIndex );
+
+
+    //
+    // GetSeekPositionForValue is the method used when seeking according to
+    // this index.
+    // Input parameters are pvarValue and pIndexIdentifier, which define,
+    // respectively, where to seek to and using which stream / index type.
+    // The main output parameter is pcbOffsetWithinData, which gives the 
+    // offset within the data segment of the ASF Data Object (i.e. from the
+    // beginning of packet 0) of the packet from which the caller should start
+    // reading.
+    // Optional output parameters are as follows:
+    //      phnsApproxTime - Specifies an approximate timestamp around where
+    //                       this stream will actually begin if the caller
+    //                       starts reading from *pcbOffsetWithinData.
+    //                       The accuracy of this value is the index interval
+    //                       of the index (usually 1sec).
+    //                       Example: Caller seeks to t=27sec.
+    //                                Nearest previous key frame is at 
+    //                                t=25.8sec.
+    //                                *phnsApproxTime will be set to 25sec.
+    //                       This parameter can be set to a non-NULL value
+    //                       only when the guidIndexType field of 
+    //                       pIndexIdentifier is GUID_NULL.  Otherwise, an
+    //                       error will be returned.
+    //                       If this information cannot be determined,
+    //                       then this value will be set to 
+    //                       MFASFINDEXER_APPROX_SEEK_TIME_UNKNOWN upon return.
+    //      pdwPayloadNumberOfStreamWithinPacket - Specifies which payload
+    //                                             in the packet at
+    //                                             *pcbOffsetWithinData 
+    //                                             the indexer is referring to
+    HRESULT GetSeekPositionForValue(
+                [in]      const PROPVARIANT     *pvarValue,
+                [in]      ASF_INDEX_IDENTIFIER  *pIndexIdentifier,
+                [out]     QWORD                 *pcbOffsetWithinData,
+                [out, optional]  MFTIME         *phnsApproxTime, 
+                [out, optional]  DWORD          *pdwPayloadNumberOfStreamWithinPacket ); 
+
+    //
+    // The following methods are useful when generating an index
+    //
+    HRESULT GenerateIndexEntries(
+                [in]      IMFSample       *pIASFPacketSample );
+
+    HRESULT CommitIndex( 
+                [in]      IMFASFContentInfo   *pIContentInfo );
+
+    HRESULT GetIndexWriteSpace(
+                [out]     QWORD           *pcbIndexWriteSpace );
+
+    HRESULT GetCompletedIndex(
+                [in]      IMFMediaBuffer  *pIIndexBuffer,
+                [in]      QWORD           cbOffsetWithinIndex ); 
+
+};
+
+
 //
 // Index descriptor GUIDs and flags
 // These are used in the ASF_INDEX_DESCRIPTOR structure
@@ -1079,6 +1034,24 @@ cpp_quote( "#define MFASFINDEXER_READ_FOR_REVERSEPLAYBACK_OUTOFDATASEGMENT      
 // The *phnsApproxTime parameter in IMFASFIndexer::GetSeekPositionForValue
 // will return this value if an approximate seek time cannot be determined
 cpp_quote( "#define MFASFINDEXER_APPROX_SEEK_TIME_UNKNOWN 0xffffffffffffffff" )
+
+cpp_quote( "STDAPI MFCreateASFIndexer( "                              )
+cpp_quote( "        /* out */     IMFASFIndexer         **ppIIndexer);"         )
+
+//
+// We will provide a default implementation of IMFByteStream that works
+// with the Indexer for read-only indexing (seeking).
+//
+// For write-mode indexing, the Indexer will automatically use default
+// IMFByteStreams, unless overridden by the user with custom byte streams.
+//
+cpp_quote( "STDAPI MFCreateASFIndexerByteStream( "                    )
+cpp_quote( "        /* in */      IMFByteStream         *pIContentByteStream,"  )
+cpp_quote( "        /* in */      QWORD                  cbIndexStartOffset,"  )
+cpp_quote( "        /* out */     IMFByteStream        **pIIndexByteStream);"   )
+
+
+
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////

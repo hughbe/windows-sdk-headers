@@ -8,7 +8,6 @@
 // <corecrt_wxxxx.h> headers, which are also #included by other public headers.
 //
 #pragma once
-#ifndef _INC_WCHAR // include guard for 3rd party interop
 #define _INC_WCHAR
 
 #include <corecrt.h>
@@ -26,10 +25,6 @@
 #include <sys/types.h>
 #include <vcruntime_string.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
 
 
@@ -45,7 +40,7 @@ typedef wchar_t _Wint_t;
 
 #if _CRT_FUNCTIONS_REQUIRED
 
-    _Check_return_opt_ _Success_(return != 0) _Ret_z_
+    _Check_return_opt_
     _ACRTIMP wchar_t* __cdecl _wsetlocale(
         _In_       int            _Category,
         _In_opt_z_ wchar_t const* _Locale
@@ -232,8 +227,10 @@ typedef wchar_t _Wint_t;
         _In_                 size_t         _N
         )
     {
-        #pragma warning(suppress: 6386) // Buffer overrun
+        #pragma warning(push)
+        #pragma warning(disable : 4995 4996 6386)
         return (wchar_t*)memcpy(_S1, _S2, _N*sizeof(wchar_t));
+        #pragma warning(pop)
     }
 
     __inline _CRT_INSECURE_DEPRECATE_MEMORY(wmemmove_s)
@@ -243,8 +240,10 @@ typedef wchar_t _Wint_t;
         _In_                     size_t         _N
         )
     {
-        #pragma warning(suppress: 6386) // Buffer overrun
+        #pragma warning(push)
+        #pragma warning(disable : 4996 6386)
         return (wchar_t*)memmove(_S1, _S2, _N*sizeof(wchar_t));
+        #pragma warning(pop)
     }
 
     _Post_equal_to_(_S)
@@ -280,7 +279,5 @@ typedef wchar_t _Wint_t;
 #endif // _CRT_FUNCTIONS_REQUIRED
 
 
+
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_WCHAR

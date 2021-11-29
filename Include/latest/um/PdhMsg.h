@@ -4,17 +4,10 @@
 //* Copyright (c) Microsoft Corporation. All Rights Reserved.          *`
 //**********************************************************************`
 #pragma once
-
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Provider "Microsoft-Windows-PDH" event count 86
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-// Provider GUID = 04d66358-c4a1-419b-8023-23b73902de2c
+//+
+// Provider Microsoft-Windows-PDH Event Count 86
+//+
 EXTERN_C __declspec(selectany) const GUID S_PDH = {0x04d66358, 0xc4a1, 0x419b, {0x80, 0x23, 0x23, 0xb7, 0x39, 0x02, 0xde, 0x2c}};
-
-#ifndef S_PDH_Traits
-#define S_PDH_Traits NULL
-#endif // S_PDH_Traits
 
 //
 // Event Descriptors
@@ -105,5 +98,4 @@ EXTERN_C __declspec(selectany) const GUID S_PDH = {0x04d66358, 0xc4a1, 0x419b, {
 #define PDH_UNMATCHED_APPEND_COUNTER 0xC0000BFCL
 #define PDH_SQL_ALTER_DETAIL_FAILED 0xC0000BFDL
 #define PDH_QUERY_PERF_DATA_TIMEOUT 0xC0000BFEL
-
 #define MSG_Publisher_Name                   0x90000001L

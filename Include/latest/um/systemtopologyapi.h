@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * consoleapi.h -- ApiSet Contract for api-ms-win-core-systemtopology-l1         *
@@ -18,12 +19,31 @@
 #include <minwindef.h>
 #include <minwinbase.h>
 
+/* APISET_NAME: api-ms-win-core-systemtopology-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_SYSTEMTOPOLOGY_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN10_RS1
+#define _APISET_SYSTEMTOPOLOGY_VER 0x0101
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_SYSTEMTOPOLOGY_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 BOOL
@@ -33,11 +53,6 @@ GetNumaHighestNodeNumber(
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #if _WIN32_WINNT >= 0x0601
 
@@ -52,6 +67,10 @@ GetNumaNodeProcessorMaskEx(
 
 #endif // (_WIN32_WINNT >=0x0601)
 
+
+#if !defined(_CONTRACT_GEN) || (_APISET_SYSTEMTOPOLOGY_VER >= 0x0101)
+
+
 #if _WIN32_WINNT >= 0x0601
 
 WINBASEAPI
@@ -64,6 +83,8 @@ GetNumaProximityNodeEx(
 
 
 #endif // (_WIN32_WINNT >=0x0601)
+
+#endif // !defined(_CONTRACT_GEN) || (_APISET_EVENTINGPROVIDER_VER >= 0x0101)
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion

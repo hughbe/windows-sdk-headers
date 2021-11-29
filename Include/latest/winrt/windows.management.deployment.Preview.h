@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.management.deployment.preview.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,24 +75,43 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
+
+#if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
 #if !defined(WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION)
 #define WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -111,11 +133,10 @@ namespace ABI {
             namespace Deployment {
                 namespace Preview {
                     interface IClassicAppManagerStatics;
-                } /* Preview */
-            } /* Deployment */
-        } /* Management */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Management */
+        } /* Deployment */
+    } /* Preview */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics ABI::Windows::Management::Deployment::Preview::IClassicAppManagerStatics
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_FWD_DEFINED__
@@ -128,29 +149,36 @@ namespace ABI {
             namespace Deployment {
                 namespace Preview {
                     interface IInstalledClassicAppInfo;
-                } /* Preview */
-            } /* Deployment */
-        } /* Management */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Management */
+        } /* Deployment */
+    } /* Preview */} /* ABI */
 #define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo ABI::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_FWD_DEFINED__
 
-// Parameterized interface forward declarations (C++)
 
-// Collection interface definitions
+
+
+
+
 namespace ABI {
     namespace Windows {
         namespace Management {
             namespace Deployment {
                 namespace Preview {
                     class InstalledClassicAppInfo;
-                } /* Preview */
-            } /* Deployment */
-        } /* Management */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Management */
+        } /* Deployment */
+    } /* Preview */} /* ABI */
+
+
+
+
+
+
+
 
 /*
  *
@@ -158,7 +186,9 @@ namespace ABI {
  *
  * Introduced to Windows.Management.Deployment.Preview.DeploymentPreviewContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Management.Deployment.Preview.ClassicAppManager
+ *
  *
  */
 #if WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
@@ -170,26 +200,28 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 namespace Preview {
-                    MIDL_INTERFACE("e2fad668-882c-4f33-b035-0df7b90d67e6")
-                    IClassicAppManagerStatics : public IInspectable
+                    /* [object, uuid("E2FAD668-882C-4F33-B035-0DF7B90D67E6"), exclusiveto, contract] */
+                    MIDL_INTERFACE("E2FAD668-882C-4F33-B035-0DF7B90D67E6")
+                    IClassicAppManagerStatics : IInspectable
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE FindInstalledApp(
-                            HSTRING appUninstallKey,
-                            ABI::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo** result
+                            /* [in] */__RPC__in HSTRING appUninstallKey,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Management::Deployment::Preview::IInstalledClassicAppInfo * * result
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IClassicAppManagerStatics = _uuidof(IClassicAppManagerStatics);
-                } /* Preview */
-            } /* Deployment */
-        } /* Management */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IClassicAppManagerStatics=_uuidof(IClassicAppManagerStatics);
+                    
+                } /* Windows */
+            } /* Management */
+        } /* Deployment */
+    } /* Preview */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -197,7 +229,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClass
  *
  * Introduced to Windows.Management.Deployment.Preview.DeploymentPreviewContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Management.Deployment.Preview.InstalledClassicAppInfo
+ *
  *
  */
 #if WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
@@ -209,34 +243,37 @@ namespace ABI {
         namespace Management {
             namespace Deployment {
                 namespace Preview {
-                    MIDL_INTERFACE("0a7d3da3-65d0-4086-80d6-0610d760207d")
-                    IInstalledClassicAppInfo : public IInspectable
+                    /* [object, uuid("0A7D3DA3-65D0-4086-80D6-0610D760207D"), exclusiveto, contract] */
+                    MIDL_INTERFACE("0A7D3DA3-65D0-4086-80D6-0610D760207D")
+                    IInstalledClassicAppInfo : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_DisplayName(
-                            HSTRING* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisplayName(
+                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE get_DisplayVersion(
-                            HSTRING* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisplayVersion(
+                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IInstalledClassicAppInfo = _uuidof(IInstalledClassicAppInfo);
-                } /* Preview */
-            } /* Deployment */
-        } /* Management */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IInstalledClassicAppInfo=_uuidof(IInstalledClassicAppInfo);
+                    
+                } /* Windows */
+            } /* Management */
+        } /* Deployment */
+    } /* Preview */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.Management.Deployment.Preview.ClassicAppManager
  *
  * Introduced to Windows.Management.Deployment.Preview.DeploymentPreviewContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Management.Deployment.Preview.IClassicAppManagerStatics interface starting with version 1.0 of the Windows.Management.Deployment.Preview.DeploymentPreviewContract API contract
@@ -253,11 +290,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Management.Deployment.Preview.InstalledClassicAppInfo
  *
  * Introduced to Windows.Management.Deployment.Preview.DeploymentPreviewContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Management.Deployment.Preview.IInstalledClassicAppInfo ** Default Interface **
@@ -268,11 +307,16 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Management_Deployment_Preview_InstalledClassicAppInfo_DEFINED
 #define RUNTIMECLASS_Windows_Management_Deployment_Preview_InstalledClassicAppInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Deployment_Preview_InstalledClassicAppInfo[] = L"Windows.Management.Deployment.Preview.InstalledClassicAppInfo";
 #endif
 #endif // WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
+
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -288,9 +332,16 @@ typedef interface __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledC
 
 #endif // ____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_FWD_DEFINED__
 
-// Parameterized interface forward declarations (C)
 
-// Collection interface definitions
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -298,69 +349,93 @@ typedef interface __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledC
  *
  * Introduced to Windows.Management.Deployment.Preview.DeploymentPreviewContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Management.Deployment.Preview.ClassicAppManager
+ *
  *
  */
 #if WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Deployment_Preview_IClassicAppManagerStatics[] = L"Windows.Management.Deployment.Preview.IClassicAppManagerStatics";
+/* [object, uuid("E2FAD668-882C-4F33-B035-0DF7B90D67E6"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* FindInstalledApp)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics* This,
-        HSTRING appUninstallKey,
-        __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo** result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *FindInstalledApp )(
+        __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics * This,
+        /* [in] */__RPC__in HSTRING appUninstallKey,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo * * result
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStaticsVtbl;
 
 interface __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_FindInstalledApp(This, appUninstallKey, result) \
-    ((This)->lpVtbl->FindInstalledApp(This, appUninstallKey, result))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_FindInstalledApp(This,appUninstallKey,result) \
+    ( (This)->lpVtbl->FindInstalledApp(This,appUninstallKey,result) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClassicAppManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -368,79 +443,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CPreview_CIClass
  *
  * Introduced to Windows.Management.Deployment.Preview.DeploymentPreviewContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Management.Deployment.Preview.InstalledClassicAppInfo
+ *
  *
  */
 #if WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Management_Deployment_Preview_IInstalledClassicAppInfo[] = L"Windows.Management.Deployment.Preview.IInstalledClassicAppInfo";
+/* [object, uuid("0A7D3DA3-65D0-4086-80D6-0610D760207D"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfoVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_DisplayName)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_DisplayVersion)(__x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo* This,
-        HSTRING* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DisplayName )(
+        __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DisplayVersion )(
+        __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfoVtbl;
 
 interface __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfoVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfoVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_get_DisplayName(This, value) \
-    ((This)->lpVtbl->get_DisplayName(This, value))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_get_DisplayName(This,value) \
+    ( (This)->lpVtbl->get_DisplayName(This,value) )
 
-#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_get_DisplayVersion(This, value) \
-    ((This)->lpVtbl->get_DisplayVersion(This, value))
+#define __x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_get_DisplayVersion(This,value) \
+    ( (This)->lpVtbl->get_DisplayVersion(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo;
 #endif /* !defined(____x_ABI_CWindows_CManagement_CDeployment_CPreview_CIInstalledClassicAppInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.Management.Deployment.Preview.ClassicAppManager
  *
  * Introduced to Windows.Management.Deployment.Preview.DeploymentPreviewContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Management.Deployment.Preview.IClassicAppManagerStatics interface starting with version 1.0 of the Windows.Management.Deployment.Preview.DeploymentPreviewContract API contract
@@ -457,11 +559,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Management.Deployment.Preview.InstalledClassicAppInfo
  *
  * Introduced to Windows.Management.Deployment.Preview.DeploymentPreviewContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Management.Deployment.Preview.IInstalledClassicAppInfo ** Default Interface **
@@ -472,11 +576,16 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Management_Deployment_Preview_InstalledClassicAppInfo_DEFINED
 #define RUNTIMECLASS_Windows_Management_Deployment_Preview_InstalledClassicAppInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Management_Deployment_Preview_InstalledClassicAppInfo[] = L"Windows.Management.Deployment.Preview.InstalledClassicAppInfo";
 #endif
 #endif // WINDOWS_MANAGEMENT_DEPLOYMENT_PREVIEW_DEPLOYMENTPREVIEWCONTRACT_VERSION >= 0x10000
+
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

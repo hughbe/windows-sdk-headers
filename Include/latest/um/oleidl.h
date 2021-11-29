@@ -3803,8 +3803,8 @@ EXTERN_C const IID IID_IEnterpriseDropTarget;
 #define CFSTR_ENTERPRISE_ID (TEXT("EnterpriseDataProtectionId"))
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_oleidl_0000_0024_v0_0_c_ifspec;
@@ -3964,7 +3964,7 @@ void __RPC_STUB IEnumOLEVERB_RemoteNext_Stub(
 /* interface __MIDL_itf_oleidl_0000_0025 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 #if _MSC_VER >= 1200
 #pragma warning(pop)

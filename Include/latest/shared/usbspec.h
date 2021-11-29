@@ -64,11 +64,7 @@ typedef union _BM_REQUEST_TYPE {
         UCHAR   Reserved:3;
         UCHAR   Type:2;
         UCHAR   Dir:1;
-#ifdef __cplusplus
-        } s;
-#else
-        };
-#endif
+    };
     UCHAR B;
 } BM_REQUEST_TYPE, *PBM_REQUEST_TYPE;
 
@@ -136,26 +132,6 @@ C_ASSERT(sizeof(USB_DEFAULT_PIPE_SETUP_PACKET) == 8);
 #define USB_REQUEST_GET_INTERFACE       0x0A
 #define USB_REQUEST_SET_INTERFACE       0x0B
 #define USB_REQUEST_SYNC_FRAME          0x0C
-
-#define USB_REQUEST_GET_FIRMWARE_STATUS 0x1A
-#define USB_REQUEST_SET_FIRMWARE_STATUS 0x1B
-
-//
-// wValue field options for USB_REQUEST_GET_FIRMWARE_STATUS
-//
-
-#define USB_GET_FIRMWARE_ALLOWED_OR_DISALLOWED_STATE    0x00
-#define USB_GET_FIRMWARE_HASH                           0x01
-
-#define USB_DEVICE_FIRMWARE_HASH_LENGTH                 32
-
-//
-// wValue field options for USB_REQUEST_SET_FIRMWARE_STATUS
-//
-
-#define USB_DISALLOW_FIRMWARE_UPDATE    0x00
-#define USB_ALLOW_FIRMWARE_UPDATE       0x01
-
 //
 // USB 3.0: 9.4 Standard Device Requests, Table 9-4. Standard Request Codes
 //
@@ -397,7 +373,6 @@ C_ASSERT(sizeof(USB_BOS_DESCRIPTOR) == 5);
 #define USB_DEVICE_CAPABILITY_SUPERSPEEDPLUS_USB          0x0A
 #define USB_DEVICE_CAPABILITY_PRECISION_TIME_MEASUREMENT  0x0B
 #define USB_DEVICE_CAPABILITY_BILLBOARD                   0x0D
-#define USB_DEVICE_CAPABILITY_FIRMWARE_STATUS             0x11
 
 //
 // USB 2.0 ECN: Link Power Management (LPM), 3. Framework: USB Device Capabilities - USB 2.0 Extension,
@@ -631,33 +606,13 @@ typedef struct _USB_DEVICE_CAPABILITY_BILLBOARD_DESCRIPTOR {
         USHORT  wSVID;
         UCHAR   bAlternateMode;
         UCHAR   iAlternateModeSetting;
-    } AlternateMode[1];
+    } AlternateMode[1];    
 } USB_DEVICE_CAPABILITY_BILLBOARD_DESCRIPTOR, *PUSB_DEVICE_CAPABILITY_BILLBOARD_DESCRIPTOR;
 
 C_ASSERT(sizeof(USB_DEVICE_CAPABILITY_BILLBOARD_DESCRIPTOR) == 48);
 
-//
-// USB 3.2 ECN: USB FW Update
-//
-typedef struct _USB_DEVICE_CAPABILITY_FIRMWARE_STATUS_DESCRIPTOR {
-    UCHAR   bLength;
-    UCHAR   bDescriptorType;
-    UCHAR   bDevCapabilityType;
-    UCHAR   bcdDescriptorVersion;
-    union {
-        ULONG        AsUlong;
-        struct {
-            ULONG    GetFirmwareImageHashSupport:1;
-            ULONG    DisallowFirmwareUpdateSupport:1;
-            ULONG    Reserved:30;
-        };
-    }       bmAttributes;
-} USB_DEVICE_CAPABILITY_FIRMWARE_STATUS_DESCRIPTOR, *PUSB_DEVICE_CAPABILITY_FIRMWARE_STATUS_DESCRIPTOR;
-
-C_ASSERT(sizeof(USB_DEVICE_CAPABILITY_FIRMWARE_STATUS_DESCRIPTOR) == 8);
-
 // {D8DD60DF-4589-4CC7-9CD2-659D9E648A9F}
-DEFINE_GUID(GUID_USB_MSOS20_PLATFORM_CAPABILITY_ID,
+DEFINE_GUID(GUID_USB_MSOS20_PLATFORM_CAPABILITY_ID, 
 0xD8DD60DF, 0x4589, 0x4CC7, 0x9C, 0xD2, 0x65, 0x9D, 0x9E, 0x64, 0x8A, 0x9F);
 
 //
@@ -784,7 +739,7 @@ C_ASSERT(sizeof(USB_ENDPOINT_DESCRIPTOR) == 7);
 #define USB_30_ENDPOINT_TYPE_INTERRUPT_USAGE_RESERVED10   0x20
 #define USB_30_ENDPOINT_TYPE_INTERRUPT_USAGE_RESERVED11   0x30
 #define USB_30_ENDPOINT_TYPE_INTERRUPT_USAGE(bmAttr)      (bmAttr & USB_30_ENDPOINT_TYPE_INTERRUPT_USAGE_MASK)
-
+ 
 #define USB_ENDPOINT_TYPE_ISOCHRONOUS_SYNCHRONIZATION_MASK               0x0C
 #define USB_ENDPOINT_TYPE_ISOCHRONOUS_SYNCHRONIZATION_NO_SYNCHRONIZATION 0x00
 #define USB_ENDPOINT_TYPE_ISOCHRONOUS_SYNCHRONIZATION_ASYNCHRONOUS       0x04

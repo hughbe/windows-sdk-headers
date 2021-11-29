@@ -577,8 +577,6 @@ typedef struct _HTTP_REQUEST_TOKEN_BINDING_INFO
 #define HTTP_LOG_FIELD_HOST                  0x00100000
 #define HTTP_LOG_FIELD_SUB_STATUS            0x00200000
 #define HTTP_LOG_FIELD_STREAM_ID             0x08000000
-#define HTTP_LOG_FIELD_STREAM_ID_EX          0x10000000
-#define HTTP_LOG_FIELD_TRANSPORT_TYPE        0x20000000
 
 //
 // Fields that are used only for error logging.
@@ -872,13 +870,6 @@ typedef struct _HTTP_PROTECTION_LEVEL_INFO
 // HTTP_SEND_RESPONSE_FLAG_OPAQUE - Specifies that the request/response is not
 // HTTP compliant and all subsequent bytes should be treated as entity-body.
 //
-// HTTP_SEND_RESPONSE_FLAG_GOAWAY - A flag that must always be specified with
-// HTTP_SEND_RESPONSE_FLAG_DISCONNECT. For pure HTTP/1.x connections, that is
-// connections that don't do HTTP/2 and HTTP/3, this behaves the same as
-// HTTP_SEND_RESPONSE_FLAG_DISCONNECT. For HTTP/2 and HTTP/3, this results in
-// sending a GOAWAY frame and will cause the client to move to a different
-// connection.
-//
 
 #define HTTP_SEND_RESPONSE_FLAG_DISCONNECT          0x00000001
 #define HTTP_SEND_RESPONSE_FLAG_MORE_DATA           0x00000002
@@ -886,7 +877,6 @@ typedef struct _HTTP_PROTECTION_LEVEL_INFO
 #define HTTP_SEND_RESPONSE_FLAG_ENABLE_NAGLING      0x00000008
 #define HTTP_SEND_RESPONSE_FLAG_PROCESS_RANGES      0x00000020
 #define HTTP_SEND_RESPONSE_FLAG_OPAQUE              0x00000040
-#define HTTP_SEND_RESPONSE_FLAG_GOAWAY              0x00000100
 
 
 //
@@ -913,9 +903,6 @@ typedef HTTP_OPAQUE_ID HTTP_RAW_CONNECTION_ID, *PHTTP_RAW_CONNECTION_ID;
 
 typedef HTTP_OPAQUE_ID HTTP_URL_GROUP_ID,      *PHTTP_URL_GROUP_ID;
 typedef HTTP_OPAQUE_ID HTTP_SERVER_SESSION_ID, *PHTTP_SERVER_SESSION_ID;
-
-// #if _WIN32_WINNT >= Somevalue
-typedef HTTP_OPAQUE_ID HTTP_CLIENT_REQUEST_ID, *PHTTP_CLIENT_REQUEST_ID;
 
 #endif // _WIN32_WINNT >= 0x0600
 
@@ -963,7 +950,6 @@ typedef struct _HTTP_VERSION
 #define HTTP_VERSION_1_0        { 1, 0 }
 #define HTTP_VERSION_1_1        { 1, 1 }
 #define HTTP_VERSION_2_0        { 2, 0 }
-#define HTTP_VERSION_3_0        { 3, 0 }
 
 #define HTTP_SET_VERSION(version, major, minor)             \
 do {                                                        \
@@ -993,17 +979,6 @@ do {                                                        \
 
 #define HTTP_LESS_EQUAL_VERSION(version, major, minor)      \
     (!HTTP_GREATER_VERSION(version, major, minor))
-
-//
-// The enum type for HTTP Scheme.
-//
-
-typedef enum _HTTP_URI_SCHEME
-{
-    HttpSchemeHttp,
-    HttpSchemeHttps,
-    HttpSchemeMaximum
-} HTTP_SCHEME, *PHTTP_URI_SCHEME;
 
 //
 // The enum type for HTTP verbs.
@@ -1359,23 +1334,6 @@ typedef struct _HTTP_RESPONSE_HEADERS
 } HTTP_RESPONSE_HEADERS, *PHTTP_RESPONSE_HEADERS;
 
 //
-// Properties that can be passed down with IOCTL_HTTP_DELEGATE_REQUEST_EX
-//
-
-typedef enum _HTTP_DELEGATE_REQUEST_PROPERTY_ID
-{
-    DelegateRequestReservedProperty,
-
-} HTTP_DELEGATE_REQUEST_PROPERTY_ID, *PHTTP_DELEGATE_REQUEST_PROPERTY_ID;
-
-typedef struct _HTTP_DELEGATE_REQUEST_PROPERTY_INFO
-{
-    HTTP_DELEGATE_REQUEST_PROPERTY_ID ProperyId;
-    ULONG PropertyInfoLength;
-    PVOID PropertyInfo;
-} HTTP_DELEGATE_REQUEST_PROPERTY_INFO, *PHTTP_DELEGATE_REQUEST_PROPERTY_INFO;
-
-//
 // Structure defining format of transport address. Use pLocalAddress->sa_family
 // to determine whether this is an IPv4 address (AF_INET) or IPv6 (AF_INET6).
 //
@@ -1525,96 +1483,6 @@ typedef struct _HTTP_SSL_PROTOCOL_INFO
 
 } HTTP_SSL_PROTOCOL_INFO, *PHTTP_SSL_PROTOCOL_INFO;
 
-//
-// List of possible sizes for which information will be retured in HTTP_REQUEST_SIZING_INFO.
-//
-
-typedef enum  _HTTP_REQUEST_SIZING_TYPE
-{
-    HttpRequestSizingTypeTlsHandshakeLeg1ClientData, // Inbound/outbound data?
-    HttpRequestSizingTypeTlsHandshakeLeg1ServerData,
-    HttpRequestSizingTypeTlsHandshakeLeg2ClientData,
-    HttpRequestSizingTypeTlsHandshakeLeg2ServerData,
-    HttpRequestSizingTypeHeaders,
-    HttpRequestSizingTypeMax
-
-} HTTP_REQUEST_SIZING_TYPE, *PHTTP_REQUEST_SIZING_TYPE;
-
-//
-// Flag values for HTTP_REQUEST_SIZING_INFO
-//
-
-#define HTTP_REQUEST_SIZING_INFO_FLAG_TCP_FAST_OPEN          0x00000001
-#define HTTP_REQUEST_SIZING_INFO_FLAG_TLS_SESSION_RESUMPTION 0x00000002
-#define HTTP_REQUEST_SIZING_INFO_FLAG_TLS_FALSE_START        0x00000004
-#define HTTP_REQUEST_SIZING_INFO_FLAG_FIRST_REQUEST          0x00000008
-
-//
-// HttpRequestInfoTypeSizeInfo payload. Contains size information filled by
-// each processsing stage.
-//
-
-typedef struct _HTTP_REQUEST_SIZING_INFO
-{
-    ULONGLONG Flags;
-    ULONG RequestIndex;
-    ULONG RequestSizingCount;
-    ULONGLONG RequestSizing[HttpRequestSizingTypeMax];
-
-} HTTP_REQUEST_SIZING_INFO, *PHTTP_REQUEST_SIZING_INFO;
-
-//
-// List of possible request timings for which information will be retured in
-// HTTP_REQUEST_TIMING_INFO. Not all timings apply for every request.
-//
-
-typedef enum  _HTTP_REQUEST_TIMING_TYPE
-{
-    HttpRequestTimingTypeConnectionStart,
-    HttpRequestTimingTypeDataStart,
-    HttpRequestTimingTypeTlsCertificateLoadStart,
-    HttpRequestTimingTypeTlsCertificateLoadEnd,
-    HttpRequestTimingTypeTlsHandshakeLeg1Start,
-    HttpRequestTimingTypeTlsHandshakeLeg1End,
-    HttpRequestTimingTypeTlsHandshakeLeg2Start,
-    HttpRequestTimingTypeTlsHandshakeLeg2End,
-    HttpRequestTimingTypeTlsAttributesQueryStart,
-    HttpRequestTimingTypeTlsAttributesQueryEnd,
-    HttpRequestTimingTypeTlsClientCertQueryStart,
-    HttpRequestTimingTypeTlsClientCertQueryEnd,
-    HttpRequestTimingTypeHttp2StreamStart,
-    HttpRequestTimingTypeHttp2HeaderDecodeStart,
-    HttpRequestTimingTypeHttp2HeaderDecodeEnd,
-    HttpRequestTimingTypeRequestHeaderParseStart,
-    HttpRequestTimingTypeRequestHeaderParseEnd,
-    HttpRequestTimingTypeRequestRoutingStart,
-    HttpRequestTimingTypeRequestRoutingEnd,
-    HttpRequestTimingTypeRequestQueuedForInspection,
-    HttpRequestTimingTypeRequestDeliveredForInspection,
-    HttpRequestTimingTypeRequestReturnedAfterInspection,
-    HttpRequestTimingTypeRequestQueuedForDelegation,
-    HttpRequestTimingTypeRequestDeliveredForDelegation,
-    HttpRequestTimingTypeRequestReturnedAfterDelegation,
-    HttpRequestTimingTypeRequestQueuedForIO,
-    HttpRequestTimingTypeRequestDeliveredForIO,
-    HttpRequestTimingTypeHttp3StreamStart,
-    HttpRequestTimingTypeHttp3HeaderDecodeStart,
-    HttpRequestTimingTypeHttp3HeaderDecodeEnd,
-    HttpRequestTimingTypeMax
-
-} HTTP_REQUEST_TIMING_TYPE, *PHTTP_REQUEST_TIMING_TYPE;
-
-//
-// HttpRequestInfoTypeTiming payload.  Contains information about how much
-// time was spent at each request processing stage.
-//
-
-typedef struct _HTTP_REQUEST_TIMING_INFO
-{
-    ULONG RequestTimingCount;
-    ULONGLONG RequestTiming[HttpRequestTimingTypeMax];
-
-} HTTP_REQUEST_TIMING_INFO, *PHTTP_REQUEST_TIMING_INFO;
 
 #if _WIN32_WINNT >= 0x0600
 
@@ -1628,12 +1496,7 @@ typedef enum _HTTP_REQUEST_INFO_TYPE
     HttpRequestInfoTypeChannelBind,
     HttpRequestInfoTypeSslProtocol,
     HttpRequestInfoTypeSslTokenBindingDraft,
-    HttpRequestInfoTypeSslTokenBinding,
-    HttpRequestInfoTypeRequestTiming,
-    HttpRequestInfoTypeTcpInfoV0,
-    HttpRequestInfoTypeRequestSizing,
-    HttpRequestInfoTypeQuicStats,
-    HttpRequestInfoTypeTcpInfoV1,
+    HttpRequestInfoTypeSslTokenBinding
 
 } HTTP_REQUEST_INFO_TYPE, *PHTTP_REQUEST_INFO_TYPE;
 
@@ -1935,13 +1798,8 @@ typedef struct _HTTP_RESPONSE_V1
 // to the Http Server API for content negotiation  used when serving from the
 // the kernel response cache.
 //
-// HTTP_RESPONSE_FLAG_MORE_ENTITY_BODY_EXISTS - there is more entity body
-// to be read for this response.  Otherwise, there is no entity body or
-// all of the entity body was copied into pEntityChunks.
-//
 
 #define HTTP_RESPONSE_FLAG_MULTIPLE_ENCODINGS_AVAILABLE 0x00000001
-#define HTTP_RESPONSE_FLAG_MORE_ENTITY_BODY_EXISTS   0x00000002
 
 
 typedef enum _HTTP_RESPONSE_INFO_TYPE
@@ -2137,12 +1995,6 @@ typedef enum _HTTP_SERVICE_CONFIG_ID
 
 #endif
 
-    HttpServiceConfigSslCertInfoEx,
-    HttpServiceConfigSslSniCertInfoEx,
-    HttpServiceConfigSslCcsCertInfoEx,
-    HttpServiceConfigSslScopedCcsCertInfo,
-    HttpServiceConfigSslScopedCcsCertInfoEx,
-
     HttpServiceConfigMax
 
 } HTTP_SERVICE_CONFIG_ID, *PHTTP_SERVICE_CONFIG_ID;
@@ -2168,12 +2020,6 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_KEY
 {
     PSOCKADDR pIpPort;
 } HTTP_SERVICE_CONFIG_SSL_KEY, *PHTTP_SERVICE_CONFIG_SSL_KEY;
-
-typedef struct _HTTP_SERVICE_CONFIG_SSL_KEY_EX
-{
-    SOCKADDR_STORAGE IpPort;
-} HTTP_SERVICE_CONFIG_SSL_KEY_EX, *PHTTP_SERVICE_CONFIG_SSL_KEY_EX;
-
 
 #if _WIN32_WINNT >= _WIN32_WINNT_WIN8
 
@@ -2201,7 +2047,7 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_PARAM
     GUID  AppId;              // A unique identifier that can be used to
                               // identify the app that has set this parameter
 
-    PWSTR pSslCertStoreName;  // Store name to read the server certificate
+    PWSTR  pSslCertStoreName; // Store name to read the server certificate
                               // from; defaults to "MY". Certificate must be
                               // stored in the LOCAL_MACHINE context.
 
@@ -2216,7 +2062,7 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_PARAM
     //  0x4     - Enable use of the DefaultRevocationFreshnessTime setting
     //  0x10000 - No usage check.
 
-    DWORD DefaultCertCheckMode;
+    DWORD  DefaultCertCheckMode;
 
     //
     // DefaultRevocationFreshnessTime (seconds) - How often to check for
@@ -2224,14 +2070,14 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_PARAM
     // then the new CRL is updated only if the previous one expires
     //
 
-    DWORD DefaultRevocationFreshnessTime;
+    DWORD  DefaultRevocationFreshnessTime;
 
     //
     // DefaultRevocationUrlRetrievalTimeout (milliseconds) - Timeout on
     // attempt to retrieve certificate revocation list from the remote URL.
     //
 
-    DWORD DefaultRevocationUrlRetrievalTimeout;
+    DWORD  DefaultRevocationUrlRetrievalTimeout;
 
     //
     // pDefaultSslCtlIdentifier - Restrict the certificate issuers that you
@@ -2239,120 +2085,22 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_PARAM
     // trusted by the machine.
     //
 
-    PWSTR pDefaultSslCtlIdentifier;
+    PWSTR  pDefaultSslCtlIdentifier;
 
     //
     // Store name under LOCAL_MACHINE where Ctl identified by
     // pDefaultSslCtlIdentifier is stored.
     //
 
-    PWSTR pDefaultSslCtlStoreName;
+    PWSTR  pDefaultSslCtlStoreName;
 
     //
     // Default Flags - see HTTP_SERVICE_CONFIG_SSL_FLAG* below.
     //
 
-    DWORD DefaultFlags;
+    DWORD  DefaultFlags;
 
 } HTTP_SERVICE_CONFIG_SSL_PARAM, *PHTTP_SERVICE_CONFIG_SSL_PARAM;
-
-//
-// The extended param type for the SSL extended params.
-//
-
-typedef enum _HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE
-{
-    ExParamTypeHttp2Window,
-    ExParamTypeHttp2SettingsLimits,
-    ExParamTypeHttpPerformance,
-    ExParamTypeMax
-} HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE, *PHTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE;
-
-typedef struct _HTTP2_WINDOW_SIZE_PARAM
-{
-    //
-    // The http/2 connection receive window size.
-    //
-
-    DWORD Http2ReceiveWindowSize;
-} HTTP2_WINDOW_SIZE_PARAM, *PHTTP2_WINDOW_SIZE_PARAM;
-
-typedef struct _HTTP2_SETTINGS_LIMITS_PARAM
-{
-    //
-    // The maximum allowed settings per SETTINGS frame.
-    //
-
-    DWORD Http2MaxSettingsPerFrame;
-
-    //
-    // The maximum settings we will process in a minute.
-    //
-
-    DWORD Http2MaxSettingsPerMinute;
-} HTTP2_SETTINGS_LIMITS_PARAM, *PHTTP2_SETTINGS_LIMITS_PARAM;
-
-typedef struct _HTTP_PERFORMANCE_PARAM
-{
-    //
-    // The knob to enable/disable buffering synchronous sends.
-    //
-
-    ULONGLONG SendBufferingFlags;
-
-    //
-    // The knob to enable aggressive ICW.
-    //
-
-    BOOLEAN EnableAggressiveICW;
-
-    //
-    // The maximum send buffer size for connections on this binding.
-    //
-
-    ULONG MaxBufferedSendBytes;
-
-    //
-    // The maximum number of concurrent streams on an http/2 connection.
-    //
-
-    ULONG MaxConcurrentClientStreams;
-
-} HTTP_PERFORMANCE_PARAM, *PHTTP_PERFORMANCE_PARAM;
-
-//
-// This defines the exteded params for the ssl config record.
-//
-
-typedef struct _HTTP_SERVICE_CONFIG_SSL_PARAM_EX
-{
-    //
-    // The id that decides which param property is passed below.
-    //
-
-    HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE ParamType;
-
-    //
-    // Flags for future use, if any.
-    //
-
-    ULONGLONG Flags;
-
-    //
-    // The property.
-    //
-
-    union
-    {
-        HTTP2_WINDOW_SIZE_PARAM Http2WindowSizeParam;
-        HTTP2_SETTINGS_LIMITS_PARAM Http2SettingsLimitsParam;
-        HTTP_PERFORMANCE_PARAM HttpPerformanceParam;
-    };
-} HTTP_SERVICE_CONFIG_SSL_PARAM_EX, *PHTTP_SERVICE_CONFIG_SSL_PARAM_EX;
-
-//
-// The SSL config flags.
-//
 
 #define HTTP_SERVICE_CONFIG_SSL_FLAG_USE_DS_MAPPER         0x00000001
 #define HTTP_SERVICE_CONFIG_SSL_FLAG_NEGOTIATE_CLIENT_CERT 0x00000002
@@ -2360,17 +2108,6 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_PARAM_EX
 #define HTTP_SERVICE_CONFIG_SSL_FLAG_NO_RAW_FILTER         0x00000004
 #endif // _WIN32_WINNT < 0x0600
 #define HTTP_SERVICE_CONFIG_SSL_FLAG_REJECT                0x00000008
-
-#define HTTP_SERVICE_CONFIG_SSL_FLAG_DISABLE_HTTP2         0x00000010
-#define HTTP_SERVICE_CONFIG_SSL_FLAG_DISABLE_QUIC          0x00000020
-#define HTTP_SERVICE_CONFIG_SSL_FLAG_DISABLE_TLS13         0x00000040
-
-#define HTTP_SERVICE_CONFIG_SSL_FLAG_DISABLE_OCSP_STAPLING 0x00000080
-#define HTTP_SERVICE_CONFIG_SSL_FLAG_ENABLE_TOKEN_BINDING  0x00000100
-#define HTTP_SERVICE_CONFIG_SSL_FLAG_LOG_EXTENDED_EVENTS   0x00000200
-#define HTTP_SERVICE_CONFIG_SSL_FLAG_DISABLE_LEGACY_TLS    0x00000400
-#define HTTP_SERVICE_CONFIG_SSL_FLAG_ENABLE_SESSION_TICKET 0x00000800
-#define HTTP_SERVICE_CONFIG_SSL_FLAG_DISABLE_TLS12         0x00001000
 
 
 //
@@ -2403,24 +2140,6 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_CCS_SET
     HTTP_SERVICE_CONFIG_SSL_CCS_KEY KeyDesc;
     HTTP_SERVICE_CONFIG_SSL_PARAM   ParamDesc;
 } HTTP_SERVICE_CONFIG_SSL_CCS_SET, *PHTTP_SERVICE_CONFIG_SSL_CCS_SET;
-
-typedef struct _HTTP_SERVICE_CONFIG_SSL_SET_EX
-{
-    HTTP_SERVICE_CONFIG_SSL_KEY_EX   KeyDesc;
-    HTTP_SERVICE_CONFIG_SSL_PARAM_EX ParamDesc;
-} HTTP_SERVICE_CONFIG_SSL_SET_EX, *PHTTP_SERVICE_CONFIG_SSL_SET_EX;
-
-typedef struct _HTTP_SERVICE_CONFIG_SSL_SNI_SET_EX
-{
-    HTTP_SERVICE_CONFIG_SSL_SNI_KEY  KeyDesc;
-    HTTP_SERVICE_CONFIG_SSL_PARAM_EX ParamDesc;
-} HTTP_SERVICE_CONFIG_SSL_SNI_SET_EX, *PHTTP_SERVICE_CONFIG_SSL_SNI_SET_EX;
-
-typedef struct _HTTP_SERVICE_CONFIG_SSL_CCS_SET_EX
-{
-    HTTP_SERVICE_CONFIG_SSL_CCS_KEY  KeyDesc;
-    HTTP_SERVICE_CONFIG_SSL_PARAM_EX ParamDesc;
-} HTTP_SERVICE_CONFIG_SSL_CCS_SET_EX, *PHTTP_SERVICE_CONFIG_SSL_CCS_SET_EX;
 
 #endif
 
@@ -2464,30 +2183,6 @@ typedef struct _HTTP_SERVICE_CONFIG_SSL_CCS_QUERY
     HTTP_SERVICE_CONFIG_SSL_CCS_KEY KeyDesc;
     DWORD                           dwToken;
 } HTTP_SERVICE_CONFIG_SSL_CCS_QUERY, *PHTTP_SERVICE_CONFIG_SSL_CCS_QUERY;
-
-typedef struct _HTTP_SERVICE_CONFIG_SSL_QUERY_EX
-{
-    HTTP_SERVICE_CONFIG_QUERY_TYPE  QueryDesc;
-    HTTP_SERVICE_CONFIG_SSL_KEY_EX  KeyDesc;
-    DWORD                           dwToken;
-    HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE ParamType;
-} HTTP_SERVICE_CONFIG_SSL_QUERY_EX, *PHTTP_SERVICE_CONFIG_SSL_QUERY_EX;
-
-typedef struct _HTTP_SERVICE_CONFIG_SSL_SNI_QUERY_EX
-{
-    HTTP_SERVICE_CONFIG_QUERY_TYPE  QueryDesc;
-    HTTP_SERVICE_CONFIG_SSL_SNI_KEY KeyDesc;
-    DWORD                           dwToken;
-    HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE ParamType;
-} HTTP_SERVICE_CONFIG_SSL_SNI_QUERY_EX, *PHTTP_SERVICE_CONFIG_SSL_SNI_QUERY_EX;
-
-typedef struct _HTTP_SERVICE_CONFIG_SSL_CCS_QUERY_EX
-{
-    HTTP_SERVICE_CONFIG_QUERY_TYPE  QueryDesc;
-    HTTP_SERVICE_CONFIG_SSL_CCS_KEY KeyDesc;
-    DWORD                           dwToken;
-    HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE ParamType;
-} HTTP_SERVICE_CONFIG_SSL_CCS_QUERY_EX, *PHTTP_SERVICE_CONFIG_SSL_CCS_QUERY_EX;
 
 #endif
 
@@ -2608,50 +2303,6 @@ typedef struct {
     HTTP_SERVICE_CONFIG_CACHE_PARAM     ParamDesc;
 } HTTP_SERVICE_CONFIG_CACHE_SET, *PHTTP_SERVICE_CONFIG_CACHE_SET;
 
-//
-// Input types for HttpQueryRequestProperty. Only types are public and not the API
-// so that IIS need not have their own types for public usage.
-//
-
-typedef enum _HTTP_REQUEST_PROPERTY
-{
-    HttpRequestPropertyIsb,
-    HttpRequestPropertyTcpInfoV0,
-    HttpRequestPropertyQuicStats,
-    HttpRequestPropertyTcpInfoV1,
-    HttpRequestPropertySni,
-} HTTP_REQUEST_PROPERTY, *PHTTP_REQUEST_PROPERTY;
-
-typedef struct _HTTP_QUERY_REQUEST_QUALIFIER_TCP
-{
-    ULONGLONG Freshness;
-} HTTP_QUERY_REQUEST_QUALIFIER_TCP, *PHTTP_QUERY_REQUEST_QUALIFIER_TCP;
-
-typedef struct _HTTP_QUERY_REQUEST_QUALIFIER_QUIC
-{
-    ULONGLONG Freshness;
-} HTTP_QUERY_REQUEST_QUALIFIER_QUIC, *PHTTP_QUERY_REQUEST_QUALIFIER_QUIC;
-
-#define HTTP_REQUEST_PROPERTY_SNI_HOST_MAX_LENGTH 255
-
-//
-// Flags inside HTTP_REQUEST_PROPERTY_SNI can have following values:
-// - HTTP_REQUEST_PROPERTY_SNI_FLAG_SNI_USED: Indicates that SNI was used for succesful
-//   endpoint lookup during handshake. If client sent the SNI but Http.sys still decided to
-//   use IP endpoint binding then this flag will not be set.
-// - HTTP_REQUEST_PROPERTY_SNI_FLAG_NO_SNI: Indicates that client did not send the SNI.
-//   If this flag is set, HTTP_REQUEST_PROPERTY_SNI_FLAG_SNI_USED can not be set.
-//
-
-#define HTTP_REQUEST_PROPERTY_SNI_FLAG_SNI_USED 0x00000001
-#define HTTP_REQUEST_PROPERTY_SNI_FLAG_NO_SNI   0x00000002
-
-typedef struct _HTTP_REQUEST_PROPERTY_SNI
-{
-    WCHAR Hostname[HTTP_REQUEST_PROPERTY_SNI_HOST_MAX_LENGTH + 1];
-    ULONG Flags;
-} HTTP_REQUEST_PROPERTY_SNI, *PHTTP_REQUEST_PROPERTY_SNI;
-
 
 //
 // Define our API linkage.
@@ -2737,25 +2388,25 @@ HTTPAPI_LINKAGE
 ULONG
 WINAPI
 HttpSetRequestQueueProperty(
-    _In_ HANDLE RequestQueueHandle,
-    _In_ HTTP_SERVER_PROPERTY Property,
+    IN HANDLE RequestQueueHandle,
+    IN HTTP_SERVER_PROPERTY Property,
     _In_reads_bytes_(PropertyInformationLength) PVOID PropertyInformation,
-    _In_ ULONG PropertyInformationLength,
-    _Reserved_ ULONG Reserved1,
-    _Reserved_ PVOID Reserved2
+    IN ULONG PropertyInformationLength,
+    _Reserved_ IN ULONG Reserved1,
+    _Reserved_ IN PVOID Reserved2
     );
 
 HTTPAPI_LINKAGE
 ULONG
 WINAPI
 HttpQueryRequestQueueProperty(
-    _In_ HANDLE RequestQueueHandle,
-    _In_ HTTP_SERVER_PROPERTY Property,
+    IN HANDLE RequestQueueProperty,
+    IN HTTP_SERVER_PROPERTY Property,
     _Out_writes_bytes_to_opt_(PropertyInformationLength, *ReturnLength) PVOID PropertyInformation,
-    _In_ ULONG PropertyInformationLength,
-    _Reserved_ ULONG Reserved1,
-    _Out_opt_ PULONG ReturnLength,
-    _Reserved_ PVOID Reserved2
+    IN ULONG PropertyInformationLength,
+    _Reserved_ IN ULONG Reserved1,
+    _Out_opt_ PULONG ReturnLength OPTIONAL,
+    _Reserved_ IN PVOID Reserved2
     );
 
 HTTPAPI_LINKAGE
@@ -3136,56 +2787,48 @@ HTTPAPI_LINKAGE
 ULONG
 WINAPI
 HttpSetServiceConfiguration(
-    _Reserved_ HANDLE ServiceHandle,
-    _In_ HTTP_SERVICE_CONFIG_ID ConfigId,
-    _In_reads_bytes_(ConfigInformationLength) PVOID pConfigInformation,
-    _In_ ULONG ConfigInformationLength,
-    _Reserved_ LPOVERLAPPED pOverlapped
+    _Reserved_ IN HANDLE ServiceHandle,
+    IN HTTP_SERVICE_CONFIG_ID ConfigId,
+    _In_reads_bytes_(ConfigInformationLength) IN PVOID pConfigInformation,
+    IN ULONG ConfigInformationLength,
+    _Reserved_ IN LPOVERLAPPED pOverlapped
     );
 
 HTTPAPI_LINKAGE
 ULONG
 WINAPI
 HttpUpdateServiceConfiguration(
-    _Reserved_ HANDLE Handle,
-    _In_ HTTP_SERVICE_CONFIG_ID ConfigId,
-    _In_reads_bytes_(ConfigInfoLength) PVOID ConfigInfo,
-    _In_ ULONG ConfigInfoLength,
-    _Reserved_ LPOVERLAPPED Overlapped
+    __reserved __in HANDLE Handle,
+    __in HTTP_SERVICE_CONFIG_ID ConfigId,
+    __in_bcount(ConfigInfoLength) PVOID ConfigInfo,
+    __in ULONG ConfigInfoLength,
+    __reserved __in LPOVERLAPPED Overlapped
     );
 
 HTTPAPI_LINKAGE
 ULONG
 WINAPI
 HttpDeleteServiceConfiguration(
-    _Reserved_ HANDLE ServiceHandle,
-    _In_ HTTP_SERVICE_CONFIG_ID ConfigId,
-    _In_reads_bytes_(ConfigInformationLength) PVOID pConfigInformation,
-    _In_ ULONG ConfigInformationLength,
-    _Reserved_ LPOVERLAPPED pOverlapped
+    _Reserved_ IN HANDLE ServiceHandle,
+    IN HTTP_SERVICE_CONFIG_ID ConfigId,
+    _In_reads_bytes_(ConfigInformationLength) IN PVOID pConfigInformation,
+    IN ULONG ConfigInformationLength,
+    _Reserved_ IN LPOVERLAPPED pOverlapped
     );
 
 HTTPAPI_LINKAGE
 ULONG
 WINAPI
 HttpQueryServiceConfiguration(
-    _Reserved_ HANDLE ServiceHandle,
-    _In_ HTTP_SERVICE_CONFIG_ID ConfigId,
-    _In_reads_bytes_opt_(InputLength) PVOID pInput,
-    _In_ ULONG InputLength,
-    _Out_writes_bytes_to_opt_(OutputLength, *pReturnLength) PVOID pOutput,
-    _In_ ULONG OutputLength,
-    _Out_opt_ PULONG pReturnLength,
-    _Reserved_ LPOVERLAPPED pOverlapped
-    );
-
-ULONG
-WINAPI
-HttpGetExtension(
-    __in HTTPAPI_VERSION Version,
-    __in ULONG Extension,
-    __out PVOID __bcount(BufferSize) Buffer,
-    __in ULONG BufferSize
+    _Reserved_ IN HANDLE ServiceHandle,
+    IN HTTP_SERVICE_CONFIG_ID ConfigId,
+    _In_reads_bytes_opt_(InputLength) IN PVOID pInput OPTIONAL,
+    IN ULONG InputLength OPTIONAL,
+    _Out_writes_bytes_to_opt_(OutputLength, *pReturnLength)
+    OUT PVOID pOutput OPTIONAL,
+    IN ULONG OutputLength OPTIONAL,
+    _Out_opt_ OUT PULONG pReturnLength OPTIONAL,
+    _Reserved_ IN LPOVERLAPPED pOverlapped
     );
 
 

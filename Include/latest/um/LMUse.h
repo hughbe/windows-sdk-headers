@@ -218,66 +218,9 @@ typedef struct _USE_INFO_5 {
 
 #define USE_DEFAULT_CREDENTIALS 0x4  // No explicit credentials passed to NetUseAdd
 
-//
-// Enforce connection level integrity and privacy.
-//
 
 #define CREATE_REQUIRE_CONNECTION_INTEGRITY 0x8
 #define CREATE_REQUIRE_CONNECTION_PRIVACY   0x10
-
-//
-// Persist the mapping in the registry. (Only valid for global mappings.)
-//
-
-#define CREATE_PERSIST_MAPPING   0x20
-
-//
-// Enables write-through semantics on all files opened via this mapping.
-//
-
-#define CREATE_WRITE_THROUGH_SEMANTICS 0x40
-
-//
-// Enables compression semantics on all files opened via this mapping.
-//
-#define CREATE_COMPRESS_NETWORK_TRAFFIC 0x80
-
-//
-// Use options
-//
-#define USE_OPTION_DEFERRED_CONNECTION_PARAMS 'CfeD'
-#define USE_OPTION_TRANSPORT_PARAMS 'ParT'
-
-typedef struct _USE_OPTION_GENERIC {
-    ULONG  Tag;
-    USHORT Length;
-    USHORT Reserved;
-} USE_OPTION_GENERIC, *PUSE_OPTION_GENERIC;
-
-typedef struct _USE_OPTION_DEFERRED_CONNECTION_PARAMETERS {
-    ULONG  Tag;      // 'CfeD'
-    USHORT Length;   // sizeof(USE_OPTION_DEFERRED_CONNECTION_PARAMETERS) + sizeof(FILE_REMOTE_PROTOCOL_INFO)
-    USHORT Reserved; // 0
-    // Followed by FILE_REMOTE_PROTOCOL_INFO
-} USE_OPTION_DEFERRED_CONNECTION_PARAMETERS, *PUSE_OPTION_DEFERRED_CONNECTION_PARAMETERS ;
-
-typedef enum _TRANSPORT_TYPE {
-   UseTransportType_None,
-   UseTransportType_Wsk,
-   UseTransportType_Quic
-} TRANSPORT_TYPE, *PTRANSPORT_TYPE;
-
-typedef struct _TRANSPORT_INFO {
-    TRANSPORT_TYPE Type;
-    // TODO: port number
-} TRANSPORT_INFO, *PTRANSPORT_INFO;
-
-typedef struct _USE_OPTION_TRANSPORT_PARAMETERS {
-    ULONG  Tag;      // 'ParT'
-    USHORT Length;   // sizeof(USE_OPTION_TRANSPORT_PARAMETERS) + sizeof(TRANSPORT_TYPE)
-    USHORT Reserved; // 0
-    // Followed by TRANSPORT_INFO
-} USE_OPTION_TRANSPORT_PARAMETERS, *PUSE_OPTION_TRANSPORT_PARAMETERS ;
 
 #ifdef __cplusplus
 }

@@ -14,10 +14,6 @@
 #include <corecrt_memcpy_s.h>
 #include <vcruntime_string.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 #ifndef __midl
 
 _CRT_BEGIN_C_HEADER
@@ -77,7 +73,7 @@ _ACRTIMP int __cdecl _memicmp_l(
 
 
 
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
 
     _CRT_NONSTDC_DEPRECATE(_memccpy)
     _ACRTIMP void* __cdecl memccpy(
@@ -118,5 +114,3 @@ _ACRTIMP int __cdecl _memicmp_l(
 _CRT_END_C_HEADER
 
 #endif // !__midl
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

@@ -1,5 +1,4 @@
 
-
 //
 // Pointer size in bytes
 //
@@ -48,22 +47,7 @@
 #define AsApcListHead 0x0
 #define AsProcess 0x10
 #define AsKernelApcPending 0x15
-#define AsUserApcPendingAll 0x16
-#define KAPC_STATE_ANY_USER_APC_PENDING_MASK 0x3
-
-
-//
-// Apc Record Structure Offset Definitions
-//
-
-#define ArNormalRoutine 0x0
-#define ArNormalContext 0x4
-#define ArSystemArgument1 0x8
-#define ArSystemArgument2 0xc
-#define ArFlags 0x10
-#define KAPC_RECORD_LENGTH 0x18
-#define KAPC_RECORD_FLAGS_CHECK_ALERT 0x1
-
+#define AsUserApcPending 0x16
 
 //
 // Bug Check Code Definitions
@@ -198,8 +182,8 @@
 // System DLL Init Block Structure Offset Definitions
 //
 
-#define IbCfgBitMap 0xb8
-#define IbWow64CfgBitMap 0xc8
+#define IbCfgBitMap 0xb0
+#define IbWow64CfgBitMap 0xc0
 #define IbMitigationOptionsMap 0xa0
 #define PS_MITIGATION_OPTION_BITS_PER_OPTION 0x4
 #define PS_MITIGATION_OPTION_ALWAYS_ON 0x1
@@ -207,7 +191,6 @@
 #define PS_MITIGATION_OPTION_MASK 0x3
 #define PS_MITIGATION_OPTION_RETURN_FLOW_GUARD 0x10
 #define PS_MITIGATION_OPTION_RESTRICT_SET_THREAD_CONTEXT 0x13
-#define PS_MITIGATION_OPTION_CET_USER_SHADOW_STACKS 0x1f
 
 //
 // User Shared Data Structure Offset Definitions
@@ -321,7 +304,6 @@
 #define STATUS_WAKE_SYSTEM 0x40000294
 #define STATUS_WAKE_SYSTEM_DEBUGGER 0x80000007
 #define STATUS_SET_CONTEXT_DENIED 0xc000060a
-#define STATUS_RETURN_ADDRESS_HIJACK_ATTEMPT 0x80000033
 
 //
 // Fast Fail Code Definitions
@@ -332,7 +314,6 @@
 #define FAST_FAIL_INVALID_CONTROL_STACK 0x2f
 #define FAST_FAIL_SET_CONTEXT_DENIED 0x30
 #define FAST_FAIL_ENCLAVE_CALL_FAILURE 0x35
-#define FAST_FAIL_FLAGS_CORRUPTION 0x3b
 
 //
 // APC Object Structure Offset Definitions
@@ -430,8 +411,7 @@
 #define InMode 0x40
 #define InServiceCount 0x48
 #define InDispatchCount 0x4c
-#define InTrapFrame 0x54
-#define InterruptObjectLength 0xd0
+#define InterruptObjectLength 0xb0
 
 //
 // Process Object Structure Offset Definitions
@@ -455,8 +435,8 @@
 #define PrKernelTime 0x98
 #define PrUserTime 0x9c
 #define PrInstrumentationCallback 0xa4
-#define KernelProcessObjectLength 0xe0
-#define ExecutiveProcessObjectLength 0x600
+#define KernelProcessObjectLength 0xb0
+#define ExecutiveProcessObjectLength 0x3e8
 #define Win32BatchFlushCallout 0x7
 
 //
@@ -492,8 +472,8 @@
 // Thread Object Structure Offset Definitions
 //
 
-#define EtCid 0x2a4
-#define EtPicoContext 0x374
+#define EtCid 0x374
+#define EtPicoContext 0x43c
 
 #define ThType 0x0
 #define ThSize 0x2
@@ -507,7 +487,7 @@
 #define THREAD_FLAGS_GROUP_SCHEDULING 0x4
 #define THREAD_FLAGS_AFFINITY_SET 0x8
 #define THREAD_FLAGS_ACCOUNTING_CSWITCH 0x36
-#define THREAD_FLAGS_ACCOUNTING_INTERRUPT 0x72
+#define THREAD_FLAGS_ACCOUNTING_INTERRUPT 0x32
 #define THREAD_FLAGS_ACCOUNTING_ANY 0x3e
 #define ThDebugActive 0x3
 #define ThThreadControlFlags 0x2
@@ -520,7 +500,6 @@
 #define ThKernelStack 0x40
 #define ThThreadLock 0x2c
 #define ThApcState 0x64
-#define ThProcess 0x150
 #define ThNextProcessor 0x148
 #define ThAdjustReason 0x15e
 #define ThAdjustIncrement 0x15f
@@ -540,11 +519,7 @@
 #define KTHREAD_RESTRICTED_GUI_THREAD_MASK 0x200000
 #define KTHREAD_SYSTEM_THREAD_BIT 0xa
 #define KTHREAD_QUEUE_DEFER_PREEMPTION_BIT 0xb
-#define KTHREAD_BAM_QOS_LEVEL_MASK 0xff
-#define KTHREAD_CET_USER_SHADOW_STACK_BIT 0x14
-
-#define DEBUG_ACTIVE_ALT_SYSCALL_HANDLER 0x24
-#define PsSystemCallMapToSystem 0x1
+#define KTHREAD_BAM_QOS_LEVEL_MASK 0x3
 
 #define ThMiscFlags 0x4c
 #define ThThreadFlags 0x50
@@ -556,11 +531,12 @@
 #define ThFirstArgument 0x5c
 #define ThApcStateIndex 0x16a
 #define ThSystemCallNumber 0x58
+#define ThProcess 0x150
 #define ThWin32Thread 0x11c
 #define ThStackBase 0x28
 #define ThLegoData 0x1b8
-#define KernelThreadObjectLength 0x278
-#define ExecutiveThreadObjectLength 0x4d8
+#define KernelThreadObjectLength 0x348
+#define ExecutiveThreadObjectLength 0x478
 
 #define KF_VFP_32REG 0x10
 
@@ -611,7 +587,7 @@
 #define PeBeingDebugged 0x2
 #define PeProcessParameters 0x10
 #define PeKernelCallbackTable 0x2c
-#define ProcessEnvironmentBlockLength 0x480
+#define ProcessEnvironmentBlockLength 0x468
 
 //
 // Process Parameters Block Structure Offset Definitions
@@ -724,17 +700,13 @@
 #define PERF_INTERRUPT_FLAG 0x4000
 #define PERF_SYSCALL_OFFSET 0x8
 #define PERF_SYSCALL_FLAG 0x40
-#define PERF_SPEC_CONTROL_OFFSET 0x14
-#define PERF_SPEC_CONTROL_FLAG 0x2
 #define NTOS_YIELD_MACRO 0x1
-#define EtwTSLength 0x20
+#define EtwTSLength 0x18
 
 //
 // Extended context structure offset definitions
 //
 
-#define CxxAllOffset 0x0
-#define CxxAllLength 0x4
 #define CxxLegacyOffset 0x8
 #define CxxLegacyLength 0xc
 #define CxxXStateOffset 0x10
@@ -746,11 +718,22 @@
 
 #define AfCount 0x0
 #define AfBitmap 0x8
-#define PbEntropyCount 0x97c
-#define PbEntropyBuffer 0x980
+#define PbEntropyCount 0x978
+#define PbEntropyBuffer 0x97c
 #define KENTROPY_TIMING_INTERRUPTS_PER_BUFFER 0x400
 #define KENTROPY_TIMING_BUFFER_MASK 0x7ff
 #define KENTROPY_TIMING_ANALYSIS 0x0
+
+//
+// Apc Record Structure Offset Definitions
+//
+
+#define ArNormalRoutine 0x0
+#define ArNormalContext 0x4
+#define ArSystemArgument1 0x8
+#define ArSystemArgument2 0xc
+#define ApcRecordLength 0x10
+
 
 //
 // Special Register Structure Offset Definition
@@ -860,7 +843,7 @@
 #define PcStartCycles 0xec8
 #define PcSpBase 0xc44
 #define PcCycleCounterHigh 0xef0
-#define ProcessorControlRegisterLength 0x6ae0
+#define ProcessorControlRegisterLength 0x5260
 
 //
 // Defines for user shared data
@@ -893,8 +876,8 @@
 #define PbIdleThread 0xc
 #define PbNumber 0x14
 #define PbPrcbLock 0x18
-#define PbKeSpinLockOrdering 0x748
-#define KI_SPINLOCK_ORDER_PRCB_LOCK 0x80
+#define PbKeSpinLockOrdering 0x744
+#define KI_SPINLOCK_ORDER_PRCB_LOCK 0x40
 #define PbGroup 0x41c
 #define PbGroupIndex 0x41d
 #define PbProcessorState 0x20
@@ -907,12 +890,12 @@
 #define PbPriorityState 0x1c
 #define PbLockQueue 0x480
 #define PbPPLookasideList 0x580
-#define PbPPNPagedLookasideList 0x4b00
-#define PbPPPagedLookasideList 0x5400
+#define PbPPNPagedLookasideList 0x3280
+#define PbPPPagedLookasideList 0x3b80
 #define PbPacketBarrier 0x600
 #define PbDeferredReadyListHead 0x604
 #define PbLookasideIrpFloat 0x650
-#define PbRequestMailbox 0x6100
+#define PbRequestMailbox 0x4880
 #define PbMailbox 0x680
 #define PbDpcGate 0x700
 #define PbWaitListHead 0x780
@@ -951,11 +934,11 @@
 #define PbAdjustDpcThreshold 0x914
 #define PbParentNode 0x938
 #define PbStartCycles 0x948
-#define PbPageColor 0xaac
-#define PbNodeColor 0xab0
-#define PbNodeShiftedColor 0xab4
-#define PbSecondaryColorMask 0xab8
-#define PbCycleTime 0xac0
+#define PbPageColor 0xaa8
+#define PbNodeColor 0xaac
+#define PbNodeShiftedColor 0xab0
+#define PbSecondaryColorMask 0xab4
+#define PbCycleTime 0xab8
 #define PbFastReadNoWait 0x638
 #define PbFastReadWait 0x63c
 #define PbFastReadNotPossible 0x640
@@ -974,8 +957,8 @@
 #define PbPanicMiniStack 0xfd0
 #define PbCycleCounterHigh 0x970
 #define ThNpxState 0x85
-#define ThUserRoBase 0x378
-#define ThUserRwBase 0x37c
+#define ThUserRoBase 0x440
+#define ThUserRwBase 0x444
 
 //
 // KTHREAD state
@@ -998,7 +981,7 @@
 #define IPI_APC 0x1
 #define IPI_DPC 0x2
 #define IPI_FREEZE 0x4
-#define IPI_PACKET_READY 0x5
+#define IPI_PACKET_READY 0x6
 
 //
 // Processor Idle Times Offset Definitions
@@ -1011,7 +994,7 @@
 // Immediate Interprocessor Command Definitions
 //
 
-#define IPI_PACKET_READY 0x5
+#define IPI_PACKET_READY 0x6
 
 //
 // Time Fields (TIME_FIELDS) Structure Offset Definitions
@@ -1751,7 +1734,7 @@
 // EPROCESS
 //
 
-#define EpDebugPort 0x18c
+#define EpDebugPort 0x15c
 
 //
 // Pico Process Provider Routines
@@ -1801,4 +1784,3 @@
 
 #define AffinityExLength 0xc
 #include "kxarm.h"
-;

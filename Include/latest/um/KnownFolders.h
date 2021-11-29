@@ -278,7 +278,7 @@ DEFINE_KNOWN_FOLDER(FOLDERID_GameTasks,           0x54fae61, 0x4dd8, 0x4787, 0x8
 // {4C5C32FF-BB9D-43b0-B5B4-2D72E54EAAA4}
 DEFINE_KNOWN_FOLDER(FOLDERID_SavedGames,          0x4c5c32ff, 0xbb9d, 0x43b0, 0xb5, 0xb4, 0x2d, 0x72, 0xe5, 0x4e, 0xaa, 0xa4);
 
-// {CAC52C1A-B53D-4edc-92D7-6B2E8AC19434} - deprecated
+// {CAC52C1A-B53D-4edc-92D7-6B2E8AC19434}
 DEFINE_KNOWN_FOLDER(FOLDERID_Games,               0xcac52c1a, 0xb53d, 0x4edc, 0x92, 0xd7, 0x6b, 0x2e, 0x8a, 0xc1, 0x94, 0x34);
 
 // {98ec0e18-2098-4d44-8644-66979315a281}
@@ -368,12 +368,11 @@ DEFINE_KNOWN_FOLDER(FOLDERID_Screenshots,         0xb7bede81, 0xdf94, 0x4682, 0x
 // {AB5FB87B-7CE2-4F83-915D-550846C9537B}
 DEFINE_KNOWN_FOLDER(FOLDERID_CameraRoll,          0xab5fb87b, 0x7ce2, 0x4f83, 0x91, 0x5d, 0x55, 0x8, 0x46, 0xc9, 0x53, 0x7b);
 
-// {A52BBA46-E9E1-435f-B3D9-28DAA648C0F6} - deprecated
-// Same GUID as FOLDERID_OneDrive
+// {A52BBA46-E9E1-435f-B3D9-28DAA648C0F6}
 DEFINE_KNOWN_FOLDER(FOLDERID_SkyDrive,            0xa52bba46, 0xe9e1, 0x435f, 0xb3, 0xd9, 0x28, 0xda, 0xa6, 0x48, 0xc0, 0xf6);
 
 // {A52BBA46-E9E1-435f-B3D9-28DAA648C0F6}
-// Same GUID as FOLDERID_SkyDrive
+// Same as FOLDERID_SkyDrive and later we'll remove FOLDERID_SkyDrive
 DEFINE_KNOWN_FOLDER(FOLDERID_OneDrive,            0xa52bba46, 0xe9e1, 0x435f, 0xb3, 0xd9, 0x28, 0xda, 0xa6, 0x48, 0xc0, 0xf6);
 
 // {24D89E24-2F19-4534-9DDE-6A6671FBB8FE}

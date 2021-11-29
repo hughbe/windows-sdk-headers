@@ -726,23 +726,6 @@ public:
     ) = 0;
 };
 
-class __declspec(uuid("3816f517-f631-49f0-8b51-16d6f0c6ffb2"))
-IHttpRequest4 : public IHttpRequest3
-{
-public:
-    virtual
-    HRESULT
-    ReadEntityBody(
-        _Out_writes_bytes_all_(cbBuffer)
-        VOID*                       pvBuffer,
-        _In_      DWORD             cbBuffer,
-        _In_      BOOL              fAsync,
-        _In_      ULONG             ulFlags,
-        _Out_     DWORD *           pcbBytesReceived,
-        _Out_     BOOL *            pfCompletionPending = NULL
-    ) = 0;
-};
-
 class __declspec(uuid("cb1c40ca-70f2-41a0-add2-881f5ef57388"))
 IHttpCachePolicy
 {
@@ -1965,8 +1948,7 @@ public:
 //
 enum HTTP_SERVER_INTERFACE_VERSION
 {
-    HTTP_SERVER_INTERFACE_V2,
-    HTTP_SERVER_INTERFACE_V3
+    HTTP_SERVER_INTERFACE_V2
 };
 
 
@@ -2212,25 +2194,6 @@ public:
     GetWorkerProcessFramework(
         _Outptr_
         IWorkerProcessFramework **  ppWorkerProcessFramework
-    ) = 0;
-};
-
-class __declspec(uuid("f7a66d59-c0a2-48b5-a88f-be5975c960fb"))
-IHttpServer3 : public IHttpServer2
-{
-public:
-
-    virtual
-    HRESULT
-    QueryRequestProperty(
-        _In_ HTTP_OPAQUE_ID id,
-        _In_ HTTP_REQUEST_PROPERTY propertyId,
-        _In_reads_bytes_opt_(qualifierSize) PVOID pQualifier,
-        _In_ ULONG qualifierSize,
-        _Out_writes_bytes_to_opt_(outputBufferSize, *pcbBytesReturned) PVOID pOutput,
-        _In_ ULONG outputBufferSize,
-        _Out_opt_ PULONG pcbBytesReturned,
-        _In_ LPOVERLAPPED pOverlapped
     ) = 0;
 };
 

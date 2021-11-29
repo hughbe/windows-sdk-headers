@@ -103,7 +103,6 @@ extern "C"{
 #define EVCF_SETTINGSMODE            0x0020
 #define EVCF_OUTOFDISKSPACE          0x0040
 #define EVCF_USERCONSENTOBTAINED     0x0080
-#define EVCF_SYSTEMAUTORUN           0x0100
 
 // IEmptyVolumeCacheCallBack Flags
 #define EVCCBF_LASTNOTIFICATION  0x0001

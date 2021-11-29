@@ -114,7 +114,6 @@ typedef enum _RADIUS_ATTRIBUTE_TYPE {
     ratProviderName = 276,     /* Remote RADIUS server group name */
     ratClearTextPassword = 277,   /* The user password in clear text */
     ratSrcIPv6Address = 278,   /* Source IPv6 address */
-    ratCertificateThumbprint = 279, /* The thumbprint of client auth certificate */
 } RADIUS_ATTRIBUTE_TYPE;
 
 /*
@@ -318,9 +317,7 @@ typedef VOID (WINAPI *PRADIUS_EXTENSION_FREE_ATTRIBUTES)(
 #define AUTHSRV_AUTHORIZATION_VALUE_W \
     L"AuthorizationDLLs"
 
-#define AUTHSRV_ENFORCE_NP_FOR_PAP_CHALLENGE_RESPONSE_VALUE_W \
-    L"EnforceNetworkPolicyForPAPBasedChallengeResponse"
-	
+
 #if _WIN32_WINNT >= 0x0501
 
 /* Version of this spec. */

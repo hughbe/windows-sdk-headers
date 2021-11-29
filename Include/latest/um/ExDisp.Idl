@@ -110,7 +110,6 @@ library SHDocVw {
             [helpstring("Reserved")]                        navReserved4 = 0x10000000,
             [helpstring("Reserved")]                        navReserved5 = 0x20000000,
             [helpstring("Reserved")]                        navReserved6 = 0x40000000,
-            [helpstring("Reserved")]                        navReserved7 = 0x80000000,
         } BrowserNavConstants;
 
 cpp_quote("//;begin_internal")
@@ -120,7 +119,6 @@ cpp_quote("#define navServerRedirectedVtabSwitch navReserved3")
 cpp_quote("#define navVtabSwitchNotUserInitiatedAction navReserved4")
 cpp_quote("#define navCheckDontShowNeedIE navReserved5")
 cpp_quote("#define navCheckDontShowNeedHVSI navReserved6")
-cpp_quote("#define navCheckDontShowHVSINeedHost navReserved7")
 cpp_quote("//;end_internal")
 
         [id(DISPID_REFRESH), helpstring("Refresh the currently viewed page."), helpcontext(0x0000)]
@@ -928,22 +926,11 @@ cpp_quote("//;end_internal")
     }
 
     [
-        uuid(6cdf73b0-7f2f-451f-bc0f-63e0f3284e54),     // IID_IShellUIHelper9
-
-        helpstring("Shell UI Helper Control Interface 9"),
-        oleautomation, dual
-    ]
-    interface IShellUIHelper9 : IShellUIHelper8
-    {
-        [id(DISPID_GETOSSKU)] HRESULT GetOSSku([out, retval] DWORD* pdwResult);
-    }
-
-    [
         uuid(64AB4BB7-111E-11d1-8F79-00C04FC2FBE1)  // CLSID_ShellUIHelper
     ]
     coclass ShellUIHelper
     {
-        [default] interface IShellUIHelper9;
+        [default] interface IShellUIHelper8;
     }
 
     [

@@ -53,13 +53,6 @@ typedef interface IWscProduct2 IWscProduct2;
 #endif 	/* __IWscProduct2_FWD_DEFINED__ */
 
 
-#ifndef __IWscProduct3_FWD_DEFINED__
-#define __IWscProduct3_FWD_DEFINED__
-typedef interface IWscProduct3 IWscProduct3;
-
-#endif 	/* __IWscProduct3_FWD_DEFINED__ */
-
-
 #ifndef __IWSCProductList_FWD_DEFINED__
 #define __IWSCProductList_FWD_DEFINED__
 typedef interface IWSCProductList IWSCProductList;
@@ -583,229 +576,6 @@ EXTERN_C const IID IID_IWscProduct2;
 #endif 	/* __IWscProduct2_INTERFACE_DEFINED__ */
 
 
-#ifndef __IWscProduct3_INTERFACE_DEFINED__
-#define __IWscProduct3_INTERFACE_DEFINED__
-
-/* interface IWscProduct3 */
-/* [unique][dual][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IWscProduct3;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("55536524-D1D1-4726-8C7C-04996A1904E7")
-    IWscProduct3 : public IWscProduct2
-    {
-    public:
-        virtual /* [id][propget] */ HRESULT STDMETHODCALLTYPE get_AntivirusDaysUntilExpired( 
-            /* [retval][out] */ __RPC__out DWORD *pdwDays) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IWscProduct3Vtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IWscProduct3 * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IWscProduct3 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IWscProduct3 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            __RPC__in IWscProduct3 * This,
-            /* [out] */ __RPC__out UINT *pctinfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            __RPC__in IWscProduct3 * This,
-            /* [in] */ UINT iTInfo,
-            /* [in] */ LCID lcid,
-            /* [out] */ __RPC__deref_out_opt ITypeInfo **ppTInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            __RPC__in IWscProduct3 * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [size_is][in] */ __RPC__in_ecount_full(cNames) LPOLESTR *rgszNames,
-            /* [range][in] */ __RPC__in_range(0,16384) UINT cNames,
-            /* [in] */ LCID lcid,
-            /* [size_is][out] */ __RPC__out_ecount_full(cNames) DISPID *rgDispId);
-        
-        /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            IWscProduct3 * This,
-            /* [annotation][in] */ 
-            _In_  DISPID dispIdMember,
-            /* [annotation][in] */ 
-            _In_  REFIID riid,
-            /* [annotation][in] */ 
-            _In_  LCID lcid,
-            /* [annotation][in] */ 
-            _In_  WORD wFlags,
-            /* [annotation][out][in] */ 
-            _In_  DISPPARAMS *pDispParams,
-            /* [annotation][out] */ 
-            _Out_opt_  VARIANT *pVarResult,
-            /* [annotation][out] */ 
-            _Out_opt_  EXCEPINFO *pExcepInfo,
-            /* [annotation][out] */ 
-            _Out_opt_  UINT *puArgErr);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProductName )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProductState )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out WSC_SECURITY_PRODUCT_STATE *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_SignatureStatus )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out WSC_SECURITY_SIGNATURE_STATUS *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_RemediationPath )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProductStateTimestamp )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProductGuid )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__deref_out_opt BSTR *pVal);
-        
-        /* [helpstring][id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_ProductIsDefault )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out BOOL *pVal);
-        
-        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AntivirusScanSubstatus )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out WSC_SECURITY_PRODUCT_SUBSTATUS *peStatus);
-        
-        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AntivirusSettingsSubstatus )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out WSC_SECURITY_PRODUCT_SUBSTATUS *peStatus);
-        
-        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AntivirusProtectionUpdateSubstatus )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out WSC_SECURITY_PRODUCT_SUBSTATUS *peStatus);
-        
-        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FirewallDomainProfileSubstatus )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out WSC_SECURITY_PRODUCT_SUBSTATUS *peStatus);
-        
-        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FirewallPrivateProfileSubstatus )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out WSC_SECURITY_PRODUCT_SUBSTATUS *peStatus);
-        
-        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_FirewallPublicProfileSubstatus )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out WSC_SECURITY_PRODUCT_SUBSTATUS *peStatus);
-        
-        /* [id][propget] */ HRESULT ( STDMETHODCALLTYPE *get_AntivirusDaysUntilExpired )( 
-            __RPC__in IWscProduct3 * This,
-            /* [retval][out] */ __RPC__out DWORD *pdwDays);
-        
-        END_INTERFACE
-    } IWscProduct3Vtbl;
-
-    interface IWscProduct3
-    {
-        CONST_VTBL struct IWscProduct3Vtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IWscProduct3_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IWscProduct3_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IWscProduct3_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IWscProduct3_GetTypeInfoCount(This,pctinfo)	\
-    ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
-
-#define IWscProduct3_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
-    ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
-
-#define IWscProduct3_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
-    ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
-
-#define IWscProduct3_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
-    ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
-
-
-#define IWscProduct3_get_ProductName(This,pVal)	\
-    ( (This)->lpVtbl -> get_ProductName(This,pVal) ) 
-
-#define IWscProduct3_get_ProductState(This,pVal)	\
-    ( (This)->lpVtbl -> get_ProductState(This,pVal) ) 
-
-#define IWscProduct3_get_SignatureStatus(This,pVal)	\
-    ( (This)->lpVtbl -> get_SignatureStatus(This,pVal) ) 
-
-#define IWscProduct3_get_RemediationPath(This,pVal)	\
-    ( (This)->lpVtbl -> get_RemediationPath(This,pVal) ) 
-
-#define IWscProduct3_get_ProductStateTimestamp(This,pVal)	\
-    ( (This)->lpVtbl -> get_ProductStateTimestamp(This,pVal) ) 
-
-#define IWscProduct3_get_ProductGuid(This,pVal)	\
-    ( (This)->lpVtbl -> get_ProductGuid(This,pVal) ) 
-
-#define IWscProduct3_get_ProductIsDefault(This,pVal)	\
-    ( (This)->lpVtbl -> get_ProductIsDefault(This,pVal) ) 
-
-
-#define IWscProduct3_get_AntivirusScanSubstatus(This,peStatus)	\
-    ( (This)->lpVtbl -> get_AntivirusScanSubstatus(This,peStatus) ) 
-
-#define IWscProduct3_get_AntivirusSettingsSubstatus(This,peStatus)	\
-    ( (This)->lpVtbl -> get_AntivirusSettingsSubstatus(This,peStatus) ) 
-
-#define IWscProduct3_get_AntivirusProtectionUpdateSubstatus(This,peStatus)	\
-    ( (This)->lpVtbl -> get_AntivirusProtectionUpdateSubstatus(This,peStatus) ) 
-
-#define IWscProduct3_get_FirewallDomainProfileSubstatus(This,peStatus)	\
-    ( (This)->lpVtbl -> get_FirewallDomainProfileSubstatus(This,peStatus) ) 
-
-#define IWscProduct3_get_FirewallPrivateProfileSubstatus(This,peStatus)	\
-    ( (This)->lpVtbl -> get_FirewallPrivateProfileSubstatus(This,peStatus) ) 
-
-#define IWscProduct3_get_FirewallPublicProfileSubstatus(This,peStatus)	\
-    ( (This)->lpVtbl -> get_FirewallPublicProfileSubstatus(This,peStatus) ) 
-
-
-#define IWscProduct3_get_AntivirusDaysUntilExpired(This,pdwDays)	\
-    ( (This)->lpVtbl -> get_AntivirusDaysUntilExpired(This,pdwDays) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IWscProduct3_INTERFACE_DEFINED__ */
-
-
 #ifndef __IWSCProductList_INTERFACE_DEFINED__
 #define __IWSCProductList_INTERFACE_DEFINED__
 
@@ -1117,15 +887,15 @@ WSCDefaultProduct;
 #endif
 #endif /* __wscAPILib_LIBRARY_DEFINED__ */
 
-/* interface __MIDL_itf_iwscapi_0000_0006 */
+/* interface __MIDL_itf_iwscapi_0000_0005 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_iwscapi_0000_0006_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_iwscapi_0000_0006_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_iwscapi_0000_0005_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_iwscapi_0000_0005_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

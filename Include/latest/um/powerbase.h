@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * powerbase.h -- ApiSet Contract for api-ms-win-power-base-l1-1-0               *  
@@ -5,8 +6,8 @@
 * Copyright (c) Microsoft Corporation. All rights reserved.                     *
 *                                                                               *
 ********************************************************************************/
-
 #ifdef _MSC_VER
+
 #if (_MSC_VER > 1000)
 #pragma once
 #endif // _MSC_VER > 1000
@@ -25,11 +26,28 @@
 #include <minwindef.h>
 #endif
 
+/* APISET_NAME: api-ms-win-power-base-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_POWERBASE_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_POWERBASE_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #ifndef _HPOWERNOTIFY_DEF_
@@ -66,6 +84,7 @@ GetPwrCapabilities(
     );
 
 
+
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 POWER_PLATFORM_ROLE
 WINAPI
@@ -74,6 +93,7 @@ PowerDeterminePlatformRoleEx(
     );
 
 #endif
+
 
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 DWORD
@@ -85,6 +105,7 @@ PowerRegisterSuspendResumeNotification(
     );
 
 #endif
+
 
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 DWORD

@@ -26,7 +26,7 @@ extern "C" {
 
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                           //
-// TimeStamp Helpers                                                         //
+// TimeStamp Helpers                                                          //
 //                                                                           //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -58,8 +58,6 @@ PropKeyFindKeyGetPropVariant(
     _Inout_ PROPVARIANT *pValue
     );
 
-_At_(pList->AllocatedSizeInBytes, _Const_)
-_At_(pList->Count, _Const_)
 NTSTATUS
 PropKeyFindKeySetPropVariant(
     _Inout_ SENSOR_COLLECTION_LIST *pList,
@@ -301,26 +299,6 @@ CollectionsListSortSubscribedActivitiesByConfidence(
     _In_ PSENSOR_COLLECTION_LIST thresholds,
     _Inout_updates_bytes_(pCollection->AllocatedSizeInBytes) PSENSOR_COLLECTION_LIST pCollection
     );
-
-HRESULT
-InitPropVariantFromCLSIDArray(
-    _In_reads_(size) GUID *members,
-    _In_ ULONG size,
-    _Out_ PROPVARIANT *ppropvar
-);
-
-BOOLEAN
-IsSensorSubscribed(
-    _In_ PSENSOR_COLLECTION_LIST subscriptionList,
-    _In_ GUID currentType
-);
-
-BOOLEAN
-IsGUIDPresentInList(
-    _In_reads_(arrayLength) const GUID *guidArray,
-    _In_ const ULONG arrayLength,
-    _In_ const GUID *guidElem
-);
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #ifdef __cplusplus

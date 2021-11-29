@@ -964,15 +964,15 @@ PdhExpandWildCardPathW(
 #define PDH_LOG_TYPE_UNDEFINED      0
 #define PDH_LOG_TYPE_CSV            1
 #define PDH_LOG_TYPE_TSV            2
-#define PDH_LOG_TYPE_RETIRED_BIN    3   // Obsolete - not supported.
 #define PDH_LOG_TYPE_TRACE_KERNEL   4
 #define PDH_LOG_TYPE_TRACE_GENERIC  5
-#define PDH_LOG_TYPE_PERFMON        6   // Obsolete - not supported.
+#define PDH_LOG_TYPE_PERFMON        6
 #if (_WIN32_WINDOWS >= 0x0501 || _WIN32_WINNT >= 0x0501 || (defined(NTDDI_VERSION) && NTDDI_VERSION >= NTDDI_WINXP))
+//#define PDH_LOG_TYPE_BINARY         3 // this is the retired binary format
 #define PDH_LOG_TYPE_SQL            7
 #define PDH_LOG_TYPE_BINARY         8
 #else
-#define PDH_LOG_TYPE_BINARY         3   // Obsolete - not supported.
+#define PDH_LOG_TYPE_BINARY         3
 #endif
 
 PDH_FUNCTION
@@ -1089,7 +1089,7 @@ PDH_FUNCTION
 PdhFormatFromRawValue(
     _In_  DWORD                   dwCounterType,
     _In_  DWORD                   dwFormat,
-    _In_opt_ LONGLONG*            pTimeBase,
+    _In_  LONGLONG              * pTimeBase,
     _In_  PPDH_RAW_COUNTER        pRawValue1,
     _In_  PPDH_RAW_COUNTER        pRawValue2,
     _Out_ PPDH_FMT_COUNTERVALUE   pFmtValue

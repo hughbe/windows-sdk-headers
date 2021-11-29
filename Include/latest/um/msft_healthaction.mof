@@ -69,9 +69,4 @@ class MSFT_HealthAction : MSFT_StorageObject
         "The percentage of the action that has completed at the time that this value is requested."
         ), Units( "Percent" ), MinValue( 0 ), MaxValue( 100 )]
     UInt16 PercentComplete;
-
-    [Read, Description(
-        "The time that the action was started."
-        )]
-    Datetime StartTime;
 };

@@ -1,4 +1,4 @@
-﻿//+---------------------------------------------------------------------------
+//+---------------------------------------------------------------------------
 //
 //  Microsoft Windows
 //  Copyright (C) Microsoft Corporation, 1992-1999.
@@ -23,8 +23,8 @@
 #endif
 #include <winapifamily.h>
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 
 #include <minschannel.h>
@@ -317,8 +317,8 @@ typedef struct _SecPkgContext_UiInfo
 } SecPkgContext_UiInfo, *PSecPkgContext_UiInfo;
 
 typedef struct _SecPkgContext_EarlyStart
-{
-    DWORD dwEarlyStartFlags;
+{  
+    DWORD dwEarlyStartFlags;  
 } SecPkgContext_EarlyStart, *PSecPkgContext_EarlyStart;
 
 // Flag values for SecPkgContext_EarlyStart
@@ -338,16 +338,6 @@ typedef struct _SecPkgContext_KeyingMaterial
     DWORD cbKeyingMaterial; // Exported keying material length, in bytes.
     _Field_size_bytes_(cbKeyingMaterial) PBYTE pbKeyingMaterial; // Exported keying material.
 } SecPkgContext_KeyingMaterial, * PSecPkgContext_KeyingMaterial;
-
-typedef struct _SecPkgContext_KeyingMaterial_Inproc
-{
-    WORD cbLabel;           // Disambiguating ASCII label length, in bytes, greater than 0.
-    LPSTR pszLabel;         // Disambiguating ASCII label, NUL terminator will be removed by schannel.
-    WORD cbContextValue;    // Application context value length, in bytes, can be 0.
-    PBYTE pbContextValue;   // Application context value, NULL if cbContextValue == 0.
-    DWORD cbKeyingMaterial; // Requested keying material length, in bytes, greater than 0.
-    PBYTE pbKeyingMaterial; // Exported keying material.
-} SecPkgContext_KeyingMaterial_Inproc, * PSecPkgContext_KeyingMaterial_Inproc;
 
 typedef struct _SecPkgContext_SrtpParameters
 {
@@ -372,8 +362,7 @@ typedef struct _SecPkgContext_TokenBinding
 #define SCH_CRED_V2              0x00000002  // for legacy code
 #define SCH_CRED_VERSION         0x00000002  // for legacy code
 #define SCH_CRED_V3              0x00000003  // for legacy code
-#define SCHANNEL_CRED_VERSION    0x00000004  // for legacy code
-#define SCH_CREDENTIALS_VERSION  0x00000005
+#define SCHANNEL_CRED_VERSION    0x00000004
 
 
 struct _HMAPPER;
@@ -399,95 +388,6 @@ typedef struct _SCHANNEL_CRED
     DWORD           dwCredFormat;
 } SCHANNEL_CRED, *PSCHANNEL_CRED;
 
-
-#ifdef SCHANNEL_USE_BLACKLISTS
-    // Note, if you #define SCHANNEL_USE_BLACKLISTS
-    // then you must define UNICODE_STRING and PUNICODE_STRING
-    // or include Ntdef.h, SubAuth.h or Winternl.h.
-
-typedef enum _eTlsAlgorithmUsage
-{
-    TlsParametersCngAlgUsageKeyExchange,          // Key exchange algorithm. RSA, ECHDE, DHE, etc.
-    TlsParametersCngAlgUsageSignature,            // Signature algorithm. RSA, DSA, ECDSA, etc.
-    TlsParametersCngAlgUsageCipher,               // Encryption algorithm. AES, DES, RC4, etc.
-    TlsParametersCngAlgUsageDigest,               // Digest of cipher suite. SHA1, SHA256, SHA384, etc.
-    TlsParametersCngAlgUsageCertSig               // Signature and/or hash used to sign certificate. RSA, DSA, ECDSA, SHA1, SHA256, etc.
-} eTlsAlgorithmUsage;
-
-//
-// SCH_CREDENTIALS structures
-//
-typedef struct _CRYPTO_SETTINGS
-{
-    eTlsAlgorithmUsage  eAlgorithmUsage;         // How this algorithm is being used.
-    UNICODE_STRING      strCngAlgId;             // CNG algorithm identifier.
-    DWORD               cChainingModes;          // Set to 0 if CNG algorithm does not have a chaining mode.
-    PUNICODE_STRING     rgstrChainingModes;      // Set to NULL if CNG algorithm does not have a chaining mode.
-    DWORD               dwMinBitLength;          // Blacklist key sizes less than this. Set to 0 if not defined or CNG algorithm implies bit length.
-    DWORD               dwMaxBitLength;          // Blacklist key sizes greater than this. Set to 0 if not defined or CNG algorithm implies bit length.
-} CRYPTO_SETTINGS, *PCRYPTO_SETTINGS;
-
-typedef struct _TLS_PARAMETERS
-{
-    DWORD               cAlpnIds;                // Valid for server applications only. Must be zero otherwise. Number of ALPN IDs in rgstrAlpnIds; set to 0 if applies to all.
-    PUNICODE_STRING     rgstrAlpnIds;            // Valid for server applications only. Must be NULL otherwise. Array of ALPN IDs that the following settings apply to; set to NULL if applies to all.
-    DWORD               grbitDisabledProtocols;  // List protocols you DO NOT want negotiated.
-    DWORD               cDisabledCrypto;         // Number of CRYPTO_SETTINGS structures; set to 0 if there are none.
-    PCRYPTO_SETTINGS    pDisabledCrypto;         // Array of CRYPTO_SETTINGS structures; set to NULL if there are none;
-    DWORD               dwFlags;                 // Optional flags to pass; set to 0 if there are none.
-} TLS_PARAMETERS, *PTLS_PARAMETERS;
-
-#define TLS_PARAMS_OPTIONAL 0x00000001           // Valid for server applications only. Must be zero otherwise.
-                                                 // TLS_PARAMETERS that will only be honored if they do not cause this server to terminate the handshake.
-
-typedef struct _SCH_CREDENTIALS
-{
-    DWORD               dwVersion;               // Always SCH_CREDENTIALS_VERSION.
-    DWORD               dwCredFormat;
-    DWORD               cCreds;
-    PCCERT_CONTEXT     *paCred;
-    HCERTSTORE          hRootStore;
-
-    DWORD               cMappers;
-    struct _HMAPPER   **aphMappers;
-
-    DWORD               dwSessionLifespan;
-    DWORD               dwFlags;
-    DWORD               cTlsParameters;
-    PTLS_PARAMETERS     pTlsParameters;
-} SCH_CREDENTIALS, *PSCH_CREDENTIALS;
-
-#define SCH_CRED_MAX_SUPPORTED_PARAMETERS 16
-#define SCH_CRED_MAX_SUPPORTED_ALPN_IDS 16
-#define SCH_CRED_MAX_SUPPORTED_CRYPTO_SETTINGS 16
-#define SCH_CRED_MAX_SUPPORTED_CHAINING_MODES 16
-
-#endif
-
-typedef struct _SEND_GENERIC_TLS_EXTENSION
-{
-    WORD  ExtensionType;            // Code point of extension.
-    WORD  HandshakeType;            // Message type used to transport extension.
-    DWORD Flags;                    // Flags used to modify behavior. Must be zero.
-    WORD  BufferSize;               // Size in bytes of the extension data.
-    UCHAR Buffer[ANYSIZE_ARRAY];    // Extension data.
-} SEND_GENERIC_TLS_EXTENSION, *PSEND_GENERIC_TLS_EXTENSION;
-
-typedef struct _TLS_EXTENSION_SUBSCRIPTION
-{
-    WORD ExtensionType; // Code point of extension.
-    WORD HandshakeType; // Message type used to transport extension.
-} TLS_EXTENSION_SUBSCRIPTION, *PTLS_EXTENSION_SUBSCRIPTION;
-
-typedef struct _SUBSCRIBE_GENERIC_TLS_EXTENSION
-{
-    DWORD Flags;                                                // Flags used to modify behavior. Must be zero.
-    DWORD SubscriptionsCount;                                   // Number of elements in the Subscriptions array.
-    TLS_EXTENSION_SUBSCRIPTION Subscriptions[ANYSIZE_ARRAY];    // Array of TLS_EXTENSION_SUBSCRIPTION structures.
-} SUBSCRIBE_GENERIC_TLS_EXTENSION, *PSUBSCRIBE_GENERIC_TLS_EXTENSION;
-
-// Maximum number of TLS_EXTENSION_SUBSCRIPTION structures allowed.
-#define SCH_MAX_EXT_SUBSCRIPTIONS 2
 
 // Values for SCHANNEL_CRED dwCredFormat field.
 #define SCH_CRED_FORMAT_CERT_CONTEXT    0x00000000
@@ -614,13 +514,6 @@ typedef struct _SCHANNEL_CERT_HASH_STORE
 //  SCH_USE_PRESHAREDKEY_ONLY
 //      This flag instructs schannel to select only PSK cipher suites and
 //      disable all other cipher suites.
-//
-//  SCH_USE_DTLS_ONLY
-//      This flag instructs schannel to select only DTLS protocols.
-//
-//  SCH_ALLOW_NULL_ENCRYPTION
-//      This flag instructs schannel to allow NULL encryption cipher suites.
-//      For example: TLS_RSA_WITH_NULL_SHA256.
 //+-------------------------------------------------------------------------
 #define SCH_CRED_NO_SYSTEM_MAPPER                    0x00000002
 #define SCH_CRED_NO_SERVERNAME_CHECK                 0x00000004
@@ -650,8 +543,6 @@ typedef struct _SCHANNEL_CERT_HASH_STORE
 #define SCH_SEND_AUX_RECORD                          0x00200000
 #define SCH_USE_STRONG_CRYPTO                        0x00400000
 #define SCH_USE_PRESHAREDKEY_ONLY                    0x00800000
-#define SCH_USE_DTLS_ONLY                            0x01000000
-#define SCH_ALLOW_NULL_ENCRYPTION                    0x02000000
 
 //
 //
@@ -789,11 +680,11 @@ typedef struct _SCHANNEL_CLIENT_SIGNATURE
 #define SP_PROT_DTLS                    (SP_PROT_DTLS_SERVER | \
                                          SP_PROT_DTLS_CLIENT )
 
-#define SP_PROT_DTLS1_0_SERVER          SP_PROT_DTLS_SERVER
+#define SP_PROT_DTLS1_0_SERVER          SP_PROT_DTLS_SERVER 
 #define SP_PROT_DTLS1_0_CLIENT          SP_PROT_DTLS_CLIENT
 #define SP_PROT_DTLS1_0                 (SP_PROT_DTLS1_0_SERVER | SP_PROT_DTLS1_0_CLIENT)
 
-#define SP_PROT_DTLS1_2_SERVER          0x00040000
+#define SP_PROT_DTLS1_2_SERVER          0x00040000 
 #define SP_PROT_DTLS1_2_CLIENT          0x00080000
 #define SP_PROT_DTLS1_2                 (SP_PROT_DTLS1_2_SERVER | SP_PROT_DTLS1_2_CLIENT)
 
@@ -815,11 +706,6 @@ typedef struct _SCHANNEL_CLIENT_SIGNATURE
 
 #define SP_PROT_TLS1_1PLUS              (SP_PROT_TLS1_1PLUS_SERVER | \
                                          SP_PROT_TLS1_1PLUS_CLIENT)
-
-#define SP_PROT_TLS1_3PLUS_SERVER       SP_PROT_TLS1_3_SERVER
-#define SP_PROT_TLS1_3PLUS_CLIENT       SP_PROT_TLS1_3_CLIENT
-#define SP_PROT_TLS1_3PLUS              (SP_PROT_TLS1_3PLUS_SERVER | \
-                                         SP_PROT_TLS1_3PLUS_CLIENT)
 
 #define SP_PROT_TLS1_X_SERVER           (SP_PROT_TLS1_0_SERVER | \
                                          SP_PROT_TLS1_1_SERVER | \
@@ -844,15 +730,6 @@ typedef struct _SCHANNEL_CLIENT_SIGNATURE
 #define SP_PROT_X_SERVERS               (SP_PROT_SERVERS | \
                                          SP_PROT_TLS1_X_SERVER | \
                                          SP_PROT_DTLS1_X_SERVER )
-
-
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 
 //
 // Helper function used to flush the SSL session cache.
@@ -1072,44 +949,7 @@ SslGetServerIdentity(
     _Out_                                   PDWORD      ServerIdentitySize,
     _In_                                    DWORD       Flags);
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
-typedef struct _SCH_EXTENSION_DATA
-{
-    WORD ExtensionType;
-    const BYTE* pExtData;
-    DWORD cbExtData;
-}SCH_EXTENSION_DATA;
 
-typedef enum _SchGetExtensionsOptions
-{
-    SCH_EXTENSIONS_OPTIONS_NONE = 0x0, 
-    SCH_NO_RECORD_HEADER = 0x1  // Specifies that the ClientHello message does not contain the record header.
-}SchGetExtensionsOptions;
-DEFINE_ENUM_FLAG_OPERATORS(SchGetExtensionsOptions);
-
-typedef SECURITY_STATUS
-(WINAPI * SslGetExtensionsFn)
-(
-    _In_reads_(clientHelloByteSize) const BYTE* clientHello,
-    _In_ DWORD clientHelloByteSize,
-    _Inout_updates_(genericExtensionsCount) SCH_EXTENSION_DATA* genericExtensions,
-    _In_ BYTE genericExtensionsCount,
-    _Out_ DWORD* bytesToRead,
-    _In_ SchGetExtensionsOptions flags
-);
-
-EXTERN_C
-SECURITY_STATUS
-WINAPI
-SslGetExtensions(
-    _In_reads_(clientHelloByteSize) const BYTE* clientHello,
-    _In_ DWORD clientHelloByteSize,
-    _Inout_updates_(genericExtensionsCount) SCH_EXTENSION_DATA* genericExtensions,
-    _In_ BYTE genericExtensionsCount,
-    _Out_ DWORD* bytesToRead,
-    _In_ SchGetExtensionsOptions flags
-);
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion

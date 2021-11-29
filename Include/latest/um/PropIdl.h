@@ -98,8 +98,8 @@ extern "C"{
 #endif
 #include <winapifamily.h>
 #ifndef _PROPIDLBASE_
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 
 
@@ -316,7 +316,7 @@ struct tag_inner_PROPVARIANT
         /* [case()] */ FLOAT fltVal;
         /* [case()] */ DOUBLE dblVal;
         /* [case()] */ VARIANT_BOOL boolVal;
-        /* [case()] */ VARIANT_BOOL __OBSOLETE__VARIANT_BOOL;
+        /* [case()] */ _VARIANT_BOOL bool;
         /* [case()] */ SCODE scode;
         /* [case()] */ CY cyVal;
         /* [case()] */ DATE date;
@@ -1084,7 +1084,7 @@ void __RPC_STUB IEnumSTATPROPSETSTG_RemoteNext_Stub(
 
 typedef /* [unique] */  __RPC_unique_pointer IPropertyStorage *LPPROPERTYSTORAGE;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #define _PROPIDLBASE_
@@ -1166,8 +1166,8 @@ enum PIDMSI_STATUS_VALUE
     } ;
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 _Check_return_ WINOLEAPI PropVariantCopy(
             _Out_ PROPVARIANT* pvarDest,
             _In_ const PROPVARIANT * pvarSrc);
@@ -1200,7 +1200,7 @@ inline void PropVariantInit (_Out_ PROPVARIANT * pvar )
 #endif /* _MSC_EXTENSIONS */
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop Family

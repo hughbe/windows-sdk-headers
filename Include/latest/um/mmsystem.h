@@ -97,6 +97,7 @@ extern "C" {            /* Assume C declarations for C++ */
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
+
 //
 // Joystickapi API Set contract
 //

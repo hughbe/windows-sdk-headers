@@ -643,7 +643,6 @@ typedef struct
 #define NTDSDSA_OPT_DISABLE_NTDSCONN_XLATE    ( 1 << 3 ) /* disable logical conn xlation */
 #define NTDSDSA_OPT_DISABLE_SPN_REGISTRATION  ( 1 << 4 ) /* disable SPN registration for ADAM */
 #define NTDSDSA_OPT_GENERATE_OWN_TOPO         ( 1 << 5 ) /* create own site topology */
-#define NTDSDSA_OPT_BLOCK_RPC                 ( 1 << 6 ) /* do not connect to this server via any RPC calls */
 
 // Bit flags for options attribute on NTDS-Connection objects.
 //

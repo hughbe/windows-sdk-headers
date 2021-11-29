@@ -38,13 +38,6 @@ DEFINE_GUID(GUID_DEVINTERFACE_NFCSE, 0x8dc7c854, 0xf5e5, 0x4bed, 0x81, 0x5d, 0xc
 #define IOCTL_NFCSE_SET_ROUTING_TABLE          CTL_CODE(FILE_DEVICE_UNKNOWN, 0x0206, METHOD_BUFFERED, FILE_ANY_ACCESS) // Input: SECURE_ELEMENT_ROUTING_TABLE
 #define IOCTL_NFCSE_HCE_REMOTE_RECV            CTL_CODE(FILE_DEVICE_UNKNOWN, 0x0250, METHOD_BUFFERED, FILE_ANY_ACCESS) // Output: SECURE_ELEMENT_HCE_DATA_PACKET
 #define IOCTL_NFCSE_HCE_REMOTE_SEND            CTL_CODE(FILE_DEVICE_UNKNOWN, 0x0251, METHOD_BUFFERED, FILE_ANY_ACCESS) // Input: SECURE_ELEMENT_HCE_DATA_PACKET
-#define IOCTL_NFCSE_SET_POWER_MODE             CTL_CODE(FILE_DEVICE_UNKNOWN, 0x0252, METHOD_BUFFERED, FILE_ANY_ACCESS) // Input: SECURE_ELEMENT_SET_POWER_MODE_INFO
-
-//
-// EVT_TRANSACTION TLV definitions, from ETSI/HCI v12.1, Section 11.2.2.4 EVT_TRANSACTION
-#define EVT_TRANSACTION_TAG_AID 0x81
-#define EVT_TRANSACTION_TAG_PARAMETERS 0x82
-#define EVT_TRANSACTION_PARAMETER_MAX_LEN 255
 
 typedef enum _SECURE_ELEMENT_TYPE {
     Integrated = 0,
@@ -53,29 +46,18 @@ typedef enum _SECURE_ELEMENT_TYPE {
 } SECURE_ELEMENT_TYPE, *PSECURE_ELEMENT_TYPE;
 
 typedef enum _SECURE_ELEMENT_EVENT_TYPE {
-    // Signals that an external reader has been discovered and the initial protocol handshake has occured.
     ExternalReaderArrival = 0,
-    // Signals that the external reader is no longer present.
     ExternalReaderDeparture = 1,
-    // Deprecated.
     ApplicationSelected = 2,
-    // Signals that an EVT_TRANSACTION event has been triggered by an SE.
     Transaction = 3,
-    // Signals that a HCE connection has been established.
     HceActivated = 4,
-    // Signals that the HCE connection has been disconnected.
-    HceDeactivated = 5,
-    // Signals that an external NFC field has been detected.
-    ExternalFieldEnter = 6,
-    // Signals that the external NFC field is no longer present.
-    ExternalFieldExit = 7,
+    HceDeactivated = 5
 } SECURE_ELEMENT_EVENT_TYPE, *PSECURE_ELEMENT_EVENT_TYPE;
 
 typedef enum _SECURE_ELEMENT_CARD_EMULATION_MODE {
     EmulationOff = 0,
     EmulationOnPowerIndependent = 1,
     EmulationOnPowerDependent = 2,
-    EmulationStealthListen = 3,
 } SECURE_ELEMENT_CARD_EMULATION_MODE, *PSECURE_ELEMENT_CARD_EMULATION_MODE;
 
 typedef struct _SECURE_ELEMENT_ENDPOINT_INFO {
@@ -189,17 +171,5 @@ typedef struct _SECURE_ELEMENT_HCE_DATA_PACKET {
 } SECURE_ELEMENT_HCE_DATA_PACKET, *PSECURE_ELEMENT_HCE_DATA_PACKET;
 
 #define SECURE_ELEMENT_HCE_DATA_PACKET_HEADER offsetof(SECURE_ELEMENT_HCE_DATA_PACKET, pbPayload)
-
-typedef enum _SECURE_ELEMENT_POWER_MODE
-{
-    SEPowerMode_ForceOn,
-    SEPowerMode_AllowOff,
-} SECURE_ELEMENT_POWER_MODE;
-
-typedef struct _SECURE_ELEMENT_SET_POWER_MODE_INFO
-{
-    GUID guidSecureElementId;
-    SECURE_ELEMENT_POWER_MODE powerMode;
-} SECURE_ELEMENT_SET_POWER_MODE_INFO;
 
 #endif  // NTDDI_VERSION

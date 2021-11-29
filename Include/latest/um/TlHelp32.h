@@ -131,13 +131,12 @@ Heap32Next(
 BOOL
 WINAPI
 Toolhelp32ReadProcessMemory(
-    DWORD th32ProcessID,
+    DWORD   th32ProcessID,
     LPCVOID lpBaseAddress,
-    LPVOID lpBuffer,
-    SIZE_T cbRead,
-    SIZE_T* lpNumberOfBytesRead
+    LPVOID  lpBuffer,
+    SIZE_T  cbRead,
+    SIZE_T *lpNumberOfBytesRead
     );
-
 
 /***** Process walking *************************************************/
 

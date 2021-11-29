@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.devices.input.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,28 +75,39 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -116,10 +130,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface IKeyboardCapabilities;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities ABI::Windows::Devices::Input::IKeyboardCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_FWD_DEFINED__
@@ -131,10 +144,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface IMouseCapabilities;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities ABI::Windows::Devices::Input::IMouseCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_FWD_DEFINED__
@@ -146,10 +158,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface IMouseDevice;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice ABI::Windows::Devices::Input::IMouseDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIMouseDevice_FWD_DEFINED__
@@ -161,10 +172,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface IMouseDeviceStatics;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics ABI::Windows::Devices::Input::IMouseDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_FWD_DEFINED__
@@ -176,178 +186,12 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface IMouseEventArgs;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs ABI::Windows::Devices::Input::IMouseEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenButtonListener;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener ABI::Windows::Devices::Input::IPenButtonListener
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenButtonListenerStatics;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics ABI::Windows::Devices::Input::IPenButtonListenerStatics
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDevice_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDevice_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenDevice;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDevice ABI::Windows::Devices::Input::IPenDevice
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDevice_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenDeviceStatics;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics ABI::Windows::Devices::Input::IPenDeviceStatics
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenDockListener;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener ABI::Windows::Devices::Input::IPenDockListener
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenDockListenerStatics;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics ABI::Windows::Devices::Input::IPenDockListenerStatics
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenDockedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs ABI::Windows::Devices::Input::IPenDockedEventArgs
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenTailButtonClickedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs ABI::Windows::Devices::Input::IPenTailButtonClickedEventArgs
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenTailButtonDoubleClickedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs ABI::Windows::Devices::Input::IPenTailButtonDoubleClickedEventArgs
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenTailButtonLongPressedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs ABI::Windows::Devices::Input::IPenTailButtonLongPressedEventArgs
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                interface IPenUndockedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs ABI::Windows::Devices::Input::IPenUndockedEventArgs
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_FWD_DEFINED__
@@ -356,10 +200,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface IPointerDevice;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice ABI::Windows::Devices::Input::IPointerDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_FWD_DEFINED__
@@ -371,10 +214,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface IPointerDevice2;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2 ABI::Windows::Devices::Input::IPointerDevice2
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_FWD_DEFINED__
@@ -386,10 +228,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface IPointerDeviceStatics;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics ABI::Windows::Devices::Input::IPointerDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_FWD_DEFINED__
@@ -401,10 +242,9 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 interface ITouchCapabilities;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities ABI::Windows::Devices::Input::ITouchCapabilities
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_FWD_DEFINED__
@@ -417,10 +257,10 @@ namespace ABI {
         namespace Devices {
             namespace Input {
                 class PointerDevice;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -430,11 +270,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("de94641c-7960-5fcd-abe8-d6ba609ef7d3"))
-IIterator<ABI::Windows::Devices::Input::PointerDevice*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PointerDevice*, ABI::Windows::Devices::Input::IPointerDevice*>>
+IIterator<ABI::Windows::Devices::Input::PointerDevice*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PointerDevice*, ABI::Windows::Devices::Input::IPointerDevice*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.Input.PointerDevice>";
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.Input.PointerDevice>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -442,12 +282,17 @@ IIterator<ABI::Windows::Devices::Input::PointerDevice*> : IIterator_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Input::PointerDevice*> __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_t;
 #define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CInput__CPointerDevice_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Input::IPointerDevice*>
+//#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Input::IPointerDevice*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CDevices__CInput__CPointerDevice_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -457,11 +302,11 @@ typedef IIterator<ABI::Windows::Devices::Input::PointerDevice*> __FIIterator_1_W
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("ad26662c-845b-5c6d-aeaa-406f48c21ae9"))
-IIterable<ABI::Windows::Devices::Input::PointerDevice*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PointerDevice*, ABI::Windows::Devices::Input::IPointerDevice*>>
+IIterable<ABI::Windows::Devices::Input::PointerDevice*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PointerDevice*, ABI::Windows::Devices::Input::IPointerDevice*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.Input.PointerDevice>";
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.Input.PointerDevice>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -469,10 +314,14 @@ IIterable<ABI::Windows::Devices::Input::PointerDevice*> : IIterable_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Input::PointerDevice*> __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_t;
 #define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CInput__CPointerDevice_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Input::IPointerDevice*>
+//#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Input::IPointerDevice*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CDevices__CInput__CPointerDevice_USE */
+
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -480,13 +329,12 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                typedef struct PointerDeviceUsage PointerDeviceUsage;
-            } /* Input */
+                struct PointerDeviceUsage;
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_USE
 #define DEF___FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_USE
@@ -494,11 +342,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("9ab2160d-11ef-5eca-8dd9-3e13aa4e5f99"))
-IIterator<struct ABI::Windows::Devices::Input::PointerDeviceUsage> : IIterator_impl<struct ABI::Windows::Devices::Input::PointerDeviceUsage>
+IIterator<struct ABI::Windows::Devices::Input::PointerDeviceUsage> : IIterator_impl<struct ABI::Windows::Devices::Input::PointerDeviceUsage> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.Input.PointerDeviceUsage>";
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.Input.PointerDeviceUsage>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -506,14 +354,17 @@ IIterator<struct ABI::Windows::Devices::Input::PointerDeviceUsage> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<struct ABI::Windows::Devices::Input::PointerDeviceUsage> __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_t;
 #define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Input::PointerDeviceUsage>
+//#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Input::PointerDeviceUsage>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
 
 #ifndef DEF___FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_USE
 #define DEF___FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_USE
@@ -521,11 +372,11 @@ typedef IIterator<struct ABI::Windows::Devices::Input::PointerDeviceUsage> __FII
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("592d6618-eaab-5a79-a47a-c7fc0b749a4e"))
-IIterable<struct ABI::Windows::Devices::Input::PointerDeviceUsage> : IIterable_impl<struct ABI::Windows::Devices::Input::PointerDeviceUsage>
+IIterable<struct ABI::Windows::Devices::Input::PointerDeviceUsage> : IIterable_impl<struct ABI::Windows::Devices::Input::PointerDeviceUsage> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.Input.PointerDeviceUsage>";
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.Input.PointerDeviceUsage>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -533,12 +384,16 @@ IIterable<struct ABI::Windows::Devices::Input::PointerDeviceUsage> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<struct ABI::Windows::Devices::Input::PointerDeviceUsage> __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_t;
 #define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Input::PointerDeviceUsage>
+//#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Input::PointerDeviceUsage>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -548,11 +403,11 @@ typedef IIterable<struct ABI::Windows::Devices::Input::PointerDeviceUsage> __FII
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("cf5674f1-9808-5a2b-80b8-5684ed0ea816"))
-IVectorView<ABI::Windows::Devices::Input::PointerDevice*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PointerDevice*, ABI::Windows::Devices::Input::IPointerDevice*>>
+IVectorView<ABI::Windows::Devices::Input::PointerDevice*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PointerDevice*, ABI::Windows::Devices::Input::IPointerDevice*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Input.PointerDevice>";
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Input.PointerDevice>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -560,14 +415,18 @@ IVectorView<ABI::Windows::Devices::Input::PointerDevice*> : IVectorView_impl<ABI
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Input::PointerDevice*> __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_t;
 #define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Input::IPointerDevice*>
+//#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Input::IPointerDevice*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 #ifndef DEF___FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_USE
 #define DEF___FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_USE
@@ -575,11 +434,11 @@ typedef IVectorView<ABI::Windows::Devices::Input::PointerDevice*> __FIVectorView
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("8e5a2c7e-3830-50d5-92ba-3163c89cbbd0"))
-IVectorView<struct ABI::Windows::Devices::Input::PointerDeviceUsage> : IVectorView_impl<struct ABI::Windows::Devices::Input::PointerDeviceUsage>
+IVectorView<struct ABI::Windows::Devices::Input::PointerDeviceUsage> : IVectorView_impl<struct ABI::Windows::Devices::Input::PointerDeviceUsage> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Input.PointerDeviceUsage>";
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Input.PointerDeviceUsage>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -587,34 +446,36 @@ IVectorView<struct ABI::Windows::Devices::Input::PointerDeviceUsage> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<struct ABI::Windows::Devices::Input::PointerDeviceUsage> __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_t;
 #define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Input::PointerDeviceUsage>
+//#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Input::PointerDeviceUsage>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
                 class MouseDevice;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
                 class MouseEventArgs;
-            } /* Input */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_USE
@@ -623,332 +484,125 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("5d72e594-28e4-5895-a34b-ea910f70fdbb"))
-ITypedEventHandler<ABI::Windows::Devices::Input::MouseDevice*, ABI::Windows::Devices::Input::MouseEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::MouseDevice*, ABI::Windows::Devices::Input::IMouseDevice*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::MouseEventArgs*, ABI::Windows::Devices::Input::IMouseEventArgs*>>
+ITypedEventHandler<ABI::Windows::Devices::Input::MouseDevice*,ABI::Windows::Devices::Input::MouseEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::MouseDevice*, ABI::Windows::Devices::Input::IMouseDevice*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::MouseEventArgs*, ABI::Windows::Devices::Input::IMouseEventArgs*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.MouseDevice, Windows.Devices.Input.MouseEventArgs>";
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.MouseDevice, Windows.Devices.Input.MouseEventArgs>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::Input::MouseDevice*, ABI::Windows::Devices::Input::MouseEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_t;
+typedef ITypedEventHandler<ABI::Windows::Devices::Input::MouseDevice*,ABI::Windows::Devices::Input::MouseEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Input::IMouseDevice*,ABI::Windows::Devices::Input::IMouseEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Input::IMouseDevice*,ABI::Windows::Devices::Input::IMouseEventArgs*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                class PenButtonListener;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_USE
-#define DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("0a0ee5ed-041b-5569-b4a4-a1e58f1343a2"))
-ITypedEventHandler<ABI::Windows::Devices::Input::PenButtonListener*, IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::IPenButtonListener*>, IInspectable*>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenButtonListener, Object>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::Input::PenButtonListener*, IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_t;
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                class PenTailButtonClickedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("2eda7109-f1c9-5f26-a054-3d25062cc0de"))
-ITypedEventHandler<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::PenTailButtonClickedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::IPenButtonListener*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenTailButtonClickedEventArgs*, ABI::Windows::Devices::Input::IPenTailButtonClickedEventArgs*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenButtonListener, Windows.Devices.Input.PenTailButtonClickedEventArgs>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::PenTailButtonClickedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                class PenTailButtonDoubleClickedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("e6e58d94-6f7b-593f-81f0-033150b4432c"))
-ITypedEventHandler<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::IPenButtonListener*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs*, ABI::Windows::Devices::Input::IPenTailButtonDoubleClickedEventArgs*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenButtonListener, Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                class PenTailButtonLongPressedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("ca6dab1f-20d6-52b0-94ce-6dcc75a1a984"))
-ITypedEventHandler<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::PenTailButtonLongPressedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::IPenButtonListener*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenTailButtonLongPressedEventArgs*, ABI::Windows::Devices::Input::IPenTailButtonLongPressedEventArgs*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenButtonListener, Windows.Devices.Input.PenTailButtonLongPressedEventArgs>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::Input::PenButtonListener*, ABI::Windows::Devices::Input::PenTailButtonLongPressedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                class PenDockListener;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_USE
-#define DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("7ceae82f-499a-5b31-a1d8-3b11c53c7871"))
-ITypedEventHandler<ABI::Windows::Devices::Input::PenDockListener*, IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenDockListener*, ABI::Windows::Devices::Input::IPenDockListener*>, IInspectable*>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenDockListener, Object>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::Input::PenDockListener*, IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_t;
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                class PenDockedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("19786a6c-8e23-5de7-a773-e711a5a068c5"))
-ITypedEventHandler<ABI::Windows::Devices::Input::PenDockListener*, ABI::Windows::Devices::Input::PenDockedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenDockListener*, ABI::Windows::Devices::Input::IPenDockListener*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenDockedEventArgs*, ABI::Windows::Devices::Input::IPenDockedEventArgs*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenDockListener, Windows.Devices.Input.PenDockedEventArgs>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::Input::PenDockListener*, ABI::Windows::Devices::Input::PenDockedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                class PenUndockedEventArgs;
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("51dba508-3194-5c91-a2e7-f94637e75a13"))
-ITypedEventHandler<ABI::Windows::Devices::Input::PenDockListener*, ABI::Windows::Devices::Input::PenUndockedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenDockListener*, ABI::Windows::Devices::Input::IPenDockListener*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Input::PenUndockedEventArgs*, ABI::Windows::Devices::Input::IPenUndockedEventArgs*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Input.PenDockListener, Windows.Devices.Input.PenUndockedEventArgs>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::Input::PenDockListener*, ABI::Windows::Devices::Input::PenUndockedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
+            
             typedef struct Rect Rect;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
+                
                 typedef enum PointerDeviceType : int PointerDeviceType;
-            } /* Input */
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
+                
                 typedef struct MouseDelta MouseDelta;
-            } /* Input */
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                class PenDevice;
-            } /* Input */
+                
+                typedef struct PointerDeviceUsage PointerDeviceUsage;
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
+
+
+
+
+
+
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Input {
+                class KeyboardCapabilities;
+            } /* Windows */
+        } /* Devices */
+    } /* Input */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Input {
+                class MouseCapabilities;
+            } /* Windows */
+        } /* Devices */
+    } /* Input */} /* ABI */
+
+
+
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Input {
+                class TouchCapabilities;
+            } /* Windows */
+        } /* Devices */
+    } /* Input */} /* ABI */
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -956,23 +610,27 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
+                /* [v1_enum, contract] */
                 enum PointerDeviceType : int
                 {
                     PointerDeviceType_Touch = 0,
                     PointerDeviceType_Pen = 1,
                     PointerDeviceType_Mouse = 2,
                 };
-            } /* Input */
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -980,22 +638,26 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
+                /* [contract] */
                 struct MouseDelta
                 {
                     INT32 X;
                     INT32 Y;
                 };
-            } /* Input */
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1003,12 +665,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
+                /* [contract] */
                 struct PointerDeviceUsage
                 {
                     UINT32 UsagePage;
@@ -1020,11 +685,12 @@ namespace ABI {
                     UINT32 Unit;
                     FLOAT PhysicalMultiplier;
                 };
-            } /* Input */
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1032,7 +698,9 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.KeyboardCapabilities
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1043,24 +711,26 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                MIDL_INTERFACE("3a3f9b56-6798-4bbc-833e-0f34b17c65ff")
-                IKeyboardCapabilities : public IInspectable
+                /* [object, uuid("3A3F9B56-6798-4BBC-833E-0F34B17C65FF"), exclusiveto, contract] */
+                MIDL_INTERFACE("3A3F9B56-6798-4BBC-833E-0F34B17C65FF")
+                IKeyboardCapabilities : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_KeyboardPresent(
-                        INT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_KeyboardPresent(
+                        /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IKeyboardCapabilities = _uuidof(IKeyboardCapabilities);
-            } /* Input */
+                extern MIDL_CONST_ID IID & IID_IKeyboardCapabilities=_uuidof(IKeyboardCapabilities);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1068,7 +738,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.MouseCapabilities
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1079,36 +751,38 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                MIDL_INTERFACE("bca5e023-7dd9-4b6b-9a92-55d43cb38f73")
-                IMouseCapabilities : public IInspectable
+                /* [object, uuid("BCA5E023-7DD9-4B6B-9A92-55D43CB38F73"), exclusiveto, contract] */
+                MIDL_INTERFACE("BCA5E023-7DD9-4B6B-9A92-55D43CB38F73")
+                IMouseCapabilities : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_MousePresent(
-                        INT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MousePresent(
+                        /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_VerticalWheelPresent(
-                        INT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_VerticalWheelPresent(
+                        /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_HorizontalWheelPresent(
-                        INT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HorizontalWheelPresent(
+                        /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_SwapButtons(
-                        INT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SwapButtons(
+                        /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_NumberOfButtons(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NumberOfButtons(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMouseCapabilities = _uuidof(IMouseCapabilities);
-            } /* Input */
+                extern MIDL_CONST_ID IID & IID_IMouseCapabilities=_uuidof(IMouseCapabilities);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1116,7 +790,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.MouseDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1127,28 +803,30 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                MIDL_INTERFACE("88edf458-f2c8-49f4-be1f-c256b388bc11")
-                IMouseDevice : public IInspectable
+                /* [object, uuid("88EDF458-F2C8-49F4-BE1F-C256B388BC11"), exclusiveto, contract] */
+                MIDL_INTERFACE("88EDF458-F2C8-49F4-BE1F-C256B388BC11")
+                IMouseDevice : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE add_MouseMoved(
-                        __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs* handler,
-                        EventRegistrationToken* cookie
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_MouseMoved(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * cookie
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_MouseMoved(
-                        EventRegistrationToken cookie
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_MouseMoved(
+                        /* [in] */EventRegistrationToken cookie
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMouseDevice = _uuidof(IMouseDevice);
-            } /* Input */
+                extern MIDL_CONST_ID IID & IID_IMouseDevice=_uuidof(IMouseDevice);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseDevice_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1156,7 +834,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseDevice;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.MouseDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1167,24 +847,26 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                MIDL_INTERFACE("484a9045-6d70-49db-8e68-46ffbd17d38d")
-                IMouseDeviceStatics : public IInspectable
+                /* [object, uuid("484A9045-6D70-49DB-8E68-46FFBD17D38D"), exclusiveto, contract] */
+                MIDL_INTERFACE("484A9045-6D70-49DB-8E68-46FFBD17D38D")
+                IMouseDeviceStatics : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE GetForCurrentView(
-                        ABI::Windows::Devices::Input::IMouseDevice** mouseDevice
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Input::IMouseDevice * * mouseDevice
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMouseDeviceStatics = _uuidof(IMouseDeviceStatics);
-            } /* Input */
+                extern MIDL_CONST_ID IID & IID_IMouseDeviceStatics=_uuidof(IMouseDeviceStatics);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1192,7 +874,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.MouseEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1203,455 +887,26 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                MIDL_INTERFACE("f625aa5d-2354-4cc7-9230-96941c969fde")
-                IMouseEventArgs : public IInspectable
+                /* [object, uuid("F625AA5D-2354-4CC7-9230-96941C969FDE"), exclusiveto, contract] */
+                MIDL_INTERFACE("F625AA5D-2354-4CC7-9230-96941C969FDE")
+                IMouseEventArgs : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_MouseDelta(
-                        ABI::Windows::Devices::Input::MouseDelta* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MouseDelta(
+                        /* [retval, out] */__RPC__out ABI::Windows::Devices::Input::MouseDelta * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IMouseEventArgs = _uuidof(IMouseEventArgs);
-            } /* Input */
+                extern MIDL_CONST_ID IID & IID_IMouseEventArgs=_uuidof(IMouseEventArgs);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-/*
- *
- * Interface Windows.Devices.Input.IPenButtonListener
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenButtonListener
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenButtonListener[] = L"Windows.Devices.Input.IPenButtonListener";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("8245c376-1ee3-53f7-b1f7-8334a16f2815")
-                IPenButtonListener : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        boolean* result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_IsSupportedChanged(
-                        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable* handler,
-                        EventRegistrationToken* token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_IsSupportedChanged(
-                        EventRegistrationToken token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_TailButtonClicked(
-                        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs* handler,
-                        EventRegistrationToken* token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_TailButtonClicked(
-                        EventRegistrationToken token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_TailButtonDoubleClicked(
-                        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs* handler,
-                        EventRegistrationToken* token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_TailButtonDoubleClicked(
-                        EventRegistrationToken token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_TailButtonLongPressed(
-                        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs* handler,
-                        EventRegistrationToken* token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_TailButtonLongPressed(
-                        EventRegistrationToken token
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenButtonListener = _uuidof(IPenButtonListener);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenButtonListener;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenButtonListenerStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenButtonListener
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenButtonListenerStatics[] = L"Windows.Devices.Input.IPenButtonListenerStatics";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("19a8a584-862f-5f69-bfea-05f6584f133f")
-                IPenButtonListenerStatics : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                        ABI::Windows::Devices::Input::IPenButtonListener** result
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenButtonListenerStatics = _uuidof(IPenButtonListenerStatics);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDevice
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDevice
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDevice_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDevice_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDevice[] = L"Windows.Devices.Input.IPenDevice";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("31856eba-a738-5a8c-b8f6-f97ef68d18ef")
-                IPenDevice : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_PenId(
-                        GUID* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenDevice = _uuidof(IPenDevice);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDevice;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDevice_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDeviceStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDevice
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDeviceStatics[] = L"Windows.Devices.Input.IPenDeviceStatics";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("9dfbbe01-0966-5180-bcb4-b85060e39479")
-                IPenDeviceStatics : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE GetFromPointerId(
-                        UINT32 pointerId,
-                        ABI::Windows::Devices::Input::IPenDevice** result
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenDeviceStatics = _uuidof(IPenDeviceStatics);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDockListener
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDockListener
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDockListener[] = L"Windows.Devices.Input.IPenDockListener";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("759f4d90-1dc0-55cb-ad18-b9101456f592")
-                IPenDockListener : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        boolean* result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_IsSupportedChanged(
-                        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable* handler,
-                        EventRegistrationToken* token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_IsSupportedChanged(
-                        EventRegistrationToken token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_Docked(
-                        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs* handler,
-                        EventRegistrationToken* token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_Docked(
-                        EventRegistrationToken token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_Undocked(
-                        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs* handler,
-                        EventRegistrationToken* token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_Undocked(
-                        EventRegistrationToken token
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenDockListener = _uuidof(IPenDockListener);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDockListener;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDockListenerStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDockListener
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDockListenerStatics[] = L"Windows.Devices.Input.IPenDockListenerStatics";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("cab75e9a-0016-5c72-969e-a97e11992a93")
-                IPenDockListenerStatics : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                        ABI::Windows::Devices::Input::IPenDockListener** result
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenDockListenerStatics = _uuidof(IPenDockListenerStatics);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDockedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDockedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDockedEventArgs[] = L"Windows.Devices.Input.IPenDockedEventArgs";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("fd4277c6-ca63-5d4e-9ed3-a28a54521c8c")
-                IPenDockedEventArgs : public IInspectable
-                {
-                public:
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenDockedEventArgs = _uuidof(IPenDockedEventArgs);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenTailButtonClickedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenTailButtonClickedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenTailButtonClickedEventArgs[] = L"Windows.Devices.Input.IPenTailButtonClickedEventArgs";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("5d2fb7b6-6ad3-5d3e-ab29-05ea2410e390")
-                IPenTailButtonClickedEventArgs : public IInspectable
-                {
-                public:
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenTailButtonClickedEventArgs = _uuidof(IPenTailButtonClickedEventArgs);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenTailButtonDoubleClickedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenTailButtonDoubleClickedEventArgs[] = L"Windows.Devices.Input.IPenTailButtonDoubleClickedEventArgs";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("846321a2-618a-5478-b04c-b358231da4a7")
-                IPenTailButtonDoubleClickedEventArgs : public IInspectable
-                {
-                public:
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenTailButtonDoubleClickedEventArgs = _uuidof(IPenTailButtonDoubleClickedEventArgs);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenTailButtonLongPressedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenTailButtonLongPressedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenTailButtonLongPressedEventArgs[] = L"Windows.Devices.Input.IPenTailButtonLongPressedEventArgs";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("f37c606e-c60a-5f42-b818-a53112406c13")
-                IPenTailButtonLongPressedEventArgs : public IInspectable
-                {
-                public:
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenTailButtonLongPressedEventArgs = _uuidof(IPenTailButtonLongPressedEventArgs);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenUndockedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenUndockedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenUndockedEventArgs[] = L"Windows.Devices.Input.IPenUndockedEventArgs";
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Input {
-                MIDL_INTERFACE("ccd09150-261b-59e6-a5d4-c1964cd03feb")
-                IPenUndockedEventArgs : public IInspectable
-                {
-                public:
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPenUndockedEventArgs = _uuidof(IPenUndockedEventArgs);
-            } /* Input */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
 
 /*
  *
@@ -1659,7 +914,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.PointerDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1670,39 +927,41 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                MIDL_INTERFACE("93c9bafc-ebcb-467e-82c6-276feae36b5a")
-                IPointerDevice : public IInspectable
+                /* [object, uuid("93C9BAFC-EBCB-467E-82C6-276FEAE36B5A"), exclusiveto, contract] */
+                MIDL_INTERFACE("93C9BAFC-EBCB-467E-82C6-276FEAE36B5A")
+                IPointerDevice : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_PointerDeviceType(
-                        ABI::Windows::Devices::Input::PointerDeviceType* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PointerDeviceType(
+                        /* [retval, out] */__RPC__out ABI::Windows::Devices::Input::PointerDeviceType * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsIntegrated(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsIntegrated(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MaxContacts(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxContacts(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_PhysicalDeviceRect(
-                        ABI::Windows::Foundation::Rect* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PhysicalDeviceRect(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ScreenRect(
-                        ABI::Windows::Foundation::Rect* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ScreenRect(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::Rect * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_SupportedUsages(
-                        __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedUsages(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPointerDevice = _uuidof(IPointerDevice);
-            } /* Input */
+                extern MIDL_CONST_ID IID & IID_IPointerDevice=_uuidof(IPointerDevice);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1710,7 +969,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDevice;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.PointerDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1721,24 +982,26 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                MIDL_INTERFACE("f8a6d2a0-c484-489f-ae3e-30d2ee1ffd3e")
-                IPointerDevice2 : public IInspectable
+                /* [object, uuid("F8A6D2A0-C484-489F-AE3E-30D2EE1FFD3E"), exclusiveto, contract] */
+                MIDL_INTERFACE("F8A6D2A0-C484-489F-AE3E-30D2EE1FFD3E")
+                IPointerDevice2 : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_MaxPointersWithZDistance(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxPointersWithZDistance(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPointerDevice2 = _uuidof(IPointerDevice2);
-            } /* Input */
+                extern MIDL_CONST_ID IID & IID_IPointerDevice2=_uuidof(IPointerDevice2);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDevice2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1746,7 +1009,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDevice2;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.PointerDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1757,28 +1022,30 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                MIDL_INTERFACE("d8b89aa1-d1c6-416e-bd8d-5790914dc563")
-                IPointerDeviceStatics : public IInspectable
+                /* [object, uuid("D8B89AA1-D1C6-416E-BD8D-5790914DC563"), exclusiveto, contract] */
+                MIDL_INTERFACE("D8B89AA1-D1C6-416E-BD8D-5790914DC563")
+                IPointerDeviceStatics : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE GetPointerDevice(
-                        UINT32 pointerId,
-                        ABI::Windows::Devices::Input::IPointerDevice** pointerDevice
+                        /* [in] */UINT32 pointerId,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Input::IPointerDevice * * pointerDevice
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetPointerDevices(
-                        __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice** pointerDevices
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * * pointerDevices
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPointerDeviceStatics = _uuidof(IPointerDeviceStatics);
-            } /* Input */
+                extern MIDL_CONST_ID IID & IID_IPointerDeviceStatics=_uuidof(IPointerDeviceStatics);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1786,7 +1053,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.TouchCapabilities
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1797,33 +1066,36 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Input {
-                MIDL_INTERFACE("20dd55f9-13f1-46c8-9285-2c05fa3eda6f")
-                ITouchCapabilities : public IInspectable
+                /* [object, uuid("20DD55F9-13F1-46C8-9285-2C05FA3EDA6F"), exclusiveto, contract] */
+                MIDL_INTERFACE("20DD55F9-13F1-46C8-9285-2C05FA3EDA6F")
+                ITouchCapabilities : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_TouchPresent(
-                        INT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TouchPresent(
+                        /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Contacts(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Contacts(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ITouchCapabilities = _uuidof(ITouchCapabilities);
-            } /* Input */
+                extern MIDL_CONST_ID IID & IID_ITouchCapabilities=_uuidof(ITouchCapabilities);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Input */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CITouchCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.Devices.Input.KeyboardCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1835,17 +1107,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CITouchCapabilities;
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_KeyboardCapabilities_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_KeyboardCapabilities_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_KeyboardCapabilities[] = L"Windows.Devices.Input.KeyboardCapabilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Input.MouseCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1857,17 +1132,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_MouseCapabilities_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_MouseCapabilities_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_MouseCapabilities[] = L"Windows.Devices.Input.MouseCapabilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Input.MouseDevice
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Input.IMouseDeviceStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1879,17 +1157,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_MouseDevice_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_MouseDevice_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_MouseDevice[] = L"Windows.Devices.Input.MouseDevice";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Input.MouseEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Input.IMouseEventArgs ** Default Interface **
@@ -1898,184 +1179,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_MouseEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_MouseEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_MouseEventArgs[] = L"Windows.Devices.Input.MouseEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-/*
- *
- * Class Windows.Devices.Input.PenButtonListener
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Input.IPenButtonListenerStatics interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenButtonListener ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenButtonListener_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenButtonListener_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenButtonListener[] = L"Windows.Devices.Input.PenButtonListener";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenDevice
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Input.IPenDeviceStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenDevice ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenDevice_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenDevice_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenDevice[] = L"Windows.Devices.Input.PenDevice";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
-/*
- *
- * Class Windows.Devices.Input.PenDockListener
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Input.IPenDockListenerStatics interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenDockListener ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenDockListener_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenDockListener_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenDockListener[] = L"Windows.Devices.Input.PenDockListener";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenDockedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenDockedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenDockedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenDockedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenDockedEventArgs[] = L"Windows.Devices.Input.PenDockedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenTailButtonClickedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenTailButtonClickedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenTailButtonClickedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenTailButtonClickedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenTailButtonClickedEventArgs[] = L"Windows.Devices.Input.PenTailButtonClickedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenTailButtonDoubleClickedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenTailButtonDoubleClickedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenTailButtonDoubleClickedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenTailButtonDoubleClickedEventArgs[] = L"Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenTailButtonLongPressedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenTailButtonLongPressedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenTailButtonLongPressedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenTailButtonLongPressedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenTailButtonLongPressedEventArgs[] = L"Windows.Devices.Input.PenTailButtonLongPressedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenUndockedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenUndockedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenUndockedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenUndockedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenUndockedEventArgs[] = L"Windows.Devices.Input.PenUndockedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
 
 /*
  *
  * Class Windows.Devices.Input.PointerDevice
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Input.IPointerDeviceStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2088,17 +1205,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_PointerDevice_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_PointerDevice_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PointerDevice[] = L"Windows.Devices.Input.PointerDevice";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Input.TouchCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2110,11 +1230,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_TouchCapabilities_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_TouchCapabilities_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_TouchCapabilities[] = L"Windows.Devices.Input.TouchCapabilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -2147,72 +1271,6 @@ typedef interface __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics __x_ABI_
 typedef interface __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs;
 
 #endif // ____x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDevice_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDevice_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenDevice __x_ABI_CWindows_CDevices_CInput_CIPenDevice;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDevice_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenDockListener __x_ABI_CWindows_CDevices_CInput_CIPenDockListener;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_FWD_DEFINED__
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs;
-
-#endif // ____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_FWD_DEFINED__
@@ -2255,73 +1313,80 @@ typedef struct __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice** result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CDevices__CInput__CPointerDevice* This,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice** items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDevice * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceVtbl;
 
 interface __FIIterator_1_Windows__CDevices__CInput__CPointerDevice
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDevice_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIIterator_1_Windows__CDevices__CInput__CPointerDevice_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CDevices__CInput__CPointerDevice_INTERFACE_DEFINED__)
@@ -2332,64 +1397,72 @@ typedef interface __FIIterable_1_Windows__CDevices__CInput__CPointerDevice __FII
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CInput__CPointerDevice;
 
-typedef struct __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceVtbl
+typedef  struct __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CDevices__CInput__CPointerDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CDevices__CInput__CPointerDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CDevices__CInput__CPointerDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CDevices__CInput__CPointerDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CDevices__CInput__CPointerDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CDevices__CInput__CPointerDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CDevices__CInput__CPointerDevice* This,
-        __FIIterator_1_Windows__CDevices__CInput__CPointerDevice** result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDevice * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDevice * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDevice * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDevice * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDevice * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDevice * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CDevices__CInput__CPointerDevice **first);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceVtbl;
 
 interface __FIIterable_1_Windows__CDevices__CInput__CPointerDevice
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDevice_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIIterable_1_Windows__CDevices__CInput__CPointerDevice_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-typedef struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage;
+struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage;
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__
 
@@ -2402,75 +1475,80 @@ typedef struct __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage* result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        UINT32 itemsLength,
-        struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage* items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This, /* [retval][out] */ __RPC__out struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl;
 
 interface __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
-#endif // ____FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#endif // ____FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__
+
+
+
 #if !defined(____FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__)
 #define ____FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__
 
@@ -2479,60 +1557,69 @@ typedef interface __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage 
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage;
 
-typedef struct __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl
+typedef  struct __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage** result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CDevices__CInput__CPointerDeviceUsage **first);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl;
 
 interface __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIIterable_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_INTERFACE_DEFINED__)
@@ -2547,79 +1634,104 @@ typedef struct __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This,
-        UINT32 index,
-        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice** result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice* value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDevice* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice** items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
 
-    END_INTERFACE
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This,
+            /* [in] */ __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
 } __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceVtbl;
 
 interface __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceVtbl* lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
+
+
 #endif // ____FIVectorView_1_Windows__CDevices__CInput__CPointerDevice_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #if !defined(____FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__
 
@@ -2632,79 +1744,104 @@ typedef struct __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsageVt
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        UINT32 index,
-        struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage* result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage* items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
 
-    END_INTERFACE
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+            /* [in] */ struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
 } __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl;
 
 interface __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl* lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsageVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
-#endif // ____FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#endif // ____FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage_INTERFACE_DEFINED__
+
+
+
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_INTERFACE_DEFINED__
@@ -2717,402 +1854,81 @@ EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CInput__CMouse
 typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs* This,
-        __x_ABI_CWindows_CDevices_CInput_CIMouseDevice* sender,
-        __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs* args);
-
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs * *e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgsVtbl;
 
 interface __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
 
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
+#define __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
 #endif /* COBJMACROS */
+
+
 
 #endif // ____FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_INTERFACE_DEFINED__
 
-typedef interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable;
-
-typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectableVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* sender,
-        IInspectable* args);
-
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectableVtbl;
-
-interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectableVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
-#endif /* COBJMACROS */
-
-#endif // ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_INTERFACE_DEFINED__
-
-typedef interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs;
-
-typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* sender,
-        __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs* args);
-
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgsVtbl;
-
-interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
-#endif /* COBJMACROS */
-
-#endif // ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_INTERFACE_DEFINED__
-
-typedef interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs;
-
-typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* sender,
-        __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs* args);
-
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgsVtbl;
-
-interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
-#endif /* COBJMACROS */
-
-#endif // ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_INTERFACE_DEFINED__
-
-typedef interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs;
-
-typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* sender,
-        __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs* args);
-
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgsVtbl;
-
-interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
-#endif /* COBJMACROS */
-
-#endif // ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_INTERFACE_DEFINED__
-
-typedef interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable;
-
-typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectableVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPenDockListener* sender,
-        IInspectable* args);
-
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectableVtbl;
-
-interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectableVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
-#endif /* COBJMACROS */
-
-#endif // ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_INTERFACE_DEFINED__
-
-typedef interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs;
-
-typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPenDockListener* sender,
-        __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs* args);
-
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgsVtbl;
-
-interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
-#endif /* COBJMACROS */
-
-#endif // ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_INTERFACE_DEFINED__
-
-typedef interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs;
-
-typedef struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPenDockListener* sender,
-        __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs* args);
-
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgsVtbl;
-
-interface __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
-#endif /* COBJMACROS */
-
-#endif // ____FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
 
 typedef struct __x_ABI_CWindows_CFoundation_CRect __x_ABI_CWindows_CFoundation_CRect;
 
+
+
+
+
 typedef enum __x_ABI_CWindows_CDevices_CInput_CPointerDeviceType __x_ABI_CWindows_CDevices_CInput_CPointerDeviceType;
 
+
 typedef struct __x_ABI_CWindows_CDevices_CInput_CMouseDelta __x_ABI_CWindows_CDevices_CInput_CMouseDelta;
+
+
+typedef struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -3120,8 +1936,11 @@ typedef struct __x_ABI_CWindows_CDevices_CInput_CMouseDelta __x_ABI_CWindows_CDe
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CInput_CPointerDeviceType
 {
     PointerDeviceType_Touch = 0,
@@ -3130,14 +1949,18 @@ enum __x_ABI_CWindows_CDevices_CInput_CPointerDeviceType
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Devices.Input.MouseDelta
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/* [contract] */
 struct __x_ABI_CWindows_CDevices_CInput_CMouseDelta
 {
     INT32 X;
@@ -3145,14 +1968,18 @@ struct __x_ABI_CWindows_CDevices_CInput_CMouseDelta
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Devices.Input.PointerDeviceUsage
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/* [contract] */
 struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage
 {
     UINT32 UsagePage;
@@ -3166,74 +1993,99 @@ struct __x_ABI_CWindows_CDevices_CInput_CPointerDeviceUsage
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Interface Windows.Devices.Input.IKeyboardCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.KeyboardCapabilities
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IKeyboardCapabilities[] = L"Windows.Devices.Input.IKeyboardCapabilities";
+/* [object, uuid("3A3F9B56-6798-4BBC-833E-0F34B17C65FF"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilitiesVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_KeyboardPresent)(__x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities* This,
-        INT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_KeyboardPresent )(
+        __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilitiesVtbl;
 
 interface __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilitiesVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilitiesVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_get_KeyboardPresent(This, value) \
-    ((This)->lpVtbl->get_KeyboardPresent(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_get_KeyboardPresent(This,value) \
+    ( (This)->lpVtbl->get_KeyboardPresent(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3241,88 +2093,120 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIKeyboardCapabilities;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.MouseCapabilities
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IMouseCapabilities[] = L"Windows.Devices.Input.IMouseCapabilities";
+/* [object, uuid("BCA5E023-7DD9-4B6B-9A92-55D43CB38F73"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilitiesVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_MousePresent)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_VerticalWheelPresent)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_HorizontalWheelPresent)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_SwapButtons)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_NumberOfButtons)(__x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities* This,
-        UINT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MousePresent )(
+        __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_VerticalWheelPresent )(
+        __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HorizontalWheelPresent )(
+        __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SwapButtons )(
+        __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NumberOfButtons )(
+        __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilitiesVtbl;
 
 interface __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilitiesVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilitiesVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_MousePresent(This, value) \
-    ((This)->lpVtbl->get_MousePresent(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_MousePresent(This,value) \
+    ( (This)->lpVtbl->get_MousePresent(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_VerticalWheelPresent(This, value) \
-    ((This)->lpVtbl->get_VerticalWheelPresent(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_VerticalWheelPresent(This,value) \
+    ( (This)->lpVtbl->get_VerticalWheelPresent(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_HorizontalWheelPresent(This, value) \
-    ((This)->lpVtbl->get_HorizontalWheelPresent(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_HorizontalWheelPresent(This,value) \
+    ( (This)->lpVtbl->get_HorizontalWheelPresent(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_SwapButtons(This, value) \
-    ((This)->lpVtbl->get_SwapButtons(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_SwapButtons(This,value) \
+    ( (This)->lpVtbl->get_SwapButtons(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_NumberOfButtons(This, value) \
-    ((This)->lpVtbl->get_NumberOfButtons(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_get_NumberOfButtons(This,value) \
+    ( (This)->lpVtbl->get_NumberOfButtons(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3330,74 +2214,100 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseCapabilities;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.MouseDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseDevice_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CInput_CIMouseDevice_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IMouseDevice[] = L"Windows.Devices.Input.IMouseDevice";
+/* [object, uuid("88EDF458-F2C8-49F4-BE1F-C256B388BC11"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIMouseDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIMouseDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIMouseDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIMouseDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIMouseDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIMouseDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* add_MouseMoved)(__x_ABI_CWindows_CDevices_CInput_CIMouseDevice* This,
-        __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs* handler,
-        EventRegistrationToken* cookie);
-    HRESULT (STDMETHODCALLTYPE* remove_MouseMoved)(__x_ABI_CWindows_CDevices_CInput_CIMouseDevice* This,
-        EventRegistrationToken cookie);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_MouseMoved )(
+        __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CDevices__CInput__CMouseDevice_Windows__CDevices__CInput__CMouseEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * cookie
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_MouseMoved )(
+        __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * This,
+        /* [in] */EventRegistrationToken cookie
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceVtbl;
 
 interface __x_ABI_CWindows_CDevices_CInput_CIMouseDevice
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_add_MouseMoved(This, handler, cookie) \
-    ((This)->lpVtbl->add_MouseMoved(This, handler, cookie))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_add_MouseMoved(This,handler,cookie) \
+    ( (This)->lpVtbl->add_MouseMoved(This,handler,cookie) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_remove_MouseMoved(This, cookie) \
-    ((This)->lpVtbl->remove_MouseMoved(This, cookie))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDevice_remove_MouseMoved(This,cookie) \
+    ( (This)->lpVtbl->remove_MouseMoved(This,cookie) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseDevice_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3405,68 +2315,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseDevice;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.MouseDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IMouseDeviceStatics[] = L"Windows.Devices.Input.IMouseDeviceStatics";
+/* [object, uuid("484A9045-6D70-49DB-8E68-46FFBD17D38D"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetForCurrentView)(__x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics* This,
-        __x_ABI_CWindows_CDevices_CInput_CIMouseDevice** mouseDevice);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetForCurrentView )(
+        __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CDevices_CInput_CIMouseDevice * * mouseDevice
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStaticsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_GetForCurrentView(This, mouseDevice) \
-    ((This)->lpVtbl->GetForCurrentView(This, mouseDevice))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_GetForCurrentView(This,mouseDevice) \
+    ( (This)->lpVtbl->GetForCurrentView(This,mouseDevice) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3474,880 +2408,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseDeviceStatics;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.MouseEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IMouseEventArgs[] = L"Windows.Devices.Input.IMouseEventArgs";
+/* [object, uuid("F625AA5D-2354-4CC7-9230-96941C969FDE"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_MouseDelta)(__x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs* This,
-        struct __x_ABI_CWindows_CDevices_CInput_CMouseDelta* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MouseDelta )(
+        __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CDevices_CInput_CMouseDelta * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_get_MouseDelta(This, value) \
-    ((This)->lpVtbl->get_MouseDelta(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_get_MouseDelta(This,value) \
+    ( (This)->lpVtbl->get_MouseDelta(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIMouseEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-/*
- *
- * Interface Windows.Devices.Input.IPenButtonListener
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenButtonListener
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenButtonListener[] = L"Windows.Devices.Input.IPenButtonListener";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* IsSupported)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* add_IsSupportedChanged)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_IInspectable* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_IsSupportedChanged)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_TailButtonClicked)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonClickedEventArgs* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_TailButtonClicked)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_TailButtonDoubleClicked)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonDoubleClickedEventArgs* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_TailButtonDoubleClicked)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_TailButtonLongPressed)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenButtonListener_Windows__CDevices__CInput__CPenTailButtonLongPressedEventArgs* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_TailButtonLongPressed)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListener* This,
-        EventRegistrationToken token);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_IsSupported(This, result) \
-    ((This)->lpVtbl->IsSupported(This, result))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_add_IsSupportedChanged(This, handler, token) \
-    ((This)->lpVtbl->add_IsSupportedChanged(This, handler, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_remove_IsSupportedChanged(This, token) \
-    ((This)->lpVtbl->remove_IsSupportedChanged(This, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_add_TailButtonClicked(This, handler, token) \
-    ((This)->lpVtbl->add_TailButtonClicked(This, handler, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_remove_TailButtonClicked(This, token) \
-    ((This)->lpVtbl->remove_TailButtonClicked(This, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_add_TailButtonDoubleClicked(This, handler, token) \
-    ((This)->lpVtbl->add_TailButtonDoubleClicked(This, handler, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_remove_TailButtonDoubleClicked(This, token) \
-    ((This)->lpVtbl->remove_TailButtonDoubleClicked(This, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_add_TailButtonLongPressed(This, handler, token) \
-    ((This)->lpVtbl->add_TailButtonLongPressed(This, handler, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_remove_TailButtonLongPressed(This, token) \
-    ((This)->lpVtbl->remove_TailButtonLongPressed(This, token))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenButtonListener;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenButtonListener_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenButtonListenerStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenButtonListener
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenButtonListenerStatics[] = L"Windows.Devices.Input.IPenButtonListenerStatics";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStaticsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPenButtonListener** result);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStaticsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStaticsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_GetDefault(This, result) \
-    ((This)->lpVtbl->GetDefault(This, result))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenButtonListenerStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDevice
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDevice
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDevice_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDevice_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDevice[] = L"Windows.Devices.Input.IPenDevice";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenDeviceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_PenId)(__x_ABI_CWindows_CDevices_CInput_CIPenDevice* This,
-        GUID* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenDeviceVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenDevice
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenDeviceVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDevice_get_PenId(This, value) \
-    ((This)->lpVtbl->get_PenId(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDevice;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDevice_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDeviceStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDevice
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDeviceStatics[] = L"Windows.Devices.Input.IPenDeviceStatics";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStaticsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetFromPointerId)(__x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics* This,
-        UINT32 pointerId,
-        __x_ABI_CWindows_CDevices_CInput_CIPenDevice** result);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStaticsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStaticsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_GetFromPointerId(This, pointerId, result) \
-    ((This)->lpVtbl->GetFromPointerId(This, pointerId, result))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDeviceStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDockListener
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDockListener
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDockListener[] = L"Windows.Devices.Input.IPenDockListener";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* IsSupported)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* add_IsSupportedChanged)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_IInspectable* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_IsSupportedChanged)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_Docked)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenDockedEventArgs* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_Docked)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_Undocked)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        __FITypedEventHandler_2_Windows__CDevices__CInput__CPenDockListener_Windows__CDevices__CInput__CPenUndockedEventArgs* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_Undocked)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListener* This,
-        EventRegistrationToken token);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenDockListener
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_IsSupported(This, result) \
-    ((This)->lpVtbl->IsSupported(This, result))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_add_IsSupportedChanged(This, handler, token) \
-    ((This)->lpVtbl->add_IsSupportedChanged(This, handler, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_remove_IsSupportedChanged(This, token) \
-    ((This)->lpVtbl->remove_IsSupportedChanged(This, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_add_Docked(This, handler, token) \
-    ((This)->lpVtbl->add_Docked(This, handler, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_remove_Docked(This, token) \
-    ((This)->lpVtbl->remove_Docked(This, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_add_Undocked(This, handler, token) \
-    ((This)->lpVtbl->add_Undocked(This, handler, token))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListener_remove_Undocked(This, token) \
-    ((This)->lpVtbl->remove_Undocked(This, token))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDockListener;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockListener_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDockListenerStatics
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDockListener
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDockListenerStatics[] = L"Windows.Devices.Input.IPenDockListenerStatics";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStaticsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics* This,
-        __x_ABI_CWindows_CDevices_CInput_CIPenDockListener** result);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStaticsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStaticsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_GetDefault(This, result) \
-    ((This)->lpVtbl->GetDefault(This, result))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockListenerStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenDockedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenDockedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenDockedEventArgs[] = L"Windows.Devices.Input.IPenDockedEventArgs";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs* This,
-        TrustLevel* trustLevel);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenDockedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenTailButtonClickedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenTailButtonClickedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenTailButtonClickedEventArgs[] = L"Windows.Devices.Input.IPenTailButtonClickedEventArgs";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs* This,
-        TrustLevel* trustLevel);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonClickedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenTailButtonDoubleClickedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenTailButtonDoubleClickedEventArgs[] = L"Windows.Devices.Input.IPenTailButtonDoubleClickedEventArgs";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs* This,
-        TrustLevel* trustLevel);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonDoubleClickedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenTailButtonLongPressedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenTailButtonLongPressedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenTailButtonLongPressedEventArgs[] = L"Windows.Devices.Input.IPenTailButtonLongPressedEventArgs";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs* This,
-        TrustLevel* trustLevel);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenTailButtonLongPressedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Interface Windows.Devices.Input.IPenUndockedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.Devices.Input.PenUndockedEventArgs
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPenUndockedEventArgs[] = L"Windows.Devices.Input.IPenUndockedEventArgs";
-typedef struct __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs* This,
-        TrustLevel* trustLevel);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgsVtbl;
-
-interface __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs
-{
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs;
-#endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
 
 /*
  *
@@ -4355,93 +2501,127 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPenUndockedEventArgs;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.PointerDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPointerDevice[] = L"Windows.Devices.Input.IPointerDevice";
+/* [object, uuid("93C9BAFC-EBCB-467E-82C6-276FEAE36B5A"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_PointerDeviceType)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        enum __x_ABI_CWindows_CDevices_CInput_CPointerDeviceType* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsIntegrated)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_MaxContacts)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_PhysicalDeviceRect)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        struct __x_ABI_CWindows_CFoundation_CRect* value);
-    HRESULT (STDMETHODCALLTYPE* get_ScreenRect)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        struct __x_ABI_CWindows_CFoundation_CRect* value);
-    HRESULT (STDMETHODCALLTYPE* get_SupportedUsages)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice* This,
-        __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PointerDeviceType )(
+        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CDevices_CInput_CPointerDeviceType * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsIntegrated )(
+        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MaxContacts )(
+        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PhysicalDeviceRect )(
+        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CRect * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ScreenRect )(
+        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CRect * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SupportedUsages )(
+        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CInput__CPointerDeviceUsage * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceVtbl;
 
 interface __x_ABI_CWindows_CDevices_CInput_CIPointerDevice
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_PointerDeviceType(This, value) \
-    ((This)->lpVtbl->get_PointerDeviceType(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_PointerDeviceType(This,value) \
+    ( (This)->lpVtbl->get_PointerDeviceType(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_IsIntegrated(This, value) \
-    ((This)->lpVtbl->get_IsIntegrated(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_IsIntegrated(This,value) \
+    ( (This)->lpVtbl->get_IsIntegrated(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_MaxContacts(This, value) \
-    ((This)->lpVtbl->get_MaxContacts(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_MaxContacts(This,value) \
+    ( (This)->lpVtbl->get_MaxContacts(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_PhysicalDeviceRect(This, value) \
-    ((This)->lpVtbl->get_PhysicalDeviceRect(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_PhysicalDeviceRect(This,value) \
+    ( (This)->lpVtbl->get_PhysicalDeviceRect(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_ScreenRect(This, value) \
-    ((This)->lpVtbl->get_ScreenRect(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_ScreenRect(This,value) \
+    ( (This)->lpVtbl->get_ScreenRect(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_SupportedUsages(This, value) \
-    ((This)->lpVtbl->get_SupportedUsages(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice_get_SupportedUsages(This,value) \
+    ( (This)->lpVtbl->get_SupportedUsages(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPointerDevice_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4449,68 +2629,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDevice;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.PointerDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPointerDevice2[] = L"Windows.Devices.Input.IPointerDevice2";
+/* [object, uuid("F8A6D2A0-C484-489F-AE3E-30D2EE1FFD3E"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2Vtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_MaxPointersWithZDistance)(__x_ABI_CWindows_CDevices_CInput_CIPointerDevice2* This,
-        UINT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2 * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MaxPointersWithZDistance )(
+        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2 * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2Vtbl;
 
 interface __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2Vtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2Vtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_get_MaxPointersWithZDistance(This, value) \
-    ((This)->lpVtbl->get_MaxPointersWithZDistance(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_get_MaxPointersWithZDistance(This,value) \
+    ( (This)->lpVtbl->get_MaxPointersWithZDistance(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDevice2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPointerDevice2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4518,74 +2722,100 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDevice2;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.PointerDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_IPointerDeviceStatics[] = L"Windows.Devices.Input.IPointerDeviceStatics";
+/* [object, uuid("D8B89AA1-D1C6-416E-BD8D-5790914DC563"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetPointerDevice)(__x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics* This,
-        UINT32 pointerId,
-        __x_ABI_CWindows_CDevices_CInput_CIPointerDevice** pointerDevice);
-    HRESULT (STDMETHODCALLTYPE* GetPointerDevices)(__x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics* This,
-        __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice** pointerDevices);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetPointerDevice )(
+        __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics * This,
+        /* [in] */UINT32 pointerId,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CDevices_CInput_CIPointerDevice * * pointerDevice
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetPointerDevices )(
+        __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CInput__CPointerDevice * * pointerDevices
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStaticsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetPointerDevice(This, pointerId, pointerDevice) \
-    ((This)->lpVtbl->GetPointerDevice(This, pointerId, pointerDevice))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetPointerDevice(This,pointerId,pointerDevice) \
+    ( (This)->lpVtbl->GetPointerDevice(This,pointerId,pointerDevice) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetPointerDevices(This, pointerDevices) \
-    ((This)->lpVtbl->GetPointerDevices(This, pointerDevices))
+#define __x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_GetPointerDevices(This,pointerDevices) \
+    ( (This)->lpVtbl->GetPointerDevices(This,pointerDevices) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4593,79 +2823,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CIPointerDeviceStatics;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Input.TouchCapabilities
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Input_ITouchCapabilities[] = L"Windows.Devices.Input.ITouchCapabilities";
+/* [object, uuid("20DD55F9-13F1-46C8-9285-2C05FA3EDA6F"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CInput_CITouchCapabilitiesVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CInput_CITouchCapabilities* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CInput_CITouchCapabilities* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CInput_CITouchCapabilities* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CInput_CITouchCapabilities* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CInput_CITouchCapabilities* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CInput_CITouchCapabilities* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_TouchPresent)(__x_ABI_CWindows_CDevices_CInput_CITouchCapabilities* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_Contacts)(__x_ABI_CWindows_CDevices_CInput_CITouchCapabilities* This,
-        UINT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TouchPresent )(
+        __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Contacts )(
+        __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CInput_CITouchCapabilitiesVtbl;
 
 interface __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CITouchCapabilitiesVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CInput_CITouchCapabilitiesVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_get_TouchPresent(This, value) \
-    ((This)->lpVtbl->get_TouchPresent(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_get_TouchPresent(This,value) \
+    ( (This)->lpVtbl->get_TouchPresent(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_get_Contacts(This, value) \
-    ((This)->lpVtbl->get_Contacts(This, value))
+#define __x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_get_Contacts(This,value) \
+    ( (This)->lpVtbl->get_Contacts(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CITouchCapabilities;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CInput_CITouchCapabilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.Devices.Input.KeyboardCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -4677,17 +2934,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CInput_CITouchCapabilities;
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_KeyboardCapabilities_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_KeyboardCapabilities_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_KeyboardCapabilities[] = L"Windows.Devices.Input.KeyboardCapabilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Input.MouseCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -4699,17 +2959,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_MouseCapabilities_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_MouseCapabilities_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_MouseCapabilities[] = L"Windows.Devices.Input.MouseCapabilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Input.MouseDevice
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Input.IMouseDeviceStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -4721,17 +2984,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_MouseDevice_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_MouseDevice_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_MouseDevice[] = L"Windows.Devices.Input.MouseDevice";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Input.MouseEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Input.IMouseEventArgs ** Default Interface **
@@ -4740,184 +3006,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_MouseEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_MouseEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_MouseEventArgs[] = L"Windows.Devices.Input.MouseEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-/*
- *
- * Class Windows.Devices.Input.PenButtonListener
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Input.IPenButtonListenerStatics interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenButtonListener ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenButtonListener_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenButtonListener_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenButtonListener[] = L"Windows.Devices.Input.PenButtonListener";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenDevice
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 8.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Input.IPenDeviceStatics interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenDevice ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenDevice_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenDevice_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenDevice[] = L"Windows.Devices.Input.PenDevice";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x80000
-
-/*
- *
- * Class Windows.Devices.Input.PenDockListener
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Devices.Input.IPenDockListenerStatics interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenDockListener ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenDockListener_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenDockListener_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenDockListener[] = L"Windows.Devices.Input.PenDockListener";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenDockedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenDockedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenDockedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenDockedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenDockedEventArgs[] = L"Windows.Devices.Input.PenDockedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenTailButtonClickedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenTailButtonClickedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenTailButtonClickedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenTailButtonClickedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenTailButtonClickedEventArgs[] = L"Windows.Devices.Input.PenTailButtonClickedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenTailButtonDoubleClickedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenTailButtonDoubleClickedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenTailButtonDoubleClickedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenTailButtonDoubleClickedEventArgs[] = L"Windows.Devices.Input.PenTailButtonDoubleClickedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenTailButtonLongPressedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenTailButtonLongPressedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenTailButtonLongPressedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenTailButtonLongPressedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenTailButtonLongPressedEventArgs[] = L"Windows.Devices.Input.PenTailButtonLongPressedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-
-/*
- *
- * Class Windows.Devices.Input.PenUndockedEventArgs
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Class implements the following interfaces:
- *    Windows.Devices.Input.IPenUndockedEventArgs ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#ifndef RUNTIMECLASS_Windows_Devices_Input_PenUndockedEventArgs_DEFINED
-#define RUNTIMECLASS_Windows_Devices_Input_PenUndockedEventArgs_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PenUndockedEventArgs[] = L"Windows.Devices.Input.PenUndockedEventArgs";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
 
 /*
  *
  * Class Windows.Devices.Input.PointerDevice
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Input.IPointerDeviceStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -4930,17 +3032,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_PointerDevice_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_PointerDevice_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_PointerDevice[] = L"Windows.Devices.Input.PointerDevice";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Input.TouchCapabilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -4952,11 +3057,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Input_TouchCapabilities_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Input_TouchCapabilities_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Input_TouchCapabilities[] = L"Windows.Devices.Input.TouchCapabilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

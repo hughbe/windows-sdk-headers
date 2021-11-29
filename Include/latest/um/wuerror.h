@@ -211,15 +211,6 @@
 //
 #define WU_S_METADATA_IGNORED_SIGNATURE_VERIFICATION _HRESULT_TYPEDEF_(0x00247102L)
 
-//
-// MessageId: WU_S_SEARCH_LOAD_SHEDDING
-//
-// MessageText:
-//
-// Search operation completed successfully but one or more services were shedding load.
-//
-#define WU_S_SEARCH_LOAD_SHEDDING        _HRESULT_TYPEDEF_(0x00248001L)
-
 ///////////////////////////////////////////////////////////////////////////////
 // Windows Update Error Codes
 ///////////////////////////////////////////////////////////////////////////////
@@ -1040,42 +1031,6 @@
 #define WU_E_UPDATE_NOT_APPROVED         _HRESULT_TYPEDEF_(0x80240062L)
 
 //
-// MessageId: WU_E_CALL_CANCELLED_BY_INTERACTIVE_SEARCH
-//
-// MessageText:
-//
-// The search call was cancelled by another interactive search against the same service.
-//
-#define WU_E_CALL_CANCELLED_BY_INTERACTIVE_SEARCH _HRESULT_TYPEDEF_(0x80240063L)
-
-//
-// MessageId: WU_E_INSTALL_JOB_RESUME_NOT_ALLOWED
-//
-// MessageText:
-//
-// Resume of install job not allowed due to another installation in progress.
-//
-#define WU_E_INSTALL_JOB_RESUME_NOT_ALLOWED _HRESULT_TYPEDEF_(0x80240064L)
-
-//
-// MessageId: WU_E_INSTALL_JOB_NOT_SUSPENDED
-//
-// MessageText:
-//
-// Resume of install job not allowed because job is not suspended.
-//
-#define WU_E_INSTALL_JOB_NOT_SUSPENDED   _HRESULT_TYPEDEF_(0x80240065L)
-
-//
-// MessageId: WU_E_INSTALL_USERCONTEXT_ACCESSDENIED
-//
-// MessageText:
-//
-// User context passed to installation from caller with insufficient privileges.
-//
-#define WU_E_INSTALL_USERCONTEXT_ACCESSDENIED _HRESULT_TYPEDEF_(0x80240066L)
-
-//
 // MessageId: WU_E_UNEXPECTED
 //
 // MessageText:
@@ -1553,15 +1508,6 @@
 // Same as ERROR_WINHTTP_NAME_NOT_RESOLVED - the proxy server or target server name cannot be resolved.
 //
 #define WU_E_PT_WINHTTP_NAME_NOT_RESOLVED _HRESULT_TYPEDEF_(0x8024402CL)
-
-//
-// MessageId: WU_E_PT_LOAD_SHEDDING
-//
-// MessageText:
-//
-// The server is shedding load.
-//
-#define WU_E_PT_LOAD_SHEDDING            _HRESULT_TYPEDEF_(0x8024402DL)
 
 //
 // MessageId: WU_E_PT_SAME_REDIR_ID
@@ -2067,108 +2013,9 @@
 //
 // MessageText:
 //
-// Post-reboot install failed.
+// Post-reboot install failed. 
 //
 #define WU_E_SIH_POST_REBOOT_INSTALL_FAILED _HRESULT_TYPEDEF_(0x80245109L)
-
-//
-// MessageId: WU_E_SIH_POST_REBOOT_NO_CACHED_SLS_RESPONSE
-//
-// MessageText:
-//
-// There were pending reboot actions, but cached SLS response was not found post-reboot.
-//
-#define WU_E_SIH_POST_REBOOT_NO_CACHED_SLS_RESPONSE _HRESULT_TYPEDEF_(0x8024510AL)
-
-//
-// MessageId: WU_E_SIH_PARSE
-//
-// MessageText:
-//
-// Parsing command line arguments failed.
-//
-#define WU_E_SIH_PARSE                   _HRESULT_TYPEDEF_(0x8024510BL)
-
-//
-// MessageId: WU_E_SIH_SECURITY
-//
-// MessageText:
-//
-// Security check failed.
-//
-#define WU_E_SIH_SECURITY                _HRESULT_TYPEDEF_(0x8024510CL)
-
-//
-// MessageId: WU_E_SIH_PPL
-//
-// MessageText:
-//
-// PPL check failed.
-//
-#define WU_E_SIH_PPL                     _HRESULT_TYPEDEF_(0x8024510DL)
-
-//
-// MessageId: WU_E_SIH_POLICY
-//
-// MessageText:
-//
-// Execution was disabled by policy.
-//
-#define WU_E_SIH_POLICY                  _HRESULT_TYPEDEF_(0x8024510EL)
-
-//
-// MessageId: WU_E_SIH_STDEXCEPTION
-//
-// MessageText:
-//
-// A standard exception was caught.
-//
-#define WU_E_SIH_STDEXCEPTION            _HRESULT_TYPEDEF_(0x8024510FL)
-
-//
-// MessageId: WU_E_SIH_NONSTDEXCEPTION
-//
-// MessageText:
-//
-// A non-standard exception was caught.
-//
-#define WU_E_SIH_NONSTDEXCEPTION         _HRESULT_TYPEDEF_(0x80245110L)
-
-//
-// MessageId: WU_E_SIH_ENGINE_EXCEPTION
-//
-// MessageText:
-//
-// The server-initiated healing engine encountered an exception not covered by another WU_E_SIH_* error code.
-//
-#define WU_E_SIH_ENGINE_EXCEPTION        _HRESULT_TYPEDEF_(0x80245111L)
-
-//
-// MessageId: WU_E_SIH_BLOCKED_FOR_PLATFORM
-//
-// MessageText:
-//
-// You are running SIH Client with cmd not supported on your platform.
-//
-#define WU_E_SIH_BLOCKED_FOR_PLATFORM    _HRESULT_TYPEDEF_(0x80245112L)
-
-//
-// MessageId: WU_E_SIH_ANOTHER_INSTANCE_RUNNING
-//
-// MessageText:
-//
-// Another SIH Client is already running.
-//
-#define WU_E_SIH_ANOTHER_INSTANCE_RUNNING _HRESULT_TYPEDEF_(0x80245113L)
-
-//
-// MessageId: WU_E_SIH_DNSRESILIENCY_OFF
-//
-// MessageText:
-//
-// Disable DNS resiliency feature per service configuration.
-//
-#define WU_E_SIH_DNSRESILIENCY_OFF       _HRESULT_TYPEDEF_(0x80245114L)
 
 //
 // MessageId: WU_E_SIH_UNEXPECTED
@@ -2532,114 +2379,6 @@
 // A data store operation did not complete because it was requested with an impersonated identity.
 //
 #define WU_E_DS_IMPERSONATED             _HRESULT_TYPEDEF_(0x8024801DL)
-
-//
-// MessageId: WU_E_DS_DATANOTAVAILABLE
-//
-// MessageText:
-//
-// An operation against update metadata did not complete because the data was never received from server.
-//
-#define WU_E_DS_DATANOTAVAILABLE         _HRESULT_TYPEDEF_(0x8024801EL)
-
-//
-// MessageId: WU_E_DS_DATANOTLOADED
-//
-// MessageText:
-//
-// An operation against update metadata did not complete because the data was available but not loaded from datastore.
-//
-#define WU_E_DS_DATANOTLOADED            _HRESULT_TYPEDEF_(0x8024801FL)
-
-//
-// MessageId: WU_E_DS_NODATA_NOSUCHREVISION
-//
-// MessageText:
-//
-// A data store operation did not complete because no such update revision is known.
-//
-#define WU_E_DS_NODATA_NOSUCHREVISION    _HRESULT_TYPEDEF_(0x80248020L)
-
-//
-// MessageId: WU_E_DS_NODATA_NOSUCHUPDATE
-//
-// MessageText:
-//
-// A data store operation did not complete because no such update is known.
-//
-#define WU_E_DS_NODATA_NOSUCHUPDATE      _HRESULT_TYPEDEF_(0x80248021L)
-
-//
-// MessageId: WU_E_DS_NODATA_EULA
-//
-// MessageText:
-//
-// A data store operation did not complete because an update's EULA information is missing.
-//
-#define WU_E_DS_NODATA_EULA              _HRESULT_TYPEDEF_(0x80248022L)
-
-//
-// MessageId: WU_E_DS_NODATA_SERVICE
-//
-// MessageText:
-//
-// A data store operation did not complete because a service's information is missing.
-//
-#define WU_E_DS_NODATA_SERVICE           _HRESULT_TYPEDEF_(0x80248023L)
-
-//
-// MessageId: WU_E_DS_NODATA_COOKIE
-//
-// MessageText:
-//
-// A data store operation did not complete because a service's synchronization information is missing.
-//
-#define WU_E_DS_NODATA_COOKIE            _HRESULT_TYPEDEF_(0x80248024L)
-
-//
-// MessageId: WU_E_DS_NODATA_TIMER
-//
-// MessageText:
-//
-// A data store operation did not complete because a timer's information is missing.
-//
-#define WU_E_DS_NODATA_TIMER             _HRESULT_TYPEDEF_(0x80248025L)
-
-//
-// MessageId: WU_E_DS_NODATA_CCR
-//
-// MessageText:
-//
-// A data store operation did not complete because a download's information is missing.
-//
-#define WU_E_DS_NODATA_CCR               _HRESULT_TYPEDEF_(0x80248026L)
-
-//
-// MessageId: WU_E_DS_NODATA_FILE
-//
-// MessageText:
-//
-// A data store operation did not complete because a file's information is missing.
-//
-#define WU_E_DS_NODATA_FILE              _HRESULT_TYPEDEF_(0x80248027L)
-
-//
-// MessageId: WU_E_DS_NODATA_DOWNLOADJOB
-//
-// MessageText:
-//
-// A data store operation did not complete because a download job's information is missing.
-//
-#define WU_E_DS_NODATA_DOWNLOADJOB       _HRESULT_TYPEDEF_(0x80248028L)
-
-//
-// MessageId: WU_E_DS_NODATA_TMI
-//
-// MessageText:
-//
-// A data store operation did not complete because a service's timestamp information is missing.
-//
-#define WU_E_DS_NODATA_TMI               _HRESULT_TYPEDEF_(0x80248029L)
 
 //
 // MessageId: WU_E_DS_UNEXPECTED
@@ -3363,24 +3102,6 @@
 // The hash of the update's sandbox does not match the expected value.
 //
 #define WU_E_DM_SANDBOX_HASH_MISMATCH    _HRESULT_TYPEDEF_(0x8024601CL)
-
-//
-// MessageId: WU_E_DM_HARDRESERVEID_CONFLICT
-//
-// MessageText:
-//
-// The hard reserve id specified conflicts with an id from another caller.
-//
-#define WU_E_DM_HARDRESERVEID_CONFLICT   _HRESULT_TYPEDEF_(0x8024601DL)
-
-//
-// MessageId: WU_E_DM_DOSVC_REQUIRED
-//
-// MessageText:
-//
-// The update has to be downloaded via DO.
-//
-#define WU_E_DM_DOSVC_REQUIRED           _HRESULT_TYPEDEF_(0x8024601EL)
 
 //
 // MessageId: WU_E_DM_UNEXPECTED
@@ -4311,62 +4032,5 @@
 // Installing merged updates only. So skipping non mergeable updates.
 //
 #define WU_E_SKIPPED_UPDATE_INSTALLATION _HRESULT_TYPEDEF_(0x8024B105L)
-
-//////////////////////////////////////////////////////////////////////////////
-// SLS related errors - 0xB201
-////
-///////
-// SLS General errors 0xB201 - 0xB2FF
-///////
-//
-// MessageId: WU_E_SLS_INVALID_REVISION
-//
-// MessageText:
-//
-// SLS response returned invalid revision number.
-//
-#define WU_E_SLS_INVALID_REVISION        _HRESULT_TYPEDEF_(0x8024B201L)
-
-//////////////////////////////////////////////////////////////////////////////
-// trust related errors - 0xB301
-////
-///////
-// trust General errors 0xB301 - 0xB3FF
-///////
-//
-// MessageId: WU_E_FILETRUST_DUALSIGNATURE_RSA
-//
-// MessageText:
-//
-// File signature validation fails to find valid RSA signature on infrastructure payload.
-//
-#define WU_E_FILETRUST_DUALSIGNATURE_RSA _HRESULT_TYPEDEF_(0x8024B301L)
-
-//
-// MessageId: WU_E_FILETRUST_DUALSIGNATURE_ECC
-//
-// MessageText:
-//
-// File signature validation fails to find valid ECC signature on infrastructure payload.
-//
-#define WU_E_FILETRUST_DUALSIGNATURE_ECC _HRESULT_TYPEDEF_(0x8024B302L)
-
-//
-// MessageId: WU_E_TRUST_SUBJECT_NOT_TRUSTED
-//
-// MessageText:
-//
-// The subject is not trusted by WU for the specified action.
-//
-#define WU_E_TRUST_SUBJECT_NOT_TRUSTED   _HRESULT_TYPEDEF_(0x8024B303L)
-
-//
-// MessageId: WU_E_TRUST_PROVIDER_UNKNOWN
-//
-// MessageText:
-//
-// Unknown trust provider for WU.
-//
-#define WU_E_TRUST_PROVIDER_UNKNOWN      _HRESULT_TYPEDEF_(0x8024B304L)
 
 #endif //_WUERROR_

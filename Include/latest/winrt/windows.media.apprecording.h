@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.media.apprecording.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,32 +75,175 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+
+#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
+#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
 
 #if !defined(WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION)
 #define WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
+#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
+
+#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
+#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
+#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -121,10 +267,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingManager;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager ABI::Windows::Media::AppRecording::IAppRecordingManager
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_FWD_DEFINED__
@@ -136,10 +281,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingManagerStatics;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics ABI::Windows::Media::AppRecording::IAppRecordingManagerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_FWD_DEFINED__
@@ -151,10 +295,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingResult;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult ABI::Windows::Media::AppRecording::IAppRecordingResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_FWD_DEFINED__
@@ -166,10 +309,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingSaveScreenshotResult;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_FWD_DEFINED__
@@ -181,10 +323,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingSavedScreenshotInfo;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_FWD_DEFINED__
@@ -196,10 +337,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingStatus;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus ABI::Windows::Media::AppRecording::IAppRecordingStatus
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_FWD_DEFINED__
@@ -211,10 +351,9 @@ namespace ABI {
         namespace Media {
             namespace AppRecording {
                 interface IAppRecordingStatusDetails;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails ABI::Windows::Media::AppRecording::IAppRecordingStatusDetails
 
 #endif // ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_FWD_DEFINED__
@@ -226,189 +365,11 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
-                class AppRecordingResult;
-            } /* AppRecording */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE
-#define DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("2c72c716-30ea-552c-aaca-51d123234ee3"))
-IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingResult*, ABI::Windows::Media::AppRecording::IAppRecordingResult*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.AppRecording.AppRecordingResult>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingResult*> __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t;
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE */
-
-#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("1f6f478f-6cab-58e5-8194-98083c72ddfc"))
-IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingResult*, ABI::Windows::Media::AppRecording::IAppRecordingResult*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.AppRecording.AppRecordingResult>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE */
-
-#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace AppRecording {
-                class AppRecordingSaveScreenshotResult;
-            } /* AppRecording */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE
-#define DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("a048c53e-e624-512b-8e07-ac4e64391b2a"))
-IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*, ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.AppRecording.AppRecordingSaveScreenshotResult>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t;
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE */
-
-#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("8e2047c3-4cdd-5404-9f68-529d0a35be65"))
-IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*, ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.AppRecording.AppRecordingSaveScreenshotResult>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE */
-
-#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-
-#ifndef DEF___FIIterator_1_HSTRING_USE
-#define DEF___FIIterator_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
-IIterator<HSTRING> : IIterator_impl<HSTRING>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<String>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
-#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_HSTRING_USE */
-
-
-
-#ifndef DEF___FIIterable_1_HSTRING_USE
-#define DEF___FIIterable_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
-IIterable<HSTRING> : IIterable_impl<HSTRING>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<String>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
-#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_HSTRING_USE */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace AppRecording {
                 class AppRecordingSavedScreenshotInfo;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
+
 
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
@@ -418,11 +379,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("3c407016-1940-5e2b-8830-c54becbbe0da"))
-IIterator<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*, ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>>
+IIterator<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*, ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo>";
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -430,12 +391,17 @@ IIterator<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> :
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t;
 #define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>
+//#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_USE */
 
+
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
@@ -445,11 +411,11 @@ typedef IIterator<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshot
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("dd170424-794d-5158-a9af-6824353f91b2"))
-IIterable<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*, ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>>
+IIterable<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*, ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo>";
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -457,36 +423,16 @@ IIterable<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> :
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t;
 #define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>
+//#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_USE */
 
+
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-
-#ifndef DEF___FIVectorView_1_HSTRING_USE
-#define DEF___FIVectorView_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
-IVectorView<HSTRING> : IVectorView_impl<HSTRING>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<String>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
-#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_HSTRING_USE */
 
 
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -497,11 +443,11 @@ typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("43c83783-b36d-5a8e-b993-e19c823e6c1a"))
-IVectorView<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*, ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>>
+IVectorView<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*, ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo>";
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -509,36 +455,278 @@ IVectorView<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*>
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo*> __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t;
 #define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>
+//#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::AppRecording::IAppRecordingSavedScreenshotInfo*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_USE */
+
 
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
-        namespace Foundation {
-            typedef struct DateTime DateTime;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        namespace Media {
+            namespace AppRecording {
+                class AppRecordingResult;
+            } /* Windows */
+        } /* Media */
+    } /* AppRecording */} /* ABI */
+
+
+#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("1f6f478f-6cab-58e5-8194-98083c72ddfc"))
+IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingResult*, ABI::Windows::Media::AppRecording::IAppRecordingResult*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.AppRecording.AppRecordingResult>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::IAppRecordingResult*>
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::IAppRecordingResult*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE */
+
+
+#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE
+#define DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("2c72c716-30ea-552c-aaca-51d123234ee3"))
+IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingResult*, ABI::Windows::Media::AppRecording::IAppRecordingResult*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.AppRecording.AppRecordingResult>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingResult*> __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t;
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::AppRecording::IAppRecordingResult*>
+//#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::AppRecording::IAppRecordingResult*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_USE */
+
+
+#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace AppRecording {
+                class AppRecordingSaveScreenshotResult;
+            } /* Windows */
+        } /* Media */
+    } /* AppRecording */} /* ABI */
+
+
+#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("8e2047c3-4cdd-5404-9f68-529d0a35be65"))
+IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*, ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.AppRecording.AppRecordingSaveScreenshotResult>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE */
+
+
+#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE
+#define DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("a048c53e-e624-512b-8e07-ac4e64391b2a"))
+IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*, ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.AppRecording.AppRecordingSaveScreenshotResult>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult*> __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t;
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>
+//#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::AppRecording::IAppRecordingSaveScreenshotResult*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_USE */
+
+
+#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+
+#ifndef DEF___FIIterator_1_HSTRING_USE
+#define DEF___FIIterator_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
+IIterator<HSTRING> : IIterator_impl<HSTRING> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<String>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
+#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
+//#define __FIIterator_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterator<HSTRING>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_HSTRING_USE */
+
+
+
+
+#ifndef DEF___FIIterable_1_HSTRING_USE
+#define DEF___FIIterable_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
+IIterable<HSTRING> : IIterable_impl<HSTRING> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<String>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
+#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
+//#define __FIIterable_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterable<HSTRING>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_HSTRING_USE */
+
+
+
+
+#ifndef DEF___FIVectorView_1_HSTRING_USE
+#define DEF___FIVectorView_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
+IVectorView<HSTRING> : IVectorView_impl<HSTRING> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<String>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
+#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
+//#define __FIVectorView_1_HSTRING_t ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_HSTRING_USE */
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
+            
+            typedef struct DateTime DateTime;
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            
             typedef struct TimeSpan TimeSpan;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
-        } /* Storage */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Storage */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -546,20 +734,19 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFile;
-        } /* Storage */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Storage */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
+
 
 namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Storage */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Storage */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -567,52 +754,75 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Storage */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Storage */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
+                
                 typedef enum AppRecordingSaveScreenshotOption : int AppRecordingSaveScreenshotOption;
-            } /* AppRecording */
+                
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
+
+
+
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
                 class AppRecordingManager;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
                 class AppRecordingStatus;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
                 class AppRecordingStatusDetails;
-            } /* AppRecording */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -620,22 +830,26 @@ namespace ABI {
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
+                /* [v1_enum, contract] */
                 enum AppRecordingSaveScreenshotOption : int
                 {
                     AppRecordingSaveScreenshotOption_None = 0,
                     AppRecordingSaveScreenshotOption_HdrContentVisible = 1,
                 };
-            } /* AppRecording */
+                
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -643,7 +857,9 @@ namespace ABI {
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingManager
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -654,44 +870,46 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
-                MIDL_INTERFACE("e7e26076-a044-48e2-a512-3094d574c7cc")
-                IAppRecordingManager : public IInspectable
+                /* [object, uuid("E7E26076-A044-48E2-A512-3094D574C7CC"), exclusiveto, contract] */
+                MIDL_INTERFACE("E7E26076-A044-48E2-A512-3094D574C7CC")
+                IAppRecordingManager : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE GetStatus(
-                        ABI::Windows::Media::AppRecording::IAppRecordingStatus** result
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::AppRecording::IAppRecordingStatus * * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE StartRecordingToFileAsync(
-                        ABI::Windows::Storage::IStorageFile* file,
-                        __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult** operation
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * file,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * * operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE RecordTimeSpanToFileAsync(
-                        ABI::Windows::Foundation::DateTime startTime,
-                        ABI::Windows::Foundation::TimeSpan duration,
-                        ABI::Windows::Storage::IStorageFile* file,
-                        __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult** operation
+                        /* [in] */ABI::Windows::Foundation::DateTime startTime,
+                        /* [in] */ABI::Windows::Foundation::TimeSpan duration,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * file,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * * operation
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_SupportedScreenshotMediaEncodingSubtypes(
-                        __FIVectorView_1_HSTRING** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedScreenshotMediaEncodingSubtypes(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SaveScreenshotToFilesAsync(
-                        ABI::Windows::Storage::IStorageFolder* folder,
-                        HSTRING filenamePrefix,
-                        ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotOption option,
-                        __FIIterable_1_HSTRING* requestedFormats,
-                        __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult** operation
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFolder * folder,
+                        /* [in] */__RPC__in HSTRING filenamePrefix,
+                        /* [in] */ABI::Windows::Media::AppRecording::AppRecordingSaveScreenshotOption option,
+                        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * requestedFormats,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * * operation
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppRecordingManager = _uuidof(IAppRecordingManager);
-            } /* AppRecording */
+                extern MIDL_CONST_ID IID & IID_IAppRecordingManager=_uuidof(IAppRecordingManager);
+                
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -699,7 +917,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManag
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingManager
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -710,24 +930,26 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
-                MIDL_INTERFACE("50e709f7-38ce-4bd3-9db2-e72bbe9de11d")
-                IAppRecordingManagerStatics : public IInspectable
+                /* [object, uuid("50E709F7-38CE-4BD3-9DB2-E72BBE9DE11D"), exclusiveto, contract] */
+                MIDL_INTERFACE("50E709F7-38CE-4BD3-9DB2-E72BBE9DE11D")
+                IAppRecordingManagerStatics : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                        ABI::Windows::Media::AppRecording::IAppRecordingManager** result
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::AppRecording::IAppRecordingManager * * result
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppRecordingManagerStatics = _uuidof(IAppRecordingManagerStatics);
-            } /* AppRecording */
+                extern MIDL_CONST_ID IID & IID_IAppRecordingManagerStatics=_uuidof(IAppRecordingManagerStatics);
+                
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -735,7 +957,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManag
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingResult
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -746,33 +970,35 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
-                MIDL_INTERFACE("3a900864-c66d-46f9-b2d9-5bc2dad070d7")
-                IAppRecordingResult : public IInspectable
+                /* [object, uuid("3A900864-C66D-46F9-B2D9-5BC2DAD070D7"), exclusiveto, contract] */
+                MIDL_INTERFACE("3A900864-C66D-46F9-B2D9-5BC2DAD070D7")
+                IAppRecordingResult : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
-                        HRESULT* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
+                        /* [retval, out] */__RPC__out HRESULT * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Duration(
-                        ABI::Windows::Foundation::TimeSpan* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Duration(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsFileTruncated(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsFileTruncated(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppRecordingResult = _uuidof(IAppRecordingResult);
-            } /* AppRecording */
+                extern MIDL_CONST_ID IID & IID_IAppRecordingResult=_uuidof(IAppRecordingResult);
+                
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -780,7 +1006,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResul
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingSaveScreenshotResult
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -791,30 +1019,32 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
-                MIDL_INTERFACE("9c5b8d0a-0abb-4457-aaee-24f9c12ec778")
-                IAppRecordingSaveScreenshotResult : public IInspectable
+                /* [object, uuid("9C5B8D0A-0ABB-4457-AAEE-24F9C12EC778"), exclusiveto, contract] */
+                MIDL_INTERFACE("9C5B8D0A-0ABB-4457-AAEE-24F9C12EC778")
+                IAppRecordingSaveScreenshotResult : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Succeeded(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
-                        HRESULT* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
+                        /* [retval, out] */__RPC__out HRESULT * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_SavedScreenshotInfos(
-                        __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SavedScreenshotInfos(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppRecordingSaveScreenshotResult = _uuidof(IAppRecordingSaveScreenshotResult);
-            } /* AppRecording */
+                extern MIDL_CONST_ID IID & IID_IAppRecordingSaveScreenshotResult=_uuidof(IAppRecordingSaveScreenshotResult);
+                
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -822,7 +1052,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveS
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -833,27 +1065,29 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
-                MIDL_INTERFACE("9b642d0a-189a-4d00-bf25-e1bb1249d594")
-                IAppRecordingSavedScreenshotInfo : public IInspectable
+                /* [object, uuid("9B642D0A-189A-4D00-BF25-E1BB1249D594"), exclusiveto, contract] */
+                MIDL_INTERFACE("9B642D0A-189A-4D00-BF25-E1BB1249D594")
+                IAppRecordingSavedScreenshotInfo : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_File(
-                        ABI::Windows::Storage::IStorageFile** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_File(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::IStorageFile * * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MediaEncodingSubtype(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MediaEncodingSubtype(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppRecordingSavedScreenshotInfo = _uuidof(IAppRecordingSavedScreenshotInfo);
-            } /* AppRecording */
+                extern MIDL_CONST_ID IID & IID_IAppRecordingSavedScreenshotInfo=_uuidof(IAppRecordingSavedScreenshotInfo);
+                
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -861,7 +1095,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaved
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingStatus
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -872,33 +1108,35 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
-                MIDL_INTERFACE("1d0cc82c-bc18-4b8a-a6ef-127efab3b5d9")
-                IAppRecordingStatus : public IInspectable
+                /* [object, uuid("1D0CC82C-BC18-4B8A-A6EF-127EFAB3B5D9"), exclusiveto, contract] */
+                MIDL_INTERFACE("1D0CC82C-BC18-4B8A-A6EF-127EFAB3B5D9")
+                IAppRecordingStatus : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_CanRecord(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanRecord(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_CanRecordTimeSpan(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanRecordTimeSpan(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_HistoricalBufferDuration(
-                        ABI::Windows::Foundation::TimeSpan* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HistoricalBufferDuration(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Details(
-                        ABI::Windows::Media::AppRecording::IAppRecordingStatusDetails** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Details(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Media::AppRecording::IAppRecordingStatusDetails * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppRecordingStatus = _uuidof(IAppRecordingStatus);
-            } /* AppRecording */
+                extern MIDL_CONST_ID IID & IID_IAppRecordingStatus=_uuidof(IAppRecordingStatus);
+                
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -906,7 +1144,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatu
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingStatusDetails
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
@@ -917,54 +1157,57 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace AppRecording {
-                MIDL_INTERFACE("b538a9b0-14ed-4412-ac45-6d672c9c9949")
-                IAppRecordingStatusDetails : public IInspectable
+                /* [object, uuid("B538A9B0-14ED-4412-AC45-6D672C9C9949"), exclusiveto, contract] */
+                MIDL_INTERFACE("B538A9B0-14ED-4412-AC45-6D672C9C9949")
+                IAppRecordingStatusDetails : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_IsAnyAppBroadcasting(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAnyAppBroadcasting(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsCaptureResourceUnavailable(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCaptureResourceUnavailable(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsGameStreamInProgress(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGameStreamInProgress(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsTimeSpanRecordingDisabled(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsTimeSpanRecordingDisabled(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsGpuConstrained(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsGpuConstrained(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsAppInactive(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsAppInactive(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsBlockedForApp(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsBlockedForApp(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsDisabledByUser(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabledByUser(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsDisabledBySystem(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsDisabledBySystem(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IAppRecordingStatusDetails = _uuidof(IAppRecordingStatusDetails);
-            } /* AppRecording */
+                extern MIDL_CONST_ID IID & IID_IAppRecordingStatusDetails=_uuidof(IAppRecordingStatusDetails);
+                
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* AppRecording */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingManager
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.AppRecording.IAppRecordingManagerStatics interface starting with version 1.0 of the Windows.Media.AppRecording.AppRecordingContract API contract
@@ -978,17 +1221,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatu
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingManager_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingManager[] = L"Windows.Media.AppRecording.AppRecordingManager";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingResult
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingResult ** Default Interface **
@@ -999,17 +1245,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingResult_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingResult[] = L"Windows.Media.AppRecording.AppRecordingResult";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingSaveScreenshotResult
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult ** Default Interface **
@@ -1020,17 +1269,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingSaveScreenshotResult_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingSaveScreenshotResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingSaveScreenshotResult[] = L"Windows.Media.AppRecording.AppRecordingSaveScreenshotResult";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingSavedScreenshotInfo ** Default Interface **
@@ -1041,17 +1293,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingSavedScreenshotInfo_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingSavedScreenshotInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingSavedScreenshotInfo[] = L"Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingStatus
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingStatus ** Default Interface **
@@ -1062,17 +1317,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingStatus_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingStatus_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingStatus[] = L"Windows.Media.AppRecording.AppRecordingStatus";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingStatusDetails
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingStatusDetails ** Default Interface **
@@ -1083,11 +1341,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingStatusDetails_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingStatusDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingStatusDetails[] = L"Windows.Media.AppRecording.AppRecordingStatusDetails";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -1137,397 +1399,6 @@ typedef interface __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDeta
 
 // Collection interface definitions
 
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
-
-#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
-
-typedef struct __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult* handler);
-    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult** result);
-    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult** result);
-
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl;
-
-interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_put_Completed(This, handler) \
-    ((This)->lpVtbl->put_Completed(This, handler))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_get_Completed(This, result) \
-    ((This)->lpVtbl->get_Completed(This, result))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_GetResults(This, result) \
-    ((This)->lpVtbl->GetResults(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__
-#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult* This,
-        __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult* asyncInfo,
-        AsyncStatus asyncStatus);
-
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_Invoke(This, asyncInfo, asyncStatus) \
-    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__
-#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
-
-#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
-
-typedef struct __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* handler);
-    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult** result);
-    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult** result);
-
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl;
-
-interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_put_Completed(This, handler) \
-    ((This)->lpVtbl->put_Completed(This, handler))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_get_Completed(This, result) \
-    ((This)->lpVtbl->get_Completed(This, result))
-
-#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_GetResults(This, result) \
-    ((This)->lpVtbl->GetResults(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__
-#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* This,
-        __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult* asyncInfo,
-        AsyncStatus asyncStatus);
-
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_Invoke(This, asyncInfo, asyncStatus) \
-    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__
-#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
-
-#if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_HSTRING __FIIterator_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_HSTRING;
-
-typedef struct __FIIterator_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_HSTRING* This,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_HSTRING* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_HSTRING* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_HSTRING* This,
-        UINT32 itemsLength,
-        HSTRING* items,
-        UINT32* result);
-
-    END_INTERFACE
-} __FIIterator_1_HSTRINGVtbl;
-
-interface __FIIterator_1_HSTRING
-{
-    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterator_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIIterator_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIIterator_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIIterator_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterator_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterator_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterator_1_HSTRING_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
-
-#define __FIIterator_1_HSTRING_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
-
-#define __FIIterator_1_HSTRING_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
-
-#define __FIIterator_1_HSTRING_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
-
-#if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_HSTRING;
-
-typedef struct __FIIterable_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_HSTRING* This,
-        __FIIterator_1_HSTRING** result);
-
-    END_INTERFACE
-} __FIIterable_1_HSTRINGVtbl;
-
-interface __FIIterable_1_HSTRING
-{
-    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIIterable_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIIterable_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIIterable_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterable_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterable_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterable_1_HSTRING_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
-
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__
@@ -1541,73 +1412,80 @@ typedef struct __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSaved
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo** result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo** items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl;
 
 interface __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__
+
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__)
@@ -1618,143 +1496,70 @@ typedef interface __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSa
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo;
 
-typedef struct __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl
+typedef  struct __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo** result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo **first);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl;
 
 interface __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
+#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
+
 
 #endif // ____FIIterable_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__
+
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
-#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_HSTRING;
-
-typedef struct __FIVectorView_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_HSTRING* This,
-        UINT32 index,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_HSTRING* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_HSTRING* This,
-        HSTRING value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_HSTRING* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        HSTRING* items,
-        UINT32* result);
-
-    END_INTERFACE
-} __FIVectorView_1_HSTRINGVtbl;
-
-interface __FIVectorView_1_HSTRING
-{
-    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIVectorView_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIVectorView_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIVectorView_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIVectorView_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIVectorView_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIVectorView_1_HSTRING_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
-
-#define __FIVectorView_1_HSTRING_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
-
-#define __FIVectorView_1_HSTRING_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
-
-#define __FIVectorView_1_HSTRING_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
 
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__)
@@ -1769,81 +1574,605 @@ typedef struct __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSav
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        UINT32 index,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo** result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo* value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo** items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
 
-    END_INTERFACE
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+            /* [in] */ __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
 } __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl;
 
 interface __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl* lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfoVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__
+
+#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__
+
+#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult;
+
+typedef struct __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingResult **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * *results);
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl;
+
+interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResultVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult_INTERFACE_DEFINED__
+
+#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__
+
+#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult;
+
+typedef struct __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * *results);
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl;
+
+interface __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResultVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__
+
+#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+#if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_HSTRING __FIIterator_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_HSTRING;
+
+typedef struct __FIIterator_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_HSTRING * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_HSTRING * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_HSTRING * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1_HSTRINGVtbl;
+
+interface __FIIterator_1_HSTRING
+{
+    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_HSTRING_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_HSTRING_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_HSTRING_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_HSTRING_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
+
+
+#if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_HSTRING;
+
+typedef  struct __FIIterable_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_HSTRING * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_HSTRING * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_HSTRING * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_HSTRING **first);
+
+    END_INTERFACE
+} __FIIterable_1_HSTRINGVtbl;
+
+interface __FIIterable_1_HSTRING
+{
+    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __FIIterable_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterable_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
+#define __FIIterable_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
 
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
-
-#define __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+#define __FIIterable_1_HSTRING_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
 
-#endif // ____FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__
-#endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+#endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
+
+
+#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_HSTRING;
+
+typedef struct __FIVectorView_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_HSTRING * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_HSTRING * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_HSTRING * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_HSTRING * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out HSTRING *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [in] */ HSTRING item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_HSTRINGVtbl;
+
+interface __FIVectorView_1_HSTRING
+{
+    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_HSTRING_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_HSTRING_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_HSTRING_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_HSTRING_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
+
+
+
 
 typedef struct __x_ABI_CWindows_CFoundation_CDateTime __x_ABI_CWindows_CFoundation_CDateTime;
 
+
 typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
+
+
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1851,13 +2180,41 @@ typedef interface __x_ABI_CWindows_CStorage_CIStorageFile __x_ABI_CWindows_CStor
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 
+
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CStorage_CIStorageFolder __x_ABI_CWindows_CStorage_CIStorageFolder;
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 
+
+
+
+
+
 typedef enum __x_ABI_CWindows_CMedia_CAppRecording_CAppRecordingSaveScreenshotOption __x_ABI_CWindows_CMedia_CAppRecording_CAppRecordingSaveScreenshotOption;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -1865,8 +2222,11 @@ typedef enum __x_ABI_CWindows_CMedia_CAppRecording_CAppRecordingSaveScreenshotOp
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CMedia_CAppRecording_CAppRecordingSaveScreenshotOption
 {
     AppRecordingSaveScreenshotOption_None = 0,
@@ -1874,102 +2234,135 @@ enum __x_ABI_CWindows_CMedia_CAppRecording_CAppRecordingSaveScreenshotOption
 };
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Interface Windows.Media.AppRecording.IAppRecordingManager
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingManager
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_AppRecording_IAppRecordingManager[] = L"Windows.Media.AppRecording.IAppRecordingManager";
+/* [object, uuid("E7E26076-A044-48E2-A512-3094D574C7CC"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetStatus)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus** result);
-    HRESULT (STDMETHODCALLTYPE* StartRecordingToFileAsync)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This,
-        __x_ABI_CWindows_CStorage_CIStorageFile* file,
-        __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult** operation);
-    HRESULT (STDMETHODCALLTYPE* RecordTimeSpanToFileAsync)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This,
-        struct __x_ABI_CWindows_CFoundation_CDateTime startTime,
-        struct __x_ABI_CWindows_CFoundation_CTimeSpan duration,
-        __x_ABI_CWindows_CStorage_CIStorageFile* file,
-        __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult** operation);
-    HRESULT (STDMETHODCALLTYPE* get_SupportedScreenshotMediaEncodingSubtypes)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This,
-        __FIVectorView_1_HSTRING** value);
-    HRESULT (STDMETHODCALLTYPE* SaveScreenshotToFilesAsync)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager* This,
-        __x_ABI_CWindows_CStorage_CIStorageFolder* folder,
-        HSTRING filenamePrefix,
-        enum __x_ABI_CWindows_CMedia_CAppRecording_CAppRecordingSaveScreenshotOption option,
-        __FIIterable_1_HSTRING* requestedFormats,
-        __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult** operation);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetStatus )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *StartRecordingToFileAsync )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * file,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * * operation
+        );
+    HRESULT ( STDMETHODCALLTYPE *RecordTimeSpanToFileAsync )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This,
+        /* [in] */__x_ABI_CWindows_CFoundation_CDateTime startTime,
+        /* [in] */__x_ABI_CWindows_CFoundation_CTimeSpan duration,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * file,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingResult * * operation
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SupportedScreenshotMediaEncodingSubtypes )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *SaveScreenshotToFilesAsync )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFolder * folder,
+        /* [in] */__RPC__in HSTRING filenamePrefix,
+        /* [in] */__x_ABI_CWindows_CMedia_CAppRecording_CAppRecordingSaveScreenshotOption option,
+        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * requestedFormats,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CAppRecording__CAppRecordingSaveScreenshotResult * * operation
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerVtbl;
 
 interface __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_GetStatus(This, result) \
-    ((This)->lpVtbl->GetStatus(This, result))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_GetStatus(This,result) \
+    ( (This)->lpVtbl->GetStatus(This,result) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_StartRecordingToFileAsync(This, file, operation) \
-    ((This)->lpVtbl->StartRecordingToFileAsync(This, file, operation))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_StartRecordingToFileAsync(This,file,operation) \
+    ( (This)->lpVtbl->StartRecordingToFileAsync(This,file,operation) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_RecordTimeSpanToFileAsync(This, startTime, duration, file, operation) \
-    ((This)->lpVtbl->RecordTimeSpanToFileAsync(This, startTime, duration, file, operation))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_RecordTimeSpanToFileAsync(This,startTime,duration,file,operation) \
+    ( (This)->lpVtbl->RecordTimeSpanToFileAsync(This,startTime,duration,file,operation) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_get_SupportedScreenshotMediaEncodingSubtypes(This, value) \
-    ((This)->lpVtbl->get_SupportedScreenshotMediaEncodingSubtypes(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_get_SupportedScreenshotMediaEncodingSubtypes(This,value) \
+    ( (This)->lpVtbl->get_SupportedScreenshotMediaEncodingSubtypes(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_SaveScreenshotToFilesAsync(This, folder, filenamePrefix, option, requestedFormats, operation) \
-    ((This)->lpVtbl->SaveScreenshotToFilesAsync(This, folder, filenamePrefix, option, requestedFormats, operation))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_SaveScreenshotToFilesAsync(This,folder,filenamePrefix,option,requestedFormats,operation) \
+    ( (This)->lpVtbl->SaveScreenshotToFilesAsync(This,folder,filenamePrefix,option,requestedFormats,operation) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1977,68 +2370,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManag
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingManager
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_AppRecording_IAppRecordingManagerStatics[] = L"Windows.Media.AppRecording.IAppRecordingManagerStatics";
+/* [object, uuid("50E709F7-38CE-4BD3-9DB2-E72BBE9DE11D"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics* This,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager** result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetDefault )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManager * * result
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStaticsVtbl;
 
 interface __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_GetDefault(This, result) \
-    ((This)->lpVtbl->GetDefault(This, result))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_GetDefault(This,result) \
+    ( (This)->lpVtbl->GetDefault(This,result) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2046,83 +2463,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingManag
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingResult
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_AppRecording_IAppRecordingResult[] = L"Windows.Media.AppRecording.IAppRecordingResult";
+/* [object, uuid("3A900864-C66D-46F9-B2D9-5BC2DAD070D7"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResultVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Succeeded)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_ExtendedError)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This,
-        HRESULT* value);
-    HRESULT (STDMETHODCALLTYPE* get_Duration)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This,
-        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsFileTruncated)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult* This,
-        boolean* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Succeeded )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExtendedError )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This,
+        /* [retval, out] */__RPC__out HRESULT * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Duration )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsFileTruncated )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResultVtbl;
 
 interface __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResultVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResultVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_get_Succeeded(This, value) \
-    ((This)->lpVtbl->get_Succeeded(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_get_Succeeded(This,value) \
+    ( (This)->lpVtbl->get_Succeeded(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_get_ExtendedError(This, value) \
-    ((This)->lpVtbl->get_ExtendedError(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_get_ExtendedError(This,value) \
+    ( (This)->lpVtbl->get_ExtendedError(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_get_Duration(This, value) \
-    ((This)->lpVtbl->get_Duration(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_get_Duration(This,value) \
+    ( (This)->lpVtbl->get_Duration(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_get_IsFileTruncated(This, value) \
-    ((This)->lpVtbl->get_IsFileTruncated(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_get_IsFileTruncated(This,value) \
+    ( (This)->lpVtbl->get_IsFileTruncated(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2130,78 +2577,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingResul
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingSaveScreenshotResult
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_AppRecording_IAppRecordingSaveScreenshotResult[] = L"Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult";
+/* [object, uuid("9C5B8D0A-0ABB-4457-AAEE-24F9C12EC778"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResultVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Succeeded)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_ExtendedError)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult* This,
-        HRESULT* value);
-    HRESULT (STDMETHODCALLTYPE* get_SavedScreenshotInfos)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult* This,
-        __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Succeeded )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExtendedError )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * This,
+        /* [retval, out] */__RPC__out HRESULT * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SavedScreenshotInfos )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CAppRecording__CAppRecordingSavedScreenshotInfo * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResultVtbl;
 
 interface __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResultVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResultVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_get_Succeeded(This, value) \
-    ((This)->lpVtbl->get_Succeeded(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_get_Succeeded(This,value) \
+    ( (This)->lpVtbl->get_Succeeded(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_get_ExtendedError(This, value) \
-    ((This)->lpVtbl->get_ExtendedError(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_get_ExtendedError(This,value) \
+    ( (This)->lpVtbl->get_ExtendedError(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_get_SavedScreenshotInfos(This, value) \
-    ((This)->lpVtbl->get_SavedScreenshotInfos(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_get_SavedScreenshotInfos(This,value) \
+    ( (This)->lpVtbl->get_SavedScreenshotInfos(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveScreenshotResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2209,73 +2684,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaveS
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_AppRecording_IAppRecordingSavedScreenshotInfo[] = L"Windows.Media.AppRecording.IAppRecordingSavedScreenshotInfo";
+/* [object, uuid("9B642D0A-189A-4D00-BF25-E1BB1249D594"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfoVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_File)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo* This,
-        __x_ABI_CWindows_CStorage_CIStorageFile** value);
-    HRESULT (STDMETHODCALLTYPE* get_MediaEncodingSubtype)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo* This,
-        HSTRING* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_File )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CIStorageFile * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MediaEncodingSubtype )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfoVtbl;
 
 interface __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfoVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfoVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_get_File(This, value) \
-    ((This)->lpVtbl->get_File(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_get_File(This,value) \
+    ( (This)->lpVtbl->get_File(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_get_MediaEncodingSubtype(This, value) \
-    ((This)->lpVtbl->get_MediaEncodingSubtype(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_get_MediaEncodingSubtype(This,value) \
+    ( (This)->lpVtbl->get_MediaEncodingSubtype(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSavedScreenshotInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2283,83 +2784,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingSaved
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingStatus
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_AppRecording_IAppRecordingStatus[] = L"Windows.Media.AppRecording.IAppRecordingStatus";
+/* [object, uuid("1D0CC82C-BC18-4B8A-A6EF-127EFAB3B5D9"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_CanRecord)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_CanRecordTimeSpan)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_HistoricalBufferDuration)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This,
-        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
-    HRESULT (STDMETHODCALLTYPE* get_Details)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus* This,
-        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanRecord )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanRecordTimeSpan )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HistoricalBufferDuration )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Details )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusVtbl;
 
 interface __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_get_CanRecord(This, value) \
-    ((This)->lpVtbl->get_CanRecord(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_get_CanRecord(This,value) \
+    ( (This)->lpVtbl->get_CanRecord(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_get_CanRecordTimeSpan(This, value) \
-    ((This)->lpVtbl->get_CanRecordTimeSpan(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_get_CanRecordTimeSpan(This,value) \
+    ( (This)->lpVtbl->get_CanRecordTimeSpan(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_get_HistoricalBufferDuration(This, value) \
-    ((This)->lpVtbl->get_HistoricalBufferDuration(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_get_HistoricalBufferDuration(This,value) \
+    ( (This)->lpVtbl->get_HistoricalBufferDuration(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_get_Details(This, value) \
-    ((This)->lpVtbl->get_Details(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_get_Details(This,value) \
+    ( (This)->lpVtbl->get_Details(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatus_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2367,114 +2898,155 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatu
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Media.AppRecording.AppRecordingStatusDetails
+ *
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_AppRecording_IAppRecordingStatusDetails[] = L"Windows.Media.AppRecording.IAppRecordingStatusDetails";
+/* [object, uuid("B538A9B0-14ED-4412-AC45-6D672C9C9949"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetailsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_IsAnyAppBroadcasting)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsCaptureResourceUnavailable)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsGameStreamInProgress)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsTimeSpanRecordingDisabled)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsGpuConstrained)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsAppInactive)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsBlockedForApp)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsDisabledByUser)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsDisabledBySystem)(__x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails* This,
-        boolean* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsAnyAppBroadcasting )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsCaptureResourceUnavailable )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsGameStreamInProgress )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsTimeSpanRecordingDisabled )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsGpuConstrained )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsAppInactive )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsBlockedForApp )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsDisabledByUser )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsDisabledBySystem )(
+        __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetailsVtbl;
 
 interface __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetailsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetailsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsAnyAppBroadcasting(This, value) \
-    ((This)->lpVtbl->get_IsAnyAppBroadcasting(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsAnyAppBroadcasting(This,value) \
+    ( (This)->lpVtbl->get_IsAnyAppBroadcasting(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsCaptureResourceUnavailable(This, value) \
-    ((This)->lpVtbl->get_IsCaptureResourceUnavailable(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsCaptureResourceUnavailable(This,value) \
+    ( (This)->lpVtbl->get_IsCaptureResourceUnavailable(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsGameStreamInProgress(This, value) \
-    ((This)->lpVtbl->get_IsGameStreamInProgress(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsGameStreamInProgress(This,value) \
+    ( (This)->lpVtbl->get_IsGameStreamInProgress(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsTimeSpanRecordingDisabled(This, value) \
-    ((This)->lpVtbl->get_IsTimeSpanRecordingDisabled(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsTimeSpanRecordingDisabled(This,value) \
+    ( (This)->lpVtbl->get_IsTimeSpanRecordingDisabled(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsGpuConstrained(This, value) \
-    ((This)->lpVtbl->get_IsGpuConstrained(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsGpuConstrained(This,value) \
+    ( (This)->lpVtbl->get_IsGpuConstrained(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsAppInactive(This, value) \
-    ((This)->lpVtbl->get_IsAppInactive(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsAppInactive(This,value) \
+    ( (This)->lpVtbl->get_IsAppInactive(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsBlockedForApp(This, value) \
-    ((This)->lpVtbl->get_IsBlockedForApp(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsBlockedForApp(This,value) \
+    ( (This)->lpVtbl->get_IsBlockedForApp(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsDisabledByUser(This, value) \
-    ((This)->lpVtbl->get_IsDisabledByUser(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsDisabledByUser(This,value) \
+    ( (This)->lpVtbl->get_IsDisabledByUser(This,value) )
 
-#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsDisabledBySystem(This, value) \
-    ((This)->lpVtbl->get_IsDisabledBySystem(This, value))
+#define __x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_get_IsDisabledBySystem(This,value) \
+    ( (This)->lpVtbl->get_IsDisabledBySystem(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatusDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingManager
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.AppRecording.IAppRecordingManagerStatics interface starting with version 1.0 of the Windows.Media.AppRecording.AppRecordingContract API contract
@@ -2488,17 +3060,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAppRecording_CIAppRecordingStatu
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingManager_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingManager[] = L"Windows.Media.AppRecording.AppRecordingManager";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingResult
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingResult ** Default Interface **
@@ -2509,17 +3084,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingResult_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingResult[] = L"Windows.Media.AppRecording.AppRecordingResult";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingSaveScreenshotResult
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingSaveScreenshotResult ** Default Interface **
@@ -2530,17 +3108,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingSaveScreenshotResult_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingSaveScreenshotResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingSaveScreenshotResult[] = L"Windows.Media.AppRecording.AppRecordingSaveScreenshotResult";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingSavedScreenshotInfo ** Default Interface **
@@ -2551,17 +3132,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingSavedScreenshotInfo_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingSavedScreenshotInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingSavedScreenshotInfo[] = L"Windows.Media.AppRecording.AppRecordingSavedScreenshotInfo";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingStatus
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingStatus ** Default Interface **
@@ -2572,17 +3156,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingStatus_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingStatus_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingStatus[] = L"Windows.Media.AppRecording.AppRecordingStatus";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Media.AppRecording.AppRecordingStatusDetails
  *
  * Introduced to Windows.Media.AppRecording.AppRecordingContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Media.AppRecording.IAppRecordingStatusDetails ** Default Interface **
@@ -2593,11 +3180,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingStatusDetails_DEFINED
 #define RUNTIMECLASS_Windows_Media_AppRecording_AppRecordingStatusDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_AppRecording_AppRecordingStatusDetails[] = L"Windows.Media.AppRecording.AppRecordingStatusDetails";
 #endif
 #endif // WINDOWS_MEDIA_APPRECORDING_APPRECORDINGCONTRACT_VERSION >= 0x10000
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

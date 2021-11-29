@@ -16,9 +16,6 @@ class MSFT_StorageScaleUnit : MSFT_StorageFaultDomain {
     UInt32 Maintenance(
 
         [In]
-        Boolean ValidateMaintenanceMode,
-
-        [In]
         Boolean EnableMaintenanceMode,
 
         [In]

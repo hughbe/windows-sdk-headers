@@ -74,13 +74,6 @@ typedef interface IMFASFStreamPrioritization IMFASFStreamPrioritization;
 #endif 	/* __IMFASFStreamPrioritization_FWD_DEFINED__ */
 
 
-#ifndef __IMFASFIndexer_FWD_DEFINED__
-#define __IMFASFIndexer_FWD_DEFINED__
-typedef interface IMFASFIndexer IMFASFIndexer;
-
-#endif 	/* __IMFASFIndexer_FWD_DEFINED__ */
-
-
 #ifndef __IMFASFSplitter_FWD_DEFINED__
 #define __IMFASFSplitter_FWD_DEFINED__
 typedef interface IMFASFSplitter IMFASFSplitter;
@@ -93,6 +86,13 @@ typedef interface IMFASFSplitter IMFASFSplitter;
 typedef interface IMFASFMultiplexer IMFASFMultiplexer;
 
 #endif 	/* __IMFASFMultiplexer_FWD_DEFINED__ */
+
+
+#ifndef __IMFASFIndexer_FWD_DEFINED__
+#define __IMFASFIndexer_FWD_DEFINED__
+typedef interface IMFASFIndexer IMFASFIndexer;
+
+#endif 	/* __IMFASFIndexer_FWD_DEFINED__ */
 
 
 #ifndef __IMFASFStreamSelector_FWD_DEFINED__
@@ -121,8 +121,8 @@ extern "C"{
 /* [local] */ 
 
 #include <winapifamily.h>
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
 
@@ -282,6 +282,46 @@ EXTERN_C const IID IID_IMFASFContentInfo;
 
 STDAPI MFCreateASFContentInfo( 
         /* out */     IMFASFContentInfo     **ppIContentInfo);
+#define MFASF_MIN_HEADER_BYTES ( sizeof( GUID ) + sizeof( QWORD ) )
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_FILE_ID, 0x3de649b4, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_CREATION_TIME, 0x3de649b6, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_PACKETS, 0x3de649b7, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_PLAY_DURATION, 0x3de649b8, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_SEND_DURATION, 0x3de649b9, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_PREROLL, 0x3de649ba, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_FLAGS, 0x3de649bb, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_MIN_PACKET_SIZE, 0x3de649bc, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_MAX_PACKET_SIZE, 0x3de649bd, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_MAX_BITRATE, 0x3de649be, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
+EXTERN_GUID( CLSID_WMDRMSystemID, 0x8948BB22, 0x11BD, 0x4796, 0x93, 0xE3, 0x97, 0x4D, 0x1B, 0x57, 0x56, 0x78 );
+EXTERN_GUID(MF_PD_ASF_CONTENTENCRYPTION_TYPE, 0x8520fe3d, 0x277e, 0x46ea, 0x99, 0xe4, 0xe3, 0xa, 0x86, 0xdb, 0x12, 0xbe);
+EXTERN_GUID(MF_PD_ASF_CONTENTENCRYPTION_KEYID, 0x8520fe3e, 0x277e, 0x46ea, 0x99, 0xe4, 0xe3, 0xa, 0x86, 0xdb, 0x12, 0xbe);
+EXTERN_GUID(MF_PD_ASF_CONTENTENCRYPTION_SECRET_DATA, 0x8520fe3f, 0x277e, 0x46ea, 0x99, 0xe4, 0xe3, 0xa, 0x86, 0xdb, 0x12, 0xbe);
+EXTERN_GUID(MF_PD_ASF_CONTENTENCRYPTION_LICENSE_URL, 0x8520fe40, 0x277e, 0x46ea, 0x99, 0xe4, 0xe3, 0xa, 0x86, 0xdb, 0x12, 0xbe);
+EXTERN_GUID( MF_PD_ASF_CONTENTENCRYPTIONEX_ENCRYPTION_DATA, 0x62508be5, 0xecdf, 0x4924, 0xa3, 0x59, 0x72, 0xba, 0xb3, 0x39, 0x7b, 0x9d);
+EXTERN_GUID( MF_PD_ASF_LANGLIST, 0xf23de43c, 0x9977, 0x460d, 0xa6, 0xec, 0x32, 0x93, 0x7f, 0x16, 0xf, 0x7d);
+#if (WINVER >= _WIN32_WINNT_WIN7) 
+EXTERN_GUID( MF_PD_ASF_LANGLIST_LEGACYORDER, 0xf23de43d, 0x9977, 0x460d, 0xa6, 0xec, 0x32, 0x93, 0x7f, 0x16, 0xf, 0x7d);
+#endif // (WINVER >= _WIN32_WINNT_WIN7) 
+EXTERN_GUID(MF_PD_ASF_MARKER, 0x5134330e, 0x83a6, 0x475e, 0xa9, 0xd5, 0x4f, 0xb8, 0x75, 0xfb, 0x2e, 0x31);
+EXTERN_GUID( MF_PD_ASF_SCRIPT, 0xe29cd0d7, 0xd602, 0x4923, 0xa7, 0xfe, 0x73, 0xfd, 0x97, 0xec, 0xc6, 0x50);
+EXTERN_GUID(MF_PD_ASF_CODECLIST, 0xe4bb3509, 0xc18d, 0x4df1, 0xbb, 0x99, 0x7a, 0x36, 0xb3, 0xcc, 0x41, 0x19);
+EXTERN_GUID( MF_PD_ASF_METADATA_IS_VBR, 0x5fc6947a, 0xef60, 0x445d, 0xb4, 0x49, 0x44, 0x2e, 0xcc, 0x78, 0xb4, 0xc1);
+EXTERN_GUID( MF_PD_ASF_METADATA_V8_VBRPEAK, 0x5fc6947b, 0xef60, 0x445d, 0xb4, 0x49, 0x44, 0x2e, 0xcc, 0x78, 0xb4, 0xc1);
+EXTERN_GUID( MF_PD_ASF_METADATA_V8_BUFFERAVERAGE, 0x5fc6947c, 0xef60, 0x445d, 0xb4, 0x49, 0x44, 0x2e, 0xcc, 0x78, 0xb4, 0xc1);
+EXTERN_GUID( MF_PD_ASF_METADATA_LEAKY_BUCKET_PAIRS, 0x5fc6947d, 0xef60, 0x445d, 0xb4, 0x49, 0x44, 0x2e, 0xcc, 0x78, 0xb4, 0xc1);
+EXTERN_GUID(MF_PD_ASF_DATA_START_OFFSET, 0xe7d5b3e7, 0x1f29, 0x45d3, 0x88, 0x22, 0x3e, 0x78, 0xfa, 0xe2, 0x72, 0xed);
+EXTERN_GUID(MF_PD_ASF_DATA_LENGTH, 0xe7d5b3e8, 0x1f29, 0x45d3, 0x88, 0x22, 0x3e, 0x78, 0xfa, 0xe2, 0x72, 0xed);
+EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_LANGUAGE_ID_INDEX, 0x48f8a522, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
+EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_AVG_DATA_BITRATE, 0x48f8a523, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
+EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_AVG_BUFFERSIZE, 0x48f8a524, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
+EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_MAX_DATA_BITRATE, 0x48f8a525, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
+EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_MAX_BUFFERSIZE, 0x48f8a526, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
+EXTERN_GUID(MF_SD_ASF_STREAMBITRATES_BITRATE, 0xa8e182ed, 0xafc8, 0x43d0, 0xb0, 0xd1, 0xf6, 0x5b, 0xad, 0x9d, 0xa5, 0x58);
+EXTERN_GUID(MF_SD_ASF_METADATA_DEVICE_CONFORMANCE_TEMPLATE, 0x245e929d, 0xc44e, 0x4f7e, 0xbb, 0x3c, 0x77, 0xd4, 0xdf, 0xd2, 0x7f, 0x8a);
+EXTERN_GUID(MF_PD_ASF_INFO_HAS_AUDIO, 0x80e62295, 0x2296, 0x4a44, 0xb3, 0x1c, 0xd1, 0x3, 0xc6, 0xfe, 0xd2, 0x3c);
+EXTERN_GUID(MF_PD_ASF_INFO_HAS_VIDEO, 0x80e62296, 0x2296, 0x4a44, 0xb3, 0x1c, 0xd1, 0x3, 0xc6, 0xfe, 0xd2, 0x3c);
+EXTERN_GUID(MF_PD_ASF_INFO_HAS_NON_AUDIO_VIDEO, 0x80e62297, 0x2296, 0x4a44, 0xb3, 0x1c, 0xd1, 0x3, 0xc6, 0xfe, 0xd2, 0x3c);
 
 
 
@@ -771,6 +811,24 @@ EXTERN_C const IID IID_IMFASFProfile;
 #endif 	/* __IMFASFProfile_INTERFACE_DEFINED__ */
 
 
+/* interface __MIDL_itf_wmcontainer_0000_0002 */
+/* [local] */ 
+
+EXTERN_GUID(MF_ASFPROFILE_MINPACKETSIZE, 0x22587626, 0x47de, 0x4168, 0x87, 0xf5, 0xb5, 0xaa, 0x9b, 0x12, 0xa8, 0xf0);
+EXTERN_GUID(MF_ASFPROFILE_MAXPACKETSIZE, 0x22587627, 0x47de, 0x4168, 0x87, 0xf5, 0xb5, 0xaa, 0x9b, 0x12, 0xa8, 0xf0);
+STDAPI MFCreateASFProfile( 
+        /* out */     IMFASFProfile         **ppIProfile);
+STDAPI MFCreateASFProfileFromPresentationDescriptor( 
+        /* in  */     IMFPresentationDescriptor  *pIPD,
+        /* out */     IMFASFProfile             **ppIProfile);
+STDAPI MFCreatePresentationDescriptorFromASFProfile( 
+        /* in  */     IMFASFProfile              *pIProfile,
+        /* out */     IMFPresentationDescriptor **ppIPD);
+
+
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0002_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0002_v0_0_s_ifspec;
+
 #ifndef __IMFASFStreamConfig_INTERFACE_DEFINED__
 #define __IMFASFStreamConfig_INTERFACE_DEFINED__
 
@@ -1194,6 +1252,24 @@ EXTERN_C const IID IID_IMFASFStreamConfig;
 #endif 	/* __IMFASFStreamConfig_INTERFACE_DEFINED__ */
 
 
+/* interface __MIDL_itf_wmcontainer_0000_0003 */
+/* [local] */ 
+
+EXTERN_GUID(MF_ASFSTREAMCONFIG_LEAKYBUCKET1, 0xc69b5901, 0xea1a, 0x4c9b, 0xb6, 0x92, 0xe2, 0xa0, 0xd2, 0x9a, 0x8a, 0xdd);
+EXTERN_GUID(MF_ASFSTREAMCONFIG_LEAKYBUCKET2, 0xc69b5902, 0xea1a, 0x4c9b, 0xb6, 0x92, 0xe2, 0xa0, 0xd2, 0x9a, 0x8a, 0xdd);
+EXTERN_GUID(MFASFSampleExtension_SampleDuration, 0xc6bd9450, 0x867f, 0x4907, 0x83, 0xa3, 0xc7, 0x79, 0x21, 0xb7, 0x33, 0xad);
+EXTERN_GUID(MFASFSampleExtension_OutputCleanPoint, 0xf72a3c6f, 0x6eb4, 0x4ebc, 0xb1, 0x92, 0x9, 0xad, 0x97, 0x59, 0xe8, 0x28);
+EXTERN_GUID(MFASFSampleExtension_SMPTE, 0x399595ec, 0x8667, 0x4e2d, 0x8f, 0xdb, 0x98, 0x81, 0x4c, 0xe7, 0x6c, 0x1e);
+EXTERN_GUID(MFASFSampleExtension_FileName, 0xe165ec0e, 0x19ed, 0x45d7, 0xb4, 0xa7, 0x25, 0xcb, 0xd1, 0xe2, 0x8e, 0x9b);
+EXTERN_GUID(MFASFSampleExtension_ContentType, 0xd590dc20, 0x07bc, 0x436c, 0x9c, 0xf7, 0xf3, 0xbb, 0xfb, 0xf1, 0xa4, 0xdc);
+EXTERN_GUID(MFASFSampleExtension_PixelAspectRatio, 0x1b1ee554, 0xf9ea, 0x4bc8, 0x82, 0x1a, 0x37, 0x6b, 0x74, 0xe4, 0xc4, 0xb8);
+EXTERN_GUID(MFASFSampleExtension_Encryption_SampleID, 0x6698B84E, 0x0AFA, 0x4330, 0xAE, 0xB2, 0x1C, 0x0A, 0x98, 0xD7, 0xA4, 0x4D);
+EXTERN_GUID(MFASFSampleExtension_Encryption_KeyID, 0x76376591,  0x795f,  0x4da1, 0x86, 0xed, 0x9d, 0x46, 0xec, 0xa1, 0x09, 0xa9);
+
+
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0003_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0003_v0_0_s_ifspec;
+
 #ifndef __IMFASFMutualExclusion_INTERFACE_DEFINED__
 #define __IMFASFMutualExclusion_INTERFACE_DEFINED__
 
@@ -1362,6 +1438,18 @@ EXTERN_C const IID IID_IMFASFMutualExclusion;
 #endif 	/* __IMFASFMutualExclusion_INTERFACE_DEFINED__ */
 
 
+/* interface __MIDL_itf_wmcontainer_0000_0004 */
+/* [local] */ 
+
+EXTERN_GUID(MFASFMutexType_Language, 0x72178C2B, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);
+EXTERN_GUID(MFASFMutexType_Bitrate, 0x72178C2C, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);
+EXTERN_GUID(MFASFMutexType_Presentation, 0x72178C2D, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);
+EXTERN_GUID(MFASFMutexType_Unknown, 0x72178C2E, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);
+
+
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0004_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0004_v0_0_s_ifspec;
+
 #ifndef __IMFASFStreamPrioritization_INTERFACE_DEFINED__
 #define __IMFASFStreamPrioritization_INTERFACE_DEFINED__
 
@@ -1492,6 +1580,389 @@ EXTERN_C const IID IID_IMFASFStreamPrioritization;
 /* [local] */ 
 
 typedef 
+enum MFASF_SPLITTERFLAGS
+    {
+        MFASF_SPLITTER_REVERSE	= 0x1,
+        MFASF_SPLITTER_WMDRM	= 0x2
+    } 	MFASF_SPLITTERFLAGS;
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0005_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0005_v0_0_s_ifspec;
+
+#ifndef __IMFASFSplitter_INTERFACE_DEFINED__
+#define __IMFASFSplitter_INTERFACE_DEFINED__
+
+/* interface IMFASFSplitter */
+/* [local][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFASFSplitter;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("12558295-E399-11D5-BC2A-00B0D0F3F4AB")
+    IMFASFSplitter : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE Initialize( 
+            /* [in] */ IMFASFContentInfo *pIContentInfo) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE SetFlags( 
+            /* [in] */ DWORD dwFlags) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetFlags( 
+            /* [out] */ DWORD *pdwFlags) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE SelectStreams( 
+            /* [in] */ WORD *pwStreamNumbers,
+            /* [in] */ WORD wNumStreams) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetSelectedStreams( 
+            /* [out] */ WORD *pwStreamNumbers,
+            /* [out][in] */ WORD *pwNumStreams) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE ParseData( 
+            /* [in] */ IMFMediaBuffer *pIBuffer,
+            /* [in] */ DWORD cbBufferOffset,
+            /* [in] */ DWORD cbLength) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetNextSample( 
+            /* [out] */ DWORD *pdwStatusFlags,
+            /* [out] */ WORD *pwStreamNumber,
+            /* [out] */ IMFSample **ppISample) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE Flush( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetLastSendTime( 
+            /* [out] */ DWORD *pdwLastSendTime) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFASFSplitterVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFASFSplitter * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFASFSplitter * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFASFSplitter * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *Initialize )( 
+            IMFASFSplitter * This,
+            /* [in] */ IMFASFContentInfo *pIContentInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *SetFlags )( 
+            IMFASFSplitter * This,
+            /* [in] */ DWORD dwFlags);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetFlags )( 
+            IMFASFSplitter * This,
+            /* [out] */ DWORD *pdwFlags);
+        
+        HRESULT ( STDMETHODCALLTYPE *SelectStreams )( 
+            IMFASFSplitter * This,
+            /* [in] */ WORD *pwStreamNumbers,
+            /* [in] */ WORD wNumStreams);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetSelectedStreams )( 
+            IMFASFSplitter * This,
+            /* [out] */ WORD *pwStreamNumbers,
+            /* [out][in] */ WORD *pwNumStreams);
+        
+        HRESULT ( STDMETHODCALLTYPE *ParseData )( 
+            IMFASFSplitter * This,
+            /* [in] */ IMFMediaBuffer *pIBuffer,
+            /* [in] */ DWORD cbBufferOffset,
+            /* [in] */ DWORD cbLength);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetNextSample )( 
+            IMFASFSplitter * This,
+            /* [out] */ DWORD *pdwStatusFlags,
+            /* [out] */ WORD *pwStreamNumber,
+            /* [out] */ IMFSample **ppISample);
+        
+        HRESULT ( STDMETHODCALLTYPE *Flush )( 
+            IMFASFSplitter * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetLastSendTime )( 
+            IMFASFSplitter * This,
+            /* [out] */ DWORD *pdwLastSendTime);
+        
+        END_INTERFACE
+    } IMFASFSplitterVtbl;
+
+    interface IMFASFSplitter
+    {
+        CONST_VTBL struct IMFASFSplitterVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFASFSplitter_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFASFSplitter_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFASFSplitter_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFASFSplitter_Initialize(This,pIContentInfo)	\
+    ( (This)->lpVtbl -> Initialize(This,pIContentInfo) ) 
+
+#define IMFASFSplitter_SetFlags(This,dwFlags)	\
+    ( (This)->lpVtbl -> SetFlags(This,dwFlags) ) 
+
+#define IMFASFSplitter_GetFlags(This,pdwFlags)	\
+    ( (This)->lpVtbl -> GetFlags(This,pdwFlags) ) 
+
+#define IMFASFSplitter_SelectStreams(This,pwStreamNumbers,wNumStreams)	\
+    ( (This)->lpVtbl -> SelectStreams(This,pwStreamNumbers,wNumStreams) ) 
+
+#define IMFASFSplitter_GetSelectedStreams(This,pwStreamNumbers,pwNumStreams)	\
+    ( (This)->lpVtbl -> GetSelectedStreams(This,pwStreamNumbers,pwNumStreams) ) 
+
+#define IMFASFSplitter_ParseData(This,pIBuffer,cbBufferOffset,cbLength)	\
+    ( (This)->lpVtbl -> ParseData(This,pIBuffer,cbBufferOffset,cbLength) ) 
+
+#define IMFASFSplitter_GetNextSample(This,pdwStatusFlags,pwStreamNumber,ppISample)	\
+    ( (This)->lpVtbl -> GetNextSample(This,pdwStatusFlags,pwStreamNumber,ppISample) ) 
+
+#define IMFASFSplitter_Flush(This)	\
+    ( (This)->lpVtbl -> Flush(This) ) 
+
+#define IMFASFSplitter_GetLastSendTime(This,pdwLastSendTime)	\
+    ( (This)->lpVtbl -> GetLastSendTime(This,pdwLastSendTime) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFASFSplitter_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_wmcontainer_0000_0006 */
+/* [local] */ 
+
+typedef 
+enum ASF_STATUSFLAGS
+    {
+        ASF_STATUSFLAGS_INCOMPLETE	= 0x1,
+        ASF_STATUSFLAGS_NONFATAL_ERROR	= 0x2
+    } 	ASF_STATUSFLAGS;
+
+EXTERN_GUID(MFASFSPLITTER_PACKET_BOUNDARY, 0xfe584a05, 0xe8d6, 0x42e3, 0xb1, 0x76, 0xf1, 0x21, 0x17, 0x5, 0xfb, 0x6f);
+STDAPI MFCreateASFSplitter( 
+        /* out */     IMFASFSplitter        **ppISplitter);
+typedef 
+enum MFASF_MULTIPLEXERFLAGS
+    {
+        MFASF_MULTIPLEXER_AUTOADJUST_BITRATE	= 0x1
+    } 	MFASF_MULTIPLEXERFLAGS;
+
+typedef struct ASF_MUX_STATISTICS
+    {
+    DWORD cFramesWritten;
+    DWORD cFramesDropped;
+    } 	ASF_MUX_STATISTICS;
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0006_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0006_v0_0_s_ifspec;
+
+#ifndef __IMFASFMultiplexer_INTERFACE_DEFINED__
+#define __IMFASFMultiplexer_INTERFACE_DEFINED__
+
+/* interface IMFASFMultiplexer */
+/* [local][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFASFMultiplexer;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("57BDD80A-9B38-4838-B737-C58F670D7D4F")
+    IMFASFMultiplexer : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE Initialize( 
+            /* [in] */ IMFASFContentInfo *pIContentInfo) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE SetFlags( 
+            /* [in] */ DWORD dwFlags) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetFlags( 
+            /* [out] */ DWORD *pdwFlags) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE ProcessSample( 
+            /* [in] */ WORD wStreamNumber,
+            /* [in] */ IMFSample *pISample,
+            /* [in] */ LONGLONG hnsTimestampAdjust) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetNextPacket( 
+            /* [out] */ DWORD *pdwStatusFlags,
+            /* [out] */ IMFSample **ppIPacket) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE Flush( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE End( 
+            /* [out][in] */ IMFASFContentInfo *pIContentInfo) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetStatistics( 
+            /* [in] */ WORD wStreamNumber,
+            /* [out] */ ASF_MUX_STATISTICS *pMuxStats) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE SetSyncTolerance( 
+            /* [in] */ DWORD msSyncTolerance) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFASFMultiplexerVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFASFMultiplexer * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFASFMultiplexer * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFASFMultiplexer * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *Initialize )( 
+            IMFASFMultiplexer * This,
+            /* [in] */ IMFASFContentInfo *pIContentInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *SetFlags )( 
+            IMFASFMultiplexer * This,
+            /* [in] */ DWORD dwFlags);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetFlags )( 
+            IMFASFMultiplexer * This,
+            /* [out] */ DWORD *pdwFlags);
+        
+        HRESULT ( STDMETHODCALLTYPE *ProcessSample )( 
+            IMFASFMultiplexer * This,
+            /* [in] */ WORD wStreamNumber,
+            /* [in] */ IMFSample *pISample,
+            /* [in] */ LONGLONG hnsTimestampAdjust);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetNextPacket )( 
+            IMFASFMultiplexer * This,
+            /* [out] */ DWORD *pdwStatusFlags,
+            /* [out] */ IMFSample **ppIPacket);
+        
+        HRESULT ( STDMETHODCALLTYPE *Flush )( 
+            IMFASFMultiplexer * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *End )( 
+            IMFASFMultiplexer * This,
+            /* [out][in] */ IMFASFContentInfo *pIContentInfo);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetStatistics )( 
+            IMFASFMultiplexer * This,
+            /* [in] */ WORD wStreamNumber,
+            /* [out] */ ASF_MUX_STATISTICS *pMuxStats);
+        
+        HRESULT ( STDMETHODCALLTYPE *SetSyncTolerance )( 
+            IMFASFMultiplexer * This,
+            /* [in] */ DWORD msSyncTolerance);
+        
+        END_INTERFACE
+    } IMFASFMultiplexerVtbl;
+
+    interface IMFASFMultiplexer
+    {
+        CONST_VTBL struct IMFASFMultiplexerVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFASFMultiplexer_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFASFMultiplexer_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFASFMultiplexer_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFASFMultiplexer_Initialize(This,pIContentInfo)	\
+    ( (This)->lpVtbl -> Initialize(This,pIContentInfo) ) 
+
+#define IMFASFMultiplexer_SetFlags(This,dwFlags)	\
+    ( (This)->lpVtbl -> SetFlags(This,dwFlags) ) 
+
+#define IMFASFMultiplexer_GetFlags(This,pdwFlags)	\
+    ( (This)->lpVtbl -> GetFlags(This,pdwFlags) ) 
+
+#define IMFASFMultiplexer_ProcessSample(This,wStreamNumber,pISample,hnsTimestampAdjust)	\
+    ( (This)->lpVtbl -> ProcessSample(This,wStreamNumber,pISample,hnsTimestampAdjust) ) 
+
+#define IMFASFMultiplexer_GetNextPacket(This,pdwStatusFlags,ppIPacket)	\
+    ( (This)->lpVtbl -> GetNextPacket(This,pdwStatusFlags,ppIPacket) ) 
+
+#define IMFASFMultiplexer_Flush(This)	\
+    ( (This)->lpVtbl -> Flush(This) ) 
+
+#define IMFASFMultiplexer_End(This,pIContentInfo)	\
+    ( (This)->lpVtbl -> End(This,pIContentInfo) ) 
+
+#define IMFASFMultiplexer_GetStatistics(This,wStreamNumber,pMuxStats)	\
+    ( (This)->lpVtbl -> GetStatistics(This,wStreamNumber,pMuxStats) ) 
+
+#define IMFASFMultiplexer_SetSyncTolerance(This,msSyncTolerance)	\
+    ( (This)->lpVtbl -> SetSyncTolerance(This,msSyncTolerance) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFASFMultiplexer_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_wmcontainer_0000_0007 */
+/* [local] */ 
+
+STDAPI MFCreateASFMultiplexer( 
+        /* out */     IMFASFMultiplexer     **ppIMultiplexer);
+typedef 
 enum MFASF_INDEXERFLAGS
     {
         MFASF_INDEXER_WRITE_NEW_INDEX	= 0x1,
@@ -1515,8 +1986,8 @@ typedef struct _ASF_INDEX_DESCRIPTOR
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0005_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0005_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0007_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0007_v0_0_s_ifspec;
 
 #ifndef __IMFASFIndexer_INTERFACE_DEFINED__
 #define __IMFASFIndexer_INTERFACE_DEFINED__
@@ -1742,466 +2213,9 @@ EXTERN_C const IID IID_IMFASFIndexer;
 #endif 	/* __IMFASFIndexer_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_wmcontainer_0000_0006 */
-/* [local] */ 
-
-STDAPI MFCreateASFIndexer( 
-        /* out */     IMFASFIndexer         **ppIIndexer);
-STDAPI MFCreateASFIndexerByteStream( 
-        /* in */      IMFByteStream         *pIContentByteStream,
-        /* in */      QWORD                  cbIndexStartOffset,
-        /* out */     IMFByteStream        **pIIndexByteStream);
-
-
-extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0006_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0006_v0_0_s_ifspec;
-
-#ifndef __IMFASFSplitter_INTERFACE_DEFINED__
-#define __IMFASFSplitter_INTERFACE_DEFINED__
-
-/* interface IMFASFSplitter */
-/* [local][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IMFASFSplitter;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("12558295-E399-11D5-BC2A-00B0D0F3F4AB")
-    IMFASFSplitter : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE Initialize( 
-            /* [in] */ IMFASFContentInfo *pIContentInfo) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE SetFlags( 
-            /* [in] */ DWORD dwFlags) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetFlags( 
-            /* [out] */ DWORD *pdwFlags) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE SelectStreams( 
-            /* [in] */ WORD *pwStreamNumbers,
-            /* [in] */ WORD wNumStreams) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetSelectedStreams( 
-            /* [out] */ WORD *pwStreamNumbers,
-            /* [out][in] */ WORD *pwNumStreams) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE ParseData( 
-            /* [in] */ IMFMediaBuffer *pIBuffer,
-            /* [in] */ DWORD cbBufferOffset,
-            /* [in] */ DWORD cbLength) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetNextSample( 
-            /* [out] */ DWORD *pdwStatusFlags,
-            /* [out] */ WORD *pwStreamNumber,
-            /* [out] */ IMFSample **ppISample) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE Flush( void) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetLastSendTime( 
-            /* [out] */ DWORD *pdwLastSendTime) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IMFASFSplitterVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMFASFSplitter * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMFASFSplitter * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMFASFSplitter * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *Initialize )( 
-            IMFASFSplitter * This,
-            /* [in] */ IMFASFContentInfo *pIContentInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetFlags )( 
-            IMFASFSplitter * This,
-            /* [in] */ DWORD dwFlags);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetFlags )( 
-            IMFASFSplitter * This,
-            /* [out] */ DWORD *pdwFlags);
-        
-        HRESULT ( STDMETHODCALLTYPE *SelectStreams )( 
-            IMFASFSplitter * This,
-            /* [in] */ WORD *pwStreamNumbers,
-            /* [in] */ WORD wNumStreams);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetSelectedStreams )( 
-            IMFASFSplitter * This,
-            /* [out] */ WORD *pwStreamNumbers,
-            /* [out][in] */ WORD *pwNumStreams);
-        
-        HRESULT ( STDMETHODCALLTYPE *ParseData )( 
-            IMFASFSplitter * This,
-            /* [in] */ IMFMediaBuffer *pIBuffer,
-            /* [in] */ DWORD cbBufferOffset,
-            /* [in] */ DWORD cbLength);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetNextSample )( 
-            IMFASFSplitter * This,
-            /* [out] */ DWORD *pdwStatusFlags,
-            /* [out] */ WORD *pwStreamNumber,
-            /* [out] */ IMFSample **ppISample);
-        
-        HRESULT ( STDMETHODCALLTYPE *Flush )( 
-            IMFASFSplitter * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetLastSendTime )( 
-            IMFASFSplitter * This,
-            /* [out] */ DWORD *pdwLastSendTime);
-        
-        END_INTERFACE
-    } IMFASFSplitterVtbl;
-
-    interface IMFASFSplitter
-    {
-        CONST_VTBL struct IMFASFSplitterVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IMFASFSplitter_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IMFASFSplitter_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IMFASFSplitter_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IMFASFSplitter_Initialize(This,pIContentInfo)	\
-    ( (This)->lpVtbl -> Initialize(This,pIContentInfo) ) 
-
-#define IMFASFSplitter_SetFlags(This,dwFlags)	\
-    ( (This)->lpVtbl -> SetFlags(This,dwFlags) ) 
-
-#define IMFASFSplitter_GetFlags(This,pdwFlags)	\
-    ( (This)->lpVtbl -> GetFlags(This,pdwFlags) ) 
-
-#define IMFASFSplitter_SelectStreams(This,pwStreamNumbers,wNumStreams)	\
-    ( (This)->lpVtbl -> SelectStreams(This,pwStreamNumbers,wNumStreams) ) 
-
-#define IMFASFSplitter_GetSelectedStreams(This,pwStreamNumbers,pwNumStreams)	\
-    ( (This)->lpVtbl -> GetSelectedStreams(This,pwStreamNumbers,pwNumStreams) ) 
-
-#define IMFASFSplitter_ParseData(This,pIBuffer,cbBufferOffset,cbLength)	\
-    ( (This)->lpVtbl -> ParseData(This,pIBuffer,cbBufferOffset,cbLength) ) 
-
-#define IMFASFSplitter_GetNextSample(This,pdwStatusFlags,pwStreamNumber,ppISample)	\
-    ( (This)->lpVtbl -> GetNextSample(This,pdwStatusFlags,pwStreamNumber,ppISample) ) 
-
-#define IMFASFSplitter_Flush(This)	\
-    ( (This)->lpVtbl -> Flush(This) ) 
-
-#define IMFASFSplitter_GetLastSendTime(This,pdwLastSendTime)	\
-    ( (This)->lpVtbl -> GetLastSendTime(This,pdwLastSendTime) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IMFASFSplitter_INTERFACE_DEFINED__ */
-
-
-/* interface __MIDL_itf_wmcontainer_0000_0007 */
-/* [local] */ 
-
-STDAPI MFCreateASFSplitter( 
-        /* out */     IMFASFSplitter        **ppISplitter);
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
-#pragma endregion
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-#define MFASF_MIN_HEADER_BYTES ( sizeof( GUID ) + sizeof( QWORD ) )
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_FILE_ID, 0x3de649b4, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_CREATION_TIME, 0x3de649b6, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_PACKETS, 0x3de649b7, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_PLAY_DURATION, 0x3de649b8, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_SEND_DURATION, 0x3de649b9, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_PREROLL, 0x3de649ba, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_FLAGS, 0x3de649bb, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_MIN_PACKET_SIZE, 0x3de649bc, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_MAX_PACKET_SIZE, 0x3de649bd, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID(MF_PD_ASF_FILEPROPERTIES_MAX_BITRATE, 0x3de649be, 0xd76d, 0x4e66, 0x9e, 0xc9, 0x78, 0x12, 0xf, 0xb4, 0xc7, 0xe3);
-EXTERN_GUID( CLSID_WMDRMSystemID, 0x8948BB22, 0x11BD, 0x4796, 0x93, 0xE3, 0x97, 0x4D, 0x1B, 0x57, 0x56, 0x78 );
-EXTERN_GUID(MF_PD_ASF_CONTENTENCRYPTION_TYPE, 0x8520fe3d, 0x277e, 0x46ea, 0x99, 0xe4, 0xe3, 0xa, 0x86, 0xdb, 0x12, 0xbe);
-EXTERN_GUID(MF_PD_ASF_CONTENTENCRYPTION_KEYID, 0x8520fe3e, 0x277e, 0x46ea, 0x99, 0xe4, 0xe3, 0xa, 0x86, 0xdb, 0x12, 0xbe);
-EXTERN_GUID(MF_PD_ASF_CONTENTENCRYPTION_SECRET_DATA, 0x8520fe3f, 0x277e, 0x46ea, 0x99, 0xe4, 0xe3, 0xa, 0x86, 0xdb, 0x12, 0xbe);
-EXTERN_GUID(MF_PD_ASF_CONTENTENCRYPTION_LICENSE_URL, 0x8520fe40, 0x277e, 0x46ea, 0x99, 0xe4, 0xe3, 0xa, 0x86, 0xdb, 0x12, 0xbe);
-EXTERN_GUID( MF_PD_ASF_CONTENTENCRYPTIONEX_ENCRYPTION_DATA, 0x62508be5, 0xecdf, 0x4924, 0xa3, 0x59, 0x72, 0xba, 0xb3, 0x39, 0x7b, 0x9d);
-EXTERN_GUID( MF_PD_ASF_LANGLIST, 0xf23de43c, 0x9977, 0x460d, 0xa6, 0xec, 0x32, 0x93, 0x7f, 0x16, 0xf, 0x7d);
-#if (WINVER >= _WIN32_WINNT_WIN7) 
-EXTERN_GUID( MF_PD_ASF_LANGLIST_LEGACYORDER, 0xf23de43d, 0x9977, 0x460d, 0xa6, 0xec, 0x32, 0x93, 0x7f, 0x16, 0xf, 0x7d);
-#endif // (WINVER >= _WIN32_WINNT_WIN7) 
-EXTERN_GUID(MF_PD_ASF_MARKER, 0x5134330e, 0x83a6, 0x475e, 0xa9, 0xd5, 0x4f, 0xb8, 0x75, 0xfb, 0x2e, 0x31);
-EXTERN_GUID( MF_PD_ASF_SCRIPT, 0xe29cd0d7, 0xd602, 0x4923, 0xa7, 0xfe, 0x73, 0xfd, 0x97, 0xec, 0xc6, 0x50);
-EXTERN_GUID(MF_PD_ASF_CODECLIST, 0xe4bb3509, 0xc18d, 0x4df1, 0xbb, 0x99, 0x7a, 0x36, 0xb3, 0xcc, 0x41, 0x19);
-EXTERN_GUID( MF_PD_ASF_METADATA_IS_VBR, 0x5fc6947a, 0xef60, 0x445d, 0xb4, 0x49, 0x44, 0x2e, 0xcc, 0x78, 0xb4, 0xc1);
-EXTERN_GUID( MF_PD_ASF_METADATA_V8_VBRPEAK, 0x5fc6947b, 0xef60, 0x445d, 0xb4, 0x49, 0x44, 0x2e, 0xcc, 0x78, 0xb4, 0xc1);
-EXTERN_GUID( MF_PD_ASF_METADATA_V8_BUFFERAVERAGE, 0x5fc6947c, 0xef60, 0x445d, 0xb4, 0x49, 0x44, 0x2e, 0xcc, 0x78, 0xb4, 0xc1);
-EXTERN_GUID( MF_PD_ASF_METADATA_LEAKY_BUCKET_PAIRS, 0x5fc6947d, 0xef60, 0x445d, 0xb4, 0x49, 0x44, 0x2e, 0xcc, 0x78, 0xb4, 0xc1);
-EXTERN_GUID(MF_PD_ASF_DATA_START_OFFSET, 0xe7d5b3e7, 0x1f29, 0x45d3, 0x88, 0x22, 0x3e, 0x78, 0xfa, 0xe2, 0x72, 0xed);
-EXTERN_GUID(MF_PD_ASF_DATA_LENGTH, 0xe7d5b3e8, 0x1f29, 0x45d3, 0x88, 0x22, 0x3e, 0x78, 0xfa, 0xe2, 0x72, 0xed);
-EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_LANGUAGE_ID_INDEX, 0x48f8a522, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
-EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_AVG_DATA_BITRATE, 0x48f8a523, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
-EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_AVG_BUFFERSIZE, 0x48f8a524, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
-EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_MAX_DATA_BITRATE, 0x48f8a525, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
-EXTERN_GUID(MF_SD_ASF_EXTSTRMPROP_MAX_BUFFERSIZE, 0x48f8a526, 0x305d, 0x422d, 0x85, 0x24, 0x25, 0x2, 0xdd, 0xa3, 0x36, 0x80);
-EXTERN_GUID(MF_SD_ASF_STREAMBITRATES_BITRATE, 0xa8e182ed, 0xafc8, 0x43d0, 0xb0, 0xd1, 0xf6, 0x5b, 0xad, 0x9d, 0xa5, 0x58);
-EXTERN_GUID(MF_SD_ASF_METADATA_DEVICE_CONFORMANCE_TEMPLATE, 0x245e929d, 0xc44e, 0x4f7e, 0xbb, 0x3c, 0x77, 0xd4, 0xdf, 0xd2, 0x7f, 0x8a);
-EXTERN_GUID(MF_PD_ASF_INFO_HAS_AUDIO, 0x80e62295, 0x2296, 0x4a44, 0xb3, 0x1c, 0xd1, 0x3, 0xc6, 0xfe, 0xd2, 0x3c);
-EXTERN_GUID(MF_PD_ASF_INFO_HAS_VIDEO, 0x80e62296, 0x2296, 0x4a44, 0xb3, 0x1c, 0xd1, 0x3, 0xc6, 0xfe, 0xd2, 0x3c);
-EXTERN_GUID(MF_PD_ASF_INFO_HAS_NON_AUDIO_VIDEO, 0x80e62297, 0x2296, 0x4a44, 0xb3, 0x1c, 0xd1, 0x3, 0xc6, 0xfe, 0xd2, 0x3c);
-EXTERN_GUID(MF_ASFPROFILE_MINPACKETSIZE, 0x22587626, 0x47de, 0x4168, 0x87, 0xf5, 0xb5, 0xaa, 0x9b, 0x12, 0xa8, 0xf0);
-EXTERN_GUID(MF_ASFPROFILE_MAXPACKETSIZE, 0x22587627, 0x47de, 0x4168, 0x87, 0xf5, 0xb5, 0xaa, 0x9b, 0x12, 0xa8, 0xf0);
-STDAPI MFCreateASFProfile( 
-        /* out */     IMFASFProfile         **ppIProfile);
-STDAPI MFCreateASFProfileFromPresentationDescriptor( 
-        /* in  */     IMFPresentationDescriptor  *pIPD,
-        /* out */     IMFASFProfile             **ppIProfile);
-STDAPI MFCreatePresentationDescriptorFromASFProfile( 
-        /* in  */     IMFASFProfile              *pIProfile,
-        /* out */     IMFPresentationDescriptor **ppIPD);
-EXTERN_GUID(MF_ASFSTREAMCONFIG_LEAKYBUCKET1, 0xc69b5901, 0xea1a, 0x4c9b, 0xb6, 0x92, 0xe2, 0xa0, 0xd2, 0x9a, 0x8a, 0xdd);
-EXTERN_GUID(MF_ASFSTREAMCONFIG_LEAKYBUCKET2, 0xc69b5902, 0xea1a, 0x4c9b, 0xb6, 0x92, 0xe2, 0xa0, 0xd2, 0x9a, 0x8a, 0xdd);
-EXTERN_GUID(MFASFSampleExtension_SampleDuration, 0xc6bd9450, 0x867f, 0x4907, 0x83, 0xa3, 0xc7, 0x79, 0x21, 0xb7, 0x33, 0xad);
-EXTERN_GUID(MFASFSampleExtension_OutputCleanPoint, 0xf72a3c6f, 0x6eb4, 0x4ebc, 0xb1, 0x92, 0x9, 0xad, 0x97, 0x59, 0xe8, 0x28);
-EXTERN_GUID(MFASFSampleExtension_SMPTE, 0x399595ec, 0x8667, 0x4e2d, 0x8f, 0xdb, 0x98, 0x81, 0x4c, 0xe7, 0x6c, 0x1e);
-EXTERN_GUID(MFASFSampleExtension_FileName, 0xe165ec0e, 0x19ed, 0x45d7, 0xb4, 0xa7, 0x25, 0xcb, 0xd1, 0xe2, 0x8e, 0x9b);
-EXTERN_GUID(MFASFSampleExtension_ContentType, 0xd590dc20, 0x07bc, 0x436c, 0x9c, 0xf7, 0xf3, 0xbb, 0xfb, 0xf1, 0xa4, 0xdc);
-EXTERN_GUID(MFASFSampleExtension_PixelAspectRatio, 0x1b1ee554, 0xf9ea, 0x4bc8, 0x82, 0x1a, 0x37, 0x6b, 0x74, 0xe4, 0xc4, 0xb8);
-EXTERN_GUID(MFASFSampleExtension_Encryption_SampleID, 0x6698B84E, 0x0AFA, 0x4330, 0xAE, 0xB2, 0x1C, 0x0A, 0x98, 0xD7, 0xA4, 0x4D);
-EXTERN_GUID(MFASFSampleExtension_Encryption_KeyID, 0x76376591,  0x795f,  0x4da1, 0x86, 0xed, 0x9d, 0x46, 0xec, 0xa1, 0x09, 0xa9);
-EXTERN_GUID(MFASFMutexType_Language, 0x72178C2B, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);
-EXTERN_GUID(MFASFMutexType_Bitrate, 0x72178C2C, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);
-EXTERN_GUID(MFASFMutexType_Presentation, 0x72178C2D, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);
-EXTERN_GUID(MFASFMutexType_Unknown, 0x72178C2E, 0xE45B, 0x11D5, 0xBC, 0x2A, 0x00, 0xB0, 0xD0, 0xF3, 0xF4, 0xAB);
-typedef 
-enum MFASF_SPLITTERFLAGS
-    {
-        MFASF_SPLITTER_REVERSE	= 0x1,
-        MFASF_SPLITTER_WMDRM	= 0x2
-    } 	MFASF_SPLITTERFLAGS;
-
-typedef 
-enum ASF_STATUSFLAGS
-    {
-        ASF_STATUSFLAGS_INCOMPLETE	= 0x1,
-        ASF_STATUSFLAGS_NONFATAL_ERROR	= 0x2
-    } 	ASF_STATUSFLAGS;
-
-EXTERN_GUID(MFASFSPLITTER_PACKET_BOUNDARY, 0xfe584a05, 0xe8d6, 0x42e3, 0xb1, 0x76, 0xf1, 0x21, 0x17, 0x5, 0xfb, 0x6f);
-typedef 
-enum MFASF_MULTIPLEXERFLAGS
-    {
-        MFASF_MULTIPLEXER_AUTOADJUST_BITRATE	= 0x1
-    } 	MFASF_MULTIPLEXERFLAGS;
-
-typedef struct ASF_MUX_STATISTICS
-    {
-    DWORD cFramesWritten;
-    DWORD cFramesDropped;
-    } 	ASF_MUX_STATISTICS;
-
-
-
-extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0007_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wmcontainer_0000_0007_v0_0_s_ifspec;
-
-#ifndef __IMFASFMultiplexer_INTERFACE_DEFINED__
-#define __IMFASFMultiplexer_INTERFACE_DEFINED__
-
-/* interface IMFASFMultiplexer */
-/* [local][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IMFASFMultiplexer;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("57BDD80A-9B38-4838-B737-C58F670D7D4F")
-    IMFASFMultiplexer : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE Initialize( 
-            /* [in] */ IMFASFContentInfo *pIContentInfo) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE SetFlags( 
-            /* [in] */ DWORD dwFlags) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetFlags( 
-            /* [out] */ DWORD *pdwFlags) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE ProcessSample( 
-            /* [in] */ WORD wStreamNumber,
-            /* [in] */ IMFSample *pISample,
-            /* [in] */ LONGLONG hnsTimestampAdjust) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetNextPacket( 
-            /* [out] */ DWORD *pdwStatusFlags,
-            /* [out] */ IMFSample **ppIPacket) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE Flush( void) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE End( 
-            /* [out][in] */ IMFASFContentInfo *pIContentInfo) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetStatistics( 
-            /* [in] */ WORD wStreamNumber,
-            /* [out] */ ASF_MUX_STATISTICS *pMuxStats) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE SetSyncTolerance( 
-            /* [in] */ DWORD msSyncTolerance) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IMFASFMultiplexerVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMFASFMultiplexer * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMFASFMultiplexer * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMFASFMultiplexer * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *Initialize )( 
-            IMFASFMultiplexer * This,
-            /* [in] */ IMFASFContentInfo *pIContentInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetFlags )( 
-            IMFASFMultiplexer * This,
-            /* [in] */ DWORD dwFlags);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetFlags )( 
-            IMFASFMultiplexer * This,
-            /* [out] */ DWORD *pdwFlags);
-        
-        HRESULT ( STDMETHODCALLTYPE *ProcessSample )( 
-            IMFASFMultiplexer * This,
-            /* [in] */ WORD wStreamNumber,
-            /* [in] */ IMFSample *pISample,
-            /* [in] */ LONGLONG hnsTimestampAdjust);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetNextPacket )( 
-            IMFASFMultiplexer * This,
-            /* [out] */ DWORD *pdwStatusFlags,
-            /* [out] */ IMFSample **ppIPacket);
-        
-        HRESULT ( STDMETHODCALLTYPE *Flush )( 
-            IMFASFMultiplexer * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *End )( 
-            IMFASFMultiplexer * This,
-            /* [out][in] */ IMFASFContentInfo *pIContentInfo);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetStatistics )( 
-            IMFASFMultiplexer * This,
-            /* [in] */ WORD wStreamNumber,
-            /* [out] */ ASF_MUX_STATISTICS *pMuxStats);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetSyncTolerance )( 
-            IMFASFMultiplexer * This,
-            /* [in] */ DWORD msSyncTolerance);
-        
-        END_INTERFACE
-    } IMFASFMultiplexerVtbl;
-
-    interface IMFASFMultiplexer
-    {
-        CONST_VTBL struct IMFASFMultiplexerVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IMFASFMultiplexer_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IMFASFMultiplexer_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IMFASFMultiplexer_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IMFASFMultiplexer_Initialize(This,pIContentInfo)	\
-    ( (This)->lpVtbl -> Initialize(This,pIContentInfo) ) 
-
-#define IMFASFMultiplexer_SetFlags(This,dwFlags)	\
-    ( (This)->lpVtbl -> SetFlags(This,dwFlags) ) 
-
-#define IMFASFMultiplexer_GetFlags(This,pdwFlags)	\
-    ( (This)->lpVtbl -> GetFlags(This,pdwFlags) ) 
-
-#define IMFASFMultiplexer_ProcessSample(This,wStreamNumber,pISample,hnsTimestampAdjust)	\
-    ( (This)->lpVtbl -> ProcessSample(This,wStreamNumber,pISample,hnsTimestampAdjust) ) 
-
-#define IMFASFMultiplexer_GetNextPacket(This,pdwStatusFlags,ppIPacket)	\
-    ( (This)->lpVtbl -> GetNextPacket(This,pdwStatusFlags,ppIPacket) ) 
-
-#define IMFASFMultiplexer_Flush(This)	\
-    ( (This)->lpVtbl -> Flush(This) ) 
-
-#define IMFASFMultiplexer_End(This,pIContentInfo)	\
-    ( (This)->lpVtbl -> End(This,pIContentInfo) ) 
-
-#define IMFASFMultiplexer_GetStatistics(This,wStreamNumber,pMuxStats)	\
-    ( (This)->lpVtbl -> GetStatistics(This,wStreamNumber,pMuxStats) ) 
-
-#define IMFASFMultiplexer_SetSyncTolerance(This,msSyncTolerance)	\
-    ( (This)->lpVtbl -> SetSyncTolerance(This,msSyncTolerance) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IMFASFMultiplexer_INTERFACE_DEFINED__ */
-
-
 /* interface __MIDL_itf_wmcontainer_0000_0008 */
 /* [local] */ 
 
-STDAPI MFCreateASFMultiplexer( 
-        /* out */     IMFASFMultiplexer     **ppIMultiplexer);
 #if (WINVER >= _WIN32_WINNT_WIN7) 
 EXTERN_GUID( MFASFINDEXER_TYPE_TIMECODE, 0x49815231, 0x6bad, 0x44fd, 0x81, 0xa, 0x3f, 0x60, 0x98, 0x4e, 0xc7, 0xfd );
 #endif // (WINVER >= _WIN32_WINNT_WIN7) 
@@ -2209,6 +2223,12 @@ EXTERN_GUID( MFASFINDEXER_TYPE_TIMECODE, 0x49815231, 0x6bad, 0x44fd, 0x81, 0xa, 
 #define MFASFINDEXER_NO_FIXED_INTERVAL              0xffffffff
 #define MFASFINDEXER_READ_FOR_REVERSEPLAYBACK_OUTOFDATASEGMENT        0xffffffffffffffff
 #define MFASFINDEXER_APPROX_SEEK_TIME_UNKNOWN 0xffffffffffffffff
+STDAPI MFCreateASFIndexer( 
+        /* out */     IMFASFIndexer         **ppIIndexer);
+STDAPI MFCreateASFIndexerByteStream( 
+        /* in */      IMFByteStream         *pIContentByteStream,
+        /* in */      QWORD                  cbIndexStartOffset,
+        /* out */     IMFByteStream        **pIIndexByteStream);
 typedef 
 enum MFASF_STREAMSELECTORFLAGS
     {

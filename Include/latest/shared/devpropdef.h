@@ -19,8 +19,8 @@ Environment:
 --*/
 
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #ifndef _DEVPROPDEF_H_
 #define _DEVPROPDEF_H_
@@ -131,9 +131,9 @@ inline bool operator!=(const DEVPROPKEY &a, const DEVPROPKEY &b) { return !(a ==
 // This enumeration describes where a property is stored.
 //
 
-typedef
+typedef 
 #ifdef MIDL_PASS
-[v1_enum]
+[v1_enum] 
 #endif
 enum _DEVPROPSTORE {
     DEVPROP_STORE_SYSTEM,
@@ -206,6 +206,7 @@ typedef struct _DEVPROPERTY {
 #define DEFINE_DEVPROPKEY(name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8, pid) EXTERN_C const DEVPROPKEY name
 #endif // INITGUID
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
+
 

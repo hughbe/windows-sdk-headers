@@ -13,6 +13,13 @@ Abstract:
 #pragma once
 #endif
 
+#include <winapifamily.h>
+
+#pragma region Desktop FamilyFamily or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
+#if (NTDDI_VERSION >= NTDDI_WIN8)
+
 
 // Handle descriptor flags.
 typedef enum
@@ -57,7 +64,6 @@ typedef enum
     PSS_CAPTURE_VA_SPACE                            = 0x00000800,
     PSS_CAPTURE_VA_SPACE_SECTION_INFORMATION        = 0x00001000,
     PSS_CAPTURE_IPT_TRACE                           = 0x00002000,
-    PSS_CAPTURE_RESERVED_00004000                   = 0x00004000,
 
     PSS_CREATE_BREAKAWAY_OPTIONAL                   = 0x04000000,
     PSS_CREATE_BREAKAWAY                            = 0x08000000,
@@ -347,21 +353,6 @@ typedef struct
     PCONTEXT ContextRecord;         // valid for life time of walk marker
 } PSS_THREAD_ENTRY;
 
-// Allocator API structure for walk marker allocations.
-typedef struct
-{
-    void* Context;
-    void* (WINAPI *AllocRoutine) (_In_ void* Context, _In_ DWORD Size);
-    void (WINAPI *FreeRoutine) (_In_ void* Context, _In_opt_ void* Address);
-} PSS_ALLOCATOR;
-
-#include <winapifamily.h>
-
-#pragma region App Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
-#if (NTDDI_VERSION >= NTDDI_WIN8)
-
 // Win32 APIs.
 _Success_(return == ERROR_SUCCESS)
 STDAPI_(DWORD)
@@ -408,6 +399,14 @@ PssDuplicateSnapshot(
     _In_opt_ PSS_DUPLICATE_FLAGS Flags
     );
 
+// Allocator API structure for walk marker allocations.
+typedef struct
+{
+    void* Context;
+    void* (WINAPI *AllocRoutine) (_In_ void* Context, _In_ DWORD Size);
+    void (WINAPI *FreeRoutine) (_In_ void* Context, _In_opt_ void* Address);
+} PSS_ALLOCATOR;
+
 // Win32 walk marker management.
 _Success_(return == ERROR_SUCCESS)
 STDAPI_(DWORD)
@@ -442,8 +441,8 @@ PssWalkMarkerSeekToBeginning(
     _In_ HPSSWALK WalkMarkerHandle
     );
 
-#endif // (NTDDI_VERSION >= NTDDI_WIN8)
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
 
+#endif // (NTDDI_VERSION >= NTDDI_WIN8)
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
 

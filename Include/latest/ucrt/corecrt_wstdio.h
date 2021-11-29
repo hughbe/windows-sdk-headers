@@ -12,11 +12,8 @@
 #include <corecrt.h>
 #include <corecrt_stdio_config.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
+
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 //
@@ -1067,6 +1064,9 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
     }
     #endif
 
+    #pragma warning(push)
+    #pragma warning(disable: 4793)
+
     _Success_(return >= 0)
     _Check_return_opt_
     _CRT_STDIO_INLINE int __CRTDECL _vsnwprintf_s_l(
@@ -1115,6 +1115,8 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
         _In_z_ _Printf_format_string_                 wchar_t const*, _Format
         )
 
+    #pragma warning(pop)
+
     _Success_(return >= 0)
     _Check_return_opt_ _CRT_INSECURE_DEPRECATE(_vsnwprintf_s)
     _CRT_STDIO_INLINE int __CRTDECL _vsnwprintf(
@@ -1127,7 +1129,10 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
     ;
     #else
     {
+        #pragma warning(push)
+        #pragma warning(disable: 4996) // Deprecation
         return _vsnwprintf_l(_Buffer, _BufferCount, _Format, NULL, _ArgList);
+        #pragma warning(pop)
     }
     #endif
 
@@ -1190,7 +1195,10 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
     ;
     #else
     {
+        #pragma warning(push)
+        #pragma warning(disable: 4996) // Deprecation
         return _vswprintf_c_l(_Buffer, _BufferCount, _Format, _Locale, _ArgList);
+        #pragma warning(pop)
     }
     #endif
 
@@ -1472,6 +1480,11 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
     }
     #endif
 
+    #pragma warning(push)
+    // Warning 4793: The compiler cannot compile function into managed code, even though the /clr compiler option is specified.
+    // Warning 4996: 'function': was declared deprecated
+    #pragma warning(disable:4793 4996)
+
     __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_2_ARGLIST_EX(
         _Success_(return >= 0)
         int, __RETURN_POLICY_SAME, _CRT_STDIO_INLINE, __CRTDECL, __swprintf_l, __vswprintf_l, _vswprintf_s_l,
@@ -1487,6 +1500,8 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
         _Pre_notnull_ _Always_(_Post_z_), wchar_t,        _Buffer,
         _In_z_ _Printf_format_string_     wchar_t const*, _Format
         )
+
+    #pragma warning(pop)
 
     _Success_(return >= 0)
     _Check_return_opt_
@@ -1637,7 +1652,10 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
         va_list _ArgList;
         __crt_va_start(_ArgList, _Locale);
 
+        #pragma warning(push)
+        #pragma warning(disable: 4996) // Deprecation
         _Result = _vsnwprintf_l(_Buffer, _BufferCount, _Format, _Locale, _ArgList);
+        #pragma warning(pop)
 
         __crt_va_end(_ArgList);
         return _Result;
@@ -1659,7 +1677,10 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
         va_list _ArgList;
         __crt_va_start(_ArgList, _Format);
 
+        #pragma warning(push)
+        #pragma warning(disable: 4996) // Deprecation
         _Result = _vsnwprintf_l(_Buffer, _BufferCount, _Format, NULL, _ArgList);
+        #pragma warning(pop)
 
         __crt_va_end(_ArgList);
         return _Result;
@@ -1792,10 +1813,8 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
 
 
     #if !defined RC_INVOKED && !defined __midl && !defined _INC_SWPRINTF_INL_
-        // C4141: double deprecation
-        // C6054: string may not be zero-terminated
         #pragma warning(push)
-        #pragma warning(disable: 4141 6054)
+        #pragma warning(disable: 4141 4412 4793 4996 6054)
 
         #ifdef __cplusplus
 
@@ -1808,6 +1827,7 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
                 int _Result;
                 va_list _ArgList;
                 __crt_va_start(_ArgList, _Format);
+                #pragma warning(suppress: 28719)
                 _Result = vswprintf(_Buffer, _CRT_INT_MAX, _Format, _ArgList);
                 __crt_va_end(_ArgList);
                 return _Result;
@@ -1820,6 +1840,7 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
                                               va_list              _ArgList
                 ) throw()
             {
+                #pragma warning(suppress: 28719)
                 return vswprintf(_Buffer, _CRT_INT_MAX, _Format, _ArgList);
             }
 
@@ -2091,7 +2112,10 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
         va_list _ArgList;
         __crt_va_start(_ArgList, _Locale);
 
+        #pragma warning(push)
+        #pragma warning(disable: 4996) // Deprecation
         _Result = _vsnwscanf_l(_Buffer, _BufferCount, _Format, _Locale, _ArgList);
+        #pragma warning(pop)
 
         __crt_va_end(_ArgList);
         return _Result;
@@ -2113,7 +2137,10 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
         va_list _ArgList;
         __crt_va_start(_ArgList, _Format);
 
+        #pragma warning(push)
+        #pragma warning(disable: 4996) // Deprecation
         _Result = _vsnwscanf_l(_Buffer, _BufferCount, _Format, NULL, _ArgList);
+        #pragma warning(pop)
 
         __crt_va_end(_ArgList);
         return _Result;
@@ -2166,6 +2193,6 @@ _ACRTIMP_ALT FILE* __cdecl __acrt_iob_func(unsigned _Ix);
     #endif
 #endif // _CRT_FUNCTIONS_REQUIRED
 
+
+
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

@@ -64,9 +64,7 @@
 #if 0
 #pragma warning(3:4100)   // Unreferenced formal parameter
 #pragma warning(3:4701)   // local may be used w/o init
-// VSTS: 14791840: Disabling C4702 due to unmanageable number of instances 
-// that are triggered when certain inlining occurs, which can vary based on the build flavors.
-// #pragma warning(3:4702)   // Unreachable code
+#pragma warning(3:4702)   // Unreachable code
 #pragma warning(3:4706)   // assignment w/i conditional expression
 #pragma warning(3:4709)   // command operator w/o index expression
 #endif

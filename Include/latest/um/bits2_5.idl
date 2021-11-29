@@ -15,7 +15,7 @@ import "bits2_0.idl";
 ]
 interface IBackgroundCopyJobHttpOptions : IUnknown
 {
-    typedef enum BG_CERT_STORE_LOCATION {
+    typedef enum {
         BG_CERT_STORE_LOCATION_CURRENT_USER = 0,
         BG_CERT_STORE_LOCATION_LOCAL_MACHINE,
         BG_CERT_STORE_LOCATION_CURRENT_SERVICE,

@@ -4,7 +4,7 @@
  |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
  |PROJECT: X3DAudio                     MODEL:   Unmanaged User-mode        |
  |VERSION: 1.7                          EXCEPT:  No Exceptions              |
- |CLASS:   N / A                        MINREQ:  Win8, Xbox One             |
+ |CLASS:   N / A                        MINREQ:  WinXP, Xbox360             |
  |BASE:    N / A                        DIALECT: MSC++ 14.00                |
  |>------------------------------------------------------------------------<|
  | DUTY: Cross-platform stand-alone 3D audio math library                   |
@@ -55,7 +55,7 @@
 #include <winapifamily.h>
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_TV_APP | WINAPI_PARTITION_TV_TITLE | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_TV_APP | WINAPI_PARTITION_TV_TITLE)
 
 //--------------<D-E-F-I-N-I-T-I-O-N-S>-------------------------------------//
 #include <windef.h>    // general windows types
@@ -288,11 +288,17 @@ typedef struct X3DAUDIO_DSP_SETTINGS
 
 //--------------<M-A-C-R-O-S>-----------------------------------------------//
 // function storage-class attribute and calltype
-#if defined(X3DEXPORT)
-#define X3DAUDIO_API_(type) EXTERN_C __declspec(dllexport) type STDAPIVCALLTYPE
+#if defined(X3DAUDIOSTATIC)
+    #define X3DAUDIO_API_(type) EXTERN_C type STDAPIVCALLTYPE
 #else
-#define X3DAUDIO_API_(type) EXTERN_C __declspec(dllimport) type STDAPIVCALLTYPE
+    #if defined(X3DEXPORT)
+        #define X3DAUDIO_API_(type) EXTERN_C __declspec(dllexport) type STDAPIVCALLTYPE
+    #else
+        #define X3DAUDIO_API_(type) EXTERN_C __declspec(dllimport) type STDAPIVCALLTYPE
+    #endif
 #endif
+#define X3DAUDIO_IMP_(type) type STDMETHODVCALLTYPE
+
 
 //--------------<F-U-N-C-T-I-O-N-S>-----------------------------------------//
 // initializes instance handle
@@ -304,7 +310,7 @@ X3DAUDIO_API_(void) X3DAudioCalculate (_In_reads_bytes_(X3DAUDIO_HANDLE_BYTESIZE
 
 #pragma pack(pop) // revert packing alignment
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_TV_APP | WINAPI_PARTITION_TV_TITLE | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_TV_APP | WINAPI_PARTITION_TV_TITLE) */
 #pragma endregion
 //---------------------------------<-EOF->----------------------------------//
 

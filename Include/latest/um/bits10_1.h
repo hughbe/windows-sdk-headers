@@ -453,7 +453,6 @@ BackgroundCopyManager10_1;
 /* interface __MIDL_itf_bits10_1_0000_0003 */
 /* [local] */ 
 
-#include "bits10_2.h"
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 

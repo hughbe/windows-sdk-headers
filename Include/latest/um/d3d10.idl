@@ -651,7 +651,8 @@ typedef struct D3D10_BUFFER_DESC
 cpp_quote( "#if !defined( D3D10_NO_HELPERS ) && defined( __cplusplus )" )
 cpp_quote( "struct CD3D10_BUFFER_DESC : public D3D10_BUFFER_DESC" )
 cpp_quote( "{" )
-cpp_quote( "    CD3D10_BUFFER_DESC() = default;" )
+cpp_quote( "    CD3D10_BUFFER_DESC()" )
+cpp_quote( "    {}" )
 cpp_quote( "    explicit CD3D10_BUFFER_DESC( const D3D10_BUFFER_DESC& o ) :" )
 cpp_quote( "        D3D10_BUFFER_DESC( o )" )
 cpp_quote( "    {}" )
@@ -669,6 +670,7 @@ cpp_quote( "        CPUAccessFlags = cpuaccessFlags ;" )
 cpp_quote( "        MiscFlags = miscFlags;" )
 cpp_quote( "    }" )
 cpp_quote( "    ~CD3D10_BUFFER_DESC() {}" )
+cpp_quote( "    operator const D3D10_BUFFER_DESC&() const { return *this; }" )
 cpp_quote( "};" )
 cpp_quote( "#endif" )
 
@@ -704,7 +706,8 @@ typedef struct D3D10_TEXTURE1D_DESC
 cpp_quote( "#if !defined( D3D10_NO_HELPERS ) && defined( __cplusplus )" )
 cpp_quote( "struct CD3D10_TEXTURE1D_DESC : public D3D10_TEXTURE1D_DESC" )
 cpp_quote( "{" )
-cpp_quote( "    CD3D10_TEXTURE1D_DESC() = default;" )
+cpp_quote( "    CD3D10_TEXTURE1D_DESC()" )
+cpp_quote( "    {}" )
 cpp_quote( "    explicit CD3D10_TEXTURE1D_DESC( const D3D10_TEXTURE1D_DESC& o ) :" )
 cpp_quote( "        D3D10_TEXTURE1D_DESC( o )" )
 cpp_quote( "    {}" )
@@ -728,6 +731,7 @@ cpp_quote( "        CPUAccessFlags = cpuaccessFlags;" )
 cpp_quote( "        MiscFlags = miscFlags;" )
 cpp_quote( "    }" )
 cpp_quote( "    ~CD3D10_TEXTURE1D_DESC() {}" )
+cpp_quote( "    operator const D3D10_TEXTURE1D_DESC&() const { return *this; }" )
 cpp_quote( "};" )
 cpp_quote( "#endif" )
 
@@ -766,7 +770,8 @@ typedef struct D3D10_TEXTURE2D_DESC
 cpp_quote( "#if !defined( D3D10_NO_HELPERS ) && defined( __cplusplus )" )
 cpp_quote( "struct CD3D10_TEXTURE2D_DESC : public D3D10_TEXTURE2D_DESC" )
 cpp_quote( "{" )
-cpp_quote( "    CD3D10_TEXTURE2D_DESC() = default;" )
+cpp_quote( "    CD3D10_TEXTURE2D_DESC()" )
+cpp_quote( "    {}" )
 cpp_quote( "    explicit CD3D10_TEXTURE2D_DESC( const D3D10_TEXTURE2D_DESC& o ) :" )
 cpp_quote( "        D3D10_TEXTURE2D_DESC( o )" )
 cpp_quote( "    {}" )
@@ -796,6 +801,7 @@ cpp_quote( "        CPUAccessFlags = cpuaccessFlags;" )
 cpp_quote( "        MiscFlags = miscFlags;" )
 cpp_quote( "    }" )
 cpp_quote( "    ~CD3D10_TEXTURE2D_DESC() {}" )
+cpp_quote( "    operator const D3D10_TEXTURE2D_DESC&() const { return *this; }" )
 cpp_quote( "};" )
 cpp_quote( "#endif" )
 
@@ -839,7 +845,8 @@ typedef struct D3D10_TEXTURE3D_DESC
 cpp_quote( "#if !defined( D3D10_NO_HELPERS ) && defined( __cplusplus )" )
 cpp_quote( "struct CD3D10_TEXTURE3D_DESC : public D3D10_TEXTURE3D_DESC" )
 cpp_quote( "{" )
-cpp_quote( "    CD3D10_TEXTURE3D_DESC() = default;" )
+cpp_quote( "    CD3D10_TEXTURE3D_DESC()" )
+cpp_quote( "    {}" )
 cpp_quote( "    explicit CD3D10_TEXTURE3D_DESC( const D3D10_TEXTURE3D_DESC& o ) :" )
 cpp_quote( "        D3D10_TEXTURE3D_DESC( o )" )
 cpp_quote( "    {}" )
@@ -865,6 +872,7 @@ cpp_quote( "        CPUAccessFlags = cpuaccessFlags;" )
 cpp_quote( "        MiscFlags = miscFlags;" )
 cpp_quote( "    }" )
 cpp_quote( "    ~CD3D10_TEXTURE3D_DESC() {}" )
+cpp_quote( "    operator const D3D10_TEXTURE3D_DESC&() const { return *this; }" )
 cpp_quote( "};" )
 cpp_quote( "#endif" )
 
@@ -1880,6 +1888,8 @@ cpp_quote("#pragma endregion")
 #pragma region Desktop Family
 cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
 
+
+
 typedef enum D3D10_CREATE_DEVICE_FLAG
 {
     D3D10_CREATE_DEVICE_SINGLETHREADED = 0x1,
@@ -1895,6 +1905,7 @@ typedef enum D3D10_CREATE_DEVICE_FLAG
 } D3D10_CREATE_DEVICE_FLAG;
 
 cpp_quote( "" )
+
 
 const UINT D3D10_SDK_VERSION = 29;
 

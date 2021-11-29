@@ -9,6 +9,17 @@
 #include "winrt/impl/Windows.Security.Isolation.1.h"
 namespace winrt::Windows::Security::Isolation
 {
+    struct HostMessageReceivedCallback : Windows::Foundation::IUnknown
+    {
+        HostMessageReceivedCallback(std::nullptr_t = nullptr) noexcept {}
+        HostMessageReceivedCallback(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        template <typename L> HostMessageReceivedCallback(L lambda);
+        template <typename F> HostMessageReceivedCallback(F* function);
+        template <typename O, typename M> HostMessageReceivedCallback(O* object, M method);
+        template <typename O, typename M> HostMessageReceivedCallback(com_ptr<O>&& object, M method);
+        template <typename O, typename M> HostMessageReceivedCallback(weak_ref<O>&& object, M method);
+        auto operator()(winrt::guid const& receiverId, param::vector_view<Windows::Foundation::IInspectable> const& message) const;
+    };
     struct MessageReceivedCallback : Windows::Foundation::IUnknown
     {
         MessageReceivedCallback(std::nullptr_t = nullptr) noexcept {}
@@ -33,7 +44,8 @@ namespace winrt::Windows::Security::Isolation
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) IsolatedWindowsEnvironment : Windows::Security::Isolation::IIsolatedWindowsEnvironment
+    struct __declspec(empty_bases) IsolatedWindowsEnvironment : Windows::Security::Isolation::IIsolatedWindowsEnvironment,
+        impl::require<IsolatedWindowsEnvironment, Windows::Security::Isolation::IIsolatedWindowsEnvironment2>
     {
         IsolatedWindowsEnvironment(std::nullptr_t) noexcept {}
         IsolatedWindowsEnvironment(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Isolation::IIsolatedWindowsEnvironment(ptr, take_ownership_from_abi) {}
@@ -86,6 +98,11 @@ namespace winrt::Windows::Security::Isolation
         IsolatedWindowsEnvironmentOwnerRegistrationResult(std::nullptr_t) noexcept {}
         IsolatedWindowsEnvironmentOwnerRegistrationResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Isolation::IIsolatedWindowsEnvironmentOwnerRegistrationResult(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IsolatedWindowsEnvironmentPostMessageResult : Windows::Security::Isolation::IIsolatedWindowsEnvironmentPostMessageResult
+    {
+        IsolatedWindowsEnvironmentPostMessageResult(std::nullptr_t) noexcept {}
+        IsolatedWindowsEnvironmentPostMessageResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Isolation::IIsolatedWindowsEnvironmentPostMessageResult(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IsolatedWindowsEnvironmentProcess : Windows::Security::Isolation::IIsolatedWindowsEnvironmentProcess
     {
         IsolatedWindowsEnvironmentProcess(std::nullptr_t) noexcept {}
@@ -118,6 +135,8 @@ namespace winrt::Windows::Security::Isolation
         IsolatedWindowsHostMessenger() = delete;
         static auto PostMessageToReceiver(winrt::guid const& receiverId, param::vector_view<Windows::Foundation::IInspectable> const& message);
         static auto GetFileId(param::hstring const& filePath);
+        static auto RegisterHostMessageReceiver(winrt::guid const& receiverId, Windows::Security::Isolation::HostMessageReceivedCallback const& hostMessageReceivedCallback);
+        static auto UnregisterHostMessageReceiver(winrt::guid const& receiverId);
     };
 }
 #endif

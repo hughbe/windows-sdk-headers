@@ -9,11 +9,9 @@
 
 #include <corecrt.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
+
+
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 //
@@ -40,7 +38,7 @@ struct __utimbuf64
     __time64_t modtime;     // modification time
 };
 
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES && !defined _CRT_NO_TIME_T
+#if _CRT_INTERNAL_NONSTDC_NAMES && !defined _CRT_NO_TIME_T
 
     struct utimbuf
     {
@@ -137,7 +135,7 @@ _ACRTIMP int __cdecl _wutime64(
 
     #endif
 
-    #if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+    #if _CRT_INTERNAL_NONSTDC_NAMES
         #ifdef _USE_32BIT_TIME_T
 
             static __inline int __CRTDECL utime(char const* const _FileName, struct utimbuf* const _Time)
@@ -158,6 +156,6 @@ _ACRTIMP int __cdecl _wutime64(
     #endif
 #endif
 
+
+
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

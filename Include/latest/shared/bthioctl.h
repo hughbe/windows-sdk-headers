@@ -41,7 +41,7 @@ Revision History:
 #endif
 
 //
-// IOCTL defines.
+// IOCTL defines. 
 //
 #define BTH_IOCTL_BASE      0
 
@@ -73,7 +73,7 @@ Revision History:
 #define IOCTL_INTERNAL_BTHENUM_GET_DEVINFO  BTH_KERNEL_CTL(BTH_IOCTL_BASE+0x02)
 
 //
-// IOCTLs
+// IOCTLs 
 //
 //
 // Input:  none
@@ -105,13 +105,13 @@ Revision History:
     (NTDDI_VERSION == NTDDI_VISTASP1 && defined(VISTA_KB942567)))
 
 //
-// Input:   BTH_VENDOR_SPECIFIC_COMMAND
+// Input:   BTH_VENDOR_SPECIFIC_COMMAND 
 // Output:  PVOID
 //
 #define IOCTL_BTH_HCI_VENDOR_COMMAND                BTH_CTL(BTH_IOCTL_BASE+0x14)
 
 #endif // >= SP1+KB942567
-
+    
 //
 // Input:  BTH_SDP_CONNECT
 // Output:  BTH_SDP_CONNECT
@@ -350,7 +350,7 @@ typedef struct _BTH_SDP_SERVICE_SEARCH_REQUEST {
     // Handle returned by the connect request or HANDLE_SDP_LOCAL
     //
     HANDLE_SDP_TYPE HANDLE_SDP_FIELD_NAME;
-
+    
     //
     // Array of UUIDs.  Each entry can be either a 2 byte, 4 byte or 16 byte
     // UUID. SDP spec mandates that a request can have a maximum of 12 UUIDs.
@@ -450,13 +450,13 @@ typedef struct _BTH_SDP_STREAM_RESPONSE {
 typedef struct _BTH_COMMAND_HEADER {
     //
     // Opcode for the command
-    //
+    // 
     USHORT OpCode;
 
     //
     // Payload of the command excluding the header.
     // TotalParameterLength = TotalCommandLength - sizeof(BTH_COMMAND_HEADER)
-    //
+    // 
     UCHAR TotalParameterLength;
 
 } BTH_COMMAND_HEADER, * PBTH_COMMAND_HEADER;
@@ -467,13 +467,13 @@ typedef struct _BTH_COMMAND_HEADER {
 typedef struct _BTH_VENDOR_SPECIFIC_COMMAND {
     //
     // Manufacturer ID
-    //
+    // 
     ULONG ManufacturerId;
 
     //
-    // LMP version. Command is send to radio only if the radios
+    // LMP version. Command is send to radio only if the radios 
     // LMP version is greater than this value.
-    //
+    // 
     UCHAR LmpVersion;
 
     //
@@ -499,17 +499,17 @@ typedef struct _BTH_VENDOR_SPECIFIC_COMMAND {
 typedef struct _BTH_VENDOR_PATTERN {
     //
     // Pattern Offset in the event structure excluding EVENT header
-    //
+    // 
     UCHAR Offset;
-
+    
     //
     // Size of the Pattern
-    //
+    // 
     UCHAR Size;
 
     //
     // Pattern
-    //
+    // 
     UCHAR Pattern[1];
 } BTH_VENDOR_PATTERN, * PBTH_VENDOR_PATTERN;
 
@@ -527,7 +527,7 @@ typedef struct _BTH_VENDOR_EVENT_INFO {
     //Size of the event buffer including Event header
     //
     ULONG EventSize;
-
+    
     //
     //Information associated with the event
     //
@@ -549,7 +549,7 @@ typedef struct _BTH_VENDOR_EVENT_INFO {
 
 typedef struct _BTH_HOST_FEATURE_MASK {
     //
-    // Mask of supported features.
+    // Mask of supported features. 
     //
     ULONGLONG Mask;
 

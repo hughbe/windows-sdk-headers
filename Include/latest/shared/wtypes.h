@@ -736,6 +736,14 @@ typedef BSTR *LPBSTR;
 /* 0 == FALSE, -1 == TRUE */
 typedef short VARIANT_BOOL;
 
+#if !__STDC__ && (_MSC_VER <= 1000)
+/* For backward compatibility */
+typedef VARIANT_BOOL _VARIANT_BOOL;
+
+#else
+/* ANSI C/C++ reserve bool as keyword */
+#define _VARIANT_BOOL    /##/
+#endif
 /* The BSTRBLOB structure is used by some implementations */
 /* of the IPropertyStorage interface when marshaling BSTRs */
 /* on systems which don't support BSTR marshaling. */

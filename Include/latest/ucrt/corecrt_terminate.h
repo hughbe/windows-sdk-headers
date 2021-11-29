@@ -9,18 +9,14 @@
 
 #include <corecrt.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 #ifndef RC_INVOKED
 
 _CRT_BEGIN_C_HEADER
 
 // terminate_handler is the standard name; terminate_function is defined for
 // source compatibility.
-typedef void (__CRTDECL* terminate_handler )(void);
-typedef void (__CRTDECL* terminate_function)(void);
+typedef void (__CRTDECL* terminate_handler )();
+typedef void (__CRTDECL* terminate_function)();
 
 #ifdef _M_CEE
     typedef void (__clrcall* __terminate_function_m)();
@@ -47,5 +43,3 @@ typedef void (__CRTDECL* terminate_function)(void);
 _CRT_END_C_HEADER
 
 #endif // RC_INVOKED
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

@@ -93,8 +93,8 @@ extern RPC_IF_HANDLE __MIDL_itf_bits2_5_0000_0000_v0_0_s_ifspec;
 /* interface IBackgroundCopyJobHttpOptions */
 /* [object][helpstring][uuid] */ 
 
-typedef 
-enum BG_CERT_STORE_LOCATION
+typedef /* [public][public][public][public] */ 
+enum __MIDL_IBackgroundCopyJobHttpOptions_0001
     {
         BG_CERT_STORE_LOCATION_CURRENT_USER	= 0,
         BG_CERT_STORE_LOCATION_LOCAL_MACHINE	= ( BG_CERT_STORE_LOCATION_CURRENT_USER + 1 ) ,

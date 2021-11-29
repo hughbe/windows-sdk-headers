@@ -60,13 +60,6 @@ typedef interface ICoreWindowComponentInterop ICoreWindowComponentInterop;
 #endif 	/* __ICoreWindowComponentInterop_FWD_DEFINED__ */
 
 
-#ifndef __ICoreWindowAdapterInterop_FWD_DEFINED__
-#define __ICoreWindowAdapterInterop_FWD_DEFINED__
-typedef interface ICoreWindowAdapterInterop ICoreWindowAdapterInterop;
-
-#endif 	/* __ICoreWindowAdapterInterop_FWD_DEFINED__ */
-
-
 /* header files for imported files */
 #include "oaidl.h"
 #include "ocidl.h"
@@ -397,175 +390,12 @@ EXTERN_C const IID IID_ICoreWindowComponentInterop;
 /* [local] */ 
 
 #endif // NTDDI_VERSION >= NTDDI_THRESHOLD
-#if (NTDDI_VERSION >= NTDDI_THRESHOLD)
-
-
-extern RPC_IF_HANDLE __MIDL_itf_corewindow_0000_0003_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_corewindow_0000_0003_v0_0_s_ifspec;
-
-#ifndef __ICoreWindowAdapterInterop_INTERFACE_DEFINED__
-#define __ICoreWindowAdapterInterop_INTERFACE_DEFINED__
-
-/* interface ICoreWindowAdapterInterop */
-/* [uuid][object] */ 
-
-
-EXTERN_C const IID IID_ICoreWindowAdapterInterop;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("7a5b6fd1-cd73-4b6c-9cf4-2e869eaf470a")
-    ICoreWindowAdapterInterop : public IInspectable
-    {
-    public:
-        virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_ApplicationViewClientAdapter( 
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value) = 0;
-        
-        virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_CoreApplicationViewClientAdapter( 
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value) = 0;
-        
-        virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_HoloViewClientAdapter( 
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value) = 0;
-        
-        virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_SystemNavigationClientAdapter( 
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value) = 0;
-        
-        virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_TitleBarClientAdapter( 
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE SetWindowClientAdapter( 
-            /* [in] */ __RPC__in_opt IUnknown *value) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct ICoreWindowAdapterInteropVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in ICoreWindowAdapterInterop * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in ICoreWindowAdapterInterop * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIids )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [out] */ __RPC__out ULONG *iidCount,
-            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-        
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_ApplicationViewClientAdapter )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value);
-        
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_CoreApplicationViewClientAdapter )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value);
-        
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HoloViewClientAdapter )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value);
-        
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_SystemNavigationClientAdapter )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value);
-        
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_TitleBarClientAdapter )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [retval][out] */ __RPC__deref_out_opt IUnknown **value);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetWindowClientAdapter )( 
-            __RPC__in ICoreWindowAdapterInterop * This,
-            /* [in] */ __RPC__in_opt IUnknown *value);
-        
-        END_INTERFACE
-    } ICoreWindowAdapterInteropVtbl;
-
-    interface ICoreWindowAdapterInterop
-    {
-        CONST_VTBL struct ICoreWindowAdapterInteropVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define ICoreWindowAdapterInterop_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define ICoreWindowAdapterInterop_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define ICoreWindowAdapterInterop_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define ICoreWindowAdapterInterop_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define ICoreWindowAdapterInterop_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define ICoreWindowAdapterInterop_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define ICoreWindowAdapterInterop_get_ApplicationViewClientAdapter(This,value)	\
-    ( (This)->lpVtbl -> get_ApplicationViewClientAdapter(This,value) ) 
-
-#define ICoreWindowAdapterInterop_get_CoreApplicationViewClientAdapter(This,value)	\
-    ( (This)->lpVtbl -> get_CoreApplicationViewClientAdapter(This,value) ) 
-
-#define ICoreWindowAdapterInterop_get_HoloViewClientAdapter(This,value)	\
-    ( (This)->lpVtbl -> get_HoloViewClientAdapter(This,value) ) 
-
-#define ICoreWindowAdapterInterop_get_SystemNavigationClientAdapter(This,value)	\
-    ( (This)->lpVtbl -> get_SystemNavigationClientAdapter(This,value) ) 
-
-#define ICoreWindowAdapterInterop_get_TitleBarClientAdapter(This,value)	\
-    ( (This)->lpVtbl -> get_TitleBarClientAdapter(This,value) ) 
-
-#define ICoreWindowAdapterInterop_SetWindowClientAdapter(This,value)	\
-    ( (This)->lpVtbl -> SetWindowClientAdapter(This,value) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __ICoreWindowAdapterInterop_INTERFACE_DEFINED__ */
-
-
-/* interface __MIDL_itf_corewindow_0000_0004 */
-/* [local] */ 
-
-#endif // NTDDI_VERSION >= NTDDI_THRESHOLD
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_corewindow_0000_0004_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_corewindow_0000_0004_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_corewindow_0000_0003_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_corewindow_0000_0003_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

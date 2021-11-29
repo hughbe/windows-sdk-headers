@@ -1,8 +1,12 @@
 //-------------------------------------------------------------------------------------
 // DirectXMathConvert.inl -- SIMD C++ Math library
 //
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+// PARTICULAR PURPOSE.
+//  
 // Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
 //
 // http://go.microsoft.com/fwlink/?LinkID=615560
 //-------------------------------------------------------------------------------------
@@ -29,12 +33,12 @@ inline XMVECTOR XM_CALLCONV XMConvertVectorIntToFloat
 {
     assert(DivExponent<32);
 #if defined(_XM_NO_INTRINSICS_)
-    float fScale = 1.0f / static_cast<float>(1U << DivExponent);
+    float fScale = 1.0f / (float)(1U << DivExponent);
     uint32_t ElementIndex = 0;
     XMVECTOR Result;
     do {
-        auto iTemp = static_cast<int32_t>(VInt.vector4_u32[ElementIndex]);
-        Result.vector4_f32[ElementIndex] = static_cast<float>(iTemp) * fScale;
+        int32_t iTemp = (int32_t)VInt.vector4_u32[ElementIndex];
+        Result.vector4_f32[ElementIndex] = ((float)iTemp) * fScale;
     } while (++ElementIndex<4);
     return Result;
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
@@ -47,7 +51,7 @@ inline XMVECTOR XM_CALLCONV XMConvertVectorIntToFloat
     // Convert DivExponent into 1.0f/(1<<DivExponent)
     uint32_t uScale = 0x3F800000U - (DivExponent << 23);
     // Splat the scalar value
-    __m128i vScale = _mm_set1_epi32(static_cast<int>(uScale));
+    __m128i vScale = _mm_set1_epi32(uScale);
     vResult = _mm_mul_ps(vResult,_mm_castsi128_ps(vScale));
     return vResult;
 #endif
@@ -64,7 +68,7 @@ inline XMVECTOR XM_CALLCONV XMConvertVectorFloatToInt
     assert(MulExponent<32);
 #if defined(_XM_NO_INTRINSICS_)
     // Get the scalar factor.
-    auto fScale = static_cast<float>(1U << MulExponent);
+    float fScale = (float)(1U << MulExponent);
     uint32_t ElementIndex = 0;
     XMVECTOR Result;
     do {
@@ -75,9 +79,9 @@ inline XMVECTOR XM_CALLCONV XMConvertVectorFloatToInt
         } else if (fTemp > (65536.0f*32768.0f)-128.0f) {
             iResult = 0x7FFFFFFF;
         } else {
-            iResult = static_cast<int32_t>(fTemp);
+            iResult = (int32_t)fTemp;
         }
-        Result.vector4_u32[ElementIndex] = static_cast<uint32_t>(iResult);
+        Result.vector4_u32[ElementIndex] = (uint32_t)iResult;
     } while (++ElementIndex<4);
     return Result;
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
@@ -92,7 +96,7 @@ inline XMVECTOR XM_CALLCONV XMConvertVectorFloatToInt
     vOverflow = vorrq_u32(vOverflow,vResult);
     return vOverflow;
 #else // _XM_SSE_INTRINSICS_
-    XMVECTOR vResult = _mm_set_ps1(static_cast<float>(1U << MulExponent));
+    XMVECTOR vResult = _mm_set_ps1((float)(1U << MulExponent));
     vResult = _mm_mul_ps(vResult,VFloat);
     // In case of positive overflow, detect it
     XMVECTOR vOverflow = _mm_cmpgt_ps(vResult,g_XMMaxInt);
@@ -116,11 +120,11 @@ inline XMVECTOR XM_CALLCONV XMConvertVectorUIntToFloat
 {
     assert(DivExponent<32);
 #if defined(_XM_NO_INTRINSICS_)
-    float fScale = 1.0f / static_cast<float>(1U << DivExponent);
+    float fScale = 1.0f / (float)(1U << DivExponent);
     uint32_t ElementIndex = 0;
     XMVECTOR Result;
     do {
-        Result.vector4_f32[ElementIndex] = static_cast<float>(VUInt.vector4_u32[ElementIndex]) * fScale;
+        Result.vector4_f32[ElementIndex] = (float)VUInt.vector4_u32[ElementIndex] * fScale;
     } while (++ElementIndex<4);
     return Result;
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
@@ -143,7 +147,7 @@ inline XMVECTOR XM_CALLCONV XMConvertVectorUIntToFloat
     // Convert DivExponent into 1.0f/(1<<DivExponent)
     uint32_t uScale = 0x3F800000U - (DivExponent << 23);
     // Splat
-    iMask = _mm_set1_epi32(static_cast<int>(uScale));
+    iMask = _mm_set1_epi32(uScale);
     vResult = _mm_mul_ps(vResult,_mm_castsi128_ps(iMask));
     return vResult;
 #endif
@@ -160,7 +164,7 @@ inline XMVECTOR XM_CALLCONV XMConvertVectorFloatToUInt
     assert(MulExponent<32);
 #if defined(_XM_NO_INTRINSICS_)
     // Get the scalar factor.
-    auto fScale = static_cast<float>(1U << MulExponent);
+    float fScale = (float)(1U << MulExponent);
     uint32_t ElementIndex = 0;
     XMVECTOR Result;
     do {
@@ -171,7 +175,7 @@ inline XMVECTOR XM_CALLCONV XMConvertVectorFloatToUInt
         } else if (fTemp >= (65536.0f*65536.0f)) {
             uResult = 0xFFFFFFFFU;
         } else {
-            uResult = static_cast<uint32_t>(fTemp);
+            uResult = (uint32_t)fTemp;
         }
         Result.vector4_u32[ElementIndex] = uResult;
     } while (++ElementIndex<4);
@@ -292,7 +296,7 @@ inline XMVECTOR XM_CALLCONV XMLoadInt2A
 )
 {
     assert(pSource);
-    assert((reinterpret_cast<uintptr_t>(pSource) & 0xF) == 0);
+    assert(((uintptr_t)pSource & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
     V.vector4_u32[0] = pSource[0];
@@ -344,7 +348,7 @@ inline XMVECTOR XM_CALLCONV XMLoadFloat2A
 )
 {
     assert(pSource);
-    assert((reinterpret_cast<uintptr_t>(pSource) & 0xF) == 0);
+    assert(((uintptr_t)pSource & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
     V.vector4_f32[0] = pSource->x;
@@ -372,8 +376,8 @@ inline XMVECTOR XM_CALLCONV XMLoadSInt2
     assert(pSource);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
-    V.vector4_f32[0] = static_cast<float>(pSource->x);
-    V.vector4_f32[1] = static_cast<float>(pSource->y);
+    V.vector4_f32[0] = (float)pSource->x;
+    V.vector4_f32[1] = (float)pSource->y;
     V.vector4_f32[2] = 0.f;
     V.vector4_f32[3] = 0.f;
     return V;
@@ -400,8 +404,8 @@ inline XMVECTOR XM_CALLCONV XMLoadUInt2
     assert(pSource);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
-    V.vector4_f32[0] = static_cast<float>(pSource->x);
-    V.vector4_f32[1] = static_cast<float>(pSource->y);
+    V.vector4_f32[0] = (float)pSource->x;
+    V.vector4_f32[1] = (float)pSource->y;
     V.vector4_f32[2] = 0.f;
     V.vector4_f32[3] = 0.f;
     return V;
@@ -467,7 +471,7 @@ inline XMVECTOR XM_CALLCONV XMLoadInt3A
 )
 {
     assert(pSource);
-    assert((reinterpret_cast<uintptr_t>(pSource) & 0xF) == 0);
+    assert(((uintptr_t)pSource & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
     V.vector4_u32[0] = pSource[0];
@@ -524,7 +528,7 @@ inline XMVECTOR XM_CALLCONV XMLoadFloat3A
 )
 {
     assert(pSource);
-    assert((reinterpret_cast<uintptr_t>(pSource) & 0xF) == 0);
+    assert(((uintptr_t)pSource & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
     V.vector4_f32[0] = pSource->x;
@@ -554,9 +558,9 @@ inline XMVECTOR XM_CALLCONV XMLoadSInt3
 #if defined(_XM_NO_INTRINSICS_)
 
     XMVECTOR V;
-    V.vector4_f32[0] = static_cast<float>(pSource->x);
-    V.vector4_f32[1] = static_cast<float>(pSource->y);
-    V.vector4_f32[2] = static_cast<float>(pSource->z);
+    V.vector4_f32[0] = (float)pSource->x;
+    V.vector4_f32[1] = (float)pSource->y;
+    V.vector4_f32[2] = (float)pSource->z;
     V.vector4_f32[3] = 0.f;
     return V;
 
@@ -586,9 +590,9 @@ inline XMVECTOR XM_CALLCONV XMLoadUInt3
     assert(pSource);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
-    V.vector4_f32[0] = static_cast<float>(pSource->x);
-    V.vector4_f32[1] = static_cast<float>(pSource->y);
-    V.vector4_f32[2] = static_cast<float>(pSource->z);
+    V.vector4_f32[0] = (float)pSource->x;
+    V.vector4_f32[1] = (float)pSource->y;
+    V.vector4_f32[2] = (float)pSource->z;
     V.vector4_f32[3] = 0.f;
     return V;
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
@@ -615,7 +619,7 @@ inline XMVECTOR XM_CALLCONV XMLoadUInt3
     // For only the ones that are too big, add the fixup
     vMask = _mm_and_ps(_mm_castsi128_ps(iMask),g_XMFixUnsigned);
     vResult = _mm_add_ps(vResult,vMask);
-    return vResult;
+    return vResult; 
 #endif
 }
 
@@ -651,7 +655,7 @@ inline XMVECTOR XM_CALLCONV XMLoadInt4A
 )
 {
     assert(pSource);
-    assert((reinterpret_cast<uintptr_t>(pSource) & 0xF) == 0);
+    assert(((uintptr_t)pSource & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
     V.vector4_u32[0] = pSource[0];
@@ -697,7 +701,7 @@ inline XMVECTOR XM_CALLCONV XMLoadFloat4A
 )
 {
     assert(pSource);
-    assert((reinterpret_cast<uintptr_t>(pSource) & 0xF) == 0);
+    assert(((uintptr_t)pSource & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
     V.vector4_f32[0] = pSource->x;
@@ -723,10 +727,10 @@ inline XMVECTOR XM_CALLCONV XMLoadSInt4
 #if defined(_XM_NO_INTRINSICS_)
 
     XMVECTOR V;
-    V.vector4_f32[0] = static_cast<float>(pSource->x);
-    V.vector4_f32[1] = static_cast<float>(pSource->y);
-    V.vector4_f32[2] = static_cast<float>(pSource->z);
-    V.vector4_f32[3] = static_cast<float>(pSource->w);
+    V.vector4_f32[0] = (float)pSource->x;
+    V.vector4_f32[1] = (float)pSource->y;
+    V.vector4_f32[2] = (float)pSource->z;
+    V.vector4_f32[3] = (float)pSource->w;
     return V;
 
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
@@ -748,10 +752,10 @@ inline XMVECTOR XM_CALLCONV XMLoadUInt4
     assert(pSource);
 #if defined(_XM_NO_INTRINSICS_)
     XMVECTOR V;
-    V.vector4_f32[0] = static_cast<float>(pSource->x);
-    V.vector4_f32[1] = static_cast<float>(pSource->y);
-    V.vector4_f32[2] = static_cast<float>(pSource->z);
-    V.vector4_f32[3] = static_cast<float>(pSource->w);
+    V.vector4_f32[0] = (float)pSource->x;
+    V.vector4_f32[1] = (float)pSource->y;
+    V.vector4_f32[2] = (float)pSource->z;
+    V.vector4_f32[3] = (float)pSource->w;
     return V;
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
     uint32x4_t v = vld1q_u32( reinterpret_cast<const uint32_t*>(pSource) );
@@ -808,7 +812,7 @@ inline XMMATRIX XM_CALLCONV XMLoadFloat3x3
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
     float32x4_t v0 = vld1q_f32( &pSource->m[0][0] );
     float32x4_t v1 = vld1q_f32( &pSource->m[1][1] );
-    float32x2_t v2 = vcreate_f32(static_cast<uint64_t>(*reinterpret_cast<const uint32_t*>(&pSource->m[2][2])));
+    float32x2_t v2 = vcreate_f32( (uint64_t)*(const uint32_t*)&pSource->m[2][2] );
     float32x4_t T = vextq_f32( v0, v1, 3 );
 
     XMMATRIX M;
@@ -828,7 +832,7 @@ inline XMMATRIX XM_CALLCONV XMLoadFloat3x3
     __m128 T2 = _mm_unpacklo_ps( V2, Z );
     __m128 T3 = _mm_shuffle_ps( V3, T2, _MM_SHUFFLE( 0, 1, 0, 0 ) );
     __m128 T4 = _mm_movehl_ps( T2, T3 );
-    __m128 T5 = _mm_movehl_ps( Z, T1 );
+    __m128 T5 = _mm_movehl_ps( Z, T1 );  
 
     XMMATRIX M;
     M.r[0] = _mm_movelh_ps( V1, T1 );
@@ -887,7 +891,7 @@ inline XMMATRIX XM_CALLCONV XMLoadFloat4x3
     M.r[3] = vsetq_lane_f32( 1.f, T3, 3 );
     return M;
 #elif defined(_XM_SSE_INTRINSICS_)
-    // Use unaligned load instructions to
+    // Use unaligned load instructions to 
     // load the 12 floats
     // vTemp1 = x1,y1,z1,x2
     XMVECTOR vTemp1 = _mm_loadu_ps(&pSource->m[0][0]);
@@ -927,7 +931,7 @@ inline XMMATRIX XM_CALLCONV XMLoadFloat4x3A
 )
 {
     assert(pSource);
-    assert((reinterpret_cast<uintptr_t>(pSource) & 0xF) == 0);
+    assert(((uintptr_t)pSource & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
 
     XMMATRIX M;
@@ -968,7 +972,7 @@ inline XMMATRIX XM_CALLCONV XMLoadFloat4x3A
     M.r[3] = vsetq_lane_f32( 1.f, T3, 3 );
     return M;
 #elif defined(_XM_SSE_INTRINSICS_)
-    // Use aligned load instructions to
+    // Use aligned load instructions to 
     // load the 12 floats
     // vTemp1 = x1,y1,z1,x2
     XMVECTOR vTemp1 = _mm_load_ps(&pSource->m[0][0]);
@@ -997,169 +1001,6 @@ inline XMMATRIX XM_CALLCONV XMLoadFloat4x3A
             vTemp3,
             _mm_castsi128_ps(vTemp4i));
     return M;
-#endif
-}
-
-//------------------------------------------------------------------------------
-_Use_decl_annotations_
-inline XMMATRIX XM_CALLCONV XMLoadFloat3x4
-(
-    const XMFLOAT3X4* pSource
-)
-{
-    assert(pSource);
-#if defined(_XM_NO_INTRINSICS_)
-
-    XMMATRIX M;
-    M.r[0].vector4_f32[0] = pSource->m[0][0];
-    M.r[0].vector4_f32[1] = pSource->m[1][0];
-    M.r[0].vector4_f32[2] = pSource->m[2][0];
-    M.r[0].vector4_f32[3] = 0.0f;
-
-    M.r[1].vector4_f32[0] = pSource->m[0][1];
-    M.r[1].vector4_f32[1] = pSource->m[1][1];
-    M.r[1].vector4_f32[2] = pSource->m[2][1];
-    M.r[1].vector4_f32[3] = 0.0f;
-
-    M.r[2].vector4_f32[0] = pSource->m[0][2];
-    M.r[2].vector4_f32[1] = pSource->m[1][2];
-    M.r[2].vector4_f32[2] = pSource->m[2][2];
-    M.r[2].vector4_f32[3] = 0.0f;
-
-    M.r[3].vector4_f32[0] = pSource->m[0][3];
-    M.r[3].vector4_f32[1] = pSource->m[1][3];
-    M.r[3].vector4_f32[2] = pSource->m[2][3];
-    M.r[3].vector4_f32[3] = 1.0f;
-    return M;
-
-#elif defined(_XM_ARM_NEON_INTRINSICS_)
-    float32x2x4_t vTemp0 = vld4_f32(&pSource->_11);
-    float32x4_t vTemp1 = vld1q_f32(&pSource->_31);
-
-    float32x2_t l = vget_low_f32(vTemp1);
-    float32x4_t T0 = vcombine_f32(vTemp0.val[0], l);
-    float32x2_t rl = vrev64_f32(l);
-    float32x4_t T1 = vcombine_f32(vTemp0.val[1], rl);
-
-    float32x2_t h = vget_high_f32(vTemp1);
-    float32x4_t T2 = vcombine_f32(vTemp0.val[2], h);
-    float32x2_t rh = vrev64_f32(h);
-    float32x4_t T3 = vcombine_f32(vTemp0.val[3], rh);
-
-    XMMATRIX M = {};
-    M.r[0] = vandq_u32(T0, g_XMMask3);
-    M.r[1] = vandq_u32(T1, g_XMMask3);
-    M.r[2] = vandq_u32(T2, g_XMMask3);
-    M.r[3] = vsetq_lane_f32(1.f, T3, 3);
-    return M;
-#elif defined(_XM_SSE_INTRINSICS_)
-    XMMATRIX M;
-    M.r[0] = _mm_loadu_ps(&pSource->_11);
-    M.r[1] = _mm_loadu_ps(&pSource->_21);
-    M.r[2] = _mm_loadu_ps(&pSource->_31);
-    M.r[3] = g_XMIdentityR3;
-
-    // x.x,x.y,y.x,y.y
-    XMVECTOR vTemp1 = _mm_shuffle_ps(M.r[0], M.r[1], _MM_SHUFFLE(1, 0, 1, 0));
-    // x.z,x.w,y.z,y.w
-    XMVECTOR vTemp3 = _mm_shuffle_ps(M.r[0], M.r[1], _MM_SHUFFLE(3, 2, 3, 2));
-    // z.x,z.y,w.x,w.y
-    XMVECTOR vTemp2 = _mm_shuffle_ps(M.r[2], M.r[3], _MM_SHUFFLE(1, 0, 1, 0));
-    // z.z,z.w,w.z,w.w
-    XMVECTOR vTemp4 = _mm_shuffle_ps(M.r[2], M.r[3], _MM_SHUFFLE(3, 2, 3, 2));
-    XMMATRIX mResult;
-
-    // x.x,y.x,z.x,w.x
-    mResult.r[0] = _mm_shuffle_ps(vTemp1, vTemp2, _MM_SHUFFLE(2, 0, 2, 0));
-    // x.y,y.y,z.y,w.y
-    mResult.r[1] = _mm_shuffle_ps(vTemp1, vTemp2, _MM_SHUFFLE(3, 1, 3, 1));
-    // x.z,y.z,z.z,w.z
-    mResult.r[2] = _mm_shuffle_ps(vTemp3, vTemp4, _MM_SHUFFLE(2, 0, 2, 0));
-    // x.w,y.w,z.w,w.w
-    mResult.r[3] = _mm_shuffle_ps(vTemp3, vTemp4, _MM_SHUFFLE(3, 1, 3, 1));
-    return mResult;
-#endif
-}
-
-//------------------------------------------------------------------------------
-_Use_decl_annotations_
-inline XMMATRIX XM_CALLCONV XMLoadFloat3x4A
-(
-    const XMFLOAT3X4A* pSource
-)
-{
-    assert(pSource);
-    assert((reinterpret_cast<uintptr_t>(pSource) & 0xF) == 0);
-#if defined(_XM_NO_INTRINSICS_)
-
-    XMMATRIX M;
-    M.r[0].vector4_f32[0] = pSource->m[0][0];
-    M.r[0].vector4_f32[1] = pSource->m[1][0];
-    M.r[0].vector4_f32[2] = pSource->m[2][0];
-    M.r[0].vector4_f32[3] = 0.0f;
-
-    M.r[1].vector4_f32[0] = pSource->m[0][1];
-    M.r[1].vector4_f32[1] = pSource->m[1][1];
-    M.r[1].vector4_f32[2] = pSource->m[2][1];
-    M.r[1].vector4_f32[3] = 0.0f;
-
-    M.r[2].vector4_f32[0] = pSource->m[0][2];
-    M.r[2].vector4_f32[1] = pSource->m[1][2];
-    M.r[2].vector4_f32[2] = pSource->m[2][2];
-    M.r[2].vector4_f32[3] = 0.0f;
-
-    M.r[3].vector4_f32[0] = pSource->m[0][3];
-    M.r[3].vector4_f32[1] = pSource->m[1][3];
-    M.r[3].vector4_f32[2] = pSource->m[2][3];
-    M.r[3].vector4_f32[3] = 1.0f;
-    return M;
-
-#elif defined(_XM_ARM_NEON_INTRINSICS_)
-    float32x2x4_t vTemp0 = vld4_f32_ex(&pSource->_11, 128);
-    float32x4_t vTemp1 = vld1q_f32_ex(&pSource->_31, 128);
-
-    float32x2_t l = vget_low_f32(vTemp1);
-    float32x4_t T0 = vcombine_f32(vTemp0.val[0], l);
-    float32x2_t rl = vrev64_f32(l);
-    float32x4_t T1 = vcombine_f32(vTemp0.val[1], rl);
-
-    float32x2_t h = vget_high_f32(vTemp1);
-    float32x4_t T2 = vcombine_f32(vTemp0.val[2], h);
-    float32x2_t rh = vrev64_f32(h);
-    float32x4_t T3 = vcombine_f32(vTemp0.val[3], rh);
-
-    XMMATRIX M = {};
-    M.r[0] = vandq_u32(T0, g_XMMask3);
-    M.r[1] = vandq_u32(T1, g_XMMask3);
-    M.r[2] = vandq_u32(T2, g_XMMask3);
-    M.r[3] = vsetq_lane_f32(1.f, T3, 3);
-    return M;
-#elif defined(_XM_SSE_INTRINSICS_)
-    XMMATRIX M;
-    M.r[0] = _mm_load_ps(&pSource->_11);
-    M.r[1] = _mm_load_ps(&pSource->_21);
-    M.r[2] = _mm_load_ps(&pSource->_31);
-    M.r[3] = g_XMIdentityR3;
-
-    // x.x,x.y,y.x,y.y
-    XMVECTOR vTemp1 = _mm_shuffle_ps(M.r[0], M.r[1], _MM_SHUFFLE(1, 0, 1, 0));
-    // x.z,x.w,y.z,y.w
-    XMVECTOR vTemp3 = _mm_shuffle_ps(M.r[0], M.r[1], _MM_SHUFFLE(3, 2, 3, 2));
-    // z.x,z.y,w.x,w.y
-    XMVECTOR vTemp2 = _mm_shuffle_ps(M.r[2], M.r[3], _MM_SHUFFLE(1, 0, 1, 0));
-    // z.z,z.w,w.z,w.w
-    XMVECTOR vTemp4 = _mm_shuffle_ps(M.r[2], M.r[3], _MM_SHUFFLE(3, 2, 3, 2));
-    XMMATRIX mResult;
-
-    // x.x,y.x,z.x,w.x
-    mResult.r[0] = _mm_shuffle_ps(vTemp1, vTemp2, _MM_SHUFFLE(2, 0, 2, 0));
-    // x.y,y.y,z.y,w.y
-    mResult.r[1] = _mm_shuffle_ps(vTemp1, vTemp2, _MM_SHUFFLE(3, 1, 3, 1));
-    // x.z,y.z,z.z,w.z
-    mResult.r[2] = _mm_shuffle_ps(vTemp3, vTemp4, _MM_SHUFFLE(2, 0, 2, 0));
-    // x.w,y.w,z.w,w.w
-    mResult.r[3] = _mm_shuffle_ps(vTemp3, vTemp4, _MM_SHUFFLE(3, 1, 3, 1));
-    return mResult;
 #endif
 }
 
@@ -1220,7 +1061,7 @@ inline XMMATRIX XM_CALLCONV XMLoadFloat4x4A
 )
 {
     assert(pSource);
-    assert((reinterpret_cast<uintptr_t>(pSource) & 0xF) == 0);
+    assert(((uintptr_t)pSource & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
 
     XMMATRIX M;
@@ -1306,7 +1147,7 @@ inline void XM_CALLCONV XMStoreFloat
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreInt2
 (
-    uint32_t*    pDestination,
+    uint32_t*    pDestination, 
     FXMVECTOR V
 )
 {
@@ -1328,12 +1169,12 @@ inline void XM_CALLCONV XMStoreInt2
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreInt2A
 (
-    uint32_t*    pDestination,
+    uint32_t*    pDestination, 
     FXMVECTOR V
 )
 {
     assert(pDestination);
-    assert((reinterpret_cast<uintptr_t>(pDestination) & 0xF) == 0);
+    assert(((uintptr_t)pDestination & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     pDestination[0] = V.vector4_u32[0];
     pDestination[1] = V.vector4_u32[1];
@@ -1349,7 +1190,7 @@ inline void XM_CALLCONV XMStoreInt2A
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat2
 (
-    XMFLOAT2* pDestination,
+    XMFLOAT2* pDestination, 
     FXMVECTOR  V
 )
 {
@@ -1371,12 +1212,12 @@ inline void XM_CALLCONV XMStoreFloat2
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat2A
 (
-    XMFLOAT2A*   pDestination,
+    XMFLOAT2A*   pDestination, 
     FXMVECTOR     V
 )
 {
     assert(pDestination);
-    assert((reinterpret_cast<uintptr_t>(pDestination) & 0xF) == 0);
+    assert(((uintptr_t)pDestination & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     pDestination->x = V.vector4_f32[0];
     pDestination->y = V.vector4_f32[1];
@@ -1398,8 +1239,8 @@ inline void XM_CALLCONV XMStoreSInt2
 {
     assert(pDestination);
 #if defined(_XM_NO_INTRINSICS_)
-    pDestination->x = static_cast<int32_t>(V.vector4_f32[0]);
-    pDestination->y = static_cast<int32_t>(V.vector4_f32[1]);
+    pDestination->x = (int32_t)V.vector4_f32[0];
+    pDestination->y = (int32_t)V.vector4_f32[1];
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
     int32x2_t v = vget_low_s32(V);
     v = vcvt_s32_f32( v );
@@ -1430,8 +1271,8 @@ inline void XM_CALLCONV XMStoreUInt2
 {
     assert(pDestination);
 #if defined(_XM_NO_INTRINSICS_)
-    pDestination->x = static_cast<uint32_t>(V.vector4_f32[0]);
-    pDestination->y = static_cast<uint32_t>(V.vector4_f32[1]);
+    pDestination->x = (uint32_t)V.vector4_f32[0];
+    pDestination->y = (uint32_t)V.vector4_f32[1];
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
     float32x2_t v = vget_low_f32(V);
     uint32x2_t iv = vcvt_u32_f32( v );
@@ -1465,7 +1306,7 @@ inline void XM_CALLCONV XMStoreUInt2
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreInt3
 (
-    uint32_t*    pDestination,
+    uint32_t*    pDestination, 
     FXMVECTOR V
 )
 {
@@ -1491,12 +1332,12 @@ inline void XM_CALLCONV XMStoreInt3
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreInt3A
 (
-    uint32_t*    pDestination,
+    uint32_t*    pDestination, 
     FXMVECTOR V
 )
 {
     assert(pDestination);
-    assert((reinterpret_cast<uintptr_t>(pDestination) & 0xF) == 0);
+    assert(((uintptr_t)pDestination & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     pDestination[0] = V.vector4_u32[0];
     pDestination[1] = V.vector4_u32[1];
@@ -1516,7 +1357,7 @@ inline void XM_CALLCONV XMStoreInt3A
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat3
 (
-    XMFLOAT3* pDestination,
+    XMFLOAT3* pDestination, 
     FXMVECTOR V
 )
 {
@@ -1542,12 +1383,12 @@ inline void XM_CALLCONV XMStoreFloat3
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat3A
 (
-    XMFLOAT3A*   pDestination,
+    XMFLOAT3A*   pDestination, 
     FXMVECTOR     V
 )
 {
     assert(pDestination);
-    assert((reinterpret_cast<uintptr_t>(pDestination) & 0xF) == 0);
+    assert(((uintptr_t)pDestination & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     pDestination->x = V.vector4_f32[0];
     pDestination->y = V.vector4_f32[1];
@@ -1573,9 +1414,9 @@ inline void XM_CALLCONV XMStoreSInt3
 {
     assert(pDestination);
 #if defined(_XM_NO_INTRINSICS_)
-    pDestination->x = static_cast<int32_t>(V.vector4_f32[0]);
-    pDestination->y = static_cast<int32_t>(V.vector4_f32[1]);
-    pDestination->z = static_cast<int32_t>(V.vector4_f32[2]);
+    pDestination->x = (int32_t)V.vector4_f32[0];
+    pDestination->y = (int32_t)V.vector4_f32[1];
+    pDestination->z = (int32_t)V.vector4_f32[2];
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
     int32x4_t v = vcvtq_s32_f32(V);
     int32x2_t vL = vget_low_s32(v);
@@ -1609,9 +1450,9 @@ inline void XM_CALLCONV XMStoreUInt3
 {
     assert(pDestination);
 #if defined(_XM_NO_INTRINSICS_)
-    pDestination->x = static_cast<uint32_t>(V.vector4_f32[0]);
-    pDestination->y = static_cast<uint32_t>(V.vector4_f32[1]);
-    pDestination->z = static_cast<uint32_t>(V.vector4_f32[2]);
+    pDestination->x = (uint32_t)V.vector4_f32[0];
+    pDestination->y = (uint32_t)V.vector4_f32[1];
+    pDestination->z = (uint32_t)V.vector4_f32[2];
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
     uint32x4_t v = vcvtq_u32_f32(V);
     uint32x2_t vL = vget_low_u32(v);
@@ -1648,7 +1489,7 @@ inline void XM_CALLCONV XMStoreUInt3
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreInt4
 (
-    uint32_t*    pDestination,
+    uint32_t*    pDestination, 
     FXMVECTOR V
 )
 {
@@ -1669,12 +1510,12 @@ inline void XM_CALLCONV XMStoreInt4
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreInt4A
 (
-    uint32_t*    pDestination,
+    uint32_t*    pDestination, 
     FXMVECTOR V
 )
 {
     assert(pDestination);
-    assert((reinterpret_cast<uintptr_t>(pDestination) & 0xF) == 0);
+    assert(((uintptr_t)pDestination & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     pDestination[0] = V.vector4_u32[0];
     pDestination[1] = V.vector4_u32[1];
@@ -1691,7 +1532,7 @@ inline void XM_CALLCONV XMStoreInt4A
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat4
 (
-    XMFLOAT4* pDestination,
+    XMFLOAT4* pDestination, 
     FXMVECTOR  V
 )
 {
@@ -1712,12 +1553,12 @@ inline void XM_CALLCONV XMStoreFloat4
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat4A
 (
-    XMFLOAT4A*   pDestination,
+    XMFLOAT4A*   pDestination, 
     FXMVECTOR     V
 )
 {
     assert(pDestination);
-    assert((reinterpret_cast<uintptr_t>(pDestination) & 0xF) == 0);
+    assert(((uintptr_t)pDestination & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
     pDestination->x = V.vector4_f32[0];
     pDestination->y = V.vector4_f32[1];
@@ -1740,10 +1581,10 @@ inline void XM_CALLCONV XMStoreSInt4
 {
     assert(pDestination);
 #if defined(_XM_NO_INTRINSICS_)
-    pDestination->x = static_cast<int32_t>(V.vector4_f32[0]);
-    pDestination->y = static_cast<int32_t>(V.vector4_f32[1]);
-    pDestination->z = static_cast<int32_t>(V.vector4_f32[2]);
-    pDestination->w = static_cast<int32_t>(V.vector4_f32[3]);
+    pDestination->x = (int32_t)V.vector4_f32[0];
+    pDestination->y = (int32_t)V.vector4_f32[1];
+    pDestination->z = (int32_t)V.vector4_f32[2];
+    pDestination->w = (int32_t)V.vector4_f32[3];
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
     int32x4_t v = vcvtq_s32_f32(V);
     vst1q_s32( reinterpret_cast<int32_t*>(pDestination), v );
@@ -1770,10 +1611,10 @@ inline void XM_CALLCONV XMStoreUInt4
 {
     assert(pDestination);
 #if defined(_XM_NO_INTRINSICS_)
-    pDestination->x = static_cast<uint32_t>(V.vector4_f32[0]);
-    pDestination->y = static_cast<uint32_t>(V.vector4_f32[1]);
-    pDestination->z = static_cast<uint32_t>(V.vector4_f32[2]);
-    pDestination->w = static_cast<uint32_t>(V.vector4_f32[3]);
+    pDestination->x = (uint32_t)V.vector4_f32[0];
+    pDestination->y = (uint32_t)V.vector4_f32[1];
+    pDestination->z = (uint32_t)V.vector4_f32[2];
+    pDestination->w = (uint32_t)V.vector4_f32[3];
 #elif defined(_XM_ARM_NEON_INTRINSICS_)
     uint32x4_t v = vcvtq_u32_f32(V);
     vst1q_u32( reinterpret_cast<uint32_t*>(pDestination), v );
@@ -1803,8 +1644,8 @@ inline void XM_CALLCONV XMStoreUInt4
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat3x3
 (
-    XMFLOAT3X3* pDestination,
-    FXMMATRIX   M
+    XMFLOAT3X3*	pDestination, 
+    FXMMATRIX	M
 )
 {
     assert(pDestination);
@@ -1850,7 +1691,7 @@ inline void XM_CALLCONV XMStoreFloat3x3
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat4x3
 (
-    XMFLOAT4X3* pDestination,
+    XMFLOAT4X3* pDestination, 
     FXMMATRIX M
 )
 {
@@ -1905,12 +1746,12 @@ inline void XM_CALLCONV XMStoreFloat4x3
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat4x3A
 (
-    XMFLOAT4X3A*    pDestination,
-    FXMMATRIX       M
+    XMFLOAT4X3A*	pDestination, 
+    FXMMATRIX		M
 )
 {
     assert(pDestination);
-    assert((reinterpret_cast<uintptr_t>(pDestination) & 0xF) == 0);
+    assert(((uintptr_t)pDestination & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
 
     pDestination->m[0][0] = M.r[0].vector4_f32[0];
@@ -1969,128 +1810,9 @@ inline void XM_CALLCONV XMStoreFloat4x3A
 
 //------------------------------------------------------------------------------
 _Use_decl_annotations_
-inline void XM_CALLCONV XMStoreFloat3x4
-(
-    XMFLOAT3X4* pDestination,
-    FXMMATRIX M
-)
-{
-    assert(pDestination);
-#if defined(_XM_NO_INTRINSICS_)
-
-    pDestination->m[0][0] = M.r[0].vector4_f32[0];
-    pDestination->m[0][1] = M.r[1].vector4_f32[0];
-    pDestination->m[0][2] = M.r[2].vector4_f32[0];
-    pDestination->m[0][3] = M.r[3].vector4_f32[0];
-
-    pDestination->m[1][0] = M.r[0].vector4_f32[1];
-    pDestination->m[1][1] = M.r[1].vector4_f32[1];
-    pDestination->m[1][2] = M.r[2].vector4_f32[1];
-    pDestination->m[1][3] = M.r[3].vector4_f32[1];
-
-    pDestination->m[2][0] = M.r[0].vector4_f32[2];
-    pDestination->m[2][1] = M.r[1].vector4_f32[2];
-    pDestination->m[2][2] = M.r[2].vector4_f32[2];
-    pDestination->m[2][3] = M.r[3].vector4_f32[2];
-
-#elif defined(_XM_ARM_NEON_INTRINSICS_)
-    float32x4x2_t P0 = vzipq_f32(M.r[0], M.r[2]);
-    float32x4x2_t P1 = vzipq_f32(M.r[1], M.r[3]);
-
-    float32x4x2_t T0 = vzipq_f32(P0.val[0], P1.val[0]);
-    float32x4x2_t T1 = vzipq_f32(P0.val[1], P1.val[1]);
-
-    vst1q_f32(&pDestination->m[0][0], T0.val[0]);
-    vst1q_f32(&pDestination->m[1][0], T0.val[1]);
-    vst1q_f32(&pDestination->m[2][0], T1.val[0]);
-#elif defined(_XM_SSE_INTRINSICS_)
-    // x.x,x.y,y.x,y.y
-    XMVECTOR vTemp1 = _mm_shuffle_ps(M.r[0], M.r[1], _MM_SHUFFLE(1, 0, 1, 0));
-    // x.z,x.w,y.z,y.w
-    XMVECTOR vTemp3 = _mm_shuffle_ps(M.r[0], M.r[1], _MM_SHUFFLE(3, 2, 3, 2));
-    // z.x,z.y,w.x,w.y
-    XMVECTOR vTemp2 = _mm_shuffle_ps(M.r[2], M.r[3], _MM_SHUFFLE(1, 0, 1, 0));
-    // z.z,z.w,w.z,w.w
-    XMVECTOR vTemp4 = _mm_shuffle_ps(M.r[2], M.r[3], _MM_SHUFFLE(3, 2, 3, 2));
-
-    // x.x,y.x,z.x,w.x
-    XMVECTOR r0 = _mm_shuffle_ps(vTemp1, vTemp2, _MM_SHUFFLE(2, 0, 2, 0));
-    // x.y,y.y,z.y,w.y
-    XMVECTOR r1 = _mm_shuffle_ps(vTemp1, vTemp2, _MM_SHUFFLE(3, 1, 3, 1));
-    // x.z,y.z,z.z,w.z
-    XMVECTOR r2 = _mm_shuffle_ps(vTemp3, vTemp4, _MM_SHUFFLE(2, 0, 2, 0));
-
-    _mm_storeu_ps(&pDestination->m[0][0], r0);
-    _mm_storeu_ps(&pDestination->m[1][0], r1);
-    _mm_storeu_ps(&pDestination->m[2][0], r2);
-#endif
-}
-
-//------------------------------------------------------------------------------
-_Use_decl_annotations_
-inline void XM_CALLCONV XMStoreFloat3x4A
-(
-    XMFLOAT3X4A* pDestination,
-    FXMMATRIX M
-)
-{
-    assert(pDestination);
-    assert((reinterpret_cast<uintptr_t>(pDestination) & 0xF) == 0);
-#if defined(_XM_NO_INTRINSICS_)
-
-    pDestination->m[0][0] = M.r[0].vector4_f32[0];
-    pDestination->m[0][1] = M.r[1].vector4_f32[0];
-    pDestination->m[0][2] = M.r[2].vector4_f32[0];
-    pDestination->m[0][3] = M.r[3].vector4_f32[0];
-
-    pDestination->m[1][0] = M.r[0].vector4_f32[1];
-    pDestination->m[1][1] = M.r[1].vector4_f32[1];
-    pDestination->m[1][2] = M.r[2].vector4_f32[1];
-    pDestination->m[1][3] = M.r[3].vector4_f32[1];
-
-    pDestination->m[2][0] = M.r[0].vector4_f32[2];
-    pDestination->m[2][1] = M.r[1].vector4_f32[2];
-    pDestination->m[2][2] = M.r[2].vector4_f32[2];
-    pDestination->m[2][3] = M.r[3].vector4_f32[2];
-
-#elif defined(_XM_ARM_NEON_INTRINSICS_)
-    float32x4x2_t P0 = vzipq_f32(M.r[0], M.r[2]);
-    float32x4x2_t P1 = vzipq_f32(M.r[1], M.r[3]);
-
-    float32x4x2_t T0 = vzipq_f32(P0.val[0], P1.val[0]);
-    float32x4x2_t T1 = vzipq_f32(P0.val[1], P1.val[1]);
-
-    vst1q_f32_ex(&pDestination->m[0][0], T0.val[0], 128);
-    vst1q_f32_ex(&pDestination->m[1][0], T0.val[1], 128);
-    vst1q_f32_ex(&pDestination->m[2][0], T1.val[0], 128);
-#elif defined(_XM_SSE_INTRINSICS_)
-    // x.x,x.y,y.x,y.y
-    XMVECTOR vTemp1 = _mm_shuffle_ps(M.r[0], M.r[1], _MM_SHUFFLE(1, 0, 1, 0));
-    // x.z,x.w,y.z,y.w
-    XMVECTOR vTemp3 = _mm_shuffle_ps(M.r[0], M.r[1], _MM_SHUFFLE(3, 2, 3, 2));
-    // z.x,z.y,w.x,w.y
-    XMVECTOR vTemp2 = _mm_shuffle_ps(M.r[2], M.r[3], _MM_SHUFFLE(1, 0, 1, 0));
-    // z.z,z.w,w.z,w.w
-    XMVECTOR vTemp4 = _mm_shuffle_ps(M.r[2], M.r[3], _MM_SHUFFLE(3, 2, 3, 2));
-
-    // x.x,y.x,z.x,w.x
-    XMVECTOR r0 = _mm_shuffle_ps(vTemp1, vTemp2, _MM_SHUFFLE(2, 0, 2, 0));
-    // x.y,y.y,z.y,w.y
-    XMVECTOR r1 = _mm_shuffle_ps(vTemp1, vTemp2, _MM_SHUFFLE(3, 1, 3, 1));
-    // x.z,y.z,z.z,w.z
-    XMVECTOR r2 = _mm_shuffle_ps(vTemp3, vTemp4, _MM_SHUFFLE(2, 0, 2, 0));
-
-    _mm_store_ps(&pDestination->m[0][0], r0);
-    _mm_store_ps(&pDestination->m[1][0], r1);
-    _mm_store_ps(&pDestination->m[2][0], r2);
-#endif
-}
-
-//------------------------------------------------------------------------------
-_Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat4x4
 (
-    XMFLOAT4X4* pDestination,
+    XMFLOAT4X4* pDestination, 
     FXMMATRIX M
 )
 {
@@ -2134,12 +1856,12 @@ inline void XM_CALLCONV XMStoreFloat4x4
 _Use_decl_annotations_
 inline void XM_CALLCONV XMStoreFloat4x4A
 (
-    XMFLOAT4X4A*    pDestination,
-    FXMMATRIX       M
+    XMFLOAT4X4A*	pDestination, 
+    FXMMATRIX		M
 )
 {
     assert(pDestination);
-    assert((reinterpret_cast<uintptr_t>(pDestination) & 0xF) == 0);
+    assert(((uintptr_t)pDestination & 0xF) == 0);
 #if defined(_XM_NO_INTRINSICS_)
 
     pDestination->m[0][0] = M.r[0].vector4_f32[0];

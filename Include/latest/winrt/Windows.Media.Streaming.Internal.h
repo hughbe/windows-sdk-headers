@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.streaming.internal.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0229 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -45,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -76,17 +75,12 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
@@ -112,24 +106,20 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
 #define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
 #define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
@@ -140,7 +130,7 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
+#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
 
 #if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
@@ -156,7 +146,7 @@
 #endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
 
 #if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
 
 #if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
@@ -164,11 +154,11 @@
 #endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -216,11 +206,11 @@
 #endif // defined(WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
+#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
+#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
 
 #if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
@@ -236,11 +226,11 @@
 #endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
 
 #if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x40000
+#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x70000
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
@@ -278,11 +268,10 @@ namespace ABI {
             namespace Streaming {
                 namespace Internal {
                     interface IMediaRendererBrokerStatics;
-                } /* Internal */
-            } /* Streaming */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Media */
+        } /* Streaming */
+    } /* Internal */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CInternal_CIMediaRendererBrokerStatics ABI::Windows::Media::Streaming::Internal::IMediaRendererBrokerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CInternal_CIMediaRendererBrokerStatics_FWD_DEFINED__
@@ -295,10 +284,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 class MediaRenderer;
-            } /* Streaming */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* Streaming */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_FWD_DEFINED__
@@ -307,10 +295,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IMediaRenderer;
-            } /* Streaming */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* Streaming */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer ABI::Windows::Media::Streaming::IMediaRenderer
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_FWD_DEFINED__
@@ -336,7 +323,7 @@ IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::MediaRenderer*> 
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::MediaRenderer*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CMediaRenderer_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CMediaRenderer ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CMediaRenderer_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CMediaRenderer ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Streaming::IMediaRenderer*>
@@ -368,7 +355,7 @@ IAsyncOperation<ABI::Windows::Media::Streaming::MediaRenderer*> : IAsyncOperatio
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::Streaming::MediaRenderer*> __FIAsyncOperation_1_Windows__CMedia__CStreaming__CMediaRenderer_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CMediaRenderer ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CStreaming__CMediaRenderer_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIAsyncOperation_1_Windows__CMedia__CStreaming__CMediaRenderer ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Streaming::IMediaRenderer*>
@@ -386,10 +373,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 class CreateMediaRendererOperation;
-            } /* Streaming */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* Streaming */} /* ABI */
 
 
 #ifndef ____x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice_FWD_DEFINED__
@@ -399,10 +385,9 @@ namespace ABI {
         namespace Media {
             namespace Streaming {
                 interface IBasicDevice;
-            } /* Streaming */
+            } /* Windows */
         } /* Media */
-    } /* Windows */
-} /* ABI */
+    } /* Streaming */} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice ABI::Windows::Media::Streaming::IBasicDevice
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice_FWD_DEFINED__
@@ -438,9 +423,8 @@ namespace ABI {
                 namespace Internal {
                     /* [object, uuid("19974CB1-9A1D-45C0-87CF-2C1E835A981C"), contract] */
                     MIDL_INTERFACE("19974CB1-9A1D-45C0-87CF-2C1E835A981C")
-                    IMediaRendererBrokerStatics : public IInspectable
+                    IMediaRendererBrokerStatics : IInspectable
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE CreateMediaRendererAsync(
                             /* [in] */__RPC__in HSTRING deviceIdentifier,
                             /* [in] */__RPC__in_opt IInspectable * mediaSessionFactoryMF,
@@ -458,11 +442,10 @@ namespace ABI {
 
                     extern MIDL_CONST_ID IID & IID_IMediaRendererBrokerStatics=_uuidof(IMediaRendererBrokerStatics);
                     
-                } /* Internal */
-            } /* Streaming */
-        } /* Media */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Media */
+        } /* Streaming */
+    } /* Internal */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CInternal_CIMediaRendererBrokerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CInternal_CIMediaRendererBrokerStatics_INTERFACE_DEFINED__) */

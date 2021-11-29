@@ -179,20 +179,6 @@ typedef interface IWRdsProtocolLogonErrorRedirector IWRdsProtocolLogonErrorRedir
 #endif 	/* __IWRdsProtocolLogonErrorRedirector_FWD_DEFINED__ */
 
 
-#ifndef __IWRdsWddmIddProps_FWD_DEFINED__
-#define __IWRdsWddmIddProps_FWD_DEFINED__
-typedef interface IWRdsWddmIddProps IWRdsWddmIddProps;
-
-#endif 	/* __IWRdsWddmIddProps_FWD_DEFINED__ */
-
-
-#ifndef __IWRdsProtocolConnectionSettings_FWD_DEFINED__
-#define __IWRdsProtocolConnectionSettings_FWD_DEFINED__
-typedef interface IWRdsProtocolConnectionSettings IWRdsProtocolConnectionSettings;
-
-#endif 	/* __IWRdsProtocolConnectionSettings_FWD_DEFINED__ */
-
-
 /* header files for imported files */
 #include "oaidl.h"
 #include "ocidl.h"
@@ -1539,7 +1525,6 @@ EXTERN_C const IID IID_IWRdsRemoteFXGraphicsConnection;
 /* interface __MIDL_itf_wtsprotocol_0000_0010 */
 /* [local] */ 
 
-#pragma deprecated(IWRdsRemoteFXGraphicsConnection)
 
 
 
@@ -2934,238 +2919,12 @@ EXTERN_C const IID IID_IWRdsProtocolLogonErrorRedirector;
 /* interface __MIDL_itf_wtsprotocol_0000_0020 */
 /* [local] */ 
 
-
-
-
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0020_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0020_v0_0_s_ifspec;
-
-#ifndef __IWRdsWddmIddProps_INTERFACE_DEFINED__
-#define __IWRdsWddmIddProps_INTERFACE_DEFINED__
-
-/* interface IWRdsWddmIddProps */
-/* [unique][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IWRdsWddmIddProps;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("1382DF4D-A289-43D1-A184-144726F9AF90")
-    IWRdsWddmIddProps : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE GetHardwareId( 
-            /* [size_is][string][in] */ __RPC__in_ecount_full_string(Count) WCHAR *pDisplayDriverHardwareId,
-            /* [in] */ DWORD Count) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE OnDriverLoad( 
-            /* [in] */ ULONG SessionId,
-            /* [in] */ HANDLE_PTR DriverHandle) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE OnDriverUnload( 
-            /* [in] */ ULONG SessionId) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE EnableWddmIdd( 
-            /* [in] */ BOOL Enabled) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IWRdsWddmIddPropsVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IWRdsWddmIddProps * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IWRdsWddmIddProps * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IWRdsWddmIddProps * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetHardwareId )( 
-            __RPC__in IWRdsWddmIddProps * This,
-            /* [size_is][string][in] */ __RPC__in_ecount_full_string(Count) WCHAR *pDisplayDriverHardwareId,
-            /* [in] */ DWORD Count);
-        
-        HRESULT ( STDMETHODCALLTYPE *OnDriverLoad )( 
-            __RPC__in IWRdsWddmIddProps * This,
-            /* [in] */ ULONG SessionId,
-            /* [in] */ HANDLE_PTR DriverHandle);
-        
-        HRESULT ( STDMETHODCALLTYPE *OnDriverUnload )( 
-            __RPC__in IWRdsWddmIddProps * This,
-            /* [in] */ ULONG SessionId);
-        
-        HRESULT ( STDMETHODCALLTYPE *EnableWddmIdd )( 
-            __RPC__in IWRdsWddmIddProps * This,
-            /* [in] */ BOOL Enabled);
-        
-        END_INTERFACE
-    } IWRdsWddmIddPropsVtbl;
-
-    interface IWRdsWddmIddProps
-    {
-        CONST_VTBL struct IWRdsWddmIddPropsVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IWRdsWddmIddProps_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IWRdsWddmIddProps_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IWRdsWddmIddProps_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IWRdsWddmIddProps_GetHardwareId(This,pDisplayDriverHardwareId,Count)	\
-    ( (This)->lpVtbl -> GetHardwareId(This,pDisplayDriverHardwareId,Count) ) 
-
-#define IWRdsWddmIddProps_OnDriverLoad(This,SessionId,DriverHandle)	\
-    ( (This)->lpVtbl -> OnDriverLoad(This,SessionId,DriverHandle) ) 
-
-#define IWRdsWddmIddProps_OnDriverUnload(This,SessionId)	\
-    ( (This)->lpVtbl -> OnDriverUnload(This,SessionId) ) 
-
-#define IWRdsWddmIddProps_EnableWddmIdd(This,Enabled)	\
-    ( (This)->lpVtbl -> EnableWddmIdd(This,Enabled) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IWRdsWddmIddProps_INTERFACE_DEFINED__ */
-
-
-/* interface __MIDL_itf_wtsprotocol_0000_0021 */
-/* [local] */ 
-
-
-
-
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0021_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0021_v0_0_s_ifspec;
-
-#ifndef __IWRdsProtocolConnectionSettings_INTERFACE_DEFINED__
-#define __IWRdsProtocolConnectionSettings_INTERFACE_DEFINED__
-
-/* interface IWRdsProtocolConnectionSettings */
-/* [unique][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IWRdsProtocolConnectionSettings;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("83FCF5D3-F6F4-EA94-9CD2-32F280E1E510")
-    IWRdsProtocolConnectionSettings : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE SetConnectionSetting( 
-            /* [in] */ GUID PropertyID,
-            /* [in] */ __RPC__in PWTS_PROPERTY_VALUE pPropertyEntriesIn) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetConnectionSetting( 
-            /* [in] */ GUID PropertyID,
-            /* [out] */ __RPC__out PWTS_PROPERTY_VALUE pPropertyEntriesOut) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IWRdsProtocolConnectionSettingsVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IWRdsProtocolConnectionSettings * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IWRdsProtocolConnectionSettings * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IWRdsProtocolConnectionSettings * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetConnectionSetting )( 
-            __RPC__in IWRdsProtocolConnectionSettings * This,
-            /* [in] */ GUID PropertyID,
-            /* [in] */ __RPC__in PWTS_PROPERTY_VALUE pPropertyEntriesIn);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetConnectionSetting )( 
-            __RPC__in IWRdsProtocolConnectionSettings * This,
-            /* [in] */ GUID PropertyID,
-            /* [out] */ __RPC__out PWTS_PROPERTY_VALUE pPropertyEntriesOut);
-        
-        END_INTERFACE
-    } IWRdsProtocolConnectionSettingsVtbl;
-
-    interface IWRdsProtocolConnectionSettings
-    {
-        CONST_VTBL struct IWRdsProtocolConnectionSettingsVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IWRdsProtocolConnectionSettings_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IWRdsProtocolConnectionSettings_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IWRdsProtocolConnectionSettings_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IWRdsProtocolConnectionSettings_SetConnectionSetting(This,PropertyID,pPropertyEntriesIn)	\
-    ( (This)->lpVtbl -> SetConnectionSetting(This,PropertyID,pPropertyEntriesIn) ) 
-
-#define IWRdsProtocolConnectionSettings_GetConnectionSetting(This,PropertyID,pPropertyEntriesOut)	\
-    ( (This)->lpVtbl -> GetConnectionSetting(This,PropertyID,pPropertyEntriesOut) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IWRdsProtocolConnectionSettings_INTERFACE_DEFINED__ */
-
-
-/* interface __MIDL_itf_wtsprotocol_0000_0022 */
-/* [local] */ 
-
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0022_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0022_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0020_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0020_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

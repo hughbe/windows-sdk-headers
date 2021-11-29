@@ -250,34 +250,6 @@ TBS_RESULT WINAPI
 Tbsi_Create_Windows_Key(
     __in TBS_HANDLE keyHandle);
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-//
-// Log types for Tbsi_Get_TCG_Log_Ex
-//
-
-#define TBS_TCGLOG_SRTM_CURRENT     0
-// Returns the SRTM log associated with the current session (boot or resume)
-#define TBS_TCGLOG_DRTM_CURRENT     1
-// Returns the DRTM log associated with the current session (boot or resume)
-#define TBS_TCGLOG_SRTM_BOOT        2
-// (User mode only) Returns the SRTM log associated with the most recent clean boot
-#define TBS_TCGLOG_SRTM_RESUME      3
-// (User mode only) Returns the SRTM log associated with the current resume from hibernation
-#define TBS_TCGLOG_DRTM_BOOT        4
-// (User mode only) Returns the DRTM log associated with the most recent clean boot
-#define TBS_TCGLOG_DRTM_RESUME      5
-// (User mode only) Returns the DRTM log associated with the current resume from hibernation
-
-_Success_(return == TBS_SUCCESS)
-TBS_RESULT WINAPI
-Tbsi_Get_TCG_Log_Ex(
-    _In_ UINT32 logType,
-    _Out_writes_bytes_opt_(*pcbOutput) PBYTE pbOutput,
-    _Inout_ PUINT32 pcbOutput);
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
 #endif // (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
 
 #endif // (NTDDI_VERSION >= NTDDI_WINBLUE)

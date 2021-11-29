@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.ui.xaml.printing.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,28 +75,171 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+
+#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
+#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
+#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
+
+#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
+#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
+#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -117,11 +263,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IAddPagesEventHandler;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler ABI::Windows::UI::Xaml::Printing::IAddPagesEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_FWD_DEFINED__
@@ -134,11 +279,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IGetPreviewPageEventHandler;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler ABI::Windows::UI::Xaml::Printing::IGetPreviewPageEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_FWD_DEFINED__
@@ -151,11 +295,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPaginateEventHandler;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler ABI::Windows::UI::Xaml::Printing::IPaginateEventHandler
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_FWD_DEFINED__
@@ -168,11 +311,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IAddPagesEventArgs;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs ABI::Windows::UI::Xaml::Printing::IAddPagesEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_FWD_DEFINED__
@@ -185,11 +327,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IGetPreviewPageEventArgs;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs ABI::Windows::UI::Xaml::Printing::IGetPreviewPageEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_FWD_DEFINED__
@@ -202,11 +343,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPaginateEventArgs;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs ABI::Windows::UI::Xaml::Printing::IPaginateEventArgs
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_FWD_DEFINED__
@@ -219,11 +359,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPrintDocument;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument ABI::Windows::UI::Xaml::Printing::IPrintDocument
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_FWD_DEFINED__
@@ -236,11 +375,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPrintDocumentFactory;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory ABI::Windows::UI::Xaml::Printing::IPrintDocumentFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_FWD_DEFINED__
@@ -253,18 +391,18 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     interface IPrintDocumentStatics;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics ABI::Windows::UI::Xaml::Printing::IPrintDocumentStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_FWD_DEFINED__
 
-// Parameterized interface forward declarations (C++)
 
-// Collection interface definitions
+
+
+
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_FWD_DEFINED__
 namespace ABI {
@@ -272,23 +410,22 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintDocumentSource;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource ABI::Windows::Graphics::Printing::IPrintDocumentSource
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_FWD_DEFINED__
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskOptions;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
@@ -297,23 +434,25 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptionsCore;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 class DependencyProperty;
-            } /* Xaml */
+            } /* Windows */
         } /* UI */
-    } /* Windows */
-} /* ABI */
+    } /* Xaml */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -322,23 +461,22 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IDependencyProperty;
-            } /* Xaml */
+            } /* Windows */
         } /* UI */
-    } /* Windows */
-} /* ABI */
+    } /* Xaml */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty ABI::Windows::UI::Xaml::IDependencyProperty
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
+
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 class UIElement;
-            } /* Xaml */
+            } /* Windows */
         } /* UI */
-    } /* Windows */
-} /* ABI */
+    } /* Xaml */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
@@ -347,25 +485,38 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 interface IUIElement;
-            } /* Xaml */
+            } /* Windows */
         } /* UI */
-    } /* Windows */
-} /* ABI */
+    } /* Xaml */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CIUIElement ABI::Windows::UI::Xaml::IUIElement
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
+                    
                     typedef enum PreviewPageCountType : int PreviewPageCountType;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
+
+
+
+
+
+
+
+
+
 
 namespace ABI {
     namespace Windows {
@@ -373,11 +524,11 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     class AddPagesEventArgs;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
@@ -385,11 +536,11 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     class GetPreviewPageEventArgs;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
@@ -397,11 +548,11 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     class PaginateEventArgs;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
@@ -409,11 +560,16 @@ namespace ABI {
             namespace Xaml {
                 namespace Printing {
                     class PrintDocument;
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
+
+
+
+
+
+
 
 /*
  *
@@ -421,30 +577,35 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
+                    /* [v1_enum, contract] */
                     enum PreviewPageCountType : int
                     {
                         PreviewPageCountType_Final = 0,
                         PreviewPageCountType_Intermediate = 1,
                     };
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Delegate Windows.UI.Xaml.Printing.AddPagesEventHandler
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -455,32 +616,35 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
-                    MIDL_INTERFACE("d4b57970-57a0-4209-847c-c093b54bc729")
-                    IAddPagesEventHandler : public IUnknown
+                    /* [object, uuid("D4B57970-57A0-4209-847C-C093B54BC729"), contract] */
+                    MIDL_INTERFACE("D4B57970-57A0-4209-847C-C093B54BC729")
+                    IAddPagesEventHandler : IUnknown
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE Invoke(
-                            IInspectable* sender,
-                            ABI::Windows::UI::Xaml::Printing::IAddPagesEventArgs* e
+                            /* [in] */__RPC__in_opt IInspectable * sender,
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Printing::IAddPagesEventArgs * e
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IAddPagesEventHandler = _uuidof(IAddPagesEventHandler);
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IAddPagesEventHandler=_uuidof(IAddPagesEventHandler);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Delegate Windows.UI.Xaml.Printing.GetPreviewPageEventHandler
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -491,32 +655,35 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
-                    MIDL_INTERFACE("ccb3e9ed-9c11-4e50-ab49-e98086bbfdef")
-                    IGetPreviewPageEventHandler : public IUnknown
+                    /* [object, uuid("CCB3E9ED-9C11-4E50-AB49-E98086BBFDEF"), contract] */
+                    MIDL_INTERFACE("CCB3E9ED-9C11-4E50-AB49-E98086BBFDEF")
+                    IGetPreviewPageEventHandler : IUnknown
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE Invoke(
-                            IInspectable* sender,
-                            ABI::Windows::UI::Xaml::Printing::IGetPreviewPageEventArgs* e
+                            /* [in] */__RPC__in_opt IInspectable * sender,
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Printing::IGetPreviewPageEventArgs * e
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IGetPreviewPageEventHandler = _uuidof(IGetPreviewPageEventHandler);
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IGetPreviewPageEventHandler=_uuidof(IGetPreviewPageEventHandler);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Delegate Windows.UI.Xaml.Printing.PaginateEventHandler
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -527,26 +694,28 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
-                    MIDL_INTERFACE("0cc05b61-811b-4a32-9965-13eb78dbb01b")
-                    IPaginateEventHandler : public IUnknown
+                    /* [object, uuid("0CC05B61-811B-4A32-9965-13EB78DBB01B"), contract] */
+                    MIDL_INTERFACE("0CC05B61-811B-4A32-9965-13EB78DBB01B")
+                    IPaginateEventHandler : IUnknown
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE Invoke(
-                            IInspectable* sender,
-                            ABI::Windows::UI::Xaml::Printing::IPaginateEventArgs* e
+                            /* [in] */__RPC__in_opt IInspectable * sender,
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Printing::IPaginateEventArgs * e
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPaginateEventHandler = _uuidof(IPaginateEventHandler);
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IPaginateEventHandler=_uuidof(IPaginateEventHandler);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -554,7 +723,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.AddPagesEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -566,25 +737,27 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
-                    MIDL_INTERFACE("e2e52be5-056c-4420-9795-cb3526ce0c20")
-                    IAddPagesEventArgs : public IInspectable
+                    /* [object, uuid("E2E52BE5-056C-4420-9795-CB3526CE0C20"), exclusiveto, contract] */
+                    MIDL_INTERFACE("E2E52BE5-056C-4420-9795-CB3526CE0C20")
+                    IAddPagesEventArgs : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_PrintTaskOptions(
-                            ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore** value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PrintTaskOptions(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore * * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IAddPagesEventArgs = _uuidof(IAddPagesEventArgs);
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IAddPagesEventArgs=_uuidof(IAddPagesEventArgs);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -592,7 +765,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.GetPreviewPageEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -604,25 +779,27 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
-                    MIDL_INTERFACE("a43d703d-dea9-4df6-a7ed-35049cd485c7")
-                    IGetPreviewPageEventArgs : public IInspectable
+                    /* [object, uuid("A43D703D-DEA9-4DF6-A7ED-35049CD485C7"), exclusiveto, contract] */
+                    MIDL_INTERFACE("A43D703D-DEA9-4DF6-A7ED-35049CD485C7")
+                    IGetPreviewPageEventArgs : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_PageNumber(
-                            INT32* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PageNumber(
+                            /* [retval, out] */__RPC__out INT32 * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IGetPreviewPageEventArgs = _uuidof(IGetPreviewPageEventArgs);
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IGetPreviewPageEventArgs=_uuidof(IGetPreviewPageEventArgs);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -630,7 +807,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEven
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.PaginateEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -642,28 +821,30 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
-                    MIDL_INTERFACE("ed945fd6-79ab-42b7-930a-3d6e09011d21")
-                    IPaginateEventArgs : public IInspectable
+                    /* [object, uuid("ED945FD6-79AB-42B7-930A-3D6E09011D21"), exclusiveto, contract] */
+                    MIDL_INTERFACE("ED945FD6-79AB-42B7-930A-3D6E09011D21")
+                    IPaginateEventArgs : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_PrintTaskOptions(
-                            ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore** value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PrintTaskOptions(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore * * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE get_CurrentPreviewPageNumber(
-                            INT32* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CurrentPreviewPageNumber(
+                            /* [retval, out] */__RPC__out INT32 * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPaginateEventArgs = _uuidof(IPaginateEventArgs);
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IPaginateEventArgs=_uuidof(IPaginateEventArgs);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -671,7 +852,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.PrintDocument
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -683,59 +866,61 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
-                    MIDL_INTERFACE("e44327c3-a999-485b-b1d8-72dc517821e6")
-                    IPrintDocument : public IInspectable
+                    /* [object, uuid("E44327C3-A999-485B-B1D8-72DC517821E6"), exclusiveto, contract] */
+                    MIDL_INTERFACE("E44327C3-A999-485B-B1D8-72DC517821E6")
+                    IPrintDocument : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_DocumentSource(
-                            ABI::Windows::Graphics::Printing::IPrintDocumentSource** value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DocumentSource(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintDocumentSource * * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE add_Paginate(
-                            ABI::Windows::UI::Xaml::Printing::IPaginateEventHandler* handler,
-                            EventRegistrationToken* token
+                        /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Paginate(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Printing::IPaginateEventHandler  * value,
+                            /* [retval, out] */__RPC__out EventRegistrationToken * token
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE remove_Paginate(
-                            EventRegistrationToken token
+                        /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_Paginate(
+                            /* [in] */EventRegistrationToken token
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE add_GetPreviewPage(
-                            ABI::Windows::UI::Xaml::Printing::IGetPreviewPageEventHandler* handler,
-                            EventRegistrationToken* token
+                        /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_GetPreviewPage(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Printing::IGetPreviewPageEventHandler  * value,
+                            /* [retval, out] */__RPC__out EventRegistrationToken * token
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE remove_GetPreviewPage(
-                            EventRegistrationToken token
+                        /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_GetPreviewPage(
+                            /* [in] */EventRegistrationToken token
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE add_AddPages(
-                            ABI::Windows::UI::Xaml::Printing::IAddPagesEventHandler* handler,
-                            EventRegistrationToken* token
+                        /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_AddPages(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Printing::IAddPagesEventHandler  * value,
+                            /* [retval, out] */__RPC__out EventRegistrationToken * token
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE remove_AddPages(
-                            EventRegistrationToken token
+                        /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_AddPages(
+                            /* [in] */EventRegistrationToken token
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE AddPage(
-                            ABI::Windows::UI::Xaml::IUIElement* pageVisual
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * pageVisual
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE AddPagesComplete(void) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetPreviewPageCount(
-                            INT32 count,
-                            ABI::Windows::UI::Xaml::Printing::PreviewPageCountType type
+                            /* [in] */INT32 count,
+                            /* [in] */ABI::Windows::UI::Xaml::Printing::PreviewPageCountType type
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE SetPreviewPage(
-                            INT32 pageNumber,
-                            ABI::Windows::UI::Xaml::IUIElement* pageVisual
+                            /* [in] */INT32 pageNumber,
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::IUIElement * pageVisual
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE InvalidatePreview(void) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintDocument = _uuidof(IPrintDocument);
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IPrintDocument=_uuidof(IPrintDocument);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -743,7 +928,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.PrintDocument
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -755,27 +942,29 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
-                    MIDL_INTERFACE("fb87b18f-2606-4a2f-99d4-a7cdbc35d7c7")
-                    IPrintDocumentFactory : public IInspectable
+                    /* [object, uuid("FB87B18F-2606-4A2F-99D4-A7CDBC35D7C7"), exclusiveto, contract] */
+                    MIDL_INTERFACE("FB87B18F-2606-4A2F-99D4-A7CDBC35D7C7")
+                    IPrintDocumentFactory : IInspectable
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE CreateInstance(
-                            IInspectable* baseInterface,
-                            IInspectable** innerInterface,
-                            ABI::Windows::UI::Xaml::Printing::IPrintDocument** value
+                            /* [in] */__RPC__in_opt IInspectable * outer,
+                            /* [out] */__RPC__deref_out_opt IInspectable * * inner,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Printing::IPrintDocument * * instance
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintDocumentFactory = _uuidof(IPrintDocumentFactory);
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IPrintDocumentFactory=_uuidof(IPrintDocumentFactory);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -783,7 +972,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFacto
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.PrintDocument
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -795,31 +986,34 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Printing {
-                    MIDL_INTERFACE("fd970a3c-b152-49e0-a6bd-6aa6477e43c7")
-                    IPrintDocumentStatics : public IInspectable
+                    /* [object, uuid("FD970A3C-B152-49E0-A6BD-6AA6477E43C7"), exclusiveto, contract] */
+                    MIDL_INTERFACE("FD970A3C-B152-49E0-A6BD-6AA6477E43C7")
+                    IPrintDocumentStatics : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_DocumentSourceProperty(
-                            ABI::Windows::UI::Xaml::IDependencyProperty** value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DocumentSourceProperty(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::IDependencyProperty * * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_IPrintDocumentStatics = _uuidof(IPrintDocumentStatics);
-                } /* Printing */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_IPrintDocumentStatics=_uuidof(IPrintDocumentStatics);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.UI.Xaml.Printing.AddPagesEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -833,17 +1027,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStati
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Printing_AddPagesEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Printing_AddPagesEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Printing_AddPagesEventArgs[] = L"Windows.UI.Xaml.Printing.AddPagesEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.UI.Xaml.Printing.GetPreviewPageEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -857,17 +1054,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Printing_GetPreviewPageEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Printing_GetPreviewPageEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Printing_GetPreviewPageEventArgs[] = L"Windows.UI.Xaml.Printing.GetPreviewPageEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.UI.Xaml.Printing.PaginateEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -881,17 +1081,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Printing_PaginateEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Printing_PaginateEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Printing_PaginateEventArgs[] = L"Windows.UI.Xaml.Printing.PaginateEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.UI.Xaml.Printing.PrintDocument
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Xaml.Printing.IPrintDocumentStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -905,11 +1108,16 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Printing_PrintDocument_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Printing_PrintDocument_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Printing_PrintDocument[] = L"Windows.UI.Xaml.Printing.PrintDocument";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -967,9 +1175,8 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics __
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_FWD_DEFINED__
 
-// Parameterized interface forward declarations (C)
 
-// Collection interface definitions
+
 
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_FWD_DEFINED__
@@ -977,11 +1184,16 @@ typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource __x
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_FWD_DEFINED__
 
+
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore;
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
+
+
+
+
 
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
@@ -989,13 +1201,37 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty __x_ABI_CWindo
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIDependencyProperty_FWD_DEFINED__
 
+
 #ifndef ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CUI_CXaml_CIUIElement __x_ABI_CWindows_CUI_CXaml_CIUIElement;
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CIUIElement_FWD_DEFINED__
 
+
+
+
+
+
 typedef enum __x_ABI_CWindows_CUI_CXaml_CPrinting_CPreviewPageCountType __x_ABI_CWindows_CUI_CXaml_CPrinting_CPreviewPageCountType;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -1003,8 +1239,11 @@ typedef enum __x_ABI_CWindows_CUI_CXaml_CPrinting_CPreviewPageCountType __x_ABI_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CXaml_CPrinting_CPreviewPageCountType
 {
     PreviewPageCountType_Final = 0,
@@ -1012,56 +1251,68 @@ enum __x_ABI_CWindows_CUI_CXaml_CPrinting_CPreviewPageCountType
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Delegate Windows.UI.Xaml.Printing.AddPagesEventHandler
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_INTERFACE_DEFINED__
+/* [object, uuid("D4B57970-57A0-4209-847C-C093B54BC729"), contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandlerVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler* This,
-        IInspectable* sender,
-        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs* e);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler * This);
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler * This);
+HRESULT ( STDMETHODCALLTYPE *Invoke )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler * This,
+        /* [in] */__RPC__in_opt IInspectable * sender,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs * e
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandlerVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandlerVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandlerVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_Invoke(This, sender, e) \
-    ((This)->lpVtbl->Invoke(This, sender, e))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_Invoke(This,sender,e) \
+    ( (This)->lpVtbl->Invoke(This,sender,e) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1069,50 +1320,61 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_INTERFACE_DEFINED__
+/* [object, uuid("CCB3E9ED-9C11-4E50-AB49-E98086BBFDEF"), contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandlerVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler* This,
-        IInspectable* sender,
-        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs* e);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler * This);
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler * This);
+HRESULT ( STDMETHODCALLTYPE *Invoke )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler * This,
+        /* [in] */__RPC__in_opt IInspectable * sender,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs * e
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandlerVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandlerVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandlerVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_Invoke(This, sender, e) \
-    ((This)->lpVtbl->Invoke(This, sender, e))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_Invoke(This,sender,e) \
+    ( (This)->lpVtbl->Invoke(This,sender,e) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1120,50 +1382,61 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEven
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_INTERFACE_DEFINED__
+/* [object, uuid("0CC05B61-811B-4A32-9965-13EB78DBB01B"), contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandlerVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler* This,
-        IInspectable* sender,
-        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs* e);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler * This);
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler * This);
+HRESULT ( STDMETHODCALLTYPE *Invoke )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler * This,
+        /* [in] */__RPC__in_opt IInspectable * sender,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs * e
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandlerVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandlerVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandlerVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_Invoke(This, sender, e) \
-    ((This)->lpVtbl->Invoke(This, sender, e))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_Invoke(This,sender,e) \
+    ( (This)->lpVtbl->Invoke(This,sender,e) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1171,68 +1444,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.AddPagesEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Printing_IAddPagesEventArgs[] = L"Windows.UI.Xaml.Printing.IAddPagesEventArgs";
+/* [object, uuid("E2E52BE5-056C-4420-9795-CB3526CE0C20"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_PrintTaskOptions)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PrintTaskOptions )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgsVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_get_PrintTaskOptions(This, value) \
-    ((This)->lpVtbl->get_PrintTaskOptions(This, value))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_get_PrintTaskOptions(This,value) \
+    ( (This)->lpVtbl->get_PrintTaskOptions(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1240,68 +1537,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventArgs;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.GetPreviewPageEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Printing_IGetPreviewPageEventArgs[] = L"Windows.UI.Xaml.Printing.IGetPreviewPageEventArgs";
+/* [object, uuid("A43D703D-DEA9-4DF6-A7ED-35049CD485C7"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_PageNumber)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs* This,
-        INT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PageNumber )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgsVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_get_PageNumber(This, value) \
-    ((This)->lpVtbl->get_PageNumber(This, value))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_get_PageNumber(This,value) \
+    ( (This)->lpVtbl->get_PageNumber(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1309,73 +1630,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEven
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.PaginateEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Printing_IPaginateEventArgs[] = L"Windows.UI.Xaml.Printing.IPaginateEventArgs";
+/* [object, uuid("ED945FD6-79AB-42B7-930A-3D6E09011D21"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_PrintTaskOptions)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore** value);
-    HRESULT (STDMETHODCALLTYPE* get_CurrentPreviewPageNumber)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs* This,
-        INT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PrintTaskOptions )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CurrentPreviewPageNumber )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgsVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_get_PrintTaskOptions(This, value) \
-    ((This)->lpVtbl->get_PrintTaskOptions(This, value))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_get_PrintTaskOptions(This,value) \
+    ( (This)->lpVtbl->get_PrintTaskOptions(This,value) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_get_CurrentPreviewPageNumber(This, value) \
-    ((This)->lpVtbl->get_CurrentPreviewPageNumber(This, value))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_get_CurrentPreviewPageNumber(This,value) \
+    ( (This)->lpVtbl->get_CurrentPreviewPageNumber(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1383,126 +1730,172 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventArgs;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.PrintDocument
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Printing_IPrintDocument[] = L"Windows.UI.Xaml.Printing.IPrintDocument";
+/* [object, uuid("E44327C3-A999-485B-B1D8-72DC517821E6"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_DocumentSource)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource** value);
-    HRESULT (STDMETHODCALLTYPE* add_Paginate)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_Paginate)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_GetPreviewPage)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_GetPreviewPage)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_AddPages)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_AddPages)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* AddPage)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        __x_ABI_CWindows_CUI_CXaml_CIUIElement* pageVisual);
-    HRESULT (STDMETHODCALLTYPE* AddPagesComplete)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This);
-    HRESULT (STDMETHODCALLTYPE* SetPreviewPageCount)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        INT32 count,
-        enum __x_ABI_CWindows_CUI_CXaml_CPrinting_CPreviewPageCountType type);
-    HRESULT (STDMETHODCALLTYPE* SetPreviewPage)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This,
-        INT32 pageNumber,
-        __x_ABI_CWindows_CUI_CXaml_CIUIElement* pageVisual);
-    HRESULT (STDMETHODCALLTYPE* InvalidatePreview)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument* This);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DocumentSource )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource * * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_Paginate )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPaginateEventHandler  * value,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_Paginate )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [in] */EventRegistrationToken token
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_GetPreviewPage )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CPrinting_CIGetPreviewPageEventHandler  * value,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_GetPreviewPage )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [in] */EventRegistrationToken token
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_AddPages )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CPrinting_CIAddPagesEventHandler  * value,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_AddPages )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [in] */EventRegistrationToken token
+        );
+    HRESULT ( STDMETHODCALLTYPE *AddPage )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * pageVisual
+        );
+    HRESULT ( STDMETHODCALLTYPE *AddPagesComplete )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetPreviewPageCount )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [in] */INT32 count,
+        /* [in] */__x_ABI_CWindows_CUI_CXaml_CPrinting_CPreviewPageCountType type
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetPreviewPage )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This,
+        /* [in] */INT32 pageNumber,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CIUIElement * pageVisual
+        );
+    HRESULT ( STDMETHODCALLTYPE *InvalidatePreview )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * This
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_get_DocumentSource(This, value) \
-    ((This)->lpVtbl->get_DocumentSource(This, value))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_get_DocumentSource(This,value) \
+    ( (This)->lpVtbl->get_DocumentSource(This,value) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_add_Paginate(This, handler, token) \
-    ((This)->lpVtbl->add_Paginate(This, handler, token))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_add_Paginate(This,value,token) \
+    ( (This)->lpVtbl->add_Paginate(This,value,token) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_remove_Paginate(This, token) \
-    ((This)->lpVtbl->remove_Paginate(This, token))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_remove_Paginate(This,token) \
+    ( (This)->lpVtbl->remove_Paginate(This,token) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_add_GetPreviewPage(This, handler, token) \
-    ((This)->lpVtbl->add_GetPreviewPage(This, handler, token))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_add_GetPreviewPage(This,value,token) \
+    ( (This)->lpVtbl->add_GetPreviewPage(This,value,token) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_remove_GetPreviewPage(This, token) \
-    ((This)->lpVtbl->remove_GetPreviewPage(This, token))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_remove_GetPreviewPage(This,token) \
+    ( (This)->lpVtbl->remove_GetPreviewPage(This,token) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_add_AddPages(This, handler, token) \
-    ((This)->lpVtbl->add_AddPages(This, handler, token))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_add_AddPages(This,value,token) \
+    ( (This)->lpVtbl->add_AddPages(This,value,token) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_remove_AddPages(This, token) \
-    ((This)->lpVtbl->remove_AddPages(This, token))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_remove_AddPages(This,token) \
+    ( (This)->lpVtbl->remove_AddPages(This,token) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_AddPage(This, pageVisual) \
-    ((This)->lpVtbl->AddPage(This, pageVisual))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_AddPage(This,pageVisual) \
+    ( (This)->lpVtbl->AddPage(This,pageVisual) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_AddPagesComplete(This) \
-    ((This)->lpVtbl->AddPagesComplete(This))
+    ( (This)->lpVtbl->AddPagesComplete(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_SetPreviewPageCount(This, count, type) \
-    ((This)->lpVtbl->SetPreviewPageCount(This, count, type))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_SetPreviewPageCount(This,count,type) \
+    ( (This)->lpVtbl->SetPreviewPageCount(This,count,type) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_SetPreviewPage(This, pageNumber, pageVisual) \
-    ((This)->lpVtbl->SetPreviewPage(This, pageNumber, pageVisual))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_SetPreviewPage(This,pageNumber,pageVisual) \
+    ( (This)->lpVtbl->SetPreviewPage(This,pageNumber,pageVisual) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_InvalidatePreview(This) \
-    ((This)->lpVtbl->InvalidatePreview(This))
+    ( (This)->lpVtbl->InvalidatePreview(This) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1510,70 +1903,94 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.PrintDocument
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Printing_IPrintDocumentFactory[] = L"Windows.UI.Xaml.Printing.IPrintDocumentFactory";
+/* [object, uuid("FB87B18F-2606-4A2F-99D4-A7CDBC35D7C7"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactoryVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateInstance)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory* This,
-        IInspectable* baseInterface,
-        IInspectable** innerInterface,
-        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory * This,
+        /* [in] */__RPC__in_opt IInspectable * outer,
+        /* [out] */__RPC__deref_out_opt IInspectable * * inner,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocument * * instance
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactoryVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactoryVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactoryVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_CreateInstance(This, baseInterface, innerInterface, value) \
-    ((This)->lpVtbl->CreateInstance(This, baseInterface, innerInterface, value))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_CreateInstance(This,outer,inner,instance) \
+    ( (This)->lpVtbl->CreateInstance(This,outer,inner,instance) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1581,74 +1998,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentFacto
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Printing.PrintDocument
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Printing_IPrintDocumentStatics[] = L"Windows.UI.Xaml.Printing.IPrintDocumentStatics";
+/* [object, uuid("FD970A3C-B152-49E0-A6BD-6AA6477E43C7"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_DocumentSourceProperty)(__x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics* This,
-        __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DocumentSourceProperty )(
+        __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CIDependencyProperty * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStaticsVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_get_DocumentSourceProperty(This, value) \
-    ((This)->lpVtbl->get_DocumentSourceProperty(This, value))
+#define __x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_get_DocumentSourceProperty(This,value) \
+    ( (This)->lpVtbl->get_DocumentSourceProperty(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.UI.Xaml.Printing.AddPagesEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1662,17 +2104,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CPrinting_CIPrintDocumentStati
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Printing_AddPagesEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Printing_AddPagesEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Printing_AddPagesEventArgs[] = L"Windows.UI.Xaml.Printing.AddPagesEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.UI.Xaml.Printing.GetPreviewPageEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1686,17 +2131,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Printing_GetPreviewPageEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Printing_GetPreviewPageEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Printing_GetPreviewPageEventArgs[] = L"Windows.UI.Xaml.Printing.GetPreviewPageEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.UI.Xaml.Printing.PaginateEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1710,17 +2158,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Printing_PaginateEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Printing_PaginateEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Printing_PaginateEventArgs[] = L"Windows.UI.Xaml.Printing.PaginateEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.UI.Xaml.Printing.PrintDocument
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Xaml.Printing.IPrintDocumentStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1734,11 +2185,16 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Printing_PrintDocument_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Printing_PrintDocument_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Printing_PrintDocument[] = L"Windows.UI.Xaml.Printing.PrintDocument";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

@@ -6,20 +6,13 @@
 // The complex math library.
 //
 #pragma once
-#ifndef _COMPLEX
 #define _COMPLEX
 
 #include <corecrt.h>
 
-#if (_CRT_HAS_CXX17 == 1) && !defined(_CRT_USE_C_COMPLEX_H)
-#include <ccomplex>
-#else // ^^^^ /std:c++17 ^^^^ // vvvv _CRT_USE_C_COMPLEX_H vvvv
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
+
+
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 //
@@ -573,8 +566,6 @@ extern "C++"
 } // extern "C++"
 #endif // __cplusplus
 
+
+
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // (_CRT_HAS_CXX17 == 1) && !defined(_CRT_USE_C_COMPLEX_H)
-#endif // _COMPLEX

@@ -117,8 +117,8 @@ interface IMFTopology;
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 interface IMFClock;
 interface IMFPresentationTimeSource;
@@ -205,23 +205,7 @@ cpp_quote( "EXTERN_GUID( MF_MPEG4SINK_MOOV_BEFORE_MDAT, 0xf672e3ac, 0xe1e6, 0x4f
 // the entire file to make room for the new properties. 
 cpp_quote("EXTERN_GUID( MF_MPEG4SINK_MINIMUM_PROPERTIES_SIZE, 0xdca1ed52, 0x450e, 0x4a22, 0x8c, 0x62, 0x4e, 0xd4, 0x52, 0xf7, 0xa1, 0x87);")
 
-// MF_MPEG4SINK_MIN_FRAGMENT_DURATION 
-// Data type: UINT64 
-// This attribute specifies the minimum duration in hns of each fragment which the MPEG4 sink produces when operating in fragmented mode. 
-// If this attribute is set, the MF_MPEG4SINK_MAX_CODED_SEQUENCES_PER_FRAGMENT attribute is ignored. 
-// 
-cpp_quote("EXTERN_GUID(MF_MPEG4SINK_MIN_FRAGMENT_DURATION, 0xa30b570c, 0x8efd, 0x45e8, 0x94, 0xfe, 0x27, 0xc8, 0x4b, 0x5b, 0xdf, 0xf6);")
-
-// MF_MPEG4SINK_MAX_CODED_SEQUENCES_PER_FRAGMENT 
-// Data type: UINT32 
-// This attribute specifies the maximum number of coded sequences which the MPEG4 sink will place in each fragment when operating in fragmented mode. 
-// A coded sequence is a group of IMFSamples where the first IMFSample has the non-zero value for 
-// the MFSampleExtension_CleanPoint attribute, followed by zero or more IMFSamples that have a zero 
-// value, or no value, for the MFSampleExtension_CleanPoint attribute. 
-// 
-cpp_quote("EXTERN_GUID(MF_MPEG4SINK_MAX_CODED_SEQUENCES_PER_FRAGMENT, 0xfc1b3bd6, 0x692d, 0x4ce5, 0x92, 0x99, 0x73, 0x8a, 0xa5, 0x46, 0x3e, 0x9a);")
-
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 #pragma region Desktop Family
@@ -577,8 +561,8 @@ cpp_quote( "    );" )
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -646,7 +630,7 @@ enum
     MF_RESOLUTION_READ              = 0x00010000,
     MF_RESOLUTION_WRITE             = 0x00020000
 };
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 #pragma region Desktop Family
@@ -685,8 +669,8 @@ interface IMFByteStream;
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 [
     object,
@@ -797,11 +781,11 @@ interface IMFSourceResolver : IUnknown
 cpp_quote( "STDAPI MFCreateSourceResolver( "                )
 cpp_quote( "        /* out */     _Outptr_ IMFSourceResolver     **ppISourceResolver);" )
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 #pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
 
 cpp_quote( "STDAPI CreatePropertyStore( " )
 cpp_quote( "        /* out */     _Outptr_ IPropertyStore        **ppStore);" )
@@ -849,23 +833,23 @@ cpp_quote( "       _Out_ PROPVARIANT* pPropVarMimeTypeArray  );  ")
 // The application can pass in an object implementing IMFSourceOpenMonitor
 cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY PROPERTYKEY MFPKEY_SourceOpenMonitor = { { 0x074d4637, 0xb5ae, 0x465d, 0xaf, 0x17, 0x1a, 0x53, 0x8d, 0x28, 0x59, 0xdd}, 0x02 }; ")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 // Type: VT_BOOL
 // When this is set to VARIANT_TRUE, if an ASF Media Source is created,
 // it will perform all seek operations approximately (and more quickly)
 cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY PROPERTYKEY MFPKEY_ASFMediaSource_ApproxSeek = { { 0xb4cd270f, 0x244d, 0x4969, 0xbb, 0x92, 0x3f, 0x0f, 0xb8, 0x31, 0x6f, 0x10}, 0x01 }; ")
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN7) ")
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 // Type: VT_BOOL
 // When this is set to VARIANT_TRUE, if an ASF Media Source is created,
@@ -907,7 +891,7 @@ cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY PROPERTYKEY MFPKEY_MediaSource_Dis
 // {3FAE10BB-F859-4192-B562-1868D3DA3A02}
 cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY PROPERTYKEY MFPKEY_SBESourceMode = { { 0x3fae10bb, 0xf859, 0x4192, 0xb5, 0x62, 0x18, 0x68, 0xd3, 0xda, 0x3a, 0x02}, 0x01 }; ")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN7) ")
@@ -1015,8 +999,8 @@ cpp_quote("EXTERN_C const DECLSPEC_SELECTANY PROPERTYKEY MFPKEY_HTTP_ByteStream_
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
 
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -1223,7 +1207,7 @@ interface IMFMediaSource : IMFMediaEventGenerator
     HRESULT Shutdown( void );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -1231,8 +1215,8 @@ cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTI
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN8) ")
 
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 [
     object,
@@ -1260,7 +1244,7 @@ interface IMFMediaSourceEx : IMFMediaSource
 // {A38253AA-6314-42fd-A3CE-BB27B6859946}
 cpp_quote( "EXTERN_GUID( MF_SOURCE_STREAM_SUPPORTS_HW_CONNECTION, 0xa38253aa, 0x6314, 0x42fd, 0xa3, 0xce, 0xbb, 0x27, 0xb6, 0x85, 0x99, 0x46);" )
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN8) ")
@@ -1271,8 +1255,8 @@ interface IMFPresentationClock;
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 [
     object,
@@ -1289,7 +1273,7 @@ interface IMFClockConsumer : IUnknown
         );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
@@ -1297,8 +1281,8 @@ cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 [
     object,
@@ -2183,157 +2167,9 @@ interface IMFVideoProcessorControl2 : IMFVideoProcessorControl
     HRESULT GetSupportedHardwareEffects([out, retval, annotation("_Out_")] UINT *puiSupport);
 };
 
-cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN10) ")
-
-// Enum describing the packing for spherical video frames
-typedef enum _MFVideoSphericalFormat {
-    MFVideoSphericalFormat_Unsupported = 0,
-    MFVideoSphericalFormat_Equirectangular = 1,
-    MFVideoSphericalFormat_CubeMap = 2,
-    MFVideoSphericalFormat_3DMesh = 3
-} MFVideoSphericalFormat;
-
-cpp_quote("#endif /* (WINVER >= _WIN32_WINNT_WIN10) */ ")
-
-// TODO: NTDDI_WIN10_RS4
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS3) ")
-
-// MF_XVP_SAMPLE_LOCK_TIMEOUT 
-// Data type: UINT32  
-// Timeout value used for sample locking operations in XVP.  Value is in milliseconds. 
-// The timeout applies to an IMFSample that uses a lock to protect access to the buffer.  
-// For example, if the IMFSample references a shared D3D texture that is protected by 
-// IDXGIKeyedMutex, then the timeout is used when trying to acquire the IDXGIKeyedMutex. 
-// After failing to acquire the lock due to a timeout, XVP will return E_TIMEOUT from ProcessOutput. 
-// {AA4DDB29-5134-4363-AC72-83EC4BC10426} 
-cpp_quote("EXTERN_GUID( MF_XVP_SAMPLE_LOCK_TIMEOUT, 0xaa4ddb29, 0x5134, 0x4363, 0xac, 0x72, 0x83, 0xec, 0x4b, 0xc1, 0x4, 0x26);")
-
-// This enumeration describes different types of  
-// spherical projection modes used when projecting 
-// from a stream representation to a 3D representation. 
-typedef enum MFVideoSphericalProjectionMode
-{
-    // The current view should be projected onto a sphere in 3D space. 
-    MFVideoSphericalProjectionMode_Spherical = 0,
-    // The current view should be projected onto a flat surface. 
-    MFVideoSphericalProjectionMode_Flat
-} MFVideoSphericalProjectionMode;
-
-[
-    object,
-    local,
-    uuid(2424B3F2-EB23-40f1-91AA-74BDDEEA0883)
-]
-/// <summary>  
-///     Configuration interface for Video Processors (version 3)  
-/// </summary>  
-interface IMFVideoProcessorControl3 : IMFVideoProcessorControl2
-{
-    /// <summary> 
-    ///     For a given input type, returns the "natural output type" of the video. 
-    ///     The natural type is defined as: 
-    ///       * no scaling applied 
-    ///       * no color conversions applied 
-    ///     This accounts for any rotation / cropping / pixel aspect applied to the video. 
-    /// </summary> 
-    /// <param name=ppType> 
-    ///     Returns a media type containing the natural output type. 
-    /// </param> 
-    HRESULT GetNaturalOutputType([out, annotation("_Outptr_")] IMFMediaType **ppType);
-
-    // Sets spherical video processing properties 
-    /// <summary> 
-    ///     Enables spherical video rendering (360 video). 
-    /// </summary> 
-    /// <param name=fEnable> 
-    ///     Whether rendering is enabled. 
-    /// </param> 
-    /// <param name=eFormat> 
-    ///     The type of spherical video to render. 
-    /// </param> 
-    /// <param name=eProjectionMode> 
-    ///     How the spherical video should be projected. 
-    /// </param> 
-    HRESULT EnableSphericalVideoProcessing(
-        [in, annotation("_In_")] BOOL fEnable,
-        [in, annotation("_In_")] MFVideoSphericalFormat eFormat,
-        [in, annotation("_In_")] MFVideoSphericalProjectionMode eProjectionMode
-    );
-
-    // Sets spherical video processing properties 
-    /// <summary> 
-    ///     When rendering spherical video (360 video) this sets the view 
-    ///     direction of the camera.  X,Y,Z,W are the components of the 
-    ///     camera's view direction quaternion.  This quaternion can be  
-    ///     left un-normalized, or normalized. 
-    /// </summary> 
-    /// <param name=X> 
-    ///     X component of view direction quaternion. 
-    /// </param> 
-    /// <param name=Y> 
-    ///     Y component of view direction quaternion. 
-    /// </param> 
-    /// <param name=Z> 
-    ///     Z component of view direction quaternion. 
-    /// </param> 
-    /// <param name=W> 
-    ///     W component of view direction quaternion. 
-    /// </param> 
-    /// <param name=fieldOfView> 
-    ///     Field of view in degrees. 
-    /// </param> 
-    HRESULT SetSphericalVideoProperties(
-        [in, annotation("_In_")] float X,
-        [in, annotation("_In_")] float Y,
-        [in, annotation("_In_")] float Z,
-        [in, annotation("_In_")] float W,
-        [in, annotation("_In_")] float fieldOfView
-    );
-
-    /// <summary> 
-    ///     When the video processor is used as part of a renderer and the renderer 
-    ///     has knowledge of the output device; the output device is passed to the video 
-    ///     processor with SetOutputDevice. 
-    /// </summary> 
-    /// <param name=pOutputDevice> 
-    ///     IUnknown of the output device.  This may be either a IDXGIOutput or  
-    ///     Windows.Graphics.Display.IDisplayInformation depending on the renderer. 
-    /// </param> 
-    HRESULT SetOutputDevice([in, annotation("_In_")] IUnknown *pOutputDevice);
-};
-
-cpp_quote("#endif /* (NTDDI_VERSION >= NTDDI_WIN10_RS3) */ ")
-
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINBLUE) ")
 
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
-
-[
-    object,
-    local,
-    uuid(604D33D7-CF23-41d5-8224-5BBBB1A87475)
-]
-/// <summary> 
-/// Configuration interface for Video Renderer Effects 
-/// </summary> 
-interface IMFVideoRendererEffectControl : IUnknown
-{
-    /// <summary> 
-    /// When the Renderer Effect requests a communication channel using the 
-    /// MF_VIDEO_RENDERER_EFFECT_APP_SERVICE_NAME MFT attribute, this method will 
-    /// be called asynchronously by the platform on successful establishment of the requested 
-    /// communication channel. The Video Renderer Effect's App Service implements this 
-    /// interface. 
-    /// </summary> 
-    /// <param name=pAppServiceConnection> 
-    /// IUnknown of the app service connection object. 
-    /// </param> 
-    HRESULT OnAppServiceConnectionEstablished([in, annotation("_In_")] IUnknown* pAppServiceConnection);
-};
-
-cpp_quote("#endif // (WINVER >= NTDDI_WIN10_VB) ")
-
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN8) ")
@@ -3348,8 +3184,8 @@ cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN7) ")
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 [
     object,
@@ -3884,7 +3720,7 @@ interface IMFPresentationClock : IMFClock
 
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 #pragma region PC Application Family
@@ -3911,8 +3747,8 @@ cpp_quote( "    );" )
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 [
     object,
@@ -4166,7 +4002,7 @@ interface IMFClockStateSink : IUnknown
 
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 #pragma region Desktop Family
@@ -4196,8 +4032,8 @@ cpp_quote( "EXTERN_GUID( MF_PD_APP_CONTEXT, 0x6c990d32, 0xbb8e, 0x477a, 0x85, 0x
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 // MF_PD_DURATION
 // Data type: int64
@@ -4325,11 +4161,11 @@ cpp_quote( "    _Outptr_ IMFPresentationDescriptor** ppPresentationDescriptor" )
 cpp_quote( "    );" )
 cpp_quote("")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
-#pragma region Desktop or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
+#pragma region Desktop Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
 
 
 //
@@ -4356,11 +4192,11 @@ cpp_quote( "    _In_reads_( cbData ) BYTE * pbData," )
 cpp_quote( "    _Outptr_ IMFPresentationDescriptor ** ppPD);")
 cpp_quote("")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -4488,7 +4324,7 @@ interface IMFMediaTypeHandler : IUnknown
        );
 };
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 #pragma region Desktop Family
@@ -7639,7 +7475,7 @@ cpp_quote( "EXTERN_GUID( MF_SOURCE_PRESENTATION_PROVIDER_SERVICE, 0xe002aadc, 0x
 //
 cpp_quote("#if defined(_MSC_VER) && (_MSC_VER >= 1600)")
 cpp_quote("#pragma warning(push)")
-cpp_quote("#pragma warning(disable:4820 4201) // Disable C4820: padding after data member, C4201: nonstandard extension used: nameless struct/union")
+cpp_quote("#pragma warning(disable:4820) // Disable C4820: padding after data member")
 cpp_quote("#endif")
 typedef struct _MFTOPONODE_ATTRIBUTE_UPDATE
 {
@@ -10228,18 +10064,6 @@ cpp_quote( "EXTERN_GUID( MFCONNECTOR_TRANSPORT_AGNOSTIC_DIGITAL_MODE_B, 0x57cd59
 cpp_quote( "" )
 
 
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
-
-// MF_POLICY_ID
-// Data type: UINT32 (treat as BOOL)
-// An identifier that can be set on an IMFOutputPolicy.
-// The value can be recieved from the MEPolicySet media event. It is stored as a VT_UI4
-// type payload in the MEPolicySet event.
-// {B160C24D-C059-48F1-A901-9EE298A9A8C3}
-cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MF_POLICY_ID = { 0xb160c24d, 0xc059, 0x48f1, { 0xa9, 0x1, 0x9e, 0xe2, 0x98, 0xa9, 0xa8, 0xc3 } };" )
-
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
-
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -11456,12 +11280,6 @@ cpp_quote( "EXTERN_GUID( MF_TRANSCODE_QUALITYVSSPEED, 0x98332df8, 0x03cd, 0x476b
 // {F45AA7CE-AB24-4012-A11B-DC8220201410}
 cpp_quote( "EXTERN_GUID( MF_TRANSCODE_DONOT_INSERT_ENCODER, 0xf45aa7ce, 0xab24, 0x4012, 0xa1, 0x1b, 0xdc, 0x82, 0x20, 0x20, 0x14, 0x10 );" )
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
-#pragma endregion
-
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
-
 typedef enum _MF_VIDEO_PROCESSOR_ALGORITHM_TYPE
 {
     // default mode favors a balance of quality and speed
@@ -11495,19 +11313,6 @@ cpp_quote("#if (WINVER >= _WIN32_WINNT_WINBLUE) ")
 //  when FALSE XVP will allocate output in DX mode (and will fail if provided output)
 // {04A2CABC-0CAB-40b1-A1B9-75BC3658F000}
 cpp_quote( "EXTERN_GUID( MF_XVP_CALLER_ALLOCATES_OUTPUT, 0x4a2cabc, 0xcab, 0x40b1, 0xa1, 0xb9, 0x75, 0xbc, 0x36, 0x58, 0xf0, 0x0 );" )
-
-//#endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD)
-cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINBLUE) ")
-
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
-#pragma endregion
-
-#pragma region Desktop Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
-
-// This should be enabled after _WIN32_WINNT is updated.   
-//#if (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)  
-cpp_quote("#if (WINVER >= _WIN32_WINNT_WINBLUE) ")
 
 cpp_quote("#if (WINVER < _WIN32_WINNT_WINTHRESHOLD) ")
 // CLSID_VideoProcessorMFT
@@ -11764,8 +11569,8 @@ interface IMFCapturePhotoConfirmation : IUnknown
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN8) ")
 
@@ -11878,11 +11683,11 @@ cpp_quote( "STDAPI MFCreateTrackedSample(" )
 cpp_quote( "    _Outptr_ IMFTrackedSample** ppMFSample);" )
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
-#pragma region Desktop or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
+#pragma region Desktop Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
 
 /////////////////////////////////////////////////////////////////////////////
 cpp_quote( "STDAPI MFCreateMFByteStreamOnStream(" )
@@ -11895,7 +11700,7 @@ cpp_quote( "STDAPI MFCreateStreamOnMFByteStream(" )
 cpp_quote( "    _In_ IMFByteStream* pByteStream," ) 
 cpp_quote( "    _Outptr_ IStream** ppStream);" )
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
 #pragma region Application Family
@@ -12089,41 +11894,6 @@ cpp_quote( "EXTERN_GUID( MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_AUDCAP_ROLE, 0xbc9d1
 // Data type: STRING
 // Contains a device Id for a provider
 cpp_quote( "EXTERN_GUID( MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_PROVIDER_DEVICE_ID, 0x36689d42, 0xa06c, 0x40ae, 0x84, 0xcf, 0xf5, 0xa0, 0x34, 0x6, 0x7c, 0xc4);" )
-
-// MF_DEVSOURCE_ATTRIBUTE_SOURCE_XADDRESS 
-// {BCA0BE52-C327-44C7-9B7D-7FA8D9B5BCDA} 
-// Data type: STRING 
-// Contains a XADDRESS of KSCATEGORY_NETWORK_CAMERA that 
-// can be obtained from the PKEY_PNPX_XAddrs from a KSCATEGORY_NETWORK_CAMERA 
-// or Web Services on Devices (WSD) xaddrs parameter, currently only supports ONVIF cameras.
-cpp_quote("EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_XADDRESS, 0xbca0be52, 0xc327, 0x44c7, 0x9b, 0x7d, 0x7f, 0xa8, 0xd9, 0xb5, 0xbc, 0xda);")
-
-// MF_DEVSOURCE_ATTRIBUTE_SOURCE_RTSP_URL 
-// {9D7B40D2-3617-4043-93E3-8D6DA9BB3492} 
-// Data type: STRING 
-// Currently only RTSP urls are supported as an initialization parameter. 
-cpp_quote("EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_STREAM_URL, 0x9d7b40d2, 0x3617, 0x4043, 0x93, 0xe3, 0x8d, 0x6d, 0xa9, 0xbb, 0x34, 0x92);")
-
-// MF_DEVSOURCE_ATTRIBUTE_SOURCE_USERNAME 
-// {05D01ADD-949F-46EB-BC8E-8B0D2B32D79D} 
-// Data type: STRING 
-// Attribute contains a username to use for authentication. 
-cpp_quote("EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_USERNAME,0x5d01add, 0x949f, 0x46eb, 0xbc, 0x8e, 0x8b, 0xd, 0x2b, 0x32, 0xd7, 0x9d);")
-
-// MF_DEVSOURCE_ATTRIBUTE_SOURCE_PASSWORD 
-// {A0FD7E16-42D9-49DF-84C0-E82C5EAB8874} 
-// Data type: STRING 
-// Attribute contains a password to use for authentication. 
-cpp_quote("EXTERN_GUID(MF_DEVSOURCE_ATTRIBUTE_SOURCE_PASSWORD, 0xa0fd7e16, 0x42d9, 0x49df, 0x84, 0xc0, 0xe8, 0x2c, 0x5e, 0xab, 0x88, 0x74);")
-
-
-// {7A213AA7-866F-414A-8C1A-275C7283A395} 
-// CLSID_FrameServerNetworkCameraSource 
-// CLSID for KSCATEGORY_NETWORK_CAMERA Source that controls the MediaSource, 
-// provides functionality to stream and control KSCATEGORY_NETWORK_CAMERA. 
-// CLSID_FrameServerNetworkCameraSource is only supported using the Windows service FrameServer 
-// and requires FrameServer for control and media flow, all other uses are not supported.
-cpp_quote("EXTERN_GUID(CLSID_FrameServerNetworkCameraSource, 0x7a213aa7, 0x866f, 0x414a, 0x8c, 0x1a, 0x27, 0x5c, 0x72, 0x83, 0xa3, 0x95);")
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -12381,8 +12151,8 @@ typedef struct _MFCONTENTPROTECTIONDEVICE_INPUT_DATA
     DWORD Reserved;
 
     /// <member name="InputData">
-    /// If PrivateDataByteCount is greater than 0, InputData[0] - InputData[PrivateDataSize - 1] is reserved for IHV use.
-    /// InputData[PrivateDataByteCount] - InputData[HWProtectionDataByteCount + PrivateDataByteCount - 1] contains the input data for the protection system command. 
+    /// If PrivateDataByteCount is greater than 0, InputData[0] – InputData[PrivateDataSize - 1] is reserved for IHV use.
+    /// InputData[PrivateDataByteCount] – InputData[HWProtectionDataByteCount + PrivateDataByteCount - 1] contains the input data for the protection system command. 
     /// The format and size of the DRM command is defined by the protection system specification.
     /// </member>
     BYTE InputData[4];
@@ -12422,8 +12192,8 @@ typedef struct _MFCONTENTPROTECTIONDEVICE_OUTPUT_DATA
     LONGLONG ExecutionTimeInHundredsOfNanoseconds;
 
     /// <member name="OutputData">
-    /// If PrivateDataSize is greater than 0, OutputData[0] - OutputData[PrivateDataByteCount - 1] is reserved for IHV use.
-    /// pbOutput[PrivateDataByteCount] - pbOutput[MaxHWProtectionDataByteCount + PrivateDataByteCount - 1] contains the region 
+    /// If PrivateDataSize is greater than 0, OutputData[0] – OutputData[PrivateDataByteCount - 1] is reserved for IHV use.
+    /// pbOutput[PrivateDataByteCount] – pbOutput[MaxHWProtectionDataByteCount + PrivateDataByteCount - 1] contains the region 
     /// into which the driver should return the output data from the protection system command.The format and size of the 
     /// command is defined by the protection system specification.
     /// </member>
@@ -12902,6 +12672,12 @@ typedef enum MF_MEDIASOURCE_STATUS_INFO
 // {1913678B-FC0F-44DA-8F43-1BA3B526F4AE}
 cpp_quote("EXTERN_GUID(MF_SD_MEDIASOURCE_STATUS, 0x1913678b, 0xfc0f, 0x44da, 0x8f, 0x43, 0x1b, 0xa3, 0xb5, 0x26, 0xf4, 0xae);")
 
+// Enum describing the packing for spherical video frames
+typedef enum _MFVideoSphericalFormat {
+    MFVideoSphericalFormat_Unsupported = 0,
+    MFVideoSphericalFormat_Equirectangular = 1
+} MFVideoSphericalFormat;
+
 // Struct describing the view direction for spherical video
 typedef struct _MF_VIDEO_SPHERICAL_VIEWDIRECTION
 {
@@ -12967,8 +12743,8 @@ cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
 //  TODO_WIN32_WINNT_REDSTONE
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 // {616DE972-83AD-4950-8170-630D19CBE307}
 // MF_ST_MEDIASOURCE_COLLECTION
@@ -13032,22 +12808,6 @@ cpp_quote( "EXTERN_GUID( MF_DEVICESTREAM_REQUIRED_CAPABILITIES, 0x6D8B957E, 0x7C
 // Transform stream, the Sensor Transform can specify SDDL on
 // the stream.
 cpp_quote( "EXTERN_GUID( MF_DEVICESTREAM_REQUIRED_SDDL, 0x331AE85D, 0xC0D3, 0x49BA, 0x83, 0xBA, 0x82, 0xA1, 0x2D, 0x63, 0xCD, 0xD6);" )
-
-// MF_DEVICEMFT_SENSORPROFILE_COLLECTION
-// Data type: IUnknown
-// IMFSensorProfileCollection interface that SGT Factory can provide to indicate new
-// profiles available to the SG generation.
-cpp_quote("EXTERN_GUID(MF_DEVICEMFT_SENSORPROFILE_COLLECTION, 0x36EBDC44, 0xB12C, 0x441B, 0x89, 0xF4, 0x08, 0xB2, 0xF4, 0x1A, 0x9C, 0xFC );")
-
-// MF_DEVICESTREAM_SENSORSTREAM_ID
-// Data type: UINT32
-// When device streams are marked as hidden due to new profile logic, we still need to
-// match the device stream to the sensor stream.  The sensor group contains all the
-// streams, including the hidden ones.  The device stream IDs get translated based on
-// what is hidden and what is not hidden, so we need to add an attribute to the device
-// stream showing the "original" sensor stream ID.  We want to avoid overloading the
-// device stream ID since that may be used by multiple components in the pipeline.
-cpp_quote("EXTERN_GUID(MF_DEVICESTREAM_SENSORSTREAM_ID, 0xE35B9FE4, 0x0659, 0x4CAD, 0xBB, 0x51, 0x33, 0x16, 0x0B, 0xE7, 0xE4, 0x13 );")
 
 typedef enum
 {
@@ -13239,90 +12999,7 @@ cpp_quote("    _COM_Outptr_ IMFSensorStream** ppStream")
 cpp_quote("    );")
 cpp_quote("")
 
-typedef struct
-{
-    GUID    Type;
-    UINT32  Index;
-    UINT32  Unused;
-} SENSORPROFILEID;
-
-[
-    object,
-    uuid(22F765D1-8DAB-4107-846D-56BAF72215E7),
-    helpstring("IMFSensorProfile Interface"),
-    local
-]
-interface IMFSensorProfile : IUnknown
-{
-    HRESULT GetProfileId(
-        [out, annotation("_Out_")] SENSORPROFILEID* pId
-        );
-
-    HRESULT AddProfileFilter(
-        [in, annotation("_In_")] UINT32 StreamId, 
-        [in, annotation("_In_z_")] LPCWSTR wzFilterSetString
-        );
-
-    HRESULT IsMediaTypeSupported(
-        [in, annotation("_In_")] UINT32 StreamId, 
-        [in, annotation("_In_")] IMFMediaType* pMediaType, 
-        [out, annotation("_Out_")] BOOL* pfSupported
-        );
-
-    HRESULT AddBlockedControl(
-        [in, annotation("_In_z_")] LPCWSTR wzBlockedControl
-        );
-};
-
-[
-    object,
-    uuid(C95EA55B-0187-48BE-9353-8D2507662351),
-    helpstring("IMFSensorProfileCollection Interface"),
-    local
-]
-interface IMFSensorProfileCollection : IUnknown
-{
-    DWORD GetProfileCount(
-        );
-
-    HRESULT GetProfile(
-        [in, annotation("_In_")] DWORD Index,
-        [out, annotation("_COM_Outptr_")] IMFSensorProfile** ppProfile
-        );
-
-    HRESULT AddProfile(
-        [in, annotation("_In_")] IMFSensorProfile* pProfile
-        );
-
-    HRESULT FindProfile(
-        [in, annotation("_In_")] SENSORPROFILEID* ProfileId, 
-        [out, annotation("_COM_Outptr_")] IMFSensorProfile** ppProfile
-        );
-
-    void RemoveProfileByIndex(
-        [in, annotation("_In_")] DWORD Index
-        );
-
-    void RemoveProfile(
-        [in, annotation("_In_")] SENSORPROFILEID* ProfileId
-        );
-};
-
-cpp_quote("STDAPI")
-cpp_quote("MFCreateSensorProfile(")
-cpp_quote("    _In_ REFGUID ProfileType,")
-cpp_quote("    _In_ UINT32 ProfileIndex,")
-cpp_quote("    _In_opt_z_ LPCWSTR Constraints,")
-cpp_quote("    _COM_Outptr_ IMFSensorProfile** ppProfile")
-cpp_quote("    );")
-
-cpp_quote("STDAPI")
-cpp_quote("MFCreateSensorProfileCollection(")
-cpp_quote("    _COM_Outptr_ IMFSensorProfileCollection** ppSensorProfile")
-cpp_quote("    );")
-
-
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 [
@@ -13440,478 +13117,3 @@ cpp_quote("    );")
 
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
-
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
-
-// Focal lengths and principal points to be used together with 
-// distortion model coefficients to create complete parameter set
-// for distortion model.
-typedef struct _MFCameraIntrinsic_CameraModel
-{
-    FLOAT FocalLength_x;
-    FLOAT FocalLength_y;
-    FLOAT PrincipalPoint_x;
-    FLOAT PrincipalPoint_y;
-} MFCameraIntrinsic_CameraModel;
-
-// Coefficients for radial lens distortion model with 6 radial
-// and 2 tangential parameters
-typedef struct _MFCameraIntrinsic_DistortionModel6KT
-{
-    FLOAT Radial_k1;
-    FLOAT Radial_k2;
-    FLOAT Radial_k3;
-    FLOAT Radial_k4;
-    FLOAT Radial_k5;
-    FLOAT Radial_k6;
-    FLOAT Tangential_p1;
-    FLOAT Tangential_p2;
-} MFCameraIntrinsic_DistortionModel6KT;
-
-// Coefficients for ArcTan or F-Theta lens distortion model.
-// This is equidistant fish-eye lens model
-typedef struct _MFCameraIntrinsic_DistortionModelArcTan
-{
-    FLOAT Radial_k0;
-    FLOAT DistortionCenter_x; // center of distortion in Z=1 plane, x
-    FLOAT DistortionCenter_y; // center of distortion in Z=1 plane, y
-    FLOAT Tangential_x;
-    FLOAT Tangential_y;
-} MFCameraIntrinsic_DistortionModelArcTan;
-
-typedef enum _MFCameraIntrinsic_DistortionModelType {
-    MFCameraIntrinsic_DistortionModelType_6KT = 0,
-    MFCameraIntrinsic_DistortionModelType_ArcTan
-} MFCameraIntrinsic_DistortionModelType;
-
-typedef struct _MFExtendedCameraIntrinsic_IntrinsicModel
-{
-    // Pixel size of the frame
-    UINT32 Width;
-    UINT32 Height;
-
-    // Identifier for camera's that provide two or more frames as one combined frame
-    // E.g., 360-cameras typically contains two physical camera sensors but provides single stream of samples where one sample contains
-    // two frames, one from each sensor. This field is used to identify those individual frames starting from top-left with id 0.
-    //
-    // Example of 2x1 combined frames and their identification: [0][1]
-    UINT32 SplitFrameId;
-
-    // Pinhole camera model parameters
-    MFCameraIntrinsic_CameraModel CameraModel;
-} MFExtendedCameraIntrinsic_IntrinsicModel;
-
-[
-    object,
-    uuid(5C595E64-4630-4231-855A-12842F733245),
-    local
-]
-interface IMFExtendedCameraIntrinsicModel : IUnknown
-{
-    HRESULT GetModel(
-        [out, annotation("_Out_")] MFExtendedCameraIntrinsic_IntrinsicModel* pIntrinsicModel
-        );
-    
-    HRESULT SetModel(
-        [in, annotation("_In_")] const MFExtendedCameraIntrinsic_IntrinsicModel* pIntrinsicModel
-        );
-
-    HRESULT GetDistortionModelType(
-        [out, annotation("_Out_")] MFCameraIntrinsic_DistortionModelType* pDistortionModelType
-        );
-};
-
-[
-    object,
-    uuid(74C2653B-5F55-4EB1-9F0F-18B8F68B7D3D),
-    local
-]
-interface IMFExtendedCameraIntrinsicsDistortionModel6KT : IUnknown
-{
-    HRESULT GetDistortionModel(
-        [out, annotation("_Out_")] MFCameraIntrinsic_DistortionModel6KT* pDistortionModel
-        );
-
-    HRESULT SetDistortionModel(
-        [in, annotation("_In_")] const MFCameraIntrinsic_DistortionModel6KT* pDistortionModel
-        );
-};
-
-[
-    object,
-    uuid(812D5F95-B572-45DC-BAFC-AE24199DDDA8),
-    local
-]
-interface IMFExtendedCameraIntrinsicsDistortionModelArcTan : IUnknown
-{
-    HRESULT GetDistortionModel(
-        [out, annotation("_Out_")] MFCameraIntrinsic_DistortionModelArcTan* pDistortionModel
-        );
-
-    HRESULT SetDistortionModel(
-        [in, annotation("_In_")] const MFCameraIntrinsic_DistortionModelArcTan* pDistortionModel
-        );
-};
-
-[
-    object,
-    uuid(687F6DAC-6987-4750-A16A-734D1E7A10FE),
-    local
-]
-interface IMFExtendedCameraIntrinsics : IUnknown
-{
-    // Initialize from buffer will clear any existing models in underlying data store
-    HRESULT InitializeFromBuffer(
-        [in, size_is(dwBufferSize), annotation("_In_reads_bytes_(dwBufferSize)")] BYTE* pbBuffer,
-        [in] DWORD dwBufferSize
-        );
-
-    HRESULT GetBufferSize(
-        [out, annotation("_Out_")] DWORD* pdwBufferSize
-        );
-
-    HRESULT SerializeToBuffer(
-        [out, annotation("_Out_writes_bytes_to_(*pdwBufferSize, *pdwBufferSize)")] BYTE* pbBuffer,
-        [out, annotation("_Inout_")] DWORD* pdwBufferSize
-        );
-
-    HRESULT GetIntrinsicModelCount(
-        [out, annotation("_Out_")] DWORD* pdwCount
-        );
-    
-    HRESULT GetIntrinsicModelByIndex(
-        [in] DWORD dwIndex,
-        [out, annotation("_COM_Outptr_")] IMFExtendedCameraIntrinsicModel** ppIntrinsicModel
-        );
-
-    HRESULT AddIntrinsicModel(
-        [in, annotation("_In_")] IMFExtendedCameraIntrinsicModel* pIntrinsicModel
-        );
-
-};
-
-// MFStreamExtension_ExtendedCameraIntrinsics 
-// {AA74B3DF-9A2C-48D6-8393-5BD1C1A81E6E}
-// Value type: Blob
-// Stores camera intrinsics data on stream attribute store
-cpp_quote("DEFINE_GUID(MFStreamExtension_ExtendedCameraIntrinsics,")
-cpp_quote("    0xaa74b3df, 0x9a2c, 0x48d6, 0x83, 0x93, 0x5b, 0xd1, 0xc1, 0xa8, 0x1e, 0x6e);")
-
-// MFSampleExtension_ExtendedCameraIntrinsics 
-// {560BC4A5-4DE0-4113-9CDC-832DB9740F3D}
-// Value type: Blob
-// Stores camera intrinsics data on the sample's (a.k.a frame) attribute store
-cpp_quote("DEFINE_GUID(MFSampleExtension_ExtendedCameraIntrinsics,")
-cpp_quote("    0x560bc4a5, 0x4de0, 0x4113, 0x9c, 0xdc, 0x83, 0x2d, 0xb9, 0x74, 0xf, 0x3d);")
-
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS5) ")
-
-cpp_quote("STDAPI")
-cpp_quote("MFCreateExtendedCameraIntrinsics(")
-cpp_quote("    _COM_Outptr_ IMFExtendedCameraIntrinsics** ppExtendedCameraIntrinsics")
-cpp_quote("    );")
-
-cpp_quote("STDAPI")
-cpp_quote("MFCreateExtendedCameraIntrinsicModel(")
-cpp_quote("    const MFCameraIntrinsic_DistortionModelType distortionModelType,")
-cpp_quote("    _COM_Outptr_ IMFExtendedCameraIntrinsicModel** ppExtendedCameraIntrinsicModel")
-cpp_quote("    );")
-
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5) ")
-
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
-
-
-///////////////////////////////////////////////////////////////////////////////
-//
-// IMFExtendedCameraControl Interface
-//
-///////////////////////////////////////////////////////////////////////////////
-[
-    object,
-    uuid(38E33520-FCA1-4845-A27A-68B7C6AB3789),
-    helpstring("IMFExtendedCameraControl Interface"),
-    local
-]
-/// <summary>
-/// This interface is used to configure the camera's extended properties.
-/// </summary>
-interface IMFExtendedCameraControl : IUnknown
-{
-    /// <summary>
-    /// Queries for property capabilities.
-    /// </summary>
-    /// <return>
-    /// ULONGLONG mapping to property capabilities (KSCAMERA_EXTENDEDPROP_*) defined in ksmedia.h
-    /// </return>
-    ULONGLONG GetCapabilities();
-
-    /// <summary>
-    /// Sets the property flags.
-    /// </summary>  
-    /// <param name="ulFlags">
-    /// ULONGLONG mapping to property flags (KSCAMERA_EXTENDEDPROP_*) defined in ksmedia.h
-    /// </param>
-    HRESULT SetFlags([in, annotation("_In_")] ULONGLONG ulFlags);
-
-    /// <summary>
-    /// Queries for property flags.
-    /// </summary>
-    /// <return>
-    /// ULONGLONG mapping to property flags (KSCAMERA_EXTENDEDPROP_*) defined in ksmedia.h
-    /// </return>
-    ULONGLONG GetFlags();
-
-    /// <summary>
-    /// Locks the internal payload buffer for query/changes.
-    /// </summary>  
-    /// <param name="ppPayload">
-    /// BYTE pointer to the buffer containing the raw payload.
-    /// Caller should not free the buffer but instead call UnlockPayload
-    /// </param>
-    /// <param name="pulPayload">
-    /// Size of the payload.
-    /// </param>
-    HRESULT LockPayload([out, annotation("_Outptr_result_buffer_(*pulPayload)")] BYTE** ppPayload, [out, annotation("_Out_")] ULONG* pulPayload);
-
-    /// <summary>
-    /// Unlocks the raw payload contained in this control.
-    /// </summary>  
-    HRESULT UnlockPayload();
-
-    /// <summary>
-    /// Commits the configured control settings to the camera driver.
-    /// </summary>
-    HRESULT CommitSettings();
-};
-
-
-///////////////////////////////////////////////////////////////////////////////
-//
-// IMFExtendedCameraController Interface
-//
-///////////////////////////////////////////////////////////////////////////////
-[
-    object,
-    uuid(B91EBFEE-CA03-4AF4-8A82-A31752F4A0FC),
-    helpstring("IMFExtendedCameraController Interface"),
-    local
-]
-/// <summary>
-/// This interface is used to configure the camera's extended properties.
-/// </summary>
-interface IMFExtendedCameraController : IUnknown
-{
-    /// <summary>
-    /// Allows an app to get the current camera's extended property controls
-    /// </summary>
-    /// <param name = "dwStreamIndex">
-    /// Indicates stream index to use for this property.
-    /// MF_CAPTURE_ENGINE_MEDIASOURCE indicates a filter level property.
-    /// </param>
-    /// <param name = "ulPropertyId">
-    /// ID index for identifying the property within KSPROPERTYSETID_ExtendedCameraControl.
-    /// </param>
-    /// <param name = "ppControl">
-    /// IMFExtendedCameraControl pointer, representing the control.
-    /// </param>
-    HRESULT GetExtendedCameraControl(
-        [in, annotation("_In_")] DWORD dwStreamIndex,
-        [in, annotation("_In_")] ULONG ulPropertyId,
-        [out, annotation("_COM_Outptr_")] IMFExtendedCameraControl** ppControl);
-};
-
-
-[
-    object,
-    uuid(F25362EA-2C0E-447F-81E2-755914CDC0C3),
-    helpstring("IMFRelativePanelReport Interface"),
-    local
-]
-/// <summary>
-/// This interface is used to retrieve the relative panel current value.
-/// </summary>
-interface IMFRelativePanelReport : IUnknown
-{
-    /// <summary>
-    /// Allows an app to get the current relative panel value
-    /// </summary>
-    /// <param name = "panel"> 
-    /// Indicates the panel associated with the camera's relative facing to the displayRegion, using a 
-    /// value from the ACPI_PLD_PANEL enumeration. Only the enumeration values of AcpiPldPanelFront, 
-    /// AcpiPldPanelBack, and AcpiPldPanelUnknown are expected. 
-    /// </param>
-    HRESULT GetRelativePanel(
-        [out, annotation("_Out_")] ULONG* panel
-    );
-};
-
-[
-    object,
-    uuid(421AF7F6-573E-4AD0-8FDA-2E57CEDB18C6),
-    helpstring("IMFRelativePanelWatcher Interface"),
-    local
-]
-/// <summary>
-/// This interface is used to control a IMFAsyncCallback, with an IMFAsyncResult to retrieve a report of its value.
-/// </summary>
-interface IMFRelativePanelWatcher : IMFShutdown
-{
-    HRESULT BeginGetReport([in, annotation("_In_")] IMFAsyncCallback* pCallback, [in, annotation("_In_opt_")] IUnknown* pState);
-
-    HRESULT EndGetReport([in, annotation("_In_")] IMFAsyncResult* pResult, [out, annotation("_COM_Outptr_")] IMFRelativePanelReport** ppRelativePanelReport);
-
-    /// <summary>
-    /// Allows an app to retrieve the report of the current relative panel value
-    /// </summary>
-    /// <param name = "ppRelativePanelReport">
-    /// IMFRelativePanelReport pointer, representing the panel value.
-    /// </param>
-    HRESULT GetReport(
-        [out, annotation("_COM_Outptr_")] IMFRelativePanelReport** ppRelativePanelReport
-        );
-};
-
-/// <summary>
-/// Allows an app to create a Relative Panel Watcher
-/// </summary>
-/// <param name = "videoDeviceId">
-/// string symbolic link name of the video capture device
-/// </param>
-/// <param name = "displayMonitorDeviceId">
-/// string symbolic link name of the display monitor device
-/// </param>
-/// <param name = "ppRelativePanelWatcher"
-/// IMFRelativePanelWatcher pointer, representing the watcher
-/// </param>
-cpp_quote("")
-cpp_quote("STDAPI")
-cpp_quote("MFCreateRelativePanelWatcher(")
-cpp_quote("    _In_ PCWSTR videoDeviceId,")
-cpp_quote("    _In_ PCWSTR displayMonitorDeviceId,")
-cpp_quote("    _COM_Outptr_ IMFRelativePanelWatcher** ppRelativePanelWatcher")
-cpp_quote("    );")
-
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
-
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
-
-[
-    object,
-    local,
-    uuid(725B77C7-CA9F-4FE5-9D72-9946BF9B3C70),
-    helpstring("IMFVideoCaptureSampleAllocator Interface"),
-    pointer_default(unique)
-]
-/// <summary>
-/// The IMFVideoCaptureSampleAllocator interface is a specialized
-/// sample allocator for video capture devices.
-/// </summary>
-interface IMFVideoCaptureSampleAllocator : IMFVideoSampleAllocator
-{
-    /// <param name="cbSampleSize">
-    /// Sample size in bytes.
-    /// The actual sample size used by the allocator is the maximum of
-    /// the size required by pMediaType and cbSampleSize.
-    /// </param>
-    /// <param name="cbCaptureMetadataSize">
-    /// Capture metadata size in bytes. Applies only to callers that want to
-    /// to include additional metadata with the captured frames. The metadata size
-    /// should include the size of a KSCAMERA_METADATA_ITEMHEADER in addition to
-    /// the size of the metadata payload itself.
-    /// </param>
-    /// <param name="cbAlignment">
-    /// Buffer alignment size in bytes.
-    /// The default and minimum alignment size is 4KB. Custom alignment sizes
-    /// less than 4KB will be treated as 4KB.
-    /// </param>
-    /// <param name="cMinimumSamples">
-    /// Minimum number of pre-allocated samples.
-    /// This method will fail if the allocator cannot pre-allocate the specified
-    /// minimum number of samples.
-    /// </param>
-    /// <param name="pAttributes">
-    /// Optional parameter. An IMFAttributes store with additional configuration
-    /// attributes for the sample allocator. The attributes that are accepted
-    /// are the same as for IMFVideoSampleAllocatorEx::InitializeSampleAllocatorEx.
-    /// (See online documentation for that API for more details.)
-    /// </param>
-    /// <param name="pMediaType">
-    /// The IMFMediaType for which samples will be allocator. The sample
-    /// allocator uses this parameter to calculate the minimum required size
-    /// for the media samples.
-    /// </param>
-    HRESULT InitializeCaptureSampleAllocator(
-        [in, annotation("_In_")] DWORD cbSampleSize,
-        [in, annotation("_In_")] DWORD cbCaptureMetadataSize,
-        [in, annotation("_In_")] DWORD cbAlignment,
-        [in, annotation("_In_")] DWORD cMinimumSamples,
-        [in, annotation("_In_opt_")] IMFAttributes *pAttributes,
-        [in, annotation("_In_")] IMFMediaType *pMediaType
-    );
-};
-
-/// <summary>
-///     The enumeration type defines video capture sample allocator mode
-/// </summary>
-typedef enum MFSampleAllocatorUsage
-{
-    MFSampleAllocatorUsage_UsesProvidedAllocator = 0,
-    MFSampleAllocatorUsage_UsesCustomAllocator,
-    MFSampleAllocatorUsage_DoesNotAllocate
-} MFSampleAllocatorUsage;
-
-[
-    object,
-    uuid(DA62B958-3A38-4A97-BD27-149C640C0771),
-    helpstring("IMFSampleAllocatorControl Interface"),
-    local
-]
-/// <summary>
-/// An enumeration that specifies how an object that implements
-/// IMFSampleAllocatorControl uses a sample allocator.
-/// </summary>
-interface IMFSampleAllocatorControl : IUnknown
-{
-    /// <summary>
-    /// Sets the default sample allocator to use for the specified output stream.
-    /// When this allocator is in use, the sample allocator usage value is
-    /// MFSampleAllocatorUsage_UsesProvidedAllocator.
-    /// </summary>
-    /// <param name="dwOutputStreamID">
-    /// The ID of the output stream that the pAllocator parameter applies to.
-    /// </param>
-    /// <param name="pAllocator">
-    /// Provides a sample allocator to use for the specified output stream. The
-    /// allocator must support one of the MF allocator interfaces, such as,
-    /// IMFVideoCaptureSampleAllocator or IMFVideoSampleAllocatorEx.
-    /// </param>
-    HRESULT SetDefaultAllocator(
-        [in, annotation("_In_")] DWORD dwOutputStreamID,
-        [in, annotation("_In_")] IUnknown *pAllocator
-    );
-
-    /// <summary>
-    /// Retrieves the sample allocator usage for the specified output stream.
-    /// </summary>
-    /// <param name="dwOutputStreamID">
-    /// The ID of the output stream whose sample allocator usage is requested.
-    /// </param>
-    /// <param name="pdwInputStreamID">
-    /// If the allocator usage is MFSampleAllocatorUsage_DoesNotAllocate,
-    /// then this output parameter is set to the ID of the input stream that
-    /// the output samples are coming from.
-    /// For all other allocator usage values, this parameter shall be ignored.
-    /// </param>
-    /// <param name="peUsage">
-    /// The sample allocator usage of the specified output stream.
-    /// </param>
-    HRESULT GetAllocatorUsage(
-        [in, annotation("_In_")] DWORD dwOutputStreamID,
-        [out, annotation("_Out_")] DWORD* pdwInputStreamID,
-        [out, annotation("_Out_")] MFSampleAllocatorUsage* peUsage
-    );
-};
-
-#pragma endregion // Application Family  

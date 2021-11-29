@@ -6,16 +6,17 @@
 // The majority of the C Standard Library <math.h> functionality.
 //
 #pragma once
-#ifndef _INC_MATH // include guard for 3rd party interop
 #define _INC_MATH
 
 #include <corecrt.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
+
+#pragma warning(push)
+#pragma warning(disable:4738) // storing 32-bit float result in memory, possible loss of performance
+#pragma warning(disable:4820) // padding added after data member
+
+
 
 #ifndef __assembler
     // Definition of the _exception struct, which is passed to the matherr function
@@ -39,7 +40,7 @@ _CRT_BEGIN_C_HEADER
             double x, y; // real and imaginary parts
         };
 
-        #if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES && !defined __cplusplus
+        #if _CRT_INTERNAL_NONSTDC_NAMES && !defined __cplusplus
             // Non-ANSI name for compatibility
             #define complex _complex
         #endif
@@ -958,7 +959,7 @@ extern "C++"
 
 #endif // _CRT_FUNCTIONS_REQUIRED
 
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
 
     #define DOMAIN      _DOMAIN
     #define SING        _SING
@@ -986,7 +987,7 @@ extern "C++"
 
 #endif // _CRT_INTERNAL_NONSTDC_NAMES
 
+
+#pragma warning(pop)
+
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif /* _INC_MATH */

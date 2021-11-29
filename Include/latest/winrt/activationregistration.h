@@ -1,6 +1,6 @@
 /* Header file automatically generated from activationregistration.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0229 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -34,36 +34,27 @@
 
 #pragma once
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
 
 #if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
 #define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
@@ -94,9 +85,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IActivatableClassRegistration;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIActivatableClassRegistration ABI::Windows::Foundation::IActivatableClassRegistration
 
 #endif // ____x_ABI_CWindows_CFoundation_CIActivatableClassRegistration_FWD_DEFINED__
@@ -107,9 +97,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IDllServerActivatableClassRegistration;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIDllServerActivatableClassRegistration ABI::Windows::Foundation::IDllServerActivatableClassRegistration
 
 #endif // ____x_ABI_CWindows_CFoundation_CIDllServerActivatableClassRegistration_FWD_DEFINED__
@@ -120,9 +109,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IExeServerActivatableClassRegistration;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIExeServerActivatableClassRegistration ABI::Windows::Foundation::IExeServerActivatableClassRegistration
 
 #endif // ____x_ABI_CWindows_CFoundation_CIExeServerActivatableClassRegistration_FWD_DEFINED__
@@ -133,9 +121,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IExeServerRegistration;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIExeServerRegistration ABI::Windows::Foundation::IExeServerRegistration
 
 #endif // ____x_ABI_CWindows_CFoundation_CIExeServerRegistration_FWD_DEFINED__
@@ -163,7 +150,7 @@ IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
@@ -193,7 +180,7 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -223,7 +210,7 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
@@ -253,7 +240,7 @@ IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*>
 // correct parameterized interface specialization.
 typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
 ////  Define an alias for the C version of the interface for compatibility purposes.
 //#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
@@ -275,11 +262,11 @@ typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #if ( _MSC_VER >= 1020 )
 #pragma once
 #endif
-#pragma warning (push)
-#pragma warning (disable:4668) 
-#pragma warning (disable:4001) 
-#pragma once 
-#pragma warning (pop)
+#pragma warning(push)
+#pragma warning(disable:4668) 
+#pragma warning(disable:4001) 
+#pragma once
+#pragma warning(pop)
 
 namespace ABI {
     namespace Windows {
@@ -287,9 +274,8 @@ namespace ABI {
             /* [version] */
             typedef TrustLevel RegisteredTrustLevel;
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 /*
@@ -309,9 +295,8 @@ namespace ABI {
                 RegistrationScope_InboxApp,
             } RegistrationScope;
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 /*
@@ -331,9 +316,8 @@ namespace ABI {
                 ActivationType_RemoteProcess,
             } ActivationType;
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 /*
@@ -353,9 +337,8 @@ namespace ABI {
                 ThreadingType_MTA,
             } ThreadingType;
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 /*
@@ -375,12 +358,10 @@ namespace ABI {
                 IdentityType_ActivateAsPackage,
                 IdentityType_SessionVirtual,
                 IdentityType_SessionUser,
-                IdentityType_ActivateAsActivatingUser,
             } IdentityType;
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 /*
@@ -399,9 +380,8 @@ namespace ABI {
                 InstancingType_MultipleInstances,
             } InstancingType;
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 /*
@@ -420,9 +400,8 @@ namespace ABI {
                 ActivateAsUser_Supported,
             } ActivateAsUser;
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 /*
@@ -438,9 +417,8 @@ namespace ABI {
         namespace Foundation {
             /* [pointer_default(unique), uuid("9BBCAE23-3DD6-49C3-B63C-1C587E7A6A67"), object, version] */
             MIDL_INTERFACE("9BBCAE23-3DD6-49C3-B63C-1C587E7A6A67")
-            IActivatableClassRegistration : public IInspectable
+            IActivatableClassRegistration : IInspectable
             {
-            public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ActivatableClassId(
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * activatableClassID
                     ) = 0;
@@ -461,9 +439,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IActivatableClassRegistration=_uuidof(IActivatableClassRegistration);
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIActivatableClassRegistration;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIActivatableClassRegistration_INTERFACE_DEFINED__) */
@@ -482,9 +459,8 @@ namespace ABI {
         namespace Foundation {
             /* [pointer_default(ref), uuid("C8AA04F6-66C6-46A3-8FE6-F56BE7DDC091"), object, version] */
             MIDL_INTERFACE("C8AA04F6-66C6-46A3-8FE6-F56BE7DDC091")
-            IDllServerActivatableClassRegistration : public IInspectable
+            IDllServerActivatableClassRegistration : IInspectable
             {
-            public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DllPath(
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * dllPath
                     ) = 0;
@@ -496,9 +472,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IDllServerActivatableClassRegistration=_uuidof(IDllServerActivatableClassRegistration);
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIDllServerActivatableClassRegistration;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIDllServerActivatableClassRegistration_INTERFACE_DEFINED__) */
@@ -517,9 +492,8 @@ namespace ABI {
         namespace Foundation {
             /* [pointer_default(ref), uuid("9308C3C5-C2AC-49D1-A024-660A2BB5D5AC"), object, version] */
             MIDL_INTERFACE("9308C3C5-C2AC-49D1-A024-660A2BB5D5AC")
-            IExeServerActivatableClassRegistration : public IInspectable
+            IExeServerActivatableClassRegistration : IInspectable
             {
-            public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ServerRegistration(
                     /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IExeServerRegistration * * serverRegistration
                     ) = 0;
@@ -528,9 +502,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IExeServerActivatableClassRegistration=_uuidof(IExeServerActivatableClassRegistration);
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIExeServerActivatableClassRegistration;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIExeServerActivatableClassRegistration_INTERFACE_DEFINED__) */
@@ -549,9 +522,8 @@ namespace ABI {
         namespace Foundation {
             /* [pointer_default(unique), uuid("EC734A06-0401-4317-BAC1-3B7E207242E3"), object, version] */
             MIDL_INTERFACE("EC734A06-0401-4317-BAC1-3B7E207242E3")
-            IExeServerRegistration : public IInspectable
+            IExeServerRegistration : IInspectable
             {
-            public:
                 /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ServerName(
                     /* [retval, out] */__RPC__deref_out_opt HSTRING * serverName
                     ) = 0;
@@ -581,9 +553,8 @@ namespace ABI {
 
             extern MIDL_CONST_ID IID & IID_IExeServerRegistration=_uuidof(IExeServerRegistration);
             
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CIExeServerRegistration;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CIExeServerRegistration_INTERFACE_DEFINED__) */
@@ -592,9 +563,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class DllServerActivatableClassRegistration;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 
@@ -617,9 +587,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class ExeServerActivatableClassRegistration;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 
@@ -642,9 +611,8 @@ namespace ABI {
     namespace Windows {
         namespace Foundation {
             class ExeServerRegistration;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 
 
@@ -1000,11 +968,11 @@ interface __FIMapView_2_HSTRING_IInspectable
 #if ( _MSC_VER >= 1020 )
 #pragma once
 #endif
-#pragma warning (push)
-#pragma warning (disable:4668) 
-#pragma warning (disable:4001) 
-#pragma once 
-#pragma warning (pop)
+#pragma warning(push)
+#pragma warning(disable:4668) 
+#pragma warning(disable:4001) 
+#pragma once
+#pragma warning(pop)
 
 /* [version] */
 typedef TrustLevel __x_ABI_CWindows_CFoundation_CRegisteredTrustLevel;
@@ -1069,7 +1037,6 @@ enum __x_ABI_CWindows_CFoundation_CIdentityType
     IdentityType_ActivateAsPackage,
     IdentityType_SessionVirtual,
     IdentityType_SessionUser,
-    IdentityType_ActivateAsActivatingUser,
 } __x_ABI_CWindows_CFoundation_CIdentityType;
 
 

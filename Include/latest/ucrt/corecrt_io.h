@@ -11,10 +11,6 @@
 #include <corecrt_share.h>
 #include <corecrt_wio.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
 
 
@@ -71,6 +67,8 @@ struct __finddata64_t
     __int64     size;
     char        name[260];
 };
+
+
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 //
@@ -434,7 +432,7 @@ struct __finddata64_t
 
 
 
-    #if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+    #if _CRT_INTERNAL_NONSTDC_NAMES
         // Suppress warnings about double deprecation
         #pragma warning(push)
         #pragma warning(disable: 4141)
@@ -568,5 +566,3 @@ struct __finddata64_t
 #endif // _CRT_FUNCTIONS_REQUIRED
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

@@ -1541,36 +1541,36 @@ typedef HRESULT DRM_RESULT;
 #define MSPR_E_LICENSE_UNSUPPORTED_IN_CURRENT_FIRMWARE              MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00C7)
 
 /*
-*    MessageId:    MSPR_E_LSRD_GET_SECURITY_INFO
+*    MessageId:    MSPR_E_HDSANTIROLLBACK_GET_SECURITY_INFO
 *    Message Meaning:
-*       Getting the security information of the LSRD Registry failed.
+*       Getting the security information of the HDS AntiRollback Registry failed.
 *    Hex Value:    0x8004B8C8
 */
-#define MSPR_E_LSRD_GET_SECURITY_INFO                               MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00C8)
+#define MSPR_E_HDSANTIROLLBACK_GET_SECURITY_INFO                    MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00C8)
 
 /*
-*    MessageId:    MSPR_E_LSRD_CONVERT_SECURITYDESCRIPTOR_TO_STRING
+*    MessageId:    MSPR_E_HDSANTIROLLBACK_CONVERT_SECURITYDESCRIPTOR_TO_STRING
 *    Message Meaning:
-*       Converting the security descriptor of the LSRD Registry to string failed.
+*       Converting the security descriptor of the HDS AntiRollback Registry to string failed.
 *    Hex Value:    0x8004B8C9
 */
-#define MSPR_E_LSRD_CONVERT_SECURITYDESCRIPTOR_TO_STRING            MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00C9)
+#define MSPR_E_HDSANTIROLLBACK_CONVERT_SECURITYDESCRIPTOR_TO_STRING MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00C9)
 
 /*
-*    MessageId:    MSPR_E_LSRD_SECURITYDESCRIPTOR_SIZE
+*    MessageId:    MSPR_E_HDSANTIROLLBACK_SECURITYDESCRIPTOR_SIZE
 *    Message Meaning:
-*       The size of the security descriptor of the LSRD Registry is incorrect.
+*       The size of the security descriptor of the HDS AntiRollback is incorrect.
 *    Hex Value:    0x8004B8CA
 */
-#define MSPR_E_LSRD_SECURITYDESCRIPTOR_SIZE                         MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00CA)
+#define MSPR_E_HDSANTIROLLBACK_SECURITYDESCRIPTOR_SIZE              MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00CA)
 
 /*
-*    MessageId:    MSPR_E_LSRD_LICENSE_DELETION_REQUIRED
+*    MessageId:    MSPR_E_HDSANTIROLLBACK_LICENSE_DELETION_REQUIRED
 *    Message Meaning:
-*       LSRD is detected, and license deletion is required.
+*       HDS roll back is detected, and license deletion is required.
 *    Hex Value:    0x8004B8CB
 */
-#define MSPR_E_LSRD_LICENSE_DELETION_REQUIRED                       MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00CB)
+#define MSPR_E_HDSANTIROLLBACK_LICENSE_DELETION_REQUIRED            MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00CB)
 
 /*
 *    MessageId:    MSPR_E_PRO_HEADER_UNSPECIFIED_ENCRYPTION_TYPE
@@ -1602,39 +1602,7 @@ typedef HRESULT DRM_RESULT;
 *       Unable to initialize underlying DRM system without data store path.
 *    Hex Value:    0x8004B8CF
 */
-#define MSPR_E_HWDRM_SUPPORTED_BUT_NO_PATHS                         MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00CF)
-
-/*
-*    MessageId:    MSPR_E_AES_CBC_NOT_SUPPORTED
-*    Message Meaning:
-*       The content uses the AES CBC algorithm (CBCS or CBC1), but this is not supported.
-*    Hex Value:    0x8004B8D0
-*/
-#define MSPR_E_AES_CBC_NOT_SUPPORTED                                MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00D0)
-
-/*
-*    MessageId:    MSPR_E_AES_STRIPING_NOT_SUPPORTED
-*    Message Meaning:
-*       The content includes AES striping (CBCS or CENS), but this is not supported.
-*    Hex Value:    0x8004B8D1
-*/
-#define MSPR_E_AES_STRIPING_NOT_SUPPORTED                           MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00D1)
-
-/*
-*    MessageId:    MSPR_E_AES_SIXTEEN_BYTE_IVS_NOT_SUPPORTED
-*    Message Meaning:
-*       The content uses AES with sixteen byte IVs, but this is not supported.
-*    Hex Value:    0x8004B8D2
-*/
-#define MSPR_E_AES_SIXTEEN_BYTE_IVS_NOT_SUPPORTED                   MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00D2)
-
-/*
-*    MessageId:    MSPR_E_SAMPLE_ENCRYPTION_TYPE_DOES_NOT_MATCH_LICENSE
-*    Message Meaning:
-*       The sample encryption type does not match the encryption type in the license.
-*    Hex Value:    0x8004B8D3
-*/
-#define MSPR_E_SAMPLE_ENCRYPTION_TYPE_DOES_NOT_MATCH_LICENSE        MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00D3)
+#define MSPR_E_HWDRM_SUPPORTED_BUT_NO_PATHS              MAKE_DRM_RESULT(DRM_SEVERITY_ERROR,  DRM_FACILITY_ITF, DRM_E_MSPRSDK_BASECODE+0x00CF)
 
 #endif /* __WINDOWS_MEDIA_PROTECTION_PLAYREADY_ERRORS_H_ */
 

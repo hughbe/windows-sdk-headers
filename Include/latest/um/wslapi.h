@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * wslapi.h -- ApiSet Contract for api-ms-win-wsl-api-l1-1-0                     *
@@ -23,11 +24,31 @@
 #include <wtypes.h>
 #endif // _CONTRACT_GEN
 
+/* APISET_NAME: api-ms-win-wsl-api-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_WSL_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN7
+#define _APISET_WSL_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_WSL_VER >= 0x0100)
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SERVER)
 
 /* Determines if a distribution is already registered */
@@ -78,11 +99,11 @@ WslConfigureDistribution(
 HRESULT
 WslGetDistributionConfiguration(
     _In_ PCWSTR distributionName,
-    _Out_ ULONG* distributionVersion,
-    _Out_ ULONG* defaultUID,
-    _Out_ WSL_DISTRIBUTION_FLAGS* wslDistributionFlags,
-    _Outptr_result_buffer_(*defaultEnvironmentVariableCount) PSTR** defaultEnvironmentVariables,
-    _Out_ ULONG* defaultEnvironmentVariableCount
+    _Out_ ULONG * distributionVersion,
+    _Out_ ULONG * defaultUID,
+    _Out_ WSL_DISTRIBUTION_FLAGS * wslDistributionFlags,
+    _Outptr_result_buffer_(*defaultEnvironmentVariableCount) PSTR ** defaultEnvironmentVariables,
+    _Out_ ULONG * defaultEnvironmentVariableCount
     );
 
 
@@ -91,7 +112,7 @@ WslLaunchInteractive(
     _In_ PCWSTR distributionName,
     _In_opt_ PCWSTR command,
     _In_ BOOL useCurrentWorkingDirectory,
-    _Out_ DWORD* exitCode
+    _Out_ DWORD * exitCode
     );
 
 
@@ -103,7 +124,7 @@ WslLaunch(
     _In_ HANDLE stdIn,
     _In_ HANDLE stdOut,
     _In_ HANDLE stdErr,
-    _Out_ HANDLE* process
+    _Out_ HANDLE * process
     );
 
 
@@ -113,5 +134,7 @@ WslLaunch(
 #ifdef __cplusplus
 }
 #endif
+
+#endif // !defined(_CONTRACT_GEN) || (_APISET_LIBLOADER_VER >= 0x0100)
 
 #endif // _WSLAPI_H_

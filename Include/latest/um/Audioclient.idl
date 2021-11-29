@@ -25,8 +25,8 @@ cpp_quote("#endif")
 
 import "AudioSessionTypes.h";
 
-#pragma region Application and Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 //-------------------------------------------------------------------------
 // Description: AudioClient buffer flags
@@ -57,15 +57,11 @@ enum _AUDCLNT_BUFFERFLAGS
 //                                 may match this format only if the format can be accepted
 //                                 the audio driver and associated APOs. 
 //
-//     AUDCLNT_STREAMOPTIONS_AMBISONICS - The client is requesting the audio client to insert
-//                                  Ambisonics renderer and configure the pipeline to match Ambisonics format types
-//
 typedef [v1_enum] enum AUDCLNT_STREAMOPTIONS
 {
     AUDCLNT_STREAMOPTIONS_NONE  = 0x00,
     AUDCLNT_STREAMOPTIONS_RAW   = 0x01,
-    AUDCLNT_STREAMOPTIONS_MATCH_FORMAT   = 0x02,
-    AUDCLNT_STREAMOPTIONS_AMBISONICS = 0x04
+    AUDCLNT_STREAMOPTIONS_MATCH_FORMAT   = 0x02
 } AUDCLNT_STREAMOPTIONS;
 
 cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(AUDCLNT_STREAMOPTIONS);")
@@ -1089,7 +1085,6 @@ interface IAudioClock : IUnknown
 
 }; // IAudioClock
 
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 //-----------------------------------------------------------------------------
 // Description: IAudioClock2 interface
 //
@@ -1127,7 +1122,6 @@ interface IAudioClock2 : IUnknown
     //
     HRESULT GetDevicePosition([out, annotation("_Out_")] UINT64* DevicePosition, [out,unique, annotation("_Out_opt_")] UINT64* QPCPosition );
 }; // IAudioClock2
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 
 [
     uuid(f6e4c0a0-46d9-4fb8-be21-57a3ef2b626c),
@@ -1160,7 +1154,6 @@ interface IAudioClockAdjustment : IUnknown
     HRESULT SetSampleRate([in, annotation("_In_")] float flSampleRate);
 }; // IAudioClockAdjustment
 
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 //-----------------------------------------------------------------------------
 // Description: ISimpleAudioVolume interface
 //
@@ -1258,7 +1251,6 @@ interface ISimpleAudioVolume : IUnknown
     HRESULT GetMute([out, annotation("_Out_")] BOOL *pbMute);
 
 }
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -1373,173 +1365,8 @@ interface IAudioStreamVolume : IUnknown
     //
     HRESULT GetAllVolumes([in, annotation("_In_")] UINT32 dwCount,[out, size_is(dwCount), , annotation("_Out_writes_(dwCount)")] float *pfVolumes);
 }
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
-#pragma endregion
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
-//-------------------------------------------------------------------------
-// Description: Enumeration of ambisonics type 
-// 
-//      AMBISONICS_TYPE_FULL3D - Periphonics (Full 3D). 
-//                               Only option supported by AMBIX_BASIC format.
-//                                     
-typedef enum AMBISONICS_TYPE
-{ 
-    AMBISONICS_TYPE_FULL3D = 0 
-
-} AMBISONICS_TYPE;
-
-//------------------------------------------------------------------------- 
-// Description: Enumeration of ambisonics channel ordering 
-// 
-//      AMBISONICS_CHANNEL_ORDERING_ACN - Ambisonics channel number. 
-//                                        Only option supported by AMBIX_BASIC format.
-//  
-typedef enum AMBISONICS_CHANNEL_ORDERING
-{ 
-    AMBISONICS_CHANNEL_ORDERING_ACN = 0 
-
-} AMBISONICS_CHANNEL_ORDERING;
- 
-//------------------------------------------------------------------------- 
-// Description: Enumeration of ambisonics normalization 
-// 
-//     AMBISONICS_NORMALIZATION_SN3D - Schmidt semi-normalized spherical harmonics. 
-//                                     Only option supported by AMBIX_BASIC format.          
-//     AMBISONICS_NORMALIZATION_N3D - Schmidt normalized spherical harmonics. 
-//                                    N3D is supported by core decoder. 
-// 
-typedef enum AMBISONICS_NORMALIZATION
-{     
-    AMBISONICS_NORMALIZATION_SN3D = 0,     
-    AMBISONICS_NORMALIZATION_N3D 
-
-} AMBISONICS_NORMALIZATION;
- 
-cpp_quote("#define AMBISONICS_PARAM_VERSION_1 1")
-cpp_quote("// The AMBISONICS_PARAMS initialization structure should be completely filled out ")
-cpp_quote("// and then passed into the SetData API of IAmbisonicsControl Service on IAudioClient")
-cpp_quote("// unsigned int(32) size of AMBISONICS_PARAMS")
-cpp_quote("// unsigned int(32)  version of AMBISONICS_PARAMS struct")
-cpp_quote("// unsigned int(32) ambisonics_type is the enumeration of ambisonics types")
-cpp_quote("// unsigned int(32) ambisonics_channel_ordering is the enumeration of ambisonics channel ordering")
-cpp_quote("// unsigned int(32) ambisonics_normalization is the enumeration of ambisonics normaliztion")
-cpp_quote("// unsigned int(32) ambisonics_order")
-cpp_quote("// unsigned int(32) ambisonics_num_channels")
-cpp_quote("// unsigned int(32) ambisonics_channel_map is a sequence of 32-bit unsigned integers that maps audio channels in a given audio track to ambisonic components,")
-cpp_quote("// given the defined ambisonics_channel_ordering. The sequence of channel_map values should match the channel sequence within the given audio track.")
- 
-typedef struct AMBISONICS_PARAMS
-{
-    UINT32                          u32Size;
-    UINT32                          u32Version;
-    AMBISONICS_TYPE                 u32Type;
-    AMBISONICS_CHANNEL_ORDERING     u32ChannelOrdering;     
-    AMBISONICS_NORMALIZATION        u32Normalization;     
-    UINT32                          u32Order;     
-    UINT32                          u32NumChannels;
-    [annotation("__field_ecount(u32NumChannels)")]     
-    [size_is(u32NumChannels)] UINT32 *pu32ChannelMap;
-} AMBISONICS_PARAMS;
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-//-----------------------------------------------------------------------------
-// Description: IAudioAmbisonicsControl interface
-//
-[
-object,
-uuid(28724C91-DF35-4856-9F76-D6A26413F3DF),
-pointer_default(unique),
-]
-interface IAudioAmbisonicsControl : IUnknown
-{
-    //-------------------------------------------------------------------------
-    // Description:
-    //
-    //  Sets the Ambisonics Metadata for the audio stream.
-    //
-    // Parameters:
-    //
-    //     cbAmbisonicsParams - [in] complete size of the buffer point by AMBISONICS_PARAMS.
-    //     pAmbisonicsParams  - [in] buffer containing metadata.
-    //
-    // Return values:
-    //
-    //     S_OK        Successful completion.
-    //     OTHER       Other error.
-    //
-    //
-    HRESULT SetData([in, size_is(cbAmbisonicsParams)] const AMBISONICS_PARAMS *pAmbisonicsParams, [in] UINT32 cbAmbisonicsParams);
-
-    //-------------------------------------------------------------------------
-    // Description:
-    //
-    //  Enables/Disables head tracking
-    //
-    // Parameters:
-    //
-    //     bEnableHeadTracking - [in] bool to decide whether the Audio Ambisonics renderer does head tracking. 
-    //                            Default value is set to TRUE  if endpoint like HMD is capable of head tracking otherwise FALSE
-    //
-    // Return values:
-    //
-    //     S_OK        Successful completion.
-    //     OTHER       Other error.
-    //
-    //
-    HRESULT SetHeadTracking([in] BOOL bEnableHeadTracking);
-
-    //-------------------------------------------------------------------------
-    // Description:
-    //
-    //  Gets if head tracking is enabled or not
-    //
-    // Parameters:
-    //
-    //     pbEnableHeadTracking - [out] bool indicating if Audio Ambisonic renderer does head tracking. 
-    //                             Default value is set to TRUE if endpoint like HMD is capable of head tracking otherwise FALSE   
-    //
-    // Return values:
-    //
-    //
-    // Return values:
-    //
-    //     S_OK        Successful completion.
-    //     OTHER       Other error.
-    //
-    //
-    HRESULT GetHeadTracking([out] BOOL *pbEnableHeadTracking);
-
-
-    //-------------------------------------------------------------------------
-    // Description:
-    //
-    //  Sets rotation values in Quaternion
-    //  Quaternion represents orientation and rotation of objects in 3D
-    //  These Rotation values corresponds to head rotation/head tracking.
-    //  For e.g. a user panning 360 degree video to 90 degrees on the right will hear the audio as if the user's head is rotated to 90 degrees on the right.
-    //  This method will return error AUDCLNT_E_HEADTRACKING_ENABLED if the SetHeadTracking is set to TRUE (default is TRUE) i.e., the user will have to first call SetHeadTracking(FALSE) before using SetRotation.
-    //
-    // Parameters:
-    //
-    //    X - [in] X component of Quaternion
-    //    Y - [in] Y component of Quaternion
-    //    Z - [in] Z component of Quaternion
-    //    W - [in] W component of Quaternion
-    //
-    // Return values:
-    //
-    //     S_OK        Successful completion.
-    //     OTHER       Other error.
-    //
-    //
-    HRESULT SetRotation([in] float X, [in] float Y, [in] float Z, [in] float W);
-}
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
-
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1676,8 +1503,8 @@ interface IChannelAudioVolume : IUnknown
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application and Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 cpp_quote("#define AUDCLNT_ERR(n) MAKE_HRESULT(SEVERITY_ERROR, FACILITY_AUDCLNT, n)")
 cpp_quote("#define AUDCLNT_SUCCESS(n) MAKE_SCODE(SEVERITY_SUCCESS, FACILITY_AUDCLNT, n)")
@@ -1717,8 +1544,6 @@ cpp_quote("#define AUDCLNT_E_RESOURCES_INVALIDATED        AUDCLNT_ERR(0x026)")
 cpp_quote("#define AUDCLNT_E_RAW_MODE_UNSUPPORTED         AUDCLNT_ERR(0x027)")
 cpp_quote("#define AUDCLNT_E_ENGINE_PERIODICITY_LOCKED    AUDCLNT_ERR(0x028)")
 cpp_quote("#define AUDCLNT_E_ENGINE_FORMAT_LOCKED         AUDCLNT_ERR(0x029)")
-cpp_quote("#define AUDCLNT_E_HEADTRACKING_ENABLED         AUDCLNT_ERR(0x030)")
-cpp_quote("#define AUDCLNT_E_HEADTRACKING_UNSUPPORTED     AUDCLNT_ERR(0x040)")
 cpp_quote("#define AUDCLNT_S_BUFFER_EMPTY                 AUDCLNT_SUCCESS(0x001)")
 cpp_quote("#define AUDCLNT_S_THREAD_ALREADY_REGISTERED    AUDCLNT_SUCCESS(0x002)")
 cpp_quote("#define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)")
@@ -1726,5 +1551,5 @@ cpp_quote("#define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)
 // NOTE! error codes of 0x100 and above a reserved for SpatialAudioClient. AUDCLNT_ERR(0x100) to AUDCLNT_ERR(0x1FF)
 // NOTE! error codes of 0x200 and above a reserved for SpatialAudioMetadataClient. AUDCLNT_ERR(0x200) to AUDCLNT_ERR(0x2FF)
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion

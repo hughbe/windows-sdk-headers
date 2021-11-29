@@ -36,22 +36,9 @@ interface IEditionUpgradeHelper : IUnknown
     GetGenuineLocalStatus(
         [out]                   BOOL*                       isGenuine
     );
-};
 
-[
- object,
- uuid(F342D19E-CC22-4648-BB5D-03CCF75B47C5)
-]
-interface IWindowsLockModeHelper: IUnknown
-{
-
-    HRESULT
-    GetSMode(
-        [out]                   BOOL*                       isSmode
-    );
 
 };
-
 
 [
     object,
@@ -86,40 +73,6 @@ interface IEditionUpgradeBroker: IUnknown
 
 };
 
-[
-object,
-dual,
-oleautomation,
-nonextensible,
-uuid(B524F93F-80D5-4EC7-AE9E-D66E93ADE1FA)
-]
-interface IContainerActivationHelper: IUnknown
-{
-    HRESULT
-    CanActivateClientVM(
-        [out, retval]                   VARIANT_BOOL*                       isAllowed
-    );
-};
-
-[
-object,
-dual,
-oleautomation,
-nonextensible,
-uuid(C39948F0-6142-44FD-98CA-E1681A8D68B5)
-]
-interface IClipServiceNotificationHelper: IUnknown
-{
-    HRESULT
-    ShowToast(
-        [in, string]                    BSTR                                titleText,
-        [in, string]                    BSTR                                bodyText,
-        [in, string]                    BSTR                                packageName,
-        [in, string]                    BSTR                                appId,
-        [in, string]                    BSTR                                launchCommand
-    );
-};
-
 
 [
 uuid(09C6A793-92DC-4D27-A11D-3921C9314DED),
@@ -133,7 +86,6 @@ library EditionUpgradeHelperLib
     coclass EditionUpgradeHelper
     {
         [default] interface IEditionUpgradeHelper;
-        interface IWindowsLockModeHelper;
     }
 
     [
@@ -142,10 +94,8 @@ library EditionUpgradeHelperLib
     coclass EditionUpgradeBroker
     {
         [default] interface IEditionUpgradeBroker;
-        interface IContainerActivationHelper;
-        interface IClipServiceNotificationHelper;
     }
-
+    
 };
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion

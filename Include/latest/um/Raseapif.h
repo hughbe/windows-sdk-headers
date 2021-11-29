@@ -173,7 +173,6 @@ typedef enum _RAS_AUTH_ATTRIBUTE_TYPE_
     raatFastRoamedSession = 8100,   	// Value field is a 32 bit integral value
     raatEAPTLV = 8102,              // Value field is a Pointer
     raatCredentialsChanged,         // Value field is a Integer with boolean semantics
-    raatCertificateThumbprint = 8250,   // Value field is a Pointer
     raatPeerId = 9000,              // Value field is a pointer
     raatServerId,                   // Value field is a pointer
     raatMethodId,                   // Value field is a pointer

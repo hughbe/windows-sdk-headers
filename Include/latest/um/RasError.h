@@ -1732,6 +1732,8 @@ Abstract:
 
 #endif
 
+#define RASBASEEND                                 (RASBASE+272)
+
 #define ERROR_VPN_PLUGIN_GENERIC                   (RASBASE+273)
 /*
 * Couldn't connect to the VPN.
@@ -1746,8 +1748,6 @@ Abstract:
 /*
 * Couldn't connect because there was a problem with device compliance.
 */
-
-#define RASBASEEND                                 (RASBASE+275)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

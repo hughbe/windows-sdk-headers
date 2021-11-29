@@ -924,7 +924,6 @@ typedef struct  tagCDDDXGK_REDIRBITMAPPRESENTINFO
     RECT*           DirtyRect;                                  // in 
     UINT            NumContexts;                                // in
     HANDLE          hContext[WINDDI_MAX_BROADCAST_CONTEXT+1];   // in  Presenting DXGCONTEXTs
-    BOOLEAN         bDoNotSynchronizeWithDxContent;             // in
 } CDDDXGK_REDIRBITMAPPRESENTINFO;
 
 #endif // NTDDI_WIN8
@@ -4631,7 +4630,7 @@ BOOL APIENTRY EngGetFilePath(
             WCHAR (*pDest)[MAX_PATH+1]
     );
 
-#if defined(_M_AMD64) && (NTDDI_VERSION >= NTDDI_VISTA) && !defined(_CONTRACT_GEN)
+#if defined(_M_AMD64) && (NTDDI_VERSION >= NTDDI_VISTA)
 
 _Check_return_ 
 _Success_(((pBuffer != NULL && cjBufferSize != 0) && return == 1) ||

@@ -6,7 +6,6 @@
 // The C++ memory allocation library functionality
 //
 #pragma once
-#ifndef _INC_NEW // include guard for 3rd party interop
 #define _INC_NEW
 
 #include <corecrt.h>
@@ -42,9 +41,7 @@
 
 #endif // __cplusplus
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
+
 
 _CRT_BEGIN_C_HEADER
 
@@ -62,7 +59,3 @@ _ACRTIMP int __cdecl _set_new_mode(_In_ int _NewMode);
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-
-#endif // _INC_NEW

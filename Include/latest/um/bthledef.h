@@ -17,7 +17,7 @@ Environment:
 
 #ifndef __BTHLEDEF_H__
 #define __BTHLEDEF_H__
-
+  
 #ifdef _MSC_VER
 #pragma once
 #endif //_MSC_VER
@@ -227,7 +227,7 @@ DEFINE_GUID(BTH_LE_ATT_BLUETOOTH_BASE_GUID,                 0x00000000, 0x0000, 
 // MTU
 //
 #define BTHLEENUM_ATT_MTU_MIN                       (23)
-#define BTHLEENUM_ATT_MTU_MAX                       (0xFFFF)
+#define BTHLEENUM_ATT_MTU_MAX                       (MAX_USHORT)
 #define BTHLEENUM_ATT_MTU_DEFAULT                   (BTHLEENUM_ATT_MTU_MIN)
 #define BTHLEENUM_ATT_MTU_INITIAL_NEGOTIATION       (525)
 
@@ -288,17 +288,17 @@ typedef HANDLE BLUETOOTH_GATT_EVENT_HANDLE;
 
 typedef struct _BTH_LE_UUID {
     BOOLEAN IsShortUuid;
-
+    
 #ifdef MIDL_PASS
     [switch_type(BOOLEAN), switch_is((BOOLEAN)IsShortUuid)]
 #endif
     union {
-
+    
 #ifdef MIDL_PASS
         [case(TRUE)]
 #endif
         USHORT ShortUuid;
-
+        
 #ifdef MIDL_PASS
         [case(FALSE)]
 #endif
@@ -359,11 +359,11 @@ typedef struct _BTH_LE_GATT_DESCRIPTOR_VALUE {
     BTH_LE_UUID DescriptorUuid;
 
 #ifdef MIDL_PASS
-    [switch_type(BTH_LE_GATT_DESCRIPTOR_TYPE),
+    [switch_type(BTH_LE_GATT_DESCRIPTOR_TYPE), 
             switch_is((BTH_LE_GATT_DESCRIPTOR_TYPE)DescriptorType)]
 #endif
     union {
-
+    
 #ifdef MIDL_PASS
         [case(CharacteristicExtendedProperties)]
 #endif
@@ -391,19 +391,19 @@ typedef struct _BTH_LE_GATT_DESCRIPTOR_VALUE {
         [case(CharacteristicFormat)]
 #endif
         struct {
-            UCHAR Format;
+            UCHAR Format; 
             UCHAR Exponent;
             BTH_LE_UUID Unit;
             UCHAR NameSpace;
             BTH_LE_UUID Description;
         } CharacteristicFormat;
-
+        
 #ifdef MIDL_PASS
         [default]
             ;
 #endif
     };
-
+    
     ULONG DataSize;
 
 #ifdef MIDL_PASS
@@ -447,7 +447,7 @@ typedef ULONG64 BTH_LE_GATT_RELIABLE_WRITE_CONTEXT, *PBTH_LE_GATT_RELIABLE_WRITE
 
 #ifdef __cplusplus
 extern "C"{
-#endif
+#endif 
 
 FORCEINLINE
 BOOLEAN
@@ -458,7 +458,7 @@ IsBthLEUuidMatch(
 /*++
 
 Routine Description:
-
+    
     Determines if the two UUIDs match each other.  If both of the are
     short UUIDs, or if they are both long UUIDs, they will be compared
     directly.  Otherwise, the short UUID will be converted to a long UUID
@@ -467,15 +467,15 @@ Routine Description:
 Arguments:
     uuid1 - left comparand
     uuid2 - right comparand
-
+    
 
 Return Value:
     TRUE if the values are equal, FALSE otherwise
-
+    
   --*/
 {
     BTH_LE_UUID tempLongUuid = {0};
-
+    
     tempLongUuid.IsShortUuid = FALSE;
     tempLongUuid.Value.LongUuid = BTH_LE_ATT_BLUETOOTH_BASE_GUID;
 
@@ -490,13 +490,13 @@ Return Value:
         tempLongUuid.Value.LongUuid.Data1 += uuid2.Value.ShortUuid;
         return (0 == memcmp(&uuid1.Value.LongUuid, &tempLongUuid.Value.LongUuid, sizeof(GUID)));
     }
-
+    
     return FALSE;
 }
 
 #ifdef __cplusplus
     }
-#endif
+#endif 
 
 
 #endif //NTDDI_WIN8

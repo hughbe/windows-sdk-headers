@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.system.power.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,28 +75,39 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -104,6 +118,8 @@
 #include "EventToken.h"
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
+// Importing Collections header
+#include <windows.foundation.collections.h>
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 /* Forward Declarations */
@@ -114,10 +130,9 @@ namespace ABI {
         namespace System {
             namespace Power {
                 interface IBackgroundEnergyManagerStatics;
-            } /* Power */
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics ABI::Windows::System::Power::IBackgroundEnergyManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_FWD_DEFINED__
@@ -129,10 +144,9 @@ namespace ABI {
         namespace System {
             namespace Power {
                 interface IForegroundEnergyManagerStatics;
-            } /* Power */
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics ABI::Windows::System::Power::IForegroundEnergyManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_FWD_DEFINED__
@@ -144,10 +158,9 @@ namespace ABI {
         namespace System {
             namespace Power {
                 interface IPowerManagerStatics;
-            } /* Power */
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 #define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics ABI::Windows::System::Power::IPowerManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_FWD_DEFINED__
@@ -156,17 +169,18 @@ namespace ABI {
 
 // Collection interface definitions
 
+
 #ifndef DEF___FIEventHandler_1_IInspectable_USE
 #define DEF___FIEventHandler_1_IInspectable_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("c50898f6-c536-5f47-8583-8b2c2438a13b"))
-IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
+IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.EventHandler`1<Object>";
+        return L"Windows.Foundation.EventHandler`1<Object>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -174,49 +188,72 @@ IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
 // correct parameterized interface specialization.
 typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
 #define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
+//#define __FIEventHandler_1_IInspectable_t ABI::Windows::Foundation::IEventHandler<IInspectable*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIEventHandler_1_IInspectable_USE */
+
+
+
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
+            
             typedef struct TimeSpan TimeSpan;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace Power {
+                
                 typedef enum BatteryStatus : int BatteryStatus;
-            } /* Power */
+                
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace Power {
+                
                 typedef enum EnergySaverStatus : int EnergySaverStatus;
-            } /* Power */
+                
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace Power {
+                
                 typedef enum PowerSupplyStatus : int PowerSupplyStatus;
-            } /* Power */
+                
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -224,12 +261,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace Power {
+                /* [v1_enum, contract] */
                 enum BatteryStatus : int
                 {
                     BatteryStatus_NotPresent = 0,
@@ -237,11 +277,12 @@ namespace ABI {
                     BatteryStatus_Idle = 2,
                     BatteryStatus_Charging = 3,
                 };
-            } /* Power */
+                
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -249,23 +290,27 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace Power {
+                /* [v1_enum, contract] */
                 enum EnergySaverStatus : int
                 {
                     EnergySaverStatus_Disabled = 0,
                     EnergySaverStatus_Off = 1,
                     EnergySaverStatus_On = 2,
                 };
-            } /* Power */
+                
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -273,23 +318,27 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace Power {
+                /* [v1_enum, contract] */
                 enum PowerSupplyStatus : int
                 {
                     PowerSupplyStatus_NotPresent = 0,
                     PowerSupplyStatus_Inadequate = 1,
                     PowerSupplyStatus_Adequate = 2,
                 };
-            } /* Power */
+                
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -297,7 +346,9 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.System.Power.BackgroundEnergyManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -308,98 +359,61 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace Power {
-                MIDL_INTERFACE("b3161d95-1180-4376-96e1-4095568147ce")
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                IBackgroundEnergyManagerStatics : public IInspectable
+                /* [object, uuid("B3161D95-1180-4376-96E1-4095568147CE"), exclusiveto, contract] */
+                MIDL_INTERFACE("B3161D95-1180-4376-96E1-4095568147CE")
+                IBackgroundEnergyManagerStatics : IInspectable
                 {
-                public:
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_LowUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LowUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_NearMaxAcceptableUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NearMaxAcceptableUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_MaxAcceptableUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxAcceptableUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_ExcessiveUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExcessiveUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_NearTerminationUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NearTerminationUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_TerminationUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TerminationUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_RecentEnergyUsage(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecentEnergyUsage(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_RecentEnergyUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecentEnergyUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE add_RecentEnergyUsageIncreased(
-                        __FIEventHandler_1_IInspectable* handler,
-                        EventRegistrationToken* token
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_RecentEnergyUsageIncreased(
+                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE remove_RecentEnergyUsageIncreased(
-                        EventRegistrationToken token
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_RecentEnergyUsageIncreased(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE add_RecentEnergyUsageReturnedToLow(
-                        __FIEventHandler_1_IInspectable* handler,
-                        EventRegistrationToken* token
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_RecentEnergyUsageReturnedToLow(
+                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE remove_RecentEnergyUsageReturnedToLow(
-                        EventRegistrationToken token
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_RecentEnergyUsageReturnedToLow(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IBackgroundEnergyManagerStatics = _uuidof(IBackgroundEnergyManagerStatics);
-            } /* Power */
+                extern MIDL_CONST_ID IID & IID_IBackgroundEnergyManagerStatics=_uuidof(IBackgroundEnergyManagerStatics);
+                
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -407,7 +421,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.System.Power.ForegroundEnergyManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -418,86 +434,55 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace Power {
-                MIDL_INTERFACE("9ff86872-e677-4814-9a20-5337ca732b98")
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                IForegroundEnergyManagerStatics : public IInspectable
+                /* [object, uuid("9FF86872-E677-4814-9A20-5337CA732B98"), exclusiveto, contract] */
+                MIDL_INTERFACE("9FF86872-E677-4814-9A20-5337CA732B98")
+                IForegroundEnergyManagerStatics : IInspectable
                 {
-                public:
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_LowUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_LowUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_NearMaxAcceptableUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NearMaxAcceptableUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_MaxAcceptableUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxAcceptableUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_ExcessiveUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ExcessiveUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_RecentEnergyUsage(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecentEnergyUsage(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE get_RecentEnergyUsageLevel(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RecentEnergyUsageLevel(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE add_RecentEnergyUsageIncreased(
-                        __FIEventHandler_1_IInspectable* handler,
-                        EventRegistrationToken* token
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_RecentEnergyUsageIncreased(
+                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE remove_RecentEnergyUsageIncreased(
-                        EventRegistrationToken token
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_RecentEnergyUsageIncreased(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE add_RecentEnergyUsageReturnedToLow(
-                        __FIEventHandler_1_IInspectable* handler,
-                        EventRegistrationToken* token
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_RecentEnergyUsageReturnedToLow(
+                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-                    virtual HRESULT STDMETHODCALLTYPE remove_RecentEnergyUsageReturnedToLow(
-                        EventRegistrationToken token
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_RecentEnergyUsageReturnedToLow(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IForegroundEnergyManagerStatics = _uuidof(IForegroundEnergyManagerStatics);
-            } /* Power */
+                extern MIDL_CONST_ID IID & IID_IForegroundEnergyManagerStatics=_uuidof(IForegroundEnergyManagerStatics);
+                
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -505,7 +490,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.System.Power.PowerManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -516,77 +503,80 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace Power {
-                MIDL_INTERFACE("1394825d-62ce-4364-98d5-aa28c7fbd15b")
-                IPowerManagerStatics : public IInspectable
+                /* [object, uuid("1394825D-62CE-4364-98D5-AA28C7FBD15B"), exclusiveto, contract] */
+                MIDL_INTERFACE("1394825D-62CE-4364-98D5-AA28C7FBD15B")
+                IPowerManagerStatics : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_EnergySaverStatus(
-                        ABI::Windows::System::Power::EnergySaverStatus* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_EnergySaverStatus(
+                        /* [retval, out] */__RPC__out ABI::Windows::System::Power::EnergySaverStatus * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_EnergySaverStatusChanged(
-                        __FIEventHandler_1_IInspectable* handler,
-                        EventRegistrationToken* token
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_EnergySaverStatusChanged(
+                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_EnergySaverStatusChanged(
-                        EventRegistrationToken token
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_EnergySaverStatusChanged(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_BatteryStatus(
-                        ABI::Windows::System::Power::BatteryStatus* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BatteryStatus(
+                        /* [retval, out] */__RPC__out ABI::Windows::System::Power::BatteryStatus * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_BatteryStatusChanged(
-                        __FIEventHandler_1_IInspectable* handler,
-                        EventRegistrationToken* token
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_BatteryStatusChanged(
+                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_BatteryStatusChanged(
-                        EventRegistrationToken token
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_BatteryStatusChanged(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_PowerSupplyStatus(
-                        ABI::Windows::System::Power::PowerSupplyStatus* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PowerSupplyStatus(
+                        /* [retval, out] */__RPC__out ABI::Windows::System::Power::PowerSupplyStatus * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_PowerSupplyStatusChanged(
-                        __FIEventHandler_1_IInspectable* handler,
-                        EventRegistrationToken* token
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_PowerSupplyStatusChanged(
+                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_PowerSupplyStatusChanged(
-                        EventRegistrationToken token
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_PowerSupplyStatusChanged(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_RemainingChargePercent(
-                        INT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RemainingChargePercent(
+                        /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_RemainingChargePercentChanged(
-                        __FIEventHandler_1_IInspectable* handler,
-                        EventRegistrationToken* token
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_RemainingChargePercentChanged(
+                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_RemainingChargePercentChanged(
-                        EventRegistrationToken token
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_RemainingChargePercentChanged(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_RemainingDischargeTime(
-                        ABI::Windows::Foundation::TimeSpan* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RemainingDischargeTime(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_RemainingDischargeTimeChanged(
-                        __FIEventHandler_1_IInspectable* handler,
-                        EventRegistrationToken* token
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_RemainingDischargeTimeChanged(
+                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_RemainingDischargeTimeChanged(
-                        EventRegistrationToken token
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_RemainingDischargeTimeChanged(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPowerManagerStatics = _uuidof(IPowerManagerStatics);
-            } /* Power */
+                extern MIDL_CONST_ID IID & IID_IPowerManagerStatics=_uuidof(IPowerManagerStatics);
+                
+            } /* Windows */
         } /* System */
-    } /* Windows */
-} /* ABI */
+    } /* Power */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.System.Power.BackgroundEnergyManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.Power.IBackgroundEnergyManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -597,18 +587,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics;
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_System_Power_BackgroundEnergyManager_DEFINED
 #define RUNTIMECLASS_Windows_System_Power_BackgroundEnergyManager_DEFINED
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Power_BackgroundEnergyManager[] = L"Windows.System.Power.BackgroundEnergyManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.System.Power.ForegroundEnergyManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.Power.IForegroundEnergyManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -619,18 +608,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_System_Power_ForegroundEnergyManager_DEFINED
 #define RUNTIMECLASS_Windows_System_Power_ForegroundEnergyManager_DEFINED
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Power_ForegroundEnergyManager[] = L"Windows.System.Power.ForegroundEnergyManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.System.Power.PowerManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.Power.IPowerManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -646,6 +634,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Power_PowerManager[] = L"Windows.System.Power.PowerManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -682,49 +673,63 @@ EXTERN_C const IID IID___FIEventHandler_1_IInspectable;
 typedef struct __FIEventHandler_1_IInspectableVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIEventHandler_1_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIEventHandler_1_IInspectable * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIEventHandler_1_IInspectable * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIEventHandler_1_IInspectable* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIEventHandler_1_IInspectable* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIEventHandler_1_IInspectable* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIEventHandler_1_IInspectable* This,
-        IInspectable* sender,
-        IInspectable* args);
-
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIEventHandler_1_IInspectable * This,/* [in] */ __RPC__in_opt IInspectable *sender,/* [in] */ __RPC__in_opt IInspectable * *e);
     END_INTERFACE
 } __FIEventHandler_1_IInspectableVtbl;
 
 interface __FIEventHandler_1_IInspectable
 {
-    CONST_VTBL struct __FIEventHandler_1_IInspectableVtbl* lpVtbl;
+    CONST_VTBL struct __FIEventHandler_1_IInspectableVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FIEventHandler_1_IInspectable_QueryInterface(This,riid,ppvObject)	\
+        ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIEventHandler_1_IInspectable_AddRef(This)	\
+        ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIEventHandler_1_IInspectable_Release(This)	\
+        ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIEventHandler_1_IInspectable_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIEventHandler_1_IInspectable_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIEventHandler_1_IInspectable_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIEventHandler_1_IInspectable_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
+#define __FIEventHandler_1_IInspectable_Invoke(This,sender,e)	\
+        ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
 #endif /* COBJMACROS */
+
 
 #endif // ____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__
 
+
+
+
 typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
+
+
+
+
 
 typedef enum __x_ABI_CWindows_CSystem_CPower_CBatteryStatus __x_ABI_CWindows_CSystem_CPower_CBatteryStatus;
 
+
 typedef enum __x_ABI_CWindows_CSystem_CPower_CEnergySaverStatus __x_ABI_CWindows_CSystem_CPower_CEnergySaverStatus;
 
+
 typedef enum __x_ABI_CWindows_CSystem_CPower_CPowerSupplyStatus __x_ABI_CWindows_CSystem_CPower_CPowerSupplyStatus;
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -732,8 +737,11 @@ typedef enum __x_ABI_CWindows_CSystem_CPower_CPowerSupplyStatus __x_ABI_CWindows
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CSystem_CPower_CBatteryStatus
 {
     BatteryStatus_NotPresent = 0,
@@ -743,14 +751,18 @@ enum __x_ABI_CWindows_CSystem_CPower_CBatteryStatus
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.System.Power.EnergySaverStatus
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CSystem_CPower_CEnergySaverStatus
 {
     EnergySaverStatus_Disabled = 0,
@@ -759,14 +771,18 @@ enum __x_ABI_CWindows_CSystem_CPower_CEnergySaverStatus
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.System.Power.PowerSupplyStatus
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CSystem_CPower_CPowerSupplyStatus
 {
     PowerSupplyStatus_NotPresent = 0,
@@ -775,207 +791,178 @@ enum __x_ABI_CWindows_CSystem_CPower_CPowerSupplyStatus
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Interface Windows.System.Power.IBackgroundEnergyManagerStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.System.Power.BackgroundEnergyManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_Power_IBackgroundEnergyManagerStatics[] = L"Windows.System.Power.IBackgroundEnergyManagerStatics";
-typedef struct
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStaticsVtbl
+/* [object, uuid("B3161D95-1180-4376-96E1-4095568147CE"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_LowUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_NearMaxAcceptableUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_MaxAcceptableUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_ExcessiveUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_NearTerminationUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_TerminationUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_RecentEnergyUsage)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_RecentEnergyUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* add_RecentEnergyUsageIncreased)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        __FIEventHandler_1_IInspectable* handler,
-        EventRegistrationToken* token);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* remove_RecentEnergyUsageIncreased)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        EventRegistrationToken token);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* add_RecentEnergyUsageReturnedToLow)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        __FIEventHandler_1_IInspectable* handler,
-        EventRegistrationToken* token);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* remove_RecentEnergyUsageReturnedToLow)(__x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics* This,
-        EventRegistrationToken token);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_LowUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NearMaxAcceptableUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MaxAcceptableUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExcessiveUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NearTerminationUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TerminationUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecentEnergyUsage )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecentEnergyUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_RecentEnergyUsageIncreased )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_RecentEnergyUsageIncreased )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [in] */EventRegistrationToken token
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_RecentEnergyUsageReturnedToLow )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_RecentEnergyUsageReturnedToLow )(
+        __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics * This,
+        /* [in] */EventRegistrationToken token
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_LowUsageLevel(This, value) \
-    ((This)->lpVtbl->get_LowUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_LowUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_LowUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_NearMaxAcceptableUsageLevel(This, value) \
-    ((This)->lpVtbl->get_NearMaxAcceptableUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_NearMaxAcceptableUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_NearMaxAcceptableUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_MaxAcceptableUsageLevel(This, value) \
-    ((This)->lpVtbl->get_MaxAcceptableUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_MaxAcceptableUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_MaxAcceptableUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_ExcessiveUsageLevel(This, value) \
-    ((This)->lpVtbl->get_ExcessiveUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_ExcessiveUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_ExcessiveUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_NearTerminationUsageLevel(This, value) \
-    ((This)->lpVtbl->get_NearTerminationUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_NearTerminationUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_NearTerminationUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_TerminationUsageLevel(This, value) \
-    ((This)->lpVtbl->get_TerminationUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_TerminationUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_TerminationUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_RecentEnergyUsage(This, value) \
-    ((This)->lpVtbl->get_RecentEnergyUsage(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_RecentEnergyUsage(This,value) \
+    ( (This)->lpVtbl->get_RecentEnergyUsage(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_RecentEnergyUsageLevel(This, value) \
-    ((This)->lpVtbl->get_RecentEnergyUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_get_RecentEnergyUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_RecentEnergyUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_add_RecentEnergyUsageIncreased(This, handler, token) \
-    ((This)->lpVtbl->add_RecentEnergyUsageIncreased(This, handler, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_add_RecentEnergyUsageIncreased(This,handler,token) \
+    ( (This)->lpVtbl->add_RecentEnergyUsageIncreased(This,handler,token) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_remove_RecentEnergyUsageIncreased(This, token) \
-    ((This)->lpVtbl->remove_RecentEnergyUsageIncreased(This, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_remove_RecentEnergyUsageIncreased(This,token) \
+    ( (This)->lpVtbl->remove_RecentEnergyUsageIncreased(This,token) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_add_RecentEnergyUsageReturnedToLow(This, handler, token) \
-    ((This)->lpVtbl->add_RecentEnergyUsageReturnedToLow(This, handler, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_add_RecentEnergyUsageReturnedToLow(This,handler,token) \
+    ( (This)->lpVtbl->add_RecentEnergyUsageReturnedToLow(This,handler,token) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_remove_RecentEnergyUsageReturnedToLow(This, token) \
-    ((This)->lpVtbl->remove_RecentEnergyUsageReturnedToLow(This, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_remove_RecentEnergyUsageReturnedToLow(This,token) \
+    ( (This)->lpVtbl->remove_RecentEnergyUsageReturnedToLow(This,token) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -983,179 +970,157 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIBackgroundEnergyManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.System.Power.ForegroundEnergyManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_Power_IForegroundEnergyManagerStatics[] = L"Windows.System.Power.IForegroundEnergyManagerStatics";
-typedef struct
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStaticsVtbl
+/* [object, uuid("9FF86872-E677-4814-9A20-5337CA732B98"), exclusiveto, contract] */
+typedef struct __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_LowUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_NearMaxAcceptableUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_MaxAcceptableUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_ExcessiveUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_RecentEnergyUsage)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* get_RecentEnergyUsageLevel)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        UINT32* value);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* add_RecentEnergyUsageIncreased)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        __FIEventHandler_1_IInspectable* handler,
-        EventRegistrationToken* token);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* remove_RecentEnergyUsageIncreased)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        EventRegistrationToken token);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* add_RecentEnergyUsageReturnedToLow)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        __FIEventHandler_1_IInspectable* handler,
-        EventRegistrationToken* token);
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    HRESULT (STDMETHODCALLTYPE* remove_RecentEnergyUsageReturnedToLow)(__x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics* This,
-        EventRegistrationToken token);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_LowUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NearMaxAcceptableUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MaxAcceptableUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ExcessiveUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecentEnergyUsage )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RecentEnergyUsageLevel )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_RecentEnergyUsageIncreased )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_RecentEnergyUsageIncreased )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [in] */EventRegistrationToken token
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_RecentEnergyUsageReturnedToLow )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_RecentEnergyUsageReturnedToLow )(
+        __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics * This,
+        /* [in] */EventRegistrationToken token
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_LowUsageLevel(This, value) \
-    ((This)->lpVtbl->get_LowUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_LowUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_LowUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_NearMaxAcceptableUsageLevel(This, value) \
-    ((This)->lpVtbl->get_NearMaxAcceptableUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_NearMaxAcceptableUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_NearMaxAcceptableUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_MaxAcceptableUsageLevel(This, value) \
-    ((This)->lpVtbl->get_MaxAcceptableUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_MaxAcceptableUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_MaxAcceptableUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_ExcessiveUsageLevel(This, value) \
-    ((This)->lpVtbl->get_ExcessiveUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_ExcessiveUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_ExcessiveUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_RecentEnergyUsage(This, value) \
-    ((This)->lpVtbl->get_RecentEnergyUsage(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_RecentEnergyUsage(This,value) \
+    ( (This)->lpVtbl->get_RecentEnergyUsage(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_RecentEnergyUsageLevel(This, value) \
-    ((This)->lpVtbl->get_RecentEnergyUsageLevel(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_get_RecentEnergyUsageLevel(This,value) \
+    ( (This)->lpVtbl->get_RecentEnergyUsageLevel(This,value) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_add_RecentEnergyUsageIncreased(This, handler, token) \
-    ((This)->lpVtbl->add_RecentEnergyUsageIncreased(This, handler, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_add_RecentEnergyUsageIncreased(This,handler,token) \
+    ( (This)->lpVtbl->add_RecentEnergyUsageIncreased(This,handler,token) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_remove_RecentEnergyUsageIncreased(This, token) \
-    ((This)->lpVtbl->remove_RecentEnergyUsageIncreased(This, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_remove_RecentEnergyUsageIncreased(This,token) \
+    ( (This)->lpVtbl->remove_RecentEnergyUsageIncreased(This,token) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_add_RecentEnergyUsageReturnedToLow(This, handler, token) \
-    ((This)->lpVtbl->add_RecentEnergyUsageReturnedToLow(This, handler, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_add_RecentEnergyUsageReturnedToLow(This,handler,token) \
+    ( (This)->lpVtbl->add_RecentEnergyUsageReturnedToLow(This,handler,token) )
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-    DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_remove_RecentEnergyUsageReturnedToLow(This, token) \
-    ((This)->lpVtbl->remove_RecentEnergyUsageReturnedToLow(This, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_remove_RecentEnergyUsageReturnedToLow(This,token) \
+    ( (This)->lpVtbl->remove_RecentEnergyUsageReturnedToLow(This,token) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1163,149 +1128,202 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIForegroundEnergyManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.System.Power.PowerManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_Power_IPowerManagerStatics[] = L"Windows.System.Power.IPowerManagerStatics";
+/* [object, uuid("1394825D-62CE-4364-98D5-AA28C7FBD15B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_EnergySaverStatus)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        enum __x_ABI_CWindows_CSystem_CPower_CEnergySaverStatus* value);
-    HRESULT (STDMETHODCALLTYPE* add_EnergySaverStatusChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        __FIEventHandler_1_IInspectable* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_EnergySaverStatusChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* get_BatteryStatus)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        enum __x_ABI_CWindows_CSystem_CPower_CBatteryStatus* value);
-    HRESULT (STDMETHODCALLTYPE* add_BatteryStatusChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        __FIEventHandler_1_IInspectable* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_BatteryStatusChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* get_PowerSupplyStatus)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        enum __x_ABI_CWindows_CSystem_CPower_CPowerSupplyStatus* value);
-    HRESULT (STDMETHODCALLTYPE* add_PowerSupplyStatusChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        __FIEventHandler_1_IInspectable* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_PowerSupplyStatusChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* get_RemainingChargePercent)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* add_RemainingChargePercentChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        __FIEventHandler_1_IInspectable* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_RemainingChargePercentChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        EventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* get_RemainingDischargeTime)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
-    HRESULT (STDMETHODCALLTYPE* add_RemainingDischargeTimeChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        __FIEventHandler_1_IInspectable* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_RemainingDischargeTimeChanged)(__x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics* This,
-        EventRegistrationToken token);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_EnergySaverStatus )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CSystem_CPower_CEnergySaverStatus * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_EnergySaverStatusChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_EnergySaverStatusChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */EventRegistrationToken token
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_BatteryStatus )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CSystem_CPower_CBatteryStatus * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_BatteryStatusChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_BatteryStatusChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */EventRegistrationToken token
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PowerSupplyStatus )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CSystem_CPower_CPowerSupplyStatus * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_PowerSupplyStatusChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_PowerSupplyStatusChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */EventRegistrationToken token
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RemainingChargePercent )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_RemainingChargePercentChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_RemainingChargePercentChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */EventRegistrationToken token
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RemainingDischargeTime )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_RemainingDischargeTimeChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_RemainingDischargeTimeChanged )(
+        __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics * This,
+        /* [in] */EventRegistrationToken token
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_EnergySaverStatus(This, value) \
-    ((This)->lpVtbl->get_EnergySaverStatus(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_EnergySaverStatus(This,value) \
+    ( (This)->lpVtbl->get_EnergySaverStatus(This,value) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_EnergySaverStatusChanged(This, handler, token) \
-    ((This)->lpVtbl->add_EnergySaverStatusChanged(This, handler, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_EnergySaverStatusChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_EnergySaverStatusChanged(This,handler,token) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_EnergySaverStatusChanged(This, token) \
-    ((This)->lpVtbl->remove_EnergySaverStatusChanged(This, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_EnergySaverStatusChanged(This,token) \
+    ( (This)->lpVtbl->remove_EnergySaverStatusChanged(This,token) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_BatteryStatus(This, value) \
-    ((This)->lpVtbl->get_BatteryStatus(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_BatteryStatus(This,value) \
+    ( (This)->lpVtbl->get_BatteryStatus(This,value) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_BatteryStatusChanged(This, handler, token) \
-    ((This)->lpVtbl->add_BatteryStatusChanged(This, handler, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_BatteryStatusChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_BatteryStatusChanged(This,handler,token) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_BatteryStatusChanged(This, token) \
-    ((This)->lpVtbl->remove_BatteryStatusChanged(This, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_BatteryStatusChanged(This,token) \
+    ( (This)->lpVtbl->remove_BatteryStatusChanged(This,token) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_PowerSupplyStatus(This, value) \
-    ((This)->lpVtbl->get_PowerSupplyStatus(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_PowerSupplyStatus(This,value) \
+    ( (This)->lpVtbl->get_PowerSupplyStatus(This,value) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_PowerSupplyStatusChanged(This, handler, token) \
-    ((This)->lpVtbl->add_PowerSupplyStatusChanged(This, handler, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_PowerSupplyStatusChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_PowerSupplyStatusChanged(This,handler,token) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_PowerSupplyStatusChanged(This, token) \
-    ((This)->lpVtbl->remove_PowerSupplyStatusChanged(This, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_PowerSupplyStatusChanged(This,token) \
+    ( (This)->lpVtbl->remove_PowerSupplyStatusChanged(This,token) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_RemainingChargePercent(This, value) \
-    ((This)->lpVtbl->get_RemainingChargePercent(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_RemainingChargePercent(This,value) \
+    ( (This)->lpVtbl->get_RemainingChargePercent(This,value) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_RemainingChargePercentChanged(This, handler, token) \
-    ((This)->lpVtbl->add_RemainingChargePercentChanged(This, handler, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_RemainingChargePercentChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_RemainingChargePercentChanged(This,handler,token) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_RemainingChargePercentChanged(This, token) \
-    ((This)->lpVtbl->remove_RemainingChargePercentChanged(This, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_RemainingChargePercentChanged(This,token) \
+    ( (This)->lpVtbl->remove_RemainingChargePercentChanged(This,token) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_RemainingDischargeTime(This, value) \
-    ((This)->lpVtbl->get_RemainingDischargeTime(This, value))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_get_RemainingDischargeTime(This,value) \
+    ( (This)->lpVtbl->get_RemainingDischargeTime(This,value) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_RemainingDischargeTimeChanged(This, handler, token) \
-    ((This)->lpVtbl->add_RemainingDischargeTimeChanged(This, handler, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_add_RemainingDischargeTimeChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_RemainingDischargeTimeChanged(This,handler,token) )
 
-#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_RemainingDischargeTimeChanged(This, token) \
-    ((This)->lpVtbl->remove_RemainingDischargeTimeChanged(This, token))
+#define __x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_remove_RemainingDischargeTimeChanged(This,token) \
+    ( (This)->lpVtbl->remove_RemainingDischargeTimeChanged(This,token) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.System.Power.BackgroundEnergyManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.Power.IBackgroundEnergyManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1316,18 +1334,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CPower_CIPowerManagerStatics;
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_System_Power_BackgroundEnergyManager_DEFINED
 #define RUNTIMECLASS_Windows_System_Power_BackgroundEnergyManager_DEFINED
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-DEPRECATED("Background Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Power_BackgroundEnergyManager[] = L"Windows.System.Power.BackgroundEnergyManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.System.Power.ForegroundEnergyManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.Power.IForegroundEnergyManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1338,18 +1355,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_System_Power_ForegroundEnergyManager_DEFINED
 #define RUNTIMECLASS_Windows_System_Power_ForegroundEnergyManager_DEFINED
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-DEPRECATED("Foreground Energy Manager has been deprecated. For more info, see MSDN.")
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Power_ForegroundEnergyManager[] = L"Windows.System.Power.ForegroundEnergyManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.System.Power.PowerManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.Power.IPowerManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1365,6 +1381,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Power_PowerManager[] = L"Windows.System.Power.PowerManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

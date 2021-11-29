@@ -29,19 +29,6 @@ Notes:
 #endif
 #include <winapifamily.h>
 
-//
-// Establish DLL function linkage if supported by the current build
-// environment and not previously defined.
-//
-
-#ifndef IPHLPAPI_DLL_LINKAGE
-#ifdef DECLSPEC_IMPORT
-#define IPHLPAPI_DLL_LINKAGE DECLSPEC_IMPORT
-#else
-#define IPHLPAPI_DLL_LINKAGE
-#endif
-#endif
-
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
@@ -75,7 +62,6 @@ extern "C" {
 //
 //--
 
-IPHLPAPI_DLL_LINKAGE
 HANDLE
 WINAPI
 IcmpCreateFile(
@@ -104,7 +90,6 @@ IcmpCreateFile(
 //
 //--
 
-IPHLPAPI_DLL_LINKAGE
 HANDLE
 WINAPI
 Icmp6CreateFile(
@@ -133,7 +118,6 @@ Icmp6CreateFile(
 //
 //--
 
-IPHLPAPI_DLL_LINKAGE
 BOOL
 WINAPI
 IcmpCloseHandle(
@@ -194,7 +178,6 @@ IcmpCloseHandle(
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
-IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 IcmpSendEcho(
@@ -283,7 +266,6 @@ IcmpSendEcho(
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
-IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 IcmpSendEcho2(
@@ -312,7 +294,6 @@ IcmpSendEcho2(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #if (NTDDI_VERSION >= NTDDI_VISTASP1)
-IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 IcmpSendEcho2Ex(
@@ -343,7 +324,6 @@ IcmpSendEcho2Ex(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #if (NTDDI_VERSION >= NTDDI_WINXP)
-IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 Icmp6SendEcho2(
@@ -397,7 +377,6 @@ Icmp6SendEcho2(
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
-IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 IcmpParseReplies(
@@ -407,7 +386,6 @@ IcmpParseReplies(
     );
 
 #if (NTDDI_VERSION >= NTDDI_WINXP)
-IPHLPAPI_DLL_LINKAGE
 DWORD
 WINAPI
 Icmp6ParseReplies(

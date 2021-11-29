@@ -45,7 +45,6 @@ DEFINE_GUID(GUID_DEVICE_ENERGY_METER,
 #define EMI_NAME_MAX                        16
 
 #define EMI_VERSION_V1                       1
-#define EMI_VERSION_V2                       2
 
 typedef enum
 {
@@ -64,64 +63,21 @@ typedef struct
 
 typedef struct
 {
-    ULONGLONG AbsoluteEnergy;
-    ULONGLONG AbsoluteTime;
-} EMI_CHANNEL_MEASUREMENT_DATA;
-
-//
-// V1 Interface Definition
-//
-
-typedef struct
-{
     EMI_MEASUREMENT_UNIT MeasurementUnit; 
+
     WCHAR HardwareOEM[EMI_NAME_MAX];
     WCHAR HardwareModel[EMI_NAME_MAX];
     USHORT HardwareRevision;
     USHORT MeteredHardwareNameSize;
     WCHAR MeteredHardwareName[ANYSIZE_ARRAY];
-} EMI_METADATA_V1;
-
-typedef EMI_CHANNEL_MEASUREMENT_DATA EMI_MEASUREMENT_DATA_V1;
-
-//
-// Backwards Compatability Typedefs
-//
-
-typedef EMI_METADATA_V1 EMI_METADATA;
-typedef EMI_MEASUREMENT_DATA_V1 EMI_MEASUREMENT_DATA;
-
-//
-// V2 Interface Definition
-//
+} EMI_METADATA;
 
 typedef struct
 {
-    EMI_MEASUREMENT_UNIT MeasurementUnit;
-    USHORT ChannelNameSize;
-    WCHAR ChannelName[ANYSIZE_ARRAY];
-} EMI_CHANNEL_V2;
+    ULONGLONG AbsoluteEnergy;
+    ULONGLONG AbsoluteTime; // in 100ns intervals
+} EMI_MEASUREMENT_DATA;
 
-typedef struct
-{
-    WCHAR HardwareOEM[EMI_NAME_MAX];
-    WCHAR HardwareModel[EMI_NAME_MAX];
-    USHORT HardwareRevision;
-    USHORT ChannelCount;
-    EMI_CHANNEL_V2 Channels[ANYSIZE_ARRAY];
-} EMI_METADATA_V2;
-
-typedef struct
-{
-    EMI_CHANNEL_MEASUREMENT_DATA ChannelData[ANYSIZE_ARRAY];
-} EMI_MEASUREMENT_DATA_V2;
-
-#define EMI_CHANNEL_V2_LENGTH(_ChannelNameSize) \
-    (FIELD_OFFSET(EMI_CHANNEL_V2, ChannelName) + (_ChannelNameSize))
-
-#define EMI_CHANNEL_V2_NEXT_CHANNEL(_Channel) \
-    ((EMI_CHANNEL_V2*)((PUCHAR)(_Channel) + \
-        EMI_CHANNEL_V2_LENGTH((_Channel)->ChannelNameSize)))
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

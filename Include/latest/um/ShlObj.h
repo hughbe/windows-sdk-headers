@@ -122,6 +122,53 @@ extern "C" {            /* Assume C declarations for C++ */
 #include <pshpack1.h>   /* Assume byte packing throughout */
 
 
+//===========================================================================
+//
+// IShellIconOverlayIdentifier
+//
+// Used to identify a file as a member of the group of files that have this specific
+// icon overlay
+//
+// Users can create new IconOverlayIdentifiers and place them in the following registry
+// location together with the Icon overlay image and their priority.
+// HKEY_LOCAL_MACHINE "Software\\Microsoft\\Windows\\CurrentVersion\\ShellIconOverlayIdentifiers"
+//
+// The shell will enumerate through all IconOverlayIdentifiers at start, and prioritize
+// them according to internal rules, in case the internal rules don't apply, we use their
+// input priority
+//
+// IShellIconOverlayIdentifier:IsMemberOf(LPCWSTR pwszPath, DWORD dwAttrib)
+//      pwszPath        full path of the file
+//      dwAttrib        attribute of this file
+//
+//  returns:
+//      S_OK,    if the file is a member
+//      S_FALSE, if the file is not a member
+//      E_FAIL,  if the operation failed due to bad WIN32_FIND_DATA
+//
+// IShellIconOverlayIdentifier::GetOverlayInfo(LPWSTR pwszIconFile, int * pIndex, DWORD * dwFlags) PURE;
+//      pszIconFile    the path of the icon file
+//      pIndex         Depend on the flags, this could contain the IconIndex
+//      dwFlags        defined below
+//
+// IShellIconOverlayIdentifier::GetPriority(int * pIPriority) PURE;
+//      pIPriority     the priority of this Overlay Identifier
+//
+//===========================================================================
+
+#undef  INTERFACE
+#define INTERFACE   IShellIconOverlayIdentifier
+
+DECLARE_INTERFACE_IID_(IShellIconOverlayIdentifier, IUnknown, "0c6c4200-c589-11d0-999a-00c04fd655e1")
+{
+    STDMETHOD (IsMemberOf)(THIS_ _In_ PCWSTR pwszPath, DWORD dwAttrib) PURE;
+    STDMETHOD (GetOverlayInfo)(THIS_ _Out_writes_(cchMax) PWSTR pwszIconFile, int cchMax, _Out_ int * pIndex, _Out_ DWORD * pdwFlags) PURE;
+    STDMETHOD (GetPriority)(THIS_ _Out_ int * pIPriority) PURE;
+};
+
+#define ISIOI_ICONFILE            0x00000001          // path is returned through pwszIconFile
+#define ISIOI_ICONINDEX           0x00000002          // icon index in pwszIconFile is returned through pIndex
+
 #if !defined(__cplusplus) && defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma warning(push)
 #pragma warning(disable:4201) /* nonstandard extension used : nameless struct/union */

@@ -90,5 +90,7 @@ interface ILoadFilterWithPrivateComActivation : ILoadFilter
         [in, out, unique] IFilter **  filterObj);
 };
 
+
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
+

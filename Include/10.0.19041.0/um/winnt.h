@@ -11611,6 +11611,40 @@ typedef struct _PROCESS_DYNAMIC_EH_CONTINUATION_TARGETS_INFORMATION {
     PPROCESS_DYNAMIC_EH_CONTINUATION_TARGET Targets;
 } PROCESS_DYNAMIC_EH_CONTINUATION_TARGETS_INFORMATION, *PPROCESS_DYNAMIC_EH_CONTINUATION_TARGETS_INFORMATION;
 
+//
+// Process dynamic enforced address ranges information, used for dynamic
+// enforced CETCOMPAT ranges.
+//
+// Information class - ProcessDynamicEnforcedCetCompatibleRanges.
+//
+
+//
+// Dynamic enforced address range should be added. If not set, the range is
+// removed. Input flag.
+//
+
+#define DYNAMIC_ENFORCED_ADDRESS_RANGE_ADD                               (0x00000001)
+
+//
+// Dynamic enforced address range has been successfully processed. Used to
+// report to the caller how much progress has been made. Output flag.
+//
+
+#define DYNAMIC_ENFORCED_ADDRESS_RANGE_PROCESSED                         (0x00000002)
+
+typedef struct _PROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE {
+    ULONG_PTR BaseAddress;
+    SIZE_T Size;
+    DWORD Flags;
+} PROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE, *PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE;
+
+typedef struct _PROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGES_INFORMATION {
+    WORD   NumberOfRanges;
+    WORD   Reserved;
+    DWORD Reserved2;
+    PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE Ranges;
+} PROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGES_INFORMATION, *PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGES_INFORMATION;
+
 
 typedef struct _QUOTA_LIMITS {
     SIZE_T PagedPoolLimit;
@@ -11913,7 +11947,17 @@ typedef struct _PROCESS_MITIGATION_USER_SHADOW_STACK_POLICY {
         DWORD Flags;
         struct {
             DWORD EnableUserShadowStack : 1;
-            DWORD ReservedFlags : 31;
+            DWORD AuditUserShadowStack : 1;
+            DWORD SetContextIpValidation : 1;
+            DWORD AuditSetContextIpValidation : 1;
+            DWORD EnableUserShadowStackStrictMode : 1;
+            DWORD BlockNonCetBinaries : 1;
+            DWORD BlockNonCetBinariesNonEhcont : 1;
+            DWORD AuditBlockNonCetBinaries : 1;
+            DWORD CetDynamicApisOutOfProcOnly : 1;
+            DWORD SetContextIpValidationRelaxedMode : 1;
+            DWORD ReservedFlags : 22;
+
         } DUMMYSTRUCTNAME;
     } DUMMYUNIONNAME;
 } PROCESS_MITIGATION_USER_SHADOW_STACK_POLICY, *PPROCESS_MITIGATION_USER_SHADOW_STACK_POLICY;
@@ -12619,7 +12663,14 @@ _Struct_size_bytes_(Size) struct _SYSTEM_CPU_SET_INFORMATION {
 
 typedef struct _SYSTEM_CPU_SET_INFORMATION SYSTEM_CPU_SET_INFORMATION, *PSYSTEM_CPU_SET_INFORMATION;
 
-// end_wdm end_ntminiport
+// end_ntminiport
+
+
+typedef struct _SYSTEM_POOL_ZEROING_INFORMATION {
+    BOOLEAN PoolZeroingSupportPresent;
+} SYSTEM_POOL_ZEROING_INFORMATION, *PSYSTEM_POOL_ZEROING_INFORMATION;
+
+// end_wdm
 
 typedef struct _SYSTEM_PROCESSOR_CYCLE_TIME_INFORMATION {
     DWORD64 CycleTime;
@@ -18698,7 +18749,7 @@ typedef struct _IMAGE_HOT_PATCH_HASHES {
 #define IMAGE_GUARD_RF_ENABLE                          0x00040000 // Module requests that the OS enable return flow protection
 #define IMAGE_GUARD_RF_STRICT                          0x00080000 // Module requests that the OS enable return flow protection in strict mode
 #define IMAGE_GUARD_RETPOLINE_PRESENT                  0x00100000 // Module was built with retpoline support
-#define IMAGE_GUARD_EH_CONTINUATION_TABLE_PRESENT      0x00200000 // Module contains EH continuation target information
+#define IMAGE_GUARD_EH_CONTINUATION_TABLE_PRESENT      0x00400000 // Module contains EH continuation target information
 
 #define IMAGE_GUARD_CF_FUNCTION_TABLE_SIZE_MASK        0xF0000000 // Stride of Guard CF function table encoded in these bits (additional count of bytes per element)
 #define IMAGE_GUARD_CF_FUNCTION_TABLE_SIZE_SHIFT       28         // Shift to right-justify Guard CF function table stride
@@ -18754,6 +18805,7 @@ typedef enum ARM64_FNPDATA_FLAGS {
 typedef enum ARM64_FNPDATA_CR {
     PdataCrUnchained = 0,
     PdataCrUnchainedSavedLr = 1,
+    PdataCrChainedWithPac = 2,
     PdataCrChained = 3,
 } ARM64_FNPDATA_CR;
 
@@ -18945,7 +18997,12 @@ typedef struct _IMAGE_DEBUG_DIRECTORY {
 #define IMAGE_DEBUG_TYPE_REPRO                  16
 #define IMAGE_DEBUG_TYPE_EX_DLLCHARACTERISTICS  20
 
-#define IMAGE_DLLCHARACTERISTICS_EX_CET_COMPAT  0x1
+#define IMAGE_DLLCHARACTERISTICS_EX_CET_COMPAT                                  0x01
+#define IMAGE_DLLCHARACTERISTICS_EX_CET_COMPAT_STRICT_MODE                      0x02
+#define IMAGE_DLLCHARACTERISTICS_EX_CET_SET_CONTEXT_IP_VALIDATION_RELAXED_MODE  0x04
+#define IMAGE_DLLCHARACTERISTICS_EX_CET_DYNAMIC_APIS_ALLOW_IN_PROC              0x08
+#define IMAGE_DLLCHARACTERISTICS_EX_CET_RESERVED_1                              0x10  // Reserved for CET policy *downgrade* only!
+#define IMAGE_DLLCHARACTERISTICS_EX_CET_RESERVED_2                              0x20  // Reserved for CET policy *downgrade* only!
 
 
 typedef struct _IMAGE_COFF_SYMBOLS_HEADER {

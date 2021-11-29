@@ -108,7 +108,7 @@ public:
     {
         isBothSigned   = (IntTraits< T >::isSigned && IntTraits< U >::isSigned),
         isBothUnsigned = (!IntTraits< T >::isSigned && !IntTraits< U >::isSigned),
-        isLikeSigned   = (static_cast<bool>(IntTraits< T >::isSigned) == static_cast<bool>(IntTraits< U >::isSigned)),
+        isLikeSigned   = (IntTraits< T >::isSigned == IntTraits< U >::isSigned),
         isCastOK       = ((isLikeSigned && sizeof(T) >= sizeof(U)) ||
         (IntTraits< T >::isSigned && sizeof(T) > sizeof(U))),
         isBothLT32Bit  = (IntTraits< T >::isLT32Bit && IntTraits< U >::isLT32Bit),
@@ -2036,7 +2036,7 @@ public:
 template < typename E > class AdditionHelper < __int64, unsigned __int64, E, AdditionState_ManualCheckInt64Uint64 >
 {
 public:
-    static SafeIntError Addition( const __int64& lhs, const unsigned __int64& rhs, __int64& result )
+    static SafeIntError Addition( const __int64& lhs, const unsigned __int64& rhs, __int64& result ) throw()
     {
         // rhs is unsigned __int64, lhs __int64
         __int64 tmp = lhs + (__int64)rhs;

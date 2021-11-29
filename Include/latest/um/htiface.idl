@@ -206,8 +206,8 @@ interface ITargetFramePriv: IUnknown
         [in, unique] LPBC pbc,
         [in, unique] IBindStatusCallback * pibsc,
         [in, unique] LPCWSTR pszTargetName,
-        [in] LPCWSTR pszUrl,
-        [in, unique] LPCWSTR pszLocation);
+		[in] LPCWSTR pszUrl,
+		[in, unique] LPCWSTR pszLocation);
 
     HRESULT FindBrowserByIndex(
         [in] DWORD dwID,

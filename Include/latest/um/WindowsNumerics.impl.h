@@ -24,14 +24,6 @@
 #endif
 
 
-// Mark the numerics constructors as constexpr, except when using the C++/CX projection.
-#ifdef _WINDOWS_NUMERICS_CX_PROJECTION_
-    #define _WINDOWS_NUMERICS_CONSTEXPR_ inline
-#else
-    #define _WINDOWS_NUMERICS_CONSTEXPR_ constexpr
-#endif
-
-
 _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 {
 #ifndef _WINDOWS_NUMERICS_CX_PROJECTION_
@@ -51,8 +43,8 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 
         // Constructors.
         float2() = default;
-        _WINDOWS_NUMERICS_CONSTEXPR_ float2(float x, float y);
-        _WINDOWS_NUMERICS_CONSTEXPR_ explicit float2(float value);
+        float2(float x, float y);
+        explicit float2(float value);
 
         // Conversion operators.
         _DEFINE_WINDOWS_NUMERICS_INTEROP_(float2, Vector2)
@@ -66,10 +58,10 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 #endif
 
         // Common values.
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float2 zero();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float2 one();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float2 unit_x();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float2 unit_y();
+        static float2 zero();
+        static float2 one();
+        static float2 unit_x();
+        static float2 unit_y();
     };
 
 #endif  // !_WINDOWS_NUMERICS_CX_PROJECTION_
@@ -120,18 +112,18 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 
         // Constructors.
         float3() = default;
-        _WINDOWS_NUMERICS_CONSTEXPR_ float3(float x, float y, float z);
-        _WINDOWS_NUMERICS_CONSTEXPR_ float3(float2 value, float z);
-        _WINDOWS_NUMERICS_CONSTEXPR_ explicit float3(float value);
+        float3(float x, float y, float z);
+        float3(float2 value, float z);
+        explicit float3(float value);
 
         _DEFINE_WINDOWS_NUMERICS_INTEROP_(float3, Vector3)
 
         // Common values.
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float3 zero();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float3 one();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float3 unit_x();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float3 unit_y();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float3 unit_z();
+        static float3 zero();
+        static float3 one();
+        static float3 unit_x();
+        static float3 unit_y();
+        static float3 unit_z();
     };
 
 #endif  // !_WINDOWS_NUMERICS_CX_PROJECTION_
@@ -181,20 +173,20 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 
         // Constructors.
         float4() = default;
-        _WINDOWS_NUMERICS_CONSTEXPR_ float4(float x, float y, float z, float w);
-        _WINDOWS_NUMERICS_CONSTEXPR_ float4(float2 value, float z, float w);
-        _WINDOWS_NUMERICS_CONSTEXPR_ float4(float3 value, float w);
-        _WINDOWS_NUMERICS_CONSTEXPR_ explicit float4(float value);
+        float4(float x, float y, float z, float w);
+        float4(float2 value, float z, float w);
+        float4(float3 value, float w);
+        explicit float4(float value);
 
         _DEFINE_WINDOWS_NUMERICS_INTEROP_(float4, Vector4)
 
         // Common values.
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float4 zero();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float4 one();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float4 unit_x();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float4 unit_y();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float4 unit_z();
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float4 unit_w();
+        static float4 zero();
+        static float4 one();
+        static float4 unit_x();
+        static float4 unit_y();
+        static float4 unit_z();
+        static float4 unit_w();
     };
 
 #endif  // !_WINDOWS_NUMERICS_CX_PROJECTION_
@@ -247,12 +239,12 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 
         // Constructors.
         float3x2() = default;
-        _WINDOWS_NUMERICS_CONSTEXPR_ float3x2(float m11, float m12, float m21, float m22, float m31, float m32);
+        float3x2(float m11, float m12, float m21, float m22, float m31, float m32);
 
         _DEFINE_WINDOWS_NUMERICS_INTEROP_(float3x2, Matrix3x2)
 
         // Common values.
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float3x2 identity();
+        static float3x2 identity();
     };
 
 #endif  // !_WINDOWS_NUMERICS_CX_PROJECTION_
@@ -304,13 +296,13 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 
         // Constructors.
         float4x4() = default;
-        _WINDOWS_NUMERICS_CONSTEXPR_ float4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
-        _WINDOWS_NUMERICS_CONSTEXPR_ explicit float4x4(float3x2 value);
+        float4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
+        explicit float4x4(float3x2 value);
         
         _DEFINE_WINDOWS_NUMERICS_INTEROP_(float4x4, Matrix4x4)
 
         // Common values.
-        _WINDOWS_NUMERICS_CONSTEXPR_ static float4x4 identity();
+        static float4x4 identity();
     };
 
 #endif  // !_WINDOWS_NUMERICS_CX_PROJECTION_
@@ -379,9 +371,9 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 
         // Constructors.
         plane() = default;
-        _WINDOWS_NUMERICS_CONSTEXPR_ plane(float x, float y, float z, float d);
-        _WINDOWS_NUMERICS_CONSTEXPR_ plane(float3 normal, float d);
-        _WINDOWS_NUMERICS_CONSTEXPR_ explicit plane(float4 value);
+        plane(float x, float y, float z, float d);
+        plane(float3 normal, float d);
+        explicit plane(float4 value);
 
         _DEFINE_WINDOWS_NUMERICS_INTEROP_(plane, Plane)
     };
@@ -413,13 +405,13 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 
         // Constructors.
         quaternion() = default;
-        _WINDOWS_NUMERICS_CONSTEXPR_ quaternion(float x, float y, float z, float w);
-        _WINDOWS_NUMERICS_CONSTEXPR_ quaternion(float3 vectorPart, float scalarPart);
+        quaternion(float x, float y, float z, float w);
+        quaternion(float3 vectorPart, float scalarPart);
 
         _DEFINE_WINDOWS_NUMERICS_INTEROP_(quaternion, Quaternion)
 
         // Common values.
-        _WINDOWS_NUMERICS_CONSTEXPR_ static quaternion identity();
+        static quaternion identity();
     };
 
 #endif  // !_WINDOWS_NUMERICS_CX_PROJECTION_
@@ -485,4 +477,3 @@ namespace DirectX
 
 
 #undef _DEFINE_WINDOWS_NUMERICS_INTEROP_
-#undef _WINDOWS_NUMERICS_CONSTEXPR_

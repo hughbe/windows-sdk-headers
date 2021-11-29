@@ -498,19 +498,12 @@ wsprintfW(
 #define VK_KANA           0x15
 #define VK_HANGEUL        0x15  /* old name - should be here for compatibility */
 #define VK_HANGUL         0x15
-
-/*
- * 0x16 : unassigned
- */
-
+#define VK_IME_ON         0x16
 #define VK_JUNJA          0x17
 #define VK_FINAL          0x18
 #define VK_HANJA          0x19
 #define VK_KANJI          0x19
-
-/*
- * 0x1A : unassigned
- */
+#define VK_IME_OFF        0x1A
 
 #define VK_ESCAPE         0x1B
 
@@ -10322,6 +10315,7 @@ SetWindowsHookExW(
 #define SetWindowsHookEx  SetWindowsHookExA
 #endif // !UNICODE
 
+
 WINUSERAPI
 BOOL
 WINAPI
@@ -14635,6 +14629,7 @@ typedef struct tagMENUBARINFO
     HWND hwndMenu;       // hwnd of item submenu if one
     BOOL fBarFocused:1;  // bar, popup has the focus
     BOOL fFocused:1;     // item has the focus
+    BOOL fUnused:30;     // reserved. Cleared to prevent Information Disclosure
 } MENUBARINFO, *PMENUBARINFO, *LPMENUBARINFO;
 
 WINUSERAPI

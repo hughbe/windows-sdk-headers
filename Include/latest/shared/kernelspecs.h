@@ -63,9 +63,6 @@ extern "C" {
     #if defined(_IA64_)
     #define HIGH_LEVEL 15
     #endif
-    #if defined(_ARM64_)
-    #define HIGH_LEVEL 15
-    #endif
 
     //
     // ---------------------------------------------------------------------

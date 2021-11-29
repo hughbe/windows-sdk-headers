@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * HeapApi.h -- ApiSet Contract for api-ms-win-core-heap-l1                      *  
@@ -18,23 +19,45 @@
 #include <minwindef.h>
 #include <minwinbase.h>
 
+/* APISET_NAME: api-ms-win-core-heap-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_HEAP_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_HEAP_VER 0x0200
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN7
+#define _APISET_HEAP_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
+
 #if _MSC_VER < 1900
 #define DECLSPEC_ALLOCATOR
 #else
 #define DECLSPEC_ALLOCATOR __declspec(allocator)
 #endif
 
+
 #ifdef __cplusplus
 extern "C" {
 #endif
+
 
 #if _MSC_VER >= 1200
 #pragma warning(push)
 #pragma warning(disable:4820) // padding added after data member
 #endif
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //
 // typdefs
@@ -48,6 +71,13 @@ typedef struct _HEAP_SUMMARY {
     SIZE_T cbMaxReserve;
 } HEAP_SUMMARY, *PHEAP_SUMMARY;
 typedef PHEAP_SUMMARY LPHEAP_SUMMARY;
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
 // Prototypes
@@ -71,7 +101,7 @@ HeapDestroy(
     _In_ HANDLE hHeap
     );
 
-
+    
 WINBASEAPI
 _Ret_maybenull_
 _Post_writable_byte_size_(dwBytes)
@@ -86,7 +116,7 @@ HeapAlloc(
 
 
 WINBASEAPI
-_Success_(return != 0)
+_Success_(return!=0)
 _Ret_maybenull_
 _Post_writable_byte_size_(dwBytes)
 DECLSPEC_ALLOCATOR
@@ -149,11 +179,12 @@ HeapSetInformation(
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 BOOL
@@ -165,11 +196,15 @@ HeapValidate(
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#pragma region Desktop Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+
+
+#if (defined(_WIN32_WINNT) && !defined(_CONTRACT_GEN)) || (_APISET_HEAP_VER <= 0x0100)
 
 BOOL
 WINAPI
@@ -180,18 +215,21 @@ HeapSummary(
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+#endif
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 DWORD
 WINAPI
 GetProcessHeaps(
     _In_ DWORD NumberOfHeaps,
-    _Out_writes_to_(NumberOfHeaps,return) PHANDLE ProcessHeaps
+    _Out_writes_to_(NumberOfHeaps, return) PHANDLE ProcessHeaps
     );
 
 
@@ -211,12 +249,6 @@ HeapUnlock(
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 WINBASEAPI
 BOOL
 WINAPI
@@ -232,18 +264,19 @@ WINAPI
 HeapQueryInformation(
     _In_opt_ HANDLE HeapHandle,
     _In_ HEAP_INFORMATION_CLASS HeapInformationClass,
-    _Out_writes_bytes_to_opt_(HeapInformationLength,*ReturnLength) PVOID HeapInformation,
+    _Out_writes_bytes_to_opt_(HeapInformationLength, *ReturnLength) PVOID HeapInformation,
     _In_ SIZE_T HeapInformationLength,
     _Out_opt_ PSIZE_T ReturnLength
     );
 
     
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
 //
 // HeapSummary() is in minwinbase.w within ;beg_internal tags. Has to stay there for downlevel reasons.
 // 
+
 
 #if _MSC_VER >= 1200
 #pragma warning(pop)

@@ -9,10 +9,6 @@
 
 #include <corecrt.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
 
 #if !defined _NO_CRT_STDIO_INLINE && !_CRT_FUNCTIONS_REQUIRED
@@ -85,7 +81,6 @@ _CRT_BEGIN_C_HEADER
     // This function must not be inlined into callers to avoid ODR violations.  The
     // static local variable has different names in C and in C++ translation units.
     _Check_return_ _Ret_notnull_
-    _CRT_INLINE_PURE_SECURITYCRITICAL_ATTRIBUTE
     __declspec(noinline) __inline unsigned __int64* __CRTDECL __local_stdio_printf_options(void)
     {
         static unsigned __int64 _OptionsStorage;
@@ -95,7 +90,6 @@ _CRT_BEGIN_C_HEADER
     // This function must not be inlined into callers to avoid ODR violations.  The
     // static local variable has different names in C and in C++ translation units.
     _Check_return_ _Ret_notnull_
-    _CRT_INLINE_PURE_SECURITYCRITICAL_ATTRIBUTE
     __declspec(noinline) __inline unsigned __int64* __CRTDECL __local_stdio_scanf_options(void)
     {
         static unsigned __int64 _OptionsStorage;
@@ -117,7 +111,6 @@ _CRT_BEGIN_C_HEADER
 #define _CRT_INTERNAL_PRINTF_LEGACY_WIDE_SPECIFIERS           (1ULL << 2)
 #define _CRT_INTERNAL_PRINTF_LEGACY_MSVCRT_COMPATIBILITY      (1ULL << 3)
 #define _CRT_INTERNAL_PRINTF_LEGACY_THREE_DIGIT_EXPONENTS     (1ULL << 4)
-#define _CRT_INTERNAL_PRINTF_STANDARD_ROUNDING                (1ULL << 5)
 
 
 #define _CRT_INTERNAL_SCANF_SECURECRT                   (1ULL << 0)
@@ -127,5 +120,3 @@ _CRT_BEGIN_C_HEADER
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

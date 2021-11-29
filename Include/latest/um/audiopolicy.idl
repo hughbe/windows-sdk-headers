@@ -13,8 +13,8 @@ import "propidl.idl";
 import "AudioSessionTypes.h";
 import "AudioClient.idl";
 
-#pragma region Application and Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 typedef enum AudioSessionDisconnectReason
 {
@@ -177,6 +177,18 @@ interface IAudioSessionEvents : IUnknown {
     //
     HRESULT OnSessionDisconnected([in, annotation("_In_")] AudioSessionDisconnectReason DisconnectReason);
 };
+
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+#pragma endregion
+
+#pragma region Desktop Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+#pragma endregion
+
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 /*++    IAudioSessionControl - Client interface that allows control over a
 *                      AudioSession.
@@ -357,7 +369,7 @@ interface IAudioSessionControl : IUnknown
     HRESULT UnregisterAudioSessionNotification([in, annotation("_In_")]IAudioSessionEvents *NewNotifications);
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 #pragma region Desktop Family

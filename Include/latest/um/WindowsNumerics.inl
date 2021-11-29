@@ -135,12 +135,12 @@ namespace DirectX
 
 _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 {
-    _WINDOWS_NUMERICS_CONSTEXPR_ float2::float2(float x, float y)
+    inline float2::float2(float x, float y)
         : x(x), y(y)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float2::float2(float value)
+    inline float2::float2(float value)
         : x(value), y(value)
     { }
 
@@ -200,25 +200,25 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 #endif  // _WINDOWS_NUMERICS_POINT_SIZE_NAMESPACE_ && !_WINDOWS_NUMERICS_CX_PROJECTION_
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float2 float2::zero()
+    inline float2 float2::zero()
     {
         return float2(0, 0);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float2 float2::one()
+    inline float2 float2::one()
     {
         return float2(1, 1);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float2 float2::unit_x()
+    inline float2 float2::unit_x()
     {
         return float2(1, 0);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float2 float2::unit_y()
+    inline float2 float2::unit_y()
     {
         return float2(0, 1);
     }
@@ -463,46 +463,46 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3::float3(float x, float y, float z)
+    inline float3::float3(float x, float y, float z)
         : x(x), y(y), z(z)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3::float3(float2 value, float z)
+    inline float3::float3(float2 value, float z)
         : x(value.x), y(value.y), z(z)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3::float3(float value)
+    inline float3::float3(float value)
         : x(value), y(value), z(value)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3 float3::zero()
+    inline float3 float3::zero()
     {
         return float3(0, 0, 0);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3 float3::one()
+    inline float3 float3::one()
     {
         return float3(1, 1, 1);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3 float3::unit_x()
+    inline float3 float3::unit_x()
     {
         return float3(1, 0, 0);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3 float3::unit_y()
+    inline float3 float3::unit_y()
     {
         return float3(0, 1, 0);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3 float3::unit_z()
+    inline float3 float3::unit_z()
     {
         return float3(0, 0, 1);
     }
@@ -759,57 +759,57 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4::float4(float x, float y, float z, float w)
+    inline float4::float4(float x, float y, float z, float w)
         : x(x), y(y), z(z), w(w)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4::float4(float2 value, float z, float w)
+    inline float4::float4(float2 value, float z, float w)
         : x(value.x), y(value.y), z(z), w(w)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4::float4(float3 value, float w)
+    inline float4::float4(float3 value, float w)
         : x(value.x), y(value.y), z(value.z), w(w)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4::float4(float value)
+    inline float4::float4(float value)
         : x(value), y(value), z(value), w(value)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4 float4::zero()
+    inline float4 float4::zero()
     {
         return float4(0, 0, 0, 0);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4 float4::one()
+    inline float4 float4::one()
     {
         return float4(1, 1, 1, 1);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4 float4::unit_x()
+    inline float4 float4::unit_x()
     {
         return float4(1, 0, 0, 0);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4 float4::unit_y()
+    inline float4 float4::unit_y()
     {
         return float4(0, 1, 0, 0);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4 float4::unit_z()
+    inline float4 float4::unit_z()
     {
         return float4(0, 0, 1, 0);
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4 float4::unit_w()
+    inline float4 float4::unit_w()
     {
         return float4(0, 0, 0, 1);
     }
@@ -1193,12 +1193,12 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3x2::float3x2(float m11, float m12, float m21, float m22, float m31, float m32)
+    inline float3x2::float3x2(float m11, float m12, float m21, float m22, float m31, float m32)
         : m11(m11), m12(m12), m21(m21), m22(m22), m31(m31), m32(m32)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float3x2 float3x2::identity()
+    inline float3x2 float3x2::identity()
     {
         return float3x2(1, 0,
                         0, 1,
@@ -1484,8 +1484,7 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
     {
         float det = determinant(matrix);
 
-        // NaN safe
-        if (!(fabs(det) >= FLT_EPSILON))
+        if (fabs(det) < FLT_EPSILON)
         {
             const float nan = _WINDOWS_NUMERICS_NAN_;
             *result = float3x2(nan, nan, nan, nan, nan, nan);
@@ -1519,7 +1518,7 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4x4::float4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)
+    inline float4x4::float4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44)
         : m11(m11), m12(m12), m13(m13), m14(m14),
           m21(m21), m22(m22), m23(m23), m24(m24),
           m31(m31), m32(m32), m33(m33), m34(m34),
@@ -1527,7 +1526,7 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4x4::float4x4(float3x2 value)
+    inline float4x4::float4x4(float3x2 value)
         : m11(value.m11), m12(value.m12), m13(0), m14(0),
           m21(value.m21), m22(value.m22), m23(0), m24(0),
           m31(0),         m32(0),         m33(1), m34(0),
@@ -1535,7 +1534,7 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ float4x4 float4x4::identity()
+    inline float4x4 float4x4::identity()
     {
         return float4x4(1, 0, 0, 0,
                         0, 1, 0, 0,
@@ -2320,8 +2319,7 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
 
         float det = a * a11 + b * a12 + c * a13 + d * a14;
 
-        // NaN safe
-        if (!(fabs(det) >= FLT_EPSILON))
+        if (fabs(det) < FLT_EPSILON)
         {
             const float nan = _WINDOWS_NUMERICS_NAN_;
 
@@ -2472,17 +2470,17 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ plane::plane(float x, float y, float z, float d)
+    inline plane::plane(float x, float y, float z, float d)
         : normal(x, y, z), d(d)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ plane::plane(float3 normal, float d)
+    inline plane::plane(float3 normal, float d)
         : normal(normal), d(d)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ plane::plane(float4 value)
+    inline plane::plane(float4 value)
         : normal(value.x, value.y, value.z), d(value.w)
     { }
 
@@ -2593,17 +2591,17 @@ _WINDOWS_NUMERICS_BEGIN_NAMESPACE_
     }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ quaternion::quaternion(float x, float y, float z, float w)
+    inline quaternion::quaternion(float x, float y, float z, float w)
         : x(x), y(y), z(z), w(w)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ quaternion::quaternion(float3 vectorPart, float scalarPart)
+    inline quaternion::quaternion(float3 vectorPart, float scalarPart)
         : x(vectorPart.x), y(vectorPart.y), z(vectorPart.z), w(scalarPart)
     { }
 
 
-    _WINDOWS_NUMERICS_CONSTEXPR_ quaternion quaternion::identity()
+    inline quaternion quaternion::identity()
     {
         return quaternion(0, 0, 0, 1);
     }

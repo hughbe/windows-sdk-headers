@@ -1,3 +1,4 @@
+
 //---------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 //---------------------------------------------------------------------------
@@ -18,41 +19,41 @@
 
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 
-typedef interface IDCompositionAffineTransform2DEffect   IDCompositionAffineTransform2DEffect;
-typedef interface IDCompositionAnimation                 IDCompositionAnimation;
-typedef interface IDCompositionArithmeticCompositeEffect IDCompositionArithmeticCompositeEffect;
-typedef interface IDCompositionBlendEffect               IDCompositionBlendEffect;
-typedef interface IDCompositionBrightnessEffect          IDCompositionBrightnessEffect;
-typedef interface IDCompositionClip                      IDCompositionClip;
-typedef interface IDCompositionColorMatrixEffect         IDCompositionColorMatrixEffect;
-typedef interface IDCompositionCompositeEffect           IDCompositionCompositeEffect;
 typedef interface IDCompositionDevice                    IDCompositionDevice;
-typedef interface IDCompositionEffect                    IDCompositionEffect;
-typedef interface IDCompositionEffectGroup               IDCompositionEffectGroup;
-typedef interface IDCompositionFilterEffect              IDCompositionFilterEffect;
-typedef interface IDCompositionGaussianBlurEffect        IDCompositionGaussianBlurEffect;
-typedef interface IDCompositionHueRotationEffect         IDCompositionHueRotationEffect;
-typedef interface IDCompositionLinearTransferEffect      IDCompositionLinearTransferEffect;
-typedef interface IDCompositionMatrixTransform           IDCompositionMatrixTransform;
-typedef interface IDCompositionMatrixTransform3D         IDCompositionMatrixTransform3D;
-typedef interface IDCompositionRectangleClip             IDCompositionRectangleClip;
-typedef interface IDCompositionRotateTransform           IDCompositionRotateTransform;
-typedef interface IDCompositionRotateTransform3D         IDCompositionRotateTransform3D;
-typedef interface IDCompositionSaturationEffect          IDCompositionSaturationEffect;
-typedef interface IDCompositionScaleTransform            IDCompositionScaleTransform;
-typedef interface IDCompositionScaleTransform3D          IDCompositionScaleTransform3D;
-typedef interface IDCompositionShadowEffect              IDCompositionShadowEffect;
-typedef interface IDCompositionSkewTransform             IDCompositionSkewTransform;
-typedef interface IDCompositionSurface                   IDCompositionSurface;
-typedef interface IDCompositionTableTransferEffect       IDCompositionTableTransferEffect;
 typedef interface IDCompositionTarget                    IDCompositionTarget;
+typedef interface IDCompositionVisual                    IDCompositionVisual;
 typedef interface IDCompositionTransform                 IDCompositionTransform;
 typedef interface IDCompositionTransform3D               IDCompositionTransform3D;
 typedef interface IDCompositionTranslateTransform        IDCompositionTranslateTransform;
 typedef interface IDCompositionTranslateTransform3D      IDCompositionTranslateTransform3D;
-typedef interface IDCompositionTurbulenceEffect          IDCompositionTurbulenceEffect;
+typedef interface IDCompositionScaleTransform            IDCompositionScaleTransform;
+typedef interface IDCompositionScaleTransform3D          IDCompositionScaleTransform3D;
+typedef interface IDCompositionRotateTransform           IDCompositionRotateTransform;
+typedef interface IDCompositionRotateTransform3D         IDCompositionRotateTransform3D;
+typedef interface IDCompositionSkewTransform             IDCompositionSkewTransform;
+typedef interface IDCompositionMatrixTransform           IDCompositionMatrixTransform;
+typedef interface IDCompositionMatrixTransform3D         IDCompositionMatrixTransform3D;
+typedef interface IDCompositionEffect                    IDCompositionEffect;
+typedef interface IDCompositionEffectGroup               IDCompositionEffectGroup;
+typedef interface IDCompositionClip                      IDCompositionClip;
+typedef interface IDCompositionRectangleClip             IDCompositionRectangleClip;
+typedef interface IDCompositionAnimation                 IDCompositionAnimation;
+typedef interface IDCompositionSurface                   IDCompositionSurface;
 typedef interface IDCompositionVirtualSurface            IDCompositionVirtualSurface;
-typedef interface IDCompositionVisual                    IDCompositionVisual;
+typedef interface IDCompositionFilterEffect              IDCompositionFilterEffect;
+typedef interface IDCompositionGaussianBlurEffect        IDCompositionGaussianBlurEffect;
+typedef interface IDCompositionBrightnessEffect          IDCompositionBrightnessEffect;
+typedef interface IDCompositionColorMatrixEffect         IDCompositionColorMatrixEffect;
+typedef interface IDCompositionShadowEffect              IDCompositionShadowEffect;
+typedef interface IDCompositionHueRotationEffect         IDCompositionHueRotationEffect;
+typedef interface IDCompositionSaturationEffect          IDCompositionSaturationEffect;
+typedef interface IDCompositionTurbulenceEffect          IDCompositionTurbulenceEffect;
+typedef interface IDCompositionLinearTransferEffect      IDCompositionLinearTransferEffect;
+typedef interface IDCompositionTableTransferEffect       IDCompositionTableTransferEffect;
+typedef interface IDCompositionCompositeEffect           IDCompositionCompositeEffect;
+typedef interface IDCompositionBlendEffect               IDCompositionBlendEffect;
+typedef interface IDCompositionArithmeticCompositeEffect IDCompositionArithmeticCompositeEffect;
+typedef interface IDCompositionAffineTransform2DEffect   IDCompositionAffineTransform2DEffect;
 
 //+-----------------------------------------------------------------------------
 //
@@ -106,6 +107,7 @@ STDAPI DCompositionCreateDevice3(
     );
 
 #endif  // (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)
+
 
 //+-----------------------------------------------------------------------------
 //
@@ -1212,12 +1214,12 @@ DECLARE_INTERFACE_IID_(IDCompositionVirtualSurface, IDCompositionSurface, "AE471
 };
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WINBLUE)
-typedef interface IDCompositionDesktopDevice        IDCompositionDesktopDevice;
 typedef interface IDCompositionDevice2              IDCompositionDevice2;
 typedef interface IDCompositionDeviceDebug          IDCompositionDeviceDebug;
-typedef interface IDCompositionSurfaceFactory       IDCompositionSurfaceFactory;
+typedef interface IDCompositionDesktopDevice        IDCompositionDesktopDevice;
 typedef interface IDCompositionVisual2              IDCompositionVisual2;
 typedef interface IDCompositionVisualDebug          IDCompositionVisualDebug;
+typedef interface IDCompositionSurfaceFactory       IDCompositionSurfaceFactory;
 
 //+-----------------------------------------------------------------------------
 //
@@ -2263,6 +2265,7 @@ DECLARE_INTERFACE_IID_(IDCompositionAffineTransform2DEffect, IDCompositionFilter
 };
 
 #endif  // (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)
+
 
 #undef INTERFACE
 #endif // NTDDI_WIN8

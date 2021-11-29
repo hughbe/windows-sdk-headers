@@ -195,8 +195,6 @@ extern "C"{
 #endif 
 /* interface __MIDL_itf_adocat_0000_0000 */
 /* [local] */ 
-#pragma warning(push) 
-#pragma warning(disable:4091) 
 typedef /* [helpcontext] */ 
 enum RuleEnum
     {
@@ -4037,11 +4035,6 @@ EXTERN_C const IID IID_Properties;
 #endif 	/* C style interface */
 #endif 	/* __Properties_INTERFACE_DEFINED__ */
 #endif /* __ADOX_LIBRARY_DEFINED__ */
-/* interface __MIDL_itf_adocat_0000_0001 */
-/* [local] */ 
-#pragma warning(pop) 
-extern RPC_IF_HANDLE __MIDL_itf_adocat_0000_0001_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_adocat_0000_0001_v0_0_s_ifspec;
 /* Additional Prototypes for ALL interfaces */
 /* end of Additional Prototypes */
 #ifdef __cplusplus

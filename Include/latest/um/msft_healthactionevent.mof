@@ -42,8 +42,4 @@ class MSFT_HealthActionEvent : MSFT_StorageEvent
         )]
     String Status;
 
-    [Read, Description(
-        "The time that the action was started."
-        )]
-    Datetime StartTime;
 };

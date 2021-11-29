@@ -72,8 +72,8 @@ extern "C" {
 
 #ifndef NONLS
 
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #ifdef _MAC
 #include <macwin32.h>
@@ -846,7 +846,6 @@ extern "C" {
 #define CAL_RETURN_NUMBER         LOCALE_RETURN_NUMBER          // return number instead of string
 #endif /* WINVER >= 0x0500 */
 
-
 #if (WINVER >= _WIN32_WINNT_WIN7)
 #define CAL_RETURN_GENITIVE_NAMES LOCALE_RETURN_GENITIVE_NAMES  // return genitive forms of month names
 #endif // winver >= windows 7
@@ -931,10 +930,6 @@ extern "C" {
 #define CAL_SENGLISHERANAME       0x0000003b   // Japanese calendar only: return the English era names for .Net compatibility
 #define CAL_SENGLISHABBREVERANAME 0x0000003c   // Japanese calendar only: return the English Abbreviated era names for .Net compatibility
 #endif
-
-// CAL_SJAPANESEERAFIRSTYEAR is only supported on machines with updates to support the "gannen" era first year behavior
-// Machines without that update will return 0 and ERROR_INVALID_FLAGS, in which case ichinen is presumed.
-#define CAL_SJAPANESEERAFIRSTYEAR 0x0000003d   // Japanese calendar only: return ichinen or gannen first year
 
 //
 //  Calendar Enumeration Value.
@@ -1082,41 +1077,12 @@ typedef DWORD CALID;
 // WARNING: These structures fail for some encodings, including UTF-8, which
 //          do not fit into the assumptions of these APIs.
 //
-
 DEPRECATED("Use Unicode. The information in this structure cannot represent all encodings accurately and may be unreliable on many machines. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 typedef struct _cpinfo {
     UINT    MaxCharSize;                    // max length (in bytes) of a char
     BYTE    DefaultChar[MAX_DEFAULTCHAR];   // default character
     BYTE    LeadByte[MAX_LEADBYTES];        // lead byte ranges
 } CPINFO, *LPCPINFO;
-
-//
-//  GEO defines
-//
-typedef DWORD   GEOTYPE;
-typedef DWORD   GEOCLASS;
-
-//
-// ** DEPRECATED ** DEPRECATED ** DEPRECATED ** DEPRECATED ** DEPRECATED **
-//
-//  DEPRECATED: The GEOID  concept is deprecated, please use
-//  Country/Region Names instead, eg: "US" instead of a GEOID like 244.
-//  See the documentation for GetGeoInfoEx.
-//
-//  WARNING: These values are arbitrarily assigned values, please use
-//           standard country/region names instead, such as "US".
-//
-// ** DEPRECATED ** DEPRECATED ** DEPRECATED ** DEPRECATED ** DEPRECATED **
-//
-typedef LONG    GEOID;
-
-#define GEOID_NOT_AVAILABLE -1
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 
 DEPRECATED("Use Unicode. The information in this structure cannot represent all encodings accurately and may be unreliable on many machines. Set DISABLE_NLS_DEPRECATION to disable this warning.")
@@ -1145,11 +1111,7 @@ typedef CPINFOEXA CPINFOEX;
 typedef LPCPINFOEXA LPCPINFOEX;
 #endif // UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
 
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 //
 //  Number format.
 //
@@ -1211,11 +1173,6 @@ typedef CURRENCYFMTA CURRENCYFMT;
 typedef LPCURRENCYFMTA LPCURRENCYFMT;
 #endif // UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 //
 //  NLS function capabilities
 //
@@ -1229,12 +1186,6 @@ typedef DWORD NLS_FUNCTION;
 //
 //  NLS version structure.
 //
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
 //
@@ -1266,12 +1217,6 @@ typedef struct _nlsversioninfo{		// Use NLSVERSIONINFOEX instead
 } NLSVERSIONINFO, *LPNLSVERSIONINFO;
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 // The combination of dwNLSVersion, and guidCustomVersion
 // identify specific sort behavior, persist those to ensure identical
 // behavior in the future.
@@ -1282,6 +1227,27 @@ typedef struct _nlsversioninfoex{
     DWORD dwEffectiveId;            // Deprecated, use guidCustomVerison instead
     GUID  guidCustomVersion;        // Explicit sort version
 } NLSVERSIONINFOEX, *LPNLSVERSIONINFOEX;
+
+//
+//  GEO defines
+//
+typedef DWORD   GEOTYPE;
+typedef DWORD   GEOCLASS;
+//
+// ** DEPRECATED ** DEPRECATED ** DEPRECATED ** DEPRECATED ** DEPRECATED **
+//
+//  DEPRECATED: The GEOID  concept is deprecated, please use
+//  Country/Region Names instead, eg: "US" instead of a GEOID like 244.
+//  See the documentation for GetGeoInfoEx.
+//
+//  WARNING: These values are arbitrarily assigned values, please use
+//           standard country/region names instead, such as "US".
+//
+// ** DEPRECATED ** DEPRECATED ** DEPRECATED ** DEPRECATED ** DEPRECATED **
+//
+typedef LONG    GEOID;
+
+#define GEOID_NOT_AVAILABLE -1
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 #define GEO_NAME_USER_DEFAULT NULL
@@ -1317,25 +1283,12 @@ enum SYSGEOTYPE {
 //
 //  More GEOCLASS defines will be listed here
 //
-DEPRECATED("The Geo Class concept is obsolete and no longer supported.  GetGeoInfoEx is preferred. Set DISABLE_NLS_DEPRECATION to disable this warning.")
+
 enum SYSGEOCLASS {
     GEOCLASS_NATION  = 16,
-    GEOCLASS_REGION  = 14,          // DEPRECATED - Never used
+    GEOCLASS_REGION  = 14,
     GEOCLASS_ALL = 0
 };
-
-#ifdef STRICT
-
-typedef BOOL (CALLBACK* LOCALE_ENUMPROCA)(LPSTR);                                           // Deprecated, please use Unicode
-typedef BOOL (CALLBACK* LOCALE_ENUMPROCW)(LPWSTR);                                          // DEPRECATED: please use LOCALE_ENUMPROCEX
-
-#endif // STRICT
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #if (WINVER >= 0x0600)
 //
@@ -1372,9 +1325,7 @@ typedef enum _NORM_FORM {
 
 #ifdef STRICT
 
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 typedef BOOL (CALLBACK* LANGUAGEGROUP_ENUMPROCA)(LGRPID, LPSTR, LPSTR, DWORD, LONG_PTR);    // Deprecated, please use Unicode
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 typedef BOOL (CALLBACK* LANGGROUPLOCALE_ENUMPROCA)(LGRPID, LCID, LPSTR, LONG_PTR);          // Deprecated, please use Unicode
 typedef BOOL (CALLBACK* UILANGUAGE_ENUMPROCA)(LPSTR, LONG_PTR);                             // Deprecated, please use Unicode
 typedef BOOL (CALLBACK* CODEPAGE_ENUMPROCA)(LPSTR);                                         // Deprecated, please use Unicode
@@ -1383,10 +1334,9 @@ typedef BOOL (CALLBACK* DATEFMT_ENUMPROCEXA)(LPSTR, CALID);                     
 typedef BOOL (CALLBACK* TIMEFMT_ENUMPROCA)(LPSTR);                                          // Deprecated, please use Unicode
 typedef BOOL (CALLBACK* CALINFO_ENUMPROCA)(LPSTR);                                          // Deprecated, please use Unicode
 typedef BOOL (CALLBACK* CALINFO_ENUMPROCEXA)(LPSTR, CALID);                                 // Deprecated, please use Unicode
-
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
+typedef BOOL (CALLBACK* LOCALE_ENUMPROCA)(LPSTR);                                           // Deprecated, please use Unicode
+typedef BOOL (CALLBACK* LOCALE_ENUMPROCW)(LPWSTR);                                          // DEPRECATED: please use LOCALE_ENUMPROCEX
 typedef BOOL (CALLBACK* LANGUAGEGROUP_ENUMPROCW)(LGRPID, LPWSTR, LPWSTR, DWORD, LONG_PTR);  // DEPRECATED: Language groups are no longer supported
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 typedef BOOL (CALLBACK* LANGGROUPLOCALE_ENUMPROCW)(LGRPID, LCID, LPWSTR, LONG_PTR);         // DEPRECATED: Language groups are no longer supported
 typedef BOOL (CALLBACK* UILANGUAGE_ENUMPROCW)(LPWSTR, LONG_PTR);
 typedef BOOL (CALLBACK* CODEPAGE_ENUMPROCW)(LPWSTR);            // Please use Unicode / UTF-8
@@ -1402,9 +1352,7 @@ typedef BOOL (CALLBACK* GEO_ENUMNAMEPROC)(PWSTR, LPARAM);
 
 #else // !STRICT
 
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 typedef FARPROC LANGUAGEGROUP_ENUMPROCA;       // Deprecated, please use Unicode
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 typedef FARPROC LANGGROUPLOCALE_ENUMPROCA;     // Deprecated, please use Unicode
 typedef FARPROC UILANGUAGE_ENUMPROCA;          // Deprecated, please use Unicode
 typedef FARPROC CODEPAGE_ENUMPROCA;            // Deprecated, please use Unicode
@@ -1414,34 +1362,9 @@ typedef FARPROC TIMEFMT_ENUMPROCA;             // Deprecated, please use Unicode
 typedef FARPROC CALINFO_ENUMPROCA;             // Deprecated, please use Unicode
 typedef FARPROC CALINFO_ENUMPROCEXA;           // Deprecated, please use Unicode
 typedef FARPROC GEO_ENUMPROC;                  // DEPRECATED, use GEO_ENUMNAMEPROC instead
-
-#endif // !STRICT
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
-#ifndef STRICT
-
 typedef FARPROC LOCALE_ENUMPROCA;              // Deprecated, please use Unicode
 typedef FARPROC LOCALE_ENUMPROCW;              // DEPRECATED: please use LOCALE_ENUMPROCEX
-
-#endif // !STRICT
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
-#ifndef STRICT
-
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 typedef FARPROC LANGUAGEGROUP_ENUMPROCW;       // DEPRECATED: Language groups are no longer supported
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 typedef FARPROC LANGGROUPLOCALE_ENUMPROCW;     // DEPRECATED: Language groups are no longer supported
 typedef FARPROC UILANGUAGE_ENUMPROCW;
 typedef FARPROC CODEPAGE_ENUMPROCW;            // Please use Unicode / UTF-8
@@ -1450,7 +1373,6 @@ typedef FARPROC DATEFMT_ENUMPROCEXW;
 typedef FARPROC TIMEFMT_ENUMPROCW;
 typedef FARPROC CALINFO_ENUMPROCW;
 typedef FARPROC CALINFO_ENUMPROCEXW;
-
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 typedef FARPROC GEO_ENUMNAMEPROC;
 #endif
@@ -1459,9 +1381,7 @@ typedef FARPROC GEO_ENUMNAMEPROC;
 
 #ifdef UNICODE
 
-// DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 #define LANGUAGEGROUP_ENUMPROC    LANGUAGEGROUP_ENUMPROCW
-// DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 #define LANGGROUPLOCALE_ENUMPROC  LANGGROUPLOCALE_ENUMPROCW
 #define UILANGUAGE_ENUMPROC       UILANGUAGE_ENUMPROCW
 #define CODEPAGE_ENUMPROC         CODEPAGE_ENUMPROCW
@@ -1474,9 +1394,7 @@ typedef FARPROC GEO_ENUMNAMEPROC;
 
 #else
 
-// DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 #define LANGUAGEGROUP_ENUMPROC    LANGUAGEGROUP_ENUMPROCA
-// DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 #define LANGGROUPLOCALE_ENUMPROC  LANGGROUPLOCALE_ENUMPROCA
 #define UILANGUAGE_ENUMPROC       UILANGUAGE_ENUMPROCA
 #define CODEPAGE_ENUMPROC         CODEPAGE_ENUMPROCA
@@ -1510,21 +1428,10 @@ typedef struct _FILEMUIINFO {
     BYTE        abBuffer[8];             // Buffer for extra data [in] (Size 4 is for padding)
 } FILEMUIINFO, *PFILEMUIINFO;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 #ifndef NOAPISET
 #include <stringapiset.h>    // String APISET dependencies
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 ////////////////////////////////////////////////////////////////////////////
 //
@@ -1584,12 +1491,6 @@ typedef struct _FILEMUIINFO {
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 //
 //  Code Page Dependent APIs.
 //
@@ -1607,7 +1508,7 @@ UINT
 WINAPI
 GetACP(void);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -1621,8 +1522,8 @@ GetOEMCP(void);
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop or Pc Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP |WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop or Pc Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP|WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM)
 
 DEPRECATED("Use Unicode. The information in this structure cannot represent all encodings accuratedly and may be unreliable on many machines. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 WINBASEAPI
@@ -1631,12 +1532,6 @@ WINAPI
 GetCPInfo(
     _In_ UINT       CodePage,
     _Out_ LPCPINFO  lpCPInfo);
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP |WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop or Pc Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP |WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 DEPRECATED("Use Unicode. The information in this structure cannot represent all encodings accurately and may be unreliable on many machines. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 WINBASEAPI
@@ -1660,17 +1555,17 @@ GetCPInfoExW(
 #define GetCPInfoEx  GetCPInfoExA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP |WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP|WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
+
+#pragma region Desktop or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //
 //  Locale Dependent APIs.
 //
 
-#pragma region Desktop or OneCore or Application or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
-
-DEPRECATED("CompareStringEx is preferred. Set DISABLE_NLS_DEPRECATION to disable this warning.")
+// DEPRECATED: CompareStringEx is preferred
 WINBASEAPI
 int
 WINAPI
@@ -1688,7 +1583,6 @@ CompareStringA(
 
 #if defined(_M_CEE)
 #undef CompareString
-DEPRECATED("CompareStringEx is preferred. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 __inline
 int
 CompareString(
@@ -1715,12 +1609,6 @@ CompareString(
 }
 #endif	/* _M_CEE */
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 #if (WINVER >= 0x0600)
 
 // DEPRECATED: FindNLSStringEx is preferred
@@ -1737,12 +1625,6 @@ FindNLSString(
     _Out_opt_               LPINT pcchFound);
 
 #endif //(WINVER >= 0x0600)
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 // DEPRECATED: LCMapStringEx is preferred
 WINBASEAPI
@@ -1774,11 +1656,11 @@ LCMapStringA(
 #define LCMapString  LCMapStringA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 // DEPRECATED: GetLocaleInfoEx is preferred
 WINBASEAPI
@@ -1809,11 +1691,11 @@ GetLocaleInfoA(
 #define GetLocaleInfo GetLocaleInfoA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 BOOL
@@ -1888,7 +1770,7 @@ SetCalendarInfoW(
 #endif // !UNICODE
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1942,23 +1824,7 @@ IsDBCSLeadByteEx(
     _In_ BYTE  TestChar
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 #if (WINVER >= 0x0600)
-
-// Use of Locale Names is preferred, LCIDs are deprecated.
-// This function is provided to enable compatibility with legacy data sets only.
-WINBASEAPI
-LCID
-WINAPI
-LocaleNameToLCID(
-    _In_ LPCWSTR lpName,
-    _In_ DWORD dwFlags);
-
 // Use of Locale Names is preferred, LCIDs are deprecated.
 // This function is provided to enable compatibility with legacy data sets only.
 WINBASEAPI
@@ -1970,9 +1836,18 @@ LCIDToLocaleName(
     _In_ int      cchName,
     _In_ DWORD    dwFlags);
 
+// Use of Locale Names is preferred, LCIDs are deprecated.
+// This function is provided to enable compatibility with legacy data sets only.
+WINBASEAPI
+LCID
+WINAPI
+LocaleNameToLCID(
+    _In_ LPCWSTR lpName,
+    _In_ DWORD dwFlags);
+
 #endif  // (WINVER >= 0x0600)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -1996,8 +1871,8 @@ GetDurationFormat(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 // DEPRECATED: GetNumberFormatEx is preferred
 WINBASEAPI
@@ -2054,12 +1929,6 @@ GetCurrencyFormatW(
 #else
 #define GetCurrencyFormat  GetCurrencyFormatA
 #endif // !UNICODE
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 // DEPRECATED: EnumCalendarInfoExEx is preferred
 WINBASEAPI
@@ -2179,14 +2048,8 @@ EnumDateFormatsExW(
 #endif // !UNICODE
 #endif /* WINVER >= 0x0500 */
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
 #if(WINVER >= 0x0500)
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
+// DEPRECATED: The Language Group concept is obsolete and no longer supported.
 WINBASEAPI
 BOOL
 WINAPI
@@ -2204,11 +2067,15 @@ GetNLSVersion(
     _In_    LCID             Locale,
     _Inout_ LPNLSVERSIONINFO lpVersionInformation);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+WINBASEAPI
+BOOL
+WINAPI
+IsNLSDefinedString(
+    _In_ NLS_FUNCTION     Function,
+    _In_ DWORD            dwFlags,
+    _In_ LPNLSVERSIONINFO lpVersionInformation,
+    _In_reads_(cchStr) LPCWSTR          lpString,
+    _In_ INT              cchStr);
 
 // DEPRECATED: IsValidLocaleName is preferred
 WINBASEAPI
@@ -2221,11 +2088,10 @@ IsValidLocale(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 // GetGeoInfoEx is preferred where available
-DEPRECATED("The GeoID concept is obsolete. Use GetGeoInfoEx instead. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 WINBASEAPI
 int
 WINAPI
@@ -2236,7 +2102,6 @@ GetGeoInfoA(
     _In_ int         cchData,
     _In_ LANGID      LangId);
 // GetGeoInfoEx is preferred where available
-DEPRECATED("The GeoID concept is obsolete. Use GetGeoInfoEx instead. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 WINBASEAPI
 int
 WINAPI
@@ -2263,14 +2128,13 @@ GetGeoInfoEx(
     _In_ int         geoDataCount);
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop or PC Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM)
 
 // EnumSystemGeoNames is preferred where available
-DEPRECATED("The GeoID concept is obsolete. Use EnumSystemGoNames instead. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 WINBASEAPI
 BOOL
 WINAPI
@@ -2292,39 +2156,33 @@ EnumSystemGeoNames(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 // GetUserDefaultGeoName is preferred where available
-DEPRECATED("The GeoID concept is obsolete. Use GetUserDefaultGeoName instead. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 WINBASEAPI
 GEOID
 WINAPI
 GetUserGeoID(
     _In_ GEOCLASS    GeoClass);
 
-/**
- * Note: This API was added in the Windows 10 Fall Creators Update.
- * (Please use this API instead of calling GetUserGeoID.)
- *
- */
 WINBASEAPI
 int
 WINAPI
 GetUserDefaultGeoName(
-    _Out_writes_z_(geoNameCount) LPWSTR geoName,
+    _Out_writes_(geoName) LPWSTR geoName,
     _In_ int geoNameCount
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 // GetUserDefaultGeoName is preferred where available
 // Applications are recommended to not change user settings themselves.
-DEPRECATED("The GeoID concept is obsolete. Use SetUserGeoName instead. Set DISABLE_NLS_DEPRECATION to disable this warning.")
 WINBASEAPI
 BOOL
 WINAPI
@@ -2347,21 +2205,6 @@ WINAPI
 ConvertDefaultLocale(
     _In_ LCID   Locale);
 
-#if(WINVER >= 0x0500)
-// DEPRECATED: Please use the user's language profile.
-WINBASEAPI
-LANGID
-WINAPI
-GetSystemDefaultUILanguage(void);
-
-#endif /* WINVER >= 0x0500 */
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-#if(WINVER >= 0x0500)
-
 WINBASEAPI
 LCID
 WINAPI
@@ -2374,13 +2217,19 @@ SetThreadLocale(
     _In_ LCID  Locale
     );
 
-#endif /* WINVER >= 0x0500 */
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#if(WINVER >= 0x0500)
+// DEPRECATED: Please use the user's language profile.
+WINBASEAPI
+LANGID
+WINAPI
+GetSystemDefaultUILanguage(void);
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Application Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-#if(WINVER >= 0x0500)
+
 // DEPRECATED: Please use the user's language profile.
 WINBASEAPI
 LANGID
@@ -2429,7 +2278,7 @@ GetUserDefaultLCID(void);
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 LANGID
@@ -2465,11 +2314,11 @@ SetProcessPreferredUILanguages(
 );
 
 #endif /* WINVER >= 0x0600 */
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or Phone Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_PHONE_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or Phone Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PHONE_APP | WINAPI_PARTITION_SYSTEM)
 
 #if(WINVER >= 0x0600)
 WINBASEAPI
@@ -2484,11 +2333,11 @@ GetUserPreferredUILanguages (
 
 #endif /* WINVER >= 0x0600 */
 
-#endif  /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_PHONE_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif  /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PHONE_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #if(WINVER >= 0x0600)
 
@@ -2560,32 +2409,6 @@ GetUILanguageInfo(
 
 #endif /* WINVER >= 0x0600 */
 
-#endif  /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB) 
-
-DECLARE_HANDLE(HSAVEDUILANGUAGES);
-
-WINBASEAPI
-BOOL
-WINAPI
-SetThreadPreferredUILanguages2(
-    _In_       ULONG flags,
-    _In_opt_   PCZZWSTR languages,
-    _Out_opt_  PULONG numLanguagesSet,
-    _Out_opt_  HSAVEDUILANGUAGES* snapshot);
-
-WINBASEAPI
-void
-WINAPI
-RestoreThreadPreferredUILanguages(_In_ const HSAVEDUILANGUAGES snapshot);
-
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_VB */
-
 #endif  /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
@@ -2615,8 +2438,8 @@ NotifyUILanguageChange(
 //  Locale Independent APIs.
 //
 
-#pragma region Desktop or OneCore or Application or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 BOOL
@@ -2631,6 +2454,11 @@ GetStringTypeExA(
 #define GetStringTypeEx  GetStringTypeExA
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //
 //  NOTE: The parameters for GetStringTypeA and GetStringTypeW are
@@ -2666,12 +2494,6 @@ FoldStringA(
 #define FoldString  FoldStringA
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 #if(WINVER >= 0x0500)
 
 // DEPRECATED, please use Locale Names and call EnumSystemLocalesEx
@@ -2696,15 +2518,9 @@ EnumSystemLocalesW(
 
 #endif /* WINVER >= 0x0500 */
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 #if(WINVER >= 0x0500)
 
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
+// DEPRECATED, language groups are obsolete and erratic.
 WINBASEAPI
 BOOL
 WINAPI
@@ -2712,7 +2528,7 @@ EnumSystemLanguageGroupsA(
     _In_ LANGUAGEGROUP_ENUMPROCA lpLanguageGroupEnumProc,
     _In_ DWORD                   dwFlags,
     _In_ LONG_PTR                lParam);
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
+// DEPRECATED, language groups are obsolete and erratic.
 WINBASEAPI
 BOOL
 WINAPI
@@ -2726,7 +2542,7 @@ EnumSystemLanguageGroupsW(
 #define EnumSystemLanguageGroups  EnumSystemLanguageGroupsA
 #endif // !UNICODE
 
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
+// DEPRECATED, language groups are obsolete and erratic.
 WINBASEAPI
 BOOL
 WINAPI
@@ -2735,7 +2551,7 @@ EnumLanguageGroupLocalesA(
     _In_ LGRPID                    LanguageGroup,
     _In_ DWORD                     dwFlags,
     _In_ LONG_PTR                  lParam);
-DEPRECATED("The Language Group concept is obsolete and no longer supported. Set DISABLE_NLS_DEPRECATION to disable this warning.")
+// DEPRECATED, language groups are obsolete and erratic.
 WINBASEAPI
 BOOL
 WINAPI
@@ -2813,43 +2629,6 @@ EnumSystemCodePagesW(
 // Windows API Normalization Functions
 //
 
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
-#if (WINVER >= 0x0600)
-
-//
-// IDN (International Domain Name) Functions
-//
-WINNORMALIZEAPI
-int
-WINAPI IdnToAscii(_In_                           DWORD    dwFlags,
-                  _In_reads_(cchUnicodeChar) 	 LPCWSTR  lpUnicodeCharStr,
-                  _In_                        	 int      cchUnicodeChar,
-                  _Out_writes_opt_(cchASCIIChar) LPWSTR   lpASCIICharStr,
-                  _In_                        	 int      cchASCIIChar);
-
-WINNORMALIZEAPI
-int
-WINAPI IdnToUnicode(_In_                         	 DWORD   dwFlags,
-                    _In_reads_(cchASCIIChar)    	 LPCWSTR lpASCIICharStr,
-                    _In_                         	 int     cchASCIIChar,
-                    _Out_writes_opt_(cchUnicodeChar) LPWSTR  lpUnicodeCharStr,
-                    _In_                         	 int     cchUnicodeChar);
-
-WINNORMALIZEAPI
-int
-WINAPI IdnToNameprepUnicode(_In_                            	DWORD   dwFlags,
-                            _In_reads_(cchUnicodeChar)     	LPCWSTR lpUnicodeCharStr,
-                            _In_                            	int     cchUnicodeChar,
-                            _Out_writes_opt_(cchNameprepChar)   LPWSTR  lpNameprepCharStr,
-                            _In_                            	int     cchNameprepChar);
-
-#endif //(WINVER >= 0x0600)
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
 #pragma region Application Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
@@ -2868,6 +2647,50 @@ BOOL
 WINAPI IsNormalizedString( _In_                   NORM_FORM NormForm,
                            _In_reads_(cwLength)  LPCWSTR   lpString,
                            _In_                   int       cwLength );
+
+
+#endif //(WINVER >= 0x0600)
+
+#if (WINVER >= 0x0600)
+
+//
+// IDN (International Domain Name) Functions
+//
+WINNORMALIZEAPI
+int
+WINAPI IdnToAscii(_In_                           DWORD    dwFlags,
+                  _In_reads_(cchUnicodeChar) 	 LPCWSTR  lpUnicodeCharStr,
+                  _In_                        	 int      cchUnicodeChar,
+                  _Out_writes_opt_(cchASCIIChar) LPWSTR   lpASCIICharStr,
+                  _In_                        	 int      cchASCIIChar);
+
+#endif //(WINVER >= 0x0600)
+
+#if (WINVER >= 0x0600)
+
+WINNORMALIZEAPI
+int
+WINAPI IdnToNameprepUnicode(_In_                            	DWORD   dwFlags,
+                            _In_reads_(cchUnicodeChar)     	LPCWSTR lpUnicodeCharStr,
+                            _In_                            	int     cchUnicodeChar,
+                            _Out_writes_opt_(cchNameprepChar)   LPWSTR  lpNameprepCharStr,
+                            _In_                            	int     cchNameprepChar);
+
+#endif //(WINVER >= 0x0600)
+
+#if (WINVER >= 0x0600)
+
+WINNORMALIZEAPI
+int
+WINAPI IdnToUnicode(_In_                         	 DWORD   dwFlags,
+                    _In_reads_(cchASCIIChar)    	 LPCWSTR lpASCIICharStr,
+                    _In_                         	 int     cchASCIIChar,
+                    _Out_writes_opt_(cchUnicodeChar) LPWSTR  lpUnicodeCharStr,
+                    _In_                         	 int     cchUnicodeChar);
+
+#endif //(WINVER >= 0x0600)
+
+#if (WINVER >= 0x0600)
 
 WINBASEAPI
 BOOL
@@ -2894,8 +2717,8 @@ WINAPI GetStringScripts(
 
 #if (WINVER >= 0x0600)
 
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
 // String based NLS APIs
@@ -2915,7 +2738,7 @@ GetLocaleInfoEx(
     _In_ int cchData
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop or PC Family or OneCore Family
@@ -2959,7 +2782,7 @@ GetDurationFormatEx(
 #pragma endregion
 
 #pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 int
@@ -2993,7 +2816,7 @@ GetUserDefaultLocaleName(
     _In_ int cchLocaleName
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop or PC Family or OneCore Family
@@ -3006,16 +2829,6 @@ GetSystemDefaultLocaleName(
     _Out_writes_(cchLocaleName) LPWSTR lpLocaleName,
     _In_ int cchLocaleName
 );
-
-WINBASEAPI
-BOOL
-WINAPI
-IsNLSDefinedString(
-    _In_ NLS_FUNCTION     Function,
-    _In_ DWORD            dwFlags,
-    _In_ LPNLSVERSIONINFO lpVersionInformation,
-    _In_reads_(cchStr) LPCWSTR          lpString,
-    _In_ INT              cchStr);
 
 WINBASEAPI
 BOOL
@@ -3040,8 +2853,8 @@ IsValidNLSVersion(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore or Gamaes Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 int
@@ -3087,8 +2900,7 @@ WINAPI
 IsValidLocaleName(
     _In_ LPCWSTR lpLocaleName
 );
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #pragma region Desktop or PC Family or OneCore Family
@@ -3132,12 +2944,6 @@ EnumTimeFormatsEx(
     _In_ LPARAM lParam
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Desktop or PC Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 typedef BOOL (CALLBACK* LOCALE_ENUMPROCEX)(LPWSTR, DWORD, LPARAM);
 
 WINBASEAPI
@@ -3150,15 +2956,15 @@ EnumSystemLocalesEx(
     _In_opt_ LPVOID lpReserved
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PC_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #endif //(WINVER >= 0x0600)
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
 
-#pragma region Application Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 int
@@ -3169,7 +2975,7 @@ ResolveLocaleName(
     _In_                            int     cchLocaleName
 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #endif // (WINVER >= _WIN32_WINNT_WIN7)

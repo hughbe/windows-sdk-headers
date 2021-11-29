@@ -4,7 +4,7 @@ Copyright (c) 1999 - 2008  Microsoft Corporation
 
 Module Name:
 
-    VirtDisk.h - Virtual Disk user mode interface
+    VirtDisk.w - Virtual Disk user mode interface
 
 Abstract:
 
@@ -187,9 +187,6 @@ typedef enum _OPEN_VIRTUAL_DISK_FLAG
     // Disable flushing and FUA (both for payload data and for metadata)
     // for backing files associated with this virtual disk.
     OPEN_VIRTUAL_DISK_FLAG_NO_WRITE_HARDENING = 0x00000100,
-
-    // Open the backing store even if it is a compressed file.
-    OPEN_VIRTUAL_DISK_FLAG_SUPPORT_COMPRESSED_VOLUMES = 0x00000200,
 
 } OPEN_VIRTUAL_DISK_FLAG;
 
@@ -401,7 +398,6 @@ typedef enum _ATTACH_VIRTUAL_DISK_VERSION
 {
     ATTACH_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
     ATTACH_VIRTUAL_DISK_VERSION_1           = 1,
-    ATTACH_VIRTUAL_DISK_VERSION_2           = 2,
 
 } ATTACH_VIRTUAL_DISK_VERSION;
 
@@ -416,12 +412,6 @@ typedef struct _ATTACH_VIRTUAL_DISK_PARAMETERS
         {
             ULONG Reserved;
         } Version1;
-
-        struct
-        {
-            ULONGLONG RestrictedOffset;
-            ULONGLONG RestrictedLength;
-        } Version2;
     };
 } ATTACH_VIRTUAL_DISK_PARAMETERS, *PATTACH_VIRTUAL_DISK_PARAMETERS;
 
@@ -451,22 +441,6 @@ typedef enum _ATTACH_VIRTUAL_DISK_FLAG
     // Do not assign a custom security descriptor to the disk; use the
     // system default.
     ATTACH_VIRTUAL_DISK_FLAG_NO_SECURITY_DESCRIPTOR         = 0x00000010,
-
-    // Default volume encryption policies should not be applied to the
-    // disk when attached to the local system.
-    ATTACH_VIRTUAL_DISK_FLAG_BYPASS_DEFAULT_ENCRYPTION_POLICY = 0x00000020,
-
-    // Attach the disk as a non-PnP device.
-    ATTACH_VIRTUAL_DISK_FLAG_NON_PNP                        = 0x00000040,
-
-    // Restrict the disk's view to the specified offset and length.
-    ATTACH_VIRTUAL_DISK_FLAG_RESTRICTED_RANGE               = 0x00000080,
-
-    // Restrict the disk's view to the unique data partition.
-    ATTACH_VIRTUAL_DISK_FLAG_SINGLE_PARTITION               = 0x00000100,
-
-    // Register the non-PnP disk as a volume with mount manager.
-    ATTACH_VIRTUAL_DISK_FLAG_REGISTER_VOLUME                = 0x00000200,
 
 } ATTACH_VIRTUAL_DISK_FLAG;
 
@@ -550,59 +524,53 @@ GetAllAttachedVirtualDiskPhysicalPaths(
 // Flags for dependent disks
 typedef enum _DEPENDENT_DISK_FLAG
 {
-    DEPENDENT_DISK_FLAG_NONE                         = 0x00000000,
+    DEPENDENT_DISK_FLAG_NONE                 = 0x00000000,
 
     //
     // Multiple files backing the virtual storage device
     //
-    DEPENDENT_DISK_FLAG_MULT_BACKING_FILES           = 0x00000001,
+    DEPENDENT_DISK_FLAG_MULT_BACKING_FILES   = 0x00000001,
 
-    DEPENDENT_DISK_FLAG_FULLY_ALLOCATED              = 0x00000002,
+    DEPENDENT_DISK_FLAG_FULLY_ALLOCATED      = 0x00000002,
 
-    DEPENDENT_DISK_FLAG_READ_ONLY                    = 0x00000004,
+    DEPENDENT_DISK_FLAG_READ_ONLY            = 0x00000004,
 
     //
-    // Backing file of the virtual storage device is not local to the machine
+    //Backing file of the virtual storage device is not local to the machine
     //
-    DEPENDENT_DISK_FLAG_REMOTE                       = 0x00000008,
+    DEPENDENT_DISK_FLAG_REMOTE               = 0x00000008,
 
     //
     // Volume is the system volume
     //
-    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME                = 0x00000010,
+    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME        = 0x00000010,
 
     //
     // Volume backing the virtual storage device file is the system volume
     //
-    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME_PARENT         = 0x00000020,
+    DEPENDENT_DISK_FLAG_SYSTEM_VOLUME_PARENT = 0x00000020,
 
-    DEPENDENT_DISK_FLAG_REMOVABLE                    = 0x00000040,
+    DEPENDENT_DISK_FLAG_REMOVABLE            = 0x00000040,
 
     //
     // Drive letters are not assigned to the volumes
     // on the virtual disk automatically.
     //
-    DEPENDENT_DISK_FLAG_NO_DRIVE_LETTER              = 0x00000080,
+    DEPENDENT_DISK_FLAG_NO_DRIVE_LETTER      = 0x00000080,
 
-    DEPENDENT_DISK_FLAG_PARENT                       = 0x00000100,
+    DEPENDENT_DISK_FLAG_PARENT               = 0x00000100,
 
     //
     // Virtual disk is not attached on the local host
     // (instead attached on a guest VM for instance)
     //
-    DEPENDENT_DISK_FLAG_NO_HOST_DISK                 = 0x00000200,
+    DEPENDENT_DISK_FLAG_NO_HOST_DISK         = 0x00000200,
 
     //
     // Indicates the lifetime of the disk is not tied
     // to any system handles
     //
-    DEPENDENT_DISK_FLAG_PERMANENT_LIFETIME           = 0x00000400,
-
-    //
-    // Volume backing the virtual storage device file
-    // can be a compressed volume.
-    //
-    DEPENDENT_DISK_FLAG_SUPPORT_COMPRESSED_VOLUMES   = 0x00000800,
+    DEPENDENT_DISK_FLAG_PERMANENT_LIFETIME   = 0x00000400,
 
 } DEPENDENT_DISK_FLAG;
 
@@ -1173,9 +1141,7 @@ typedef enum _MIRROR_VIRTUAL_DISK_FLAG
 {
     MIRROR_VIRTUAL_DISK_FLAG_NONE                   = 0x00000000,
     MIRROR_VIRTUAL_DISK_FLAG_EXISTING_FILE          = 0x00000001,
-    MIRROR_VIRTUAL_DISK_FLAG_SKIP_MIRROR_ACTIVATION = 0x00000002,
-    MIRROR_VIRTUAL_DISK_FLAG_ENABLE_SMB_COMPRESSION = 0x00000004,
-    MIRROR_VIRTUAL_DISK_FLAG_IS_LIVE_MIGRATION      = 0x00000008
+    MIRROR_VIRTUAL_DISK_FLAG_SKIP_MIRROR_ACTIVATION = 0x00000002
 
 } MIRROR_VIRTUAL_DISK_FLAG;
 
@@ -1498,66 +1464,6 @@ RawSCSIVirtualDisk(
 
 
 #endif // NTDDI_VERSION >= NTDDI_WINTHRESHOLD
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
-//
-// ForkVirtualDisk
-//
-
-// Version definitions
-typedef enum _FORK_VIRTUAL_DISK_VERSION
-{
-    FORK_VIRTUAL_DISK_VERSION_UNSPECIFIED = 0,
-    FORK_VIRTUAL_DISK_VERSION_1           = 1,
-
-} FORK_VIRTUAL_DISK_VERSION;
-
-// Versioned parameter structure for ForkVirtualDisk
-typedef struct _FORK_VIRTUAL_DISK_PARAMETERS
-{
-    FORK_VIRTUAL_DISK_VERSION Version;
-
-    union
-    {
-        struct
-        {
-            PCWSTR ForkedVirtualDiskPath;
-
-        } Version1;
-    };
-
-} FORK_VIRTUAL_DISK_PARAMETERS, *PFORK_VIRTUAL_DISK_PARAMETERS;
-
-// Flags for ForkVirtualDisk
-typedef enum _FORK_VIRTUAL_DISK_FLAG
-{
-    FORK_VIRTUAL_DISK_FLAG_NONE          = 0x00000000,
-    FORK_VIRTUAL_DISK_FLAG_EXISTING_FILE = 0x00000001,
-
-} FORK_VIRTUAL_DISK_FLAG;
-
-#ifdef DEFINE_ENUM_FLAG_OPERATORS
-DEFINE_ENUM_FLAG_OPERATORS(FORK_VIRTUAL_DISK_FLAG);
-#endif
-
-DWORD
-WINAPI
-ForkVirtualDisk(
-    _In_ HANDLE VirtualDiskHandle,
-    _In_ FORK_VIRTUAL_DISK_FLAG Flags,
-    _In_ const FORK_VIRTUAL_DISK_PARAMETERS* Parameters,
-    _Inout_ LPOVERLAPPED Overlapped
-    );
-
-DWORD
-WINAPI
-CompleteForkVirtualDisk(
-    _In_ HANDLE VirtualDiskHandle
-    );
-
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS5
-
 #endif // VIRTDISK_DEFINE_FLAGS
 
 //
@@ -1580,18 +1486,17 @@ CompleteForkVirtualDisk(
 
 #if !defined(__midl)
 
-#define _SURFACE_VIRTUAL_DISK_FLAG                                  _ATTACH_VIRTUAL_DISK_FLAG
-#define SURFACE_VIRTUAL_DISK_FLAG_NONE                              ATTACH_VIRTUAL_DISK_FLAG_NONE
-#define SURFACE_VIRTUAL_DISK_FLAG_READ_ONLY                         ATTACH_VIRTUAL_DISK_FLAG_READ_ONLY
-#define SURFACE_VIRTUAL_DISK_FLAG_NO_DRIVE_LETTER                   ATTACH_VIRTUAL_DISK_FLAG_NO_DRIVE_LETTER
-#define SURFACE_VIRTUAL_DISK_FLAG_PERMANENT_LIFETIME                ATTACH_VIRTUAL_DISK_FLAG_PERMANENT_LIFETIME
-#define SURFACE_VIRTUAL_DISK_FLAG_NO_LOCAL_HOST                     ATTACH_VIRTUAL_DISK_FLAG_NO_LOCAL_HOST
-#define SURFACE_VIRTUAL_DISK_FLAG_NO_SECURITY_DESCRIPTOR            ATTACH_VIRTUAL_DISK_FLAG_NO_SECURITY_DESCRIPTOR
-#define SURFACE_VIRTUAL_DISK_FLAG_BYPASS_DEFAULT_ENCRYPTION_POLICY  ATTACH_VIRTUAL_DISK_FLAG_BYPASS_DEFAULT_ENCRYPTION_POLICY
-#define SURFACE_VIRTUAL_DISK_FLAG                                   ATTACH_VIRTUAL_DISK_FLAG
-#define _UNSURFACE_VIRTUAL_DISK_FLAG                                _DETACH_VIRTUAL_DISK_FLAG
-#define UNSURFACE_VIRTUAL_DISK_FLAG_NONE                            DETACH_VIRTUAL_DISK_FLAG_NONE
-#define UNSURFACE_VIRTUAL_DISK_FLAG                                 DETACH_VIRTUAL_DISK_FLAG
+#define _SURFACE_VIRTUAL_DISK_FLAG                              _ATTACH_VIRTUAL_DISK_FLAG
+#define SURFACE_VIRTUAL_DISK_FLAG_NONE                          ATTACH_VIRTUAL_DISK_FLAG_NONE
+#define SURFACE_VIRTUAL_DISK_FLAG_READ_ONLY                     ATTACH_VIRTUAL_DISK_FLAG_READ_ONLY
+#define SURFACE_VIRTUAL_DISK_FLAG_NO_DRIVE_LETTER               ATTACH_VIRTUAL_DISK_FLAG_NO_DRIVE_LETTER
+#define SURFACE_VIRTUAL_DISK_FLAG_PERMANENT_LIFETIME            ATTACH_VIRTUAL_DISK_FLAG_PERMANENT_LIFETIME
+#define SURFACE_VIRTUAL_DISK_FLAG_NO_LOCAL_HOST                 ATTACH_VIRTUAL_DISK_FLAG_NO_LOCAL_HOST
+#define SURFACE_VIRTUAL_DISK_FLAG_NO_SECURITY_DESCRIPTOR        ATTACH_VIRTUAL_DISK_FLAG_NO_SECURITY_DESCRIPTOR
+#define SURFACE_VIRTUAL_DISK_FLAG                               ATTACH_VIRTUAL_DISK_FLAG
+#define _UNSURFACE_VIRTUAL_DISK_FLAG                            _DETACH_VIRTUAL_DISK_FLAG
+#define UNSURFACE_VIRTUAL_DISK_FLAG_NONE                        DETACH_VIRTUAL_DISK_FLAG_NONE
+#define UNSURFACE_VIRTUAL_DISK_FLAG                             DETACH_VIRTUAL_DISK_FLAG
 
 #else
 
@@ -1640,3 +1545,5 @@ DEFINE_ENUM_FLAG_OPERATORS(UNSURFACE_VIRTUAL_DISK_FLAG);
 #endif // VIRT_DISK_API_DEF
 
 // VirtDisk.h EOF
+
+

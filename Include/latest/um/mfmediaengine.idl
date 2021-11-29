@@ -158,7 +158,6 @@ typedef enum MF_MEDIA_ENGINE_EVENT
     MF_MEDIA_ENGINE_EVENT_DELAYLOADEVENT_CHANGED = 1013,
     MF_MEDIA_ENGINE_EVENT_STREAMRENDERINGERROR = 1014,
     MF_MEDIA_ENGINE_EVENT_SUPPORTEDRATES_CHANGED = 1015,
-    MF_MEDIA_ENGINE_EVENT_AUDIOENDPOINTCHANGE = 1016,
 
 } MF_MEDIA_ENGINE_EVENT;
 
@@ -668,29 +667,6 @@ interface IMFMediaEngineEx : IMFMediaEngine
         );
 };
 
-//+-----------------------------------------------------------------------------
-//
-//  Interface:  IMFMediaEngineAudioEndpointId
-//
-//  Synopsis:   IMFMediaEngineAudioEndpointId extends the media engine for audio endpoint Ids
-//
-//------------------------------------------------------------------------------
-[
-    object,
-    uuid(7a3bac98-0e76-49fb-8c20-8a86fd98eaf2),
-    pointer_default(unique),
-    local
-]
-interface IMFMediaEngineAudioEndpointId : IUnknown
-{
-    HRESULT SetAudioEndpointId(
-        [in, annotation("_In_opt_")] LPCWSTR pszEndpointId
-        );
-
-    HRESULT GetAudioEndpointId(
-        [out, annotation("_Outptr_")] LPWSTR* ppszEndpointId
-        );
-};
 
 typedef enum MF_MEDIA_ENGINE_EXTENSION_TYPE
 {
@@ -2683,36 +2659,6 @@ interface IMFMediaKeySession2 : IMFMediaKeySession
     HRESULT Remove();
 
     HRESULT Shutdown();
-}
-
-
-//////////////////////////////////////////////////////////////////////////////
-//
-//  Store CDMs May 10, 2019
-//
-//  Allows direct usage of CDM objects that can be defined in store apps.
-//
-//////////////////////////////////////////////////////////////////////////////
-
-//+-----------------------------------------------------------------------------
-//
-//  Interface:  IMFMediaEngineClassFactory4
-//
-//  Synopsis:   Implement direct access of CDM object that could be defined in store apps.
-//
-//------------------------------------------------------------------------------
-[
-    object,
-    uuid(fbe256c1-43cf-4a9b-8cb8-ce8632a34186),
-    local
-]
-interface IMFMediaEngineClassFactory4 : IUnknown
-{
-    HRESULT CreateContentDecryptionModuleFactory(
-        [in, annotation("_In_")] LPCWSTR keySystem,
-        [in, annotation("_In_")] REFIID riid,
-        [out, iid_is(riid), annotation("_Outptr_")] LPVOID *ppvObject
-        );
 }
 
 

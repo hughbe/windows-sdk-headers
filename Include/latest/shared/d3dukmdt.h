@@ -39,14 +39,8 @@
 #define DXGKDDI_INTERFACE_VERSION_WDDM1_3_PATH_INDEPENDENT_ROTATION  0x4003
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_0    0x5023
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_1    0x6003
-#define DXGKDDI_INTERFACE_VERSION_WDDM2_1_5  0x6010     // Used in RS1.7 for GPU-P
-#define DXGKDDI_INTERFACE_VERSION_WDDM2_1_6  0x6011     // Used in RS1.8 for GPU-P
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_2    0x700A
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_3    0x8001
-#define DXGKDDI_INTERFACE_VERSION_WDDM2_4    0x9006
-#define DXGKDDI_INTERFACE_VERSION_WDDM2_5    0xA00B
-#define DXGKDDI_INTERFACE_VERSION_WDDM2_6    0xB004
-#define DXGKDDI_INTERFACE_VERSION_WDDM2_7    0xC004
 
 
 #define IS_OFFICIAL_DDI_INTERFACE_VERSION(version)                 \
@@ -58,18 +52,12 @@
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM1_3_PATH_INDEPENDENT_ROTATION) || \
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_0) ||   \
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_1) ||   \
-             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_1_5) || \
-             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_1_6) || \
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_2) ||   \
-             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_3) ||   \
-             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_4) ||   \
-             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_5) ||   \
-             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_6) ||   \
-             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_7)      \
+             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_3)      \
             )
 
 #if !defined(DXGKDDI_INTERFACE_VERSION)
-#define DXGKDDI_INTERFACE_VERSION           DXGKDDI_INTERFACE_VERSION_WDDM2_7
+#define DXGKDDI_INTERFACE_VERSION           DXGKDDI_INTERFACE_VERSION_WDDM2_3
 #endif // !defined(DXGKDDI_INTERFACE_VERSION)
 
 #define D3D_UMD_INTERFACE_VERSION_VISTA      0x000C
@@ -99,30 +87,8 @@
 #define D3D_UMD_INTERFACE_VERSION_WDDM2_3_2     0x8001
 #define D3D_UMD_INTERFACE_VERSION_WDDM2_3       D3D_UMD_INTERFACE_VERSION_WDDM2_3_2
 
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_4_1     0x9000
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_4_2     0x9001
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_4       D3D_UMD_INTERFACE_VERSION_WDDM2_4_2
-
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_5_1     0xA000
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_5_2     0xA001
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_5_3     0xA002
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_5       D3D_UMD_INTERFACE_VERSION_WDDM2_5_3
-
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_6_1     0xB000
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_6_2     0xB001
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_6_3     0xB002
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_6_4     0xB003
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_6       D3D_UMD_INTERFACE_VERSION_WDDM2_6_4
-
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_7_1     0xC000
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_7_2     0xC001
-#define D3D_UMD_INTERFACE_VERSION_WDDM2_7       D3D_UMD_INTERFACE_VERSION_WDDM2_7_2
-
-// Components which depend on D3D_UMD_INTERFACE_VERSION need to be updated, static assert validation present.
-// Search for D3D_UMD_INTERFACE_VERSION across all depots to ensure all dependencies are updated.
-
 #if !defined(D3D_UMD_INTERFACE_VERSION)
-#define D3D_UMD_INTERFACE_VERSION           D3D_UMD_INTERFACE_VERSION_WDDM2_7
+#define D3D_UMD_INTERFACE_VERSION           D3D_UMD_INTERFACE_VERSION_WDDM2_3
 #endif // !defined(D3D_UMD_INTERFACE_VERSION)
 
 //
@@ -194,8 +160,7 @@ typedef struct _DXGKVGPU_ESCAPE_POWERTRANSITIONCOMPLETE
 
 typedef struct _DXGKVGPU_ESCAPE_INITIALIZE
 {
-    DXGKVGPU_ESCAPE_HEAD    Header;
-    GUID                    VmGuid;
+    DXGKVGPU_ESCAPE_HEAD Header;
 } DXGKVGPU_ESCAPE_INITIALIZE;
 
 typedef struct _DXGKVGPU_ESCAPE_RELEASE
@@ -243,7 +208,6 @@ typedef struct _DXGK_PTE
 
 #define D3DGPU_NULL 0
 #define D3DDDI_MAX_WRITTEN_PRIMARIES 16
-#define D3DDDI_MAX_MPO_PRESENT_DIRTY_RECTS  0xFFF
 
 typedef struct _D3DGPU_PHYSICAL_ADDRESS
 {
@@ -506,13 +470,7 @@ typedef struct _D3DDDI_ESCAPEFLAGS
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_2)
             UINT    Reserved            : 1;    // 0x00000010   Used internally by DisplayOnly present
             UINT    VirtualMachineData  : 1;    // 0x00000020   Cannot be set from user mode
-#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_5)
-            UINT    DriverKnownEscape   : 1;    // 0x00000040       // Driver private data points to a well known structure
-            UINT    DriverCommonEscape  : 1;    // 0x00000080       // Private data points runtime defined structure
-            UINT    Reserved2           :24;    // 0xFFFFFF00
-#else  // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_5)
             UINT    Reserved2           :26;    // 0xFFFFFFC0
-#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_5)
 #else
             UINT    Reserved            :28;    // 0xFFFFFFF0
 #endif //  (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_2)
@@ -526,29 +484,6 @@ typedef struct _D3DDDI_ESCAPEFLAGS
         UINT        Value;
     };
 } D3DDDI_ESCAPEFLAGS;
-
-#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_5)
-
-typedef enum _D3DDDI_DRIVERESCAPETYPE
-{
-    D3DDDI_DRIVERESCAPETYPE_TRANSLATEALLOCATIONHANDLE   = 0,
-    D3DDDI_DRIVERESCAPETYPE_TRANSLATERESOURCEHANDLE     = 1,
-    D3DDDI_DRIVERESCAPETYPE_MAX,
-} D3DDDI_DRIVERESCAPETYPE;
-
-typedef struct _D3DDDI_DRIVERESCAPE_TRANSLATEALLOCATIONEHANDLE
-{
-     D3DDDI_DRIVERESCAPETYPE  EscapeType; 
-     D3DKMT_HANDLE            hAllocation;
-} D3DDDI_DRIVERESCAPE_TRANSLATEALLOCATIONEHANDLE;
-
-typedef struct _D3DDDI_DRIVERESCAPE_TRANSLATERESOURCEHANDLE
-{
-     D3DDDI_DRIVERESCAPETYPE  EscapeType;
-     D3DKMT_HANDLE            hResource;
-} D3DDDI_DRIVERESCAPE_TRANSLATERESOURCEHANDLE;
-
-#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_5)
 
 typedef struct _D3DDDI_CREATECONTEXTFLAGS
 {
@@ -600,9 +535,7 @@ typedef struct _D3DDDI_CREATEHWQUEUEFLAGS
         struct
         {
             UINT    DisableGpuTimeout   : 1;      // 0x00000001
-            UINT    NoBroadcastSignal   : 1;      // 0x00000002
-            UINT    NoBroadcastWait     : 1;      // 0x00000004
-            UINT    Reserved            :29;      // 0xFFFFFFF8
+            UINT    Reserved            :31;      // 0xFFFFFFFE
         };
         UINT Value;
     };
@@ -863,14 +796,6 @@ typedef enum _D3DDDI_OUTPUT_WIRE_COLOR_SPACE_TYPE
     // OS only intend to use the _G22_P2020 value in future,
     // for now graphics drivers should not expect it.
     D3DDDI_OUTPUT_WIRE_COLOR_SPACE_G22_P2020              = 31,
-    
-    // OS only intend to use the _G2084_P2020_HDR10PLUS value in future,
-    // for now graphics drivers should not expect it.
-    D3DDDI_OUTPUT_WIRE_COLOR_SPACE_G2084_P2020_HDR10PLUS  = 32,
-
-    // OS only intend to use the _G2084_P2020_DVLL value in future,
-    // for now graphics drivers should not expect it.
-    D3DDDI_OUTPUT_WIRE_COLOR_SPACE_G2084_P2020_DVLL       = 33,
 } D3DDDI_OUTPUT_WIRE_COLOR_SPACE_TYPE;
 
 typedef struct _D3DDDIRECT
@@ -898,10 +823,7 @@ typedef enum _D3DDDI_GAMMARAMP_TYPE
     D3DDDI_GAMMARAMP_DXGI_1        = 3,
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_3)
     D3DDDI_GAMMARAMP_MATRIX_3x4    = 4,
-#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_3)
-#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_6)
-    D3DDDI_GAMMARAMP_MATRIX_V2     = 5,
-#endif // DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_6
+#endif (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_3)
 } D3DDDI_GAMMARAMP_TYPE;
 
 typedef struct _D3DDDI_GAMMA_RAMP_RGB256x3x16
@@ -932,33 +854,10 @@ typedef struct _D3DKMDT_3X4_COLORSPACE_TRANSFORM
     D3DDDI_DXGI_RGB     LookupTable1D[4096];
 } D3DKMDT_3x4_COLORSPACE_TRANSFORM, *PD3DDDI_3x4_COLORSPACE_TRANSFORM;
 
-typedef enum _D3DKMDT_COLORSPACE_TRANSFORM_STAGE_CONTROL
-{
-    D3DKMDT_COLORSPACE_TRANSFORM_STAGE_CONTROL_NO_CHANGE = 0,
-    D3DKMDT_COLORSPACE_TRANSFORM_STAGE_CONTROL_ENABLE    = 1,
-    D3DKMDT_COLORSPACE_TRANSFORM_STAGE_CONTROL_BYPASS    = 2,
-}D3DKMDT_COLORSPACE_TRANSFORM_STAGE_CONTROL, *PD3DKMDT_COLORSPACE_TRANSFORM_STAGE_CONTROL;
-
-typedef struct _D3DKMDT_COLORSPACE_TRANSFORM_MATRIX_V2
-{
-    // stage of 1D Degamma.
-    D3DKMDT_COLORSPACE_TRANSFORM_STAGE_CONTROL  StageControlLookupTable1DDegamma;
-    D3DDDI_DXGI_RGB                             LookupTable1DDegamma[4096];
-
-    // stage of 3x3 matrix
-    D3DKMDT_COLORSPACE_TRANSFORM_STAGE_CONTROL  StageControlColorMatrix3x3;
-    float                                       ColorMatrix3x3[3][3];
-
-    // stage of 1D Regamma.
-    D3DKMDT_COLORSPACE_TRANSFORM_STAGE_CONTROL  StageControlLookupTable1DRegamma;
-    D3DDDI_DXGI_RGB                             LookupTable1DRegamma[4096];
-} D3DKMDT_COLORSPACE_TRANSFORM_MATRIX_V2, *PD3DKMDT_COLORSPACE_TRANSFORM_MATRIX_V2;
-
 typedef enum _D3DDDI_HDR_METADATA_TYPE
 {
     D3DDDI_HDR_METADATA_TYPE_NONE               = 0,
     D3DDDI_HDR_METADATA_TYPE_HDR10              = 1,
-    D3DDDI_HDR_METADATA_TYPE_HDR10PLUS         = 2,
 } D3DDDI_HDR_METADATA_TYPE;
 
 typedef struct _D3DDDI_HDR_METADATA_HDR10
@@ -975,11 +874,6 @@ typedef struct _D3DDDI_HDR_METADATA_HDR10
     UINT16 MaxContentLightLevel;
     UINT16 MaxFrameAverageLightLevel;
 } D3DDDI_HDR_METADATA_HDR10;
-
-typedef struct D3DDDI_HDR_METADATA_HDR10PLUS
-{
-    BYTE Data[72];
-} D3DDDI_HDR_METADATA_HDR10PLUS;
 
 // Used as a value for D3DDDI_VIDEO_PRESENT_SOURCE_ID and D3DDDI_VIDEO_PRESENT_TARGET_ID types to specify
 // that the respective video present source/target ID hasn't been initialized.
@@ -1273,8 +1167,6 @@ typedef enum _D3DDDI_SYNCHRONIZATIONOBJECT_TYPE
     D3DDDI_PERIODIC_MONITORED_FENCE = 6,
 #endif // DXGKDDI_INTERFACE_VERSION
 
-    D3DDDI_SYNCHRONIZATION_TYPE_LIMIT
-
 } D3DDDI_SYNCHRONIZATIONOBJECT_TYPE;
 
 #if ((DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_0) || \
@@ -1348,7 +1240,6 @@ typedef struct D3DDDI_MAKERESIDENT
     D3DKMT_HANDLE               hPagingQueue;       // [in] Handle to the paging queue used to synchronize paging operations for this call.
     UINT                        NumAllocations;     // [in/out] On input, the number of allocation handles om the AllocationList array. On output,
                                                     //          the number of allocations successfully made resident.
-    _Field_size_(NumAllocations)
     CONST D3DKMT_HANDLE*        AllocationList;     // [in] An array of NumAllocations allocation handles
     CONST UINT*                 PriorityList;       // [in] Residency priority array for each of the allocations in the resource or allocation list
     D3DDDI_MAKERESIDENT_FLAGS   Flags;              // [in] Residency flags
@@ -1757,62 +1648,6 @@ typedef struct _D3DDDI_WAITFORSYNCHRONIZATIONOBJECTFROMCPU_FLAGS
 } D3DDDI_WAITFORSYNCHRONIZATIONOBJECTFROMCPU_FLAGS;
 
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_0)
-
-#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_4)
-
-typedef struct _D3DDDI_QUERYREGISTRY_FLAGS
-{
-    union
-    {
-        struct
-        {
-            UINT   TranslatePath    :  1;
-            UINT   MutableValue     :  1;
-            UINT   Reserved         : 30;
-        };
-        UINT Value;
-    };
-} D3DDDI_QUERYREGISTRY_FLAGS;
-
-typedef enum _D3DDDI_QUERYREGISTRY_TYPE
-{
-   D3DDDI_QUERYREGISTRY_SERVICEKEY      = 0,	
-   D3DDDI_QUERYREGISTRY_ADAPTERKEY      = 1,	
-   D3DDDI_QUERYREGISTRY_DRIVERSTOREPATH = 2,
-   D3DDDI_QUERYREGISTRY_DRIVERIMAGEPATH = 3,
-   D3DDDI_QUERYREGISTRY_MAX,
-} D3DDDI_QUERYREGISTRY_TYPE;
-
-typedef enum _D3DDDI_QUERYREGISTRY_STATUS
-{
-   D3DDDI_QUERYREGISTRY_STATUS_SUCCESS              = 0,	
-   D3DDDI_QUERYREGISTRY_STATUS_BUFFER_OVERFLOW      = 1,	
-   D3DDDI_QUERYREGISTRY_STATUS_FAIL                 = 2,	
-   D3DDDI_QUERYREGISTRY_STATUS_MAX,
-} D3DDDI_QUERYREGISTRY_STATUS;
-
-//
-// Output data value follows this structure.
-// PrivateDriverSize must be sizeof(D3DDDI_QUERYREGISTRY_INFO) + (size of the the key value in bytes)
-//
-typedef struct _D3DDDI_QUERYREGISTRY_INFO
-{
-   D3DDDI_QUERYREGISTRY_TYPE    QueryType;              // In
-   D3DDDI_QUERYREGISTRY_FLAGS   QueryFlags;             // In
-   WCHAR                        ValueName[MAX_PATH];    // In
-   ULONG                        ValueType;              // In
-   ULONG                        PhysicalAdapterIndex;   // In
-   ULONG                        OutputValueSize;        // Out. Number of bytes written to the output value or required in case of D3DDDI_QUERYREGISTRY_STATUS_BUFFER_OVERFLOW.
-   D3DDDI_QUERYREGISTRY_STATUS  Status;                 // Out
-   union {
-        DWORD   OutputDword;                            // Out
-        UINT64  OutputQword;                            // Out
-        WCHAR   OutputString[1];                        // Out. Dynamic array
-        BYTE    OutputBinary[1];                        // Out. Dynamic array
-   };
- } D3DDDI_QUERYREGISTRY_INFO;
-
-#endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_4)
 
 //
 // Defines the maximum number of context a particular command buffer can

@@ -8238,7 +8238,8 @@ EXTERN_C const IID IID_IInternetHostSecurityManager;
 #define URLACTION_SCRIPT_NAVIGATE                              0x0000140A
 #define URLACTION_PLUGGABLE_PROTOCOL_XHR                       0x0000140B
 #define URLACTION_ALLOW_VBSCRIPT_IE                            0x0000140C
-#define URLACTION_SCRIPT_CURR_MAX                              0x0000140C
+#define URLACTION_ALLOW_JSCRIPT_IE                             0x0000140D
+#define URLACTION_SCRIPT_CURR_MAX                              0x0000140D
 #define URLACTION_SCRIPT_MAX                                   0x000015ff
 
 #define URLACTION_HTML_MIN                                     0x00001600

@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * consoleapi.h -- ApiSet Contract for api-ms-win-core-namespace-l1              *
@@ -18,11 +19,28 @@
 #include <minwindef.h>
 #include <minwinbase.h>
 
+/* APISET_NAME: api-ms-win-core-namespace-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_NAMESPACE_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_NAMESPACE_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #define PRIVATE_NAMESPACE_FLAG_DESTROY      0x00000001
@@ -68,7 +86,7 @@ WINBASEAPI
 BOOL
 WINAPI
 AddSIDToBoundaryDescriptor(
-    _Inout_ HANDLE* BoundaryDescriptor,
+    _Inout_ HANDLE * BoundaryDescriptor,
     _In_ PSID RequiredSid
     );
 

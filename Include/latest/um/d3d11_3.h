@@ -153,14 +153,6 @@ enum D3D11_CONTEXT_TYPE
         D3D11_CONTEXT_TYPE_VIDEO	= 4
     } 	D3D11_CONTEXT_TYPE;
 
-#ifdef __cplusplus
-enum D3D11_TEXTURE_LAYOUT : int
-{
-D3D11_TEXTURE_LAYOUT_UNDEFINED = 0,
-D3D11_TEXTURE_LAYOUT_ROW_MAJOR = 1,
-D3D11_TEXTURE_LAYOUT_64K_STANDARD_SWIZZLE = 2,
-};
-#else
 typedef 
 enum D3D11_TEXTURE_LAYOUT
     {
@@ -169,7 +161,6 @@ enum D3D11_TEXTURE_LAYOUT
         D3D11_TEXTURE_LAYOUT_64K_STANDARD_SWIZZLE	= 2
     } 	D3D11_TEXTURE_LAYOUT;
 
-#endif
 typedef struct D3D11_TEXTURE2D_DESC1
     {
     UINT Width;
@@ -189,7 +180,8 @@ typedef struct D3D11_TEXTURE2D_DESC1
 }
 struct CD3D11_TEXTURE2D_DESC1 : public D3D11_TEXTURE2D_DESC1
 {
-    CD3D11_TEXTURE2D_DESC1() = default;
+    CD3D11_TEXTURE2D_DESC1()
+    {}
     explicit CD3D11_TEXTURE2D_DESC1( const D3D11_TEXTURE2D_DESC1& o ) :
         D3D11_TEXTURE2D_DESC1( o )
     {}
@@ -238,6 +230,7 @@ struct CD3D11_TEXTURE2D_DESC1 : public D3D11_TEXTURE2D_DESC1
         TextureLayout = textureLayout;
     }
     ~CD3D11_TEXTURE2D_DESC1() {}
+    operator const D3D11_TEXTURE2D_DESC1&() const { return *this; }
 };
 extern "C"{
 #endif
@@ -424,7 +417,8 @@ typedef struct D3D11_TEXTURE3D_DESC1
 }
 struct CD3D11_TEXTURE3D_DESC1 : public D3D11_TEXTURE3D_DESC1
 {
-    CD3D11_TEXTURE3D_DESC1() = default;
+    CD3D11_TEXTURE3D_DESC1()
+    {}
     explicit CD3D11_TEXTURE3D_DESC1( const D3D11_TEXTURE3D_DESC1& o ) :
         D3D11_TEXTURE3D_DESC1( o )
     {}
@@ -467,6 +461,7 @@ struct CD3D11_TEXTURE3D_DESC1 : public D3D11_TEXTURE3D_DESC1
         TextureLayout = textureLayout;
     }
     ~CD3D11_TEXTURE3D_DESC1() {}
+    operator const D3D11_TEXTURE3D_DESC1&() const { return *this; }
 };
 extern "C"{
 #endif
@@ -662,7 +657,8 @@ typedef struct D3D11_RASTERIZER_DESC2
 }
 struct CD3D11_RASTERIZER_DESC2 : public D3D11_RASTERIZER_DESC2
 {
-    CD3D11_RASTERIZER_DESC2() = default;
+    CD3D11_RASTERIZER_DESC2()
+    {}
     explicit CD3D11_RASTERIZER_DESC2( const D3D11_RASTERIZER_DESC2& o ) :
         D3D11_RASTERIZER_DESC2( o )
     {}
@@ -709,6 +705,7 @@ struct CD3D11_RASTERIZER_DESC2 : public D3D11_RASTERIZER_DESC2
         ConservativeRaster = conservativeRaster;
     }
     ~CD3D11_RASTERIZER_DESC2() {}
+    operator const D3D11_RASTERIZER_DESC2&() const { return *this; }
 };
 extern "C"{
 #endif
@@ -903,7 +900,8 @@ typedef struct D3D11_SHADER_RESOURCE_VIEW_DESC1
 }
 struct CD3D11_SHADER_RESOURCE_VIEW_DESC1 : public D3D11_SHADER_RESOURCE_VIEW_DESC1
 {
-    CD3D11_SHADER_RESOURCE_VIEW_DESC1() = default;
+    CD3D11_SHADER_RESOURCE_VIEW_DESC1()
+    {}
     explicit CD3D11_SHADER_RESOURCE_VIEW_DESC1( const D3D11_SHADER_RESOURCE_VIEW_DESC1& o ) :
         D3D11_SHADER_RESOURCE_VIEW_DESC1( o )
     {}
@@ -1106,6 +1104,7 @@ struct CD3D11_SHADER_RESOURCE_VIEW_DESC1 : public D3D11_SHADER_RESOURCE_VIEW_DES
         Texture3D.MipLevels = mipLevels;
     }
     ~CD3D11_SHADER_RESOURCE_VIEW_DESC1() {}
+    operator const D3D11_SHADER_RESOURCE_VIEW_DESC1&() const { return *this; }
 };
 extern "C"{
 #endif
@@ -1295,7 +1294,8 @@ typedef struct D3D11_RENDER_TARGET_VIEW_DESC1
 }
 struct CD3D11_RENDER_TARGET_VIEW_DESC1 : public D3D11_RENDER_TARGET_VIEW_DESC1
 {
-    CD3D11_RENDER_TARGET_VIEW_DESC1() = default;
+    CD3D11_RENDER_TARGET_VIEW_DESC1()
+    {}
     explicit CD3D11_RENDER_TARGET_VIEW_DESC1( const D3D11_RENDER_TARGET_VIEW_DESC1& o ) :
         D3D11_RENDER_TARGET_VIEW_DESC1( o )
     {}
@@ -1452,6 +1452,7 @@ struct CD3D11_RENDER_TARGET_VIEW_DESC1 : public D3D11_RENDER_TARGET_VIEW_DESC1
         Texture3D.WSize = wSize;
     }
     ~CD3D11_RENDER_TARGET_VIEW_DESC1() {}
+    operator const D3D11_RENDER_TARGET_VIEW_DESC1&() const { return *this; }
 };
 extern "C"{
 #endif
@@ -1639,7 +1640,8 @@ typedef struct D3D11_UNORDERED_ACCESS_VIEW_DESC1
 }
 struct CD3D11_UNORDERED_ACCESS_VIEW_DESC1 : public D3D11_UNORDERED_ACCESS_VIEW_DESC1
 {
-    CD3D11_UNORDERED_ACCESS_VIEW_DESC1() = default;
+    CD3D11_UNORDERED_ACCESS_VIEW_DESC1()
+    {}
     explicit CD3D11_UNORDERED_ACCESS_VIEW_DESC1( const D3D11_UNORDERED_ACCESS_VIEW_DESC1& o ) :
         D3D11_UNORDERED_ACCESS_VIEW_DESC1( o )
     {}
@@ -1786,6 +1788,7 @@ struct CD3D11_UNORDERED_ACCESS_VIEW_DESC1 : public D3D11_UNORDERED_ACCESS_VIEW_D
         Texture3D.WSize = wSize;
     }
     ~CD3D11_UNORDERED_ACCESS_VIEW_DESC1() {}
+    operator const D3D11_UNORDERED_ACCESS_VIEW_DESC1&() const { return *this; }
 };
 extern "C"{
 #endif
@@ -1951,7 +1954,8 @@ typedef struct D3D11_QUERY_DESC1
 }
 struct CD3D11_QUERY_DESC1 : public D3D11_QUERY_DESC1
 {
-    CD3D11_QUERY_DESC1() = default;
+    CD3D11_QUERY_DESC1()
+    {}
     explicit CD3D11_QUERY_DESC1( const D3D11_QUERY_DESC1& o ) :
         D3D11_QUERY_DESC1( o )
     {}
@@ -1965,6 +1969,7 @@ struct CD3D11_QUERY_DESC1 : public D3D11_QUERY_DESC1
         ContextType = contextType;
     }
     ~CD3D11_QUERY_DESC1() {}
+    operator const D3D11_QUERY_DESC1&() const { return *this; }
 };
 extern "C"{
 #endif
@@ -2120,10 +2125,9 @@ EXTERN_C const IID IID_ID3D11Query1;
 typedef 
 enum D3D11_FENCE_FLAG
     {
-        D3D11_FENCE_FLAG_NONE	= 0,
+        D3D11_FENCE_FLAG_NONE	= 0x1,
         D3D11_FENCE_FLAG_SHARED	= 0x2,
-        D3D11_FENCE_FLAG_SHARED_CROSS_ADAPTER	= 0x4,
-        D3D11_FENCE_FLAG_NON_MONITORED	= 0x8
+        D3D11_FENCE_FLAG_SHARED_CROSS_ADAPTER	= 0x4
     } 	D3D11_FENCE_FLAG;
 
 DEFINE_ENUM_FLAG_OPERATORS(D3D11_FENCE_FLAG);

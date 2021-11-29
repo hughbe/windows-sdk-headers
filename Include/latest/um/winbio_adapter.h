@@ -41,7 +41,7 @@ Environment:
 
 #ifdef __cplusplus
 extern "C"{
-#endif
+#endif 
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -56,7 +56,7 @@ typedef struct _WINBIO_ENGINE_INTERFACE *PWINBIO_ENGINE_INTERFACE;
 typedef struct _WINBIO_STORAGE_INTERFACE *PWINBIO_STORAGE_INTERFACE;
 
 #if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
-
+    
 typedef struct _WINBIO_FRAMEWORK_INTERFACE *PWINBIO_FRAMEWORK_INTERFACE;
 
 #endif
@@ -79,8 +79,8 @@ typedef ULONG WINBIO_STORAGE_CAPABILITIES, *PWINBIO_STORAGE_CAPABILITIES;
 // Contents of a single storage record. The Storage Adapter fills in one
 // of these structure in response to a 'GetCurrentRecord' call.
 //
-// NOTE:
-//  The memory pointed to by this structure belongs to the Storage Adapter
+// NOTE: 
+//  The memory pointed to by this structure belongs to the Storage Adapter 
 //  and is only valid until the pipeline executes its next database operation,
 //  or until the pipeline is cleared.
 //
@@ -115,8 +115,8 @@ typedef struct _WINBIO_PIPELINE {
     HANDLE StorageHandle;
 
     //
-    // Pointers to interface dispatch tables for each
-    // Adapter in the plug-in stack. These should be
+    // Pointers to interface dispatch tables for each 
+    // Adapter in the plug-in stack. These should be 
     // considered read-only by the plug-in Adapters.
     //
     PWINBIO_SENSOR_INTERFACE    SensorInterface;
@@ -133,7 +133,7 @@ typedef struct _WINBIO_PIPELINE {
     PWINIBIO_STORAGE_CONTEXT    StorageContext;
 
 #if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
-
+    
     PWINBIO_FRAMEWORK_INTERFACE FrameworkInterface;
 
 #endif
@@ -152,7 +152,7 @@ typedef ULONG WINBIO_ADAPTER_TYPE, *PWINBIO_ADAPTER_TYPE;
 #define WINBIO_ADAPTER_TYPE_STORAGE     ((WINBIO_ADAPTER_TYPE)3)
 
 #if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
-
+    
 #define WINBIO_ADAPTER_TYPE_FRAMEWORK   ((WINBIO_ADAPTER_TYPE)4)
 
 #endif
@@ -365,20 +365,20 @@ typedef HRESULT
 //
 typedef HRESULT
 (WINAPI *PIBIO_SENSOR_ASYNC_IMPORT_RAW_BUFFER_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _Inout_ PWINBIO_PIPELINE Pipeline, 
     _In_reads_bytes_opt_(RawBufferSize) PUCHAR RawBufferAddress,
-    _In_ SIZE_T RawBufferSize,
-    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress,
+    _In_ SIZE_T RawBufferSize, 
+    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress, 
     _Out_opt_ SIZE_T *ResultBufferSize
     );
 
 typedef HRESULT
 (WINAPI *PIBIO_SENSOR_ASYNC_IMPORT_SECURE_BUFFER_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _Inout_ PWINBIO_PIPELINE Pipeline, 
     _In_ GUID SecureBufferIdentifier,
     _In_reads_bytes_opt_(MetadataBufferSize) PUCHAR MetadataBufferAddress,
-    _In_ SIZE_T MetadataBufferSize,
-    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress,
+    _In_ SIZE_T MetadataBufferSize, 
+    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress, 
     _Out_opt_ SIZE_T *ResultBufferSize
     );
 
@@ -394,41 +394,6 @@ typedef HRESULT
     _Out_writes_bytes_to_(TypeInfoBufferSize, *TypeInfoDataSize) PUCHAR TypeInfoBufferAddress,
     _In_ SIZE_T TypeInfoBufferSize,
     _Out_ SIZE_T *TypeInfoDataSize
-    );
-
-#endif
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-//
-// Additional methods available in V6.0 and later
-//
-typedef HRESULT
-(WINAPI *PIBIO_SENSOR_CONNECT_SECURE_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_ const WINBIO_SECURE_CONNECTION_PARAMS* ConnectionParams,
-    _Outptr_ WINBIO_SECURE_CONNECTION_DATA** ConnectionData
-    );
-
-typedef HRESULT
-(WINAPI *PIBIO_SENSOR_START_CAPTURE_EX_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_ WINBIO_BIR_PURPOSE Purpose,
-    _In_reads_bytes_opt_(NonceSize) const UCHAR* Nonce,
-    _In_ SIZE_T NonceSize,
-    _In_ WINBIO_BIR_DATA_FLAGS Flags,
-    _Out_ OVERLAPPED** Overlapped
-    );
-
-typedef HRESULT
-(WINAPI *PIBIO_SENSOR_START_NOTIFY_WAKE_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _Out_ OVERLAPPED** Overlapped
-    );
-
-typedef HRESULT
-(WINAPI *PIBIO_SENSOR_FINISH_NOTIFY_WAKE_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _Out_ WINBIO_WAKE_REASON* Reason
     );
 
 #endif
@@ -459,10 +424,6 @@ typedef HRESULT
 #define WINBIO_SENSOR_INTERFACE_VERSION_5    WINBIO_MAKE_INTERFACE_VERSION(5,0)
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-#define WINBIO_SENSOR_INTERFACE_VERSION_6    WINBIO_MAKE_INTERFACE_VERSION(6,0)
-#endif
-
 typedef struct _WINBIO_SENSOR_INTERFACE {
     WINBIO_ADAPTER_INTERFACE_VERSION            Version;
     WINBIO_ADAPTER_TYPE                         Type;
@@ -477,10 +438,10 @@ typedef struct _WINBIO_SENSOR_INTERFACE {
     PIBIO_SENSOR_QUERY_STATUS_FN                QueryStatus;
     PIBIO_SENSOR_RESET_FN                       Reset;
     PIBIO_SENSOR_SET_MODE_FN                    SetMode;
-
+    
     PIBIO_SENSOR_SET_INDICATOR_STATUS_FN        SetIndicatorStatus;
     PIBIO_SENSOR_GET_INDICATOR_STATUS_FN        GetIndicatorStatus;
-
+    
     PIBIO_SENSOR_START_CAPTURE_FN               StartCapture;
     PIBIO_SENSOR_FINISH_CAPTURE_FN              FinishCapture;
     PIBIO_SENSOR_EXPORT_SENSOR_DATA_FN          ExportSensorData;
@@ -527,15 +488,6 @@ typedef struct _WINBIO_SENSOR_INTERFACE {
     PIBIO_SENSOR_QUERY_PRIVATE_SENSOR_TYPE_FN   QueryPrivateSensorType;
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-    //
-    // V6.0 methods begin here...
-    //
-    PIBIO_SENSOR_CONNECT_SECURE_FN              ConnectSecure;
-    PIBIO_SENSOR_START_CAPTURE_EX_FN            StartCaptureEx;
-    PIBIO_SENSOR_START_NOTIFY_WAKE_FN           StartNotifyWake;
-    PIBIO_SENSOR_FINISH_NOTIFY_WAKE_FN          FinishNotifyWake;
-#endif
 } WINBIO_SENSOR_INTERFACE, *PWINBIO_SENSOR_INTERFACE;
 
 //
@@ -549,7 +501,7 @@ WbioQuerySensorInterface(
     );
 
 //
-// Pointer to an interface-retrieval function used by the
+// Pointer to an interface-retrieval function used by the 
 // framework after a 'GetProcAddress' call.
 //
 typedef HRESULT
@@ -1145,10 +1097,10 @@ WbioSensorAcceptCalibrationData(
 
 inline HRESULT
 WbioSensorAsyncImportRawBuffer(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _Inout_ PWINBIO_PIPELINE Pipeline, 
     _In_reads_bytes_opt_(RawBufferSize) PUCHAR RawBufferAddress,
-    _In_ SIZE_T RawBufferSize,
-    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress,
+    _In_ SIZE_T RawBufferSize, 
+    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress, 
     _Out_opt_ SIZE_T *ResultBufferSize
     )
 {
@@ -1176,11 +1128,11 @@ WbioSensorAsyncImportRawBuffer(
 
 inline HRESULT
 WbioSensorAsyncImportSecureBuffer(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _Inout_ PWINBIO_PIPELINE Pipeline, 
     _In_ GUID SecureBufferIdentifier,
     _In_reads_bytes_opt_(MetadataBufferSize) PUCHAR MetadataBufferAddress,
-    _In_ SIZE_T MetadataBufferSize,
-    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress,
+    _In_ SIZE_T MetadataBufferSize, 
+    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress, 
     _Out_opt_ SIZE_T *ResultBufferSize
     )
 {
@@ -1243,116 +1195,6 @@ WbioSensorQueryPrivateSensorType(
 //-----------------------------------------------------------------------------
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-//
-// V6.0 methods begin here...
-//
-
-inline HRESULT
-WbioSensorConnectSecure(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_ const WINBIO_SECURE_CONNECTION_PARAMS* ConnectionParams,
-    _Outptr_ WINBIO_SECURE_CONNECTION_DATA** ConnectionData
-    )
-{
-    if (!ARGUMENT_PRESENT(Pipeline) ||
-        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
-    {
-        return E_POINTER;
-    }
-    else if (!ARGUMENT_PRESENT(Pipeline->SensorInterface->ConnectSecure))
-    {
-        return E_NOTIMPL;
-    }
-    else
-    {
-        return Pipeline->SensorInterface->ConnectSecure(
-                                            Pipeline,
-                                            ConnectionParams,
-                                            ConnectionData
-                                            );
-    }
-}
-//-----------------------------------------------------------------------------
-
-inline HRESULT
-WbioSensorStartCaptureEx(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_ WINBIO_BIR_PURPOSE Purpose,
-    _In_reads_bytes_opt_(NonceSize) const UCHAR* Nonce,
-    _In_ SIZE_T NonceSize,
-    _In_ WINBIO_BIR_DATA_FLAGS Flags,
-    _Out_ OVERLAPPED** Overlapped
-    )
-{
-    if (!ARGUMENT_PRESENT(Pipeline) ||
-        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
-    {
-        return E_POINTER;
-    }
-    else if (!ARGUMENT_PRESENT(Pipeline->SensorInterface->StartCaptureEx))
-    {
-        return E_NOTIMPL;
-    }
-    else
-    {
-        return Pipeline->SensorInterface->StartCaptureEx(
-                                            Pipeline,
-                                            Purpose,
-                                            Nonce,
-                                            NonceSize,
-                                            Flags,
-                                            Overlapped
-                                            );
-    }
-}
-//-----------------------------------------------------------------------------
-
-inline HRESULT
-WbioSensorStartNotifyWake(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _Out_ OVERLAPPED** Overlapped
-    )
-{
-    if (!ARGUMENT_PRESENT(Pipeline) ||
-        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
-    {
-        return E_POINTER;
-    }
-    else if (!ARGUMENT_PRESENT(Pipeline->SensorInterface->StartNotifyWake))
-    {
-        return E_NOTIMPL;
-    }
-    else
-    {
-        return Pipeline->SensorInterface->StartNotifyWake(Pipeline, Overlapped);
-    }
-}
-//-----------------------------------------------------------------------------
-
-inline HRESULT
-WbioSensorFinishNotifyWake(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _Out_ WINBIO_WAKE_REASON* Reason
-    )
-{
-    if (!ARGUMENT_PRESENT(Pipeline) ||
-        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
-    {
-        return E_POINTER;
-    }
-    else if (!ARGUMENT_PRESENT(Pipeline->SensorInterface->FinishNotifyWake))
-    {
-        return E_NOTIMPL;
-    }
-    else
-    {
-        return Pipeline->SensorInterface->FinishNotifyWake(Pipeline, Reason);
-    }
-}
-//-----------------------------------------------------------------------------
-
-#endif
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -1380,7 +1222,7 @@ typedef HRESULT
     _Inout_ PWINBIO_PIPELINE Pipeline
     );
 
-// 'QUERY_PREFERRED_FORMAT' - SENSOR ASKS ENGINE WHAT DATA
+// 'QUERY_PREFERRED_FORMAT' - SENSOR ASKS ENGINE WHAT DATA 
 // FORMAT THE ENGINE PREFERS TO RECEIVE FROM THE SENSOR
 typedef HRESULT
 (WINAPI *PIBIO_ENGINE_QUERY_PREFERRED_FORMAT_FN)(
@@ -1433,7 +1275,7 @@ typedef HRESULT
     _Out_ PWINBIO_REJECT_DETAIL RejectDetail
     );
 
-// CAN RETURN:
+// CAN RETURN: 
 //      'FEATURE SET' - AFTER A PUSH FROM THE SENSOR - WINBIO_DATA_FLAG_INTERMEDIATE
 //      'ENROLLMENT TEMPLATE' - AFTER AN ENROLLMENT CYCLE - WINBIO_DATA_FLAG_PROCESSED
 //      'MATCHING TEMPLATE' - AFTER AN IDENTIFY OR VERIFY OPERATION - WINBIO_DATA_FLAG_PROCESSED
@@ -1692,32 +1534,6 @@ typedef HRESULT
 
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-//
-// Additional methods available in V6.0 and later
-//
-
-typedef HRESULT
-(WINAPI *PIBIO_ENGINE_CREATE_ENROLLMENT_AUTHENTICATED_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _Outptr_result_bytebuffer_(*NonceSize) PUCHAR* Nonce,
-    _Out_ SIZE_T* NonceSize
-    );
-
-typedef HRESULT
-(WINAPI *PIBIO_ENGINE_IDENTIFY_FEATURE_SET_AUTHENTICATED_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_reads_bytes_(NonceSize) const UCHAR* Nonce,
-    _In_ SIZE_T NonceSize,
-    _Out_ WINBIO_IDENTITY* Identity,
-    _Out_ WINBIO_BIOMETRIC_SUBTYPE* SubFactor,
-    _Out_ WINBIO_REJECT_DETAIL* RejectDetail,
-    _Outptr_result_bytebuffer_(*AuthenticationSize) PUCHAR* Authentication,
-    _Out_ SIZE_T* AuthenticationSize
-    );
-
-#endif
-
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Engine Adapter interface table.
@@ -1744,10 +1560,6 @@ typedef HRESULT
 #define WINBIO_ENGINE_INTERFACE_VERSION_5   WINBIO_MAKE_INTERFACE_VERSION(5,0)
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-#define WINBIO_ENGINE_INTERFACE_VERSION_6   WINBIO_MAKE_INTERFACE_VERSION(6,0)
-#endif
-
 typedef struct _WINBIO_ENGINE_INTERFACE {
     WINBIO_ADAPTER_INTERFACE_VERSION            Version;
     WINBIO_ADAPTER_TYPE                         Type;
@@ -1768,7 +1580,7 @@ typedef struct _WINBIO_ENGINE_INTERFACE {
 
     PIBIO_ENGINE_ACCEPT_SAMPLE_DATA_FN          AcceptSampleData;       // PROCESSES CURRENT BUFFER FROM PIPELINE AND GENERATES A FEATURE SET IN THE PIPELINE
     PIBIO_ENGINE_EXPORT_ENGINE_DATA_FN          ExportEngineData;       // EXPORTS FEATURE SET OR TEMPLATE
-
+    
     PIBIO_ENGINE_VERIFY_FEATURE_SET_FN          VerifyFeatureSet;
     PIBIO_ENGINE_IDENTIFY_FEATURE_SET_FN        IdentifyFeatureSet;
 
@@ -1804,7 +1616,7 @@ typedef struct _WINBIO_ENGINE_INTERFACE {
     PIBIO_ENGINE_SET_ENROLLMENT_SELECTOR_FN             SetEnrollmentSelector;
     PIBIO_ENGINE_SET_ENROLLMENT_PARAMETERS_FN           SetEnrollmentParameters;
     PIBIO_ENGINE_QUERY_EXTENDED_ENROLLMENT_STATUS_FN    QueryExtendedEnrollmentStatus;
-    PIBIO_ENGINE_REFRESH_CACHE_FN                       RefreshCache;
+    PIBIO_ENGINE_REFRESH_CACHE_FN                       RefreshCache; 
     PIBIO_ENGINE_SELECT_CALIBRATION_FORMAT_FN           SelectCalibrationFormat;
     PIBIO_ENGINE_QUERY_CALIBRATION_DATA_FN              QueryCalibrationData;
     PIBIO_ENGINE_SET_ACCOUNT_POLICY_FN                  SetAccountPolicy;
@@ -1825,14 +1637,6 @@ typedef struct _WINBIO_ENGINE_INTERFACE {
     PIBIO_ENGINE_ACCEPT_PRIVATE_SENSOR_TYPE_INFO_FN AcceptPrivateSensorTypeInfo;
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-    //
-    // V6.0 methods begin here...
-    //
-    PIBIO_ENGINE_CREATE_ENROLLMENT_AUTHENTICATED_FN    CreateEnrollmentAuthenticated;
-    PIBIO_ENGINE_IDENTIFY_FEATURE_SET_AUTHENTICATED_FN IdentifyFeatureSetAuthenticated;
-#endif
-
 } WINBIO_ENGINE_INTERFACE, *PWINBIO_ENGINE_INTERFACE;
 
 //
@@ -1846,7 +1650,7 @@ WbioQueryEngineInterface(
     );
 
 //
-// Pointer to an interface-retrieval function used by the
+// Pointer to an interface-retrieval function used by the 
 // framework after a 'GetProcAddress' call.
 //
 typedef HRESULT
@@ -2951,75 +2755,6 @@ WbioEngineAcceptPrivateSensorTypeInfo(
 
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-//
-// V6.0 methods begin here...
-//
-
-inline HRESULT
-WbioEngineCreateEnrollmentAuthenticated(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _Outptr_result_bytebuffer_(*NonceSize) PUCHAR* Nonce,
-    _Out_ SIZE_T* NonceSize
-    )
-{
-    if (!ARGUMENT_PRESENT(Pipeline) ||
-        !ARGUMENT_PRESENT(Pipeline->EngineInterface))
-    {
-        return E_POINTER;
-    }
-    else if (!ARGUMENT_PRESENT(Pipeline->EngineInterface->CreateEnrollmentAuthenticated))
-    {
-        return E_NOTIMPL;
-    }
-    else
-    {
-        return Pipeline->EngineInterface->CreateEnrollmentAuthenticated(
-                                              Pipeline,
-                                              Nonce,
-                                              NonceSize);
-    }
-}
-//-----------------------------------------------------------------------------
-
-inline HRESULT
-WbioEngineIdentifyFeatureSetAuthenticated(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_reads_bytes_(NonceSize) const UCHAR* Nonce,
-    _In_ SIZE_T NonceSize,
-    _Out_ WINBIO_IDENTITY* Identity,
-    _Out_ WINBIO_BIOMETRIC_SUBTYPE* SubFactor,
-    _Out_ WINBIO_REJECT_DETAIL* RejectDetail,
-    _Outptr_result_bytebuffer_(*AuthenticationSize) PUCHAR* Authentication,
-    _Out_ SIZE_T* AuthenticationSize
-    )
-{
-    if (!ARGUMENT_PRESENT(Pipeline) ||
-        !ARGUMENT_PRESENT(Pipeline->EngineInterface))
-    {
-        return E_POINTER;
-    }
-    else if (!ARGUMENT_PRESENT(Pipeline->EngineInterface->IdentifyFeatureSetAuthenticated))
-    {
-        return E_NOTIMPL;
-    }
-    else
-    {
-        return Pipeline->EngineInterface->IdentifyFeatureSetAuthenticated(
-                                              Pipeline,
-                                              Nonce,
-                                              NonceSize,
-                                              Identity,
-                                              SubFactor,
-                                              RejectDetail,
-                                              Authentication,
-                                              AuthenticationSize);
-    }
-}
-//-----------------------------------------------------------------------------
-
-#endif
-
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -3228,17 +2963,17 @@ typedef HRESULT
 // Additional methods available in V5.0 and later
 //
 typedef HRESULT
-(WINAPI *PIBIO_STORAGE_RESERVED_1_FN)(
-    _Reserved_ PWINBIO_PIPELINE Pipeline,
-    _Reserved_ PWINBIO_IDENTITY Identity,
-    _Reserved_ PULONGLONG Reserved1,
-    _Reserved_ PULONGLONG Reserved2
+(WINAPI *PIBIO_STORAGE_GET_USER_STATE_FN)(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_ PWINBIO_IDENTITY Identity,
+    _Out_ PULONGLONG CurrentState,
+    _Out_ PULONGLONG NextState
     );
 
 typedef HRESULT
-(WINAPI *PIBIO_STORAGE_RESERVED_2_FN)(
-    _Reserved_ PWINBIO_PIPELINE Pipeline,
-    _Reserved_ PWINBIO_IDENTITY Identity
+(WINAPI *PIBIO_STORAGE_INCREMENT_USER_STATE_FN)(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_ PWINBIO_IDENTITY Identity
     );
 
 typedef HRESULT
@@ -3346,8 +3081,8 @@ typedef struct _WINBIO_STORAGE_INTERFACE {
     //
     // Additional methods available in V5.0 and later
     //
-    PIBIO_STORAGE_RESERVED_1_FN                 Reserved1;
-    PIBIO_STORAGE_RESERVED_2_FN                 Reserved2;
+    PIBIO_STORAGE_GET_USER_STATE_FN             GetUserState;
+    PIBIO_STORAGE_INCREMENT_USER_STATE_FN       IncrementUserState;
     PIBIO_STORAGE_UPDATE_RECORD_BEGIN_FN        UpdateRecordBegin;
     PIBIO_STORAGE_UPDATE_RECORD_COMMIT_FN       UpdateRecordCommit;
 #endif
@@ -3366,7 +3101,7 @@ WbioQueryStorageInterface(
     );
 
 //
-// Pointer to an interface-retrieval function used by the
+// Pointer to an interface-retrieval function used by the 
 // framework after a 'GetProcAddress' call.
 //
 typedef HRESULT
@@ -3633,8 +3368,8 @@ WbioStorageAddRecord(
     }
     else
     {
-        return Pipeline->StorageInterface->AddRecord(
-                                                Pipeline,
+        return Pipeline->StorageInterface->AddRecord( 
+                                                Pipeline, 
                                                 RecordContents
                                                 );
     }
@@ -4077,6 +3812,60 @@ WbioStorageNotifyDatabaseChange(
 //
 
 inline HRESULT
+WbioStorageGetUserState(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_ PWINBIO_IDENTITY Identity,
+    _Out_ PULONGLONG CurrentState,
+    _Out_ PULONGLONG NextState
+    )
+{
+    if (!ARGUMENT_PRESENT(Pipeline) ||
+        !ARGUMENT_PRESENT(Pipeline->StorageInterface))
+    {
+        return E_POINTER;
+    }
+    else if (!ARGUMENT_PRESENT(Pipeline->StorageInterface->GetUserState))
+    {
+        return E_NOTIMPL;
+    }
+    else
+    {
+        return Pipeline->StorageInterface->GetUserState(
+                                                Pipeline,
+                                                Identity,
+                                                CurrentState,
+                                                NextState
+                                                );
+    }
+}
+//-----------------------------------------------------------------------------
+
+inline HRESULT
+WbioStorageIncrementUserState(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_ PWINBIO_IDENTITY Identity
+    )
+{
+    if (!ARGUMENT_PRESENT(Pipeline) ||
+        !ARGUMENT_PRESENT(Pipeline->StorageInterface))
+    {
+        return E_POINTER;
+    }
+    else if (!ARGUMENT_PRESENT(Pipeline->StorageInterface->IncrementUserState))
+    {
+        return E_NOTIMPL;
+    }
+    else
+    {
+        return Pipeline->StorageInterface->IncrementUserState(
+                                                Pipeline,
+                                                Identity
+                                                );
+    }
+}
+//-----------------------------------------------------------------------------
+
+inline HRESULT
 WbioStorageUpdateRecordBegin(
     _Inout_ PWINBIO_PIPELINE Pipeline,
     _In_ PWINBIO_IDENTITY Identity,
@@ -4206,22 +3995,22 @@ typedef HRESULT
 // Methods available in V5.0 and later
 //
 typedef HRESULT
-(WINAPI *PIBIO_FRAMEWORK_VSM_STORAGE_RESERVED_1_FN)(
-    _Reserved_ PWINBIO_PIPELINE Pipeline,
-    _In_ SIZE_T Reserved1,
-    _Reserved_ PSIZE_T Reserved2
+(WINAPI *PIBIO_FRAMEWORK_VSM_STORAGE_RECORD_MIGRATE_BEGIN_FN)(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_ SIZE_T RequiredCapacity,
+    _Out_ PSIZE_T MaxBufferSize
     );
 
 typedef HRESULT
-(WINAPI *PIBIO_FRAMEWORK_VSM_STORAGE_RESERVED_2_FN)(
-    _Reserved_ PWINBIO_PIPELINE Pipeline,
-    _Reserved_ PUCHAR Reserved1,
-    _In_ SIZE_T Reserved2
+(WINAPI *PIBIO_FRAMEWORK_VSM_STORAGE_RECORD_MIGRATE_NEXT_FN)(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_reads_bytes_(BufferSize) PUCHAR BufferAddress,
+    _In_ SIZE_T BufferSize
     );
 
 typedef HRESULT
-(WINAPI *PIBIO_FRAMEWORK_VSM_STORAGE_RESERVED_3_FN)(
-    _Reserved_ PWINBIO_PIPELINE Pipeline
+(WINAPI *PIBIO_FRAMEWORK_VSM_STORAGE_RECORD_MIGRATE_END_FN)(
+    _Inout_ PWINBIO_PIPELINE Pipeline
     );
 
 typedef HRESULT
@@ -4250,7 +4039,7 @@ typedef HRESULT
 
 #endif  // NTDDI_VERSION >= NTDDI_WIN10_RS2
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS2) // BUGBUG: convert to NTDDI_WIN10_RS3 when build system is updated
 
 //
 // Methods available in V6.0 and later
@@ -4268,35 +4057,7 @@ typedef HRESULT
     _Inout_ PWINBIO_PIPELINE Pipeline,
     _In_ GUID SecureBufferIdentifier
     );
-
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS3
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-//
-// Methods available in V7.0 and later
-//
-
-typedef HRESULT
-(WINAPI *PIBIO_FRAMEWORK_VSM_QUERY_AUTHORIZED_ENROLLMENTS_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_ PWINBIO_IDENTITY Identity,
-    _Out_ SIZE_T *SecureIdentityCount,
-    _Outptr_result_buffer_(*SecureIdentityCount) PWINBIO_IDENTITY *SecureIdentities
-    );
-
-typedef HRESULT
-(WINAPI *PIBIO_FRAMEWORK_VSM_DECRYPT_SAMPLE_FN)(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_reads_bytes_(AuthenticationSize) const UCHAR* Authentication,
-    _In_ SIZE_T AuthenticationSize,
-    _In_reads_bytes_(IvSize) const UCHAR* Iv,
-    _In_ SIZE_T IvSize,
-    _Inout_updates_bytes_(EncryptedDataSize) UCHAR* EncryptedData,
-    _In_ SIZE_T EncryptedDataSize
-    );
-
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS4
+#endif
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -4317,12 +4078,8 @@ typedef HRESULT
 #define WINBIO_FRAMEWORK_INTERFACE_VERSION_5_0  WINBIO_MAKE_INTERFACE_VERSION(5,0)
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS2) // BUGBUG: convert to NTDDI_WIN10_RS3 when build system is updated
 #define WINBIO_FRAMEWORK_INTERFACE_VERSION_6_0  WINBIO_MAKE_INTERFACE_VERSION(6,0)
-#endif
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-#define WINBIO_FRAMEWORK_INTERFACE_VERSION_7_0  WINBIO_MAKE_INTERFACE_VERSION(7,0)
 #endif
 
 typedef struct _WINBIO_FRAMEWORK_INTERFACE {
@@ -4386,11 +4143,11 @@ typedef struct _WINBIO_FRAMEWORK_INTERFACE {
     PIBIO_SENSOR_ASYNC_IMPORT_RAW_BUFFER_FN                     VsmSensorAsyncImportRawBuffer;
     PIBIO_SENSOR_ASYNC_IMPORT_SECURE_BUFFER_FN                  VsmSensorAsyncImportSecureBuffer;
 
-    PIBIO_FRAMEWORK_VSM_STORAGE_RESERVED_1_FN                   Reserved1;
-    PIBIO_FRAMEWORK_VSM_STORAGE_RESERVED_2_FN                   Reserved2;
-    PIBIO_FRAMEWORK_VSM_STORAGE_RESERVED_3_FN                   Reserved3;
-    PIBIO_STORAGE_RESERVED_1_FN                                 Reserved4;
-    PIBIO_STORAGE_RESERVED_2_FN                                 Reserved5;
+    PIBIO_FRAMEWORK_VSM_STORAGE_RECORD_MIGRATE_BEGIN_FN         VsmStorageRecordMigrateBegin;
+    PIBIO_FRAMEWORK_VSM_STORAGE_RECORD_MIGRATE_NEXT_FN          VsmStorageRecordMigrateNext;
+    PIBIO_FRAMEWORK_VSM_STORAGE_RECORD_MIGRATE_END_FN           VsmStorageRecordMigrateEnd;
+    PIBIO_STORAGE_GET_USER_STATE_FN                             VsmStorageGetUserState;
+    PIBIO_STORAGE_INCREMENT_USER_STATE_FN                       VsmStorageIncrementUserState;
 
     //
     // (Upcalls...)
@@ -4400,7 +4157,7 @@ typedef struct _WINBIO_FRAMEWORK_INTERFACE {
     PIBIO_FRAMEWORK_GET_PROPERTY_FN                             GetProperty;
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS2) // BUGBUG: convert to NTDDI_WIN10_RS3 when build system is updated
     //
     // V6.0 methods begin here...
     //
@@ -4408,16 +4165,6 @@ typedef struct _WINBIO_FRAMEWORK_INTERFACE {
     //
     PIBIO_FRAMEWORK_LOCK_AND_VALIDATE_SECURE_BUFFER_FN          LockAndValidateSecureBuffer;
     PIBIO_FRAMEWORK_RELEASE_SECURE_BUFFER_FN                    ReleaseSecureBuffer;
-#endif
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-    //
-    // V7.0 methods begin here...
-    //
-    // (Upcalls...)
-    //
-    PIBIO_FRAMEWORK_VSM_QUERY_AUTHORIZED_ENROLLMENTS_FN         QueryAuthorizedEnrollments;
-    PIBIO_FRAMEWORK_VSM_DECRYPT_SAMPLE_FN                       DecryptSample;
 #endif
 
 } WINBIO_FRAMEWORK_INTERFACE, *PWINBIO_FRAMEWORK_INTERFACE;
@@ -5398,10 +5145,10 @@ WbioFrameworkVsmSensorDeactivate(
 
 inline HRESULT
 WbioFrameworkVsmSensorAsyncImportRawBuffer(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _Inout_ PWINBIO_PIPELINE Pipeline, 
     _In_reads_bytes_opt_(RawBufferSize) PUCHAR RawBufferAddress,
-    _In_ SIZE_T RawBufferSize,
-    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress,
+    _In_ SIZE_T RawBufferSize, 
+    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress, 
     _Out_opt_ SIZE_T *ResultBufferSize
     )
 {
@@ -5437,11 +5184,11 @@ WbioFrameworkVsmSensorAsyncImportRawBuffer(
 
 inline HRESULT
 WbioFrameworkVsmSensorAsyncImportSecureBuffer(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _Inout_ PWINBIO_PIPELINE Pipeline, 
     _In_ GUID SecureBufferIdentifier,
     _In_reads_bytes_opt_(MetadataBufferSize) PUCHAR MetadataBufferAddress,
-    _In_ SIZE_T MetadataBufferSize,
-    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress,
+    _In_ SIZE_T MetadataBufferSize, 
+    _Outptr_result_bytebuffer_maybenull_(*ResultBufferSize) PUCHAR *ResultBufferAddress, 
     _Out_opt_ SIZE_T *ResultBufferSize
     )
 {
@@ -5470,6 +5217,175 @@ WbioFrameworkVsmSensorAsyncImportSecureBuffer(
                                                     MetadataBufferSize,
                                                     ResultBufferAddress,
                                                     ResultBufferSize
+                                                    );
+        }
+    }
+}
+//-----------------------------------------------------------------------------
+
+inline HRESULT
+WbioFrameworkVsmStorageRecordMigrateBegin(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_ SIZE_T RequiredCapacity,
+    _Out_ PSIZE_T MaxBufferSize
+    )
+{
+    if (!ARGUMENT_PRESENT(Pipeline) ||
+        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
+    {
+        return E_POINTER;
+    }
+    else
+    {
+        WINBIO_ADAPTER_INTERFACE_VERSION requiredFrameworkVersion = WINBIO_FRAMEWORK_INTERFACE_VERSION_5_0;
+
+        if (Pipeline->SensorInterface->Version.MinorVersion == 0 ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface) ||
+            !WINBIO_IS_FRAMEWORK_VERSION_COMPATIBLE(Pipeline, requiredFrameworkVersion) ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface->VsmStorageRecordMigrateBegin))
+        {
+            return E_NOTIMPL;
+        }
+        else
+        {
+            return Pipeline->FrameworkInterface->VsmStorageRecordMigrateBegin(
+                                                    Pipeline,
+                                                    RequiredCapacity,
+                                                    MaxBufferSize
+                                                    );
+        }
+    }
+}
+//-----------------------------------------------------------------------------
+
+inline HRESULT
+WbioFrameworkVsmStorageRecordMigrateNext(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_reads_bytes_(BufferSize) PUCHAR BufferAddress,
+    _In_ SIZE_T BufferSize
+    )
+{
+    if (!ARGUMENT_PRESENT(Pipeline) ||
+        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
+    {
+        return E_POINTER;
+    }
+    else
+    {
+        WINBIO_ADAPTER_INTERFACE_VERSION requiredFrameworkVersion = WINBIO_FRAMEWORK_INTERFACE_VERSION_5_0;
+
+        if (Pipeline->SensorInterface->Version.MinorVersion == 0 ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface) ||
+            !WINBIO_IS_FRAMEWORK_VERSION_COMPATIBLE(Pipeline, requiredFrameworkVersion) ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface->VsmStorageRecordMigrateNext))
+        {
+            return E_NOTIMPL;
+        }
+        else
+        {
+            return Pipeline->FrameworkInterface->VsmStorageRecordMigrateNext(
+                                                    Pipeline,
+                                                    BufferAddress,
+                                                    BufferSize
+                                                    );
+        }
+    }
+}
+//-----------------------------------------------------------------------------
+
+inline HRESULT
+WbioFrameworkVsmStorageRecordMigrateEnd(
+    _Inout_ PWINBIO_PIPELINE Pipeline
+    )
+{
+    if (!ARGUMENT_PRESENT(Pipeline) ||
+        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
+    {
+        return E_POINTER;
+    }
+    else
+    {
+        WINBIO_ADAPTER_INTERFACE_VERSION requiredFrameworkVersion = WINBIO_FRAMEWORK_INTERFACE_VERSION_5_0;
+
+        if (Pipeline->SensorInterface->Version.MinorVersion == 0 ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface) ||
+            !WINBIO_IS_FRAMEWORK_VERSION_COMPATIBLE(Pipeline, requiredFrameworkVersion) ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface->VsmStorageRecordMigrateEnd))
+        {
+            return E_NOTIMPL;
+        }
+        else
+        {
+            return Pipeline->FrameworkInterface->VsmStorageRecordMigrateEnd(Pipeline);
+        }
+    }
+}
+//-----------------------------------------------------------------------------
+
+inline HRESULT
+WbioFrameworkVsmStorageGetUserState(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_ PWINBIO_IDENTITY Identity,
+    _Out_ PULONGLONG CurrentState,
+    _Out_ PULONGLONG NextState
+    )
+{
+    if (!ARGUMENT_PRESENT(Pipeline) ||
+        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
+    {
+        return E_POINTER;
+    }
+    else
+    {
+        WINBIO_ADAPTER_INTERFACE_VERSION requiredFrameworkVersion = WINBIO_FRAMEWORK_INTERFACE_VERSION_5_0;
+
+        if (Pipeline->SensorInterface->Version.MinorVersion == 0 ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface) ||
+            !WINBIO_IS_FRAMEWORK_VERSION_COMPATIBLE(Pipeline, requiredFrameworkVersion) ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface->VsmStorageGetUserState))
+        {
+            return E_NOTIMPL;
+        }
+        else
+        {
+            return Pipeline->FrameworkInterface->VsmStorageGetUserState(
+                                                    Pipeline,
+                                                    Identity,
+                                                    CurrentState,
+                                                    NextState
+                                                    );
+        }
+    }
+}
+//-----------------------------------------------------------------------------
+
+inline HRESULT
+WbioFrameworkVsmStorageIncrementUserState(
+    _Inout_ PWINBIO_PIPELINE Pipeline,
+    _In_ PWINBIO_IDENTITY Identity
+    )
+{
+    if (!ARGUMENT_PRESENT(Pipeline) ||
+        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
+    {
+        return E_POINTER;
+    }
+    else
+    {
+        WINBIO_ADAPTER_INTERFACE_VERSION requiredFrameworkVersion = WINBIO_FRAMEWORK_INTERFACE_VERSION_5_0;
+
+        if (Pipeline->SensorInterface->Version.MinorVersion == 0 ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface) ||
+            !WINBIO_IS_FRAMEWORK_VERSION_COMPATIBLE(Pipeline, requiredFrameworkVersion) ||
+            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface->VsmStorageIncrementUserState))
+        {
+            return E_NOTIMPL;
+        }
+        else
+        {
+            return Pipeline->FrameworkInterface->VsmStorageIncrementUserState(
+                                                    Pipeline,
+                                                    Identity
                                                     );
         }
     }
@@ -5589,7 +5505,7 @@ WbioFrameworkGetProperty(
 
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS2
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS2) // BUGBUG: convert to NTDDI_WIN10_RS3 when build system is updated
 
 inline HRESULT
 WbioFrameworkLockAndValidateSecureBuffer(
@@ -5663,90 +5579,6 @@ WbioFrameworkReleaseSecureBuffer(
 
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS3
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-inline HRESULT
-WbioFramweworkVsmQueryAuthorizedEnrollments(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_ PWINBIO_IDENTITY Identity,
-    _Out_ SIZE_T *SecureIdentityCount,
-    _Outptr_result_buffer_(*SecureIdentityCount) PWINBIO_IDENTITY *SecureIdentities
-    )
-{
-    if (!ARGUMENT_PRESENT(Pipeline) ||
-        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
-    {
-        return E_POINTER;
-    }
-    else
-    {
-        WINBIO_ADAPTER_INTERFACE_VERSION requiredFrameworkVersion = WINBIO_FRAMEWORK_INTERFACE_VERSION_7_0;
-
-        if (Pipeline->SensorInterface->Version.MinorVersion == 0 ||
-            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface) ||
-            !WINBIO_IS_FRAMEWORK_VERSION_COMPATIBLE(Pipeline, requiredFrameworkVersion) ||
-            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface->QueryAuthorizedEnrollments))
-        {
-            return E_NOTIMPL;
-        }
-        else
-        {
-            return Pipeline->FrameworkInterface->QueryAuthorizedEnrollments(
-                                                    Pipeline,
-                                                    Identity,
-                                                    SecureIdentityCount,
-                                                    SecureIdentities
-                                                    );
-        }
-    }
-}
-//-----------------------------------------------------------------------------
-
-inline HRESULT
-WbioFrameworkVsmDecryptSample(
-    _Inout_ PWINBIO_PIPELINE Pipeline,
-    _In_reads_bytes_(AuthenticationSize) const UCHAR* Authentication,
-    _In_ SIZE_T AuthenticationSize,
-    _In_reads_bytes_(IvSize) const UCHAR* Iv,
-    _In_ SIZE_T IvSize,
-    _Inout_updates_bytes_(EncryptedDataSize) UCHAR* EncryptedData,
-    _In_ SIZE_T EncryptedDataSize
-    )
-{
-    if (!ARGUMENT_PRESENT(Pipeline) ||
-        !ARGUMENT_PRESENT(Pipeline->SensorInterface))
-    {
-        return E_POINTER;
-    }
-    else
-    {
-        WINBIO_ADAPTER_INTERFACE_VERSION requiredFrameworkVersion = WINBIO_FRAMEWORK_INTERFACE_VERSION_7_0;
-
-        if (Pipeline->SensorInterface->Version.MinorVersion == 0 ||
-            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface) ||
-            !WINBIO_IS_FRAMEWORK_VERSION_COMPATIBLE(Pipeline, requiredFrameworkVersion) ||
-            !ARGUMENT_PRESENT(Pipeline->FrameworkInterface->DecryptSample))
-        {
-            return E_NOTIMPL;
-        }
-        else
-        {
-            return Pipeline->FrameworkInterface->DecryptSample(
-                                                    Pipeline,
-                                                    Authentication,
-                                                    AuthenticationSize,
-                                                    Iv,
-                                                    IvSize,
-                                                    EncryptedData,
-                                                    EncryptedDataSize
-                                                    );
-        }
-    }
-}
-//-----------------------------------------------------------------------------
-
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS4
-
 #ifdef __cplusplus
 } // extern "C"
 #endif
@@ -5758,4 +5590,5 @@ WbioFrameworkVsmDecryptSample(
 #pragma endregion
 
 #endif // _WINBIO_ADAPTER_H_2C0E14E1_5330_4f60_9B4F_836CFFD7452A_
+
 

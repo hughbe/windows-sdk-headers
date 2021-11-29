@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * profileapi.h -- ApiSet Contract for api-ms-win-core-profile-l1                *  
@@ -17,12 +18,29 @@
 #include <apisetcconv.h>
 #include <minwindef.h>
 
+/* APISET_NAME: api-ms-win-core-profile-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_PROFILE_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN7
+#define _APISET_PROFILE_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
 // Performance counter API's
@@ -32,7 +50,7 @@ WINBASEAPI
 BOOL
 WINAPI
 QueryPerformanceCounter(
-    _Out_ LARGE_INTEGER* lpPerformanceCount
+    _Out_ LARGE_INTEGER * lpPerformanceCount
     );
 
 
@@ -40,11 +58,11 @@ WINBASEAPI
 BOOL
 WINAPI
 QueryPerformanceFrequency(
-    _Out_ LARGE_INTEGER* lpFrequency
+    _Out_ LARGE_INTEGER * lpFrequency
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
 #ifdef __cplusplus

@@ -103,7 +103,6 @@ typedef DWORDLONG *PSP_LOG_TOKEN;
 #define TXTLOG_UTIL             0x00000200
 #define TXTLOG_INFDB            0x00000400
 
-#define TXTLOG_DRVSETUP         0x00400000
 #define TXTLOG_POLICY           0x00800000
 #define TXTLOG_NEWDEV           0x01000000
 #define TXTLOG_UMPNPMGR         0x02000000

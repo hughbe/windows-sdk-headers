@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * processtopologyapi.h -- ApiSet Contract for api-ms-win-core-processtopology-l1 *
@@ -18,12 +19,32 @@
 #include <minwindef.h>
 #include <minwinbase.h>
 
+/* APISET_NAME: api-ms-win-core-processtopology-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_PROCESSTOPOLOGY_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINBLUE
+#define _APISET_PROCESSTOPOLOGY_VER 0x0200
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_PROCESSTOPOLOGY_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 
 #if (_WIN32_WINNT >= 0x0601)
 
@@ -43,8 +64,10 @@ GetProcessGroupAffinity(
 #pragma endregion
 
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 
 #if (_WIN32_WINNT >= 0x0601)
 
@@ -62,14 +85,14 @@ BOOL
 WINAPI
 SetThreadGroupAffinity(
     _In_ HANDLE hThread,
-    _In_ CONST GROUP_AFFINITY* GroupAffinity,
+    _In_ CONST GROUP_AFFINITY * GroupAffinity,
     _Out_opt_ PGROUP_AFFINITY PreviousGroupAffinity
     );
 
 
 #endif // (_WIN32_WINNT >= 0x0601)
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
 #ifdef __cplusplus

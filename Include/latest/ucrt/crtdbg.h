@@ -6,15 +6,10 @@
 // Public debugging facilities for the CRT
 //
 #pragma once
-#ifndef _INC_CRTDBG // include guard for 3rd party interop
 #define _INC_CRTDBG
 
 #include <corecrt.h>
 #include <vcruntime_new_debug.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -320,7 +315,7 @@ typedef struct _CrtMemState
         #define _wgetdcwd(d, s, le)       _wgetdcwd_dbg(d, s, le, _NORMAL_BLOCK, __FILE__, __LINE__)
         #define _wtempnam(s1, s2)         _wtempnam_dbg(s1, s2, _NORMAL_BLOCK, __FILE__, __LINE__)
 
-        #if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+        #if _CRT_INTERNAL_NONSTDC_NAMES
             #define   strdup(s)          _strdup_dbg(s, _NORMAL_BLOCK, __FILE__, __LINE__)
             #define   wcsdup(s)          _wcsdup_dbg(s, _NORMAL_BLOCK, __FILE__, __LINE__)
             #define   tempnam(s1, s2)    _tempnam_dbg(s1, s2, _NORMAL_BLOCK, __FILE__, __LINE__)
@@ -811,6 +806,3 @@ typedef struct _CrtMemState
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_CRTDBG

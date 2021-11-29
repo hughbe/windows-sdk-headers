@@ -56,8 +56,8 @@ Notes:
 #pragma once
 #include <winapifamily.h>
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #ifdef __cplusplus
 extern "C" {
@@ -104,12 +104,6 @@ extern "C" {
 #define NETIO_SUCCESS(x) NT_SUCCESS(x)
 #define NETIOAPI_API_ NTAPI
 #define _NETIOAPI_SUCCESS_
-
-#ifdef IPHLPAPI_DLL_LINKAGE
-#undef IPHLPAPI_DLL_LINKAGE
-#endif
-#define IPHLPAPI_DLL_LINKAGE
-
 #endif /* __IPHLPAPI_H__ */
 
 #define NETIOAPI_API NETIO_STATUS NETIOAPI_API_
@@ -133,7 +127,7 @@ typedef enum _MIB_NOTIFICATION_TYPE {
     MibInitialNotification,
 } MIB_NOTIFICATION_TYPE, *PMIB_NOTIFICATION_TYPE;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 //
@@ -146,8 +140,8 @@ typedef enum _MIB_NOTIFICATION_TYPE {
 
 #ifdef _WS2IPDEF_
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #include <ntddndis.h>
 
@@ -224,7 +218,6 @@ typedef struct _MIB_IF_TABLE2 {
 } MIB_IF_TABLE2, *PMIB_IF_TABLE2;
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIfEntry2(
@@ -257,11 +250,11 @@ Notes:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
 
@@ -271,7 +264,6 @@ typedef enum _MIB_IF_ENTRY_LEVEL {
 } MIB_IF_ENTRY_LEVEL, *PMIB_IF_ENTRY_LEVEL;
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIfEntry2Ex(
@@ -313,7 +305,6 @@ Notes:
 #endif
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIfTable2(
@@ -351,7 +342,6 @@ typedef enum _MIB_IF_TABLE_LEVEL {
 } MIB_IF_TABLE_LEVEL, *PMIB_IF_TABLE_LEVEL;
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIfTable2Ex(
@@ -497,7 +487,6 @@ typedef struct _MIB_IP_NETWORK_CONNECTION_BANDWIDTH_ESTIMATES {
   *PMIB_IP_NETWORK_CONNECTION_BANDWIDTH_ESTIMATES;
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIfStackTable(
@@ -505,7 +494,6 @@ GetIfStackTable(
     );
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetInvertedIfStackTable(
@@ -513,7 +501,6 @@ GetInvertedIfStackTable(
     );
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIpInterfaceEntry(
@@ -548,7 +535,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIpInterfaceTable(
@@ -587,7 +573,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 VOID
 NETIOAPI_API_
 InitializeIpInterfaceEntry(
@@ -616,7 +601,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 NotifyIpInterfaceChange(
@@ -668,7 +652,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 SetIpInterfaceEntry(
@@ -704,7 +687,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIpNetworkConnectionBandwidthEstimates(
@@ -739,11 +721,11 @@ Return Value:
 // Unicast address management routines.
 //
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
 // The structure for unicast IP Address management.
@@ -787,14 +769,13 @@ VOID
     _In_ MIB_NOTIFICATION_TYPE NotificationType
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 CreateUnicastIpAddressEntry(
@@ -830,7 +811,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 DeleteUnicastIpAddressEntry(
@@ -861,7 +841,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetUnicastIpAddressEntry(
@@ -894,14 +873,13 @@ Notes:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetUnicastIpAddressTable(
@@ -940,14 +918,13 @@ Notes:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 VOID
 NETIOAPI_API_
 InitializeUnicastIpAddressEntry(
@@ -977,14 +954,13 @@ Notes:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 NotifyUnicastIpAddressChange(
@@ -1043,7 +1019,6 @@ VOID
     );
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 NotifyStableUnicastIpAddressTable(
@@ -1054,14 +1029,13 @@ NotifyStableUnicastIpAddressTable(
     _Inout_ HANDLE *NotificationHandle
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 SetUnicastIpAddressEntry(
@@ -1120,7 +1094,6 @@ typedef struct _MIB_ANYCASTIPADDRESS_TABLE {
 } MIB_ANYCASTIPADDRESS_TABLE, *PMIB_ANYCASTIPADDRESS_TABLE;
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 CreateAnycastIpAddressEntry(
@@ -1151,7 +1124,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 DeleteAnycastIpAddressEntry(
@@ -1182,7 +1154,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetAnycastIpAddressEntry(
@@ -1216,7 +1187,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetAnycastIpAddressTable(
@@ -1279,7 +1249,6 @@ typedef struct _MIB_MULTICASTIPADDRESS_TABLE {
 } MIB_MULTICASTIPADDRESS_TABLE, *PMIB_MULTICASTIPADDRESS_TABLE;
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetMulticastIpAddressEntry(
@@ -1313,7 +1282,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetMulticastIpAddressTable(
@@ -1356,11 +1324,11 @@ Notes:
 // Route management routines.
 //
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 typedef struct _IP_ADDRESS_PREFIX {
     SOCKADDR_INET Prefix;
@@ -1402,11 +1370,11 @@ typedef struct _MIB_IPFORWARD_TABLE2 {
     MIB_IPFORWARD_ROW2 Table[ANY_SIZE];
 } MIB_IPFORWARD_TABLE2, *PMIB_IPFORWARD_TABLE2;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 typedef
 VOID
@@ -1417,7 +1385,6 @@ VOID
     );
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 CreateIpForwardEntry2(
@@ -1454,7 +1421,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 DeleteIpForwardEntry2(
@@ -1485,14 +1451,13 @@ Notes:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetBestRoute2(
@@ -1542,14 +1507,13 @@ Notes:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIpForwardEntry2(
@@ -1584,14 +1548,13 @@ Notes:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIpForwardTable2(
@@ -1629,14 +1592,13 @@ Notes:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 VOID
 NETIOAPI_API_
 InitializeIpForwardEntry(
@@ -1665,7 +1627,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 NotifyRouteChange2(
@@ -1717,7 +1678,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 SetIpForwardEntry2(
@@ -1810,7 +1770,6 @@ typedef struct _MIB_IPPATH_TABLE {
 
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 FlushIpPathTable(
@@ -1841,7 +1800,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIpPathEntry(
@@ -1875,7 +1833,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIpPathTable(
@@ -1956,7 +1913,6 @@ typedef struct _MIB_IPNET_TABLE2 {
 } MIB_IPNET_TABLE2, *PMIB_IPNET_TABLE2;
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 CreateIpNetEntry2(
@@ -1988,7 +1944,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 DeleteIpNetEntry2(
@@ -2020,7 +1975,6 @@ Notes:
 
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 FlushIpNetTable2(
@@ -2057,7 +2011,6 @@ Return Value:
 
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIpNetEntry2(
@@ -2091,7 +2044,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetIpNetTable2(
@@ -2130,7 +2082,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ResolveIpNetEntry2(
@@ -2171,7 +2122,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 SetIpNetEntry2(
@@ -2202,12 +2152,6 @@ Notes:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
 //
 // Teredo APIs.
 //
@@ -2222,7 +2166,6 @@ VOID
     );
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 NotifyTeredoPortChange(
@@ -2233,7 +2176,6 @@ NotifyTeredoPortChange(
     );
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetTeredoPort(
@@ -2276,11 +2218,10 @@ Return Value:
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 NETIOAPI_API
 CancelMibChangeNotify2(
     _In_ HANDLE NotificationHandle
@@ -2308,7 +2249,6 @@ Notes:
 
 --*/
 
-IPHLPAPI_DLL_LINKAGE
 VOID
 NETIOAPI_API_
 FreeMibTable(
@@ -2330,14 +2270,13 @@ Return Value:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 CreateSortedAddressPairs(
@@ -2393,16 +2332,15 @@ Return Value:
 
 --*/
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #endif //_WS2IPDEF_
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertCompartmentGuidToId(
@@ -2430,7 +2368,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertCompartmentIdToGuid(
@@ -2458,7 +2395,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceNameToLuidA(
@@ -2486,7 +2422,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceNameToLuidW(
@@ -2514,7 +2449,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceLuidToNameA(
@@ -2545,7 +2479,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceLuidToNameW(
@@ -2576,7 +2509,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceLuidToIndex(
@@ -2604,7 +2536,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceIndexToLuid(
@@ -2632,7 +2563,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceLuidToAlias(
@@ -2663,7 +2593,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceAliasToLuid(
@@ -2691,7 +2620,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceLuidToGuid(
@@ -2719,7 +2647,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 ConvertInterfaceGuidToLuid(
@@ -2748,9 +2675,8 @@ Return Value:
 
 #define IF_NAMESIZE NDIS_IF_MAX_STRING_SIZE
 
-_IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 NET_IFINDEX
+_IRQL_requires_max_(PASSIVE_LEVEL)
 NETIOAPI_API_
 if_nametoindex(
     _In_ PCSTR InterfaceName
@@ -2771,9 +2697,8 @@ Return Value:
 
 --*/
 
-_IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 PCHAR
+_IRQL_requires_max_(PASSIVE_LEVEL)
 NETIOAPI_API_
 if_indextoname(
     _In_ NET_IFINDEX InterfaceIndex,
@@ -2803,7 +2728,6 @@ Notes:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 NET_IF_COMPARTMENT_ID
 NETIOAPI_API_
 GetCurrentThreadCompartmentId(
@@ -2826,7 +2750,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 SetCurrentThreadCompartmentId(
@@ -2851,7 +2774,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 VOID
 NETIOAPI_API_
 GetCurrentThreadCompartmentScope(
@@ -2881,7 +2803,6 @@ Permissions:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 SetCurrentThreadCompartmentScope(
@@ -2911,7 +2832,6 @@ Permissions:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 NET_IF_COMPARTMENT_ID
 NETIOAPI_API_
 GetJobCompartmentId(
@@ -2938,7 +2858,6 @@ Permissions:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 SetJobCompartmentId(
@@ -2970,9 +2889,8 @@ Permissions:
 
 --*/
 
-_IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 NET_IF_COMPARTMENT_ID
+_IRQL_requires_max_(PASSIVE_LEVEL)
 NETIOAPI_API_
 GetSessionCompartmentId(
     _In_ ULONG SessionId
@@ -2994,7 +2912,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 SetSessionCompartmentId(
@@ -3022,7 +2939,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 NET_IF_COMPARTMENT_ID
 NETIOAPI_API_
 GetDefaultCompartmentId(
@@ -3042,7 +2958,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 GetNetworkInformation(
@@ -3079,7 +2994,6 @@ Return Value:
 --*/
 
 _IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
 _NETIOAPI_SUCCESS_
 NETIOAPI_API
 SetNetworkInformation(
@@ -3111,7 +3025,6 @@ Return Value:
 
 #pragma warning(pop)
 
-IPHLPAPI_DLL_LINKAGE
 NETIOAPI_API
 ConvertLengthToIpv4Mask(
     _In_ ULONG MaskLength,
@@ -3137,7 +3050,6 @@ Return Value:
 
 --*/
 
-IPHLPAPI_DLL_LINKAGE
 NETIOAPI_API
 ConvertIpv4MaskToLength(
     _In_ ULONG Mask,
@@ -3163,314 +3075,11 @@ Return Value:
 
 --*/
 
-#define DNS_SETTINGS_VERSION1                     0x0001
-#define DNS_INTERFACE_SETTINGS_VERSION1           0x0001
-#define DNS_INTERFACE_SETTINGS_VERSION2           0x0002
-
-#define DNS_SETTING_IPV6                          0x0001
-#define DNS_SETTING_NAMESERVER                    0x0002
-#define DNS_SETTING_SEARCHLIST                    0x0004
-#define DNS_SETTING_REGISTRATION_ENABLED          0x0008
-#define DNS_SETTING_REGISTER_ADAPTER_NAME         0x0010
-#define DNS_SETTING_DOMAIN                        0x0020
-#define DNS_SETTING_HOSTNAME                      0x0040
-#define DNS_SETTINGS_ENABLE_LLMNR                 0x0080
-#define DNS_SETTINGS_QUERY_ADAPTER_NAME           0x0100
-#define DNS_SETTING_PROFILE_NAMESERVER            0x0200
-#define DNS_SETTING_DISABLE_UNCONSTRAINED_QUERIES 0x0400
-#define DNS_SETTING_SUPPLEMENTAL_SEARCH_LIST      0x0800
-
-typedef struct _DNS_SETTINGS
-{
-    ULONG Version;
-    ULONG64 Flags;
-    PWSTR Hostname;
-    PWSTR Domain;
-    PWSTR SearchList;
-} DNS_SETTINGS;
-
-typedef struct _DNS_INTERFACE_SETTINGS
-{
-    ULONG Version;
-    ULONG64 Flags;
-    PWSTR Domain;
-    PWSTR NameServer;
-    PWSTR SearchList;
-    ULONG RegistrationEnabled;
-    ULONG RegisterAdapterName;
-    ULONG EnableLLMNR;
-    ULONG QueryAdapterName;
-    PWSTR ProfileNameServer;
-} DNS_INTERFACE_SETTINGS;
-
-typedef struct _DNS_INTERFACE_SETTINGS_EX
-{
-    DNS_INTERFACE_SETTINGS SettingsV1;
-    ULONG                  DisableUnconstrainedQueries;
-    PWSTR                  SupplementalSearchList;
-} DNS_INTERFACE_SETTINGS_EX;
-
-NETIOAPI_API
-GetDnsSettings(
-    _Inout_ DNS_SETTINGS *Settings
-    );
-/*++
-
-Routine Description:
-
-    Retrieves the DNS settings specified in the Settings parameter.
-
-    The user must call FreeDnsSettings(Settings) afterwards.
-
-Arguments:
-
-    Settings - GetDnsSettings will populate all the settings
-        in this structure. Version must be set.
-
-Return Value:
-
-    User-Mode: NO_ERROR on success, error code on failure.
-
-    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
-
---*/
-
-VOID
-NETIOAPI_API_
-FreeDnsSettings(
-    _Inout_ DNS_SETTINGS *Settings
-    );
-/*++
-
-Routine Description:
-
-    Frees the settings previously retrieved by GetDnsSettings.
-    This is done by invoking MIDL_user_free.
-
-Arguments:
-
-    Settings - The settings structure. Version must be set.
-
-Return Value:
-
-    None.
-
---*/
-
-NETIOAPI_API
-SetDnsSettings(
-    _In_ const DNS_SETTINGS *Settings
-    );
-/*++
-
-Routine Description:
-
-    Set the DNS settings specified in the Settings parameter.
-
-Arguments:
-
-    Settings - Specifies the settings to be set.
-        Version must be set.
-        Flags is used to control which settings are to be set.
-
-Return Value:
-
-    User-Mode: NO_ERROR on success, error code on failure.
-
-    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
-
---*/
-
-NETIOAPI_API
-GetInterfaceDnsSettings(
-    _In_ GUID Interface,
-    _Inout_ DNS_INTERFACE_SETTINGS *Settings
-    );
-/*++
-
-Routine Description:
-
-    Retrieves the DNS settings specified in the Settings parameter.
-
-    The user must call FreeInterfaceDnsSettings(Settings) afterwards.
-
-Arguments:
-
-    Interface - The Interface GUID that the settings refer to.
-
-    Settings - GetInterfaceDnsSettings will populate all the settings
-        in this structure. Version must be set.
-
-Return Value:
-
-    User-Mode: NO_ERROR on success, error code on failure.
-
-    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
-
---*/
-
-VOID
-NETIOAPI_API_
-FreeInterfaceDnsSettings(
-    _Inout_ DNS_INTERFACE_SETTINGS *Settings
-    );
-/*++
-
-Routine Description:
-
-    Frees the settings previously retrieved by GetInterfaceDnsSettings.
-    This is done by invoking MIDL_user_free.
-
-Arguments:
-
-    Settings - The settings structure. Version must be set.
-
-Return Value:
-
-    None.
-
---*/
-
-NETIOAPI_API
-SetInterfaceDnsSettings(
-    _In_ GUID Interface,
-    _In_ const DNS_INTERFACE_SETTINGS *Settings
-    );
-/*++
-
-Routine Description:
-
-    Set the per interface DNS settings specified in the Settings parameter.
-
-Arguments:
-
-    Interface - The Interface GUID that the settings refer to.
-
-    Settings - Specifies the settings to be set.
-        Version must be set.
-        Flags is used to control which settings are to be set.
-
-Return Value:
-
-    User-Mode: NO_ERROR on success, error code on failure.
-
-    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
-
---*/
-
-_IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
-_NETIOAPI_SUCCESS_
-NETIOAPI_API
-GetNetworkConnectivityHint(
-    _Out_ NL_NETWORK_CONNECTIVITY_HINT *ConnectivityHint
-    );
-/*++
-
-Routine Description:
-
-    Queries for the aggregate level and cost of network connectivity that an
-    app or service is likely to experience.
-
-Arguments:
-
-    ConnectivityHint - Receives the aggregate connectivity level and cost hints.
-
-Return Value:
-
-    User-Mode: NO_ERROR on success, error code on failure.
-
-    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
-
---*/
-
-_IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
-_NETIOAPI_SUCCESS_
-NETIOAPI_API
-GetNetworkConnectivityHintForInterface(
-    _In_ NET_IFINDEX InterfaceIndex,
-    _Out_ NL_NETWORK_CONNECTIVITY_HINT *ConnectivityHint
-    );
-/*++
-
-Routine Description:
-
-    Queries for the level and cost of network connectivity for the specified
-    interface.
-
-Arguments:
-
-    InterfaceIndex - The index of the interface for which to retrieve
-        connectivity information.
-
-    ConnectivityHint - Receives the connectivity level and cost hints for the
-        specified interface.
-
-Return Value:
-
-    User-Mode: NO_ERROR on success, error code on failure.
-
-    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
-
---*/
-
-typedef
-VOID
-(NETIOAPI_API_ *PNETWORK_CONNECTIVITY_HINT_CHANGE_CALLBACK) (
-    _In_ PVOID CallerContext,
-    _In_ NL_NETWORK_CONNECTIVITY_HINT ConnectivityHint
-    );
-
-_IRQL_requires_max_(PASSIVE_LEVEL)
-IPHLPAPI_DLL_LINKAGE
-_NETIOAPI_SUCCESS_
-NETIOAPI_API
-NotifyNetworkConnectivityHintChange(
-    _In_ PNETWORK_CONNECTIVITY_HINT_CHANGE_CALLBACK Callback,
-    _In_opt_ PVOID CallerContext,
-    _In_ BOOLEAN InitialNotification,
-    _Out_ PHANDLE NotificationHandle
-    );
-/*++
-
-Routine Description:
-
-    Register for notification when the aggregate network connectivity level
-    and cost hints change.
-
-Arguments:
-
-    Callback - Supplies a callback function.  This function will be invoked
-        when a network connectivity level or cost change occurs.
-
-    CallerContext - Provides the user specific caller context.  This context
-        will be supplied to the callback function.
-
-    InitialNotification - Supplies a boolean to indicate whether an
-        initialization notification should be provided.
-
-    NotificationHandle - Returns a handle to the notification registration.
-
-Return Value:
-
-    User-Mode: NO_ERROR on success, error code on failure.
-
-    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
-
-Notes:
-
-    1. Invocation of the callback function is serialized.
-
-    2. Use CancelMibChangeNotify2 to deregister for change notifications.
-
---*/
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
 //4201.
@@ -3479,7 +3088,7 @@ Notes:
 }
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #endif // _NETIOAPI_H_.

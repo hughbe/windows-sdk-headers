@@ -443,7 +443,6 @@ cpp_quote("#define INET_E_HSTS_CERTIFICATE_ERROR                _HRESULT_TYPEDEF
 cpp_quote("#define INET_E_RESERVED_2                            _HRESULT_TYPEDEF_(0x800C001FL)      ")
 cpp_quote("#define INET_E_RESERVED_3                            _HRESULT_TYPEDEF_(0x800C0020L)      ")
 cpp_quote("#define INET_E_RESERVED_4                            _HRESULT_TYPEDEF_(0x800C0021L)      ")
-cpp_quote("#define INET_E_RESERVED_5                            _HRESULT_TYPEDEF_(0x800C0022L)      ")
 cpp_quote("#define INET_E_ERROR_FIRST                           _HRESULT_TYPEDEF_(0x800C0002L)      ")
 
 // User declined download of component
@@ -665,8 +664,8 @@ cpp_quote("#endif")
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application Family or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)")
 
 //+---------------------------------------------------------------------------
 //
@@ -930,8 +929,7 @@ interface IBindStatusCallback: IUnknown
             ,BINDSTATUS_RESERVED_10
             ,BINDSTATUS_RESERVED_11
             ,BINDSTATUS_RESERVED_12
-            ,BINDSTATUS_RESERVED_13
-            , BINDSTATUS_LAST_PRIVATE = BINDSTATUS_RESERVED_13
+            , BINDSTATUS_LAST_PRIVATE = BINDSTATUS_RESERVED_12
         } BINDSTATUS;
 
         HRESULT OnStartBinding(
@@ -992,7 +990,7 @@ interface IBindStatusCallback: IUnknown
 }
 cpp_quote("#endif")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
 #pragma region Desktop Family
@@ -2283,7 +2281,6 @@ interface IInternetBindInfo : IUnknown
             ,BINDSTRING_PROXY_PASSWORD
             ,BINDSTRING_ENTERPRISE_ID
             ,BINDSTRING_DOC_URL
-            ,BINDSTRING_SAMESITE_COOKIE_LEVEL
         } BINDSTRING;
 
 
@@ -3311,18 +3308,6 @@ midl_pragma warning (default: 2495)
         PUAFOUT_ISLOCKZONEPOLICY               = 0x00000001
     } PUAFOUT ;
 
-cpp_quote("// Note that for the below function, the semantics of the 'pwszUrl',")
-cpp_quote("// 'pContext', and 'cbContext' parameters depend on the specific")
-cpp_quote("// URLACTION_* enum value that is passed for 'dwAction'. For example,")
-cpp_quote("// when 'dwAction' is URLACTION_HTML_MIXED_CONTENT, 'pwszUrl' will be")
-cpp_quote("// the target URL of the resource, 'pContext' will be the containing")
-cpp_quote("// document's IUri* cast to BYTE*, and 'cbContext' will be sizeof(Uri*).")
-cpp_quote("// When 'dwAction' is URLACTION_CROSS_DOMAIN_DATA, 'pwszUrl' will be")
-cpp_quote("// the source URL, 'pContext' will be the target PCWSTR cast to BYTE*,")
-cpp_quote("// and 'cbContext' will be the size of the string including its null")
-cpp_quote("// terminator. Implementers should use the value of 'dwAction' to")
-cpp_quote("// correctly interpret the 'pswzUrl', 'pContext' and 'cbContext' for")
-cpp_quote("// each action type.")
     HRESULT     ProcessUrlAction
     (
         [in]    LPCWSTR     pwszUrl,
@@ -3336,7 +3321,6 @@ cpp_quote("// each action type.")
         [in]    DWORD   dwFlags,    // See enum PUAF for details.
         [in]    DWORD   dwReserved
     );
-
 cpp_quote("// This is the wrapper function that most clients will use.")
 cpp_quote("// It figures out the current Policy for the passed in Action,")
 cpp_quote("// and puts up UI if the current Policy indicates that the user")
@@ -3412,7 +3396,6 @@ cpp_quote("#define _LPINTERNETSECURITYMANANGEREX_DEFINED")
 
 interface IInternetSecurityManagerEx : IInternetSecurityManager
 {
-cpp_quote("// Please see notes on IInternetSecurityManager::ProcessUrlAction")
     HRESULT     ProcessUrlActionEx
     (
         [in]    LPCWSTR     pwszUrl,
@@ -3462,7 +3445,6 @@ midl_pragma warning (disable:2495) // annotation is allowed on local interface a
                 DWORD*      pdwOutFlags
     );
 
-cpp_quote("// Please see notes on IInternetSecurityManager::ProcessUrlAction")
     HRESULT ProcessUrlActionEx2
     (
         [in, annotation("_In_")]
@@ -3572,7 +3554,6 @@ interface IInternetHostSecurityManager : IUnknown
         [in]    DWORD_PTR dwReserved
     );
 
-cpp_quote("// Please see notes on IInternetSecurityManager::ProcessUrlAction")
     HRESULT     ProcessUrlAction
     (
         [in]    DWORD       dwAction,

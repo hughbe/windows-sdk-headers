@@ -7,16 +7,13 @@
 // legacy DOS interface.
 //
 #pragma once
-#ifndef _INC_DOS // include guard for 3rd party interop
 #define _INC_DOS
 
 #include <corecrt.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
+
+
 
 // File attribute constants
 #define _A_NORMAL 0x00 // Normal file - No read/write restrictions
@@ -25,6 +22,8 @@ _CRT_BEGIN_C_HEADER
 #define _A_SYSTEM 0x04 // System file
 #define _A_SUBDIR 0x10 // Subdirectory
 #define _A_ARCH   0x20 // Archive file
+
+
 
 #ifdef _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
 
@@ -49,13 +48,12 @@ _CRT_BEGIN_C_HEADER
             );
     #endif
 
-    #if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+    #if _CRT_INTERNAL_NONSTDC_NAMES
         #define diskfree_t _diskfree_t
     #endif
 
 #endif
 
+
+
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_DOS

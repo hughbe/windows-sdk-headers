@@ -2037,7 +2037,6 @@ typedef enum _POLICY_INFORMATION_CLASS {
     PolicyDnsDomainInformation,
     PolicyDnsDomainInformationInt,
     PolicyLocalAccountDomainInformation,
-    PolicyMachineAccountInformation,
     PolicyLastEntry
 
 } POLICY_INFORMATION_CLASS, *PPOLICY_INFORMATION_CLASS;
@@ -2409,20 +2408,6 @@ typedef struct _POLICY_DOMAIN_KERBEROS_TICKET_INFO {
 //
 //      Reserved   --  Reserved
 
-//
-// The following structure corresponds to the PolicyMachineAccountInformation
-// information class.  Only valid when the machine is joined to an AD domain.
-// When not joined, will return 0+NULL.
-//
-// Note, DN is not cached because it may change (if\when the account is
-// moved within the domain tree).
-//
-typedef struct _POLICY_MACHINE_ACCT_INFO {
-
-    ULONG Rid;
-    PSID Sid;
-
-} POLICY_MACHINE_ACCT_INFO, *PPOLICY_MACHINE_ACCT_INFO;
 
 //
 // The following data type defines the classes of Policy Information / Policy Domain Information
@@ -2675,12 +2660,6 @@ typedef PLSA_TRUST_INFORMATION PTRUSTED_DOMAIN_INFORMATION_BASIC;
 #if (_WIN32_WINNT >= 0x0602)
 #define TRUST_ATTRIBUTE_CROSS_ORGANIZATION_NO_TGT_DELEGATION 0x00000200  // do not forward TGT to the other side of the trust which is not part of this enterprise
 #define TRUST_ATTRIBUTE_PIM_TRUST                     0x00000400  // Outgoing trust to a PIM forest.
-#endif
-#if (_WIN32_WINNT >= 0x0603)
-// Forward the TGT to the other side of the trust which is not part of this enterprise
-// This flag has the opposite meaning of TRUST_ATTRIBUTE_CROSS_ORGANIZATION_NO_TGT_DELEGATION which is now deprecated.
-// Note: setting TRUST_ATTRIBUTE_CROSS_ORGANIZATION_ENABLE_TGT_DELEGATION is not recommended from a security standpoint.
-#define TRUST_ATTRIBUTE_CROSS_ORGANIZATION_ENABLE_TGT_DELEGATION 0x00000800
 #endif
 // Trust attributes 0x00000040 through 0x00200000 are reserved for future use
 #else
@@ -3418,7 +3397,6 @@ LsaLookupSids(
     );
 
 NTSTATUS
-NTAPI
 LsaLookupSids2(
     _In_ LSA_HANDLE PolicyHandle,
     _In_ ULONG LookupOptions,

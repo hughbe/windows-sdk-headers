@@ -279,19 +279,14 @@ cpp_quote("#define FWPS_INCOMING_FLAG_IS_LOCAL_ONLY_FLOW                 (0x0000
 cpp_quote("#define FWPS_L2_INCOMING_FLAG_IS_RAW_IPV4_FRAMING             (0x00000001)")
 cpp_quote("#define FWPS_L2_INCOMING_FLAG_IS_RAW_IPV6_FRAMING             (0x00000002)")
 cpp_quote("#define FWPS_L2_INCOMING_FLAG_RECLASSIFY_MULTI_DESTINATION    (0x00000008)")
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)")
-cpp_quote("#define FWPS_INCOMING_FLAG_RESERVED0                          (0x00000100)")
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)")  
 cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN8)")
 cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN7)")
 
 cpp_quote("#define FWPS_RIGHT_ACTION_WRITE          (0x00000001)")
 
-cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_ABSORB                         (0x00000001)")
-cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_BUFFER_LIMIT_REACHED           (0x00000002)")
-cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_NO_MORE_DATA                   (0x00000004)")
-cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_ALE_FAST_CACHE_CHECK           (0x00000008)")
-cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_ALE_FAST_CACHE_POSSIBLE        (0x00000010)")
+cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_ABSORB                      (0x00000001)")
+cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_BUFFER_LIMIT_REACHED        (0x00000002)")
+cpp_quote("#define FWPS_CLASSIFY_OUT_FLAG_NO_MORE_DATA                (0x00000004)")
 
 // Used to return the outcome of classification to the shim.
 typedef struct FWPS_CLASSIFY_OUT0_

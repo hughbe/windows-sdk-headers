@@ -479,8 +479,8 @@ void __RPC_STUB IInitializeWithStream_RemoteInitialize_Stub(
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-#pragma region Application and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_propsys_0000_0002_v0_0_c_ifspec;
@@ -615,10 +615,6 @@ EXTERN_C const IID IID_IPropertyStore;
 
 typedef /* [unique] */  __RPC_unique_pointer IPropertyStore *LPPROPERTYSTORE;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 PSSTDAPI PropVariantToWinRTPropertyValue(_In_ REFPROPVARIANT propvar, _In_ REFIID riid, _COM_Outptr_result_maybenull_ void **ppv);
 PSSTDAPI WinRTPropertyValueToPropVariant(_In_opt_ IUnknown *punkPropertyValue, _Out_ PROPVARIANT *ppropvar);
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -1828,7 +1824,6 @@ enum PROPDESC_FORMAT_FLAGS
         PDFF_NOAUTOREADINGORDER	= 0x2000
     } 	PROPDESC_FORMAT_FLAGS;
 
-#define PDFF_PREFERFRIENDLY    static_cast<PROPDESC_FORMAT_FLAGS>(0x10000000) // Use even friendlier date/time descriptions ;internal
 DEFINE_ENUM_FLAG_OPERATORS(PROPDESC_FORMAT_FLAGS)
 typedef /* [v1_enum] */ 
 enum PROPDESC_SORTDESCRIPTION

@@ -27,10 +27,9 @@
 #define DISPID_INTERNAL_CELEMENTCLASSCACHE  MINLONG
 //;end_internal
 
-// Adding a (DISPID) cast to address a subset of the warnings that used to be suppressed by -Wv:17. For more information, visit https://osgwiki.com/wiki/Dev_14_Migration
-// VSTS 15061105: The unsigned values being stored in the signed DISPID data type overflow and present risks if used in comparisons.
-#define DISPID_XOBJ_MIN                 ((DISPID)0x80010000)
-#define DISPID_XOBJ_MAX                 ((DISPID)0x8001FFFF)
+
+#define DISPID_XOBJ_MIN                 0x80010000
+#define DISPID_XOBJ_MAX                 0x8001FFFF
 #define DISPID_XOBJ_BASE                DISPID_XOBJ_MIN
 #define DISPID_HTMLOBJECT               (DISPID_XOBJ_BASE   + 500)  //  500 =  1F4
 #define DISPID_ELEMENT                  (DISPID_HTMLOBJECT  + 500)  // 1000 =  3E8
@@ -8039,7 +8038,6 @@
 #define DISPID_IHTMLPRIVATEWINDOW5_ESTABLISHINCOMINGPORT          
 #define DISPID_IHTMLPRIVATEWINDOW5_GETPROCESSIDTHREADID           
 #define DISPID_IHTMLPRIVATEWINDOW5_ESTABLISHISODEPENDENCIES       
-#define DISPID_IHTMLPRIVATEWINDOW5_ESTABLISHCROSSPROCESSINCOMINGPORT 
 
 //    DISPIDs for interface IHTMLPrivateWindow6
 

@@ -302,7 +302,6 @@ enum _EAP_ATTRIBUTE_TYPE
                                    // by certain password based eap methods
                                    // to authenticate a user.
     eatQuarantineSoH     = 8150, // Value field is a pointer
-    eatCertificateThumbprint = 8250, // Value field is a pointer
     eatPeerId                 = 9000,  // Value field is a pointer
     eatServerId,                          // Value field is a pointer
     eatMethodId,                          // Value field is a pointer
@@ -401,8 +400,6 @@ typedef struct _EAP_ATTRIBUTES
 #define EAP_FLAG_Reserved9                  0x00400000
 
 #define EAP_FLAG_VPN                        0x00800000
-
-#define EAP_FLAG_ONLY_EAP_TLS               0x01000000
 
 // the various states of the input fields
 #define EAP_CONFIG_INPUT_FIELD_PROPS_DEFAULT                0X00000000

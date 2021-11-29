@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * mmiscapi.h -- ApiSet Contract for api-ms-win-mm-misc-l1-1                     *  
@@ -19,11 +20,30 @@
 
 #include <mmsyscom.h> // mm common definitions
 
+/* APISET_NAME: api-ms-win-mm-misc-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_MMISC_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINBLUE
+#define _APISET_MMISC_VER 0x0101
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_MMISC_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Desktop Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #ifndef MMNODRV
@@ -51,6 +71,7 @@ typedef struct DRVCONFIGINFOEX {
     DWORD    dnDevNode;
 } DRVCONFIGINFOEX, *PDRVCONFIGINFOEX, NEAR *NPDRVCONFIGINFOEX, FAR *LPDRVCONFIGINFOEX;
 #endif
+
 
 #if (WINVER < 0x030a) || defined(_WIN32)
 
@@ -161,6 +182,7 @@ LRESULT   WINAPI DrvDefDriverProc(DWORD dwDriverIdentifier, HDRVR hdrvr, UINT uM
 #endif /* DRV_LOAD */
 #endif /* ifdef (WINVER < 0x030a) || defined(_WIN32) */
 
+
 #if (WINVER >= 0x030a)
 /* return values from DriverProc() function */
 #define DRV_CANCEL             DRVCNF_CANCEL
@@ -190,11 +212,14 @@ DriverCallback(
     );
 
 
+
+#if !defined(_CONTRACT_GEN) || (_APISET_MMISC_VER >= 0x0101)
 /****************************************************************************
 
   Sound schemes
 
-****************************************************************************/LONG
+****************************************************************************/
+LONG
 WINAPI
 sndOpenSound(
     _In_ LPCWSTR EventName,
@@ -202,6 +227,8 @@ sndOpenSound(
     _In_ INT32 Flags,
     _Outptr_ PHANDLE FileHandle
     );
+
+#endif
 
 //
 // removed from winmmi.h
@@ -226,6 +253,7 @@ mmDrvInstall(
     DRIVERMSGPROC drvMessage,
     UINT wFlags
     );
+
 
 
 #endif  /* ifndef MMNODRV */
@@ -360,6 +388,7 @@ typedef const MMCKINFO *LPCMMCKINFO;
 #define MMIOM_CLOSE             4       /* close file */
 #define MMIOM_WRITEFLUSH        5       /* write and flush */
 
+
 #if (WINVER >= 0x030a)
 #define MMIOM_RENAME            6       /* rename specified file */
 #endif /* ifdef WINVER >= 0x030a */
@@ -486,6 +515,7 @@ mmioRenameW(
 FOURCC WINAPI mmioStringToFOURCC( LPCSTR sz, UINT uFlags);
 LPMMIOPROC WINAPI mmioInstallIOProc( FOURCC fccIOProc, LPMMIOPROC pIOProc, DWORD dwFlags);
 HMMIO WINAPI mmioOpen(_Inout_opt_ LPSTR pszFileName, LPMMIOINFO pmmioinfo, DWORD fdwOpen);
+
 #if (WINVER >= 0x030a)
 MMRESULT WINAPI mmioRename( _In_ LPCSTR pszFileName, _In_ LPCSTR pszNewFileName, _In_opt_ const MMIOINFO FAR* pmmioinfo, _In_ DWORD fdwRename);
 #endif /* ifdef WINVER >= 0x030a */
@@ -513,7 +543,7 @@ LONG
 WINAPI
 mmioWrite(
     _In_ HMMIO hmmio,
-    _In_reads_bytes_(cch) const char  _huge * pch,
+    _In_reads_bytes_(cch) const char _huge * pch,
     _In_ LONG cch
     );
 
@@ -587,7 +617,7 @@ WINAPI
 mmioDescend(
     _In_ HMMIO hmmio,
     _Inout_ LPMMCKINFO pmmcki,
-    _In_opt_ const MMCKINFO  FAR * pmmckiParent,
+    _In_opt_ const MMCKINFO FAR * pmmckiParent,
     _In_ UINT fuDescend
     );
 

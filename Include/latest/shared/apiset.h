@@ -38,7 +38,6 @@ Author:
 #endif
 
 #ifdef _API_SET_HOST
-// This section is intended for hosting contracts. Any legacy host definitions are ignored.
 
 #undef API_SET_LIBRARY
 
@@ -82,52 +81,7 @@ Author:
 
 #else
 
-#if defined(_API_SET_LEGACY_TARGET)
-// This section is intended for "classic apiset forwarders" that are forwarding back to a legacy host.
-// In this section, the definition for _API_SET_LEGACY_TARGET is taken as the default legacy host for the
-// entire contract. But any APIs which specify LegacyHost directly will override this definition.
-
-#define API_SET(X)                                  X = _API_SET_LEGACY_TARGET##.##X
-#define API_SET_DIR(X,DIR)                          X = _API_SET_LEGACY_TARGET##.##X DIR
-#define API_SET_PRIVATE(X)                          X = _API_SET_LEGACY_TARGET##.##X PRIVATE
-#define API_SET_PRIVATE_DIR(X,DIR)                  X = _API_SET_LEGACY_TARGET##.##X DIR PRIVATE
-#define API_SET_BY_ORDINAL(X,O,PO)                  X = _API_SET_LEGACY_TARGET##.##PO @##O NONAME
-#define API_SET_BY_ORDINAL_DIR(X,O,PO,DIR)          X = _API_SET_LEGACY_TARGET##.##PO @##O NONAME DIR
-#define API_SET_BY_ORDINAL_PRIVATE(X,O,PO)          X = _API_SET_LEGACY_TARGET##.##PO @##O NONAME PRIVATE
-#define API_SET_BY_ORDINAL_PRIVATE_DIR(X,O,PO,DIR)  X = _API_SET_LEGACY_TARGET##.##PO @##O NONAME DIR PRIVATE
-
-#define API_SET_LEGACY(X,L)                         X = L##.##X
-#define API_SET_LEGACY_DIR(X,L,DIR)                 X = L##.##X DIR
-#define API_SET_LEGACY_PRIVATE(X,L)                 X = L##.##X PRIVATE
-#define API_SET_LEGACY_PRIVATE_DIR(X,L,DIR)         X = L##.##X DIR PRIVATE
-#define API_SET_LEGACY_BY_ORDINAL(X,L,O,PO)         X = L##.##PO @##O NONAME
-#define API_SET_LEGACY_BY_ORDINAL_DIR(X,L,O,PO,DIR) X = L##.##PO @##O NONAME DIR
-#define API_SET_LEGACY_BY_ORDINAL_PRIVATE(X,L,O,PO) X = L##.##PO @##O NONAME PRIVATE
-#define API_SET_LEGACY_BY_ORDINAL_PRIVATE_DIR(X,L,O,PO,DIR) X = L##.##PO @##O NONAME DIR PRIVATE
-
-#elif defined(_API_SET_FORWARDER_TARGET)
-// This section is intended for "reverse forwarders" that are forwarding to an explicit apiset name.
-// Any legacy targets are ignored.
-#define API_SET(X)                                  X = _API_SET_FORWARDER_TARGET##.##X
-#define API_SET_DIR(X,DIR)                          X = _API_SET_FORWARDER_TARGET##.##X DIR
-#define API_SET_PRIVATE(X)                          X = _API_SET_FORWARDER_TARGET##.##X PRIVATE
-#define API_SET_PRIVATE_DIR(X,DIR)                  X = _API_SET_FORWARDER_TARGET##.##X DIR PRIVATE
-#define API_SET_BY_ORDINAL(X,O,PO)                  X = _API_SET_FORWARDER_TARGET##.##PO @##O NONAME
-#define API_SET_BY_ORDINAL_DIR(X,O,PO,DIR)          X = _API_SET_FORWARDER_TARGET##.##PO @##O NONAME DIR
-#define API_SET_BY_ORDINAL_PRIVATE(X,O,PO)          X = _API_SET_FORWARDER_TARGET##.##PO @##O NONAME PRIVATE
-#define API_SET_BY_ORDINAL_PRIVATE_DIR(X,O,PO,DIR)  X = _API_SET_FORWARDER_TARGET##.##PO @##O NONAME DIR PRIVATE
-
-#define API_SET_LEGACY(X,L)                         X = _API_SET_FORWARDER_TARGET##.##X
-#define API_SET_LEGACY_DIR(X,L,DIR)                 X = _API_SET_FORWARDER_TARGET##.##X DIR
-#define API_SET_LEGACY_PRIVATE(X,L)                 X = _API_SET_FORWARDER_TARGET##.##X PRIVATE
-#define API_SET_LEGACY_PRIVATE_DIR(X,L,DIR)         X = _API_SET_FORWARDER_TARGET##.##X DIR PRIVATE
-#define API_SET_LEGACY_BY_ORDINAL(X,L,O,PO)         X = _API_SET_FORWARDER_TARGET##.##PO @##O NONAME
-#define API_SET_LEGACY_BY_ORDINAL_DIR(X,L,O,PO,DIR) X = _API_SET_FORWARDER_TARGET##.##PO @##O NONAME DIR
-#define API_SET_LEGACY_BY_ORDINAL_PRIVATE(X,L,O,PO) X = _API_SET_FORWARDER_TARGET##.##PO @##O NONAME PRIVATE
-#define API_SET_LEGACY_BY_ORDINAL_PRIVATE_DIR(X,L,O,PO,DIR) X = _API_SET_FORWARDER_TARGET##.##PO @##O NONAME DIR PRIVATE
-
-#else
-// This section is intended for internal contract generation to build artifacts that model the contract without forwarding.
+#ifndef _API_SET_LEGACY_TARGET
 
 #define API_SET(X)                                  X
 #define API_SET_DIR(X,DIR)                          X DIR
@@ -147,7 +101,27 @@ Author:
 #define API_SET_LEGACY_BY_ORDINAL_PRIVATE(X,L,O,PO) X @##O NONAME PRIVATE
 #define API_SET_LEGACY_BY_ORDINAL_PRIVATE_DIR(X,L,O,PO,DIR) X @##O NONAME DIR PRIVATE
 
-#endif // _API_SET_LEGACY_TARGET, _API_SET_FORWARDER_TARGET
+#else
+
+#define API_SET(X)                                  X = _API_SET_LEGACY_TARGET##.##X
+#define API_SET_DIR(X,DIR)                          X = _API_SET_LEGACY_TARGET##.##X DIR
+#define API_SET_PRIVATE(X)                          X = _API_SET_LEGACY_TARGET##.##X PRIVATE
+#define API_SET_PRIVATE_DIR(X,DIR)                  X = _API_SET_LEGACY_TARGET##.##X DIR PRIVATE
+#define API_SET_BY_ORDINAL(X,O,PO)                  X = _API_SET_LEGACY_TARGET##.##PO @##O NONAME
+#define API_SET_BY_ORDINAL_DIR(X,O,PO,DIR)          X = _API_SET_LEGACY_TARGET##.##PO @##O NONAME DIR
+#define API_SET_BY_ORDINAL_PRIVATE(X,O,PO)          X = _API_SET_LEGACY_TARGET##.##PO @##O NONAME PRIVATE
+#define API_SET_BY_ORDINAL_PRIVATE_DIR(X,O,PO,DIR)  X = _API_SET_LEGACY_TARGET##.##PO @##O NONAME DIR PRIVATE
+
+#define API_SET_LEGACY(X,L)                         X = L##.##X
+#define API_SET_LEGACY_DIR(X,L,DIR)                 X = L##.##X DIR
+#define API_SET_LEGACY_PRIVATE(X,L)                 X = L##.##X PRIVATE
+#define API_SET_LEGACY_PRIVATE_DIR(X,L,DIR)         X = L##.##X DIR PRIVATE
+#define API_SET_LEGACY_BY_ORDINAL(X,L,O,PO)         X = L##.##PO @##O NONAME
+#define API_SET_LEGACY_BY_ORDINAL_DIR(X,L,O,PO,DIR) X = L##.##PO @##O NONAME DIR
+#define API_SET_LEGACY_BY_ORDINAL_PRIVATE(X,L,O,PO) X = L##.##PO @##O NONAME PRIVATE
+#define API_SET_LEGACY_BY_ORDINAL_PRIVATE_DIR(X,L,O,PO,DIR) X = L##.##PO @##O NONAME DIR PRIVATE
+
+#endif // _API_SET_LEGACY_TARGET
 
 #define API_SET_LIBRARY(X)              LIBRARY X
 

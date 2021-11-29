@@ -93,8 +93,7 @@ typedef enum _FLT_FILESYSTEM_TYPE {
     FLT_FSTYPE_MSFS,            //Microsoft's Mailslot file system  (\FileSystem\msfs)
     FLT_FSTYPE_CSVFS,           //Microsoft's Cluster Shared Volume file system  (\FileSystem\csvfs)
     FLT_FSTYPE_REFS,            //Microsoft's ReFS file system      (\FileSystem\Refs or \FileSystem\Refsv1)
-    FLT_FSTYPE_OPENAFS,         //OpenAFS file system               (\Device\AFSRedirector)
-    FLT_FSTYPE_CIMFS            //Composite Image file system       (\FileSystem\cimfs)
+    FLT_FSTYPE_OPENAFS          //OpenAFS file system               (\Device\AFSRedirector)
 
 } FLT_FILESYSTEM_TYPE, *PFLT_FILESYSTEM_TYPE;
 

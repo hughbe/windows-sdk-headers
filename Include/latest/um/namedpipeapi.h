@@ -1,3 +1,8 @@
+ 
+ 
+// begin_1_0
+// begin_2_1
+// begin_2_2
 /********************************************************************************
 *                                                                               *
 * namedpipeapi.h - ApiSet Contract for api-ms-win-core-namedpipe-l1-1-0         *
@@ -18,11 +23,40 @@
 #include <minwindef.h>
 #include <minwinbase.h>
 
+/* APISET_NAME: api-ms-win-core-namedpipe-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_NAMEDPIPE_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN10_TH2
+#define _APISET_NAMEDPIPE_VER 0x0202
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINTHRESHOLD
+#define _APISET_NAMEDPIPE_VER 0x0201
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_NAMEDPIPE_VER 0x0200
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN7
+#define _APISET_NAMEDPIPE_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+// end_1_0
+// end_2_1
+// end_2_2
+
+// begin_1_0
+
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 BOOL
@@ -68,17 +102,13 @@ BOOL
 WINAPI
 PeekNamedPipe(
     _In_ HANDLE hNamedPipe,
-    _Out_writes_bytes_to_opt_(nBufferSize,*lpBytesRead) LPVOID lpBuffer,
+    _Out_writes_bytes_to_opt_(nBufferSize, *lpBytesRead) LPVOID lpBuffer,
     _In_ DWORD nBufferSize,
     _Out_opt_ LPDWORD lpBytesRead,
     _Out_opt_ LPDWORD lpTotalBytesAvail,
     _Out_opt_ LPDWORD lpBytesLeftThisMessage
     );
 
-
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 BOOL
@@ -87,16 +117,12 @@ TransactNamedPipe(
     _In_ HANDLE hNamedPipe,
     _In_reads_bytes_opt_(nInBufferSize) LPVOID lpInBuffer,
     _In_ DWORD nInBufferSize,
-    _Out_writes_bytes_to_opt_(nOutBufferSize,*lpBytesRead) LPVOID lpOutBuffer,
+    _Out_writes_bytes_to_opt_(nOutBufferSize, *lpBytesRead) LPVOID lpOutBuffer,
     _In_ DWORD nOutBufferSize,
     _Out_ LPDWORD lpBytesRead,
     _Inout_opt_ LPOVERLAPPED lpOverlapped
     );
 
-
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINBASEAPI
 HANDLE
@@ -130,9 +156,6 @@ WaitNamedPipeW(
 #define WaitNamedPipe  WaitNamedPipeW
 #endif
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #if (_WIN32_WINNT >= 0x0600)
 
@@ -161,10 +184,17 @@ ImpersonateNamedPipeClient(
     );
                                
 
+
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
+// end_1_0
+// begin_2_1
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_NAMEDPIPE_VER >= 0x0201)
 
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
@@ -199,7 +229,17 @@ GetNamedPipeHandleStateW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
+#endif // !defined(_CONTRACT_GEN) || (_APISET_NAMEDPIPE_VER >= 0x0201)
+
+// end_2_1
+
+// begin_2_2
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_NAMEDPIPE_VER >= 0x0202)
+
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
@@ -209,7 +249,7 @@ CallNamedPipeW(
     _In_ LPCWSTR lpNamedPipeName,
     _In_reads_bytes_opt_(nInBufferSize) LPVOID lpInBuffer,
     _In_ DWORD nInBufferSize,
-    _Out_writes_bytes_to_opt_(nOutBufferSize,*lpBytesRead) LPVOID lpOutBuffer,
+    _Out_writes_bytes_to_opt_(nOutBufferSize, *lpBytesRead) LPVOID lpOutBuffer,
     _In_ DWORD nOutBufferSize,
     _Out_ LPDWORD lpBytesRead,
     _In_ DWORD nTimeOut
@@ -223,9 +263,20 @@ CallNamedPipeW(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
+#endif // !defined(_CONTRACT_GEN) || (_APISET_NAMEDPIPE_VER >= 0x0202)
+
+// end_2_2
+
+// begin_1_0
+// begin_2_1
+// begin_2_2
+
 #ifdef __cplusplus
 }
 #endif
 
 #endif // _NAMEDPIPE_H_
 
+// end_1_0
+// end_2_1
+// end_2_2

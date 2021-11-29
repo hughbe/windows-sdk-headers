@@ -71,9 +71,6 @@ typedef struct {
 
 #ifndef _WINDOWS_
 
-#pragma warning(push)
-#pragma warning(disable:4214) /* nonstandard extension used : bit field types other then int */
-
 //
 // Battery Class-Miniport device driver interfaces
 //
@@ -216,41 +213,7 @@ typedef struct {
     PDEVICE_OBJECT                  Fdo;
 } BATTERY_MINIPORT_INFO_V1_1, *PBATTERY_MINIPORT_INFO_V1_1;
 
-typedef enum BATTERY_CHARGING_STATE {
-    BatteryNoPowerSupply = 0,
-    BatteryInadequatePowerSupply = 1,
-    BatteryAdequatePowerSupply = 2
-} BATTERY_CHARGING_STATE;
 
-//
-// Battery data.
-//
-
-typedef struct _BATTERY_NON_CATASTROPHIC_EVENT {
-    ULONG           BatteryChargeLimitState : 1;
-    ULONG           BatteryChargingState : 2;
-    ULONG           Reserved : 29;
-} BATTERY_NON_CATASTROPHIC_EVENT, *PBATTERY_NON_CATASTROPHIC_EVENT;
-
-typedef struct _BATTERY_MINIPORT_UPDATE_DATA {
-    ULONG                               Version;
-    BATTERY_NON_CATASTROPHIC_EVENT      NotifyEvent;
-} BATTERY_MINIPORT_UPDATE_DATA, *PBATTERY_MINIPORT_UPDATE_DATA;
-
-typedef BATTERY_MINIPORT_UPDATE_DATA BATTERY_MINIPORT_UPDATE_DATA_V2;
-typedef PBATTERY_MINIPORT_UPDATE_DATA PBATTERY_MINIPORT_UPDATE_DATA_V2;
-
-#define BATTERY_MINIPORT_UPDATE_DATA_VER_1               0x00000001
-#define BATTERY_MINIPORT_UPDATE_DATA_VER_2               0x00000002
-
-#define BATTERY_MINIPORT_UPDATE_DATA_VER_1_SIZE          sizeof(BATTERY_MINIPORT_UPDATE_DATA)
-#define BATTERY_MINIPORT_UPDATE_DATA_VER_2_SIZE          sizeof(BATTERY_MINIPORT_UPDATE_DATA_V2)
-
-#pragma warning(pop)
-
-//
-// Miniport info struct version info.
-//
 
 #define BATTERY_CLASS_MAJOR_VERSION     0x0001
 #define BATTERY_CLASS_MINOR_VERSION     0x0000
@@ -408,15 +371,6 @@ NTSTATUS
 BATTERYCLASSAPI
 BatteryClassStatusNotify (
     _In_ PVOID ClassData
-    );
-
-_IRQL_requires_max_(PASSIVE_LEVEL)
-_Check_return_
-NTSTATUS
-BATTERYCLASSAPI
-BatteryClassUpdateData (
-    _In_ PVOID ClassData,
-    _In_ PBATTERY_MINIPORT_UPDATE_DATA UpdateData
     );
 
 #endif // _WINDOWS_

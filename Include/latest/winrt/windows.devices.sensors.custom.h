@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.devices.sensors.custom.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,28 +75,39 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -117,11 +131,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensor;
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor ABI::Windows::Devices::Sensors::Custom::ICustomSensor
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_FWD_DEFINED__
@@ -134,11 +147,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensor2;
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 ABI::Windows::Devices::Sensors::Custom::ICustomSensor2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_FWD_DEFINED__
@@ -151,11 +163,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensorReading;
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading ABI::Windows::Devices::Sensors::Custom::ICustomSensorReading
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_FWD_DEFINED__
@@ -168,11 +179,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensorReading2;
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2 ABI::Windows::Devices::Sensors::Custom::ICustomSensorReading2
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_FWD_DEFINED__
@@ -185,11 +195,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensorReadingChangedEventArgs;
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs ABI::Windows::Devices::Sensors::Custom::ICustomSensorReadingChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_FWD_DEFINED__
@@ -202,11 +211,10 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     interface ICustomSensorStatics;
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics ABI::Windows::Devices::Sensors::Custom::ICustomSensorStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_FWD_DEFINED__
@@ -220,38 +228,11 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     class CustomSensor;
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_USE
-#define DEF___FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("7fbfbe55-9674-54e3-a269-9caa820ed23c"))
-IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Sensors::Custom::CustomSensor*, ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Custom.CustomSensor>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t;
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -261,11 +242,11 @@ typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> _
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("808b62d7-6e02-5680-a59e-118a98a4e70f"))
-IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Sensors::Custom::CustomSensor*, ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>>
+IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Sensors::Custom::CustomSensor*, ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.Sensors.Custom.CustomSensor>";
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.Sensors.Custom.CustomSensor>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -273,12 +254,93 @@ IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::CustomSe
 // correct parameterized interface specialization.
 typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t;
 #define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_USE
+#define DEF___FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("7fbfbe55-9674-54e3-a269-9caa820ed23c"))
+IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Sensors::Custom::CustomSensor*, ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.Sensors.Custom.CustomSensor>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::CustomSensor*> __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t;
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>
+//#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Sensors {
+                namespace Custom {
+                    class CustomSensorReadingChangedEventArgs;
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("aa9460cb-f08c-5963-b232-cc4075e984e7"))
+ITypedEventHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*,ABI::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Sensors::Custom::CustomSensor*, ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs*, ABI::Windows::Devices::Sensors::Custom::ICustomSensorReadingChangedEventArgs*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Custom.CustomSensor, Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*,ABI::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::Custom::ICustomSensor*,ABI::Windows::Devices::Sensors::Custom::ICustomSensorReadingChangedEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::Sensors::Custom::ICustomSensor*,ABI::Windows::Devices::Sensors::Custom::ICustomSensorReadingChangedEventArgs*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 
 #ifndef DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE
@@ -287,22 +349,27 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Sensors::Custom::
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("09335560-6c6b-5a26-9348-97b781132b20"))
-IKeyValuePair<HSTRING, IInspectable*> : IKeyValuePair_impl<HSTRING, IInspectable*>
+IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IKeyValuePair`2<String, Object>";
+        return L"Windows.Foundation.Collections.IKeyValuePair`2<String, Object>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IKeyValuePair<HSTRING, IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
+typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
+//#define __FIKeyValuePair_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE */
+
+
 
 
 
@@ -312,11 +379,11 @@ typedef IKeyValuePair<HSTRING, IInspectable*> __FIKeyValuePair_2_HSTRING_IInspec
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("5db5fa32-707c-5849-a06b-91c8eb9d10e8"))
-IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValuePair_2_HSTRING_IInspectable*>
+IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValuePair_2_HSTRING_IInspectable*> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>";
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -324,10 +391,15 @@ IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
+//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE */
+
+
 
 
 
@@ -337,11 +409,11 @@ typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIK
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("fe2f3d47-5d47-5499-8374-430c7cda0204"))
-IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValuePair_2_HSTRING_IInspectable*>
+IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValuePair_2_HSTRING_IInspectable*> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>";
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -349,10 +421,15 @@ IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValu
 // correct parameterized interface specialization.
 typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
 #define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
+//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE */
+
+
 
 
 
@@ -362,33 +439,36 @@ typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIK
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("bb78502a-f79d-54fa-92c9-90c5039fdf7e"))
-IMapView<HSTRING, IInspectable*> : IMapView_impl<HSTRING, IInspectable*>
+IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IMapView`2<String, Object>";
+        return L"Windows.Foundation.Collections.IMapView`2<String, Object>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IMapView<HSTRING, IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
+typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
 #define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
+//#define __FIMapView_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIMapView_2_HSTRING_IInspectable_USE */
+
 
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            typedef struct TimeSpan TimeSpan;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+            struct TimeSpan;
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
-#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
 #define DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE
@@ -396,11 +476,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("604d0c4c-91de-5c2a-935f-362f13eaf800"))
-IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct ABI::Windows::Foundation::TimeSpan>
+IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct ABI::Windows::Foundation::TimeSpan> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan>";
+        return L"Windows.Foundation.IReference`1<Windows.Foundation.TimeSpan>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -408,74 +488,45 @@ IReference<struct ABI::Windows::Foundation::TimeSpan> : IReference_impl<struct A
 // correct parameterized interface specialization.
 typedef IReference<struct ABI::Windows::Foundation::TimeSpan> __FIReference_1_Windows__CFoundation__CTimeSpan_t;
 #define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::__FIReference_1_Windows__CFoundation__CTimeSpan_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIReference_1_Windows__CFoundation__CTimeSpan ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
+//#define __FIReference_1_Windows__CFoundation__CTimeSpan_t ABI::Windows::Foundation::IReference<ABI::Windows::Foundation::TimeSpan>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIReference_1_Windows__CFoundation__CTimeSpan_USE */
 
-#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Sensors {
-                namespace Custom {
-                    class CustomSensorReadingChangedEventArgs;
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("aa9460cb-f08c-5963-b232-cc4075e984e7"))
-ITypedEventHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*, ABI::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Sensors::Custom::CustomSensor*, ABI::Windows::Devices::Sensors::Custom::ICustomSensor*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs*, ABI::Windows::Devices::Sensors::Custom::ICustomSensorReadingChangedEventArgs*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.Sensors.Custom.CustomSensor, Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::Sensors::Custom::CustomSensor*, ABI::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs*> __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
+            
             typedef struct DateTime DateTime;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
-#ifndef ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
-#define ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            interface IPropertyValue;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CFoundation_CIPropertyValue ABI::Windows::Foundation::IPropertyValue
+            
+            typedef struct TimeSpan TimeSpan;
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
-#endif // ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+
+
+
+
+
+
+
+
+
 
 namespace ABI {
     namespace Windows {
@@ -483,11 +534,22 @@ namespace ABI {
             namespace Sensors {
                 namespace Custom {
                     class CustomSensorReading;
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -495,7 +557,9 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensor
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -507,44 +571,46 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 namespace Custom {
-                    MIDL_INTERFACE("a136f9ad-4034-4b4d-99dd-531aac649c09")
-                    ICustomSensor : public IInspectable
+                    /* [object, uuid("A136F9AD-4034-4B4D-99DD-531AAC649C09"), exclusiveto, contract] */
+                    MIDL_INTERFACE("A136F9AD-4034-4B4D-99DD-531AAC649C09")
+                    ICustomSensor : IInspectable
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE GetCurrentReading(
-                            ABI::Windows::Devices::Sensors::Custom::ICustomSensorReading** value
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Sensors::Custom::ICustomSensorReading * * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE get_MinimumReportInterval(
-                            UINT32* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MinimumReportInterval(
+                            /* [retval, out] */__RPC__out UINT32 * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE put_ReportInterval(
-                            UINT32 value
+                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ReportInterval(
+                            /* [in] */UINT32 value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE get_ReportInterval(
-                            UINT32* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ReportInterval(
+                            /* [retval, out] */__RPC__out UINT32 * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE get_DeviceId(
-                            HSTRING* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DeviceId(
+                            /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE add_ReadingChanged(
-                            __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs* handler,
-                            EventRegistrationToken* token
+                        /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_ReadingChanged(
+                            /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * handler,
+                            /* [retval, out] */__RPC__out EventRegistrationToken * token
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE remove_ReadingChanged(
-                            EventRegistrationToken token
+                        /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_ReadingChanged(
+                            /* [in] */EventRegistrationToken token
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomSensor = _uuidof(ICustomSensor);
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomSensor=_uuidof(ICustomSensor);
+                    
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -552,7 +618,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensor
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -564,31 +632,33 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 namespace Custom {
-                    MIDL_INTERFACE("20db3111-ec58-4d9f-bfbd-e77825088510")
-                    ICustomSensor2 : public IInspectable
+                    /* [object, uuid("20DB3111-EC58-4D9F-BFBD-E77825088510"), exclusiveto, contract] */
+                    MIDL_INTERFACE("20DB3111-EC58-4D9F-BFBD-E77825088510")
+                    ICustomSensor2 : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE put_ReportLatency(
-                            UINT32 value
+                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ReportLatency(
+                            /* [in] */UINT32 value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE get_ReportLatency(
-                            UINT32* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ReportLatency(
+                            /* [retval, out] */__RPC__out UINT32 * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE get_MaxBatchSize(
-                            UINT32* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxBatchSize(
+                            /* [retval, out] */__RPC__out UINT32 * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomSensor2 = _uuidof(ICustomSensor2);
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomSensor2=_uuidof(ICustomSensor2);
+                    
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
 
 /*
  *
@@ -596,7 +666,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensorReading
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -608,28 +680,30 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 namespace Custom {
-                    MIDL_INTERFACE("64004f4d-446a-4366-a87a-5f963268ec53")
-                    ICustomSensorReading : public IInspectable
+                    /* [object, uuid("64004F4D-446A-4366-A87A-5F963268EC53"), exclusiveto, contract] */
+                    MIDL_INTERFACE("64004F4D-446A-4366-A87A-5F963268EC53")
+                    ICustomSensorReading : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_Timestamp(
-                            ABI::Windows::Foundation::DateTime* value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Timestamp(
+                            /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE get_Properties(
-                            __FIMapView_2_HSTRING_IInspectable** value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Properties(
+                            /* [retval, out] */__RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable * * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomSensorReading = _uuidof(ICustomSensorReading);
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomSensorReading=_uuidof(ICustomSensorReading);
+                    
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -637,7 +711,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensorReading
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -649,25 +725,27 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 namespace Custom {
-                    MIDL_INTERFACE("223c98ea-bf73-4992-9a48-d3c897594ccb")
-                    ICustomSensorReading2 : public IInspectable
+                    /* [object, uuid("223C98EA-BF73-4992-9A48-D3C897594CCB"), exclusiveto, contract] */
+                    MIDL_INTERFACE("223C98EA-BF73-4992-9A48-D3C897594CCB")
+                    ICustomSensorReading2 : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_PerformanceCount(
-                            __FIReference_1_Windows__CFoundation__CTimeSpan** value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PerformanceCount(
+                            /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CTimeSpan * * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomSensorReading2 = _uuidof(ICustomSensorReading2);
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomSensorReading2=_uuidof(ICustomSensorReading2);
+                    
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
 
 /*
  *
@@ -675,7 +753,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -687,25 +767,27 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 namespace Custom {
-                    MIDL_INTERFACE("6b202023-cffd-4cc1-8ff0-e21823d76fcc")
-                    ICustomSensorReadingChangedEventArgs : public IInspectable
+                    /* [object, uuid("6B202023-CFFD-4CC1-8FF0-E21823D76FCC"), exclusiveto, contract] */
+                    MIDL_INTERFACE("6B202023-CFFD-4CC1-8FF0-E21823D76FCC")
+                    ICustomSensorReadingChangedEventArgs : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_Reading(
-                            ABI::Windows::Devices::Sensors::Custom::ICustomSensorReading** value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Reading(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Sensors::Custom::ICustomSensorReading * * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomSensorReadingChangedEventArgs = _uuidof(ICustomSensorReadingChangedEventArgs);
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomSensorReadingChangedEventArgs=_uuidof(ICustomSensorReadingChangedEventArgs);
+                    
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -713,7 +795,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensor
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -725,36 +809,39 @@ namespace ABI {
         namespace Devices {
             namespace Sensors {
                 namespace Custom {
-                    MIDL_INTERFACE("992052cf-f422-4c7d-836b-e7dc74a7124b")
-                    ICustomSensorStatics : public IInspectable
+                    /* [object, uuid("992052CF-F422-4C7D-836B-E7DC74A7124B"), exclusiveto, contract] */
+                    MIDL_INTERFACE("992052CF-F422-4C7D-836B-E7DC74A7124B")
+                    ICustomSensorStatics : IInspectable
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE GetDeviceSelector(
-                            GUID interfaceId,
-                            HSTRING* result
+                            /* [in] */GUID interfaceId,
+                            /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE FromIdAsync(
-                            HSTRING sensorId,
-                            __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor** result
+                            /* [in] */__RPC__in HSTRING sensorId,
+                            /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * * result
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomSensorStatics = _uuidof(ICustomSensorStatics);
-                } /* Custom */
-            } /* Sensors */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomSensorStatics=_uuidof(ICustomSensorStatics);
+                    
+                } /* Windows */
+            } /* Devices */
+        } /* Sensors */
+    } /* Custom */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.Devices.Sensors.Custom.CustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Sensors.Custom.ICustomSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -769,17 +856,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensor_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensor_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_Custom_CustomSensor[] = L"Windows.Devices.Sensors.Custom.CustomSensor";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Sensors.Custom.CustomSensorReading
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.Custom.ICustomSensorReading ** Default Interface **
@@ -791,17 +881,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensorReading_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensorReading_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_Custom_CustomSensorReading[] = L"Windows.Devices.Sensors.Custom.CustomSensorReading";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.Custom.ICustomSensorReadingChangedEventArgs ** Default Interface **
@@ -812,11 +905,16 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensorReadingChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensorReadingChangedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_Custom_CustomSensorReadingChangedEventArgs[] = L"Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -860,7 +958,55 @@ typedef interface __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStati
 
 // Collection interface definitions
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_INTERFACE_DEFINED__
+
 typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_INTERFACE_DEFINED__)
@@ -874,116 +1020,109 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom
 typedef struct __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* handler);
-    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor** result);
-    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This,
-        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor** result);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl;
 
 interface __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl* lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_put_Completed(This, handler) \
-    ((This)->lpVtbl->put_Completed(This, handler))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_get_Completed(This, result) \
-    ((This)->lpVtbl->get_Completed(This, result))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_GetResults(This, result) \
-    ((This)->lpVtbl->GetResults(This, result))
-
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
 #endif /* COBJMACROS */
+
 
 #endif // ____FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor;
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs;
 
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl
+typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* This,
-        __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor* asyncInfo,
-        AsyncStatus asyncStatus);
-
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * *e);
     END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl;
+} __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgsVtbl;
 
-interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor
+interface __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs
 {
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensorVtbl* lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_Release(This) \
-    ((This)->lpVtbl->Release(This))
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_Invoke(This, asyncInfo, asyncStatus) \
-    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
-
+#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
 #endif /* COBJMACROS */
 
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CSensors__CCustom__CCustomSensor_INTERFACE_DEFINED__
+
+
+#endif // ____FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 #if !defined(____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
 #define ____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
@@ -996,61 +1135,61 @@ EXTERN_C const IID IID___FIKeyValuePair_2_HSTRING_IInspectable;
 typedef struct __FIKeyValuePair_2_HSTRING_IInspectableVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIKeyValuePair_2_HSTRING_IInspectable* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIKeyValuePair_2_HSTRING_IInspectable* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Key)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* get_Value)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
-        IInspectable** result);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This,
+            /* [out] */ __RPC__out ULONG *iidCount,
+            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out HSTRING *key);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__deref_out_opt IInspectable * *value);
     END_INTERFACE
 } __FIKeyValuePair_2_HSTRING_IInspectableVtbl;
 
 interface __FIKeyValuePair_2_HSTRING_IInspectable
 {
-    CONST_VTBL struct __FIKeyValuePair_2_HSTRING_IInspectableVtbl* lpVtbl;
+    CONST_VTBL struct __FIKeyValuePair_2_HSTRING_IInspectableVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIKeyValuePair_2_HSTRING_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIKeyValuePair_2_HSTRING_IInspectable_Release(This) \
-    ((This)->lpVtbl->Release(This))
 
-#define __FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Key(This, result) \
-    ((This)->lpVtbl->get_Key(This, result))
 
-#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Value(This, result) \
-    ((This)->lpVtbl->get_Value(This, result))
+#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Key(This,key)	\
+    ( (This)->lpVtbl -> get_Key(This,key) ) 
 
+#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Value(This,value)	\
+    ( (This)->lpVtbl -> get_Value(This,value) ) 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+
 
 #if !defined(____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
 #define ____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
@@ -1064,72 +1203,79 @@ typedef struct __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        __FIKeyValuePair_2_HSTRING_IInspectable** result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        UINT32 itemsLength,
-        __FIKeyValuePair_2_HSTRING_IInspectable** items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out __FIKeyValuePair_2_HSTRING_IInspectable * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __FIKeyValuePair_2_HSTRING_IInspectable * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
 } __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl;
 
 interface __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable
 {
-    CONST_VTBL struct __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+
 
 #if !defined(____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
 #define ____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
@@ -1139,61 +1285,69 @@ typedef interface __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable __FIIte
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable;
 
-typedef struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl
+typedef  struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
-        __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable** result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable **first);
 
     END_INTERFACE
 } __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl;
 
 interface __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable
 {
-    CONST_VTBL struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
 
-typedef interface __FIMapView_2_HSTRING_IInspectable __FIMapView_2_HSTRING_IInspectable;
+
 
 #if !defined(____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
 #define ____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__
@@ -1206,78 +1360,68 @@ EXTERN_C const IID IID___FIMapView_2_HSTRING_IInspectable;
 typedef struct __FIMapView_2_HSTRING_IInspectableVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIMapView_2_HSTRING_IInspectable* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIMapView_2_HSTRING_IInspectable* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIMapView_2_HSTRING_IInspectable* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIMapView_2_HSTRING_IInspectable* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIMapView_2_HSTRING_IInspectable* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIMapView_2_HSTRING_IInspectable* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* Lookup)(__FIMapView_2_HSTRING_IInspectable* This,
-        HSTRING key,
-        IInspectable** result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIMapView_2_HSTRING_IInspectable* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* HasKey)(__FIMapView_2_HSTRING_IInspectable* This,
-        HSTRING key,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* Split)(__FIMapView_2_HSTRING_IInspectable* This,
-        __FIMapView_2_HSTRING_IInspectable** first,
-        __FIMapView_2_HSTRING_IInspectable** second);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This);
 
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,/* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in HSTRING key,
+        /* [retval][out] */ __RPC__deref_out_opt IInspectable * *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This, /* [in] */ __RPC__in HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *Split )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,/* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable **firstPartition,
+        /* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable **secondPartition);
     END_INTERFACE
 } __FIMapView_2_HSTRING_IInspectableVtbl;
 
 interface __FIMapView_2_HSTRING_IInspectable
 {
-    CONST_VTBL struct __FIMapView_2_HSTRING_IInspectableVtbl* lpVtbl;
+    CONST_VTBL struct __FIMapView_2_HSTRING_IInspectableVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FIMapView_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIMapView_2_HSTRING_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIMapView_2_HSTRING_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIMapView_2_HSTRING_IInspectable_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIMapView_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIMapView_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIMapView_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIMapView_2_HSTRING_IInspectable_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIMapView_2_HSTRING_IInspectable_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIMapView_2_HSTRING_IInspectable_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIMapView_2_HSTRING_IInspectable_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIMapView_2_HSTRING_IInspectable_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIMapView_2_HSTRING_IInspectable_Lookup(This, key, result) \
-    ((This)->lpVtbl->Lookup(This, key, result))
-
-#define __FIMapView_2_HSTRING_IInspectable_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
-
-#define __FIMapView_2_HSTRING_IInspectable_HasKey(This, key, result) \
-    ((This)->lpVtbl->HasKey(This, key, result))
-
-#define __FIMapView_2_HSTRING_IInspectable_Split(This, first, second) \
-    ((This)->lpVtbl->Split(This, first, second))
-
+#define __FIMapView_2_HSTRING_IInspectable_Lookup(This,key,value)	\
+    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
+#define __FIMapView_2_HSTRING_IInspectable_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+#define __FIMapView_2_HSTRING_IInspectable_HasKey(This,key,found)	\
+    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
+#define __FIMapView_2_HSTRING_IInspectable_Split(This,firstPartition,secondPartition)	\
+    ( (This)->lpVtbl -> Split(This,firstPartition,secondPartition) ) 
 #endif /* COBJMACROS */
+
 
 #endif // ____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__
 
-typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
 
-#if WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
+struct __x_ABI_CWindows_CFoundation_CTimeSpan;
+
 #if !defined(____FIReference_1_Windows__CFoundation__CTimeSpan_INTERFACE_DEFINED__)
 #define ____FIReference_1_Windows__CFoundation__CTimeSpan_INTERFACE_DEFINED__
 
@@ -1289,116 +1433,79 @@ EXTERN_C const IID IID___FIReference_1_Windows__CFoundation__CTimeSpan;
 typedef struct __FIReference_1_Windows__CFoundation__CTimeSpanVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This );
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIReference_1_Windows__CFoundation__CTimeSpan* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIReference_1_Windows__CFoundation__CTimeSpan* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIReference_1_Windows__CFoundation__CTimeSpan* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIReference_1_Windows__CFoundation__CTimeSpan* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIReference_1_Windows__CFoundation__CTimeSpan* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIReference_1_Windows__CFoundation__CTimeSpan* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Value)(__FIReference_1_Windows__CFoundation__CTimeSpan* This,
-        struct __x_ABI_CWindows_CFoundation_CTimeSpan* result);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This, 
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( __RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
 
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIReference_1_Windows__CFoundation__CTimeSpan * This, /* [retval][out] */ __RPC__out struct __x_ABI_CWindows_CFoundation_CTimeSpan *value);
     END_INTERFACE
 } __FIReference_1_Windows__CFoundation__CTimeSpanVtbl;
 
 interface __FIReference_1_Windows__CFoundation__CTimeSpan
 {
-    CONST_VTBL struct __FIReference_1_Windows__CFoundation__CTimeSpanVtbl* lpVtbl;
+    CONST_VTBL struct __FIReference_1_Windows__CFoundation__CTimeSpanVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FIReference_1_Windows__CFoundation__CTimeSpan_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIReference_1_Windows__CFoundation__CTimeSpan_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIReference_1_Windows__CFoundation__CTimeSpan_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIReference_1_Windows__CFoundation__CTimeSpan_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIReference_1_Windows__CFoundation__CTimeSpan_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIReference_1_Windows__CFoundation__CTimeSpan_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIReference_1_Windows__CFoundation__CTimeSpan_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIReference_1_Windows__CFoundation__CTimeSpan_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIReference_1_Windows__CFoundation__CTimeSpan_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIReference_1_Windows__CFoundation__CTimeSpan_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIReference_1_Windows__CFoundation__CTimeSpan_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIReference_1_Windows__CFoundation__CTimeSpan_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIReference_1_Windows__CFoundation__CTimeSpan_get_Value(This, result) \
-    ((This)->lpVtbl->get_Value(This, result))
-
+#define __FIReference_1_Windows__CFoundation__CTimeSpan_get_Value(This,value)	\
+    ( (This)->lpVtbl -> get_Value(This,value) ) 
 #endif /* COBJMACROS */
+
 
 #endif // ____FIReference_1_Windows__CFoundation__CTimeSpan_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__
 
-typedef interface __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs;
 
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs;
-
-typedef struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs* This,
-        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* sender,
-        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs* args);
-
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgsVtbl;
-
-interface __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
-#endif /* COBJMACROS */
-
-#endif // ____FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 typedef struct __x_ABI_CWindows_CFoundation_CDateTime __x_ABI_CWindows_CFoundation_CDateTime;
 
-#ifndef ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
-#define ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CFoundation_CIPropertyValue __x_ABI_CWindows_CFoundation_CIPropertyValue;
 
-#endif // ____x_ABI_CWindows_CFoundation_CIPropertyValue_FWD_DEFINED__
+typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -1406,99 +1513,135 @@ typedef interface __x_ABI_CWindows_CFoundation_CIPropertyValue __x_ABI_CWindows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensor
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_Custom_ICustomSensor[] = L"Windows.Devices.Sensors.Custom.ICustomSensor";
+/* [object, uuid("A136F9AD-4034-4B4D-99DD-531AAC649C09"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetCurrentReading)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading** value);
-    HRESULT (STDMETHODCALLTYPE* get_MinimumReportInterval)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* put_ReportInterval)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        UINT32 value);
-    HRESULT (STDMETHODCALLTYPE* get_ReportInterval)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_DeviceId)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* add_ReadingChanged)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs* handler,
-        EventRegistrationToken* token);
-    HRESULT (STDMETHODCALLTYPE* remove_ReadingChanged)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor* This,
-        EventRegistrationToken token);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetCurrentReading )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MinimumReportInterval )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_ReportInterval )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+        /* [in] */UINT32 value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ReportInterval )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DeviceId )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_ReadingChanged )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CDevices__CSensors__CCustom__CCustomSensor_Windows__CDevices__CSensors__CCustom__CCustomSensorReadingChangedEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_ReadingChanged )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor * This,
+        /* [in] */EventRegistrationToken token
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorVtbl;
 
 interface __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_GetCurrentReading(This, value) \
-    ((This)->lpVtbl->GetCurrentReading(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_GetCurrentReading(This,value) \
+    ( (This)->lpVtbl->GetCurrentReading(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_get_MinimumReportInterval(This, value) \
-    ((This)->lpVtbl->get_MinimumReportInterval(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_get_MinimumReportInterval(This,value) \
+    ( (This)->lpVtbl->get_MinimumReportInterval(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_put_ReportInterval(This, value) \
-    ((This)->lpVtbl->put_ReportInterval(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_put_ReportInterval(This,value) \
+    ( (This)->lpVtbl->put_ReportInterval(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_get_ReportInterval(This, value) \
-    ((This)->lpVtbl->get_ReportInterval(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_get_ReportInterval(This,value) \
+    ( (This)->lpVtbl->get_ReportInterval(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_get_DeviceId(This, value) \
-    ((This)->lpVtbl->get_DeviceId(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_get_DeviceId(This,value) \
+    ( (This)->lpVtbl->get_DeviceId(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_add_ReadingChanged(This, handler, token) \
-    ((This)->lpVtbl->add_ReadingChanged(This, handler, token))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_add_ReadingChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_ReadingChanged(This,handler,token) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_remove_ReadingChanged(This, token) \
-    ((This)->lpVtbl->remove_ReadingChanged(This, token))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_remove_ReadingChanged(This,token) \
+    ( (This)->lpVtbl->remove_ReadingChanged(This,token) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1506,78 +1649,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensor
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 #if !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_Custom_ICustomSensor2[] = L"Windows.Devices.Sensors.Custom.ICustomSensor2";
+/* [object, uuid("20DB3111-EC58-4D9F-BFBD-E77825088510"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2Vtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_ReportLatency)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2* This,
-        UINT32 value);
-    HRESULT (STDMETHODCALLTYPE* get_ReportLatency)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MaxBatchSize)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2* This,
-        UINT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propput] */HRESULT ( STDMETHODCALLTYPE *put_ReportLatency )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 * This,
+        /* [in] */UINT32 value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ReportLatency )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MaxBatchSize )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2 * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2Vtbl;
 
 interface __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2Vtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2Vtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_put_ReportLatency(This, value) \
-    ((This)->lpVtbl->put_ReportLatency(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_put_ReportLatency(This,value) \
+    ( (This)->lpVtbl->put_ReportLatency(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_get_ReportLatency(This, value) \
-    ((This)->lpVtbl->get_ReportLatency(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_get_ReportLatency(This,value) \
+    ( (This)->lpVtbl->get_ReportLatency(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_get_MaxBatchSize(This, value) \
-    ((This)->lpVtbl->get_MaxBatchSize(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_get_MaxBatchSize(This,value) \
+    ( (This)->lpVtbl->get_MaxBatchSize(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
 
 /*
  *
@@ -1585,73 +1756,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensorReading
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_Custom_ICustomSensorReading[] = L"Windows.Devices.Sensors.Custom.ICustomSensorReading";
+/* [object, uuid("64004F4D-446A-4366-A87A-5F963268EC53"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Timestamp)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading* This,
-        struct __x_ABI_CWindows_CFoundation_CDateTime* value);
-    HRESULT (STDMETHODCALLTYPE* get_Properties)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading* This,
-        __FIMapView_2_HSTRING_IInspectable** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Timestamp )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CDateTime * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Properties )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingVtbl;
 
 interface __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_get_Timestamp(This, value) \
-    ((This)->lpVtbl->get_Timestamp(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_get_Timestamp(This,value) \
+    ( (This)->lpVtbl->get_Timestamp(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_get_Properties(This, value) \
-    ((This)->lpVtbl->get_Properties(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_get_Properties(This,value) \
+    ( (This)->lpVtbl->get_Properties(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1659,68 +1856,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensorReading
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 #if !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_Custom_ICustomSensorReading2[] = L"Windows.Devices.Sensors.Custom.ICustomSensorReading2";
+/* [object, uuid("223C98EA-BF73-4992-9A48-D3C897594CCB"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2Vtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_PerformanceCount)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2* This,
-        __FIReference_1_Windows__CFoundation__CTimeSpan** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2 * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PerformanceCount )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2 * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIReference_1_Windows__CFoundation__CTimeSpan * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2Vtbl;
 
 interface __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2Vtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2Vtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_get_PerformanceCount(This, value) \
-    ((This)->lpVtbl->get_PerformanceCount(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_get_PerformanceCount(This,value) \
+    ( (This)->lpVtbl->get_PerformanceCount(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
 
 /*
  *
@@ -1728,68 +1949,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_Custom_ICustomSensorReadingChangedEventArgs[] = L"Windows.Devices.Sensors.Custom.ICustomSensorReadingChangedEventArgs";
+/* [object, uuid("6B202023-CFFD-4CC1-8FF0-E21823D76FCC"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Reading)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs* This,
-        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Reading )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReading * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_get_Reading(This, value) \
-    ((This)->lpVtbl->get_Reading(This, value))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_get_Reading(This,value) \
+    ( (This)->lpVtbl->get_Reading(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorReadingChangedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1797,81 +2042,108 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Sensors.Custom.CustomSensor
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Sensors_Custom_ICustomSensorStatics[] = L"Windows.Devices.Sensors.Custom.ICustomSensorStatics";
+/* [object, uuid("992052CF-F422-4C7D-836B-E7DC74A7124B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetDeviceSelector)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics* This,
-        GUID interfaceId,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* FromIdAsync)(__x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics* This,
-        HSTRING sensorId,
-        __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor** result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetDeviceSelector )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics * This,
+        /* [in] */GUID interfaceId,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *FromIdAsync )(
+        __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics * This,
+        /* [in] */__RPC__in HSTRING sensorId,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CSensors__CCustom__CCustomSensor * * result
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStaticsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_GetDeviceSelector(This, interfaceId, result) \
-    ((This)->lpVtbl->GetDeviceSelector(This, interfaceId, result))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_GetDeviceSelector(This,interfaceId,result) \
+    ( (This)->lpVtbl->GetDeviceSelector(This,interfaceId,result) )
 
-#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_FromIdAsync(This, sensorId, result) \
-    ((This)->lpVtbl->FromIdAsync(This, sensorId, result))
+#define __x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_FromIdAsync(This,sensorId,result) \
+    ( (This)->lpVtbl->FromIdAsync(This,sensorId,result) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensorStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.Devices.Sensors.Custom.CustomSensor
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Sensors.Custom.ICustomSensorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1886,17 +2158,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CSensors_CCustom_CICustomSensor
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensor_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensor_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_Custom_CustomSensor[] = L"Windows.Devices.Sensors.Custom.CustomSensor";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Sensors.Custom.CustomSensorReading
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.Custom.ICustomSensorReading ** Default Interface **
@@ -1908,17 +2183,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensorReading_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensorReading_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_Custom_CustomSensorReading[] = L"Windows.Devices.Sensors.Custom.CustomSensorReading";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Sensors.Custom.ICustomSensorReadingChangedEventArgs ** Default Interface **
@@ -1929,11 +2207,16 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensorReadingChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Sensors_Custom_CustomSensorReadingChangedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Sensors_Custom_CustomSensorReadingChangedEventArgs[] = L"Windows.Devices.Sensors.Custom.CustomSensorReadingChangedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

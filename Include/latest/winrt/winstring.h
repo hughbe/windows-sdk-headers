@@ -1,5 +1,5 @@
+ 
 // Copyright (C) Microsoft Corporation. All rights reserved.
-
 #ifndef __WINSTRING_H_
 #define __WINSTRING_H_
 
@@ -18,22 +18,41 @@
 #include <hstring.h>
 #include <rpc.h>
 
+/* APISET_NAME: api-ms-win-core-winrt-string-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_WINRT_STRING_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINTHRESHOLD
+#define _APISET_WINRT_STRING_VER 0x0101
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_WINRT_STRING_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 STDAPI
 WindowsCreateString(
     _In_reads_opt_(length) PCNZWCH sourceString,
     UINT32 length,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* string
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * string
     );
 
 STDAPI
 WindowsCreateStringReference(
-    _In_reads_opt_(length + 1) PCWSTR sourceString,
+    _In_reads_opt_(length+1) PCWSTR sourceString,
     UINT32 length,
-    _Out_ HSTRING_HEADER* hstringHeader,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* string
+    _Out_ HSTRING_HEADER * hstringHeader,
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * string
     );
 
 STDAPI
@@ -44,7 +63,7 @@ WindowsDeleteString(
 STDAPI
 WindowsDuplicateString(
     _In_opt_ HSTRING string,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* newString
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * newString
     );
 
 STDAPI_(UINT32)
@@ -55,7 +74,7 @@ WindowsGetStringLen(
 STDAPI_(PCWSTR)
 WindowsGetStringRawBuffer(
     _In_opt_ HSTRING string,
-    _Out_opt_ UINT32* length
+    _Out_opt_ UINT32 * length
     );
 
 STDAPI_(BOOL)
@@ -66,21 +85,21 @@ WindowsIsStringEmpty(
 STDAPI
 WindowsStringHasEmbeddedNull(
     _In_opt_ HSTRING string,
-    _Out_ BOOL* hasEmbedNull
+    _Out_ BOOL * hasEmbedNull
     );
 
 STDAPI
 WindowsCompareStringOrdinal(
     _In_opt_ HSTRING string1,
     _In_opt_ HSTRING string2,
-    _Out_ INT32* result
+    _Out_ INT32 * result
     );
 
 STDAPI
 WindowsSubstring(
     _In_opt_ HSTRING string,
     UINT32 startIndex,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* newString
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * newString
     );
 
 STDAPI
@@ -88,14 +107,14 @@ WindowsSubstringWithSpecifiedLength(
     _In_opt_ HSTRING string,
     UINT32 startIndex,
     UINT32 length,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* newString
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * newString
     );
   
 STDAPI
 WindowsConcatString(
     _In_opt_ HSTRING string1,
     _In_opt_ HSTRING string2,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* newString
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * newString
     );
 
 STDAPI
@@ -103,21 +122,21 @@ WindowsReplaceString(
     _In_opt_ HSTRING string,
     _In_opt_ HSTRING stringReplaced,
     _In_opt_ HSTRING stringReplaceWith,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* newString
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * newString
     );
 
 STDAPI
 WindowsTrimStringStart(
     _In_opt_ HSTRING string,
     _In_opt_ HSTRING trimString,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* newString
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * newString
     );
 
 STDAPI
 WindowsTrimStringEnd(
     _In_opt_ HSTRING string,
     _In_opt_ HSTRING trimString,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* newString
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * newString
     );
 
 
@@ -125,14 +144,14 @@ WindowsTrimStringEnd(
 STDAPI
 WindowsPreallocateStringBuffer(
     UINT32 length,
-    _Outptr_result_buffer_(length + 1) WCHAR** charBuffer,
-    _Outptr_ _Result_nullonfailure_ HSTRING_BUFFER* bufferHandle
+    _Outptr_result_buffer_(length+1) WCHAR ** charBuffer,
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING_BUFFER * bufferHandle
     );
 
 STDAPI
 WindowsPromoteStringBuffer(
     _In_ HSTRING_BUFFER bufferHandle,
-    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING* string
+    _Outptr_result_maybenull_ _Result_nullonfailure_ HSTRING * string
     );
 
 STDAPI
@@ -145,6 +164,7 @@ WindowsDeleteStringBuffer(
 #pragma endregion
 
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #ifdef __cplusplus
@@ -156,40 +176,68 @@ extern "C"
 ULONG
 __RPC_USER
 HSTRING_UserSize(
-    __RPC__in ULONG* pFlags,
+    __RPC__in ULONG * pFlags,
     ULONG StartingSize,
-    __RPC__in HSTRING* ppidl
+    __RPC__in HSTRING * ppidl
     );
 
 UCHAR*
 __RPC_USER
 HSTRING_UserMarshal(
-    __RPC__in ULONG* pFlags,
-    __RPC__inout_xcount(0) UCHAR* pBuffer,
-    __RPC__in HSTRING* ppidl
+    __RPC__in ULONG * pFlags,
+    __RPC__inout_xcount(0) UCHAR * pBuffer,
+    __RPC__in HSTRING * ppidl
     );
 
 UCHAR*
 __RPC_USER
 HSTRING_UserUnmarshal(
-    __RPC__in ULONG* pFlags,
-    __RPC__in_xcount(0) UCHAR* pBuffer,
-    __RPC__out HSTRING* ppidl
+    __RPC__in ULONG * pFlags,
+    __RPC__in_xcount(0) UCHAR * pBuffer,
+    __RPC__out HSTRING * ppidl
     );
 
 void
 __RPC_USER
 HSTRING_UserFree(
-    __RPC__in ULONG* pFlags,
-    __RPC__in HSTRING* ppidl
+    __RPC__in ULONG * pFlags,
+    __RPC__in HSTRING * ppidl
     );
+
 
 
 #if defined(_WIN64)
         
+ULONG
+__RPC_USER
+HSTRING_UserSize64(
+    __RPC__in ULONG * pFlags,
+    ULONG StartingSize,
+    __RPC__in HSTRING * ppidl
+    );
 
+UCHAR*
+__RPC_USER
+HSTRING_UserMarshal64(
+    __RPC__in ULONG * pFlags,
+    __RPC__inout_xcount(0) UCHAR * pBuffer,
+    __RPC__in HSTRING * ppidl
+    );
 
+UCHAR*
+__RPC_USER
+HSTRING_UserUnmarshal64(
+    __RPC__in ULONG * pFlags,
+    __RPC__in_xcount(0) UCHAR * pBuffer,
+    __RPC__out HSTRING * ppidl
+    );
 
+void
+__RPC_USER
+HSTRING_UserFree64(
+    __RPC__in ULONG * pFlags,
+    __RPC__in HSTRING * ppidl
+    );
 
 
 #endif  // defined(_WIN64)
@@ -202,6 +250,7 @@ HSTRING_UserFree(
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 // HSTRING Inspection
@@ -211,12 +260,14 @@ WindowsInspectString(
     _In_ UINT_PTR targetHString,
     USHORT machine,
     _In_ PINSPECT_HSTRING_CALLBACK callback,
-    _In_opt_ void* context,
-    _Out_ UINT32* length,
-    _Out_ UINT_PTR* targetStringAddress
+    _In_opt_ void * context,
+    _Out_ UINT32 * length,
+    _Out_ UINT_PTR * targetStringAddress
     );
 
 
+
+#if !defined(_CONTRACT_GEN) || (_APISET_WINRT_STRING_VER >= 0x0101)
 // HSTRING Inspection 2
 typedef HRESULT (WINAPI *PINSPECT_HSTRING_CALLBACK2)(_In_ void* context, UINT64 readAddress, UINT32 length, _Out_writes_(length) BYTE* buffer);
 STDAPI
@@ -224,10 +275,12 @@ WindowsInspectString2(
     _In_ UINT64 targetHString,
     USHORT machine,
     _In_ PINSPECT_HSTRING_CALLBACK2 callback,
-    _In_opt_ void* context,
-    _Out_ UINT32* length,
-    _Out_ UINT64* targetStringAddress
+    _In_opt_ void * context,
+    _Out_ UINT32 * length,
+    _Out_ UINT64 * targetStringAddress
     );
+
+#endif
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion

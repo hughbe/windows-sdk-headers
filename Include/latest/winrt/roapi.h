@@ -1,3 +1,4 @@
+ 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
 #ifndef __ROAPI_H_
@@ -20,6 +21,22 @@
 #include <activation.h>
 #include <hstring.h>
 
+/* APISET_NAME: api-ms-win-core-winrt-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_ROAPI_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_ROAPI_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef _ROAPI_
 #define ROAPI
 #else
@@ -34,6 +51,7 @@ extern "C" {
 typedef enum RO_INIT_TYPE
 {
 #pragma region Desktop Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     RO_INIT_SINGLETHREADED     = 0,      // Single-threaded application
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
@@ -50,6 +68,7 @@ typedef struct _RO_REGISTRATION_COOKIE *RO_REGISTRATION_COOKIE; /* make this hea
 typedef HRESULT (STDAPICALLTYPE * PFNGETACTIVATIONFACTORY)(HSTRING, IActivationFactory **);
 
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 // forward declarations of the dllexport'd versions
@@ -75,7 +94,7 @@ HRESULT
 WINAPI
 RoActivateInstance(
     _In_ HSTRING activatableClassId,
-    _COM_Outptr_ IInspectable** instance
+    _COM_Outptr_ IInspectable ** instance
     );
 
 
@@ -84,10 +103,10 @@ _Check_return_
 HRESULT
 WINAPI
 RoRegisterActivationFactories(
-    _In_reads_(count) HSTRING* activatableClassIds,
-    _In_reads_(count) PFNGETACTIVATIONFACTORY* activationFactoryCallbacks,
+    _In_reads_(count) HSTRING * activatableClassIds,
+    _In_reads_(count) PFNGETACTIVATIONFACTORY * activationFactoryCallbacks,
     _In_ UINT32 count,
-    _Out_ RO_REGISTRATION_COOKIE* cookie
+    _Out_ RO_REGISTRATION_COOKIE * cookie
     );
 
 
@@ -106,7 +125,7 @@ WINAPI
 RoGetActivationFactory(
     _In_ HSTRING activatableClassId,
     _In_ REFIID iid,
-    _COM_Outptr_ void** factory
+    _COM_Outptr_ void ** factory
     );
 
 
@@ -118,9 +137,9 @@ _Check_return_
 HRESULT
 WINAPI
 RoRegisterForApartmentShutdown(
-    _In_ IApartmentShutdown* callbackObject,
-    _Out_ UINT64* apartmentIdentifier,
-    _Out_ APARTMENT_SHUTDOWN_REGISTRATION_COOKIE* regCookie
+    _In_ IApartmentShutdown * callbackObject,
+    _Out_ UINT64 * apartmentIdentifier,
+    _Out_ APARTMENT_SHUTDOWN_REGISTRATION_COOKIE * regCookie
     );
 
 
@@ -138,7 +157,7 @@ _Check_return_
 HRESULT
 WINAPI
 RoGetApartmentIdentifier(
-    _Out_ UINT64* apartmentIdentifier
+    _Out_ UINT64 * apartmentIdentifier
     );
 
 
@@ -149,9 +168,6 @@ RoGetApartmentIdentifier(
 }
 #endif
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
 #ifdef __cplusplus
 
 namespace Windows
@@ -161,6 +177,7 @@ namespace Windows
         // initialize / uninitialize
         _Check_return_
         __inline HRESULT Initialize(_In_ RO_INIT_TYPE initType
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
              = RO_INIT_SINGLETHREADED
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
@@ -191,7 +208,7 @@ namespace Windows
                 }
                 else
                 {
-                    hr = pInspectable->QueryInterface(IID_PPV_ARGS(instance));
+                    hr = pInspectable->QueryInterface(IID_INS_ARGS(instance));
                     pInspectable->Release();
                 }
             }
@@ -221,7 +238,7 @@ namespace Windows
             _In_        HSTRING activatableClassId, 
             _COM_Outptr_ T**     factory)
         {
-            return RoGetActivationFactory(activatableClassId, IID_PPV_ARGS(factory));
+            return RoGetActivationFactory(activatableClassId, IID_INS_ARGS(factory));
         }
     }
 }
@@ -235,6 +252,7 @@ namespace ABI
             // initialize / uninitialize
             _Check_return_
             __inline HRESULT Initialize(_In_ RO_INIT_TYPE initType
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
                  = RO_INIT_SINGLETHREADED
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
@@ -279,15 +297,12 @@ namespace ABI
                 _In_        HSTRING activatableClassId, 
                 _COM_Outptr_ T**     factory)
             {
-                return RoGetActivationFactory(activatableClassId, IID_PPV_ARGS(factory));
+                return RoGetActivationFactory(activatableClassId, IID_INS_ARGS(factory));
             }
         }
     }
 }
 
 #endif // __cplusplus
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
 
 #endif

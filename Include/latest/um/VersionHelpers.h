@@ -141,27 +141,6 @@ IsWindowsServer()
     return !VerifyVersionInfoW(&osvi, VER_PRODUCT_TYPE, dwlConditionMask);
 }
 
-VERSIONHELPERAPI
-IsActiveSessionCountLimited()
-{
-    BOOL fActiveSessionCountLimited = FALSE;
-    DWORDLONG dwlConditionMask = 0;
-    OSVERSIONINFOEX VersionInfo = { 0 };
-
-    VER_SET_CONDITION(dwlConditionMask, VER_SUITENAME, VER_AND);
-    VersionInfo.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX);
-
-    VersionInfo.wSuiteMask = VER_SUITE_TERMINAL;
-    BOOL fSuiteTerminal = VerifyVersionInfo( &VersionInfo, VER_SUITENAME, dwlConditionMask );
-
-    VersionInfo.wSuiteMask = VER_SUITE_SINGLEUSERTS;
-    BOOL fSuiteSingleUserTS = VerifyVersionInfo( &VersionInfo, VER_SUITENAME, dwlConditionMask );
-
-    fActiveSessionCountLimited  = !(fSuiteTerminal & !fSuiteSingleUserTS);
-
-    return fActiveSessionCountLimited != FALSE;
-}
-
 #endif // _VERSIONHELPERS_H_INCLUDED_
 
 #endif // NTDDI_VERSION

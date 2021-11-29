@@ -1,4 +1,6 @@
+ 
 // Copyright (C) Microsoft Corporation. All rights reserved.
+
 
 #if defined(_MSC_VER)
 #pragma once
@@ -16,9 +18,26 @@
 #include <apisetcconv.h>
 #include <objidl.h>
 
+
+/* APISET_NAME: api-ms-win-core-winrt-robuffer-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_ROBUFFER_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_ROBUFFER_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 STDAPI
 RoGetBufferMarshaler(
-    _Outptr_ IMarshal** bufferMarshaler
+    _Outptr_ IMarshal ** bufferMarshaler
     );
 
 

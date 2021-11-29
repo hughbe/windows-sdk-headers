@@ -6,15 +6,10 @@
 // This file declares the narrow character (char) classification functionality.
 //
 #pragma once
-#ifndef _INC_CTYPE // include guard for 3rd party interop
 #define _INC_CTYPE
 
 #include <corecrt.h>
 #include <corecrt_wctype.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 #if !defined __midl && !defined RC_INVOKED
@@ -82,24 +77,6 @@ _Check_return_ _ACRTIMP int __cdecl __iscsym(_In_ int _C);
 // Character Classification Macro Definitions
 //
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-__inline int __CRTDECL __acrt_locale_get_ctype_array_value(
-    _In_reads_(_Char_value + 1) unsigned short const * const _Locale_pctype_array,
-    _In_range_(-1, 255)         int                    const _Char_value,
-    _In_                        int                    const _Mask
-    )
-{
-    // The C Standard specifies valid input to a ctype function ranges from -1 to 255.
-    // To avoid undefined behavior, we should check this range for all accesses.
-    // Note _locale_pctype array does extend to -127 to support accessing
-    // _pctype directly with signed chars.
-    if (_Char_value >= -1 && _Char_value <= 255)
-    {
-        return _Locale_pctype_array[_Char_value] & _Mask;
-    }
-
-    return 0;
-}
-
 #ifndef _CTYPE_DISABLE_MACROS
 
     // Maximum number of bytes in multi-byte character in the current locale
@@ -125,67 +102,27 @@ __inline int __CRTDECL __acrt_locale_get_ctype_array_value(
         _ACRTIMP int __cdecl ___mb_cur_max_l_func(_locale_t _Locale);
     #endif
 
+
+
     // In the debug CRT, we make all calls through the validation function to catch
     // invalid integer inputs that yield undefined behavior.
     #ifdef _DEBUG
         _ACRTIMP int __cdecl _chvalidator(_In_ int _Ch, _In_ int _Mask);
         #define __chvalidchk(a, b) _chvalidator(a, b)
     #else
-
-        #define __chvalidchk(a, b) (__acrt_locale_get_ctype_array_value(__PCTYPE_FUNC, (a), (b)))
+        #define __chvalidchk(a, b) (__PCTYPE_FUNC[(a)] & (b))
     #endif
 
 
 
     #define __ascii_isalpha(c)   ( __chvalidchk(c, _ALPHA))
     #define __ascii_isdigit(c)   ( __chvalidchk(c, _DIGIT))
-
-    #ifdef _CRT_DEFINE_ASCII_CTYPE_MACROS
-        #define __ascii_tolower(c)   ( (((c) >= 'A') && ((c) <= 'Z')) ? ((c) - 'A' + 'a') : (c) )
-        #define __ascii_toupper(c)   ( (((c) >= 'a') && ((c) <= 'z')) ? ((c) - 'a' + 'A') : (c) )
-        #define __ascii_iswalpha(c)  ( ('A' <= (c) && (c) <= 'Z') || ( 'a' <= (c) && (c) <= 'z'))
-        #define __ascii_iswdigit(c)  ( '0' <= (c) && (c) <= '9')
-        #define __ascii_towlower(c)  ( (((c) >= L'A') && ((c) <= L'Z')) ? ((c) - L'A' + L'a') : (c) )
-        #define __ascii_towupper(c)  ( (((c) >= L'a') && ((c) <= L'z')) ? ((c) - L'a' + L'A') : (c) )
-    #else
-        __forceinline int __CRTDECL __ascii_tolower(int const _C)
-        {
-            if (_C >= 'A' && _C <= 'Z')
-            {
-                return _C - ('A' - 'a');
-            }
-            return _C;
-        }
-
-        __forceinline int __CRTDECL __ascii_toupper(int const _C)
-        {
-            if (_C >= 'a' && _C <= 'z')
-            {
-                return _C - ('a' - 'A');
-            }
-            return _C;
-        }
-
-        __forceinline int __CRTDECL __ascii_iswalpha(int const _C)
-        {
-            return (_C >= 'A' && _C <= 'Z') || (_C >= 'a' && _C <= 'z');
-        }
-
-        __forceinline int __CRTDECL __ascii_iswdigit(int const _C)
-        {
-            return _C >= '0' && _C <= '9';
-        }
-
-        __forceinline int __CRTDECL __ascii_towlower(int const _C)
-        {
-            return __ascii_tolower(_C);
-        }
-
-        __forceinline int __CRTDECL __ascii_towupper(int const _C)
-        {
-            return __ascii_toupper(_C);
-        }
-    #endif
+    #define __ascii_tolower(c)   ( (((c) >= 'A') && ((c) <= 'Z')) ? ((c) - 'A' + 'a') : (c) )
+    #define __ascii_toupper(c)   ( (((c) >= 'a') && ((c) <= 'z')) ? ((c) - 'a' + 'A') : (c) )
+    #define __ascii_iswalpha(c)  ( ('A' <= (c) && (c) <= 'Z') || ( 'a' <= (c) && (c) <= 'z'))
+    #define __ascii_iswdigit(c)  ( '0' <= (c) && (c) <= '9')
+    #define __ascii_towlower(c)  ( (((c) >= L'A') && ((c) <= L'Z')) ? ((c) - L'A' + L'a') : (c) )
+    #define __ascii_towupper(c)  ( (((c) >= L'a') && ((c) <= L'z')) ? ((c) - L'a' + L'A') : (c) )
 
 
 
@@ -225,7 +162,7 @@ __inline int __CRTDECL __acrt_locale_get_ctype_array_value(
         #else
         if (_Locale)
         {
-            return __acrt_locale_get_ctype_array_value(__acrt_get_locale_data_prefix(_Locale)->_locale_pctype, _C, _Mask);
+            return __acrt_get_locale_data_prefix(_Locale)->_locale_pctype[_C] & _Mask;
         }
 
         return __chvalidchk(_C, _Mask);
@@ -241,21 +178,12 @@ __inline int __CRTDECL __acrt_locale_get_ctype_array_value(
         _In_opt_ _locale_t const _Locale
         )
     {
-        if (_Locale) {
-            if (_C >= -1 && _C <= 255)
-            {
-                return __acrt_get_locale_data_prefix(_Locale)->_locale_pctype[_C] & _Mask;
-            }
-
-            if (__acrt_get_locale_data_prefix(_Locale)->_locale_mb_cur_max > 1)
-            {
-                return _isctype_l(_C, _Mask, _Locale);
-            }
-
-            return 0; // >0xFF and SBCS locale
+        if (_Locale && __acrt_get_locale_data_prefix(_Locale)->_locale_mb_cur_max > 1)
+        {
+            return _isctype_l(_C, _Mask, _Locale);
         }
 
-        return _chvalidchk_l(_C, _Mask, 0);
+        return _chvalidchk_l(_C, _Mask, _Locale);
     }
 
     #define _isalpha_l(c, locale)  _ischartype_l(c, _ALPHA, locale)
@@ -292,7 +220,7 @@ __inline int __CRTDECL __acrt_locale_get_ctype_array_value(
 #endif // _CTYPE_DISABLE_MACROS
 
 
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
     #define isascii __isascii
     #define toascii __toascii
     #define iscsymf __iscsymf
@@ -303,6 +231,3 @@ __inline int __CRTDECL __acrt_locale_get_ctype_array_value(
 
 #endif // !defined __midl && !defined RC_INVOKED
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_CTYPE

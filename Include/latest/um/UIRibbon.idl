@@ -75,10 +75,10 @@ cpp_quote("DEFINE_UIPROPERTYKEY(UI_PKEY_FontProperties_BackgroundColor,     VT_U
 cpp_quote("DEFINE_UIPROPERTYKEY(UI_PKEY_FontProperties_ForegroundColorType, VT_UI4,                 310); ") // UI_SWATCHCOLORTYPE
 cpp_quote("DEFINE_UIPROPERTYKEY(UI_PKEY_FontProperties_BackgroundColorType, VT_UI4,                 311); ") // UI_SWATCHCOLORTYPE
 cpp_quote("DEFINE_UIPROPERTYKEY(UI_PKEY_FontProperties_ChangedProperties,   VT_UNKNOWN,             312); ") // IPropertyStore
-cpp_quote("DEFINE_UIPROPERTYKEY(UI_PKEY_FontProperties_DeltaSize,           VT_UI4,                 313); ") // UI_FONTDELTASIZE
+cpp_quote("DEFINE_UIPROPERTYKEY(UI_PKEY_FontProperties_DeltaSize,           VT_UI4,                 313); ") // UI_FONTDELTASIZE 
 
 // Application menu properties
-cpp_quote("DEFINE_UIPROPERTYKEY(UI_PKEY_RecentItems,                  VT_ARRAY|VT_UNKNOWN,    350); ")
+cpp_quote("DEFINE_UIPROPERTYKEY(UI_PKEY_RecentItems,                  VT_ARRAY|VT_UNKNOWN,    350); ") 
 cpp_quote("DEFINE_UIPROPERTYKEY(UI_PKEY_Pinned,                       VT_BOOL,                351); ")
 
 // Color picker properties
@@ -122,9 +122,9 @@ cpp_quote("}")
 
 // Annotations on methods are not supported by earlier versions of MIDL
 #ifdef NTDDI_WIN7
-#define UI_CHECKRETURN                  [annotation("_Check_return_")]
+#define UI_CHECKRETURN                  [annotation("_Check_return_")] 
 #else
-#define UI_CHECKRETURN
+#define UI_CHECKRETURN                    
 #endif
 
 // Windows Ribbon interfaces implemented by the framework
@@ -142,7 +142,7 @@ typedef [v1_enum] enum UI_FONTPROPERTIES
     UI_FONTPROPERTIES_NOTSET       = 1,
     UI_FONTPROPERTIES_SET          = 2,
 } UI_FONTPROPERTIES;
-
+     
 typedef [v1_enum] enum UI_FONTVERTICALPOSITION
 {
     UI_FONTVERTICALPOSITION_NOTAVAILABLE = 0,
@@ -150,7 +150,7 @@ typedef [v1_enum] enum UI_FONTVERTICALPOSITION
     UI_FONTVERTICALPOSITION_SUPERSCRIPT  = 2,
     UI_FONTVERTICALPOSITION_SUBSCRIPT    = 3,
 } UI_FONTVERTICALPOSITION;
-
+   
 typedef [v1_enum] enum UI_FONTUNDERLINE
 {
     UI_FONTUNDERLINE_NOTAVAILABLE = 0,
@@ -185,7 +185,7 @@ typedef [v1_enum] enum UI_SWATCHCOLORTYPE
 typedef [v1_enum] enum UI_SWATCHCOLORMODE
 {
     UI_SWATCHCOLORMODE_NORMAL     = 0,
-    UI_SWATCHCOLORMODE_MONOCHROME = 1,
+    UI_SWATCHCOLORMODE_MONOCHROME = 1, 
 } UI_SWATCHCOLORMODE;
 
 // Events supported by Ribbon event reporting
@@ -266,13 +266,13 @@ interface IUIFramework : IUnknown
 
     // Connects the framework and the application
     UI_CHECKRETURN HRESULT Initialize([in] HWND frameWnd, [in] IUIApplication* application);
-
+ 
     // Releases all framework objects
     HRESULT Destroy();
-
+ 
     // Loads and instantiates the views and commands specified in markup
     UI_CHECKRETURN HRESULT LoadUI([in] HINSTANCE instance, [in] LPCWSTR resourceName);
-
+ 
     // Retrieves a pointer to a view object
     UI_CHECKRETURN HRESULT GetView(UINT32 viewId, REFIID riid, [out, iid_is(riid), annotation("_Outptr_")] void** ppv);
 
@@ -408,10 +408,10 @@ const UINT32 UI_COLLECTION_INVALIDINDEX = 0xffffffff;
 ]
 interface IUICollectionChangedEvent : IUnknown
 {
-    UI_CHECKRETURN HRESULT OnChanged(UI_COLLECTIONCHANGE action,
-                      UINT32 oldIndex,
-                      [in, annotation("_In_opt_")] IUnknown* oldItem,
-                      UINT32 newIndex,
+    UI_CHECKRETURN HRESULT OnChanged(UI_COLLECTIONCHANGE action, 
+                      UINT32 oldIndex, 
+                      [in, annotation("_In_opt_")] IUnknown* oldItem, 
+                      UINT32 newIndex, 
                       [in, annotation("_In_opt_")] IUnknown* newItem);
 };
 
@@ -442,7 +442,7 @@ interface IUICommandHandler : IUnknown
                     [in, annotation("_In_opt_")] IUISimplePropertySet* commandExecutionProperties); // additional data for this execution
 
     // Informs of the current value of a property, and queries for the new one
-    UI_CHECKRETURN HRESULT UpdateProperty(UINT32 commandId,
+    UI_CHECKRETURN HRESULT UpdateProperty(UINT32 commandId, 
                            [in] REFPROPERTYKEY key,
                            [in, annotation("_In_opt_")] const PROPVARIANT* currentValue,
                            [out] PROPVARIANT* newValue);
@@ -490,19 +490,19 @@ interface IUIApplication : IUnknown
     } UI_VIEWVERB;
 
     // A view has changed
-    UI_CHECKRETURN HRESULT OnViewChanged(UINT32 viewId,
-                          UI_VIEWTYPE typeID,
-                          [in] IUnknown* view,
-                          UI_VIEWVERB verb,
+    UI_CHECKRETURN HRESULT OnViewChanged(UINT32 viewId, 
+                          UI_VIEWTYPE typeID, 
+                          [in] IUnknown* view, 
+                          UI_VIEWVERB verb, 
                           INT32 uReasonCode);
-
+ 
     // Command creation callback
-    UI_CHECKRETURN HRESULT OnCreateUICommand(UINT32 commandId,
-                              UI_COMMANDTYPE typeID,
+    UI_CHECKRETURN HRESULT OnCreateUICommand(UINT32 commandId, 
+                              UI_COMMANDTYPE typeID, 
                               [out] IUICommandHandler** commandHandler);
 
     // Command destroy callback
-    UI_CHECKRETURN HRESULT OnDestroyUICommand(UINT32 commandId,
+    UI_CHECKRETURN HRESULT OnDestroyUICommand(UINT32 commandId, 
                                UI_COMMANDTYPE typeID,
                                [in, annotation("_In_opt_")] IUICommandHandler* commandHandler);
 
@@ -553,22 +553,22 @@ cpp_quote("DEFINE_GUID(LIBID_UIRibbon,         0x942f35c2, 0xe83b, 0x45ef, 0xb0,
 ]
 library UIRibbon
 {
-    [
-        uuid(926749fa-2615-4987-8845-c33e65f2b957),
+    [ 
+        uuid(926749fa-2615-4987-8845-c33e65f2b957), 
         helpstring("UIRibbonFramework class")
-    ]
-    coclass UIRibbonFramework
-    {
-        [default] interface IUIFramework;
+    ] 
+    coclass UIRibbonFramework 
+    { 
+        [default] interface IUIFramework; 
     };
 
-    [
+    [ 
         uuid(0F7434B6-59B6-4250-999E-D168D6AE4293),
         helpstring("UIRibbonImageFromBitmapFactory class")
-    ]
-    coclass UIRibbonImageFromBitmapFactory
-    {
-        [default] interface IUIImageFromBitmap;
+    ] 
+    coclass UIRibbonImageFromBitmapFactory 
+    { 
+        [default] interface IUIImageFromBitmap; 
     };
 };
 

@@ -70,17 +70,11 @@ typedef enum INTERACTION_CONFIGURATION_FLAGS
 
     INTERACTION_CONFIGURATION_FLAG_TAP                                      = 0x00000001,
     INTERACTION_CONFIGURATION_FLAG_TAP_DOUBLE                               = 0x00000002,
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-    INTERACTION_CONFIGURATION_FLAG_TAP_MULTIPLE_FINGER                      = 0x00000004,
-#endif
 
     INTERACTION_CONFIGURATION_FLAG_SECONDARY_TAP                            = 0x00000001,
 
     INTERACTION_CONFIGURATION_FLAG_HOLD                                     = 0x00000001,
     INTERACTION_CONFIGURATION_FLAG_HOLD_MOUSE                               = 0x00000002,
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-    INTERACTION_CONFIGURATION_FLAG_HOLD_MULTIPLE_FINGER                     = 0x00000004,
-#endif
 
     INTERACTION_CONFIGURATION_FLAG_DRAG                                     = 0x00000001,
 
@@ -155,31 +149,6 @@ typedef enum MOUSE_WHEEL_PARAMETER
     MOUSE_WHEEL_PARAMETER_MAX                   = 0xffffffff
 } MOUSE_WHEEL_PARAMETER;
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-typedef enum TAP_PARAMETER
-{
-    TAP_PARAMETER_MIN_CONTACT_COUNT      = 0x00000000,
-    TAP_PARAMETER_MAX_CONTACT_COUNT      = 0x00000001,
-    TAP_PARAMETER_MAX                    = 0xffffffff
-} TAP_PARAMETER;
-
-typedef enum HOLD_PARAMETER
-{
-    HOLD_PARAMETER_MIN_CONTACT_COUNT       = 0x00000000,
-    HOLD_PARAMETER_MAX_CONTACT_COUNT       = 0x00000001,
-    HOLD_PARAMETER_THRESHOLD_RADIUS        = 0x00000002,
-    HOLD_PARAMETER_THRESHOLD_START_DELAY   = 0x00000003,
-    HOLD_PARAMETER_MAX                     = 0xffffffff
-} HOLD_PARAMETER;
-
-typedef enum TRANSLATION_PARAMETER
-{
-    TRANSLATION_PARAMETER_MIN_CONTACT_COUNT = 0x00000000,
-    TRANSLATION_PARAMETER_MAX_CONTACT_COUNT = 0x00000001,
-    TRANSLATION_PARAMETER_MAX               = 0xffffffff
-} TRANSLATION_PARAMETER;
-#endif
-
 typedef enum MANIPULATION_RAILS_STATE
 {
     MANIPULATION_RAILS_STATE_UNDECIDED = 0x00000000,
@@ -239,25 +208,6 @@ typedef struct INTERACTION_CONTEXT_OUTPUT
     } arguments;
 } INTERACTION_CONTEXT_OUTPUT;
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-typedef struct INTERACTION_CONTEXT_OUTPUT2
-{
-    INTERACTION_ID     interactionId;
-    INTERACTION_FLAGS  interactionFlags;
-    POINTER_INPUT_TYPE inputType;
-    UINT32             contactCount;
-    UINT32             currentContactCount;
-    float              x;
-    float              y;
-    union
-    {
-        INTERACTION_ARGUMENTS_MANIPULATION   manipulation;
-        INTERACTION_ARGUMENTS_TAP            tap;
-        INTERACTION_ARGUMENTS_CROSS_SLIDE    crossSlide;
-    } arguments;
-} INTERACTION_CONTEXT_OUTPUT2;
-#endif
-
 typedef struct INTERACTION_CONTEXT_CONFIGURATION
 {
     INTERACTION_ID                  interactionId;
@@ -274,12 +224,6 @@ typedef struct CROSS_SLIDE_PARAMETER
 typedef void (CALLBACK *INTERACTION_CONTEXT_OUTPUT_CALLBACK) (
     _In_opt_ void *clientData,
     _In_reads_(1) const INTERACTION_CONTEXT_OUTPUT *output);
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-typedef void (CALLBACK *INTERACTION_CONTEXT_OUTPUT_CALLBACK2) (
-    _In_opt_ void *clientData,
-    _In_reads_(1) const INTERACTION_CONTEXT_OUTPUT2 *output);
-#endif
 
 DECLARE_HANDLE(HINTERACTIONCONTEXT);
 
@@ -324,15 +268,6 @@ RegisterOutputCallbackInteractionContext(
     _In_ HINTERACTIONCONTEXT interactionContext,
     _In_ INTERACTION_CONTEXT_OUTPUT_CALLBACK outputCallback,
     _In_opt_ void *clientData);
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-HRESULT
-WINAPI
-RegisterOutputCallbackInteractionContext2(
-    _In_ HINTERACTIONCONTEXT interactionContext,
-    _In_ INTERACTION_CONTEXT_OUTPUT_CALLBACK2 outputCallback,
-    _In_opt_ void *clientData);
-#endif
 
 HRESULT
 WINAPI
@@ -389,50 +324,6 @@ WINAPI
     _In_ HINTERACTIONCONTEXT interactionContext,
     _In_ CROSS_SLIDE_THRESHOLD threshold,
     _Out_writes_(1) float *distance);
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-HRESULT
-WINAPI
-SetTapParameterInteractionContext(
-    HINTERACTIONCONTEXT interactionContext,
-    TAP_PARAMETER parameter,
-    float value);
-
-HRESULT
-WINAPI
-GetTapParameterInteractionContext(
-    HINTERACTIONCONTEXT interactionContext,
-    TAP_PARAMETER parameter,
-    _Out_ float *value);
-
-HRESULT
-WINAPI
-SetHoldParameterInteractionContext(
-    HINTERACTIONCONTEXT interactionContext,
-    HOLD_PARAMETER parameter,
-    float value);
-
-HRESULT
-WINAPI
-GetHoldParameterInteractionContext(
-    HINTERACTIONCONTEXT interactionContext,
-    HOLD_PARAMETER parameter,
-    _Out_ float *value);
-
-HRESULT
-WINAPI
-SetTranslationParameterInteractionContext(
-    HINTERACTIONCONTEXT interactionContext,
-    TRANSLATION_PARAMETER parameter,
-    float value);
-
-HRESULT
-WINAPI
-GetTranslationParameterInteractionContext(
-    HINTERACTIONCONTEXT interactionContext,
-    TRANSLATION_PARAMETER parameter,
-    _Out_ float *value);
-#endif
 
 HRESULT
 WINAPI

@@ -41,9 +41,7 @@
 // Warning 4624 is generated if the object has private destructor and the object cannot be created on the stack
 // ComPtr does not require the object to be created on the stack thus disabling the warning
 
-// Legacy artifact: This enabled sealed / final optimizations for classes in release builds, and blocking 
-// of access to AddRef/Release through ComPtr in checked builds. This guard has been removed, so prefer the C++ 
-// keywords intead.
+// Enable sealed / final optimizations for classes in release builds, and RemoveIUnknown of ComPtr in checked builds
 #if defined(_DEBUG) || defined(DBG)
 #define WrlFinal 
 #define WrlSealed 
@@ -192,15 +190,8 @@ class WeakRef;
 #if (NTDDI_VERSION >= NTDDI_WINBLUE)
 class AgileRef;
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
 template<typename T>
 HRESULT AsAgile(_In_ T* p, _Out_ AgileRef* pAgile) throw();
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
 #endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
 
 template<typename T>
@@ -261,7 +252,7 @@ public:
 
     // copy constructor that allows to instantiate class when U* is convertible to T*
     template<class U>
-    ComPtr(const ComPtr<U> &other, typename Details::EnableIf<Details::IsConvertible<U*, T*>::value, void *>::type * = 0) throw() :
+    ComPtr(const ComPtr<U> &other, typename Details::EnableIf<__is_convertible_to(U*, T*), void *>::type * = 0) throw() :
         ptr_(other.ptr_)
     {
         InternalAddRef();
@@ -277,7 +268,7 @@ public:
 
     // Move constructor that allows instantiation of a class when U* is convertible to T*
     template<class U>
-    ComPtr(_Inout_ ComPtr<U>&& other, typename Details::EnableIf<Details::IsConvertible<U*, T*>::value, void *>::type * = 0) throw() :
+    ComPtr(_Inout_ ComPtr<U>&& other, typename Details::EnableIf<__is_convertible_to(U*, T*), void *>::type * = 0) throw() :
         ptr_(other.ptr_)
     {
         other.ptr_ = nullptr;
@@ -369,13 +360,14 @@ public:
     {
         return ptr_;
     }
-    
-#if (defined(_DEBUG) || defined(DBG)) && defined(__REMOVE_IUNKNOWN_METHODS__)
+
+#if defined(_DEBUG) || defined(DBG)
     typename Details::RemoveIUnknown<InterfaceType>::ReturnType* operator->() const throw()
     {
         return static_cast<typename Details::RemoveIUnknown<InterfaceType>::ReturnType*>(ptr_);
     }
 #else
+    // allow use of sealed / final in retail builds.
     InterfaceType* operator->() const throw()
     {
         return ptr_;
@@ -490,20 +482,12 @@ public:
         return ::Microsoft::WRL::AsWeak(ptr_, pWeakRef);
     }
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
 #if (NTDDI_VERSION >= NTDDI_WINBLUE)
-
     HRESULT AsAgile(_Out_ AgileRef* pAgile) const throw()
     {
         return ::Microsoft::WRL::AsAgile(ptr_, pAgile);
     }
-
 #endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
 
 };    // ComPtr
 
@@ -764,9 +748,6 @@ public:
     void operator->() = delete;
 };
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
 template<typename T>
 HRESULT AsAgile(_In_opt_ T* p, _Inout_ Microsoft::WRL::AgileRef* pAgile) throw()
 {
@@ -784,10 +765,6 @@ HRESULT AsAgile(_In_opt_ T* p, _Inout_ Microsoft::WRL::AgileRef* pAgile) throw()
     
     return hr;
 }
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
 #endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
 
 // Comparison operators - don't compare COM object identity

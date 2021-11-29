@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * realtimeapi.h -- ApiSet Contract for api-ms-win-core-realtime-l1              *
@@ -17,12 +18,34 @@
 #include <apisetcconv.h>
 #include <minwindef.h>
 
+/* APISET_NAME: api-ms-win-core-realtime-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_REALTIME_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN10_RS2
+#define _APISET_REALTIME_VER 0x0102
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINTHRESHOLD
+#define _APISET_REALTIME_VER 0x0101
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_REALTIME_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 
 #if (_WIN32_WINNT >= 0x0600)
 
@@ -55,6 +78,7 @@ QueryIdleProcessorCycleTime(
 
 #endif
 
+
 #if (_WIN32_WINNT >= 0x0601)
 
 WINBASEAPI
@@ -73,7 +97,11 @@ QueryIdleProcessorCycleTimeEx(
 #pragma endregion
 
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_REALTIME_VER >= 0x0101)
 
 WINBASEAPI
 VOID
@@ -99,6 +127,9 @@ QueryInterruptTime(
     );
 
 
+#endif // !defined(_CONTRACT_GEN) || (_APISET_REALTIME_VER >= 0x0101)
+
+
 #if (_WIN32_WINNT >= 0x0601)
 
 WINBASEAPI
@@ -110,6 +141,9 @@ QueryUnbiasedInterruptTime(
 
 
 #endif // (_WIN32_WINNT >= 0x0601)
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_REALTIME_VER >= 0x0102)
 
 WINBASEAPI
 HRESULT
@@ -138,6 +172,8 @@ ConvertPerformanceCounterToAuxiliaryCounter(
     _Out_opt_ PULONGLONG lpConversionError
     );
 
+
+#endif // !defined(_CONTRACT_GEN) || (_APISET_REALTIME_VER >= 0x0102)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion

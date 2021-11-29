@@ -6,7 +6,6 @@
 // The C Standard Library <string.h> header.
 //
 #pragma once
-#ifndef _INC_STRING // include guard for 3rd party interop
 #define _INC_STRING
 
 #include <corecrt.h>
@@ -15,10 +14,6 @@
 #include <vcruntime_string.h>
 
 #ifndef __midl
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -88,11 +83,15 @@ __DEFINE_CPP_OVERLOAD_SECURE_FUNC_0_1(
 
 #ifndef RC_INVOKED
 
+#pragma warning(push)
+#pragma warning(disable: 28719) // __WARNING_BANNED_API_USAGE
+#pragma warning(disable: 28726) // __WARNING_BANNED_API_USAGEL2
     __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1(
         char*, __RETURN_POLICY_DST, __EMPTY_DECLSPEC, strcat,
         _Inout_updates_z_(_String_length_(_Destination) + _String_length_(_Source) + 1), char,        _Destination,
         _In_z_                                                                           char const*, _Source
         )
+#pragma warning(pop)
 
 #endif // RC_INVOKED
 
@@ -127,11 +126,15 @@ __DEFINE_CPP_OVERLOAD_SECURE_FUNC_0_1(
     _In_z_   char const*, _Source
     )
 
+#pragma warning(push)
+#pragma warning(disable: 28719) // __WARNING_BANNED_API_USAGE
+#pragma warning(disable: 28726) // __WARNING_BANNED_API_USAGEL2
 __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1(
     char*, __RETURN_POLICY_DST, __EMPTY_DECLSPEC, strcpy,
     _Out_writes_z_(_String_length_(_Source) + 1), char,        _Destination,
     _In_z_                                        char const*, _Source
     )
+#pragma warning(pop)
 
 _Check_return_
 _ACRTIMP size_t __cdecl strcspn(
@@ -524,15 +527,21 @@ extern "C++"
 
 
 
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
 
-    #pragma push_macro("strdup")
-    #undef strdup
+    #if defined _DEBUG && defined _CRTDBG_MAP_ALLOC
+        #pragma push_macro("strdup")
+        #undef strdup
+    #endif
+
     _Check_return_ _CRT_NONSTDC_DEPRECATE(_strdup)
     _ACRTIMP char* __cdecl strdup(
         _In_opt_z_ char const* _String
         );
-    #pragma pop_macro("strdup")
+
+    #if defined _DEBUG && defined _CRTDBG_MAP_ALLOC
+        #pragma pop_macro("strdup")
+    #endif
 
     // Declarations of functions defined in oldnames.lib:
     _Check_return_ _CRT_NONSTDC_DEPRECATE(_strcmpi)
@@ -586,7 +595,5 @@ extern "C++"
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
+
 #endif // !__midl
-#endif // _INC_STRING

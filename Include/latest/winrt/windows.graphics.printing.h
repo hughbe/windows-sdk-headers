@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.graphics.printing.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,28 +75,171 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+
+#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
+#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
+#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
+
+#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
+#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
+#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -118,10 +264,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskSourceRequestedHandler;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedHandler
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_FWD_DEFINED__
@@ -133,10 +278,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintDocumentSource;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource ABI::Windows::Graphics::Printing::IPrintDocumentSource
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_FWD_DEFINED__
@@ -148,10 +292,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintManager;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager ABI::Windows::Graphics::Printing::IPrintManager
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_FWD_DEFINED__
@@ -163,10 +306,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintManagerStatic;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic ABI::Windows::Graphics::Printing::IPrintManagerStatic
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_FWD_DEFINED__
@@ -178,10 +320,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintManagerStatic2;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2 ABI::Windows::Graphics::Printing::IPrintManagerStatic2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_FWD_DEFINED__
@@ -193,58 +334,12 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintPageInfo;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo ABI::Windows::Graphics::Printing::IPrintPageInfo
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                interface IPrintPageRange;
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange ABI::Windows::Graphics::Printing::IPrintPageRange
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                interface IPrintPageRangeFactory;
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory ABI::Windows::Graphics::Printing::IPrintPageRangeFactory
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                interface IPrintPageRangeOptions;
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions ABI::Windows::Graphics::Printing::IPrintPageRangeOptions
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_FWD_DEFINED__
@@ -253,10 +348,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTask;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask ABI::Windows::Graphics::Printing::IPrintTask
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_FWD_DEFINED__
@@ -268,10 +362,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTask2;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 ABI::Windows::Graphics::Printing::IPrintTask2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_FWD_DEFINED__
@@ -283,10 +376,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskCompletedEventArgs;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs ABI::Windows::Graphics::Printing::IPrintTaskCompletedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_FWD_DEFINED__
@@ -298,28 +390,12 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptions;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions ABI::Windows::Graphics::Printing::IPrintTaskOptions
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                interface IPrintTaskOptions2;
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2 ABI::Windows::Graphics::Printing::IPrintTaskOptions2
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
@@ -328,10 +404,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptionsCore;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
@@ -343,10 +418,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptionsCoreProperties;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties ABI::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_FWD_DEFINED__
@@ -358,10 +432,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskOptionsCoreUIConfiguration;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration ABI::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_FWD_DEFINED__
@@ -373,10 +446,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskProgressingEventArgs;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs ABI::Windows::Graphics::Printing::IPrintTaskProgressingEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_FWD_DEFINED__
@@ -388,10 +460,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskRequest;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest ABI::Windows::Graphics::Printing::IPrintTaskRequest
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_FWD_DEFINED__
@@ -403,10 +474,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskRequestedDeferral;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral ABI::Windows::Graphics::Printing::IPrintTaskRequestedDeferral
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_FWD_DEFINED__
@@ -418,10 +488,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskRequestedEventArgs;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs ABI::Windows::Graphics::Printing::IPrintTaskRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_FWD_DEFINED__
@@ -433,10 +502,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskSourceRequestedArgs;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_FWD_DEFINED__
@@ -448,10 +516,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskSourceRequestedDeferral;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_FWD_DEFINED__
@@ -463,10 +530,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IPrintTaskTargetDeviceSupport;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport ABI::Windows::Graphics::Printing::IPrintTaskTargetDeviceSupport
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_FWD_DEFINED__
@@ -478,10 +544,9 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IStandardPrintTaskOptionsStatic;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic ABI::Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_FWD_DEFINED__
@@ -493,321 +558,36 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 interface IStandardPrintTaskOptionsStatic2;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2 ABI::Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic2
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                interface IStandardPrintTaskOptionsStatic3;
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3 ABI::Windows::Graphics::Printing::IStandardPrintTaskOptionsStatic3
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_FWD_DEFINED__
-
 // Parameterized interface forward declarations (C++)
 
 // Collection interface definitions
-
-#ifndef DEF___FIAsyncOperation_1_boolean_USE
-#define DEF___FIAsyncOperation_1_boolean_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("cdb5efb3-5788-509d-9be1-71ccb8a3362a"))
-IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<bool, boolean>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Boolean>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
-#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_boolean_USE */
-
-
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_boolean_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_boolean_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a"))
-IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<bool, boolean>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Boolean>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
-#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_boolean_USE */
-
-
-
-#ifndef DEF___FIIterator_1_HSTRING_USE
-#define DEF___FIIterator_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
-IIterator<HSTRING> : IIterator_impl<HSTRING>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<String>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
-#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_HSTRING_USE */
-
-
-
-#ifndef DEF___FIIterable_1_HSTRING_USE
-#define DEF___FIIterable_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
-IIterable<HSTRING> : IIterable_impl<HSTRING>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<String>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
-#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_HSTRING_USE */
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                class PrintPageRange;
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-#ifndef DEF___FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE
-#define DEF___FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("38f75665-fb40-53e2-a916-15ba754a6a9e"))
-IIterator<ABI::Windows::Graphics::Printing::PrintPageRange*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintPageRange*, ABI::Windows::Graphics::Printing::IPrintPageRange*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Graphics.Printing.PrintPageRange>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<ABI::Windows::Graphics::Printing::PrintPageRange*> __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_t;
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-#ifndef DEF___FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE
-#define DEF___FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("ed6ddf38-34cf-5a2f-b9ac-413dffce7f81"))
-IIterable<ABI::Windows::Graphics::Printing::PrintPageRange*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintPageRange*, ABI::Windows::Graphics::Printing::IPrintPageRange*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Graphics.Printing.PrintPageRange>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<ABI::Windows::Graphics::Printing::PrintPageRange*> __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_t;
-#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-
-#ifndef DEF___FIVectorView_1_HSTRING_USE
-#define DEF___FIVectorView_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
-IVectorView<HSTRING> : IVectorView_impl<HSTRING>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<String>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
-#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_HSTRING_USE */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-#ifndef DEF___FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE
-#define DEF___FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("0063b11e-2098-5eff-9652-08a3516c99a6"))
-IVectorView<ABI::Windows::Graphics::Printing::PrintPageRange*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintPageRange*, ABI::Windows::Graphics::Printing::IPrintPageRange*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Printing.PrintPageRange>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<ABI::Windows::Graphics::Printing::PrintPageRange*> __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_t;
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-
-#ifndef DEF___FIVector_1_HSTRING_USE
-#define DEF___FIVector_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("98b9acc1-4b56-532e-ac73-03d5291cca90"))
-IVector<HSTRING> : IVector_impl<HSTRING>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IVector`1<String>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
-#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVector_1_HSTRING_USE */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-#ifndef DEF___FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE
-#define DEF___FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("1d314a18-2a16-542f-a986-1b7841b878aa"))
-IVector<ABI::Windows::Graphics::Printing::PrintPageRange*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintPageRange*, ABI::Windows::Graphics::Printing::IPrintPageRange*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IVector`1<Windows.Graphics.Printing.PrintPageRange>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVector<ABI::Windows::Graphics::Printing::PrintPageRange*> __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_t;
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintManager;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskRequestedEventArgs;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_USE
@@ -816,24 +596,27 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("8a8cb877-70c5-54ce-8b42-d790e2914859"))
-ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintManager*, ABI::Windows::Graphics::Printing::PrintTaskRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintManager*, ABI::Windows::Graphics::Printing::IPrintManager*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTaskRequestedEventArgs*, ABI::Windows::Graphics::Printing::IPrintTaskRequestedEventArgs*>>
+ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintManager*,ABI::Windows::Graphics::Printing::PrintTaskRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintManager*, ABI::Windows::Graphics::Printing::IPrintManager*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTaskRequestedEventArgs*, ABI::Windows::Graphics::Printing::IPrintTaskRequestedEventArgs*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintManager, Windows.Graphics.Printing.PrintTaskRequestedEventArgs>";
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintManager, Windows.Graphics.Printing.PrintTaskRequestedEventArgs>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintManager*, ABI::Windows::Graphics::Printing::PrintTaskRequestedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_t;
+typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintManager*,ABI::Windows::Graphics::Printing::PrintTaskRequestedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintManager*,ABI::Windows::Graphics::Printing::IPrintTaskRequestedEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintManager*,ABI::Windows::Graphics::Printing::IPrintTaskRequestedEventArgs*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 namespace ABI {
@@ -841,10 +624,11 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 class PrintTask;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
+
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -854,36 +638,40 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("4cc141d4-c0d9-5220-b1ce-80fff3bd2d44"))
-ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*, IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::IPrintTask*>, IInspectable*>
+ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::IPrintTask*>,IInspectable*> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintTask, Object>";
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintTask, Object>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*, IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_t;
+typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,IInspectable*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintTask*,IInspectable*>
+//#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintTask*,IInspectable*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskCompletedEventArgs;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_USE
@@ -892,37 +680,40 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("b0b02549-b9ad-5226-898a-7b563b46640c"))
-ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::PrintTaskCompletedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::IPrintTask*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTaskCompletedEventArgs*, ABI::Windows::Graphics::Printing::IPrintTaskCompletedEventArgs*>>
+ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,ABI::Windows::Graphics::Printing::PrintTaskCompletedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::IPrintTask*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTaskCompletedEventArgs*, ABI::Windows::Graphics::Printing::IPrintTaskCompletedEventArgs*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintTask, Windows.Graphics.Printing.PrintTaskCompletedEventArgs>";
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintTask, Windows.Graphics.Printing.PrintTaskCompletedEventArgs>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::PrintTaskCompletedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_t;
+typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,ABI::Windows::Graphics::Printing::PrintTaskCompletedEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintTask*,ABI::Windows::Graphics::Printing::IPrintTaskCompletedEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintTask*,ABI::Windows::Graphics::Printing::IPrintTaskCompletedEventArgs*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskProgressingEventArgs;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_USE
@@ -931,35 +722,363 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("c08d0524-5899-536c-8f46-55fdaa4cf78b"))
-ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::PrintTaskProgressingEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::IPrintTask*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTaskProgressingEventArgs*, ABI::Windows::Graphics::Printing::IPrintTaskProgressingEventArgs*>>
+ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,ABI::Windows::Graphics::Printing::PrintTaskProgressingEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::IPrintTask*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::PrintTaskProgressingEventArgs*, ABI::Windows::Graphics::Printing::IPrintTaskProgressingEventArgs*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintTask, Windows.Graphics.Printing.PrintTaskProgressingEventArgs>";
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Graphics.Printing.PrintTask, Windows.Graphics.Printing.PrintTaskProgressingEventArgs>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*, ABI::Windows::Graphics::Printing::PrintTaskProgressingEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_t;
+typedef ITypedEventHandler<ABI::Windows::Graphics::Printing::PrintTask*,ABI::Windows::Graphics::Printing::PrintTaskProgressingEventArgs*> __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_t;
 #define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintTask*,ABI::Windows::Graphics::Printing::IPrintTaskProgressingEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Graphics::Printing::IPrintTask*,ABI::Windows::Graphics::Printing::IPrintTaskProgressingEventArgs*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_boolean_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_boolean_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a"))
+IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<bool, boolean>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Boolean>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
+#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
+//#define __FIAsyncOperationCompletedHandler_1_boolean_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_boolean_USE */
+
+
+
+
+#ifndef DEF___FIAsyncOperation_1_boolean_USE
+#define DEF___FIAsyncOperation_1_boolean_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("cdb5efb3-5788-509d-9be1-71ccb8a3362a"))
+IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<bool, boolean>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Boolean>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
+#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
+//#define __FIAsyncOperation_1_boolean_t ABI::Windows::Foundation::IAsyncOperation<boolean>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_boolean_USE */
+
+
+
+
+
+#ifndef DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#define DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("09335560-6c6b-5a26-9348-97b781132b20"))
+IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IKeyValuePair`2<String, Object>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
+#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
+//#define __FIKeyValuePair_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE */
+
+
+
+
+
+#ifndef DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#define DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("5db5fa32-707c-5849-a06b-91c8eb9d10e8"))
+IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValuePair_2_HSTRING_IInspectable*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
+//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE */
+
+
+
+
+
+#ifndef DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#define DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("fe2f3d47-5d47-5499-8374-430c7cda0204"))
+IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValuePair_2_HSTRING_IInspectable*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
+//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE */
+
+
+
+
+
+#ifndef DEF___FIMapView_2_HSTRING_IInspectable_USE
+#define DEF___FIMapView_2_HSTRING_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("bb78502a-f79d-54fa-92c9-90c5039fdf7e"))
+IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IMapView`2<String, Object>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
+#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
+//#define __FIMapView_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIMapView_2_HSTRING_IInspectable_USE */
+
+
+
+
+
+#ifndef DEF___FIMap_2_HSTRING_IInspectable_USE
+#define DEF___FIMap_2_HSTRING_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("1b0d3570-0877-5ec2-8a2c-3b9539506aca"))
+IMap<HSTRING,IInspectable*> : IMap_impl<HSTRING,IInspectable*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IMap`2<String, Object>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IMap<HSTRING,IInspectable*> __FIMap_2_HSTRING_IInspectable_t;
+#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMap_2_HSTRING_IInspectable_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIMap_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
+//#define __FIMap_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IMap<HSTRING,IInspectable*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIMap_2_HSTRING_IInspectable_USE */
+
+
+
+
+#ifndef DEF___FIIterator_1_HSTRING_USE
+#define DEF___FIIterator_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
+IIterator<HSTRING> : IIterator_impl<HSTRING> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<String>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
+#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
+//#define __FIIterator_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterator<HSTRING>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_HSTRING_USE */
+
+
+
+
+#ifndef DEF___FIIterable_1_HSTRING_USE
+#define DEF___FIIterable_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
+IIterable<HSTRING> : IIterable_impl<HSTRING> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<String>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
+#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
+//#define __FIIterable_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterable<HSTRING>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_HSTRING_USE */
+
+
+
+
+#ifndef DEF___FIVectorView_1_HSTRING_USE
+#define DEF___FIVectorView_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
+IVectorView<HSTRING> : IVectorView_impl<HSTRING> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<String>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
+#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
+//#define __FIVectorView_1_HSTRING_t ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_HSTRING_USE */
+
+
+
+
+#ifndef DEF___FIVector_1_HSTRING_USE
+#define DEF___FIVector_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("98b9acc1-4b56-532e-ac73-03d5291cca90"))
+IVector<HSTRING> : IVector_impl<HSTRING> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVector`1<String>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
+#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
+//#define __FIVector_1_HSTRING_t ABI::Windows::Foundation::Collections::IVector<HSTRING>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVector_1_HSTRING_USE */
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace DataTransfer {
                 class DataPackagePropertySet;
-            } /* DataTransfer */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* DataTransfer */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
@@ -968,37 +1087,46 @@ namespace ABI {
         namespace ApplicationModel {
             namespace DataTransfer {
                 interface IDataPackagePropertySet;
-            } /* DataTransfer */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* DataTransfer */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
 
+
+
+
+
 namespace ABI {
     namespace Windows {
         namespace Foundation {
+            
             typedef struct DateTime DateTime;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
+            
             typedef struct Rect Rect;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
+            
             typedef struct Size Size;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
+
+
+
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1007,213 +1135,255 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStream;
-            } /* Streams */
+            } /* Windows */
         } /* Storage */
-    } /* Windows */
-} /* ABI */
+    } /* Streams */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 
+
+
+
+
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintBinding : int PrintBinding;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintBordering : int PrintBordering;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintCollation : int PrintCollation;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintColorMode : int PrintColorMode;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintDuplex : int PrintDuplex;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintHolePunch : int PrintHolePunch;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintMediaSize : int PrintMediaSize;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintMediaType : int PrintMediaType;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintOrientation : int PrintOrientation;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintQuality : int PrintQuality;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintStaple : int PrintStaple;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef enum PrintTaskCompletion : int PrintTaskCompletion;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                
                 typedef struct PrintPageDescription PrintPageDescription;
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintPageInfo;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                class PrintPageRangeOptions;
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskOptions;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskRequest;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskRequestedDeferral;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskSourceRequestedArgs;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
                 class PrintTaskSourceRequestedDeferral;
-            } /* Printing */
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -1221,12 +1391,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintBinding : int
                 {
                     PrintBinding_Default = 0,
@@ -1247,11 +1420,12 @@ namespace ABI {
                     PrintBinding_JogOffset = 15,
                     PrintBinding_Trim = 16,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1259,12 +1433,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintBordering : int
                 {
                     PrintBordering_Default = 0,
@@ -1273,11 +1450,12 @@ namespace ABI {
                     PrintBordering_Bordered = 3,
                     PrintBordering_Borderless = 4,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -1285,12 +1463,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintCollation : int
                 {
                     PrintCollation_Default = 0,
@@ -1299,11 +1480,12 @@ namespace ABI {
                     PrintCollation_Collated = 3,
                     PrintCollation_Uncollated = 4,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1311,12 +1493,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintColorMode : int
                 {
                     PrintColorMode_Default = 0,
@@ -1326,11 +1511,12 @@ namespace ABI {
                     PrintColorMode_Grayscale = 4,
                     PrintColorMode_Monochrome = 5,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1338,12 +1524,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintDuplex : int
                 {
                     PrintDuplex_Default = 0,
@@ -1353,11 +1542,12 @@ namespace ABI {
                     PrintDuplex_TwoSidedShortEdge = 4,
                     PrintDuplex_TwoSidedLongEdge = 5,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1365,12 +1555,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintHolePunch : int
                 {
                     PrintHolePunch_Default = 0,
@@ -1382,11 +1575,12 @@ namespace ABI {
                     PrintHolePunch_TopEdge = 6,
                     PrintHolePunch_BottomEdge = 7,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1394,12 +1588,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintMediaSize : int
                 {
                     PrintMediaSize_Default = 0,
@@ -1576,11 +1773,12 @@ namespace ABI {
                     PrintMediaSize_Roll36Inch = 171,
                     PrintMediaSize_Roll54Inch = 172,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1588,12 +1786,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintMediaType : int
                 {
                     PrintMediaType_Default = 0,
@@ -1629,11 +1830,12 @@ namespace ABI {
                     PrintMediaType_TShirtTransfer = 30,
                     PrintMediaType_None = 31,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1641,12 +1843,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintOrientation : int
                 {
                     PrintOrientation_Default = 0,
@@ -1657,11 +1862,12 @@ namespace ABI {
                     PrintOrientation_Landscape = 5,
                     PrintOrientation_LandscapeFlipped = 6,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1669,12 +1875,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintQuality : int
                 {
                     PrintQuality_Default = 0,
@@ -1688,11 +1897,12 @@ namespace ABI {
                     PrintQuality_Photographic = 8,
                     PrintQuality_Text = 9,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1700,12 +1910,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintStaple : int
                 {
                     PrintStaple_Default = 0,
@@ -1722,11 +1935,12 @@ namespace ABI {
                     PrintStaple_StapleDualBottom = 11,
                     PrintStaple_SaddleStitch = 12,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1734,12 +1948,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [v1_enum, contract] */
                 enum PrintTaskCompletion : int
                 {
                     PrintTaskCompletion_Abandoned = 0,
@@ -1747,11 +1964,12 @@ namespace ABI {
                     PrintTaskCompletion_Failed = 2,
                     PrintTaskCompletion_Submitted = 3,
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1759,12 +1977,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
+                /* [contract] */
                 struct PrintPageDescription
                 {
                     ABI::Windows::Foundation::Size PageSize;
@@ -1772,17 +1993,19 @@ namespace ABI {
                     UINT32 DpiX;
                     UINT32 DpiY;
                 };
-            } /* Printing */
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Delegate Windows.Graphics.Printing.PrintTaskSourceRequestedHandler
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1792,30 +2015,33 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("6c109fa8-5cb6-4b3a-8663-f39cb02dc9b4")
-                IPrintTaskSourceRequestedHandler : public IUnknown
+                /* [object, uuid("6C109FA8-5CB6-4B3A-8663-F39CB02DC9B4"), contract] */
+                MIDL_INTERFACE("6C109FA8-5CB6-4B3A-8663-F39CB02DC9B4")
+                IPrintTaskSourceRequestedHandler : IUnknown
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE Invoke(
-                        ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs* args
+                        /* [in] */__RPC__in_opt ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedArgs * args
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskSourceRequestedHandler = _uuidof(IPrintTaskSourceRequestedHandler);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskSourceRequestedHandler=_uuidof(IPrintTaskSourceRequestedHandler);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Interface Windows.Graphics.Printing.IPrintDocumentSource
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1826,21 +2052,23 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("dedc0c30-f1eb-47df-aae6-ed5427511f01")
-                IPrintDocumentSource : public IInspectable
+                /* [object, uuid("DEDC0C30-F1EB-47DF-AAE6-ED5427511F01"), contract] */
+                MIDL_INTERFACE("DEDC0C30-F1EB-47DF-AAE6-ED5427511F01")
+                IPrintDocumentSource : IInspectable
                 {
-                public:
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintDocumentSource = _uuidof(IPrintDocumentSource);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintDocumentSource=_uuidof(IPrintDocumentSource);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1848,7 +2076,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSourc
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1859,28 +2089,30 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("ff2a9694-8c99-44fd-ae4a-19d9aa9a0f0a")
-                IPrintManager : public IInspectable
+                /* [object, uuid("FF2A9694-8C99-44FD-AE4A-19D9AA9A0F0A"), exclusiveto, contract] */
+                MIDL_INTERFACE("FF2A9694-8C99-44FD-AE4A-19D9AA9A0F0A")
+                IPrintManager : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE add_PrintTaskRequested(
-                        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs* eventHandler,
-                        EventRegistrationToken* eventCookie
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_PrintTaskRequested(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * eventHandler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_PrintTaskRequested(
-                        EventRegistrationToken eventCookie
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_PrintTaskRequested(
+                        /* [in] */EventRegistrationToken eventCookie
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintManager = _uuidof(IPrintManager);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintManager=_uuidof(IPrintManager);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1888,7 +2120,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1899,27 +2133,29 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("58185dcd-e634-4654-84f0-e0152a8217ac")
-                IPrintManagerStatic : public IInspectable
+                /* [object, uuid("58185DCD-E634-4654-84F0-E0152A8217AC"), exclusiveto, contract] */
+                MIDL_INTERFACE("58185DCD-E634-4654-84F0-E0152A8217AC")
+                IPrintManagerStatic : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE GetForCurrentView(
-                        ABI::Windows::Graphics::Printing::IPrintManager** printingManager
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintManager * * printingManager
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ShowPrintUIAsync(
-                        __FIAsyncOperation_1_boolean** operation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintManagerStatic = _uuidof(IPrintManagerStatic);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintManagerStatic=_uuidof(IPrintManagerStatic);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1927,7 +2163,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1938,24 +2176,26 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("35a99955-e6ab-4139-9abd-b86a729b3598")
-                IPrintManagerStatic2 : public IInspectable
+                /* [object, uuid("35A99955-E6AB-4139-9ABD-B86A729B3598"), exclusiveto, contract] */
+                MIDL_INTERFACE("35A99955-E6AB-4139-9ABD-B86A729B3598")
+                IPrintManagerStatic2 : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        boolean* result
+                        /* [retval, out] */__RPC__out boolean * result
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintManagerStatic2 = _uuidof(IPrintManagerStatic2);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintManagerStatic2=_uuidof(IPrintManagerStatic2);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -1963,7 +2203,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintPageInfo
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1974,183 +2216,53 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("dd4be9c9-a6a1-4ada-930e-da872a4f23d3")
-                IPrintPageInfo : public IInspectable
+                /* [object, uuid("DD4BE9C9-A6A1-4ADA-930E-DA872A4F23D3"), exclusiveto, contract] */
+                MIDL_INTERFACE("DD4BE9C9-A6A1-4ADA-930E-DA872A4F23D3")
+                IPrintPageInfo : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE put_MediaSize(
-                        ABI::Windows::Graphics::Printing::PrintMediaSize value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MediaSize(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintMediaSize value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MediaSize(
-                        ABI::Windows::Graphics::Printing::PrintMediaSize* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MediaSize(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintMediaSize * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_PageSize(
-                        ABI::Windows::Foundation::Size value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_PageSize(
+                        /* [in] */ABI::Windows::Foundation::Size value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_PageSize(
-                        ABI::Windows::Foundation::Size* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PageSize(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::Size * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_DpiX(
-                        UINT32 value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DpiX(
+                        /* [in] */UINT32 value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_DpiX(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DpiX(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_DpiY(
-                        UINT32 value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_DpiY(
+                        /* [in] */UINT32 value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_DpiY(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DpiY(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Orientation(
-                        ABI::Windows::Graphics::Printing::PrintOrientation value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Orientation(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintOrientation value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Orientation(
-                        ABI::Windows::Graphics::Printing::PrintOrientation* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Orientation(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintOrientation * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintPageInfo = _uuidof(IPrintPageInfo);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintPageInfo=_uuidof(IPrintPageInfo);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-/*
- *
- * Interface Windows.Graphics.Printing.IPrintPageRange
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintPageRange
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintPageRange[] = L"Windows.Graphics.Printing.IPrintPageRange";
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                MIDL_INTERFACE("f8a06c54-6e7c-51c5-57fd-0660c2d71513")
-                IPrintPageRange : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_FirstPageNumber(
-                        INT32* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_LastPageNumber(
-                        INT32* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPrintPageRange = _uuidof(IPrintPageRange);
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-/*
- *
- * Interface Windows.Graphics.Printing.IPrintPageRangeFactory
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintPageRange
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintPageRangeFactory[] = L"Windows.Graphics.Printing.IPrintPageRangeFactory";
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                MIDL_INTERFACE("408fd45f-e047-5f85-7129-fb085a4fad14")
-                IPrintPageRangeFactory : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE Create(
-                        INT32 firstPage,
-                        INT32 lastPage,
-                        ABI::Windows::Graphics::Printing::IPrintPageRange** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE CreateWithSinglePage(
-                        INT32 page,
-                        ABI::Windows::Graphics::Printing::IPrintPageRange** result
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPrintPageRangeFactory = _uuidof(IPrintPageRangeFactory);
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-/*
- *
- * Interface Windows.Graphics.Printing.IPrintPageRangeOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintPageRangeOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintPageRangeOptions[] = L"Windows.Graphics.Printing.IPrintPageRangeOptions";
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                MIDL_INTERFACE("ce6db728-1357-46b2-a923-79f995f448fc")
-                IPrintPageRangeOptions : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE put_AllowAllPages(
-                        boolean value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_AllowAllPages(
-                        boolean* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_AllowCurrentPage(
-                        boolean value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_AllowCurrentPage(
-                        boolean* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_AllowCustomSetOfPages(
-                        boolean value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_AllowCustomSetOfPages(
-                        boolean* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPrintPageRangeOptions = _uuidof(IPrintPageRangeOptions);
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 /*
  *
@@ -2158,7 +2270,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOpti
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTask
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2169,58 +2283,60 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("61d80247-6cf6-4fad-84e2-a5e82e2d4ceb")
-                IPrintTask : public IInspectable
+                /* [object, uuid("61D80247-6CF6-4FAD-84E2-A5E82E2D4CEB"), exclusiveto, contract] */
+                MIDL_INTERFACE("61D80247-6CF6-4FAD-84E2-A5E82E2D4CEB")
+                IPrintTask : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Properties(
-                        ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Properties(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::DataTransfer::IDataPackagePropertySet * * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Source(
-                        ABI::Windows::Graphics::Printing::IPrintDocumentSource** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Source(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintDocumentSource * * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Options(
-                        ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Options(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintTaskOptionsCore * * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_Previewing(
-                        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable* eventHandler,
-                        EventRegistrationToken* eventCookie
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Previewing(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * eventHandler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_Previewing(
-                        EventRegistrationToken eventCookie
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_Previewing(
+                        /* [in] */EventRegistrationToken eventCookie
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_Submitting(
-                        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable* eventHandler,
-                        EventRegistrationToken* eventCookie
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Submitting(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * eventHandler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_Submitting(
-                        EventRegistrationToken eventCookie
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_Submitting(
+                        /* [in] */EventRegistrationToken eventCookie
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_Progressing(
-                        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs* eventHandler,
-                        EventRegistrationToken* eventCookie
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Progressing(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * eventHandler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_Progressing(
-                        EventRegistrationToken eventCookie
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_Progressing(
+                        /* [in] */EventRegistrationToken eventCookie
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE add_Completed(
-                        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs* eventHandler,
-                        EventRegistrationToken* eventCookie
+                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_Completed(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * eventHandler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE remove_Completed(
-                        EventRegistrationToken eventCookie
+                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_Completed(
+                        /* [in] */EventRegistrationToken eventCookie
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTask = _uuidof(IPrintTask);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTask=_uuidof(IPrintTask);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2228,7 +2344,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTask
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2239,27 +2357,29 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("36234877-3e53-4d9d-8f5e-316ac8dedae1")
-                IPrintTask2 : public IInspectable
+                /* [object, uuid("36234877-3E53-4D9D-8F5E-316AC8DEDAE1"), exclusiveto, contract] */
+                MIDL_INTERFACE("36234877-3E53-4D9D-8F5E-316AC8DEDAE1")
+                IPrintTask2 : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE put_IsPreviewEnabled(
-                        boolean value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPreviewEnabled(
+                        /* [in] */boolean value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsPreviewEnabled(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPreviewEnabled(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTask2 = _uuidof(IPrintTask2);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTask2=_uuidof(IPrintTask2);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -2267,7 +2387,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskCompletedEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2278,24 +2400,26 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("5bcd34af-24e9-4c10-8d07-14c346ba3fce")
-                IPrintTaskCompletedEventArgs : public IInspectable
+                /* [object, uuid("5BCD34AF-24E9-4C10-8D07-14C346BA3FCE"), exclusiveto, contract] */
+                MIDL_INTERFACE("5BCD34AF-24E9-4C10-8D07-14C346BA3FCE")
+                IPrintTaskCompletedEventArgs : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Completion(
-                        ABI::Windows::Graphics::Printing::PrintTaskCompletion* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Completion(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintTaskCompletion * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskCompletedEventArgs = _uuidof(IPrintTaskCompletedEventArgs);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskCompletedEventArgs=_uuidof(IPrintTaskCompletedEventArgs);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2303,7 +2427,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompleted
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskOptions
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2314,76 +2440,40 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("5a0a66bb-d289-41bb-96dd-57e28338ae3f")
-                IPrintTaskOptions : public IInspectable
+                /* [object, uuid("5A0A66BB-D289-41BB-96DD-57E28338AE3F"), exclusiveto, contract] */
+                MIDL_INTERFACE("5A0A66BB-D289-41BB-96DD-57E28338AE3F")
+                IPrintTaskOptions : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE put_Bordering(
-                        ABI::Windows::Graphics::Printing::PrintBordering value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Bordering(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintBordering value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Bordering(
-                        ABI::Windows::Graphics::Printing::PrintBordering* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Bordering(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintBordering * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetPagePrintTicket(
-                        ABI::Windows::Graphics::Printing::IPrintPageInfo* printPageInfo,
-                        ABI::Windows::Storage::Streams::IRandomAccessStream** printTicket
+                        /* [in] */__RPC__in_opt ABI::Windows::Graphics::Printing::IPrintPageInfo * printPageInfo,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStream * * printTicket
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskOptions = _uuidof(IPrintTaskOptions);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskOptions=_uuidof(IPrintTaskOptions);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-/*
- *
- * Interface Windows.Graphics.Printing.IPrintTaskOptions2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskOptions2[] = L"Windows.Graphics.Printing.IPrintTaskOptions2";
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                MIDL_INTERFACE("eb9b1606-9a36-4b59-8617-b217849262e1")
-                IPrintTaskOptions2 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_PageRangeOptions(
-                        ABI::Windows::Graphics::Printing::IPrintPageRangeOptions** value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_CustomPageRanges(
-                        __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange** value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IPrintTaskOptions2 = _uuidof(IPrintTaskOptions2);
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 /*
  *
  * Interface Windows.Graphics.Printing.IPrintTaskOptionsCore
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2394,31 +2484,34 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("1bdbb474-4ed1-41eb-be3c-72d18ed67337")
-                IPrintTaskOptionsCore : public IInspectable
+                /* [object, uuid("1BDBB474-4ED1-41EB-BE3C-72D18ED67337"), contract] */
+                MIDL_INTERFACE("1BDBB474-4ED1-41EB-BE3C-72D18ED67337")
+                IPrintTaskOptionsCore : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE GetPageDescription(
-                        UINT32 jobPageNumber,
-                        ABI::Windows::Graphics::Printing::PrintPageDescription* description
+                        /* [in] */UINT32 jobPageNumber,
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintPageDescription * description
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskOptionsCore = _uuidof(IPrintTaskOptionsCore);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskOptionsCore=_uuidof(IPrintTaskOptionsCore);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Interface Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2429,99 +2522,102 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("c1b71832-9e93-4e55-814b-3326a59efce1")
-                IPrintTaskOptionsCoreProperties : public IInspectable
+                /* [object, uuid("C1B71832-9E93-4E55-814B-3326A59EFCE1"), contract] */
+                MIDL_INTERFACE("C1B71832-9E93-4E55-814B-3326A59EFCE1")
+                IPrintTaskOptionsCoreProperties : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE put_MediaSize(
-                        ABI::Windows::Graphics::Printing::PrintMediaSize value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MediaSize(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintMediaSize value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MediaSize(
-                        ABI::Windows::Graphics::Printing::PrintMediaSize* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MediaSize(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintMediaSize * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_MediaType(
-                        ABI::Windows::Graphics::Printing::PrintMediaType value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MediaType(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintMediaType value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MediaType(
-                        ABI::Windows::Graphics::Printing::PrintMediaType* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MediaType(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintMediaType * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Orientation(
-                        ABI::Windows::Graphics::Printing::PrintOrientation value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Orientation(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintOrientation value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Orientation(
-                        ABI::Windows::Graphics::Printing::PrintOrientation* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Orientation(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintOrientation * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_PrintQuality(
-                        ABI::Windows::Graphics::Printing::PrintQuality value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_PrintQuality(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintQuality value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_PrintQuality(
-                        ABI::Windows::Graphics::Printing::PrintQuality* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PrintQuality(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintQuality * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_ColorMode(
-                        ABI::Windows::Graphics::Printing::PrintColorMode value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_ColorMode(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintColorMode value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ColorMode(
-                        ABI::Windows::Graphics::Printing::PrintColorMode* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ColorMode(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintColorMode * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Duplex(
-                        ABI::Windows::Graphics::Printing::PrintDuplex value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Duplex(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintDuplex value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Duplex(
-                        ABI::Windows::Graphics::Printing::PrintDuplex* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Duplex(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintDuplex * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Collation(
-                        ABI::Windows::Graphics::Printing::PrintCollation value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Collation(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintCollation value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Collation(
-                        ABI::Windows::Graphics::Printing::PrintCollation* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Collation(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintCollation * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Staple(
-                        ABI::Windows::Graphics::Printing::PrintStaple value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Staple(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintStaple value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Staple(
-                        ABI::Windows::Graphics::Printing::PrintStaple* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Staple(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintStaple * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_HolePunch(
-                        ABI::Windows::Graphics::Printing::PrintHolePunch value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_HolePunch(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintHolePunch value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_HolePunch(
-                        ABI::Windows::Graphics::Printing::PrintHolePunch* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HolePunch(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintHolePunch * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Binding(
-                        ABI::Windows::Graphics::Printing::PrintBinding value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Binding(
+                        /* [in] */ABI::Windows::Graphics::Printing::PrintBinding value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Binding(
-                        ABI::Windows::Graphics::Printing::PrintBinding* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Binding(
+                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Printing::PrintBinding * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MinCopies(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MinCopies(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MaxCopies(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxCopies(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_NumberOfCopies(
-                        UINT32 value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_NumberOfCopies(
+                        /* [in] */UINT32 value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_NumberOfCopies(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NumberOfCopies(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskOptionsCoreProperties = _uuidof(IPrintTaskOptionsCoreProperties);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskOptionsCoreProperties=_uuidof(IPrintTaskOptionsCoreProperties);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Interface Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2532,24 +2628,26 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("62e69e23-9a1e-4336-b74f-3cc7f4cff709")
-                IPrintTaskOptionsCoreUIConfiguration : public IInspectable
+                /* [object, uuid("62E69E23-9A1E-4336-B74F-3CC7F4CFF709"), contract] */
+                MIDL_INTERFACE("62E69E23-9A1E-4336-B74F-3CC7F4CFF709")
+                IPrintTaskOptionsCoreUIConfiguration : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_DisplayedOptions(
-                        __FIVector_1_HSTRING** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DisplayedOptions(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskOptionsCoreUIConfiguration = _uuidof(IPrintTaskOptionsCoreUIConfiguration);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskOptionsCoreUIConfiguration=_uuidof(IPrintTaskOptionsCoreUIConfiguration);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2557,7 +2655,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskProgressingEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2568,24 +2668,26 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("810cd3cb-b410-4282-a073-5ac378234174")
-                IPrintTaskProgressingEventArgs : public IInspectable
+                /* [object, uuid("810CD3CB-B410-4282-A073-5AC378234174"), exclusiveto, contract] */
+                MIDL_INTERFACE("810CD3CB-B410-4282-A073-5AC378234174")
+                IPrintTaskProgressingEventArgs : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_DocumentPageCount(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_DocumentPageCount(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskProgressingEventArgs = _uuidof(IPrintTaskProgressingEventArgs);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskProgressingEventArgs=_uuidof(IPrintTaskProgressingEventArgs);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2593,7 +2695,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressi
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskRequest
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2604,32 +2708,34 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("6ff61e2e-2722-4240-a67c-f364849a17f3")
-                IPrintTaskRequest : public IInspectable
+                /* [object, uuid("6FF61E2E-2722-4240-A67C-F364849A17F3"), exclusiveto, contract] */
+                MIDL_INTERFACE("6FF61E2E-2722-4240-A67C-F364849A17F3")
+                IPrintTaskRequest : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Deadline(
-                        ABI::Windows::Foundation::DateTime* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Deadline(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CreatePrintTask(
-                        HSTRING title,
-                        ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedHandler* handler,
-                        ABI::Windows::Graphics::Printing::IPrintTask** task
+                        /* [in] */__RPC__in HSTRING title,
+                        /* [in] */__RPC__in_opt ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedHandler  * handler,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintTask * * task
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
-                        ABI::Windows::Graphics::Printing::IPrintTaskRequestedDeferral** deferral
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintTaskRequestedDeferral * * deferral
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskRequest = _uuidof(IPrintTaskRequest);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskRequest=_uuidof(IPrintTaskRequest);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2637,7 +2743,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskRequestedDeferral
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2648,22 +2756,24 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("cfefb3f0-ce3e-42c7-9496-64800c622c44")
-                IPrintTaskRequestedDeferral : public IInspectable
+                /* [object, uuid("CFEFB3F0-CE3E-42C7-9496-64800C622C44"), exclusiveto, contract] */
+                MIDL_INTERFACE("CFEFB3F0-CE3E-42C7-9496-64800C622C44")
+                IPrintTaskRequestedDeferral : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE Complete(void) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskRequestedDeferral = _uuidof(IPrintTaskRequestedDeferral);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskRequestedDeferral=_uuidof(IPrintTaskRequestedDeferral);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2671,7 +2781,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequested
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskRequestedEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2682,24 +2794,26 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("d0aff924-a31b-454c-a7b6-5d0cc522fc16")
-                IPrintTaskRequestedEventArgs : public IInspectable
+                /* [object, uuid("D0AFF924-A31B-454C-A7B6-5D0CC522FC16"), exclusiveto, contract] */
+                MIDL_INTERFACE("D0AFF924-A31B-454C-A7B6-5D0CC522FC16")
+                IPrintTaskRequestedEventArgs : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Request(
-                        ABI::Windows::Graphics::Printing::IPrintTaskRequest** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Request(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintTaskRequest * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskRequestedEventArgs = _uuidof(IPrintTaskRequestedEventArgs);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskRequestedEventArgs=_uuidof(IPrintTaskRequestedEventArgs);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2707,7 +2821,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequested
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskSourceRequestedArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2718,30 +2834,32 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("f9f067be-f456-41f0-9c98-5ce73e851410")
-                IPrintTaskSourceRequestedArgs : public IInspectable
+                /* [object, uuid("F9F067BE-F456-41F0-9C98-5CE73E851410"), exclusiveto, contract] */
+                MIDL_INTERFACE("F9F067BE-F456-41F0-9C98-5CE73E851410")
+                IPrintTaskSourceRequestedArgs : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Deadline(
-                        ABI::Windows::Foundation::DateTime* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Deadline(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetSource(
-                        ABI::Windows::Graphics::Printing::IPrintDocumentSource* source
+                        /* [in] */__RPC__in_opt ABI::Windows::Graphics::Printing::IPrintDocumentSource * source
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
-                        ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral** deferral
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Graphics::Printing::IPrintTaskSourceRequestedDeferral * * deferral
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskSourceRequestedArgs = _uuidof(IPrintTaskSourceRequestedArgs);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskSourceRequestedArgs=_uuidof(IPrintTaskSourceRequestedArgs);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2749,7 +2867,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceReq
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2760,22 +2880,24 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("4a1560d1-6992-4d9d-8555-4ca4563fb166")
-                IPrintTaskSourceRequestedDeferral : public IInspectable
+                /* [object, uuid("4A1560D1-6992-4D9D-8555-4CA4563FB166"), exclusiveto, contract] */
+                MIDL_INTERFACE("4A1560D1-6992-4D9D-8555-4CA4563FB166")
+                IPrintTaskSourceRequestedDeferral : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE Complete(void) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskSourceRequestedDeferral = _uuidof(IPrintTaskSourceRequestedDeferral);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskSourceRequestedDeferral=_uuidof(IPrintTaskSourceRequestedDeferral);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2783,7 +2905,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceReq
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTask
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2794,33 +2918,35 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("295d70c0-c2cb-4b7d-b0ea-93095091a220")
-                IPrintTaskTargetDeviceSupport : public IInspectable
+                /* [object, uuid("295D70C0-C2CB-4B7D-B0EA-93095091A220"), exclusiveto, contract] */
+                MIDL_INTERFACE("295D70C0-C2CB-4B7D-B0EA-93095091A220")
+                IPrintTaskTargetDeviceSupport : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE put_IsPrinterTargetEnabled(
-                        boolean value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_IsPrinterTargetEnabled(
+                        /* [in] */boolean value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsPrinterTargetEnabled(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPrinterTargetEnabled(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_Is3DManufacturingTargetEnabled(
-                        boolean value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Is3DManufacturingTargetEnabled(
+                        /* [in] */boolean value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Is3DManufacturingTargetEnabled(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Is3DManufacturingTargetEnabled(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPrintTaskTargetDeviceSupport = _uuidof(IPrintTaskTargetDeviceSupport);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IPrintTaskTargetDeviceSupport=_uuidof(IPrintTaskTargetDeviceSupport);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2828,7 +2954,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDev
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.StandardPrintTaskOptions
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2839,60 +2967,62 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("b4483d26-0dd0-4cd4-baff-930fc7d6a574")
-                IStandardPrintTaskOptionsStatic : public IInspectable
+                /* [object, uuid("B4483D26-0DD0-4CD4-BAFF-930FC7D6A574"), exclusiveto, contract] */
+                MIDL_INTERFACE("B4483D26-0DD0-4CD4-BAFF-930FC7D6A574")
+                IStandardPrintTaskOptionsStatic : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_MediaSize(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MediaSize(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_MediaType(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MediaType(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Orientation(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Orientation(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_PrintQuality(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PrintQuality(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ColorMode(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ColorMode(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Duplex(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Duplex(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Collation(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Collation(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Staple(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Staple(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_HolePunch(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HolePunch(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Binding(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Binding(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Copies(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Copies(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_NUp(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NUp(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_InputBin(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_InputBin(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStandardPrintTaskOptionsStatic = _uuidof(IStandardPrintTaskOptionsStatic);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IStandardPrintTaskOptionsStatic=_uuidof(IStandardPrintTaskOptionsStatic);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -2900,7 +3030,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskO
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.StandardPrintTaskOptions
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -2911,60 +3043,26 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Printing {
-                MIDL_INTERFACE("3be38bf4-7a44-4269-9a52-81261e289ee9")
-                IStandardPrintTaskOptionsStatic2 : public IInspectable
+                /* [object, uuid("3BE38BF4-7A44-4269-9A52-81261E289EE9"), exclusiveto, contract] */
+                MIDL_INTERFACE("3BE38BF4-7A44-4269-9A52-81261E289EE9")
+                IStandardPrintTaskOptionsStatic2 : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Bordering(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Bordering(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IStandardPrintTaskOptionsStatic2 = _uuidof(IStandardPrintTaskOptionsStatic2);
-            } /* Printing */
+                extern MIDL_CONST_ID IID & IID_IStandardPrintTaskOptionsStatic2=_uuidof(IStandardPrintTaskOptionsStatic2);
+                
+            } /* Windows */
         } /* Graphics */
-    } /* Windows */
-} /* ABI */
+    } /* Printing */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-/*
- *
- * Interface Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.StandardPrintTaskOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IStandardPrintTaskOptionsStatic3[] = L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3";
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Printing {
-                MIDL_INTERFACE("bbf68e86-3858-41b3-a799-55dd9888d475")
-                IStandardPrintTaskOptionsStatic3 : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_CustomPageRanges(
-                        HSTRING* value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IStandardPrintTaskOptionsStatic3 = _uuidof(IStandardPrintTaskOptionsStatic3);
-            } /* Printing */
-        } /* Graphics */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 /*
  *
@@ -2972,9 +3070,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskO
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintManager ** Default Interface **
@@ -2983,17 +3082,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskO
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintManager_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintManager[] = L"Windows.Graphics.Printing.PrintManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintPageInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -3007,60 +3109,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintPageInfo_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintPageInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintPageInfo[] = L"Windows.Graphics.Printing.PrintPageInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-/*
- *
- * Class Windows.Graphics.Printing.PrintPageRange
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Graphics.Printing.IPrintPageRangeFactory interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Graphics.Printing.IPrintPageRange ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintPageRange_DEFINED
-#define RUNTIMECLASS_Windows_Graphics_Printing_PrintPageRange_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintPageRange[] = L"Windows.Graphics.Printing.PrintPageRange";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-/*
- *
- * Class Windows.Graphics.Printing.PrintPageRangeOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Class implements the following interfaces:
- *    Windows.Graphics.Printing.IPrintPageRangeOptions ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintPageRangeOptions_DEFINED
-#define RUNTIMECLASS_Windows_Graphics_Printing_PrintPageRangeOptions_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintPageRangeOptions[] = L"Windows.Graphics.Printing.PrintPageRangeOptions";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 /*
  *
  * Class Windows.Graphics.Printing.PrintTask
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTask ** Default Interface **
@@ -3071,17 +3133,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTask_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTask_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTask[] = L"Windows.Graphics.Printing.PrintTask";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskCompletedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskCompletedEventArgs ** Default Interface **
@@ -3090,11 +3155,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskCompletedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskCompletedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskCompletedEventArgs[] = L"Windows.Graphics.Printing.PrintTaskCompletedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3102,28 +3169,31 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskOptionsCore ** Default Interface **
  *    Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties
  *    Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration
  *    Windows.Graphics.Printing.IPrintTaskOptions
- *    Windows.Graphics.Printing.IPrintTaskOptions2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskOptions_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskOptions_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskOptions[] = L"Windows.Graphics.Printing.PrintTaskOptions";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskProgressingEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskProgressingEventArgs ** Default Interface **
@@ -3132,17 +3202,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskProgressingEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskProgressingEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskProgressingEventArgs[] = L"Windows.Graphics.Printing.PrintTaskProgressingEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskRequest
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskRequest ** Default Interface **
@@ -3151,17 +3224,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequest_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequest_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskRequest[] = L"Windows.Graphics.Printing.PrintTaskRequest";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskRequestedDeferral
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskRequestedDeferral ** Default Interface **
@@ -3170,17 +3246,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequestedDeferral_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequestedDeferral_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskRequestedDeferral[] = L"Windows.Graphics.Printing.PrintTaskRequestedDeferral";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskRequestedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskRequestedEventArgs ** Default Interface **
@@ -3189,17 +3268,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequestedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequestedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskRequestedEventArgs[] = L"Windows.Graphics.Printing.PrintTaskRequestedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskSourceRequestedArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs ** Default Interface **
@@ -3208,17 +3290,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskSourceRequestedArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskSourceRequestedArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskSourceRequestedArgs[] = L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral ** Default Interface **
@@ -3227,11 +3312,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskSourceRequestedDeferral_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskSourceRequestedDeferral_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskSourceRequestedDeferral[] = L"Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3239,10 +3326,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -3253,6 +3340,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_StandardPrintTaskOptions[] = L"Windows.Graphics.Printing.StandardPrintTaskOptions";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -3292,24 +3382,6 @@ typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo __x_ABI_C
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange;
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory;
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions;
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask;
@@ -3333,12 +3405,6 @@ typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEvent
 typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions;
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2 __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2;
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_FWD_DEFINED__
@@ -3412,842 +3478,11 @@ typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOption
 
 #endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_FWD_DEFINED__
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3 __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3;
-
-#endif // ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_FWD_DEFINED__
-
 // Parameterized interface forward declarations (C)
 
 // Collection interface definitions
 
-typedef interface __FIAsyncOperationCompletedHandler_1_boolean __FIAsyncOperationCompletedHandler_1_boolean;
 
-#if !defined(____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_boolean __FIAsyncOperation_1_boolean;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_boolean;
-
-typedef struct __FIAsyncOperation_1_booleanVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_boolean* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_boolean* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_boolean* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_boolean* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_boolean* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_boolean* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_boolean* This,
-        __FIAsyncOperationCompletedHandler_1_boolean* handler);
-    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_boolean* This,
-        __FIAsyncOperationCompletedHandler_1_boolean** result);
-    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_boolean* This,
-        boolean* result);
-
-    END_INTERFACE
-} __FIAsyncOperation_1_booleanVtbl;
-
-interface __FIAsyncOperation_1_boolean
-{
-    CONST_VTBL struct __FIAsyncOperation_1_booleanVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperation_1_boolean_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperation_1_boolean_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperation_1_boolean_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperation_1_boolean_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIAsyncOperation_1_boolean_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIAsyncOperation_1_boolean_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIAsyncOperation_1_boolean_put_Completed(This, handler) \
-    ((This)->lpVtbl->put_Completed(This, handler))
-
-#define __FIAsyncOperation_1_boolean_get_Completed(This, result) \
-    ((This)->lpVtbl->get_Completed(This, result))
-
-#define __FIAsyncOperation_1_boolean_GetResults(This, result) \
-    ((This)->lpVtbl->GetResults(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__
-
-#if !defined(____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_boolean __FIAsyncOperationCompletedHandler_1_boolean;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_boolean;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_booleanVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_boolean* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_boolean* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_boolean* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_boolean* This,
-        __FIAsyncOperation_1_boolean* asyncInfo,
-        AsyncStatus asyncStatus);
-
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_booleanVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_boolean
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_booleanVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperationCompletedHandler_1_boolean_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperationCompletedHandler_1_boolean_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperationCompletedHandler_1_boolean_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperationCompletedHandler_1_boolean_Invoke(This, asyncInfo, asyncStatus) \
-    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
-
-#if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_HSTRING __FIIterator_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_HSTRING;
-
-typedef struct __FIIterator_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_HSTRING* This,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_HSTRING* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_HSTRING* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_HSTRING* This,
-        UINT32 itemsLength,
-        HSTRING* items,
-        UINT32* result);
-
-    END_INTERFACE
-} __FIIterator_1_HSTRINGVtbl;
-
-interface __FIIterator_1_HSTRING
-{
-    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterator_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIIterator_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIIterator_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIIterator_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterator_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterator_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterator_1_HSTRING_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
-
-#define __FIIterator_1_HSTRING_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
-
-#define __FIIterator_1_HSTRING_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
-
-#define __FIIterator_1_HSTRING_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
-
-#if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_HSTRING;
-
-typedef struct __FIIterable_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_HSTRING* This,
-        __FIIterator_1_HSTRING** result);
-
-    END_INTERFACE
-} __FIIterable_1_HSTRINGVtbl;
-
-interface __FIIterable_1_HSTRING
-{
-    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIIterable_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIIterable_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIIterable_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterable_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterable_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterable_1_HSTRING_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__)
-#define ____FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange;
-
-typedef struct __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange** result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange** items,
-        UINT32* result);
-
-    END_INTERFACE
-} __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl;
-
-interface __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange
-{
-    CONST_VTBL struct __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
-
-#define __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__)
-#define ____FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange;
-
-typedef struct __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        __FIIterator_1_Windows__CGraphics__CPrinting__CPrintPageRange** result);
-
-    END_INTERFACE
-} __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl;
-
-interface __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange
-{
-    CONST_VTBL struct __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIIterable_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_HSTRING;
-
-typedef struct __FIVectorView_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_HSTRING* This,
-        UINT32 index,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_HSTRING* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_HSTRING* This,
-        HSTRING value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_HSTRING* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        HSTRING* items,
-        UINT32* result);
-
-    END_INTERFACE
-} __FIVectorView_1_HSTRINGVtbl;
-
-interface __FIVectorView_1_HSTRING
-{
-    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIVectorView_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIVectorView_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIVectorView_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIVectorView_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIVectorView_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIVectorView_1_HSTRING_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
-
-#define __FIVectorView_1_HSTRING_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
-
-#define __FIVectorView_1_HSTRING_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
-
-#define __FIVectorView_1_HSTRING_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange;
-
-typedef struct __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32 index,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange** result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange** items,
-        UINT32* result);
-
-    END_INTERFACE
-} __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl;
-
-interface __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange
-{
-    CONST_VTBL struct __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
-
-#define __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-#if !defined(____FIVector_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIVector_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIVector_1_HSTRING __FIVector_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVector_1_HSTRING;
-
-typedef struct __FIVector_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVector_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVector_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVector_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVector_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVector_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVector_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVector_1_HSTRING* This,
-        UINT32 index,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVector_1_HSTRING* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* GetView)(__FIVector_1_HSTRING* This,
-        __FIVectorView_1_HSTRING** result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVector_1_HSTRING* This,
-        HSTRING value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* SetAt)(__FIVector_1_HSTRING* This,
-        UINT32 index,
-        HSTRING value);
-    HRESULT (STDMETHODCALLTYPE* InsertAt)(__FIVector_1_HSTRING* This,
-        UINT32 index,
-        HSTRING value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAt)(__FIVector_1_HSTRING* This,
-        UINT32 index);
-    HRESULT (STDMETHODCALLTYPE* Append)(__FIVector_1_HSTRING* This,
-        HSTRING value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(__FIVector_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* Clear)(__FIVector_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVector_1_HSTRING* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        HSTRING* items,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(__FIVector_1_HSTRING* This,
-        UINT32 itemsLength,
-        HSTRING* items);
-
-    END_INTERFACE
-} __FIVector_1_HSTRINGVtbl;
-
-interface __FIVector_1_HSTRING
-{
-    CONST_VTBL struct __FIVector_1_HSTRINGVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIVector_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIVector_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIVector_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIVector_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIVector_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIVector_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIVector_1_HSTRING_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
-
-#define __FIVector_1_HSTRING_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
-
-#define __FIVector_1_HSTRING_GetView(This, result) \
-    ((This)->lpVtbl->GetView(This, result))
-
-#define __FIVector_1_HSTRING_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
-
-#define __FIVector_1_HSTRING_SetAt(This, index, value) \
-    ((This)->lpVtbl->SetAt(This, index, value))
-
-#define __FIVector_1_HSTRING_InsertAt(This, index, value) \
-    ((This)->lpVtbl->InsertAt(This, index, value))
-
-#define __FIVector_1_HSTRING_RemoveAt(This, index) \
-    ((This)->lpVtbl->RemoveAt(This, index))
-
-#define __FIVector_1_HSTRING_Append(This, value) \
-    ((This)->lpVtbl->Append(This, value))
-
-#define __FIVector_1_HSTRING_RemoveAtEnd(This) \
-    ((This)->lpVtbl->RemoveAtEnd(This))
-
-#define __FIVector_1_HSTRING_Clear(This) \
-    ((This)->lpVtbl->Clear(This))
-
-#define __FIVector_1_HSTRING_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
-
-#define __FIVector_1_HSTRING_ReplaceAll(This, itemsLength, items) \
-    ((This)->lpVtbl->ReplaceAll(This, itemsLength, items))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIVector_1_HSTRING_INTERFACE_DEFINED__
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__)
-#define ____FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__
-
-typedef interface __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange;
-
-typedef struct __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32 index,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange** result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* GetView)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        __FIVectorView_1_Windows__CGraphics__CPrinting__CPrintPageRange** result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* SetAt)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32 index,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* value);
-    HRESULT (STDMETHODCALLTYPE* InsertAt)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32 index,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAt)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32 index);
-    HRESULT (STDMETHODCALLTYPE* Append)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    HRESULT (STDMETHODCALLTYPE* Clear)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange** items,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(__FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange* This,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange** items);
-
-    END_INTERFACE
-} __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl;
-
-interface __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange
-{
-    CONST_VTBL struct __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRangeVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetView(This, result) \
-    ((This)->lpVtbl->GetView(This, result))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_SetAt(This, index, value) \
-    ((This)->lpVtbl->SetAt(This, index, value))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_InsertAt(This, index, value) \
-    ((This)->lpVtbl->InsertAt(This, index, value))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_RemoveAt(This, index) \
-    ((This)->lpVtbl->RemoveAt(This, index))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_Append(This, value) \
-    ((This)->lpVtbl->Append(This, value))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_RemoveAtEnd(This) \
-    ((This)->lpVtbl->RemoveAtEnd(This))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_Clear(This) \
-    ((This)->lpVtbl->Clear(This))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
-
-#define __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_ReplaceAll(This, itemsLength, items) \
-    ((This)->lpVtbl->ReplaceAll(This, itemsLength, items))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_INTERFACE_DEFINED__
@@ -4260,43 +3495,44 @@ EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CP
 typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager* sender,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs* args);
-
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * *e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgsVtbl;
 
 interface __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
 #endif /* COBJMACROS */
 
+
+
 #endif // ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_INTERFACE_DEFINED__)
@@ -4310,44 +3546,45 @@ EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CP
 typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectableVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* sender,
-        IInspectable* args);
-
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * sender,/* [in] */ __RPC__in_opt IInspectable * *e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectableVtbl;
 
 interface __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectableVtbl* lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectableVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_Release(This) \
-    ((This)->lpVtbl->Release(This))
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
 #endif /* COBJMACROS */
 
+
+
 #endif // ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_INTERFACE_DEFINED__
@@ -4360,45 +3597,45 @@ EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CP
 typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* sender,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs* args);
-
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * *e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgsVtbl;
 
 interface __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
 #endif /* COBJMACROS */
 
+
+
 #endif // ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_INTERFACE_DEFINED__
@@ -4411,43 +3648,946 @@ EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CGraphics__CPrinting__CP
 typedef struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* sender,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs* args);
-
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * *e);
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgsVtbl;
 
 interface __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if !defined(____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_boolean __FIAsyncOperationCompletedHandler_1_boolean;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_boolean;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_boolean __FIAsyncOperation_1_boolean;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_booleanVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_boolean * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_boolean * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_boolean * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_boolean * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_boolean *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_booleanVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_boolean
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_booleanVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_boolean_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_boolean_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_boolean_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_boolean_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
+
+
+#if !defined(____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_boolean __FIAsyncOperation_1_boolean;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_boolean;
+
+typedef struct __FIAsyncOperation_1_booleanVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_boolean * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_boolean * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_boolean * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_boolean * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_boolean *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_boolean **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [retval][out] */ __RPC__out boolean *results);
+    END_INTERFACE
+} __FIAsyncOperation_1_booleanVtbl;
+
+interface __FIAsyncOperation_1_boolean
+{
+    CONST_VTBL struct __FIAsyncOperation_1_booleanVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1_boolean_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_boolean_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_boolean_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1_boolean_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_boolean_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_boolean_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1_boolean_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_boolean_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_boolean_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
+#define ____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIKeyValuePair_2_HSTRING_IInspectable __FIKeyValuePair_2_HSTRING_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIKeyValuePair_2_HSTRING_IInspectable;
+
+typedef struct __FIKeyValuePair_2_HSTRING_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This,
+            /* [out] */ __RPC__out ULONG *iidCount,
+            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out HSTRING *key);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__deref_out_opt IInspectable * *value);
+    END_INTERFACE
+} __FIKeyValuePair_2_HSTRING_IInspectableVtbl;
+
+interface __FIKeyValuePair_2_HSTRING_IInspectable
+{
+    CONST_VTBL struct __FIKeyValuePair_2_HSTRING_IInspectableVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Key(This,key)	\
+    ( (This)->lpVtbl -> get_Key(This,key) ) 
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Value(This,value)	\
+    ( (This)->lpVtbl -> get_Value(This,value) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
+#define ____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable;
+
+typedef struct __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out __FIKeyValuePair_2_HSTRING_IInspectable * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __FIKeyValuePair_2_HSTRING_IInspectable * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl;
+
+interface __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable
+{
+    CONST_VTBL struct __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
+#define ____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable;
+
+typedef  struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable **first);
+
+    END_INTERFACE
+} __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl;
+
+interface __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable
+{
+    CONST_VTBL struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
 
-#endif // ____FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#endif // ____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
+#define ____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIMapView_2_HSTRING_IInspectable __FIMapView_2_HSTRING_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIMapView_2_HSTRING_IInspectable;
+
+typedef struct __FIMapView_2_HSTRING_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,/* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in HSTRING key,
+        /* [retval][out] */ __RPC__deref_out_opt IInspectable * *value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This, /* [in] */ __RPC__in HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *Split )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,/* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable **firstPartition,
+        /* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable **secondPartition);
+    END_INTERFACE
+} __FIMapView_2_HSTRING_IInspectableVtbl;
+
+interface __FIMapView_2_HSTRING_IInspectable
+{
+    CONST_VTBL struct __FIMapView_2_HSTRING_IInspectableVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIMapView_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIMapView_2_HSTRING_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIMapView_2_HSTRING_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIMapView_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIMapView_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIMapView_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIMapView_2_HSTRING_IInspectable_Lookup(This,key,value)	\
+    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
+#define __FIMapView_2_HSTRING_IInspectable_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+#define __FIMapView_2_HSTRING_IInspectable_HasKey(This,key,found)	\
+    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
+#define __FIMapView_2_HSTRING_IInspectable_Split(This,firstPartition,secondPartition)	\
+    ( (This)->lpVtbl -> Split(This,firstPartition,secondPartition) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIMap_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
+#define ____FIMap_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIMap_2_HSTRING_IInspectable __FIMap_2_HSTRING_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIMap_2_HSTRING_IInspectable;
+
+typedef struct __FIMap_2_HSTRING_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMap_2_HSTRING_IInspectable * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMap_2_HSTRING_IInspectable * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMap_2_HSTRING_IInspectable * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMap_2_HSTRING_IInspectable * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMap_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMap_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMap_2_HSTRING_IInspectable * This,
+        /* [in] */ HSTRING key,
+        /* [retval][out] */ __RPC__deref_out_opt IInspectable * **value);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMap_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out unsigned int *size);
+    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMap_2_HSTRING_IInspectable * This, /* [in] */ HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIMap_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable **view);
+    HRESULT ( STDMETHODCALLTYPE *Insert )(__RPC__in __FIMap_2_HSTRING_IInspectable * This,
+        /* [in] */ HSTRING key,
+        /* [in] */ __RPC__in_opt IInspectable * *value,
+        /* [retval][out] */ __RPC__out boolean *replaced);
+    HRESULT ( STDMETHODCALLTYPE *Remove )(__RPC__in __FIMap_2_HSTRING_IInspectable * This,/* [in] */ HSTRING key);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIMap_2_HSTRING_IInspectable * This);
+    END_INTERFACE
+} __FIMap_2_HSTRING_IInspectableVtbl;
+
+interface __FIMap_2_HSTRING_IInspectable
+{
+    CONST_VTBL struct __FIMap_2_HSTRING_IInspectableVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIMap_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIMap_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIMap_2_HSTRING_IInspectable_Lookup(This,key,value)	\
+    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_HasKey(This,key,found)	\
+    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_GetView(This,view)	\
+    ( (This)->lpVtbl -> GetView(This,view) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_Insert(This,key,value,replaced)	\
+    ( (This)->lpVtbl -> Insert(This,key,value,replaced) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_Remove(This,key)	\
+    ( (This)->lpVtbl -> Remove(This,key) ) 
+
+#define __FIMap_2_HSTRING_IInspectable_Clear(This)	\
+    ( (This)->lpVtbl -> Clear(This) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIMap_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+
+#if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_HSTRING __FIIterator_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_HSTRING;
+
+typedef struct __FIIterator_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_HSTRING * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_HSTRING * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_HSTRING * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1_HSTRINGVtbl;
+
+interface __FIIterator_1_HSTRING
+{
+    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_HSTRING_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_HSTRING_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_HSTRING_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_HSTRING_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
+
+
+#if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_HSTRING;
+
+typedef  struct __FIIterable_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_HSTRING * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_HSTRING * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_HSTRING * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_HSTRING **first);
+
+    END_INTERFACE
+} __FIIterable_1_HSTRINGVtbl;
+
+interface __FIIterable_1_HSTRING
+{
+    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterable_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterable_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterable_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_HSTRING_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
+
+
+#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_HSTRING;
+
+typedef struct __FIVectorView_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_HSTRING * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_HSTRING * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_HSTRING * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_HSTRING * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out HSTRING *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [in] */ HSTRING item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_HSTRINGVtbl;
+
+interface __FIVectorView_1_HSTRING
+{
+    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_HSTRING_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_HSTRING_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_HSTRING_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_HSTRING_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
+
+
+#if !defined(____FIVector_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIVector_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIVector_1_HSTRING __FIVector_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVector_1_HSTRING;
+
+typedef struct __FIVector_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVector_1_HSTRING * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_HSTRING * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int index,
+        /* [retval][out] */ __RPC__deref_out_opt HSTRING *item);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+        __RPC__in __FIVector_1_HSTRING * This,
+        /* [retval][out] */ __RPC__out unsigned int *size);
+
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIVectorView_1_HSTRING **view);
+
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ __RPC__in HSTRING item,
+        /* [out] */ __RPC__out unsigned int *index,
+        /* [retval][out] */ __RPC__out boolean *found);
+
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int index,
+        /* [in] */ __RPC__in HSTRING item);
+
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int index,
+        /* [in] */ __RPC__in HSTRING item);
+
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_HSTRING * This, /* [in] */ unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_HSTRING * This, /* [in] */ __RPC__in HSTRING item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int startIndex,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int count,
+        /* [size_is][in] */ __RPC__in_ecount_full(count) HSTRING *value);
+
+    END_INTERFACE
+} __FIVector_1_HSTRINGVtbl;
+
+interface __FIVector_1_HSTRING
+{
+    CONST_VTBL struct __FIVector_1_HSTRINGVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVector_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVector_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVector_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVector_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVector_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVector_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVector_1_HSTRING_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVector_1_HSTRING_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVector_1_HSTRING_GetView(This,view)	\
+    ( (This)->lpVtbl -> GetView(This,view) ) 
+
+#define __FIVector_1_HSTRING_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVector_1_HSTRING_SetAt(This,index,item)	\
+    ( (This)->lpVtbl -> SetAt(This,index,item) ) 
+
+#define __FIVector_1_HSTRING_InsertAt(This,index,item)	\
+    ( (This)->lpVtbl -> InsertAt(This,index,item) ) 
+
+#define __FIVector_1_HSTRING_RemoveAt(This,index)	\
+    ( (This)->lpVtbl -> RemoveAt(This,index) ) 
+
+#define __FIVector_1_HSTRING_Append(This,item)	\
+    ( (This)->lpVtbl -> Append(This,item) ) 
+
+#define __FIVector_1_HSTRING_RemoveAtEnd(This)	\
+    ( (This)->lpVtbl -> RemoveAtEnd(This) ) 
+
+#define __FIVector_1_HSTRING_Clear(This)	\
+    ( (This)->lpVtbl -> Clear(This) ) 
+
+#define __FIVector_1_HSTRING_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#define __FIVector_1_HSTRING_ReplaceAll(This,count,value)	\
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVector_1_HSTRING_INTERFACE_DEFINED__
+
+
 
 #ifndef ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
@@ -4455,11 +4595,21 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackage
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet_FWD_DEFINED__
 
+
+
+
+
+
 typedef struct __x_ABI_CWindows_CFoundation_CDateTime __x_ABI_CWindows_CFoundation_CDateTime;
+
 
 typedef struct __x_ABI_CWindows_CFoundation_CRect __x_ABI_CWindows_CFoundation_CRect;
 
+
 typedef struct __x_ABI_CWindows_CFoundation_CSize __x_ABI_CWindows_CFoundation_CSize;
+
+
+
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -4467,31 +4617,90 @@ typedef interface __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream __x_AB
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 
+
+
+
+
+
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBinding __x_ABI_CWindows_CGraphics_CPrinting_CPrintBinding;
+
 
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBordering __x_ABI_CWindows_CGraphics_CPrinting_CPrintBordering;
 
+
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintCollation __x_ABI_CWindows_CGraphics_CPrinting_CPrintCollation;
+
 
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintColorMode __x_ABI_CWindows_CGraphics_CPrinting_CPrintColorMode;
 
+
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintDuplex __x_ABI_CWindows_CGraphics_CPrinting_CPrintDuplex;
+
 
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintHolePunch __x_ABI_CWindows_CGraphics_CPrinting_CPrintHolePunch;
 
+
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize;
+
 
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaType __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaType;
 
+
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation;
+
 
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintQuality __x_ABI_CWindows_CGraphics_CPrinting_CPrintQuality;
 
+
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintStaple __x_ABI_CWindows_CGraphics_CPrinting_CPrintStaple;
+
 
 typedef enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintTaskCompletion __x_ABI_CWindows_CGraphics_CPrinting_CPrintTaskCompletion;
 
+
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CPrintPageDescription __x_ABI_CWindows_CGraphics_CPrinting_CPrintPageDescription;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -4499,8 +4708,11 @@ typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CPrintPageDescription __x_AB
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBinding
 {
     PrintBinding_Default = 0,
@@ -4523,14 +4735,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBinding
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintBordering
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBordering
 {
     PrintBordering_Default = 0,
@@ -4541,14 +4757,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBordering
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintCollation
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintCollation
 {
     PrintCollation_Default = 0,
@@ -4559,14 +4779,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintCollation
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintColorMode
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintColorMode
 {
     PrintColorMode_Default = 0,
@@ -4578,14 +4802,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintColorMode
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintDuplex
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintDuplex
 {
     PrintDuplex_Default = 0,
@@ -4597,14 +4825,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintDuplex
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintHolePunch
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintHolePunch
 {
     PrintHolePunch_Default = 0,
@@ -4618,14 +4850,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintHolePunch
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintMediaSize
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize
 {
     PrintMediaSize_Default = 0,
@@ -4804,14 +5040,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintMediaType
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaType
 {
     PrintMediaType_Default = 0,
@@ -4849,14 +5089,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaType
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintOrientation
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation
 {
     PrintOrientation_Default = 0,
@@ -4869,14 +5113,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintQuality
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintQuality
 {
     PrintQuality_Default = 0,
@@ -4892,14 +5140,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintQuality
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintStaple
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintStaple
 {
     PrintStaple_Default = 0,
@@ -4918,14 +5170,18 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintStaple
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintTaskCompletion
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintTaskCompletion
 {
     PrintTaskCompletion_Abandoned = 0,
@@ -4935,22 +5191,27 @@ enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintTaskCompletion
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Struct Windows.Graphics.Printing.PrintPageDescription
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/* [contract] */
 struct __x_ABI_CWindows_CGraphics_CPrinting_CPrintPageDescription
 {
-    struct __x_ABI_CWindows_CFoundation_CSize PageSize;
-    struct __x_ABI_CWindows_CFoundation_CRect ImageableRect;
+    __x_ABI_CWindows_CFoundation_CSize PageSize;
+    __x_ABI_CWindows_CFoundation_CRect ImageableRect;
     UINT32 DpiX;
     UINT32 DpiY;
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4958,49 +5219,60 @@ struct __x_ABI_CWindows_CGraphics_CPrinting_CPrintPageDescription
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_INTERFACE_DEFINED__
+/* [object, uuid("6C109FA8-5CB6-4B3A-8663-F39CB02DC9B4"), contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandlerVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* args);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler * This);
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler * This);
+HRESULT ( STDMETHODCALLTYPE *Invoke )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * args
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandlerVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandlerVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandlerVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_Invoke(This, args) \
-    ((This)->lpVtbl->Invoke(This, args))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_Invoke(This,args) \
+    ( (This)->lpVtbl->Invoke(This,args) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -5008,61 +5280,82 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceReq
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintDocumentSource[] = L"Windows.Graphics.Printing.IPrintDocumentSource";
+/* [object, uuid("DEDC0C30-F1EB-47DF-AAE6-ED5427511F01"), contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSourceVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource* This,
-        TrustLevel* trustLevel);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource * This
+    );
 
-    END_INTERFACE
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSourceVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSourceVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSourceVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -5070,74 +5363,100 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSourc
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintManager[] = L"Windows.Graphics.Printing.IPrintManager";
+/* [object, uuid("FF2A9694-8C99-44FD-AE4A-19D9AA9A0F0A"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* add_PrintTaskRequested)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager* This,
-        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs* eventHandler,
-        EventRegistrationToken* eventCookie);
-    HRESULT (STDMETHODCALLTYPE* remove_PrintTaskRequested)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager* This,
-        EventRegistrationToken eventCookie);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_PrintTaskRequested )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintManager_Windows__CGraphics__CPrinting__CPrintTaskRequestedEventArgs * eventHandler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_PrintTaskRequested )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * This,
+        /* [in] */EventRegistrationToken eventCookie
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_add_PrintTaskRequested(This, eventHandler, eventCookie) \
-    ((This)->lpVtbl->add_PrintTaskRequested(This, eventHandler, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_add_PrintTaskRequested(This,eventHandler,eventCookie) \
+    ( (This)->lpVtbl->add_PrintTaskRequested(This,eventHandler,eventCookie) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_remove_PrintTaskRequested(This, eventCookie) \
-    ((This)->lpVtbl->remove_PrintTaskRequested(This, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_remove_PrintTaskRequested(This,eventCookie) \
+    ( (This)->lpVtbl->remove_PrintTaskRequested(This,eventCookie) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -5145,73 +5464,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintManagerStatic[] = L"Windows.Graphics.Printing.IPrintManagerStatic";
+/* [object, uuid("58185DCD-E634-4654-84F0-E0152A8217AC"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStaticVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetForCurrentView)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager** printingManager);
-    HRESULT (STDMETHODCALLTYPE* ShowPrintUIAsync)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic* This,
-        __FIAsyncOperation_1_boolean** operation);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetForCurrentView )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManager * * printingManager
+        );
+    HRESULT ( STDMETHODCALLTYPE *ShowPrintUIAsync )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStaticVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStaticVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStaticVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_GetForCurrentView(This, printingManager) \
-    ((This)->lpVtbl->GetForCurrentView(This, printingManager))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_GetForCurrentView(This,printingManager) \
+    ( (This)->lpVtbl->GetForCurrentView(This,printingManager) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_ShowPrintUIAsync(This, operation) \
-    ((This)->lpVtbl->ShowPrintUIAsync(This, operation))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_ShowPrintUIAsync(This,operation) \
+    ( (This)->lpVtbl->ShowPrintUIAsync(This,operation) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -5219,68 +5564,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintManager
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintManagerStatic2[] = L"Windows.Graphics.Printing.IPrintManagerStatic2";
+/* [object, uuid("35A99955-E6AB-4139-9ABD-B86A729B3598"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2Vtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* IsSupported)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2* This,
-        boolean* result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2 * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *IsSupported )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2 * This,
+        /* [retval, out] */__RPC__out boolean * result
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2Vtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2Vtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2Vtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_IsSupported(This, result) \
-    ((This)->lpVtbl->IsSupported(This, result))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_IsSupported(This,result) \
+    ( (This)->lpVtbl->IsSupported(This,result) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -5288,358 +5657,155 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintManagerStatic
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintPageInfo
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintPageInfo[] = L"Windows.Graphics.Printing.IPrintPageInfo";
+/* [object, uuid("DD4BE9C9-A6A1-4ADA-930E-DA872A4F23D3"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfoVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_MediaSize)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize value);
-    HRESULT (STDMETHODCALLTYPE* get_MediaSize)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize* value);
-    HRESULT (STDMETHODCALLTYPE* put_PageSize)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        struct __x_ABI_CWindows_CFoundation_CSize value);
-    HRESULT (STDMETHODCALLTYPE* get_PageSize)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        struct __x_ABI_CWindows_CFoundation_CSize* value);
-    HRESULT (STDMETHODCALLTYPE* put_DpiX)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        UINT32 value);
-    HRESULT (STDMETHODCALLTYPE* get_DpiX)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* put_DpiY)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        UINT32 value);
-    HRESULT (STDMETHODCALLTYPE* get_DpiY)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* put_Orientation)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation value);
-    HRESULT (STDMETHODCALLTYPE* get_Orientation)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propput] */HRESULT ( STDMETHODCALLTYPE *put_MediaSize )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MediaSize )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_PageSize )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [in] */__x_ABI_CWindows_CFoundation_CSize value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PageSize )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CSize * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_DpiX )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [in] */UINT32 value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DpiX )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_DpiY )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [in] */UINT32 value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DpiY )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Orientation )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Orientation )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfoVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfoVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfoVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_MediaSize(This, value) \
-    ((This)->lpVtbl->put_MediaSize(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_MediaSize(This,value) \
+    ( (This)->lpVtbl->put_MediaSize(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_MediaSize(This, value) \
-    ((This)->lpVtbl->get_MediaSize(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_MediaSize(This,value) \
+    ( (This)->lpVtbl->get_MediaSize(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_PageSize(This, value) \
-    ((This)->lpVtbl->put_PageSize(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_PageSize(This,value) \
+    ( (This)->lpVtbl->put_PageSize(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_PageSize(This, value) \
-    ((This)->lpVtbl->get_PageSize(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_PageSize(This,value) \
+    ( (This)->lpVtbl->get_PageSize(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_DpiX(This, value) \
-    ((This)->lpVtbl->put_DpiX(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_DpiX(This,value) \
+    ( (This)->lpVtbl->put_DpiX(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_DpiX(This, value) \
-    ((This)->lpVtbl->get_DpiX(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_DpiX(This,value) \
+    ( (This)->lpVtbl->get_DpiX(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_DpiY(This, value) \
-    ((This)->lpVtbl->put_DpiY(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_DpiY(This,value) \
+    ( (This)->lpVtbl->put_DpiY(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_DpiY(This, value) \
-    ((This)->lpVtbl->get_DpiY(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_DpiY(This,value) \
+    ( (This)->lpVtbl->get_DpiY(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_Orientation(This, value) \
-    ((This)->lpVtbl->put_Orientation(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_put_Orientation(This,value) \
+    ( (This)->lpVtbl->put_Orientation(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_Orientation(This, value) \
-    ((This)->lpVtbl->get_Orientation(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_get_Orientation(This,value) \
+    ( (This)->lpVtbl->get_Orientation(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-/*
- *
- * Interface Windows.Graphics.Printing.IPrintPageRange
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintPageRange
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintPageRange[] = L"Windows.Graphics.Printing.IPrintPageRange";
-typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_FirstPageNumber)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_LastPageNumber)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange* This,
-        INT32* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeVtbl;
-
-interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange
-{
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_get_FirstPageNumber(This, value) \
-    ((This)->lpVtbl->get_FirstPageNumber(This, value))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_get_LastPageNumber(This, value) \
-    ((This)->lpVtbl->get_LastPageNumber(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-/*
- *
- * Interface Windows.Graphics.Printing.IPrintPageRangeFactory
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintPageRange
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintPageRangeFactory[] = L"Windows.Graphics.Printing.IPrintPageRangeFactory";
-typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactoryVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* Create)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory* This,
-        INT32 firstPage,
-        INT32 lastPage,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange** result);
-    HRESULT (STDMETHODCALLTYPE* CreateWithSinglePage)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory* This,
-        INT32 page,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRange** result);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactoryVtbl;
-
-interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory
-{
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactoryVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_Create(This, firstPage, lastPage, result) \
-    ((This)->lpVtbl->Create(This, firstPage, lastPage, result))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_CreateWithSinglePage(This, page, result) \
-    ((This)->lpVtbl->CreateWithSinglePage(This, page, result))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeFactory_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-/*
- *
- * Interface Windows.Graphics.Printing.IPrintPageRangeOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintPageRangeOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintPageRangeOptions[] = L"Windows.Graphics.Printing.IPrintPageRangeOptions";
-typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptionsVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_AllowAllPages)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        boolean value);
-    HRESULT (STDMETHODCALLTYPE* get_AllowAllPages)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* put_AllowCurrentPage)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        boolean value);
-    HRESULT (STDMETHODCALLTYPE* get_AllowCurrentPage)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* put_AllowCustomSetOfPages)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        boolean value);
-    HRESULT (STDMETHODCALLTYPE* get_AllowCustomSetOfPages)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions* This,
-        boolean* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptionsVtbl;
-
-interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions
-{
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptionsVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_put_AllowAllPages(This, value) \
-    ((This)->lpVtbl->put_AllowAllPages(This, value))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_get_AllowAllPages(This, value) \
-    ((This)->lpVtbl->get_AllowAllPages(This, value))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_put_AllowCurrentPage(This, value) \
-    ((This)->lpVtbl->put_AllowCurrentPage(This, value))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_get_AllowCurrentPage(This, value) \
-    ((This)->lpVtbl->get_AllowCurrentPage(This, value))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_put_AllowCustomSetOfPages(This, value) \
-    ((This)->lpVtbl->put_AllowCustomSetOfPages(This, value))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_get_AllowCustomSetOfPages(This, value) \
-    ((This)->lpVtbl->get_AllowCustomSetOfPages(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 /*
  *
@@ -5647,122 +5813,166 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOpti
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTask
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTask[] = L"Windows.Graphics.Printing.IPrintTask";
+/* [object, uuid("61D80247-6CF6-4FAD-84E2-A5E82E2D4CEB"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Properties)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet** value);
-    HRESULT (STDMETHODCALLTYPE* get_Source)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource** value);
-    HRESULT (STDMETHODCALLTYPE* get_Options)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore** value);
-    HRESULT (STDMETHODCALLTYPE* add_Previewing)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable* eventHandler,
-        EventRegistrationToken* eventCookie);
-    HRESULT (STDMETHODCALLTYPE* remove_Previewing)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        EventRegistrationToken eventCookie);
-    HRESULT (STDMETHODCALLTYPE* add_Submitting)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable* eventHandler,
-        EventRegistrationToken* eventCookie);
-    HRESULT (STDMETHODCALLTYPE* remove_Submitting)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        EventRegistrationToken eventCookie);
-    HRESULT (STDMETHODCALLTYPE* add_Progressing)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs* eventHandler,
-        EventRegistrationToken* eventCookie);
-    HRESULT (STDMETHODCALLTYPE* remove_Progressing)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        EventRegistrationToken eventCookie);
-    HRESULT (STDMETHODCALLTYPE* add_Completed)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs* eventHandler,
-        EventRegistrationToken* eventCookie);
-    HRESULT (STDMETHODCALLTYPE* remove_Completed)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask* This,
-        EventRegistrationToken eventCookie);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Properties )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CDataTransfer_CIDataPackagePropertySet * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Source )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Options )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * * value
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_Previewing )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * eventHandler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_Previewing )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [in] */EventRegistrationToken eventCookie
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_Submitting )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_IInspectable * eventHandler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_Submitting )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [in] */EventRegistrationToken eventCookie
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_Progressing )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskProgressingEventArgs * eventHandler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_Progressing )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [in] */EventRegistrationToken eventCookie
+        );
+    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_Completed )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CGraphics__CPrinting__CPrintTask_Windows__CGraphics__CPrinting__CPrintTaskCompletedEventArgs * eventHandler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
+        );
+    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_Completed )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * This,
+        /* [in] */EventRegistrationToken eventCookie
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_get_Properties(This, value) \
-    ((This)->lpVtbl->get_Properties(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_get_Properties(This,value) \
+    ( (This)->lpVtbl->get_Properties(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_get_Source(This, value) \
-    ((This)->lpVtbl->get_Source(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_get_Source(This,value) \
+    ( (This)->lpVtbl->get_Source(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_get_Options(This, value) \
-    ((This)->lpVtbl->get_Options(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_get_Options(This,value) \
+    ( (This)->lpVtbl->get_Options(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_add_Previewing(This, eventHandler, eventCookie) \
-    ((This)->lpVtbl->add_Previewing(This, eventHandler, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_add_Previewing(This,eventHandler,eventCookie) \
+    ( (This)->lpVtbl->add_Previewing(This,eventHandler,eventCookie) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_remove_Previewing(This, eventCookie) \
-    ((This)->lpVtbl->remove_Previewing(This, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_remove_Previewing(This,eventCookie) \
+    ( (This)->lpVtbl->remove_Previewing(This,eventCookie) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_add_Submitting(This, eventHandler, eventCookie) \
-    ((This)->lpVtbl->add_Submitting(This, eventHandler, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_add_Submitting(This,eventHandler,eventCookie) \
+    ( (This)->lpVtbl->add_Submitting(This,eventHandler,eventCookie) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_remove_Submitting(This, eventCookie) \
-    ((This)->lpVtbl->remove_Submitting(This, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_remove_Submitting(This,eventCookie) \
+    ( (This)->lpVtbl->remove_Submitting(This,eventCookie) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_add_Progressing(This, eventHandler, eventCookie) \
-    ((This)->lpVtbl->add_Progressing(This, eventHandler, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_add_Progressing(This,eventHandler,eventCookie) \
+    ( (This)->lpVtbl->add_Progressing(This,eventHandler,eventCookie) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_remove_Progressing(This, eventCookie) \
-    ((This)->lpVtbl->remove_Progressing(This, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_remove_Progressing(This,eventCookie) \
+    ( (This)->lpVtbl->remove_Progressing(This,eventCookie) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_add_Completed(This, eventHandler, eventCookie) \
-    ((This)->lpVtbl->add_Completed(This, eventHandler, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_add_Completed(This,eventHandler,eventCookie) \
+    ( (This)->lpVtbl->add_Completed(This,eventHandler,eventCookie) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_remove_Completed(This, eventCookie) \
-    ((This)->lpVtbl->remove_Completed(This, eventCookie))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_remove_Completed(This,eventCookie) \
+    ( (This)->lpVtbl->remove_Completed(This,eventCookie) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -5770,73 +5980,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTask
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTask2[] = L"Windows.Graphics.Printing.IPrintTask2";
+/* [object, uuid("36234877-3E53-4D9D-8F5E-316AC8DEDAE1"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2Vtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_IsPreviewEnabled)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2* This,
-        boolean value);
-    HRESULT (STDMETHODCALLTYPE* get_IsPreviewEnabled)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2* This,
-        boolean* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propput] */HRESULT ( STDMETHODCALLTYPE *put_IsPreviewEnabled )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsPreviewEnabled )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2 * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2Vtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2Vtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2Vtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_put_IsPreviewEnabled(This, value) \
-    ((This)->lpVtbl->put_IsPreviewEnabled(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_put_IsPreviewEnabled(This,value) \
+    ( (This)->lpVtbl->put_IsPreviewEnabled(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_get_IsPreviewEnabled(This, value) \
-    ((This)->lpVtbl->get_IsPreviewEnabled(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_get_IsPreviewEnabled(This,value) \
+    ( (This)->lpVtbl->get_IsPreviewEnabled(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -5844,68 +6080,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask2;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskCompletedEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskCompletedEventArgs[] = L"Windows.Graphics.Printing.IPrintTaskCompletedEventArgs";
+/* [object, uuid("5BCD34AF-24E9-4C10-8D07-14C346BA3FCE"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Completion)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintTaskCompletion* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Completion )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintTaskCompletion * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgsVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_get_Completion(This, value) \
-    ((This)->lpVtbl->get_Completion(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_get_Completion(This,value) \
+    ( (This)->lpVtbl->get_Completion(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompletedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -5913,153 +6173,107 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskCompleted
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskOptions
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskOptions[] = L"Windows.Graphics.Printing.IPrintTaskOptions";
+/* [object, uuid("5A0A66BB-D289-41BB-96DD-57E28338AE3F"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Bordering)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBordering value);
-    HRESULT (STDMETHODCALLTYPE* get_Bordering)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBordering* value);
-    HRESULT (STDMETHODCALLTYPE* GetPagePrintTicket)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo* printPageInfo,
-        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream** printTicket);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Bordering )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintBordering value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Bordering )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintBordering * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetPagePrintTicket )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageInfo * printPageInfo,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * * printTicket
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_put_Bordering(This, value) \
-    ((This)->lpVtbl->put_Bordering(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_put_Bordering(This,value) \
+    ( (This)->lpVtbl->put_Bordering(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_get_Bordering(This, value) \
-    ((This)->lpVtbl->get_Bordering(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_get_Bordering(This,value) \
+    ( (This)->lpVtbl->get_Bordering(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_GetPagePrintTicket(This, printPageInfo, printTicket) \
-    ((This)->lpVtbl->GetPagePrintTicket(This, printPageInfo, printTicket))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_GetPagePrintTicket(This,printPageInfo,printTicket) \
+    ( (This)->lpVtbl->GetPagePrintTicket(This,printPageInfo,printTicket) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-/*
- *
- * Interface Windows.Graphics.Printing.IPrintTaskOptions2
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskOptions2[] = L"Windows.Graphics.Printing.IPrintTaskOptions2";
-typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_PageRangeOptions)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintPageRangeOptions** value);
-    HRESULT (STDMETHODCALLTYPE* get_CustomPageRanges)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2* This,
-        __FIVector_1_Windows__CGraphics__CPrinting__CPrintPageRange** value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2Vtbl;
-
-interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2
-{
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_get_PageRangeOptions(This, value) \
-    ((This)->lpVtbl->get_PageRangeOptions(This, value))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_get_CustomPageRanges(This, value) \
-    ((This)->lpVtbl->get_CustomPageRanges(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 /*
  *
@@ -6067,67 +6281,90 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptions2;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskOptionsCore[] = L"Windows.Graphics.Printing.IPrintTaskOptionsCore";
+/* [object, uuid("1BDBB474-4ED1-41EB-BE3C-72D18ED67337"), contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetPageDescription)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This,
-        UINT32 jobPageNumber,
-        struct __x_ABI_CWindows_CGraphics_CPrinting_CPrintPageDescription* description);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetPageDescription )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore * This,
+        /* [in] */UINT32 jobPageNumber,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintPageDescription * description
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_GetPageDescription(This, jobPageNumber, description) \
-    ((This)->lpVtbl->GetPageDescription(This, jobPageNumber, description))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_GetPageDescription(This,jobPageNumber,description) \
+    ( (This)->lpVtbl->GetPageDescription(This,jobPageNumber,description) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6135,181 +6372,250 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskOptionsCoreProperties[] = L"Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties";
+/* [object, uuid("C1B71832-9E93-4E55-814B-3326A59EFCE1"), contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCorePropertiesVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_MediaSize)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize value);
-    HRESULT (STDMETHODCALLTYPE* get_MediaSize)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize* value);
-    HRESULT (STDMETHODCALLTYPE* put_MediaType)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaType value);
-    HRESULT (STDMETHODCALLTYPE* get_MediaType)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaType* value);
-    HRESULT (STDMETHODCALLTYPE* put_Orientation)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation value);
-    HRESULT (STDMETHODCALLTYPE* get_Orientation)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation* value);
-    HRESULT (STDMETHODCALLTYPE* put_PrintQuality)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintQuality value);
-    HRESULT (STDMETHODCALLTYPE* get_PrintQuality)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintQuality* value);
-    HRESULT (STDMETHODCALLTYPE* put_ColorMode)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintColorMode value);
-    HRESULT (STDMETHODCALLTYPE* get_ColorMode)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintColorMode* value);
-    HRESULT (STDMETHODCALLTYPE* put_Duplex)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintDuplex value);
-    HRESULT (STDMETHODCALLTYPE* get_Duplex)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintDuplex* value);
-    HRESULT (STDMETHODCALLTYPE* put_Collation)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintCollation value);
-    HRESULT (STDMETHODCALLTYPE* get_Collation)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintCollation* value);
-    HRESULT (STDMETHODCALLTYPE* put_Staple)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintStaple value);
-    HRESULT (STDMETHODCALLTYPE* get_Staple)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintStaple* value);
-    HRESULT (STDMETHODCALLTYPE* put_HolePunch)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintHolePunch value);
-    HRESULT (STDMETHODCALLTYPE* get_HolePunch)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintHolePunch* value);
-    HRESULT (STDMETHODCALLTYPE* put_Binding)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBinding value);
-    HRESULT (STDMETHODCALLTYPE* get_Binding)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        enum __x_ABI_CWindows_CGraphics_CPrinting_CPrintBinding* value);
-    HRESULT (STDMETHODCALLTYPE* get_MinCopies)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_MaxCopies)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* put_NumberOfCopies)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        UINT32 value);
-    HRESULT (STDMETHODCALLTYPE* get_NumberOfCopies)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties* This,
-        UINT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propput] */HRESULT ( STDMETHODCALLTYPE *put_MediaSize )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MediaSize )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaSize * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_MediaType )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaType value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MediaType )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintMediaType * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Orientation )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Orientation )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintOrientation * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_PrintQuality )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintQuality value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PrintQuality )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintQuality * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_ColorMode )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintColorMode value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ColorMode )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintColorMode * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Duplex )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintDuplex value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Duplex )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintDuplex * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Collation )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintCollation value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Collation )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintCollation * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Staple )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintStaple value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Staple )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintStaple * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_HolePunch )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintHolePunch value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HolePunch )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintHolePunch * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Binding )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */__x_ABI_CWindows_CGraphics_CPrinting_CPrintBinding value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Binding )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CPrinting_CPrintBinding * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MinCopies )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MaxCopies )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_NumberOfCopies )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [in] */UINT32 value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NumberOfCopies )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCorePropertiesVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCorePropertiesVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCorePropertiesVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_MediaSize(This, value) \
-    ((This)->lpVtbl->put_MediaSize(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_MediaSize(This,value) \
+    ( (This)->lpVtbl->put_MediaSize(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_MediaSize(This, value) \
-    ((This)->lpVtbl->get_MediaSize(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_MediaSize(This,value) \
+    ( (This)->lpVtbl->get_MediaSize(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_MediaType(This, value) \
-    ((This)->lpVtbl->put_MediaType(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_MediaType(This,value) \
+    ( (This)->lpVtbl->put_MediaType(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_MediaType(This, value) \
-    ((This)->lpVtbl->get_MediaType(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_MediaType(This,value) \
+    ( (This)->lpVtbl->get_MediaType(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Orientation(This, value) \
-    ((This)->lpVtbl->put_Orientation(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Orientation(This,value) \
+    ( (This)->lpVtbl->put_Orientation(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Orientation(This, value) \
-    ((This)->lpVtbl->get_Orientation(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Orientation(This,value) \
+    ( (This)->lpVtbl->get_Orientation(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_PrintQuality(This, value) \
-    ((This)->lpVtbl->put_PrintQuality(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_PrintQuality(This,value) \
+    ( (This)->lpVtbl->put_PrintQuality(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_PrintQuality(This, value) \
-    ((This)->lpVtbl->get_PrintQuality(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_PrintQuality(This,value) \
+    ( (This)->lpVtbl->get_PrintQuality(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_ColorMode(This, value) \
-    ((This)->lpVtbl->put_ColorMode(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_ColorMode(This,value) \
+    ( (This)->lpVtbl->put_ColorMode(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_ColorMode(This, value) \
-    ((This)->lpVtbl->get_ColorMode(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_ColorMode(This,value) \
+    ( (This)->lpVtbl->get_ColorMode(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Duplex(This, value) \
-    ((This)->lpVtbl->put_Duplex(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Duplex(This,value) \
+    ( (This)->lpVtbl->put_Duplex(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Duplex(This, value) \
-    ((This)->lpVtbl->get_Duplex(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Duplex(This,value) \
+    ( (This)->lpVtbl->get_Duplex(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Collation(This, value) \
-    ((This)->lpVtbl->put_Collation(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Collation(This,value) \
+    ( (This)->lpVtbl->put_Collation(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Collation(This, value) \
-    ((This)->lpVtbl->get_Collation(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Collation(This,value) \
+    ( (This)->lpVtbl->get_Collation(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Staple(This, value) \
-    ((This)->lpVtbl->put_Staple(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Staple(This,value) \
+    ( (This)->lpVtbl->put_Staple(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Staple(This, value) \
-    ((This)->lpVtbl->get_Staple(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Staple(This,value) \
+    ( (This)->lpVtbl->get_Staple(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_HolePunch(This, value) \
-    ((This)->lpVtbl->put_HolePunch(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_HolePunch(This,value) \
+    ( (This)->lpVtbl->put_HolePunch(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_HolePunch(This, value) \
-    ((This)->lpVtbl->get_HolePunch(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_HolePunch(This,value) \
+    ( (This)->lpVtbl->get_HolePunch(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Binding(This, value) \
-    ((This)->lpVtbl->put_Binding(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_Binding(This,value) \
+    ( (This)->lpVtbl->put_Binding(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Binding(This, value) \
-    ((This)->lpVtbl->get_Binding(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_Binding(This,value) \
+    ( (This)->lpVtbl->get_Binding(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_MinCopies(This, value) \
-    ((This)->lpVtbl->get_MinCopies(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_MinCopies(This,value) \
+    ( (This)->lpVtbl->get_MinCopies(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_MaxCopies(This, value) \
-    ((This)->lpVtbl->get_MaxCopies(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_MaxCopies(This,value) \
+    ( (This)->lpVtbl->get_MaxCopies(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_NumberOfCopies(This, value) \
-    ((This)->lpVtbl->put_NumberOfCopies(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_put_NumberOfCopies(This,value) \
+    ( (This)->lpVtbl->put_NumberOfCopies(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_NumberOfCopies(This, value) \
-    ((This)->lpVtbl->get_NumberOfCopies(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_get_NumberOfCopies(This,value) \
+    ( (This)->lpVtbl->get_NumberOfCopies(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreProperties_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6317,66 +6623,89 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskOptionsCoreUIConfiguration[] = L"Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration";
+/* [object, uuid("62E69E23-9A1E-4336-B74F-3CC7F4CFF709"), contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfigurationVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_DisplayedOptions)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration* This,
-        __FIVector_1_HSTRING** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DisplayedOptions )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfigurationVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfigurationVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfigurationVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_get_DisplayedOptions(This, value) \
-    ((This)->lpVtbl->get_DisplayedOptions(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_get_DisplayedOptions(This,value) \
+    ( (This)->lpVtbl->get_DisplayedOptions(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreUIConfiguration_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6384,68 +6713,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskProgressingEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskProgressingEventArgs[] = L"Windows.Graphics.Printing.IPrintTaskProgressingEventArgs";
+/* [object, uuid("810CD3CB-B410-4282-A073-5AC378234174"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_DocumentPageCount)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs* This,
-        UINT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_DocumentPageCount )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgsVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_get_DocumentPageCount(This, value) \
-    ((This)->lpVtbl->get_DocumentPageCount(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_get_DocumentPageCount(This,value) \
+    ( (This)->lpVtbl->get_DocumentPageCount(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressingEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6453,80 +6806,108 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskProgressi
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskRequest
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskRequest[] = L"Windows.Graphics.Printing.IPrintTaskRequest";
+/* [object, uuid("6FF61E2E-2722-4240-A67C-F364849A17F3"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Deadline)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest* This,
-        struct __x_ABI_CWindows_CFoundation_CDateTime* value);
-    HRESULT (STDMETHODCALLTYPE* CreatePrintTask)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest* This,
-        HSTRING title,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler* handler,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask** task);
-    HRESULT (STDMETHODCALLTYPE* GetDeferral)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral** deferral);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Deadline )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CDateTime * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *CreatePrintTask )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * This,
+        /* [in] */__RPC__in HSTRING title,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedHandler  * handler,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTask * * task
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetDeferral )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral * * deferral
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_get_Deadline(This, value) \
-    ((This)->lpVtbl->get_Deadline(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_get_Deadline(This,value) \
+    ( (This)->lpVtbl->get_Deadline(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_CreatePrintTask(This, title, handler, task) \
-    ((This)->lpVtbl->CreatePrintTask(This, title, handler, task))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_CreatePrintTask(This,title,handler,task) \
+    ( (This)->lpVtbl->CreatePrintTask(This,title,handler,task) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_GetDeferral(This, deferral) \
-    ((This)->lpVtbl->GetDeferral(This, deferral))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_GetDeferral(This,deferral) \
+    ( (This)->lpVtbl->GetDeferral(This,deferral) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6534,67 +6915,91 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskRequestedDeferral
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskRequestedDeferral[] = L"Windows.Graphics.Printing.IPrintTaskRequestedDeferral";
+/* [object, uuid("CFEFB3F0-CE3E-42C7-9496-64800C622C44"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferralVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* Complete)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral* This);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *Complete )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral * This
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferralVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferralVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferralVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_Complete(This) \
-    ((This)->lpVtbl->Complete(This))
+    ( (This)->lpVtbl->Complete(This) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedDeferral_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6602,68 +7007,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequested
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskRequestedEventArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskRequestedEventArgs[] = L"Windows.Graphics.Printing.IPrintTaskRequestedEventArgs";
+/* [object, uuid("D0AFF924-A31B-454C-A7B6-5D0CC522FC16"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Request)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Request )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequest * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgsVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_get_Request(This, value) \
-    ((This)->lpVtbl->get_Request(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_get_Request(This,value) \
+    ( (This)->lpVtbl->get_Request(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6671,78 +7100,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskRequested
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskSourceRequestedArgs
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskSourceRequestedArgs[] = L"Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs";
+/* [object, uuid("F9F067BE-F456-41F0-9C98-5CE73E851410"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Deadline)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* This,
-        struct __x_ABI_CWindows_CFoundation_CDateTime* value);
-    HRESULT (STDMETHODCALLTYPE* SetSource)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource* source);
-    HRESULT (STDMETHODCALLTYPE* GetDeferral)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs* This,
-        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral** deferral);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Deadline )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CDateTime * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *SetSource )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintDocumentSource * source
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetDeferral )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral * * deferral
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgsVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_get_Deadline(This, value) \
-    ((This)->lpVtbl->get_Deadline(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_get_Deadline(This,value) \
+    ( (This)->lpVtbl->get_Deadline(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_SetSource(This, source) \
-    ((This)->lpVtbl->SetSource(This, source))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_SetSource(This,source) \
+    ( (This)->lpVtbl->SetSource(This,source) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_GetDeferral(This, deferral) \
-    ((This)->lpVtbl->GetDeferral(This, deferral))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_GetDeferral(This,deferral) \
+    ( (This)->lpVtbl->GetDeferral(This,deferral) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6750,67 +7207,91 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceReq
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskSourceRequestedDeferral[] = L"Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral";
+/* [object, uuid("4A1560D1-6992-4D9D-8555-4CA4563FB166"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferralVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* Complete)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral* This);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *Complete )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral * This
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferralVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferralVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferralVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_Complete(This) \
-    ((This)->lpVtbl->Complete(This))
+    ( (This)->lpVtbl->Complete(This) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceRequestedDeferral_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6818,83 +7299,113 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskSourceReq
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.PrintTask
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IPrintTaskTargetDeviceSupport[] = L"Windows.Graphics.Printing.IPrintTaskTargetDeviceSupport";
+/* [object, uuid("295D70C0-C2CB-4B7D-B0EA-93095091A220"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupportVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_IsPrinterTargetEnabled)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This,
-        boolean value);
-    HRESULT (STDMETHODCALLTYPE* get_IsPrinterTargetEnabled)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* put_Is3DManufacturingTargetEnabled)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This,
-        boolean value);
-    HRESULT (STDMETHODCALLTYPE* get_Is3DManufacturingTargetEnabled)(__x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport* This,
-        boolean* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propput] */HRESULT ( STDMETHODCALLTYPE *put_IsPrinterTargetEnabled )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsPrinterTargetEnabled )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Is3DManufacturingTargetEnabled )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Is3DManufacturingTargetEnabled )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupportVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupportVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupportVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_put_IsPrinterTargetEnabled(This, value) \
-    ((This)->lpVtbl->put_IsPrinterTargetEnabled(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_put_IsPrinterTargetEnabled(This,value) \
+    ( (This)->lpVtbl->put_IsPrinterTargetEnabled(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_get_IsPrinterTargetEnabled(This, value) \
-    ((This)->lpVtbl->get_IsPrinterTargetEnabled(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_get_IsPrinterTargetEnabled(This,value) \
+    ( (This)->lpVtbl->get_IsPrinterTargetEnabled(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_put_Is3DManufacturingTargetEnabled(This, value) \
-    ((This)->lpVtbl->put_Is3DManufacturingTargetEnabled(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_put_Is3DManufacturingTargetEnabled(This,value) \
+    ( (This)->lpVtbl->put_Is3DManufacturingTargetEnabled(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_get_Is3DManufacturingTargetEnabled(This, value) \
-    ((This)->lpVtbl->get_Is3DManufacturingTargetEnabled(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_get_Is3DManufacturingTargetEnabled(This,value) \
+    ( (This)->lpVtbl->get_Is3DManufacturingTargetEnabled(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDeviceSupport_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -6902,128 +7413,176 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIPrintTaskTargetDev
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.StandardPrintTaskOptions
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IStandardPrintTaskOptionsStatic[] = L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic";
+/* [object, uuid("B4483D26-0DD0-4CD4-BAFF-930FC7D6A574"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStaticVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_MediaSize)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_MediaType)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_Orientation)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_PrintQuality)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_ColorMode)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_Duplex)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_Collation)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_Staple)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_HolePunch)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_Binding)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_Copies)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_NUp)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_InputBin)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic* This,
-        HSTRING* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MediaSize )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MediaType )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Orientation )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PrintQuality )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ColorMode )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Duplex )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Collation )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Staple )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HolePunch )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Binding )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Copies )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NUp )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_InputBin )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStaticVtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStaticVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStaticVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_MediaSize(This, value) \
-    ((This)->lpVtbl->get_MediaSize(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_MediaSize(This,value) \
+    ( (This)->lpVtbl->get_MediaSize(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_MediaType(This, value) \
-    ((This)->lpVtbl->get_MediaType(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_MediaType(This,value) \
+    ( (This)->lpVtbl->get_MediaType(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Orientation(This, value) \
-    ((This)->lpVtbl->get_Orientation(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Orientation(This,value) \
+    ( (This)->lpVtbl->get_Orientation(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_PrintQuality(This, value) \
-    ((This)->lpVtbl->get_PrintQuality(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_PrintQuality(This,value) \
+    ( (This)->lpVtbl->get_PrintQuality(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_ColorMode(This, value) \
-    ((This)->lpVtbl->get_ColorMode(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_ColorMode(This,value) \
+    ( (This)->lpVtbl->get_ColorMode(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Duplex(This, value) \
-    ((This)->lpVtbl->get_Duplex(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Duplex(This,value) \
+    ( (This)->lpVtbl->get_Duplex(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Collation(This, value) \
-    ((This)->lpVtbl->get_Collation(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Collation(This,value) \
+    ( (This)->lpVtbl->get_Collation(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Staple(This, value) \
-    ((This)->lpVtbl->get_Staple(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Staple(This,value) \
+    ( (This)->lpVtbl->get_Staple(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_HolePunch(This, value) \
-    ((This)->lpVtbl->get_HolePunch(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_HolePunch(This,value) \
+    ( (This)->lpVtbl->get_HolePunch(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Binding(This, value) \
-    ((This)->lpVtbl->get_Binding(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Binding(This,value) \
+    ( (This)->lpVtbl->get_Binding(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Copies(This, value) \
-    ((This)->lpVtbl->get_Copies(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_Copies(This,value) \
+    ( (This)->lpVtbl->get_Copies(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_NUp(This, value) \
-    ((This)->lpVtbl->get_NUp(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_NUp(This,value) \
+    ( (This)->lpVtbl->get_NUp(This,value) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_InputBin(This, value) \
-    ((This)->lpVtbl->get_InputBin(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_get_InputBin(This,value) \
+    ( (This)->lpVtbl->get_InputBin(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -7031,137 +7590,92 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskO
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Graphics.Printing.StandardPrintTaskOptions
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IStandardPrintTaskOptionsStatic2[] = L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2";
+/* [object, uuid("3BE38BF4-7A44-4269-9A52-81261E289EE9"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2Vtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2 * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Bordering)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2* This,
-        HSTRING* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2 * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2 * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2 * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2 * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2 * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Bordering )(
+        __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2 * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2Vtbl;
 
 interface __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2Vtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2Vtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_get_Bordering(This, value) \
-    ((This)->lpVtbl->get_Bordering(This, value))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_get_Bordering(This,value) \
+    ( (This)->lpVtbl->get_Bordering(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2;
 #endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-/*
- *
- * Interface Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Interface is a part of the implementation of type Windows.Graphics.Printing.StandardPrintTaskOptions
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#if !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Graphics_Printing_IStandardPrintTaskOptionsStatic3[] = L"Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3";
-typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3Vtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_CustomPageRanges)(__x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3* This,
-        HSTRING* value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3Vtbl;
-
-interface __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3
-{
-    CONST_VTBL struct __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3Vtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_get_CustomPageRanges(This, value) \
-    ((This)->lpVtbl->get_CustomPageRanges(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3;
-#endif /* !defined(____x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskOptionsStatic3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 /*
  *
@@ -7169,9 +7683,10 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskO
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintManager ** Default Interface **
@@ -7180,17 +7695,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskO
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintManager_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintManager[] = L"Windows.Graphics.Printing.PrintManager";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintPageInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -7204,60 +7722,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintPageInfo_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintPageInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintPageInfo[] = L"Windows.Graphics.Printing.PrintPageInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-/*
- *
- * Class Windows.Graphics.Printing.PrintPageRange
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * RuntimeClass can be activated.
- *   Type can be activated via the Windows.Graphics.Printing.IPrintPageRangeFactory interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
- *
- * Class implements the following interfaces:
- *    Windows.Graphics.Printing.IPrintPageRange ** Default Interface **
- *
- * Class Threading Model:  Both Single and Multi Threaded Apartment
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintPageRange_DEFINED
-#define RUNTIMECLASS_Windows_Graphics_Printing_PrintPageRange_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintPageRange[] = L"Windows.Graphics.Printing.PrintPageRange";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
-/*
- *
- * Class Windows.Graphics.Printing.PrintPageRangeOptions
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
- * Class implements the following interfaces:
- *    Windows.Graphics.Printing.IPrintPageRangeOptions ** Default Interface **
- *
- * Class Marshaling Behavior:  Agile - Class is agile
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-#ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintPageRangeOptions_DEFINED
-#define RUNTIMECLASS_Windows_Graphics_Printing_PrintPageRangeOptions_DEFINED
-extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintPageRangeOptions[] = L"Windows.Graphics.Printing.PrintPageRangeOptions";
-#endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
 /*
  *
  * Class Windows.Graphics.Printing.PrintTask
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTask ** Default Interface **
@@ -7268,17 +7746,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTask_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTask_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTask[] = L"Windows.Graphics.Printing.PrintTask";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskCompletedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskCompletedEventArgs ** Default Interface **
@@ -7287,11 +7768,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskCompletedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskCompletedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskCompletedEventArgs[] = L"Windows.Graphics.Printing.PrintTaskCompletedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -7299,28 +7782,31 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskOptionsCore ** Default Interface **
  *    Windows.Graphics.Printing.IPrintTaskOptionsCoreProperties
  *    Windows.Graphics.Printing.IPrintTaskOptionsCoreUIConfiguration
  *    Windows.Graphics.Printing.IPrintTaskOptions
- *    Windows.Graphics.Printing.IPrintTaskOptions2
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskOptions_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskOptions_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskOptions[] = L"Windows.Graphics.Printing.PrintTaskOptions";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskProgressingEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskProgressingEventArgs ** Default Interface **
@@ -7329,17 +7815,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskProgressingEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskProgressingEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskProgressingEventArgs[] = L"Windows.Graphics.Printing.PrintTaskProgressingEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskRequest
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskRequest ** Default Interface **
@@ -7348,17 +7837,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequest_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequest_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskRequest[] = L"Windows.Graphics.Printing.PrintTaskRequest";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskRequestedDeferral
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskRequestedDeferral ** Default Interface **
@@ -7367,17 +7859,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequestedDeferral_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequestedDeferral_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskRequestedDeferral[] = L"Windows.Graphics.Printing.PrintTaskRequestedDeferral";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskRequestedEventArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskRequestedEventArgs ** Default Interface **
@@ -7386,17 +7881,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequestedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskRequestedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskRequestedEventArgs[] = L"Windows.Graphics.Printing.PrintTaskRequestedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskSourceRequestedArgs
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskSourceRequestedArgs ** Default Interface **
@@ -7405,17 +7903,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskSourceRequestedArgs_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskSourceRequestedArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskSourceRequestedArgs[] = L"Windows.Graphics.Printing.PrintTaskSourceRequestedArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintTaskSourceRequestedDeferral ** Default Interface **
@@ -7424,11 +7925,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskSourceRequestedDeferral_DEFINED
 #define RUNTIMECLASS_Windows_Graphics_Printing_PrintTaskSourceRequestedDeferral_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_PrintTaskSourceRequestedDeferral[] = L"Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -7436,10 +7939,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic3 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Graphics.Printing.IStandardPrintTaskOptionsStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -7450,6 +7953,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Graphics_Printing_StandardPrintTaskOptions[] = L"Windows.Graphics.Printing.StandardPrintTaskOptions";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

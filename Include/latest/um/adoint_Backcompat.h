@@ -249,9 +249,6 @@ extern "C"{
 #endif 
 /* interface __MIDL_itf_ado10_0000_0000 */
 /* [local] */ 
-// VSTS 15030784: Wv17: Cleanup C4091: onecore\enduser\databaseaccess\src\mdac\shared\ado. See work item for more details on this suppression.
-#pragma warning(push) // For C4091
-#pragma warning(disable:4091) // '': ignored on left of 'type' when no variable is declared
 #if 0
 typedef /* [uuid][public] */  DECLSPEC_UUID("54D8B4B9-663B-4a9c-95F6-0E749ABD70F1") __int64 ADO_LONGPTR;
 typedef /* [uuid][public] */  DECLSPEC_UUID("54D8B4B9-663B-4a9c-95F6-0E749ABD70F1") long ADO_LONGPTR;
@@ -8685,7 +8682,6 @@ EXTERN_C const IID IID_Properties;
 #endif /* __ADODB_LIBRARY_DEFINED__ */
 /* interface __MIDL_itf_ado10_0001_0035 */
 /* [local] */ 
-#pragma warning(pop) // For C4091
 extern RPC_IF_HANDLE __MIDL_itf_ado10_0001_0035_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_ado10_0001_0035_v0_0_s_ifspec;
 /* Additional Prototypes for ALL interfaces */

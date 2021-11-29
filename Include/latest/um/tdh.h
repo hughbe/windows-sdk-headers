@@ -12,10 +12,6 @@ Abstract:
 
 --*/
 
-#ifdef _MSC_VER
-#pragma once
-#endif // _MSC_VER
-
 #ifndef __TDH_H__
 #define __TDH_H__
 #include <winapifamily.h>
@@ -23,9 +19,6 @@ Abstract:
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
-#ifndef TDH_INLINE
-#define TDH_INLINE __inline
-#endif
 
 #ifdef __cplusplus
 extern "C" {
@@ -40,7 +33,7 @@ extern "C" {
 #pragma warning (disable:4214)  // bit field types other than int
 
 typedef _Return_type_success_(return == ERROR_SUCCESS) ULONG TDHSTATUS;
-#define TDHAPI TDHSTATUS __stdcall
+#define TDHAPI  TDHSTATUS __stdcall
 
 typedef HANDLE TDH_HANDLE, *PTDH_HANDLE;
 
@@ -163,10 +156,8 @@ enum _TDH_IN_TYPE {
     TDH_INTYPE_POINTER, /*
         Field size depends on the eventRecord.EventHeader.Flags value. If the
         EVENT_HEADER_FLAG_32_BIT_HEADER flag is set, the field size is 4 bytes.
-        If the EVENT_HEADER_FLAG_64_BIT_HEADER flag is set, the field size is 8
-        bytes. Default OutType is HEXINT64. Other usable OutTypes include
-        CODE_POINTER, LONG, UNSIGNEDLONG.
-        */
+        If the EVENT_HEADER_FLAG_64_BIT_HEADER flag is set, the field size is
+        8 bytes. */
     TDH_INTYPE_FILETIME,   /* Field size is 8 bytes. */
     TDH_INTYPE_SYSTEMTIME, /* Field size is 16 bytes. */
     TDH_INTYPE_SID, /*
@@ -174,36 +165,9 @@ enum _TDH_IN_TYPE {
         value to determine the number of relative IDs. */
     TDH_INTYPE_HEXINT32, /* Field size is 4 bytes. */
     TDH_INTYPE_HEXINT64, /* Field size is 8 bytes. */
-    TDH_INTYPE_MANIFEST_COUNTEDSTRING, /*
-        Supported in Windows 2018 Fall Update or later. This is the same as
-        TDH_INTYPE_COUNTEDSTRING, but can be used in manifests.
-        Field contains a little-endian 16-bit bytecount followed by a WCHAR
-        (16-bit character) string. Default OutType is STRING. Other usable
-        OutTypes include XML, JSON. Field size is determined by reading the
-        first two bytes of the payload, which are then interpreted as a
-        little-endian 16-bit integer which gives the number of additional bytes
-        (not characters) in the field. */
-    TDH_INTYPE_MANIFEST_COUNTEDANSISTRING, /*
-        Supported in Windows 2018 Fall Update or later. This is the same as
-        TDH_INTYPE_COUNTEDANSISTRING, but can be used in manifests.
-        Field contains a little-endian 16-bit bytecount followed by a CHAR
-        (8-bit character) string. Default OutType is STRING. Other usable
-        OutTypes include XML, JSON, UTF8. Field size is determined by reading
-        the first two bytes of the payload, which are then interpreted as a
-        little-endian 16-bit integer which gives the number of additional bytes
-        (not characters) in the field. */
-    TDH_INTYPE_RESERVED24,
-    TDH_INTYPE_MANIFEST_COUNTEDBINARY, /*
-        Supported in Windows 2018 Fall Update or later.
-        Field contains a little-endian 16-bit bytecount followed by binary
-        data. Default OutType is HEXBINARY. Other usable
-        OutTypes include IPV6, SOCKETADDRESS, PKCS7_WITH_TYPE_INFO. Field size
-        is determined by reading the first two bytes of the payload, which are
-        then interpreted as a little-endian 16-bit integer which gives the
-        number of additional bytes in the field. */
 
     // End of winmeta intypes.
-    // Start of TDH intypes for WBEM. These types cannot be used in manifests.
+    // Start of TDH intypes for WBEM.
 
     TDH_INTYPE_COUNTEDSTRING = 300, /*
         Field contains a little-endian 16-bit bytecount followed by a WCHAR
@@ -254,7 +218,6 @@ enum _TDH_IN_TYPE {
         Field contains a CHAR (8-bit character) value. Default OutType is
         STRING. Field size is 1 byte. */
     TDH_INTYPE_SIZET, /*
-        Deprecated. Prefer TDH_INTYPE_POINTER with TDH_OUTTYPE_UNSIGNEDLONG.
         Field contains a SIZE_T (UINT_PTR) value. Default OutType is HEXINT64.
         Field size depends on the eventRecord.EventHeader.Flags value. If the
         EVENT_HEADER_FLAG_32_BIT_HEADER flag is set, the field size is 4 bytes.
@@ -430,12 +393,6 @@ enum _TDH_OUT_TYPE {
         Specifies that the field should be treated as an address that can
         potentially be decoded into a symbol name. Applicable to InTypes
         UInt32, UInt64, HexInt32, HexInt64, and Pointer. */
-    TDH_OUTTYPE_DATETIME_UTC, /*
-        Usable with the FILETIME and SYSTEMTIME InType values. Data is decoded
-        as a date/time. FILETIME is decoded as a 64-bit integer representing
-        the number of 100-nanosecond intervals since January 1, 1601.
-        SYSTEMTIME is decoded as the Win32 SYSTEMTIME structure. In both cases,
-        the time zone is assumed to be UTC.) */
 
     // End of winmeta outtypes.
     // Start of TDH outtypes for WBEM.
@@ -478,17 +435,7 @@ typedef struct _EVENT_PROPERTY_INFO {
             ULONG padding;
         } structType;
         struct _customSchemaType {
-            // Data of this field is described by a user-defined serialization
-            // protocol such as Bond or Protocol Buffers. InType and OutType
-            // should be set for best-effort decoding by decoders that do not
-            // understand the schema, e.g. InType could be set to
-            // TDH_INTYPE_BINARY so that a decoder can properly extract or skip
-            // the raw serialized data even if it can't parse it. The
-            // CustomSchemaOffset points at a structure laid out as:
-            // UINT16 Protocol; // User-defined value from 5..31
-            // UINT16 Length;
-            // BYTE SchemaData[Length];
-            USHORT InType;
+            USHORT padding2;
             USHORT OutType;
             ULONG CustomSchemaOffset;
         } customSchemaType;
@@ -556,19 +503,11 @@ typedef struct _TRACE_EVENT_INFO {
 
     ULONG TaskNameOffset; /* Meaning of this field depends on DecodingSource.
         - XMLFile: The offset to the name of the associated task.
-        - Wbem: The offset to the event's MOF "DisplayName" property. For many
-          Wbem providers, ProviderName is a provider category and TaskName is
-          the provider subcategory.
+        - Wbem: The offset to the name of the event.
         - WPP: Not used.
         - Tlg: The offset to the name of the event. */
 
-    ULONG OpcodeNameOffset; /* Meaning of this field depends on DecodingSource.
-        - XMLFile: The offset to the name of the associated opcode.
-        - Wbem: The offset to the event's MOF "EventTypeName" property. For
-          many Wbem providers, OpcodeName is the event's name.
-        - WPP: Not used.
-        - Tlg: The offset to the name of the associated opcode. */
-
+    ULONG OpcodeNameOffset;
     ULONG EventMessageOffset;
     ULONG ProviderMessageOffset;
     ULONG BinaryXMLOffset;
@@ -710,6 +649,7 @@ typedef enum _PAYLOAD_OPERATOR {
     PAYLOADFIELD_INVALID = 32
 } PAYLOAD_OPERATOR;
 
+
 typedef struct _PAYLOAD_FILTER_PREDICATE {
     LPWSTR FieldName;
     USHORT CompareOp;    // PAYLOAD_OPERATOR
@@ -720,34 +660,31 @@ typedef struct _PAYLOAD_FILTER_PREDICATE {
 
 #if (WINVER >= _WIN32_WINNT_WINBLUE)
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhCreatePayloadFilter(
-    _In_ LPCGUID ProviderGuid,
-    _In_ PCEVENT_DESCRIPTOR EventDescriptor,
-    _In_ BOOLEAN EventMatchANY,
-    _In_ ULONG PayloadPredicateCount,
-    _In_reads_(PayloadPredicateCount) PPAYLOAD_FILTER_PREDICATE PayloadPredicates,
-    _Outptr_result_maybenull_ PVOID* PayloadFilter
+     _In_ LPCGUID ProviderGuid,
+     _In_ PCEVENT_DESCRIPTOR EventDescriptor,
+     _In_ BOOLEAN EventMatchANY,
+     _In_ ULONG PayloadPredicateCount,
+     _In_reads_(PayloadPredicateCount)
+        PPAYLOAD_FILTER_PREDICATE PayloadPredicates,
+     _Outptr_result_maybenull_ PVOID *PayloadFilter
     );
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhDeletePayloadFilter(
-    _Inout_ PVOID* PayloadFilter
+     _Inout_ PVOID *PayloadFilter
     );
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhAggregatePayloadFilters(
     _In_ ULONG PayloadFilterCount,
-    _In_reads_(PayloadFilterCount) PVOID* PayloadFilterPtrs,
+    _In_reads_(PayloadFilterCount) PVOID *PayloadFilterPtrs,
     _In_reads_opt_(PayloadFilterCount) PBOOLEAN EventMatchALLFlags,
     _Out_ PEVENT_FILTER_DESCRIPTOR EventFilterDescriptor
     );
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhCleanupPayloadEventFilterDescriptor(
     _Inout_ PEVENT_FILTER_DESCRIPTOR EventFilterDescriptor
     );
@@ -820,45 +757,22 @@ typedef struct _PROVIDER_EVENT_INFO {
 typedef PROVIDER_EVENT_INFO *PPROVIDER_EVENT_INFO;
 
 typedef enum _TDH_CONTEXT_TYPE {
-    TDH_CONTEXT_WPP_TMFFILE, /* LPCWSTR path to the TMF file for a WPP event. */
-    TDH_CONTEXT_WPP_TMFSEARCHPATH, /* LPCWSTR semicolon-separated list of
-        directories to search for the TMF file for a WPP event. Only files
-        with the name [ProviderId].TMF will be found during the search. */
-    TDH_CONTEXT_WPP_GMT, /* Integer value. If set to 1, the TdhGetWppProperty
-        and TdhGetWppMessage functions will format a WPP event's timestamp in
-        UTC (GMT). By default, the timestamp is formatted in local time. */
-    TDH_CONTEXT_POINTERSIZE, /* Integer value, set to 4 or 8. Used when
-        decoding POINTER or SIZE_T fields on WPP events that do not set a
-        pointer size in the event header. If the event does not set a pointer
-        size in the event header and this context is not set, the decoder will
-        use the pointer size of the current process. */
-    TDH_CONTEXT_PDB_PATH, /* LPCWSTR semicolon-separated list of PDB files
-        to be search for decoding information when decoding an event using
-        TdhGetWppProperty or TdhGetWppMessage. (Not used by TdhGetProperty
-        or TdhGetEventInformation.) */
+    TDH_CONTEXT_WPP_TMFFILE = 0,
+    TDH_CONTEXT_WPP_TMFSEARCHPATH,
+    TDH_CONTEXT_WPP_GMT,
+    TDH_CONTEXT_POINTERSIZE,
+    TDH_CONTEXT_PDB_PATH,
     TDH_CONTEXT_MAXIMUM
 } TDH_CONTEXT_TYPE;
 
-/*
-Decoding configuration parameters used with TdhGetDecodingParameter,
-TdhSetDecodingParameter, TdhGetEventInformation, TdhGetProperty,
-TdhGetPropertySize, and TdhEnumerateProviderFilters.
-
-Note that the TDH_CONTEXT_WPP_GMT and TDH_CONTEXT_PDB_PATH parameter types are
-only used by TdhGetDecodingParameter and TdhSetDecodingParameter. They are
-ignored by TdhGetEventInformation and TdhGetProperty.
-*/
 typedef struct _TDH_CONTEXT {
-    ULONGLONG ParameterValue; /* For GMT or POINTERSIZE, directly stores the
-        parameter's integer value. For other types, stores an LPCWSTR pointing
-        to a nul-terminated string with the parameter value. */
+    ULONGLONG ParameterValue;    // Pointer to Data.
     TDH_CONTEXT_TYPE ParameterType;
-    ULONG ParameterSize; /* Reserved. Set to 0. */
+    ULONG ParameterSize;
 } TDH_CONTEXT;
 typedef TDH_CONTEXT *PTDH_CONTEXT;
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhGetEventInformation(
     _In_ PEVENT_RECORD Event,
     _In_ ULONG TdhContextCount,
@@ -867,28 +781,25 @@ TdhGetEventInformation(
     _Inout_ PULONG BufferSize
     );
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhGetEventMapInformation(
     _In_ PEVENT_RECORD pEvent,
     _In_ PWSTR pMapName,
     _Out_writes_bytes_opt_(*pBufferSize) PEVENT_MAP_INFO pBuffer,
-    _Inout_ ULONG* pBufferSize
+    _Inout_ ULONG *pBufferSize
     );
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhGetPropertySize(
     _In_ PEVENT_RECORD pEvent,
     _In_ ULONG TdhContextCount,
     _In_reads_opt_(TdhContextCount) PTDH_CONTEXT pTdhContext,
     _In_ ULONG PropertyDataCount,
     _In_reads_(PropertyDataCount) PPROPERTY_DATA_DESCRIPTOR pPropertyData,
-    _Out_ ULONG* pPropertySize
+    _Out_ ULONG *pPropertySize
     );
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhGetProperty(
     _In_ PEVENT_RECORD pEvent,
     _In_ ULONG TdhContextCount,
@@ -899,30 +810,27 @@ TdhGetProperty(
     _Out_writes_bytes_(BufferSize) PBYTE pBuffer
     );
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhEnumerateProviders(
     _Out_writes_bytes_opt_(*pBufferSize) PPROVIDER_ENUMERATION_INFO pBuffer,
-    _Inout_ ULONG* pBufferSize
+    _Inout_ ULONG *pBufferSize
     );
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhQueryProviderFieldInformation(
     _In_ LPGUID pGuid,
     _In_ ULONGLONG EventFieldValue,
     _In_ EVENT_FIELD_TYPE EventFieldType,
     _Out_writes_bytes_opt_(*pBufferSize) PPROVIDER_FIELD_INFOARRAY pBuffer,
-    _Inout_ ULONG* pBufferSize
+    _Inout_ ULONG *pBufferSize
     );
 
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhEnumerateProviderFieldInformation(
     _In_ LPGUID pGuid,
     _In_ EVENT_FIELD_TYPE EventFieldType,
     _Out_writes_bytes_opt_(*pBufferSize) PPROVIDER_FIELD_INFOARRAY pBuffer,
-    _Inout_ ULONG* pBufferSize
+    _Inout_ ULONG *pBufferSize
     );
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
@@ -932,15 +840,14 @@ TdhEnumerateProviderFieldInformation(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhEnumerateProviderFilters(
     _In_ LPGUID Guid,
     _In_ ULONG TdhContextCount,
     _In_reads_opt_(TdhContextCount) PTDH_CONTEXT TdhContext,
-    _Out_ ULONG* FilterCount,
-    _Out_writes_bytes_opt_(*BufferSize) PPROVIDER_FILTER_INFO* Buffer,
-    _Inout_ ULONG* BufferSize
+    _Out_ ULONG *FilterCount,
+    _Out_writes_bytes_opt_(*BufferSize) PPROVIDER_FILTER_INFO *Buffer,
+    _Inout_ ULONG *BufferSize
     );
 #endif
 
@@ -950,42 +857,21 @@ TdhEnumerateProviderFilters(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhLoadManifest(
     _In_ PWSTR Manifest
     );
 #endif
 
-#if (WINVER >= _WIN32_WINNT_WIN10)
-TDHSTATUS
-__stdcall
-TdhLoadManifestFromMemory(
-    _In_reads_bytes_(cbData) LPCVOID pData,
-    _In_ ULONG cbData
-    );
-#endif
-
 #if (WINVER >= _WIN32_WINNT_WIN7)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhUnloadManifest(
     _In_ PWSTR Manifest
     );
 #endif
 
-#if (WINVER >= _WIN32_WINNT_WIN10)
-TDHSTATUS
-__stdcall
-TdhUnloadManifestFromMemory(
-    _In_reads_bytes_(cbData) LPCVOID pData,
-    _In_ ULONG cbData
-    );
-#endif
-
 #if (WINVER >= _WIN32_WINNT_WIN7)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhFormatProperty(
     _In_ PTRACE_EVENT_INFO EventInfo,
     _In_opt_ PEVENT_MAP_INFO MapInfo,
@@ -1008,16 +894,14 @@ TdhFormatProperty(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhOpenDecodingHandle(
     _Out_ PTDH_HANDLE Handle
     );
 #endif
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhSetDecodingParameter(
     _In_ TDH_HANDLE Handle,
     _In_ PTDH_CONTEXT TdhContext
@@ -1025,8 +909,7 @@ TdhSetDecodingParameter(
 #endif
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhGetDecodingParameter(
     _In_ TDH_HANDLE Handle,
     _Inout_ PTDH_CONTEXT TdhContext
@@ -1034,8 +917,7 @@ TdhGetDecodingParameter(
 #endif
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhGetWppProperty(
     _In_ TDH_HANDLE Handle,
     _In_ PEVENT_RECORD EventRecord,
@@ -1046,8 +928,7 @@ TdhGetWppProperty(
 #endif
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhGetWppMessage(
     _In_ TDH_HANDLE Handle,
     _In_ PEVENT_RECORD EventRecord,
@@ -1057,16 +938,14 @@ TdhGetWppMessage(
 #endif
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhCloseDecodingHandle(
     _In_ TDH_HANDLE Handle
     );
 #endif
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
-TDHSTATUS
-__stdcall
+TDHAPI
 TdhLoadManifestFromBinary(
     _In_ PWSTR BinaryPath
     );
@@ -1079,23 +958,21 @@ TdhLoadManifestFromBinary(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #if (WINVER >= _WIN32_WINNT_WINBLUE)
-TDHSTATUS
-__stdcall
-TdhEnumerateManifestProviderEvents(
+TDHAPI
+TdhEnumerateManifestProviderEvents (
     _In_ LPGUID ProviderGuid,
     _Out_writes_bytes_opt_(*BufferSize) PPROVIDER_EVENT_INFO Buffer,
-    _Inout_ ULONG* BufferSize
+    _Inout_ ULONG *BufferSize
     );
 #endif
 
 #if (WINVER >= _WIN32_WINNT_WINBLUE)
-TDHSTATUS
-__stdcall
-TdhGetManifestEventInformation(
+TDHAPI
+TdhGetManifestEventInformation (
     _In_ LPGUID ProviderGuid,
     _In_ PEVENT_DESCRIPTOR EventDescriptor,
     _Out_writes_bytes_opt_(*BufferSize) PTRACE_EVENT_INFO Buffer,
-    _Inout_ ULONG* BufferSize
+    _Inout_  ULONG *BufferSize
     );
 #endif
 
@@ -1103,7 +980,7 @@ TdhGetManifestEventInformation(
 //  Helper macros to access strings from variable length Tdh structures.
 //
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 EMI_MAP_NAME(
     _In_ PEVENT_MAP_INFO MapInfo
@@ -1114,7 +991,7 @@ EMI_MAP_NAME(
            (PWSTR)((PBYTE)MapInfo + MapInfo->NameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 EMI_MAP_FORMAT(
     _In_ PEVENT_MAP_INFO MapInfo
@@ -1128,7 +1005,7 @@ EMI_MAP_FORMAT(
     }
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 EMI_MAP_OUTPUT(
     _In_ PEVENT_MAP_INFO MapInfo,
@@ -1140,7 +1017,7 @@ EMI_MAP_OUTPUT(
            (PWSTR)((PBYTE)MapInfo + Map->OutputOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 EMI_MAP_INPUT(
     _In_ PEVENT_MAP_INFO MapInfo,
@@ -1155,7 +1032,7 @@ EMI_MAP_INPUT(
     }
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_MAP_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo,
@@ -1167,7 +1044,7 @@ TEI_MAP_NAME(
            (PWSTR)((PBYTE)EventInfo + Property->nonStructType.MapNameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_PROPERTY_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo,
@@ -1179,7 +1056,7 @@ TEI_PROPERTY_NAME(
            (PWSTR)((PBYTE)EventInfo + Property->NameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_PROVIDER_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1190,7 +1067,7 @@ TEI_PROVIDER_NAME(
            (PWSTR)((PBYTE)EventInfo + EventInfo->ProviderNameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_LEVEL_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1201,7 +1078,7 @@ TEI_LEVEL_NAME(
            (PWSTR)((PBYTE)EventInfo + EventInfo->LevelNameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_CHANNEL_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1212,7 +1089,7 @@ TEI_CHANNEL_NAME(
            (PWSTR)((PBYTE)EventInfo + EventInfo->ChannelNameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_KEYWORDS_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1223,7 +1100,7 @@ TEI_KEYWORDS_NAME(
            (PWSTR)((PBYTE)EventInfo + EventInfo->KeywordsNameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_TASK_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1234,7 +1111,7 @@ TEI_TASK_NAME(
            (PWSTR)((PBYTE)EventInfo + EventInfo->TaskNameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_OPCODE_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1245,7 +1122,7 @@ TEI_OPCODE_NAME(
            (PWSTR)((PBYTE)EventInfo + EventInfo->OpcodeNameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_EVENT_MESSAGE(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1256,7 +1133,7 @@ TEI_EVENT_MESSAGE(
            (PWSTR)((PBYTE)EventInfo + EventInfo->EventMessageOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_PROVIDER_MESSAGE(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1267,7 +1144,7 @@ TEI_PROVIDER_MESSAGE(
            (PWSTR)((PBYTE)EventInfo + EventInfo->ProviderMessageOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_ACTIVITYID_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1278,7 +1155,7 @@ TEI_ACTIVITYID_NAME(
            (PWSTR)((PBYTE)EventInfo + EventInfo->ActivityIDNameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 TEI_RELATEDACTIVITYID_NAME(
     _In_ PTRACE_EVENT_INFO EventInfo
@@ -1296,7 +1173,7 @@ TEI_RELATEDACTIVITYID_NAME(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
-TDH_INLINE
+FORCEINLINE
 PWSTR
 PFI_FILTER_MESSAGE(
     _In_ PPROVIDER_FILTER_INFO FilterInfo
@@ -1309,7 +1186,7 @@ PFI_FILTER_MESSAGE(
 #endif
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
-TDH_INLINE
+FORCEINLINE
 PWSTR
 PFI_PROPERTY_NAME(
     _In_ PPROVIDER_FILTER_INFO FilterInfo,
@@ -1328,7 +1205,7 @@ PFI_PROPERTY_NAME(
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 PFI_FIELD_NAME(
     _In_ PPROVIDER_FIELD_INFOARRAY FieldInfoArray,
@@ -1340,7 +1217,7 @@ PFI_FIELD_NAME(
            (PWSTR)((PBYTE)FieldInfoArray + FieldInfo->NameOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 PFI_FIELD_MESSAGE(
     _In_ PPROVIDER_FIELD_INFOARRAY FieldInfoArray,
@@ -1352,7 +1229,7 @@ PFI_FIELD_MESSAGE(
            (PWSTR)((PBYTE)FieldInfoArray + FieldInfo->DescriptionOffset);
 }
 
-TDH_INLINE
+FORCEINLINE
 PWSTR
 PEI_PROVIDER_NAME(
     _In_ PPROVIDER_ENUMERATION_INFO ProviderEnum,
@@ -1369,6 +1246,7 @@ PEI_PROVIDER_NAME(
 #ifdef __cplusplus
 }
 #endif
+
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion

@@ -342,6 +342,7 @@ namespace winrt::Windows::UI::Composition
     struct IVector4KeyFrameAnimation;
     struct IVisual;
     struct IVisual2;
+    struct IVisual3;
     struct IVisualCollection;
     struct IVisualElement;
     struct IVisualFactory;
@@ -1065,6 +1066,10 @@ namespace winrt::impl
         using type = interface_category;
     };
     template <> struct category<Windows::UI::Composition::IVisual2>
+    {
+        using type = interface_category;
+    };
+    template <> struct category<Windows::UI::Composition::IVisual3>
     {
         using type = interface_category;
     };
@@ -2168,6 +2173,10 @@ namespace winrt::impl
     {
         static constexpr auto & value{ L"Windows.UI.Composition.IVisual2" };
     };
+    template <> struct name<Windows::UI::Composition::IVisual3>
+    {
+        static constexpr auto & value{ L"Windows.UI.Composition.IVisual3" };
+    };
     template <> struct name<Windows::UI::Composition::IVisualCollection>
     {
         static constexpr auto & value{ L"Windows.UI.Composition.IVisualCollection" };
@@ -3267,6 +3276,10 @@ namespace winrt::impl
     template <> struct guid_storage<Windows::UI::Composition::IVisual2>
     {
         static constexpr guid value{ 0x3052B611,0x56C3,0x4C3E,{ 0x8B,0xF3,0xF6,0xE1,0xAD,0x47,0x3F,0x06 } };
+    };
+    template <> struct guid_storage<Windows::UI::Composition::IVisual3>
+    {
+        static constexpr guid value{ 0x30BE580D,0xF4B6,0x4AB7,{ 0x80,0xDD,0x37,0x38,0xCB,0xAC,0x9F,0x2C } };
     };
     template <> struct guid_storage<Windows::UI::Composition::IVisualCollection>
     {
@@ -5241,6 +5254,14 @@ namespace winrt::impl
             virtual int32_t __stdcall put_RelativeSizeAdjustment(Windows::Foundation::Numerics::float2) noexcept = 0;
         };
     };
+    template <> struct abi<Windows::UI::Composition::IVisual3>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsHitTestVisible(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_IsHitTestVisible(bool) noexcept = 0;
+        };
+    };
     template <> struct abi<Windows::UI::Composition::IVisualCollection>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -7172,6 +7193,16 @@ namespace winrt::impl
     template <> struct consume<Windows::UI::Composition::IVisual2>
     {
         template <typename D> using type = consume_Windows_UI_Composition_IVisual2<D>;
+    };
+    template <typename D>
+    struct consume_Windows_UI_Composition_IVisual3
+    {
+        [[nodiscard]] auto IsHitTestVisible() const;
+        auto IsHitTestVisible(bool value) const;
+    };
+    template <> struct consume<Windows::UI::Composition::IVisual3>
+    {
+        template <typename D> using type = consume_Windows_UI_Composition_IVisual3<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Composition_IVisualCollection

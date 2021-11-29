@@ -311,22 +311,13 @@ typedef struct _DISK_COPY_DATA_PARAMETERS {
 #define PARTITION_FAT32_XINT13          0x0C      // FAT32 using extended int13 services
 #define PARTITION_XINT13                0x0E      // Win95 partition using extended int13 services
 #define PARTITION_XINT13_EXTENDED       0x0F      // Same as type 5 but uses extended int13 services
-#define PARTITION_MSFT_RECOVERY         0x27      // Microsoft recovery partition
-#define PARTITION_MAIN_OS               0x28      // Main OS partition
-#define PARTIITON_OS_DATA               0x29      // OS data partition
-#define PARTITION_PRE_INSTALLED         0x2a      // PreInstalled partition
-#define PARTITION_BSP                   0x2b      // BSP partition
-#define PARTITION_DPP                   0x2c      // DPP partition
-#define PARTITION_WINDOWS_SYSTEM        0x2d      // Windows system partition
 #define PARTITION_PREP                  0x41      // PowerPC Reference Platform (PReP) Boot Partition
 #define PARTITION_LDM                   0x42      // Logical Disk Manager partition
 #define PARTITION_DM                    0x54      // OnTrack Disk Manager partition
 #define PARTITION_EZDRIVE               0x55      // EZ-Drive partition
 #define PARTITION_UNIX                  0x63      // Unix
-#define PARTITION_SPACES_DATA           0xD7      // Storage Spaces protective partition
 #define PARTITION_SPACES                0xE7      // Storage Spaces protective partition
 #define PARTITION_GPT                   0xEE      // Gpt protective partition
-#define PARTITION_SYSTEM                0xEF      // System partition
 
 #define VALID_NTFT                      0xC0      // NTFT uses high order bits
 
@@ -378,21 +369,13 @@ typedef struct _DISK_COPY_DATA_PARAMETERS {
     ((PartitionType) == PARTITION_FAT32_XINT13) ||  \
     ((PartitionType) == PARTITION_XINT13) )
 #else
-#define IsRecognizedPartition( PartitionType ) (      \
-    ((PartitionType) == PARTITION_BSP)            ||  \
-    ((PartitionType) == PARTITION_DPP)            ||  \
-    ((PartitionType) == PARTITION_FAT_12)         ||  \
-    ((PartitionType) == PARTITION_FAT_16)         ||  \
-    ((PartitionType) == PARTITION_FAT32)          ||  \
-    ((PartitionType) == PARTITION_FAT32_XINT13)   ||  \
-    ((PartitionType) == PARTITION_HUGE)           ||  \
-    ((PartitionType) == PARTITION_IFS)            ||  \
-    ((PartitionType) == PARTITION_MAIN_OS)        ||  \
-    ((PartitionType) == PARTITION_MSFT_RECOVERY)  ||  \
-    ((PartitionType) == PARTIITON_OS_DATA)        ||  \
-    ((PartitionType) == PARTITION_PRE_INSTALLED)  ||  \
-    ((PartitionType) == PARTITION_SYSTEM)         ||  \
-    ((PartitionType) == PARTITION_WINDOWS_SYSTEM) ||  \
+#define IsRecognizedPartition( PartitionType ) (    \
+    ((PartitionType) == PARTITION_FAT_12)       ||  \
+    ((PartitionType) == PARTITION_FAT_16)       ||  \
+    ((PartitionType) == PARTITION_HUGE)         ||  \
+    ((PartitionType) == PARTITION_IFS)          ||  \
+    ((PartitionType) == PARTITION_FAT32)        ||  \
+    ((PartitionType) == PARTITION_FAT32_XINT13) ||  \
     ((PartitionType) == PARTITION_XINT13) )
 #endif
 
@@ -678,8 +661,6 @@ typedef struct __WRAPPED__ _PARTITION_INFORMATION_GPT {
 //
 
 #define GPT_ATTRIBUTE_PLATFORM_REQUIRED             (0x0000000000000001)
-#define GPT_ATTRIBUTE_NO_BLOCK_IO_PROTOCOL          (0x0000000000000002)
-#define GPT_ATTRIBUTE_LEGACY_BIOS_BOOTABLE          (0x0000000000000004)
 
 //
 // The following are GPT partition attributes applicable when the
@@ -810,11 +791,6 @@ typedef struct __WRAPPED__ _PARTITION_INFORMATION_EX {
 
     __WRAPPED__
     BOOLEAN RewritePartition;
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS3)  /* ABRACADABRA_WIN10_RS3 */
-    __WRAPPED__
-    BOOLEAN IsServicePartition;
-#endif
 
     union {
 
@@ -1578,7 +1554,6 @@ typedef struct _SET_PARTITION_ATTRIBUTES {
 // end_winioctl
 #define DISK_ATTRIBUTE_HIDDEN               0x0000000000000004
 #define DISK_ATTRIBUTE_MAINTENANCE          0x0000000000000008
-#define DISK_ATTRIBUTE_SPACES_BYPASS        0x0000000000000010
 
 // begin_winioctl
 //

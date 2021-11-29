@@ -236,13 +236,6 @@ typedef interface IDirectManipulationManagerPartner IDirectManipulationManagerPa
 #endif 	/* __IDirectManipulationManagerPartner_FWD_DEFINED__ */
 
 
-#ifndef __IDirectManipulationViewportPartner_FWD_DEFINED__
-#define __IDirectManipulationViewportPartner_FWD_DEFINED__
-typedef interface IDirectManipulationViewportPartner IDirectManipulationViewportPartner;
-
-#endif 	/* __IDirectManipulationViewportPartner_FWD_DEFINED__ */
-
-
 #ifndef __DirectManipulationViewport_FWD_DEFINED__
 #define __DirectManipulationViewport_FWD_DEFINED__
 
@@ -3422,8 +3415,8 @@ EXTERN_C const IID IID_IDirectManipulationDeferContactService;
 #endif // #if (NTDDI_VERSION > NTDDI_WIN8)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_directmanipulation_0000_0029_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_directmanipulation_0000_0029_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_directmanipulation_0000_0028_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_directmanipulation_0000_0028_v0_0_s_ifspec;
 
 
 #ifndef __DirectManipulation_LIBRARY_DEFINED__
@@ -3484,15 +3477,15 @@ DCompManipulationCompositor;
 #endif
 #endif /* __DirectManipulation_LIBRARY_DEFINED__ */
 
-/* interface __MIDL_itf_directmanipulation_0000_0030 */
+/* interface __MIDL_itf_directmanipulation_0000_0029 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_directmanipulation_0000_0030_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_directmanipulation_0000_0030_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_directmanipulation_0000_0029_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_directmanipulation_0000_0029_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

@@ -23,8 +23,8 @@ Abstract:
 extern "C" {
 #endif
 
-#pragma region Desktop and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // AvRt Priorities
@@ -113,12 +113,6 @@ AvSetMmThreadPriority (
     _In_ HANDLE AvrtHandle,
     _In_ AVRT_PRIORITY Priority
     );
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 _Success_(return != FALSE)
 AVRTAPI

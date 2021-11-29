@@ -120,8 +120,8 @@ extern "C"{
 /* [local] */ 
 
 #include <winapifamily.h>
-#pragma region Desktop or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #define E_NOTFOUND HRESULT_FROM_WIN32(ERROR_NOT_FOUND)
 #define E_UNSUPPORTED_TYPE HRESULT_FROM_WIN32(ERROR_UNSUPPORTED_TYPE)
 #define DEVICE_STATE_ACTIVE      0x00000001
@@ -155,7 +155,6 @@ DEFINE_PROPERTYKEY(PKEY_AudioEndpointLogo_IconEffects, 0xf1ab780d, 0x2010, 0x4ed
 DEFINE_PROPERTYKEY(PKEY_AudioEndpointLogo_IconPath, 0xf1ab780d, 0x2010, 0x4ed3, 0xa3, 0xa6, 0x8b, 0x87, 0xf0, 0xf0, 0xc4, 0x76, 1);
 DEFINE_PROPERTYKEY(PKEY_AudioEndpointSettings_MenuText, 0x14242002, 0x0320, 0x4de4, 0x95, 0x55, 0xa7, 0xd8, 0x2b, 0x73, 0xc2, 0x86, 0);
 DEFINE_PROPERTYKEY(PKEY_AudioEndpointSettings_LaunchContract, 0x14242002, 0x0320, 0x4de4, 0x95, 0x55, 0xa7, 0xd8, 0x2b, 0x73, 0xc2, 0x86, 1);
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 typedef struct tagDIRECTX_AUDIO_ACTIVATION_PARAMS
     {
     DWORD cbDirectXAudioActivationParams;
@@ -165,7 +164,6 @@ typedef struct tagDIRECTX_AUDIO_ACTIVATION_PARAMS
 
 typedef struct tagDIRECTX_AUDIO_ACTIVATION_PARAMS *PDIRECTX_AUDIO_ACTIVATION_PARAMS;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 typedef /* [public][public][public][public][public] */ 
 enum __MIDL___MIDL_itf_mmdeviceapi_0000_0000_0001
     {
@@ -203,7 +201,7 @@ enum __MIDL___MIDL_itf_mmdeviceapi_0000_0000_0003
 
 #define HDMI     DigitalAudioDisplayDevice
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #pragma region Application Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
@@ -223,8 +221,8 @@ DEFINE_GUID(DEVINTERFACE_MIDI_INPUT, 0x504be32c, 0xccf6, 0x4d2c, 0xb7, 0x3f, 0x6
 #endif
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
-#pragma region Desktop and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0000_v0_0_c_ifspec;
@@ -843,10 +841,6 @@ EXTERN_C const IID IID_IMMDeviceEnumerator;
 /* interface __MIDL_itf_mmdeviceapi_0000_0005 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 /* IMMDeviceActivator is reserved for system use */
 
 
@@ -1161,10 +1155,6 @@ typedef /* [public] */ struct __MIDL___MIDL_itf_mmdeviceapi_0000_0008_0001
     IMMDevice *pPnpDevnode;
     } 	AudioExtensionParams;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
-#pragma region Desktop and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mmdeviceapi_0000_0008_v0_0_c_ifspec;
@@ -1192,7 +1182,7 @@ MMDeviceEnumerator;
 /* interface __MIDL_itf_mmdeviceapi_0000_0009 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 

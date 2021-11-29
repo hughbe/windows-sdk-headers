@@ -610,11 +610,6 @@ typedef LPFINDREPLACEA LPFINDREPLACE;
 #define FR_HIDEWHOLEWORD                0x00010000
 #if (NTDDI_VERSION >= NTDDI_WIN2K)
 #define FR_RAW                          0x00020000
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-#define FR_SHOWWRAPAROUND               0x00040000
-#define FR_NOWRAPAROUND                 0x00080000
-#define FR_WRAPAROUND                   0x00100000
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 #define FR_MATCHDIAC                    0x20000000
 #define FR_MATCHKASHIDA                 0x40000000
 #define FR_MATCHALEFHAMZA               0x80000000

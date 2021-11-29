@@ -6,7 +6,6 @@
 // The C Standard Library <stdlib.h> header.
 //
 #pragma once
-#ifndef _INC_STDLIB // include guard for 3rd party interop
 #define _INC_STDLIB
 
 #include <corecrt.h>
@@ -14,10 +13,6 @@
 #include <corecrt_search.h>
 #include <corecrt_wstdlib.h>
 #include <limits.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -80,7 +75,7 @@ _ACRTIMP unsigned int __cdecl _set_abort_behavior(
     #endif
 #endif
 
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
     // Non-ANSI name for compatibility
     #define onexit_t _onexit_t
 #endif
@@ -89,7 +84,7 @@ _ACRTIMP unsigned int __cdecl _set_abort_behavior(
 
 #ifdef _M_CEE
     #pragma warning (push)
-    #pragma warning (disable: 4985) // Attributes not present on previous declaration
+    #pragma warning (disable: 4985)
 
     _Check_return_ int __clrcall _atexit_m_appdomain(_In_opt_ void (__clrcall* _Function)(void));
 
@@ -305,8 +300,8 @@ _Check_return_ _ACRTIMP lldiv_t __cdecl lldiv(_In_ long long _Numerator, _In_ lo
 
 // These functions have declspecs in their declarations in the Windows headers,
 // which cause PREfast to fire 6540.
-#pragma warning(push)
-#pragma warning(disable: 6540)
+#pragma warning (push)
+#pragma warning (disable:6540)
 
 unsigned int __cdecl _rotl(
     _In_ unsigned int _Value,
@@ -340,7 +335,7 @@ unsigned __int64 __cdecl _rotr64(
     _In_ int              _Shift
     );
 
-#pragma warning(pop)
+#pragma warning (pop)
 
 
 
@@ -638,12 +633,16 @@ __DEFINE_CPP_OVERLOAD_SECURE_FUNC_1_1(
     _In_ int,  _Radix
     )
 
+#pragma warning(push)
+#pragma warning(disable: 28719) // __WARNING_BANNED_API_USAGE
+#pragma warning(disable: 28726) // __WARNING_BANNED_API_USAGEL2
 __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_1_1(
     char*, __RETURN_POLICY_DST, _ACRTIMP, _itoa,
     _In_                    int,  _Value,
     _Pre_notnull_ _Post_z_, char, _Buffer,
     _In_                    int,  _Radix
     )
+#pragma warning(pop)
 
 _Success_(return == 0)
 _Check_return_opt_
@@ -684,12 +683,15 @@ __DEFINE_CPP_OVERLOAD_SECURE_FUNC_1_1(
     _In_ int,           _Radix
     )
 
+#pragma warning(push)
+#pragma warning(disable: 28726) // __WARNING_BANNED_API_USAGEL2
 __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_1_1(
     char*, __RETURN_POLICY_DST, _ACRTIMP, _ultoa,
     _In_                    unsigned long, _Value,
     _Pre_notnull_ _Post_z_, char,          _Buffer,
     _In_                    int,           _Radix
     )
+#pragma warning(pop)
 
 _Success_(return == 0)
 _Check_return_opt_
@@ -1092,6 +1094,9 @@ __DEFINE_CPP_OVERLOAD_SECURE_FUNC_0_4(
     _In_opt_z_ char const*, _Ext
     )
 
+#pragma warning(push)
+#pragma warning(disable: 28719) // __WARNING_BANNED_API_USAGE
+#pragma warning(disable: 28726) // __WARNING_BANNED_API_USAGEL2
 __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_4(
     void, __RETURN_POLICY_VOID, _ACRTIMP, _makepath,
     _Pre_notnull_ _Post_z_, char,        _Buffer,
@@ -1100,6 +1105,7 @@ __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_4(
     _In_opt_z_              char const*, _Filename,
     _In_opt_z_              char const*, _Ext
     )
+#pragma warning(pop)
 
 _CRT_INSECURE_DEPRECATE(_splitpath_s)
 _ACRTIMP void __cdecl _splitpath(
@@ -1125,150 +1131,162 @@ _ACRTIMP errno_t __cdecl _splitpath_s(
 
 __DEFINE_CPP_OVERLOAD_SECURE_FUNC_SPLITPATH(errno_t, _splitpath_s, char, _Dest)
 
-#if __STDC_WANT_SECURE_LIB__
-
-_Check_return_opt_
-_Success_(return == 0)
-_DCRTIMP errno_t __cdecl getenv_s(
-    _Out_                            size_t*     _RequiredCount,
-    _Out_writes_opt_z_(_BufferCount) char*       _Buffer,
-    _In_                             rsize_t     _BufferCount,
-    _In_z_                           char const* _VarName
-    );
-
-#endif // __STDC_WANT_SECURE_LIB__
 
 
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+//
+// APIs Only Available in Desktop Apps
+//
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+#ifdef _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
 
-
-_ACRTIMP int*       __cdecl __p___argc (void);
-_ACRTIMP char***    __cdecl __p___argv (void);
-_ACRTIMP wchar_t*** __cdecl __p___wargv(void);
-
-#ifdef _CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY
-    extern int       __argc;
-    extern char**    __argv;
-    extern wchar_t** __wargv;
-#else
-    #define __argc  (*__p___argc())  // Pointer to number of command line arguments
-    #define __argv  (*__p___argv())  // Pointer to table of narrow command line arguments
-    #define __wargv (*__p___wargv()) // Pointer to table of wide command line arguments
-#endif
-
-_DCRTIMP char***    __cdecl __p__environ (void);
-_DCRTIMP wchar_t*** __cdecl __p__wenviron(void);
-
-#ifndef _CRT_BEST_PRACTICES_USAGE
-    #define _CRT_V12_LEGACY_FUNCTIONALITY
-#endif
-
-#ifndef _CRT_V12_LEGACY_FUNCTIONALITY
-    // Deprecated symbol: Do not expose environment global pointers unless
-    // legacy access is specifically requested
-    #define _environ    crt_usage_error__do_not_reference_global_pointer_directly__environ
-    #define _wenviron   crt_usage_error__do_not_reference_global_pointer_directly__wenviron
-#else
-    #define _environ  (*__p__environ())  // Pointer to narrow environment table
-    #define _wenviron (*__p__wenviron()) // Pointer to wide environment table
-#endif
-
-
-
-// Sizes for buffers used by the getenv/putenv family of functions.
-#define _MAX_ENV 32767
-
-
-#if _CRT_FUNCTIONS_REQUIRED
-
-    _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
-    _DCRTIMP char* __cdecl getenv(
-        _In_z_ char const* _VarName
-        );
-
-    __DEFINE_CPP_OVERLOAD_SECURE_FUNC_1_1(
-        errno_t, getenv_s,
-        _Out_  size_t*,     _RequiredCount,
-               char,        _Buffer,
-        _In_z_ char const*, _VarName
-        )
-
-    #if defined(_DEBUG) && defined(_CRTDBG_MAP_ALLOC)
-        #pragma push_macro("_dupenv_s")
-        #undef _dupenv_s
-    #endif
+    #if __STDC_WANT_SECURE_LIB__
 
     _Check_return_opt_
-    _DCRTIMP errno_t __cdecl _dupenv_s(
-        _Outptr_result_buffer_maybenull_(*_BufferCount) _Outptr_result_maybenull_z_ char**      _Buffer,
-        _Out_opt_                                                                   size_t*     _BufferCount,
-        _In_z_                                                                      char const* _VarName
+    _Success_(return == 0)
+    _DCRTIMP errno_t __cdecl getenv_s(
+        _Out_                            size_t*     _RequiredCount,
+        _Out_writes_opt_z_(_BufferCount) char*       _Buffer,
+        _In_                             rsize_t     _BufferCount,
+        _In_z_                           char const* _VarName
         );
 
-    #if defined(_DEBUG) && defined(_CRTDBG_MAP_ALLOC)
-        #pragma pop_macro("_dupenv_s")
+    #endif // __STDC_WANT_SECURE_LIB__
+
+
+
+
+    _ACRTIMP int*       __cdecl __p___argc (void);
+    _ACRTIMP char***    __cdecl __p___argv (void);
+    _ACRTIMP wchar_t*** __cdecl __p___wargv(void);
+
+    #ifdef _CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY
+        extern int       __argc;
+        extern char**    __argv;
+        extern wchar_t** __wargv;
+    #else
+        #define __argc  (*__p___argc())  // Pointer to number of command line arguments
+        #define __argv  (*__p___argv())  // Pointer to table of narrow command line arguments
+        #define __wargv (*__p___wargv()) // Pointer to table of wide command line arguments
     #endif
 
-    _DCRTIMP int __cdecl system(
-        _In_opt_z_ char const* _Command
-        );
+    _DCRTIMP char***    __cdecl __p__environ (void);
+    _DCRTIMP wchar_t*** __cdecl __p__wenviron(void);
 
-    // The functions below have declspecs in their declarations in the Windows
-    // headers, causing PREfast to fire 6540 here
-    #pragma warning(push)
-    #pragma warning(disable: 6540)
+    #ifndef _CRT_BEST_PRACTICES_USAGE
+        #define _CRT_V12_LEGACY_FUNCTIONALITY
+    #endif
 
-    _Check_return_
-    _DCRTIMP int __cdecl _putenv(
-        _In_z_ char const* _EnvString
-        );
+    #ifndef _CRT_V12_LEGACY_FUNCTIONALITY
+        // Deprecated symbol: Do not expose environment global pointers unless
+        // legacy access is specifically requested
+        #define _environ    crt_usage_error__do_not_reference_global_pointer_directly__environ
+        #define _wenviron   crt_usage_error__do_not_reference_global_pointer_directly__wenviron
+    #else
+        #define _environ  (*__p__environ())  // Pointer to narrow environment table
+        #define _wenviron (*__p__wenviron()) // Pointer to wide environment table
+    #endif
 
-    _Check_return_wat_
-    _DCRTIMP errno_t __cdecl _putenv_s(
-        _In_z_ char const* _Name,
-        _In_z_ char const* _Value
-        );
 
-    #pragma warning(pop)
 
-    _DCRTIMP errno_t __cdecl _searchenv_s(
-        _In_z_                       char const* _Filename,
-        _In_z_                       char const* _VarName,
-        _Out_writes_z_(_BufferCount) char*       _Buffer,
-        _In_                         size_t      _BufferCount
-        );
+    // Sizes for buffers used by the getenv/putenv family of functions.
+    #define _MAX_ENV 32767
 
-    __DEFINE_CPP_OVERLOAD_SECURE_FUNC_2_0(
-        errno_t, _searchenv_s,
-        _In_z_ char const*, _Filename,
-        _In_z_ char const*, _VarName,
-               char,        _Buffer
-        )
 
-    __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_2_0(
-        void, __RETURN_POLICY_VOID, _DCRTIMP, _searchenv,
-        _In_z_                  char const*, _Filename,
-        _In_z_                  char const*, _VarName,
-        _Pre_notnull_ _Post_z_, char,        _Buffer
-        )
+    #if _CRT_FUNCTIONS_REQUIRED
 
-    // The Win32 API SetErrorMode, Beep and Sleep should be used instead.
-    _CRT_OBSOLETE(SetErrorMode)
-    _DCRTIMP void __cdecl _seterrormode(
-        _In_ int _Mode
-        );
+        _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+        _DCRTIMP char* __cdecl getenv(
+            _In_z_ char const* _VarName
+            );
 
-    _CRT_OBSOLETE(Beep)
-    _DCRTIMP void __cdecl _beep(
-        _In_ unsigned _Frequency,
-        _In_ unsigned _Duration
-        );
+        __DEFINE_CPP_OVERLOAD_SECURE_FUNC_1_1(
+            errno_t, getenv_s,
+            _Out_  size_t*,     _RequiredCount,
+                   char,        _Buffer,
+            _In_z_ char const*, _VarName
+            )
 
-    _CRT_OBSOLETE(Sleep)
-    _DCRTIMP void __cdecl _sleep(
-        _In_ unsigned long _Duration
-        );
+        #if defined (_DEBUG) && defined (_CRTDBG_MAP_ALLOC)
+            #pragma push_macro("_dupenv_s")
+            #undef _dupenv_s
+        #endif
 
-#endif // _CRT_FUNCTIONS_REQUIRED
+        _Check_return_opt_
+        _DCRTIMP errno_t __cdecl _dupenv_s(
+            _Outptr_result_buffer_maybenull_(*_BufferCount) _Outptr_result_maybenull_z_ char**      _Buffer,
+            _Out_opt_                                                                   size_t*     _BufferCount,
+            _In_z_                                                                      char const* _VarName
+            );
+
+        #if defined (_DEBUG) && defined (_CRTDBG_MAP_ALLOC)
+            #pragma pop_macro("_dupenv_s")
+        #endif
+
+        _DCRTIMP int __cdecl system(
+            _In_opt_z_ char const* _Command
+            );
+
+        // The functions below have declspecs in their declarations in the Windows
+        // headers, causing PREfast to fire 6540 here
+        #pragma warning (push)
+        #pragma warning (disable:6540)
+
+        _Check_return_
+        _DCRTIMP int __cdecl _putenv(
+            _In_z_ char const* _EnvString
+            );
+
+        _Check_return_wat_
+        _DCRTIMP errno_t __cdecl _putenv_s(
+            _In_z_ char const* _Name,
+            _In_z_ char const* _Value
+            );
+
+        #pragma warning (pop)
+
+        _DCRTIMP errno_t __cdecl _searchenv_s(
+            _In_z_                       char const* _Filename,
+            _In_z_                       char const* _VarName,
+            _Out_writes_z_(_BufferCount) char*       _Buffer,
+            _In_                         size_t      _BufferCount
+            );
+
+        __DEFINE_CPP_OVERLOAD_SECURE_FUNC_2_0(
+            errno_t, _searchenv_s,
+            _In_z_ char const*, _Filename,
+            _In_z_ char const*, _VarName,
+                   char,        _Buffer
+            )
+
+        __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_2_0(
+            void, __RETURN_POLICY_VOID, _DCRTIMP, _searchenv,
+            _In_z_                  char const*, _Filename,
+            _In_z_                  char const*, _VarName,
+            _Pre_notnull_ _Post_z_, char,        _Buffer
+            )
+
+        // The Win32 API SetErrorMode, Beep and Sleep should be used instead.
+        _CRT_OBSOLETE(SetErrorMode)
+        _DCRTIMP void __cdecl _seterrormode(
+            _In_ int _Mode
+            );
+
+        _CRT_OBSOLETE(Beep)
+        _DCRTIMP void __cdecl _beep(
+            _In_ unsigned _Frequency,
+            _In_ unsigned _Duration
+            );
+
+        _CRT_OBSOLETE(Sleep)
+        _DCRTIMP void __cdecl _sleep(
+            _In_ unsigned long _Duration
+            );
+
+    #endif // _CRT_FUNCTIONS_REQUIRED
+
+#endif // _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
+
 
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -1276,7 +1294,7 @@ _DCRTIMP wchar_t*** __cdecl __p__wenviron(void);
 // Non-ANSI Names for Compatibility
 //
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
 
     #ifndef __cplusplus
         #define max(a,b) (((a) > (b)) ? (a) : (b))
@@ -1341,12 +1359,16 @@ _DCRTIMP wchar_t*** __cdecl __p__wenviron(void);
         _In_                   int           _Radix
         );
 
-    #define environ _environ
+    #ifdef _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
 
-    _Check_return_ _CRT_NONSTDC_DEPRECATE(_putenv)
-    _DCRTIMP int __cdecl putenv(
-        _In_z_ char const* _EnvString
-        );
+        #define environ _environ
+
+        _Check_return_ _CRT_NONSTDC_DEPRECATE(_putenv)
+        _DCRTIMP int __cdecl putenv(
+            _In_z_ char const* _EnvString
+            );
+
+    #endif // _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
 
     #pragma warning(pop)
 
@@ -1357,6 +1379,3 @@ _DCRTIMP wchar_t*** __cdecl __p__wenviron(void);
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_STDLIB

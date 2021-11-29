@@ -786,3 +786,17 @@ ValidLabel SETS "$ValidTarget"
         EPILOG_RESTORE_REG_PAIR x21, x22, #16
         EPILOG_RESTORE_REG_PAIR x19, x20, #96!
         MEND
+
+
+        ;
+        ; Macro to ensure that any eret is followed by barriers to
+        ; prevent speculation
+        ;
+        MACRO
+        ERET_FIX
+        eret
+        dsb sy
+        isb sy
+        MEND
+
+#define eret ERET_FIX

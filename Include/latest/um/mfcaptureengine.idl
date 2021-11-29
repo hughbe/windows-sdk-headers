@@ -118,61 +118,6 @@ typedef enum MF_CAPTURE_ENGINE_STREAM_CATEGORY
     MF_CAPTURE_ENGINE_STREAM_CATEGORY_UNSUPPORTED   =  0x00000005
 }MF_CAPTURE_ENGINE_STREAM_CATEGORY;
 
-
-//////////////////////////////////////////////////////////////////////////////
-//
-// MF_CAPTURE_ENGINE_MEDIA_CATEGORY_TYPE Enumeration
-//
-/////////////////////////////////////////////////////////////////////////////
-/// <summary>
-/// Defines the media capture categories.
-/// </summary>
-typedef enum MF_CAPTURE_ENGINE_MEDIA_CATEGORY_TYPE
-{
-    /// <summary>
-    /// Default capture category
-    /// </summary>
-    MF_CAPTURE_ENGINE_MEDIA_CATEGORY_TYPE_OTHER = 0,
-    /// <summary>
-    /// Communications capture category
-    /// </summary>
-    MF_CAPTURE_ENGINE_MEDIA_CATEGORY_TYPE_COMMUNICATIONS = 1,
-    /// <summary>
-    /// General media capture category
-    /// </summary>
-    MF_CAPTURE_ENGINE_MEDIA_CATEGORY_TYPE_MEDIA = 2,
-    /// <summary>
-    /// Game Chat capture category
-    /// </summary>
-    MF_CAPTURE_ENGINE_MEDIA_CATEGORY_TYPE_GAMECHAT = 3,
-    /// <summary>
-    /// Speech capture category
-    /// </summary>
-    MF_CAPTURE_ENGINE_MEDIA_CATEGORY_TYPE_SPEECH = 4,
-}MF_CAPTURE_ENGINE_MEDIA_CATEGORY_TYPE;
-
-
-//////////////////////////////////////////////////////////////////////////////
-//
-// MF_CAPTURE_ENGINE_AUDIO_PROCESSING_MODE Enumeration
-//
-/////////////////////////////////////////////////////////////////////////////
-/// <summary>
-/// Defines the capture audio processing mode.
-/// </summary>
-typedef enum MF_CAPTURE_ENGINE_AUDIO_PROCESSING_MODE
-{
-    /// <summary>
-    /// Normal audio signal processing.
-    /// </summary>
-    MF_CAPTURE_ENGINE_AUDIO_PROCESSING_DEFAULT = 0,
-    /// <summary>
-    /// Minimal audio signal processing.
-    /// </summary>
-    MF_CAPTURE_ENGINE_AUDIO_PROCESSING_RAW = 1,
-}MF_CAPTURE_ENGINE_AUDIO_PROCESSING_MODE;
-
-
 ///////////////////////////////////////////////////////////////////////////////
 //
 // GUIDs to go with IMFCaptureEngineOnEventCallback. These are extended types on IMFMediaEvent
@@ -336,19 +281,6 @@ cpp_quote( "EXTERN_GUID(MF_CAPTURE_ENGINE_ENCODER_MFT_FIELDOFUSE_UNLOCK_Attribut
 // Data type:  UINT32 - 0/not present - do not eanble notification.  Non-zero, enable notification.
 // Indicates whether stream state notification should be enabled or not.
 cpp_quote("EXTERN_GUID(MF_CAPTURE_ENGINE_ENABLE_CAMERA_STREAMSTATE_NOTIFICATION, 0x4C808E9D, 0xAAED, 0x4713, 0x90, 0xFB, 0xCB, 0x24, 0x06, 0x4A, 0xB8, 0xDA);")    
-
-// {8e3f5bd5-dbbf-42f0-8542-d07a3971762a}
-// MF_CAPTURE_ENGINE_MEDIA_CATEGORY
-// Data type:  UINT32 - values come from the MF_CAPTURE_ENGINE_MEDIA_CATEGORY_TYPE enumeration.
-// Attribute that dictates the media capture category used by the capture engine.
-cpp_quote("EXTERN_GUID(MF_CAPTURE_ENGINE_MEDIA_CATEGORY, 0x8e3f5bd5, 0xdbbf, 0x42f0, 0x85, 0x42, 0xd0, 0x7a, 0x39, 0x71, 0x76, 0x2a);")
-
-// {10f1be5e-7e11-410b-973d-f4b6109000fe}
-// MF_CAPTURE_ENGINE_AUDIO_PROCESSING
-// Data type:  UINT32 - values come from the MF_CAPTURE_ENGINE_AUDIO_PROCESSING_MODE enumeration.
-// Attribute that defines the audio processing mode to be used during capture.
-cpp_quote("EXTERN_GUID(MF_CAPTURE_ENGINE_AUDIO_PROCESSING, 0x10f1be5e, 0x7e11, 0x410b, 0x97, 0x3d, 0xf4, 0xb6, 0x10, 0x90, 0x0, 0xfe);")
-
     
 ///////////////////////////////////////////////////////////////////////////////
 //

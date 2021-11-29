@@ -1,3 +1,10 @@
+ 
+ 
+// begin_1_0
+// begin_2_0
+// begin_2_1
+// begin_2_2
+// begin_2_3
 /********************************************************************************
 *                                                                               *
 * sysinfoapi.h -- ApiSet Contract for api-ms-win-core-sysinfo-l1                *
@@ -18,11 +25,13 @@
 #include <minwindef.h>
 #include <minwinbase.h>
 
+
 #if (_MSC_VER >= 800)
 #pragma warning(disable:4514)
 #ifndef __WINDOWS_DONT_DISABLE_PRAGMA_PACK_WARNING__
 #pragma warning(disable:4103)
 #endif
+
 #if _MSC_VER >= 1200
 #pragma warning(push)
 #endif
@@ -30,6 +39,31 @@
 #pragma warning(disable:4201)
 #pragma warning(disable:4214)
 #endif
+
+/* APISET_NAME: api-ms-win-core-sysinfo-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_SYSINFO_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINTHRESHOLD
+#define _APISET_SYSINFO_VER 0x0203
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINPHONEBLUE
+#define _APISET_SYSINFO_VER 0x0202
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINBLUE
+#define _APISET_SYSINFO_VER 0x0201
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_SYSINFO_VER 0x0200
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN7
+#define _APISET_SYSINFO_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 
 #if defined(FKG_FORCED_USAGE) || defined(WINPHONE) || defined(BUILD_WINDOWS)
 # define NOT_BUILD_WINDOWS_DEPRECATE
@@ -41,8 +75,17 @@
 extern "C" {
 #endif
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+// end_1_0
+// end_2_0
+// end_2_1
+// end_2_2
+// end_2_3
+// begin_1_0
+// begin_2_0
+
+#pragma region Application Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 typedef struct _SYSTEM_INFO {
     union {
@@ -63,6 +106,17 @@ typedef struct _SYSTEM_INFO {
     WORD wProcessorRevision;
 } SYSTEM_INFO, *LPSYSTEM_INFO;
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+// end_1_0
+// end_2_0
+// begin_1_0
+
+#pragma region Application Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 typedef struct _MEMORYSTATUSEX {
     DWORD dwLength;
     DWORD dwMemoryLoad;
@@ -74,10 +128,6 @@ typedef struct _MEMORYSTATUSEX {
     DWORDLONG ullAvailVirtual;
     DWORDLONG ullAvailExtendedVirtual;
 } MEMORYSTATUSEX, *LPMEMORYSTATUSEX;
-
-#define USER_CET_ENVIRONMENT_WIN32_PROCESS        0x00000000
-#define USER_CET_ENVIRONMENT_SGX2_ENCLAVE         0x00000002
-#define USER_CET_ENVIRONMENT_VBS_BASIC_ENCLAVE    0x00000011
 
 WINBASEAPI
 BOOL
@@ -119,42 +169,12 @@ GetLocalTime(
     );
 
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-
-WINBASEAPI
-BOOL
-WINAPI
-IsUserCetAvailableInEnvironment(
-    _In_ DWORD UserCetEnvironment
-    );
-
-
-#endif
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
-
-WINBASEAPI
-BOOL
-WINAPI
-GetSystemLeapSecondInformation(
-    _Out_ PBOOL Enabled,
-    _Out_ PDWORD Flags
-    );
-
-
-#endif
-
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 NOT_BUILD_WINDOWS_DEPRECATE
 WINBASEAPI
@@ -170,16 +190,19 @@ WINBASEAPI
 BOOL
 WINAPI
 SetLocalTime(
-    _In_ CONST SYSTEMTIME* lpSystemTime
+    _In_ CONST SYSTEMTIME * lpSystemTime
     );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
+// end_1_0
+// begin_1_0
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 __drv_preferredFunction("GetTickCount64", "GetTickCount overflows roughly every 49 days.  Code that does not take that into account can loop indefinitely.  GetTickCount64 operates on 64 bit values and does not have that problem")
 WINBASEAPI
@@ -188,6 +211,7 @@ WINAPI
 GetTickCount(
     VOID
     );
+
 
 
 #if (_WIN32_WINNT >= 0x0600)
@@ -202,11 +226,12 @@ GetTickCount64(
 
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 _Success_(return != FALSE)
@@ -219,35 +244,12 @@ GetSystemTimeAdjustment(
     );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
-WINBASEAPI
-_Success_(return != FALSE)
-BOOL
-WINAPI
-GetSystemTimeAdjustmentPrecise(
-    _Out_ PDWORD64 lpTimeAdjustment,
-    _Out_ PDWORD64 lpTimeIncrement,
-    _Out_ PBOOL lpTimeAdjustmentDisabled
-    );
-
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 WINBASEAPI
 _Success_(return != 0 && return < uSize)
 UINT
 WINAPI
 GetSystemDirectoryA(
-    _Out_writes_to_opt_(uSize,return + 1) LPSTR lpBuffer,
+    _Out_writes_to_opt_(uSize, return + 1) LPSTR lpBuffer,
     _In_ UINT uSize
     );
 
@@ -256,7 +258,7 @@ _Success_(return != 0 && return < uSize)
 UINT
 WINAPI
 GetSystemDirectoryW(
-    _Out_writes_to_opt_(uSize,return + 1) LPWSTR lpBuffer,
+    _Out_writes_to_opt_(uSize, return + 1) LPWSTR lpBuffer,
     _In_ UINT uSize
     );
 
@@ -266,19 +268,13 @@ GetSystemDirectoryW(
 #define GetSystemDirectory  GetSystemDirectoryA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 WINBASEAPI
 _Must_inspect_result_
 _Success_(return != 0 && return < uSize)
 UINT
 WINAPI
 GetWindowsDirectoryA(
-    _Out_writes_to_opt_(uSize,return + 1) LPSTR lpBuffer,
+    _Out_writes_to_opt_(uSize, return + 1) LPSTR lpBuffer,
     _In_ UINT uSize
     );
 
@@ -288,7 +284,7 @@ _Success_(return != 0 && return < uSize)
 UINT
 WINAPI
 GetWindowsDirectoryW(
-    _Out_writes_to_opt_(uSize,return + 1) LPWSTR lpBuffer,
+    _Out_writes_to_opt_(uSize, return + 1) LPWSTR lpBuffer,
     _In_ UINT uSize
     );
 
@@ -298,18 +294,12 @@ GetWindowsDirectoryW(
 #define GetWindowsDirectory  GetWindowsDirectoryA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-
 WINBASEAPI
 _Success_(return != 0 && return < uSize)
 UINT
 WINAPI
 GetSystemWindowsDirectoryA(
-    _Out_writes_to_opt_(uSize,return + 1) LPSTR lpBuffer,
+    _Out_writes_to_opt_(uSize, return + 1) LPSTR lpBuffer,
     _In_ UINT uSize
     );
 
@@ -318,7 +308,7 @@ _Success_(return != 0 && return < uSize)
 UINT
 WINAPI
 GetSystemWindowsDirectoryW(
-    _Out_writes_to_opt_(uSize,return + 1) LPWSTR lpBuffer,
+    _Out_writes_to_opt_(uSize, return + 1) LPWSTR lpBuffer,
     _In_ UINT uSize
     );
 
@@ -328,11 +318,18 @@ GetSystemWindowsDirectoryW(
 #define GetSystemWindowsDirectory  GetSystemWindowsDirectoryA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+// end_1_0
+// begin_1_0
+// begin_2_0
+// begin_2_1
+// begin_2_3
+
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 typedef enum _COMPUTER_NAME_FORMAT {
     ComputerNameNetBIOS,
@@ -346,13 +343,26 @@ typedef enum _COMPUTER_NAME_FORMAT {
     ComputerNameMax
 } COMPUTER_NAME_FORMAT ;
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+// end_1_0
+// end_2_0
+// end_2_1
+// end_2_3
+// begin_1_0
+
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 WINBASEAPI
 _Success_(return != FALSE)
 BOOL
 WINAPI
 GetComputerNameExA(
     _In_ COMPUTER_NAME_FORMAT NameType,
-    _Out_writes_to_opt_(*nSize,*nSize + 1) LPSTR lpBuffer,
+    _Out_writes_to_opt_(*nSize, *nSize + 1) LPSTR lpBuffer,
     _Inout_ LPDWORD nSize
     );
 
@@ -362,7 +372,7 @@ BOOL
 WINAPI
 GetComputerNameExW(
     _In_ COMPUTER_NAME_FORMAT NameType,
-    _Out_writes_to_opt_(*nSize,*nSize + 1) LPWSTR lpBuffer,
+    _Out_writes_to_opt_(*nSize, *nSize + 1) LPWSTR lpBuffer,
     _Inout_ LPDWORD nSize
     );
 
@@ -372,10 +382,17 @@ GetComputerNameExW(
 #define GetComputerNameEx  GetComputerNameExA
 #endif // !UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
+// end_1_0
+// begin_2_0
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER >= 0x0101)
+
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
@@ -395,15 +412,21 @@ WINBASEAPI
 BOOL
 WINAPI
 SetSystemTime(
-    _In_ CONST SYSTEMTIME* lpSystemTime
+    _In_ CONST SYSTEMTIME * lpSystemTime
     );
 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#endif // !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER > 0x0100)
+
+// end_2_0
+// begin_1_0
+
+#pragma region Application Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 NOT_BUILD_WINDOWS_DEPRECATE
 WINBASEAPI
@@ -433,16 +456,11 @@ WINBASEAPI
 BOOL
 WINAPI
 GetLogicalProcessorInformation(
-    _Out_writes_bytes_to_opt_(*ReturnedLength,*ReturnedLength) PSYSTEM_LOGICAL_PROCESSOR_INFORMATION Buffer,
+    _Out_writes_bytes_to_opt_(*ReturnedLength, *ReturnedLength) PSYSTEM_LOGICAL_PROCESSOR_INFORMATION Buffer,
     _Inout_ PDWORD ReturnedLength
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
-#pragma endregion
-
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
 
@@ -451,7 +469,7 @@ BOOL
 WINAPI
 GetLogicalProcessorInformationEx(
     _In_ LOGICAL_PROCESSOR_RELATIONSHIP RelationshipType,
-    _Out_writes_bytes_to_opt_(*ReturnedLength,*ReturnedLength) PSYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX Buffer,
+    _Out_writes_bytes_to_opt_(*ReturnedLength, *ReturnedLength) PSYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX Buffer,
     _Inout_ PDWORD ReturnedLength
     );
 
@@ -461,8 +479,16 @@ GetLogicalProcessorInformationEx(
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+// end_1_0
+// begin_2_0
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER >= 0x0101)
+
+#pragma region Application Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WINXP)
 
@@ -476,6 +502,7 @@ GetNativeSystemInfo(
 
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_WINXP)
 
+
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 
 WINBASEAPI
@@ -488,11 +515,13 @@ GetSystemTimePreciseAsFileTime(
 
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_VISTA)
 
@@ -510,11 +539,6 @@ GetProductInfo(
 
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_VISTA)
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 #if (NTDDI_VERSION >= NTDDI_WIN2K)
 
@@ -530,6 +554,7 @@ VerSetConditionMask(
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN2K)
 
+
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 
 WINBASEAPI
@@ -542,18 +567,12 @@ GetOsSafeBootMode(
 
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region OneCore Family or App Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP)
-
 WINBASEAPI
 UINT
 WINAPI
 EnumSystemFirmwareTables(
     _In_ DWORD FirmwareTableProviderSignature,
-    _Out_writes_bytes_to_opt_(BufferSize,return) PVOID pFirmwareTableEnumBuffer,
+    _Out_writes_bytes_to_opt_(BufferSize, return) PVOID pFirmwareTableEnumBuffer,
     _In_ DWORD BufferSize
     );
 
@@ -564,15 +583,24 @@ WINAPI
 GetSystemFirmwareTable(
     _In_ DWORD FirmwareTableProviderSignature,
     _In_ DWORD FirmwareTableID,
-    _Out_writes_bytes_to_opt_(BufferSize,return) PVOID pFirmwareTableBuffer,
+    _Out_writes_bytes_to_opt_(BufferSize, return) PVOID pFirmwareTableBuffer,
     _In_ DWORD BufferSize
     );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
+#endif // !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER > 0x0100)
+
+// end_2_0
+// begin_2_1
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER >= 0x0201)
+
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
@@ -581,7 +609,7 @@ BOOL
 WINAPI
 DnsHostnameToComputerNameExW(
     _In_ LPCWSTR Hostname,
-    _Out_writes_to_opt_(*nSize,*nSize + 1) LPWSTR ComputerName,
+    _Out_writes_to_opt_(*nSize, *nSize + 1) LPWSTR ComputerName,
     _Inout_ LPDWORD nSize
     );
 
@@ -622,16 +650,6 @@ SetSystemTimeAdjustment(
 
 
 WINBASEAPI
-_Success_(return != FALSE)
-BOOL
-WINAPI
-SetSystemTimeAdjustmentPrecise(
-    _In_ DWORD64 dwTimeAdjustment,
-    _In_ BOOL bTimeAdjustmentDisabled
-    );
-
-
-WINBASEAPI
 BOOL
 WINAPI
 InstallELAMCertificateInfo(
@@ -642,6 +660,15 @@ InstallELAMCertificateInfo(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
+#endif // !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER >= 0x0201)
+
+// end_2_1
+// begin_2_2
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER >= 0x0202)
+
+
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
 
 WINBASEAPI
@@ -649,15 +676,25 @@ BOOL
 WINAPI
 GetProcessorSystemCycleTime(
     _In_ USHORT Group,
-    _Out_writes_bytes_to_opt_(*ReturnedLength,*ReturnedLength) PSYSTEM_PROCESSOR_CYCLE_TIME_INFORMATION Buffer,
+    _Out_writes_bytes_to_opt_(*ReturnedLength, *ReturnedLength) PSYSTEM_PROCESSOR_CYCLE_TIME_INFORMATION Buffer,
     _Inout_ PDWORD ReturnedLength
     );
 
 
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
 
+#endif // !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER >= 0x0202)
+
+// end_2_2
+// begin_2_3
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER >= 0x0203)
+
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)
 
@@ -673,8 +710,11 @@ GetOsManufacturingMode(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
+
 #pragma region App Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)
 
@@ -682,7 +722,7 @@ WINBASEAPI
 HRESULT
 WINAPI
 GetIntegratedDisplaySize(
-    _Out_ double* sizeInInches
+    _Out_ double * sizeInInches
     );
 
 
@@ -692,6 +732,7 @@ GetIntegratedDisplaySize(
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
@@ -730,11 +771,22 @@ SetComputerNameExA(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
+#endif // !defined(_CONTRACT_GEN) || (_APISET_SYSINFO_VER >= 0x0203)
+
+// end_2_3
+// begin_1_0
+// begin_2_0
+// begin_2_1
+// begin_2_2
+// begin_2_3
+
 #ifdef __cplusplus
 }
 #endif
 
+
 #if (_MSC_VER >= 800)
+
 #if _MSC_VER >= 1200
 #pragma warning(pop)
 #else
@@ -747,3 +799,8 @@ SetComputerNameExA(
 
 #endif // _SYSINFOAPI_H_
 
+// end_1_0
+// end_2_0
+// end_2_1
+// end_2_2
+// end_2_3

@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.ui.xaml.resources.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,28 +75,39 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -115,11 +129,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Resources {
                     interface ICustomXamlResourceLoader;
-                } /* Resources */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Resources */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoader
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_FWD_DEFINED__
@@ -132,11 +145,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Resources {
                     interface ICustomXamlResourceLoaderFactory;
-                } /* Resources */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Resources */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderFactory
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_FWD_DEFINED__
@@ -149,11 +161,10 @@ namespace ABI {
             namespace Xaml {
                 namespace Resources {
                     interface ICustomXamlResourceLoaderOverrides;
-                } /* Resources */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Resources */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderOverrides
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_FWD_DEFINED__
@@ -166,29 +177,38 @@ namespace ABI {
             namespace Xaml {
                 namespace Resources {
                     interface ICustomXamlResourceLoaderStatics;
-                } /* Resources */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Resources */} /* ABI */
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoaderStatics
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_FWD_DEFINED__
 
-// Parameterized interface forward declarations (C++)
 
-// Collection interface definitions
+
+
+
+
+
+
+
 namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Xaml {
                 namespace Resources {
                     class CustomXamlResourceLoader;
-                } /* Resources */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Resources */} /* ABI */
+
+
+
+
+
+
 
 /*
  *
@@ -196,7 +216,9 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Resources.CustomXamlResourceLoader
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -208,22 +230,24 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Resources {
-                    MIDL_INTERFACE("511a84ab-4a88-419f-852e-54083b90b078")
-                    ICustomXamlResourceLoader : public IInspectable
+                    /* [object, uuid("511A84AB-4A88-419F-852E-54083B90B078"), exclusiveto, contract] */
+                    MIDL_INTERFACE("511A84AB-4A88-419F-852E-54083B90B078")
+                    ICustomXamlResourceLoader : IInspectable
                     {
-                    public:
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomXamlResourceLoader = _uuidof(ICustomXamlResourceLoader);
-                } /* Resources */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomXamlResourceLoader=_uuidof(ICustomXamlResourceLoader);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Resources */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -231,7 +255,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourc
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Resources.CustomXamlResourceLoader
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -243,27 +269,29 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Resources {
-                    MIDL_INTERFACE("5bfd7e49-7886-44f3-8ed3-6fec0463ed69")
-                    ICustomXamlResourceLoaderFactory : public IInspectable
+                    /* [object, uuid("5BFD7E49-7886-44F3-8ED3-6FEC0463ED69"), exclusiveto, contract] */
+                    MIDL_INTERFACE("5BFD7E49-7886-44F3-8ED3-6FEC0463ED69")
+                    ICustomXamlResourceLoaderFactory : IInspectable
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE CreateInstance(
-                            IInspectable* baseInterface,
-                            IInspectable** innerInterface,
-                            ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoader** value
+                            /* [in] */__RPC__in_opt IInspectable * outer,
+                            /* [out] */__RPC__deref_out_opt IInspectable * * inner,
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoader * * instance
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomXamlResourceLoaderFactory = _uuidof(ICustomXamlResourceLoaderFactory);
-                } /* Resources */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomXamlResourceLoaderFactory=_uuidof(ICustomXamlResourceLoaderFactory);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Resources */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -271,7 +299,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourc
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Resources.CustomXamlResourceLoader
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -283,29 +313,31 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Resources {
-                    MIDL_INTERFACE("f851e991-af02-46e8-9af8-427b7ebfe9f8")
-                    ICustomXamlResourceLoaderOverrides : public IInspectable
+                    /* [object, uuid("F851E991-AF02-46E8-9AF8-427B7EBFE9F8"), exclusiveto, contract] */
+                    MIDL_INTERFACE("F851E991-AF02-46E8-9AF8-427B7EBFE9F8")
+                    ICustomXamlResourceLoaderOverrides : IInspectable
                     {
-                    public:
                         virtual HRESULT STDMETHODCALLTYPE GetResource(
-                            HSTRING resourceId,
-                            HSTRING objectType,
-                            HSTRING propertyName,
-                            HSTRING propertyType,
-                            IInspectable** result
+                            /* [in] */__RPC__in HSTRING resourceId,
+                            /* [in] */__RPC__in HSTRING objectType,
+                            /* [in] */__RPC__in HSTRING propertyName,
+                            /* [in] */__RPC__in HSTRING propertyType,
+                            /* [retval, out] */__RPC__deref_out_opt IInspectable * * returnValue
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomXamlResourceLoaderOverrides = _uuidof(ICustomXamlResourceLoaderOverrides);
-                } /* Resources */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomXamlResourceLoaderOverrides=_uuidof(ICustomXamlResourceLoaderOverrides);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Resources */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -313,7 +345,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourc
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Resources.CustomXamlResourceLoader
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -325,34 +359,37 @@ namespace ABI {
         namespace UI {
             namespace Xaml {
                 namespace Resources {
-                    MIDL_INTERFACE("224ff617-e4dc-4c27-ad32-db93d5d0e5da")
-                    ICustomXamlResourceLoaderStatics : public IInspectable
+                    /* [object, uuid("224FF617-E4DC-4C27-AD32-DB93D5D0E5DA"), exclusiveto, contract] */
+                    MIDL_INTERFACE("224FF617-E4DC-4C27-AD32-DB93D5D0E5DA")
+                    ICustomXamlResourceLoaderStatics : IInspectable
                     {
-                    public:
-                        virtual HRESULT STDMETHODCALLTYPE get_Current(
-                            ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoader** value
+                        /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Current(
+                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoader * * value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE put_Current(
-                            ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoader* value
+                        /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Current(
+                            /* [in] */__RPC__in_opt ABI::Windows::UI::Xaml::Resources::ICustomXamlResourceLoader * value
                             ) = 0;
+                        
                     };
 
-                    extern MIDL_CONST_ID IID& IID_ICustomXamlResourceLoaderStatics = _uuidof(ICustomXamlResourceLoaderStatics);
-                } /* Resources */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
+                    extern MIDL_CONST_ID IID & IID_ICustomXamlResourceLoaderStatics=_uuidof(ICustomXamlResourceLoaderStatics);
+                    
+                } /* Windows */
+            } /* UI */
+        } /* Xaml */
+    } /* Resources */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.UI.Xaml.Resources.CustomXamlResourceLoader
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -367,11 +404,16 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourc
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Resources_CustomXamlResourceLoader_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Resources_CustomXamlResourceLoader_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Resources_CustomXamlResourceLoader[] = L"Windows.UI.Xaml.Resources.CustomXamlResourceLoader";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -399,9 +441,18 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoad
 
 #endif // ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_FWD_DEFINED__
 
-// Parameterized interface forward declarations (C)
 
-// Collection interface definitions
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -409,63 +460,85 @@ typedef interface __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoad
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Resources.CustomXamlResourceLoader
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Resources_ICustomXamlResourceLoader[] = L"Windows.UI.Xaml.Resources.ICustomXamlResourceLoader";
+/* [object, uuid("511A84AB-4A88-419F-852E-54083B90B078"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader* This,
-        TrustLevel* trustLevel);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader * This
+    );
 
-    END_INTERFACE
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -473,70 +546,94 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourc
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Resources.CustomXamlResourceLoader
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Resources_ICustomXamlResourceLoaderFactory[] = L"Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderFactory";
+/* [object, uuid("5BFD7E49-7886-44F3-8ED3-6FEC0463ED69"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactoryVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateInstance)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory* This,
-        IInspectable* baseInterface,
-        IInspectable** innerInterface,
-        __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory * This,
+        /* [in] */__RPC__in_opt IInspectable * outer,
+        /* [out] */__RPC__deref_out_opt IInspectable * * inner,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader * * instance
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactoryVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactoryVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactoryVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_CreateInstance(This, baseInterface, innerInterface, value) \
-    ((This)->lpVtbl->CreateInstance(This, baseInterface, innerInterface, value))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_CreateInstance(This,outer,inner,instance) \
+    ( (This)->lpVtbl->CreateInstance(This,outer,inner,instance) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -544,72 +641,96 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourc
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Resources.CustomXamlResourceLoader
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Resources_ICustomXamlResourceLoaderOverrides[] = L"Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderOverrides";
+/* [object, uuid("F851E991-AF02-46E8-9AF8-427B7EBFE9F8"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverridesVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetResource)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides* This,
-        HSTRING resourceId,
-        HSTRING objectType,
-        HSTRING propertyName,
-        HSTRING propertyType,
-        IInspectable** result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *GetResource )(
+        __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides * This,
+        /* [in] */__RPC__in HSTRING resourceId,
+        /* [in] */__RPC__in HSTRING objectType,
+        /* [in] */__RPC__in HSTRING propertyName,
+        /* [in] */__RPC__in HSTRING propertyType,
+        /* [retval, out] */__RPC__deref_out_opt IInspectable * * returnValue
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverridesVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverridesVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverridesVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_GetResource(This, resourceId, objectType, propertyName, propertyType, result) \
-    ((This)->lpVtbl->GetResource(This, resourceId, objectType, propertyName, propertyType, result))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_GetResource(This,resourceId,objectType,propertyName,propertyType,returnValue) \
+    ( (This)->lpVtbl->GetResource(This,resourceId,objectType,propertyName,propertyType,returnValue) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderOverrides_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -617,79 +738,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourc
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.UI.Xaml.Resources.CustomXamlResourceLoader
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Xaml_Resources_ICustomXamlResourceLoaderStatics[] = L"Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics";
+/* [object, uuid("224FF617-E4DC-4C27-AD32-DB93D5D0E5DA"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics* This,
-        __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader** value);
-    HRESULT (STDMETHODCALLTYPE* put_Current)(__x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics* This,
-        __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Current )(
+        __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader * * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Current )(
+        __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoader * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStaticsVtbl;
 
 interface __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_get_Current(This, value) \
-    ((This)->lpVtbl->get_Current(This, value))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_get_Current(This,value) \
+    ( (This)->lpVtbl->get_Current(This,value) )
 
-#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_put_Current(This, value) \
-    ((This)->lpVtbl->put_Current(This, value))
+#define __x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_put_Current(This,value) \
+    ( (This)->lpVtbl->put_Current(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourceLoaderStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.UI.Xaml.Resources.CustomXamlResourceLoader
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Xaml.Resources.ICustomXamlResourceLoaderStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -704,11 +852,16 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CResources_CICustomXamlResourc
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_UI_Xaml_Resources_CustomXamlResourceLoader_DEFINED
 #define RUNTIMECLASS_Windows_UI_Xaml_Resources_CustomXamlResourceLoader_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Xaml_Resources_CustomXamlResourceLoader[] = L"Windows.UI.Xaml.Resources.CustomXamlResourceLoader";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

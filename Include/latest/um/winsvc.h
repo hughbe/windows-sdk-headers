@@ -1784,50 +1784,6 @@ WaitServiceState (
 
 #endif // NTDDI_VERSION >= NTDDI_WIN8
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-//
-// Service state type enums
-//
-
-typedef enum SERVICE_REGISTRY_STATE_TYPE {
-    ServiceRegistryStateParameters = 0,
-    ServiceRegistryStatePersistent = 1,
-    MaxServiceRegistryStateType = 2,
-} SERVICE_REGISTRY_STATE_TYPE;
-
-_Must_inspect_result_
-DWORD
-WINAPI
-GetServiceRegistryStateKey(
-    _In_ SERVICE_STATUS_HANDLE ServiceStatusHandle,
-    _In_ SERVICE_REGISTRY_STATE_TYPE StateType,
-    _In_ DWORD AccessMask,
-    _Out_ HKEY *ServiceStateKey
-    );
-
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS4
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
-typedef enum SERVICE_DIRECTORY_TYPE {
-    ServiceDirectoryPersistentState = 0,
-    ServiceDirectoryTypeMax = 1,
-} SERVICE_DIRECTORY_TYPE;
-
-_Must_inspect_result_
-DWORD
-WINAPI
-GetServiceDirectory(
-    _In_ SERVICE_STATUS_HANDLE hServiceStatus,
-    _In_ SERVICE_DIRECTORY_TYPE eDirectoryType,
-    _Out_writes_opt_(cchPathBufferLength) PWCHAR lpPathBuffer,
-    _In_ DWORD cchPathBufferLength,
-    _Out_ DWORD *lpcchRequiredBufferLength
-    );
-
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS5
-
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 

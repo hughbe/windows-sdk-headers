@@ -3296,6 +3296,43 @@
 #define ERROR_UNEXPECTED_NTCACHEMANAGER_ERROR 443L
 
 //
+// MessageId: ERROR_LINUX_SUBSYSTEM_UPDATE_REQUIRED
+//
+// MessageText:
+//
+// WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
+//
+#define ERROR_LINUX_SUBSYSTEM_UPDATE_REQUIRED 444L
+
+//
+// MessageId: ERROR_DLP_POLICY_WARNS_AGAINST_OPERATION
+//
+// MessageText:
+//
+// This action is blocked, but you can choose to allow it. Please refer to the data loss prevention notification for further information.
+//
+#define ERROR_DLP_POLICY_WARNS_AGAINST_OPERATION 445L
+
+//
+// MessageId: ERROR_DLP_POLICY_DENIES_OPERATION
+//
+// MessageText:
+//
+// This action is blocked. Please refer to the data loss prevention notification for further information.
+//
+#define ERROR_DLP_POLICY_DENIES_OPERATION 446L
+
+// Data Loss Prevention error code to suppress showing UX/error message. Still adding error text for consistency.
+//
+// MessageId: ERROR_DLP_POLICY_SILENTLY_FAIL
+//
+// MessageText:
+//
+// This action is blocked. Please refer to the data loss prevention notification for further information.
+//
+#define ERROR_DLP_POLICY_SILENTLY_FAIL   449L
+
+//
 // **** Available SYSTEM error codes ****
 //
 
@@ -3461,6 +3498,15 @@
 // Attempt to access invalid address.
 //
 #define ERROR_INVALID_ADDRESS            487L
+
+//
+// MessageId: ERROR_HAS_SYSTEM_CRITICAL_FILES
+//
+// MessageText:
+//
+// The volume contains paging, crash dump or other system critical files.
+//
+#define ERROR_HAS_SYSTEM_CRITICAL_FILES  488L
 
 //
 // MessageId: ERROR_VRF_CFG_AND_IO_ENABLED

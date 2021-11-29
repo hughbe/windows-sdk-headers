@@ -716,6 +716,20 @@ SetProcessDynamicEHContinuationTargets(
 
 #endif
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+
+WINBASEAPI
+BOOL
+WINAPI
+SetProcessDynamicEnforcedCetCompatibleRanges(
+    _In_ HANDLE Process,
+    _In_ USHORT NumberOfRanges,
+    _Inout_updates_(NumberOfRanges) PPROCESS_DYNAMIC_ENFORCED_ADDRESS_RANGE Ranges
+    );
+
+
+#endif
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 

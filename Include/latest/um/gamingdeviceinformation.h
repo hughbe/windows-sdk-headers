@@ -1,3 +1,4 @@
+ 
 //
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //
@@ -27,6 +28,25 @@
 #include <nturtl.h>
 #include <windows.h>
 #endif
+
+/* APISET_NAME: api-ms-win-gaming-deviceinformation-l1 */
+/* APISET_TAG: public */
+
+// #if _APISET_TARGET_VERSION
+// #ifdef _APISET_TARGET_VERSION
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_GAMING_DEVICEINFORMATION_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN10_RS3
+#define _APISET_GAMING_DEVICEINFORMATION_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+ // #ifndef _APISET_GAMING_DEVICEINFORMATION_VER
+
 
 #if defined(__cplusplus)
 extern "C" {
@@ -60,8 +80,10 @@ typedef struct GAMING_DEVICE_MODEL_INFORMATION
 // Returns S_OK and GAMING_DEVICE_VENDOR_ID_NONE/GAMING_DEVICE_DEVICE_ID_NONE on non-Xbox SKUs.
 STDAPI
 GetGamingDeviceModelInformation(
-    _Out_ GAMING_DEVICE_MODEL_INFORMATION* information
+    _Out_ GAMING_DEVICE_MODEL_INFORMATION * information
     );
+
+
 
 
 #if defined(__cplusplus)

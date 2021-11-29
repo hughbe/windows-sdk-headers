@@ -44,7 +44,6 @@ cpp_quote("// IEmptyVolumeCache Flags")
 #pragma midl_echo("#define EVCF_SETTINGSMODE            0x0020")
 #pragma midl_echo("#define EVCF_OUTOFDISKSPACE          0x0040")
 #pragma midl_echo("#define EVCF_USERCONSENTOBTAINED     0x0080")
-#pragma midl_echo("#define EVCF_SYSTEMAUTORUN           0x0100")
 
 cpp_quote("")
 cpp_quote("// IEmptyVolumeCacheCallBack Flags")

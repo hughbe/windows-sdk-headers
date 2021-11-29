@@ -8,12 +8,7 @@ Abstract:
 
 */
 
-#ifndef _SWDEVICE_H_
-#define _SWDEVICE_H_
-
-#if _MSC_VER > 1000
 #pragma once
-#endif
 
 #include <winapifamily.h>
 
@@ -108,4 +103,4 @@ SwDeviceInterfacePropertySet(
 #endif // defined(__cplusplus)
 
 #endif // NTDDI_VERSION
-#endif // _SWDEVICE_H_
+

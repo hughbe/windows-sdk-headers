@@ -1100,6 +1100,13 @@ namespace winrt::Windows::UI::Composition
         IVisual2(std::nullptr_t = nullptr) noexcept {}
         IVisual2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IVisual3 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IVisual3>
+    {
+        IVisual3(std::nullptr_t = nullptr) noexcept {}
+        IVisual3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IVisualCollection :
         Windows::Foundation::IInspectable,
         impl::consume_t<IVisualCollection>

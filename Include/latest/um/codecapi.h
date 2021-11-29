@@ -388,9 +388,6 @@ Abstract:
     #define STATIC_CODECAPI_AVRealtimeControl               0x6f440632, 0xc4ad, 0x4bf7, 0x9e, 0x52, 0x45, 0x69, 0x42, 0xb4, 0x54, 0xb0
     #define STATIC_CODECAPI_AVEncMaxFrameRate               0xb98e1b31, 0x19fa, 0x4d4f, 0x99, 0x31, 0xd6, 0xa5, 0xb8, 0xaa, 0xb9, 0x3c		
 
-    #define STATIC_CODECAPI_AVEncNoInputCopy                0xd2b46a2a, 0xe8ee, 0x4ec5, 0x86, 0x9e, 0x44, 0x9b, 0x6c, 0x62, 0xc8, 0x1a
-
-    #define STATIC_CODECAPI_AVEncChromaEncodeMode           0x8a47ab5a, 0x4798, 0x4c93, 0xb5, 0xa5, 0x55, 0x4f, 0x9a, 0x3b, 0x9f, 0x50
 // end of static definitions }
 
 //
@@ -974,8 +971,7 @@ enum eAVScenarioInfo
     eAVScenarioInfo_VideoConference = 2,
     eAVScenarioInfo_Archive         = 3,
     eAVScenarioInfo_LiveStreaming   = 4,
-    eAVScenarioInfo_CameraRecord    = 5,
-    eAVScenarioInfo_DisplayRemotingWithFeatureMap = 6
+    eAVScenarioInfo_CameraRecord    = 5
 };
 
 enum eVideoEncoderDisplayContentType
@@ -2040,28 +2036,6 @@ DEFINE_CODECAPI_GUID( AVPriorityControl,"54ba3dc8-bdde-4329-b187-2018bc5c2ba1", 
 //   1 - realtime 
 DEFINE_CODECAPI_GUID( AVRealtimeControl,"6f440632-c4ad-4bf7-9e52-456942b454b0", 0x6f440632, 0xc4ad, 0x4bf7, 0x9e, 0x52, 0x45, 0x69, 0x42, 0xb4, 0x54, 0xb0 ) 
 
-// AVEncNoInputCopy (UINT32)
-// Enables the encoder to avoid copying the input buffer
-// 0 - default behavior (copy input buffer to encoder internal buffer)
-// 1 - use input buffer directly
-// Input color space must be IYUV or YV12 for this to be effective.  Input buffers must be fully contiguous.  Input buffers 
-// must be macroblock-aligned (width and height divisible by 16).
-DEFINE_CODECAPI_GUID( AVEncNoInputCopy, "d2b46a2a-e8ee-4ec5-869e-449b6c62c81a", 0xd2b46a2a, 0xe8ee, 0x4ec5, 0x86, 0x9e, 0x44, 0x9b, 0x6c, 0x62, 0xc8, 0x1a )
-
-// AVEncChromaEncodeMode (UINT32)
-// Change the mode used to encode chroma-only frames
-// A member of the eAVChromaEncodeMode structure, where:
-//   eAVChromaEncodeMode_420 - default encoding
-//   eAVChromaEncodeMode_444 - enhanced encoding of chroma for repeated input frames
-//   eAVChromaEncodeMode_444_v2 - encoder will skip non-chroma macroblocks, in addition to functionality for eAVChromaEncodeMode_444
-enum eAVEncChromaEncodeMode
-{
-    eAVEncChromaEncodeMode_420,
-    eAVEncChromaEncodeMode_444,
-    eAVEncChromaEncodeMode_444_v2,
-};
-DEFINE_CODECAPI_GUID( AVEncChromaEncodeMode, "8a47ab5a-4798-4c93-b5a5-554f9a3b9f50", 0x8a47ab5a, 0x4798, 0x4c93, 0xb5, 0xa5, 0x55, 0x4f, 0x9a, 0x3b, 0x9f, 0x50 )
-
 #ifndef UUID_GEN
 // { GUID refs
     #define CODECAPI_AVEncCommonFormatConstraint DEFINE_CODECAPI_GUIDNAMED( AVEncCommonFormatConstraint )
@@ -2388,10 +2362,6 @@ DEFINE_CODECAPI_GUID( AVEncChromaEncodeMode, "8a47ab5a-4798-4c93-b5a5-554f9a3b9f
     #define CODECAPI_AVPriorityControl              DEFINE_CODECAPI_GUIDNAMED( AVPriorityControl )
     #define CODECAPI_AVRealtimeControl              DEFINE_CODECAPI_GUIDNAMED( AVRealtimeControl )
     #define CODECAPI_AVEncMaxFrameRate              DEFINE_CODECAPI_GUIDNAMED( AVEncMaxFrameRate)
-
-    #define CODECAPI_AVEncNoInputCopy               DEFINE_CODECAPI_GUIDNAMED( AVEncNoInputCopy )
-
-    #define CODECAPI_AVEncChromaEncodeMode          DEFINE_CODECAPI_GUIDNAMED( AVEncChromaEncodeMode )
 #endif
 
 

@@ -1,8 +1,19 @@
 //
-// Copyright (C) Microsoft Corporation. All rights reserved.
+//  Copyright (c) 2004 Microsoft Corporation
 //
-//  Abstract: Interface definitions for Network List Manager.
+//  File:   N E T L I S T M G R . I D L
 //
+//  Abstract:
+//      Interface definitions for Network List Manager.
+//
+//  Author:
+//      deonb    March 14, 2006
+//
+//  Revision History:
+//
+//  Notes:
+//
+/////////////////////////////////////////////////////////////////////////////
 
 cpp_quote("#include <winapifamily.h>")
 
@@ -74,7 +85,7 @@ cpp_quote("#define NA_InternetConnectivityV4 L\"NA_InternetConnectivityV4\"")
 cpp_quote("#define NA_InternetConnectivityV6 L\"NA_InternetConnectivityV6\"")
 
 // maximum allowed length of a list of destination addresses to receive notifications
-const UINT NLM_MAX_ADDRESS_LIST_SIZE = 10;
+const UINT NLM_MAX_ADDRESS_LIST_SIZE = 10; 
 // default value for unavailable field in data plan status structure
 const UINT32 NLM_UNKNOWN_DATAPLAN_STATUS = 0xFFFFFFFF;
 
@@ -83,15 +94,15 @@ typedef
     version(1.0),
     v1_enum,
     helpstring("NLM Supported Connection Cost Level and Cost Flags")
-]
+] 
 enum NLM_CONNECTION_COST
 {
     //cost level
-    NLM_CONNECTION_COST_UNKNOWN                 = 0x0,
-    NLM_CONNECTION_COST_UNRESTRICTED            = 0x1,
-    NLM_CONNECTION_COST_FIXED                   = 0x2,
-    NLM_CONNECTION_COST_VARIABLE                = 0x4,
-    //cost flags
+    NLM_CONNECTION_COST_UNKNOWN                 = 0x0,  
+    NLM_CONNECTION_COST_UNRESTRICTED            = 0x1,     
+    NLM_CONNECTION_COST_FIXED                   = 0x2,     
+    NLM_CONNECTION_COST_VARIABLE                = 0x4,  
+    //cost flags   
     NLM_CONNECTION_COST_OVERDATALIMIT           = 0x10000,
     NLM_CONNECTION_COST_CONGESTED               = 0x20000,
     NLM_CONNECTION_COST_ROAMING                 = 0x40000,
@@ -101,42 +112,42 @@ enum NLM_CONNECTION_COST
 //
 //---------------------------------------------------
 //
-typedef
+typedef 
 [
     version(1.0),
     helpstring("NLM Plan Usage Data Structure")
-]
+] 
 struct NLM_USAGE_DATA
 {
     DWORD UsageInMegabytes;
     FILETIME LastSyncTime;
 } NLM_USAGE_DATA;
 
-typedef
+typedef 
 [
     version(1.0),
     helpstring("NLM Data Plan Status structure")
-]
-struct NLM_DATAPLAN_STATUS
+] 
+struct NLM_DATAPLAN_STATUS 
 {
     GUID InterfaceGuid;
     NLM_USAGE_DATA UsageData;
     DWORD DataLimitInMegabytes;
     DWORD InboundBandwidthInKbps;
     DWORD OutboundBandwidthInKbps;
-    FILETIME NextBillingCycle;
+    FILETIME NextBillingCycle; 
     DWORD MaxTransferSizeInMegabytes;
     DWORD Reserved;
 } NLM_DATAPLAN_STATUS;
 
-typedef
+typedef 
 [
     version(1.0),
     helpstring("NLM Socket Address Storage")
-]
-struct NLM_SOCKADDR
+] 
+struct NLM_SOCKADDR 
 {
-    BYTE data[128];       // Big enough storage to store SOCKADDR_STORAGE
+    BYTE data[128];       // Big enough storage to store SOCKADDR_STORAGE                                     
 } NLM_SOCKADDR;
 
 //
@@ -151,11 +162,11 @@ typedef [v1_enum] enum NLM_NETWORK_CLASS
 
 #define MAX_PROFILENAME_LENGTH 256
 
-typedef
+typedef 
 [
     version(1.0),
     helpstring("NetworkInformation Simulator Data structure")
-]
+] 
 struct NLM_SIMULATED_PROFILE_INFO
 {
     WCHAR ProfileName[MAX_PROFILENAME_LENGTH];
@@ -168,9 +179,9 @@ typedef [v1_enum] enum NLM_INTERNET_CONNECTIVITY
 {
     // This interface/family is unable to access the Internet due to HTTP hijacking
     NLM_INTERNET_CONNECTIVITY_WEBHIJACK =  0x01,
-    // This interface/family is using a web proxy to communicated with the Internet
+    // This interface/family is using a web proxy to communicated with the Internet 
     NLM_INTERNET_CONNECTIVITY_PROXIED   =  0x02,
-    // This interface/family has corporate network access
+    // This interface/family has corporate network access 
     NLM_INTERNET_CONNECTIVITY_CORPORATE =  0x04,
 } NLM_INTERNET_CONNECTIVITY;
 
@@ -220,7 +231,7 @@ interface INetworkListManager : IDispatch
     [id(1), helpstring("Enumerate the list of networks in your compartment.")]
     HRESULT GetNetworks ([in] NLM_ENUM_NETWORK Flags,
                          [out, retval] IEnumNetworks **ppEnumNetwork);
-
+    
     [id(2), helpstring("Get a network given a Network ID.")]
     HRESULT GetNetwork   ([in] GUID gdNetworkId,
                           [out, retval] INetwork **ppNetwork);
@@ -255,7 +266,7 @@ interface INetworkListManager : IDispatch
     oleautomation,
     pointer_default(unique)
     // Event interface - do not make dual
-]
+] 
 interface INetworkListManagerEvents : IUnknown
 {
     HRESULT ConnectivityChanged ([in] NLM_CONNECTIVITY newConnectivity);
@@ -295,13 +306,13 @@ interface INetwork : IDispatch
 
     [id(5), helpstring("Get the network ID.")]
     HRESULT GetNetworkId ([out, retval] GUID *pgdGuidNetworkId);
-
+    
     [id(6), helpstring("Get the domain type.")]
     HRESULT GetDomainType ([out, retval] NLM_DOMAIN_TYPE *pNetworkType);
-
+    
     [id(7), helpstring("Get the list of network connections for this network.")]
     HRESULT GetNetworkConnections([out, retval] IEnumNetworkConnections **ppEnumNetworkConnection);
-
+    
     [id(8), helpstring("Get the time and date this network was created.")]
     HRESULT GetTimeCreatedAndConnected ([out] DWORD *pdwLowDateTimeCreated,
                                         [out] DWORD *pdwHighDateTimeCreated,
@@ -470,7 +481,7 @@ interface INetworkConnectionEvents : IUnknown
 
     HRESULT NetworkConnectionConnectivityChanged ([in] GUID connectionId, [in] NLM_CONNECTIVITY newConnectivity);
 
-    HRESULT NetworkConnectionPropertyChanged([in] GUID connectionId,
+    HRESULT NetworkConnectionPropertyChanged([in] GUID connectionId, 
                                              [in] NLM_CONNECTION_PROPERTY_CHANGE flags);
 }
 
@@ -481,21 +492,21 @@ interface INetworkConnectionEvents : IUnknown
     uuid(DCB00008-570F-4A9B-8D69-199FDBA5723B),
     helpstring("Network Cost Manager"),
     object,
-    pointer_default(unique)
+    pointer_default(unique)    
 ]
 interface INetworkCostManager : IUnknown
 {
     [id(1), helpstring("Returns the cost of routing to a destination.")]
     HRESULT GetCost([out] DWORD *pCost, [in, unique] NLM_SOCKADDR *pDestIPAddr);
-
+    
     [id(2), helpstring("Returns the data plan status of a connection used to route to a destination.")]
     HRESULT GetDataPlanStatus([out] NLM_DATAPLAN_STATUS *pDataPlanStatus,
                              [in, unique] NLM_SOCKADDR *pDestIPAddr
                              );
 
     [id(3), helpstring("Set a list of destination addresses to receive notifications.")]
-    HRESULT SetDestinationAddresses([in, range(0, NLM_MAX_ADDRESS_LIST_SIZE)] UINT32 length,
-                                    [in, size_is(length), unique] NLM_SOCKADDR *pDestIPAddrList,
+    HRESULT SetDestinationAddresses([in, range(0, NLM_MAX_ADDRESS_LIST_SIZE)] UINT32 length, 
+                                    [in, size_is(length), unique] NLM_SOCKADDR *pDestIPAddrList, 
                                     [in] VARIANT_BOOL bAppend);
 }
 
@@ -529,7 +540,7 @@ interface INetworkConnectionCost : IUnknown
 {
     [id(1), helpstring("Returns the cost of this network connection.")]
     HRESULT GetCost([out] DWORD *pCost);
-
+    
     [id(2), helpstring("Returns the data plan status of this network connection.")]
     HRESULT GetDataPlanStatus([out] NLM_DATAPLAN_STATUS *pDataPlanStatus);
 }
@@ -560,10 +571,10 @@ interface INetworkConnectionCostEvents : IUnknown
     helpstring("Network List 1.0 Type Library")
 ]
 library NETWORKLIST
-{
-    enum NLM_CONNECTION_COST;
+{   
+    enum NLM_CONNECTION_COST; 
     interface INetworkConnectionCost;
-
+    
     [
         uuid(DCB00C01-570F-4A9B-8D69-199FDBA5723B),
         helpstring("Network List Manager")
@@ -578,7 +589,7 @@ library NETWORKLIST
         [source]           interface INetworkCostManagerEvents;
         [source]           interface INetworkConnectionCostEvents;
                            interface IPropertyBag;
-    }
+    }    
 }
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")

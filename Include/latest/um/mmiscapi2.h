@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * mmiscapi2.h -- ApiSet Contract for api-ms-win-mm-misc-l2-1-0                  *  
@@ -19,11 +20,27 @@
 
 #include <mmsyscom.h> // mm common definitions
 
+/* APISET_NAME: api-ms-win-mm-misc-l2 */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_MMISC2_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_MMISC2_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Desktop Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 typedef void (CALLBACK TIMECALLBACK)(UINT uTimerID, UINT uMsg, DWORD_PTR dwUser, DWORD_PTR dw1, DWORD_PTR dw2);
@@ -38,6 +55,7 @@ typedef TIMECALLBACK FAR *LPTIMECALLBACK;
 #define TIME_CALLBACK_EVENT_SET     0x0010  /* callback is event - use SetEvent */
 #define TIME_CALLBACK_EVENT_PULSE   0x0020  /* callback is event - use PulseEvent */
 #endif
+
 
 #if WINVER >= 0x0501
 #define TIME_KILL_SYNCHRONOUS   0x0100  /* This flag prevents the event from occurring */

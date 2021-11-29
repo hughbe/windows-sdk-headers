@@ -318,8 +318,6 @@ cpp_quote("#define APPIDREGFLAGS_RESERVED4 0x200")
 cpp_quote("#define APPIDREGFLAGS_RESERVED5 0x400")
 cpp_quote("#define APPIDREGFLAGS_AAA_NO_IMPLICIT_ACTIVATE_AS_IU 0x800")
 cpp_quote("#define APPIDREGFLAGS_RESERVED7 0x1000")
-cpp_quote("#define APPIDREGFLAGS_RESERVED8 0x2000")
-cpp_quote("#define APPIDREGFLAGS_RESERVED9 0x4000")
 cpp_quote("#endif // !_APPIDREGFLAGS_DEFINED")
 
 // Flags controlling security behavior of SCM/Resolver calls from RPCSS
@@ -364,7 +362,7 @@ typedef enum tagCLSCTX
 // The following flag is internal only
     CLSCTX_APPCONTAINER = 0x400000,  // Internal CLSCTX used to indicate activation is for app container
     CLSCTX_ACTIVATE_AAA_AS_IU = 0x800000, // Interactive User activation behavior for As-Activator servers.
-    CLSCTX_RESERVED6 = 0x1000000, // reserved
+    CLSCTX_RESERVED6 = 0x1000000, // Pick native architecture server only (internal name is CLSCTX_ACTIVATE_NATIVE_SERVER)
     CLSCTX_ACTIVATE_ARM32_SERVER  = 0x2000000, // Pick ARM32 server only
     CLSCTX_PS_DLL = 0x80000000, // Internal CLSCTX used for loading Proxy/Stub DLLs
  } CLSCTX;
@@ -408,12 +406,11 @@ typedef enum tagMSHLFLAGS
 // marshal context: determines the destination context of the marshal operation
 typedef enum tagMSHCTX
 {
-    MSHCTX_LOCAL = 0,           // unmarshal context is local (e.g. shared memory)
+    MSHCTX_LOCAL = 0,           // unmarshal context is local (eg.shared memory)
     MSHCTX_NOSHAREDMEM = 1,     // unmarshal context has no shared memory access
     MSHCTX_DIFFERENTMACHINE = 2,// unmarshal context is on a different machine
     MSHCTX_INPROC = 3,          // unmarshal context is on different thread
-    MSHCTX_CROSSCTX = 4,        // unmarshal context is on different context
-    MSHCTX_RESERVED1 = 5,       // reserved
+    MSHCTX_CROSSCTX = 4         // unmarshal context is on different context
 } MSHCTX;
 
 // #######################################################################

@@ -784,7 +784,7 @@ typedef struct {
 
 _Check_return_
 WINOLEAUTAPI VarParseNumFromStr(_In_ LPCOLESTR strIn, _In_ LCID lcid, _In_ ULONG dwFlags,
-            _Inout_ NUMPARSE * pnumprs, _Out_writes_(pnumprs->cDig) BYTE * rgbDig);
+            _Out_ NUMPARSE * pnumprs, _Out_ BYTE * rgbDig);
 
 _Check_return_
 WINOLEAUTAPI VarNumFromParseNum(_In_ NUMPARSE * pnumprs, _In_reads_(pnumprs->cDig) BYTE * rgbDig,
@@ -1040,7 +1040,7 @@ WINOLEAUTAPI VarFormatFromTokens(
 
 WINOLEAUTAPI VarTokenizeFormatString(
 	_In_opt_ LPOLESTR pstrFormat,
-	_Inout_updates_(cbTok) LPBYTE rgbTok,
+	_Inout_ LPBYTE rgbTok,
 	int cbTok,
 	int iFirstDay,
 	int iFirstWeek,
@@ -1247,7 +1247,7 @@ WINOLEAUTAPI DispGetParam(
 
 /* Automatic TypeInfo driven implementation of IDispatch::GetIDsOfNames()
  */
-_Check_return_ WINOLEAUTAPI DispGetIDsOfNames(ITypeInfo * ptinfo, _In_reads_(cNames) LPOLESTR* rgszNames,
+_Check_return_ WINOLEAUTAPI DispGetIDsOfNames(ITypeInfo * ptinfo, _In_reads_(cNames) OLECHAR ** rgszNames,
             UINT cNames, _Out_writes_(cNames) DISPID * rgdispid);
 
 /* Automatic TypeInfo driven implementation of IDispatch::Invoke()
@@ -1286,9 +1286,9 @@ WINOLEAUTAPI CreateStdDispatch(IUnknown * punkOuter, void * pvThis,
 /* Low-level helper for IDispatch::Invoke() provides machine independence
  * for customized Invoke().
  */
-WINOLEAUTAPI DispCallFunc(_In_opt_ void * pvInstance, ULONG_PTR oVft, CALLCONV cc,
-            VARTYPE vtReturn, UINT  cActuals, _In_reads_(cActuals) VARTYPE * prgvt,
-            _In_reads_(cActuals) VARIANTARG ** prgpvarg, _Out_ VARIANT * pvargResult);
+WINOLEAUTAPI DispCallFunc(void * pvInstance, ULONG_PTR oVft, CALLCONV cc,
+            VARTYPE vtReturn, UINT  cActuals, VARTYPE * prgvt,
+            VARIANTARG ** prgpvarg, VARIANT * pvargResult);
 
 
 /*---------------------------------------------------------------------*/

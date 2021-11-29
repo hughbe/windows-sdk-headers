@@ -178,8 +178,7 @@ typedef _Return_type_success_(return >= 0) LONG NTSTATUS, *PNTSTATUS;
         (_Status) == ERROR_DOWNGRADE_DETECTED || \
         (_Status) == __HRESULT_FROM_WIN32( ERROR_DOWNGRADE_DETECTED ) || \
         (_Status) == STATUS_DOWNGRADE_DETECTED || \
-        (_Status) == HRESULT_FROM_NT( STATUS_DOWNGRADE_DETECTED ) || \
-        (_Status) == SEC_E_DOWNGRADE_DETECTED \
+        (_Status) == HRESULT_FROM_NT( STATUS_DOWNGRADE_DETECTED ) \
 )
 
 #define CREDUIP_IS_EXPIRED_ERROR( _Status ) ( \
@@ -633,7 +632,6 @@ typedef enum _CRED_MARSHAL_TYPE {
     UsernameTargetCredential,
     BinaryBlobCredential,
     UsernameForPackedCredentials,  // internal only, reserved
-    BinaryBlobForSystem,  // internal only, via CredProtectEx
 } CRED_MARSHAL_TYPE, *PCRED_MARSHAL_TYPE;
 
 //
@@ -643,8 +641,7 @@ typedef enum _CRED_MARSHAL_TYPE {
 typedef enum _CRED_PROTECTION_TYPE {
     CredUnprotected,
     CredUserProtection,
-    CredTrustedProtection,
-    CredForSystemProtection,
+    CredTrustedProtection
 } CRED_PROTECTION_TYPE, *PCRED_PROTECTION_TYPE;
 
 //
@@ -1187,24 +1184,7 @@ BOOL
 WINAPI
 CredProtectW(
     _In_ BOOL                               fAsSelf,
-    _In_reads_(cchCredentials) LPWSTR       pszCredentials,
-    _In_ DWORD                              cchCredentials,
-    _Out_writes_to_(*pcchMaxChars, *pcchMaxChars) LPWSTR pszProtectedCredentials,
-    _Inout_ DWORD*                          pcchMaxChars,
-    _Out_opt_ CRED_PROTECTION_TYPE*         ProtectionType
-    );
-
-#define CRED_PROTECT_AS_SELF        0x1
-#define CRED_PROTECT_TO_SYSTEM      0x2
-#define CRED_PROTECT_VALID_FLAGS    (CRED_PROTECT_AS_SELF | CRED_PROTECT_TO_SYSTEM)
-
-_Success_(return)
-WINADVAPI
-BOOL
-WINAPI
-CredProtectEx(
-    _In_ ULONG                              Flags,
-    _In_reads_(cchCredentials) LPWSTR       pszCredentials,
+    _In_reads_(cchCredentials) LPWSTR      pszCredentials,
     _In_ DWORD                              cchCredentials,
     _Out_writes_to_(*pcchMaxChars, *pcchMaxChars) LPWSTR pszProtectedCredentials,
     _Inout_ DWORD*                          pcchMaxChars,
@@ -1216,7 +1196,7 @@ BOOL
 WINAPI
 CredProtectA(
     _In_ BOOL                            fAsSelf,
-    _In_reads_(cchCredentials) LPSTR     pszCredentials,
+    _In_reads_(cchCredentials) LPSTR    pszCredentials,
     _In_ DWORD                           cchCredentials,
     _Out_writes_(*pcchMaxChars) LPSTR    pszProtectedCredentials,
     _Inout_ DWORD*                       pcchMaxChars,
@@ -1235,23 +1215,7 @@ BOOL
 WINAPI
 CredUnprotectW(
     _In_ BOOL                                   fAsSelf,
-    _In_reads_(cchProtectedCredentials) LPWSTR  pszProtectedCredentials,
-    _In_ DWORD                                  cchProtectedCredentials,
-    _Out_writes_to_opt_(*pcchMaxChars, *pcchMaxChars) LPWSTR pszCredentials,
-    _Inout_ DWORD*                              pcchMaxChars
-    );
-
-#define CRED_UNPROTECT_AS_SELF          0x1
-#define CRED_UNPROTECT_ALLOW_TO_SYSTEM  0x2
-#define CRED_UNPROTECT_VALID_FLAGS      (CRED_UNPROTECT_AS_SELF | CRED_UNPROTECT_ALLOW_TO_SYSTEM)
-
-_Success_(return)
-WINADVAPI
-BOOL
-WINAPI
-CredUnprotectEx(
-    _In_ ULONG                                  Flags,
-    _In_reads_(cchProtectedCredentials) LPWSTR  pszProtectedCredentials,
+    _In_reads_(cchProtectedCredentials) LPWSTR pszProtectedCredentials,
     _In_ DWORD                                  cchProtectedCredentials,
     _Out_writes_to_opt_(*pcchMaxChars, *pcchMaxChars) LPWSTR pszCredentials,
     _Inout_ DWORD*                              pcchMaxChars
@@ -1262,7 +1226,7 @@ BOOL
 WINAPI
 CredUnprotectA(
     _In_ BOOL                                   fAsSelf,
-    _In_reads_(cchProtectedCredentials) LPSTR   pszProtectedCredentials,
+    _In_reads_(cchProtectedCredentials) LPSTR  pszProtectedCredentials,
     _In_ DWORD                                  cchProtectedCredentials,
     _Out_writes_opt_(*pcchMaxChars) LPSTR       pszCredentials,
     _Inout_ DWORD*                              pcchMaxChars

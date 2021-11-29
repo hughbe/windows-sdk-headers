@@ -46,13 +46,6 @@ typedef interface IProofOfPossessionCookieInfoManager IProofOfPossessionCookieIn
 #endif 	/* __IProofOfPossessionCookieInfoManager_FWD_DEFINED__ */
 
 
-#ifndef __IProofOfPossessionCookieInfoManager2_FWD_DEFINED__
-#define __IProofOfPossessionCookieInfoManager2_FWD_DEFINED__
-typedef interface IProofOfPossessionCookieInfoManager2 IProofOfPossessionCookieInfoManager2;
-
-#endif 	/* __IProofOfPossessionCookieInfoManager2_FWD_DEFINED__ */
-
-
 #ifndef __ProofOfPossessionCookieInfoManager_FWD_DEFINED__
 #define __ProofOfPossessionCookieInfoManager_FWD_DEFINED__
 
@@ -68,7 +61,6 @@ typedef struct ProofOfPossessionCookieInfoManager ProofOfPossessionCookieInfoMan
 /* header files for imported files */
 #include "oaidl.h"
 #include "ocidl.h"
-#include "Inspectable.h"
 
 #ifdef __cplusplus
 extern "C"{
@@ -189,92 +181,6 @@ EXTERN_C const IID IID_IProofOfPossessionCookieInfoManager;
 #endif 	/* __IProofOfPossessionCookieInfoManager_INTERFACE_DEFINED__ */
 
 
-#ifndef __IProofOfPossessionCookieInfoManager2_INTERFACE_DEFINED__
-#define __IProofOfPossessionCookieInfoManager2_INTERFACE_DEFINED__
-
-/* interface IProofOfPossessionCookieInfoManager2 */
-/* [unique][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IProofOfPossessionCookieInfoManager2;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("15E41407-B42F-4AE7-9966-34A087B2D713")
-    IProofOfPossessionCookieInfoManager2 : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE GetCookieInfoWithUriForAccount( 
-            /* [in] */ __RPC__in_opt IInspectable *webAccount,
-            /* [in] */ __RPC__in LPCWSTR uri,
-            /* [out] */ __RPC__out DWORD *cookieInfoCount,
-            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*cookieInfoCount) ProofOfPossessionCookieInfo **cookieInfo) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IProofOfPossessionCookieInfoManager2Vtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IProofOfPossessionCookieInfoManager2 * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IProofOfPossessionCookieInfoManager2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IProofOfPossessionCookieInfoManager2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetCookieInfoWithUriForAccount )( 
-            __RPC__in IProofOfPossessionCookieInfoManager2 * This,
-            /* [in] */ __RPC__in_opt IInspectable *webAccount,
-            /* [in] */ __RPC__in LPCWSTR uri,
-            /* [out] */ __RPC__out DWORD *cookieInfoCount,
-            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*cookieInfoCount) ProofOfPossessionCookieInfo **cookieInfo);
-        
-        END_INTERFACE
-    } IProofOfPossessionCookieInfoManager2Vtbl;
-
-    interface IProofOfPossessionCookieInfoManager2
-    {
-        CONST_VTBL struct IProofOfPossessionCookieInfoManager2Vtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IProofOfPossessionCookieInfoManager2_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IProofOfPossessionCookieInfoManager2_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IProofOfPossessionCookieInfoManager2_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IProofOfPossessionCookieInfoManager2_GetCookieInfoWithUriForAccount(This,webAccount,uri,cookieInfoCount,cookieInfo)	\
-    ( (This)->lpVtbl -> GetCookieInfoWithUriForAccount(This,webAccount,uri,cookieInfoCount,cookieInfo) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IProofOfPossessionCookieInfoManager2_INTERFACE_DEFINED__ */
-
-
 
 #ifndef __ProofOfPossessionCookieInfoManagerLib_LIBRARY_DEFINED__
 #define __ProofOfPossessionCookieInfoManagerLib_LIBRARY_DEFINED__
@@ -294,15 +200,15 @@ ProofOfPossessionCookieInfoManager;
 #endif
 #endif /* __ProofOfPossessionCookieInfoManagerLib_LIBRARY_DEFINED__ */
 
-/* interface __MIDL_itf_proofofpossessioncookieinfo_0000_0003 */
+/* interface __MIDL_itf_proofofpossessioncookieinfo_0000_0002 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_proofofpossessioncookieinfo_0000_0003_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_proofofpossessioncookieinfo_0000_0003_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_proofofpossessioncookieinfo_0000_0002_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_proofofpossessioncookieinfo_0000_0002_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

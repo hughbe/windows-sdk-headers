@@ -3875,11 +3875,6 @@ GetPrintOutputInfo(
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN8)
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
-
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
-
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

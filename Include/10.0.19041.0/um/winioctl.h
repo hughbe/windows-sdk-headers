@@ -13214,6 +13214,35 @@ typedef struct _FILE_FS_PERSISTENT_VOLUME_INFORMATION {
 
 #endif // #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS1)
+
+//
+//  This indicates that AutoChk modified this volume and is cleared by AutoChk
+//  after it ensured that the volume is dismounted or the system is rebooted.
+//  This can be set or queried.
+//
+
+#define PERSISTENT_VOLUME_STATE_CHKDSK_RAN_ONCE                     (0x00000400)
+
+//
+//  This again indicates that AutoChk modified this volume but is cleared by
+//  NTFS on next mount.  So if this flag is set it means that the volume was
+//  modified by AutoChk while it's still mounted and the on-disk state and
+//  the in memory state could be different.  This can only be queried.
+//
+
+#define PERSISTENT_VOLUME_STATE_MODIFIED_BY_CHKDSK                  (0x00000800)
+
+//
+//  The volume was formatted as DAX.  The volume may not be mounted as DAX
+//  if the storage is not DAX capable.  This can only be queried.
+//
+
+#define PERSISTENT_VOLUME_STATE_DAX_FORMATTED                       (0x00001000)
+
+#endif // #if (NTDDI_VERSION >= NTDDI_WIN10_RS1)
+
+
 //
 //==================== FSCTL_QUERY_FILE_SYSTEM_RECOGNITION ====================
 //

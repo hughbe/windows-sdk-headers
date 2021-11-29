@@ -40,7 +40,7 @@ extern "C"
     //      E_OUTOFMEMORY - No memory is available.
     //
     _Success_(return == S_OK)
-    STDAPI AERT_Allocate(_In_ size_t size, _Outptr_result_bytebuffer_(size) void **pMemory);
+    HRESULT AERT_Allocate(_In_ size_t size, _Outptr_result_bytebuffer_(size) void **pMemory);
 
     //-------------------------------------------------------------------------
     // Description: Locked memory free
@@ -51,7 +51,7 @@ extern "C"
     // Return codes:
     //      S_OK
     //
-    STDAPI AERT_Free(_In_ void *pMemory);
+    HRESULT AERT_Free(_In_ void *pMemory);
 }
 
 

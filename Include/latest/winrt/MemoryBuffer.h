@@ -3,11 +3,11 @@
 
 #include <objidl.h>
 
-#ifdef __cplusplus
+#ifdef __cplusplus  
 namespace Windows { namespace Foundation {
 
-struct __declspec(uuid("5b0d3235-4dba-4d44-865e-8f1d0e4fd04d")) IMemoryBufferByteAccess :
-    public IUnknown
+struct __declspec(uuid("5b0d3235-4dba-4d44-865e-8f1d0e4fd04d")) IMemoryBufferByteAccess : 
+	public IUnknown
 {
     // An IMemoryBuffer object is created by a client, and the buffer is provided by IBufferByteAccess::GetBuffer.
     // When IMemoryBufferReference::Close() is called, the code that is using this buffer should set "value" to nullptr,

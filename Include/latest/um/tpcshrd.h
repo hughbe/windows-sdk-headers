@@ -166,12 +166,10 @@ typedef struct _PACKET_DESCRIPTION *PPACKET_DESCRIPTION;
 #endif // __WISPSHRD_H
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-
 #pragma region APP Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 #ifndef __WISPSHRD_H
 #define __WISPSHRD_H
-
 #define WM_TABLET_DEFBASE                    0x02C0
 #define WM_TABLET_MAXOFFSET                  0x20
 #define WM_TABLET_ADDED                      (WM_TABLET_DEFBASE + 8)
@@ -191,18 +189,14 @@ typedef struct _PACKET_DESCRIPTION *PPACKET_DESCRIPTION;
 #define TABLET_DISABLE_SMOOTHSCROLLING     0x00080000
 #define TABLET_DISABLE_FLICKFALLBACKKEYS   0x00100000
 #define TABLET_ENABLE_MULTITOUCHDATA       0x01000000
-
 #define MAX_PACKET_PROPERTY_COUNT    32
 #define MAX_PACKET_BUTTON_COUNT      32
-
 #define IP_CURSOR_DOWN           0x00000001
 #define IP_INVERTED              0x00000002
 #define IP_MARGIN                0x00000004
-
 typedef DWORD CURSOR_ID;
 typedef USHORT SYSTEM_EVENT;
 typedef DWORD TABLET_CONTEXT_ID;
-
 typedef enum _PROPERTY_UNITS
 {
     PROPERTY_UNITS_DEFAULT = 0,
@@ -233,7 +227,6 @@ typedef enum _PROPERTY_UNITS
     PROPERTY_UNITS_CANDELA = 16
 
 }   PROPERTY_UNITS, *PPROPERTY_UNITS;
-
 #ifndef _XFORM_
 #define _XFORM_
 typedef [hidden] struct  tagXFORM
@@ -246,23 +239,20 @@ typedef [hidden] struct  tagXFORM
     float   eDy;
 } XFORM;
 #endif
-
 typedef struct tagSYSTEM_EVENT_DATA
 {
-    BYTE bModifier;        // Bit values for the modifiers
-    WCHAR wKey;            // Scan code for the keyboard character
-    LONG xPos;             // xPos of the event
-    LONG yPos;             // yPos of the event
-    BYTE bCursorMode;      // cursor type of the event i.e. normal/eraser
-    DWORD dwButtonState;   // state of the buttons at the time of the system event
+	BYTE bModifier;		// Bit values for the modifiers
+	WCHAR wKey;			// Scan code for the keyboard character
+	LONG xPos;			// xPos of the event
+	LONG yPos;			// yPos of the event
+	BYTE bCursorMode;	// cursor type of the event i.e. normal/eraser
+	DWORD dwButtonState;// state of the buttons at the time of the system event
 } SYSTEM_EVENT_DATA;
-
 typedef struct tagSTROKE_RANGE
 {
     ULONG iStrokeBegin;   // index of the first stroke in this range, inclusive
     ULONG iStrokeEnd;     // index of the last stroke for this range, inclusive
 } STROKE_RANGE;
-
 typedef struct _PROPERTY_METRICS
 {
     LONG nLogicalMin;
@@ -270,22 +260,21 @@ typedef struct _PROPERTY_METRICS
     PROPERTY_UNITS Units;
     FLOAT fResolution;
 } PROPERTY_METRICS, *PPROPERTY_METRICS;
-
 typedef struct _PACKET_PROPERTY
 {
     GUID guid;
     PROPERTY_METRICS PropertyMetrics;
 } PACKET_PROPERTY, *PPACKET_PROPERTY;
-
 typedef struct _PACKET_DESCRIPTION
 {
     ULONG cbPacketSize;
+    [range(0, MAX_PACKET_PROPERTY_COUNT)]
     ULONG cPacketProperties;
-    PACKET_PROPERTY * pPacketProperties;
+    [unique, size_is(cPacketProperties)] PACKET_PROPERTY * pPacketProperties;
+    [range(0, MAX_PACKET_BUTTON_COUNT)]
     ULONG cButtons;
-    GUID * pguidButtons;
+    [unique, size_is(cButtons)] GUID * pguidButtons;
 } PACKET_DESCRIPTION, *PPACKET_DESCRIPTION;
-
 #endif // __WISPSHRD_H
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion

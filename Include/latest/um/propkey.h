@@ -27,39 +27,6 @@
 
 
 //-----------------------------------------------------------------------------
-// Address properties
-
-//  Name:     System.Address.Country -- PKEY_Address_Country
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {C07B4199-E1DF-4493-B1E1-DE5946FB58F8}, 100
-DEFINE_PROPERTYKEY(PKEY_Address_Country, 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8, 100);
-#define INIT_PKEY_Address_Country { { 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8 }, 100 }
-
-//  Name:     System.Address.CountryCode -- PKEY_Address_CountryCode
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {C07B4199-E1DF-4493-B1E1-DE5946FB58F8}, 101
-DEFINE_PROPERTYKEY(PKEY_Address_CountryCode, 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8, 101);
-#define INIT_PKEY_Address_CountryCode { { 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8 }, 101 }
-
-//  Name:     System.Address.Region -- PKEY_Address_Region
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {C07B4199-E1DF-4493-B1E1-DE5946FB58F8}, 102
-DEFINE_PROPERTYKEY(PKEY_Address_Region, 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8, 102);
-#define INIT_PKEY_Address_Region { { 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8 }, 102 }
-
-//  Name:     System.Address.RegionCode -- PKEY_Address_RegionCode
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {C07B4199-E1DF-4493-B1E1-DE5946FB58F8}, 103
-DEFINE_PROPERTYKEY(PKEY_Address_RegionCode, 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8, 103);
-#define INIT_PKEY_Address_RegionCode { { 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8 }, 103 }
-
-//  Name:     System.Address.Town -- PKEY_Address_Town
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {C07B4199-E1DF-4493-B1E1-DE5946FB58F8}, 104
-DEFINE_PROPERTYKEY(PKEY_Address_Town, 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8, 104);
-#define INIT_PKEY_Address_Town { { 0xC07B4199, 0xE1DF, 0x4493, 0xB1, 0xE1, 0xDE, 0x59, 0x46, 0xFB, 0x58, 0xF8 }, 104 }
-
-//-----------------------------------------------------------------------------
 // Audio properties
 
 //  Name:     System.Audio.ChannelCount -- PKEY_Audio_ChannelCount
@@ -1453,14 +1420,6 @@ DEFINE_PROPERTYKEY(PKEY_ComputerName, 0x28636AA6, 0x953D, 0x11D2, 0xB5, 0xD6, 0x
 DEFINE_PROPERTYKEY(PKEY_ContainedItems, 0x28636AA6, 0x953D, 0x11D2, 0xB5, 0xD6, 0x00, 0xC0, 0x4F, 0xD9, 0x18, 0xD0, 29);
 #define INIT_PKEY_ContainedItems { { 0x28636AA6, 0x953D, 0x11D2, 0xB5, 0xD6, 0x00, 0xC0, 0x4F, 0xD9, 0x18, 0xD0 }, 29 }
 
-//  Name:     System.ContentId -- PKEY_ContentId
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {FCEFF153-E839-4CF3-A9E7-EA22832094B8}, 132
-//
-//  Durable identifier for a file that can be used to prevent duplication of activities across devices.
-DEFINE_PROPERTYKEY(PKEY_ContentId, 0xFCEFF153, 0xE839, 0x4CF3, 0xA9, 0xE7, 0xEA, 0x22, 0x83, 0x20, 0x94, 0xB8, 132);
-#define INIT_PKEY_ContentId { { 0xFCEFF153, 0xE839, 0x4CF3, 0xA9, 0xE7, 0xEA, 0x22, 0x83, 0x20, 0x94, 0xB8 }, 132 }
-
 //  Name:     System.ContentStatus -- PKEY_ContentStatus
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: (FMTID_DocumentSummaryInformation) {D5CDD502-2E9C-101B-9397-08002B2CF9AE}, 27
@@ -1472,14 +1431,6 @@ DEFINE_PROPERTYKEY(PKEY_ContentStatus, 0xD5CDD502, 0x2E9C, 0x101B, 0x93, 0x97, 0
 //  FormatID: (FMTID_DocumentSummaryInformation) {D5CDD502-2E9C-101B-9397-08002B2CF9AE}, 26
 DEFINE_PROPERTYKEY(PKEY_ContentType, 0xD5CDD502, 0x2E9C, 0x101B, 0x93, 0x97, 0x08, 0x00, 0x2B, 0x2C, 0xF9, 0xAE, 26);
 #define INIT_PKEY_ContentType { { 0xD5CDD502, 0x2E9C, 0x101B, 0x93, 0x97, 0x08, 0x00, 0x2B, 0x2C, 0xF9, 0xAE }, 26 }
-
-//  Name:     System.ContentUri -- PKEY_ContentUri
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {FCEFF153-E839-4CF3-A9E7-EA22832094B8}, 131
-//
-//  Durable identifier for a file that can be used across devices to access file.
-DEFINE_PROPERTYKEY(PKEY_ContentUri, 0xFCEFF153, 0xE839, 0x4CF3, 0xA9, 0xE7, 0xEA, 0x22, 0x83, 0x20, 0x94, 0xB8, 131);
-#define INIT_PKEY_ContentUri { { 0xFCEFF153, 0xE839, 0x4CF3, 0xA9, 0xE7, 0xEA, 0x22, 0x83, 0x20, 0x94, 0xB8 }, 131 }
 
 //  Name:     System.Copyright -- PKEY_Copyright
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
@@ -3934,35 +3885,19 @@ DEFINE_PROPERTYKEY(PKEY_Devices_AepService_ServiceId, 0xC9C141A9, 0x1B4C, 0x4F17
 DEFINE_PROPERTYKEY(PKEY_Devices_AppPackageFamilyName, 0x51236583, 0x0C4A, 0x4FE8, 0xB8, 0x1F, 0x16, 0x6A, 0xEC, 0x13, 0xF5, 0x10, 100);
 #define INIT_PKEY_Devices_AppPackageFamilyName { { 0x51236583, 0x0C4A, 0x4FE8, 0xB8, 0x1F, 0x16, 0x6A, 0xEC, 0x13, 0xF5, 0x10 }, 100 }
 
-//  Name:     System.Devices.AudioDevice.Microphone.IsFarField -- PKEY_Devices_AudioDevice_Microphone_IsFarField
-//  Type:     Boolean -- VT_BOOL
-//  FormatID: {8943B373-388C-4395-B557-BC6DBAFFAFDB}, 6
-//
-//  Far field capability of the microphone. If VARIANT_TRUE the microphone element will detect far field sound.
-DEFINE_PROPERTYKEY(PKEY_Devices_AudioDevice_Microphone_IsFarField, 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB, 6);
-#define INIT_PKEY_Devices_AudioDevice_Microphone_IsFarField { { 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB }, 6 }
-
 //  Name:     System.Devices.AudioDevice.Microphone.SensitivityInDbfs -- PKEY_Devices_AudioDevice_Microphone_SensitivityInDbfs
 //  Type:     Double -- VT_R8
 //  FormatID: {8943B373-388C-4395-B557-BC6DBAFFAFDB}, 3
 //
-//  Sensitivity information in dBFS for a microphone device.
+//  Sensitivity information in Dbfs for a microphone device.
 DEFINE_PROPERTYKEY(PKEY_Devices_AudioDevice_Microphone_SensitivityInDbfs, 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB, 3);
 #define INIT_PKEY_Devices_AudioDevice_Microphone_SensitivityInDbfs { { 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB }, 3 }
-
-//  Name:     System.Devices.AudioDevice.Microphone.SensitivityInDbfs2 -- PKEY_Devices_AudioDevice_Microphone_SensitivityInDbfs2
-//  Type:     Double -- VT_R8
-//  FormatID: {8943B373-388C-4395-B557-BC6DBAFFAFDB}, 5
-//
-//  Sensitivity information in dBFS for a microphone device, measured after fixed hardware gain (if available). Assumes 0dB software gain
-DEFINE_PROPERTYKEY(PKEY_Devices_AudioDevice_Microphone_SensitivityInDbfs2, 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB, 5);
-#define INIT_PKEY_Devices_AudioDevice_Microphone_SensitivityInDbfs2 { { 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB }, 5 }
 
 //  Name:     System.Devices.AudioDevice.Microphone.SignalToNoiseRatioInDb -- PKEY_Devices_AudioDevice_Microphone_SignalToNoiseRatioInDb
 //  Type:     Double -- VT_R8
 //  FormatID: {8943B373-388C-4395-B557-BC6DBAFFAFDB}, 4
 //
-//  Signal to noise ratio information in dB for a microphone device.
+//  Signal to noise ratio information in Db for a microphone device.
 DEFINE_PROPERTYKEY(PKEY_Devices_AudioDevice_Microphone_SignalToNoiseRatioInDb, 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB, 4);
 #define INIT_PKEY_Devices_AudioDevice_Microphone_SignalToNoiseRatioInDb { { 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB }, 4 }
 
@@ -4037,14 +3972,6 @@ DEFINE_PROPERTYKEY(PKEY_Devices_CategoryIds, 0x78C34FC8, 0x104A, 0x4ACA, 0x9E, 0
 //  Plural form of device category.
 DEFINE_PROPERTYKEY(PKEY_Devices_CategoryPlural, 0x78C34FC8, 0x104A, 0x4ACA, 0x9E, 0xA4, 0x52, 0x4D, 0x52, 0x99, 0x6E, 0x57, 92);
 #define INIT_PKEY_Devices_CategoryPlural { { 0x78C34FC8, 0x104A, 0x4ACA, 0x9E, 0xA4, 0x52, 0x4D, 0x52, 0x99, 0x6E, 0x57 }, 92 }
-
-//  Name:     System.Devices.ChallengeAep -- PKEY_Devices_ChallengeAep
-//  Type:     Boolean -- VT_BOOL
-//  FormatID: {0774315E-B714-48EC-8DE8-8125C077AC11}, 2
-//
-//  Enable or Disable device presence challenging behavior for AEPs
-DEFINE_PROPERTYKEY(PKEY_Devices_ChallengeAep, 0x0774315E, 0xB714, 0x48EC, 0x8D, 0xE8, 0x81, 0x25, 0xC0, 0x77, 0xAC, 0x11, 2);
-#define INIT_PKEY_Devices_ChallengeAep { { 0x0774315E, 0xB714, 0x48EC, 0x8D, 0xE8, 0x81, 0x25, 0xC0, 0x77, 0xAC, 0x11 }, 2 }
 
 //  Name:     System.Devices.ChargingState -- PKEY_Devices_ChargingState
 //  Type:     Byte -- VT_UI1
@@ -4574,22 +4501,6 @@ DEFINE_PROPERTYKEY(PKEY_Devices_NotWorkingProperly, 0x78C34FC8, 0x104A, 0x4ACA, 
 DEFINE_PROPERTYKEY(PKEY_Devices_Paired, 0x78C34FC8, 0x104A, 0x4ACA, 0x9E, 0xA4, 0x52, 0x4D, 0x52, 0x99, 0x6E, 0x57, 56);
 #define INIT_PKEY_Devices_Paired { { 0x78C34FC8, 0x104A, 0x4ACA, 0x9E, 0xA4, 0x52, 0x4D, 0x52, 0x99, 0x6E, 0x57 }, 56 }
 
-//  Name:     System.Devices.Panel.PanelGroup -- PKEY_Devices_Panel_PanelGroup
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {8DBC9C86-97A9-4BFF-9BC6-BFE95D3E6DAD}, 3
-//
-//  The group that this panel belongs to
-DEFINE_PROPERTYKEY(PKEY_Devices_Panel_PanelGroup, 0x8DBC9C86, 0x97A9, 0x4BFF, 0x9B, 0xC6, 0xBF, 0xE9, 0x5D, 0x3E, 0x6D, 0xAD, 3);
-#define INIT_PKEY_Devices_Panel_PanelGroup { { 0x8DBC9C86, 0x97A9, 0x4BFF, 0x9B, 0xC6, 0xBF, 0xE9, 0x5D, 0x3E, 0x6D, 0xAD }, 3 }
-
-//  Name:     System.Devices.Panel.PanelId -- PKEY_Devices_Panel_PanelId
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {8DBC9C86-97A9-4BFF-9BC6-BFE95D3E6DAD}, 2
-//
-//  Identity of the Device Panel
-DEFINE_PROPERTYKEY(PKEY_Devices_Panel_PanelId, 0x8DBC9C86, 0x97A9, 0x4BFF, 0x9B, 0xC6, 0xBF, 0xE9, 0x5D, 0x3E, 0x6D, 0xAD, 2);
-#define INIT_PKEY_Devices_Panel_PanelId { { 0x8DBC9C86, 0x97A9, 0x4BFF, 0x9B, 0xC6, 0xBF, 0xE9, 0x5D, 0x3E, 0x6D, 0xAD }, 2 }
-
 //  Name:     System.Devices.Parent -- PKEY_Devices_Parent
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: {4340A6C5-93FA-4706-972C-7B648008A5A7}, 8
@@ -4597,14 +4508,6 @@ DEFINE_PROPERTYKEY(PKEY_Devices_Panel_PanelId, 0x8DBC9C86, 0x97A9, 0x4BFF, 0x9B,
 //  Parent device.
 DEFINE_PROPERTYKEY(PKEY_Devices_Parent, 0x4340A6C5, 0x93FA, 0x4706, 0x97, 0x2C, 0x7B, 0x64, 0x80, 0x08, 0xA5, 0xA7, 8);
 #define INIT_PKEY_Devices_Parent { { 0x4340A6C5, 0x93FA, 0x4706, 0x97, 0x2C, 0x7B, 0x64, 0x80, 0x08, 0xA5, 0xA7 }, 8 }
-
-//  Name:     System.Devices.PhoneLineTransportDevice.Connected -- PKEY_Devices_PhoneLineTransportDevice_Connected
-//  Type:     Boolean -- VT_BOOL
-//  FormatID: {AECF2FE8-1D00-4FEE-8A6D-A70D719B772B}, 2
-//
-//  Connection status of a PhoneLineTransportDevice.
-DEFINE_PROPERTYKEY(PKEY_Devices_PhoneLineTransportDevice_Connected, 0xAECF2FE8, 0x1D00, 0x4FEE, 0x8A, 0x6D, 0xA7, 0x0D, 0x71, 0x9B, 0x77, 0x2B, 2);
-#define INIT_PKEY_Devices_PhoneLineTransportDevice_Connected { { 0xAECF2FE8, 0x1D00, 0x4FEE, 0x8A, 0x6D, 0xA7, 0x0D, 0x71, 0x9B, 0x77, 0x2B }, 2 }
 
 //  Name:     System.Devices.PhysicalDeviceLocation -- PKEY_Devices_PhysicalDeviceLocation
 //  Type:     Buffer -- VT_VECTOR | VT_UI1  (For variants: VT_ARRAY | VT_UI1)
@@ -8010,14 +7913,6 @@ DEFINE_PROPERTYKEY(PKEY_Search_UrlToIndex, 0x0B63E343, 0x9CCC, 0x11D0, 0xBC, 0xD
 DEFINE_PROPERTYKEY(PKEY_Search_UrlToIndexWithModificationTime, 0x0B63E343, 0x9CCC, 0x11D0, 0xBC, 0xDB, 0x00, 0x80, 0x5F, 0xCC, 0xCE, 0x04, 12);
 #define INIT_PKEY_Search_UrlToIndexWithModificationTime { { 0x0B63E343, 0x9CCC, 0x11D0, 0xBC, 0xDB, 0x00, 0x80, 0x5F, 0xCC, 0xCE, 0x04 }, 12 }
 
-//  Name:     System.Supplemental.Album -- PKEY_Supplemental_Album
-//  Type:     Multivalue String -- VT_VECTOR | VT_LPWSTR  (For variants: VT_ARRAY | VT_BSTR)
-//  FormatID: {0C73B141-39D6-4653-A683-CAB291EAF95B}, 6
-//  
-//  Contains list of the album where the item belongs or is associated with.
-DEFINE_PROPERTYKEY(PKEY_Supplemental_Album, 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B, 6);
-#define INIT_PKEY_Supplemental_Album { { 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B }, 6 }
-
 //  Name:     System.Supplemental.AlbumID -- PKEY_Supplemental_AlbumID
 //  Type:     Multivalue String -- VT_VECTOR | VT_LPWSTR  (For variants: VT_ARRAY | VT_BSTR)
 //  FormatID: {0C73B141-39D6-4653-A683-CAB291EAF95B}, 2
@@ -8027,22 +7922,6 @@ DEFINE_PROPERTYKEY(PKEY_Supplemental_Album, 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x
 DEFINE_PROPERTYKEY(PKEY_Supplemental_AlbumID, 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B, 2);
 #define INIT_PKEY_Supplemental_AlbumID { { 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B }, 2 }
 
-//  Name:     System.Supplemental.Location -- PKEY_Supplemental_Location
-//  Type:     Multivalue String -- VT_VECTOR | VT_LPWSTR  (For variants: VT_ARRAY | VT_BSTR)
-//  FormatID: {0C73B141-39D6-4653-A683-CAB291EAF95B}, 5
-//  
-//  Contains list of location information identified by client such as Photo app.
-DEFINE_PROPERTYKEY(PKEY_Supplemental_Location, 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B, 5);
-#define INIT_PKEY_Supplemental_Location { { 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B }, 5 }
-
-//  Name:     System.Supplemental.Person -- PKEY_Supplemental_Person
-//  Type:     Multivalue String -- VT_VECTOR | VT_LPWSTR  (For variants: VT_ARRAY | VT_BSTR)
-//  FormatID: {0C73B141-39D6-4653-A683-CAB291EAF95B}, 7
-//  
-//  Contains list of person identified by client such as Photo app.
-DEFINE_PROPERTYKEY(PKEY_Supplemental_Person, 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B, 7);
-#define INIT_PKEY_Supplemental_Person { { 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B }, 7 }
-
 //  Name:     System.Supplemental.ResourceId -- PKEY_Supplemental_ResourceId
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: {0C73B141-39D6-4653-A683-CAB291EAF95B}, 3
@@ -8050,14 +7929,6 @@ DEFINE_PROPERTYKEY(PKEY_Supplemental_Person, 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0
 //  Contains the identifier for the item on the remote sync service. Used for comparing a file on the system to ones that are available in the cloud.
 DEFINE_PROPERTYKEY(PKEY_Supplemental_ResourceId, 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B, 3);
 #define INIT_PKEY_Supplemental_ResourceId { { 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B }, 3 }
-
-//  Name:     System.Supplemental.Tag -- PKEY_Supplemental_Tag
-//  Type:     Multivalue String -- VT_VECTOR | VT_LPWSTR  (For variants: VT_ARRAY | VT_BSTR)
-//  FormatID: {0C73B141-39D6-4653-A683-CAB291EAF95B}, 4
-//  
-//  Contains list of tag associated with the item.
-DEFINE_PROPERTYKEY(PKEY_Supplemental_Tag, 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B, 4);
-#define INIT_PKEY_Supplemental_Tag { { 0x0C73B141, 0x39D6, 0x4653, 0xA6, 0x83, 0xCA, 0xB2, 0x91, 0xEA, 0xF9, 0x5B }, 4 }
 
 //-----------------------------------------------------------------------------
 // Shell properties
@@ -8172,7 +8043,7 @@ DEFINE_PROPERTYKEY(PKEY_AppUserModel_IsDestListSeparator, 0x9F4C2855, 0x9F79, 0x
 //  Type:     Boolean -- VT_BOOL
 //  FormatID: {9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 11
 //  
-//  Deprecated. Indicates that an application supports dual desktop and immersive modes. In Windows 8, this property is only applicable for web browsers.
+//  Indicates that an application supports dual desktop and immersive modes. In Windows 8, this property is only applicable for web browsers.
 DEFINE_PROPERTYKEY(PKEY_AppUserModel_IsDualMode, 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3, 11);
 #define INIT_PKEY_AppUserModel_IsDualMode { { 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3 }, 11 }
 
@@ -8221,14 +8092,6 @@ DEFINE_PROPERTYKEY(PKEY_AppUserModel_StartPinOption, 0x9F4C2855, 0x9F79, 0x4B39,
 //  Used to CoCreate an INotificationActivationCallback interface to notify about toast activations.
 DEFINE_PROPERTYKEY(PKEY_AppUserModel_ToastActivatorCLSID, 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3, 26);
 #define INIT_PKEY_AppUserModel_ToastActivatorCLSID { { 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3 }, 26 }
-
-//  Name:     System.AppUserModel.VisualElementsManifestHintPath -- PKEY_AppUserModel_VisualElementsManifestHintPath
-//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
-//  FormatID: {9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 31
-//  
-//  Suggests where to look for the VisualElementsManifest for a Win32 app
-DEFINE_PROPERTYKEY(PKEY_AppUserModel_VisualElementsManifestHintPath, 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3, 31);
-#define INIT_PKEY_AppUserModel_VisualElementsManifestHintPath { { 0x9F4C2855, 0x9F79, 0x4B39, 0xA8, 0xD0, 0xE1, 0xD4, 0x2D, 0xE1, 0xD5, 0xF3 }, 31 }
 
 //  Name:     System.EdgeGesture.DisableTouchWhenFullscreen -- PKEY_EdgeGesture_DisableTouchWhenFullscreen
 //  Type:     Boolean -- VT_BOOL

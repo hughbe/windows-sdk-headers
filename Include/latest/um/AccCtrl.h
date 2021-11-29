@@ -184,9 +184,7 @@ typedef struct _TRUSTEE_A
         OBJECTS_AND_NAME_A     *pObjectsAndName;
     };
 #else
-    // This member is not null-terminated as it may be used to hold strings, which are null-terminated or 
-    // SIDs, which are not null-terminated.
-    LPCH                        ptstrName;
+    LPSTR                       ptstrName;
 #endif
 } TRUSTEE_A, *PTRUSTEE_A, TRUSTEEA, *PTRUSTEEA;
 typedef struct _TRUSTEE_W
@@ -209,9 +207,7 @@ typedef struct _TRUSTEE_W
         OBJECTS_AND_NAME_W     *pObjectsAndName;
     };
 #else
-    // This member is not null-terminated as it may be used to hold strings, which are null-terminated or 
-    // SID, which are not null-terminated.
-    LPWCH                       ptstrName;
+    LPWSTR                      ptstrName;
 #endif
 } TRUSTEE_W, *PTRUSTEE_W, TRUSTEEW, *PTRUSTEEW;
 #ifdef UNICODE

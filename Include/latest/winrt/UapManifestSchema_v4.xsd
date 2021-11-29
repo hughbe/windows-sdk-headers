@@ -9,9 +9,6 @@
            xmlns:wincap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/windowscapabilities/3"
            xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
            xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
-           xmlns:uap6="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"
-           xmlns:uap8="http://schemas.microsoft.com/appx/manifest/uap/windows10/8"
-           xmlns:uap10="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"
            >
 
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/types"/>
@@ -19,9 +16,6 @@
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/foundation/windows10/windowscapabilities/3"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"/>
-  <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/6"/>
-  <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/8"/>
-  <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/10"/>
 
   <xs:element name="MainPackageDependency" substitutionGroup="f:MainPackageDependencyChoice2">
     <xs:complexType>
@@ -88,7 +82,6 @@
       </xs:choice>
       <xs:attribute name="Category" type="t:ST_ApplicationExtensionCategory_Uap4" use="required"/>
       <xs:attributeGroup ref="t:ExtensionBaseAttributes"/>
-      <xs:attributeGroup ref="uap10:TrustLevelGroup"/>
     </xs:complexType>
     <xs:unique name="SharedFonts_File">
       <xs:selector xpath="uap4:SharedFonts/uap4:Font"/>
@@ -169,7 +162,6 @@
   <xs:complexType name="CT_MediaCodecInput">
     <xs:attribute name="SubType" type="t:ST_MediaCodecSubType" use="required" />
     <xs:attribute ref="uap5:MkvCodecId" use="optional" />
-    <xs:attribute ref="uap6:CodecMimeType" use="optional"/>
   </xs:complexType>
 
   <xs:complexType name="CT_MediaCodecOutput">
@@ -199,16 +191,12 @@
   </xs:simpleType>
 
   <xs:complexType name="CT_DevicePortalProvider">
-    <xs:all>
-      <xs:element ref="uap8:Tools" minOccurs="0" />
-      <xs:element ref="uap8:Workspaces" minOccurs="0"/>
-    </xs:all>
     <xs:attribute name="DisplayName" type="t:ST_DisplayName" use="required"/>
     <xs:attribute name="AppServiceName" type="t:ST_AppServiceName" use="required"/>
     <xs:attribute name="ContentRoute" type="t:ST_NonEmptyString" use="optional"/>
     <xs:attribute name="HandlerRoute" type="t:ST_NonEmptyString" use="optional"/>
   </xs:complexType>
- 
+
 </xs:schema>
 
 

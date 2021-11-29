@@ -30,7 +30,7 @@ extern "C" {
 #endif
 
 #ifndef FILE_DEVICE_BIOMETRIC
-#define FILE_DEVICE_BIOMETRIC   0x00000044
+#define FILE_DEVICE_BIOMETRIC   0x00000044 
 #else
 #if 0x00000044 != FILE_DEVICE_BIOMETRIC
 #error "Incorrect Biometric Device Definition"
@@ -91,27 +91,6 @@ DEFINE_GUID( GUID_DEVINTERFACE_BIOMETRIC_READER,
 #define IOCTL_BIOMETRIC_GET_PRIVATE_SENSOR_TYPE         BIO_CTL_CODE(0x00A)
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS3)
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-//
-// Optional IOCTLs for support of the Secure Connection Protocol (SCP) V1
-// Capability: WINBIO_CAPABILITY_SCP_V1
-//
-#define IOCTL_BIOMETRIC_CONNECT_SECURE                  BIO_CTL_CODE(0x00B)
-#define IOCTL_BIOMETRIC_CAPTURE_ENCRYPTED_DATA          BIO_CTL_CODE(0x00C)
-
-//
-// Optional IOCTL for wake-on-touch support.
-// Capability: WINBIO_CAPABILITY_WAKE
-// The WBDI driver must hold this IOCTL in non-power-managed IO queue.
-// The Windows Biometric Framework will send this IOCTL on transition to a low
-// power state. When the sensor wishes to wake the host, it should complete this
-// IOCTL.
-//
-#define IOCTL_BIOMETRIC_NOTIFY_WAKE                    BIO_CTL_CODE(0x00D)
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS4)
 
 //
 // Vendor control codes are specified at 0x800:
@@ -270,44 +249,6 @@ typedef struct _WINBIO_PRIVATE_SENSOR_TYPE_INFO {
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-//
-// IN payload for IOCTL_BIOMETRIC_CONNECT_SECURE is a WINBIO_SECURE_CONNECTION_PARAMS structure
-//
-
-//
-// OUT payload for IOCTL_BIOMETRIC_CONNECT_SECURE is a WINBIO_SECURE_CONNECTION_DATA structure
-//
-
-//
-// IN payload for IOCTL_BIOMETRIC_CAPTURE_ENCRYPTED_DATA
-//
-typedef struct _WINBIO_ENCRYPTED_CAPTURE_PARAMS {
-    DWORD PayloadSize;
-    WINBIO_BIR_PURPOSE Purpose;
-    WINBIO_REGISTERED_FORMAT Format;
-    WINBIO_UUID VendorFormat;
-    WINBIO_BIR_DATA_FLAGS Flags;
-    DWORD NonceSize;
-    // Nonce[NonceSize]
-} WINBIO_ENCRYPTED_CAPTURE_PARAMS, *PWINBIO_ENCRYPTED_CAPTURE_PARAMS;
-
-//
-// OUT payload for IOCTL_BIOMETRIC_CAPTURE_ENCRYPTED_DATA is a WINBIO_CAPTURE_DATA structure
-//
-
-//
-// OUT payload for IOCTL_BIOMETRIC_NOTIFY_WAKE
-//
-typedef struct _WINBIO_NOTIFY_WAKE {
-    DWORD PayloadSize;
-    HRESULT WinBioHresult;
-    WINBIO_WAKE_REASON Reason;
-} WINBIO_NOTIFY_WAKE, *PWINBIO_NOTIFY_WAKE;
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
 #ifdef __cplusplus
 }
 #endif
@@ -317,3 +258,4 @@ typedef struct _WINBIO_NOTIFY_WAKE {
 #pragma endregion
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN7)
+

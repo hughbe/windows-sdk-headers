@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.applicationmodel.search.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,32 +75,171 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
+
 #if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
 #define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
 
+#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
+
+#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
+
+#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
+#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
+
+#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
+#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
+
+#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
+#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
+
+#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
+#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x20000
+#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
+#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
+
+#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
+
+#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x40000
+#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
+#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -122,10 +264,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ILocalContentSuggestionSettings;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings ABI::Windows::ApplicationModel::Search::ILocalContentSuggestionSettings
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_FWD_DEFINED__
@@ -137,10 +278,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPane;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane ABI::Windows::ApplicationModel::Search::ISearchPane
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_FWD_DEFINED__
@@ -152,10 +292,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneQueryChangedEventArgs;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_FWD_DEFINED__
@@ -167,10 +306,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneQueryLinguisticDetails;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails ABI::Windows::ApplicationModel::Search::ISearchPaneQueryLinguisticDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_FWD_DEFINED__
@@ -182,10 +320,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneQuerySubmittedEventArgs;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneQuerySubmittedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_FWD_DEFINED__
@@ -197,10 +334,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails ABI::Windows::ApplicationModel::Search::ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_FWD_DEFINED__
@@ -212,10 +348,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneResultSuggestionChosenEventArgs;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneResultSuggestionChosenEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_FWD_DEFINED__
@@ -227,10 +362,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneStatics;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics ABI::Windows::ApplicationModel::Search::ISearchPaneStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_FWD_DEFINED__
@@ -242,10 +376,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneStaticsWithHideThisApplication;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication ABI::Windows::ApplicationModel::Search::ISearchPaneStaticsWithHideThisApplication
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_FWD_DEFINED__
@@ -257,10 +390,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneSuggestionsRequest;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_FWD_DEFINED__
@@ -272,10 +404,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneSuggestionsRequestDeferral;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_FWD_DEFINED__
@@ -287,10 +418,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneSuggestionsRequestedEventArgs;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_FWD_DEFINED__
@@ -302,10 +432,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchPaneVisibilityChangedEventArgs;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs ABI::Windows::ApplicationModel::Search::ISearchPaneVisibilityChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_FWD_DEFINED__
@@ -317,10 +446,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchQueryLinguisticDetails;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails ABI::Windows::ApplicationModel::Search::ISearchQueryLinguisticDetails
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_FWD_DEFINED__
@@ -332,10 +460,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchQueryLinguisticDetailsFactory;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory ABI::Windows::ApplicationModel::Search::ISearchQueryLinguisticDetailsFactory
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_FWD_DEFINED__
@@ -347,10 +474,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchSuggestionCollection;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection ABI::Windows::ApplicationModel::Search::ISearchSuggestionCollection
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_FWD_DEFINED__
@@ -362,10 +488,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchSuggestionsRequest;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest ABI::Windows::ApplicationModel::Search::ISearchSuggestionsRequest
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_FWD_DEFINED__
@@ -377,10 +502,9 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Search {
                 interface ISearchSuggestionsRequestDeferral;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral ABI::Windows::ApplicationModel::Search::ISearchSuggestionsRequestDeferral
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_FWD_DEFINED__
@@ -388,63 +512,231 @@ namespace ABI {
 // Parameterized interface forward declarations (C++)
 
 // Collection interface definitions
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Search {
+                class SearchPane;
+            } /* Windows */
+        } /* ApplicationModel */
+    } /* Search */} /* ABI */
 
-#ifndef DEF___FIIterator_1_HSTRING_USE
-#define DEF___FIIterator_1_HSTRING_USE
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Search {
+                class SearchPaneQueryChangedEventArgs;
+            } /* Windows */
+        } /* ApplicationModel */
+    } /* Search */} /* ABI */
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
-IIterator<HSTRING> : IIterator_impl<HSTRING>
+struct __declspec(uuid("7ccd7da1-8767-5eef-972d-31d09f1bf308"))
+ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterator`1<String>";
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
-#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_HSTRING_USE */
+#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_USE */
 
 
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FIIterable_1_HSTRING_USE
-#define DEF___FIIterable_1_HSTRING_USE
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Search {
+                class SearchPaneQuerySubmittedEventArgs;
+            } /* Windows */
+        } /* ApplicationModel */
+    } /* Search */} /* ABI */
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
-IIterable<HSTRING> : IIterable_impl<HSTRING>
+struct __declspec(uuid("5f05121b-61a6-5f6b-b007-20816dfe7009"))
+ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneQuerySubmittedEventArgs*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterable`1<String>";
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
-#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneQuerySubmittedEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneQuerySubmittedEventArgs*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_HSTRING_USE */
+#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_USE */
 
+
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Search {
+                class SearchPaneResultSuggestionChosenEventArgs;
+            } /* Windows */
+        } /* ApplicationModel */
+    } /* Search */} /* ABI */
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("ec31e5d4-3b8c-5757-96bf-14096be946cd"))
+ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneResultSuggestionChosenEventArgs*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneResultSuggestionChosenEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneResultSuggestionChosenEventArgs*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_USE */
+
+
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Search {
+                class SearchPaneSuggestionsRequestedEventArgs;
+            } /* Windows */
+        } /* ApplicationModel */
+    } /* Search */} /* ABI */
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("95088dc0-6c14-55b8-8a8f-9df1ca44d1d4"))
+ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestedEventArgs*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestedEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestedEventArgs*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_USE */
+
+
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Search {
+                class SearchPaneVisibilityChangedEventArgs;
+            } /* Windows */
+        } /* ApplicationModel */
+    } /* Search */} /* ABI */
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("3975ff72-971b-54b6-9b5f-cc442e2a87f0"))
+ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>,ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneVisibilityChangedEventArgs*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*,ABI::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneVisibilityChangedEventArgs*>
+//#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::ApplicationModel::Search::ISearchPane*,ABI::Windows::ApplicationModel::Search::ISearchPaneVisibilityChangedEventArgs*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_USE */
+
+
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFolder;
-        } /* Storage */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Storage */} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
@@ -452,12 +744,12 @@ namespace ABI {
     namespace Windows {
         namespace Storage {
             interface IStorageFolder;
-        } /* Storage */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Storage */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFolder ABI::Windows::Storage::IStorageFolder
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -467,11 +759,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("5aac96fb-b3b9-5a7f-a920-4b5a8df81168"))
-IIterator<ABI::Windows::Storage::StorageFolder*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Storage::StorageFolder*, ABI::Windows::Storage::IStorageFolder*>>
+IIterator<ABI::Windows::Storage::StorageFolder*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Storage::StorageFolder*, ABI::Windows::Storage::IStorageFolder*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Storage.StorageFolder>";
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Storage.StorageFolder>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -479,12 +771,17 @@ IIterator<ABI::Windows::Storage::StorageFolder*> : IIterator_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Storage::StorageFolder*> __FIIterator_1_Windows__CStorage__CStorageFolder_t;
 #define __FIIterator_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CStorage__CStorageFolder_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageFolder*>
+//#define __FIIterator_1_Windows__CStorage__CStorageFolder_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Storage::IStorageFolder*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CStorage__CStorageFolder_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -494,11 +791,11 @@ typedef IIterator<ABI::Windows::Storage::StorageFolder*> __FIIterator_1_Windows_
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("4669befc-ae5c-52b1-8a97-5466ce61e94e"))
-IIterable<ABI::Windows::Storage::StorageFolder*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Storage::StorageFolder*, ABI::Windows::Storage::IStorageFolder*>>
+IIterable<ABI::Windows::Storage::StorageFolder*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Storage::StorageFolder*, ABI::Windows::Storage::IStorageFolder*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Storage.StorageFolder>";
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Storage.StorageFolder>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -506,36 +803,16 @@ IIterable<ABI::Windows::Storage::StorageFolder*> : IIterable_impl<ABI::Windows::
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Storage::StorageFolder*> __FIIterable_1_Windows__CStorage__CStorageFolder_t;
 #define __FIIterable_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CStorage__CStorageFolder_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageFolder*>
+//#define __FIIterable_1_Windows__CStorage__CStorageFolder_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Storage::IStorageFolder*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CStorage__CStorageFolder_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#ifndef DEF___FIVectorView_1_HSTRING_USE
-#define DEF___FIVectorView_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
-IVectorView<HSTRING> : IVectorView_impl<HSTRING>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<String>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
-#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_HSTRING_USE */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -546,11 +823,11 @@ typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("e20debc6-dc4e-542e-a2e7-a24d19c8dd62"))
-IVectorView<ABI::Windows::Storage::StorageFolder*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Storage::StorageFolder*, ABI::Windows::Storage::IStorageFolder*>>
+IVectorView<ABI::Windows::Storage::StorageFolder*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Storage::StorageFolder*, ABI::Windows::Storage::IStorageFolder*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>";
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Storage.StorageFolder>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -558,36 +835,16 @@ IVectorView<ABI::Windows::Storage::StorageFolder*> : IVectorView_impl<ABI::Windo
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Storage::StorageFolder*> __FIVectorView_1_Windows__CStorage__CStorageFolder_t;
 #define __FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CStorage__CStorageFolder_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFolder*>
+//#define __FIVectorView_1_Windows__CStorage__CStorageFolder_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Storage::IStorageFolder*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CStorage__CStorageFolder_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#ifndef DEF___FIVector_1_HSTRING_USE
-#define DEF___FIVector_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("98b9acc1-4b56-532e-ac73-03d5291cca90"))
-IVector<HSTRING> : IVector_impl<HSTRING>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IVector`1<String>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
-#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVector_1_HSTRING_USE */
 
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -598,11 +855,11 @@ typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("6c26b7be-5f01-5a60-9dd7-fd17be3a9dd6"))
-IVector<ABI::Windows::Storage::StorageFolder*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Storage::StorageFolder*, ABI::Windows::Storage::IStorageFolder*>>
+IVector<ABI::Windows::Storage::StorageFolder*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Storage::StorageFolder*, ABI::Windows::Storage::IStorageFolder*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IVector`1<Windows.Storage.StorageFolder>";
+        return L"Windows.Foundation.Collections.IVector`1<Windows.Storage.StorageFolder>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -610,217 +867,140 @@ IVector<ABI::Windows::Storage::StorageFolder*> : IVector_impl<ABI::Windows::Foun
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Storage::StorageFolder*> __FIVector_1_Windows__CStorage__CStorageFolder_t;
 #define __FIVector_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CStorage__CStorageFolder_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVector_1_Windows__CStorage__CStorageFolder ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::IStorageFolder*>
+//#define __FIVector_1_Windows__CStorage__CStorageFolder_t ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Storage::IStorageFolder*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVector_1_Windows__CStorage__CStorageFolder_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Search {
-                class SearchPane;
-            } /* Search */
-        } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
 
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Search {
-                class SearchPaneQueryChangedEventArgs;
-            } /* Search */
-        } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_USE
+#ifndef DEF___FIIterator_1_HSTRING_USE
+#define DEF___FIIterator_1_HSTRING_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("7ccd7da1-8767-5eef-972d-31d09f1bf308"))
-ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs*>>
+struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
+IIterator<HSTRING> : IIterator_impl<HSTRING> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs>";
+        return L"Windows.Foundation.Collections.IIterator`1<String>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
+#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
+//#define __FIIterator_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterator<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_USE */
+#endif /* DEF___FIIterator_1_HSTRING_USE */
 
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Search {
-                class SearchPaneQuerySubmittedEventArgs;
-            } /* Search */
-        } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_USE
+#ifndef DEF___FIIterable_1_HSTRING_USE
+#define DEF___FIIterable_1_HSTRING_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("5f05121b-61a6-5f6b-b007-20816dfe7009"))
-ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneQuerySubmittedEventArgs*>>
+struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
+IIterable<HSTRING> : IIterable_impl<HSTRING> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs>";
+        return L"Windows.Foundation.Collections.IIterable`1<String>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
+#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
+//#define __FIIterable_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterable<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_USE */
+#endif /* DEF___FIIterable_1_HSTRING_USE */
 
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Search {
-                class SearchPaneResultSuggestionChosenEventArgs;
-            } /* Search */
-        } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_USE
+#ifndef DEF___FIVectorView_1_HSTRING_USE
+#define DEF___FIVectorView_1_HSTRING_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("ec31e5d4-3b8c-5757-96bf-14096be946cd"))
-ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneResultSuggestionChosenEventArgs*>>
+struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
+IVectorView<HSTRING> : IVectorView_impl<HSTRING> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs>";
+        return L"Windows.Foundation.Collections.IVectorView`1<String>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
+#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
+//#define __FIVectorView_1_HSTRING_t ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_USE */
+#endif /* DEF___FIVectorView_1_HSTRING_USE */
 
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Search {
-                class SearchPaneSuggestionsRequestedEventArgs;
-            } /* Search */
-        } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_USE
+#ifndef DEF___FIVector_1_HSTRING_USE
+#define DEF___FIVector_1_HSTRING_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("95088dc0-6c14-55b8-8a8f-9df1ca44d1d4"))
-ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestedEventArgs*>>
+struct __declspec(uuid("98b9acc1-4b56-532e-ac73-03d5291cca90"))
+IVector<HSTRING> : IVector_impl<HSTRING> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs>";
+        return L"Windows.Foundation.Collections.IVector`1<String>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
+typedef IVector<HSTRING> __FIVector_1_HSTRING_t;
+#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::__FIVector_1_HSTRING_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVector_1_HSTRING ABI::Windows::Foundation::Collections::IVector<HSTRING>
+//#define __FIVector_1_HSTRING_t ABI::Windows::Foundation::Collections::IVector<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_USE */
+#endif /* DEF___FIVector_1_HSTRING_USE */
 
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-namespace ABI {
-    namespace Windows {
-        namespace ApplicationModel {
-            namespace Search {
-                class SearchPaneVisibilityChangedEventArgs;
-            } /* Search */
-        } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_USE
-#define DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("3975ff72-971b-54b6-9b5f-cc442e2a87f0"))
-ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::ISearchPane*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs*, ABI::Windows::ApplicationModel::Search::ISearchPaneVisibilityChangedEventArgs*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.ApplicationModel.Search.SearchPane, Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::ApplicationModel::Search::SearchPane*, ABI::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs*> __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_t;
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
 
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_USE */
 
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+
+
+
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -829,83 +1009,130 @@ namespace ABI {
         namespace Storage {
             namespace Streams {
                 interface IRandomAccessStreamReference;
-            } /* Streams */
+            } /* Windows */
         } /* Storage */
-    } /* Windows */
-} /* ABI */
+    } /* Streams */} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference ABI::Windows::Storage::Streams::IRandomAccessStreamReference
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
                 class LocalContentSuggestionSettings;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneQueryLinguisticDetails;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneSuggestionsRequest;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
                 class SearchPaneSuggestionsRequestDeferral;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
                 class SearchQueryLinguisticDetails;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
                 class SearchSuggestionCollection;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace ApplicationModel {
+            namespace Search {
+                class SearchSuggestionsRequest;
+            } /* Windows */
+        } /* ApplicationModel */
+    } /* Search */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
                 class SearchSuggestionsRequestDeferral;
-            } /* Search */
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -913,7 +1140,9 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.LocalContentSuggestionSettings
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -924,39 +1153,41 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("eeaeb062-743d-456e-84a3-23f06f2d15d7")
-                ILocalContentSuggestionSettings : public IInspectable
+                /* [object, uuid("EEAEB062-743D-456E-84A3-23F06F2D15D7"), exclusiveto, contract] */
+                MIDL_INTERFACE("EEAEB062-743D-456E-84A3-23F06F2D15D7")
+                ILocalContentSuggestionSettings : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE put_Enabled(
-                        boolean value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_Enabled(
+                        /* [in] */boolean value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Enabled(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Enabled(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Locations(
-                        __FIVector_1_Windows__CStorage__CStorageFolder** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Locations(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CStorage__CStorageFolder * * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_AqsFilter(
-                        HSTRING value
+                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AqsFilter(
+                        /* [in] */__RPC__in HSTRING value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_AqsFilter(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AqsFilter(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_PropertiesToMatch(
-                        __FIVector_1_HSTRING** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PropertiesToMatch(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ILocalContentSuggestionSettings = _uuidof(ILocalContentSuggestionSettings);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ILocalContentSuggestionSettings=_uuidof(ILocalContentSuggestionSettings);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -964,7 +1195,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CILocalContent
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPane
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -975,184 +1208,213 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("fdacec38-3700-4d73-91a1-2f998674238a")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("FDACEC38-3700-4D73-91A1-2F998674238A"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("FDACEC38-3700-4D73-91A1-2F998674238A")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPane : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPane : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE put_SearchHistoryEnabled(
-                        boolean value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_SearchHistoryEnabled(
+                        /* [in] */boolean value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_SearchHistoryEnabled(
-                        boolean* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_SearchHistoryEnabled(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE put_SearchHistoryContext(
-                        HSTRING value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_SearchHistoryContext(
+                        /* [in] */__RPC__in HSTRING value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_SearchHistoryContext(
-                        HSTRING* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_SearchHistoryContext(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE put_PlaceholderText(
-                        HSTRING value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_PlaceholderText(
+                        /* [in] */__RPC__in HSTRING value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_PlaceholderText(
-                        HSTRING* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_PlaceholderText(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_QueryText(
-                        HSTRING* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_QueryText(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_Language(
-                        HSTRING* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Language(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                        boolean* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE add_VisibilityChanged(
-                        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs* handler,
-                        EventRegistrationToken* token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventadd, deprecated] */virtual HRESULT STDMETHODCALLTYPE add_VisibilityChanged(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE remove_VisibilityChanged(
-                        EventRegistrationToken token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventremove, deprecated] */virtual HRESULT STDMETHODCALLTYPE remove_VisibilityChanged(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE add_QueryChanged(
-                        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs* handler,
-                        EventRegistrationToken* token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventadd, deprecated] */virtual HRESULT STDMETHODCALLTYPE add_QueryChanged(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE remove_QueryChanged(
-                        EventRegistrationToken token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventremove, deprecated] */virtual HRESULT STDMETHODCALLTYPE remove_QueryChanged(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE add_SuggestionsRequested(
-                        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs* handler,
-                        EventRegistrationToken* token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventadd, deprecated] */virtual HRESULT STDMETHODCALLTYPE add_SuggestionsRequested(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE remove_SuggestionsRequested(
-                        EventRegistrationToken token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventremove, deprecated] */virtual HRESULT STDMETHODCALLTYPE remove_SuggestionsRequested(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE add_QuerySubmitted(
-                        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs* handler,
-                        EventRegistrationToken* token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventadd, deprecated] */virtual HRESULT STDMETHODCALLTYPE add_QuerySubmitted(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE remove_QuerySubmitted(
-                        EventRegistrationToken token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventremove, deprecated] */virtual HRESULT STDMETHODCALLTYPE remove_QuerySubmitted(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE add_ResultSuggestionChosen(
-                        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs* handler,
-                        EventRegistrationToken* token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventadd, deprecated] */virtual HRESULT STDMETHODCALLTYPE add_ResultSuggestionChosen(
+                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * handler,
+                        /* [retval, out] */__RPC__out EventRegistrationToken * token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE remove_ResultSuggestionChosen(
-                        EventRegistrationToken token
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [eventremove, deprecated] */virtual HRESULT STDMETHODCALLTYPE remove_ResultSuggestionChosen(
+                        /* [in] */EventRegistrationToken token
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE SetLocalContentSuggestionSettings(
-                        ABI::Windows::ApplicationModel::Search::ILocalContentSuggestionSettings* settings
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE SetLocalContentSuggestionSettings(
+                        /* [in] */__RPC__in_opt ABI::Windows::ApplicationModel::Search::ILocalContentSuggestionSettings * settings
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE ShowOverloadDefault(void) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [overload, deprecated] */virtual HRESULT STDMETHODCALLTYPE ShowOverloadDefault(void) = 0;
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE ShowOverloadWithQuery(
-                        HSTRING query
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [overload, deprecated] */virtual HRESULT STDMETHODCALLTYPE ShowOverloadWithQuery(
+                        /* [in] */__RPC__in HSTRING query
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE put_ShowOnKeyboardInput(
-                        boolean value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propput, deprecated] */virtual HRESULT STDMETHODCALLTYPE put_ShowOnKeyboardInput(
+                        /* [in] */boolean value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_ShowOnKeyboardInput(
-                        boolean* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_ShowOnKeyboardInput(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE TrySetQueryText(
-                        HSTRING query,
-                        boolean* succeeded
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE TrySetQueryText(
+                        /* [in] */__RPC__in HSTRING query,
+                        /* [retval, out] */__RPC__out boolean * succeeded
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPane = _uuidof(ISearchPane);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPane=_uuidof(ISearchPane);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Interface Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1163,42 +1425,48 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("3c064fe9-2351-4248-a529-7110f464a785")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("3C064FE9-2351-4248-A529-7110F464A785"), deprecated, contract] */
+                MIDL_INTERFACE("3C064FE9-2351-4248-A529-7110F464A785")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneQueryChangedEventArgs : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneQueryChangedEventArgs : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_QueryText(
-                        HSTRING* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_QueryText(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_Language(
-                        HSTRING* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Language(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_LinguisticDetails(
-                        ABI::Windows::ApplicationModel::Search::ISearchPaneQueryLinguisticDetails** value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_LinguisticDetails(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchPaneQueryLinguisticDetails * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneQueryChangedEventArgs = _uuidof(ISearchPaneQueryChangedEventArgs);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneQueryChangedEventArgs=_uuidof(ISearchPaneQueryChangedEventArgs);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1206,7 +1474,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQu
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1217,30 +1487,32 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("82fb460e-0940-4b6d-b8d0-642b30989e15")
-                ISearchPaneQueryLinguisticDetails : public IInspectable
+                /* [object, uuid("82FB460E-0940-4B6D-B8D0-642B30989E15"), exclusiveto, contract] */
+                MIDL_INTERFACE("82FB460E-0940-4B6D-B8D0-642B30989E15")
+                ISearchPaneQueryLinguisticDetails : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_QueryTextAlternatives(
-                        __FIVectorView_1_HSTRING** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_QueryTextAlternatives(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_QueryTextCompositionStart(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_QueryTextCompositionStart(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_QueryTextCompositionLength(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_QueryTextCompositionLength(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneQueryLinguisticDetails = _uuidof(ISearchPaneQueryLinguisticDetails);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneQueryLinguisticDetails=_uuidof(ISearchPaneQueryLinguisticDetails);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1248,7 +1520,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1259,36 +1533,41 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("143ba4fc-e9c5-4736-91b2-e8eb9cb88356")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("143BA4FC-E9C5-4736-91B2-E8EB9CB88356"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("143BA4FC-E9C5-4736-91B2-E8EB9CB88356")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneQuerySubmittedEventArgs : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneQuerySubmittedEventArgs : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_QueryText(
-                        HSTRING* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_QueryText(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_Language(
-                        HSTRING* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Language(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneQuerySubmittedEventArgs = _uuidof(ISearchPaneQuerySubmittedEventArgs);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneQuerySubmittedEventArgs=_uuidof(ISearchPaneQuerySubmittedEventArgs);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1296,7 +1575,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1307,30 +1588,34 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("460c92e5-4c32-4538-a4d4-b6b4400d140f")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("460C92E5-4C32-4538-A4D4-B6B4400D140F"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("460C92E5-4C32-4538-A4D4-B6B4400D140F")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_LinguisticDetails(
-                        ABI::Windows::ApplicationModel::Search::ISearchPaneQueryLinguisticDetails** value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_LinguisticDetails(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchPaneQueryLinguisticDetails * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails = _uuidof(ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails=_uuidof(ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1338,7 +1623,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1349,30 +1636,34 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("c8316cc0-aed2-41e0-bce0-c26ca74f85ec")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("C8316CC0-AED2-41E0-BCE0-C26CA74F85EC"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("C8316CC0-AED2-41E0-BCE0-C26CA74F85EC")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneResultSuggestionChosenEventArgs : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneResultSuggestionChosenEventArgs : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_Tag(
-                        HSTRING* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Tag(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneResultSuggestionChosenEventArgs = _uuidof(ISearchPaneResultSuggestionChosenEventArgs);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneResultSuggestionChosenEventArgs=_uuidof(ISearchPaneResultSuggestionChosenEventArgs);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1380,7 +1671,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneRe
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPane
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1391,30 +1684,34 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("9572adf1-8f1d-481f-a15b-c61655f16a0e")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("9572ADF1-8F1D-481F-A15B-C61655F16A0E"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("9572ADF1-8F1D-481F-A15B-C61655F16A0E")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneStatics : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneStatics : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE GetForCurrentView(
-                        ABI::Windows::ApplicationModel::Search::ISearchPane** searchPane
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE GetForCurrentView(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchPane * * searchPane
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneStatics = _uuidof(ISearchPaneStatics);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneStatics=_uuidof(ISearchPaneStatics);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1422,7 +1719,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSt
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPane
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1433,28 +1732,32 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("00732830-50f1-4d03-99ac-c6644c8ed8b5")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("00732830-50F1-4D03-99AC-C6644C8ED8B5"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("00732830-50F1-4D03-99AC-C6644C8ED8B5")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneStaticsWithHideThisApplication may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneStaticsWithHideThisApplication : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneStaticsWithHideThisApplication : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneStaticsWithHideThisApplication may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE HideThisApplication(void) = 0;
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE HideThisApplication(void) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneStaticsWithHideThisApplication = _uuidof(ISearchPaneStaticsWithHideThisApplication);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneStaticsWithHideThisApplication=_uuidof(ISearchPaneStaticsWithHideThisApplication);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1462,7 +1765,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSt
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1473,42 +1778,48 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("81b10b1c-e561-4093-9b4d-2ad482794a53")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("81B10B1C-E561-4093-9B4D-2AD482794A53"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("81B10B1C-E561-4093-9B4D-2AD482794A53")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneSuggestionsRequest : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneSuggestionsRequest : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                        boolean* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_SearchSuggestionCollection(
-                        ABI::Windows::ApplicationModel::Search::ISearchSuggestionCollection** collection
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_SearchSuggestionCollection(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchSuggestionCollection * * collection
                         ) = 0;
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE GetDeferral(
-                        ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestDeferral** deferral
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE GetDeferral(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequestDeferral * * deferral
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneSuggestionsRequest = _uuidof(ISearchPaneSuggestionsRequest);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneSuggestionsRequest=_uuidof(ISearchPaneSuggestionsRequest);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1516,7 +1827,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1527,28 +1840,32 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("a0d009f7-8748-4ee2-ad44-afa6be997c51")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("A0D009F7-8748-4EE2-AD44-AFA6BE997C51"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("A0D009F7-8748-4EE2-AD44-AFA6BE997C51")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneSuggestionsRequestDeferral : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneSuggestionsRequestDeferral : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE Complete(void) = 0;
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE Complete(void) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneSuggestionsRequestDeferral = _uuidof(ISearchPaneSuggestionsRequestDeferral);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneSuggestionsRequestDeferral=_uuidof(ISearchPaneSuggestionsRequestDeferral);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1556,10 +1873,13 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs
+ *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1570,30 +1890,34 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("c89b8a2f-ac56-4460-8d2f-80023bec4fc5")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("C89B8A2F-AC56-4460-8D2F-80023BEC4FC5"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("C89B8A2F-AC56-4460-8D2F-80023BEC4FC5")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneSuggestionsRequestedEventArgs : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneSuggestionsRequestedEventArgs : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_Request(
-                        ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequest** value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Request(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchPaneSuggestionsRequest * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneSuggestionsRequestedEventArgs = _uuidof(ISearchPaneSuggestionsRequestedEventArgs);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneSuggestionsRequestedEventArgs=_uuidof(ISearchPaneSuggestionsRequestedEventArgs);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1601,7 +1925,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1612,30 +1938,34 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("3c4d3046-ac4b-49f2-97d6-020e6182cb9c")
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                /* [object, uuid("3C4D3046-AC4B-49F2-97D6-020E6182CB9C"), exclusiveto, deprecated, contract] */
+                MIDL_INTERFACE("3C4D3046-AC4B-49F2-97D6-020E6182CB9C")
+                
+                #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                 DEPRECATED("ISearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                ISearchPaneVisibilityChangedEventArgs : public IInspectable
+                #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                ISearchPaneVisibilityChangedEventArgs : IInspectable
                 {
-                public:
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    
+                    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
                     DEPRECATED("ISearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-                    virtual HRESULT STDMETHODCALLTYPE get_Visible(
-                        boolean* value
+                    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_Visible(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchPaneVisibilityChangedEventArgs = _uuidof(ISearchPaneVisibilityChangedEventArgs);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchPaneVisibilityChangedEventArgs=_uuidof(ISearchPaneVisibilityChangedEventArgs);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1643,7 +1973,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVi
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchQueryLinguisticDetails
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1654,30 +1986,32 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("46a1205b-69c9-4745-b72f-a8a4fc8f24ae")
-                ISearchQueryLinguisticDetails : public IInspectable
+                /* [object, uuid("46A1205B-69C9-4745-B72F-A8A4FC8F24AE"), exclusiveto, contract] */
+                MIDL_INTERFACE("46A1205B-69C9-4745-B72F-A8A4FC8F24AE")
+                ISearchQueryLinguisticDetails : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_QueryTextAlternatives(
-                        __FIVectorView_1_HSTRING** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_QueryTextAlternatives(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_QueryTextCompositionStart(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_QueryTextCompositionStart(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_QueryTextCompositionLength(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_QueryTextCompositionLength(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchQueryLinguisticDetails = _uuidof(ISearchQueryLinguisticDetails);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchQueryLinguisticDetails=_uuidof(ISearchQueryLinguisticDetails);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1685,7 +2019,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryL
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchQueryLinguisticDetails
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1696,27 +2032,29 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("cac6c3b8-3c64-4dfd-ad9f-479e4d4065a4")
-                ISearchQueryLinguisticDetailsFactory : public IInspectable
+                /* [object, uuid("CAC6C3B8-3C64-4DFD-AD9F-479E4D4065A4"), exclusiveto, contract] */
+                MIDL_INTERFACE("CAC6C3B8-3C64-4DFD-AD9F-479E4D4065A4")
+                ISearchQueryLinguisticDetailsFactory : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE CreateInstance(
-                        __FIIterable_1_HSTRING* queryTextAlternatives,
-                        UINT32 queryTextCompositionStart,
-                        UINT32 queryTextCompositionLength,
-                        ABI::Windows::ApplicationModel::Search::ISearchQueryLinguisticDetails** value
+                        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * queryTextAlternatives,
+                        /* [in] */UINT32 queryTextCompositionStart,
+                        /* [in] */UINT32 queryTextCompositionLength,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchQueryLinguisticDetails * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchQueryLinguisticDetailsFactory = _uuidof(ISearchQueryLinguisticDetailsFactory);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchQueryLinguisticDetailsFactory=_uuidof(ISearchQueryLinguisticDetailsFactory);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1724,7 +2062,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryL
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchSuggestionCollection
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1735,40 +2075,42 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("323a8a4b-fbea-4446-abbc-3da7915fdd3a")
-                ISearchSuggestionCollection : public IInspectable
+                /* [object, uuid("323A8A4B-FBEA-4446-ABBC-3DA7915FDD3A"), exclusiveto, contract] */
+                MIDL_INTERFACE("323A8A4B-FBEA-4446-ABBC-3DA7915FDD3A")
+                ISearchSuggestionCollection : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Size(
-                        UINT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Size(
+                        /* [retval, out] */__RPC__out UINT32 * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE AppendQuerySuggestion(
-                        HSTRING text
+                        /* [in] */__RPC__in HSTRING text
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE AppendQuerySuggestions(
-                        __FIIterable_1_HSTRING* suggestions
+                        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * suggestions
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE AppendResultSuggestion(
-                        HSTRING text,
-                        HSTRING detailText,
-                        HSTRING tag,
-                        ABI::Windows::Storage::Streams::IRandomAccessStreamReference* image,
-                        HSTRING imageAlternateText
+                        /* [in] */__RPC__in HSTRING text,
+                        /* [in] */__RPC__in HSTRING detailText,
+                        /* [in] */__RPC__in HSTRING tag,
+                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStreamReference * image,
+                        /* [in] */__RPC__in HSTRING imageAlternateText
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE AppendSearchSeparator(
-                        HSTRING label
+                        /* [in] */__RPC__in HSTRING label
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchSuggestionCollection = _uuidof(ISearchSuggestionCollection);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchSuggestionCollection=_uuidof(ISearchSuggestionCollection);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1776,7 +2118,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSugges
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchSuggestionsRequest
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1787,30 +2131,32 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("4e4e26a7-44e5-4039-9099-6000ead1f0c6")
-                ISearchSuggestionsRequest : public IInspectable
+                /* [object, uuid("4E4E26A7-44E5-4039-9099-6000EAD1F0C6"), exclusiveto, contract] */
+                MIDL_INTERFACE("4E4E26A7-44E5-4039-9099-6000EAD1F0C6")
+                ISearchSuggestionsRequest : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsCanceled(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_SearchSuggestionCollection(
-                        ABI::Windows::ApplicationModel::Search::ISearchSuggestionCollection** collection
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SearchSuggestionCollection(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchSuggestionCollection * * collection
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
-                        ABI::Windows::ApplicationModel::Search::ISearchSuggestionsRequestDeferral** deferral
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Search::ISearchSuggestionsRequestDeferral * * deferral
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchSuggestionsRequest = _uuidof(ISearchSuggestionsRequest);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchSuggestionsRequest=_uuidof(ISearchSuggestionsRequest);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -1818,7 +2164,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSugges
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1829,28 +2177,31 @@ namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
             namespace Search {
-                MIDL_INTERFACE("b71598a9-c065-456d-a845-1eccec5dc28b")
-                ISearchSuggestionsRequestDeferral : public IInspectable
+                /* [object, uuid("B71598A9-C065-456D-A845-1ECCEC5DC28B"), exclusiveto, contract] */
+                MIDL_INTERFACE("B71598A9-C065-456D-A845-1ECCEC5DC28B")
+                ISearchSuggestionsRequestDeferral : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE Complete(void) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISearchSuggestionsRequestDeferral = _uuidof(ISearchSuggestionsRequestDeferral);
-            } /* Search */
+                extern MIDL_CONST_ID IID & IID_ISearchSuggestionsRequestDeferral=_uuidof(ISearchSuggestionsRequestDeferral);
+                
+            } /* Windows */
         } /* ApplicationModel */
-    } /* Windows */
-} /* ABI */
+    } /* Search */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.ApplicationModel.Search.LocalContentSuggestionSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1862,17 +2213,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSugges
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_LocalContentSuggestionSettings_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_LocalContentSuggestionSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_LocalContentSuggestionSettings[] = L"Windows.ApplicationModel.Search.LocalContentSuggestionSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPane
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication interface starting with version 1.0 of the Windows.ApplicationModel.Search.SearchContract API contract
@@ -1885,8 +2239,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPane_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPane_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1894,11 +2250,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs ** Default Interface **
@@ -1907,8 +2265,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQueryChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQueryChangedEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1916,11 +2276,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails ** Default Interface **
@@ -1929,17 +2291,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQueryLinguisticDetails_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQueryLinguisticDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchPaneQueryLinguisticDetails[] = L"Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgs ** Default Interface **
@@ -1949,8 +2314,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQuerySubmittedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQuerySubmittedEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1958,11 +2325,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneResultSuggestionChosenEventArgs ** Default Interface **
@@ -1971,8 +2340,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneResultSuggestionChosenEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneResultSuggestionChosenEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -1980,11 +2351,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest ** Default Interface **
@@ -1993,8 +2366,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequest_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequest_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -2002,11 +2377,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral ** Default Interface **
@@ -2015,8 +2392,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequestDeferral_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequestDeferral_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -2024,11 +2403,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestedEventArgs ** Default Interface **
@@ -2038,8 +2419,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequestedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequestedEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -2047,11 +2430,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneVisibilityChangedEventArgs ** Default Interface **
@@ -2060,8 +2445,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneVisibilityChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneVisibilityChangedEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -2069,11 +2456,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchQueryLinguisticDetails
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.ApplicationModel.Search.ISearchQueryLinguisticDetailsFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2085,17 +2474,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchQueryLinguisticDetails_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchQueryLinguisticDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchQueryLinguisticDetails[] = L"Windows.ApplicationModel.Search.SearchQueryLinguisticDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchSuggestionCollection
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchSuggestionCollection ** Default Interface **
@@ -2104,17 +2496,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionCollection_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionCollection_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchSuggestionCollection[] = L"Windows.ApplicationModel.Search.SearchSuggestionCollection";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchSuggestionsRequest
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchSuggestionsRequest ** Default Interface **
@@ -2123,17 +2518,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionsRequest_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionsRequest_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchSuggestionsRequest[] = L"Windows.ApplicationModel.Search.SearchSuggestionsRequest";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchSuggestionsRequestDeferral ** Default Interface **
@@ -2142,11 +2540,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionsRequestDeferral_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionsRequestDeferral_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchSuggestionsRequestDeferral[] = L"Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -2262,152 +2664,266 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestions
 
 // Collection interface definitions
 
-#if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
 
-typedef interface __FIIterator_1_HSTRING __FIIterator_1_HSTRING;
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_HSTRING;
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs;
 
-typedef struct __FIIterator_1_HSTRINGVtbl
+typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_HSTRING* This,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_HSTRING* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_HSTRING* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_HSTRING* This,
-        UINT32 itemsLength,
-        HSTRING* items,
-        UINT32* result);
-
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * *e);
     END_INTERFACE
-} __FIIterator_1_HSTRINGVtbl;
+} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgsVtbl;
 
-interface __FIIterator_1_HSTRING
+interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs
 {
-    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl* lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterator_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterator_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterator_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterator_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterator_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterator_1_HSTRING_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
-
-#define __FIIterator_1_HSTRING_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
-
-#define __FIIterator_1_HSTRING_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
-
-#define __FIIterator_1_HSTRING_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
-
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
 #endif /* COBJMACROS */
 
-#endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
 
-#if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
 
-typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
+#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__
+
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_HSTRING;
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs;
 
-typedef struct __FIIterable_1_HSTRINGVtbl
+typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * This);
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_HSTRING* This,
-        __FIIterator_1_HSTRING** result);
-
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * *e);
     END_INTERFACE
-} __FIIterable_1_HSTRINGVtbl;
+} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgsVtbl;
 
-interface __FIIterable_1_HSTRING
+interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs
 {
-    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl* lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterable_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterable_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterable_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
 
-#define __FIIterable_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterable_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterable_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterable_1_HSTRING_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
-
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
 #endif /* COBJMACROS */
 
-#endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
+
+
+#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__
+
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs;
+
+typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * *e);
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgsVtbl;
+
+interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__
+
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs;
+
+typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * *e);
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgsVtbl;
+
+interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__
+
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs;
+
+typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * sender,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * *e);
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgsVtbl;
+
+interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgsVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_Invoke(This,sender,e)	\
+    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__
+
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CStorage_CIStorageFolder __x_ABI_CWindows_CStorage_CIStorageFolder;
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFolder_FWD_DEFINED__
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CStorage__CStorageFolder_INTERFACE_DEFINED__)
@@ -2422,73 +2938,80 @@ typedef struct __FIIterator_1_Windows__CStorage__CStorageFolderVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CStorage__CStorageFolder* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CStorage__CStorageFolder* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CStorage__CStorageFolder* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CStorage__CStorageFolder* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CStorage__CStorageFolder* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CStorage__CStorageFolder* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CStorage__CStorageFolder* This,
-        __x_ABI_CWindows_CStorage_CIStorageFolder** result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CStorage__CStorageFolder* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CStorage__CStorageFolder* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CStorage__CStorageFolder* This,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CStorage_CIStorageFolder** items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CStorage_CIStorageFolder * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CStorage_CIStorageFolder * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CStorage__CStorageFolderVtbl;
 
 interface __FIIterator_1_Windows__CStorage__CStorageFolder
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CStorage__CStorageFolderVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CStorage__CStorageFolderVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CStorage__CStorageFolder_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CStorage__CStorageFolder_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIIterator_1_Windows__CStorage__CStorageFolder_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CStorage__CStorageFolder_INTERFACE_DEFINED__)
@@ -2499,143 +3022,70 @@ typedef interface __FIIterable_1_Windows__CStorage__CStorageFolder __FIIterable_
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CStorage__CStorageFolder;
 
-typedef struct __FIIterable_1_Windows__CStorage__CStorageFolderVtbl
+typedef  struct __FIIterable_1_Windows__CStorage__CStorageFolderVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CStorage__CStorageFolder* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CStorage__CStorageFolder* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CStorage__CStorageFolder* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CStorage__CStorageFolder* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CStorage__CStorageFolder* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CStorage__CStorageFolder* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CStorage__CStorageFolder* This,
-        __FIIterator_1_Windows__CStorage__CStorageFolder** result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CStorage__CStorageFolder * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CStorage__CStorageFolder * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CStorage__CStorageFolder * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CStorage__CStorageFolder * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CStorage__CStorageFolder * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CStorage__CStorageFolder * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CStorage__CStorageFolder **first);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CStorage__CStorageFolderVtbl;
 
 interface __FIIterable_1_Windows__CStorage__CStorageFolder
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CStorage__CStorageFolderVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CStorage__CStorageFolderVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CStorage__CStorageFolder_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1_Windows__CStorage__CStorageFolder_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterable_1_Windows__CStorage__CStorageFolder_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1_Windows__CStorage__CStorageFolder_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterable_1_Windows__CStorage__CStorageFolder_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1_Windows__CStorage__CStorageFolder_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterable_1_Windows__CStorage__CStorageFolder_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CStorage__CStorageFolder_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __FIIterable_1_Windows__CStorage__CStorageFolder_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterable_1_Windows__CStorage__CStorageFolder_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterable_1_Windows__CStorage__CStorageFolder_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterable_1_Windows__CStorage__CStorageFolder_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
+#define __FIIterable_1_Windows__CStorage__CStorageFolder_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CStorage__CStorageFolder_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
+
 
 #endif // ____FIIterable_1_Windows__CStorage__CStorageFolder_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_HSTRING;
-
-typedef struct __FIVectorView_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_HSTRING* This,
-        UINT32 index,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_HSTRING* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_HSTRING* This,
-        HSTRING value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_HSTRING* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        HSTRING* items,
-        UINT32* result);
-
-    END_INTERFACE
-} __FIVectorView_1_HSTRINGVtbl;
-
-interface __FIVectorView_1_HSTRING
-{
-    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIVectorView_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIVectorView_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIVectorView_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIVectorView_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIVectorView_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIVectorView_1_HSTRING_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
-
-#define __FIVectorView_1_HSTRING_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
-
-#define __FIVectorView_1_HSTRING_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
-
-#define __FIVectorView_1_HSTRING_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CStorage__CStorageFolder_INTERFACE_DEFINED__)
@@ -2650,201 +3100,103 @@ typedef struct __FIVectorView_1_Windows__CStorage__CStorageFolderVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This,
-        UINT32 index,
-        __x_ABI_CWindows_CStorage_CIStorageFolder** result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This,
-        __x_ABI_CWindows_CStorage_CIStorageFolder* value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CStorage__CStorageFolder* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CStorage_CIStorageFolder** items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
 
-    END_INTERFACE
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CStorage_CIStorageFolder * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This,
+            /* [in] */ __x_ABI_CWindows_CStorage_CIStorageFolder * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CStorage__CStorageFolder * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CStorage_CIStorageFolder * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
 } __FIVectorView_1_Windows__CStorage__CStorageFolderVtbl;
 
 interface __FIVectorView_1_Windows__CStorage__CStorageFolder
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CStorage__CStorageFolderVtbl* lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CStorage__CStorageFolderVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CStorage__CStorageFolder_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
+
+
 
 #endif // ____FIVectorView_1_Windows__CStorage__CStorageFolder_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if !defined(____FIVector_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIVector_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIVector_1_HSTRING __FIVector_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVector_1_HSTRING;
-
-typedef struct __FIVector_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVector_1_HSTRING* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVector_1_HSTRING* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVector_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVector_1_HSTRING* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVector_1_HSTRING* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVector_1_HSTRING* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVector_1_HSTRING* This,
-        UINT32 index,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVector_1_HSTRING* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* GetView)(__FIVector_1_HSTRING* This,
-        __FIVectorView_1_HSTRING** result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVector_1_HSTRING* This,
-        HSTRING value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* SetAt)(__FIVector_1_HSTRING* This,
-        UINT32 index,
-        HSTRING value);
-    HRESULT (STDMETHODCALLTYPE* InsertAt)(__FIVector_1_HSTRING* This,
-        UINT32 index,
-        HSTRING value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAt)(__FIVector_1_HSTRING* This,
-        UINT32 index);
-    HRESULT (STDMETHODCALLTYPE* Append)(__FIVector_1_HSTRING* This,
-        HSTRING value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(__FIVector_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* Clear)(__FIVector_1_HSTRING* This);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVector_1_HSTRING* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        HSTRING* items,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(__FIVector_1_HSTRING* This,
-        UINT32 itemsLength,
-        HSTRING* items);
-
-    END_INTERFACE
-} __FIVector_1_HSTRINGVtbl;
-
-interface __FIVector_1_HSTRING
-{
-    CONST_VTBL struct __FIVector_1_HSTRINGVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIVector_1_HSTRING_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIVector_1_HSTRING_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIVector_1_HSTRING_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIVector_1_HSTRING_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIVector_1_HSTRING_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIVector_1_HSTRING_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIVector_1_HSTRING_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
-
-#define __FIVector_1_HSTRING_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
-
-#define __FIVector_1_HSTRING_GetView(This, result) \
-    ((This)->lpVtbl->GetView(This, result))
-
-#define __FIVector_1_HSTRING_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
-
-#define __FIVector_1_HSTRING_SetAt(This, index, value) \
-    ((This)->lpVtbl->SetAt(This, index, value))
-
-#define __FIVector_1_HSTRING_InsertAt(This, index, value) \
-    ((This)->lpVtbl->InsertAt(This, index, value))
-
-#define __FIVector_1_HSTRING_RemoveAt(This, index) \
-    ((This)->lpVtbl->RemoveAt(This, index))
-
-#define __FIVector_1_HSTRING_Append(This, value) \
-    ((This)->lpVtbl->Append(This, value))
-
-#define __FIVector_1_HSTRING_RemoveAtEnd(This) \
-    ((This)->lpVtbl->RemoveAtEnd(This))
-
-#define __FIVector_1_HSTRING_Clear(This) \
-    ((This)->lpVtbl->Clear(This))
-
-#define __FIVector_1_HSTRING_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
-
-#define __FIVector_1_HSTRING_ReplaceAll(This, itemsLength, items) \
-    ((This)->lpVtbl->ReplaceAll(This, itemsLength, items))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIVector_1_HSTRING_INTERFACE_DEFINED__
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVector_1_Windows__CStorage__CStorageFolder_INTERFACE_DEFINED__)
@@ -2859,373 +3211,545 @@ typedef struct __FIVector_1_Windows__CStorage__CStorageFolderVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVector_1_Windows__CStorage__CStorageFolder* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVector_1_Windows__CStorage__CStorageFolder* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        UINT32 index,
-        __x_ABI_CWindows_CStorage_CIStorageFolder** result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* GetView)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        __FIVectorView_1_Windows__CStorage__CStorageFolder** result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        __x_ABI_CWindows_CStorage_CIStorageFolder* value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* SetAt)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        UINT32 index,
-        __x_ABI_CWindows_CStorage_CIStorageFolder* value);
-    HRESULT (STDMETHODCALLTYPE* InsertAt)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        UINT32 index,
-        __x_ABI_CWindows_CStorage_CIStorageFolder* value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAt)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        UINT32 index);
-    HRESULT (STDMETHODCALLTYPE* Append)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        __x_ABI_CWindows_CStorage_CIStorageFolder* value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(__FIVector_1_Windows__CStorage__CStorageFolder* This);
-    HRESULT (STDMETHODCALLTYPE* Clear)(__FIVector_1_Windows__CStorage__CStorageFolder* This);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CStorage_CIStorageFolder** items,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(__FIVector_1_Windows__CStorage__CStorageFolder* This,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CStorage_CIStorageFolder** items);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This, /* [out] */ __RPC__deref_out_opt __x_ABI_CWindows_CStorage_CIStorageFolder * *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ unsigned int index,
+        /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CStorage_CIStorageFolder * *item);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+        __RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This,
+        /* [retval][out] */ __RPC__out unsigned int *size);
+
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This, /* [retval][out] */ __RPC__deref_out_opt __FIVectorView_1_Windows__CStorage__CStorageFolder **view);
+
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ __RPC__in __x_ABI_CWindows_CStorage_CIStorageFolder * item,
+        /* [out] */ __RPC__out unsigned int *index,
+        /* [retval][out] */ __RPC__out boolean *found);
+
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ unsigned int index,
+        /* [in] */ __RPC__in __x_ABI_CWindows_CStorage_CIStorageFolder * item);
+
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ unsigned int index,
+        /* [in] */ __RPC__in __x_ABI_CWindows_CStorage_CIStorageFolder * item);
+
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This, /* [in] */ unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This, /* [in] */ __RPC__in __x_ABI_CWindows_CStorage_CIStorageFolder * item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ unsigned int startIndex,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CStorage_CIStorageFolder * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CStorage__CStorageFolder * This,
+        /* [in] */ unsigned int count,
+        /* [size_is][in] */ __RPC__in_ecount_full(count) __x_ABI_CWindows_CStorage_CIStorageFolder * *value);
 
     END_INTERFACE
 } __FIVector_1_Windows__CStorage__CStorageFolderVtbl;
 
 interface __FIVector_1_Windows__CStorage__CStorageFolder
 {
-    CONST_VTBL struct __FIVector_1_Windows__CStorage__CStorageFolderVtbl* lpVtbl;
+    CONST_VTBL struct __FIVector_1_Windows__CStorage__CStorageFolderVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_GetView(This, result) \
-    ((This)->lpVtbl->GetView(This, result))
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_SetAt(This, index, value) \
-    ((This)->lpVtbl->SetAt(This, index, value))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_InsertAt(This, index, value) \
-    ((This)->lpVtbl->InsertAt(This, index, value))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_GetView(This,view)	\
+    ( (This)->lpVtbl -> GetView(This,view) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_RemoveAt(This, index) \
-    ((This)->lpVtbl->RemoveAt(This, index))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_Append(This, value) \
-    ((This)->lpVtbl->Append(This, value))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_SetAt(This,index,item)	\
+    ( (This)->lpVtbl -> SetAt(This,index,item) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_RemoveAtEnd(This) \
-    ((This)->lpVtbl->RemoveAtEnd(This))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_InsertAt(This,index,item)	\
+    ( (This)->lpVtbl -> InsertAt(This,index,item) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_Clear(This) \
-    ((This)->lpVtbl->Clear(This))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_RemoveAt(This,index)	\
+    ( (This)->lpVtbl -> RemoveAt(This,index) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_Append(This,item)	\
+    ( (This)->lpVtbl -> Append(This,item) ) 
 
-#define __FIVector_1_Windows__CStorage__CStorageFolder_ReplaceAll(This, itemsLength, items) \
-    ((This)->lpVtbl->ReplaceAll(This, itemsLength, items))
+#define __FIVector_1_Windows__CStorage__CStorageFolder_RemoveAtEnd(This)	\
+    ( (This)->lpVtbl -> RemoveAtEnd(This) ) 
+
+#define __FIVector_1_Windows__CStorage__CStorageFolder_Clear(This)	\
+    ( (This)->lpVtbl -> Clear(This) ) 
+
+#define __FIVector_1_Windows__CStorage__CStorageFolder_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#define __FIVector_1_Windows__CStorage__CStorageFolder_ReplaceAll(This,count,value)	\
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) ) 
 
 #endif /* COBJMACROS */
+
+
 
 #endif // ____FIVector_1_Windows__CStorage__CStorageFolder_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__
+#if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
 
-typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs;
+typedef interface __FIIterator_1_HSTRING __FIIterator_1_HSTRING;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs;
+EXTERN_C const IID IID___FIIterator_1_HSTRING;
 
-typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgsVtbl
+typedef struct __FIIterator_1_HSTRINGVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* sender,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* args);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_HSTRING * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_HSTRING * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_HSTRING * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
-} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgsVtbl;
+} __FIIterator_1_HSTRINGVtbl;
 
-interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs
+interface __FIIterator_1_HSTRING
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_HSTRING_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_HSTRING_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_HSTRING_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_HSTRING_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
+
+
+#if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_HSTRING;
+
+typedef  struct __FIIterable_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_HSTRING * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_HSTRING * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_HSTRING * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_HSTRING **first);
+
+    END_INTERFACE
+} __FIIterable_1_HSTRINGVtbl;
+
+interface __FIIterable_1_HSTRING
+{
+    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
+
+#define __FIIterable_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_HSTRING_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
 
-#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__
+#endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
 
-typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs;
+
+#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs;
+EXTERN_C const IID IID___FIVectorView_1_HSTRING;
 
-typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgsVtbl
+typedef struct __FIVectorView_1_HSTRINGVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* sender,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs* args);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_HSTRING * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
 
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgsVtbl;
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_HSTRING * This);
 
-interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_HSTRING * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_HSTRING * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_HSTRING * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out HSTRING *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [in] */ HSTRING item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_HSTRING * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_HSTRINGVtbl;
+
+interface __FIVectorView_1_HSTRING
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIVectorView_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIVectorView_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
+#define __FIVectorView_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_HSTRING_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_HSTRING_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_HSTRING_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_HSTRING_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
-#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__
 
-typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs;
+#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
+
+
+#if !defined(____FIVector_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIVector_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIVector_1_HSTRING __FIVector_1_HSTRING;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs;
+EXTERN_C const IID IID___FIVector_1_HSTRING;
 
-typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgsVtbl
+typedef struct __FIVector_1_HSTRINGVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* sender,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs* args);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVector_1_HSTRING * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_HSTRING * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int index,
+        /* [retval][out] */ __RPC__deref_out_opt HSTRING *item);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+        __RPC__in __FIVector_1_HSTRING * This,
+        /* [retval][out] */ __RPC__out unsigned int *size);
+
+    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIVectorView_1_HSTRING **view);
+
+    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ __RPC__in HSTRING item,
+        /* [out] */ __RPC__out unsigned int *index,
+        /* [retval][out] */ __RPC__out boolean *found);
+
+    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int index,
+        /* [in] */ __RPC__in HSTRING item);
+
+    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int index,
+        /* [in] */ __RPC__in HSTRING item);
+
+    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_HSTRING * This, /* [in] */ unsigned int index);
+    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_HSTRING * This, /* [in] */ __RPC__in HSTRING item);
+    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_HSTRING * This);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int startIndex,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_HSTRING * This,
+        /* [in] */ unsigned int count,
+        /* [size_is][in] */ __RPC__in_ecount_full(count) HSTRING *value);
 
     END_INTERFACE
-} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgsVtbl;
+} __FIVector_1_HSTRINGVtbl;
 
-interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs
+interface __FIVector_1_HSTRING
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __FIVector_1_HSTRINGVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIVector_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIVector_1_HSTRING_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
+#define __FIVector_1_HSTRING_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#endif /* COBJMACROS */
 
-#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+#define __FIVector_1_HSTRING_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__
+#define __FIVector_1_HSTRING_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs;
+#define __FIVector_1_HSTRING_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs;
 
-typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgsVtbl
-{
-    BEGIN_INTERFACE
+#define __FIVector_1_HSTRING_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* sender,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs* args);
+#define __FIVector_1_HSTRING_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
 
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgsVtbl;
+#define __FIVector_1_HSTRING_GetView(This,view)	\
+    ( (This)->lpVtbl -> GetView(This,view) ) 
 
-interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgsVtbl* lpVtbl;
-};
+#define __FIVector_1_HSTRING_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
 
-#ifdef COBJMACROS
+#define __FIVector_1_HSTRING_SetAt(This,index,item)	\
+    ( (This)->lpVtbl -> SetAt(This,index,item) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIVector_1_HSTRING_InsertAt(This,index,item)	\
+    ( (This)->lpVtbl -> InsertAt(This,index,item) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIVector_1_HSTRING_RemoveAt(This,index)	\
+    ( (This)->lpVtbl -> RemoveAt(This,index) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIVector_1_HSTRING_Append(This,item)	\
+    ( (This)->lpVtbl -> Append(This,item) ) 
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
+#define __FIVector_1_HSTRING_RemoveAtEnd(This)	\
+    ( (This)->lpVtbl -> RemoveAtEnd(This) ) 
+
+#define __FIVector_1_HSTRING_Clear(This)	\
+    ( (This)->lpVtbl -> Clear(This) ) 
+
+#define __FIVector_1_HSTRING_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#define __FIVector_1_HSTRING_ReplaceAll(This,count,value)	\
+    ( (This)->lpVtbl -> ReplaceAll(This,count,value) ) 
 
 #endif /* COBJMACROS */
 
-#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#if !defined(____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__)
-#define ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__
 
-typedef interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs;
+#endif // ____FIVector_1_HSTRING_INTERFACE_DEFINED__
 
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs;
 
-typedef struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgsVtbl
-{
-    BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* sender,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs* args);
 
-    END_INTERFACE
-} __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgsVtbl;
 
-interface __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs
-{
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgsVtbl* lpVtbl;
-};
 
-#ifdef COBJMACROS
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_Invoke(This, sender, args) \
-    ((This)->lpVtbl->Invoke(This, sender, args))
-
-#endif /* COBJMACROS */
-
-#endif // ____FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
@@ -3233,99 +3757,179 @@ typedef interface __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReferen
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  *
  * Interface Windows.ApplicationModel.Search.ILocalContentSuggestionSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.LocalContentSuggestionSettings
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ILocalContentSuggestionSettings[] = L"Windows.ApplicationModel.Search.ILocalContentSuggestionSettings";
+/* [object, uuid("EEAEB062-743D-456E-84A3-23F06F2D15D7"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettingsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Enabled)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        boolean value);
-    HRESULT (STDMETHODCALLTYPE* get_Enabled)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_Locations)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        __FIVector_1_Windows__CStorage__CStorageFolder** value);
-    HRESULT (STDMETHODCALLTYPE* put_AqsFilter)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        HSTRING value);
-    HRESULT (STDMETHODCALLTYPE* get_AqsFilter)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_PropertiesToMatch)(__x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* This,
-        __FIVector_1_HSTRING** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propput] */HRESULT ( STDMETHODCALLTYPE *put_Enabled )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+        /* [in] */boolean value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Enabled )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Locations )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVector_1_Windows__CStorage__CStorageFolder * * value
+        );
+    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_AqsFilter )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+        /* [in] */__RPC__in HSTRING value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_AqsFilter )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PropertiesToMatch )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVector_1_HSTRING * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettingsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettingsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettingsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_put_Enabled(This, value) \
-    ((This)->lpVtbl->put_Enabled(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_put_Enabled(This,value) \
+    ( (This)->lpVtbl->put_Enabled(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_get_Enabled(This, value) \
-    ((This)->lpVtbl->get_Enabled(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_get_Enabled(This,value) \
+    ( (This)->lpVtbl->get_Enabled(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_get_Locations(This, value) \
-    ((This)->lpVtbl->get_Locations(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_get_Locations(This,value) \
+    ( (This)->lpVtbl->get_Locations(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_put_AqsFilter(This, value) \
-    ((This)->lpVtbl->put_AqsFilter(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_put_AqsFilter(This,value) \
+    ( (This)->lpVtbl->put_AqsFilter(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_get_AqsFilter(This, value) \
-    ((This)->lpVtbl->get_AqsFilter(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_get_AqsFilter(This,value) \
+    ( (This)->lpVtbl->get_AqsFilter(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_get_PropertiesToMatch(This, value) \
-    ((This)->lpVtbl->get_PropertiesToMatch(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_get_PropertiesToMatch(This,value) \
+    ( (This)->lpVtbl->get_PropertiesToMatch(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3333,347 +3937,469 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CILocalContent
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPane
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPane[] = L"Windows.ApplicationModel.Search.ISearchPane";
-typedef struct
+/* [object, uuid("FDACEC38-3700-4D73-91A1-2F998674238A"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* put_SearchHistoryEnabled)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        boolean value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_SearchHistoryEnabled)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        boolean* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* put_SearchHistoryContext)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        HSTRING value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_SearchHistoryContext)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        HSTRING* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* put_PlaceholderText)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        HSTRING value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_PlaceholderText)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        HSTRING* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_QueryText)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        HSTRING* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_Language)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        HSTRING* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_Visible)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        boolean* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* add_VisibilityChanged)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs* handler,
-        EventRegistrationToken* token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* remove_VisibilityChanged)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        EventRegistrationToken token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* add_QueryChanged)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs* handler,
-        EventRegistrationToken* token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* remove_QueryChanged)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        EventRegistrationToken token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* add_SuggestionsRequested)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs* handler,
-        EventRegistrationToken* token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* remove_SuggestionsRequested)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        EventRegistrationToken token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* add_QuerySubmitted)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs* handler,
-        EventRegistrationToken* token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* remove_QuerySubmitted)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        EventRegistrationToken token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* add_ResultSuggestionChosen)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs* handler,
-        EventRegistrationToken* token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* remove_ResultSuggestionChosen)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        EventRegistrationToken token);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* SetLocalContentSuggestionSettings)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings* settings);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* ShowOverloadDefault)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* ShowOverloadWithQuery)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        HSTRING query);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* put_ShowOnKeyboardInput)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        boolean value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_ShowOnKeyboardInput)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        boolean* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* TrySetQueryText)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane* This,
-        HSTRING query,
-        boolean* succeeded);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propput, deprecated] */HRESULT ( STDMETHODCALLTYPE *put_SearchHistoryEnabled )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */boolean value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_SearchHistoryEnabled )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propput, deprecated] */HRESULT ( STDMETHODCALLTYPE *put_SearchHistoryContext )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in HSTRING value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_SearchHistoryContext )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propput, deprecated] */HRESULT ( STDMETHODCALLTYPE *put_PlaceholderText )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in HSTRING value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_PlaceholderText )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_QueryText )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_Language )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_Visible )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventadd, deprecated] */HRESULT ( STDMETHODCALLTYPE *add_VisibilityChanged )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneVisibilityChangedEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventremove, deprecated] */HRESULT ( STDMETHODCALLTYPE *remove_VisibilityChanged )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */EventRegistrationToken token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventadd, deprecated] */HRESULT ( STDMETHODCALLTYPE *add_QueryChanged )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQueryChangedEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventremove, deprecated] */HRESULT ( STDMETHODCALLTYPE *remove_QueryChanged )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */EventRegistrationToken token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventadd, deprecated] */HRESULT ( STDMETHODCALLTYPE *add_SuggestionsRequested )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneSuggestionsRequestedEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventremove, deprecated] */HRESULT ( STDMETHODCALLTYPE *remove_SuggestionsRequested )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */EventRegistrationToken token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventadd, deprecated] */HRESULT ( STDMETHODCALLTYPE *add_QuerySubmitted )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneQuerySubmittedEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventremove, deprecated] */HRESULT ( STDMETHODCALLTYPE *remove_QuerySubmitted )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */EventRegistrationToken token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventadd, deprecated] */HRESULT ( STDMETHODCALLTYPE *add_ResultSuggestionChosen )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CApplicationModel__CSearch__CSearchPane_Windows__CApplicationModel__CSearch__CSearchPaneResultSuggestionChosenEventArgs * handler,
+        /* [retval, out] */__RPC__out EventRegistrationToken * token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [eventremove, deprecated] */HRESULT ( STDMETHODCALLTYPE *remove_ResultSuggestionChosen )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */EventRegistrationToken token
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *SetLocalContentSuggestionSettings )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CApplicationModel_CSearch_CILocalContentSuggestionSettings * settings
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [overload, deprecated] */HRESULT ( STDMETHODCALLTYPE *ShowOverloadDefault )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [overload, deprecated] */HRESULT ( STDMETHODCALLTYPE *ShowOverloadWithQuery )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in HSTRING query
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propput, deprecated] */HRESULT ( STDMETHODCALLTYPE *put_ShowOnKeyboardInput )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */boolean value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_ShowOnKeyboardInput )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *TrySetQueryText )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * This,
+        /* [in] */__RPC__in HSTRING query,
+        /* [retval, out] */__RPC__out boolean * succeeded
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_put_SearchHistoryEnabled(This, value) \
-    ((This)->lpVtbl->put_SearchHistoryEnabled(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_put_SearchHistoryEnabled(This,value) \
+    ( (This)->lpVtbl->put_SearchHistoryEnabled(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_SearchHistoryEnabled(This, value) \
-    ((This)->lpVtbl->get_SearchHistoryEnabled(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_SearchHistoryEnabled(This,value) \
+    ( (This)->lpVtbl->get_SearchHistoryEnabled(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_put_SearchHistoryContext(This, value) \
-    ((This)->lpVtbl->put_SearchHistoryContext(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_put_SearchHistoryContext(This,value) \
+    ( (This)->lpVtbl->put_SearchHistoryContext(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_SearchHistoryContext(This, value) \
-    ((This)->lpVtbl->get_SearchHistoryContext(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_SearchHistoryContext(This,value) \
+    ( (This)->lpVtbl->get_SearchHistoryContext(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_put_PlaceholderText(This, value) \
-    ((This)->lpVtbl->put_PlaceholderText(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_put_PlaceholderText(This,value) \
+    ( (This)->lpVtbl->put_PlaceholderText(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_PlaceholderText(This, value) \
-    ((This)->lpVtbl->get_PlaceholderText(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_PlaceholderText(This,value) \
+    ( (This)->lpVtbl->get_PlaceholderText(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_QueryText(This, value) \
-    ((This)->lpVtbl->get_QueryText(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_QueryText(This,value) \
+    ( (This)->lpVtbl->get_QueryText(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_Language(This, value) \
-    ((This)->lpVtbl->get_Language(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_Language(This,value) \
+    ( (This)->lpVtbl->get_Language(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_Visible(This, value) \
-    ((This)->lpVtbl->get_Visible(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_Visible(This,value) \
+    ( (This)->lpVtbl->get_Visible(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_VisibilityChanged(This, handler, token) \
-    ((This)->lpVtbl->add_VisibilityChanged(This, handler, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_VisibilityChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_VisibilityChanged(This,handler,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_VisibilityChanged(This, token) \
-    ((This)->lpVtbl->remove_VisibilityChanged(This, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_VisibilityChanged(This,token) \
+    ( (This)->lpVtbl->remove_VisibilityChanged(This,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_QueryChanged(This, handler, token) \
-    ((This)->lpVtbl->add_QueryChanged(This, handler, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_QueryChanged(This,handler,token) \
+    ( (This)->lpVtbl->add_QueryChanged(This,handler,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_QueryChanged(This, token) \
-    ((This)->lpVtbl->remove_QueryChanged(This, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_QueryChanged(This,token) \
+    ( (This)->lpVtbl->remove_QueryChanged(This,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_SuggestionsRequested(This, handler, token) \
-    ((This)->lpVtbl->add_SuggestionsRequested(This, handler, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_SuggestionsRequested(This,handler,token) \
+    ( (This)->lpVtbl->add_SuggestionsRequested(This,handler,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_SuggestionsRequested(This, token) \
-    ((This)->lpVtbl->remove_SuggestionsRequested(This, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_SuggestionsRequested(This,token) \
+    ( (This)->lpVtbl->remove_SuggestionsRequested(This,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_QuerySubmitted(This, handler, token) \
-    ((This)->lpVtbl->add_QuerySubmitted(This, handler, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_QuerySubmitted(This,handler,token) \
+    ( (This)->lpVtbl->add_QuerySubmitted(This,handler,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_QuerySubmitted(This, token) \
-    ((This)->lpVtbl->remove_QuerySubmitted(This, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_QuerySubmitted(This,token) \
+    ( (This)->lpVtbl->remove_QuerySubmitted(This,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_ResultSuggestionChosen(This, handler, token) \
-    ((This)->lpVtbl->add_ResultSuggestionChosen(This, handler, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_add_ResultSuggestionChosen(This,handler,token) \
+    ( (This)->lpVtbl->add_ResultSuggestionChosen(This,handler,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_ResultSuggestionChosen(This, token) \
-    ((This)->lpVtbl->remove_ResultSuggestionChosen(This, token))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_remove_ResultSuggestionChosen(This,token) \
+    ( (This)->lpVtbl->remove_ResultSuggestionChosen(This,token) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_SetLocalContentSuggestionSettings(This, settings) \
-    ((This)->lpVtbl->SetLocalContentSuggestionSettings(This, settings))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_SetLocalContentSuggestionSettings(This,settings) \
+    ( (This)->lpVtbl->SetLocalContentSuggestionSettings(This,settings) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_ShowOverloadDefault(This) \
-    ((This)->lpVtbl->ShowOverloadDefault(This))
+    ( (This)->lpVtbl->ShowOverloadDefault(This) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_ShowOverloadWithQuery(This, query) \
-    ((This)->lpVtbl->ShowOverloadWithQuery(This, query))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_ShowOverloadWithQuery(This,query) \
+    ( (This)->lpVtbl->ShowOverloadWithQuery(This,query) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_put_ShowOnKeyboardInput(This, value) \
-    ((This)->lpVtbl->put_ShowOnKeyboardInput(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_put_ShowOnKeyboardInput(This,value) \
+    ( (This)->lpVtbl->put_ShowOnKeyboardInput(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_ShowOnKeyboardInput(This, value) \
-    ((This)->lpVtbl->get_ShowOnKeyboardInput(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_get_ShowOnKeyboardInput(This,value) \
+    ( (This)->lpVtbl->get_ShowOnKeyboardInput(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_TrySetQueryText(This, query, succeeded) \
-    ((This)->lpVtbl->TrySetQueryText(This, query, succeeded))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_TrySetQueryText(This,query,succeeded) \
+    ( (This)->lpVtbl->TrySetQueryText(This,query,succeeded) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3681,98 +4407,131 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane;
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneQueryChangedEventArgs[] = L"Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs";
-typedef struct
+/* [object, uuid("3C064FE9-2351-4248-A529-7110F464A785"), deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_QueryText)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* This,
-        HSTRING* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_Language)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* This,
-        HSTRING* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_LinguisticDetails)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_QueryText )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_Language )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_LinguisticDetails )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_get_QueryText(This, value) \
-    ((This)->lpVtbl->get_QueryText(This, value))
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_get_Language(This, value) \
-    ((This)->lpVtbl->get_Language(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_get_QueryText(This,value) \
+    ( (This)->lpVtbl->get_QueryText(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_get_LinguisticDetails(This, value) \
-    ((This)->lpVtbl->get_LinguisticDetails(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_get_Language(This,value) \
+    ( (This)->lpVtbl->get_Language(This,value) )
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+DEPRECATED("ISearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_get_LinguisticDetails(This,value) \
+    ( (This)->lpVtbl->get_LinguisticDetails(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryChangedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3780,78 +4539,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQu
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneQueryLinguisticDetails[] = L"Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails";
+/* [object, uuid("82FB460E-0940-4B6D-B8D0-642B30989E15"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetailsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_QueryTextAlternatives)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails* This,
-        __FIVectorView_1_HSTRING** value);
-    HRESULT (STDMETHODCALLTYPE* get_QueryTextCompositionStart)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_QueryTextCompositionLength)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails* This,
-        UINT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_QueryTextAlternatives )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_QueryTextCompositionStart )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_QueryTextCompositionLength )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetailsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetailsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetailsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_get_QueryTextAlternatives(This, value) \
-    ((This)->lpVtbl->get_QueryTextAlternatives(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_get_QueryTextAlternatives(This,value) \
+    ( (This)->lpVtbl->get_QueryTextAlternatives(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_get_QueryTextCompositionStart(This, value) \
-    ((This)->lpVtbl->get_QueryTextCompositionStart(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_get_QueryTextCompositionStart(This,value) \
+    ( (This)->lpVtbl->get_QueryTextCompositionStart(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_get_QueryTextCompositionLength(This, value) \
-    ((This)->lpVtbl->get_QueryTextCompositionLength(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_get_QueryTextCompositionLength(This,value) \
+    ( (This)->lpVtbl->get_QueryTextCompositionLength(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3859,89 +4646,119 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneQuerySubmittedEventArgs[] = L"Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgs";
-typedef struct
+/* [object, uuid("143BA4FC-E9C5-4736-91B2-E8EB9CB88356"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_QueryText)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs* This,
-        HSTRING* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_Language)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs* This,
-        HSTRING* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_QueryText )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_Language )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_get_QueryText(This, value) \
-    ((This)->lpVtbl->get_QueryText(This, value))
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_get_Language(This, value) \
-    ((This)->lpVtbl->get_Language(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_get_QueryText(This,value) \
+    ( (This)->lpVtbl->get_QueryText(This,value) )
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+DEPRECATED("ISearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_get_Language(This,value) \
+    ( (This)->lpVtbl->get_Language(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -3949,78 +4766,104 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails[] = L"Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails";
-typedef struct
+/* [object, uuid("460C92E5-4C32-4538-A4D4-B6B4400D140F"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetailsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
     DEPRECATED("ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_LinguisticDetails)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails** value);
-
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_LinguisticDetails )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQueryLinguisticDetails * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetailsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetailsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetailsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneQuerySubmittedEventArgsWithLinguisticDetails may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_get_LinguisticDetails(This, value) \
-    ((This)->lpVtbl->get_LinguisticDetails(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_get_LinguisticDetails(This,value) \
+    ( (This)->lpVtbl->get_LinguisticDetails(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQuerySubmittedEventArgsWithLinguisticDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4028,78 +4871,104 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneQu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneResultSuggestionChosenEventArgs[] = L"Windows.ApplicationModel.Search.ISearchPaneResultSuggestionChosenEventArgs";
-typedef struct
+/* [object, uuid("C8316CC0-AED2-41E0-BCE0-C26CA74F85EC"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
     DEPRECATED("ISearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_Tag)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs* This,
-        HSTRING* value);
-
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_Tag )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_get_Tag(This, value) \
-    ((This)->lpVtbl->get_Tag(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_get_Tag(This,value) \
+    ( (This)->lpVtbl->get_Tag(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneResultSuggestionChosenEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4107,78 +4976,104 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneRe
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPane
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneStatics[] = L"Windows.ApplicationModel.Search.ISearchPaneStatics";
-typedef struct
+/* [object, uuid("9572ADF1-8F1D-481F-A15B-C61655F16A0E"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
     DEPRECATED("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* GetForCurrentView)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane** searchPane);
-
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *GetForCurrentView )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPane * * searchPane
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneStatics may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_GetForCurrentView(This, searchPane) \
-    ((This)->lpVtbl->GetForCurrentView(This, searchPane))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_GetForCurrentView(This,searchPane) \
+    ( (This)->lpVtbl->GetForCurrentView(This,searchPane) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4186,77 +5081,103 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSt
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPane
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneStaticsWithHideThisApplication[] = L"Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication";
-typedef struct
+/* [object, uuid("00732830-50F1-4D03-99AC-C6644C8ED8B5"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneStaticsWithHideThisApplication may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplicationVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
     DEPRECATED("ISearchPaneStaticsWithHideThisApplication may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* HideThisApplication)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication* This);
-
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *HideThisApplication )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication * This
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplicationVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplicationVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplicationVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneStaticsWithHideThisApplication may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneStaticsWithHideThisApplication may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_HideThisApplication(This) \
-    ((This)->lpVtbl->HideThisApplication(This))
+    ( (This)->lpVtbl->HideThisApplication(This) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneStaticsWithHideThisApplication_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4264,100 +5185,134 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSt
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneSuggestionsRequest[] = L"Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest";
-typedef struct
+/* [object, uuid("81B10B1C-E561-4093-9B4D-2AD482794A53"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_IsCanceled)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest* This,
-        boolean* value);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_SearchSuggestionCollection)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection** collection);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* GetDeferral)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral** deferral);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_IsCanceled )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_SearchSuggestionCollection )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * * collection
+        );
+    
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *GetDeferral )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral * * deferral
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_get_IsCanceled(This, value) \
-    ((This)->lpVtbl->get_IsCanceled(This, value))
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_get_SearchSuggestionCollection(This, collection) \
-    ((This)->lpVtbl->get_SearchSuggestionCollection(This, collection))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_get_IsCanceled(This,value) \
+    ( (This)->lpVtbl->get_IsCanceled(This,value) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_GetDeferral(This, deferral) \
-    ((This)->lpVtbl->GetDeferral(This, deferral))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_get_SearchSuggestionCollection(This,collection) \
+    ( (This)->lpVtbl->get_SearchSuggestionCollection(This,collection) )
+
+
+#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+DEPRECATED("ISearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
+#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_GetDeferral(This,deferral) \
+    ( (This)->lpVtbl->GetDeferral(This,deferral) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4365,77 +5320,103 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneSuggestionsRequestDeferral[] = L"Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral";
-typedef struct
+/* [object, uuid("A0D009F7-8748-4EE2-AD44-AFA6BE997C51"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferralVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
     DEPRECATED("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* Complete)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral* This);
-
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *Complete )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral * This
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferralVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferralVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferralVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_Complete(This) \
-    ((This)->lpVtbl->Complete(This))
+    ( (This)->lpVtbl->Complete(This) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestDeferral_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4443,81 +5424,108 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs
+ *
  *
  * Any object which implements this interface must also implement the following interfaces:
  *     Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneSuggestionsRequestedEventArgs[] = L"Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestedEventArgs";
-typedef struct
+/* [object, uuid("C89B8A2F-AC56-4460-8D2F-80023BEC4FC5"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
     DEPRECATED("ISearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_Request)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest** value);
-
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_Request )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequest * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_get_Request(This, value) \
-    ((This)->lpVtbl->get_Request(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_get_Request(This,value) \
+    ( (This)->lpVtbl->get_Request(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSuggestionsRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4525,78 +5533,104 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneSu
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs
+ *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchPaneVisibilityChangedEventArgs[] = L"Windows.ApplicationModel.Search.ISearchPaneVisibilityChangedEventArgs";
-typedef struct
+/* [object, uuid("3C4D3046-AC4B-49F2-97D6-020E6182CB9C"), exclusiveto, deprecated, contract] */
+typedef struct 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("ISearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs* This,
-        TrustLevel* trustLevel);
-#if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * This
+    );
+
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+
+    #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
     DEPRECATED("ISearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
-#endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    HRESULT (STDMETHODCALLTYPE* get_Visible)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs* This,
-        boolean* value);
-
+    #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_Visible )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+
 
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-    DEPRECATED("ISearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
+DEPRECATED("ISearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_get_Visible(This, value) \
-    ((This)->lpVtbl->get_Visible(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_get_Visible(This,value) \
+    ( (This)->lpVtbl->get_Visible(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVisibilityChangedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4604,78 +5638,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchPaneVi
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchQueryLinguisticDetails
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchQueryLinguisticDetails[] = L"Windows.ApplicationModel.Search.ISearchQueryLinguisticDetails";
+/* [object, uuid("46A1205B-69C9-4745-B72F-A8A4FC8F24AE"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_QueryTextAlternatives)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails* This,
-        __FIVectorView_1_HSTRING** value);
-    HRESULT (STDMETHODCALLTYPE* get_QueryTextCompositionStart)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_QueryTextCompositionLength)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails* This,
-        UINT32* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_QueryTextAlternatives )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_QueryTextCompositionStart )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_QueryTextCompositionLength )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_get_QueryTextAlternatives(This, value) \
-    ((This)->lpVtbl->get_QueryTextAlternatives(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_get_QueryTextAlternatives(This,value) \
+    ( (This)->lpVtbl->get_QueryTextAlternatives(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_get_QueryTextCompositionStart(This, value) \
-    ((This)->lpVtbl->get_QueryTextCompositionStart(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_get_QueryTextCompositionStart(This,value) \
+    ( (This)->lpVtbl->get_QueryTextCompositionStart(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_get_QueryTextCompositionLength(This, value) \
-    ((This)->lpVtbl->get_QueryTextCompositionLength(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_get_QueryTextCompositionLength(This,value) \
+    ( (This)->lpVtbl->get_QueryTextCompositionLength(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4683,71 +5745,95 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryL
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchQueryLinguisticDetails
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchQueryLinguisticDetailsFactory[] = L"Windows.ApplicationModel.Search.ISearchQueryLinguisticDetailsFactory";
+/* [object, uuid("CAC6C3B8-3C64-4DFD-AD9F-479E4D4065A4"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactoryVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateInstance)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory* This,
-        __FIIterable_1_HSTRING* queryTextAlternatives,
-        UINT32 queryTextCompositionStart,
-        UINT32 queryTextCompositionLength,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *CreateInstance )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory * This,
+        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * queryTextAlternatives,
+        /* [in] */UINT32 queryTextCompositionStart,
+        /* [in] */UINT32 queryTextCompositionLength,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetails * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactoryVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactoryVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactoryVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_CreateInstance(This, queryTextAlternatives, queryTextCompositionStart, queryTextCompositionLength, value) \
-    ((This)->lpVtbl->CreateInstance(This, queryTextAlternatives, queryTextCompositionStart, queryTextCompositionLength, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_CreateInstance(This,queryTextAlternatives,queryTextCompositionStart,queryTextCompositionLength,value) \
+    ( (This)->lpVtbl->CreateInstance(This,queryTextAlternatives,queryTextCompositionStart,queryTextCompositionLength,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryLinguisticDetailsFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4755,92 +5841,124 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchQueryL
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchSuggestionCollection
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchSuggestionCollection[] = L"Windows.ApplicationModel.Search.ISearchSuggestionCollection";
+/* [object, uuid("323A8A4B-FBEA-4446-ABBC-3DA7915FDD3A"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollectionVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This,
-        UINT32* value);
-    HRESULT (STDMETHODCALLTYPE* AppendQuerySuggestion)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This,
-        HSTRING text);
-    HRESULT (STDMETHODCALLTYPE* AppendQuerySuggestions)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This,
-        __FIIterable_1_HSTRING* suggestions);
-    HRESULT (STDMETHODCALLTYPE* AppendResultSuggestion)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This,
-        HSTRING text,
-        HSTRING detailText,
-        HSTRING tag,
-        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference* image,
-        HSTRING imageAlternateText);
-    HRESULT (STDMETHODCALLTYPE* AppendSearchSeparator)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection* This,
-        HSTRING label);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Size )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This,
+        /* [retval, out] */__RPC__out UINT32 * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *AppendQuerySuggestion )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This,
+        /* [in] */__RPC__in HSTRING text
+        );
+    HRESULT ( STDMETHODCALLTYPE *AppendQuerySuggestions )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This,
+        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * suggestions
+        );
+    HRESULT ( STDMETHODCALLTYPE *AppendResultSuggestion )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This,
+        /* [in] */__RPC__in HSTRING text,
+        /* [in] */__RPC__in HSTRING detailText,
+        /* [in] */__RPC__in HSTRING tag,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference * image,
+        /* [in] */__RPC__in HSTRING imageAlternateText
+        );
+    HRESULT ( STDMETHODCALLTYPE *AppendSearchSeparator )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * This,
+        /* [in] */__RPC__in HSTRING label
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollectionVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollectionVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollectionVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_get_Size(This, value) \
-    ((This)->lpVtbl->get_Size(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_get_Size(This,value) \
+    ( (This)->lpVtbl->get_Size(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_AppendQuerySuggestion(This, text) \
-    ((This)->lpVtbl->AppendQuerySuggestion(This, text))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_AppendQuerySuggestion(This,text) \
+    ( (This)->lpVtbl->AppendQuerySuggestion(This,text) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_AppendQuerySuggestions(This, suggestions) \
-    ((This)->lpVtbl->AppendQuerySuggestions(This, suggestions))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_AppendQuerySuggestions(This,suggestions) \
+    ( (This)->lpVtbl->AppendQuerySuggestions(This,suggestions) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_AppendResultSuggestion(This, text, detailText, tag, image, imageAlternateText) \
-    ((This)->lpVtbl->AppendResultSuggestion(This, text, detailText, tag, image, imageAlternateText))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_AppendResultSuggestion(This,text,detailText,tag,image,imageAlternateText) \
+    ( (This)->lpVtbl->AppendResultSuggestion(This,text,detailText,tag,image,imageAlternateText) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_AppendSearchSeparator(This, label) \
-    ((This)->lpVtbl->AppendSearchSeparator(This, label))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_AppendSearchSeparator(This,label) \
+    ( (This)->lpVtbl->AppendSearchSeparator(This,label) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4848,78 +5966,106 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSugges
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchSuggestionsRequest
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchSuggestionsRequest[] = L"Windows.ApplicationModel.Search.ISearchSuggestionsRequest";
+/* [object, uuid("4E4E26A7-44E5-4039-9099-6000EAD1F0C6"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_IsCanceled)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_SearchSuggestionCollection)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection** collection);
-    HRESULT (STDMETHODCALLTYPE* GetDeferral)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest* This,
-        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral** deferral);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsCanceled )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SearchSuggestionCollection )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionCollection * * collection
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetDeferral )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral * * deferral
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_get_IsCanceled(This, value) \
-    ((This)->lpVtbl->get_IsCanceled(This, value))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_get_IsCanceled(This,value) \
+    ( (This)->lpVtbl->get_IsCanceled(This,value) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_get_SearchSuggestionCollection(This, collection) \
-    ((This)->lpVtbl->get_SearchSuggestionCollection(This, collection))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_get_SearchSuggestionCollection(This,collection) \
+    ( (This)->lpVtbl->get_SearchSuggestionCollection(This,collection) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_GetDeferral(This, deferral) \
-    ((This)->lpVtbl->GetDeferral(This, deferral))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_GetDeferral(This,deferral) \
+    ( (This)->lpVtbl->GetDeferral(This,deferral) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
@@ -4927,73 +6073,98 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSugges
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
+ *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Search_ISearchSuggestionsRequestDeferral[] = L"Windows.ApplicationModel.Search.ISearchSuggestionsRequestDeferral";
+/* [object, uuid("B71598A9-C065-456D-A845-1ECCEC5DC28B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferralVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* Complete)(__x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral* This);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *Complete )(
+        __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral * This
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferralVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferralVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferralVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
 #define __x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_Complete(This) \
-    ((This)->lpVtbl->Complete(This))
+    ( (This)->lpVtbl->Complete(This) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CSearch_CISearchSuggestionsRequestDeferral_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 
 /*
  *
  * Class Windows.ApplicationModel.Search.LocalContentSuggestionSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -5005,17 +6176,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CSearch_CISearchSugges
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_LocalContentSuggestionSettings_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_LocalContentSuggestionSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_LocalContentSuggestionSettings[] = L"Windows.ApplicationModel.Search.LocalContentSuggestionSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPane
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Search.ISearchPaneStaticsWithHideThisApplication interface starting with version 1.0 of the Windows.ApplicationModel.Search.SearchContract API contract
@@ -5028,8 +6202,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPane_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPane_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPane may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -5037,11 +6213,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneQueryChangedEventArgs ** Default Interface **
@@ -5050,8 +6228,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQueryChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQueryChangedEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneQueryChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -5059,11 +6239,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneQueryLinguisticDetails ** Default Interface **
@@ -5072,17 +6254,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQueryLinguisticDetails_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQueryLinguisticDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchPaneQueryLinguisticDetails[] = L"Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneQuerySubmittedEventArgs ** Default Interface **
@@ -5092,8 +6277,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQuerySubmittedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneQuerySubmittedEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneQuerySubmittedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -5101,11 +6288,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneResultSuggestionChosenEventArgs ** Default Interface **
@@ -5114,8 +6303,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneResultSuggestionChosenEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneResultSuggestionChosenEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneResultSuggestionChosenEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -5123,11 +6314,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequest ** Default Interface **
@@ -5136,8 +6329,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequest_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequest_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneSuggestionsRequest may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -5145,11 +6340,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestDeferral ** Default Interface **
@@ -5158,8 +6355,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequestDeferral_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequestDeferral_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneSuggestionsRequestDeferral may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -5167,11 +6366,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneSuggestionsRequestedEventArgs ** Default Interface **
@@ -5181,8 +6382,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequestedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneSuggestionsRequestedEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneSuggestionsRequestedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -5190,11 +6393,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs
  *
  * Introduced to Windows.ApplicationModel.Search.SearchContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchPaneVisibilityChangedEventArgs ** Default Interface **
@@ -5203,8 +6408,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneVisibilityChangedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchPaneVisibilityChangedEventArgs_DEFINED
+
 #if WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 DEPRECATED("SearchPaneVisibilityChangedEventArgs may be altered or unavailable for releases after Windows 10.")
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
@@ -5212,11 +6419,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchQueryLinguisticDetails
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.ApplicationModel.Search.ISearchQueryLinguisticDetailsFactory interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -5228,17 +6437,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchQueryLinguisticDetails_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchQueryLinguisticDetails_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchQueryLinguisticDetails[] = L"Windows.ApplicationModel.Search.SearchQueryLinguisticDetails";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchSuggestionCollection
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchSuggestionCollection ** Default Interface **
@@ -5247,17 +6459,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionCollection_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionCollection_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchSuggestionCollection[] = L"Windows.ApplicationModel.Search.SearchSuggestionCollection";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchSuggestionsRequest
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchSuggestionsRequest ** Default Interface **
@@ -5266,17 +6481,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionsRequest_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionsRequest_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchSuggestionsRequest[] = L"Windows.ApplicationModel.Search.SearchSuggestionsRequest";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+
 /*
  *
  * Class Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.ApplicationModel.Search.ISearchSuggestionsRequestDeferral ** Default Interface **
@@ -5285,11 +6503,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionsRequestDeferral_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Search_SearchSuggestionsRequestDeferral_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Search_SearchSuggestionsRequestDeferral[] = L"Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

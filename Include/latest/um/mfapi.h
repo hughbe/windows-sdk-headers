@@ -71,27 +71,27 @@ extern "C" {
 #if defined(__cplusplus)
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFStartup( ULONG Version, DWORD dwFlags = MFSTARTUP_FULL );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #else
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFStartup( ULONG Version, DWORD dwFlags );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #endif
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 //
 // Shuts down the platform object.
@@ -120,22 +120,22 @@ STDAPI MFUnlockPlatform();
 //
 typedef unsigned __int64 MFWORKITEM_KEY;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI MFPutWorkItem(
             DWORD dwQueue,
             IMFAsyncCallback * pCallback,
             IUnknown * pState);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFPutWorkItem2(
             DWORD dwQueue,
@@ -143,21 +143,21 @@ STDAPI MFPutWorkItem2(
             _In_ IMFAsyncCallback * pCallback,
             _In_opt_ IUnknown * pState);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI MFPutWorkItemEx(
             DWORD dwQueue,
             IMFAsyncResult * pResult);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFPutWorkItemEx2(
             DWORD dwQueue,
@@ -180,11 +180,11 @@ STDAPI MFScheduleWorkItemEx(
             INT64 Timeout,
             _Out_opt_ MFWORKITEM_KEY * pKey);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI MFScheduleWorkItem(
             IMFAsyncCallback * pCallback,
@@ -197,20 +197,20 @@ STDAPI MFScheduleWorkItem(
 //   Due to asynchronous nature of timers, application might still get a
 //   timer callback after MFCancelWorkItem has returned.
 //
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFCancelWorkItem(
             MFWORKITEM_KEY Key);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -268,11 +268,11 @@ STDAPI MFAllocateWorkQueue(
             _Out_ OUT DWORD * pdwWorkQueue);
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFLockWorkQueue(
             _In_ DWORD dwWorkQueue);
@@ -280,11 +280,11 @@ STDAPI MFLockWorkQueue(
 STDAPI MFUnlockWorkQueue(
             _In_ DWORD dwWorkQueue);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI MFBeginRegisterWorkQueueWithMMCSS(
             DWORD dwWorkQueueId,
@@ -329,11 +329,11 @@ STDAPI MFRegisterPlatformWithMMCSS(
 
 STDAPI MFUnregisterPlatformFromMMCSS();
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFLockSharedWorkQueue(
     _In_ PCWSTR wszClass,
@@ -341,11 +341,11 @@ STDAPI MFLockSharedWorkQueue(
     _Inout_ DWORD* pdwTaskId,
     _Out_ DWORD* pID );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI MFGetWorkQueueMMCSSPriority(
             DWORD dwWorkQueueId,
@@ -359,11 +359,11 @@ STDAPI MFGetWorkQueueMMCSSPriority(
 //
 // Instantiates the MF-provided Async Result implementation
 //
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFCreateAsyncResult(
     IUnknown * punkObject,
@@ -403,11 +403,11 @@ typedef struct tagMFASYNCRESULT
 }   MFASYNCRESULT;
 #endif /* C style interface */
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////    Files       //////////////////////////////
@@ -454,11 +454,11 @@ STDAPI MFCancelCreateFile(
 //
 // Creates an IMFMediaBuffer in memory
 //
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFCreateMemoryBuffer(
     _In_ DWORD                      cbMaxLength,
@@ -474,11 +474,11 @@ STDAPI MFCreateMediaBufferWrapper(
     _In_ DWORD                      dwLength,
     _Out_ IMFMediaBuffer **         ppBuffer );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // Creates a legacy buffer (IMediaBuffer) wrapper at the given offset within
@@ -501,11 +501,11 @@ STDAPI MFCreateLegacyMediaBufferOnMFMediaBuffer(
 STDAPI_(DXGI_FORMAT) MFMapDX9FormatToDXGIFormat( _In_ DWORD dx9 );
 STDAPI_(DWORD) MFMapDXGIFormatToDX9Format( _In_ DXGI_FORMAT dx11 );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFLockDXGIDeviceManager(
     _Out_opt_ UINT* pResetToken,
@@ -513,11 +513,11 @@ STDAPI MFLockDXGIDeviceManager(
     );
 
 STDAPI MFUnlockDXGIDeviceManager();
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI MFCreateDXSurfaceBuffer(
     _In_ REFIID                     riid,
@@ -531,11 +531,11 @@ STDAPI MFCreateWICBitmapBuffer(
     _Outptr_ IMFMediaBuffer **   ppBuffer
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI
 MFCreateDXGISurfaceBuffer(
@@ -586,11 +586,11 @@ STDAPI MFCreateAlignedMemoryBuffer(
     _In_ DWORD                      cbAligment, 
     _Out_ IMFMediaBuffer **         ppBuffer );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // This GUID is used in IMFGetService::GetService calls to retrieve 
@@ -606,11 +606,11 @@ EXTERN_C const GUID MR_BUFFER_SERVICE;
 // Instantiates the MF-provided Media Event implementation.
 //
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFCreateMediaEvent(
     _In_ MediaEventType met,
@@ -631,11 +631,11 @@ STDAPI MFCreateMediaEvent(
 STDAPI MFCreateEventQueue(
     _Out_ IMFMediaEventQueue **ppMediaEventQueue );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // Event attributes
@@ -815,11 +815,11 @@ DEFINE_GUID(MF_EVENT_SCRUBSAMPLE_TIME,
 DEFINE_GUID(MF_EVENT_OUTPUT_NODE,
 0x830f1a8b, 0xc060, 0x46dd, 0xa8, 0x01, 0x1c, 0x95, 0xde, 0xc9, 0xb1, 0x07);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
 //
@@ -1345,11 +1345,6 @@ DEFINE_GUID(MFSampleExtension_MeanAbsoluteDifference,
 DEFINE_GUID(MFSampleExtension_LongTermReferenceFrameInfo,
 0x9154733f, 0xe1bd, 0x41bf, 0x81, 0xd3, 0xfc, 0xd9, 0x18, 0xf7, 0x13, 0x32);
 
-typedef struct _ROI_AREA {
-    RECT rect;
-    INT32 QPDelta;
-} ROI_AREA, *PROI_AREA;
-
 // MFSampleExtension_ROIRectangle {3414a438-4998-4d2c-be82-be3ca0b24d43}
 // Type: BLOB
 DEFINE_GUID(MFSampleExtension_ROIRectangle,
@@ -1360,40 +1355,11 @@ DEFINE_GUID(MFSampleExtension_ROIRectangle,
 DEFINE_GUID(MFSampleExtension_LastSlice,
 0x2b5d5457, 0x5547, 0x4f07, 0xb8, 0xc8, 0xb4, 0xa3, 0xa9, 0xa1, 0xda, 0xac);
 
-// Indicates macroblock is not needed for output and can be skipped
-#define MACROBLOCK_FLAG_SKIP 0x00000001                 
-// Indicates macroblock is changed from the previous frame
-#define MACROBLOCK_FLAG_DIRTY 0x00000002
-// Indicates macroblock from the previous frame has moved to a new position
-#define MACROBLOCK_FLAG_MOTION 0x00000004
-// Indicates macroblock contains video playback or other continuous motion, rather than a slower moving screen capture
-#define MACROBLOCK_FLAG_VIDEO 0x00000008
-// Indicates that the motion vector values of MACROBLOCK_DATA are valid, and should be used in preference to
-// the encoder's calculated motion vector values
-#define MACROBLOCK_FLAG_HAS_MOTION_VECTOR 0x00000010
-// Indicates that the QPDelta value of MACROBLOCK_DATA is valid, and specifies the QP of this macroblock relative
-// to the rest of the frame
-#define MACROBLOCK_FLAG_HAS_QP 0x00000020
+typedef struct _ROI_AREA {
+  RECT rect;
+  INT32 QPDelta;
+} ROI_AREA, *PROI_AREA;
 
-typedef struct _MACROBLOCK_DATA {
-    UINT32 flags;
-    INT16 motionVectorX;
-    INT16 motionVectorY;
-    INT32 QPDelta;
-} MACROBLOCK_DATA;
-
-// MFSampleExtension_FeatureMap {a032d165-46fc-400a-b449-49de53e62a6e}
-// Type: BLOB
-// Blob should contain one MACROBLOCK_DATA structure for each macroblock in the
-// input frame.
-DEFINE_GUID(MFSampleExtension_FeatureMap,
-0xa032d165, 0x46fc, 0x400a, 0xb4, 0x49, 0x49, 0xde, 0x53, 0xe6, 0x2a, 0x6e);
-
-// MFSampleExtension_ChromaOnly {1eb9179c-a01f-4845-8c04-0e65a26eb04f}
-// Type: BOOL (UINT32)
-// Set to 1 if the input sample is a chroma-only frame
-DEFINE_GUID(MFSampleExtension_ChromaOnly,
-0x1eb9179c, 0xa01f, 0x4845, 0x8c, 0x04, 0x0e, 0x65, 0xa2, 0x6e, 0xb0, 0x4f);
 
 ///////////////////////////////////////////////////////////////////////////////
 /// These are the attribute GUIDs that need to be used by MFT0 to provide
@@ -1603,6 +1569,7 @@ DEFINE_GUID(MF_CAPTURE_METADATA_SCANLINE_DIRECTION,
 #define MFCAPTURE_METADATA_SCAN_BOTTOM_TOP         0x00000002
 #define MFCAPTURE_METADATA_SCANLINE_VERTICAL       0x00000004
 
+
 typedef struct tagFaceRectInfoBlobHeader
 {
     ULONG Size;     // Size of this header + all FaceRectInfo following
@@ -1615,13 +1582,11 @@ typedef struct tagFaceRectInfo
     LONG confidenceLevel;   // Confidence Level of the region being a face
 } FaceRectInfo;
 
-
 typedef struct tagFaceCharacterizationBlobHeader
 {
     ULONG Size;  // Size of this header + all FaceCharacterization following
     ULONG Count; // Number of FaceCharacterization's in the blob. Must match the number of FaceRectInfo's in FaceRectInfoBlobHeader
 } FaceCharacterizationBlobHeader;
-
 
 typedef struct tagFaceCharacterization
 {
@@ -1784,7 +1749,7 @@ DEFINE_GUID(MFT_CATEGORY_VIDEO_PROCESSOR,
 DEFINE_GUID(MFT_CATEGORY_OTHER,
 0x90175d57, 0xb7ea, 0x4901, 0xae, 0xb3, 0x93, 0x3a, 0x87, 0x47, 0x75, 0x6f);
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS1)
+#if (WINVER >= _WIN32_WINNT_WIN10_RS1)
 DEFINE_GUID(MFT_CATEGORY_ENCRYPTOR,  
 0xb0c687be, 0x01cd, 0x44b5, 0xb8, 0xb2, 0x7c, 0x1d, 0x7e, 0x05, 0x8b, 0x1f);
 #endif
@@ -1796,11 +1761,11 @@ DEFINE_GUID(MFT_CATEGORY_VIDEO_RENDERER_EFFECT,
 0x145cd8b4, 0x92f4, 0x4b23, 0x8a, 0xe7, 0xe0, 0xdf, 0x6, 0xc2, 0xda, 0x95);
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // "Flags" is for future expansion - for now must be 0
@@ -1878,11 +1843,11 @@ MFTEnum(
     _Out_                   UINT32*                 pcMFTs
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
 
@@ -1932,11 +1897,11 @@ DEFINE_GUID(MFT_ENUM_VIDEO_RENDERER_EXTENSION_PROFILE,
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS2)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS1)  
 
@@ -1997,13 +1962,13 @@ MFGetMFTMerit(
 
 #endif // (WINVER >= _WIN32_WINNT_WIN7)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI
 MFRegisterLocalSchemeHandler(
@@ -2030,11 +1995,11 @@ MFCreateMFByteStreamWrapper(
     _Out_       IMFByteStream** ppStreamWrapper
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 //
 // Create a MF activate object that can instantiate media extension objects.
@@ -2048,13 +2013,13 @@ MFCreateMediaExtensionActivate(
     _Outptr_    LPVOID*         ppvObject
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #endif // (WINVER >= _WIN32_WINNT_WIN8)
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////  MFT  Attributes GUIDs ////////////////////////////
@@ -2210,7 +2175,6 @@ typedef enum _MFFrameSourceTypes
     MFFrameSourceTypes_Color                = 0x0001,
     MFFrameSourceTypes_Infrared             = 0x0002,
     MFFrameSourceTypes_Depth                = 0x0004,
-    MFFrameSourceTypes_Image                = 0x0008,
     MFFrameSourceTypes_Custom               = 0x0080
 } MFFrameSourceTypes;
 
@@ -2287,7 +2251,7 @@ DEFINE_MEDIATYPE_GUID( MFAudioFormat_ADTS,              WAVE_FORMAT_MPEG_ADTS_AA
 DEFINE_MEDIATYPE_GUID( MFAudioFormat_AMR_NB,            WAVE_FORMAT_AMR_NB );
 DEFINE_MEDIATYPE_GUID( MFAudioFormat_AMR_WB,            WAVE_FORMAT_AMR_WB );
 DEFINE_MEDIATYPE_GUID( MFAudioFormat_AMR_WP,            WAVE_FORMAT_AMR_WP );
-#if (WINVER >= _WIN32_WINNT_WINTHRESHOLD)
+#if (WINVER >= _WIN32_WINNT_THRESHOLD)
 DEFINE_MEDIATYPE_GUID( MFAudioFormat_FLAC,              WAVE_FORMAT_FLAC );
 DEFINE_MEDIATYPE_GUID( MFAudioFormat_ALAC,              WAVE_FORMAT_ALAC );
 DEFINE_MEDIATYPE_GUID( MFAudioFormat_Opus,              WAVE_FORMAT_OPUS );
@@ -2300,18 +2264,7 @@ DEFINE_GUID(MFAudioFormat_Dolby_DDPlus, // == MEDIASUBTYPE_DOLBY_DDPLUS defined 
 0xa7fb87af, 0x2d02, 0x42fb, 0xa4, 0xd4, 0x5, 0xcd, 0x93, 0x84, 0x3b, 0xdd);
 DEFINE_GUID(MFAudioFormat_Vorbis,      // {8D2FD10B-5841-4a6b-8905-588FEC1ADED9}
 0x8D2FD10B, 0x5841, 0x4a6b, 0x89, 0x05, 0x58, 0x8F, 0xEC, 0x1A, 0xDE, 0xD9);
-DEFINE_GUID(MFAudioFormat_DTS_RAW, // == MEDIASUBTYPE_DTS defined in wmcodecdsp.h
-0xE06D8033, 0xDB46, 0x11CF, 0xB4, 0xD1, 0x00, 0x80, 0x5F, 0x6C, 0xBB, 0xEA);
-DEFINE_GUID(MFAudioFormat_DTS_HD, // == MEDIASUBTYPE_DTS_HD defined in wmcodecdsp.h
-0xA2E58EB7, 0x0FA9, 0x48BB, 0xA4, 0x0C, 0xFA, 0x0E, 0x15, 0x6D, 0x06, 0x45);
-DEFINE_GUID(MFAudioFormat_DTS_XLL, // {45B37C1B-8C70-4E59-A7BE-A1E42C81C80D}
-0x45B37C1B, 0x8C70, 0x4E59, 0xA7, 0xBE, 0xA1, 0xE4, 0x2C, 0x81, 0xC8, 0x0D);
-DEFINE_GUID(MFAudioFormat_DTS_LBR, // {C2FE6F0A-4E3C-4DF1-9B60-50863091E4B9}
-0xC2FE6F0A, 0x4E3C, 0x4DF1, 0x9B, 0x60, 0x50, 0x86, 0x30, 0x91, 0xE4, 0xB9);
-DEFINE_GUID(MFAudioFormat_DTS_UHD, // {87020117-ACE3-42DE-B73E-C656706263F8}
-0x87020117, 0xACE3, 0x42DE, 0xB7, 0x3E, 0xC6, 0x56, 0x70, 0x62, 0x63, 0xF8);
-DEFINE_GUID(MFAudioFormat_DTS_UHDY, // {9B9CCA00-91B9-4CCC-883A-8F787AC3CC86}
-0x9B9CCA00, 0x91B9, 0x4CCC, 0x88, 0x3A, 0x8F, 0x78, 0x7A, 0xC3, 0xCC, 0x86);
+
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
 
@@ -2392,33 +2345,6 @@ DEFINE_GUID(MFSubtitleFormat_SSA,
 // {1BB3D849-6614-4D80-8882-ED24AA82DA92}      MFSubtitleFormat_CustomUserData
 DEFINE_GUID(MFSubtitleFormat_CustomUserData,
     0x1bb3d849, 0x6614, 0x4d80, 0x88, 0x82, 0xed, 0x24, 0xaa, 0x82, 0xda, 0x92);
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-
-// {71F40E4A-1278-4442-B30D-39DD1D7722BC}      MFSubtitleFormat_PGS
-DEFINE_GUID(MFSubtitleFormat_PGS,
-    0x71f40e4a, 0x1278, 0x4442, 0xb3, 0x0d, 0x39, 0xdd, 0x1d, 0x77, 0x22, 0xbc);
-
-// {6B8E40F4-8D2C-4CED-AD91-5960E45B4433}      MFSubtitleFormat_VobSub
-DEFINE_GUID(MFSubtitleFormat_VobSub,
-    0x6b8e40f4, 0x8d2c, 0x4ced, 0xad, 0x91, 0x59, 0x60, 0xe4, 0x5b, 0x44, 0x33);
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
-
-//
-// Binary Data MediaTypes
-//
-
-#ifndef DEFINE_BINARY_MEDIATYPE_GUID
-#define DEFINE_BINARY_MEDIATYPE_GUID(name, format) \
-    DEFINE_GUID(name,                       \
-    format, 0xbf10, 0x48b4, 0xbc, 0x18, 0x59, 0x3d, 0xc1, 0xdb, 0x95, 0xf);
-#endif
-
-DEFINE_BINARY_MEDIATYPE_GUID(MFBinaryFormat_Base, 0x00000000);
-DEFINE_BINARY_MEDIATYPE_GUID(MFBinaryFormat_GPMD, 'gpmd');
-
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////  Media Type Attributes GUIDs ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -2521,15 +2447,12 @@ DEFINE_GUID( MFSampleExtension_3DVideo_SampleFormat,
 
 // Enum describing the video rotation formats
 // Only the values of 0, 90, 180, and 270 are valid.
-#ifndef _MFVideoRotationFormat_
-#define _MFVideoRotationFormat_
 typedef enum _MFVideoRotationFormat {
     MFVideoRotationFormat_0        = 0,
     MFVideoRotationFormat_90       = 90,
     MFVideoRotationFormat_180      = 180,
     MFVideoRotationFormat_270      = 270,
 } MFVideoRotationFormat;
-#endif
 
 // MF_MT_VIDEO_ROTATION      {C380465D-2271-428C-9B83-ECEA3B4A85C1}
 // Type: UINT32
@@ -2545,7 +2468,7 @@ typedef enum _MFVideoRotationFormat {
 DEFINE_GUID(MF_MT_VIDEO_ROTATION,
 0xc380465d, 0x2271, 0x428c, 0x9b, 0x83, 0xec, 0xea, 0x3b, 0x4a, 0x85, 0xc1);
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
+#if (WINVER >= _WIN32_WINNT_WIN10_RS2)
 DEFINE_GUID(MF_DEVICESTREAM_MULTIPLEXED_MANAGER,
 0x6ea542b0, 0x281f, 0x4231, 0xa4, 0x64, 0xfe, 0x2f, 0x50, 0x22, 0x50, 0x1c);    
 
@@ -2710,31 +2633,6 @@ DEFINE_GUID(MF_MT_VIDEO_RENDERER_EXTENSION_PROFILE,
 0x8437d4b9, 0xd448, 0x4fcd, 0x9b, 0x6b, 0x83, 0x9b, 0xf9, 0x6c, 0x77, 0x98);
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS2) 
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4) 
-
-// MF_DECODER_FWD_CUSTOM_SEI_DECODE_ORDER {f13bbe3c-36d4-410a-b985-7a951a1e6294}  
-// Type: UINT32  
-// Specifies that the SEI unit type to forward on output samples of the decoder  
-// shall be sent out in decode order (i.e. ahead of time)  
-// This is required for downstream apps to process the SEI in advance of receiving  
-// the frame it is meant to be attached to  
-DEFINE_GUID(MF_DECODER_FWD_CUSTOM_SEI_DECODE_ORDER, 0xf13bbe3c, 0x36d4, 0x410a, 0xb9, 0x85, 0x7a, 0x95, 0x1a, 0x1e, 0x62, 0x94);
-
-#endif /* (NTDDI_VERSION >= NTDDI_WIN10_RS4) */ 
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-
-// {C6052A80-6D9C-40a3-9DB8-F027A25C9AB9} 
-// Type: String 
-// Name of the App Service, as defined in the AppX manifest of the Package that contains this Video 
-// Renderer Effect. 
-// This attribute is specified by the Video Renderer Effect to request that the platforms establish 
-// a communication channel with the Video Renderer Effect's App Service. 
-DEFINE_GUID(MF_VIDEO_RENDERER_EFFECT_APP_SERVICE_NAME,
-    0xc6052a80, 0x6d9c, 0x40a3, 0x9d, 0xb8, 0xf0, 0x27, 0xa2, 0x5c, 0x9a, 0xb9);
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 //
 // AUDIO data
@@ -2991,7 +2889,7 @@ DEFINE_GUID(MF_MT_MIN_MASTERING_LUMINANCE,
 // 
 // MF_MT_DECODER_USE_MAX_RESOLUTION hints the decoder should allocate worst 
 // case supported resolution whenever possible
-// {4c547c24-af9a-4f38-96ad-978773cf53e7} MF_MT_DECODER_USE_MAX_RESOLUTION {UINT32 (BOOL)}
+// {4c547c24-af9a-4f38-96ad-978773cf53xe7} MF_MT_DECODER_USE_MAX_RESOLUTION {UINT32 (BOOL)}
 DEFINE_GUID(MF_MT_DECODER_USE_MAX_RESOLUTION,
 0x4c547c24, 0xaf9a, 0x4f38, 0x96, 0xad, 0x97, 0x87, 0x73, 0xcf, 0x53, 0xe7);
 
@@ -3004,11 +2902,11 @@ DEFINE_GUID(MF_MT_DECODER_MAX_DPB_COUNT,
 
 #endif // (WINVER > _WIN32_WINNT_WIN10)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 // {47537213-8cfb-4722-aa34-fbc9e24d77b8}   MF_MT_CUSTOM_VIDEO_PRIMARIES    {BLOB (MT_CUSTOM_VIDEO_PRIMARIES)}
 DEFINE_GUID(MF_MT_CUSTOM_VIDEO_PRIMARIES,
@@ -3025,11 +2923,11 @@ typedef struct _MT_CUSTOM_VIDEO_PRIMARIES {
     float fWy;
 } MT_CUSTOM_VIDEO_PRIMARIES;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 // {3e23d450-2c75-4d25-a00e-b91670d12327}   MF_MT_YUV_MATRIX                {UINT32 (oneof MFVideoTransferMatrix)}
 DEFINE_GUID(MF_MT_YUV_MATRIX,
@@ -3098,11 +2996,11 @@ DEFINE_GUID(MF_MT_DEFAULT_STRIDE,
 DEFINE_GUID(MF_MT_PALETTE,
 0x6d283f42, 0x9846, 0x4410, 0xaf, 0xd9, 0x65, 0x4d, 0x50, 0x3b, 0x1a, 0x54);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // the following is only used for legacy data that was stuck at the end of the format block when the type
@@ -3113,11 +3011,11 @@ DEFINE_GUID(MF_MT_PALETTE,
 DEFINE_GUID(MF_MT_AM_FORMAT_TYPE,
 0x73d1072d, 0x1870, 0x4174, 0xa0, 0x63, 0x29, 0xff, 0x4f, 0xf6, 0xc1, 0x1e);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 //
 // VIDEO - Generic compressed video extra data
@@ -3240,18 +3138,6 @@ DEFINE_GUID(MF_MT_H264_LAYOUT_PER_STREAM,
 DEFINE_GUID(MF_MT_IN_BAND_PARAMETER_SET,
 0x75da5090, 0x910b, 0x4a03, 0x89, 0x6c, 0x7b, 0x89, 0x8f, 0xee, 0xa5, 0xaf);
 
-//{54F486DD-9327-4F6D-80AB-6F709EBB4CCE}          {UINT32, FourCC of the track type in MPEG-4 used for binary streams}
-DEFINE_GUID(MF_MT_MPEG4_TRACK_TYPE,
-    0x54f486dd, 0x9327, 0x4f6d, 0x80, 0xab, 0x6f, 0x70, 0x9e, 0xbb, 0x4c, 0xce);
-
-// The speed-up factor of playback. This is a multiplier to the frame rate, and is expressed as a ratio.
-// The upper 32 bits of the attribute value contain the numerator, and the lower 32 bits contain the denominator.
-// Note that this applies to the entirety of the playback.
-// Use MFGetAttributeRataio/MFSetAttributeRatio to get/set value.
-// {83877F5E-0444-4E28-8479-6DB0989B8C09}   {UINT64}
-DEFINE_GUID(MF_MT_CONTAINER_RATE_SCALING,
-    0x83877f5e, 0x444, 0x4e28, 0x84, 0x79, 0x6d, 0xb0, 0x98, 0x9b, 0x8c, 0x9);
-
 //
 // INTERLEAVED - DV extra data
 //
@@ -3279,13 +3165,13 @@ DEFINE_GUID(MF_MT_DV_VAUX_SRC_PACK,
 DEFINE_GUID(MF_MT_DV_VAUX_CTRL_PACK,
 0x2f84e1c4, 0x0da1, 0x4788, 0x93, 0x8e, 0x0d, 0xfb, 0xfb, 0xb3, 0x4b, 0x48);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // ARBITRARY
@@ -3313,11 +3199,11 @@ DEFINE_GUID(MF_MT_ARBITRARY_HEADER,
 DEFINE_GUID(MF_MT_ARBITRARY_FORMAT,
 0x5a75b249, 0xd7d, 0x49a1, 0xa1, 0xc3, 0xe0, 0xd8, 0x7f, 0xc, 0xad, 0xe5);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 //
 // IMAGE
@@ -3338,22 +3224,11 @@ DEFINE_GUID(MF_MT_MPEG4_SAMPLE_DESCRIPTION,
 DEFINE_GUID(MF_MT_MPEG4_CURRENT_SAMPLE_ENTRY,
 0x9aa7e155, 0xb64a, 0x4c1d, 0xa5, 0x00, 0x45, 0x5d, 0x60, 0x0b, 0x65, 0x60);
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-//
-// Ambisonics Stream Attribute
-// The value of this blob must be AMBISONICS_PARAMS structure defined in AudioClient.h
-//
-// {F715CF3E-A964-4C3F-94AE-9D6BA7264641}   MF_SD_AMBISONICS_SAMPLE3D_DESCRIPTION   {BLOB}
-DEFINE_GUID(MF_SD_AMBISONICS_SAMPLE3D_DESCRIPTION,
-0xf715cf3e, 0xa964, 0x4c3f, 0x94, 0xae, 0x9d, 0x6b, 0xa7, 0x26, 0x46, 0x41);
-
-#endif
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // Save original format information for AVI and WAV files
@@ -3366,11 +3241,11 @@ DEFINE_GUID(MF_MT_ORIGINAL_4CC,
 DEFINE_GUID(MF_MT_ORIGINAL_WAVE_FORMAT_TAG,
 0x8cbbc843, 0x9fd9, 0x49c2, 0x88, 0x2f, 0xa7, 0x25, 0x86, 0xc4, 0x08, 0xad);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 //
 // Video Capture Media Type Attributes
@@ -3384,13 +3259,13 @@ DEFINE_GUID(MF_MT_FRAME_RATE_RANGE_MIN,
 DEFINE_GUID(MF_MT_FRAME_RATE_RANGE_MAX, 
 0xe3371d41, 0xb4cf, 0x4a05, 0xbd, 0x4e, 0x20, 0xb8, 0x8b, 0xb2, 0xc4, 0xd6);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #endif // (WINVER >= _WIN32_WINNT_WIN7)
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 #if (WINVER >= _WIN32_WINNT_WIN8)
 // {9C27891A-ED7A-40e1-88E8-B22727A024EE}   MF_LOW_LATENCY                  {UINT32 (BOOL)}
@@ -3568,11 +3443,11 @@ DEFINE_GUID(MFStreamFormat_MPEG2Transport,
 DEFINE_GUID(MFStreamFormat_MPEG2Program,
 0x263067d1, 0xd330, 0x45dc, 0xb6, 0x69, 0x34, 0xd9, 0x86, 0xe4, 0xe3, 0xe1);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 //
 // Representations
 //
@@ -3606,22 +3481,22 @@ MFValidateMediaTypeSize(
     _In_                    UINT32  cbSize
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI
 MFCreateMediaType(
     _Outptr_ IMFMediaType**  ppMFType
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI
 MFCreateMFVideoFormatFromMFMediaType(
@@ -3630,17 +3505,17 @@ MFCreateMFVideoFormatFromMFMediaType(
     _Out_opt_   UINT32*                 pcbSize
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 typedef enum _MFWaveFormatExConvertFlags {
     MFWaveFormatExConvertFlag_Normal            = 0,
     MFWaveFormatExConvertFlag_ForceExtensible   = 1
 } MFWaveFormatExConvertFlags;
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #ifdef __cplusplus
@@ -3650,7 +3525,7 @@ typedef enum _MFWaveFormatExConvertFlags {
 //
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 STDAPI
 MFCreateWaveFormatExFromMFMediaType(
     _In_        IMFMediaType*   pMFType,
@@ -3658,11 +3533,11 @@ MFCreateWaveFormatExFromMFMediaType(
     _Out_opt_   UINT32*         pcbSize,
     _In_        UINT32          Flags = MFWaveFormatExConvertFlag_Normal
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI
 MFInitMediaTypeFromVideoInfoHeader(
@@ -3703,7 +3578,7 @@ MFCalculateBitmapImageSize(
     _Out_                   UINT32*                 pcbImageSize,
     _Out_opt_               BOOL*                   pbKnown = NULL
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #else /* cplusplus */
@@ -3713,7 +3588,7 @@ MFCalculateBitmapImageSize(
 //
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI
 MFCreateWaveFormatExFromMFMediaType(
@@ -3722,11 +3597,11 @@ MFCreateWaveFormatExFromMFMediaType(
     _Out_opt_   UINT32*         pcbSize,
     _In_        UINT32          Flags
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 STDAPI
 MFInitMediaTypeFromVideoInfoHeader(
     _In_                    IMFMediaType*           pMFType,
@@ -3766,13 +3641,13 @@ MFCalculateBitmapImageSize(
     _Out_                   UINT32*                 pcbImageSize,
     _Out_opt_               BOOL*                   pbKnown
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #endif /* cplusplus */
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI
 MFCalculateImageSize(
@@ -3803,22 +3678,22 @@ MFInitMediaTypeFromMFVideoFormat(
     _In_                    UINT32                  cbBufSize
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 STDAPI
 MFInitMediaTypeFromWaveFormatEx(
     _In_                    IMFMediaType*           pMFType,
     _In_reads_bytes_(cbBufSize)  const WAVEFORMATEX*     pWaveFormat,
     _In_                    UINT32                  cbBufSize
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 STDAPI
 MFInitMediaTypeFromAMMediaType(
     _In_    IMFMediaType*           pMFType,
@@ -3862,11 +3737,11 @@ MFCompareFullToPartialMediaType(
     );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 STDAPI
 MFWrapMediaType(
     _In_    IMFMediaType*    pOrig,
@@ -3883,11 +3758,11 @@ MFUnwrapMediaType(
     _Out_   IMFMediaType **  ppOrig
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
-#pragma region Desktop or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // MFCreateVideoMediaType
@@ -4033,11 +3908,11 @@ MFConvertColorInfoFromDXVA(
 //
 // Optimized stride copy function
 //
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFCopyImage(
     _Out_writes_bytes_(_Inexpressible_(abs(lDestStride) *  dwLines)) BYTE* pDest,
@@ -4048,11 +3923,11 @@ STDAPI MFCopyImage(
     DWORD   dwLines
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI MFConvertFromFP16Array(
     _Out_writes_(dwCount) float* pDest,
@@ -4066,11 +3941,11 @@ STDAPI MFConvertToFP16Array(
     DWORD dwCount
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 STDAPI MFCreate2DMediaBuffer( 
     _In_ DWORD dwWidth,
@@ -4092,7 +3967,7 @@ STDAPI MFCreateMediaBufferFromMediaType(
     _Outptr_ IMFMediaBuffer** ppBuffer 
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////  Attributes Utility functions ////////////////////////////
@@ -4102,7 +3977,7 @@ STDAPI MFCreateMediaBufferFromMediaType(
 #ifdef __cplusplus
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 //
 // IMFAttributes inline UTILITY FUNCTIONS - used for IMFMediaType as well
@@ -4350,7 +4225,7 @@ STDAPI MFCreateCollection(
     _Out_ IMFCollection **ppIMFCollection );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #endif
@@ -4360,7 +4235,7 @@ STDAPI MFCreateCollection(
 ////////////////////////////////////////////////////////////////////////////////
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 //
 // Heap alloc/free
@@ -4388,7 +4263,7 @@ DEFINE_GUID(CLSID_MFSourceResolver,
     0x4188,
     0xbc, 0xc4, 0xe4, 0x7f, 0xdf, 0x04, 0x86, 0x8c);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 #if (WINVER >= _WIN32_WINNT_WIN7)
@@ -4396,11 +4271,11 @@ DEFINE_GUID(CLSID_MFSourceResolver,
 //  Returns _I64_MAX or LLONG_MIN on failure or _I64_MAX if mplat.dll is not available
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 LONGLONG WINAPI MFllMulDiv(LONGLONG a, LONGLONG b, LONGLONG c, LONGLONG d);
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #endif // (WINVER >= _WIN32_WINNT_WIN7)
@@ -4410,66 +4285,14 @@ LONGLONG WINAPI MFllMulDiv(LONGLONG a, LONGLONG b, LONGLONG c, LONGLONG d);
 ////////////////////////////////////////////////////////////////////////////////
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 STDAPI MFGetContentProtectionSystemCLSID(
     _In_ REFGUID guidProtectionSystemID,
     _Out_ CLSID *pclsid );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-
-// MF_DEVICESTREAM_ATTRIBUTE_FACEAUTH_CAPABILITY
-// Data type: UINT64
-// Represents the Capability field of the KSCAMERA_EXTENDEDPROP_HEADER corresponding to the
-// KSPROPERTY_CAMERACONTROL_EXTENDED_FACEAUTH_MODE extended property control.  If this control
-// is not supported, this attribute will not be present on the stream.  
-// The capability advertised will only contain the bitwise OR of the available
-// supported modes defined by the Face Auth DDI in ksmedia.h:
-// 
-//      KSCAMERA_EXTENDEDPROP_FACEAUTH_MODE_DISABLED
-//      KSCAMERA_EXTENDEDPROP_FACEAUTH_MODE_ALTERNATIVE_FRAME_ILLUMINATION
-//      KSCAMERA_EXTENDEDPROP_FACEAUTH_MODE_BACKGROUND_SUBTRACTION
-DEFINE_GUID(MF_DEVICESTREAM_ATTRIBUTE_FACEAUTH_CAPABILITY,
-0xCB6FD12A, 0x2248, 0x4E41, 0xAD, 0x46, 0xE7, 0x8B, 0xB9, 0x0A, 0xB9, 0xFC);
-
-// MF_DEVICESTREAM_ATTRIBUTE_SECURE_CAPABILITY
-// Data type: UINT64
-// Represents the Capability field of the KSCAMERA_EXTENDEDPROP_HEADER corresponding to the
-// KSPROPERTY_CAMERACONTROL_EXTENDED_SECURE_MODE extended property control.  If this control
-// is not supported, this attribute will not be present on the stream.  
-// The capability advertised will only contain the bitwise OR of the available
-// supported modes defined by the Secure DDI in ksmedia.h:
-// 
-//      KSCAMERA_EXTENDEDPROP_SECURE_MODE_DISABLED
-//      KSCAMERA_EXTENDEDPROP_SECURE_MODE_ENABLED
-DEFINE_GUID(MF_DEVICESTREAM_ATTRIBUTE_SECURE_CAPABILITY,
-0x940FD626, 0xEA6E, 0x4684, 0x98, 0x40, 0x36, 0xBD, 0x6E, 0xC9, 0xFB, 0xEF);
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-
-// MFCombineSamples
-//  pSample - pointer to a sample to append/combine 'pSampleToAdd' to 
-//  pSampleToAdd - the sample to append 
-//  dwMaxMergedDurationInMS - indicates the maximum duration that the combined sample should be allowed to occupy 
-//  pCombined - indicates that pSampleToAdd was successfully added to the base sample
-STDAPI MFCombineSamples( _In_ IMFSample *pSample, _In_ IMFSample* pSampleToAdd, _In_ DWORD dwMaxMergedDurationInMS, _Out_ BOOL* pMerged );
-
-// MFSplitSample
-//  pSample - a single combined sample that should be split up 
-//  pOutputSamples - output array of split samples 
-//  dwOutputSampleMaxCount - maximum array size (use the BufferCount on pSample to find out an upper bound) 
-//  pdwOutputSampleCount - actual number of output samples produce
-
-STDAPI MFSplitSample( _In_ IMFSample *pSample, _Out_writes_to_(dwOutputSampleMaxCount, *pdwOutputSampleCount) IMFSample** pOutputSamples, _In_ DWORD dwOutputSampleMaxCount, _Out_ DWORD* pdwOutputSampleCount );
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
-#pragma endregion
-
 
 #if defined(__cplusplus)
 }

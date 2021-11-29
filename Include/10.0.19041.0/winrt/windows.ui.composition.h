@@ -2464,6 +2464,21 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIVisual2_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisual3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CIVisual3_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                interface IVisual3;
+            } /* Composition */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CComposition_CIVisual3 ABI::Windows::UI::Composition::IVisual3
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CIVisual3_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisualCollection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIVisualCollection_FWD_DEFINED__
 namespace ABI {
@@ -12559,6 +12574,45 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CIVisual2;
 
 /*
  *
+ * Interface Windows.UI.Composition.IVisual3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Visual
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CIVisual3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CIVisual3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_IVisual3[] = L"Windows.UI.Composition.IVisual3";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Composition {
+                MIDL_INTERFACE("30be580d-f4b6-4ab7-80dd-3738cbac9f2c")
+                IVisual3 : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_IsHitTestVisible(
+                        boolean* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE put_IsHitTestVisible(
+                        boolean value
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IVisual3 = _uuidof(IVisual3);
+            } /* Composition */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CIVisual3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CIVisual3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
+
+/*
+ *
  * Interface Windows.UI.Composition.IVisualCollection
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
@@ -14736,6 +14790,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Composition.IVisual ** Default Interface **
  *    Windows.UI.Composition.IVisual2
+ *    Windows.UI.Composition.IVisual3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -15730,6 +15785,12 @@ typedef interface __x_ABI_CWindows_CUI_CComposition_CIVisual __x_ABI_CWindows_CU
 typedef interface __x_ABI_CWindows_CUI_CComposition_CIVisual2 __x_ABI_CWindows_CUI_CComposition_CIVisual2;
 
 #endif // ____x_ABI_CWindows_CUI_CComposition_CIVisual2_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisual3_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CComposition_CIVisual3_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CComposition_CIVisual3 __x_ABI_CWindows_CUI_CComposition_CIVisual3;
+
+#endif // ____x_ABI_CWindows_CUI_CComposition_CIVisual3_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CComposition_CIVisualCollection_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CComposition_CIVisualCollection_FWD_DEFINED__
@@ -32433,6 +32494,80 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CIVisual2;
 
 /*
  *
+ * Interface Windows.UI.Composition.IVisual3
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Composition.Visual
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
+#if !defined(____x_ABI_CWindows_CUI_CComposition_CIVisual3_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CComposition_CIVisual3_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_IVisual3[] = L"Windows.UI.Composition.IVisual3";
+typedef struct __x_ABI_CWindows_CUI_CComposition_CIVisual3Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CComposition_CIVisual3* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CComposition_CIVisual3* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CComposition_CIVisual3* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CComposition_CIVisual3* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CComposition_CIVisual3* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CComposition_CIVisual3* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsHitTestVisible)(__x_ABI_CWindows_CUI_CComposition_CIVisual3* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* put_IsHitTestVisible)(__x_ABI_CWindows_CUI_CComposition_CIVisual3* This,
+        boolean value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CComposition_CIVisual3Vtbl;
+
+interface __x_ABI_CWindows_CUI_CComposition_CIVisual3
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CComposition_CIVisual3Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CComposition_CIVisual3_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CComposition_CIVisual3_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CComposition_CIVisual3_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CComposition_CIVisual3_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CComposition_CIVisual3_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CComposition_CIVisual3_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CComposition_CIVisual3_get_IsHitTestVisible(This, value) \
+    ((This)->lpVtbl->get_IsHitTestVisible(This, value))
+
+#define __x_ABI_CWindows_CUI_CComposition_CIVisual3_put_IsHitTestVisible(This, value) \
+    ((This)->lpVtbl->put_IsHitTestVisible(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CIVisual3;
+#endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CIVisual3_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
+
+/*
+ *
  * Interface Windows.UI.Composition.IVisualCollection
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 2.0
@@ -34758,6 +34893,7 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.UI.Composition.IVisual ** Default Interface **
  *    Windows.UI.Composition.IVisual2
+ *    Windows.UI.Composition.IVisual3
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

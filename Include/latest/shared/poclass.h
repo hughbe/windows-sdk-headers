@@ -291,14 +291,8 @@ typedef struct _BATTERY_USB_CHARGER_STATUS
 // BATTERY_USB_CHARGER_STATUS.Flags field.
 // Indicates Type-C port running in the Default USB mode.
 //
+
 #define BATTERY_USB_CHARGER_STATUS_FN_DEFAULT_USB                   0x00000001
-
-//
-// BATTERY_USB_CHARGER_STATUS.Flags field.
-// Indicates Type-C port has established an explicit contract of Power Delivery with the port partner.
-//
-#define BATTERY_USB_CHARGER_STATUS_UCM_PD                           0x00000002
-
 
 typedef struct _BATTERY_WAIT_STATUS {
     ULONG       BatteryTag;
@@ -357,7 +351,6 @@ typedef struct _BATTERY_MANUFACTURE_DATE
 // New ioctl for Windows Phone specific feature: Source Change Notificaton.
 #define IOCTL_BATTERY_CHARGING_SOURCE_CHANGE    \
         CTL_CODE(FILE_DEVICE_BATTERY, 0x14, METHOD_BUFFERED, FILE_READ_ACCESS)
-
 
 #define BATTERY_TAG_INVALID     0
 
@@ -495,6 +488,135 @@ typedef struct {
 
 
 #ifndef _WINDOWS_
+
+//
+// PCC processor power management interface
+//
+
+#pragma warning(push)
+#pragma warning(disable:4201) // anonymous unions warning
+#pragma warning(disable:4214) // bit field other than int
+#pragma pack(push,1)
+
+typedef struct _PCC_HEADER {
+    ULONG Signature;
+    USHORT HeaderLength;
+    UCHAR MajorVersion;
+    UCHAR MinorVersion;
+    union {
+        struct {
+            ULONG SciDoorbell:1;      // 0
+            ULONG Reserved:31;        // 31:1
+        };
+
+        ULONG AsULong;
+    } SupportedFeatures;
+
+    union {
+        struct {
+            USHORT CommandCode:8;     // 7:0
+            USHORT ReservedZ:7;       // 14:8
+            USHORT SciDoorbell:1;     // 15
+        };
+
+        USHORT AsUShort;
+    } Command;
+
+    union {
+        struct {
+            USHORT CommandComplete:1; // 0
+            USHORT SciReceived:1;     // 1
+            USHORT Error:1;           // 2
+            USHORT Reserved:13;       // 15:3
+        };
+
+        USHORT AsUShort;
+    } Status;
+
+    ULONG Latency;
+    ULONG MinimumCommandInterval;
+    ULONG MaximumCommandInterval;
+    ULONG NominalFrequency;
+    ULONG MinimumFrequency;
+    ULONG MinimumUnthrottledFrequency;
+} PCC_HEADER, *PPCC_HEADER;
+
+typedef struct _PCC_INPUT_BUFFER {
+    UCHAR ControlEnabled;
+    union {
+        struct {
+            UCHAR ReservedZ[3];
+        } GetAverageFrequency;
+
+        struct {
+            UCHAR DesiredFrequency;
+            UCHAR ReservedZ[2];
+        } SetDesiredFrequency;
+
+    };
+} PCC_INPUT_BUFFER, *PPCC_INPUT_BUFFER;
+
+typedef union _PCC_OUTPUT_BUFFER {
+    struct {
+        UCHAR AverageFrequency;
+        UCHAR FrequencyLimit;
+        UCHAR Reserved[2];
+    } GetAverageFrequency;
+
+    struct {
+        UCHAR Reserved[4];
+    } SetDesiredFrequency;
+
+} PCC_OUTPUT_BUFFER, *PPCC_OUTPUT_BUFFER;
+
+#pragma pack(pop)
+#pragma warning(pop)
+
+_Function_class_(PROCESSOR_PCC_DOORBELL_CALLBACK)
+_IRQL_requires_same_
+typedef
+VOID
+(PROCESSOR_PCC_DOORBELL_CALLBACK)(
+    _In_ ULONG Status,
+    _In_ ULONG_PTR Context
+    );
+
+typedef PROCESSOR_PCC_DOORBELL_CALLBACK *PPROCESSOR_PCC_DOORBELL_CALLBACK;
+
+#define PROCESSOR_PCC_COMMAND_GET_AVERAGE_FREQUENCY 0x00
+#define PROCESSOR_PCC_COMMAND_SET_DESIRED_FREQUENCY 0x01
+
+_Function_class_(PROCESSOR_PCC_RING_DOORBELL)
+_IRQL_requires_same_
+typedef
+NTSTATUS
+(PROCESSOR_PCC_RING_DOORBELL)(
+    _In_ UCHAR Command,
+    _In_ PPROCESSOR_PCC_DOORBELL_CALLBACK Callback,
+    _In_ ULONG_PTR Context
+    );
+
+typedef PROCESSOR_PCC_RING_DOORBELL *PPROCESSOR_PCC_RING_DOORBELL;
+
+typedef struct _PROCESSOR_PCC_INTERFACE_STANDARD {
+    //
+    // Generic interface header
+    //
+    USHORT                  Size;
+    USHORT                  Version;
+    PVOID                   Context;
+    PINTERFACE_REFERENCE    InterfaceReference;
+    PINTERFACE_DEREFERENCE  InterfaceDereference;
+    //
+    // PCC interfaces
+    //
+    PPROCESSOR_PCC_RING_DOORBELL PccRingDoorbell;
+    PPCC_HEADER PccHeader;
+    ULONG PccHeaderLength;
+
+} PROCESSOR_PCC_INTERFACE_STANDARD, *PPROCESSOR_PCC_INTERFACE_STANDARD;
+
+#define PROCESSOR_PCC_INTERFACE_STANDARD_VERSION 1
 
 //
 // Thermal client interface (devices implementing

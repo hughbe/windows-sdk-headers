@@ -6,14 +6,9 @@
 // System error numbers for use with errno and errno_t.
 //
 #pragma once
-#ifndef _INC_ERRNO // include guard for 3rd party interop
 #define _INC_ERRNO
 
 #include <corecrt.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -132,6 +127,3 @@ _CRT_BEGIN_C_HEADER
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_ERRNO

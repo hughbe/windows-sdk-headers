@@ -399,11 +399,6 @@ typedef struct tagNMCUSTOMTEXT
 #define TRBN_LAST               (0U-1519U)
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-#define EN_FIRST                (0U-1520U)      // edit control
-#define EN_LAST                 (0U-1540U)
-#endif
-
 #define MSGF_COMMCTRL_BEGINDRAG     0x4200
 #define MSGF_COMMCTRL_SIZEHEADER    0x4201
 #define MSGF_COMMCTRL_DRAGSELECT    0x4202
@@ -5781,7 +5776,6 @@ typedef COMBOBOXEXITEMW CONST *PCCOMBOEXITEMW;
 #define CBES_EX_TEXTENDELLIPSIS      0x00000020
 #endif
 
-
 typedef struct {
     NMHDR hdr;
     COMBOBOXEXITEMA ceItem;
@@ -7380,17 +7374,6 @@ typedef struct tagNMBCDROPDOWN
 #define WC_EDIT                 "Edit"
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-// Edit Control Extended Styles to use with EM_SETEXTENDEDSTYLE/EM_GETEXTENDEDSTYLE
-#define ES_EX_ALLOWEOL_CR             0x0001L
-#define ES_EX_ALLOWEOL_LF             0x0002L
-#define ES_EX_ALLOWEOL_ALL            (ES_EX_ALLOWEOL_CR | ES_EX_ALLOWEOL_LF)
-#define ES_EX_CONVERT_EOL_ON_PASTE    0x0004L
-
-
-#define ES_EX_ZOOMABLE                0x0010L
-#endif
-
 #if (NTDDI_VERSION >= NTDDI_WINXP)
 #define EM_SETCUEBANNER     (ECM_FIRST + 1)     // Set the cue banner with the lParm = LPCWSTR
 #define Edit_SetCueBannerText(hwnd, lpcwText) \
@@ -7430,88 +7413,6 @@ typedef struct _tagEDITBALLOONTIP
 
 #define EM_TAKEFOCUS        (ECM_FIRST + 8)
 #define Edit_TakeFocus(hwndCtl)                   ((DWORD)SNDMSG((hwndCtl), EM_TAKEFOCUS, 0L, 0L))
-
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
-// EM_SETENDOFLINE/EM_GETENDOFLINE options
-typedef enum EC_ENDOFLINE {
-    EC_ENDOFLINE_DETECTFROMCONTENT = 0,
-    EC_ENDOFLINE_CRLF              = 1,
-    EC_ENDOFLINE_CR                = 2,
-    EC_ENDOFLINE_LF                = 3,
-} EC_ENDOFLINE;
-
-#define EM_SETEXTENDEDSTYLE     (ECM_FIRST + 10)
-#define Edit_SetExtendedStyle(hwndCtl, dw, dwMask) \
-        (DWORD)SNDMSG((hwndCtl), EM_SETEXTENDEDSTYLE, (dwMask), (dw))
-#define EM_GETEXTENDEDSTYLE     (ECM_FIRST + 11)
-#define Edit_GetExtendedStyle(hwndCtl) \
-        (DWORD)SNDMSG((hwndCtl), EM_GETEXTENDEDSTYLE, 0, 0)
-#define EM_SETENDOFLINE         (ECM_FIRST + 12)
-#define Edit_SetEndOfLine(hwndCtl, eolType) \
-        (DWORD)SNDMSG((hwndCtl), EM_SETENDOFLINE, (eolType), 0)
-#define EM_GETENDOFLINE         (ECM_FIRST + 13)
-#define Edit_GetEndOfLine(hwndCtl) \
-        (EC_ENDOFLINE)SNDMSG((hwndCtl), EM_GETENDOFLINE, 0, 0)
-
-#define EM_ENABLESEARCHWEB      (ECM_FIRST + 14)
-#define Edit_EnableSearchWeb(hwndCtl, enable) \
-        (BOOL)SNDMSG((hwndCtl), EM_ENABLESEARCHWEB, (WPARAM)(enable), 0)
-#define EM_SEARCHWEB            (ECM_FIRST + 15)
-#define Edit_SearchWeb(hwndCtl) \
-        (BOOL)SNDMSG((hwndCtl), EM_SEARCHWEB, 0, 0)
-
-// Form codes are internal-only so keep the api internal
-
-#define EM_SETCARETINDEX        (ECM_FIRST + 17)
-#define Edit_SetCaretIndex(hwndCtl, newCaretPosition) \
-        (BOOL)SNDMSG((hwndCtl), EM_SETCARETINDEX, (WPARAM)(newCaretIndex), 0)
-#define EM_GETCARETINDEX        (ECM_FIRST + 18)
-#define Edit_GetCaretIndex(hwndCtl) \
-        (DWORD)SNDMSG((hwndCtl), EM_GETCARETINDEX, 0, 0)
-
-// We want to reuse the same messages as richedit.h
-// which is why these are outside of the ECM_FIRST-ECM_LAST range.
-#define EM_GETZOOM              (WM_USER + 224)
-#define Edit_GetZoom(hwndCtl, numerator, denominator) \
-        (BOOL)SNDMSG((hwndCtl), EM_GETZOOM, (WPARAM)(numerator), (LPARAM)(denominator))
-#define EM_SETZOOM              (WM_USER + 225)
-#define Edit_SetZoom(hwndCtl, numerator, denominator) \
-        (BOOL)SNDMSG((hwndCtl), EM_SETZOOM, (WPARAM)(numerator), (LPARAM)(denominator))
-
-#define EM_FILELINEFROMCHAR     (ECM_FIRST + 19)
-#define Edit_GetFileLineFromChar(hwndCtl, characterIndex) \
-        (DWORD)SNDMSG((hwndCtl), EM_FILELINEFROMCHAR, (WPARAM)(characterIndex), 0)
-#define EM_FILELINEINDEX        (ECM_FIRST + 20)
-#define Edit_GetFileLineIndex(hwndCtl, lineNumber) \
-        (DWORD)SNDMSG((hwndCtl), EM_FILELINEINDEX, (WPARAM)(lineNumber), 0)
-#define EM_FILELINELENGTH       (ECM_FIRST + 21)
-#define Edit_GetFileLineLength(hwndCtl, characterIndex) \
-        (DWORD)SNDMSG((hwndCtl), EM_FILELINELENGTH, (WPARAM)(characterIndex), 0)
-#define EM_GETFILELINE          (ECM_FIRST + 22)
-#define Edit_GetFileLine(hwndCtl, lineNumber, textBuffer) \
-        (DWORD)SNDMSG((hwndCtl), EM_GETFILELINE, (WPARAM)(lineNumber), (LPARAM)(textBuffer))
-#define EM_GETFILELINECOUNT        (ECM_FIRST + 23)
-#define Edit_GetFileLineCount(hwndCtl) \
-        (DWORD)SNDMSG((hwndCtl), EM_GETFILELINECOUNT, 0, 0)
-
-#define EN_SEARCHWEB            (EN_FIRST - 0)
-
-typedef enum EC_SEARCHWEB_ENTRYPOINT {
-    EC_SEARCHWEB_ENTRYPOINT_EXTERNAL    = 0,
-    EC_SEARCHWEB_ENTRYPOINT_CONTEXTMENU = 1,
-} EC_SEARCHWEB_ENTRYPOINT;
-
-typedef struct NMSEARCHWEB
-{
-    NMHDR hdr;
-    EC_SEARCHWEB_ENTRYPOINT entrypoint;
-    BOOL hasQueryText;
-    BOOL invokeSucceeded;
-} NMSEARCHWEB;
-
-#endif
 
 #endif // NOEDIT
 

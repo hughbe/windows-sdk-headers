@@ -514,7 +514,6 @@
 #define IDM_LAUNCHURICALLBACK             3908
 #define IDM_FOLLOWLINKN_INPRIVATE         3909
 #define IDM_FOLLOWLINKT_INPRIVATE         3910
-#define IDM_FOLLOWLINKEDGE                3911
 
 // Commands mapped from the standard set.  We should
 // consider deleting them from public header files.
@@ -555,8 +554,6 @@
 #define IDM_YELLOWHIGHLIGHT         15218
 #define IDM_NONEHIGHLIGHT           15219
 #define IDM_PDFREADALOUD            15220
-#define IDM_SHAREPDF                15221
-#define IDM_PDFDEFINE               15222
 
 // Defines for IDM_ZOOMPERCENT
 #define CMD_ZOOM_PAGEWIDTH -1
@@ -630,7 +627,7 @@
 #define IDM_SHAREAPPCACHEEVENT          15033
 // UNUSED :                             15034
 // Diagnostics mode commands
-// UNUSED :                             15035
+// UNUSED:                              15035
 // UNUSED:                              15036
 // 15037 unused. Repurpose as needed.
 // PrintManager Printing Support

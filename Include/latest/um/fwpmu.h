@@ -658,6 +658,71 @@ DEFINE_GUID(
 );
 
 
+// {36C299BB-64D3-4B2A-8C07-06A6E063AB72}
+DEFINE_GUID(FWPM_LAYER_ALE_PRECLASSIFY_IP_LOCAL_ADDRESS_V4,
+   0x36c299bb,
+   0x64d3,
+   0x4b2a,
+   0x8c, 0x7, 0x6, 0xa6, 0xe0, 0x63, 0xab, 0x72
+);
+
+// {BA062113-FFD1-4D12-948A-C121666B66A4}
+DEFINE_GUID(FWPM_LAYER_ALE_PRECLASSIFY_IP_REMOTE_ADDRESS_V4,
+   0xba062113,
+   0xffd1,
+   0x4d12,
+   0x94, 0x8a, 0xc1, 0x21, 0x66, 0x6b, 0x66, 0xa4
+);
+
+// {141EB5BC-2E50-449D-B78D-B27DFEEB1705}
+DEFINE_GUID(FWPM_LAYER_ALE_PRECLASSIFY_IP_LOCAL_PORT_V4,
+    0x141eb5bc,
+    0x2e50,
+    0x449d,
+    0xb7, 0x8d, 0xb2, 0x7d, 0xfe, 0xeb, 0x17, 0x5
+);
+
+// {72BC3A67-F1F8-436E-8984-5AD4924A9DAC}
+DEFINE_GUID(FWPM_LAYER_ALE_PRECLASSIFY_IP_REMOTE_PORT_V4,
+    0x72bc3a67,
+    0xf1f8,
+    0x436e,
+    0x89, 0x84, 0x5a, 0xd4, 0x92, 0x4a, 0x9d, 0xac
+);
+
+// {EFBB6075-1DF3-4EE9-9E33-265381198AF7}
+DEFINE_GUID(FWPM_LAYER_ALE_PRECLASSIFY_IP_LOCAL_ADDRESS_V6,
+   0xefbb6075,
+   0x1df3,
+   0x4ee9,
+   0x9e, 0x33, 0x26, 0x53, 0x81, 0x19, 0x8a, 0xf7
+);
+
+
+// {B47DF0DF-DA49-49E1-9CE4-82A7224118B2}
+DEFINE_GUID(FWPM_LAYER_ALE_PRECLASSIFY_IP_REMOTE_ADDRESS_V6,
+   0xb47df0df,
+   0xda49,
+   0x49e1,
+   0x9c, 0xe4, 0x82, 0xa7, 0x22, 0x41, 0x18, 0xb2
+);
+
+// {DF97AB11-2DC4-4018-B631-18BB38944CAF}
+DEFINE_GUID(FWPM_LAYER_ALE_PRECLASSIFY_IP_LOCAL_PORT_V6,
+    0xdf97ab11,
+    0x2dc4,
+    0x4018,
+    0xb6, 0x31, 0x18, 0xbb, 0x38, 0x94, 0x4c, 0xaf);
+
+
+// {EE0865C4-658F-465D-A37B-79C09339EBF6}
+DEFINE_GUID(FWPM_LAYER_ALE_PRECLASSIFY_IP_REMOTE_PORT_V6,
+    0xee0865c4,
+    0x658f,
+    0x465d,
+    0xa3, 0x7b, 0x79, 0xc0, 0x93, 0x39, 0xeb, 0xf6);
+
+
 #endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
 
 // f02b1526-a459-4a51-b9e3-759de52b9d2c
@@ -2350,36 +2415,6 @@ DEFINE_GUID(
     0x93, 0xda, 0xe8, 0xc3, 0x3f, 0xc9, 0x23, 0xc7
 );
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
-
-// 335a3e90-84aa-42f5-9e6f-59309536a44c
-DEFINE_GUID(
-    FWPM_CONDITION_RESERVED13,
-    0x335a3e90,
-    0x84aa,
-    0x42f5,
-    0x9e, 0x6f, 0x59, 0x30, 0x95, 0x36, 0xa4, 0x4c
-);
-
-// 30e44da2-2f1a-4116-a559-f907de83604a
-DEFINE_GUID(
-    FWPM_CONDITION_RESERVED14,
-    0x30e44da2,
-    0x2f1a,
-    0x4116,
-    0xa5, 0x59, 0xf9, 0x07, 0xde, 0x83, 0x60, 0x4a
-);
-
-// bab8340f-afe0-43d1-80d8-5ca456962de3
-DEFINE_GUID(
-    FWPM_CONDITION_RESERVED15,
-    0xbab8340f,
-    0xafe0,
-    0x43d1,
-    0x80, 0xd8, 0x5c, 0xa4, 0x56, 0x96, 0x2d, 0xe3
-);
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 
@@ -4848,30 +4883,6 @@ FwpmNetEventEnum3(
    );
 #endif // (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-DWORD
-WINAPI
-FwpmNetEventEnum4(
-   _In_ HANDLE engineHandle,
-   _In_ HANDLE enumHandle,
-   _In_ UINT32 numEntriesRequested,
-   _Outptr_result_buffer_(*numEntriesReturned) FWPM_NET_EVENT4*** entries,
-   _Out_ UINT32* numEntriesReturned
-   );
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5) //NTDDI_WIN10_RS5
-DWORD
-WINAPI
-FwpmNetEventEnum5(
-   _In_ HANDLE engineHandle,
-   _In_ HANDLE enumHandle,
-   _In_ UINT32 numEntriesRequested,
-   _Outptr_result_buffer_(*numEntriesReturned) FWPM_NET_EVENT5*** entries,
-   _Out_ UINT32* numEntriesReturned
-   );
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
 DWORD
 WINAPI
 FwpmNetEventDestroyEnumHandle0(
@@ -4972,44 +4983,6 @@ FwpmNetEventSubscribe2(
    );
 
 #endif // (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-typedef void (CALLBACK *FWPM_NET_EVENT_CALLBACK3)(
-                           _Inout_ void* context,
-                           _In_ const FWPM_NET_EVENT4* event
-                           );
-
-DWORD
-WINAPI
-FwpmNetEventSubscribe3(
-   _In_ HANDLE engineHandle,
-   _In_ const FWPM_NET_EVENT_SUBSCRIPTION0* subscription,
-   _In_ FWPM_NET_EVENT_CALLBACK3 callback,
-   _In_opt_ void* context,
-   _Out_ HANDLE* eventsHandle
-   );
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5) //NTDDI_WIN10_RS5
-
-typedef void (CALLBACK *FWPM_NET_EVENT_CALLBACK4)(
-                           _Inout_ void* context,
-                           _In_ const FWPM_NET_EVENT5* event
-                           );
-
-DWORD
-WINAPI
-FwpmNetEventSubscribe4(
-   _In_ HANDLE engineHandle,
-   _In_ const FWPM_NET_EVENT_SUBSCRIPTION0* subscription,
-   _In_ FWPM_NET_EVENT_CALLBACK4 callback,
-   _In_opt_ void* context,
-   _Out_ HANDLE* eventsHandle
-   );
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
 
 #if (NTDDI_VERSION >= NTDDI_WIN7)

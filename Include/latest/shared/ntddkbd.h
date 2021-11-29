@@ -140,9 +140,6 @@ typedef struct _KEYBOARD_INPUT_DATA {
 #define KEY_TERMSRV_SHADOW  0x10
 #define KEY_TERMSRV_VKPACKET 0x20
 #define KEY_RIM_VKEY 0x40
-#define KEY_FROM_KEYBOARD_OVERRIDER 0x80
-#define KEY_UNICODE_SEQUENCE_ITEM 0x100
-#define KEY_UNICODE_SEQUENCE_END 0x200
 
 //
 // NtDeviceIoControlFile Input/Output Buffer record structures for

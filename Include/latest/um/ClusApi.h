@@ -35,7 +35,6 @@ Revision History:
 #define NT9_MAJOR_VERSION           8
 #define NT10_MAJOR_VERSION          9
 #define NT11_MAJOR_VERSION          10
-#define NT12_MAJOR_VERSION          11
 
 // NT10 cluster upgrade versions (eg technical previews)
 #define WS2016_TP4_UPGRADE_VERSION  6
@@ -44,12 +43,6 @@ Revision History:
 
 // NT11 upgrade versions
 #define RS3_UPGRADE_VERSION  1
-#define RS4_UPGRADE_VERSION  2
-#define RS5_UPGRADE_VERSION  3
-
-// NT12 upgrade versions
-#define NINETEEN_H1_UPGRADE_VERSION  1
-#define NINETEEN_H2_UPGRADE_VERSION  2
 
 #define CLUSREG_NAME_MIXED_MODE                    L"MixedMode"
 
@@ -412,9 +405,7 @@ typedef enum
 {
     CLUSTER_CLOUD_TYPE_NONE     = 0,
     CLUSTER_CLOUD_TYPE_AZURE    = 1,
-
-
-    CLUSTER_CLOUD_TYPE_MIXED    = 128,
+    CLUSTER_CLOUD_TYPE_MIXED    = 2,
 
     CLUSTER_CLOUD_TYPE_UNKNOWN  = -1
 } CLUSTER_CLOUD_TYPE, *PCLUSTER_CLOUD_TYPE;
@@ -433,19 +424,6 @@ typedef enum
     CLUS_GROUP_DO_NOT_START = 1,
     CLUS_GROUP_START_ALLOWED = 2
 } CLUS_GROUP_START_SETTING;
-
-
-typedef enum 
-{
-    CLUS_AFFINITY_RULE_NONE = 0,
-    CLUS_AFFINITY_RULE_SAME_FAULT_DOMAIN = 1,
-    CLUS_AFFINITY_RULE_SAME_NODE = 2,
-    CLUS_AFFINITY_RULE_DIFFERENT_FAULT_DOMAIN = 3,
-    CLUS_AFFINITY_RULE_DIFFERENT_NODE = 4,
-
-    CLUS_AFFINITY_RULE_MIN = CLUS_AFFINITY_RULE_NONE,
-    CLUS_AFFINITY_RULE_MAX = CLUS_AFFINITY_RULE_DIFFERENT_NODE,
-} CLUS_AFFINITY_RULE_TYPE;
 
 #endif // CLUSAPI_VERSION_WINTHRESHOLD
 
@@ -1102,17 +1080,9 @@ typedef enum CLUSTER_OBJECT_TYPE {
     CLUSTER_OBJECT_TYPE_REGISTRY            =    0x00000008,
     CLUSTER_OBJECT_TYPE_QUORUM              =    0x00000009,
     CLUSTER_OBJECT_TYPE_SHARED_VOLUME       =    0x0000000a,
-    CLUSTER_OBJECT_TYPE_GROUPSET            =    0x0000000d,
-    CLUSTER_OBJECT_TYPE_AFFINITYRULE        =    0x00000010
+    CLUSTER_OBJECT_TYPE_GROUPSET          =    0x0000000d,
 } CLUSTER_OBJECT_TYPE;
 
-
-typedef enum CLUSTERSET_OBJECT_TYPE {
-    CLUSTERSET_OBJECT_TYPE_NONE             =    0x00000000,
-    CLUSTERSET_OBJECT_TYPE_MEMBER           =    0x00000001,
-    CLUSTERSET_OBJECT_TYPE_WORKLOAD         =    0x00000002,
-    CLUSTERSET_OBJECT_TYPE_DATABASE         =    0x00000003,
-} CLUSTERSET_OBJECT_TYPE;
 //
 // Cluster notification structs V2
 //
@@ -1509,15 +1479,6 @@ ClusterAddGroupToGroupSet(
     _In_ HGROUP hGroup
     );
 
-DWORD
-WINAPI
-ClusterAddGroupToGroupSetWithDomains(
-    _In_ HGROUPSET hGroupSet,
-    _In_ HGROUP hGroup,
-    _In_ DWORD faultDomain,
-    _In_ DWORD updateDomain
-    );
-
 typedef DWORD
 (WINAPI * PCLUSAPI_CLUSTER_ADD_GROUP_TO_GROUP_GROUPSET)(
     _In_ HGROUPSET hGroupSet,
@@ -1769,94 +1730,6 @@ ClusterNodeReplacement(
     __in LPCWSTR    lpszNodeNameNew);
 
 
-// affinity rule
-
-DWORD
-WINAPI
-ClusterCreateAffinityRule(
-    __in HCLUSTER hCluster,
-    __in LPCWSTR ruleName,
-    __in CLUS_AFFINITY_RULE_TYPE ruleType
-);
-
-typedef DWORD
-(WINAPI * PCLUSAPI_CLUSTER_CREATE_AFFINITY_RULE)(
-    __in HCLUSTER hCluster,
-    __in LPCWSTR ruleName,
-    __in CLUS_AFFINITY_RULE_TYPE ruleType
-);
-
-DWORD
-WINAPI
-ClusterRemoveAffinityRule(
-    __in HCLUSTER hCluster,
-    __in LPCWSTR ruleName
-);
-
-typedef DWORD
-(WINAPI * PCLUSAPI_CLUSTER_REMOVE_AFFINITY_RULE)(
-    __in HCLUSTER hCluster,
-    __in LPCWSTR ruleName
-);
-
-DWORD
-WINAPI
-ClusterAddGroupToAffinityRule(
-    __in HCLUSTER hCluster,
-    __in LPCWSTR ruleName,
-    __in HGROUP hGroup
-);
-
-typedef DWORD
-(WINAPI * PCLUSAPI_CLUSTER_ADD_GROUP_TO_AFFINITY_RULE)(
-    __in HCLUSTER hCluster,
-    __in LPCWSTR ruleName,
-    __in HGROUP hGroup
-);
-
-DWORD
-WINAPI
-ClusterRemoveGroupFromAffinityRule(
-    __in HCLUSTER hCluster,
-    __in LPCWSTR ruleName,
-    __in HGROUP hGroup
-);
-
-typedef DWORD
-(WINAPI * PCLUSAPI_CLUSTER_REMOVE_GROUP_FROM_AFFINITY_RULE)(
-    __in HCLUSTER hCluster,
-    __in LPCWSTR ruleName,
-    __in HGROUP hGroup
-);
-
-DWORD
-WINAPI
-ClusterAffinityRuleControl(
-    _In_ HCLUSTER hCluster,
-    _In_ LPCWSTR affinityRuleName,
-    _In_opt_ HNODE hHostNode,
-    _In_ DWORD dwControlCode,
-    _In_reads_bytes_opt_(cbInBufferSize) LPVOID lpInBuffer,
-    _In_ DWORD cbInBufferSize,
-    _Out_writes_bytes_to_opt_(cbOutBufferSize, *lpBytesReturned) LPVOID lpOutBuffer,
-    _In_ DWORD cbOutBufferSize,
-    _Out_opt_ LPDWORD lpBytesReturned
-    );
-
-typedef DWORD
-(WINAPI * PCLUSAPI_CLUSTER_AFFINITY_RULE_CONTROL)(
-    _In_ HCLUSTER hCluster,
-    _In_ LPCWSTR affinityRuleName,
-    _In_opt_ HNODE hHostNode,
-    _In_ DWORD dwControlCode,
-    _In_reads_bytes_opt_(cbInBufferSize) LPVOID lpInBuffer,
-    _In_ DWORD cbInBufferSize,
-    _Out_writes_bytes_to_opt_(cbOutBufferSize, *lpBytesReturned) LPVOID lpOutBuffer,
-    _In_ DWORD cbOutBufferSize,
-    _Out_opt_ LPDWORD lpBytesReturned
-);
-
-
 #endif //(CLUSAPI_VERSION >= CLUSAPI_VERSION_WINTHRESHOLD)
 
 #endif // MIDL_PASS
@@ -1937,8 +1810,7 @@ typedef enum CLUSTER_NODE_STATUS
     NodeStatusDrainInProgress           =  0x4,
     NodeStatusDrainCompleted            =  0x8,
     NodeStatusDrainFailed               =  0x10,
-    NodeStatusAvoidPlacement            =  0x20,
-    NodeStatusMax                       =  (NodeStatusIsolated | NodeStatusQuarantined | NodeStatusDrainFailed | NodeStatusAvoidPlacement)
+    NodeStatusMax                       =  (NodeStatusIsolated | NodeStatusQuarantined | NodeStatusDrainFailed)
 } CLUSTER_NODE_STATUS;
 
 #endif //CLUSAPI_VERSION >= CLUSAPI_VERSION_WINTHRESHOLD
@@ -2393,10 +2265,7 @@ typedef HGROUP
 #if (CLUSAPI_VERSION >= CLUSAPI_VERSION_WINDOWS8)
 
 // flags for PauseClusterNodeEx
-#define CLUSAPI_NODE_PAUSE_REMAIN_ON_PAUSED_NODE_ON_MOVE_ERROR  0x00000001
-#define CLUSAPI_NODE_AVOID_PLACEMENT                            0x00000002
-#define CLUSAPI_NODE_PAUSE_RETRY_DRAIN_ON_FAILURE               0x00000004
-
+#define CLUSAPI_NODE_PAUSE_REMAIN_ON_PAUSED_NODE_ON_MOVE_ERROR 0x00000001
 
 DWORD
 WINAPI
@@ -2452,7 +2321,6 @@ typedef DWORD
 #define CLUSGRP_STATUS_OS_HEARTBEAT                                            0x0000000000000200
 #define CLUSGRP_STATUS_APPLICATION_READY                                       0x0000000000000400
 #define CLUSGRP_STATUS_OFFLINE_NOT_LOCAL_DISK_OWNER                            0x0000000000000800
-#define CLUSGRP_STATUS_WAITING_FOR_DEPENDENCIES                                0x0000000000001000
 
 HGROUP
 WINAPI
@@ -2664,11 +2532,7 @@ DWORD WINAPI OfflineClusterResourceEx(
 #define CLUSAPI_GROUP_MOVE_QUEUE_ENABLED                    0x00000004
 #define CLUSAPI_GROUP_MOVE_HIGH_PRIORITY_START              0x00000008
 #define CLUSAPI_GROUP_MOVE_FAILBACK                         0x00000010
-#define CLUSAPI_GROUP_MOVE_IGNORE_AFFINITY_RULE             0x00000020
 
-
-#define CLUSAPI_CHANGE_RESOURCE_GROUP_FORCE_MOVE_TO_CSV     0x0000000000000001
-#define CLUSAPI_VALID_CHANGE_RESOURCE_GROUP_FLAGS           (CLUSAPI_CHANGE_RESOURCE_GROUP_FORCE_MOVE_TO_CSV)
 
 DWORD
 WINAPI
@@ -3097,21 +2961,6 @@ typedef DWORD
 (WINAPI * PCLUSAPI_CHANGE_CLUSTER_RESOURCE_GROUP)(
     HRESOURCE hResource,
     HGROUP hGroup
-    );
-
-DWORD
-WINAPI
-ChangeClusterResourceGroupEx(
-    _In_ HRESOURCE hResource,
-    _In_ HGROUP hGroup,
-    _In_ ULONGLONG Flags
-    );
-
-typedef DWORD
-(WINAPI * PCLUSAPI_CHANGE_CLUSTER_RESOURCE_GROUP_EX)(
-    HRESOURCE hResource,
-    HGROUP hGroup,
-    _In_ ULONGLONG Flags
     );
 
 DWORD
@@ -3597,7 +3446,6 @@ typedef enum CLUSTER_CONTROL_OBJECT {
     CLUS_OBJECT_NETINTERFACE,
     CLUS_OBJECT_CLUSTER,
     CLUS_OBJECT_GROUPSET,
-    CLUS_OBJECT_AFFINITYRULE,
     CLUS_OBJECT_USER=128
 } CLUSTER_CONTROL_OBJECT;
 
@@ -3659,9 +3507,6 @@ typedef enum CLUSTER_CONTROL_OBJECT {
     CLCTL_INTERNAL_MASK | \
     ((CLCTL_CLUSTER_BASE + Function) << CLUSCTL_FUNCTION_SHIFT) | \
     ((Modify) << CLCTL_MODIFY_SHIFT) )
-
-//External codes:
-//A control code that applications can use to initiate an operation on a cluster object. External control codes are passed as the dwControlCode parameter to control code functions.
 
 #ifndef _CLUSTER_API_TYPES_
 typedef enum CLCTL_CODES {
@@ -3823,9 +3668,6 @@ typedef enum CLCTL_CODES {
 
     CTCTL_GET_FAULT_DOMAIN_STATE            = CLCTL_EXTERNAL_CODE( 197, CLUS_ACCESS_READ, CLUS_NO_MODIFY ),
 
-    
-    CLCTL_NETNAME_SET_PWD_INFOEX            = CLCTL_EXTERNAL_CODE( 198, CLUS_ACCESS_WRITE, CLUS_NO_MODIFY ),
-
     // Control codes 2000 to 2999 are reserved.
 
     CLCTL_STORAGE_GET_AVAILABLE_DISKS_EX2_INT   = CLCTL_EXTERNAL_CODE( 2040, CLUS_ACCESS_READ, CLUS_NO_MODIFY ),
@@ -3886,15 +3728,6 @@ typedef enum CLCTL_CODES {
     CLCTL_SCALEOUT_GET_CLUSTERS                     = CLCTL_EXTERNAL_CODE( 2919, CLUS_ACCESS_READ, CLUS_MODIFY ),
 
 
-    CLCTL_RELOAD_AUTOLOGGER_CONFIG                  = CLCTL_EXTERNAL_CODE( 2932, CLUS_ACCESS_WRITE, CLUS_NO_MODIFY ),
-    CLCTL_STORAGE_RENAME_SHARED_VOLUME              = CLCTL_EXTERNAL_CODE( 2933, CLUS_ACCESS_WRITE, CLUS_NO_MODIFY ),
-    CLCTL_STORAGE_RENAME_SHARED_VOLUME_GUID         = CLCTL_EXTERNAL_CODE( 2934, CLUS_ACCESS_WRITE, CLUS_NO_MODIFY ),
-    CLCTL_ENUM_AFFINITY_RULE_NAMES                  = CLCTL_EXTERNAL_CODE( 2935, CLUS_ACCESS_READ, CLUS_NO_MODIFY ),
-
-//Internal codes:
-//A control code used by the Cluster service to notify a resource DLL of changes to the cluster environment. Applications cannot use internal control codes; they must use external control codes.
-
-
     //
     // Internal control codes
     //
@@ -3931,8 +3764,6 @@ typedef enum CLCTL_CODES {
 
     CLCTL_NOTIFY_MONITOR_SHUTTING_DOWN      = CLCTL_INTERNAL_CODE( 32, CLUS_ACCESS_READ, CLUS_NO_MODIFY ),
 
-    CLCTL_UNDELETE                          = CLCTL_INTERNAL_CODE( 33, CLUS_ACCESS_WRITE, CLUS_MODIFY ),
-
     CLCTL_GET_OPERATION_CONTEXT             = CLCTL_INTERNAL_CODE( 2106, CLUS_ACCESS_READ, CLUS_NO_MODIFY ),
     CLCTL_NOTIFY_OWNER_CHANGE               = CLCTL_INTERNAL_CODE( 2120, CLUS_ACCESS_WRITE, CLUS_MODIFY ),
 #if (CLUSAPI_VERSION >= CLUSAPI_VERSION_WINTHRESHOLD)
@@ -3940,8 +3771,6 @@ typedef enum CLCTL_CODES {
 #endif
 
 
-        CLCTL_CHECK_DRAIN_VETO                  = CLCTL_INTERNAL_CODE( 2123, CLUS_ACCESS_READ, CLUS_NO_MODIFY ),
-        CLCTL_NOTIFY_DRAIN_COMPLETE             = CLCTL_INTERNAL_CODE( 2124, CLUS_ACCESS_READ, CLUS_NO_MODIFY ),
 
 } CLCTL_CODES;
 
@@ -3974,8 +3803,6 @@ typedef enum CLCTL_CODES {
 #define CLUSCTL_GROUPSET_CODE( Function ) ( \
     ((CLUS_OBJECT_GROUPSET << CLUSCTL_OBJECT_SHIFT) | Function) )
 
-#define CLUSCTL_AFFINITYRULE_CODE( Function ) ( \
-    ((CLUS_OBJECT_AFFINITYRULE << CLUSCTL_OBJECT_SHIFT) | Function) )
 
 #define CLUSCTL_USER_CODE( Function, Object ) ( \
      ( (Object) << CLUSCTL_OBJECT_SHIFT)  |  CLCTL_USER_BASE  |  (Function << CLUSCTL_FUNCTION_SHIFT)  )
@@ -4098,9 +3925,6 @@ typedef enum CLUSCTL_RESOURCE_CODES {
     CLUSCTL_RESOURCE_NETNAME_SET_PWD_INFO =
         CLUSCTL_RESOURCE_CODE( CLCTL_NETNAME_SET_PWD_INFO ),
 
-    CLUSCTL_RESOURCE_NETNAME_SET_PWD_INFOEX =
-        CLUSCTL_RESOURCE_CODE( CLCTL_NETNAME_SET_PWD_INFOEX ),
-
     CLUSCTL_RESOURCE_NETNAME_DELETE_CO =
         CLUSCTL_RESOURCE_CODE( CLCTL_NETNAME_DELETE_CO ),
 
@@ -4211,17 +4035,11 @@ typedef enum CLUSCTL_RESOURCE_CODES {
     CLUSCTL_RESOURCE_RLUA_SET_PWD_INFO =
         CLUSCTL_RESOURCE_CODE( CLCTL_NETNAME_SET_PWD_INFO ),
 
-    CLUSCTL_RESOURCE_RLUA_SET_PWD_INFOEX =
-        CLUSCTL_RESOURCE_CODE( CLCTL_NETNAME_SET_PWD_INFOEX ),
-
     //
     // Internal resource codes
     //
     CLUSCTL_RESOURCE_DELETE =
         CLUSCTL_RESOURCE_CODE( CLCTL_DELETE ),
-
-    CLUSCTL_RESOURCE_UNDELETE =
-            CLUSCTL_RESOURCE_CODE( CLCTL_UNDELETE ),
 
     CLUSCTL_RESOURCE_INSTALL_NODE =
         CLUSCTL_RESOURCE_CODE( CLCTL_INSTALL_NODE ),
@@ -4307,12 +4125,6 @@ typedef enum CLUSCTL_RESOURCE_CODES {
 #if (CLUSAPI_VERSION >= CLUSAPI_VERSION_WINTHRESHOLD)
     CLUSCTL_RESOURCE_VALIDATE_CHANGE_GROUP =
         CLUSCTL_RESOURCE_CODE( CLCTL_VALIDATE_CHANGE_GROUP ),
-
-    CLUSCTL_RESOURCE_STORAGE_RENAME_SHARED_VOLUME =
-        CLUSCTL_RESOURCE_CODE( CLCTL_STORAGE_RENAME_SHARED_VOLUME ),
-
-    CLUSCTL_RESOURCE_STORAGE_RENAME_SHARED_VOLUME_GUID =
-        CLUSCTL_RESOURCE_CODE( CLCTL_STORAGE_RENAME_SHARED_VOLUME_GUID ),
 #endif
 
 
@@ -4342,12 +4154,6 @@ typedef enum CLUSCTL_RESOURCE_CODES {
     CLUSCTL_RESOURCE_SCALEOUT_GET_CLUSTERS =
         CLUSCTL_RESOURCE_CODE( CLCTL_SCALEOUT_GET_CLUSTERS ),
 
-
-        CLUSCTL_RESOURCE_CHECK_DRAIN_VETO =
-                CLUSCTL_RESOURCE_CODE( CLCTL_CHECK_DRAIN_VETO ),
-
-        CLUSCTL_RESOURCE_NOTIFY_DRAIN_COMPLETE = 
-                CLUSCTL_RESOURCE_CODE( CLCTL_NOTIFY_DRAIN_COMPLETE ),
 } CLUSCTL_RESOURCE_CODES;
 
 //
@@ -4541,12 +4347,6 @@ typedef enum CLUSCTL_RESOURCE_TYPE_CODES {
 
     CLUSCTL_RESOURCE_TYPE_NOTIFY_MONITOR_SHUTTING_DOWN =
         CLUSCTL_RESOURCE_TYPE_CODE( CLCTL_NOTIFY_MONITOR_SHUTTING_DOWN ),
-
-    CLUSCTL_RESOURCE_TYPE_CHECK_DRAIN_VETO =
-            CLUSCTL_RESOURCE_TYPE_CODE( CLCTL_CHECK_DRAIN_VETO ),
-
-    CLUSCTL_RESOURCE_TYPE_NOTIFY_DRAIN_COMPLETE =
-            CLUSCTL_RESOURCE_TYPE_CODE( CLCTL_NOTIFY_DRAIN_COMPLETE ),
 
 } CLUSCTL_RESOURCE_TYPE_CODES;
 
@@ -4934,20 +4734,8 @@ typedef enum CLUSCTL_CLUSTER_CODES {
 
     CLUSCTL_CLUSTER_SET_CLUSTER_S2D_CACHE_METADATA_RESERVE_BYTES =
         CLUSCTL_CLUSTER_CODE( CLCTL_SET_CLUSTER_S2D_CACHE_METADATA_RESERVE_BYTES ),
-
-    CLUSCTL_CLUSTER_STORAGE_RENAME_SHARED_VOLUME =
-        CLUSCTL_CLUSTER_CODE( CLCTL_STORAGE_RENAME_SHARED_VOLUME ),
-
-    CLUSCTL_CLUSTER_STORAGE_RENAME_SHARED_VOLUME_GUID =
-        CLUSCTL_CLUSTER_CODE( CLCTL_STORAGE_RENAME_SHARED_VOLUME_GUID ),
 #endif
 
-
-    CLUSCTL_CLUSTER_RELOAD_AUTOLOGGER_CONFIG  =
-        CLUSCTL_CLUSTER_CODE( CLCTL_RELOAD_AUTOLOGGER_CONFIG  ),
-
-    CLUSCTL_CLUSTER_ENUM_AFFINITY_RULE_NAMES =
-	    CLUSCTL_CLUSTER_CODE( CLCTL_ENUM_AFFINITY_RULE_NAMES ),
 
 } CLUSCTL_CLUSTER_CODES;
 
@@ -4980,28 +4768,6 @@ typedef enum CLUSCTL_GROUPSET_CODES {
 
 
 } CLUSCTL_GROUPSET_CODES;
-
-//
-// Cluster control codes for Affinity Rules
-//
-typedef enum CLUSCTL_AFFINITYRULE_CODES {
-	CLUSCTL_AFFINITYRULE_GET_COMMON_PROPERTIES = 
-		CLUSCTL_AFFINITYRULE_CODE( CLCTL_GET_COMMON_PROPERTIES ),
-
-	CLUSCTL_AFFINITYRULE_GET_RO_COMMON_PROPERTIES =
-		CLUSCTL_AFFINITYRULE_CODE( CLCTL_GET_RO_COMMON_PROPERTIES ),
-
-	CLUSCTL_AFFINITYRULE_SET_COMMON_PROPERTIES =
-		CLUSCTL_AFFINITYRULE_CODE( CLCTL_SET_COMMON_PROPERTIES ),
-
-	CLUSCTL_AFFINITYRULE_GET_ID = 
-		CLUSCTL_AFFINITYRULE_CODE( CLCTL_GET_ID ),
-
-    CLUSCTL_AFFINITYRULE_GET_GROUPNAMES = 
-        CLUSCTL_AFFINITYRULE_CODE( CLCTL_GROUPSET_GET_GROUPS ),
-		
-} CLUSCTL_AFFINITYRULE_CODES;
-
 
 //
 // Cluster Resource Class types
@@ -5054,8 +4820,7 @@ typedef enum CLUS_CHARACTERISTICS {
     CLUS_CHAR_NOT_PREEMPTABLE               = 0x00004000,
     CLUS_CHAR_NOTIFY_NEW_OWNER              = 0x00008000,
     CLUS_CHAR_SUPPORTS_UNMONITORED_STATE    = 0x00010000,
-    CLUS_CHAR_INFRASTRUCTURE                = 0x00020000,       // The resource type is for infrastructure and is not for roles
-    CLUS_CHAR_VETO_DRAIN                    = 0x00040000
+    CLUS_CHAR_INFRASTRUCTURE                = 0x00020000        // The resource type is for infrastructure and is not for roles
 } CLUS_CHARACTERISTICS;
 
 //
@@ -5252,7 +5017,6 @@ typedef enum CLUSPROP_PIFLAGS {
     CLUSPROP_PIFLAG_DEFAULT_QUORUM  = 0x00000008,
     CLUSPROP_PIFLAG_USABLE_FOR_CSV  = 0x00000010,
     CLUSPROP_PIFLAG_ENCRYPTION_ENABLED = 0x00000020,
-    CLUSPROP_PIFLAG_RAW             = 0x00000040,
     CLUSPROP_PIFLAG_UNKNOWN         = 0x80000000
 } CLUSPROP_PIFLAGS;
 
@@ -5389,63 +5153,6 @@ typedef struct _CLUSTER_SHARED_VOLUME_STATE_INFO_EX
 } CLUSTER_SHARED_VOLUME_STATE_INFO_EX, *PCLUSTER_SHARED_VOLUME_STATE_INFO_EX;
 
 
-#if (CLUSAPI_VERSION >= CLUSAPI_VERSION_WINTHRESHOLD)
-typedef enum _CLUSTER_SHARED_VOLUME_RENAME_INPUT_TYPE
-{
-    ClusterSharedVolumeRenameInputTypeNone,
-    ClusterSharedVolumeRenameInputTypeVolumeOffset,
-    ClusterSharedVolumeRenameInputTypeVolumeId,
-    ClusterSharedVolumeRenameInputTypeVolumeName,
-    ClusterSharedVolumeRenameInputTypeVolumeGuid
-} CLUSTER_SHARED_VOLUME_RENAME_INPUT_TYPE, *PCLUSTER_SHARED_VOLUME_RENAME_INPUT_TYPE;
-
-typedef struct _CLUSTER_SHARED_VOLUME_RENAME_INPUT_VOLUME
-{
-    CLUSTER_SHARED_VOLUME_RENAME_INPUT_TYPE InputType;
-    union
-    {
-        ULONGLONG VolumeOffset;
-        WCHAR VolumeId[MAX_PATH];
-        WCHAR VolumeName[MAX_PATH];
-        WCHAR VolumeGuid[50];
-    };
-} CLUSTER_SHARED_VOLUME_RENAME_INPUT_VOLUME, *PCLUSTER_SHARED_VOLUME_RENAME_INPUT_VOLUME;
-
-typedef struct _CLUSTER_SHARED_VOLUME_RENAME_INPUT_NAME
-{
-    WCHAR NewVolumeName[MAX_PATH];
-} CLUSTER_SHARED_VOLUME_RENAME_INPUT_NAME, *PCLUSTER_SHARED_VOLUME_RENAME_INPUT_NAME;
-
-typedef struct _CLUSTER_SHARED_VOLUME_RENAME_INPUT_GUID_NAME
-{
-    WCHAR NewVolumeName[MAX_PATH];
-    WCHAR NewVolumeGuid[50];
-} CLUSTER_SHARED_VOLUME_RENAME_INPUT_GUID_NAME, *PCLUSTER_SHARED_VOLUME_RENAME_INPUT_GUID_NAME;
-
-#ifdef __cplusplus
-typedef struct _CLUSTER_SHARED_VOLUME_RENAME_INPUT
-    : public CLUSTER_SHARED_VOLUME_RENAME_INPUT_VOLUME
-    , public CLUSTER_SHARED_VOLUME_RENAME_INPUT_NAME {
-#else
-typedef struct _CLUSTER_SHARED_VOLUME_RENAME_INPUT {
-    CLUSTER_SHARED_VOLUME_RENAME_INPUT_VOLUME;
-    CLUSTER_SHARED_VOLUME_RENAME_INPUT_NAME;
-#endif
-} CLUSTER_SHARED_VOLUME_RENAME_INPUT, *PCLUSTER_SHARED_VOLUME_RENAME_INPUT;
-
-#ifdef __cplusplus
-typedef struct _CLUSTER_SHARED_VOLUME_RENAME_GUID_INPUT
-    : public CLUSTER_SHARED_VOLUME_RENAME_INPUT_VOLUME
-    , public CLUSTER_SHARED_VOLUME_RENAME_INPUT_GUID_NAME {
-#else
-typedef struct _CLUSTER_SHARED_VOLUME_RENAME_GUID_INPUT {
-    CLUSTER_SHARED_VOLUME_RENAME_INPUT_VOLUME;
-    CLUSTER_SHARED_VOLUME_RENAME_INPUT_GUID_NAME;
-#endif
-} CLUSTER_SHARED_VOLUME_RENAME_GUID_INPUT, *PCLUSTER_SHARED_VOLUME_RENAME_GUID_INPUT;
-
-#endif // CLUSAPI_VERSION >= CLUSAPI_VERSION_WINTHRESHOLD
-
 typedef struct _CLUS_CHKDSK_INFO {
     DWORD PartitionNumber;
     DWORD ChkdskState;
@@ -5569,12 +5276,6 @@ typedef struct CLUS_NETNAME_VS_TOKEN_INFO {
 #define GUID_PRESENT 0x1
 #define CREATEDC_PRESENT 0x2
 
-// (PWLEN/sizeof(wchar_t))-1 is the max allowed password size, remember to add 1 to buffers to hold the null
-#define MAX_CO_PASSWORD_LENGTHEX 127
-
-// including the null
-#define MAX_CO_PASSWORD_STORAGEEX 128
-
 #define MAX_CREATINGDC_LENGTH 256
 
 typedef struct CLUS_NETNAME_PWD_INFO {
@@ -5583,17 +5284,6 @@ typedef struct CLUS_NETNAME_PWD_INFO {
     WCHAR CreatingDC[MAX_CREATINGDC_LENGTH+2];  // including the '\\' prefix
     WCHAR ObjectGuid[MAX_OBJECTID];                          //
 } CLUS_NETNAME_PWD_INFO, *PCLUS_NETNAME_PWD_INFO, CLUS_RLUA_PWD_INFO, *PCLUS_RLUA_PWD_INFO;
-
-//
-// input structure for CLUSCTL_RESOURCE_NETNAME_SET_PWD_INFOEX and for CLUSCTL_RESOURCE_RLUA_SET_PWD_INFOEX
-//
-typedef struct CLUS_NETNAME_PWD_INFOEX {
-    DWORD Flags;
-    WCHAR Password[MAX_CO_PASSWORD_STORAGEEX];
-    WCHAR CreatingDC[MAX_CREATINGDC_LENGTH+2];  // including the '\\' prefix
-    WCHAR ObjectGuid[MAX_OBJECTID];                          //
-} CLUS_NETNAME_PWD_INFOEX, *PCLUS_NETNAME_PWD_INFOEX, CLUS_RLUA_PWD_INFOEX, *PCLUS_RLUA_PWD_INFOEX;
-
 
 //
 // input structure for CLUSCTL_RESOURCE_DNN_SEND_LEADER_STATUS and for CLUSCTL_RESOURCE_DNN_REFRESH_CLONES
@@ -5656,12 +5346,6 @@ typedef struct _CLUS_MAINTENANCE_MODE_INFOEX {
     CLUSTER_RESOURCE_STATE      InternalState;
     DWORD                       Signature;
 } CLUS_MAINTENANCE_MODE_INFOEX, *PCLUS_MAINTENANCE_MODE_INFOEX;
-
-typedef struct _CLUS_SET_MAINTENANCE_MODE_INPUT {
-    BOOL  InMaintenance;
-    DWORD ExtraParameterSize;
-    BYTE  ExtraParameter[1];
-} CLUS_SET_MAINTENANCE_MODE_INPUT, *PCLUS_SET_MAINTENANCE_MODE_INPUT;
 
 typedef struct _CLUS_STORAGE_SET_DRIVELETTER {
     DWORD    PartitionNumber;
@@ -6964,12 +6648,6 @@ DetermineClusterCloudTypeFromCluster(
     _Out_ PCLUSTER_CLOUD_TYPE   pCloudType
 );
 
-DWORD 
-WINAPI 
-GetNodeCloudTypeDW(
-    _In_ PCWSTR  ppszNodeName, 
-    __out DWORD* NodeCloudType);
-
 typedef DWORD (WINAPI *PCLUSAPI_REMOVE_CLUSTER_NAME_ACCOUNT)(
     _In_ HCLUSTER    hCluster
 );
@@ -7094,13 +6772,17 @@ typedef DWORD
 #define CLUS_RESTYPE_NAME_STORAGE_REPLICA       L"Storage Replica"
 #define CLUS_RESTYPE_NAME_CROSS_CLUSTER         L"Cross Cluster Dependency Orchestrator"
 
+#if CLUSTER_SET == 1
 #define CLUS_RESTYPE_NAME_SCALEOUT_MASTER       L"Scaleout Master"
 #define CLUS_RESTYPE_NAME_SCALEOUT_WORKER       L"Scaleout Worker"
+#endif
 
 #define CLUS_RESTYPE_NAME_CONTAINER             L"Container"
 
+#if CLUSTER_SET == 1
 #define CLUS_RES_NAME_SCALEOUT_MASTER           L"Scaleout Master"
 #define CLUS_RES_NAME_SCALEOUT_WORKER           L"Scaleout Worker"
+#endif
 
 //
 // Cluster common property names
@@ -7161,7 +6843,6 @@ typedef DWORD
 #define CLUSTER_NAME_AUTO_BALANCER_LEVEL           L"AutoBalancerLevel"
 #define CLUSREG_NAME_GROUP_DEPENDENCY_TIMEOUT      L"GroupDependencyTimeout"
 #define CLUSREG_NAME_PLACEMENT_OPTIONS             L"PlacementOptions"
-#define CLUSREG_NAME_ENABLED_EVENT_LOGS            L"EnabledEventLogs"
 
 //
 // Properties and defaults for single and multi subnet delays and thresholds.
@@ -7324,14 +7005,6 @@ typedef DWORD
 #define CLUSREG_NAME_GROUPSET_FAULT_DOMAINS         L"FaultDomains"
 #define CLUSREG_NAME_GROUPSET_RESERVE_NODE  L"ReserveSpareNode"
 #define CLUSREG_NAME_GROUPSET_AVAILABILITY_SET_INDEX_TO_NODE_MAPPING L"NodeDomainInfo"
-
-//
-// Affinity rule property names
-// 
-#define CLUSREG_NAME_AFFINITYRULE_NAME              L"Name"
-#define CLUSREG_NAME_AFFINITYRULE_TYPE              L"RuleType"
-#define CLUSREG_NAME_AFFINITYRULE_GROUPS            L"Groups"
-#define CLUSREG_NAME_AFFINITYRULE_ENABLED           L"Enabled"
 
 //
 // Resource private property names

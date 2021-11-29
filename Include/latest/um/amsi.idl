@@ -76,9 +76,6 @@ typedef [v1_enum] enum AMSI_ATTRIBUTE
     // PVOID, memory address of the "All Attribute" Microsoft Edge buffer. Optional.
     AMSI_ATTRIBUTE_ALL_ADDRESS = 8,
 
-    // ULONG
-    AMSI_ATTRIBUTE_QUIET = 9, // deprecated, do not use
-
 } AMSI_ATTRIBUTE;
 
 typedef [v1_enum] enum AMSI_UAC_REQUEST_TYPE

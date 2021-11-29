@@ -784,40 +784,8 @@ EXTERN_C const __declspec(selectany) GUID PROPERTY_DYNAMIC_TIME_ZONE_INFORMATION
 
 // ************************************************************************
 
-
-// ************** PROPERTY_GET_FAST_RECONNECT ******************
-// 
-// This is used to get whether fast reconnect should work or not based on the stack
-// 
-// There are no inputs to this query.
-//
-// Output to this query - It passes 1 WTS_PROPERTY_VALUE structure. Protocol needs to set it to:
-//          pPropertyEntriesOut[0].Type = WTS_VALUE_TYPE_ULONG;
-//          pPropertyEntriesOut[0].u.strVal.pstrVal = (0 = Don't do fast reconnect, 1 = Do fast reconnect)
-//
-EXTERN_C const _declspec(selectany) GUID PROPERTY_TYPE_GET_FAST_RECONNECT = /* 6212d757-0043-4862-99c3-9f3059ac2a3b*/
-{ 0x6212d757, 0x0043, 0x4862,{ 0x99, 0xc3, 0x9f, 0x30, 0x59, 0xac, 0x2a, 0x3b } };
-
 #endif
 
-#ifndef __midl
-
-/* -------------------------------------------------------------------
- * IWrdsProtocolConnectionSettings GUIDs
- * 
- * There are the GUIDS that can be passed in to Get/Set Settings under IWrdsProtocolConnectionSettings
- *
- * -------------------------------------------------------------------*/
-
-EXTERN_C const _declspec(selectany) GUID CONNECTION_PROPERTY_IDLE_TIME_WARNING = /* 693f7ff5-0c4e-4d17-b8e0-1f70325e5d58*/
-{ 0x693F7FF5, 0x0C4E, 0x4D17,{ 0xB8, 0xE0, 0x1F, 0x70, 0x32, 0x5E, 0x5D, 0x58 } };
-
-EXTERN_C const _declspec(selectany) GUID CONNECTION_PROPERTY_CURSOR_BLINK_DISABLED = /* 4B150580-FEA4-4D3C-9DE4-7433A66618F7 */
-{ 0x4B150580, 0xFEA4, 0x4D3C,{ 0x9D, 0xE4, 0x74, 0x33, 0xA6, 0x66, 0x18, 0xF7 } };
-
-
-
-#endif
 
 /* -------------------------------------------------------------------
  * Licensing structures

@@ -1,4 +1,4 @@
-// begin_consoleapi_h
+ 
 /********************************************************************************
 *                                                                               *
 * consoleapi.h -- ApiSet Contract for api-ms-win-core-console-l1                *
@@ -16,17 +16,33 @@
 
 #include <apiset.h>
 #include <apisetcconv.h>
-#include <minwindef.h>
-#include <minwinbase.h>
 
-#include <wincontypes.h>
+
+#include <windows.h>
+
+/* APISET_NAME: api-ms-win-core-console-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_CONSOLE_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN7
+#define _APISET_CONSOLE_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 BOOL
@@ -37,32 +53,19 @@ AllocConsole(
 
 
 WINBASEAPI
-BOOL
-WINAPI
-FreeConsole(
-    VOID
-    );
-
-
-#if (_WIN32_WINNT >= 0x0500)
-
-WINBASEAPI
-BOOL
-WINAPI
-AttachConsole(
-    _In_ DWORD dwProcessId
-    );
-
-
-#define ATTACH_PARENT_PROCESS ((DWORD)-1)
-
-#endif /* _WIN32_WINNT >= 0x0500 */
-
-WINBASEAPI
 UINT
 WINAPI
 GetConsoleCP(
     VOID
+    );
+
+
+WINBASEAPI
+BOOL
+WINAPI
+GetConsoleMode(
+    _In_ HANDLE hConsoleHandle,
+    _Out_ LPDWORD lpMode
     );
 
 
@@ -74,37 +77,94 @@ GetConsoleOutputCP(
     );
 
 
-//
-// Input Mode flags:
-//
+WINBASEAPI
+BOOL
+WINAPI
+GetNumberOfConsoleInputEvents(
+    _In_ HANDLE hConsoleInput,
+    _Out_ LPDWORD lpNumberOfEvents
+    );
 
-#define ENABLE_PROCESSED_INPUT              0x0001
-#define ENABLE_LINE_INPUT                   0x0002
-#define ENABLE_ECHO_INPUT                   0x0004
-#define ENABLE_WINDOW_INPUT                 0x0008
-#define ENABLE_MOUSE_INPUT                  0x0010
-#define ENABLE_INSERT_MODE                  0x0020
-#define ENABLE_QUICK_EDIT_MODE              0x0040
-#define ENABLE_EXTENDED_FLAGS               0x0080
-#define ENABLE_AUTO_POSITION                0x0100
-#define ENABLE_VIRTUAL_TERMINAL_INPUT       0x0200
-
-//
-// Output Mode flags:
-//
-
-#define ENABLE_PROCESSED_OUTPUT             0x0001
-#define ENABLE_WRAP_AT_EOL_OUTPUT           0x0002
-#define ENABLE_VIRTUAL_TERMINAL_PROCESSING  0x0004
-#define DISABLE_NEWLINE_AUTO_RETURN         0x0008
-#define ENABLE_LVB_GRID_WORLDWIDE           0x0010
 
 WINBASEAPI
 BOOL
 WINAPI
-GetConsoleMode(
-    _In_ HANDLE hConsoleHandle,
-    _Out_ LPDWORD lpMode
+PeekConsoleInputA(
+    _In_ HANDLE hConsoleInput,
+    _Out_writes_(nLength) PINPUT_RECORD lpBuffer,
+    _In_ DWORD nLength,
+    _Out_ LPDWORD lpNumberOfEventsRead
+    );
+
+
+#ifndef UNICODE
+#define PeekConsoleInput  PeekConsoleInputA
+#endif
+
+WINBASEAPI
+_Success_(return != FALSE)
+BOOL
+WINAPI
+ReadConsoleA(
+    _In_ HANDLE hConsoleInput,
+    _Out_writes_bytes_to_(nNumberOfCharsToRead * sizeof(CHAR), *lpNumberOfCharsRead * sizeof(CHAR)) LPVOID lpBuffer,
+    _In_ DWORD nNumberOfCharsToRead,
+    _Out_ _Deref_out_range_(<=, nNumberOfCharsToRead) LPDWORD lpNumberOfCharsRead,
+    _In_opt_ PCONSOLE_READCONSOLE_CONTROL pInputControl
+    );
+
+WINBASEAPI
+_Success_(return != FALSE)
+BOOL
+WINAPI
+ReadConsoleW(
+    _In_ HANDLE hConsoleInput,
+    _Out_writes_bytes_to_(nNumberOfCharsToRead * sizeof(WCHAR), *lpNumberOfCharsRead * sizeof(WCHAR)) LPVOID lpBuffer,
+    _In_ DWORD nNumberOfCharsToRead,
+    _Out_ _Deref_out_range_(<=, nNumberOfCharsToRead) LPDWORD lpNumberOfCharsRead,
+    _In_opt_ PCONSOLE_READCONSOLE_CONTROL pInputControl
+    );
+
+#ifdef UNICODE
+#define ReadConsole  ReadConsoleW
+#else
+#define ReadConsole  ReadConsoleA
+#endif // !UNICODE
+
+WINBASEAPI
+_Success_(return != FALSE)
+BOOL
+WINAPI
+ReadConsoleInputA(
+    _In_ HANDLE hConsoleInput,
+    _Out_writes_to_(nLength, *lpNumberOfEventsRead) PINPUT_RECORD lpBuffer,
+    _In_ DWORD nLength,
+    _Out_ _Deref_out_range_(<=, nLength) LPDWORD lpNumberOfEventsRead
+    );
+
+WINBASEAPI
+_Success_(return != FALSE)
+BOOL
+WINAPI
+ReadConsoleInputW(
+    _In_ HANDLE hConsoleInput,
+    _Out_writes_to_(nLength, *lpNumberOfEventsRead) PINPUT_RECORD lpBuffer,
+    _In_ DWORD nLength,
+    _Out_ _Deref_out_range_(<=, nLength) LPDWORD lpNumberOfEventsRead
+    );
+
+#ifdef UNICODE
+#define ReadConsoleInput  ReadConsoleInputW
+#else
+#define ReadConsoleInput  ReadConsoleInputA
+#endif // !UNICODE
+
+WINBASEAPI
+BOOL
+WINAPI
+SetConsoleCtrlHandler(
+    _In_opt_ PHANDLER_ROUTINE HandlerRoutine,
+    _In_ BOOL Add
     );
 
 
@@ -120,119 +180,9 @@ SetConsoleMode(
 WINBASEAPI
 BOOL
 WINAPI
-GetNumberOfConsoleInputEvents(
-    _In_ HANDLE hConsoleInput,
-    _Out_ LPDWORD lpNumberOfEvents
-    );
-
-
-WINBASEAPI
-_Success_(return != FALSE)
-BOOL
-WINAPI
-ReadConsoleInputA(
-    _In_ HANDLE hConsoleInput,
-    _Out_writes_to_(nLength,*lpNumberOfEventsRead) PINPUT_RECORD lpBuffer,
-    _In_ DWORD nLength,
-    _Out_ _Deref_out_range_(<=,nLength) LPDWORD lpNumberOfEventsRead
-    );
-
-WINBASEAPI
-_Success_(return != FALSE)
-BOOL
-WINAPI
-ReadConsoleInputW(
-    _In_ HANDLE hConsoleInput,
-    _Out_writes_to_(nLength,*lpNumberOfEventsRead) PINPUT_RECORD lpBuffer,
-    _In_ DWORD nLength,
-    _Out_ _Deref_out_range_(<=,nLength) LPDWORD lpNumberOfEventsRead
-    );
-
-#ifdef UNICODE
-#define ReadConsoleInput  ReadConsoleInputW
-#else
-#define ReadConsoleInput  ReadConsoleInputA
-#endif // !UNICODE
-
-// end_consoleapi_h
-
-
-
-#ifndef UNICODE
-#define PeekConsoleInput  PeekConsoleInputA
-#endif
-
-// begin_consoleapi_h
-
-WINBASEAPI
-BOOL
-WINAPI
-PeekConsoleInputA(
-    _In_ HANDLE hConsoleInput,
-    _Out_writes_(nLength) PINPUT_RECORD lpBuffer,
-    _In_ DWORD nLength,
-    _Out_ LPDWORD lpNumberOfEventsRead
-    );
-
-WINBASEAPI
-BOOL
-WINAPI
-PeekConsoleInputW(
-    _In_ HANDLE hConsoleInput,
-    _Out_writes_(nLength) PINPUT_RECORD lpBuffer,
-    _In_ DWORD nLength,
-    _Out_ LPDWORD lpNumberOfEventsRead
-    );
-
-#ifdef UNICODE
-#define PeekConsoleInput  PeekConsoleInputW
-#else
-#define PeekConsoleInput  PeekConsoleInputA
-#endif // !UNICODE
-
-typedef struct _CONSOLE_READCONSOLE_CONTROL {
-    ULONG nLength;
-    ULONG nInitialChars;
-    ULONG dwCtrlWakeupMask;
-    ULONG dwControlKeyState;
-} CONSOLE_READCONSOLE_CONTROL, *PCONSOLE_READCONSOLE_CONTROL;
-
-WINBASEAPI
-_Success_(return != FALSE)
-BOOL
-WINAPI
-ReadConsoleA(
-    _In_ HANDLE hConsoleInput,
-    _Out_writes_bytes_to_(nNumberOfCharsToRead * sizeof(TCHAR%),*lpNumberOfCharsRead * sizeof(TCHAR%)) LPVOID lpBuffer,
-    _In_ DWORD nNumberOfCharsToRead,
-    _Out_ _Deref_out_range_(<=,nNumberOfCharsToRead) LPDWORD lpNumberOfCharsRead,
-    _In_opt_ PCONSOLE_READCONSOLE_CONTROL pInputControl
-    );
-
-WINBASEAPI
-_Success_(return != FALSE)
-BOOL
-WINAPI
-ReadConsoleW(
-    _In_ HANDLE hConsoleInput,
-    _Out_writes_bytes_to_(nNumberOfCharsToRead * sizeof(TCHAR%),*lpNumberOfCharsRead * sizeof(TCHAR%)) LPVOID lpBuffer,
-    _In_ DWORD nNumberOfCharsToRead,
-    _Out_ _Deref_out_range_(<=,nNumberOfCharsToRead) LPDWORD lpNumberOfCharsRead,
-    _In_opt_ PCONSOLE_READCONSOLE_CONTROL pInputControl
-    );
-
-#ifdef UNICODE
-#define ReadConsole  ReadConsoleW
-#else
-#define ReadConsole  ReadConsoleA
-#endif // !UNICODE
-
-WINBASEAPI
-BOOL
-WINAPI
 WriteConsoleA(
     _In_ HANDLE hConsoleOutput,
-    _In_reads_(nNumberOfCharsToWrite) CONST VOID* lpBuffer,
+    _In_reads_(nNumberOfCharsToWrite) CONST VOID * lpBuffer,
     _In_ DWORD nNumberOfCharsToWrite,
     _Out_opt_ LPDWORD lpNumberOfCharsWritten,
     _Reserved_ LPVOID lpReserved
@@ -243,7 +193,7 @@ BOOL
 WINAPI
 WriteConsoleW(
     _In_ HANDLE hConsoleOutput,
-    _In_reads_(nNumberOfCharsToWrite) CONST VOID* lpBuffer,
+    _In_reads_(nNumberOfCharsToWrite) CONST VOID * lpBuffer,
     _In_ DWORD nNumberOfCharsToWrite,
     _Out_opt_ LPDWORD lpNumberOfCharsWritten,
     _Reserved_ LPVOID lpReserved
@@ -255,80 +205,6 @@ WriteConsoleW(
 #define WriteConsole  WriteConsoleA
 #endif // !UNICODE
 
-//
-// Ctrl Event flags
-//
-
-#define CTRL_C_EVENT        0
-#define CTRL_BREAK_EVENT    1
-#define CTRL_CLOSE_EVENT    2
-// 3 is reserved!
-// 4 is reserved!
-#define CTRL_LOGOFF_EVENT   5
-#define CTRL_SHUTDOWN_EVENT 6
-
-//
-// typedef for ctrl-c handler routines
-//
-
-typedef
-BOOL
-(WINAPI *PHANDLER_ROUTINE)(
-    _In_ DWORD CtrlType
-    );
-
-WINBASEAPI
-BOOL
-WINAPI
-SetConsoleCtrlHandler(
-    _In_opt_ PHANDLER_ROUTINE HandlerRoutine,
-    _In_ BOOL Add
-    );
-
-
-
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
-// CreatePseudoConsole Flags
-#define PSEUDOCONSOLE_INHERIT_CURSOR (0x1)
-
-WINBASEAPI
-HRESULT
-WINAPI
-CreatePseudoConsole(
-    _In_ COORD size,
-    _In_ HANDLE hInput,
-    _In_ HANDLE hOutput,
-    _In_ DWORD dwFlags,
-    _Out_ HPCON* phPC
-    );
-
-
-WINBASEAPI
-HRESULT
-WINAPI
-ResizePseudoConsole(
-    _In_ HPCON hPC,
-    _In_ COORD size
-    );
-
-
-WINBASEAPI
-VOID
-WINAPI
-ClosePseudoConsole(
-    _In_ HPCON hPC
-    );
-
-
-#endif
-
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
@@ -337,4 +213,3 @@ ClosePseudoConsole(
 #endif
 
 #endif // _APISETCONSOLE_
-// end_consoleapi_h

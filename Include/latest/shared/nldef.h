@@ -24,8 +24,8 @@ Environment:
 #pragma once
 #include <winapifamily.h>
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 
 typedef enum {
@@ -263,34 +263,6 @@ typedef enum _NL_INTERFACE_NETWORK_CATEGORY_STATE {
 } NL_INTERFACE_NETWORK_CATEGORY_STATE,
 *PNL_INTERFACE_NETWORK_CATEGORY_STATE;
 
-typedef enum _NL_NETWORK_CONNECTIVITY_LEVEL_HINT {
-    NetworkConnectivityLevelHintUnknown = 0,
-    NetworkConnectivityLevelHintNone,
-    NetworkConnectivityLevelHintLocalAccess,
-    NetworkConnectivityLevelHintInternetAccess,
-    NetworkConnectivityLevelHintConstrainedInternetAccess,
-    NetworkConnectivityLevelHintHidden,
-} NL_NETWORK_CONNECTIVITY_LEVEL_HINT;
-
-typedef enum _NL_NETWORK_CONNECTIVITY_COST_HINT {
-    NetworkConnectivityCostHintUnknown = 0,
-    NetworkConnectivityCostHintUnrestricted,
-    NetworkConnectivityCostHintFixed,
-    NetworkConnectivityCostHintVariable,
-} NL_NETWORK_CONNECTIVITY_COST_HINT;
-
-typedef struct _NL_NETWORK_CONNECTIVITY_HINT {
-    NL_NETWORK_CONNECTIVITY_LEVEL_HINT ConnectivityLevel;
-
-    //
-    // Fields reflecting cost factors.
-    //
-    NL_NETWORK_CONNECTIVITY_COST_HINT ConnectivityCost;
-    BOOLEAN ApproachingDataLimit;
-    BOOLEAN OverDataLimit;
-    BOOLEAN Roaming;
-} NL_NETWORK_CONNECTIVITY_HINT;
-
 #define NET_IF_CURRENT_SESSION ((ULONG)-1)
 
 typedef struct _NL_BANDWIDTH_INFORMATION {
@@ -299,7 +271,7 @@ typedef struct _NL_BANDWIDTH_INFORMATION {
     BOOLEAN BandwidthPeaked;
 } NL_BANDWIDTH_INFORMATION, *PNL_BANDWIDTH_INFORMATION;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #endif // _NLDEF_

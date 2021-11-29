@@ -411,8 +411,9 @@ typedef VARIANT_BOOL OLE_ENABLEDEFAULTBOOL;
 /////////////////////////////////////////////////////////////////////////////
 // Self-registration APIs (to be implemented by server DLL)
 
+__control_entrypoint(DllExport)
 STDAPI DllRegisterServer(void);
-
+__control_entrypoint(DllExport)
 STDAPI DllUnregisterServer(void);
 
 

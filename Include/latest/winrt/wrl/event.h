@@ -236,13 +236,13 @@ template<typename TDelegateInterface, typename ...TArgs>
 class DelegateArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArgs...)>
 {
     template<typename TDelegateInterface, typename TCallback, DelegateCheckMode checkMode, typename... TArgs>
-    struct DelegateInvokeHelper WrlFinal : public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>, RemoveReference<TCallback>::Type
+    struct DelegateInvokeHelper WrlSealed : public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>, RemoveReference<TCallback>::Type
     {
-        DelegateInvokeHelper(TCallback&& callback) throw() : RemoveReference<TCallback>::Type(Details::Forward<TCallback>(callback)) {}
+        DelegateInvokeHelper(TCallback&& callback) throw() : RemoveReference<TCallback>::Type(Forward<TCallback>(callback)) {}
 
         HRESULT STDMETHODCALLTYPE Invoke(TArgs... args) throw() override
         {
-            return DelegateTraits<checkMode>::CheckReturn((*this)(Details::Forward<TArgs>(args)...));
+            return DelegateTraits<checkMode>::CheckReturn((*this)(Forward<TArgs>(args)...));
         }
     };
 
@@ -288,13 +288,13 @@ HRESULT CreateAgileHelper(_In_ TDelegateInterface* delegateInterface, _COM_Outpt
 
     using DelegateHelper = DelegateArgTraitsHelper<TDelegateInterface>;
 
-    auto callback = DelegateHelper::Traits::template Callback<Implements<RuntimeClassFlags<ClassicCom>, TDelegateInterface, FtmBase>, typename DelegateHelper::Interface>(
+    auto callback = typename DelegateHelper::Traits::template Callback<Implements<RuntimeClassFlags<ClassicCom>, TDelegateInterface, FtmBase>, typename DelegateHelper::Interface>(
         [delegateAsAgile = Move(delegateAsAgile)](auto&&... args)
     { 
         ComPtr<TDelegateInterface> localDelegate;
         HRESULT hr = delegateAsAgile.CopyTo(localDelegate.GetAddressOf());
         if (FAILED(hr)) return hr;
-        return localDelegate->Invoke(Details::Forward<decltype(args)>(args)...);
+        return localDelegate->Invoke(Forward<decltype(args)>(args)...);
     });
 
     if (!callback) return E_OUTOFMEMORY;
@@ -313,7 +313,7 @@ template<typename TDelegateInterface, typename TLambda>
 ComPtr<typename Details::DelegateArgTraitsHelper<TDelegateInterface>::Interface> Callback(TLambda&& callback) throw()
 {
     using DelegateHelper = Details::DelegateArgTraitsHelper<TDelegateInterface>;
-    return DelegateHelper::Traits::template Callback<TDelegateInterface, typename DelegateHelper::Interface>(Details::Forward<TLambda>(callback));
+    return DelegateHelper::Traits::Callback<TDelegateInterface, DelegateHelper::Interface>(Details::Forward<TLambda>(callback));
 }
 
 // Construct a COM/WinRT delegate, an object with an Invoke() method, from a raw function.
@@ -321,7 +321,7 @@ template<typename TDelegateInterface, typename TFunc>
 ComPtr<typename Details::DelegateArgTraitsHelper<TDelegateInterface>::Interface> Callback(_In_ TFunc* callback) throw()
 {
     using DelegateHelper = Details::DelegateArgTraitsHelper<TDelegateInterface>;
-    return DelegateHelper::Traits::template Callback<TDelegateInterface, typename DelegateHelper::Interface>(
+    return DelegateHelper::Traits::Callback<TDelegateInterface, DelegateHelper::Interface>(
         [=](auto&& ...args)
     {
         return callback(Details::Forward<decltype(args)>(args)...);
@@ -427,7 +427,7 @@ HRESULT WeakReferenceCallback(_In_ T* targetObject, HRESULT (T::*targetMethod)(T
 
 // The explicit overload is required here to support template argument deduction of the callback interface type.
 template<typename T, typename TDelegateInterface, typename ...TArgs>
-HRESULT WeakReferenceCallback(_In_ T* targetObject, HRESULT(T::*targetMethod)(TArgs... args), ::Microsoft::WRL::Details::ComPtrRef< ::Microsoft::WRL::ComPtr<TDelegateInterface>> callback)
+HRESULT WeakReferenceCallback(_In_ T* targetObject, HRESULT(T::*targetMethod)(TArgs... args), _Outptr_result_nullonfailure_ ::Microsoft::WRL::Details::ComPtrRef< ::Microsoft::WRL::ComPtr<TDelegateInterface>> callback)
 {
     return WeakReferenceCallback(targetObject, targetMethod, static_cast<TDelegateInterface**>(callback));
 }
@@ -438,7 +438,7 @@ namespace Details
 // EventTargetArray is used to keep array of event targets. This array is fixed-length.
 // Every time element is added/removed from array EventSource allocate new array. This array
 // is optimize-for-invoke lock strategy in EventSource
-class EventTargetArray WrlFinal : public ::Microsoft::WRL::RuntimeClass< ::Microsoft::WRL::RuntimeClassFlags<ClassicCom>, IUnknown >
+class EventTargetArray WrlSealed : public ::Microsoft::WRL::RuntimeClass< ::Microsoft::WRL::RuntimeClassFlags<ClassicCom>, IUnknown >
 {
     public:
         EventTargetArray() throw() : begin_(nullptr), end_(nullptr), bucketAssists_(nullptr)

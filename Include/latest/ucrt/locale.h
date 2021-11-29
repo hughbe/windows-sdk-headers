@@ -6,14 +6,9 @@
 // The C locale library.
 //
 #pragma once
-#ifndef _INC_LOCALE // include guard for 3rd party interop
 #define _INC_LOCALE
 
 #include <corecrt.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -93,7 +88,7 @@ struct tm;
         _In_ int _Flag
         );
 
-    _Check_return_opt_ _Success_(return != 0) _Ret_z_
+    _Check_return_opt_
     _ACRTIMP char* __cdecl setlocale(
         _In_       int         _Category,
         _In_opt_z_ char const* _Locale
@@ -116,7 +111,7 @@ struct tm;
         );
 
     // Also declared in <wchar.h>
-    _Check_return_opt_ _Success_(return != 0) _Ret_z_
+    _Check_return_opt_
     _ACRTIMP wchar_t* __cdecl _wsetlocale(
         _In_       int            _Category,
         _In_opt_z_ wchar_t const* _Locale
@@ -179,6 +174,3 @@ struct tm;
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_LOCALE

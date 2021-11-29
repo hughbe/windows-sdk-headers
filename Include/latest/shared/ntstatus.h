@@ -120,7 +120,6 @@ Notes:
 #define FACILITY_FVE_ERROR_CODE          0x21
 #define FACILITY_FWP_ERROR_CODE          0x22
 #define FACILITY_NDIS_ERROR_CODE         0x23
-#define FACILITY_QUIC_ERROR_CODE         0x24
 #define FACILITY_TPM                     0x29
 #define FACILITY_RTPM                    0x2A
 #define FACILITY_HYPERVISOR              0x35
@@ -140,15 +139,13 @@ Notes:
 #define FACILITY_SDBUS                   0x51
 #define FACILITY_SHARED_VHDX             0x5C
 #define FACILITY_SMB                     0x5D
-#define FACILITY_XVS                     0x5E
 #define FACILITY_INTERIX                 0x99
 #define FACILITY_SPACES                  0xE7
 #define FACILITY_SECURITY_CORE           0xE8
 #define FACILITY_SYSTEM_INTEGRITY        0xE9
 #define FACILITY_LICENSING               0xEA
 #define FACILITY_PLATFORM_MANIFEST       0xEB
-#define FACILITY_APP_EXEC                0xEC
-#define FACILITY_MAXIMUM_VALUE           0xED
+#define FACILITY_MAXIMUM_VALUE           0xEC
 
 
 //
@@ -627,15 +624,6 @@ Notes:
 // At least a portion of IO range intersects with a ghosted file range.
 //
 #define STATUS_GHOSTED                   ((NTSTATUS)0x0000012FL)
-
-//
-// MessageId: STATUS_DATA_OVERWRITTEN
-//
-// MessageText:
-//
-// A completed operation may have overwritten previous data.
-//
-#define STATUS_DATA_OVERWRITTEN          ((NTSTATUS)0x00000130L)
 
 //
 // MessageId: STATUS_RESOURCEMANAGER_READ_ONLY
@@ -1286,15 +1274,6 @@ Notes:
 #define STATUS_IMAGE_AT_DIFFERENT_BASE   ((NTSTATUS)0x40000036L)
 
 //
-// MessageId: STATUS_PATCH_DEFERRED
-//
-// MessageText:
-//
-// A system patch was successfully loaded but is not applicable to any currently loaded images.
-//
-#define STATUS_PATCH_DEFERRED            ((NTSTATUS)0x40000037L)
-
-//
 // MessageId: DBG_REPLY_LATER
 //
 // MessageText:
@@ -1866,15 +1845,6 @@ Notes:
 #define STATUS_NO_WORK_DONE              ((NTSTATUS)0x80000032L)
 
 //
-// MessageId: STATUS_RETURN_ADDRESS_HIJACK_ATTEMPT
-//
-// MessageText:
-//
-// A return address hijack is being attempted. This is supported by the operating system when user-mode shadow stacks are enabled.
-//
-#define STATUS_RETURN_ADDRESS_HIJACK_ATTEMPT ((NTSTATUS)0x80000033L)
-
-//
 // MessageId: DBG_EXCEPTION_NOT_HANDLED
 //
 // MessageText:
@@ -1958,7 +1928,7 @@ Notes:
 
 /*++
 
- MessageId's 0xcf00 - 0xcfff (inclusive) are for Cloud Files specific warning messages.
+ MessageId's 0xcf00 - 0xcfff (inclusive) are for Cloud Files specific messages.
 
 --*/
 //
@@ -1972,7 +1942,7 @@ Notes:
 
 /*++
 
- End of Cloud Files specific warning messages.
+ End of Cloud Files specific messages.
 
 --*/
 /////////////////////////////////////////////////////////////////////////
@@ -5940,33 +5910,6 @@ Notes:
 // The specified CPU Set IDs are invalid.
 //
 #define STATUS_CPU_SET_INVALID           ((NTSTATUS)0xC00001AFL)
-
-//
-// MessageId: STATUS_IO_DEVICE_INVALID_DATA
-//
-// MessageText:
-//
-// The device reported an invalid data error.
-//
-#define STATUS_IO_DEVICE_INVALID_DATA    ((NTSTATUS)0xC00001B0L)
-
-//
-// MessageId: STATUS_IO_UNALIGNED_WRITE
-//
-// MessageText:
-//
-// The device reported an unaligned write error.
-//
-#define STATUS_IO_UNALIGNED_WRITE        ((NTSTATUS)0xC00001B1L)
-
-//
-// MessageId: STATUS_CONTROL_STACK_VIOLATION
-//
-// MessageText:
-//
-// An invalid address was found on the control flow stack.
-//
-#define STATUS_CONTROL_STACK_VIOLATION   ((NTSTATUS)0xC00001B2L)    //winnt
 
 //
 //  Available range of NTSTATUS codes
@@ -9952,13 +9895,13 @@ Notes:
 #define STATUS_STORAGE_LOST_DATA_PERSISTENCE ((NTSTATUS)0xC000049EL)
 
 //
-// MessageId: STATUS_VRF_CFG_AND_IO_ENABLED
+// MessageId: STATUS_VRF_CFG_ENABLED
 //
 // MessageText:
 //
-// Driver Verifier Volatile settings cannot be set when CFG and IO are enabled.
+// Driver Verifier Volatile settings cannot be set when CFG is enabled.
 //
-#define STATUS_VRF_CFG_AND_IO_ENABLED    ((NTSTATUS)0xC000049FL)
+#define STATUS_VRF_CFG_ENABLED           ((NTSTATUS)0xC000049FL)
 
 //
 // MessageId: STATUS_PARTITION_TERMINATING
@@ -9977,231 +9920,6 @@ Notes:
 // An externally encrypted syskey has been configured, but the system no longer supports this feature.  Please see https://go.microsoft.com/fwlink/?linkid=851152 for more information.
 //
 #define STATUS_EXTERNAL_SYSKEY_NOT_SUPPORTED ((NTSTATUS)0xC00004A1L)
-
-//
-// MessageId: STATUS_ENCLAVE_VIOLATION
-//
-// MessageText:
-//
-// An attempt was made to access protected memory in violation of its secure access policy.
-//
-#define STATUS_ENCLAVE_VIOLATION         ((NTSTATUS)0xC00004A2L)    // winnt
-
-//
-// MessageId: STATUS_FILE_PROTECTED_UNDER_DPL
-//
-// MessageText:
-//
-// The read or write operation to an encrypted file could not be completed because the file can only be accessed when the device is unlocked.
-//
-#define STATUS_FILE_PROTECTED_UNDER_DPL  ((NTSTATUS)0xC00004A3L)
-
-//
-// MessageId: STATUS_VOLUME_NOT_CLUSTER_ALIGNED
-//
-// MessageText:
-//
-// The volume is not cluster aligned on the disk.
-//
-#define STATUS_VOLUME_NOT_CLUSTER_ALIGNED ((NTSTATUS)0xC00004A4L)
-
-//
-// MessageId: STATUS_NO_PHYSICALLY_ALIGNED_FREE_SPACE_FOUND
-//
-// MessageText:
-//
-// No physically aligned free space was found on the volume.
-//
-#define STATUS_NO_PHYSICALLY_ALIGNED_FREE_SPACE_FOUND ((NTSTATUS)0xC00004A5L)
-
-//
-// MessageId: STATUS_APPX_FILE_NOT_ENCRYPTED
-//
-// MessageText:
-//
-// The APPX file can not be accessed because it is not encrypted as expected.
-//
-#define STATUS_APPX_FILE_NOT_ENCRYPTED   ((NTSTATUS)0xC00004A6L)
-
-//
-// MessageId: STATUS_RWRAW_ENCRYPTED_FILE_NOT_ENCRYPTED
-//
-// MessageText:
-//
-// A read or write of raw encrypted data cannot be performed because the file is not encrypted.
-//
-#define STATUS_RWRAW_ENCRYPTED_FILE_NOT_ENCRYPTED ((NTSTATUS)0xC00004A7L)
-
-//
-// MessageId: STATUS_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILEOFFSET
-//
-// MessageText:
-//
-// An invalid file offset in the encrypted data info block was passed for read or write operation of file's raw encrypted data.
-//
-#define STATUS_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILEOFFSET ((NTSTATUS)0xC00004A8L)
-
-//
-// MessageId: STATUS_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILERANGE
-//
-// MessageText:
-//
-// An invalid offset and length combination in the encrypted data info was passed for read or write operation of file's raw encrypted data.
-//
-#define STATUS_RWRAW_ENCRYPTED_INVALID_EDATAINFO_FILERANGE ((NTSTATUS)0xC00004A9L)
-
-//
-// MessageId: STATUS_RWRAW_ENCRYPTED_INVALID_EDATAINFO_PARAMETER
-//
-// MessageText:
-//
-// An invalid parameter in the encrypted data info was passed for read or write operation of file's raw encrypted data.
-//
-#define STATUS_RWRAW_ENCRYPTED_INVALID_EDATAINFO_PARAMETER ((NTSTATUS)0xC00004AAL)
-
-//
-// MessageId: STATUS_FT_READ_FAILURE
-//
-// MessageText:
-//
-// The specified data could not be read from any of the copies.
-//
-#define STATUS_FT_READ_FAILURE           ((NTSTATUS)0xC00004ABL)
-
-//
-// MessageId: STATUS_PATCH_CONFLICT
-//
-// MessageText:
-//
-// A system patch could not be applied due to conflicting accesses to the system image.
-//
-#define STATUS_PATCH_CONFLICT            ((NTSTATUS)0xC00004ACL)
-
-//
-// MessageId: STATUS_STORAGE_RESERVE_ID_INVALID
-//
-// MessageText:
-//
-// The specified storage reserve ID is invalid.
-//
-#define STATUS_STORAGE_RESERVE_ID_INVALID ((NTSTATUS)0xC00004ADL)
-
-//
-// MessageId: STATUS_STORAGE_RESERVE_DOES_NOT_EXIST
-//
-// MessageText:
-//
-// The specified storage reserve does not exist.
-//
-#define STATUS_STORAGE_RESERVE_DOES_NOT_EXIST ((NTSTATUS)0xC00004AEL)
-
-//
-// MessageId: STATUS_STORAGE_RESERVE_ALREADY_EXISTS
-//
-// MessageText:
-//
-// The specified storage reserve already exists.
-//
-#define STATUS_STORAGE_RESERVE_ALREADY_EXISTS ((NTSTATUS)0xC00004AFL)
-
-//
-// MessageId: STATUS_STORAGE_RESERVE_NOT_EMPTY
-//
-// MessageText:
-//
-// The specified storage reserve is not empty.
-//
-#define STATUS_STORAGE_RESERVE_NOT_EMPTY ((NTSTATUS)0xC00004B0L)
-
-//
-// MessageId: STATUS_NOT_A_DAX_VOLUME
-//
-// MessageText:
-//
-// This operation requires a DAX volume.
-//
-#define STATUS_NOT_A_DAX_VOLUME          ((NTSTATUS)0xC00004B1L)
-
-//
-// MessageId: STATUS_NOT_DAX_MAPPABLE
-//
-// MessageText:
-//
-// This stream is not DAX mappable.
-//
-#define STATUS_NOT_DAX_MAPPABLE          ((NTSTATUS)0xC00004B2L)
-
-//
-// MessageId: STATUS_CASE_DIFFERING_NAMES_IN_DIR
-//
-// MessageText:
-//
-// This directory contains entries whose names differ only in case.
-//
-#define STATUS_CASE_DIFFERING_NAMES_IN_DIR ((NTSTATUS)0xC00004B3L)
-
-//
-// MessageId: STATUS_FILE_NOT_SUPPORTED
-//
-// MessageText:
-//
-// The file cannot be safely opened because it is not supported by this version of Windows.
-//
-#define STATUS_FILE_NOT_SUPPORTED        ((NTSTATUS)0xC00004B4L)
-
-//
-// MessageId: STATUS_NOT_SUPPORTED_WITH_BTT
-//
-// MessageText:
-//
-// This operation is not supported with BTT enabled.
-//
-#define STATUS_NOT_SUPPORTED_WITH_BTT    ((NTSTATUS)0xC00004B5L)
-
-//
-// MessageId: STATUS_ENCRYPTION_DISABLED
-//
-// MessageText:
-//
-// This operation cannot be performed because encryption is currently disabled.
-//
-#define STATUS_ENCRYPTION_DISABLED       ((NTSTATUS)0xC00004B6L)
-
-//
-// MessageId: STATUS_ENCRYPTING_METADATA_DISALLOWED
-//
-// MessageText:
-//
-// This encryption operation cannot be performed on filesystem metadata.
-//
-#define STATUS_ENCRYPTING_METADATA_DISALLOWED ((NTSTATUS)0xC00004B7L)
-
-//
-// MessageId: STATUS_CANT_CLEAR_ENCRYPTION_FLAG
-//
-// MessageText:
-//
-// Encryption cannot be cleared on this file/directory because it still has an encrypted attribute.
-//
-#define STATUS_CANT_CLEAR_ENCRYPTION_FLAG ((NTSTATUS)0xC00004B8L)
-
-//
-// MessageId: STATUS_UNSATISFIED_DEPENDENCIES
-//
-// MessageText:
-//
-// The operation could not be completed due to one or more unsatisfied dependencies.
-//
-#define STATUS_UNSATISFIED_DEPENDENCIES  ((NTSTATUS)0xC00004B9L)
-
-//
-// MessageId: STATUS_CASE_SENSITIVE_PATH
-//
-// MessageText:
-//
-// The file cannot be opened because the path has a case-sensitive directory.
-//
-#define STATUS_CASE_SENSITIVE_PATH       ((NTSTATUS)0xC00004BAL)
 
 
 //     **** New SYSTEM error codes can be inserted here ****
@@ -10396,24 +10114,6 @@ Notes:
 //
 #define STATUS_SMR_GARBAGE_COLLECTION_REQUIRED ((NTSTATUS)0xC0000514L)
 
-//
-// MessageId: STATUS_INTERRUPTED
-//
-// MessageText:
-//
-// Execution of the thread was interrupted.
-//
-#define STATUS_INTERRUPTED               ((NTSTATUS)0xC0000515L)    // winnt
-
-//
-// MessageId: STATUS_THREAD_NOT_RUNNING
-//
-// MessageText:
-//
-// The target thread is not currently running.
-//
-#define STATUS_THREAD_NOT_RUNNING        ((NTSTATUS)0xC0000516L)    // winnt
-
 
 //     **** New SYSTEM error codes can be inserted here ****
 
@@ -10531,7 +10231,7 @@ Notes:
 //
 // MessageText:
 //
-// No receive buffer has been supplied in a synchronous request.
+// No receive buffer has been supplied in a synchrounus request.
 //
 #define STATUS_LPC_RECEIVE_BUFFER_EXPECTED ((NTSTATUS)0xC0000705L)
 
@@ -10706,7 +10406,7 @@ Notes:
 //
 // The provided callback is already registered.
 //
-#define STATUS_ALREADY_REGISTERED        ((NTSTATUS)0xC0000718L)    //winnt
+#define STATUS_ALREADY_REGISTERED        ((NTSTATUS)0xC0000718L)
 
 //
 // MessageId: STATUS_CONTEXT_MISMATCH
@@ -11205,15 +10905,6 @@ Notes:
 //
 #define STATUS_EOF_ON_GHOSTED_RANGE      ((NTSTATUS)0xC000A007L)
 
-//
-// MessageId: STATUS_CC_NEEDS_CALLBACK_SECTION_DRAIN
-//
-// MessageText:
-//
-// Filesystem needs to release all the file resources and callback into Cc to drain pending section deletions, before retrying the operation.
-//
-#define STATUS_CC_NEEDS_CALLBACK_SECTION_DRAIN ((NTSTATUS)0xC000A008L)
-
 /*++
 
  MessageId's 0xa010 - 0xa07f (inclusive) are reserved for TCPIP errors.
@@ -11434,7 +11125,7 @@ Notes:
 //
 // MessageText:
 //
-// The requested operation is not supported for the specified handle.
+// The requested operation is not suppported for the specified handle.
 //
 #define STATUS_GPIO_OPERATION_DENIED     ((NTSTATUS)0xC000A125L)
 
@@ -11559,15 +11250,6 @@ Notes:
 //
 #define STATUS_LPAC_ACCESS_DENIED        ((NTSTATUS)0xC000A203L)
 
-//
-// MessageId: STATUS_ADMINLESS_ACCESS_DENIED
-//
-// MessageText:
-//
-// Access to the specified resource has been denied for an adminless system.
-//
-#define STATUS_ADMINLESS_ACCESS_DENIED   ((NTSTATUS)0xC000A204L)
-
 /*++
 
  MessageId's 0xa281 - 0xa2a0 (inclusive) are reserved for Fast Cache specific messages.
@@ -11620,7 +11302,7 @@ Notes:
 
 /*++
 
- MessageId's 0xa2a1 - 0xa2dc (inclusive) are for File System specific messages.
+ MessageId's 0xa2a1 - 0xa300 (inclusive) are for File System Filters Supported Features specific messages.
 
 --*/
 //
@@ -11659,52 +11341,6 @@ Notes:
 //
 #define STATUS_OFFLOAD_WRITE_FILE_NOT_SUPPORTED ((NTSTATUS)0xC000A2A4L)
 
-//
-// MessageId: STATUS_WOF_WIM_HEADER_CORRUPT
-//
-// MessageText:
-//
-// The WOF driver encountered a corruption in WIM image's Header.
-//
-#define STATUS_WOF_WIM_HEADER_CORRUPT    ((NTSTATUS)0xC000A2A5L)
-
-//
-// MessageId: STATUS_WOF_WIM_RESOURCE_TABLE_CORRUPT
-//
-// MessageText:
-//
-// The WOF driver encountered a corruption in WIM image's Resource Table.
-//
-#define STATUS_WOF_WIM_RESOURCE_TABLE_CORRUPT ((NTSTATUS)0xC000A2A6L)
-
-//
-// MessageId: STATUS_WOF_FILE_RESOURCE_TABLE_CORRUPT
-//
-// MessageText:
-//
-// The WOF driver encountered a corruption in the compressed file's Resource Table.
-//
-#define STATUS_WOF_FILE_RESOURCE_TABLE_CORRUPT ((NTSTATUS)0xC000A2A7L)
-
-/*++
-
- MessageId's 0xc000 - 0xc0ff (inclusive) are for CimFS specific messages.
-
---*/
-//
-// MessageId: STATUS_CIMFS_IMAGE_CORRUPT
-//
-// MessageText:
-//
-// The CimFS image is corrupted.
-//
-#define STATUS_CIMFS_IMAGE_CORRUPT       ((NTSTATUS)0xC000C001L)
-
-/*++
-
- End of CimFS specific messages.
-
---*/
 /*++
 
  MessageId's 0xce00 - 0xceff (inclusive) are for File System virtualization specific messages.
@@ -11846,7 +11482,7 @@ Notes:
 //
 // MessageText:
 //
-// The cloud sync root is already connected with another cloud sync provider.
+// The cloud sync root is already connected with another cloud sync engine.
 //
 #define STATUS_CLOUD_FILE_ALREADY_CONNECTED ((NTSTATUS)0xC000CF09L)
 
@@ -11855,7 +11491,7 @@ Notes:
 //
 // MessageText:
 //
-// The operation is not supported by the cloud sync provider.
+// The operation is not supported by the cloud sync engine.
 //
 #define STATUS_CLOUD_FILE_NOT_SUPPORTED  ((NTSTATUS)0xC000CF0AL)
 
@@ -11882,7 +11518,7 @@ Notes:
 //
 // MessageText:
 //
-// The operation is reserved for a connected cloud sync provider.
+// The operation is reserved for a connected cloud sync engine.
 //
 #define STATUS_CLOUD_FILE_CONNECTED_PROVIDER_ONLY ((NTSTATUS)0xC000CF0DL)
 
@@ -11891,7 +11527,7 @@ Notes:
 //
 // MessageText:
 //
-// The cloud sync provider failed to validate the downloaded data.
+// The cloud sync engine failed to validate the downloaded data.
 //
 #define STATUS_CLOUD_FILE_VALIDATION_FAILED ((NTSTATUS)0xC000CF0EL)
 
@@ -11900,7 +11536,7 @@ Notes:
 //
 // MessageText:
 //
-// The cloud sync provider failed user authentication.
+// The cloud sync engine failed user authentication.
 //
 #define STATUS_CLOUD_FILE_AUTHENTICATION_FAILED ((NTSTATUS)0xC000CF0FL)
 
@@ -11909,7 +11545,7 @@ Notes:
 //
 // MessageText:
 //
-// The cloud sync provider failed to perform the operation due to low system resources.
+// The cloud sync engine failed to perform the operation due to low system resources.
 //
 #define STATUS_CLOUD_FILE_INSUFFICIENT_RESOURCES ((NTSTATUS)0xC000CF10L)
 
@@ -11918,7 +11554,7 @@ Notes:
 //
 // MessageText:
 //
-// The cloud sync provider failed to perform the operation due to network being unavailable.
+// The cloud sync engine failed to perform the operation due to network being unavailable.
 //
 #define STATUS_CLOUD_FILE_NETWORK_UNAVAILABLE ((NTSTATUS)0xC000CF11L)
 
@@ -12012,109 +11648,9 @@ Notes:
 //
 #define STATUS_CLOUD_FILE_REQUEST_CANCELED ((NTSTATUS)0xC000CF1BL)
 
-//
-// MessageId: STATUS_CLOUD_FILE_PROVIDER_TERMINATED
-//
-// MessageText:
-//
-// The cloud file provider exited unexpectedly.
-//
-#define STATUS_CLOUD_FILE_PROVIDER_TERMINATED ((NTSTATUS)0xC000CF1DL)
-
-//
-// MessageId: STATUS_NOT_A_CLOUD_SYNC_ROOT
-//
-// MessageText:
-//
-// The file is not a cloud sync root.
-//
-#define STATUS_NOT_A_CLOUD_SYNC_ROOT     ((NTSTATUS)0xC000CF1EL)
-
-//
-// MessageId: STATUS_CLOUD_FILE_REQUEST_TIMEOUT
-//
-// MessageText:
-//
-// The cloud operation was not completed before the time-out period expired.
-//
-#define STATUS_CLOUD_FILE_REQUEST_TIMEOUT ((NTSTATUS)0xC000CF1FL)
-
-//
-// MessageId: STATUS_CLOUD_FILE_DEHYDRATION_DISALLOWED
-//
-// MessageText:
-//
-// Dehydration of the cloud file is disallowed by the cloud sync provider.
-//
-#define STATUS_CLOUD_FILE_DEHYDRATION_DISALLOWED ((NTSTATUS)0xC000CF20L)
-
 /*++
 
  End of Cloud Files specific messages.
-
---*/
-/*++
-
- MessageId's 0xf500 - 0xf5ff (inclusive) are for File Snap specific messages.
-
---*/
-//
-// MessageId: STATUS_FILE_SNAP_IN_PROGRESS
-//
-// MessageText:
-//
-// A file snapshot operation was attempted when one is already in progress.
-//
-#define STATUS_FILE_SNAP_IN_PROGRESS     ((NTSTATUS)0xC000F500L)
-
-//
-// MessageId: STATUS_FILE_SNAP_USER_SECTION_NOT_SUPPORTED
-//
-// MessageText:
-//
-// A snapshot of the file cannot be taken because a user-mapped section is present.
-//
-#define STATUS_FILE_SNAP_USER_SECTION_NOT_SUPPORTED ((NTSTATUS)0xC000F501L)
-
-//
-// MessageId: STATUS_FILE_SNAP_MODIFY_NOT_SUPPORTED
-//
-// MessageText:
-//
-// The file snapshot operation was terminated because one of the files was modified in a way incompatible with a snapshot operation.  Please try again.
-//
-#define STATUS_FILE_SNAP_MODIFY_NOT_SUPPORTED ((NTSTATUS)0xC000F502L)
-
-//
-// MessageId: STATUS_FILE_SNAP_IO_NOT_COORDINATED
-//
-// MessageText:
-//
-// An I/O request could not be coordinated with a file snapshot operation.
-//
-#define STATUS_FILE_SNAP_IO_NOT_COORDINATED ((NTSTATUS)0xC000F503L)
-
-//
-// MessageId: STATUS_FILE_SNAP_UNEXPECTED_ERROR
-//
-// MessageText:
-//
-// An unexpected error occurred while processing a file snapshot operation.
-//
-#define STATUS_FILE_SNAP_UNEXPECTED_ERROR ((NTSTATUS)0xC000F504L)
-
-//
-// MessageId: STATUS_FILE_SNAP_INVALID_PARAMETER
-//
-// MessageText:
-//
-// A file snapshot operation received an invalid parameter.
-//
-#define STATUS_FILE_SNAP_INVALID_PARAMETER ((NTSTATUS)0xC000F505L)
-
-/*++
-
- End of File Snap specific messages.
 
 --*/
 
@@ -14178,7 +13714,7 @@ Notes:
 //
 // MessageText:
 //
-// The specified context is already attached to another object
+// The specifiec context is already attached to another object
 //
 #define STATUS_FLT_CONTEXT_ALREADY_LINKED ((NTSTATUS)0xC01C001CL)
 
@@ -14893,7 +14429,7 @@ Notes:
 //
 // MessageText:
 //
-// Cluster CAM has detected that someone is trying to replay ticket.
+// Cluster CAM has detected that somone is trying to reply ticket.
 //
 #define STATUS_CLUSTER_CAM_TICKET_REPLAY_DETECTED ((NTSTATUS)0xC0130031L)
 
@@ -15447,7 +14983,7 @@ Notes:
 //
 // MessageText:
 //
-// The transactional resource manager had too many transactions outstanding that could not be aborted. The transactional resource manger has been shut down.
+// The transactional resource manager had too many tranactions outstanding that could not be aborted. The transactional resource manger has been shut down.
 //
 #define STATUS_CANNOT_ABORT_TRANSACTIONS ((NTSTATUS)0xC019004DL)
 
@@ -16283,7 +15819,7 @@ Notes:
 //
 // MessageText:
 //
-// Not able to present with color conversion
+// Not able to present with color convertion
 //
 #define STATUS_GRAPHICS_CANNOTCOLORCONVERT ((NTSTATUS)0xC01E0008L)
 
@@ -16301,7 +15837,7 @@ Notes:
 //
 // MessageText:
 //
-// Specified buffer is not big enough to contain entire requested dataset. Partial data populated up to the size of the buffer. Caller needs to provide buffer of size as specified in the partially populated buffer's content (interface specific).
+// Specified buffer is not big enough to contain entire requested dataset. Partial data populated upto the size of the buffer. Caller needs to provide buffer of size as specified in the partially populated buffer's content (interface specific).
 //
 #define STATUS_GRAPHICS_PARTIAL_DATA_POPULATED ((NTSTATUS)0x401E000AL)
 
@@ -16340,51 +15876,6 @@ Notes:
 // Windowless present is disabled (desktop windowing management subsystem is off).
 //
 #define STATUS_GRAPHICS_WINDOWLESS_PRESENT_DISABLED ((NTSTATUS)0xC01E000EL)
-
-//
-// MessageId: STATUS_GRAPHICS_PRESENT_INVALID_WINDOW
-//
-// MessageText:
-//
-// Window handle is invalid
-//
-#define STATUS_GRAPHICS_PRESENT_INVALID_WINDOW ((NTSTATUS)0xC01E000FL)
-
-//
-// MessageId: STATUS_GRAPHICS_PRESENT_BUFFER_NOT_BOUND
-//
-// MessageText:
-//
-// No buffer is bound to composition surface
-//
-#define STATUS_GRAPHICS_PRESENT_BUFFER_NOT_BOUND ((NTSTATUS)0xC01E0010L)
-
-//
-// MessageId: STATUS_GRAPHICS_VAIL_STATE_CHANGED
-//
-// MessageText:
-//
-// Vail state has been changed
-//
-#define STATUS_GRAPHICS_VAIL_STATE_CHANGED ((NTSTATUS)0xC01E0011L)
-
-//
-// MessageId: STATUS_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN
-//
-// MessageText:
-//
-// Notifying indirect display UMDF class driver to abandon current swapchain.
-//
-#define STATUS_GRAPHICS_INDIRECT_DISPLAY_ABANDON_SWAPCHAIN ((NTSTATUS)0xC01E0012L)
-
-//
-// MessageId: STATUS_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED
-//
-// MessageText:
-//
-// Notifying indirect display UMDF class driver that indirect display device has been stopped.
-//
-#define STATUS_GRAPHICS_INDIRECT_DISPLAY_DEVICE_STOPPED ((NTSTATUS)0xC01E0013L)
 
 //
 //   Video Memory Manager (VidMM) specific status codes {0x0100..0x01ff}
@@ -19262,7 +18753,7 @@ Notes:
 //
 // MessageText:
 //
-// Network interface aborted the request.
+// Netowork interface aborted the request.
 //
 #define STATUS_NDIS_REQUEST_ABORTED      ((NTSTATUS)0xC023000CL)
 
@@ -19280,7 +18771,7 @@ Notes:
 //
 // MessageText:
 //
-// Network interface does not support this request.
+// Netword interface does not support this request.
 //
 #define STATUS_NDIS_NOT_SUPPORTED        ((NTSTATUS)0xC02300BBL)
 
@@ -19388,7 +18879,7 @@ Notes:
 //
 // MessageText:
 //
-// An attempt was made to map a file that is already mapped.
+// An attempt was made to map a file that is alreay mapped.
 //
 #define STATUS_NDIS_ALREADY_MAPPED       ((NTSTATUS)0xC023001DL)
 
@@ -19490,15 +18981,6 @@ Notes:
 // This operation requires the miniport adapter to be reinitialized.
 //
 #define STATUS_NDIS_REINIT_REQUIRED      ((NTSTATUS)0xC0230030L)
-
-//
-// MessageId: STATUS_NDIS_NO_QUEUES
-//
-// MessageText:
-//
-// There are not enough queues to complete the operation.
-//
-#define STATUS_NDIS_NO_QUEUES            ((NTSTATUS)0xC0230031L)
 
 
 //
@@ -19647,7 +19129,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Authentication failed.
+// Authentication failed.
 //
 #define STATUS_TPM_AUTHFAIL              ((NTSTATUS)0xC0290001L)
 
@@ -19656,7 +19138,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The index to a PCR, DIR or other register is incorrect.
+// The index to a PCR, DIR or other register is incorrect.
 //
 #define STATUS_TPM_BADINDEX              ((NTSTATUS)0xC0290002L)
 
@@ -19665,7 +19147,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: One or more parameter is bad.
+// One or more parameter is bad.
 //
 #define STATUS_TPM_BAD_PARAMETER         ((NTSTATUS)0xC0290003L)
 
@@ -19674,7 +19156,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: An operation completed successfully but the auditing of that operation failed.
+// An operation completed successfully but the auditing of that operation failed.
 //
 #define STATUS_TPM_AUDITFAILURE          ((NTSTATUS)0xC0290004L)
 
@@ -19683,7 +19165,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The clear disable flag is set and all clear operations now require physical access.
+// The clear disable flag is set and all clear operations now require physical access.
 //
 #define STATUS_TPM_CLEAR_DISABLED        ((NTSTATUS)0xC0290005L)
 
@@ -19692,7 +19174,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Activate the Trusted Platform Module (TPM).
+// Activate the Trusted Platform Module (TPM).
 //
 #define STATUS_TPM_DEACTIVATED           ((NTSTATUS)0xC0290006L)
 
@@ -19701,7 +19183,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Enable the Trusted Platform Module (TPM).
+// Enable the Trusted Platform Module (TPM).
 //
 #define STATUS_TPM_DISABLED              ((NTSTATUS)0xC0290007L)
 
@@ -19710,7 +19192,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The target command has been disabled.
+// The target command has been disabled.
 //
 #define STATUS_TPM_DISABLED_CMD          ((NTSTATUS)0xC0290008L)
 
@@ -19719,7 +19201,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The operation failed.
+// The operation failed.
 //
 #define STATUS_TPM_FAIL                  ((NTSTATUS)0xC0290009L)
 
@@ -19728,7 +19210,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The ordinal was unknown or inconsistent.
+// The ordinal was unknown or inconsistent.
 //
 #define STATUS_TPM_BAD_ORDINAL           ((NTSTATUS)0xC029000AL)
 
@@ -19737,7 +19219,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The ability to install an owner is disabled.
+// The ability to install an owner is disabled.
 //
 #define STATUS_TPM_INSTALL_DISABLED      ((NTSTATUS)0xC029000BL)
 
@@ -19746,7 +19228,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The key handle cannot be interpreted.
+// The key handle cannot be interpreted.
 //
 #define STATUS_TPM_INVALID_KEYHANDLE     ((NTSTATUS)0xC029000CL)
 
@@ -19755,7 +19237,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The key handle points to an invalid key.
+// The key handle points to an invalid key.
 //
 #define STATUS_TPM_KEYNOTFOUND           ((NTSTATUS)0xC029000DL)
 
@@ -19764,7 +19246,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Unacceptable encryption scheme.
+// Unacceptable encryption scheme.
 //
 #define STATUS_TPM_INAPPROPRIATE_ENC     ((NTSTATUS)0xC029000EL)
 
@@ -19773,7 +19255,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Migration authorization failed.
+// Migration authorization failed.
 //
 #define STATUS_TPM_MIGRATEFAIL           ((NTSTATUS)0xC029000FL)
 
@@ -19782,7 +19264,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: PCR information could not be interpreted.
+// PCR information could not be interpreted.
 //
 #define STATUS_TPM_INVALID_PCR_INFO      ((NTSTATUS)0xC0290010L)
 
@@ -19791,7 +19273,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: No room to load key.
+// No room to load key.
 //
 #define STATUS_TPM_NOSPACE               ((NTSTATUS)0xC0290011L)
 
@@ -19800,7 +19282,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: There is no Storage Root Key (SRK) set.
+// There is no Storage Root Key (SRK) set.
 //
 #define STATUS_TPM_NOSRK                 ((NTSTATUS)0xC0290012L)
 
@@ -19809,7 +19291,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: An encrypted blob is invalid or was not created by this TPM.
+// An encrypted blob is invalid or was not created by this TPM.
 //
 #define STATUS_TPM_NOTSEALED_BLOB        ((NTSTATUS)0xC0290013L)
 
@@ -19818,7 +19300,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The Trusted Platform Module (TPM) already has an owner.
+// The Trusted Platform Module (TPM) already has an owner.
 //
 #define STATUS_TPM_OWNER_SET             ((NTSTATUS)0xC0290014L)
 
@@ -19827,7 +19309,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The TPM has insufficient internal resources to perform the requested action.
+// The TPM has insufficient internal resources to perform the requested action.
 //
 #define STATUS_TPM_RESOURCES             ((NTSTATUS)0xC0290015L)
 
@@ -19836,7 +19318,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: A random string was too short.
+// A random string was too short.
 //
 #define STATUS_TPM_SHORTRANDOM           ((NTSTATUS)0xC0290016L)
 
@@ -19845,7 +19327,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The TPM does not have the space to perform the operation.
+// The TPM does not have the space to perform the operation.
 //
 #define STATUS_TPM_SIZE                  ((NTSTATUS)0xC0290017L)
 
@@ -19854,7 +19336,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The named PCR value does not match the current PCR value.
+// The named PCR value does not match the current PCR value.
 //
 #define STATUS_TPM_WRONGPCRVAL           ((NTSTATUS)0xC0290018L)
 
@@ -19863,7 +19345,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The paramSize argument to the command has the incorrect value .
+// The paramSize argument to the command has the incorrect value .
 //
 #define STATUS_TPM_BAD_PARAM_SIZE        ((NTSTATUS)0xC0290019L)
 
@@ -19872,7 +19354,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: There is no existing SHA-1 thread.
+// There is no existing SHA-1 thread.
 //
 #define STATUS_TPM_SHA_THREAD            ((NTSTATUS)0xC029001AL)
 
@@ -19881,7 +19363,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The calculation is unable to proceed because the existing SHA-1 thread has already encountered an error.
+// The calculation is unable to proceed because the existing SHA-1 thread has already encountered an error.
 //
 #define STATUS_TPM_SHA_ERROR             ((NTSTATUS)0xC029001BL)
 
@@ -19890,7 +19372,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The TPM hardware device reported a failure during its internal self test. Try restarting the computer to resolve the problem. If the problem continues, you might need to replace your TPM hardware or motherboard.
+// The TPM hardware device reported a failure during its internal self test. Try restarting the computer to resolve the problem. If the problem continues, you might need to replace your TPM hardware or motherboard.
 //
 #define STATUS_TPM_FAILEDSELFTEST        ((NTSTATUS)0xC029001CL)
 
@@ -19899,7 +19381,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The authorization for the second key in a 2 key function failed authorization.
+// The authorization for the second key in a 2 key function failed authorization.
 //
 #define STATUS_TPM_AUTH2FAIL             ((NTSTATUS)0xC029001DL)
 
@@ -19908,7 +19390,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The tag value sent to for a command is invalid.
+// The tag value sent to for a command is invalid.
 //
 #define STATUS_TPM_BADTAG                ((NTSTATUS)0xC029001EL)
 
@@ -19917,7 +19399,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: An IO error occurred transmitting information to the TPM.
+// An IO error occurred transmitting information to the TPM.
 //
 #define STATUS_TPM_IOERROR               ((NTSTATUS)0xC029001FL)
 
@@ -19926,7 +19408,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The encryption process had a problem.
+// The encryption process had a problem.
 //
 #define STATUS_TPM_ENCRYPT_ERROR         ((NTSTATUS)0xC0290020L)
 
@@ -19935,7 +19417,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The decryption process did not complete.
+// The decryption process did not complete.
 //
 #define STATUS_TPM_DECRYPT_ERROR         ((NTSTATUS)0xC0290021L)
 
@@ -19944,7 +19426,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: An invalid handle was used.
+// An invalid handle was used.
 //
 #define STATUS_TPM_INVALID_AUTHHANDLE    ((NTSTATUS)0xC0290022L)
 
@@ -19953,7 +19435,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The TPM does not have an Endorsement Key (EK) installed.
+// The TPM does not have an Endorsement Key (EK) installed.
 //
 #define STATUS_TPM_NO_ENDORSEMENT        ((NTSTATUS)0xC0290023L)
 
@@ -19962,7 +19444,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The usage of a key is not allowed.
+// The usage of a key is not allowed.
 //
 #define STATUS_TPM_INVALID_KEYUSAGE      ((NTSTATUS)0xC0290024L)
 
@@ -19971,7 +19453,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The submitted entity type is not allowed.
+// The submitted entity type is not allowed.
 //
 #define STATUS_TPM_WRONG_ENTITYTYPE      ((NTSTATUS)0xC0290025L)
 
@@ -19980,7 +19462,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The command was received in the wrong sequence relative to TPM_Init and a subsequent TPM_Startup.
+// The command was received in the wrong sequence relative to TPM_Init and a subsequent TPM_Startup.
 //
 #define STATUS_TPM_INVALID_POSTINIT      ((NTSTATUS)0xC0290026L)
 
@@ -19989,7 +19471,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Signed data cannot include additional DER information.
+// Signed data cannot include additional DER information.
 //
 #define STATUS_TPM_INAPPROPRIATE_SIG     ((NTSTATUS)0xC0290027L)
 
@@ -19998,7 +19480,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The key properties in TPM_KEY_PARMs are not supported by this TPM.
+// The key properties in TPM_KEY_PARMs are not supported by this TPM.
 //
 #define STATUS_TPM_BAD_KEY_PROPERTY      ((NTSTATUS)0xC0290028L)
 
@@ -20007,7 +19489,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The migration properties of this key are incorrect.
+// The migration properties of this key are incorrect.
 //
 #define STATUS_TPM_BAD_MIGRATION         ((NTSTATUS)0xC0290029L)
 
@@ -20016,7 +19498,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The signature or encryption scheme for this key is incorrect or not permitted in this situation.
+// The signature or encryption scheme for this key is incorrect or not permitted in this situation.
 //
 #define STATUS_TPM_BAD_SCHEME            ((NTSTATUS)0xC029002AL)
 
@@ -20025,7 +19507,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The size of the data (or blob) parameter is bad or inconsistent with the referenced key.
+// The size of the data (or blob) parameter is bad or inconsistent with the referenced key.
 //
 #define STATUS_TPM_BAD_DATASIZE          ((NTSTATUS)0xC029002BL)
 
@@ -20034,7 +19516,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: A mode parameter is bad, such as capArea or subCapArea for TPM_GetCapability, phsicalPresence parameter for TPM_PhysicalPresence, or migrationType for TPM_CreateMigrationBlob.
+// A mode parameter is bad, such as capArea or subCapArea for TPM_GetCapability, phsicalPresence parameter for TPM_PhysicalPresence, or migrationType for TPM_CreateMigrationBlob.
 //
 #define STATUS_TPM_BAD_MODE              ((NTSTATUS)0xC029002CL)
 
@@ -20043,7 +19525,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Either the physicalPresence or physicalPresenceLock bits have the wrong value.
+// Either the physicalPresence or physicalPresenceLock bits have the wrong value.
 //
 #define STATUS_TPM_BAD_PRESENCE          ((NTSTATUS)0xC029002DL)
 
@@ -20052,7 +19534,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The TPM cannot perform this version of the capability.
+// The TPM cannot perform this version of the capability.
 //
 #define STATUS_TPM_BAD_VERSION           ((NTSTATUS)0xC029002EL)
 
@@ -20061,7 +19543,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The TPM does not allow for wrapped transport sessions.
+// The TPM does not allow for wrapped transport sessions.
 //
 #define STATUS_TPM_NO_WRAP_TRANSPORT     ((NTSTATUS)0xC029002FL)
 
@@ -20070,7 +19552,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: TPM audit construction failed and the underlying command was returning a failure code also.
+// TPM audit construction failed and the underlying command was returning a failure code also.
 //
 #define STATUS_TPM_AUDITFAIL_UNSUCCESSFUL ((NTSTATUS)0xC0290030L)
 
@@ -20079,7 +19561,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: TPM audit construction failed and the underlying command was returning success.
+// TPM audit construction failed and the underlying command was returning success.
 //
 #define STATUS_TPM_AUDITFAIL_SUCCESSFUL  ((NTSTATUS)0xC0290031L)
 
@@ -20088,7 +19570,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Attempt to reset a PCR register that does not have the resettable attribute.
+// Attempt to reset a PCR register that does not have the resettable attribute.
 //
 #define STATUS_TPM_NOTRESETABLE          ((NTSTATUS)0xC0290032L)
 
@@ -20097,7 +19579,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Attempt to reset a PCR register that requires locality and locality modifier not part of command transport.
+// Attempt to reset a PCR register that requires locality and locality modifier not part of command transport.
 //
 #define STATUS_TPM_NOTLOCAL              ((NTSTATUS)0xC0290033L)
 
@@ -20106,7 +19588,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Make identity blob not properly typed.
+// Make identity blob not properly typed.
 //
 #define STATUS_TPM_BAD_TYPE              ((NTSTATUS)0xC0290034L)
 
@@ -20115,7 +19597,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: When saving context identified resource type does not match actual resource.
+// When saving context identified resource type does not match actual resource.
 //
 #define STATUS_TPM_INVALID_RESOURCE      ((NTSTATUS)0xC0290035L)
 
@@ -20124,7 +19606,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The TPM is attempting to execute a command only available when in FIPS mode.
+// The TPM is attempting to execute a command only available when in FIPS mode.
 //
 #define STATUS_TPM_NOTFIPS               ((NTSTATUS)0xC0290036L)
 
@@ -20133,7 +19615,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The command is attempting to use an invalid family ID.
+// The command is attempting to use an invalid family ID.
 //
 #define STATUS_TPM_INVALID_FAMILY        ((NTSTATUS)0xC0290037L)
 
@@ -20142,7 +19624,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The permission to manipulate the NV storage is not available.
+// The permission to manipulate the NV storage is not available.
 //
 #define STATUS_TPM_NO_NV_PERMISSION      ((NTSTATUS)0xC0290038L)
 
@@ -20151,7 +19633,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The operation requires a signed command.
+// The operation requires a signed command.
 //
 #define STATUS_TPM_REQUIRES_SIGN         ((NTSTATUS)0xC0290039L)
 
@@ -20160,7 +19642,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Wrong operation to load an NV key.
+// Wrong operation to load an NV key.
 //
 #define STATUS_TPM_KEY_NOTSUPPORTED      ((NTSTATUS)0xC029003AL)
 
@@ -20169,7 +19651,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: NV_LoadKey blob requires both owner and blob authorization.
+// NV_LoadKey blob requires both owner and blob authorization.
 //
 #define STATUS_TPM_AUTH_CONFLICT         ((NTSTATUS)0xC029003BL)
 
@@ -20178,7 +19660,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The NV area is locked and not writable.
+// The NV area is locked and not writtable.
 //
 #define STATUS_TPM_AREA_LOCKED           ((NTSTATUS)0xC029003CL)
 
@@ -20187,7 +19669,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The locality is incorrect for the attempted operation.
+// The locality is incorrect for the attempted operation.
 //
 #define STATUS_TPM_BAD_LOCALITY          ((NTSTATUS)0xC029003DL)
 
@@ -20196,7 +19678,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The NV area is read only and can't be written to.
+// The NV area is read only and can't be written to.
 //
 #define STATUS_TPM_READ_ONLY             ((NTSTATUS)0xC029003EL)
 
@@ -20205,7 +19687,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: There is no protection on the write to the NV area.
+// There is no protection on the write to the NV area.
 //
 #define STATUS_TPM_PER_NOWRITE           ((NTSTATUS)0xC029003FL)
 
@@ -20214,7 +19696,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The family count value does not match.
+// The family count value does not match.
 //
 #define STATUS_TPM_FAMILYCOUNT           ((NTSTATUS)0xC0290040L)
 
@@ -20223,7 +19705,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The NV area has already been written to.
+// The NV area has already been written to.
 //
 #define STATUS_TPM_WRITE_LOCKED          ((NTSTATUS)0xC0290041L)
 
@@ -20232,7 +19714,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The NV area attributes conflict.
+// The NV area attributes conflict.
 //
 #define STATUS_TPM_BAD_ATTRIBUTES        ((NTSTATUS)0xC0290042L)
 
@@ -20241,7 +19723,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The structure tag and version are invalid or inconsistent.
+// The structure tag and version are invalid or inconsistent.
 //
 #define STATUS_TPM_INVALID_STRUCTURE     ((NTSTATUS)0xC0290043L)
 
@@ -20250,7 +19732,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The key is under control of the TPM Owner and can only be evicted by the TPM Owner.
+// The key is under control of the TPM Owner and can only be evicted by the TPM Owner.
 //
 #define STATUS_TPM_KEY_OWNER_CONTROL     ((NTSTATUS)0xC0290044L)
 
@@ -20259,7 +19741,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The counter handle is incorrect.
+// The counter handle is incorrect.
 //
 #define STATUS_TPM_BAD_COUNTER           ((NTSTATUS)0xC0290045L)
 
@@ -20268,7 +19750,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The write is not a complete write of the area.
+// The write is not a complete write of the area.
 //
 #define STATUS_TPM_NOT_FULLWRITE         ((NTSTATUS)0xC0290046L)
 
@@ -20277,7 +19759,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The gap between saved context counts is too large.
+// The gap between saved context counts is too large.
 //
 #define STATUS_TPM_CONTEXT_GAP           ((NTSTATUS)0xC0290047L)
 
@@ -20286,7 +19768,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The maximum number of NV writes without an owner has been exceeded.
+// The maximum number of NV writes without an owner has been exceeded.
 //
 #define STATUS_TPM_MAXNVWRITES           ((NTSTATUS)0xC0290048L)
 
@@ -20295,7 +19777,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: No operator AuthData value is set.
+// No operator AuthData value is set.
 //
 #define STATUS_TPM_NOOPERATOR            ((NTSTATUS)0xC0290049L)
 
@@ -20304,7 +19786,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The resource pointed to by context is not loaded.
+// The resource pointed to by context is not loaded.
 //
 #define STATUS_TPM_RESOURCEMISSING       ((NTSTATUS)0xC029004AL)
 
@@ -20313,7 +19795,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The delegate administration is locked.
+// The delegate administration is locked.
 //
 #define STATUS_TPM_DELEGATE_LOCK         ((NTSTATUS)0xC029004BL)
 
@@ -20322,7 +19804,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Attempt to manage a family other then the delegated family.
+// Attempt to manage a family other then the delegated family.
 //
 #define STATUS_TPM_DELEGATE_FAMILY       ((NTSTATUS)0xC029004CL)
 
@@ -20331,7 +19813,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Delegation table management not enabled.
+// Delegation table management not enabled.
 //
 #define STATUS_TPM_DELEGATE_ADMIN        ((NTSTATUS)0xC029004DL)
 
@@ -20340,7 +19822,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: There was a command executed outside of an exclusive transport session.
+// There was a command executed outside of an exclusive transport session.
 //
 #define STATUS_TPM_TRANSPORT_NOTEXCLUSIVE ((NTSTATUS)0xC029004EL)
 
@@ -20349,7 +19831,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Attempt to context save a owner evict controlled key.
+// Attempt to context save a owner evict controlled key.
 //
 #define STATUS_TPM_OWNER_CONTROL         ((NTSTATUS)0xC029004FL)
 
@@ -20358,7 +19840,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The DAA command has no resources available to execute the command.
+// The DAA command has no resources availble to execute the command.
 //
 #define STATUS_TPM_DAA_RESOURCES         ((NTSTATUS)0xC0290050L)
 
@@ -20367,7 +19849,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The consistency check on DAA parameter inputData0 has failed.
+// The consistency check on DAA parameter inputData0 has failed.
 //
 #define STATUS_TPM_DAA_INPUT_DATA0       ((NTSTATUS)0xC0290051L)
 
@@ -20376,7 +19858,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The consistency check on DAA parameter inputData1 has failed.
+// The consistency check on DAA parameter inputData1 has failed.
 //
 #define STATUS_TPM_DAA_INPUT_DATA1       ((NTSTATUS)0xC0290052L)
 
@@ -20385,7 +19867,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The consistency check on DAA_issuerSettings has failed.
+// The consistency check on DAA_issuerSettings has failed.
 //
 #define STATUS_TPM_DAA_ISSUER_SETTINGS   ((NTSTATUS)0xC0290053L)
 
@@ -20394,7 +19876,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The consistency check on DAA_tpmSpecific has failed.
+// The consistency check on DAA_tpmSpecific has failed.
 //
 #define STATUS_TPM_DAA_TPM_SETTINGS      ((NTSTATUS)0xC0290054L)
 
@@ -20403,7 +19885,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The atomic process indicated by the submitted DAA command is not the expected process.
+// The atomic process indicated by the submitted DAA command is not the expected process.
 //
 #define STATUS_TPM_DAA_STAGE             ((NTSTATUS)0xC0290055L)
 
@@ -20412,7 +19894,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The issuer's validity check has detected an inconsistency.
+// The issuer's validity check has detected an inconsistency.
 //
 #define STATUS_TPM_DAA_ISSUER_VALIDITY   ((NTSTATUS)0xC0290056L)
 
@@ -20421,7 +19903,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The consistency check on w has failed.
+// The consistency check on w has failed.
 //
 #define STATUS_TPM_DAA_WRONG_W           ((NTSTATUS)0xC0290057L)
 
@@ -20430,7 +19912,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The handle is incorrect.
+// The handle is incorrect.
 //
 #define STATUS_TPM_BAD_HANDLE            ((NTSTATUS)0xC0290058L)
 
@@ -20439,7 +19921,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Delegation is not correct.
+// Delegation is not correct.
 //
 #define STATUS_TPM_BAD_DELEGATE          ((NTSTATUS)0xC0290059L)
 
@@ -20448,7 +19930,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: The context blob is invalid.
+// The context blob is invalid.
 //
 #define STATUS_TPM_BADCONTEXT            ((NTSTATUS)0xC029005AL)
 
@@ -20457,7 +19939,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Too many contexts held by the TPM.
+// Too many contexts held by the TPM.
 //
 #define STATUS_TPM_TOOMANYCONTEXTS       ((NTSTATUS)0xC029005BL)
 
@@ -20466,7 +19948,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Migration authority signature validation failure.
+// Migration authority signature validation failure.
 //
 #define STATUS_TPM_MA_TICKET_SIGNATURE   ((NTSTATUS)0xC029005CL)
 
@@ -20475,7 +19957,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Migration destination not authenticated.
+// Migration destination not authenticated.
 //
 #define STATUS_TPM_MA_DESTINATION        ((NTSTATUS)0xC029005DL)
 
@@ -20484,7 +19966,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Migration source incorrect.
+// Migration source incorrect.
 //
 #define STATUS_TPM_MA_SOURCE             ((NTSTATUS)0xC029005EL)
 
@@ -20493,7 +19975,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Incorrect migration authority.
+// Incorrect migration authority.
 //
 #define STATUS_TPM_MA_AUTHORITY          ((NTSTATUS)0xC029005FL)
 
@@ -20502,7 +19984,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Attempt to revoke the EK and the EK is not revocable.
+// Attempt to revoke the EK and the EK is not revocable.
 //
 #define STATUS_TPM_PERMANENTEK           ((NTSTATUS)0xC0290061L)
 
@@ -20511,7 +19993,7 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: Bad signature of CMK ticket.
+// Bad signature of CMK ticket.
 //
 #define STATUS_TPM_BAD_SIGNATURE         ((NTSTATUS)0xC0290062L)
 
@@ -20520,621 +20002,9 @@ Notes:
 //
 // MessageText:
 //
-// TPM 1.2: There is no room in the context list for additional contexts.
+// There is no room in the context list for additional contexts.
 //
 #define STATUS_TPM_NOCONTEXTSPACE        ((NTSTATUS)0xC0290063L)
-
-//
-// MessageId: STATUS_TPM_20_E_ASYMMETRIC
-//
-// MessageText:
-//
-// TPM 2.0: Asymmetric algorithm not supported or not correct.
-//
-#define STATUS_TPM_20_E_ASYMMETRIC       ((NTSTATUS)0xC0290081L)
-
-//
-// MessageId: STATUS_TPM_20_E_ATTRIBUTES
-//
-// MessageText:
-//
-// TPM 2.0: Inconsistent attributes.
-//
-#define STATUS_TPM_20_E_ATTRIBUTES       ((NTSTATUS)0xC0290082L)
-
-//
-// MessageId: STATUS_TPM_20_E_HASH
-//
-// MessageText:
-//
-// TPM 2.0: Hash algorithm not supported or not appropriate.
-//
-#define STATUS_TPM_20_E_HASH             ((NTSTATUS)0xC0290083L)
-
-//
-// MessageId: STATUS_TPM_20_E_VALUE
-//
-// MessageText:
-//
-// TPM 2.0: Value is out of range or is not correct for the context.
-//
-#define STATUS_TPM_20_E_VALUE            ((NTSTATUS)0xC0290084L)
-
-//
-// MessageId: STATUS_TPM_20_E_HIERARCHY
-//
-// MessageText:
-//
-// TPM 2.0: Hierarchy is not enabled or is not correct for the use.
-//
-#define STATUS_TPM_20_E_HIERARCHY        ((NTSTATUS)0xC0290085L)
-
-//
-// MessageId: STATUS_TPM_20_E_KEY_SIZE
-//
-// MessageText:
-//
-// TPM 2.0: Key size is not supported.
-//
-#define STATUS_TPM_20_E_KEY_SIZE         ((NTSTATUS)0xC0290087L)
-
-//
-// MessageId: STATUS_TPM_20_E_MGF
-//
-// MessageText:
-//
-// TPM 2.0: Mask generation function not supported.
-//
-#define STATUS_TPM_20_E_MGF              ((NTSTATUS)0xC0290088L)
-
-//
-// MessageId: STATUS_TPM_20_E_MODE
-//
-// MessageText:
-//
-// TPM 2.0: Mode of operation not supported.
-//
-#define STATUS_TPM_20_E_MODE             ((NTSTATUS)0xC0290089L)
-
-//
-// MessageId: STATUS_TPM_20_E_TYPE
-//
-// MessageText:
-//
-// TPM 2.0: The type of the value is not appropriate for the use.
-//
-#define STATUS_TPM_20_E_TYPE             ((NTSTATUS)0xC029008AL)
-
-//
-// MessageId: STATUS_TPM_20_E_HANDLE
-//
-// MessageText:
-//
-// TPM 2.0: The Handle is not correct for the use.
-//
-#define STATUS_TPM_20_E_HANDLE           ((NTSTATUS)0xC029008BL)
-
-//
-// MessageId: STATUS_TPM_20_E_KDF
-//
-// MessageText:
-//
-// TPM 2.0: Unsupported key derivation function or function not appropriate for use.
-//
-#define STATUS_TPM_20_E_KDF              ((NTSTATUS)0xC029008CL)
-
-//
-// MessageId: STATUS_TPM_20_E_RANGE
-//
-// MessageText:
-//
-// TPM 2.0: Value was out of allowed range.
-//
-#define STATUS_TPM_20_E_RANGE            ((NTSTATUS)0xC029008DL)
-
-//
-// MessageId: STATUS_TPM_20_E_AUTH_FAIL
-//
-// MessageText:
-//
-// TPM 2.0: The authorization HMAC check failed and DA counter incremented.
-//
-#define STATUS_TPM_20_E_AUTH_FAIL        ((NTSTATUS)0xC029008EL)
-
-//
-// MessageId: STATUS_TPM_20_E_NONCE
-//
-// MessageText:
-//
-// TPM 2.0: Invalid nonce size.
-//
-#define STATUS_TPM_20_E_NONCE            ((NTSTATUS)0xC029008FL)
-
-//
-// MessageId: STATUS_TPM_20_E_PP
-//
-// MessageText:
-//
-// TPM 2.0: Authorization requires assertion of PP.
-//
-#define STATUS_TPM_20_E_PP               ((NTSTATUS)0xC0290090L)
-
-//
-// MessageId: STATUS_TPM_20_E_SCHEME
-//
-// MessageText:
-//
-// TPM 2.0: Unsupported or incompatible scheme.
-//
-#define STATUS_TPM_20_E_SCHEME           ((NTSTATUS)0xC0290092L)
-
-//
-// MessageId: STATUS_TPM_20_E_SIZE
-//
-// MessageText:
-//
-// TPM 2.0: Structure is wrong size.
-//
-#define STATUS_TPM_20_E_SIZE             ((NTSTATUS)0xC0290095L)
-
-//
-// MessageId: STATUS_TPM_20_E_SYMMETRIC
-//
-// MessageText:
-//
-// TPM 2.0: Unsupported symmetric algorithm or key size, or not appropriate for instance.
-//
-#define STATUS_TPM_20_E_SYMMETRIC        ((NTSTATUS)0xC0290096L)
-
-//
-// MessageId: STATUS_TPM_20_E_TAG
-//
-// MessageText:
-//
-// TPM 2.0: Incorrect structure tag.
-//
-#define STATUS_TPM_20_E_TAG              ((NTSTATUS)0xC0290097L)
-
-//
-// MessageId: STATUS_TPM_20_E_SELECTOR
-//
-// MessageText:
-//
-// TPM 2.0: Union selector is incorrect.
-//
-#define STATUS_TPM_20_E_SELECTOR         ((NTSTATUS)0xC0290098L)
-
-//
-// MessageId: STATUS_TPM_20_E_INSUFFICIENT
-//
-// MessageText:
-//
-// TPM 2.0: The TPM was unable to unmarshal a value because there were not enough octets in the input buffer.
-//
-#define STATUS_TPM_20_E_INSUFFICIENT     ((NTSTATUS)0xC029009AL)
-
-//
-// MessageId: STATUS_TPM_20_E_SIGNATURE
-//
-// MessageText:
-//
-// TPM 2.0: The signature is not valid.
-//
-#define STATUS_TPM_20_E_SIGNATURE        ((NTSTATUS)0xC029009BL)
-
-//
-// MessageId: STATUS_TPM_20_E_KEY
-//
-// MessageText:
-//
-// TPM 2.0: Key fields are not compatible with the selected use.
-//
-#define STATUS_TPM_20_E_KEY              ((NTSTATUS)0xC029009CL)
-
-//
-// MessageId: STATUS_TPM_20_E_POLICY_FAIL
-//
-// MessageText:
-//
-// TPM 2.0: A policy check failed.
-//
-#define STATUS_TPM_20_E_POLICY_FAIL      ((NTSTATUS)0xC029009DL)
-
-//
-// MessageId: STATUS_TPM_20_E_INTEGRITY
-//
-// MessageText:
-//
-// TPM 2.0: Integrity check failed.
-//
-#define STATUS_TPM_20_E_INTEGRITY        ((NTSTATUS)0xC029009FL)
-
-//
-// MessageId: STATUS_TPM_20_E_TICKET
-//
-// MessageText:
-//
-// TPM 2.0: Invalid ticket.
-//
-#define STATUS_TPM_20_E_TICKET           ((NTSTATUS)0xC02900A0L)
-
-//
-// MessageId: STATUS_TPM_20_E_RESERVED_BITS
-//
-// MessageText:
-//
-// TPM 2.0: Reserved bits not set to zero as required.
-//
-#define STATUS_TPM_20_E_RESERVED_BITS    ((NTSTATUS)0xC02900A1L)
-
-//
-// MessageId: STATUS_TPM_20_E_BAD_AUTH
-//
-// MessageText:
-//
-// TPM 2.0: Authorization failure without DA implications.
-//
-#define STATUS_TPM_20_E_BAD_AUTH         ((NTSTATUS)0xC02900A2L)
-
-//
-// MessageId: STATUS_TPM_20_E_EXPIRED
-//
-// MessageText:
-//
-// TPM 2.0: The policy has expired.
-//
-#define STATUS_TPM_20_E_EXPIRED          ((NTSTATUS)0xC02900A3L)
-
-//
-// MessageId: STATUS_TPM_20_E_POLICY_CC
-//
-// MessageText:
-//
-// TPM 2.0: The command code in the policy is not the command code of the command or the command code in a policy command references a command that is not implemented.
-//
-#define STATUS_TPM_20_E_POLICY_CC        ((NTSTATUS)0xC02900A4L)
-
-//
-// MessageId: STATUS_TPM_20_E_BINDING
-//
-// MessageText:
-//
-// TPM 2.0: Public and sensitive portions of an object are not cryptographically bound.
-//
-#define STATUS_TPM_20_E_BINDING          ((NTSTATUS)0xC02900A5L)
-
-//
-// MessageId: STATUS_TPM_20_E_CURVE
-//
-// MessageText:
-//
-// TPM 2.0: Curve not supported.
-//
-#define STATUS_TPM_20_E_CURVE            ((NTSTATUS)0xC02900A6L)
-
-//
-// MessageId: STATUS_TPM_20_E_ECC_POINT
-//
-// MessageText:
-//
-// TPM 2.0: Point is not on the required curve.
-//
-#define STATUS_TPM_20_E_ECC_POINT        ((NTSTATUS)0xC02900A7L)
-
-//
-// MessageId: STATUS_TPM_20_E_INITIALIZE
-//
-// MessageText:
-//
-// TPM 2.0: TPM not initialized.
-//
-#define STATUS_TPM_20_E_INITIALIZE       ((NTSTATUS)0xC0290100L)
-
-//
-// MessageId: STATUS_TPM_20_E_FAILURE
-//
-// MessageText:
-//
-// TPM 2.0: Commands not being accepted because of a TPM failure.
-//
-#define STATUS_TPM_20_E_FAILURE          ((NTSTATUS)0xC0290101L)
-
-//
-// MessageId: STATUS_TPM_20_E_SEQUENCE
-//
-// MessageText:
-//
-// TPM 2.0: Improper use of a sequence handle.
-//
-#define STATUS_TPM_20_E_SEQUENCE         ((NTSTATUS)0xC0290103L)
-
-//
-// MessageId: STATUS_TPM_20_E_PRIVATE
-//
-// MessageText:
-//
-// TPM 2.0: TPM_RC_PRIVATE error.
-//
-#define STATUS_TPM_20_E_PRIVATE          ((NTSTATUS)0xC029010BL)
-
-//
-// MessageId: STATUS_TPM_20_E_HMAC
-//
-// MessageText:
-//
-// TPM 2.0: TPM_RC_HMAC.
-//
-#define STATUS_TPM_20_E_HMAC             ((NTSTATUS)0xC0290119L)
-
-//
-// MessageId: STATUS_TPM_20_E_DISABLED
-//
-// MessageText:
-//
-// TPM 2.0: TPM_RC_DISABLED.
-//
-#define STATUS_TPM_20_E_DISABLED         ((NTSTATUS)0xC0290120L)
-
-//
-// MessageId: STATUS_TPM_20_E_EXCLUSIVE
-//
-// MessageText:
-//
-// TPM 2.0: Command failed because audit sequence required exclusivity.
-//
-#define STATUS_TPM_20_E_EXCLUSIVE        ((NTSTATUS)0xC0290121L)
-
-//
-// MessageId: STATUS_TPM_20_E_ECC_CURVE
-//
-// MessageText:
-//
-// TPM 2.0: Unsupported ECC curve.
-//
-#define STATUS_TPM_20_E_ECC_CURVE        ((NTSTATUS)0xC0290123L)
-
-//
-// MessageId: STATUS_TPM_20_E_AUTH_TYPE
-//
-// MessageText:
-//
-// TPM 2.0: Authorization handle is not correct for command.
-//
-#define STATUS_TPM_20_E_AUTH_TYPE        ((NTSTATUS)0xC0290124L)
-
-//
-// MessageId: STATUS_TPM_20_E_AUTH_MISSING
-//
-// MessageText:
-//
-// TPM 2.0: Command requires an authorization session for handle and is not present.
-//
-#define STATUS_TPM_20_E_AUTH_MISSING     ((NTSTATUS)0xC0290125L)
-
-//
-// MessageId: STATUS_TPM_20_E_POLICY
-//
-// MessageText:
-//
-// TPM 2.0: Policy failure in Math Operation or an invalid authPolicy value.
-//
-#define STATUS_TPM_20_E_POLICY           ((NTSTATUS)0xC0290126L)
-
-//
-// MessageId: STATUS_TPM_20_E_PCR
-//
-// MessageText:
-//
-// TPM 2.0: PCR check fail.
-//
-#define STATUS_TPM_20_E_PCR              ((NTSTATUS)0xC0290127L)
-
-//
-// MessageId: STATUS_TPM_20_E_PCR_CHANGED
-//
-// MessageText:
-//
-// TPM 2.0: PCR have changed since checked.
-//
-#define STATUS_TPM_20_E_PCR_CHANGED      ((NTSTATUS)0xC0290128L)
-
-//
-// MessageId: STATUS_TPM_20_E_UPGRADE
-//
-// MessageText:
-//
-// TPM 2.0: The TPM is not in the right mode for upgrade.
-//
-#define STATUS_TPM_20_E_UPGRADE          ((NTSTATUS)0xC029012DL)
-
-//
-// MessageId: STATUS_TPM_20_E_TOO_MANY_CONTEXTS
-//
-// MessageText:
-//
-// TPM 2.0: Context ID counter is at maximum.
-//
-#define STATUS_TPM_20_E_TOO_MANY_CONTEXTS ((NTSTATUS)0xC029012EL)
-
-//
-// MessageId: STATUS_TPM_20_E_AUTH_UNAVAILABLE
-//
-// MessageText:
-//
-// TPM 2.0: authValue or authPolicy is not available for selected entity.
-//
-#define STATUS_TPM_20_E_AUTH_UNAVAILABLE ((NTSTATUS)0xC029012FL)
-
-//
-// MessageId: STATUS_TPM_20_E_REBOOT
-//
-// MessageText:
-//
-// TPM 2.0: A _TPM_Init and Startup(CLEAR) is required before the TPM can resume operation.
-//
-#define STATUS_TPM_20_E_REBOOT           ((NTSTATUS)0xC0290130L)
-
-//
-// MessageId: STATUS_TPM_20_E_UNBALANCED
-//
-// MessageText:
-//
-// TPM 2.0: The protection algorithms (hash and symmetric) are not reasonably balanced. The digest size of the hash must be larger than the key size of the symmetric algorithm.
-//
-#define STATUS_TPM_20_E_UNBALANCED       ((NTSTATUS)0xC0290131L)
-
-//
-// MessageId: STATUS_TPM_20_E_COMMAND_SIZE
-//
-// MessageText:
-//
-// TPM 2.0: The TPM command's commandSize value is inconsistent with contents of the command buffer; either the size is not the same as the bytes loaded by the hardware interface layer or the value is not large enough to hold a command header.
-//
-#define STATUS_TPM_20_E_COMMAND_SIZE     ((NTSTATUS)0xC0290142L)
-
-//
-// MessageId: STATUS_TPM_20_E_COMMAND_CODE
-//
-// MessageText:
-//
-// TPM 2.0: Command code not supported.
-//
-#define STATUS_TPM_20_E_COMMAND_CODE     ((NTSTATUS)0xC0290143L)
-
-//
-// MessageId: STATUS_TPM_20_E_AUTHSIZE
-//
-// MessageText:
-//
-// TPM 2.0: The value of authorizationSize is out of range or the number of octets in the authorization Area is greater than required.
-//
-#define STATUS_TPM_20_E_AUTHSIZE         ((NTSTATUS)0xC0290144L)
-
-//
-// MessageId: STATUS_TPM_20_E_AUTH_CONTEXT
-//
-// MessageText:
-//
-// TPM 2.0: Use of an authorization session with a context command or another command that cannot have an authorization session.
-//
-#define STATUS_TPM_20_E_AUTH_CONTEXT     ((NTSTATUS)0xC0290145L)
-
-//
-// MessageId: STATUS_TPM_20_E_NV_RANGE
-//
-// MessageText:
-//
-// TPM 2.0: NV offset+size is out of range.
-//
-#define STATUS_TPM_20_E_NV_RANGE         ((NTSTATUS)0xC0290146L)
-
-//
-// MessageId: STATUS_TPM_20_E_NV_SIZE
-//
-// MessageText:
-//
-// TPM 2.0: Requested allocation size is larger than allowed.
-//
-#define STATUS_TPM_20_E_NV_SIZE          ((NTSTATUS)0xC0290147L)
-
-//
-// MessageId: STATUS_TPM_20_E_NV_LOCKED
-//
-// MessageText:
-//
-// TPM 2.0: NV access locked.
-//
-#define STATUS_TPM_20_E_NV_LOCKED        ((NTSTATUS)0xC0290148L)
-
-//
-// MessageId: STATUS_TPM_20_E_NV_AUTHORIZATION
-//
-// MessageText:
-//
-// TPM 2.0: NV access authorization fails in command actions
-//
-#define STATUS_TPM_20_E_NV_AUTHORIZATION ((NTSTATUS)0xC0290149L)
-
-//
-// MessageId: STATUS_TPM_20_E_NV_UNINITIALIZED
-//
-// MessageText:
-//
-// TPM 2.0: An NV index is used before being initialized or the state saved by TPM2_Shutdown(STATE) could not be restored.
-//
-#define STATUS_TPM_20_E_NV_UNINITIALIZED ((NTSTATUS)0xC029014AL)
-
-//
-// MessageId: STATUS_TPM_20_E_NV_SPACE
-//
-// MessageText:
-//
-// TPM 2.0: Insufficient space for NV allocation.
-//
-#define STATUS_TPM_20_E_NV_SPACE         ((NTSTATUS)0xC029014BL)
-
-//
-// MessageId: STATUS_TPM_20_E_NV_DEFINED
-//
-// MessageText:
-//
-// TPM 2.0: NV index or persistent object already defined.
-//
-#define STATUS_TPM_20_E_NV_DEFINED       ((NTSTATUS)0xC029014CL)
-
-//
-// MessageId: STATUS_TPM_20_E_BAD_CONTEXT
-//
-// MessageText:
-//
-// TPM 2.0: Context in TPM2_ContextLoad() is not valid.
-//
-#define STATUS_TPM_20_E_BAD_CONTEXT      ((NTSTATUS)0xC0290150L)
-
-//
-// MessageId: STATUS_TPM_20_E_CPHASH
-//
-// MessageText:
-//
-// TPM 2.0: chHash value already set or not correct for use.
-//
-#define STATUS_TPM_20_E_CPHASH           ((NTSTATUS)0xC0290151L)
-
-//
-// MessageId: STATUS_TPM_20_E_PARENT
-//
-// MessageText:
-//
-// TPM 2.0: Handle for parent is not a valid parent.
-//
-#define STATUS_TPM_20_E_PARENT           ((NTSTATUS)0xC0290152L)
-
-//
-// MessageId: STATUS_TPM_20_E_NEEDS_TEST
-//
-// MessageText:
-//
-// TPM 2.0: Some function needs testing.
-//
-#define STATUS_TPM_20_E_NEEDS_TEST       ((NTSTATUS)0xC0290153L)
-
-//
-// MessageId: STATUS_TPM_20_E_NO_RESULT
-//
-// MessageText:
-//
-// TPM 2.0: returned when an internal function cannot process a request due to an unspecified problem. This code is usually related to invalid parameters that are not properly filtered by the input unmarshaling code.
-//
-#define STATUS_TPM_20_E_NO_RESULT        ((NTSTATUS)0xC0290154L)
-
-//
-// MessageId: STATUS_TPM_20_E_SENSITIVE
-//
-// MessageText:
-//
-// TPM 2.0: The sensitive area did not unmarshal correctly after decryption - this code is used in lieu of the other unmarshaling errors so that an attacker cannot determine where the unmarshaling error occurred.
-//
-#define STATUS_TPM_20_E_SENSITIVE        ((NTSTATUS)0xC0290155L)
 
 //
 // TPM vendor specific hardware errors {0x0400..0x04ff}
@@ -21400,7 +20270,7 @@ Notes:
 //
 // MessageText:
 //
-// The validation was not successful.
+// The validation was not succesful.
 //
 #define STATUS_PCP_VALIDATION_FAILED     ((NTSTATUS)0xC029200CL)
 
@@ -21574,42 +20444,6 @@ Notes:
 // The RSA key creation is blocked on this TPM due to known security vulnerabilities.
 //
 #define STATUS_PCP_IFX_RSA_KEY_CREATION_BLOCKED ((NTSTATUS)0xC029201FL)
-
-//
-// MessageId: STATUS_PCP_TICKET_MISSING
-//
-// MessageText:
-//
-// A ticket required to use a key was not provided.
-//
-#define STATUS_PCP_TICKET_MISSING        ((NTSTATUS)0xC0292020L)
-
-//
-// MessageId: STATUS_PCP_RAW_POLICY_NOT_SUPPORTED
-//
-// MessageText:
-//
-// This key has a raw policy so the KSP can't authenticate against it.
-//
-#define STATUS_PCP_RAW_POLICY_NOT_SUPPORTED ((NTSTATUS)0xC0292021L)
-
-//
-// MessageId: STATUS_PCP_KEY_HANDLE_INVALIDATED
-//
-// MessageText:
-//
-// The TPM key's handle was unexpectedly invalidated due to a hardware or firmware issue.
-//
-#define STATUS_PCP_KEY_HANDLE_INVALIDATED ((NTSTATUS)0xC0292022L)
-
-//
-// MessageId: STATUS_PCP_UNSUPPORTED_PSS_SALT
-//
-// MessageText:
-//
-// The requested salt size for signing with RSAPSS does not match what the TPM uses.
-//
-#define STATUS_PCP_UNSUPPORTED_PSS_SALT  ((NTSTATUS)0x40292023L)
 
 
 //
@@ -22094,33 +20928,6 @@ Notes:
 #define STATUS_HV_NOT_ALLOWED_WITH_NESTED_VIRT_ACTIVE ((NTSTATUS)0xC0350072L)
 
 //
-// MessageId: STATUS_HV_INSUFFICIENT_ROOT_MEMORY
-//
-// MessageText:
-//
-// There is not enough memory in the root partition's pool to complete the operation.
-//
-#define STATUS_HV_INSUFFICIENT_ROOT_MEMORY ((NTSTATUS)0xC0350073L)
-
-//
-// MessageId: STATUS_HV_EVENT_BUFFER_ALREADY_FREED
-//
-// MessageText:
-//
-// The provided event log buffer was already marked as freed.
-//
-#define STATUS_HV_EVENT_BUFFER_ALREADY_FREED ((NTSTATUS)0xC0350074L)
-
-//
-// MessageId: STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY
-//
-// MessageText:
-//
-// There is not enough contiguous memory in the partition's pool to complete the operation.
-//
-#define STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY ((NTSTATUS)0xC0350075L)
-
-//
 // MessageId: STATUS_HV_NOT_PRESENT
 //
 // MessageText:
@@ -22130,7 +20937,7 @@ Notes:
 #define STATUS_HV_NOT_PRESENT            ((NTSTATUS)0xC0351000L)
 
 //
-// Virtualization status codes - these codes are used by the Virtualization Infrastructure Driver (VID) and other components
+// Virtualization status codes - these codes are used by the Virtualization Infrustructure Driver (VID) and other components
 //                               of the virtualization stack.
 //
 //
@@ -22811,7 +21618,7 @@ Notes:
 //
 // MessageText:
 //
-// The disk layout contains non-basic partitions which appear after basic partitions. This is an invalid disk layout.
+// The disk layout contains non-basic partitions which appear after basic paritions. This is an invalid disk layout.
 //
 #define STATUS_VOLMGR_DISK_LAYOUT_NON_BASIC_BETWEEN_BASIC_PARTITIONS ((NTSTATUS)0xC038000CL)
 
@@ -22829,7 +21636,7 @@ Notes:
 //
 // MessageText:
 //
-// The disk layout contains partitions which are smaller than the minimum size.
+// The disk layout contains partitions which are samller than the minimum size.
 //
 #define STATUS_VOLMGR_DISK_LAYOUT_PARTITIONS_TOO_SMALL ((NTSTATUS)0xC038000EL)
 
@@ -22964,7 +21771,7 @@ Notes:
 //
 // MessageText:
 //
-// The specified volume extent is not sector aligned.
+// The specifed volume extent is not sector aligned.
 //
 #define STATUS_VOLMGR_EXTENT_NOT_SECTOR_ALIGNED ((NTSTATUS)0xC038001DL)
 
@@ -22973,7 +21780,7 @@ Notes:
 //
 // MessageText:
 //
-// The specified partition overlaps an EBR (the first track of an extended partition on a MBR disks).
+// The specified parition overlaps an EBR (the first track of an extended partition on a MBR disks).
 //
 #define STATUS_VOLMGR_EXTENT_OVERLAPS_EBR_PARTITION ((NTSTATUS)0xC038001EL)
 
@@ -24076,15 +22883,6 @@ Notes:
 #define STATUS_RDBSS_POST_OPERATION      ((NTSTATUS)0xC0410003L)
 
 //
-// MessageId: STATUS_RDBSS_RETRY_LOOKUP
-//
-// MessageText:
-//
-// The caller must retry by looking up the object in the name table.
-//
-#define STATUS_RDBSS_RETRY_LOOKUP        ((NTSTATUS)0xC0410004L)
-
-//
 // Bluetooth Attribute Protocol Warnings
 //
 
@@ -24330,7 +23128,7 @@ Notes:
 //
 // MessageText:
 //
-// The Supplemental Policy is not recognized on this device.
+// The Supplemntal Policy is not recognized on this device.
 //
 #define STATUS_SECUREBOOT_POLICY_UNKNOWN ((NTSTATUS)0xC0430009L)
 
@@ -24501,24 +23299,6 @@ Notes:
 // The System Integrity policy is either not signed or is signed by a non-trusted signer.
 //
 #define STATUS_SYSTEM_INTEGRITY_POLICY_NOT_SIGNED ((NTSTATUS)0xC0E90004L)
-
-//
-// MessageId: STATUS_SYSTEM_INTEGRITY_TOO_MANY_POLICIES
-//
-// MessageText:
-//
-// The number of System Integrity policies is out of limit.
-//
-#define STATUS_SYSTEM_INTEGRITY_TOO_MANY_POLICIES ((NTSTATUS)0xC0E90005L)
-
-//
-// MessageId: STATUS_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED
-//
-// MessageText:
-//
-// The Code Integrity supplemental policy is not authorized by a Code Integrity base policy.
-//
-#define STATUS_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED ((NTSTATUS)0xC0E90006L)
 
 //
 // Clip modern app and windows licensing error messages.
@@ -24938,33 +23718,6 @@ Notes:
 #define STATUS_SPACES_DRIVE_LOST_DATA    ((NTSTATUS)0xC0E7001DL)
 
 //
-// MessageId: STATUS_SPACES_ENTRY_INCOMPLETE
-//
-// MessageText:
-//
-// The specified log entry is not complete.
-//
-#define STATUS_SPACES_ENTRY_INCOMPLETE   ((NTSTATUS)0xC0E7001EL)
-
-//
-// MessageId: STATUS_SPACES_ENTRY_INVALID
-//
-// MessageText:
-//
-// The specified log entry is not valid.
-//
-#define STATUS_SPACES_ENTRY_INVALID      ((NTSTATUS)0xC0E7001FL)
-
-//
-// MessageId: STATUS_SPACES_MARK_DIRTY
-//
-// MessageText:
-//
-// A slab needs to be marked dirty.
-//
-#define STATUS_SPACES_MARK_DIRTY         ((NTSTATUS)0xC0E70020L)
-
-//
 // Volsnap status codes (volsnap.sys)
 //
 //
@@ -25191,104 +23944,6 @@ Notes:
 // The hypervisor is not protecting DMA because an IOMMU is not present or not enabled in the BIOS.
 //
 #define STATUS_VSM_DMA_PROTECTION_NOT_IN_USE ((NTSTATUS)0xC0450001L)
-
-//
-// Application Execution (AppExec)
-//
-//
-// MessageId: STATUS_APPEXEC_CONDITION_NOT_SATISFIED
-//
-// MessageText:
-//
-// The condition supplied for the app execution request was not satisfied, so the request was not performed.
-//
-#define STATUS_APPEXEC_CONDITION_NOT_SATISFIED ((NTSTATUS)0xC0EC0000L)
-
-//
-// MessageId: STATUS_APPEXEC_HANDLE_INVALIDATED
-//
-// MessageText:
-//
-// The supplied handle has been invalidated and may not be used for the requested operation.
-//
-#define STATUS_APPEXEC_HANDLE_INVALIDATED ((NTSTATUS)0xC0EC0001L)
-
-//
-// MessageId: STATUS_APPEXEC_INVALID_HOST_GENERATION
-//
-// MessageText:
-//
-// The supplied host generation has been invalidated and may not be used for the requested operation.
-//
-#define STATUS_APPEXEC_INVALID_HOST_GENERATION ((NTSTATUS)0xC0EC0002L)
-
-//
-// MessageId: STATUS_APPEXEC_UNEXPECTED_PROCESS_REGISTRATION
-//
-// MessageText:
-//
-// An attempt to register a process failed because the target host was not in a valid state to receive process registrations.
-//
-#define STATUS_APPEXEC_UNEXPECTED_PROCESS_REGISTRATION ((NTSTATUS)0xC0EC0003L)
-
-//
-// MessageId: STATUS_APPEXEC_INVALID_HOST_STATE
-//
-// MessageText:
-//
-// The host is not in a valid state to support the execution request.
-//
-#define STATUS_APPEXEC_INVALID_HOST_STATE ((NTSTATUS)0xC0EC0004L)
-
-//
-// MessageId: STATUS_APPEXEC_NO_DONOR
-//
-// MessageText:
-//
-// The operation was not completed because a required resource donor was not found for the host.
-//
-#define STATUS_APPEXEC_NO_DONOR          ((NTSTATUS)0xC0EC0005L)
-
-//
-// MessageId: STATUS_APPEXEC_HOST_ID_MISMATCH
-//
-// MessageText:
-//
-// The operation was not completed because an unexpected host ID was encountered.
-//
-#define STATUS_APPEXEC_HOST_ID_MISMATCH  ((NTSTATUS)0xC0EC0006L)
-
-//
-// MessageId: STATUS_APPEXEC_UNKNOWN_USER
-//
-// MessageText:
-//
-// The operation was not completed because the specified user was not known to the service.
-//
-#define STATUS_APPEXEC_UNKNOWN_USER      ((NTSTATUS)0xC0EC0007L)
-
-
-//
-// QUIC
-//
-
-//
-// MessageId: STATUS_QUIC_HANDSHAKE_FAILURE
-//
-// MessageText:
-//
-// The QUIC connection handshake failed.
-//
-#define STATUS_QUIC_HANDSHAKE_FAILURE    ((NTSTATUS)0xC0240000L)
-
-//
-// MessageId: STATUS_QUIC_VER_NEG_FAILURE
-//
-// MessageText:
-//
-// The QUIC connection failed to negotiate a compatible protocol version.
-//
-#define STATUS_QUIC_VER_NEG_FAILURE      ((NTSTATUS)0xC0240001L)
 
 //
 // Map a WIN32 error value into an NTSTATUS

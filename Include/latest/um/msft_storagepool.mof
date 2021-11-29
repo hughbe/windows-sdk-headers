@@ -701,12 +701,6 @@ class MSFT_StoragePool : MSFT_StorageObject {
         [In]
         UInt64 ReadCacheSize,
 
-        [In]
-        Boolean IsManualAttach,
-
-        [In]
-        Boolean AddToCluster,
-
         [Out, EmbeddedInstance("MSFT_VirtualDisk")]
         String CreatedVirtualDisk,
 
@@ -1052,9 +1046,6 @@ class MSFT_StoragePool : MSFT_StorageObject {
         UInt16 ProvisioningType,
 
         [In]
-        UInt64 AllocationUnitSize,
-
-        [In]
         UInt16 MediaType,
 
         [In]
@@ -1068,9 +1059,6 @@ class MSFT_StoragePool : MSFT_StorageObject {
 
         [In]
         String ResiliencySettingName,
-
-        [In]
-        UInt16 Usage,
 
         [In]
         UInt64 Interleave,

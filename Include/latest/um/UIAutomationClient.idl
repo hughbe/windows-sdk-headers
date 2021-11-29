@@ -42,7 +42,6 @@ enum PropertyConditionFlags
 {
     PropertyConditionFlags_None = 0x00,
     PropertyConditionFlags_IgnoreCase = 0x01,
-    PropertyConditionFlags_MatchSubstring = 0x02,
 };
 
 enum AutomationElementMode
@@ -71,28 +70,13 @@ enum TreeTraversalOptions
     // Visit order: Visit children from last to first.
     TreeTraversalOptions_LastToFirstOrder   = 0x2
 };
-
-// Enum for IUIAutomation6 ConnectionRecoveryBehavior get/set property to set
-// the options of the connection recovery behavior.
-enum ConnectionRecoveryBehaviorOptions
-{
-    ConnectionRecoveryBehaviorOptions_Disabled = 0x00,
-    ConnectionRecoveryBehaviorOptions_Enabled = 0x01,
-};
-
-// Enum for IUIAutomation6 CoalesceEvents get/set property to set the options
-// of the connection recovery behavior.
-enum CoalesceEventsOptions
-{
-    CoalesceEventsOptions_Disabled = 0x00,
-    CoalesceEventsOptions_Enabled = 0x01,
-};
 cpp_quote("#endif")
 
 struct ExtendedProperty {
     BSTR PropertyName;
     BSTR PropertyValue;
 };
+
 
 typedef void * UIA_HWND;
 
@@ -184,7 +168,6 @@ library UIAutomationClient
         const long UIA_TextEdit_ConversionTargetChangedEventId           = 20033;
         const long UIA_ChangesEventId                                    = 20034;
         const long UIA_NotificationEventId                               = 20035;
-        const long UIA_ActiveTextPositionChangedEventId                  = 20036;
     };
 
     [dllname("<no entry points>")]
@@ -363,12 +346,10 @@ library UIAutomationClient
         const long UIA_Selection2LastSelectedItemPropertyId           = 30170;
         const long UIA_Selection2CurrentSelectedItemPropertyId        = 30171;
         const long UIA_Selection2ItemCountPropertyId                  = 30172;
-        const long UIA_HeadingLevelPropertyId                         = 30173;
-        const long UIA_IsDialogPropertyId                             = 30174;
     }
 
     [dllname("<no entry points>")]
-    module UIA_TextAttributeIds
+    module UIA_TextAttributeIds 
     {
         const long UIA_AnimationStyleAttributeId             = 40000;
         const long UIA_BackgroundColorAttributeId            = 40001;
@@ -489,7 +470,7 @@ library UIAutomationClient
         const long AnnotationType_DataValidationError    = 60021;
         const long AnnotationType_CircularReferenceError = 60022;
         const long AnnotationType_Mathematics            = 60023;
-        const long AnnotationType_Sensitive              = 60024;
+
     };
 
     [dllname("<no entry points>")]
@@ -522,21 +503,6 @@ library UIAutomationClient
         const long UIA_MainLandmarkTypeId       = 80002;
         const long UIA_NavigationLandmarkTypeId = 80003;
         const long UIA_SearchLandmarkTypeId     = 80004;
-    };
-
-    [dllname("<no entry points>")]
-    module UIA_HeadingLevelIds
-    {
-        const long HeadingLevel_None = 80050;
-        const long HeadingLevel1 = 80051;
-        const long HeadingLevel2 = 80052;
-        const long HeadingLevel3 = 80053;
-        const long HeadingLevel4 = 80054;
-        const long HeadingLevel5 = 80055;
-        const long HeadingLevel6 = 80056;
-        const long HeadingLevel7 = 80057;
-        const long HeadingLevel8 = 80058;
-        const long HeadingLevel9 = 80059;
     };
 
     [dllname("<no entry points>")]
@@ -615,7 +581,7 @@ library UIAutomationClient
             [out, retval] int * childCount );
 
         HRESULT GetChildrenAsNativeArray (
-            [out, size_is(, *childArrayCount)] IUIAutomationCondition *** childArray,
+            [out, size_is( ,*childArrayCount)] IUIAutomationCondition *** childArray,
             [out] int * childArrayCount );
 
         HRESULT GetChildren (
@@ -628,7 +594,7 @@ library UIAutomationClient
     [object, uuid(f528b657-847b-498c-8896-d52b565407a1), pointer_default(unique)]
     interface IUIAutomationNotCondition : IUIAutomationCondition
     {
-        HRESULT GetChild (
+        HRESULT GetChild(
             [out, retval] IUIAutomationCondition ** condition );
     }
 
@@ -1518,17 +1484,6 @@ library UIAutomationClient
     }
 
     //
-    //  IUIAutomationActiveTextPositionChangedEventHandler
-    //
-    [object, uuid(F97933B0-8DAE-4496-8997-5BA015FE0D82), pointer_default(unique), oleautomation]
-    interface IUIAutomationActiveTextPositionChangedEventHandler : IUnknown
-    {
-        HRESULT HandleActiveTextPositionChangedEvent(
-            [in] IUIAutomationElement* sender,
-            [in] IUIAutomationTextRange* range);
-    }
-
-    //
     //  IUIAutomationLegacyIAccessiblePattern
     //
 
@@ -2311,25 +2266,6 @@ library UIAutomationClient
             [out, retval] VARIANT* returnVal);
     }
 
-    [object, uuid(8C60217D-5411-4CDE-BCC0-1CEDA223830C), pointer_default(unique)]
-    interface IUIAutomationElement8 : IUIAutomationElement7
-    {
-        [propget] HRESULT CurrentHeadingLevel(
-            [out, retval] HEADINGLEVELID* retVal);
-
-        [propget] HRESULT CachedHeadingLevel(
-            [out, retval] HEADINGLEVELID* retVal);
-    }
-
-    [object, uuid(39325fac-039d-440e-a3a3-5eb81a5cecc3), pointer_default(unique)]
-    interface IUIAutomationElement9 : IUIAutomationElement8
-    {
-        [propget] HRESULT CurrentIsDialog(
-            [out, retval] BOOL* retVal);
-        [propget] HRESULT CachedIsDialog(
-            [out, retval] BOOL* retVal);
-    }
-
     //  IUIAutomationElementArray
     //
     [object, uuid(14314595-b4bc-4055-95f2-58f2e42c9855), pointer_default(unique)]
@@ -2450,54 +2386,6 @@ library UIAutomationClient
         HRESULT ClearTable ( );
 
         HRESULT RestoreDefaultTable ( );
-    }
-
-    //
-    //  IUIAutomationEventHandlerGroup
-    //
-    [object, uuid(C9EE12F2-C13B-4408-997C-639914377F4E), pointer_default(unique)]
-    interface IUIAutomationEventHandlerGroup : IUnknown
-    {
-        HRESULT AddActiveTextPositionChangedEventHandler(
-            [in] enum TreeScope scope,
-            [in] IUIAutomationCacheRequest* cacheRequest,
-            [in] IUIAutomationActiveTextPositionChangedEventHandler* handler);
-
-        HRESULT AddAutomationEventHandler(
-            [in] EVENTID eventId,
-            [in] enum TreeScope scope,
-            [in] IUIAutomationCacheRequest* cacheRequest,
-            [in] IUIAutomationEventHandler* handler);
-
-        HRESULT AddChangesEventHandler(
-            [in] enum TreeScope scope,
-            [in, size_is(changesCount)] int* changeTypes,
-            [in] int changesCount,
-            [in] IUIAutomationCacheRequest* cacheRequest,
-            [in] IUIAutomationChangesEventHandler* handler);
-
-        HRESULT AddNotificationEventHandler(
-            [in] enum TreeScope scope,
-            [in] IUIAutomationCacheRequest* cacheRequest,
-            [in] IUIAutomationNotificationEventHandler* handler);
-
-        HRESULT AddPropertyChangedEventHandler(
-            [in] enum TreeScope scope,
-            [in] IUIAutomationCacheRequest* cacheRequest,
-            [in] IUIAutomationPropertyChangedEventHandler* handler,
-            [in, size_is(propertyCount)] PROPERTYID* propertyArray,
-            [in] int propertyCount);
-
-        HRESULT AddStructureChangedEventHandler(
-            [in] enum TreeScope scope,
-            [in] IUIAutomationCacheRequest* cacheRequest,
-            [in] IUIAutomationStructureChangedEventHandler* handler);
-
-        HRESULT AddTextEditTextChangedEventHandler(
-            [in] enum TreeScope scope,
-            [in] enum TextEditChangeType textEditChangeType,
-            [in] IUIAutomationCacheRequest* cacheRequest,
-            [in] IUIAutomationTextEditTextChangedEventHandler* handler);
     }
 
     //
@@ -2762,7 +2650,7 @@ library UIAutomationClient
     }
 
     //
-    //  IUIAutomation2
+    //  IUIAutomation
     //
     [object, uuid(34723aff-0c9d-49d0-9896-7ab52df8cd8a), pointer_default(unique)]
     interface IUIAutomation2 : IUIAutomation
@@ -2844,46 +2732,6 @@ library UIAutomationClient
     }
 
     //
-    //  IUIAutomation6
-    //
-    [object, uuid(AAE072DA-29E3-413D-87A7-192DBF81ED10), pointer_default(unique)]
-    interface IUIAutomation6 : IUIAutomation5
-    {
-        HRESULT CreateEventHandlerGroup(
-            [out] IUIAutomationEventHandlerGroup** handlerGroup);
-
-        HRESULT AddEventHandlerGroup(
-            [in] IUIAutomationElement* element,
-            [in] IUIAutomationEventHandlerGroup* handlerGroup);
-
-        HRESULT RemoveEventHandlerGroup(
-            [in] IUIAutomationElement* element,
-            [in] IUIAutomationEventHandlerGroup* handlerGroup);
-
-        [propget] HRESULT ConnectionRecoveryBehavior(
-            [out, retval] enum ConnectionRecoveryBehaviorOptions* connectionRecoveryBehaviorOptions);
-
-        [propput] HRESULT ConnectionRecoveryBehavior(
-            [in] enum ConnectionRecoveryBehaviorOptions connectionRecoveryBehaviorOptions);
-
-        [propget] HRESULT CoalesceEvents(
-            [out, retval] enum CoalesceEventsOptions* coalesceEventsOptions);
-
-        [propput] HRESULT CoalesceEvents(
-            [in] enum CoalesceEventsOptions coalesceEventsOptions);
-
-        HRESULT AddActiveTextPositionChangedEventHandler ( 
-            [in] IUIAutomationElement* element, 
-            [in] enum TreeScope scope, 
-            [in] IUIAutomationCacheRequest* cacheRequest, 
-            [in] IUIAutomationActiveTextPositionChangedEventHandler* handler); 
-
-        HRESULT RemoveActiveTextPositionChangedEventHandler( 
-            [in] IUIAutomationElement* element, 
-            [in] IUIAutomationActiveTextPositionChangedEventHandler* handler); 
-    }
-
-    //
     //  CUIAutomation
     //
     [
@@ -2916,7 +2764,6 @@ library UIAutomationClient
         interface IUIAutomation3;
         interface IUIAutomation4;
         interface IUIAutomation5;
-        interface IUIAutomation6;
     }
 }
 

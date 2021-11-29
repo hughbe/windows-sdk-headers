@@ -26,8 +26,8 @@ extern "C" {
 
 #if NTDDI_VERSION >= NTDDI_WIN8 
 
-#ifndef SIPAEV_PREBOOT_CERT
 //----------------------------------TCG-defined PCR Event Types
+#ifndef SIPAEV_PREBOOT_CERT
 #define SIPAEV_PREBOOT_CERT (0x00000000)
 #define SIPAEV_POST_CODE (0x00000001)
 #define SIPAEV_UNUSED (0x00000002)
@@ -46,7 +46,6 @@ extern "C" {
 #define SIPAEV_NONHOST_CODE (0x0000000F)
 #define SIPAEV_NONHOST_CONFIG (0x00000010)
 #define SIPAEV_NONHOST_INFO (0x00000011)
-#define SIPAEV_OMIT_BOOT_DEVICE_EVENTS (0x00000012)
 #define SIPAEV_EFI_EVENT_BASE (0x80000000)
 #define SIPAEV_EFI_VARIABLE_DRIVER_CONFIG (0x80000001)
 #define SIPAEV_EFI_VARIABLE_BOOT (0x80000002)
@@ -59,41 +58,6 @@ extern "C" {
 #define SIPAEV_EFI_HANDOFF_TABLES (0x80000009)
 #define SIPAEV_EFI_HCRTM_EVENT (0x80000010)
 #define SIPAEV_EFI_VARIABLE_AUTHORITY (0x800000E0)
-//----------------------------------PCR Event Types for Intel TXT
-#define SIPAEV_TXT_EVENT_BASE (0x00000400)
-#define SIPAEV_TXT_PCR_MAPPING (0x00000401)
-#define SIPAEV_TXT_HASH_START (0x00000402)
-#define SIPAEV_TXT_COMBINED_HASH (0x00000403)
-#define SIPAEV_TXT_MLE_HASH (0x00000404)
-#define SIPAEV_TXT_BIOSAC_REG_DATA (0x0000040A)
-#define SIPAEV_TXT_CPU_SCRTM_STAT (0x0000040B)
-#define SIPAEV_TXT_LCP_CONTROL_HASH (0x0000040C)
-#define SIPAEV_TXT_ELEMENTS_HASH (0x0000040D)
-#define SIPAEV_TXT_STM_HASH (0x0000040E)
-#define SIPAEV_TXT_OSSINITDATA_CAP_HASH (0x0000040F)
-#define SIPAEV_TXT_SINIT_PUBKEY_HASH (0x00000410)
-#define SIPAEV_TXT_LCP_HASH (0x00000411)
-#define SIPAEV_TXT_LCP_DETAILS_HASH (0x00000412)
-#define SIPAEV_TXT_LCP_AUTHORITIES_HASH (0x00000413)
-#define SIPAEV_TXT_NV_INFO_HASH (0x00000414)
-#define SIPAEV_TXT_COLD_BOOT_BIOS_HASH (0x00000415)
-#define SIPAEV_TXT_KM_HASH (0x00000416)
-#define SIPAEV_TXT_BPM_HASH (0x00000417)
-#define SIPAEV_TXT_KM_INFO_HASH (0x00000418)
-#define SIPAEV_TXT_BPM_INFO_HASH (0x00000419)
-#define SIPAEV_TXT_BOOT_POL_HASH (0x0000041A)
-#define SIPAEV_TXT_RANDOM_VALUE (0x000004FE)
-#define SIPAEV_TXT_CAP_VALUE (0x000004FF)
-//----------------------------------PCR Event Types for AMD SecureLaunch
-#define SIPAEV_AMD_SL_EVENT_BASE (0x00008000)
-#define SIPAEV_AMD_SL_LOAD (0x00008001)
-#define SIPAEV_AMD_SL_PSP_FW_SPLT (0x00008002)
-#define SIPAEV_AMD_SL_TSME_RB_FUSE (0x00008003)
-#define SIPAEV_AMD_SL_PUB_KEY (0x00008004)
-#define SIPAEV_AMD_SL_SVN (0x00008005)
-#define SIPAEV_AMD_SL_LOAD_1 (0x00008006)
-#define SIPAEV_AMD_SL_SEPARATOR (0x00008007)
-
 #endif
 
 //-----------------------------Types of tagged events in WBCL file
@@ -114,7 +78,6 @@ extern "C" {
 #define SIPAEVENTTYPE_ELAM                              (0x00090000)
 #define SIPAEVENTTYPE_VBS                               (0x000A0000)
 #define SIPAEVENTTYPE_KSR                               (0x000B0000)
-#define SIPAEVENTTYPE_DRTM                              (0x000C0000)
 
 //SIPAEVENTTYPE_CONTAINER
 #define SIPAEVENT_TRUSTBOUNDARY            (SIPAEVENTTYPE_AGGREGATION + \
@@ -263,18 +226,6 @@ extern "C" {
                                             0x0013)
 
 //
-// Describes the SMT (simultaneous multithreading or HyperThreading) status.
-// The potential values are as follows:
-//
-// 0 - SMT is disabled in firmware, or not supported by the platform.
-// 1 - SMT is enabled.
-// 2 - SMT is enabled in firmware, but disabled in software.
-//
-
-#define SIPAEVENT_SMT_STATUS               (SIPAEVENTTYPE_OSPARAMETER + \
-                                           0x0014)
-
-//
 // Describes the VSM/SMART identity decryption public key.
 //
 #define SIPAEVENT_VSM_IDK_INFO             (SIPAEVENTTYPE_OSPARAMETER + \
@@ -337,18 +288,6 @@ extern "C" {
                                              0x0028)
 
 // #endif
-
-#if NTDDI_VERSION >= NTDDI_WIN10_RS5
-
-//
-// This event contains certain details of the active Secure Boot Custom Policy (SBCP).
-// The data portion for this event is an instance of SIPAEVENT_SBCP_INFO_PAYLOAD_V* 
-// structure.
-//
-#define SIPAEVENT_SBCP_INFO                 (SIPAEVENTTYPE_OSPARAMETER + \
-                                             0x0029)
-
-#endif
 
 //SIPAEVENTTYPE_AUHTORITY
 #define SIPAEVENT_NOAUTHORITY              (SIPAEVENTTYPE_AUTHORITY + \
@@ -436,70 +375,13 @@ extern "C" {
 
 // SIPAEVENTTYPE_KSR
 #define SIPAEVENT_KSR_SIGNATURE            (SIPAEVENTTYPE_KSR + \
-                                           0x001)
+                                            0x001)
 
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS3
 
-#if NTDDI_VERSION >= NTDDI_WIN10_RS5
 
 //
-// SIPAEVENTTYPE_DRTM.
-//
-// This event is measured to PCR[20] during DRTM by TcbLaunch.exe.
-//
-// The payload for this event is an instance of TPM_API_PA_DIRECT_AUTHORIZATION_1
-// containing a signature over a TPM policy matching the system state at the time
-// of launching TcbLaunch.exe. A typical TPM policy for validating DRTM state
-// contains a combination of the MLE measurement in PCR 18, a state of PCR[22] and
-// a proper value for the DRTM SVN.
-//
-#define SIPAEVENT_DRTM_STATE_AUTH           (SIPAEVENTTYPE_DRTM + \
-                                            0x001)
-
-#if NTDDI_VERSION >= NTDDI_WIN10_VB
-
-//
-// SIPAEVENT_DRTM_SMM_LEVEL.
-//
-// This event is measured to PCR[20] during DRTM by TcbLaunch.exe.
-//
-// The payload for this event is a single byte of data containing one of the values
-// from the SI_DRTM_SMM_LEVEL enumeration.
-//
-
-#define SIPAEVENT_DRTM_SMM_LEVEL            (SIPAEVENTTYPE_DRTM + \
-                                            0x002)
-
-//
-// SIPAEVENT_DRTM_AMD_SMM_HASH.
-//
-// This event is measured to PCR[19] during AMD Secure Launch by TcbLaunch.exe.
-//
-// The payload for this event is the hash digest of the AMD SMM code module
-// as computed by the AMD DRTM service.
-//
-
-#define SIPAEVENT_DRTM_AMD_SMM_HASH         (SIPAEVENTTYPE_DRTM + \
-                                            0x003)
-
-//
-// SIPAEVENT_DRTM_AMD_SMM_SIGNER_KEY.
-//
-// This event is measured to PCR[20] during AMD Secure Launch by TcbLaunch.exe.
-//
-// The payload for this event is the hash digest of the AMD SMM code module
-// signer public key as reported by the AMD DRTM service.
-//
-
-#define SIPAEVENT_DRTM_AMD_SMM_SIGNER_KEY   (SIPAEVENTTYPE_DRTM + \
-                                            0x004)
-
-#endif // NTDDI_VERSION > NTDDI_WIN10_VB
-
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS5
-
-//
-#endif // SIPAEVENTTYPE_NONMEASURED
+#endif
 
 //--------------------------------------------Value Definitions
 
@@ -549,9 +431,6 @@ typedef UINT16 WBCL_DIGEST_ALG_ID;
 #define WBCL_DIGEST_ALG_ID_SHA_2_384        0x000C
 #define WBCL_DIGEST_ALG_ID_SHA_2_512        0x000D
 #define WBCL_DIGEST_ALG_ID_SM3_256          0x0012
-#define WBCL_DIGEST_ALG_ID_SHA3_256         0x0027
-#define WBCL_DIGEST_ALG_ID_SHA3_384         0x0028
-#define WBCL_DIGEST_ALG_ID_SHA3_512         0x0029
 
 //
 // These values are aligned with the TPM 2.0 algorithm bitmap
@@ -561,9 +440,6 @@ typedef UINT16 WBCL_DIGEST_ALG_ID;
 #define WBCL_DIGEST_ALG_BITMAP_SHA_2_384    0x00000004
 #define WBCL_DIGEST_ALG_BITMAP_SHA_2_512    0x00000008
 #define WBCL_DIGEST_ALG_BITMAP_SM3_256      0x00000010
-#define WBCL_DIGEST_ALG_BITMAP_SHA3_256     0x00000020
-#define WBCL_DIGEST_ALG_BITMAP_SHA3_384     0x00000040
-#define WBCL_DIGEST_ALG_BITMAP_SHA3_512     0x00000080
 
 //
 // An iterator object for WBCL log.
@@ -810,59 +686,6 @@ typedef struct tag_SIPAEVENT_KSR_SIGNATURE_PAYLOAD
 } SIPAEVENT_KSR_SIGNATURE_PAYLOAD, *PSIPAEVENT_KSR_SIGNATURE_PAYLOAD;
 
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS3
-
-#if NTDDI_VERSION >= NTDDI_WIN10_RS5
-
-//
-// Payload structure used to carry information about SBCP.
-//
-typedef struct tag_SIPAEVENT_SBCP_INFO_PAYLOAD_V1
-{
-    //
-    // Version of this structure. 
-    // For SIPAEVENT_SBCP_INFO_PAYLOAD_V1 this value is going to be set to 1.
-    //
-    UINT32 PayloadVersion;
-
-    //
-    // Offset in bytes from the start of this structure to the first byte
-    // of VarData.
-    //
-    UINT32 VarDataOffset;
-
-    //
-    // Indicates hash algorithm ID used to produce SBCP hash digest.
-    // Contains one of the TPM_ALG_ID values, typically the TPM_ALG_SHA256.
-    //
-    UINT16  HashAlgID;
-
-    //
-    // Indicates the hash digest length (in bytes). Digest is stored as part of VarData.
-    //
-    _Field_range_(1, 64)
-    UINT16  DigestLength;
-
-    //
-    // Contains the OptionFlags value from the SBCP descriptor.
-    //
-    UINT32  Options;
-
-    //
-    // Contains the SignersCount value for the SBCP.
-    // 
-    UINT32  SignersCount;
-
-    //
-    // VarData layout is:
-    //
-    // BYTE Digest[DigestLength]
-    //
-    _Field_size_bytes_(DigestLength)
-    BYTE    VarData[ANYSIZE_ARRAY];
-
-} SIPAEVENT_SBCP_INFO_PAYLOAD_V1, *PSIPAEVENT_SBCP_INFO_PAYLOAD_V1;
-
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS5
 
 #pragma pack(pop)
 

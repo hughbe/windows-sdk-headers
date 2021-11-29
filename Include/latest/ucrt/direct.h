@@ -6,15 +6,10 @@
 // Functions for directory handling and creation.
 //
 #pragma once
-#ifndef _INC_DIRECT // include guard for 3rd party interop
 #define _INC_DIRECT
 
 #include <corecrt.h>
 #include <corecrt_wdirect.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -86,7 +81,7 @@ _Check_return_ _ACRTIMP int __cdecl _rmdir(_In_z_ char const* _Path);
 
 
 
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
 
     #ifdef _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
 
@@ -126,6 +121,3 @@ _Check_return_ _ACRTIMP int __cdecl _rmdir(_In_z_ char const* _Path);
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_DIRECT

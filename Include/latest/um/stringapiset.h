@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * stringapi.h -- ApiSet Contract for api-ms-win-core-string-l1                  *
@@ -18,14 +19,32 @@
 #include <minwindef.h>
 #include <winnls.h>
 
+/* APISET_NAME: api-ms-win-core-string-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_STRING_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN7
+#define _APISET_STRING_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#pragma region Desktop or OneCore or Application or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
 
 #if (WINVER >= 0x0600)
+
+#pragma region Application or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 int
@@ -55,7 +74,14 @@ CompareStringOrdinal(
     );
 
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
 #endif //(WINVER >= 0x0600)
+
+#pragma region Desktop or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINBASEAPI
 int
@@ -88,6 +114,13 @@ FoldStringW(
 #define FoldString  FoldStringW
 #endif
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 WINBASEAPI
 BOOL
 WINAPI
@@ -114,6 +147,7 @@ GetStringTypeW(
     );
 
 
+
 //
 //  NLS Code Page Dependent APIs.
 //
@@ -128,7 +162,7 @@ MultiByteToWideChar(
     _In_ DWORD dwFlags,
     _In_NLS_string_(cbMultiByte) LPCCH lpMultiByteStr,
     _In_ int cbMultiByte,
-    _Out_writes_to_opt_(cchWideChar,return) LPWSTR lpWideCharStr,
+    _Out_writes_to_opt_(cchWideChar, return) LPWSTR lpWideCharStr,
     _In_ int cchWideChar
     );
 
@@ -143,18 +177,19 @@ WideCharToMultiByte(
     _In_ DWORD dwFlags,
     _In_NLS_string_(cchWideChar) LPCWCH lpWideCharStr,
     _In_ int cchWideChar,
-    _Out_writes_bytes_to_opt_(cbMultiByte,return) LPSTR lpMultiByteStr,
+    _Out_writes_bytes_to_opt_(cbMultiByte, return) LPSTR lpMultiByteStr,
     _In_ int cbMultiByte,
     _In_opt_ LPCCH lpDefaultChar,
     _Out_opt_ LPBOOL lpUsedDefaultChar
     );
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 #ifdef __cplusplus
 }
 #endif
+
 
 #endif // _APISETSTRING_

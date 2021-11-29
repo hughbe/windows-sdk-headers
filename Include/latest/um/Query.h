@@ -249,15 +249,9 @@ typedef struct tagPROPERTYRESTRICTION
     } 	PROPERTYRESTRICTION;
 
 // NOTE: When using the /permissive- compiler switch the below structure
-// will not compile due to the case(RTOr) member 'or'. If compiling with the /permissive-
-// switch please also define QUERY_H_RESTRICTION_PERMISSIVE
+// will not compile due to the case(RTOr) member 'or'. Please compile without
+// the /permissive- switch
 
-#pragma push_macro("orRestrictionName")
-#if QUERY_H_RESTRICTION_PERMISSIVE
-#define orRestrictionName orRestriction
-#else
-#define orRestrictionName or
-#endif
 struct tagRESTRICTION
     {
     ULONG rt;
@@ -265,7 +259,7 @@ struct tagRESTRICTION
     /* [switch_is][switch_type] */ union _URes
         {
         /* [case()] */ NODERESTRICTION ar;
-        /* [case()] */ NODERESTRICTION orRestrictionName;
+        /* [case()] */ NODERESTRICTION or;
         /* [case()] */ NODERESTRICTION pxr;
         /* [case()] */ VECTORRESTRICTION vr;
         /* [case()] */ NOTRESTRICTION nr;
@@ -275,7 +269,6 @@ struct tagRESTRICTION
         /* [default] */  /* Empty union arm */ 
         } 	res;
     } ;
-#pragma pop_macro("orRestrictionName")
 typedef struct tagCOLUMNSET
     {
     ULONG cCol;

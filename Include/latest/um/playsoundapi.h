@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * playsoundapi.h -- ApiSet Contract for api-ms-win-mm-playsound-l1-1-0          *  
@@ -19,11 +20,28 @@
 
 #include <mmsyscom.h> // mm common definitions
 
+/* APISET_NAME: api-ms-win-mm-playsound-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_PLAYSOUND_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_PLAYSOUND_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Desktop Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #ifndef MMNOSOUND                                                
@@ -77,7 +95,8 @@ BOOL WINAPI sndPlaySound(LPCSTR pszSound, UINT fuSound);
 #define SND_ALIAS_ID    0x00110000L /* alias is a predefined ID */
 #define SND_FILENAME    0x00020000L /* name is file name */
 #define SND_RESOURCE    0x00040004L /* name is resource name or atom */
-#if(WINVER >= 0x0400)
+
+#if (WINVER >= 0x0400)
 #define SND_PURGE           0x0040  /* purge non-static events for task */
 #define SND_APPLICATION     0x0080  /* look for application specific association */
 #endif /* WINVER >= 0x0400 */
@@ -98,6 +117,7 @@ BOOL WINAPI sndPlaySound(LPCSTR pszSound, UINT fuSound);
 #define SND_ALIAS_SYSTEMWELCOME         sndAlias('S', 'W')
 #define SND_ALIAS_SYSTEMEXCLAMATION     sndAlias('S', '!')
 #define SND_ALIAS_SYSTEMDEFAULT         sndAlias('S', 'D')
+
 
 WINMMAPI
 BOOL

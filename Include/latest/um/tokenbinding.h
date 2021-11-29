@@ -41,7 +41,6 @@ typedef enum TOKENBINDING_KEY_PARAMETERS_TYPE{
     TOKENBINDING_KEY_PARAMETERS_TYPE_RSA2048_PKCS = 0,
     TOKENBINDING_KEY_PARAMETERS_TYPE_RSA2048_PSS = 1,
     TOKENBINDING_KEY_PARAMETERS_TYPE_ECDSAP256 = 2,
-    TOKENBINDING_KEY_PARAMETERS_TYPE_ANYEXISTING = 255,
 }TOKENBINDING_KEY_PARAMETERS_TYPE;
 
 #pragma pack(push, 1)
@@ -126,21 +125,6 @@ TokenBindingGenerateID(
     _In_reads_bytes_(publicKeySize) const void *publicKey,
     _In_ DWORD publicKeySize,
     _Outptr_ TOKENBINDING_RESULT_DATA **resultData
-);
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
-STDAPI_(SECURITY_STATUS)
-TokenBindingGenerateIDForUri(
-    _In_ TOKENBINDING_KEY_PARAMETERS_TYPE keyType,
-    _In_ PCWSTR targetUri,
-    _Outptr_ TOKENBINDING_RESULT_DATA **resultData
-);
-#endif
-
-STDAPI_(SECURITY_STATUS)
-TokenBindingGetHighestSupportedVersion(
-    _Out_ BYTE *majorVersion,
-    _Out_ BYTE *minorVersion
 );
 
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)

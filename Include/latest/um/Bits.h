@@ -371,8 +371,8 @@ EXTERN_C const IID IID_IEnumBackgroundCopyFiles;
 /* interface IBackgroundCopyError */
 /* [object][helpstring][uuid] */ 
 
-typedef 
-enum BG_ERROR_CONTEXT
+typedef /* [public][public] */ 
+enum __MIDL_IBackgroundCopyError_0001
     {
         BG_ERROR_CONTEXT_NONE	= 0,
         BG_ERROR_CONTEXT_UNKNOWN	= 1,
@@ -381,8 +381,7 @@ enum BG_ERROR_CONTEXT
         BG_ERROR_CONTEXT_LOCAL_FILE	= 4,
         BG_ERROR_CONTEXT_REMOTE_FILE	= 5,
         BG_ERROR_CONTEXT_GENERAL_TRANSPORT	= 6,
-        BG_ERROR_CONTEXT_REMOTE_APPLICATION	= 7,
-        BG_ERROR_CONTEXT_SERVER_CERTIFICATE_CALLBACK	= 8
+        BG_ERROR_CONTEXT_REMOTE_APPLICATION	= 7
     } 	BG_ERROR_CONTEXT;
 
 
@@ -532,8 +531,8 @@ typedef struct _BG_JOB_TIMES
     FILETIME TransferCompletionTime;
     } 	BG_JOB_TIMES;
 
-typedef 
-enum BG_JOB_PRIORITY
+typedef /* [public][public][public] */ 
+enum __MIDL_IBackgroundCopyJob_0001
     {
         BG_JOB_PRIORITY_FOREGROUND	= 0,
         BG_JOB_PRIORITY_HIGH	= ( BG_JOB_PRIORITY_FOREGROUND + 1 ) ,
@@ -541,8 +540,8 @@ enum BG_JOB_PRIORITY
         BG_JOB_PRIORITY_LOW	= ( BG_JOB_PRIORITY_NORMAL + 1 ) 
     } 	BG_JOB_PRIORITY;
 
-typedef 
-enum BG_JOB_STATE
+typedef /* [public][public] */ 
+enum __MIDL_IBackgroundCopyJob_0002
     {
         BG_JOB_STATE_QUEUED	= 0,
         BG_JOB_STATE_CONNECTING	= ( BG_JOB_STATE_QUEUED + 1 ) ,
@@ -555,16 +554,16 @@ enum BG_JOB_STATE
         BG_JOB_STATE_CANCELLED	= ( BG_JOB_STATE_ACKNOWLEDGED + 1 ) 
     } 	BG_JOB_STATE;
 
-typedef 
-enum BG_JOB_TYPE
+typedef /* [public][public][public] */ 
+enum __MIDL_IBackgroundCopyJob_0003
     {
         BG_JOB_TYPE_DOWNLOAD	= 0,
         BG_JOB_TYPE_UPLOAD	= ( BG_JOB_TYPE_DOWNLOAD + 1 ) ,
         BG_JOB_TYPE_UPLOAD_REPLY	= ( BG_JOB_TYPE_UPLOAD + 1 ) 
     } 	BG_JOB_TYPE;
 
-typedef 
-enum BG_JOB_PROXY_USAGE
+typedef /* [public][public][public] */ 
+enum __MIDL_IBackgroundCopyJob_0004
     {
         BG_JOB_PROXY_USAGE_PRECONFIG	= 0,
         BG_JOB_PROXY_USAGE_NO_PROXY	= ( BG_JOB_PROXY_USAGE_PRECONFIG + 1 ) ,

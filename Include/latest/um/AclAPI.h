@@ -42,7 +42,7 @@ extern "C" {
 // to "Only On Error."
 //
 
-typedef VOID (CALLBACK *FN_PROGRESS) (
+typedef VOID (*FN_PROGRESS) (
     _In_ LPWSTR                     pObjectName,    // name of object just processed
     _In_ DWORD                      Status,         // status of operation on object
     _Inout_ PPROG_INVOKE_SETTING    pInvokeSetting, // Never, always,

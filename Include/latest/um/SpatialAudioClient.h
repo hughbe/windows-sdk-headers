@@ -104,8 +104,8 @@ extern "C"{
 /* [local] */ 
 
 #include <winapifamily.h>
-#pragma region Application and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 typedef /* [v1_enum] */ 
 enum AudioObjectType
     {
@@ -1126,7 +1126,7 @@ typedef struct SpatialAudioClientActivationParams
 #define SPTLAUDCLNT_E_STATIC_OBJECT_NOT_AVAILABLE         AUDCLNT_ERR(0x010b)
 #define SPTLAUDCLNT_E_OBJECT_ALREADY_ACTIVE               AUDCLNT_ERR(0x010c)
 #define SPTLAUDCLNT_E_INTERNAL                            AUDCLNT_ERR(0x010d)
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 
 
 extern RPC_IF_HANDLE __MIDL_itf_spatialaudioclient_0000_0007_v0_0_c_ifspec;

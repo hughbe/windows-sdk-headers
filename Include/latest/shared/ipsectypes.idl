@@ -334,6 +334,7 @@ cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS3)")
 cpp_quote("#define IPSEC_POLICY_FLAG_SITE_TO_SITE_TUNNEL (0x00010000)")
 cpp_quote("#endif // (NTDDI_VERSION > NTDDI_WIN10_RS3)")
 
+
 // Type used to store transport mode quick mode negotiation policy
 typedef struct IPSEC_TRANSPORT_POLICY0_
 {
@@ -909,9 +910,6 @@ cpp_quote("#if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)")
 cpp_quote("#define IPSEC_SA_BUNDLE_FLAG_IP_IN_IP_PKT (0x00400000)")
 cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)")
 
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)")
-cpp_quote("#define IPSEC_SA_BUNDLE_FLAG_LOW_POWER_MODE_SUPPORT (0x00800000)")
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)")
 
 // Type used to store information about an IPsec SA bundle.
 typedef struct IPSEC_SA_BUNDLE0_

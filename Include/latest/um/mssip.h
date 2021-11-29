@@ -48,8 +48,6 @@ typedef CRYPT_HASH_BLOB             CRYPT_DIGEST_DATA;
 
 #define SPC_DIGEST_GENERATE_FLAG                0x200
 #define SPC_DIGEST_SIGN_FLAG                    0x400
-// 0x1000 and 0x2000 are used by SIG_APPEND and SIG_SEAL defined in signer.w 
-#define SPC_DIGEST_SIGN_EX_FLAG                 0x4000
 
 // Define relaxed PE marker check semantic.
 #define SPC_RELAXED_PE_MARKER_CHECK             0x800

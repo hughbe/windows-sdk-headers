@@ -6,15 +6,10 @@
 // Floating point environment library.
 //
 #pragma once
-#ifndef _FENV // include guard for 3rd party interop
 #define _FENV
 
 #include <corecrt.h>
 #include <float.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -111,7 +106,7 @@ _ACRTIMP int __cdecl fesetround(_In_ int _Round);
             };
 
             double _Ans = 0.0;
-            size_t _Index;
+            int _N;
 
             if ((_Except &= FE_ALL_EXCEPT) == 0)
             {
@@ -119,11 +114,11 @@ _ACRTIMP int __cdecl fesetround(_In_ int _Round);
             }
 
             // Raise the exceptions not masked:
-            for (_Index = 0; _Index < sizeof(_Table) / sizeof(_Table[0]); ++_Index)
+            for (_N = 0; _N < sizeof(_Table) / sizeof(_Table[0]); ++_N)
             {
-                if ((_Except & _Table[_Index]._Except_Val) != 0)
+                if ((_Except & _Table[_N]._Except_Val) != 0)
                 {
-                    _Ans = _Table[_Index]._Num / _Table[_Index]._Denom;
+                    _Ans = _Table[_N]._Num / _Table[_N]._Denom;
 
                     // x87 exceptions are raised immediately before execution of the
                     // next floating point instruction.  If we're using /arch:IA32,
@@ -154,6 +149,3 @@ _ACRTIMP int __cdecl fesetround(_In_ int _Round);
 #endif // !defined _M_CEE && !defined _CORECRT_BUILD
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _FENV

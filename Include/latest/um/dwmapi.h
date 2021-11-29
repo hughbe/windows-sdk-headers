@@ -1,8 +1,20 @@
-// Copyright (C) Microsoft Corporation. All rights reserved.
+/*=========================================================================*\
+
+    Copyright (c) Microsoft Corporation.  All rights reserved.
+
+    File: dwmapi.h
+
+    Module Name: dwmapi
+
+    Description: DWM API declarations
+
+\*=========================================================================*/
 #ifndef _DWMAPI_H_
 #define _DWMAPI_H_
 
 #include <winapifamily.h>
+
+#pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
@@ -15,6 +27,11 @@
 #define DWMAPI_(type)   STDAPI_(type)
 #endif /* _DWMAPI_ */
 #endif /* DWMAPI */
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 #ifndef MILCORE_KERNEL_COMPONENT
 #include <wtypes.h>
@@ -40,7 +57,7 @@ typedef struct _DWM_BLURBEHIND
 enum DWMWINDOWATTRIBUTE
 {
     DWMWA_NCRENDERING_ENABLED = 1,      // [get] Is non-client rendering enabled/disabled
-    DWMWA_NCRENDERING_POLICY,           // [set] DWMNCRENDERINGPOLICY - Non-client rendering policy
+    DWMWA_NCRENDERING_POLICY,           // [set] Non-client rendering policy
     DWMWA_TRANSITIONS_FORCEDISABLED,    // [set] Potentially enable/forcibly disable transitions
     DWMWA_ALLOW_NCPAINT,                // [set] Allow contents rendered in the non-client area to be visible on the DWM-drawn frame.
     DWMWA_CAPTION_BUTTON_BOUNDS,        // [get] Bounds of the caption button area in window-relative space.
@@ -53,11 +70,9 @@ enum DWMWINDOWATTRIBUTE
     DWMWA_EXCLUDED_FROM_PEEK,           // [set] LivePreview exclusion information
     DWMWA_CLOAK,                        // [set] Cloak or uncloak the window
     DWMWA_CLOAKED,                      // [get] Gets the cloaked state of the window
-    DWMWA_FREEZE_REPRESENTATION,        // [set] BOOL, Force this window to freeze the thumbnail without live update
-    DWMWA_PASSIVE_UPDATE_MODE,          // [set] BOOL, Updates the window only when desktop composition runs for other reasons
+    DWMWA_FREEZE_REPRESENTATION,        // [set] Force this window to freeze the thumbnail without live update
     DWMWA_LAST
 };
-
 
 // Non-client rendering policy attribute values
 enum DWMNCRENDERINGPOLICY
@@ -253,7 +268,7 @@ typedef  struct _DWM_TIMING_INFO
     // for this HWND that have been displayed by the DWM
     // since DwmSetPresentParameters was called
     DWM_FRAME_COUNT cRefreshesDisplayed;
-
+    
     // The total number of refreshes worth of content
     // that have been presented by the application
     // since DwmSetPresentParameters was called
@@ -589,62 +604,16 @@ DwmShowContact(
 #endif // NTDDI_WIN8
 
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-enum DWM_TAB_WINDOW_REQUIREMENTS
-{
-    // This result means the window meets all requirements requested.
-    DWMTWR_NONE                     = 0x0000,
-
-    // In some configurations, admin/user setting or mode of the system means that windows won't be tabbed
-    // This requirement says that the system/mode must implement tabbing and if it does not
-    // nothing can be done to change this.
-    DWMTWR_IMPLEMENTED_BY_SYSTEM    = 0x0001,
-
-    // The window has an owner or parent so is ineligible for tabbing.
-    DWMTWR_WINDOW_RELATIONSHIP      = 0x0002,
-
-    // The window has styles that make it ineligible for tabbing.
-    // To be eligible windows must:
-    // Have the WS_OVERLAPPEDWINDOW (WS_CAPTION, WS_THICKFRAME, etc.) styles set.
-    // Not have WS_POPUP, WS_CHILD or WS_DLGFRAME set.
-    // Not have WS_EX_TOPMOST or WS_EX_TOOLWINDOW set.
-    DWMTWR_WINDOW_STYLES            = 0x0004,
-
-    // The window has a region (set using SetWindowRgn) making it ineligible.
-    DWMTWR_WINDOW_REGION            = 0x0008,
-
-    // The window is ineligible due to its Dwm configuration.
-    // It must not extended its client area into the title bar using DwmExtendFrameIntoClientArea
-    // It must not have DWMWA_NCRENDERING_POLICY set to DWMNCRP_ENABLED
-    DWMTWR_WINDOW_DWM_ATTRIBUTES    = 0x0010,
-
-    // The window is ineligible due to it's margins, most likely due to custom handling in WM_NCCALCSIZE.
-    // The window must use the default window margins for the non-client area.
-    DWMTWR_WINDOW_MARGINS           = 0x0020,
-
-    // The window has been explicitly opted out by setting DWMWA_TABBING_ENABLED to FALSE.
-    DWMTWR_TABBING_ENABLED          = 0x0040,
-
-    // The user has configured this application to not participate in tabbing.
-    DWMTWR_USER_POLICY              = 0x0080,
-
-    // The group policy has configured this application to not participate in tabbing.
-    DWMTWR_GROUP_POLICY             = 0x0100,
-
-    // This is set if app compat has blocked tabs for this window. Can be overridden per window by setting
-    // DWMWA_TABBING_ENABLED to TRUE. That does not override any other tabbing requirements.
-    DWMTWR_APP_COMPAT               = 0x0200
-};
-DEFINE_ENUM_FLAG_OPERATORS(DWM_TAB_WINDOW_REQUIREMENTS);
-
-// Checks the requirements needed to get tabs in the application title bar.
-DWMAPI DwmGetUnmetTabRequirements(_In_opt_ HWND appWindow, _Out_ enum DWM_TAB_WINDOW_REQUIREMENTS* value);
-
-#endif // NTDDI_WIN10_RS4
-
 
 #include <poppack.h>
 
+#ifdef __cplusplus
+}
+#endif
+
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
 #endif // _DWMAPI_H_
+

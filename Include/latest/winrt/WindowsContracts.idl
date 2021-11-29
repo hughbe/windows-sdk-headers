@@ -4,10 +4,10 @@ namespace Windows
 {
     namespace Foundation
     {
-        [contractversion(4)]
+        [contractversion(3)]
         apicontract FoundationContract{};
 
-        [contractversion(10)]
+        [contractversion(5)]
         apicontract UniversalApiContract{};
     }
 
@@ -18,7 +18,7 @@ namespace Windows
     }
     namespace ApplicationModel.Calls
     {
-        [contractversion(5)]
+        [contractversion(3)]
         apicontract CallsPhoneContract{};
     }
 
@@ -29,12 +29,6 @@ namespace Windows
 
         [contractversion(1)]
         apicontract PhoneInternalContract{};
-    }
-
-    namespace Networking.Sockets
-    {
-        [contractversion(3)]
-        apicontract ControlChannelTriggerContract{};
     }
 
 }

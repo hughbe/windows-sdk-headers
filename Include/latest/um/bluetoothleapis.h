@@ -27,7 +27,7 @@ Environment:
 
 #ifdef __cplusplus
 extern "C"{
-#endif
+#endif 
 
 #if NTDDI_VERSION >= NTDDI_WIN8
 
@@ -438,7 +438,7 @@ BluetoothGATTBeginReliableWrite(
 
 //
 //  Description:
-//      The BluetoothGATTSetCharacteristicValue function writes the specified characteristic value to the Bluetooth device.
+//      The BluetoothGATTSetCharacteristicValue function writes the specified characteristic value to the Bluetooth device. 
 //
 //  Parameters:
 //      hDevice [in]
@@ -717,7 +717,7 @@ BluetoothGATTUnregisterEvent(
 
 #ifdef __cplusplus
     }
-#endif
+#endif 
 
 
 

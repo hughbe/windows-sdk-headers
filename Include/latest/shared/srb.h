@@ -16,8 +16,6 @@ Revision History:
 
 --*/
 
-//@[contract("ntoskrnl-srb"), comment("MVI_tracked - https://osgwiki.com/wiki/Microsoft_Virus_Initiative")];
-
 #ifndef _NTSRB_
 #define _NTSRB_
 
@@ -471,7 +469,6 @@ typedef struct _SCSI_SUPPORTED_CONTROL_TYPE_LIST {
 // SCSI I/O Request Block
 //
 
-//@[comment("MVI_tracked")]
 typedef struct _SCSI_REQUEST_BLOCK {
     USHORT Length;                  // offset 0
     UCHAR Function;                 // offset 2
@@ -733,6 +730,8 @@ typedef struct _SCSI_PNP_REQUEST_BLOCK {
 //
 #define SRB_FUNCTION_STORAGE_REQUEST_BLOCK  0x28
 
+#define SRB_FUNCTION_CRYPTO_OPERATION       0x29
+
 // end_storport
 
 #define SRB_FUNCTION_GET_DUMP_INFO          0x2a
@@ -772,8 +771,6 @@ typedef struct _SCSI_PNP_REQUEST_BLOCK {
 #define SRB_STATUS_ERROR_RECOVERY           0x23
 #define SRB_STATUS_NOT_POWERED              0x24
 #define SRB_STATUS_LINK_DOWN                0x25
-#define SRB_STATUS_INSUFFICIENT_RESOURCES   0x26
-#define SRB_STATUS_THROTTLED_REQUEST        0x27
 
 
 //
@@ -820,11 +817,6 @@ typedef struct _SCSI_PNP_REQUEST_BLOCK {
 // This flag indicates the request is part of the workflow for processing a D3.
 //
 #define SRB_FLAGS_D3_PROCESSING             0x00000800
-
-//
-// This flag indicates that LBA range falls into sequential write required zone
-//
-#define SRB_FLAGS_SEQUENTIAL_REQUIRED       0x00001000
 
 
 #define SRB_FLAGS_IS_ACTIVE                 0x00010000
@@ -1095,9 +1087,7 @@ typedef _Struct_size_bytes_(SrbLength) struct SRB_ALIGN _STORAGE_REQUEST_BLOCK {
     _Field_range_(SRB_FUNCTION_STORAGE_REQUEST_BLOCK, SRB_FUNCTION_STORAGE_REQUEST_BLOCK)
     UCHAR Function;
     UCHAR SrbStatus;
-
-    // Reserved for internal use
-    ULONG ReservedUlong1;
+    UCHAR ReservedUchar[4];
 
     //
     // General SRB fields. The first 6 fields should not changed between
@@ -1119,7 +1109,7 @@ typedef _Struct_size_bytes_(SrbLength) struct SRB_ALIGN _STORAGE_REQUEST_BLOCK {
     ULONG SrbFlags;
 
     // Reserved for future use to expand SrbStatus to 32-bit
-    ULONG ReservedUlong2;
+    ULONG ReservedUlong;
 
     // Equivalent to QueueTag or Task Tag in SCSI
     ULONG RequestTag;

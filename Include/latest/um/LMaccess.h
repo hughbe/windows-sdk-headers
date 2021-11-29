@@ -53,11 +53,7 @@ NET_API_STATUS NET_API_FUNCTION
 NetUserAdd (
     _In_opt_  LPCWSTR    servername OPTIONAL,
     _In_      DWORD      level,
-    _When_(level == 1, _In_reads_bytes_(sizeof(USER_INFO_1)))
-    _When_(level == 2, _In_reads_bytes_(sizeof(USER_INFO_2)))
-    _When_(level == 3, _In_reads_bytes_(sizeof(USER_INFO_3)))
-    _When_(level == 4, _In_reads_bytes_(sizeof(USER_INFO_4)))
-        LPBYTE     buf,
+    _In_      LPBYTE     buf,
     _Out_opt_ LPDWORD    parm_err OPTIONAL
     );
 
@@ -974,9 +970,9 @@ NetLocalGroupAdd (
 
 NET_API_STATUS NET_API_FUNCTION
 NetLocalGroupAddMember (
-    _In_opt_ LPCWSTR   servername OPTIONAL,
-    _In_ LPCWSTR   groupname,
-    _In_ PSID     membersid
+    IN  LPCWSTR   servername OPTIONAL,
+    IN  LPCWSTR   groupname,
+    IN  PSID     membersid
     );
 
 NET_API_STATUS NET_API_FUNCTION
@@ -1512,22 +1508,18 @@ NetValidatePasswordPolicyFree(
 // Function Prototypes - Domain
 //
 
-_Success_(return == ERROR_SUCCESS)
 NET_API_STATUS NET_API_FUNCTION
 NetGetDCName (
-    _In_opt_ LPCWSTR   ServerName,
-    _In_opt_ LPCWSTR   DomainName,
-    _Outptr_result_nullonfailure_ _At_((LPWSTR *)Buffer, _Outptr_result_z_)
-        LPBYTE  *Buffer
+    _In_opt_ IN  LPCWSTR   servername OPTIONAL,
+    _In_opt_ IN  LPCWSTR   domainname OPTIONAL,
+    _At_((LPWSTR *)bufptr, _Outptr_result_z_) LPBYTE  *bufptr
     );
 
-_Success_(return == ERROR_SUCCESS)
 NET_API_STATUS NET_API_FUNCTION
 NetGetAnyDCName (
-    _In_opt_ LPCWSTR ServerName,
-    _In_opt_ LPCWSTR DomainName,
-    _Outptr_result_nullonfailure_ _At_((LPWSTR *)Buffer, _Outptr_result_z_)
-        LPBYTE  *Buffer
+    _In_opt_ IN  LPCWSTR   servername OPTIONAL,
+    _In_opt_ IN  LPCWSTR   domainname OPTIONAL,
+    _At_((LPWSTR *)bufptr, _Outptr_result_z_) LPBYTE  *bufptr
     );
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
@@ -1681,7 +1673,7 @@ NetAddServiceAccount(
     _In_ LPWSTR AccountName,
     _In_ LPWSTR Password,
     _In_ DWORD Flags);
-
+    
 // Do not create an account by this name
 // Only link this account to my computer if it exists
 #define SERVICE_ACCOUNT_FLAG_LINK_TO_HOST_ONLY    0x00000001L
@@ -1712,7 +1704,7 @@ NetEnumerateServiceAccounts(
     _In_ DWORD Flags,
     _Out_ DWORD* AccountsCount,
     _Outptr_result_buffer_(*AccountsCount) PZPWSTR* Accounts);
-
+    
 NTSTATUS
 NetIsServiceAccount(
     _In_opt_ LPWSTR ServerName,

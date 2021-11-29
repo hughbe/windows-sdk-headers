@@ -1,3 +1,4 @@
+ 
 //
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //
@@ -20,6 +21,7 @@
 #ifndef _GAMING_TCUI_EXT_
 #define _GAMING_TCUI_EXT_
 
+
 #if NTDDI_VERSION >= NTDDI_THRESHOLD
 
 #include <apiset.h>
@@ -33,6 +35,33 @@
 #endif
 
 #include <winstring.h>
+
+/* APISET_NAME: api-ms-win-gaming-tcui-l1 */
+/* APISET_TAG: public */
+
+// #if _APISET_TARGET_VERSION
+// #ifdef _APISET_TARGET_VERSION
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_GAMING_TCUI_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN10_RS3
+#define _APISET_GAMING_TCUI_VER 0x0104
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN10_RS2
+#define _APISET_GAMING_TCUI_VER 0x0103
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN10_RS1
+#define _APISET_GAMING_TCUI_VER 0x0102
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN10_TH2
+#define _APISET_GAMING_TCUI_VER 0x0101
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINTHRESHOLD
+#define _APISET_GAMING_TCUI_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+ // #ifndef _APISET_GAMING_TCUI_VER
+
 
 #if defined(__cplusplus)
 extern "C" {
@@ -58,7 +87,7 @@ ShowGameInviteUI(
     _In_ HSTRING sessionId,
     _In_ HSTRING invitationDisplayText,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
@@ -66,14 +95,14 @@ HRESULT
 WINAPI
 ShowPlayerPickerUI(
     _In_ HSTRING promptDisplayText,
-    _In_reads_(xuidsCount) const HSTRING* xuids,
+    _In_reads_(xuidsCount) const HSTRING * xuids,
     _In_ size_t xuidsCount,
-    _In_reads_opt_(preSelectedXuidsCount) const HSTRING* preSelectedXuids,
+    _In_reads_opt_(preSelectedXuidsCount) const HSTRING * preSelectedXuids,
     _In_ size_t preSelectedXuidsCount,
     _In_ size_t minSelectionCount,
     _In_ size_t maxSelectionCount,
     _In_ PlayerPickerUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
@@ -82,7 +111,7 @@ WINAPI
 ShowProfileCardUI(
     _In_ HSTRING targetUserXuid,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
@@ -91,7 +120,7 @@ WINAPI
 ShowChangeFriendRelationshipUI(
     _In_ HSTRING targetUserXuid,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
@@ -100,7 +129,7 @@ WINAPI
 ShowTitleAchievementsUI(
     _In_ UINT32 titleId,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
@@ -116,6 +145,10 @@ WINAPI
 TryCancelPendingGameUI(
     );
 
+
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_GAMING_TCUI_VER >= 0x0101)
 
 typedef enum KnownGamingPrivileges{
     XPRIVILEGE_BROADCAST = 190,                     // The user can broadcast live gameplay
@@ -142,6 +175,7 @@ typedef enum KnownGamingPrivileges{
     XPRIVILEGE_ADD_FRIEND = 255,                    // The user can follow other Xbox LIVE users and add Xbox LIVE friends when this privilege is present
 } KnownGamingPrivileges;
 
+
 HRESULT
 WINAPI
 CheckGamingPrivilegeWithUI(
@@ -150,7 +184,7 @@ CheckGamingPrivilegeWithUI(
     _In_ HSTRING policy,
     _In_opt_ HSTRING friendlyMessage,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
@@ -160,92 +194,102 @@ CheckGamingPrivilegeSilently(
     _In_ UINT32 privilegeId,
     _In_ HSTRING scope,
     _In_ HSTRING policy,
-    _Out_ BOOL* hasPrivilege
+    _Out_ BOOL * hasPrivilege
     );
 
+
+#endif //#if _APISET_GAMING_TCUI_VER >= 0x0101)
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_GAMING_TCUI_VER >= 0x0102)
 
 HRESULT
 WINAPI
 ShowGameInviteUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ HSTRING serviceConfigurationId,
     _In_ HSTRING sessionTemplateName,
     _In_ HSTRING sessionId,
     _In_ HSTRING invitationDisplayText,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 ShowPlayerPickerUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ HSTRING promptDisplayText,
-    _In_reads_(xuidsCount) const HSTRING* xuids,
+    _In_reads_(xuidsCount) const HSTRING * xuids,
     _In_ size_t xuidsCount,
-    _In_reads_opt_(preSelectedXuidsCount) const HSTRING* preSelectedXuids,
+    _In_reads_opt_(preSelectedXuidsCount) const HSTRING * preSelectedXuids,
     _In_ size_t preSelectedXuidsCount,
     _In_ size_t minSelectionCount,
     _In_ size_t maxSelectionCount,
     _In_ PlayerPickerUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 ShowProfileCardUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ HSTRING targetUserXuid,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 ShowChangeFriendRelationshipUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ HSTRING targetUserXuid,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 ShowTitleAchievementsUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ UINT32 titleId,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 CheckGamingPrivilegeWithUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ UINT32 privilegeId,
     _In_ HSTRING scope,
     _In_ HSTRING policy,
     _In_opt_ HSTRING friendlyMessage,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 CheckGamingPrivilegeSilentlyForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ UINT32 privilegeId,
     _In_ HSTRING scope,
     _In_ HSTRING policy,
-    _Out_ BOOL* hasPrivilege
+    _Out_ BOOL * hasPrivilege
     );
 
+
+#endif //#if _APISET_GAMING_TCUI_VER >= 0x0102)
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_GAMING_TCUI_VER >= 0x0103)
 
 HRESULT
 WINAPI
@@ -256,40 +300,44 @@ ShowGameInviteUIWithContext(
     _In_ HSTRING invitationDisplayText,
     _In_ HSTRING customActivationContext,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 ShowGameInviteUIWithContextForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ HSTRING serviceConfigurationId,
     _In_ HSTRING sessionTemplateName,
     _In_ HSTRING sessionId,
     _In_ HSTRING invitationDisplayText,
     _In_ HSTRING customActivationContext,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
+#endif //#if _APISET_GAMING_TCUI_VER >= 0x0103)
+
+
+#if !defined(_CONTRACT_GEN) || (_APISET_GAMING_TCUI_VER >= 0x0104)
 HRESULT
 WINAPI
 ShowGameInfoUI(
     _In_ UINT32 titleId,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 ShowGameInfoUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ UINT32 titleId,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
@@ -297,16 +345,16 @@ HRESULT
 WINAPI
 ShowFindFriendsUI(
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 ShowFindFriendsUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
@@ -314,16 +362,16 @@ HRESULT
 WINAPI
 ShowCustomizeUserProfileUI(
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 ShowCustomizeUserProfileUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
@@ -331,22 +379,26 @@ HRESULT
 WINAPI
 ShowUserSettingsUI(
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
 
 
 HRESULT
 WINAPI
 ShowUserSettingsUIForUser(
-    _In_ IInspectable* user,
+    _In_ IInspectable * user,
     _In_ GameUICompletionRoutine completionRoutine,
-    _In_opt_ void* context
+    _In_opt_ void * context
     );
+
+
+#endif //#if _APISET_GAMING_TCUI_VER >= 0x0104)
 
 
 #if defined(__cplusplus)
 } // end extern "C"
 #endif // defined(__cplusplus)
+
 
 #endif // NTDDI_VERSION >= NTDDI_THRESHOLD
 

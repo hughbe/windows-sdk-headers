@@ -2553,6 +2553,34 @@ DISPID_MP2TUNERFACTORY_CREATETUNEREQUEST        = 1,
 // Extensible eventing mechanism
 ///////////////////////////////////////////////////////////////////////////////////////
 
+	//
+	// Generic and specific events that could return
+	// in OnESEventReceived
+	//
+	[
+		object,
+		uuid(1F0E5357-AF43-44e6-8547-654C645145D2),
+		helpstring("IESEvent Interface"),
+		pointer_default(unique)
+	]
+	interface IESEvent : IUnknown
+	{
+		// Get current information of the event
+		HRESULT GetEventId ([out, retval] DWORD* pdwEventId);
+		HRESULT GetEventType ([out, retval] GUID* pguidEventType);
+
+		// Set the completion status of the event if the callee processes the event.
+		HRESULT SetCompletionStatus ([in]DWORD dwResult);
+
+		// Get the data in byte array.
+		// use NULL pbData to determine data length
+		// Get the data in byte array.
+		HRESULT GetData ([out, retval] SAFEARRAY(BYTE)* pbData);
+
+		// Get the data in unicode string format.
+		HRESULT GetStringData ([out, retval] BSTR* pbstrData);
+	};
+
 	[
 		object,
 		uuid(BA4B6526-1A35-4635-8B56-3EC612746A8C),
@@ -2718,6 +2746,17 @@ DISPID_MP2TUNERFACTORY_CREATETUNEREQUEST        = 1,
 
 	[
 		object,
+		uuid(ABD414BF-CFE5-4e5e-AF5B-4B4E49C5BFEB),
+		helpstring("Eventing out-going client interface"),
+		pointer_default(unique)
+	]
+	interface IESEvents : IUnknown
+	{
+		HRESULT OnESEventReceived([in] GUID guidEventType, [in] IESEvent* pESEvent);
+	};
+
+	[
+		object,
 		uuid(ED89A619-4C06-4b2f-99EB-C7669B13047C),
 		helpstring("Extensible eventing service interface"),
 		pointer_default(unique)
@@ -2765,6 +2804,35 @@ DISPID_MP2TUNERFACTORY_CREATETUNEREQUEST        = 1,
 ///////////////////////////////////////////////////////////////////////////////////////
 // utility interfaces
 ///////////////////////////////////////////////////////////////////////////////////////
+
+    [
+        object,
+        hidden,
+        nonextensible,
+        uuid(3B21263F-26E8-489d-AAC4-924F7EFD9511),
+        helpstring("Broadcast Event Service Firing/Reflecting Interface"),
+        pointer_default(unique)
+    ]
+    interface IBroadcastEvent : IUnknown
+    {
+        HRESULT Fire([in] GUID EventID);
+        
+    };
+
+    [
+        object,
+        hidden,
+        nonextensible,
+        uuid(3d9e3887-1929-423f-8021-43682de95448),
+        helpstring("Enhanced Broadcast Event Service Firing/Reflecting Interface"),
+        pointer_default(unique)
+    ]
+    interface IBroadcastEventEx : IBroadcastEvent
+    {
+        HRESULT FireEx([in] GUID EventID, [in] ULONG Param1, [in] ULONG Param2, [in] ULONG Param3, [in] ULONG Param4);
+        
+    };
+
 
     // this is a utility object that does the marshalling and makes it simple to register 
     // an apt model ITuner implementation into a graph's IServiceProvider
@@ -3423,6 +3491,7 @@ library TunerLib
 
 cpp_quote("#define SID_ESEventService CLSID_ESEventService")
 cpp_quote("#define SID_ESEventFactory CLSID_ESEventFactory")
+cpp_quote("#define SID_SBroadcastEventService CLSID_BroadcastEventService")
 cpp_quote("#define SID_SContentTuneRequest IID_ITuner")
 cpp_quote("#define SID_ScanningTuner IID_IScanningTuner")
 cpp_quote("#define SID_ScanningTunerEx IID_IScanningTunerEx")

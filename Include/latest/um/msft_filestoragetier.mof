@@ -35,10 +35,4 @@ class MSFT_FileStorageTier {
 
     [Read]
     Uint64  FileSizeOnDesiredStorageTierClass;
-
-    [Read]
-    Uint64  FileSizeOnPerformanceTierClass;
-
-    [Read]
-    Uint64  FileSizeOnCapacityTierClass;
 };

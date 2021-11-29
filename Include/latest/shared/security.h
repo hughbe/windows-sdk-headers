@@ -17,8 +17,8 @@
 #endif
 #include <winapifamily.h>
 
-#pragma region Desktop Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
 // This file will go out and pull in all the header files that you need,
@@ -58,17 +58,6 @@
 #endif
 #endif // NEGOSSP_NAME
 
-#ifndef CLOUDAP_NAME
-#define CLOUDAP_NAME_W  L"CloudAP"
-#define ClOUDAP_NAME_A  "CloudAP"
-
-#ifdef UNICODE
-#define CLOUDAP_NAME    CLOUDAP_NAME_W
-#else
-#define CLOUDAP_NAME    ClOUDAP_NAME_A
-#endif
-#endif // CLOUDAP_NAME
-
 //
 // Include the master SSPI header file
 //
@@ -87,5 +76,6 @@
 #include <issper16.h>
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
+

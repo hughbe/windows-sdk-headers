@@ -67,13 +67,6 @@ typedef interface IAudioProcessingObject IAudioProcessingObject;
 #endif 	/* __IAudioProcessingObject_FWD_DEFINED__ */
 
 
-#ifndef __IAudioDeviceModulesClient_FWD_DEFINED__
-#define __IAudioDeviceModulesClient_FWD_DEFINED__
-typedef interface IAudioDeviceModulesClient IAudioDeviceModulesClient;
-
-#endif 	/* __IAudioDeviceModulesClient_FWD_DEFINED__ */
-
-
 #ifndef __IAudioSystemEffects_FWD_DEFINED__
 #define __IAudioSystemEffects_FWD_DEFINED__
 typedef interface IAudioSystemEffects IAudioSystemEffects;
@@ -695,89 +688,7 @@ EXTERN_C const IID IID_IAudioProcessingObject;
 #endif 	/* __IAudioProcessingObject_INTERFACE_DEFINED__ */
 
 
-#ifndef __IAudioDeviceModulesClient_INTERFACE_DEFINED__
-#define __IAudioDeviceModulesClient_INTERFACE_DEFINED__
-
-/* interface IAudioDeviceModulesClient */
-/* [unique][helpstring][nonextensible][uuid][local][object] */ 
-
-
-EXTERN_C const IID IID_IAudioDeviceModulesClient;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("98F37DAC-D0B6-49F5-896A-AA4D169A4C48")
-    IAudioDeviceModulesClient : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE SetAudioDeviceModulesManager( 
-            /* [annotation][in] */ 
-            _In_  IUnknown *pAudioDeviceModulesManager) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IAudioDeviceModulesClientVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IAudioDeviceModulesClient * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IAudioDeviceModulesClient * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IAudioDeviceModulesClient * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetAudioDeviceModulesManager )( 
-            IAudioDeviceModulesClient * This,
-            /* [annotation][in] */ 
-            _In_  IUnknown *pAudioDeviceModulesManager);
-        
-        END_INTERFACE
-    } IAudioDeviceModulesClientVtbl;
-
-    interface IAudioDeviceModulesClient
-    {
-        CONST_VTBL struct IAudioDeviceModulesClientVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IAudioDeviceModulesClient_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IAudioDeviceModulesClient_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IAudioDeviceModulesClient_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IAudioDeviceModulesClient_SetAudioDeviceModulesManager(This,pAudioDeviceModulesManager)	\
-    ( (This)->lpVtbl -> SetAudioDeviceModulesManager(This,pAudioDeviceModulesManager) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IAudioDeviceModulesClient_INTERFACE_DEFINED__ */
-
-
-/* interface __MIDL_itf_audioenginebaseapo_0000_0005 */
+/* interface __MIDL_itf_audioenginebaseapo_0000_0004 */
 /* [local] */ 
 
 //
@@ -792,8 +703,8 @@ extern HRESULT WINAPI EnumerateAPOs(FNAPONOTIFICATIONCALLBACK pfnCallback, PVOID
 extern HRESULT WINAPI GetAPOProperties(REFCLSID clsid, APO_REG_PROPERTIES* pProperties);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioenginebaseapo_0000_0005_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioenginebaseapo_0000_0005_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioenginebaseapo_0000_0004_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioenginebaseapo_0000_0004_v0_0_s_ifspec;
 
 #ifndef __IAudioSystemEffects_INTERFACE_DEFINED__
 #define __IAudioSystemEffects_INTERFACE_DEFINED__
@@ -1060,7 +971,7 @@ EXTERN_C const IID IID_IAudioSystemEffectsCustomFormats;
 #endif 	/* __IAudioSystemEffectsCustomFormats_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioenginebaseapo_0000_0008 */
+/* interface __MIDL_itf_audioenginebaseapo_0000_0007 */
 /* [local] */ 
 
 typedef struct APOInitSystemEffects
@@ -1085,7 +996,7 @@ typedef struct APOInitSystemEffects2
     BOOL InitializeForDiscoveryOnly;
     } 	APOInitSystemEffects2;
 
-typedef /* [public] */ struct __MIDL___MIDL_itf_audioenginebaseapo_0000_0008_0001
+typedef /* [public] */ struct __MIDL___MIDL_itf_audioenginebaseapo_0000_0007_0001
     {
     LPARAM AddPageParam;
     LPWSTR pwstrEndpointID;
@@ -1121,13 +1032,12 @@ DEFINE_PROPERTYKEY(PKEY_MFX_KeywordDetector_ProcessingModes_Supported_For_Stream
 DEFINE_PROPERTYKEY(PKEY_EFX_KeywordDetector_ProcessingModes_Supported_For_Streaming, 0xd3993a3f, 0x99c2, 0x4402, 0xb5, 0xec, 0xa9, 0x2a, 0x3, 0x67, 0x66, 0x4b, 10);
 DEFINE_PROPERTYKEY(PKEY_SFX_Offload_ProcessingModes_Supported_For_Streaming, 0xd3993a3f, 0x99c2, 0x4402, 0xb5, 0xec, 0xa9, 0x2a, 0x3, 0x67, 0x66, 0x4b, 11);
 DEFINE_PROPERTYKEY(PKEY_MFX_Offload_ProcessingModes_Supported_For_Streaming, 0xd3993a3f, 0x99c2, 0x4402, 0xb5, 0xec, 0xa9, 0x2a, 0x3, 0x67, 0x66, 0x4b, 12);
-DEFINE_PROPERTYKEY(PKEY_APO_SWFallback_ProcessingModes, 0xd3993a3f, 0x99c2, 0x4402, 0xb5, 0xec, 0xa9, 0x2a, 0x3, 0x67, 0x66, 0x4b, 13);
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioenginebaseapo_0000_0008_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioenginebaseapo_0000_0008_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioenginebaseapo_0000_0007_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioenginebaseapo_0000_0007_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

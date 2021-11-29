@@ -35,7 +35,7 @@ Environment:
 #if ((defined(_WINSOCK_DEPRECATED_NO_WARNINGS) || defined(BUILD_WINDOWS)) && !defined(_WINSOCK_DEPRECATE_WARNINGS)) || defined(MIDL_PASS)
 #define _WINSOCK_DEPRECATED_BY(replacement)
 #else
-#define _WINSOCK_DEPRECATED_BY(replacement) __declspec(deprecated("Use " replacement " instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"))
+#define _WINSOCK_DEPRECATED_BY(replacement) __declspec(deprecated("Use " ## replacement ## " instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"))
 #endif
 #endif
 
@@ -73,13 +73,13 @@ extern "C" {
 
 //#if(_WIN32_WINNT >= 0x0600)
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 //
 // Address families.
 //
 typedef USHORT ADDRESS_FAMILY;
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 //#endif//(_WIN32_WINNT >= 0x0600)
@@ -167,8 +167,6 @@ typedef USHORT ADDRESS_FAMILY;
 //
 
 #define SOL_SOCKET 0xffff
-#define SOL_IP     (SOL_SOCKET-4)
-#define SOL_IPV6   (SOL_SOCKET-5)
 
 //
 // Define socket-level options.
@@ -215,9 +213,6 @@ typedef USHORT ADDRESS_FAMILY;
                                     // outbound connections
 #define SO_REUSE_MULTICASTPORT 0x3008 // enable port reuse and disable unicast
                                     //reception.
-#define SO_ORIGINAL_DST 0x300F      // Query the original destination address
-                                    // of a redirected connection.
-#define IP6T_SO_ORIGINAL_DST SO_ORIGINAL_DST
 #endif //(_WIN32_WINNT >= 0x0600)
 
 //
@@ -232,8 +227,8 @@ typedef USHORT ADDRESS_FAMILY;
 
 #define TCP_NODELAY         0x0001
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 //
 // Structure used to store most addresses.
 //
@@ -267,7 +262,7 @@ typedef struct _SOCKET_ADDRESS {
 //        _Field_range_(>=, sizeof(SOCKADDR_IN6)))
     INT iSockaddrLength;
 } SOCKET_ADDRESS, *PSOCKET_ADDRESS, *LPSOCKET_ADDRESS;
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 /*
@@ -602,8 +597,8 @@ typedef enum {
 #define INADDR_BROADCAST        (ULONG)0xffffffff
 #define INADDR_NONE             0xffffffff
 
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
 // Scope ID definition
@@ -648,7 +643,7 @@ typedef struct sockaddr_in {
     CHAR sin_zero[8];
 } SOCKADDR_IN, *PSOCKADDR_IN;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 //
@@ -929,8 +924,8 @@ ADDRINFOW, *PADDRINFOW;
 
 #if (_WIN32_WINNT >= 0x0600)
 
-#pragma region App Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 typedef struct _WINSOCK_DEPRECATED_BY("ADDRINFOEXW") addrinfoexA
 {
     int                 ai_flags;       // AI_PASSIVE, AI_CANONNAME, AI_NUMERICHOST
@@ -945,7 +940,7 @@ typedef struct _WINSOCK_DEPRECATED_BY("ADDRINFOEXW") addrinfoexA
     LPGUID              ai_provider;
     struct addrinfoexA *ai_next;        // Next structure in linked list
 } ADDRINFOEXA, *PADDRINFOEXA, *LPADDRINFOEXA;
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 typedef struct addrinfoexW

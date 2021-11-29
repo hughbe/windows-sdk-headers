@@ -2684,25 +2684,6 @@ typedef HCLUSCRYPTPROVIDER
     _In_ DWORD dwFlags
     );
 
-HCLUSCRYPTPROVIDER
-WINAPI
-OpenClusterCryptProviderEx(
-    _In_ LPCWSTR lpszResource,
-    _In_ LPCWSTR lpszKeyname,
-    _In_ LPCTSTR lpszProvider,
-    _In_ DWORD dwType,
-    _In_ DWORD dwFlags
-    );
-
-typedef HCLUSCRYPTPROVIDER
-(WINAPI * POPEN_CLUSTER_CRYPT_PROVIDEREX)(
-    _In_ LPCWSTR lpszResource,
-    _In_ LPCWSTR lpszKeyname,
-    _In_ LPCTSTR lpszProvider,
-    _In_ DWORD dwType,
-    _In_ DWORD dwFlags
-    );
-
 DWORD
 WINAPI
 CloseClusterCryptProvider(

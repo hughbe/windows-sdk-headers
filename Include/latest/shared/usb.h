@@ -429,43 +429,6 @@ typedef struct _USBD_PIPE_INFORMATION {
 
 #define USBD_PF_PRIORITY_MASK                 0x000000F0
 
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-
-//
-// Inform the USB hub driver that the client is enlightened to handle
-// SuperSpeedPlus high bandwidth Isochronous endpoints and expects the
-// bytes per interval to be captured in the MaximumTransferSize field
-// of the pipe information instead of the MaximumPacketSize field.
-// The USB hub driver will set the USBD_PF_SSP_HIGH_BANDWIDTH_ISOCH
-// flag for any such pipes if the client opts in by first setting this flag.
-//
-#define USBD_PF_HANDLES_SSP_HIGH_BANDWIDTH_ISOCH      0x00000100
-
-//
-// Inform the client that the pipe is a high bandwidth SuperSpeedPlus
-// Isochronous endpoint and the bytes per interval are captured in
-// the MaximumTransferSize field of the pipe information instead
-// of the MaximumPacketSize field. Note: this flag communicates pipe
-// properties from the host to the client, whereas other pipe flags
-// have historically been used to communicate intent from the client
-// to the host. As such, this flag is not included in the USBD_PF_VALID_MASK
-// and is only meaningful if the client has set the
-// USBD_PF_HANDLES_SSP_HIGH_BANDWIDTH_ISOCH flag.
-//
-#define USBD_PF_SSP_HIGH_BANDWIDTH_ISOCH      0x00010000
-
-#define USBD_PF_VALID_MASK    (USBD_PF_CHANGE_MAX_PACKET | \
-                               USBD_PF_SHORT_PACKET_OPT | \
-                               USBD_PF_ENABLE_RT_THREAD_ACCESS | \
-                               USBD_PF_MAP_ADD_TRANSFERS | \
-                               USBD_PF_VIDEO_PRIORITY | \
-                               USBD_PF_VOICE_PRIORITY | \
-                               USBD_PF_INTERACTIVE_PRIORITY | \
-                               USBD_PF_HANDLES_SSP_HIGH_BANDWIDTH_ISOCH)
-
-#else // (NTDDI_VERSION < NTDDI_WIN10_VB)
-
 #define USBD_PF_VALID_MASK    (USBD_PF_CHANGE_MAX_PACKET | \
                                USBD_PF_SHORT_PACKET_OPT | \
                                USBD_PF_ENABLE_RT_THREAD_ACCESS | \
@@ -473,8 +436,6 @@ typedef struct _USBD_PIPE_INFORMATION {
                                USBD_PF_VIDEO_PRIORITY | \
                                USBD_PF_VOICE_PRIORITY | \
                                USBD_PF_INTERACTIVE_PRIORITY)
-
-#endif
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 
@@ -518,9 +479,7 @@ typedef struct _USBD_ENDPOINT_OFFLOAD_INFORMATION {
     ULONG UsbDeviceAddress:8;
     ULONG SlotId:8;
     ULONG MultiTT:1;
-
-    ULONG LSOrFSDeviceConnectedToTTHub:1;
-    ULONG Reserved0:14;
+    ULONG Reserved0:15;
 
     //
     // Transfer ring information

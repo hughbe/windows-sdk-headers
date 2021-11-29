@@ -45,18 +45,9 @@ extern "C" {
 // Path:    ...\TimeProviders\<PrividerName>\InputProvider 
 // Type:    REG_DWORD (cast to BOOL)
 // Meaning: If true, this provider is an input provider, and will be
-//          called upon to return time samples. If this parameter and the 
-//          optional MetadataProvider parameter are set to false, this provider is as an output provider.
+//          called upon to return time samples. If false, this provider
+//          is an output provider.
 #define wszW32TimeRegValueInputProvider    L"InputProvider"
-
-// Path:    ...\TimeProviders\<PrividerName>\MetaDataProvider 
-// Type:    REG_DWORD (cast to BOOL)
-// Meaning: Optional parameter. If InputProvider parameter is true and this parameter is set to true, 
-//          this provider is a metadata provider, and will be called upon to return time metadata. 
-//          If both InputProvider and this parameter are set to false, this provider is as an output provider. 
-//          Additional checks are applied before loading a metadata provider. See documentation for further information.
-#define wszW32TimeRegValueMetaDataProvider    L"MetaDataProvider"
-
 
 //--------------------------------------------------------------------
 // types
@@ -76,7 +67,6 @@ typedef enum TimeProvCmd {
     TPC_NetTopoChange,      // (TpcNetTopoChangeArgs *)pvArgs
     TPC_Query,              // (W32TIME_PROVIDER_STATUS *)pvArgs
     TPC_Shutdown,           // (void)pvArgs
-    TPC_GetMetaDataSamples  // (TpcGetSamplesArgs *)pvArgs
 } TimeProvCmd;
 
 // info that can be requested through GetTimeSysInfo
@@ -84,7 +74,7 @@ typedef enum TimeSysInfo {
     TSI_LastSyncTime,   // (unsigned __int64 *)pvInfo, NtTimeEpoch, in (10^-7)s
     TSI_ClockTickSize,  // (unsigned __int64 *)pvInfo, NtTimePeriod, in (10^-7)s
     TSI_ClockPrecision, // (  signed __int32 *)pvInfo, ClockTickSize, in log2(s)
-    TSI_CurrentTime,    // (unsigned __int64 *)pvInfo, UTC-compatible NtTimeEpoch, in (10^-7)s. This removes the leap seconds, if any, from the system time.
+    TSI_CurrentTime,    // (unsigned __int64 *)pvInfo, NtTimeEpoch, in (10^-7)s
     TSI_PhaseOffset,    // (  signed __int64 *)pvInfo, opaque
     TSI_TickCount,      // (unsigned __int64 *)pvInfo, opaque
     TSI_LeapFlags,      // (            BYTE *)pvInfo, a warning of an impending leap second or loss of synchronization
@@ -95,11 +85,6 @@ typedef enum TimeSysInfo {
     TSI_RootDispersion, // (unsigned __int64 *)pvInfo, NtTimePeriod, in (10^-7)s
     TSI_TSFlags,        // (           DWORD *)pvInfo, Time source flags
     TSI_SeriviceRole,   // (           DWORD *)pvInfo, Time service role flags
-    TSI_CurrentUtcOffset, // (  signed __int64 *)pvInfo, Number of leap seconds elapsed since 12:00 AM June 1st 2018.
-                          // This can be a +ve or -ve number. Add this number to the time value after June 1st 2018 
-                          // obtained using TSI_CurrentTime to determine the approximate invariant time. This can be
-                          // used with loose consistency for time computations. The consistency around leap second roll over
-                          // is undefined.
 } TimeSysInfo;
 
 // flags which provide information about a time jump
@@ -185,16 +170,6 @@ typedef struct TimeSample {
     WCHAR wszUniqueName[256];           // Admin readable name that uniquely identifies this peer
 } TimeSample;
 
-typedef struct MetaDataSample {
-    DWORD dwSize;                       // size of this structure
-    DWORD dwRefid;                      // NtpRefId
-    unsigned __int64 tpDispersion;      // NtTimePeriod, in (10^-7)s - measurement error, INCLUDING root dispersion
-    unsigned __int64 nSysTickCount;     // opaque, must be GetTimeSysInfo(TSI_TickCount)
-    BYTE nLeapFlags;                    // a warning of an impending leap second or loss of synchronization
-    BYTE nStratum;                      // how far away the computer is from a reference source
-    DWORD dwTSFlags;                    // time source flags
-    WCHAR wszUniqueName[256];           // Admin readable name that uniquely identifies this peer
-} MetaDataSample;
 
 typedef struct TpcGetSamplesArgs {
     BYTE * pbSampleBuf;
@@ -202,13 +177,6 @@ typedef struct TpcGetSamplesArgs {
     DWORD dwSamplesReturned;
     DWORD dwSamplesAvailable;
 } TpcGetSamplesArgs;
-
-typedef struct TpcGetMetaDataSamplesArgs {
-    BYTE * pbSampleBuf;
-    DWORD cbSampleBuf;
-    DWORD dwSamplesReturned;
-    DWORD dwSamplesAvailable;
-} TpcGetMetaDataSamplesArgs;
 
 typedef struct TpcTimeJumpedArgs { 
     TimeJumpedFlags tjfFlags; 

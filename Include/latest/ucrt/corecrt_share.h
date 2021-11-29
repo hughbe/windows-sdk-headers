@@ -8,11 +8,7 @@
 //
 #pragma once
 
-#include <corecrt.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 #define _SH_DENYRW      0x10    // deny read/write mode
 #define _SH_DENYWR      0x20    // deny write mode
@@ -28,6 +24,3 @@ _UCRT_DISABLE_CLANG_WARNINGS
     #define SH_DENYRD _SH_DENYRD
     #define SH_DENYNO _SH_DENYNO
 #endif
-
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

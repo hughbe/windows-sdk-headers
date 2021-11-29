@@ -389,8 +389,8 @@ typedef enum _PerfRegInfoType {
     PERF_REG_PROVIDER_GUID,           /* Returns a GUID. */
     PERF_REG_COUNTERSET_ENGLISH_NAME, /* Returns a nul-terminated utf-16le string.
         Equivalent to PERF_REG_COUNTERSET_NAME_STRING with requestLangId = 0. */
-    PERF_REG_COUNTER_ENGLISH_NAMES    /* Returns a PERF_STRING_BUFFER_HEADER block.
-        Equivalent to PERF_REG_COUNTER_NAME_STRINGS with requestLangId = 0. */
+    PERF_REG_COUNTER_ENGLISH_NAMES    /* Returns a nul-terminated utf-16le string.
+        Equivalent to PERF_REG_COUNTERSET_HELP_STRING with requestLangId = 0. */
 } PerfRegInfoType;
 
 /*

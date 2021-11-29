@@ -10,10 +10,6 @@
 
 #include <corecrt.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
 
 
@@ -363,6 +359,9 @@ _CRT_BEGIN_C_HEADER
         _In_opt_z_ wchar_t const*, _Ext
         )
 
+#pragma warning(push)
+#pragma warning(disable: 28719) // __WARNING_BANNED_API_USAGE
+#pragma warning(disable: 28726) // __WARNING_BANNED_API_USAGEL2
 __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_4(
         void, __RETURN_POLICY_VOID, _ACRTIMP, _wmakepath,
         _Pre_notnull_ _Post_z_, wchar_t,        _Buffer,
@@ -371,6 +370,7 @@ __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_4(
         _In_opt_z_              wchar_t const*, _Filename,
         _In_opt_z_              wchar_t const*, _Ext
         )
+#pragma warning(pop)
 
     _ACRTIMP void __cdecl _wperror(
         _In_opt_z_ wchar_t const* _ErrorMessage
@@ -401,6 +401,10 @@ __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_4(
         errno_t, _wsplitpath_s,
         wchar_t, _Path
         )
+
+
+
+    #ifdef _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
 
         #pragma push_macro("_wdupenv_s")
         #undef _wdupenv_s
@@ -472,10 +476,9 @@ __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_4(
             _In_opt_z_ wchar_t const* _Command
             );
 
+    #endif // _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
 #endif // _CRT_FUNCTIONS_REQUIRED
 
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

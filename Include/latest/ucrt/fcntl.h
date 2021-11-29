@@ -6,14 +6,9 @@
 // File control options used by _open().
 //
 #pragma once
-#ifndef _INC_FCNTL // include guard for 3rd party interop
 #define _INC_FCNTL
 
-#include <corecrt.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 #define _O_RDONLY      0x0000  // open for reading only
 #define _O_WRONLY      0x0001  // open for writing only
@@ -61,8 +56,3 @@ _UCRT_DISABLE_CLANG_WARNINGS
     #define O_SEQUENTIAL _O_SEQUENTIAL
     #define O_RANDOM     _O_RANDOM
 #endif
-
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-
-#endif // _INC_FCNTL

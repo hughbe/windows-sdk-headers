@@ -478,6 +478,8 @@ namespace Windows
 
             interface IVisual2;
 
+            interface IVisual3;
+
             interface IVisualCollection;
 
             interface IVisualElement;
@@ -2672,6 +2674,15 @@ namespace Windows
                 [propput] HRESULT RelativeSizeAdjustment([in] Windows.Foundation.Numerics.Vector2 value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Composition.Visual)]
+            [uuid(30BE580D-F4B6-4AB7-80DD-3738CBAC9F2C)]
+            interface IVisual3 : IInspectable
+            {
+                [propget] HRESULT IsHitTestVisible([out] [retval] boolean* value);
+                [propput] HRESULT IsHitTestVisible([in] boolean value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]
             [exclusiveto(Windows.UI.Composition.VisualCollection)]
             [uuid(8B745505-FD3E-4A98-84A8-E949468C6BCB)]
@@ -3536,6 +3547,7 @@ namespace Windows
             {
                 [default] interface Windows.UI.Composition.IVisual;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.Composition.IVisual2;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Composition.IVisual3;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 2.0)]

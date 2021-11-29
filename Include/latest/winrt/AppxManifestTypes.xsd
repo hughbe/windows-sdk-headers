@@ -91,26 +91,6 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="ST_FileNameCharSet_2019">
-    <xs:restriction base="ST_NonEmptyString">
-      <xs:pattern value="[^&lt;&gt;&quot;:%|?\x01-\x1f]+"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_FileType_2019">
-    <xs:restriction base="ST_FileNameCharSet_2019">
-      <xs:pattern value="(\*|.[^.\*]+)"/>
-      <xs:maxLength value="64"/>
-    </xs:restriction>
-  </xs:simpleType>
-  
-  <xs:simpleType name="ST_FileTypeOrStar">
-    <xs:restriction base="ST_NonEmptyString">
-      <xs:pattern value="(\*|(\.[^.\\]+))"/>
-      <xs:maxLength value="64"/>
-    </xs:restriction>
-  </xs:simpleType>
-
   <xs:simpleType name="ST_Executable">
     <xs:restriction base="ST_FileName">
       <xs:pattern value=".+\.(exe)"/>
@@ -202,15 +182,7 @@
   <xs:simpleType name="ST_ProgId">
     <xs:restriction base="ST_NonEmptyString">
       <xs:pattern value="[A-Za-z][A-Za-z0-9\.]*"/>
-      <xs:maxLength value="255"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_FileTypeAssociationSupportedVerbId">
-    <xs:restriction base="ST_NonEmptyString">
-      <xs:minLength value="3"/>
-      <xs:maxLength value="64"/>
-      <xs:pattern value="([A-Za-z0-9]*)"/>
+      <xs:maxLength value="39"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -276,15 +248,6 @@
   <xs:simpleType name="ST_VersionQuad">
     <xs:restriction base="ST_NonEmptyString">
       <xs:pattern value="(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])(\.(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])){3}"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_VersionQuadNoneZero">
-    <xs:restriction base="ST_NonEmptyString">
-      <xs:pattern value="([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])(\.(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])){3}"/>
-      <xs:pattern value="(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])(\.([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))(\.(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])){2}"/>
-      <xs:pattern value="(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])(\.(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))(\.([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))(\.(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))"/>
-      <xs:pattern value="(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])(\.(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])){2}(\.([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -408,19 +371,6 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="offlineMapsManagement"/>
       <xs:enumeration value="userDataTasks"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_Capability_Uap_6">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="graphicsCapture"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_Capability_Uap_7">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="globalMediaControl"/>
-      <xs:enumeration value="gazeInput"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -721,55 +671,10 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="ST_ExtensionCategory_Uap6">
-    <xs:restriction base="xs:string">
-      <!-- Application Extensions -->
-      <xs:enumeration value="windows.barcodeScannerProvider"/>
-      <xs:enumeration value="windows.localExperiencePack"/>
-      <xs:enumeration value="windows.barcodeScannerPreviewProvider"/>
-      <!-- Package Extensions -->
-      <xs:enumeration value="windows.loaderSearchPathOverride"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_ExtensionCategory_Uap7">
-    <xs:restriction base="xs:string">
-      <!-- Package Extensions -->
-      <xs:enumeration value="windows.sharedFonts"/>
-      <xs:enumeration value="windows.enterpriseDataProtection"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_ExtensionCategory_Uap8">
-    <xs:restriction base="xs:string">
-      <!-- Application Extensions -->
-      <xs:enumeration value="windows.posPaymentConnector"/>
-      <!-- Package Extensions -->
-      <xs:enumeration value="windows.dataProtection"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_ExtensionCategory_Uap10">
-    <xs:restriction base="xs:string">
-      <!-- Application Extensions -->
-      <xs:enumeration value="windows.protocol"/>
-      <!-- Package Extensions -->
-      <xs:enumeration value="windows.hostRuntime"/>
-      <xs:enumeration value="windows.installedLocationVirtualization"/>
-      <xs:enumeration value="windows.mediaContentDecryptionModule"/>
-    </xs:restriction>
-  </xs:simpleType>
-
   <xs:simpleType name="ST_ExtensionCategory_Com">
     <xs:restriction base="xs:string">
       <xs:enumeration value="windows.comServer"/>
       <xs:enumeration value="windows.comInterface"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_ExtensionCategory_Preview_Com">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="windows.comServer"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -810,22 +715,6 @@
       <xs:enumeration value="windows.autoPlayHandler"/>
     </xs:restriction>
   </xs:simpleType>
-  
-  <xs:simpleType name="ST_ApplicationExtensionCategory_Desktop4">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="windows.fileExplorerContextMenus"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-    <xs:simpleType name="ST_ExtensionCategory_Desktop6">
-    <xs:restriction base="xs:string">
-      <!-- Application Extensions -->
-      <xs:enumeration value="windows.service"/>
-      <!-- Package Extensions -->
-      <xs:enumeration value="windows.mutablePackageDirectories"/>
-      <xs:enumeration value="windows.customInstall"/>
-    </xs:restriction>
-  </xs:simpleType>
 
   <xs:simpleType name="ST_ApplicationExtensionCategory_Restricted">
     <xs:restriction base="xs:string">
@@ -843,13 +732,6 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="windows.lockScreenComponent"/>
       <xs:enumeration value="windows.desktopAppMigration"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_PackageExtensionCategory_Restricted4">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="windows.primaryInteropAssemblies"/>
-      <xs:enumeration value="windows.classicAppCompatKeys"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -921,13 +803,6 @@
   <xs:simpleType name="ST_BackgroundTasks_Iot">
     <xs:restriction base="xs:string">
       <xs:enumeration value="startup"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="ST_Subsystem">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="console"/>
-      <xs:enumeration value="windows"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -1145,13 +1020,6 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="ST_Protocol_2019">
-    <xs:restriction base="ST_NonEmptyString">
-      <xs:minLength value="2"/>
-      <xs:maxLength value="2048"/>
-    </xs:restriction>
-  </xs:simpleType>
-
   <xs:simpleType name="ST_DialProtocol">
     <xs:restriction base="ST_NonEmptyString">
       <xs:pattern value="[A-Za-z][-A-Za-z0-9\.\+]*"/>
@@ -1326,16 +1194,6 @@
       <xs:pattern value="[-+A-Za-z0-9][-+.A-Za-z0-9]+"/>
       <xs:minLength value="2"/>
       <xs:maxLength value="39"/>
-    </xs:restriction>
-  </xs:simpleType>
-  
-  <!-- In 19H1 was needed update the max length for AppExentesion Name-->
-  <!-- This is the same type of ST_AppServiceName but with maxLength equals to 255 -->
-  <xs:simpleType name="ST_AppServiceNameLonger">
-    <xs:restriction base="ST_NonEmptyString">
-      <xs:pattern value="[-+A-Za-z0-9][-+.A-Za-z0-9]+"/>
-      <xs:minLength value="2"/>
-      <xs:maxLength value="255"/>
     </xs:restriction>
   </xs:simpleType>
 

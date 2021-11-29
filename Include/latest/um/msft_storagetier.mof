@@ -303,52 +303,6 @@ class MSFT_StorageTier : MSFT_StorageObject {
         String ExtendedStatus
     );
 
-    //
-    // Method: SetAttributes3
-    //
-
-    UInt32 SetAttributes3(
-
-        [In]
-        UInt16 ProvisioningType,
-
-        [In]
-        UInt64 AllocationUnitSize,
-
-        [In]
-        UInt16 MediaType,
-
-        [In]
-        UInt16 FaultDomainAwareness,
-
-        [In]
-        UInt16 ColumnIsolation,
-
-        [In]
-        String ResiliencySettingName,
-
-        [In]
-        UInt16 Usage,
-
-        [In]
-        UInt16 PhysicalDiskRedundancy,
-
-        [In]
-        UInt16 NumberOfDataCopies,
-
-        [In]
-        UInt16 NumberOfGroups,
-
-        [In]
-        UInt16 NumberOfColumns,
-
-        [In]
-        UInt64 Interleave,
-
-        [Out]
-        String ExtendedStatus
-    );
-
 
     //
     // Method: SetDescription

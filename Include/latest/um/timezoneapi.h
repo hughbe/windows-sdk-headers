@@ -1,3 +1,4 @@
+ 
 // begin_1_0
 /********************************************************************************
 *                                                                               *
@@ -19,14 +20,31 @@
 #include <minwindef.h>
 #include <minwinbase.h>
 
+/* APISET_NAME: api-ms-win-core-timezone-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_TIMEZONE_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_TIMEZONE_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 // end_1_0
 
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 // begin_1_0
 
@@ -59,8 +77,8 @@ _Success_(return != FALSE)
 BOOL
 WINAPI
 SystemTimeToTzSpecificLocalTime(
-    _In_opt_ CONST TIME_ZONE_INFORMATION* lpTimeZoneInformation,
-    _In_ CONST SYSTEMTIME* lpUniversalTime,
+    _In_opt_ CONST TIME_ZONE_INFORMATION * lpTimeZoneInformation,
+    _In_ CONST SYSTEMTIME * lpUniversalTime,
     _Out_ LPSYSTEMTIME lpLocalTime
     );
 
@@ -70,8 +88,8 @@ _Success_(return != FALSE)
 BOOL
 WINAPI
 TzSpecificLocalTimeToSystemTime(
-    _In_opt_ CONST TIME_ZONE_INFORMATION* lpTimeZoneInformation,
-    _In_ CONST SYSTEMTIME* lpLocalTime,
+    _In_opt_ CONST TIME_ZONE_INFORMATION * lpTimeZoneInformation,
+    _In_ CONST SYSTEMTIME * lpLocalTime,
     _Out_ LPSYSTEMTIME lpUniversalTime
     );
 
@@ -81,7 +99,7 @@ _Success_(return != FALSE)
 BOOL
 WINAPI
 FileTimeToSystemTime(
-    _In_ CONST FILETIME* lpFileTime,
+    _In_ CONST FILETIME * lpFileTime,
     _Out_ LPSYSTEMTIME lpSystemTime
     );
 
@@ -91,7 +109,7 @@ _Success_(return != FALSE)
 BOOL
 WINAPI
 SystemTimeToFileTime(
-    _In_ CONST SYSTEMTIME* lpSystemTime,
+    _In_ CONST SYSTEMTIME * lpSystemTime,
     _Out_ LPFILETIME lpFileTime
     );
 
@@ -105,12 +123,20 @@ GetTimeZoneInformation(
     );
 
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 WINBASEAPI
 BOOL
 WINAPI
 SetTimeZoneInformation(
-    _In_ CONST TIME_ZONE_INFORMATION* lpTimeZoneInformation
+    _In_ CONST TIME_ZONE_INFORMATION * lpTimeZoneInformation
     );
+
 
 
 #if (_WIN32_WINNT >= 0x0600)
@@ -119,11 +145,19 @@ WINBASEAPI
 BOOL
 WINAPI
 SetDynamicTimeZoneInformation(
-    _In_ CONST DYNAMIC_TIME_ZONE_INFORMATION* lpTimeZoneInformation
+    _In_ CONST DYNAMIC_TIME_ZONE_INFORMATION * lpTimeZoneInformation
     );
 
 
 #endif // _WIN32_WINNT >= 0x0600
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 
 #if (_WIN32_WINNT >= 0x0600)
 
@@ -137,6 +171,7 @@ GetDynamicTimeZoneInformation(
 
 
 #endif // _WIN32_WINNT >= 0x0600
+
 
 #if (_WIN32_WINNT >= 0x0601)
 
@@ -153,6 +188,7 @@ GetTimeZoneInformationForYear(
 #endif // _WIN32_WINNT >= 0x0601
 
 // end_1_0
+
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 
@@ -182,8 +218,8 @@ _Success_(return != FALSE)
 BOOL
 WINAPI
 SystemTimeToTzSpecificLocalTimeEx(
-    _In_opt_ CONST DYNAMIC_TIME_ZONE_INFORMATION* lpTimeZoneInformation,
-    _In_ CONST SYSTEMTIME* lpUniversalTime,
+    _In_opt_ CONST DYNAMIC_TIME_ZONE_INFORMATION * lpTimeZoneInformation,
+    _In_ CONST SYSTEMTIME * lpUniversalTime,
     _Out_ LPSYSTEMTIME lpLocalTime
     );
 
@@ -193,41 +229,15 @@ _Success_(return != FALSE)
 BOOL
 WINAPI
 TzSpecificLocalTimeToSystemTimeEx(
-    _In_opt_ CONST DYNAMIC_TIME_ZONE_INFORMATION* lpTimeZoneInformation,
-    _In_ CONST SYSTEMTIME* lpLocalTime,
+    _In_opt_ CONST DYNAMIC_TIME_ZONE_INFORMATION * lpTimeZoneInformation,
+    _In_ CONST SYSTEMTIME * lpLocalTime,
     _Out_ LPSYSTEMTIME lpUniversalTime
     );
 
 
 #endif /* (_WIN32_WINNT >= _WIN32_WINNT_WIN8) */
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
-WINBASEAPI
-_Success_(return != FALSE)
-BOOL
-WINAPI
-LocalFileTimeToLocalSystemTime(
-    _In_opt_ CONST TIME_ZONE_INFORMATION* timeZoneInformation,
-    _In_ CONST FILETIME* localFileTime,
-    _Out_ SYSTEMTIME* localSystemTime
-    );
-
-
-WINBASEAPI
-_Success_(return != FALSE)
-BOOL
-WINAPI
-LocalSystemTimeToLocalFileTime(
-    _In_opt_ CONST TIME_ZONE_INFORMATION* timeZoneInformation,
-    _In_ CONST SYSTEMTIME* localSystemTime,
-    _Out_ FILETIME* localFileTime
-    );
-
-
-#endif /* (NTDDI_VERSION >= NTDDI_WIN10_RS5) */
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 // begin_1_0

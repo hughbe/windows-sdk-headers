@@ -46,20 +46,6 @@ typedef interface IDpxJob IDpxJob;
 #endif 	/* __IDpxJob_FWD_DEFINED__ */
 
 
-#ifndef __IFileHashProviderCallback_FWD_DEFINED__
-#define __IFileHashProviderCallback_FWD_DEFINED__
-typedef interface IFileHashProviderCallback IFileHashProviderCallback;
-
-#endif 	/* __IFileHashProviderCallback_FWD_DEFINED__ */
-
-
-#ifndef __IDpxJob2_FWD_DEFINED__
-#define __IDpxJob2_FWD_DEFINED__
-typedef interface IDpxJob2 IDpxJob2;
-
-#endif 	/* __IDpxJob2_FWD_DEFINED__ */
-
-
 #ifndef __IDpxContainer_FWD_DEFINED__
 #define __IDpxContainer_FWD_DEFINED__
 typedef interface IDpxContainer IDpxContainer;
@@ -173,34 +159,6 @@ typedef unsigned int ALG_ID;
 
 
 
-typedef unsigned int LOCATIONTYPE;
-
-#define	LOCATIONTYPE_UNKNOWN	( 0 )
-
-#define	LOCATIONTYPE_NONE	( 0x1000000 )
-
-#define	LOCATIONTYPE_LOCAL	( 0x2000000 )
-
-#define	LOCATIONTYPE_CAB	( 0x3000000 )
-
-#define	LOCATIONTYPE_CMI	( 0x4000000 )
-
-#define	LOCATIONTYPE__MASK_FLAGS	( 0xffff )
-
-#define	LOCATIONTYPE_RECURSIVE	( 0x1 )
-
-#define	LOCATIONTYPE_ABSOLUTE	( 0x2 )
-
-#define	LOCATIONTYPE_COMPRESSED	( 0x4 )
-
-#define	LOCATIONTYPE_IGNORE	( 0x8 )
-
-#define	LOCATIONTYPE_DUPLICATE	( 0x10 )
-
-#define	LOCATIONTYPE_INTERMEDIATE	( 0x20 )
-
-#define	LOCATIONTYPE__MASK_TYPE	( 0xffff0000 )
-
 typedef /* [public][public] */ 
 enum __MIDL___MIDL_itf_dpx1_0000_0000_0001
     {
@@ -258,14 +216,10 @@ typedef /* [public][public] */ struct __MIDL___MIDL_itf_dpx1_0000_0000_0006
 #define DPX_COMPRESSION_ALGORITHM_OPTION_NAME L"postprocess_compression_algorithm"
 #define DPX_CLEANUP_OPTION_NAME L"postprocess_source_cleanup"
 #define DPX_COMPRESSION_ALGORITHM_XPRESS_HUFF L"xpress_huff"
-#define DPX_COMPRESSION_ALGORITHM_WOF_PROVIDER_FILE L"wof_provider_file"
 #define DPX_COMPRESSED_FILE_HEADER_LENGTH 4
 #define DPX_COMPRESSED_FILE_HEADER_XPRESS_HUFF {'D', 'C', 'X', '\x01'}
 #define DPX_XPRESS_HUFF_BLOCK_SIZE (1024 * 1024)
 #define DPX_OPTION_TELEMETRY_CORRELATION_VECTOR L"Telemetry_correlation_vector"
-#define DPX_OPTION_HASH_TYPE L"cix_hash_type"
-#define DPX_OPTION_HARDLINK_ASSETS L"hardlink_assets"
-#define DPX_OPTION_COMPLETE_SELF_COPIES L"complete_self_copies"
 
 
 extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0000_v0_0_c_ifspec;
@@ -489,307 +443,6 @@ EXTERN_C const IID IID_IDpxJob;
 
 
 #endif 	/* __IDpxJob_INTERFACE_DEFINED__ */
-
-
-/* interface __MIDL_itf_dpx1_0000_0001 */
-/* [local] */ 
-
-#ifdef __cplusplus
-enum class DPX_FILE_PROVIDER_QUERY_DISPOSITION
-{
-    Invalid = 0,
-    Success = 1,
-    Compressed = 2
-};
-#else
-typedef 
-enum tagDPX_FILE_PROVIDER_QUERY_DISPOSITION
-    {
-        DPX_FILE_PROVIDER_QUERY_DISPOSITION_INVALID	= 0,
-        DPX_FILE_PROVIDER_QUERY_DISPOSITION_SUCCESS	= 1,
-        DPX_FILE_PROVIDER_QUERY_DISPOSITION_COMPRESSED	= 2
-    } 	DPX_FILE_PROVIDER_QUERY_DISPOSITION;
-
-#endif
-
-
-extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0001_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0001_v0_0_s_ifspec;
-
-#ifndef __IFileHashProviderCallback_INTERFACE_DEFINED__
-#define __IFileHashProviderCallback_INTERFACE_DEFINED__
-
-/* interface IFileHashProviderCallback */
-/* [unique][object][uuid] */ 
-
-
-EXTERN_C const IID IID_IFileHashProviderCallback;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("e9a288f7-bcfb-4466-95c6-5a388263d8fb")
-    IFileHashProviderCallback : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE GetFileHash( 
-            /* [in] */ __RPC__in LPCWSTR FilePath,
-            /* [in] */ ALG_ID algId,
-            /* [out] */ __RPC__out DPX_FILE_PROVIDER_QUERY_DISPOSITION *pDisposition,
-            /* [in] */ UINT cbHashData,
-            /* [size_is][out] */ __RPC__out_ecount_full(cbHashData) BYTE pbHashData[  ]) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IFileHashProviderCallbackVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IFileHashProviderCallback * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IFileHashProviderCallback * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IFileHashProviderCallback * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetFileHash )( 
-            __RPC__in IFileHashProviderCallback * This,
-            /* [in] */ __RPC__in LPCWSTR FilePath,
-            /* [in] */ ALG_ID algId,
-            /* [out] */ __RPC__out DPX_FILE_PROVIDER_QUERY_DISPOSITION *pDisposition,
-            /* [in] */ UINT cbHashData,
-            /* [size_is][out] */ __RPC__out_ecount_full(cbHashData) BYTE pbHashData[  ]);
-        
-        END_INTERFACE
-    } IFileHashProviderCallbackVtbl;
-
-    interface IFileHashProviderCallback
-    {
-        CONST_VTBL struct IFileHashProviderCallbackVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IFileHashProviderCallback_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IFileHashProviderCallback_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IFileHashProviderCallback_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IFileHashProviderCallback_GetFileHash(This,FilePath,algId,pDisposition,cbHashData,pbHashData)	\
-    ( (This)->lpVtbl -> GetFileHash(This,FilePath,algId,pDisposition,cbHashData,pbHashData) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IFileHashProviderCallback_INTERFACE_DEFINED__ */
-
-
-#ifndef __IDpxJob2_INTERFACE_DEFINED__
-#define __IDpxJob2_INTERFACE_DEFINED__
-
-/* interface IDpxJob2 */
-/* [unique][object][uuid] */ 
-
-
-EXTERN_C const IID IID_IDpxJob2;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("e1c292c8-919a-4f1b-b85a-9c542932fc8d")
-    IDpxJob2 : public IDpxJob
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE SetInventoryProvider( 
-            /* [in] */ LOCATIONTYPE locationType,
-            /* [in] */ __RPC__in_opt IFileHashProviderCallback *pProvider) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IDpxJob2Vtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IDpxJob2 * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IDpxJob2 * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IDpxJob2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetTargetPath )( 
-            __RPC__in IDpxJob2 * This,
-            /* [out] */ __RPC__deref_out_opt LPWSTR *TargetPath);
-        
-        HRESULT ( STDMETHODCALLTYPE *AddContainer )( 
-            __RPC__in IDpxJob2 * This,
-            /* [in] */ __RPC__in LPCWSTR ContainerPath,
-            /* [out] */ __RPC__deref_out_opt IDpxContainer **ppContainer);
-        
-        HRESULT ( STDMETHODCALLTYPE *EnumContainers )( 
-            __RPC__in IDpxJob2 * This,
-            /* [out] */ __RPC__deref_out_opt IEnumDpxContainers **ppEnumContainers);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetDownloadProvider )( 
-            __RPC__in IDpxJob2 * This,
-            /* [unique][in] */ __RPC__in_opt IDpxDownloadProvider *pDownloadProvider);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetDownloadProvider )( 
-            __RPC__in IDpxJob2 * This,
-            /* [out] */ __RPC__deref_out_opt IDpxDownloadProvider **ppDownloadProvider);
-        
-        HRESULT ( STDMETHODCALLTYPE *Resume )( 
-            __RPC__in IDpxJob2 * This,
-            DPX_RESUME_TYPE eResumeType);
-        
-        HRESULT ( STDMETHODCALLTYPE *Suspend )( 
-            __RPC__in IDpxJob2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *Cancel )( 
-            __RPC__in IDpxJob2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetProgress )( 
-            __RPC__in IDpxJob2 * This,
-            /* [out] */ __RPC__out DPX_PROGRESS *pProgress);
-        
-        HRESULT ( STDMETHODCALLTYPE *SaveJobState )( 
-            __RPC__in IDpxJob2 * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetUserValue )( 
-            __RPC__in IDpxJob2 * This,
-            /* [in] */ UINT64 UserValue);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetUserValue )( 
-            __RPC__in IDpxJob2 * This,
-            /* [out] */ __RPC__out UINT64 *pUserValue);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetOptionValue )( 
-            __RPC__in IDpxJob2 * This,
-            /* [in] */ __RPC__in LPCWSTR OptionName,
-            /* [unique][in] */ __RPC__in_opt LPCWSTR OptionValue);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetOptionValue )( 
-            __RPC__in IDpxJob2 * This,
-            /* [in] */ __RPC__in LPCWSTR OptionName,
-            /* [out] */ __RPC__deref_out_opt LPWSTR *pOptionValue);
-        
-        /* [local] */ void ( STDMETHODCALLTYPE *FreeMemory )( 
-            IDpxJob2 * This,
-            /* [in] */ void *Allocation);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetInventoryProvider )( 
-            __RPC__in IDpxJob2 * This,
-            /* [in] */ LOCATIONTYPE locationType,
-            /* [in] */ __RPC__in_opt IFileHashProviderCallback *pProvider);
-        
-        END_INTERFACE
-    } IDpxJob2Vtbl;
-
-    interface IDpxJob2
-    {
-        CONST_VTBL struct IDpxJob2Vtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IDpxJob2_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IDpxJob2_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IDpxJob2_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IDpxJob2_GetTargetPath(This,TargetPath)	\
-    ( (This)->lpVtbl -> GetTargetPath(This,TargetPath) ) 
-
-#define IDpxJob2_AddContainer(This,ContainerPath,ppContainer)	\
-    ( (This)->lpVtbl -> AddContainer(This,ContainerPath,ppContainer) ) 
-
-#define IDpxJob2_EnumContainers(This,ppEnumContainers)	\
-    ( (This)->lpVtbl -> EnumContainers(This,ppEnumContainers) ) 
-
-#define IDpxJob2_SetDownloadProvider(This,pDownloadProvider)	\
-    ( (This)->lpVtbl -> SetDownloadProvider(This,pDownloadProvider) ) 
-
-#define IDpxJob2_GetDownloadProvider(This,ppDownloadProvider)	\
-    ( (This)->lpVtbl -> GetDownloadProvider(This,ppDownloadProvider) ) 
-
-#define IDpxJob2_Resume(This,eResumeType)	\
-    ( (This)->lpVtbl -> Resume(This,eResumeType) ) 
-
-#define IDpxJob2_Suspend(This)	\
-    ( (This)->lpVtbl -> Suspend(This) ) 
-
-#define IDpxJob2_Cancel(This)	\
-    ( (This)->lpVtbl -> Cancel(This) ) 
-
-#define IDpxJob2_GetProgress(This,pProgress)	\
-    ( (This)->lpVtbl -> GetProgress(This,pProgress) ) 
-
-#define IDpxJob2_SaveJobState(This)	\
-    ( (This)->lpVtbl -> SaveJobState(This) ) 
-
-#define IDpxJob2_SetUserValue(This,UserValue)	\
-    ( (This)->lpVtbl -> SetUserValue(This,UserValue) ) 
-
-#define IDpxJob2_GetUserValue(This,pUserValue)	\
-    ( (This)->lpVtbl -> GetUserValue(This,pUserValue) ) 
-
-#define IDpxJob2_SetOptionValue(This,OptionName,OptionValue)	\
-    ( (This)->lpVtbl -> SetOptionValue(This,OptionName,OptionValue) ) 
-
-#define IDpxJob2_GetOptionValue(This,OptionName,pOptionValue)	\
-    ( (This)->lpVtbl -> GetOptionValue(This,OptionName,pOptionValue) ) 
-
-#define IDpxJob2_FreeMemory(This,Allocation)	\
-    ( (This)->lpVtbl -> FreeMemory(This,Allocation) ) 
-
-
-#define IDpxJob2_SetInventoryProvider(This,locationType,pProvider)	\
-    ( (This)->lpVtbl -> SetInventoryProvider(This,locationType,pProvider) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IDpxJob2_INTERFACE_DEFINED__ */
 
 
 #ifndef __IDpxContainer_INTERFACE_DEFINED__
@@ -2139,7 +1792,7 @@ EXTERN_C const IID IID_IEnumDpxContainerDirectoryEntries;
 #endif 	/* __IEnumDpxContainerDirectoryEntries_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_dpx1_0000_0012 */
+/* interface __MIDL_itf_dpx1_0000_0010 */
 /* [local] */ 
 
 typedef struct tagDpxContainerDecryptionData
@@ -2158,8 +1811,8 @@ enum tagDPX_CONTAINER_ENCRYPTION_ENUM
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0012_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0012_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0010_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0010_v0_0_s_ifspec;
 
 #ifndef __IDpxEncryptedContainer_INTERFACE_DEFINED__
 #define __IDpxEncryptedContainer_INTERFACE_DEFINED__
@@ -2354,7 +2007,7 @@ EXTERN_C const IID IID_IDpxEncryptedContainer;
 #endif 	/* __IDpxEncryptedContainer_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_dpx1_0000_0013 */
+/* interface __MIDL_itf_dpx1_0000_0011 */
 /* [local] */ 
 
 typedef struct tagDpxPredecessorFilePathInfo
@@ -2366,8 +2019,8 @@ typedef struct tagDpxPredecessorFilePathInfo
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0013_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0013_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0011_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0011_v0_0_s_ifspec;
 
 #ifndef __IDpxContainer2_INTERFACE_DEFINED__
 #define __IDpxContainer2_INTERFACE_DEFINED__
@@ -2808,15 +2461,15 @@ EXTERN_C const IID IID_IDpxContainer3;
 #endif 	/* __IDpxContainer3_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_dpx1_0000_0015 */
+/* interface __MIDL_itf_dpx1_0000_0013 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0015_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0015_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0013_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_dpx1_0000_0013_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

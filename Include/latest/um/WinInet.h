@@ -1234,10 +1234,8 @@ BOOLAPI InternetUnlockRequestFile(
 #define INTERNET_OPTION_TOKEN_BINDING_PUBLIC_KEY     181
 
 
-#define INTERNET_OPTION_COOKIES_SAME_SITE_LEVEL      187
-
 #define INTERNET_FIRST_OPTION                   INTERNET_OPTION_CALLBACK
-#define INTERNET_LAST_OPTION                    INTERNET_OPTION_COOKIES_SAME_SITE_LEVEL
+#define INTERNET_LAST_OPTION                    INTERNET_OPTION_TOKEN_BINDING_PUBLIC_KEY
 
 
 //
@@ -1245,17 +1243,6 @@ BOOLAPI InternetUnlockRequestFile(
 //
 
 #define INTERNET_PRIORITY_FOREGROUND            1000
-
-//
-// Values for INTERNET_OPTION_COOKIES_SAME_SITE_LEVEL
-//
-
-#define HTTP_COOKIES_SAME_SITE_LEVEL_UNKNOWN        0x0
-#define HTTP_COOKIES_SAME_SITE_LEVEL_SAME_SITE      0x1
-#define HTTP_COOKIES_SAME_SITE_LEVEL_CROSS_SITE_LAX 0x2
-#define HTTP_COOKIES_SAME_SITE_LEVEL_CROSS_SITE     0x3
-
-#define HTTP_COOKIES_SAME_SITE_LEVEL_MAX HTTP_COOKIES_SAME_SITE_LEVEL_CROSS_SITE
 
 //
 // Values for INTERNET_OPTION_ENABLE_HTTP_PROTOCOL / INTERNET_OPTION_HTTP_PROTOCOL_USED
@@ -2390,20 +2377,12 @@ BOOLAPI GopherGetAttributeW(
 
 #define HTTP_QUERY_FLAG_NUMBER64                0x08000000
 
-//
-// HTTP_QUERY_FLAG_COALESCE_WITH_COMMA - if this bit is set in the dwInfoLevel
-// parameter of HttpQueryInfo(), then the values from several headers of the
-// same name will be combined using comma as the delimiter
-//
 
-#define HTTP_QUERY_FLAG_COALESCE_WITH_COMMA     0x04000000
-
-#define HTTP_QUERY_MODIFIER_FLAGS_MASK          (HTTP_QUERY_FLAG_REQUEST_HEADERS      \
-                                                | HTTP_QUERY_FLAG_SYSTEMTIME          \
-                                                | HTTP_QUERY_FLAG_NUMBER              \
-                                                | HTTP_QUERY_FLAG_COALESCE            \
-                                                | HTTP_QUERY_FLAG_NUMBER64            \
-                                                | HTTP_QUERY_FLAG_COALESCE_WITH_COMMA \
+#define HTTP_QUERY_MODIFIER_FLAGS_MASK          (HTTP_QUERY_FLAG_REQUEST_HEADERS    \
+                                                | HTTP_QUERY_FLAG_SYSTEMTIME        \
+                                                | HTTP_QUERY_FLAG_NUMBER            \
+                                                | HTTP_QUERY_FLAG_COALESCE          \
+                                                | HTTP_QUERY_FLAG_NUMBER64          \
                                                 )
 
 #define HTTP_QUERY_HEADER_MASK                  (~HTTP_QUERY_MODIFIER_FLAGS_MASK)
@@ -2448,7 +2427,6 @@ BOOLAPI GopherGetAttributeW(
 #define HTTP_STATUS_REQUEST_TOO_LARGE   413 // request entity was too large
 #define HTTP_STATUS_URI_TOO_LONG        414 // request URI too long
 #define HTTP_STATUS_UNSUPPORTED_MEDIA   415 // unsupported media type
-#define HTTP_STATUS_MISDIRECTED_REQUEST 421 // misdirected request
 #define HTTP_STATUS_RETRY_WITH          449 // retry after doing the appropriate action.
 
 #define HTTP_STATUS_SERVER_ERROR        500 // internal server error
@@ -2664,29 +2642,26 @@ typedef struct
     BOOL fExpiresSet;
 } INTERNET_COOKIE2;
 
-#define INTERNET_COOKIE_IS_SECURE                  0x00000001
-#define INTERNET_COOKIE_IS_SESSION                 0x00000002
+#define INTERNET_COOKIE_IS_SECURE                0x00000001
+#define INTERNET_COOKIE_IS_SESSION               0x00000002
 
-#define INTERNET_COOKIE_THIRD_PARTY                0x00000010
-#define INTERNET_COOKIE_PROMPT_REQUIRED            0x00000020
-#define INTERNET_COOKIE_EVALUATE_P3P               0x00000040
-#define INTERNET_COOKIE_APPLY_P3P                  0x00000080
+#define INTERNET_COOKIE_THIRD_PARTY              0x00000010
+#define INTERNET_COOKIE_PROMPT_REQUIRED          0x00000020
+#define INTERNET_COOKIE_EVALUATE_P3P             0x00000040
+#define INTERNET_COOKIE_APPLY_P3P                0x00000080
 
-#define INTERNET_COOKIE_P3P_ENABLED                0x00000100
-#define INTERNET_COOKIE_IS_RESTRICTED              0x00000200
-#define INTERNET_COOKIE_IE6                        0x00000400
-#define INTERNET_COOKIE_IS_LEGACY                  0x00000800
+#define INTERNET_COOKIE_P3P_ENABLED              0x00000100
+#define INTERNET_COOKIE_IS_RESTRICTED            0x00000200
+#define INTERNET_COOKIE_IE6                      0x00000400
+#define INTERNET_COOKIE_IS_LEGACY                0x00000800
 
-#define INTERNET_COOKIE_NON_SCRIPT                 0x00001000
-#define INTERNET_COOKIE_HTTPONLY                   0x00002000
-#define INTERNET_COOKIE_HOST_ONLY                  0x00004000
-#define INTERNET_COOKIE_APPLY_HOST_ONLY            0x00008000
+#define INTERNET_COOKIE_NON_SCRIPT               0x00001000
+#define INTERNET_COOKIE_HTTPONLY                 0x00002000
+#define INTERNET_COOKIE_HOST_ONLY                0x00004000
+#define INTERNET_COOKIE_APPLY_HOST_ONLY          0x00008000
 
 
-#define INTERNET_COOKIE_HOST_ONLY_APPLIED          0x00080000
-#define INTERNET_COOKIE_SAME_SITE_STRICT           0x00100000
-#define INTERNET_COOKIE_SAME_SITE_LAX              0x00200000
-#define INTERNET_COOKIE_SAME_SITE_LEVEL_CROSS_SITE 0x00400000
+#define INTERNET_COOKIE_HOST_ONLY_APPLIED        0x00080000
 
 
 BOOLAPI
@@ -3048,8 +3023,7 @@ INTERNETAPI_(DWORD) InternetConfirmZoneCrossing(
 
 #define ERROR_INTERNET_CLIENT_AUTH_CERT_NEEDED_PROXY (INTERNET_ERROR_BASE + 187)
 #define ERROR_INTERNET_SECURE_FAILURE_PROXY          (INTERNET_ERROR_BASE + 188)
-#define ERROR_INTERNET_HTTP_PROTOCOL_MISMATCH   (INTERNET_ERROR_BASE + 190)
-#define INTERNET_ERROR_LAST                     (INTERNET_ERROR_BASE + 190)
+#define INTERNET_ERROR_LAST                     (INTERNET_ERROR_BASE + 189)
 
 
 //#endif // !defined(_WINERROR_)

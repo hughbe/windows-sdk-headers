@@ -171,11 +171,6 @@ typedef DWORD WLAN_REASON_CODE, *PWLAN_REASON_CODE;
 #define WLAN_REASON_CODE_MSMSEC_CONNECT_BASE    (WLAN_REASON_CODE_MSMSEC_BASE + WLAN_REASON_CODE_RANGE_SIZE / 2)
 #define WLAN_REASON_CODE_MSMSEC_END             (WLAN_REASON_CODE_MSMSEC_BASE + WLAN_REASON_CODE_RANGE_SIZE - 1)
 
-// range for codes reserved for system usage
-//
-#define WLAN_REASON_CODE_RESERVED_BASE          L2_REASON_CODE_RESERVED_BASE
-#define WLAN_REASON_CODE_RESERVED_END           (WLAN_REASON_CODE_RESERVED_BASE + WLAN_REASON_CODE_RANGE_SIZE - 1)
-
 // AC network incompatible reason codes
 //
 #define WLAN_REASON_CODE_NETWORK_NOT_COMPATIBLE (WLAN_REASON_CODE_AC_BASE +1)
@@ -843,35 +838,23 @@ typedef struct _WLAN_CONNECTION_NOTIFICATION_DATA {
     DOT11_SSID dot11Ssid;
     DOT11_BSS_TYPE dot11BssType;
     BOOL bSecurityEnabled;
-    WLAN_REASON_CODE wlanReasonCode;
+   WLAN_REASON_CODE wlanReasonCode;
     DWORD dwFlags;
     WCHAR strProfileXml[1];
 } WLAN_CONNECTION_NOTIFICATION_DATA, *PWLAN_CONNECTION_NOTIFICATION_DATA;
 
-// data structure for device service notifications.
-typedef struct _WLAN_DEVICE_SERVICE_NOTIFICATION_DATA {
-    GUID DeviceService;
-    DWORD dwOpCode;
-    DWORD dwDataSize;
-#ifdef __midl
-    [unique, size_is(dwDataSize)] BYTE DataBlob[*];
-#else
-    BYTE DataBlob[1];
-#endif
-} WLAN_DEVICE_SERVICE_NOTIFICATION_DATA, *PWLAN_DEVICE_SERVICE_NOTIFICATION_DATA;
 
 // the types of notification
 // compatible with L2_NOTIFICATION_SOURCE
-#define WLAN_NOTIFICATION_SOURCE_NONE           L2_NOTIFICATION_SOURCE_NONE
-#define WLAN_NOTIFICATION_SOURCE_ALL            L2_NOTIFICATION_SOURCE_ALL
+#define WLAN_NOTIFICATION_SOURCE_NONE         L2_NOTIFICATION_SOURCE_NONE
+#define WLAN_NOTIFICATION_SOURCE_ALL          L2_NOTIFICATION_SOURCE_ALL
 
-#define WLAN_NOTIFICATION_SOURCE_ACM            L2_NOTIFICATION_SOURCE_WLAN_ACM
-#define WLAN_NOTIFICATION_SOURCE_MSM            L2_NOTIFICATION_SOURCE_WLAN_MSM
-#define WLAN_NOTIFICATION_SOURCE_SECURITY       L2_NOTIFICATION_SOURCE_WLAN_SECURITY
-#define WLAN_NOTIFICATION_SOURCE_IHV            L2_NOTIFICATION_SOURCE_WLAN_IHV
-#define WLAN_NOTIFICATION_SOURCE_HNWK           L2_NOTIFICATION_SOURCE_WLAN_HNWK
-#define WLAN_NOTIFICATION_SOURCE_ONEX           L2_NOTIFICATION_SOURCE_ONEX
-#define WLAN_NOTIFICATION_SOURCE_DEVICE_SERVICE L2_NOTIFICATION_SOURCE_WLAN_DEVICE_SERVICE
+#define WLAN_NOTIFICATION_SOURCE_ACM          L2_NOTIFICATION_SOURCE_WLAN_ACM
+#define WLAN_NOTIFICATION_SOURCE_MSM          L2_NOTIFICATION_SOURCE_WLAN_MSM
+#define WLAN_NOTIFICATION_SOURCE_SECURITY     L2_NOTIFICATION_SOURCE_WLAN_SECURITY
+#define WLAN_NOTIFICATION_SOURCE_IHV          L2_NOTIFICATION_SOURCE_WLAN_IHV
+#define WLAN_NOTIFICATION_SOURCE_HNWK         L2_NOTIFICATION_SOURCE_WLAN_HNWK
+#define WLAN_NOTIFICATION_SOURCE_ONEX         L2_NOTIFICATION_SOURCE_ONEX
 
 #ifdef __midl
 // use the 4-byte enum
@@ -1469,33 +1452,6 @@ WlanSaveTemporaryProfile(
     _In_ BOOL bOverWrite,
     _Reserved_ PVOID pReserved
 );
-
-DWORD WINAPI
-WlanDeviceServiceCommand(
-    _In_ HANDLE hClientHandle,
-    _In_ CONST GUID *pInterfaceGuid,
-    _In_ LPGUID pDeviceServiceGuid,
-    _In_ DWORD dwOpCode,
-    _In_ DWORD dwInBufferSize,
-    _In_reads_bytes_opt_(dwInBufferSize) PVOID pInBuffer,
-    _In_ DWORD dwOutBufferSize,
-    _Inout_updates_bytes_opt_(dwOutBufferSize) PVOID pOutBuffer,
-    _Out_ PDWORD pdwBytesReturned
-);
-
-DWORD WINAPI
-WlanGetSupportedDeviceServices(
-    _In_ HANDLE hClientHandle,
-    _In_ CONST GUID *pInterfaceGuid,
-    _Outptr_ PWLAN_DEVICE_SERVICE_GUID_LIST *ppDevSvcGuidList
-);
-
-DWORD WINAPI
-WlanRegisterDeviceServiceNotification(
-    _In_ HANDLE hClientHandle,
-    _In_opt_ CONST PWLAN_DEVICE_SERVICE_GUID_LIST pDevSvcGuidList
-);
-
 
 #if !defined(__midl)
 
@@ -2232,52 +2188,52 @@ DEFINE_DEVPROPKEY(
     );
 
 //
-// Property: DEVPKEY_InfraCast_Supported
+// Property: DEVPKEY_WiFiDirect_IsInfraCastSupported
 // Description: A value indicating if the remote Miracast Sink supports infrastructure connections
 // Type: DEVPROP_TYPE_BOOLEAN
 // Availability: If remote device is a Miracast sink and supports infrastructure connections, then this is set to DEVPROP_TRUE,
 //               otherwise set to DEVPROP_FALSE, or empty.
 //
 DEFINE_DEVPROPKEY(
-    DEVPKEY_InfraCast_Supported,
+    DEVPKEY_WiFiDirect_IsInfraCastSupported,
     0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
     0x11
     );
 
 //
-// Property: DEVPKEY_InfraCast_StreamSecuritySupported
+// Property: DEVPKEY_WiFiDirect_IsInfraCastStreamSecuritySupported
 // Description: A value indicating if the remote Miracast Sink supports stream security
 // Type: DEVPROP_TYPE_BOOLEAN
 // Availability: If remote device is a Miracast sink and supports stream security, then this is set to DEVPROP_TRUE,
 //               otherwise set to DEVPROP_FALSE, or empty.
 //
 DEFINE_DEVPROPKEY(
-    DEVPKEY_InfraCast_StreamSecuritySupported,
+    DEVPKEY_WiFiDirect_IsInfraCastStreamSecuritySupported,
     0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
     0x12
     );
 
 //
-// Property: DEVPKEY_InfraCast_AccessPointBssid
+// Property: DEVPKEY_WiFiDirect_InfraCastAccessPointBssid
 // Description: A value indicating the BSSID of the Access Point the Miracast Sink is connected to, if the network is secure.
 // Type: DEVPROP_TYPE_BINARY
 // Binary Data: DOT11_MAC_ADDRESS (UCHAR[6])
 // Availability: If the Miracast Sink connection to an Access Point is secure, this value is set else is empty.
 //
 DEFINE_DEVPROPKEY(
-    DEVPKEY_InfraCast_AccessPointBssid,
+    DEVPKEY_WiFiDirect_InfraCastAccessPointBssid,
     0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
     0x13
     );
 
 //
-// Property: DEVPKEY_InfraCast_SinkHostName
-// Description: A value indicating the DNS hostname of the Miracast Sink.
+// Property: DEVPKEY_WiFiDirect_InfraCastSinkHostName
+// Description: A value indicating the BSSID of the Access Point the Miracast Sink is connected to, if the network is secure.
 // Type: DEVPROP_TYPE_STRING
-// Availability: If the Miracast Sink supports connection over infrastructure, this value is set else is empty.
+// Availability: If the Miracast Sink support connection over infrastructure, this value is set else is empty.
 //
 DEFINE_DEVPROPKEY(
-    DEVPKEY_InfraCast_SinkHostName,
+    DEVPKEY_WiFiDirect_InfraCastSinkHostName,
     0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
     0x14
     );
@@ -2342,58 +2298,6 @@ DEFINE_DEVPROPKEY(
     0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
     0x19
 );
-
-//
-// Property: DEVPKEY_InfraCast_SinkIpAddress
-// Description: A value containing an IPv4 or IPV6 IP address of the Miracast Sink.
-// Type: DEVPROP_TYPE_STRING
-// Availability: If the Miracast Sink supports connection over infrastructure, this value maybe set, else is empty.
-//
-DEFINE_DEVPROPKEY(
-    DEVPKEY_InfraCast_SinkIpAddress,
-    0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
-    0x1A
-    );
-
-//
-// Property: DEVPKEY_WiFiDirect_TransientAssociation
-// Description: Set when the association should not be persisted. Tells the DAF provider to remove the association
-//              when the devnode goes offline
-// Type: DEVPROP_TYPE_BOOLEAN
-// Availability: If the pairing result indicated that the persistent group is not supported, set to DEVPROP_TRUE,
-//               otherwise set to DEVPROP_FALSE,
-//               or empty.
-//
-DEFINE_DEVPROPKEY(
-    DEVPKEY_WiFiDirect_TransientAssociation,
-    0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
-    0x1B
-    );
-
-//
-// Property: DEVPKEY_WiFiDirect_LinkQuality
-// Description: The signal quality value ranging from 0 through 100. A value of 100 specifies the highest link quality.
-// Type: DEVPROP_TYPE_UINT32
-// Availability: Always
-//
-DEFINE_DEVPROPKEY(
-    DEVPKEY_WiFiDirect_LinkQuality,
-    0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
-    0x1C
-    );
-
-//
-// Property: DEVPKEY_InfraCast_PinSupported
-// Description: A value indicating if the remote Miracast over Infrastructure Sink supports PIN entry
-// Type: DEVPROP_TYPE_BOOLEAN
-// Availability: If remote device is a Miracast sink and supports Infrastructure and PIN entry, then this is set to DEVPROP_TRUE,
-//               otherwise set to DEVPROP_FALSE, or empty.
-//
-DEFINE_DEVPROPKEY(
-    DEVPKEY_InfraCast_PinSupported,
-    0x1506935d, 0xe3e7, 0x450f, 0x86, 0x37, 0x82, 0x23, 0x3e, 0xbe, 0x5f, 0x6E,
-    0x1D
-    );
 
 //
 // Wi-Fi Direct Services Property Key Definitions

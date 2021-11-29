@@ -109,13 +109,6 @@ typedef interface IAudioStreamVolume IAudioStreamVolume;
 #endif 	/* __IAudioStreamVolume_FWD_DEFINED__ */
 
 
-#ifndef __IAudioAmbisonicsControl_FWD_DEFINED__
-#define __IAudioAmbisonicsControl_FWD_DEFINED__
-typedef interface IAudioAmbisonicsControl IAudioAmbisonicsControl;
-
-#endif 	/* __IAudioAmbisonicsControl_FWD_DEFINED__ */
-
-
 #ifndef __IChannelAudioVolume_FWD_DEFINED__
 #define __IChannelAudioVolume_FWD_DEFINED__
 typedef interface IChannelAudioVolume IChannelAudioVolume;
@@ -148,8 +141,8 @@ typedef /* [hidden][restricted] */ LONGLONG REFERENCE_TIME;
 #include <ksmedia.h>
 #endif
 #endif
-#pragma region Application and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 enum _AUDCLNT_BUFFERFLAGS
     {
@@ -162,8 +155,7 @@ enum AUDCLNT_STREAMOPTIONS
     {
         AUDCLNT_STREAMOPTIONS_NONE	= 0,
         AUDCLNT_STREAMOPTIONS_RAW	= 0x1,
-        AUDCLNT_STREAMOPTIONS_MATCH_FORMAT	= 0x2,
-        AUDCLNT_STREAMOPTIONS_AMBISONICS	= 0x4
+        AUDCLNT_STREAMOPTIONS_MATCH_FORMAT	= 0x2
     } 	AUDCLNT_STREAMOPTIONS;
 
 DEFINE_ENUM_FLAG_OPERATORS(AUDCLNT_STREAMOPTIONS);
@@ -1310,15 +1302,6 @@ EXTERN_C const IID IID_IAudioClock;
 #endif 	/* __IAudioClock_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0006 */
-/* [local] */ 
-
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-
-
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0006_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0006_v0_0_s_ifspec;
-
 #ifndef __IAudioClock2_INTERFACE_DEFINED__
 #define __IAudioClock2_INTERFACE_DEFINED__
 
@@ -1405,15 +1388,6 @@ EXTERN_C const IID IID_IAudioClock2;
 #endif 	/* __IAudioClock2_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0007 */
-/* [local] */ 
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
-
-
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0007_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0007_v0_0_s_ifspec;
-
 #ifndef __IAudioClockAdjustment_INTERFACE_DEFINED__
 #define __IAudioClockAdjustment_INTERFACE_DEFINED__
 
@@ -1495,15 +1469,6 @@ EXTERN_C const IID IID_IAudioClockAdjustment;
 
 #endif 	/* __IAudioClockAdjustment_INTERFACE_DEFINED__ */
 
-
-/* interface __MIDL_itf_audioclient_0000_0008 */
-/* [local] */ 
-
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-
-
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0008_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0008_v0_0_s_ifspec;
 
 #ifndef __ISimpleAudioVolume_INTERFACE_DEFINED__
 #define __ISimpleAudioVolume_INTERFACE_DEFINED__
@@ -1626,15 +1591,6 @@ EXTERN_C const IID IID_ISimpleAudioVolume;
 
 #endif 	/* __ISimpleAudioVolume_INTERFACE_DEFINED__ */
 
-
-/* interface __MIDL_itf_audioclient_0000_0009 */
-/* [local] */ 
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
-
-
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0009_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0009_v0_0_s_ifspec;
 
 #ifndef __IAudioStreamVolume_INTERFACE_DEFINED__
 #define __IAudioStreamVolume_INTERFACE_DEFINED__
@@ -1785,188 +1741,14 @@ EXTERN_C const IID IID_IAudioStreamVolume;
 /* interface __MIDL_itf_audioclient_0000_0010 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-typedef 
-enum AMBISONICS_TYPE
-    {
-        AMBISONICS_TYPE_FULL3D	= 0
-    } 	AMBISONICS_TYPE;
-
-typedef 
-enum AMBISONICS_CHANNEL_ORDERING
-    {
-        AMBISONICS_CHANNEL_ORDERING_ACN	= 0
-    } 	AMBISONICS_CHANNEL_ORDERING;
-
-typedef 
-enum AMBISONICS_NORMALIZATION
-    {
-        AMBISONICS_NORMALIZATION_SN3D	= 0,
-        AMBISONICS_NORMALIZATION_N3D	= ( AMBISONICS_NORMALIZATION_SN3D + 1 ) 
-    } 	AMBISONICS_NORMALIZATION;
-
-#define AMBISONICS_PARAM_VERSION_1 1
-// The AMBISONICS_PARAMS initialization structure should be completely filled out 
-// and then passed into the SetData API of IAmbisonicsControl Service on IAudioClient
-// unsigned int(32) size of AMBISONICS_PARAMS
-// unsigned int(32)  version of AMBISONICS_PARAMS struct
-// unsigned int(32) ambisonics_type is the enumeration of ambisonics types
-// unsigned int(32) ambisonics_channel_ordering is the enumeration of ambisonics channel ordering
-// unsigned int(32) ambisonics_normalization is the enumeration of ambisonics normaliztion
-// unsigned int(32) ambisonics_order
-// unsigned int(32) ambisonics_num_channels
-// unsigned int(32) ambisonics_channel_map is a sequence of 32-bit unsigned integers that maps audio channels in a given audio track to ambisonic components,
-// given the defined ambisonics_channel_ordering. The sequence of channel_map values should match the channel sequence within the given audio track.
-typedef struct AMBISONICS_PARAMS
-    {
-    UINT32 u32Size;
-    UINT32 u32Version;
-    AMBISONICS_TYPE u32Type;
-    AMBISONICS_CHANNEL_ORDERING u32ChannelOrdering;
-    AMBISONICS_NORMALIZATION u32Normalization;
-    UINT32 u32Order;
-    UINT32 u32NumChannels;
-    /* [size_is][annotation] */ 
-    __field_ecount(u32NumChannels)  UINT32 *pu32ChannelMap;
-    } 	AMBISONICS_PARAMS;
-
-
-
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0010_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0010_v0_0_s_ifspec;
-
-#ifndef __IAudioAmbisonicsControl_INTERFACE_DEFINED__
-#define __IAudioAmbisonicsControl_INTERFACE_DEFINED__
-
-/* interface IAudioAmbisonicsControl */
-/* [unique][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IAudioAmbisonicsControl;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("28724C91-DF35-4856-9F76-D6A26413F3DF")
-    IAudioAmbisonicsControl : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE SetData( 
-            /* [size_is][in] */ __RPC__in_ecount_full(cbAmbisonicsParams) const AMBISONICS_PARAMS *pAmbisonicsParams,
-            /* [in] */ UINT32 cbAmbisonicsParams) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE SetHeadTracking( 
-            /* [in] */ BOOL bEnableHeadTracking) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE GetHeadTracking( 
-            /* [out] */ __RPC__out BOOL *pbEnableHeadTracking) = 0;
-        
-        virtual HRESULT STDMETHODCALLTYPE SetRotation( 
-            /* [in] */ float X,
-            /* [in] */ float Y,
-            /* [in] */ float Z,
-            /* [in] */ float W) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IAudioAmbisonicsControlVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IAudioAmbisonicsControl * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IAudioAmbisonicsControl * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IAudioAmbisonicsControl * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetData )( 
-            __RPC__in IAudioAmbisonicsControl * This,
-            /* [size_is][in] */ __RPC__in_ecount_full(cbAmbisonicsParams) const AMBISONICS_PARAMS *pAmbisonicsParams,
-            /* [in] */ UINT32 cbAmbisonicsParams);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetHeadTracking )( 
-            __RPC__in IAudioAmbisonicsControl * This,
-            /* [in] */ BOOL bEnableHeadTracking);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetHeadTracking )( 
-            __RPC__in IAudioAmbisonicsControl * This,
-            /* [out] */ __RPC__out BOOL *pbEnableHeadTracking);
-        
-        HRESULT ( STDMETHODCALLTYPE *SetRotation )( 
-            __RPC__in IAudioAmbisonicsControl * This,
-            /* [in] */ float X,
-            /* [in] */ float Y,
-            /* [in] */ float Z,
-            /* [in] */ float W);
-        
-        END_INTERFACE
-    } IAudioAmbisonicsControlVtbl;
-
-    interface IAudioAmbisonicsControl
-    {
-        CONST_VTBL struct IAudioAmbisonicsControlVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IAudioAmbisonicsControl_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IAudioAmbisonicsControl_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IAudioAmbisonicsControl_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IAudioAmbisonicsControl_SetData(This,pAmbisonicsParams,cbAmbisonicsParams)	\
-    ( (This)->lpVtbl -> SetData(This,pAmbisonicsParams,cbAmbisonicsParams) ) 
-
-#define IAudioAmbisonicsControl_SetHeadTracking(This,bEnableHeadTracking)	\
-    ( (This)->lpVtbl -> SetHeadTracking(This,bEnableHeadTracking) ) 
-
-#define IAudioAmbisonicsControl_GetHeadTracking(This,pbEnableHeadTracking)	\
-    ( (This)->lpVtbl -> GetHeadTracking(This,pbEnableHeadTracking) ) 
-
-#define IAudioAmbisonicsControl_SetRotation(This,X,Y,Z,W)	\
-    ( (This)->lpVtbl -> SetRotation(This,X,Y,Z,W) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IAudioAmbisonicsControl_INTERFACE_DEFINED__ */
-
-
-/* interface __MIDL_itf_audioclient_0000_0011 */
-/* [local] */ 
-
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0011_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0011_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0010_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0010_v0_0_s_ifspec;
 
 #ifndef __IChannelAudioVolume_INTERFACE_DEFINED__
 #define __IChannelAudioVolume_INTERFACE_DEFINED__
@@ -2118,13 +1900,13 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 #endif 	/* __IChannelAudioVolume_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0012 */
+/* interface __MIDL_itf_audioclient_0000_0011 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-#pragma region Application and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 #define AUDCLNT_ERR(n) MAKE_HRESULT(SEVERITY_ERROR, FACILITY_AUDCLNT, n)
 #define AUDCLNT_SUCCESS(n) MAKE_SCODE(SEVERITY_SUCCESS, FACILITY_AUDCLNT, n)
 #define AUDCLNT_E_NOT_INITIALIZED              AUDCLNT_ERR(0x001)
@@ -2161,17 +1943,15 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 #define AUDCLNT_E_RAW_MODE_UNSUPPORTED         AUDCLNT_ERR(0x027)
 #define AUDCLNT_E_ENGINE_PERIODICITY_LOCKED    AUDCLNT_ERR(0x028)
 #define AUDCLNT_E_ENGINE_FORMAT_LOCKED         AUDCLNT_ERR(0x029)
-#define AUDCLNT_E_HEADTRACKING_ENABLED         AUDCLNT_ERR(0x030)
-#define AUDCLNT_E_HEADTRACKING_UNSUPPORTED     AUDCLNT_ERR(0x040)
 #define AUDCLNT_S_BUFFER_EMPTY                 AUDCLNT_SUCCESS(0x001)
 #define AUDCLNT_S_THREAD_ALREADY_REGISTERED    AUDCLNT_SUCCESS(0x002)
 #define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0012_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0012_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0011_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0011_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

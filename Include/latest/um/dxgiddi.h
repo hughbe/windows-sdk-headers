@@ -73,8 +73,7 @@ typedef struct DXGI_DDI_PRESENT_FLAGS
             UINT    TemporaryMono            : 1;        // 0x00000008
             UINT    AllowTearing             : 1;        // 0x00000010
             UINT    AllowFlexibleRefresh     : 1;        // 0x00000020
-            UINT    NoScanoutTransform       : 1;        // 0x00000040
-            UINT    Reserved                 :25;
+            UINT    Reserved                 :26;
         };
         UINT    Value;
     };
@@ -350,8 +349,7 @@ typedef enum DXGI_DDI_MULTIPLANE_OVERLAY_FLAGS
 {
     DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_VERTICAL_FLIP                 = 0x1,
     DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_HORIZONTAL_FLIP               = 0x2,
-    DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_FULLSCREEN_POST_COMPOSITION   = 0x4,
-    DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_NO_SCANOUT_TRANFORMATION      = 0x8,
+    DXGI_DDI_MULTIPLANE_OVERLAY_FLAG_FULLSCREEN_POST_COMPOSITION   = 0x4
 } DXGI_DDI_MULTIPLANE_OVERLAY_FLAGS;
 
 typedef enum DXGI_DDI_MULTIPLANE_OVERLAY_BLEND
@@ -906,55 +904,6 @@ typedef struct DXGIDDICB_PRESENT_MULTIPLANE_OVERLAY1
 } DXGIDDICB_PRESENT_MULTIPLANE_OVERLAY1;
 #endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_2_1)
 
-#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_4_2)
-
-typedef struct DXGIDDICB_SUBMITPRESENTBLTTOHWQUEUE
-{
-    D3DKMT_HANDLE               hSrcAllocation;             // in: The allocation of which content will be presented
-    D3DKMT_HANDLE               hDstAllocation;             // in: The destination allocation of the present
-    void *                      pDXGIContext;               // opaque: Fill this with the value in DXGI_DDI_ARG_PRESENT.pDXGIContext
-    HANDLE                      hHwQueue;                   // in: Hardware queue being submitted to.
-    UINT64                      HwQueueProgressFenceId;     // Hardware queue progress fence ID that will be signaled when the Present Blt is done on the GPU
-
-    UINT                        PrivateDriverDataSize;
-    _Field_size_bytes_(PrivateDriverDataSize)
-    PVOID                       pPrivateDriverData;         // in: Private driver data to pass to DdiPresent
-} DXGIDDICB_SUBMITPRESENTBLTTOHWQUEUE;
-
-#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_4_2)
-
-#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_5_2)
-
-typedef struct DXGIDDICB_SUBMITPRESENTTOHWQUEUE
-{
-    void *                      pDXGIContext;               // opaque: Fill this with the value in DXGI_DDI_ARG_PRESENT.pDXGIContext
-    _Field_size_(BroadcastHwQueueCount)
-    D3DKMT_HANDLE*              BroadcastSrcAllocations;    // in: allocations which content will be presented
-    _Field_size_opt_(BroadcastHwQueueCount)
-    D3DKMT_HANDLE*              BroadcastDstAllocations;    // in: if non-zero, it's the destination allocations of the present
-    HANDLE*                     hHwQueues;                  // in: hardware queues being submitted to.
-    UINT                        BroadcastHwQueueCount;      // in: the number of broadcast hardware queues
-    UINT                        PrivateDriverDataSize;      // in: private driver data size in bytes
-    _Field_size_bytes_(PrivateDriverDataSize)
-    PVOID                       pPrivateDriverData;         // in: private driver data to pass to DdiPresent
-
-#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_6_2)
-
-    BOOLEAN                     bOptimizeForComposition;                        // out: DWM is involved in composition
-
-#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_6_2)
-
-#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_6_3)
-
-    BOOL                        SyncIntervalOverrideValid;
-    DXGI_DDI_FLIP_INTERVAL_TYPE SyncIntervalOverride;
-
-#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_6_3)
-
-} DXGIDDICB_SUBMITPRESENTTOHWQUEUE;
-
-#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_5_2)
-
 
 
 typedef _Check_return_ HRESULT (APIENTRY CALLBACK *PFNDDXGIDDI_PRESENTCB)(
@@ -970,20 +919,6 @@ typedef _Check_return_ HRESULT (APIENTRY CALLBACK *PFNDDXGIDDI_PRESENT_MULTIPLAN
         _In_ HANDLE hDevice, _In_ CONST DXGIDDICB_PRESENT_MULTIPLANE_OVERLAY1*);
 #endif // (D3D_UMD_INTERFACE_VERSION >=  D3D_UMD_INTERFACE_VERSION_WDDM2_2_1)
 
-#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_4_2)
-
-typedef _Check_return_ HRESULT (APIENTRY CALLBACK *PFNDDXGIDDI_SUBMITPRESENTBLTTOHWQUEUECB)(
-        _In_ HANDLE hDevice, _In_ DXGIDDICB_SUBMITPRESENTBLTTOHWQUEUE*);
-
-#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_4_2)
-
-#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_5_2)
-
-typedef _Check_return_ HRESULT (APIENTRY CALLBACK *PFNDDXGIDDI_SUBMITPRESENTTOHWQUEUECB)(
-        _In_ HANDLE hDevice, _In_ DXGIDDICB_SUBMITPRESENTTOHWQUEUE*);
-
-#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_5_2)
-
 //--------------------------------------------------------------------------------------------------------
 typedef struct DXGI_DDI_BASE_CALLBACKS
 {
@@ -996,14 +931,6 @@ typedef struct DXGI_DDI_BASE_CALLBACKS
     // Use IS_DXGI1_6_BASE_FUNCTIONS macro to check if field is available.
     PFNDDXGIDDI_PRESENT_MULTIPLANE_OVERLAY1CB pfnPresentMultiplaneOverlay1Cb;
 #endif // (D3D_UMD_INTERFACE_VERSION >=  D3D_UMD_INTERFACE_VERSION_WDDM2_2_1)
-
-#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_4_2)
-    PFNDDXGIDDI_SUBMITPRESENTBLTTOHWQUEUECB pfnSubmitPresentBltToHwQueueCb;
-#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_4_2)
-
-#if (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_5_2)
-    PFNDDXGIDDI_SUBMITPRESENTTOHWQUEUECB pfnSubmitPresentToHwQueueCb;
-#endif // (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM2_5_2)
 } DXGI_DDI_BASE_CALLBACKS;
 
 //========================================================================================================

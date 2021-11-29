@@ -111,8 +111,8 @@ extern "C"{
 /* [local] */ 
 
 #include <winapifamily.h>
-#pragma region Application and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 typedef 
 enum AudioSessionDisconnectReason
     {
@@ -305,6 +305,22 @@ EXTERN_C const IID IID_IAudioSessionEvents;
 #endif 	/* __IAudioSessionEvents_INTERFACE_DEFINED__ */
 
 
+/* interface __MIDL_itf_audiopolicy_0000_0001 */
+/* [local] */ 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#pragma endregion
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
+
+
+extern RPC_IF_HANDLE __MIDL_itf_audiopolicy_0000_0001_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audiopolicy_0000_0001_v0_0_s_ifspec;
+
 #ifndef __IAudioSessionControl_INTERFACE_DEFINED__
 #define __IAudioSessionControl_INTERFACE_DEFINED__
 
@@ -492,7 +508,7 @@ EXTERN_C const IID IID_IAudioSessionControl;
 /* interface __MIDL_itf_audiopolicy_0000_0002 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)

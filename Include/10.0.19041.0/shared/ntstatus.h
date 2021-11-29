@@ -10203,6 +10203,15 @@ Notes:
 //
 #define STATUS_CASE_SENSITIVE_PATH       ((NTSTATUS)0xC00004BAL)
 
+//
+// MessageId: STATUS_HAS_SYSTEM_CRITICAL_FILES
+//
+// MessageText:
+//
+// The volume contains paging, crash dump or other system critical files.
+//
+#define STATUS_HAS_SYSTEM_CRITICAL_FILES ((NTSTATUS)0xC00004BDL)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 

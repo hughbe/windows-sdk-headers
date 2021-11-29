@@ -13,10 +13,6 @@
 #include <corecrt.h>
 #include <stddef.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
 
 
@@ -189,7 +185,7 @@ extern "C++"
 
 
 
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
 
     _Check_return_ _CRT_NONSTDC_DEPRECATE(_lfind)
     _ACRTIMP void* __cdecl lfind(
@@ -214,5 +210,3 @@ extern "C++"
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

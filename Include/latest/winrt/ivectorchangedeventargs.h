@@ -1,6 +1,6 @@
 /* Header file automatically generated from ivectorchangedeventargs.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0229 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -45,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -76,36 +75,27 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 #if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
 
 #if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
 #define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
@@ -138,21 +128,20 @@ namespace ABI {
         namespace Foundation {
             namespace Collections {
                 interface IVectorChangedEventArgs;
-            } /* Collections */
+            } /* Windows */
         } /* Foundation */
-    } /* Windows */
-} /* ABI */
+    } /* Collections */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs ABI::Windows::Foundation::Collections::IVectorChangedEventArgs
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs_FWD_DEFINED__
 
 
 
-#pragma warning (push)
-#pragma warning (disable:4668) 
-#pragma warning (disable:4001) 
-#pragma once 
-#pragma warning (pop)
+#pragma warning(push)
+#pragma warning(disable:4668) 
+#pragma warning(disable:4001) 
+#pragma once
+#pragma warning(pop)
 
 /*
  *
@@ -177,10 +166,9 @@ namespace ABI {
                     CollectionChange_ItemChanged,
                 } CollectionChange;
                 
-            } /* Collections */
+            } /* Windows */
         } /* Foundation */
-    } /* Windows */
-} /* ABI */
+    } /* Collections */} /* ABI */
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
 
@@ -202,9 +190,8 @@ namespace ABI {
             namespace Collections {
                 /* [contract, version, pointer_default(unique), uuid("575933df-34fe-4480-af15-07691f3d5d9b"), object] */
                 MIDL_INTERFACE("575933df-34fe-4480-af15-07691f3d5d9b")
-                IVectorChangedEventArgs : public IInspectable
+                IVectorChangedEventArgs : IInspectable
                 {
-                public:
                     /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CollectionChange(
                         /* [retval, out] */__RPC__out ABI::Windows::Foundation::Collections::CollectionChange * value
                         ) = 0;
@@ -216,10 +203,9 @@ namespace ABI {
 
                 extern MIDL_CONST_ID IID & IID_IVectorChangedEventArgs=_uuidof(IVectorChangedEventArgs);
                 
-            } /* Collections */
+            } /* Windows */
         } /* Foundation */
-    } /* Windows */
-} /* ABI */
+    } /* Collections */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs_INTERFACE_DEFINED__) */
@@ -235,11 +221,11 @@ typedef interface __x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEvent
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs_FWD_DEFINED__
 
 
-#pragma warning (push)
-#pragma warning (disable:4668) 
-#pragma warning (disable:4001) 
-#pragma once 
-#pragma warning (pop)
+#pragma warning(push)
+#pragma warning(disable:4668) 
+#pragma warning(disable:4001) 
+#pragma once
+#pragma warning(pop)
 
 /*
  *

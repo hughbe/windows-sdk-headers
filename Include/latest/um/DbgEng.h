@@ -242,7 +242,6 @@ typedef interface DECLSPEC_UUID("bc0d583f-126d-43a1-9cc4-a860ab1d537b")
     IDebugControl6* PDEBUG_CONTROL6;
 typedef interface DECLSPEC_UUID("b86fb3b1-80d4-475b-aea3-cf06539cf63a")
     IDebugControl7* PDEBUG_CONTROL7;
-
 typedef interface DECLSPEC_UUID("88f7dfab-3ea7-4c3a-aefb-c4e8106173aa")
     IDebugDataSpaces* PDEBUG_DATA_SPACES;
 typedef interface DECLSPEC_UUID("7a5e852f-96e9-468f-ac1b-0b3addc4a049")
@@ -437,14 +436,6 @@ typedef struct _DEBUG_CACHED_SYMBOL_INFO
     ULONG Id;
     ULONG Arg3;
 } DEBUG_CACHED_SYMBOL_INFO, *PDEBUG_CACHED_SYMBOL_INFO;
-
-typedef struct _PROCESS_NAME_ENTRY
-{
-    ULONG ProcessId;
-    ULONG NameOffset;  // offset for the process name string.
-    ULONG NameSize;    // ProcessName will always be NULL terminated, NameSize is for struct align and safeguard.
-    ULONG NextEntry;   // offset for next entry, 0 if the last.
-} PROCESS_NAME_ENTRY, *PPROCESS_NAME_ENTRY;
 
 //
 // Request requests.
@@ -1970,8 +1961,6 @@ typedef struct _DEBUG_CREATE_PROCESS_OPTIONS
 #define DEBUG_OUTPUT_SYMBOLS           0x00000200
 // Output which modifies the status bar
 #define DEBUG_OUTPUT_STATUS            0x00000400
-// Structured XML status messages
-#define DEBUG_OUTPUT_XML               0x00000800
 
 // Internal debugger output, used mainly
 // for debugging the debugger.  Output
@@ -2429,7 +2418,6 @@ DECLARE_INTERFACE_(IDebugClient, IUnknown)
 #define DEBUG_FORMAT_USER_SMALL_ADD_AVX_XSTATE_CONTEXT    0x00020000
 #define DEBUG_FORMAT_USER_SMALL_IPT_TRACE                 0x00040000
 #define DEBUG_FORMAT_USER_SMALL_IGNORE_INACCESSIBLE_MEM   0x08000000
-#define DEBUG_FORMAT_USER_SMALL_SCAN_PARTIAL_PAGES        0x10000000
 
 
 //
@@ -6584,14 +6572,7 @@ DECLARE_INTERFACE_(IDebugOutputStream, IUnknown)
 #define DEBUG_ENGOPT_DISABLESQM                  0x00080000
 // This is used to disable the source stepping (step over/step in) into CFG code.
 #define DEBUG_ENGOPT_DISABLE_STEPLINES_OPTIONS   0x00200000
-// This is used when debugging target with sensitive data.
-// It will disable saving dumps during debugging
-// Can be set only (no reset once it is set)
-#define DEBUG_ENGOPT_DEBUGGING_SENSITIVE_DATA    0x00400000
-// When opening .cab or .zip files, if there is a trace (.run file), open
-// it instead of any other dump files in the archive.
-#define DEBUG_ENGOPT_PREFER_TRACE_FILES          0x00800000
-#define DEBUG_ENGOPT_ALL                         0x00EFFFFF
+#define DEBUG_ENGOPT_ALL                         0x002FFFFF
 
 // General unspecified ID constant.
 #define DEBUG_ANY_ID 0xffffffff
@@ -6737,7 +6718,6 @@ typedef struct _STACK_SYM_FRAME_INFO
 #define DEBUG_KERNEL_EXDI_DRIVER    2
 #define DEBUG_KERNEL_IDNA           3
 #define DEBUG_KERNEL_INSTALL_DRIVER 4
-#define DEBUG_KERNEL_REPT           5
 
 #define DEBUG_KERNEL_SMALL_DUMP  DEBUG_DUMP_SMALL
 #define DEBUG_KERNEL_DUMP        DEBUG_DUMP_DEFAULT
@@ -6750,7 +6730,6 @@ typedef struct _STACK_SYM_FRAME_INFO
 #define DEBUG_USER_WINDOWS_PROCESS         0
 #define DEBUG_USER_WINDOWS_PROCESS_SERVER  1
 #define DEBUG_USER_WINDOWS_IDNA            2
-#define DEBUG_USER_WINDOWS_REPT            3
 #define DEBUG_USER_WINDOWS_SMALL_DUMP      DEBUG_DUMP_SMALL
 #define DEBUG_USER_WINDOWS_DUMP            DEBUG_DUMP_DEFAULT
 #define DEBUG_USER_WINDOWS_DUMP_WINDOWS_CE DEBUG_DUMP_WINDOWS_CE
@@ -6917,18 +6896,6 @@ typedef struct _DEBUG_LAST_EVENT_INFO_SYSTEM_ERROR
     ULONG Error;
     ULONG Level;
 } DEBUG_LAST_EVENT_INFO_SYSTEM_ERROR, *PDEBUG_LAST_EVENT_INFO_SYSTEM_ERROR;
-
-typedef struct _DEBUG_LAST_EVENT_INFO_SERVICE_EXCEPTION
-{
-    ULONG Kind;
-    ULONG DataSize;
-    ULONG64 Address;
-
-    //
-    // (Kind) Specific Data... (e.g.: an EXCEPTION_RECORD64 or another definition given by
-    //                                a specific platform service)
-    //
-} DEBUG_LAST_EVENT_INFO_SERVICE_EXCEPTION, *PDEBUG_LAST_EVENT_INFO_SERVICE_EXCEPTION;
 
 // DEBUG_VALUE types.
 #define DEBUG_VALUE_INVALID      0
@@ -17115,7 +17082,6 @@ DECLARE_INTERFACE_(IDebugDataSpaces4, IUnknown)
 #define DEBUG_EVENT_CHANGE_DEBUGGEE_STATE   0x00000400
 #define DEBUG_EVENT_CHANGE_ENGINE_STATE     0x00000800
 #define DEBUG_EVENT_CHANGE_SYMBOL_STATE     0x00001000
-#define DEBUG_EVENT_SERVICE_EXCEPTION       0x00002000
 
 // SessionStatus flags.
 // A debuggee has been discovered for the session.

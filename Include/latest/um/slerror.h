@@ -2430,51 +2430,6 @@
 #define SL_E_EDITION_MISMATCHED          ((HRESULT)0xC004F210L)
 
 //
-// MessageId: SL_E_HWID_CHANGED
-//
-// MessageText:
-//
-// The Software Licensing Service reported that the hardware of the device may have changed.
-//
-#define SL_E_HWID_CHANGED                ((HRESULT)0xC004F211L)
-
-//
-// MessageId: SL_E_OEM_KEY_EDITION_MISMATCH
-//
-// MessageText:
-//
-// The Software Licensing Service reported that the edition of the OEM key does not match the edition of Windows.
-//
-#define SL_E_OEM_KEY_EDITION_MISMATCH    ((HRESULT)0xC004F212L)
-
-//
-// MessageId: SL_E_NO_PRODUCT_KEY_FOUND
-//
-// MessageText:
-//
-// The Software Licensing Service reported that no product key was found on the system.
-//
-#define SL_E_NO_PRODUCT_KEY_FOUND        ((HRESULT)0xC004F213L)
-
-//
-// MessageId: SL_E_DOWNLEVEL_SETUP_KEY
-//
-// MessageText:
-//
-// The Software Licensing Service reported a problem with the downlevel product key.
-//
-#define SL_E_DOWNLEVEL_SETUP_KEY         ((HRESULT)0xC004F214L)
-
-//
-// MessageId: SL_E_BIOS_KEY
-//
-// MessageText:
-//
-// The Software Licensing Service reported a problem with the BIOS key.
-//
-#define SL_E_BIOS_KEY                    ((HRESULT)0xC004F215L)
-
-//
 // 0xF300 - 0xF3FF reserved for token-based activation
 //
 //

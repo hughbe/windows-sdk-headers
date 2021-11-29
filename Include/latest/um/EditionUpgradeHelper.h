@@ -46,32 +46,11 @@ typedef interface IEditionUpgradeHelper IEditionUpgradeHelper;
 #endif 	/* __IEditionUpgradeHelper_FWD_DEFINED__ */
 
 
-#ifndef __IWindowsLockModeHelper_FWD_DEFINED__
-#define __IWindowsLockModeHelper_FWD_DEFINED__
-typedef interface IWindowsLockModeHelper IWindowsLockModeHelper;
-
-#endif 	/* __IWindowsLockModeHelper_FWD_DEFINED__ */
-
-
 #ifndef __IEditionUpgradeBroker_FWD_DEFINED__
 #define __IEditionUpgradeBroker_FWD_DEFINED__
 typedef interface IEditionUpgradeBroker IEditionUpgradeBroker;
 
 #endif 	/* __IEditionUpgradeBroker_FWD_DEFINED__ */
-
-
-#ifndef __IContainerActivationHelper_FWD_DEFINED__
-#define __IContainerActivationHelper_FWD_DEFINED__
-typedef interface IContainerActivationHelper IContainerActivationHelper;
-
-#endif 	/* __IContainerActivationHelper_FWD_DEFINED__ */
-
-
-#ifndef __IClipServiceNotificationHelper_FWD_DEFINED__
-#define __IClipServiceNotificationHelper_FWD_DEFINED__
-typedef interface IClipServiceNotificationHelper IClipServiceNotificationHelper;
-
-#endif 	/* __IClipServiceNotificationHelper_FWD_DEFINED__ */
 
 
 #ifndef __EditionUpgradeHelper_FWD_DEFINED__
@@ -234,86 +213,6 @@ EXTERN_C const IID IID_IEditionUpgradeHelper;
 #endif 	/* __IEditionUpgradeHelper_INTERFACE_DEFINED__ */
 
 
-#ifndef __IWindowsLockModeHelper_INTERFACE_DEFINED__
-#define __IWindowsLockModeHelper_INTERFACE_DEFINED__
-
-/* interface IWindowsLockModeHelper */
-/* [uuid][object] */ 
-
-
-EXTERN_C const IID IID_IWindowsLockModeHelper;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("F342D19E-CC22-4648-BB5D-03CCF75B47C5")
-    IWindowsLockModeHelper : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE GetSMode( 
-            /* [out] */ __RPC__out BOOL *isSmode) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IWindowsLockModeHelperVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IWindowsLockModeHelper * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IWindowsLockModeHelper * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IWindowsLockModeHelper * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetSMode )( 
-            __RPC__in IWindowsLockModeHelper * This,
-            /* [out] */ __RPC__out BOOL *isSmode);
-        
-        END_INTERFACE
-    } IWindowsLockModeHelperVtbl;
-
-    interface IWindowsLockModeHelper
-    {
-        CONST_VTBL struct IWindowsLockModeHelperVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IWindowsLockModeHelper_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IWindowsLockModeHelper_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IWindowsLockModeHelper_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IWindowsLockModeHelper_GetSMode(This,isSmode)	\
-    ( (This)->lpVtbl -> GetSMode(This,isSmode) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IWindowsLockModeHelper_INTERFACE_DEFINED__ */
-
-
 #ifndef __IEditionUpgradeBroker_INTERFACE_DEFINED__
 #define __IEditionUpgradeBroker_INTERFACE_DEFINED__
 
@@ -420,174 +319,6 @@ EXTERN_C const IID IID_IEditionUpgradeBroker;
 #endif 	/* __IEditionUpgradeBroker_INTERFACE_DEFINED__ */
 
 
-#ifndef __IContainerActivationHelper_INTERFACE_DEFINED__
-#define __IContainerActivationHelper_INTERFACE_DEFINED__
-
-/* interface IContainerActivationHelper */
-/* [uuid][nonextensible][oleautomation][dual][object] */ 
-
-
-EXTERN_C const IID IID_IContainerActivationHelper;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("B524F93F-80D5-4EC7-AE9E-D66E93ADE1FA")
-    IContainerActivationHelper : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE CanActivateClientVM( 
-            /* [retval][out] */ __RPC__out VARIANT_BOOL *isAllowed) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IContainerActivationHelperVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IContainerActivationHelper * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IContainerActivationHelper * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IContainerActivationHelper * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *CanActivateClientVM )( 
-            __RPC__in IContainerActivationHelper * This,
-            /* [retval][out] */ __RPC__out VARIANT_BOOL *isAllowed);
-        
-        END_INTERFACE
-    } IContainerActivationHelperVtbl;
-
-    interface IContainerActivationHelper
-    {
-        CONST_VTBL struct IContainerActivationHelperVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IContainerActivationHelper_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IContainerActivationHelper_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IContainerActivationHelper_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IContainerActivationHelper_CanActivateClientVM(This,isAllowed)	\
-    ( (This)->lpVtbl -> CanActivateClientVM(This,isAllowed) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IContainerActivationHelper_INTERFACE_DEFINED__ */
-
-
-#ifndef __IClipServiceNotificationHelper_INTERFACE_DEFINED__
-#define __IClipServiceNotificationHelper_INTERFACE_DEFINED__
-
-/* interface IClipServiceNotificationHelper */
-/* [uuid][nonextensible][oleautomation][dual][object] */ 
-
-
-EXTERN_C const IID IID_IClipServiceNotificationHelper;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("C39948F0-6142-44FD-98CA-E1681A8D68B5")
-    IClipServiceNotificationHelper : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE ShowToast( 
-            /* [string][in] */ __RPC__in_string BSTR titleText,
-            /* [string][in] */ __RPC__in_string BSTR bodyText,
-            /* [string][in] */ __RPC__in_string BSTR packageName,
-            /* [string][in] */ __RPC__in_string BSTR appId,
-            /* [string][in] */ __RPC__in_string BSTR launchCommand) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IClipServiceNotificationHelperVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            __RPC__in IClipServiceNotificationHelper * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            __RPC__in IClipServiceNotificationHelper * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            __RPC__in IClipServiceNotificationHelper * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *ShowToast )( 
-            __RPC__in IClipServiceNotificationHelper * This,
-            /* [string][in] */ __RPC__in_string BSTR titleText,
-            /* [string][in] */ __RPC__in_string BSTR bodyText,
-            /* [string][in] */ __RPC__in_string BSTR packageName,
-            /* [string][in] */ __RPC__in_string BSTR appId,
-            /* [string][in] */ __RPC__in_string BSTR launchCommand);
-        
-        END_INTERFACE
-    } IClipServiceNotificationHelperVtbl;
-
-    interface IClipServiceNotificationHelper
-    {
-        CONST_VTBL struct IClipServiceNotificationHelperVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IClipServiceNotificationHelper_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IClipServiceNotificationHelper_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IClipServiceNotificationHelper_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IClipServiceNotificationHelper_ShowToast(This,titleText,bodyText,packageName,appId,launchCommand)	\
-    ( (This)->lpVtbl -> ShowToast(This,titleText,bodyText,packageName,appId,launchCommand) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IClipServiceNotificationHelper_INTERFACE_DEFINED__ */
-
-
 
 #ifndef __EditionUpgradeHelperLib_LIBRARY_DEFINED__
 #define __EditionUpgradeHelperLib_LIBRARY_DEFINED__
@@ -615,15 +346,15 @@ EditionUpgradeBroker;
 #endif
 #endif /* __EditionUpgradeHelperLib_LIBRARY_DEFINED__ */
 
-/* interface __MIDL_itf_editionupgradehelper_0000_0006 */
+/* interface __MIDL_itf_editionupgradehelper_0000_0003 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_editionupgradehelper_0000_0006_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_editionupgradehelper_0000_0006_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_editionupgradehelper_0000_0003_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_editionupgradehelper_0000_0003_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

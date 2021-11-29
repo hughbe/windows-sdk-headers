@@ -69,8 +69,8 @@ interface IInitializeWithStream : IUnknown
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application and Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 [
     uuid(886d8eeb-8cf2-4446-8d02-cdba1dbdcf99),
@@ -88,12 +88,6 @@ interface IPropertyStore : IUnknown
 }
 
 typedef [unique] IPropertyStore * LPPROPERTYSTORE;
-
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
-#pragma endregion
-
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 cpp_quote("PSSTDAPI PropVariantToWinRTPropertyValue(_In_ REFPROPVARIANT propvar, _In_ REFIID riid, _COM_Outptr_result_maybenull_ void **ppv);")
 cpp_quote("PSSTDAPI WinRTPropertyValueToPropVariant(_In_opt_ IUnknown *punkPropertyValue, _Out_ PROPVARIANT *ppropvar);")
@@ -372,7 +366,7 @@ interface IPropertyDescription : IUnknown
         PDFF_READONLY               = 0x00001000,   // Use readonly format, fill with default text if empty and !PDFF_FAILIFEMPTYPROP
         PDFF_NOAUTOREADINGORDER     = 0x00002000,   // Don't detect reading order automatically. Useful if you will be converting to Ansi and don't want Unicode reading order characters
     } PROPDESC_FORMAT_FLAGS;
-    cpp_quote("#define PDFF_PREFERFRIENDLY    static_cast<PROPDESC_FORMAT_FLAGS>(0x10000000) // Use even friendlier date/time descriptions ;internal")  // ;internal
+
     cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(PROPDESC_FORMAT_FLAGS)")
 
     typedef [v1_enum] enum PROPDESC_SORTDESCRIPTION

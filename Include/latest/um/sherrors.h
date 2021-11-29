@@ -139,19 +139,6 @@
 // Camera Roll error codes
 #define CAMERAROLL_E_NO_DOWNSAMPLING_REQUIRED   _HRESULT_TYPEDEF_(0x80270120L) // The provided image didn't require downsampling because it was small enough already
 
-// Error codes for when Shell denies a WinRT app activation request via Window Manager/View Manager.
-// These should be considered subsets of NAV_E_SHELLVALIDATIONFAILED.
-// By the time the activation request reached shell, the scenario was already over and the activation is intentionally denied (not an error).
-#define E_ACTIVATIONDENIED_USERCLOSE    _HRESULT_TYPEDEF_(0x80270130L)
-// The shell hit a critical error while handling the activation request and cannot process it correctly, so the activation must be denied.
-#define E_ACTIVATIONDENIED_SHELLERROR   _HRESULT_TYPEDEF_(0x80270131L)
-// The shell restarted while the activation was in-progress, and it is unable to process it properly.
-#define E_ACTIVATIONDENIED_SHELLRESTART _HRESULT_TYPEDEF_(0x80270132L)
-// Placeholder for an unexpected error that we cannot definitively map into one of the above buckets. Not expected to fire in practice.
-#define E_ACTIVATIONDENIED_UNEXPECTED   _HRESULT_TYPEDEF_(0x80270133L)
-// The shell was not ready when the activation started, so the activation was aborted immediately.
-#define E_ACTIVATIONDENIED_SHELLNOTREADY _HRESULT_TYPEDEF_(0x80270134L)
-
 // Library error/failure code
 #define LIBRARY_E_NO_SAVE_LOCATION          _HRESULT_TYPEDEF_(0x80270200L)
 #define LIBRARY_E_NO_ACCESSIBLE_LOCATION    _HRESULT_TYPEDEF_(0x80270201L)

@@ -172,23 +172,6 @@ interface IXblIdpAuthTokenResult : IUnknown
     HRESULT GetTitleRestrictions([out, retval, string] LPWSTR* titleRestrictions);
 };
 
-[
-    object,
-    uuid (75d760b0-60b9-412d-994f-26b2cd5f7812),
-    pointer_default(unique)
-]
-interface IXblIdpAuthTokenResult2 : IUnknown
-{
-    // Modern Gamertag. Only supplied with as successful result.
-    HRESULT GetModernGamertag([out, retval, string] LPWSTR *value);
-
-    // Modern Gamertag Suffix. Only supplied with as successful result.
-    HRESULT GetModernGamertagSuffix([out, retval, string] LPWSTR *value);
-
-    // Unique Modern Gamertag. Only supplied with as successful result.
-    HRESULT GetUniqueModernGamertag([out, retval, string] LPWSTR *value);
-};
-
 cpp_quote("#ifdef __cplusplus")
 cpp_quote("")
 cpp_quote("class DECLSPEC_UUID(\"ce23534b-56d8-4978-86a2-7ee570640468\")")
@@ -213,7 +196,6 @@ cpp_quote("#endif")
 coclass XblIdpAuthTokenResult
 {
     [default] interface IXblIdpAuthTokenResult;
-    interface IXblIdpAuthTokenResult2;
 }
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")

@@ -25,8 +25,6 @@ Revision History:
 
 --*/
 
-//@[contract("wdbgexts"), comment("MVI_tracked - https://osgwiki.com/wiki/Microsoft_Virus_Initiative")];
-
 #ifndef _WDBGEXTS_
 #define _WDBGEXTS_
 
@@ -51,8 +49,7 @@ extern "C" {
 #pragma warning(disable:4820) // padding added
 
 // Maximum value of MAXIMUM_PROCESSORS for all platforms.
-// NB: Keep in sync with extsfns.w/h (the !analyze public header)
-#define CROSS_PLATFORM_MAXIMUM_PROCESSORS 2048
+#define CROSS_PLATFORM_MAXIMUM_PROCESSORS 1280
 
 #if !defined(WDBGAPI)
 #define WDBGAPI __stdcall
@@ -887,13 +884,12 @@ typedef struct _WDBGEXTS_MODULE_IN_RANGE {
 // reduce compatibility problems.
 //
 
-#define DBGKD_VERS_FLAG_MP          0x0001   // kernel is MP built
-#define DBGKD_VERS_FLAG_DATA        0x0002   // DebuggerDataList is valid
-#define DBGKD_VERS_FLAG_PTR64       0x0004   // native pointers are 64 bits
-#define DBGKD_VERS_FLAG_NOMM        0x0008   // No MM - don't decode PTEs
-#define DBGKD_VERS_FLAG_HSS         0x0010   // hardware stepping support
-#define DBGKD_VERS_FLAG_PARTITIONS  0x0020   // multiple OS partitions exist
-#define DBGKD_VERS_FLAG_HAL_IN_NTOS 0x0040   // HAL is linked into NTOS kernel
+#define DBGKD_VERS_FLAG_MP         0x0001   // kernel is MP built
+#define DBGKD_VERS_FLAG_DATA       0x0002   // DebuggerDataList is valid
+#define DBGKD_VERS_FLAG_PTR64      0x0004   // native pointers are 64 bits
+#define DBGKD_VERS_FLAG_NOMM       0x0008   // No MM - don't decode PTEs
+#define DBGKD_VERS_FLAG_HSS        0x0010   // hardware stepping support
+#define DBGKD_VERS_FLAG_PARTITIONS 0x0020   // multiple OS partitions exist
 
 #define KDBG_TAG    'GBDK'
 
@@ -1409,11 +1405,6 @@ typedef struct _KDDEBUGGER_DATA64 {
 
     USHORT    SizeEThread;
 
-    UCHAR     L1tfHighPhysicalBitIndex;  // Windows 10 19H1 Addition
-    UCHAR     L1tfSwizzleBitIndex;       // Windows 10 19H1 Addition
-
-    ULONG     Padding0;
-
     ULONG64   KdPrintCircularBufferPtr;
     ULONG64   KdPrintBufferSize;
 
@@ -1482,15 +1473,8 @@ typedef struct _KDDEBUGGER_DATA64 {
 
     // Windows 10 RS1 Addition
 
-    USHORT    Padding1;
+    USHORT    Padding;
     ULONG64   PteBase;
-
-    // Windows 10 RS5 Addition
-
-    ULONG64   RetpolineStubFunctionTable;
-    ULONG     RetpolineStubFunctionTableSize;
-    ULONG     RetpolineStubOffset;
-    ULONG     RetpolineStubSize;
 
 } KDDEBUGGER_DATA64, *PKDDEBUGGER_DATA64;
 

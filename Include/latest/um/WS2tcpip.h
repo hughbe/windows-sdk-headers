@@ -36,7 +36,7 @@
 #if ((defined(_WINSOCK_DEPRECATED_NO_WARNINGS) || defined(BUILD_WINDOWS)) && !defined(_WINSOCK_DEPRECATE_WARNINGS)) || defined(MIDL_PASS)
 #define _WINSOCK_DEPRECATED_BY(replacement)
 #else
-#define _WINSOCK_DEPRECATED_BY(replacement) __declspec(deprecated("Use " replacement " instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"))
+#define _WINSOCK_DEPRECATED_BY(replacement) __declspec(deprecated("Use " ## replacement ## " instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings"))
 #endif
 #endif
 
@@ -183,8 +183,8 @@ void
     _In_      LPWSAOVERLAPPED lpOverlapped
     );
 
-#pragma region Desktop Family or OneCore Family or Game Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 _WINSOCK_DEPRECATED_BY("GetAddrInfoExW()")
 WINSOCK_API_LINKAGE
 INT
@@ -201,7 +201,7 @@ GetAddrInfoExA(
     _In_opt_    LPLOOKUPSERVICE_COMPLETION_ROUTINE  lpCompletionRoutine,
     _Out_opt_   LPHANDLE        lpNameHandle
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 WINSOCK_API_LINKAGE
@@ -241,8 +241,8 @@ GetAddrInfoExOverlappedResult(
 #endif
 
 #if INCL_WINSOCK_API_TYPEDEFS
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family 
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 typedef
 INT
 (WSAAPI *LPFN_GETADDRINFOEXA)(
@@ -257,7 +257,7 @@ INT
     _In_opt_    LPLOOKUPSERVICE_COMPLETION_ROUTINE  lpCompletionRoutine,
     _Out_opt_   LPHANDLE        lpNameHandle
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 typedef
@@ -298,8 +298,8 @@ INT
 #endif
 
 #if (_WIN32_WINNT >= 0x0600)
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 _WINSOCK_DEPRECATED_BY("SetAddrInfoExW()")
 WINSOCK_API_LINKAGE
 INT
@@ -318,7 +318,7 @@ SetAddrInfoExA(
     _In_opt_    LPLOOKUPSERVICE_COMPLETION_ROUTINE  lpCompletionRoutine,
     _Out_opt_   LPHANDLE        lpNameHandle
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 WINSOCK_API_LINKAGE
@@ -441,8 +441,8 @@ VOID
 
 #if (_WIN32_WINNT >= 0x0600)
 
-#pragma region App Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 _WINSOCK_DEPRECATED_BY("FreeAddrInfoExW()")
 WINSOCK_API_LINKAGE
 void
@@ -450,7 +450,7 @@ WSAAPI
 FreeAddrInfoEx(
     _In_opt_  PADDRINFOEXA    pAddrInfoEx
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 WINSOCK_API_LINKAGE
@@ -467,14 +467,14 @@ FreeAddrInfoExW(
 #endif
 
 #if INCL_WINSOCK_API_TYPEDEFS
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 typedef
 void
 (WSAAPI *LPFN_FREEADDRINFOEXA)(
     _In_    PADDRINFOEXA    pAddrInfoEx
     );
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 typedef
@@ -957,174 +957,6 @@ idealsendbacklognotify(
 }
 
 #endif
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
-//
-// Wrapper functions for the IP_USER_MTU/IPV6_USER_MTU socket option.
-//
-
-WS2TCPIP_INLINE
-INT
-WSAGetIPUserMtu(
-    _In_ SOCKET Socket,
-    _Out_ DWORD *Mtu
-    )
-{
-    WSAPROTOCOL_INFOW Info;
-    INT InfoSize = sizeof(Info);
-    INT OptSize = sizeof(*Mtu);
-    INT Error;
-
-    Error = getsockopt(Socket, SOL_SOCKET, SO_PROTOCOL_INFO, (PCHAR)&Info, &InfoSize);
-    if (Error != SOCKET_ERROR) {
-        if (Info.iAddressFamily == AF_INET) {
-            Error =
-                getsockopt(Socket, IPPROTO_IP, IP_USER_MTU, (PCHAR)Mtu, &OptSize);
-#if(_WIN32_WINNT >= 0x0501)
-        } else if (Info.iAddressFamily == AF_INET6) {
-            Error =
-                getsockopt(Socket, IPPROTO_IPV6, IPV6_USER_MTU, (PCHAR)Mtu, &OptSize);
-#endif //(_WIN32_WINNT >= 0x0501)
-        } else {
-            Error = SOCKET_ERROR;
-            WSASetLastError(WSAEAFNOSUPPORT);
-        }
-    }
-
-    return Error;
-}
-
-WS2TCPIP_INLINE
-INT
-WSASetIPUserMtu(
-    _In_ SOCKET Socket,
-    _In_ DWORD Mtu
-    )
-{
-    WSAPROTOCOL_INFOW Info;
-    INT InfoSize = sizeof(Info);
-    INT Error;
-
-    Error = getsockopt(Socket, SOL_SOCKET, SO_PROTOCOL_INFO, (PCHAR)&Info, &InfoSize);
-    if (Error != SOCKET_ERROR) {
-        if (Info.iAddressFamily == AF_INET) {
-            Error =
-                setsockopt(Socket, IPPROTO_IP, IP_USER_MTU, (PCHAR)&Mtu, sizeof(Mtu));
-#if(_WIN32_WINNT >= 0x0501)
-        } else if (Info.iAddressFamily == AF_INET6) {
-            Error =
-                setsockopt(Socket, IPPROTO_IPV6, IPV6_USER_MTU, (PCHAR)&Mtu, sizeof(Mtu));
-#endif //(_WIN32_WINNT >= 0x0501)
-        } else {
-            Error = SOCKET_ERROR;
-            WSASetLastError(WSAEAFNOSUPPORT);
-        }
-    }
-
-    return Error;
-}
-
-//
-// Wrapper functions for the TCP_FAIL_CONNECT_ON_ICMP_ERROR and
-// TCP_ICMP_ERROR_SOURCE_ADDRESS socket options.
-//
-
-WS2TCPIP_INLINE
-INT
-WSAGetFailConnectOnIcmpError(
-    _In_ SOCKET Socket,
-    _Out_ DWORD *Enabled
-    )
-{
-    INT OptSize = sizeof(*Enabled);
-    return getsockopt(Socket, IPPROTO_TCP, TCP_FAIL_CONNECT_ON_ICMP_ERROR,
-                      (CHAR*)Enabled, &OptSize);
-}
-
-WS2TCPIP_INLINE
-INT
-WSASetFailConnectOnIcmpError(
-    _In_ SOCKET Socket,
-    _In_ DWORD Enabled
-    )
-{
-    return setsockopt(Socket, IPPROTO_TCP, TCP_FAIL_CONNECT_ON_ICMP_ERROR,
-                      (CHAR*)&Enabled, sizeof(Enabled));
-}
-
-WS2TCPIP_INLINE
-INT
-WSAGetIcmpErrorInfo(
-    _In_ SOCKET Socket,
-    _Out_ ICMP_ERROR_INFO *Info
-    )
-{
-    INT Error;
-    INT OptSize = sizeof(*Info);
-
-    Error = getsockopt(Socket, IPPROTO_TCP, TCP_ICMP_ERROR_INFO, (CHAR*)Info,
-                       &OptSize);
-    if (Error != SOCKET_ERROR && OptSize == 0) {
-        Error = SOCKET_ERROR;
-        WSASetLastError(WSANO_DATA);
-    }
-
-    return Error;
-}
-
-//
-// Wrapper functions for the UDP_SEND_MSG_SIZE and UDP_RECV_MAX_COALESCED_SIZE
-// socket options.
-//
-
-WS2TCPIP_INLINE
-INT
-WSAGetUdpSendMessageSize(
-    _In_ SOCKET Socket,
-    _Out_ DWORD *MsgSize
-    )
-{
-    INT OptSize = sizeof(*MsgSize);
-
-    return getsockopt(Socket, IPPROTO_UDP, UDP_SEND_MSG_SIZE, (PCHAR)MsgSize,
-                      &OptSize);
-}
-
-WS2TCPIP_INLINE
-INT
-WSASetUdpSendMessageSize(
-    _In_ SOCKET Socket,
-    _In_ DWORD MsgSize
-    )
-{
-    return setsockopt(Socket, IPPROTO_UDP, UDP_SEND_MSG_SIZE, (PCHAR)&MsgSize,
-                      sizeof(MsgSize));
-}
-
-WS2TCPIP_INLINE
-INT
-WSAGetUdpRecvMaxCoalescedSize(
-    _In_ SOCKET Socket,
-    _Out_ DWORD *MaxCoalescedMsgSize
-    )
-{
-    INT OptSize = sizeof(*MaxCoalescedMsgSize);
-
-    return getsockopt(Socket, IPPROTO_UDP, UDP_RECV_MAX_COALESCED_SIZE,
-                      (PCHAR)MaxCoalescedMsgSize, &OptSize);
-}
-
-WS2TCPIP_INLINE
-INT
-WSASetUdpRecvMaxCoalescedSize(
-    _In_ SOCKET Socket,
-    _In_ DWORD MaxCoalescedMsgSize
-    )
-{
-    return setsockopt(Socket, IPPROTO_UDP, UDP_RECV_MAX_COALESCED_SIZE,
-                      (PCHAR)&MaxCoalescedMsgSize, sizeof(MaxCoalescedMsgSize));
-}
-#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
 
 #if (_WIN32_WINNT >= 0x0600)
 #ifdef _SECURE_SOCKET_TYPES_DEFINED_

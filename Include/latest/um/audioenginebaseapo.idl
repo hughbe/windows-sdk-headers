@@ -914,19 +914,6 @@ interface IAudioProcessingObject : IUnknown{
 
 }; // IAudioProcessingObject
 
-[
-    object,
-    local,
-    uuid(98F37DAC-D0B6-49F5-896A-AA4D169A4C48),
-    nonextensible,
-    helpstring("IAudioDeviceModulesClient"),
-    pointer_default(unique)
-]
-interface IAudioDeviceModulesClient : IUnknown
-{
-    HRESULT SetAudioDeviceModulesManager([in, annotation("_In_")] IUnknown* pAudioDeviceModulesManager);
-};
-
 cpp_quote("//")
 cpp_quote("// APO registration functions")
 cpp_quote("//")
@@ -1245,13 +1232,6 @@ cpp_quote ("DEFINE_PROPERTYKEY(PKEY_SFX_Offload_ProcessingModes_Supported_For_St
 // Lists the signal processing modes supported by the mode effect APO. This list only includes signal processing modes where the APO actually
 // processes the audio signal during streaming. This list does not include any signal processing modes supported by the APO for discovery purposes only.
 cpp_quote ("DEFINE_PROPERTYKEY(PKEY_MFX_Offload_ProcessingModes_Supported_For_Streaming, 0xd3993a3f, 0x99c2, 0x4402, 0xb5, 0xec, 0xa9, 0x2a, 0x3, 0x67, 0x66, 0x4b, 12);")
-
-// PKEY_APO_SWFallback_ProcessingModes:
-// vartype = VT_VECTOR | VT_LPWSTR
-// {D3993A3F-99C2-4402-B5EC-A92A0367664B},13
-// Lists the signal processing modes supported by the host connector that are available for fallback to SW APO if sufficient HW resources
-// aren't available.
-cpp_quote ("DEFINE_PROPERTYKEY(PKEY_APO_SWFallback_ProcessingModes, 0xd3993a3f, 0x99c2, 0x4402, 0xb5, 0xec, 0xa9, 0x2a, 0x3, 0x67, 0x66, 0x4b, 13);")
 
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")

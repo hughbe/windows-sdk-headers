@@ -77,31 +77,6 @@ DEFINE_GUID(PEI_NOTIFY_TYPE_GUID,
             0x09a9D5ac, 0x5204, 0x4214, 0x96, 0xe5,
             0x94, 0x99, 0x2e, 0x75, 0x2b, 0xcd);
 
-/* 487565ba-6494-4367-95ca-4eff893522f6 */
-DEFINE_GUID(BMC_NOTIFY_TYPE_GUID,
-            0x487565ba, 0x6494, 0x4367, 0x95, 0xca,
-            0x4e, 0xff, 0x89, 0x35, 0x22, 0xf6);
-
-/* e9d59197-94ee-4a4f-8ad8-9b7d8bd93d2e */
-DEFINE_GUID(SCI_NOTIFY_TYPE_GUID,
-            0xe9d59197, 0x94ee, 0x4a4f, 0x8a, 0xd8,
-            0x9b, 0x7d, 0x8b, 0xd9, 0x3d, 0x2e);
-
-/* fe84086e-b557-43cf-ac1b-17982e078470 */
-DEFINE_GUID(EXTINT_NOTIFY_TYPE_GUID,
-            0xfe84086e, 0xb557, 0x43cf, 0xac, 0x1b,
-            0x17, 0x98, 0x2e, 0x07, 0x84, 0x70);
-
-/* 0033f803-2e70-4e88-992c-6f26daf3db7a */
-DEFINE_GUID(DEVICE_DRIVER_NOTIFY_TYPE_GUID, 
-            0x0033f803, 0x2e70, 0x4e88, 0x99, 0x2c,
-            0x6f, 0x26, 0xda, 0xf3, 0xdb, 0x7a);
-
-/* 919448b2-3739-4b7f-a8f1-e0062805c2a3 */
-DEFINE_GUID(CMCI_NOTIFY_TYPE_GUID,
-            0x919448b2, 0x3739, 0x4b7f, 0xa8, 0xf1,
-            0xe0, 0x06, 0x28, 0x05, 0xc2, 0xa3);
-
 //------------------------------------------- Standard Error Section type GUIDs
 
 /* 9876ccad-47b4-4bdb-b65e-16f193c4f3db */
@@ -149,16 +124,6 @@ DEFINE_GUID(FIRMWARE_ERROR_RECORD_REFERENCE_GUID,
             0x81212a96, 0x09ed, 0x4996, 0x94, 0x71,
             0x8d, 0x72, 0x9c, 0x8e, 0x69, 0xed);
 
-/* 81687003-dbfd-4728-9ffd-f0904f97597d */
-DEFINE_GUID(PMEM_ERROR_SECTION_GUID,
-            0x81687003, 0xdbfd, 0x4728, 0x9f, 0xfd,
-            0xf0, 0x90, 0x4f, 0x97, 0x59, 0x7d);
-
-/* 85183a8b-9c41-429c-939c-5c3c087ca280 */
-DEFINE_GUID(MU_TELEMETRY_SECTION_GUID,
-            0x85183a8b, 0x9c41, 0x429c, 0x93, 0x9c,
-            0x5c, 0x3c, 0x08, 0x7c, 0xa2, 0x80);
-
 //-------------------------------------- Processor check information type GUIDs
 
 /* a55701f5-e3ef-43de-ac72-249b573fad2c */
@@ -188,11 +153,6 @@ DEFINE_GUID(WHEA_MSCHECK_GUID,
 // the specification of non-standard section bodies.
 //
 
-//---------------------------------------------------- Empty GUID
-
-/* 00000000-0000-0000-0000-00000000000 */
-DEFINE_GUID(CPER_EMPTY_GUID, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-
 //---------------------------------------------------- Microsoft record creator
 
 /* cf07c4bd-b789-4e18-b3c4-1f732cb57131 */
@@ -200,14 +160,6 @@ DEFINE_GUID(WHEA_RECORD_CREATOR_GUID,
             0xcf07c4bd,
             0xb789, 0x4e18,
             0xb3, 0xc4, 0x1f, 0x73, 0x2c, 0xb5, 0x71, 0x31);
-
-//---------------------------------------------------- device driver record creator
-
-/* 57217c8d-5e66-44fb-8033-9b74cacedf5b */
-DEFINE_GUID(DEFAULT_DEVICE_DRIVER_CREATOR_GUID,
-            0x57217c8d,
-            0x5e66, 0x44fb,
-            0x80, 0x33, 0x9b, 0x74, 0xca, 0xce, 0xdf, 0x5b);
 
 //--------------------------------------- Microsoft specific notification types
 
@@ -243,23 +195,11 @@ DEFINE_GUID(GENERIC_SECTION_GUID,
             0xc1b9, 0x4940,
             0xab, 0x76, 0x90, 0x97, 0x03, 0xa4, 0x32, 0x0f);
 
-/* 1c15b445-9b06-4667-ac25-33c056b88803 */
-DEFINE_GUID(IPMI_MSR_DUMP_SECTION_GUID,
-            0x1c15b445,
-            0x9b06, 0x4667,
-            0xac, 0x25, 0x33, 0xc0, 0x56, 0xb8, 0x88, 0x03);
-
 /* e71254e9-c1b9-4940-ab76-909703a4320f */
 DEFINE_GUID(WHEA_ERROR_PACKET_SECTION_GUID,
             0xe71254e9,
             0xc1b9, 0x4940,
             0xab, 0x76, 0x90, 0x97, 0x03, 0xa4, 0x32, 0x0f);
-
-/* ec49534b-30e7-4358-972f-eca6958fae3b */
-DEFINE_GUID(WHEA_DPC_CAPABILITY_SECTION_GUID,
-            0xec49534b,
-            0x30e7, 0x4358,
-            0x97, 0x2f, 0xec, 0xa6, 0x95, 0x8f, 0xae, 0x3b);
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

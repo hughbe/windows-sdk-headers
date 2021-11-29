@@ -8,8 +8,8 @@
 #ifndef __AUDIOSESSIONTYPES__                                                               
 #define __AUDIOSESSIONTYPES__
 
-#pragma region Application and Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 #if defined(__midl)
 #define MIDL_SIZE_IS(x) [size_is(x)]
 #define MIDL_STRING [string]
@@ -19,7 +19,6 @@
 #define MIDL_STRING
 #define MIDL_ANYSIZE_ARRAY ANYSIZE_ARRAY
 #endif  // defined(__midl)
-
 
 //-------------------------------------------------------------------------
 // Description: AudioClient share mode
@@ -107,7 +106,6 @@ typedef enum _AUDIO_STREAM_CATEGORY
 //     AUDCLNT_STREAMFLAGS_AUTOCONVERTPCM -           A channel matrixer and a sample rate converter are inserted as necessary
 //                                                    to convert between the uncompressed format supplied to
 //                                                    IAudioClient::Initialize and the audio engine mix format.
-//
 //
 //     AUDCLNT_SESSIONFLAGS_EXPIREWHENUNOWNED -       Session expires when there are no streams and no owning
 //                                                    session controls.

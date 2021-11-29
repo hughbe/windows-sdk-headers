@@ -41,8 +41,8 @@ cpp_quote("#ifndef _PROPIDLBASE_")
  *  Property Storage Interfaces
  ****************************************************************************/
 
-#pragma region Application Family or OneCore Family or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family or OneCore Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)")
 
 interface IPropertyStorage;
 interface IEnumSTATPROPSTG;
@@ -182,7 +182,7 @@ struct tag_inner_PROPVARIANT
         [case (VT_R4)]              FLOAT            fltVal;
         [case (VT_R8)]              DOUBLE           dblVal;
         [case (VT_BOOL)]            VARIANT_BOOL     boolVal;
-        [case (VT_ILLEGAL)]         VARIANT_BOOL     /*bool*/__OBSOLETE__VARIANT_BOOL;      // obsolete
+        [case (VT_ILLEGAL)]         _VARIANT_BOOL    bool;      // obsolete
         [case (VT_ERROR)]           SCODE            scode;
         [case (VT_CY)]              CY               cyVal;
         [case (VT_DATE)]            DATE             date;
@@ -617,7 +617,7 @@ interface IEnumSTATPROPSETSTG : IUnknown
 
 typedef [unique] IPropertyStorage * LPPROPERTYSTORAGE;
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 cpp_quote("")
 

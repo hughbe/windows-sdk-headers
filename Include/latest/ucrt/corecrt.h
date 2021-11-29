@@ -9,72 +9,9 @@
 
 #include <vcruntime.h>
 
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-//
-// Warning Suppression
-//
-//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-
-// C4412: function signature contains type '_locale_t';
-//        C++ objects are unsafe to pass between pure code and mixed or native. (/Wall)
-#ifndef _UCRT_DISABLED_WARNING_4412
-    #ifdef _M_CEE_PURE
-        #define _UCRT_DISABLED_WARNING_4412 4412
-    #else
-        #define _UCRT_DISABLED_WARNING_4412
-    #endif
-#endif
-
-// Use _UCRT_EXTRA_DISABLED_WARNINGS to add additional warning suppressions to UCRT headers.
-#ifndef _UCRT_EXTRA_DISABLED_WARNINGS
-    #define _UCRT_EXTRA_DISABLED_WARNINGS
-#endif
-
-// C4324: structure was padded due to __declspec(align()) (/W4)
-// C4514: unreferenced inline function has been removed (/Wall)
-// C4574: 'MACRO' is defined to be '0': did you mean to use '#if MACRO'? (/Wall)
-// C4710: function not inlined (/Wall)
-// C4793: 'function' is compiled as native code (/Wall and /W1 under /clr:pure)
-// C4820: padding after data member (/Wall)
-// C4995: name was marked #pragma deprecated
-// C4996: __declspec(deprecated)
-// C28719: Banned API, use a more robust and secure replacement.
-// C28726: Banned or deprecated API, use a more robust and secure replacement.
-// C28727: Banned API.
-#ifndef _UCRT_DISABLED_WARNINGS
-    #define _UCRT_DISABLED_WARNINGS 4324 _UCRT_DISABLED_WARNING_4412 4514 4574 4710 4793 4820 4995 4996 28719 28726 28727 _UCRT_EXTRA_DISABLED_WARNINGS
-#endif
-
-#ifndef _UCRT_DISABLE_CLANG_WARNINGS
-    #ifdef __clang__
-    // warning: declspec(deprecated) [-Wdeprecated-declarations]
-    // warning: __declspec attribute 'allocator' is not supported [-Wignored-attributes]
-    // warning: '#pragma optimize' is not supported [-Wignored-pragma-optimize]
-    // warning: unknown pragma ignored [-Wunknown-pragmas]
-        #define _UCRT_DISABLE_CLANG_WARNINGS                                  \
-            _Pragma("clang diagnostic push")                                  \
-            _Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \
-            _Pragma("clang diagnostic ignored \"-Wignored-attributes\"")      \
-            _Pragma("clang diagnostic ignored \"-Wignored-pragma-optimize\"") \
-            _Pragma("clang diagnostic ignored \"-Wunknown-pragmas\"")
-    #else // __clang__
-        #define _UCRT_DISABLE_CLANG_WARNINGS
-    #endif // __clang__
-#endif // _UCRT_DISABLE_CLANG_WARNINGS
-
-#ifndef _UCRT_RESTORE_CLANG_WARNINGS
-    #ifdef __clang__
-        #define _UCRT_RESTORE_CLANG_WARNINGS _Pragma("clang diagnostic pop")
-    #else // __clang__
-        #define _UCRT_RESTORE_CLANG_WARNINGS
-    #endif // __clang__
-#endif // _UCRT_RESTORE_CLANG_WARNINGS
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
-
 _CRT_BEGIN_C_HEADER
+
+
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 //
@@ -138,17 +75,6 @@ _CRT_BEGIN_C_HEADER
     #define _CRT_HYBRIDPATCHABLE __declspec(hybrid_patchable)
 #else
     #define _CRT_HYBRIDPATCHABLE
-#endif
-
-// The CLR requires code calling other SecurityCritical code or using SecurityCritical types
-// to be marked as SecurityCritical.
-// _CRT_SECURITYCRITICAL_ATTRIBUTE covers this for internal function definitions.
-// _CRT_INLINE_PURE_SECURITYCRITICAL_ATTRIBUTE is for inline pure functions defined in the header.
-// This is clr:pure-only because for mixed mode we compile inline functions as native.
-#ifdef _M_CEE_PURE
-    #define _CRT_INLINE_PURE_SECURITYCRITICAL_ATTRIBUTE [System::Security::SecurityCritical]
-#else
-    #define _CRT_INLINE_PURE_SECURITYCRITICAL_ATTRIBUTE
 #endif
 
 #ifndef _CONST_RETURN
@@ -227,18 +153,8 @@ extern "C++"
 #define __FILEW__     _CRT_WIDE(__FILE__)
 #define __FUNCTIONW__ _CRT_WIDE(__FUNCTION__)
 
-#ifdef __cplusplus
-    #ifndef _STATIC_ASSERT
-        #define _STATIC_ASSERT(expr) static_assert((expr), #expr)
-    #endif
-#else
-    #ifndef _STATIC_ASSERT
-        #ifdef __clang__
-            #define _STATIC_ASSERT(expr) _Static_assert((expr), #expr)
-        #else
-            #define _STATIC_ASSERT(expr) typedef char __static_assert_t[(expr) != 0]
-        #endif
-    #endif
+#ifndef _STATIC_ASSERT
+    #define _STATIC_ASSERT(expr) typedef char __static_assert_t[(expr) != 0]
 #endif
 
 #ifndef NULL
@@ -274,21 +190,7 @@ extern "C++"
     #define _CRT_UNUSED(x) (void)x
 #endif
 
-#ifndef _CRT_HAS_CXX17
- #ifdef _MSVC_LANG
-  #if _MSVC_LANG > 201402
-   #define _CRT_HAS_CXX17   1
-  #else /* _MSVC_LANG > 201402 */
-   #define _CRT_HAS_CXX17   0
-  #endif /* _MSVC_LANG > 201402 */
- #else /* _MSVC_LANG */
-  #if defined __cplusplus && __cplusplus > 201402
-   #define _CRT_HAS_CXX17   1
-  #else /* __cplusplus > 201402 */
-   #define _CRT_HAS_CXX17   0
-  #endif /* __cplusplus > 201402 */
- #endif /* _MSVC_LANG */
-#endif /* _CRT_HAS_CXX17 */
+
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 //
@@ -306,12 +208,6 @@ extern "C++"
                     #define _CRT_USE_WINAPI_FAMILY_PHONE_APP
                 #endif
             #endif
-
-            #ifdef WINAPI_FAMILY_GAMES
-                #if WINAPI_FAMILY == WINAPI_FAMILY_GAMES
-                    #define _CRT_USE_WINAPI_FAMILY_GAMES
-                #endif
-            #endif
         #endif
     #else
         #define _CRT_USE_WINAPI_FAMILY_DESKTOP_APP
@@ -319,7 +215,7 @@ extern "C++"
 #endif
 
 #ifndef _ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE
-    #define _ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE 1
+    #define _ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE 0
 #endif
 
 #ifndef _CRT_BUILD_DESKTOP_APP
@@ -390,18 +286,14 @@ _ACRTIMP void __cdecl _invoke_watson(
 
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 //
-// Deprecation and Warnings
+// Deprecation
 //
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-#define _CRT_WARNING_MESSAGE(NUMBER, MESSAGE) \
-    __FILE__ "(" _CRT_STRINGIZE(__LINE__) "): warning " NUMBER ": " MESSAGE
-
-#if ( defined _CRT_DECLARE_NONSTDC_NAMES && _CRT_DECLARE_NONSTDC_NAMES) || \
-    (!defined _CRT_DECLARE_NONSTDC_NAMES && !__STDC__                 )
-    #define _CRT_INTERNAL_NONSTDC_NAMES 1
-#else
-    #define _CRT_INTERNAL_NONSTDC_NAMES 0
-#endif
+#define _CRT_INTERNAL_NONSTDC_NAMES                                            \
+    (                                                                          \
+        ( defined _CRT_DECLARE_NONSTDC_NAMES && _CRT_DECLARE_NONSTDC_NAMES) || \
+        (!defined _CRT_DECLARE_NONSTDC_NAMES && !__STDC__                 )    \
+    )
 
 #if defined _CRT_NONSTDC_NO_DEPRECATE && !defined _CRT_NONSTDC_NO_WARNINGS
     #define _CRT_NONSTDC_NO_WARNINGS
@@ -754,6 +646,8 @@ typedef _Mbstatet mbstate_t;
         #define __DEFINE_CPP_OVERLOAD_SECURE_FUNC_0_1_ARGLIST(_ReturnType, _FuncName, _VFuncName, _DstType, _Dst, _TType1, _TArg1) \
             extern "C++"                                                                                                           \
             {                                                                                                                      \
+                __pragma(warning(push));                                                                                           \
+                __pragma(warning(disable: 4793));                                                                                  \
                 template <size_t _Size>                                                                                            \
                 inline                                                                                                             \
                 _ReturnType __CRTDECL _FuncName(_DstType (&_Dst)[_Size], _TType1 _TArg1, ...) _CRT_SECURE_CPP_NOTHROW              \
@@ -762,11 +656,14 @@ typedef _Mbstatet mbstate_t;
                     __crt_va_start(_ArgList, _TArg1);                                                                              \
                     return _VFuncName(_Dst, _Size, _TArg1, _ArgList);                                                              \
                 }                                                                                                                  \
+                __pragma(warning(pop));                                                                                            \
             }
 
         #define __DEFINE_CPP_OVERLOAD_SECURE_FUNC_0_2_ARGLIST(_ReturnType, _FuncName, _VFuncName, _DstType, _Dst, _TType1, _TArg1, _TType2, _TArg2) \
             extern "C++"                                                                                                                            \
             {                                                                                                                                       \
+                __pragma(warning(push));                                                                                                            \
+                __pragma(warning(disable: 4793));                                                                                                   \
                 template <size_t _Size>                                                                                                             \
                 inline                                                                                                                              \
                 _ReturnType __CRTDECL _FuncName(_DstType (&_Dst)[_Size], _TType1 _TArg1, _TType2 _TArg2, ...) _CRT_SECURE_CPP_NOTHROW               \
@@ -775,6 +672,7 @@ typedef _Mbstatet mbstate_t;
                     __crt_va_start(_ArgList, _TArg2);                                                                                               \
                     return _VFuncName(_Dst, _Size, _TArg1, _TArg2, _ArgList);                                                                       \
                 }                                                                                                                                   \
+                __pragma(warning(pop));                                                                                                             \
             }
 
         #define __DEFINE_CPP_OVERLOAD_SECURE_FUNC_SPLITPATH(_ReturnType, _FuncName, _DstType, _Src)               \
@@ -898,7 +796,7 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_FuncName(_SalAttributeDst _DstType *_Dst) \
             { \
-                _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst); \
+                _DeclSpec _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst); \
                 return _FuncName(_Dst); \
             } \
             extern "C++" \
@@ -943,7 +841,7 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_FuncName(_SalAttributeDst _DstType *_Dst) \
             { \
-                _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst); \
+                _DeclSpec _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst); \
                 return _FuncName(_Dst); \
             } \
             extern "C++" \
@@ -998,7 +896,7 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1) \
             { \
-                _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1); \
+                _DeclSpec _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1); \
                 return _FuncName(_Dst, _TArg1); \
             } \
             extern "C++" \
@@ -1043,7 +941,7 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2) _CRT_SECURE_CPP_NOTHROW \
             { \
-                _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2); \
+                _DeclSpec _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2); \
                 return _FuncName(_Dst, _TArg1, _TArg2); \
             } \
             extern "C++" \
@@ -1088,7 +986,7 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2, _TType3 _TArg3) \
             { \
-                _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2, _TType3 _TArg3); \
+                _DeclSpec _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2, _TType3 _TArg3); \
                 return _FuncName(_Dst, _TArg1, _TArg2, _TArg3); \
             } \
             extern "C++" \
@@ -1133,7 +1031,7 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2, _TType3 _TArg3, _TType4 _TArg4) \
             { \
-                _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2, _TType3 _TArg3, _TType4 _TArg4); \
+                _DeclSpec _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2, _TType3 _TArg3, _TType4 _TArg4); \
                 return _FuncName(_Dst, _TArg1, _TArg2, _TArg3, _TArg4); \
             } \
             extern "C++" \
@@ -1178,7 +1076,7 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_FuncName(_HType1 _HArg1, _SalAttributeDst _DstType *_Dst, _TType1 _TArg1) \
             { \
-                _ReturnType __cdecl _FuncName(_HType1 _HArg1, _SalAttributeDst _DstType *_Dst, _TType1 _TArg1); \
+                _DeclSpec _ReturnType __cdecl _FuncName(_HType1 _HArg1, _SalAttributeDst _DstType *_Dst, _TType1 _TArg1); \
                 return _FuncName(_HArg1, _Dst, _TArg1); \
             } \
             extern "C++" \
@@ -1223,7 +1121,7 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_FuncName(_HType1 _HArg1, _HType2 _HArg2, _SalAttributeDst _DstType *_Dst) \
             { \
-                _ReturnType __cdecl _FuncName(_HType1 _HArg1, _HType2 _HArg2, _SalAttributeDst _DstType *_Dst); \
+                _DeclSpec _ReturnType __cdecl _FuncName(_HType1 _HArg1, _HType2 _HArg2, _SalAttributeDst _DstType *_Dst); \
                 return _FuncName(_HArg1, _HArg2, _Dst); \
             } \
             extern "C++" \
@@ -1268,11 +1166,13 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_VFuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, va_list _ArgList) \
             { \
-                _ReturnType _CC _VFuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, va_list _ArgList); \
+                _DeclSpec _ReturnType _CC _VFuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, va_list _ArgList); \
                 return _VFuncName(_Dst, _TArg1, _ArgList); \
             } \
             extern "C++" \
             { \
+                __pragma(warning(push)); \
+                __pragma(warning(disable: 4793)); \
             template <typename _T> \
             inline \
             _CRT_INSECURE_DEPRECATE(_SecureFuncName) \
@@ -1291,7 +1191,10 @@ typedef _Mbstatet mbstate_t;
                 __crt_va_start(_ArgList, _TArg1); \
                 return __insecure_##_VFuncName(static_cast<_DstType *>(_Dst), _TArg1, _ArgList); \
             } \
+                __pragma(warning(pop)); \
                 \
+                __pragma(warning(push)); \
+                __pragma(warning(disable: 4793)); \
                 template <> \
             inline \
             _CRT_INSECURE_DEPRECATE(_SecureFuncName) \
@@ -1301,7 +1204,10 @@ typedef _Mbstatet mbstate_t;
                 __crt_va_start(_ArgList, _TArg1); \
                 return __insecure_##_VFuncName(_Dst, _TArg1, _ArgList); \
             } \
+                __pragma(warning(pop)); \
                 \
+                __pragma(warning(push)); \
+                __pragma(warning(disable: 4793)); \
                 template <size_t _Size> \
             inline \
             _ReturnType __CRTDECL _FuncName(_DstType (&_Dst)[_Size], _TType1 _TArg1, ...) _CRT_SECURE_CPP_NOTHROW \
@@ -1310,7 +1216,10 @@ typedef _Mbstatet mbstate_t;
                 __crt_va_start(_ArgList, _TArg1); \
                 _ReturnPolicy(_SecureVFuncName(_Dst, _Size, _TArg1, _ArgList), _Dst); \
             } \
+                __pragma(warning(pop)); \
                 \
+                __pragma(warning(push)); \
+                __pragma(warning(disable: 4793)); \
             template <> \
             inline \
             _CRT_INSECURE_DEPRECATE(_SecureFuncName) \
@@ -1320,6 +1229,7 @@ typedef _Mbstatet mbstate_t;
                 __crt_va_start(_ArgList, _TArg1); \
                 _ReturnPolicy(_SecureVFuncName(_Dst, 1, _TArg1, _ArgList), _Dst); \
             } \
+                __pragma(warning(pop)); \
                 \
             template <typename _T> \
             inline \
@@ -1361,11 +1271,13 @@ typedef _Mbstatet mbstate_t;
             __inline \
             _ReturnType __CRTDECL __insecure_##_VFuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2, va_list _ArgList) \
             { \
-                _ReturnType _CC _VFuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2, va_list _ArgList); \
+                _DeclSpec _ReturnType _CC _VFuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2, va_list _ArgList); \
                 return _VFuncName(_Dst, _TArg1, _TArg2, _ArgList); \
             } \
             extern "C++" \
             { \
+                __pragma(warning(push)); \
+                __pragma(warning(disable: 4793)); \
             template <typename _T> \
             inline \
                 _CRT_INSECURE_DEPRECATE(_FuncName##_s) \
@@ -1384,7 +1296,10 @@ typedef _Mbstatet mbstate_t;
                 __crt_va_start(_ArgList, _TArg2); \
                 return __insecure_##_VFuncName(static_cast<_DstType *>(_Dst), _TArg1, _TArg2, _ArgList); \
             } \
+                __pragma(warning(pop)); \
                 \
+                __pragma(warning(push)); \
+                __pragma(warning(disable: 4793)); \
             template <> \
             inline \
                 _CRT_INSECURE_DEPRECATE(_FuncName##_s) \
@@ -1394,7 +1309,10 @@ typedef _Mbstatet mbstate_t;
                 __crt_va_start(_ArgList, _TArg2); \
                 return __insecure_##_VFuncName(_Dst, _TArg1, _TArg2, _ArgList); \
             } \
+                __pragma(warning(pop)); \
                 \
+                __pragma(warning(push)); \
+                __pragma(warning(disable: 4793)); \
             template <size_t _Size> \
             inline \
             _ReturnType __CRTDECL _FuncName(_SecureDstType (&_Dst)[_Size], _TType1 _TArg1, _TType2 _TArg2, ...) _CRT_SECURE_CPP_NOTHROW \
@@ -1403,7 +1321,10 @@ typedef _Mbstatet mbstate_t;
                 __crt_va_start(_ArgList, _TArg2); \
                 _ReturnPolicy(_SecureVFuncName(_Dst, _Size, _TArg1, _TArg2, _ArgList), _Dst); \
             } \
+                __pragma(warning(pop)); \
                 \
+                __pragma(warning(push)); \
+                __pragma(warning(disable: 4793)); \
             template <> \
             inline \
                 _CRT_INSECURE_DEPRECATE(_FuncName##_s) \
@@ -1413,6 +1334,7 @@ typedef _Mbstatet mbstate_t;
                 __crt_va_start(_ArgList, _TArg2); \
                 _ReturnPolicy(_SecureVFuncName(_Dst, 1, _TArg1, _TArg2, _ArgList), _Dst); \
             } \
+                __pragma(warning(pop)); \
                 \
             template <typename _T> \
             inline \
@@ -2055,7 +1977,6 @@ typedef _Mbstatet mbstate_t;
     #endif // !_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
 #endif
 
-_CRT_END_C_HEADER
 
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
+
+_CRT_END_C_HEADER

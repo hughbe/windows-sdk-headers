@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * mciapi.h -- ApiSet Contract for api-ms-win-mm-mci-l1-1-0                      *  
@@ -19,11 +20,27 @@
 
 #include <mmsyscom.h>
 
+/* APISET_NAME: api-ms-win-mm-mci-l1 */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_MCI_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_MCI_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Desktop Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 /****************************************************************************
@@ -41,6 +58,7 @@ typedef DWORD   MCIERROR;       /* error return code, 0 means no error */
 #define _MCIDEVICEID_
 typedef UINT    MCIDEVICEID;    /* MCI device ID type */
 #endif
+
 
 typedef UINT (CALLBACK *YIELDPROC)(MCIDEVICEID mciId, DWORD dwYieldData);
 
@@ -178,6 +196,7 @@ mciSetYieldProc(
     );
 
 
+
 #if (WINVER >= 0x030a)
 WINMMAPI
 HTASK
@@ -195,6 +214,7 @@ mciGetYieldProc(
     );
 
 #endif /* ifdef WINVER >= 0x030a */
+
 
 #if (WINVER < 0x030a)
 WINMMAPI
@@ -328,6 +348,7 @@ mciExecute(
 #define MCI_USER_MESSAGES               (DRV_MCI_FIRST + 0x400)
 #define MCI_LAST                        0x0FFF
 
+
 /* device ID for "all devices" */
 #define MCI_ALL_DEVICE_ID               ((MCIDEVICEID)-1)
 
@@ -397,11 +418,13 @@ mciExecute(
                                                   ((WORD)(m)<<8)) | \
                                                  (((DWORD)(BYTE)(s))<<16)))
 
+
 /* flags for wParam of MM_MCINOTIFY message */
 #define MCI_NOTIFY_SUCCESSFUL           0x0001
 #define MCI_NOTIFY_SUPERSEDED           0x0002
 #define MCI_NOTIFY_ABORTED              0x0004
 #define MCI_NOTIFY_FAILURE              0x0008
+
 
 /* common flags for dwFlags parameter of MCI command messages */
 #define MCI_NOTIFY                      0x00000001L
@@ -662,6 +685,7 @@ typedef struct tagMCI_BREAK_PARMS {
 } MCI_BREAK_PARMS, *PMCI_BREAK_PARMS, FAR * LPMCI_BREAK_PARMS;
 
 
+
 /* parameter block for MCI_SAVE command message */
 #ifdef _WIN32
 
@@ -726,6 +750,7 @@ typedef struct tagMCI_RECORD_PARMS {
     DWORD       dwFrom;
     DWORD       dwTo;
 } MCI_RECORD_PARMS, FAR *LPMCI_RECORD_PARMS;
+
 
 /* MCI extensions for videodisc devices */
 
@@ -947,6 +972,7 @@ typedef struct tagMCI_WAVE_SET_PARMS {
     WORD    wReserved5;
 } MCI_WAVE_SET_PARMS, *PMCI_WAVE_SET_PARMS, FAR * LPMCI_WAVE_SET_PARMS;
 
+
 /* MCI extensions for MIDI sequencer devices */
 
 /* flags for the dwReturn field of MCI_STATUS_PARMS parameter block */
@@ -995,6 +1021,7 @@ typedef struct tagMCI_SEQ_SET_PARMS {
     DWORD       dwMaster;
     DWORD       dwOffset;
 } MCI_SEQ_SET_PARMS, *PMCI_SEQ_SET_PARMS, FAR * LPMCI_SEQ_SET_PARMS;
+
 
 /* MCI extensions for animation devices */
 
@@ -1180,6 +1207,7 @@ typedef struct tagMCI_ANIM_UPDATE_PARMS {
     RECT        rc;
     HDC         hDC;
 } MCI_ANIM_UPDATE_PARMS, *PMCI_ANIM_UPDATE_PARMS, FAR * LPMCI_ANIM_UPDATE_PARMS;
+
 
 /* MCI extensions for video overlay devices */
 

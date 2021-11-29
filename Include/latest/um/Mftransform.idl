@@ -1,7 +1,7 @@
 cpp_quote("#include <winapifamily.h>")
 
-#pragma region Desktop or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
+#pragma region Desktop Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
 
 //------------------------------------------------------------------------------
 // File: MFTransform.idl
@@ -14,11 +14,11 @@ cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITI
 
 import "mfobjects.idl";
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 // Per-buffer flags that apply to input buffers
 enum _MFT_INPUT_DATA_BUFFER_FLAGS {
@@ -468,7 +468,7 @@ interface IMFTransform : IUnknown
 
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 
@@ -515,8 +515,8 @@ cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN7) ")
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 cpp_quote( "//" )
 cpp_quote( "// Define the MFT methods back so we don't accidentally hose the IMediaObject interface." )
@@ -612,7 +612,7 @@ cpp_quote(" EXTERN_C const DECLSPEC_SELECTANY GUID MFT_AUDIO_DECODER_SPATIAL_MET
 #endif //(NTDDI_VERSION >= NTDDI_WIN10_RS2)
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
@@ -740,47 +740,10 @@ interface IMFDeviceTransform : IUnknown
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD ) ")
 
-cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN10) ")
-
-///////////////////////////////////////////////////////////////////////////////
-//
-// IMFDeviceTransformCallback Interface
-//
-///////////////////////////////////////////////////////////////////////////////
-
-// MF_DMFT_FRAME_BUFFER_INFO
-// Data type: BLOB
-// Always part of IMFDeviceTransformCallback::OnBufferSent pCallbackAttributes
-// 396CE1C9-67A9-454C-8797-95A45799D804
-cpp_quote( "EXTERN_GUID( MF_DMFT_FRAME_BUFFER_INFO,  0x396CE1C9, 0x67A9, 0x454C, 0x87, 0x97, 0x95, 0xA4, 0x57, 0x99, 0xD8, 0x04);" )
-
-[
-    object,
-    uuid(6D5CB646-29EC-41FB-8179-8C4C6D750811),
-    helpstring("IMFDeviceTransformCallback"),
-    local
-]
-interface IMFDeviceTransformCallback  : IUnknown
-{
-    // Provides information of buffers allocated and sent to driver
-    //
-    // PKSSTREAM_HEADER that is inside pInfo is meant only for READ-ONLY usage
-    // i.e., user shouldn't try to allocate/deallocate, open/close 
-    // anything within the header
-    //
-    HRESULT OnBufferSent(
-        [in, annotation("_In_")] IMFAttributes* pCallbackAttributes,
-        [in, annotation("_In_")] DWORD pinId
-    );
-};
-
-cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN10 ) ")
-
-
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN8) ")
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 // MF_SA_REQUIRED_SAMPLE_COUNT_PROGRESSIVE
 // Data type: UINT32
@@ -906,15 +869,15 @@ cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_ENCODER_SUPPORTS_CONFIG_E
 // that the HMFT is using for processing. This is only for reference and
 // is not used/verified by the topology
 cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_ENUM_HARDWARE_VENDOR_ID_Attribute =  { 0x3aecb0cc, 0x35b, 0x4bcc, { 0x81, 0x85, 0x2b, 0x8d, 0x55, 0x1e, 0xf3, 0xaf } };")
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WIN8) ")
 
 cpp_quote("#if (WINVER >= _WIN32_WINNT_WIN7) ")
 
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 // MF_TRANSFORM_ASYNC
 // Data type: UINT32
@@ -1051,7 +1014,7 @@ cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_CODEC_MERIT_Attribute = {
 cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_ENUM_TRANSCODE_ONLY_ATTRIBUTE = { 0x111ea8cd, 0xb62a, 0x4bdb, { 0x89, 0xf6, 0x67, 0xff, 0xcd, 0xc2, 0x45, 0x8b } };" )
 
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -1110,35 +1073,3 @@ typedef struct _MFT_STREAM_STATE_PARAM
 
 cpp_quote("#endif // (WINVER >= _WIN32_WINNT_WINTHRESHOLD) ")
 #pragma endregion
-
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
-
-#pragma region Application or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
-
-//
-// Attributes that can be used by an IMFInputTrustAuthority Decrypter.
-//
-// An implementation of a Content Decryption Module may include an implementation of 
-// IMFInputTrustAuthority. The IMFInputTrustAuthority object is accessed through 
-// IMFContentDecryptionModule::CreateTrustedInput.
-//
-
-// MFT_POLICY_SET_AWARE
-// Data type: UINT32 (treat as BOOL)
-// If nonzero, indicates that this IMFTransform wants to receive MEPolicySet completion notifications
-// {5A633B19-CC39-4FA8-8CA5-59981B7A0018}
-cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_POLICY_SET_AWARE = { 0x5a633b19, 0xcc39, 0x4fa8, { 0x8c, 0xa5, 0x59, 0x98, 0x1b, 0x7a, 0x0, 0x18 } };" )
-
-// MFT_USING_HARDWARE_DRM
-// Data type: UINT32 (treat as BOOL)
-// If an MFT decrypter specifies this attribute set to 1, then it is using HARDWARE DRM.
-// If an MFT decrypter specifies this attribute set to 0, then it is not using HARDWARE DRM.
-// If an MFT decrypter does not specify this attribute or specifies it with a different value,
-// then it does not (or is unable to) indicate whether it is using HARDWARE DRM or not.
-cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_USING_HARDWARE_DRM = { 0x34faa77d, 0xd79e, 0x4957, { 0xb8, 0xce, 0x36, 0x2b, 0x26, 0x84, 0x99, 0x6c } }; " )
-
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
-#pragma endregion
-
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB) ")

@@ -65,7 +65,7 @@ const ::Windows::Foundation::Diagnostics::CausalitySynchronousWork CausalitySync
 
 // GUID identifying the the Windows Platform for logging purposes
 // {C54C95D9-5B6E-41E9-A28D-2DD68F94B500}
-extern _declspec(selectany) const GUID GUID_CAUSALITY_WINDOWS_PLATFORM_ID =
+extern _declspec(selectany) const GUID GUID_CAUSALITY_WINDOWS_PLATFORM_ID = 
 { 0xc54c95d9, 0x5b6e, 0x41e9, { 0xa2, 0x8d, 0x2d, 0xd6, 0x8f, 0x94, 0xb5, 0x0 } };
 
 namespace Microsoft {
@@ -105,7 +105,7 @@ namespace Details
   };
 }
 
-// Options for error propagation and the defaults are set here.
+// Options for error propagation and the defaults are set here. 
 #if defined(BUILD_WINDOWS) && (NTDDI_VERSION >= NTDDI_WINBLUE)
 template < ErrorPropagationPolicy errorPropagationPolicy = PropagateErrorWithWin8Quirk>
 #else
@@ -119,7 +119,7 @@ struct ErrorPropagationOptions : public Microsoft::WRL::Details::AsyncOptionsBas
 
 #ifndef _WRL_DISABLE_CAUSALITY_
 
-// Options for causality tracing and the needed defaults are set here. The following class may be used as
+// Options for causality tracing and the needed defaults are set here. The following class may be used as 
 // a reference to add more options to AsyncBase
 #ifdef BUILD_WINDOWS
 #define WRL_DEFAULT_CAUSALITY_GUID GUID_CAUSALITY_WINDOWS_PLATFORM_ID
@@ -167,7 +167,7 @@ struct DisableCausality : public AsyncCausalityOptions< DisableCausalityAsyncOpe
 namespace Details
 {
 // maps internal definitions for AsyncStatus and defines states that are not client visible
-enum AsyncStatusInternal
+enum AsyncStatusInternal 
 {
     // non-client visible internal states
     _Undefined = -2,
@@ -198,7 +198,7 @@ struct DerefHelper<T*>
 
 // Provides the name for a async operation/action for logging purposes
 template < typename TComplete, bool hasName, typename TOptions >
-struct CausalityNameHelper
+struct CausalityNameHelper 
 {
     // Provides a default string for the Async Operation/Action name if a name is not provided
     // for logging purposes
@@ -210,7 +210,7 @@ struct CausalityNameHelper
 
 // Specialization to handle the logging for those classes that implement z_get_rc_name_impl
 template < typename TComplete, typename TOptions >
-struct CausalityNameHelper< TComplete, false, TOptions >
+struct CausalityNameHelper< TComplete, false, TOptions > 
 {
     static PCWSTR GetName()
     {
@@ -232,28 +232,28 @@ struct CausalityNameHelper< ::ABI::Windows::Foundation::IAsyncActionCompletedHan
 
 #endif // _WRL_DISABLE_CAUSALITY_
 
-// helper class to switch between default or given options for error
+// helper class to switch between default or given options for error 
 // propagation
 template < bool hasValue, typename TOptions >
 struct ErrorPropagationOptionsHelper;
 
 // provides the given options for error propagation
 template < typename TOptions >
-struct ErrorPropagationOptionsHelper< true , TOptions >
+struct ErrorPropagationOptionsHelper< true , TOptions > 
 {
     static const Microsoft::WRL::ErrorPropagationPolicy PropagationPolicy = TOptions::PropagationPolicy;
 };
 
 // provides default options for error propagation
 template < typename TOptions >
-struct ErrorPropagationOptionsHelper< false , TOptions >
+struct ErrorPropagationOptionsHelper< false , TOptions > 
 {
     static const Microsoft::WRL::ErrorPropagationPolicy PropagationPolicy = Microsoft::WRL::ErrorPropagationOptions<>::PropagationPolicy;
 };
 
 #ifndef _WRL_DISABLE_CAUSALITY_
 
-// helper class to switch between default or given options for
+// helper class to switch between default or given options for 
 // Async Causality Options
 template < bool hasCausalityOptions, typename TComplete, typename TOptions >
 struct AsyncCausalityOptionsHelper;
@@ -262,19 +262,15 @@ struct AsyncCausalityOptionsHelper;
 template < typename TComplete, typename TOptions >
 struct AsyncCausalityOptionsHelper < true, TComplete, TOptions >
 {
-#if defined(BUILD_WINDOWS) || defined(WRL_REQUIRE_ASYNC_NAMES)
-
-    // Take reasonable steps to make the name unique. Suggest choosing a name that captures
-    // the return type, class name, and method name. Example:
-    // "Windows.Foundation.IAsyncAction MyNamespace.MyClass.DoSomethingAsync"
-    static_assert(!(__is_base_of(::ABI::Windows::Foundation::IAsyncActionCompletedHandler, TComplete) && !TOptions::hasCausalityOperationName), "Please add name to Asynchronous Operations for Better Diagnostics");
+#ifdef BUILD_WINDOWS
+    static_assert(!(__is_base_of(::ABI::Windows::Foundation::IAsyncActionCompletedHandler, TComplete) && !TOptions::hasCausalityOperationName),"Please add name to Asynchronous Operations for Better Diagnostics: http://winri/BreakingChanges/BreakingChangeForm/Index/1992");
 #endif
     static PCWSTR GetAsyncOperationName()
     {
         return CausalityNameHelper< TComplete, TOptions::hasCausalityOperationName, TOptions >::GetName();
     }
 
-    static const GUID GetPlatformId()
+    static const GUID GetPlatformId() 
     {
         return TOptions::GetPlatformId();
     }
@@ -291,24 +287,21 @@ struct AsyncCausalityOptionsHelper < true, TComplete, TOptions >
 template < typename TComplete, typename TOptions >
 struct AsyncCausalityOptionsHelper < false, TComplete, TOptions >
 {
-#if defined(BUILD_WINDOWS) || defined(WRL_REQUIRE_ASYNC_NAMES)
-    // Take reasonable steps to make the name unique. Suggest choosing a name that captures
-    // the return type, class name, and method name. Example:
-    // "Windows.Foundation.IAsyncAction MyNamespace.MyClass.DoSomethingAsync"
-    static_assert(!(__is_base_of(::ABI::Windows::Foundation::IAsyncActionCompletedHandler, TComplete) && !TOptions::hasCausalityOperationName), "Please add name to Asynchronous Operations for Better Diagnostics");
+#ifdef BUILD_WINDOWS
+    static_assert(!(__is_base_of(::ABI::Windows::Foundation::IAsyncActionCompletedHandler, TComplete) && !TOptions::hasCausalityOperationName),"Please add name to Asynchronous Operations for Better Diagnostics: http://winri/BreakingChanges/BreakingChangeForm/Index/1992");
 #endif
     static PCWSTR GetAsyncOperationName()
     {
         return CausalityNameHelper< TComplete, TOptions::hasCausalityOperationName, TOptions >::GetName();
     }
 
-    static const GUID GetPlatformId()
+    static const GUID GetPlatformId() 
     {
         return Microsoft::WRL::AsyncCausalityOptions<>::GetPlatformId();
     }
 
     static ::ABI::Windows::Foundation::Diagnostics::CausalitySource GetCausalitySource()
-    {
+    { 
         return Microsoft::WRL::AsyncCausalityOptions<>::GetCausalitySource();
     }
 
@@ -320,7 +313,7 @@ struct AsyncCausalityOptionsHelper < false, TComplete, TOptions >
 // helper calls to accumulate all options
 // Future options have to be added here
 template < typename TComplete, typename TOptions >
-struct AsyncOptionsHelper :
+struct AsyncOptionsHelper : 
 #ifndef _WRL_DISABLE_CAUSALITY_
     public AsyncCausalityOptionsHelper < TOptions::hasCausalityOptions, TComplete, TOptions >,
 #endif // _WRL_DISABLE_CAUSALITY_
@@ -341,7 +334,7 @@ enum AsyncResultType
     MultipleResults = 0x0002
 };
 
-// indicates how an attempt to transition to a terminal state of Completed or Error should behave with respect to
+// indicates how an attempt to transition to a terminal state of Completed or Error should behave with respect to 
 // the (client-requested) Canceled state.
 enum CancelTransitionPolicy
 {
@@ -351,7 +344,7 @@ enum CancelTransitionPolicy
     RemainCanceled = 0,
 
     // If the async operation is presently in a (client-requested) Canceled state, this indicates that
-    // state should transition from that Canceled state to the terminal state of Completed or Error as
+    // state should transition from that Canceled state to the terminal state of Completed or Error as 
     // determined by the call utilizing this flag.
     TransitionFromCanceled
 };
@@ -366,7 +359,7 @@ template <>
 struct ErrorPropagationPolicyTraits< PropagateDelegateError >
 {
     static HRESULT FireCompletionErrorPropagationPolicyFilter(HRESULT hrIn, IUnknown *, void * = nullptr)
-    {
+    {   
         // Ignore errors if the error is caused by a disconnected object
         if (hrIn == RPC_E_DISCONNECTED || hrIn == HRESULT_FROM_WIN32(RPC_S_SERVER_UNAVAILABLE) || hrIn == JSCRIPT_E_CANTEXECUTE)
         {
@@ -419,22 +412,22 @@ template <
 #if defined(BUILD_WINDOWS) && (NTDDI_VERSION >= NTDDI_WINBLUE)
     ErrorPropagationPolicy errorPropagationPolicy = PropagateErrorWithWin8Quirk,
 #else
-    ErrorPropagationPolicy errorPropagationPolicy = ErrorPropagationPolicy::IgnoreDelegateError,
+    ErrorPropagationPolicy errorPropagationPolicy = ErrorPropagationPolicy::IgnoreDelegateError, 
 #endif
     PCWSTR OpName = nullptr,
 #ifdef BUILD_WINDOWS
-    const GUID &PlatformId = GUID_CAUSALITY_WINDOWS_PLATFORM_ID,
+    const GUID &PlatformId = GUID_CAUSALITY_WINDOWS_PLATFORM_ID, 
     ::ABI::Windows::Foundation::Diagnostics::CausalitySource CausalitySource = ::ABI::Windows::Foundation::Diagnostics::CausalitySource::CausalitySource_System
 #else
-    const GUID &PlatformId = GUID_NULL,
-    ::ABI::Windows::Foundation::Diagnostics::CausalitySource CausalitySource = ::ABI::Windows::Foundation::Diagnostics::CausalitySource::CausalitySource_Application
+    const GUID &PlatformId = GUID_NULL, 
+    ::ABI::Windows::Foundation::Diagnostics::CausalitySource CausalitySource = ::ABI::Windows::Foundation::Diagnostics::CausalitySource::CausalitySource_Application 
 #endif //BUILD_WINDOWS
 >
-struct AsyncOptions :
+struct AsyncOptions : 
 #ifndef _WRL_DISABLE_CAUSALITY_
     public AsyncCausalityOptions<OpName, PlatformId, CausalitySource>,
 #endif // _WRL_DISABLE_CAUSALITY_
-    public ErrorPropagationOptions<errorPropagationPolicy>
+    public ErrorPropagationOptions<errorPropagationPolicy> 
 {
     static const bool hasCausalityOptions  = true;
     static const bool hasErrorPropagationPolicy = true;
@@ -442,8 +435,8 @@ struct AsyncOptions :
     static const bool isCausalityEnabled = true;
 };
 
-#pragma endregion
-// End of AsyncOptions region
+#pragma endregion 
+// End of AsyncOptions region 
 
 #ifndef _WRL_DISABLE_CAUSALITY_
     _declspec(selectany) INIT_ONCE gCausalityInitOnce = INIT_ONCE_STATIC_INIT;
@@ -452,10 +445,10 @@ struct AsyncOptions :
 
 // AsyncBase - base class that implements the WinRT Async state machine
 // this base class is designed to be used with WRL to implement an async worker object
-template <
-    typename TComplete,
-    typename TProgress = Details::Nil,
-    AsyncResultType resultType = SingleResult,
+template < 
+    typename TComplete, 
+    typename TProgress = Details::Nil, 
+    AsyncResultType resultType = SingleResult, 
     typename TAsyncBaseOptions = AsyncOptions<>
 >
 class AsyncBase : public AsyncBase< TComplete, Details::Nil, resultType, TAsyncBaseOptions >
@@ -466,9 +459,9 @@ class AsyncBase : public AsyncBase< TComplete, Details::Nil, resultType, TAsyncB
 
 public:
 
-    // since this is designed to be used inside of an RuntimeClass<> template, we can
+    // since this is designed to be used inside of an RuntimeClass<> template, we can 
     // only have a default constructor
-    AsyncBase() :
+    AsyncBase() : 
         progressDelegate_(nullptr),
         progressDelegateBucketAssist_(nullptr)
     {
@@ -477,7 +470,7 @@ public:
     // Delegate Helpers
     STDMETHOD(PutOnProgress)(TProgress* progressHandler)
     {
-        HRESULT hr = this->CheckValidStateForDelegateCall();
+        HRESULT hr = CheckValidStateForDelegateCall();
         if (SUCCEEDED(hr))
         {
             progressDelegate_ = progressHandler;
@@ -487,7 +480,7 @@ public:
                 progressDelegateBucketAssist_ = Microsoft::WRL::Details::GetDelegateBucketAssist(progressDelegate_.Get());
             }
 
-            this->TraceDelegateAssigned();
+            TraceDelegateAssigned();
         }
         return hr;
     }
@@ -495,7 +488,7 @@ public:
     STDMETHOD(GetOnProgress)(TProgress** progressHandler)
     {
         *progressHandler = nullptr;
-        HRESULT hr = this->CheckValidStateForDelegateCall();
+        HRESULT hr = CheckValidStateForDelegateCall();
         if (SUCCEEDED(hr))
         {
             progressDelegate_.CopyTo(progressHandler);
@@ -507,17 +500,17 @@ public:
     {
         HRESULT hr = S_OK;
         ComPtr< ::ABI::Windows::Foundation::IAsyncInfo > asyncInfo = this;
-        ComPtr<typename Details::DerefHelper<typename ProgressTraits::Arg1Type>::DerefType> operationInterface;
+        ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;
         if (progressDelegate_)
         {
             hr = asyncInfo.As(&operationInterface);
             if (SUCCEEDED(hr))
             {
-                this->TraceProgressNotificationStart();
+                TraceProgressNotificationStart();
 
                 hr = progressDelegate_->Invoke(operationInterface.Get(), arg);
 
-                this->TraceProgressNotificationComplete();
+                TraceProgressNotificationComplete();
             }
         }
 
@@ -545,18 +538,18 @@ class AsyncBase< TComplete, Details::Nil, resultType, TAsyncBaseOptions > : publ
     typedef typename Details::ArgTraitsHelper< TComplete >::Traits CompleteTraits;
     typedef Microsoft::WRL::Details::AsyncOptionsHelper<TComplete, TAsyncBaseOptions> AllOptions;
 public:
-    // since this is designed to be used inside of a RuntimeClass<> template, we can
+    // since this is designed to be used inside of a RuntimeClass<> template, we can 
     // only have a default constructor
-    AsyncBase() :
-        currentStatus_(Details::AsyncStatusInternal::_Created),
-        id_(1),
+    AsyncBase() : 
+        currentStatus_(Details::AsyncStatusInternal::_Created), 
+        id_(1), 
         errorCode_(S_OK),
         completeDelegate_(nullptr),
         completeDelegateBucketAssist_(nullptr),
         asyncOperationBucketAssist_(nullptr),
         cCompleteDelegateAssigned_(0),
         cCallbackMade_(0)
-    {
+    {     
     }
 
     // The TraceCompletion in logged if the FireCompletion occurs and the completion call back is assigned
@@ -639,7 +632,7 @@ protected:
             hr = OnStart();
 
 #ifndef _WRL_DISABLE_CAUSALITY_
-            if (SUCCEEDED(hr) &&
+            if (SUCCEEDED(hr) && 
                 ::InitOnceExecuteOnce(&gCausalityInitOnce, InitCausality, NULL, NULL))
             {
                 TraceOperationStart();
@@ -673,7 +666,7 @@ public:
     STDMETHOD(Close)(void) override
     {
         HRESULT hr = S_OK;
-        if (TransitionToState(Details::_Closed))
+        if (TransitionToState(Details::_Closed)) 
         {
             OnClose();
         }
@@ -681,7 +674,7 @@ public:
         {
             Details::AsyncStatusInternal current = Details::_Undefined;
             CurrentStatus(&current);
-
+            
             if (current == Details::_Closed)
             {
                 hr = S_OK;          // Closed => Closed transition is just ignored
@@ -694,7 +687,7 @@ public:
 #endif // (NTDDI_VERSION >= NTDDI_WINBLUE)
             }
         }
-        return hr;
+        return hr;    
     }
 
     // Delegate helpers
@@ -712,15 +705,15 @@ public:
                 }
 
                 completeDelegate_ = completeHandler;
-
+                
                 // Guarantee that the write of completeDelegate_ is ordered with respect to the read of state below
                 // as perceived from FireCompletion on another thread.
                 MemoryBarrier();
 
-                this->TraceDelegateAssigned();
+                TraceDelegateAssigned();
 
                 // in the "hot start" case, put_Completed could have been called after the async operation has hit
-                // a terminal state.  If so, fire the completion immediately.
+                // a terminal state.  If so, fire the completion immediately. 
                 if (IsTerminalState())
                 {
                     FireCompletion();
@@ -756,11 +749,11 @@ public:
 
         __WRL_ASSERT__(IsTerminalState() && "Must only call FireCompletion when operation is in terminal state");
 
-        // we guarantee that completion can only ever be fired once
+        // we guarantee that completion can only ever be fired once 
         if (completeDelegate_ != nullptr && InterlockedIncrement(&cCallbackMade_) == 1)
         {
             ComPtr< ::ABI::Windows::Foundation::IAsyncInfo> asyncInfo = this;
-            ComPtr<typename Details::DerefHelper<typename CompleteTraits::Arg1Type>::DerefType> operationInterface;
+            ComPtr<Details::DerefHelper<CompleteTraits::Arg1Type>::DerefType> operationInterface;
 
             TraceOperationComplete();
 
@@ -786,7 +779,7 @@ public:
 
 protected:
 
-    inline void CurrentStatus(Details::AsyncStatusInternal *status)
+    inline void CurrentStatus(Details::AsyncStatusInternal *status) 
     {
         ::_InterlockedCompareExchange(reinterpret_cast<LONG*>(status), currentStatus_, static_cast<LONG>(*status));
         __WRL_ASSERT__(*status != Details::_Undefined);
@@ -795,7 +788,7 @@ protected:
     // This method returns the error code stored as a result of a transition into the error state.
     // In addition, if there is any restricted error information associated with the error that was captured at the time
     // of the error transition, it will be associated with the calling thread via a SetRestrictedErrorInfo call.
-    inline void ErrorCode(HRESULT *error)
+    inline void ErrorCode(HRESULT *error) 
     {
         Details::AsyncStatusInternal current = Details::_Undefined;
         CurrentStatus(&current);
@@ -868,8 +861,8 @@ protected:
         return bTransition;
     }
 
-    // This method checks to see if the delegate properties can be
-    // modified in the current state and generates the appropriate
+    // This method checks to see if the delegate properties can be 
+    // modified in the current state and generates the appropriate 
     // error hr in the case of violation.
     inline HRESULT CheckValidStateForDelegateCall()
     {
@@ -885,8 +878,8 @@ protected:
         return S_OK;
     }
 
-    // This method checks to see if results can be collected in the
-    // current state and generates the appropriate error hr in
+    // This method checks to see if results can be collected in the 
+    // current state and generates the appropriate error hr in 
     // the case of a violation.
     inline HRESULT CheckValidStateForResultsCall()
     {
@@ -916,8 +909,8 @@ protected:
             }
         }
         // multiple results can be called after async operation is running (started) and before/after Completed
-        else if (current != Details::_Started &&
-                 current != Details::_Canceled &&
+        else if (current != Details::_Started && 
+                 current != Details::_Canceled && 
                  current != Details::_Completed)
         {
 #if (NTDDI_VERSION >= NTDDI_WINBLUE)
@@ -927,9 +920,9 @@ protected:
         }
         return S_OK;
     }
-
-    // This method can be called by derived classes periodically to determine
-    // whether the asynchronous operation should continue processing or should
+    
+    // This method can be called by derived classes periodically to determine 
+    // whether the asynchronous operation should continue processing or should 
     // be halted.
     inline bool ContinueAsyncOperation()
     {
@@ -948,9 +941,9 @@ protected:
 private:
 #ifndef _WRL_DISABLE_CAUSALITY_
     // This method is used to initialize the Causality tracking
-    static BOOL WINAPI InitCausality(
-        _Inout_opt_ PINIT_ONCE InitOnce,
-        _Inout_opt_ PVOID Parameter,
+    static BOOL WINAPI InitCausality( 
+        _Inout_opt_ PINIT_ONCE InitOnce,  
+        _Inout_opt_ PVOID Parameter,  
         _Out_opt_ PVOID* Context )
     {
         UNREFERENCED_PARAMETER(InitOnce);
@@ -965,10 +958,10 @@ private:
         osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX);
         osvi.dwMajorVersion = 6;
         osvi.dwMinorVersion = 2;
-
+    
         VER_SET_CONDITION(dwlConditionMask, VER_MAJORVERSION, VER_GREATER_EQUAL);
         VER_SET_CONDITION(dwlConditionMask, VER_MINORVERSION, VER_GREATER_EQUAL);
-
+    
         // if running on Windows 8 or greater
         if (VerifyVersionInfo(&osvi, VER_MAJORVERSION | VER_MINORVERSION, dwlConditionMask))
         {
@@ -991,8 +984,8 @@ private:
 #endif _WRL_DISABLE_CAUSALITY_
 
     // This method is used to check if calls to the AsyncInfo properties
-    // (id, status, error code) are legal in the current state. It also
-    // generates the appropriate error hr to return in the case of an
+    // (id, status, error code) are legal in the current state. It also 
+    // generates the appropriate error hr to return in the case of an 
     // illegal call.
     inline HRESULT CheckValidStateForAsyncInfoCall()
     {
@@ -1020,36 +1013,36 @@ private:
         Details::AsyncStatusInternal current = Details::_Undefined;
         CurrentStatus(&current);
 
-        // This enforces the valid state transitions of the asynchronous worker object
+        // This enforces the valid state transitions of the asynchronous worker object 
         // state machine.
         switch(newState)
         {
         case Details::_Started:
-            if (current != Details::_Created)
+            if (current != Details::_Created) 
             {
                 return false;
             }
             break;
         case Details::_Completed:
-            if (current != Details::_Started)
+            if (current != Details::_Started) 
             {
                 return false;
             }
             break;
         case Details::_Canceled:
-            if (current != Details::_Started)
+            if (current != Details::_Started) 
             {
                 return false;
             }
             break;
         case Details::_Error:
-            if (current != Details::_Started)
+            if (current != Details::_Started) 
             {
                 return false;
             }
             break;
         case Details::_Closed:
-            if (!IsTerminalState(current))
+            if (!IsTerminalState(current)) 
             {
                 return false;
             }
@@ -1059,48 +1052,48 @@ private:
             break;
         }
         // attempt the transition to the new state
-        // Note: if currentStatus_ == current, then there was no intervening write
-        // by the async work object and the swap succeeded.
+        // Note: if currentStatus_ == current, then there was no intervening write 
+        // by the async work object and the swap succeeded. 
         Details::AsyncStatusInternal retState = static_cast<Details::AsyncStatusInternal>(
-                ::_InterlockedCompareExchange(reinterpret_cast<volatile LONG*>(&currentStatus_),
-                                            newState,
+                ::_InterlockedCompareExchange(reinterpret_cast<volatile LONG*>(&currentStatus_), 
+                                            newState, 
                                             static_cast<LONG>(current)));
 
-        // ICE returns the former state, if the returned state and the
-        // state we captured at the beginning of this method are the same,
+        // ICE returns the former state, if the returned state and the 
+        // state we captured at the beginning of this method are the same, 
         // the swap succeeded.
         return (retState == current);
     }
 
 protected:
 
-    // It is legal for an async operation object to transition from (client-requested) Canceled
+    // It is legal for an async operation object to transition from (client-requested) Canceled 
     // state to Completed if, for example, the operation completed near the time of the cancellation request.
-    // An operation which is no longer responsive to client requests to cancel and intends to complete
+    // An operation which is no longer responsive to client requests to cancel and intends to complete 
     // successfully despite any new incoming requests to cancel should call TryTransitionToCompleted and
     // pass TransitionFromCanceled instead of using this method.
     inline bool TransitionCanceledToCompleted()
     {
         // this is somewhat overly pessimistic since the client cannot possibly transition
-        // the operation out of the canceled state (only the async operation itself can call
+        // the operation out of the canceled state (only the async operation itself can call 
         // this method)
         Details::AsyncStatusInternal retState = static_cast<Details::AsyncStatusInternal>(
-                ::_InterlockedCompareExchange(reinterpret_cast<volatile LONG*>(&currentStatus_),
-                                            Details::AsyncStatusInternal::_Completed,
+                ::_InterlockedCompareExchange(reinterpret_cast<volatile LONG*>(&currentStatus_), 
+                                            Details::AsyncStatusInternal::_Completed, 
                                             Details::AsyncStatusInternal::_Canceled));
         return (retState == Details::AsyncStatusInternal::_Canceled);
     }
 
-    // It is legal for an async operation object to transition from (client-requested) Canceled
-    // state to the error state if, for example, the operation encountered an error near the time
+    // It is legal for an async operation object to transition from (client-requested) Canceled 
+    // state to the error state if, for example, the operation encountered an error near the time 
     // of the cancellation request.  An operation which is no longer responsive to client requests to cancel
     // and intends to complete with an error despite any new incoming requests to cancel should call
     // TryTransitionToError and pass TransitionFromCanceled instead of using this method.
     inline bool TransitionCanceledToError()
     {
         Details::AsyncStatusInternal retState = static_cast<Details::AsyncStatusInternal>(
-                ::_InterlockedCompareExchange(reinterpret_cast<volatile LONG*>(&currentStatus_),
-                                            Details::AsyncStatusInternal::_Error,
+                ::_InterlockedCompareExchange(reinterpret_cast<volatile LONG*>(&currentStatus_), 
+                                            Details::AsyncStatusInternal::_Error, 
                                             Details::AsyncStatusInternal::_Canceled));
         return (retState == Details::AsyncStatusInternal::_Canceled);
     }
@@ -1114,9 +1107,9 @@ protected:
 
     inline bool IsTerminalState(Details::AsyncStatusInternal status)
     {
-        return (status == Details::_Error ||
-                status == Details::_Canceled ||
-                status == Details::_Completed ||
+        return (status == Details::_Error || 
+                status == Details::_Canceled || 
+                status == Details::_Completed || 
                 status == Details::_Closed);
     }
 

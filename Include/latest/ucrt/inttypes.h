@@ -7,15 +7,10 @@
 // various integer conversion and manipulation functions.
 //
 #pragma once
-#ifndef _INTTYPES // include guard for 3rd party interop
 #define _INTTYPES
 
 #include <corecrt.h>
 #include <stdint.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -335,7 +330,3 @@ _CRT_END_C_HEADER
  * Copyright (c) 1992-2010 by P.J. Plauger.  ALL RIGHTS RESERVED.
  * Consult your license regarding permissions and restrictions.
 V5.30:0009 */
-
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INTTYPES

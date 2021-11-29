@@ -218,17 +218,8 @@
 
 #pragma once
 
-#if !defined(RC_INVOKED)
-
 #include <corecrt.h>
 #include <crtdbg.h>
-
-// Disable warnings hit under /Wall:
-// C4514: unreferenced inline function has been removed (/Wall)
-// C4710: function not inlined (/Wall)
-#pragma warning(push)
-#pragma warning(disable: 4514)
-#pragma warning(disable: 4710)
 
 #if !defined (_SAFEINT_DEFAULT_ERROR_POLICY)
 #define _SAFEINT_DEFAULT_ERROR_POLICY SafeIntErrorPolicy_SafeIntException
@@ -1552,56 +1543,56 @@ T*& operator -=( T*& lhs, SafeInt< U, E > rhs )
 }
 
 template < typename T, typename U, typename E >
-T*& operator *=( T* lhs, SafeInt< U, E >)
+T*& operator *=( T* lhs, SafeInt< U, E > rhs )
 {
     static_assert( details::DependentFalse< T >::value, "SafeInt<T>: This operator explicitly not supported" );
     return lhs;
 }
 
 template < typename T, typename U, typename E >
-T*& operator /=( T* lhs, SafeInt< U, E >)
+T*& operator /=( T* lhs, SafeInt< U, E > rhs )
 {
     static_assert( details::DependentFalse< T >::value, "SafeInt<T>: This operator explicitly not supported" );
     return lhs;
 }
 
 template < typename T, typename U, typename E >
-T*& operator %=( T* lhs, SafeInt< U, E >)
+T*& operator %=( T* lhs, SafeInt< U, E > rhs )
 {
     static_assert( details::DependentFalse< T >::value, "SafeInt<T>: This operator explicitly not supported" );
     return lhs;
 }
 
 template < typename T, typename U, typename E >
-T*& operator &=( T* lhs, SafeInt< U, E >)
+T*& operator &=( T* lhs, SafeInt< U, E > rhs )
 {
     static_assert( details::DependentFalse< T >::value, "SafeInt<T>: This operator explicitly not supported" );
     return lhs;
 }
 
 template < typename T, typename U, typename E >
-T*& operator ^=( T* lhs, SafeInt< U, E >)
+T*& operator ^=( T* lhs, SafeInt< U, E > rhs )
 {
     static_assert( details::DependentFalse< T >::value, "SafeInt<T>: This operator explicitly not supported" );
     return lhs;
 }
 
 template < typename T, typename U, typename E >
-T*& operator |=( T* lhs, SafeInt< U, E >)
+T*& operator |=( T* lhs, SafeInt< U, E > rhs )
 {
     static_assert( details::DependentFalse< T >::value, "SafeInt<T>: This operator explicitly not supported" );
     return lhs;
 }
 
 template < typename T, typename U, typename E >
-T*& operator <<=( T* lhs, SafeInt< U, E >)
+T*& operator <<=( T* lhs, SafeInt< U, E > rhs )
 {
     static_assert( details::DependentFalse< T >::value, "SafeInt<T>: This operator explicitly not supported" );
     return lhs;
 }
 
 template < typename T, typename U, typename E >
-T*& operator >>=( T* lhs, SafeInt< U, E >)
+T*& operator >>=( T* lhs, SafeInt< U, E > rhs )
 {
     static_assert( details::DependentFalse< T >::value, "SafeInt<T>: This operator explicitly not supported" );
     return lhs;
@@ -1660,6 +1651,3 @@ SafeInt< T, E > operator |( U lhs, SafeInt< T, E > rhs ) throw()
 } // namespace msl
 
 #pragma pack(pop)
-
-#pragma warning(pop) // Disable /Wall warnings
-#endif // RC_INVOKED

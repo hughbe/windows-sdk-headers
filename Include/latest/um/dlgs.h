@@ -256,8 +256,6 @@ Abstract:
 #define IDC_MANAGE_LINK         1592
 #endif
 
-#ifndef RC_INVOKED
-
 //
 //  Typedef Declarations.
 //
@@ -269,7 +267,6 @@ typedef struct tagCRGB
     BYTE    bExtra;
 } CRGB;           /* RGB Color */
 
-#endif /* !RC_INVOKED */
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

@@ -72,14 +72,12 @@ typedef ULONG WINBIO_IDENTITY_TYPE, *PWINBIO_IDENTITY_TYPE;
 
 #ifdef MIDL_PASS
 
-const WINBIO_IDENTITY_TYPE  WINBIO_ID_TYPE_NULL      = (WINBIO_IDENTITY_TYPE)0;  // The Identity structure is empty.
-const WINBIO_IDENTITY_TYPE  WINBIO_ID_TYPE_WILDCARD  = (WINBIO_IDENTITY_TYPE)1;  // The Identity matches "all identities".
-const WINBIO_IDENTITY_TYPE  WINBIO_ID_TYPE_GUID      = (WINBIO_IDENTITY_TYPE)2;  // A GUID identifies the template.
-const WINBIO_IDENTITY_TYPE  WINBIO_ID_TYPE_SID       = (WINBIO_IDENTITY_TYPE)3;  // An account SID identifies the template.
-const WINBIO_IDENTITY_TYPE  WINBIO_ID_TYPE_SECURE_ID = (WINBIO_IDENTITY_TYPE)4;  // A secure ID identifies the template.
+const WINBIO_IDENTITY_TYPE  WINBIO_ID_TYPE_NULL     = (WINBIO_IDENTITY_TYPE)0;  // The Identity structure is empty.
+const WINBIO_IDENTITY_TYPE  WINBIO_ID_TYPE_WILDCARD = (WINBIO_IDENTITY_TYPE)1;  // The Identity matches "all identities".
+const WINBIO_IDENTITY_TYPE  WINBIO_ID_TYPE_GUID     = (WINBIO_IDENTITY_TYPE)2;  // A GUID identifies the template.
+const WINBIO_IDENTITY_TYPE  WINBIO_ID_TYPE_SID      = (WINBIO_IDENTITY_TYPE)3;  // An account SID identifies the template.
 
-const ULONG SECURITY_MAX_SID_SIZE          = (ULONG)68;
-const ULONG WINBIO_IDENTITY_SECURE_ID_SIZE = (ULONG)32;
+const ULONG SECURITY_MAX_SID_SIZE = (ULONG)68;
 
 typedef union switch(WINBIO_IDENTITY_TYPE Type) _WINBIO_IDENTITY {
     case WINBIO_ID_TYPE_NULL:       ULONG Null;
@@ -89,16 +87,14 @@ typedef union switch(WINBIO_IDENTITY_TYPE Type) _WINBIO_IDENTITY {
                                         ULONG Size;
                                         UCHAR Data[SECURITY_MAX_SID_SIZE];
                                     } AccountSid;
-    case WINBIO_ID_TYPE_SECURE_ID:  UCHAR SecureId[WINBIO_IDENTITY_SECURE_ID_SIZE];
 } WINBIO_IDENTITY;
 
 #else // MIDL_PASS
 
-#define WINBIO_ID_TYPE_NULL      ((WINBIO_IDENTITY_TYPE)0)  // The Identity structure is empty.
-#define WINBIO_ID_TYPE_WILDCARD  ((WINBIO_IDENTITY_TYPE)1)  // The Identity matches "all identities"
-#define WINBIO_ID_TYPE_GUID      ((WINBIO_IDENTITY_TYPE)2)  // A GUID identifies the template.
-#define WINBIO_ID_TYPE_SID       ((WINBIO_IDENTITY_TYPE)3)  // An account SID identifies the template.
-#define WINBIO_ID_TYPE_SECURE_ID ((WINBIO_IDENTITY_TYPE)4)  // A secure ID identifies the template.
+#define WINBIO_ID_TYPE_NULL     ((WINBIO_IDENTITY_TYPE)0)  // The Identity structure is empty.
+#define WINBIO_ID_TYPE_WILDCARD ((WINBIO_IDENTITY_TYPE)1)  // The Identity matches "all identities"
+#define WINBIO_ID_TYPE_GUID     ((WINBIO_IDENTITY_TYPE)2)  // A GUID identifies the template.
+#define WINBIO_ID_TYPE_SID      ((WINBIO_IDENTITY_TYPE)3)  // An account SID identifies the template.
 
 //
 // Structure that contains the identity value associated
@@ -107,7 +103,6 @@ typedef union switch(WINBIO_IDENTITY_TYPE Type) _WINBIO_IDENTITY {
 //#ifndef SECURITY_MAX_SID_SIZE
 //#define SECURITY_MAX_SID_SIZE 68
 //#endif
-#define WINBIO_IDENTITY_SECURE_ID_SIZE ((ULONG)32)
 typedef struct _WINBIO_IDENTITY {
     WINBIO_IDENTITY_TYPE Type;
     union {
@@ -118,9 +113,6 @@ typedef struct _WINBIO_IDENTITY {
             ULONG Size;
             UCHAR Data[SECURITY_MAX_SID_SIZE];
         } AccountSid;
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-        UCHAR SecureId[WINBIO_IDENTITY_SECURE_ID_SIZE];
-#endif
     } Value;
 } WINBIO_IDENTITY;
 
@@ -250,78 +242,6 @@ typedef ULONG WINBIO_CAPABILITIES, *PWINBIO_CAPABILITIES;
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS1)
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
-// Secure Connection Protocol (SCP) V1
-#define WINBIO_CAPABILITY_SCP_V1            ((WINBIO_CAPABILITIES)0x00000200)
-
-// Modern standby support
-#define WINBIO_CAPABILITY_WAKE              ((WINBIO_CAPABILITIES)0x00000400)
-
-//
-// Constants for the SCP V1 protocol
-//
-typedef USHORT WINBIO_SCP_VERSION;
-#define WINBIO_SCP_VERSION_1 1
-
-// Sizes for the fixed V1 cipher suite
-#define WINBIO_SCP_RANDOM_SIZE_V1           32
-#define WINBIO_SCP_DIGEST_SIZE_V1           32 // SHA256
-#define WINBIO_SCP_CURVE_FIELD_SIZE_V1      32 // NIST P256
-#define WINBIO_SCP_PUBLIC_KEY_SIZE_V1       65 // 0x04||x||y
-#define WINBIO_SCP_PRIVATE_KEY_SIZE_V1      32 // log_2(n)/8
-#define WINBIO_SCP_SIGNATURE_SIZE_V1        64 // r||s
-#define WINBIO_SCP_ENCRYPTION_BLOCK_SIZE_V1 16 // AES
-#define WINBIO_SCP_ENCRYPTION_KEY_SIZE_V1   32 // AES256
-
-typedef USHORT WINBIO_SCP_FLAGS;
-#define WINBIO_SCP_FLAG_RECONNECT           ((WINBIO_SCP_FLAGS)0x0001)
-
-//
-// Secure Connection Protocol structures
-//
-typedef struct _WINBIO_SECURE_CONNECTION_PARAMS {
-    DWORD PayloadSize;
-    WINBIO_SCP_VERSION Version; // WINBIO_SCP_VERSION_1
-    WINBIO_SCP_FLAGS Flags;
-    // Required fields:
-    //   HostRandom[WINBIO_SCP_RANDOM_SIZE_V1];
-    // Fields omitted for reconnection:
-    //   PublicKey[WINBIO_SCP_PUBLIC_KEY_SIZE_V1]
-} WINBIO_SECURE_CONNECTION_PARAMS, *PWINBIO_SECURE_CONNECTION_PARAMS;
-
-typedef struct _WINBIO_SECURE_CONNECTION_DATA {
-    DWORD Size;
-    WINBIO_SCP_VERSION Version; // WINBIO_SCP_VERSION_1
-    WINBIO_SCP_FLAGS Flags;
-    DWORD ModelCertificateSize;
-    DWORD IntermediateCA1Size;
-    DWORD IntermediateCA2Size;
-    // Required fields:
-    //   Mac[WINBIO_SCP_DIGEST_SIZE_V1];
-    // Fields omitted for reconnection:
-    //   DeviceRandom[WINBIO_SCP_RANDOM_SIZE_V1]
-    //   ModelCertificate[ModelCertificateSize]
-    //   DevicePublicKey[WINBIO_SCP_PUBLIC_KEY_SIZE_V1]
-    //   FirmwarePublicKey[WINBIO_SPC_PUBLIC_KEY_SIZE_V1]
-    //   FirmwareHash[WINBIO_SCP_DIGEST_SIZE_V1]
-    //   ModelSignature[WINBIO_SCP_SIGNATURE_SIZE_V1]
-    //   DeviceSignature[WINBIO_SCP_SIGNATURE_SIZE_V1]
-    // Field required the driver needs to append for full connection:
-    //   IntermediateCA1[IntermediateCA1Size]
-    //   IntermediateCA2[IntermediateCA2Size]
-} WINBIO_SECURE_CONNECTION_DATA, *PWINBIO_SECURE_CONNECTION_DATA;
-
-//
-// Values representing the reason the sensor woke the host
-//
-typedef ULONG WINBIO_WAKE_REASON, *PWINBIO_WAKE_REASON;
-
-#define WINBIO_WAKE_REASON_UNKNOWN ((WINBIO_WAKE_REASON)0)
-#define WINBIO_WAKE_REASON_TOUCH   ((WINBIO_WAKE_REASON)1)
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-
 //
 // Values representing the operating status of a sensor
 //
@@ -391,19 +311,6 @@ typedef UCHAR WINBIO_BIOMETRIC_SUBTYPE, *PWINBIO_BIOMETRIC_SUBTYPE;
 // information.
 //
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
-///////////////////////////////////////////////////////////////////////////////
-//
-// Biometric unit security level
-//
-typedef ULONG WINBIO_UNIT_SECURITY_LEVEL, *PWINBIO_UNIT_SECURITY_LEVEL;
-
-#define WINBIO_UNIT_SECURITY_LEVEL_NORMAL   ((WINBIO_UNIT_SECURITY_LEVEL)0)
-#define WINBIO_UNIT_SECURITY_LEVEL_VBS      ((WINBIO_UNIT_SECURITY_LEVEL)1)
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Factor-specific value that describes the reason a
@@ -437,7 +344,7 @@ typedef ULONG WINBIO_REJECT_DETAIL, *PWINBIO_REJECT_DETAIL;
 //  - Flags indicating of position errors                                   [0x00FF0000]
 //  - A (single) enumerated value explaining the reason for the rejection.  [0x0000FFFF]
 //
-// This mask covers the upper 8 bits of the reject detail value, where
+// This mask covers the upper 8 bits of the reject detail value, where 
 // the proof-of-liveness behaviors are located.
 //
 #define WINBIO_REJECT_DETAIL_ANTI_SPOOF_MASK    ((WINBIO_REJECT_DETAIL)0xFF000000)
@@ -492,7 +399,7 @@ typedef ULONG WINBIO_REJECT_DETAIL, *PWINBIO_REJECT_DETAIL;
 #define WINBIO_FACE_TOO_DARK                ((WINBIO_REJECT_DETAIL)3)
 //
 // SPOOF_DETECTED indicates that the recognition component believes the
-// face is not live, but is coming from a replayed video feed, a photo,
+// face is not live, but is coming from a replayed video feed, a photo, 
 // or a 3-D sculpture.
 //
 #define WINBIO_FACE_SPOOF_DETECTED          ((WINBIO_REJECT_DETAIL)4)
@@ -1029,7 +936,7 @@ typedef WINBIO_BDB_ANSI_381_RECORD *PWINBIO_BDB_ANSI_381_RECORD;
 //
 //      ANSI/INCITS 385-2004: "Face Recognition Format for Data Interchange"
 //
-// 385-2004 defines two types of frontal face images: full resolution and low
+// 385-2004 defines two types of frontal face images: full resolution and low 
 // resolution. In practice, WinBio will use only full resolution images for
 // face recognition.
 //
@@ -1230,7 +1137,7 @@ typedef ULONG64 WINBIO_PROTECTION_TICKET, *PWINBIO_PROTECTION_TICKET;
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN9)
 
-#define WINBIO_OPAQUE_ENGINE_DATA_ITEM_COUNT    ((ULONG)77)  // Number of ULONG slots in the array
+#define WINBIO_OPAQUE_ENGINE_DATA_ITEM_COUNT    ((ULONG)72)  // Number of ULONG slots in the array
 
 #if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)
 
@@ -1256,7 +1163,7 @@ typedef ULONG WINBIO_PRESENCE_CHANGE, *PWINBIO_PRESENCE_CHANGE;
 //
 // Factor-specific extended information about a single presence
 //
-typedef [switch_type(WINBIO_BIOMETRIC_TYPE)] union _WINBIO_PRESENCE_PROPERTIES {
+typedef [switch_type(WINBIO_BIOMETRIC_TYPE)] union _WINBIO_PRESENCE_PROPERTIES { 
 
     [case(WINBIO_NO_TYPE_AVAILABLE)]
         ULONG32 Null;
@@ -1280,7 +1187,7 @@ typedef [switch_type(WINBIO_BIOMETRIC_TYPE)] union _WINBIO_PRESENCE_PROPERTIES {
             POINT PupilCenter_2;
             LONG Distance;
         } Iris;
-} WINBIO_PRESENCE_PROPERTIES, *PWINBIO_PRESENCE_PROPERTIES;
+} WINBIO_PRESENCE_PROPERTIES, *PWINBIO_PRESENCE_PROPERTIES; 
 
 //
 // A single individual...
@@ -1607,7 +1514,7 @@ typedef struct _WINBIO_EXTENDED_SENSOR_INFO {
     WINBIO_CAPABILITIES GenericSensorCapabilities;
 
     WINBIO_BIOMETRIC_TYPE Factor;
-    [switch_is(Factor)] union
+    [switch_is(Factor)] union 
     {
         [case(WINBIO_NO_TYPE_AVAILABLE)]
             ULONG32 Null;
@@ -1641,15 +1548,15 @@ typedef struct _WINBIO_EXTENDED_SENSOR_INFO {
                 ULONG32 Reserved;   // Reserved for future expansion
             } Voice;
     } Specific;
-} WINBIO_EXTENDED_SENSOR_INFO, *PWINBIO_EXTENDED_SENSOR_INFO;
+} WINBIO_EXTENDED_SENSOR_INFO, *PWINBIO_EXTENDED_SENSOR_INFO; 
 
 #else   // MIDL_PASS
 
-typedef struct _WINBIO_EXTENDED_SENSOR_INFO {
+typedef struct _WINBIO_EXTENDED_SENSOR_INFO { 
     WINBIO_CAPABILITIES GenericSensorCapabilities;
 
     WINBIO_BIOMETRIC_TYPE Factor;
-    union
+    union 
     {
         ULONG32 Null;
 
@@ -1678,7 +1585,7 @@ typedef struct _WINBIO_EXTENDED_SENSOR_INFO {
             ULONG32 Reserved;   // Reserved for future expansion
         } Voice;
     } Specific;
-} WINBIO_EXTENDED_SENSOR_INFO, *PWINBIO_EXTENDED_SENSOR_INFO;
+} WINBIO_EXTENDED_SENSOR_INFO, *PWINBIO_EXTENDED_SENSOR_INFO; 
 
 #endif  // MIDL_PASS
 
@@ -1720,7 +1627,7 @@ typedef struct _WINBIO_EXTENDED_ENGINE_INFO {
     WINBIO_CAPABILITIES GenericEngineCapabilities;
 
     WINBIO_BIOMETRIC_TYPE Factor;
-    [switch_is(Factor)] union
+    [switch_is(Factor)] union 
     {
         [case(WINBIO_NO_TYPE_AVAILABLE)]
             ULONG32 Null;
@@ -1762,7 +1669,7 @@ typedef struct _WINBIO_EXTENDED_ENGINE_INFO {
                 } EnrollmentRequirements;
             } Voice;
     } Specific;
-} WINBIO_EXTENDED_ENGINE_INFO, *PWINBIO_EXTENDED_ENGINE_INFO;
+} WINBIO_EXTENDED_ENGINE_INFO, *PWINBIO_EXTENDED_ENGINE_INFO; 
 
 #else   // MIDL_PASS
 
@@ -1770,7 +1677,7 @@ typedef struct _WINBIO_EXTENDED_ENGINE_INFO {
     WINBIO_CAPABILITIES GenericEngineCapabilities;
 
     WINBIO_BIOMETRIC_TYPE Factor;
-    union
+    union 
     {
         ULONG32 Null;
 
@@ -1807,7 +1714,7 @@ typedef struct _WINBIO_EXTENDED_ENGINE_INFO {
             } EnrollmentRequirements;
         } Voice;
     } Specific;
-} WINBIO_EXTENDED_ENGINE_INFO, *PWINBIO_EXTENDED_ENGINE_INFO;
+} WINBIO_EXTENDED_ENGINE_INFO, *PWINBIO_EXTENDED_ENGINE_INFO; 
 
 #endif  // MIDL_PASS
 
@@ -1837,11 +1744,11 @@ typedef struct _WINBIO_EXTENDED_ENGINE_INFO {
 
 #ifdef MIDL_PASS
 
-typedef struct _WINBIO_EXTENDED_STORAGE_INFO {
+typedef struct _WINBIO_EXTENDED_STORAGE_INFO { 
     WINBIO_CAPABILITIES GenericStorageCapabilities;
 
     WINBIO_BIOMETRIC_TYPE Factor;
-    [switch_is(Factor)] union
+    [switch_is(Factor)] union 
     {
         [case(WINBIO_NO_TYPE_AVAILABLE)]
             ULONG32 Null;
@@ -1870,7 +1777,7 @@ typedef struct _WINBIO_EXTENDED_STORAGE_INFO {
                 // Reserved for future expansion
             } Voice;
     } Specific;
-} WINBIO_EXTENDED_STORAGE_INFO, *PWINBIO_EXTENDED_STORAGE_INFO;
+} WINBIO_EXTENDED_STORAGE_INFO, *PWINBIO_EXTENDED_STORAGE_INFO; 
 
 #else   // MIDL_PASS
 
@@ -1878,7 +1785,7 @@ typedef struct _WINBIO_EXTENDED_STORAGE_INFO {
     WINBIO_CAPABILITIES GenericStorageCapabilities;
 
     WINBIO_BIOMETRIC_TYPE Factor;
-    union
+    union 
     {
         ULONG32 Null;
 
@@ -1902,7 +1809,7 @@ typedef struct _WINBIO_EXTENDED_STORAGE_INFO {
             // Reserved for future expansion
         } Voice;
     } Specific;
-} WINBIO_EXTENDED_STORAGE_INFO, *PWINBIO_EXTENDED_STORAGE_INFO;
+} WINBIO_EXTENDED_STORAGE_INFO, *PWINBIO_EXTENDED_STORAGE_INFO; 
 
 #endif  // MIDL_PASS
 
@@ -1933,14 +1840,14 @@ typedef struct _WINBIO_EXTENDED_STORAGE_INFO {
 
 #ifdef MIDL_PASS
 
-typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS {
+typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS { 
     HRESULT TemplateStatus;
     WINBIO_REJECT_DETAIL RejectDetail;
     ULONG PercentComplete;
 
     WINBIO_BIOMETRIC_TYPE Factor;
     WINBIO_BIOMETRIC_SUBTYPE SubFactor;
-    [switch_is(Factor)] union
+    [switch_is(Factor)] union 
     {
         [case(WINBIO_NO_TYPE_AVAILABLE)]
             ULONG32 Null;
@@ -1972,15 +1879,6 @@ typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS {
                 POINT PupilCenter_1;
                 POINT PupilCenter_2;
                 LONG Distance;
-                ULONG GridPointCompletionPercent;
-                UINT16 GridPointIndex;
-                struct
-                {
-                    double X;
-                    double Y;
-                    double Z;
-                } Point3D;
-                BOOL StopCaptureAndShowCriticalFeedback;
             } Iris;
 
         [case(WINBIO_TYPE_VOICE)]
@@ -1988,7 +1886,7 @@ typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS {
                 ULONG32 Reserved;           // Reserved for future expansion
             } Voice;
     } Specific;
-} WINBIO_EXTENDED_ENROLLMENT_STATUS, *PWINBIO_EXTENDED_ENROLLMENT_STATUS;
+} WINBIO_EXTENDED_ENROLLMENT_STATUS, *PWINBIO_EXTENDED_ENROLLMENT_STATUS; 
 
 #else   // MIDL_PASS
 
@@ -1999,7 +1897,7 @@ typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS {
 
     WINBIO_BIOMETRIC_TYPE Factor;
     WINBIO_BIOMETRIC_SUBTYPE SubFactor;
-    union
+    union 
     {
         ULONG32 Null;
 
@@ -2027,22 +1925,13 @@ typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS {
             POINT PupilCenter_1;
             POINT PupilCenter_2;
             LONG Distance;
-            ULONG GridPointCompletionPercent;
-            UINT16 GridPointIndex;
-            struct
-            {
-                double X;
-                double Y;
-                double Z;
-            } Point3D;
-            BOOL StopCaptureAndShowCriticalFeedback;
         } Iris;
 
         struct {
             ULONG32 Reserved;               // Reserved for future expansion
         } Voice;
     } Specific;
-} WINBIO_EXTENDED_ENROLLMENT_STATUS, *PWINBIO_EXTENDED_ENROLLMENT_STATUS;
+} WINBIO_EXTENDED_ENROLLMENT_STATUS, *PWINBIO_EXTENDED_ENROLLMENT_STATUS; 
 
 #endif  // MIDL_PASS
 
@@ -2069,70 +1958,11 @@ typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS {
 //
 #define WINBIO_PROPERTY_EXTENDED_UNIT_STATUS        ((WINBIO_PROPERTY_ID)6)
 
-typedef struct _WINBIO_EXTENDED_UNIT_STATUS {
+typedef struct _WINBIO_EXTENDED_UNIT_STATUS { 
     WINBIO_SENSOR_STATUS Availability;
     ULONG ReasonCode;
-} WINBIO_EXTENDED_UNIT_STATUS, *PWINBIO_EXTENDED_UNIT_STATUS;
+} WINBIO_EXTENDED_UNIT_STATUS, *PWINBIO_EXTENDED_UNIT_STATUS; 
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
-///////////////////////////////////////////////////////////////////////////////
-//
-// WINBIO_PROPERTY_UNIT_SECURITY_LEVEL
-//
-// Description:
-//      Returns the security level a specific biometric unit
-//      is running as.
-//
-// Access:
-//      Read-only
-//
-// Inputs:
-//      SessionHandle - must be valid
-//      UnitId - must be valid
-//      Identity - must be NULL
-//      SubFactor - must be WINBIO_SUBTYPE_NO_INFORMATION
-//
-// Outputs:
-//      PropertyBuffer - points to a WINBIO_UNIT_SECURITY_LEVEL buffer containing the level
-//      PropertyBufferSize - points to a SIZE_T variable containing sizeof(WINBIO_UNIT_SECURITY_LEVEL)
-//
-#define WINBIO_PROPERTY_UNIT_SECURITY_LEVEL         ((WINBIO_PROPERTY_ID)7)
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
-
-///////////////////////////////////////////////////////////////////////////////
-//
-// WINBIO_PROPERTY_FP_BU_STATE
-//
-// Description:
-//      Returns information on whether a FP sensor is currently
-//      attached to the machine, in addition to any relevant FP
-//      biometric unit (BU) creation error codes.
-//
-// Access:
-//      Read-only
-//
-// Inputs:
-//      SessionHandle - must be valid
-//      UnitId - must be zero
-//      Identity - must be NULL
-//      SubFactor - must be WINBIO_SUBTYPE_NO_INFORMATION
-//
-// Outputs:
-//      PropertyBuffer - points to buffer containing a WINBIO_FP_BU_STATE structure
-//      PropertyBufferSize - points to a SIZE_T variable containing sizeof(WINBIO_FP_BU_STATE)
-//
-#define WINBIO_PROPERTY_FP_BU_STATE        ((WINBIO_PROPERTY_ID)8)
-
-typedef struct _WINBIO_FP_BU_STATE {
-    BOOL SensorAttached;
-    HRESULT CreationResult;
-} WINBIO_FP_BU_STATE, *PWINBIO_FP_BU_STATE;
-
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 
 ///////////////////////////////////////////////////////////////////////////
 //
@@ -2198,7 +2028,7 @@ typedef enum _WINBIO_POLICY_SOURCE
 typedef struct _WINBIO_ANTI_SPOOF_POLICY {
     WINBIO_ANTI_SPOOF_POLICY_ACTION Action;
     WINBIO_POLICY_SOURCE Source;
-} WINBIO_ANTI_SPOOF_POLICY, *PWINBIO_ANTI_SPOOF_POLICY;
+} WINBIO_ANTI_SPOOF_POLICY, *PWINBIO_ANTI_SPOOF_POLICY; 
 
 
 #if (NTDDI_VERSION >= NTDDI_WIN9)
@@ -2301,17 +2131,11 @@ typedef ULONG32 WINBIO_MATCH_TYPE, *PWINBIO_MATCH_TYPE;
 #define WINBIO_MATCH_TRUSTED_EXECUTION_ENVIRONMENT ((WINBIO_MATCH_TYPE)2)
 #define WINBIO_MATCH_ON_CHIP                       ((WINBIO_MATCH_TYPE)3)
 
-typedef ULONG32 WINBIO_PROTECTION_TYPE, *PWINBIO_PROTECTION_TYPE;
-
-#define WINBIO_PROTECTION_SOFTWARE                      ((WINBIO_PROTECTION_TYPE)1)
-#define WINBIO_PROTECTION_TRUSTED_EXECUTION_ENVIRONMENT ((WINBIO_PROTECTION_TYPE)2)
-
 typedef struct _WINBIO_GESTURE_METADATA
 {
     SIZE_T Size;
     WINBIO_BIOMETRIC_TYPE BiometricType;
     WINBIO_MATCH_TYPE MatchType;
-    WINBIO_PROTECTION_TYPE ProtectionType;
 } WINBIO_GESTURE_METADATA, *PWINBIO_GESTURE_METADATA;
 
 //
@@ -2347,4 +2171,5 @@ const ULONG WINBIO_MAX_PRIVATE_SENSOR_TYPE_INFO_BUFFER_SIZE = 0x1000;
 #endif // (NTDDI_VERSION >= NTDDI_WIN7)
 
 #endif // _WINBIO_TYPES_H_712486DB_3EF5_41da_937A_55DCB7B66A53_
+
 

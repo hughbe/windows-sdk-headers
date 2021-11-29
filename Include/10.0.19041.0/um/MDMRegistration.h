@@ -400,6 +400,28 @@ RegisterDeviceWithManagementUsingAADDeviceCredentials();
 
 Routine Description:
 
+This function is used to register a device with the MDM service synchronously.
+It will automatically discover the MDM information, including MDM device enrollment resource URL and authentication device token from AAD
+
+Arguments:
+
+    MDMApplicationID   Unique ID of MDM application that is configured in Azure AD. 
+                       Only required when multiple MDM applications are configured on the Azure AD.
+                       The maximum length is 255 characters, excluding the terminal null.
+
+Return Value:
+
+HRESULT indicating success or failure.
+
+--*/
+HRESULT WINAPI
+RegisterDeviceWithManagementUsingAADDeviceCredentials2(_In_opt_ PCWSTR MDMApplicationID);
+
+
+/*++
+
+Routine Description:
+
     This function is used to register a device with the MDM service synchronously.
 
 Arguments:
@@ -439,6 +461,57 @@ HRESULT WINAPI
 UnregisterDeviceWithManagement(
     _In_opt_z_ LPCWSTR enrollmentID
     );
+
+/*++
+
+Routine Description:
+
+    This API is used to get the config info associated with the provider ID.
+
+Arguments:
+
+    providerID - string parameter containing the providerID
+    configStringBufferLength - pointer to the buffer length (size of configString in chars)
+    configString - a buffer that will contain the ConfigInfo if the function completes successfully
+        If the buffer specified by configString parameter is not large enough to hold the data, the function 
+        returns ERROR_MORE_DATA and stores the required buffer size in the variable pointed to by configStringBufferLength. 
+        In this case, the contents of the configString buffer are undefined. 
+
+Return Value:
+
+    HRESULT indicating success or failure.
+
+--*/
+HRESULT WINAPI
+GetDeviceManagementConfigInfo(
+    _In_ PCWSTR providerID,
+    _Inout_ DWORD* configStringBufferLength,
+    _Out_writes_to_opt_(*configStringBufferLength, *configStringBufferLength) PWSTR configString
+    );
+    
+
+/*++
+
+Routine Description:
+
+    This API is used to set the config info associated with the provider ID.
+
+Arguments:
+
+    providerID - string parameter containing the providerID
+    configString - string parameter containing the ConfigInfo(data to write)
+
+Return Value:
+
+    HRESULT indicating success or failure.
+
+--*/
+HRESULT WINAPI
+SetDeviceManagementConfigInfo(
+    _In_ PCWSTR providerID,
+    _In_ PCWSTR configString
+    );    
+
 
 /*++
 

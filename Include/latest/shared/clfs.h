@@ -110,11 +110,6 @@ typedef DWORD CLFSSTATUS;
 #define CLFS_FLAG_MINIFILTER_LEVEL      0x00000100      // Kernel mode create flag indicating mini-filter target.
 #define CLFS_FLAG_HIDDEN_SYSTEM_LOG     0x00000200      // Kernel mode create flag indicating the log and containers should be marked hidden & system.
 
-// 
-// Marshalling Context Flag
-//
-#define CLFS_MARSHALLING_FLAG_NONE                0x00000000     // No flags
-#define CLFS_MARSHALLING_FLAG_DISABLE_BUFF_INIT   0x00000001     // Flag to disable mashalling buffer intialization
 
 //
 // Flag indicating all CLFS I/O will be targeted to an intermediate level of the I/O stack

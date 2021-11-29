@@ -1,4 +1,4 @@
-﻿<xs:schema targetNamespace="http://schemas.microsoft.com/win/2004/08/events" elementFormDefault="qualified" xmlns:man="http://schemas.microsoft.com/win/2004/08/events" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema targetNamespace="http://schemas.microsoft.com/win/2004/08/events" elementFormDefault="qualified" xmlns:man="http://schemas.microsoft.com/win/2004/08/events" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:simpleType name="GUIDType">
     <xs:annotation>
       <xs:documentation>
@@ -139,7 +139,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <xs:complexType name="FilterListType" mixed="true">
     <xs:sequence>
       <xs:element name="filter" type="man:FilterType" minOccurs="0" maxOccurs="unbounded"/>
@@ -221,7 +220,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <xs:complexType name="LevelListType">
     <xs:annotation>
       <xs:documentation>
@@ -246,7 +244,6 @@
     <xs:attribute name="message" type="man:strTableRef" use="optional"/>
     <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
-
   <xs:complexType name="TaskListType">
     <xs:annotation>
       <xs:documentation>
@@ -583,9 +580,10 @@
               Defined attributes include:
               FILE=Filename of source code associated with event;
               LINE=Line number of source code associated with event;
+              COL=Column of source code associated with event;
               FUNC=Function name associated with event;
-              MJ=Major component associated with event (component name);
-              MN=Minor component associated with event (subcomponent name).
+              MJ=Major component associated with event;
+              MN=Minor component associated with event.
               Values containing semicolons or double-quotes should be quoted using
               double-quotes; double-quotes within the value should be doubled. Example:
               attributes='FILE=source.cpp;LINE=123;MJ="Value; ""Quoted"""'
@@ -734,41 +732,6 @@
     </xs:choice>
   </xs:complexType>
 
-  <xs:complexType name="TraitsType">
-    <xs:annotation>
-      <xs:documentation>
-        Specifies values for this provider's provider traits. The provider traits
-        consist of a small binary blob that is registered with the ETW runtime via
-        EventSetInformation and included with each call to EventWrite. The traits
-        blob contains information about a provider's name, decode GUID, and group
-        GUID.
-        When provider traits are needed (i.e. when the provider has different values
-        for its control GUID and its decode GUID or when the traits element is
-        present), the MC tool's -um or -km codegen will generate a provider traits
-        blob, will generate code to automatically register the blob as part of
-        EventRegister, and will include the blob in each call to EventWrite.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:attribute name="includeName" type="xs:boolean" use="optional">
-      <xs:annotation>
-        <xs:documentation>
-          Optional. Default is false. If true, the provider's name will be included
-          in the provider traits. If false, the provider's name will be left blank
-          to reduce the size of the trace file. Including the provider name makes it
-          possible to filter an event by provider name.
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="groupGuid" type="man:GUIDType" use="optional">
-      <xs:annotation>
-        <xs:documentation>
-          Optional. Specifies that this provider is a member of the specified provider
-          group. By default, the provider is not a member of any provider group.
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-  </xs:complexType>
-
   <xs:complexType name="ProviderType">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="channels" type="man:ChannelListType"/>
@@ -781,7 +744,6 @@
       <xs:element name="templates" type="man:TemplateListType"/>
       <xs:element name="events" type="man:DefinitionType"/>
       <xs:element name="filters" type="man:FilterListType"/>
-      <xs:element name="traits" type="man:TraitsType"/>
       <xs:any namespace="##other" processContents="lax"/>
     </xs:choice>
     <xs:attribute name="name" type="xs:anyURI" use="required"/>
@@ -872,7 +834,6 @@
     <xs:attribute name="name" type="xs:anyURI" use="required"/>
     <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
-
   <xs:complexType name="LocalizationType">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="resources">
@@ -889,7 +850,6 @@
     <xs:attribute name="fallbackCulture" type="xs:string" use="optional" default="en-us"/>
     <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
-
   <xs:complexType name="EventsType">
     <xs:choice maxOccurs="unbounded">
       <xs:element name="provider" type="man:ProviderType"/>
@@ -911,7 +871,6 @@
     </xs:choice>
     <xs:anyAttribute namespace="##other"/>
   </xs:complexType>
-
   <xs:complexType name="InstrumentationType">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:element name="events" type="man:EventsType"/>
@@ -919,9 +878,7 @@
     </xs:choice>
     <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
-
   <xs:complexType name="InstrumentationManifestType"/>
-
   <xs:element name="instrumentationManifest">
     <xs:complexType>
       <xs:complexContent>

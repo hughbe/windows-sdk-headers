@@ -783,9 +783,6 @@ protected:
     SRWLOCK SRWLock_;
 };
 
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
 class HStringReference;
 
 class HString
@@ -888,10 +885,6 @@ public:
             {
                 hr = Set(str, length);
             }
-        }
-        else
-        {
-            hr = Set(L"", 0);
         }
         return hr;
     }
@@ -1275,9 +1268,6 @@ public:
         return _hr;
     }
 };
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
 
 } } } // namespace ::Microsoft::WRL::Wrappers
 

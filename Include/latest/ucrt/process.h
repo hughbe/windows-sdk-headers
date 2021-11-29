@@ -7,16 +7,11 @@
 // spawn families of functions).
 //
 #pragma once
-#ifndef _INC_PROCESS // include guard for 3rd party interop
 #define _INC_PROCESS
 
 #include <corecrt.h>
 #include <corecrt_startup.h>
 #include <corecrt_wprocess.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -233,7 +228,7 @@ _ACRTIMP void __cdecl _endthreadex(
 
 
 
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
 
     #define P_WAIT          _P_WAIT
     #define P_NOWAIT        _P_NOWAIT
@@ -370,6 +365,3 @@ _ACRTIMP void __cdecl _endthreadex(
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_PROCESS

@@ -6,9 +6,7 @@ import "dxgi1_5.idl";
 cpp_quote("#include <winapifamily.h>")
 
 #pragma region App Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
-
-cpp_quote( "HRESULT WINAPI DXGIDeclareAdapterRemovalSupport();" )
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 typedef enum DXGI_ADAPTER_FLAG3
 {
@@ -125,65 +123,10 @@ interface IDXGIOutput6 :
     HRESULT CheckHardwareCompositionSupport([out, annotation("_Out_")] UINT* pFlags);
 };
 
-//+-----------------------------------------------------------------------------
-//
-//  Enum for GPU Preference categories
-//
-//------------------------------------------------------------------------------
-typedef enum DXGI_GPU_PREFERENCE
-{
-    DXGI_GPU_PREFERENCE_UNSPECIFIED = 0,
-    DXGI_GPU_PREFERENCE_MINIMUM_POWER,
-    DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE,
-
-} DXGI_GPU_PREFERENCE;
-
-//--------------------------------------------------------------------------------------------------------
-// IDXGIFactory6 interface
-//--------------------------------------------------------------------------------------------------------
-[
-    object,
-    uuid(c1b6694f-ff09-44a9-b03c-77900a0a1d17),
-    local,
-    pointer_default(unique)
-]
-interface IDXGIFactory6 :
-    IDXGIFactory5
-{
-    HRESULT EnumAdapterByGpuPreference(
-        [annotation("_In_")] UINT Adapter,
-        [annotation("_In_")] DXGI_GPU_PREFERENCE GpuPreference,
-        [annotation("_In_")] REFIID riid,
-        [annotation("_COM_Outptr_")] void** ppvAdapter
-    );
-};
-
-//--------------------------------------------------------------------------------------------------------
-// IDXGIFactory7 interface
-//--------------------------------------------------------------------------------------------------------
-[
-    object,
-    uuid(a4966eed-76db-44da-84c1-ee9a7afb20a8),
-    local,
-    pointer_default(unique)
-]
-interface IDXGIFactory7 :
-    IDXGIFactory6
-{
-    HRESULT RegisterAdaptersChangedEvent(
-        [in, annotation("_In_")] HANDLE hEvent,
-        [out, annotation("_Out_")] DWORD *pdwCookie
-    );
-
-    HRESULT UnregisterAdaptersChangedEvent([in, annotation("_In_")] DWORD dwCookie);
-};
-
 //--------------------------------------------------------------------------------------------------------
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 cpp_quote( "DEFINE_GUID(IID_IDXGIAdapter4,0x3c8d99d1,0x4fbf,0x4181,0xa8,0x2c,0xaf,0x66,0xbf,0x7b,0xd2,0x4e);" )
 cpp_quote( "DEFINE_GUID(IID_IDXGIOutput6,0x068346e8,0xaaec,0x4b84,0xad,0xd7,0x13,0x7f,0x51,0x3f,0x77,0xa1);" )
-cpp_quote( "DEFINE_GUID(IID_IDXGIFactory6,0xc1b6694f,0xff09,0x44a9,0xb0,0x3c,0x77,0x90,0x0a,0x0a,0x1d,0x17);" )
-cpp_quote( "DEFINE_GUID(IID_IDXGIFactory7,0xa4966eed,0x76db,0x44da,0x84,0xc1,0xee,0x9a,0x7a,0xfb,0x20,0xa8);" )

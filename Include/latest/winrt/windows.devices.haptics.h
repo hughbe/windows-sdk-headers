@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.devices.haptics.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,28 +75,39 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -116,10 +130,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface IKnownSimpleHapticsControllerWaveformsStatics;
-            } /* Haptics */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics ABI::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_FWD_DEFINED__
@@ -131,10 +144,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface ISimpleHapticsController;
-            } /* Haptics */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController ABI::Windows::Devices::Haptics::ISimpleHapticsController
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_FWD_DEFINED__
@@ -146,10 +158,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface ISimpleHapticsControllerFeedback;
-            } /* Haptics */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_FWD_DEFINED__
@@ -161,10 +172,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface IVibrationDevice;
-            } /* Haptics */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice ABI::Windows::Devices::Haptics::IVibrationDevice
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_FWD_DEFINED__
@@ -176,10 +186,9 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 interface IVibrationDeviceStatics;
-            } /* Haptics */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 #define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics ABI::Windows::Devices::Haptics::IVibrationDeviceStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_FWD_DEFINED__
@@ -191,262 +200,72 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Haptics {
-                typedef enum VibrationAccessStatus : int VibrationAccessStatus;
-            } /* Haptics */
+                class SimpleHapticsController;
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-#ifndef DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE
-#define DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("076b2611-5614-55a5-9c58-f9d17a8f0b79"))
-IAsyncOperation<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> : IAsyncOperation_impl<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.Haptics.VibrationAccessStatus>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t;
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("a38b59db-4ef1-5bd2-89ef-f1d9f1faca96"))
-IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.Haptics.VibrationAccessStatus>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace Haptics {
-                class VibrationDevice;
-            } /* Haptics */
-        } /* Devices */
-    } /* Windows */
-} /* ABI */
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#define DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("44193494-e331-50ca-bb61-6a71bd9b01c4"))
-IAsyncOperation<ABI::Windows::Devices::Haptics::VibrationDevice*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.Haptics.VibrationDevice>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("4e22a135-f59a-546d-9fcf-82deb833d968"))
-IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::VibrationDevice*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.Haptics.VibrationDevice>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#define DEF___FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#ifndef DEF___FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_USE
+#define DEF___FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("24e9b323-eef1-533f-ad38-de8fc8ca5692"))
-IIterator<ABI::Windows::Devices::Haptics::VibrationDevice*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>>
+struct __declspec(uuid("3c501ba4-eda4-5238-bdb7-d10ba350cd83"))
+IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsController*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::SimpleHapticsController*, ABI::Windows::Devices::Haptics::ISimpleHapticsController*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.Haptics.VibrationDevice>";
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.Haptics.SimpleHapticsController>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IIterator<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+typedef IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsController*> __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t;
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
+//#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
+#endif /* DEF___FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_USE */
+
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-#ifndef DEF___FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#define DEF___FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#ifndef DEF___FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_USE
+#define DEF___FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("1a40c994-8810-5688-9362-c4bb51018552"))
-IIterable<ABI::Windows::Devices::Haptics::VibrationDevice*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>>
+struct __declspec(uuid("b50da692-4a2b-5c8a-8e14-0439c0b1dba4"))
+IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsController*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::SimpleHapticsController*, ABI::Windows::Devices::Haptics::ISimpleHapticsController*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.Haptics.VibrationDevice>";
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.Haptics.SimpleHapticsController>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IIterable<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
-#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+typedef IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsController*> __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t;
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
+//#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
+#endif /* DEF___FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#define DEF___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("485aa8a6-2d29-5d34-b8d9-b0c961c17f7f"))
-IVectorView<ABI::Windows::Devices::Haptics::VibrationDevice*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.VibrationDevice>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#define DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("bda8b138-7862-59f3-bfd9-5f1cb063df02"))
-IAsyncOperation<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> : IAsyncOperation_impl<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.VibrationDevice>>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#define DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("096f6389-6757-56df-af12-cfe1d8f23fc1"))
-IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> : IAsyncOperationCompletedHandler_impl<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*>
-{
-    static const wchar_t* z_get_rc_name_impl()
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.VibrationDevice>>";
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t
-/* Foundation */ } /* Windows */ } /* ABI */ }
-
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
@@ -455,10 +274,10 @@ namespace ABI {
         namespace Devices {
             namespace Haptics {
                 class SimpleHapticsControllerFeedback;
-            } /* Haptics */
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
@@ -468,11 +287,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("b7d297d6-9666-5c9e-9dcc-5c382eae6750"))
-IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*, ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>>
+IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*, ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.Haptics.SimpleHapticsControllerFeedback>";
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.Haptics.SimpleHapticsControllerFeedback>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -480,12 +299,17 @@ IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : II
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t;
 #define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>
+//#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
@@ -495,11 +319,11 @@ typedef IIterator<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedbac
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("8894a0df-33b0-57b0-aa1a-9255eee72dd5"))
-IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*, ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>>
+IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*, ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.Haptics.SimpleHapticsControllerFeedback>";
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.Haptics.SimpleHapticsControllerFeedback>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -507,12 +331,122 @@ IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : II
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t;
 #define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>
+//#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_USE */
 
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace Haptics {
+                class VibrationDevice;
+            } /* Windows */
+        } /* Devices */
+    } /* Haptics */} /* ABI */
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#define DEF___FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("24e9b323-eef1-533f-ad38-de8fc8ca5692"))
+IIterator<ABI::Windows::Devices::Haptics::VibrationDevice*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.Haptics.VibrationDevice>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+//#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#define DEF___FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("1a40c994-8810-5688-9362-c4bb51018552"))
+IIterable<ABI::Windows::Devices::Haptics::VibrationDevice*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.Haptics.VibrationDevice>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
+#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+//#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_USE
+#define DEF___FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("5390f01e-c701-5382-97cc-94eaac4b6cbf"))
+IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsController*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::SimpleHapticsController*, ABI::Windows::Devices::Haptics::ISimpleHapticsController*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.SimpleHapticsController>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsController*> __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t;
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
+//#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::ISimpleHapticsController*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
@@ -522,11 +456,11 @@ typedef IIterable<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedbac
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("51f54b04-bb9d-5c7b-8f5f-67f8caf4b003"))
-IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*, ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>>
+IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*, ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>> 
 {
-    static const wchar_t* z_get_rc_name_impl()
+    static const wchar_t* z_get_rc_name_impl() 
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.SimpleHapticsControllerFeedback>";
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.SimpleHapticsControllerFeedback>"; 
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -534,30 +468,286 @@ IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> : 
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Devices::Haptics::SimpleHapticsControllerFeedback*> __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t;
 #define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
 
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>
+//#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#define DEF___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("485aa8a6-2d29-5d34-b8d9-b0c961c17f7f"))
+IVectorView<ABI::Windows::Devices::Haptics::VibrationDevice*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.VibrationDevice>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t
+/* ABI */ } /* Windows */ } /* Foundation */ } /* Collections */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+//#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
+
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 namespace ABI {
     namespace Windows {
+        namespace Devices {
+            namespace Haptics {
+                enum VibrationAccessStatus : int;
+            } /* Windows */
+        } /* Devices */
+    } /* Haptics */} /* ABI */
+
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("a38b59db-4ef1-5bd2-89ef-f1d9f1faca96"))
+IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.Haptics.VibrationAccessStatus>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::VibrationAccessStatus>
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::VibrationAccessStatus>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE */
+
+
+
+
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE
+#define DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("076b2611-5614-55a5-9c58-f9d17a8f0b79"))
+IAsyncOperation<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> : IAsyncOperation_impl<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.Haptics.VibrationAccessStatus>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<enum ABI::Windows::Devices::Haptics::VibrationAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t;
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Haptics::VibrationAccessStatus>
+//#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Haptics::VibrationAccessStatus>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_USE */
+
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("4e22a135-f59a-546d-9fcf-82deb833d968"))
+IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::VibrationDevice*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.Haptics.VibrationDevice>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#define DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("44193494-e331-50ca-bb61-6a71bd9b01c4"))
+IAsyncOperation<ABI::Windows::Devices::Haptics::VibrationDevice*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::Haptics::VibrationDevice*, ABI::Windows::Devices::Haptics::IVibrationDevice*>> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.Haptics.VibrationDevice>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::Devices::Haptics::VibrationDevice*> __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+//#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::Haptics::IVibrationDevice*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#define DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("096f6389-6757-56df-af12-cfe1d8f23fc1"))
+IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> : IAsyncOperationCompletedHandler_impl<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.VibrationDevice>>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::IVibrationDevice*>*>
+//#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::IVibrationDevice*>*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+#ifndef DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#define DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("bda8b138-7862-59f3-bfd9-5f1cb063df02"))
+IAsyncOperation<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> : IAsyncOperation_impl<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> 
+{
+    static const wchar_t* z_get_rc_name_impl() 
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.Haptics.VibrationDevice>>"; 
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t;
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t
+/* ABI */ } /* Windows */ } /* Foundation */ }
+
+////  Define an alias for the C version of the interface for compatibility purposes.
+//#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::IVibrationDevice*>*>
+//#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::Haptics::IVibrationDevice*>*>
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_USE */
+
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+
+namespace ABI {
+    namespace Windows {
         namespace Foundation {
+            
             typedef struct TimeSpan TimeSpan;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+            
+        } /* Windows */
+    } /* Foundation */} /* ABI */
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Haptics {
-                class SimpleHapticsController;
-            } /* Haptics */
+                
+                typedef enum VibrationAccessStatus : int VibrationAccessStatus;
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -565,12 +755,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Haptics {
+                /* [v1_enum, contract] */
                 enum VibrationAccessStatus : int
                 {
                     VibrationAccessStatus_Allowed = 0,
@@ -578,11 +771,12 @@ namespace ABI {
                     VibrationAccessStatus_DeniedBySystem = 2,
                     VibrationAccessStatus_DeniedByEnergySaver = 3,
                 };
-            } /* Haptics */
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
@@ -590,7 +784,9 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -601,36 +797,38 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Haptics {
-                MIDL_INTERFACE("3d577ef7-4cee-11e6-b535-001bdc06ab3b")
-                IKnownSimpleHapticsControllerWaveformsStatics : public IInspectable
+                /* [object, uuid("3D577EF7-4CEE-11E6-B535-001BDC06AB3B"), exclusiveto, contract] */
+                MIDL_INTERFACE("3D577EF7-4CEE-11E6-B535-001BDC06AB3B")
+                IKnownSimpleHapticsControllerWaveformsStatics : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Click(
-                        UINT16* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Click(
+                        /* [retval, out] */__RPC__out UINT16 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_BuzzContinuous(
-                        UINT16* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BuzzContinuous(
+                        /* [retval, out] */__RPC__out UINT16 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_RumbleContinuous(
-                        UINT16* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_RumbleContinuous(
+                        /* [retval, out] */__RPC__out UINT16 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Press(
-                        UINT16* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Press(
+                        /* [retval, out] */__RPC__out UINT16 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Release(
-                        UINT16* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Release(
+                        /* [retval, out] */__RPC__out UINT16 * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IKnownSimpleHapticsControllerWaveformsStatics = _uuidof(IKnownSimpleHapticsControllerWaveformsStatics);
-            } /* Haptics */
+                extern MIDL_CONST_ID IID & IID_IKnownSimpleHapticsControllerWaveformsStatics=_uuidof(IKnownSimpleHapticsControllerWaveformsStatics);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
@@ -638,7 +836,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsCo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.SimpleHapticsController
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -649,58 +849,60 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Haptics {
-                MIDL_INTERFACE("3d577ef9-4cee-11e6-b535-001bdc06ab3b")
-                ISimpleHapticsController : public IInspectable
+                /* [object, uuid("3D577EF9-4CEE-11E6-B535-001BDC06AB3B"), exclusiveto, contract] */
+                MIDL_INTERFACE("3D577EF9-4CEE-11E6-B535-001BDC06AB3B")
+                ISimpleHapticsController : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Id(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Id(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_SupportedFeedback(
-                        __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedFeedback(
+                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsIntensitySupported(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsIntensitySupported(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsPlayCountSupported(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPlayCountSupported(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsPlayDurationSupported(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsPlayDurationSupported(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsReplayPauseIntervalSupported(
-                        boolean* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsReplayPauseIntervalSupported(
+                        /* [retval, out] */__RPC__out boolean * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE StopFeedback(void) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE SendHapticFeedback(
-                        ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback* feedback
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE SendHapticFeedback(
+                        /* [in] */__RPC__in_opt ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback * feedback
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE SendHapticFeedbackWithIntensity(
-                        ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback* feedback,
-                        DOUBLE intensity
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE SendHapticFeedbackWithIntensity(
+                        /* [in] */__RPC__in_opt ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback * feedback,
+                        /* [in] */DOUBLE intensity
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SendHapticFeedbackForDuration(
-                        ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback* feedback,
-                        DOUBLE intensity,
-                        ABI::Windows::Foundation::TimeSpan playDuration
+                        /* [in] */__RPC__in_opt ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback * feedback,
+                        /* [in] */DOUBLE intensity,
+                        /* [in] */ABI::Windows::Foundation::TimeSpan playDuration
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SendHapticFeedbackForPlayCount(
-                        ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback* feedback,
-                        DOUBLE intensity,
-                        INT32 playCount,
-                        ABI::Windows::Foundation::TimeSpan replayPauseInterval
+                        /* [in] */__RPC__in_opt ABI::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback * feedback,
+                        /* [in] */DOUBLE intensity,
+                        /* [in] */INT32 playCount,
+                        /* [in] */ABI::Windows::Foundation::TimeSpan replayPauseInterval
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISimpleHapticsController = _uuidof(ISimpleHapticsController);
-            } /* Haptics */
+                extern MIDL_CONST_ID IID & IID_ISimpleHapticsController=_uuidof(ISimpleHapticsController);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
@@ -708,7 +910,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.SimpleHapticsControllerFeedback
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -719,27 +923,29 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Haptics {
-                MIDL_INTERFACE("3d577ef8-4cee-11e6-b535-001bdc06ab3b")
-                ISimpleHapticsControllerFeedback : public IInspectable
+                /* [object, uuid("3D577EF8-4CEE-11E6-B535-001BDC06AB3B"), exclusiveto, contract] */
+                MIDL_INTERFACE("3D577EF8-4CEE-11E6-B535-001BDC06AB3B")
+                ISimpleHapticsControllerFeedback : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Waveform(
-                        UINT16* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Waveform(
+                        /* [retval, out] */__RPC__out UINT16 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_Duration(
-                        ABI::Windows::Foundation::TimeSpan* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Duration(
+                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_ISimpleHapticsControllerFeedback = _uuidof(ISimpleHapticsControllerFeedback);
-            } /* Haptics */
+                extern MIDL_CONST_ID IID & IID_ISimpleHapticsControllerFeedback=_uuidof(ISimpleHapticsControllerFeedback);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
@@ -747,7 +953,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.VibrationDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -758,27 +966,29 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Haptics {
-                MIDL_INTERFACE("40f21a3e-8844-47ff-b312-06185a3844da")
-                IVibrationDevice : public IInspectable
+                /* [object, uuid("40F21A3E-8844-47FF-B312-06185A3844DA"), exclusiveto, contract] */
+                MIDL_INTERFACE("40F21A3E-8844-47FF-B312-06185A3844DA")
+                IVibrationDevice : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_Id(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Id(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_SimpleHapticsController(
-                        ABI::Windows::Devices::Haptics::ISimpleHapticsController** value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SimpleHapticsController(
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::Haptics::ISimpleHapticsController * * value
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IVibrationDevice = _uuidof(IVibrationDevice);
-            } /* Haptics */
+                extern MIDL_CONST_ID IID & IID_IVibrationDevice=_uuidof(IVibrationDevice);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
@@ -786,7 +996,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.VibrationDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -797,43 +1009,46 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace Haptics {
-                MIDL_INTERFACE("53e2eded-2290-4ac9-8eb3-1a84122eb71c")
-                IVibrationDeviceStatics : public IInspectable
+                /* [object, uuid("53E2EDED-2290-4AC9-8EB3-1A84122EB71C"), exclusiveto, contract] */
+                MIDL_INTERFACE("53E2EDED-2290-4AC9-8EB3-1A84122EB71C")
+                IVibrationDeviceStatics : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE RequestAccessAsync(
-                        __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus** operation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * * operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeviceSelector(
-                        HSTRING* result
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE FromIdAsync(
-                        HSTRING deviceId,
-                        __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice** operation
+                        /* [in] */__RPC__in HSTRING deviceId,
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * * operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDefaultAsync(
-                        __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice** operation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * * operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE FindAllAsync(
-                        __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice** operation
+                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * * operation
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IVibrationDeviceStatics = _uuidof(IVibrationDeviceStatics);
-            } /* Haptics */
+                extern MIDL_CONST_ID IID & IID_IVibrationDeviceStatics=_uuidof(IVibrationDeviceStatics);
+                
+            } /* Windows */
         } /* Devices */
-    } /* Windows */
-} /* ABI */
+    } /* Haptics */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
  * Class Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -848,11 +1063,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+
 /*
  *
  * Class Windows.Devices.Haptics.SimpleHapticsController
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Haptics.ISimpleHapticsController ** Default Interface **
@@ -861,17 +1078,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Haptics_SimpleHapticsController_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Haptics_SimpleHapticsController_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Haptics_SimpleHapticsController[] = L"Windows.Devices.Haptics.SimpleHapticsController";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+
 /*
  *
  * Class Windows.Devices.Haptics.SimpleHapticsControllerFeedback
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Haptics.ISimpleHapticsControllerFeedback ** Default Interface **
@@ -880,17 +1100,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Haptics_SimpleHapticsControllerFeedback_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Haptics_SimpleHapticsControllerFeedback_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Haptics_SimpleHapticsControllerFeedback[] = L"Windows.Devices.Haptics.SimpleHapticsControllerFeedback";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+
 /*
  *
  * Class Windows.Devices.Haptics.VibrationDevice
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Haptics.IVibrationDeviceStatics interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -904,11 +1127,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Haptics_VibrationDevice_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Haptics_VibrationDevice_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Haptics_VibrationDevice[] = L"Windows.Devices.Haptics.VibrationDevice";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -946,612 +1173,167 @@ typedef interface __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics __
 
 // Collection interface definitions
 
-typedef enum __x_ABI_CWindows_CDevices_CHaptics_CVibrationAccessStatus __x_ABI_CWindows_CDevices_CHaptics_CVibrationAccessStatus;
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__
+#if !defined(____FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
+typedef interface __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
+EXTERN_C const IID IID___FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController;
 
-typedef struct __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl
+typedef struct __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* handler);
-    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus** result);
-    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This,
-        enum __x_ABI_CWindows_CDevices_CHaptics_CVibrationAccessStatus* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
-} __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl;
+} __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerVtbl;
 
-interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus
+interface __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController;
+
+typedef  struct __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsController **first);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerVtbl;
+
+interface __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_put_Completed(This, handler) \
-    ((This)->lpVtbl->put_Completed(This, handler))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_get_Completed(This, result) \
-    ((This)->lpVtbl->get_Completed(This, result))
 
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_GetResults(This, result) \
-    ((This)->lpVtbl->GetResults(This, result))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
 
-#endif // ____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__
+
+#endif // ____FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsController_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* This,
-        __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus* asyncInfo,
-        AsyncStatus asyncStatus);
-
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_Invoke(This, asyncInfo, asyncStatus) \
-    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-typedef struct __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice* handler);
-    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice** result);
-    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice** result);
-
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
-
-interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_put_Completed(This, handler) \
-    ((This)->lpVtbl->put_Completed(This, handler))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_get_Completed(This, result) \
-    ((This)->lpVtbl->get_Completed(This, result))
-
-#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_GetResults(This, result) \
-    ((This)->lpVtbl->GetResults(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice* asyncInfo,
-        AsyncStatus asyncStatus);
-
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_Invoke(This, asyncInfo, asyncStatus) \
-    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
-#define ____FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-typedef struct __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice** result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice** items,
-        UINT32* result);
-
-    END_INTERFACE
-} __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
-
-interface __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice
-{
-    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
-
-#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
-#define ____FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-typedef struct __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice** result);
-
-    END_INTERFACE
-} __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
-
-interface __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice
-{
-    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-typedef struct __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        UINT32 index,
-        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice** result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice* value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice** items,
-        UINT32* result);
-
-    END_INTERFACE
-} __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
-
-interface __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice
-{
-    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
-
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-typedef struct __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* handler);
-    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice** result);
-    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice** result);
-
-    END_INTERFACE
-} __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
-
-interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice
-{
-    CONST_VTBL struct __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_put_Completed(This, handler) \
-    ((This)->lpVtbl->put_Completed(This, handler))
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_get_Completed(This, result) \
-    ((This)->lpVtbl->get_Completed(This, result))
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetResults(This, result) \
-    ((This)->lpVtbl->GetResults(This, result))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-#if !defined(____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
-
-typedef struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* This,
-        __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice* asyncInfo,
-        AsyncStatus asyncStatus);
-
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_Invoke(This, asyncInfo, asyncStatus) \
-    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
-
-#endif /* COBJMACROS */
-
-#endif // ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_INTERFACE_DEFINED__)
@@ -1566,73 +1348,80 @@ typedef struct __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback** result);
-    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback** items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl;
 
 interface __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_get_Current(This, result) \
-    ((This)->lpVtbl->get_Current(This, result))
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_get_HasCurrent(This, result) \
-    ((This)->lpVtbl->get_HasCurrent(This, result))
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_MoveNext(This, result) \
-    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetMany(This, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_INTERFACE_DEFINED__)
@@ -1643,60 +1432,343 @@ typedef interface __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsCont
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback;
 
-typedef struct __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl
+typedef  struct __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback** result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback **first);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl;
 
 interface __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl* lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_First(This, result) \
-    ((This)->lpVtbl->First(This, result))
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
 
 #endif /* COBJMACROS */
 
+
 #endif // ____FIIterable_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+typedef struct __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * *current);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
+    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [in] */ unsigned int capacity,
+        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * *items,
+        /* [retval][out] */ __RPC__out unsigned int *actual);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
+
+interface __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_get_Current(This,current)	\
+    ( (This)->lpVtbl -> get_Current(This,current) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_get_HasCurrent(This,hasCurrent)	\
+    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_MoveNext(This,hasCurrent)	\
+    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
+
+#define __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_GetMany(This,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+typedef  struct __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+                                           /* [out] */ __RPC__out ULONG *iidCount,
+                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CDevices__CHaptics__CVibrationDevice **first);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
+
+interface __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_First(This,first)	\
+    ( (This)->lpVtbl -> First(This,first) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif // ____FIIterable_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController;
+
+typedef struct __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+            /* [in] */ __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerVtbl;
+
+interface __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsController_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_INTERFACE_DEFINED__)
@@ -1711,79 +1783,581 @@ typedef struct __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsContr
 {
     BEGIN_INTERFACE
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        UINT32 index,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback** result);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        UINT32* result);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* value,
-        UINT32* index,
-        boolean* result);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback* This,
-        UINT32 startIndex,
-        UINT32 itemsLength,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback** items,
-        UINT32* result);
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
 
-    END_INTERFACE
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+            /* [in] */ __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
 } __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl;
 
 interface __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl* lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedbackVtbl *lpVtbl;
 };
+
+
 
 #ifdef COBJMACROS
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_Release(This) \
-    ((This)->lpVtbl->Release(This))
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetAt(This, index, result) \
-    ((This)->lpVtbl->GetAt(This, index, result))
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_get_Size(This, result) \
-    ((This)->lpVtbl->get_Size(This, result))
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_IndexOf(This, value, index, result) \
-    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetMany(This, startIndex, itemsLength, items, result) \
-    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
 
 #endif /* COBJMACROS */
 
+
+
 #endif // ____FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback_INTERFACE_DEFINED__
+
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+typedef struct __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+
+    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+
+    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+                                            /* [out] */ __RPC__out ULONG *iidCount,
+                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+            /* [out] */ __RPC__deref_out_opt HSTRING *className);
+
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+        __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+            /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+                                         __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+                                         /* [in] */ unsigned int index,
+                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * *item);
+
+        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
+            __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+            /* [retval][out] */ __RPC__out unsigned int *size);
+
+        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+            /* [in] */ __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * item,
+            /* [out] */ __RPC__out unsigned int *index,
+            /* [retval][out] */ __RPC__out boolean *found);
+
+        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
+                                               __RPC__in __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+            /* [in] */ unsigned int startIndex,
+            /* [in] */ unsigned int capacity,
+            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * *items,
+            /* [retval][out] */ __RPC__out unsigned int *actual);
+
+        END_INTERFACE
+} __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
+
+interface __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl *lpVtbl;
+};
+
+
+
+#ifdef COBJMACROS
+
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetAt(This,index,item)	\
+    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_get_Size(This,size)	\
+    ( (This)->lpVtbl -> get_Size(This,size) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_IndexOf(This,item,index,found)	\
+    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+
+#define __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetMany(This,startIndex,capacity,items,actual)	\
+    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+
+#endif /* COBJMACROS */
+
+
+
+#endif // ____FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+enum __x_ABI_CWindows_CDevices_CHaptics_CVibrationAccessStatus;
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__
+
+
+
+#if !defined(____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus;
+
+typedef struct __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationAccessStatus **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CDevices_CHaptics_CVibrationAccessStatus *results);
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl;
+
+interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatusVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus_INTERFACE_DEFINED__
+
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+typedef struct __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CHaptics__CVibrationDevice **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * *results);
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
+
+interface __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+// Forward declare the async operation.
+typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+typedef struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+
+    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice *asyncInfo, /* [in] */ AsyncStatus status);
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_Invoke(This,asyncInfo,status)	\
+    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+#if !defined(____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice;
+
+typedef struct __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl
+{
+    BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [in] */ __RPC__in REFIID riid,
+        /* [annotation][iid_is][out] */ 
+        _COM_Outptr_  void **ppvObject);
+    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This);
+
+    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This,
+        /* [out] */ __RPC__out ULONG *iidCount,
+        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
+    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
+    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+
+    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice *handler);
+    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice **handler);
+    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * This, /* [retval][out] */ __RPC__out __FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * *results);
+    END_INTERFACE
+} __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl;
+
+interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice
+{
+    CONST_VTBL struct __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDeviceVtbl *lpVtbl;
+};
+
+#ifdef COBJMACROS
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_put_Completed(This,handler)	\
+    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_get_Completed(This,handler)	\
+    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_GetResults(This,results)	\
+    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#endif /* COBJMACROS */
+
+
+#endif // ____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice_INTERFACE_DEFINED__
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+
 typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
+
+
+
+
+
+typedef enum __x_ABI_CWindows_CDevices_CHaptics_CVibrationAccessStatus __x_ABI_CWindows_CDevices_CHaptics_CVibrationAccessStatus;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -1791,8 +2365,11 @@ typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundati
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CHaptics_CVibrationAccessStatus
 {
     VibrationAccessStatus_Allowed = 0,
@@ -1802,94 +2379,127 @@ enum __x_ABI_CWindows_CDevices_CHaptics_CVibrationAccessStatus
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+
 /*
  *
  * Interface Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics[] = L"Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics";
+/* [object, uuid("3D577EF7-4CEE-11E6-B535-001BDC06AB3B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Click)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This,
-        UINT16* value);
-    HRESULT (STDMETHODCALLTYPE* get_BuzzContinuous)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This,
-        UINT16* value);
-    HRESULT (STDMETHODCALLTYPE* get_RumbleContinuous)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This,
-        UINT16* value);
-    HRESULT (STDMETHODCALLTYPE* get_Press)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This,
-        UINT16* value);
-    HRESULT (STDMETHODCALLTYPE* get_Release)(__x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics* This,
-        UINT16* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Click )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This,
+        /* [retval, out] */__RPC__out UINT16 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_BuzzContinuous )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This,
+        /* [retval, out] */__RPC__out UINT16 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_RumbleContinuous )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This,
+        /* [retval, out] */__RPC__out UINT16 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Press )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This,
+        /* [retval, out] */__RPC__out UINT16 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Release )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics * This,
+        /* [retval, out] */__RPC__out UINT16 * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStaticsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_Click(This, value) \
-    ((This)->lpVtbl->get_Click(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_Click(This,value) \
+    ( (This)->lpVtbl->get_Click(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_BuzzContinuous(This, value) \
-    ((This)->lpVtbl->get_BuzzContinuous(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_BuzzContinuous(This,value) \
+    ( (This)->lpVtbl->get_BuzzContinuous(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_RumbleContinuous(This, value) \
-    ((This)->lpVtbl->get_RumbleContinuous(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_RumbleContinuous(This,value) \
+    ( (This)->lpVtbl->get_RumbleContinuous(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_Press(This, value) \
-    ((This)->lpVtbl->get_Press(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_Press(This,value) \
+    ( (This)->lpVtbl->get_Press(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_Release(This, value) \
-    ((This)->lpVtbl->get_Release(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_get_Release(This,value) \
+    ( (This)->lpVtbl->get_Release(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsControllerWaveformsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
@@ -1897,123 +2507,167 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIKnownSimpleHapticsCo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.SimpleHapticsController
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Haptics_ISimpleHapticsController[] = L"Windows.Devices.Haptics.ISimpleHapticsController";
+/* [object, uuid("3D577EF9-4CEE-11E6-B535-001BDC06AB3B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Id)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_SupportedFeedback)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback** value);
-    HRESULT (STDMETHODCALLTYPE* get_IsIntensitySupported)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsPlayCountSupported)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsPlayDurationSupported)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* get_IsReplayPauseIntervalSupported)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        boolean* value);
-    HRESULT (STDMETHODCALLTYPE* StopFeedback)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This);
-    HRESULT (STDMETHODCALLTYPE* SendHapticFeedback)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* feedback);
-    HRESULT (STDMETHODCALLTYPE* SendHapticFeedbackWithIntensity)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* feedback,
-        DOUBLE intensity);
-    HRESULT (STDMETHODCALLTYPE* SendHapticFeedbackForDuration)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* feedback,
-        DOUBLE intensity,
-        struct __x_ABI_CWindows_CFoundation_CTimeSpan playDuration);
-    HRESULT (STDMETHODCALLTYPE* SendHapticFeedbackForPlayCount)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* feedback,
-        DOUBLE intensity,
-        INT32 playCount,
-        struct __x_ABI_CWindows_CFoundation_CTimeSpan replayPauseInterval);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Id )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SupportedFeedback )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CHaptics__CSimpleHapticsControllerFeedback * * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsIntensitySupported )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsPlayCountSupported )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsPlayDurationSupported )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsReplayPauseIntervalSupported )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [retval, out] */__RPC__out boolean * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *StopFeedback )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *SendHapticFeedback )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * feedback
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *SendHapticFeedbackWithIntensity )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * feedback,
+        /* [in] */DOUBLE intensity
+        );
+    HRESULT ( STDMETHODCALLTYPE *SendHapticFeedbackForDuration )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * feedback,
+        /* [in] */DOUBLE intensity,
+        /* [in] */__x_ABI_CWindows_CFoundation_CTimeSpan playDuration
+        );
+    HRESULT ( STDMETHODCALLTYPE *SendHapticFeedbackForPlayCount )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * feedback,
+        /* [in] */DOUBLE intensity,
+        /* [in] */INT32 playCount,
+        /* [in] */__x_ABI_CWindows_CFoundation_CTimeSpan replayPauseInterval
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerVtbl;
 
 interface __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_Id(This, value) \
-    ((This)->lpVtbl->get_Id(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_Id(This,value) \
+    ( (This)->lpVtbl->get_Id(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_SupportedFeedback(This, value) \
-    ((This)->lpVtbl->get_SupportedFeedback(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_SupportedFeedback(This,value) \
+    ( (This)->lpVtbl->get_SupportedFeedback(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_IsIntensitySupported(This, value) \
-    ((This)->lpVtbl->get_IsIntensitySupported(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_IsIntensitySupported(This,value) \
+    ( (This)->lpVtbl->get_IsIntensitySupported(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_IsPlayCountSupported(This, value) \
-    ((This)->lpVtbl->get_IsPlayCountSupported(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_IsPlayCountSupported(This,value) \
+    ( (This)->lpVtbl->get_IsPlayCountSupported(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_IsPlayDurationSupported(This, value) \
-    ((This)->lpVtbl->get_IsPlayDurationSupported(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_IsPlayDurationSupported(This,value) \
+    ( (This)->lpVtbl->get_IsPlayDurationSupported(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_IsReplayPauseIntervalSupported(This, value) \
-    ((This)->lpVtbl->get_IsReplayPauseIntervalSupported(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_get_IsReplayPauseIntervalSupported(This,value) \
+    ( (This)->lpVtbl->get_IsReplayPauseIntervalSupported(This,value) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_StopFeedback(This) \
-    ((This)->lpVtbl->StopFeedback(This))
+    ( (This)->lpVtbl->StopFeedback(This) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_SendHapticFeedback(This, feedback) \
-    ((This)->lpVtbl->SendHapticFeedback(This, feedback))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_SendHapticFeedback(This,feedback) \
+    ( (This)->lpVtbl->SendHapticFeedback(This,feedback) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_SendHapticFeedbackWithIntensity(This, feedback, intensity) \
-    ((This)->lpVtbl->SendHapticFeedbackWithIntensity(This, feedback, intensity))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_SendHapticFeedbackWithIntensity(This,feedback,intensity) \
+    ( (This)->lpVtbl->SendHapticFeedbackWithIntensity(This,feedback,intensity) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_SendHapticFeedbackForDuration(This, feedback, intensity, playDuration) \
-    ((This)->lpVtbl->SendHapticFeedbackForDuration(This, feedback, intensity, playDuration))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_SendHapticFeedbackForDuration(This,feedback,intensity,playDuration) \
+    ( (This)->lpVtbl->SendHapticFeedbackForDuration(This,feedback,intensity,playDuration) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_SendHapticFeedbackForPlayCount(This, feedback, intensity, playCount, replayPauseInterval) \
-    ((This)->lpVtbl->SendHapticFeedbackForPlayCount(This, feedback, intensity, playCount, replayPauseInterval))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_SendHapticFeedbackForPlayCount(This,feedback,intensity,playCount,replayPauseInterval) \
+    ( (This)->lpVtbl->SendHapticFeedbackForPlayCount(This,feedback,intensity,playCount,replayPauseInterval) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
@@ -2021,73 +2675,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.SimpleHapticsControllerFeedback
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Haptics_ISimpleHapticsControllerFeedback[] = L"Windows.Devices.Haptics.ISimpleHapticsControllerFeedback";
+/* [object, uuid("3D577EF8-4CEE-11E6-B535-001BDC06AB3B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedbackVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Waveform)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* This,
-        UINT16* value);
-    HRESULT (STDMETHODCALLTYPE* get_Duration)(__x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback* This,
-        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Waveform )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * This,
+        /* [retval, out] */__RPC__out UINT16 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Duration )(
+        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedbackVtbl;
 
 interface __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedbackVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedbackVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_get_Waveform(This, value) \
-    ((This)->lpVtbl->get_Waveform(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_get_Waveform(This,value) \
+    ( (This)->lpVtbl->get_Waveform(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_get_Duration(This, value) \
-    ((This)->lpVtbl->get_Duration(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_get_Duration(This,value) \
+    ( (This)->lpVtbl->get_Duration(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControllerFeedback_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
@@ -2095,73 +2775,99 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsControl
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.VibrationDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Haptics_IVibrationDevice[] = L"Windows.Devices.Haptics.IVibrationDevice";
+/* [object, uuid("40F21A3E-8844-47FF-B312-06185A3844DA"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Id)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* get_SimpleHapticsController)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice* This,
-        __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController** value);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Id )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SimpleHapticsController )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice * This,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CDevices_CHaptics_CISimpleHapticsController * * value
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceVtbl;
 
 interface __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_get_Id(This, value) \
-    ((This)->lpVtbl->get_Id(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_get_Id(This,value) \
+    ( (This)->lpVtbl->get_Id(This,value) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_get_SimpleHapticsController(This, value) \
-    ((This)->lpVtbl->get_SimpleHapticsController(This, value))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_get_SimpleHapticsController(This,value) \
+    ( (This)->lpVtbl->get_SimpleHapticsController(This,value) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
@@ -2169,95 +2875,128 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIVibrationDevice;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Devices.Haptics.VibrationDevice
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_Haptics_IVibrationDeviceStatics[] = L"Windows.Devices.Haptics.IVibrationDeviceStatics";
+/* [object, uuid("53E2EDED-2290-4AC9-8EB3-1A84122EB71C"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* RequestAccessAsync)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This,
-        __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus** operation);
-    HRESULT (STDMETHODCALLTYPE* GetDeviceSelector)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* FromIdAsync)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This,
-        HSTRING deviceId,
-        __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice** operation);
-    HRESULT (STDMETHODCALLTYPE* GetDefaultAsync)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This,
-        __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice** operation);
-    HRESULT (STDMETHODCALLTYPE* FindAllAsync)(__x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics* This,
-        __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice** operation);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *RequestAccessAsync )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationAccessStatus * * operation
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetDeviceSelector )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *FromIdAsync )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This,
+        /* [in] */__RPC__in HSTRING deviceId,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * * operation
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetDefaultAsync )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CHaptics__CVibrationDevice * * operation
+        );
+    HRESULT ( STDMETHODCALLTYPE *FindAllAsync )(
+        __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics * This,
+        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CHaptics__CVibrationDevice * * operation
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStaticsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_RequestAccessAsync(This, operation) \
-    ((This)->lpVtbl->RequestAccessAsync(This, operation))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_RequestAccessAsync(This,operation) \
+    ( (This)->lpVtbl->RequestAccessAsync(This,operation) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetDeviceSelector(This, result) \
-    ((This)->lpVtbl->GetDeviceSelector(This, result))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetDeviceSelector(This,result) \
+    ( (This)->lpVtbl->GetDeviceSelector(This,result) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_FromIdAsync(This, deviceId, operation) \
-    ((This)->lpVtbl->FromIdAsync(This, deviceId, operation))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_FromIdAsync(This,deviceId,operation) \
+    ( (This)->lpVtbl->FromIdAsync(This,deviceId,operation) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetDefaultAsync(This, operation) \
-    ((This)->lpVtbl->GetDefaultAsync(This, operation))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_GetDefaultAsync(This,operation) \
+    ( (This)->lpVtbl->GetDefaultAsync(This,operation) )
 
-#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_FindAllAsync(This, operation) \
-    ((This)->lpVtbl->FindAllAsync(This, operation))
+#define __x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_FindAllAsync(This,operation) \
+    ( (This)->lpVtbl->FindAllAsync(This,operation) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CHaptics_CIVibrationDeviceStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 
 /*
  *
  * Class Windows.Devices.Haptics.KnownSimpleHapticsControllerWaveforms
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Haptics.IKnownSimpleHapticsControllerWaveformsStatics interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2272,11 +3011,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+
 /*
  *
  * Class Windows.Devices.Haptics.SimpleHapticsController
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Haptics.ISimpleHapticsController ** Default Interface **
@@ -2285,17 +3026,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Haptics_SimpleHapticsController_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Haptics_SimpleHapticsController_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Haptics_SimpleHapticsController[] = L"Windows.Devices.Haptics.SimpleHapticsController";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+
 /*
  *
  * Class Windows.Devices.Haptics.SimpleHapticsControllerFeedback
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
+ *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Haptics.ISimpleHapticsControllerFeedback ** Default Interface **
@@ -2304,17 +3048,20 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Haptics_SimpleHapticsControllerFeedback_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Haptics_SimpleHapticsControllerFeedback_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Haptics_SimpleHapticsControllerFeedback[] = L"Windows.Devices.Haptics.SimpleHapticsControllerFeedback";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 
+
 /*
  *
  * Class Windows.Devices.Haptics.VibrationDevice
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
+ *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.Haptics.IVibrationDeviceStatics interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2328,11 +3075,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
 #ifndef RUNTIMECLASS_Windows_Devices_Haptics_VibrationDevice_DEFINED
 #define RUNTIMECLASS_Windows_Devices_Haptics_VibrationDevice_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_Haptics_VibrationDevice[] = L"Windows.Devices.Haptics.VibrationDevice";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

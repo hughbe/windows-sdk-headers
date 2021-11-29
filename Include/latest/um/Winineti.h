@@ -458,10 +458,7 @@ BOOLAPI InternetWriteFileExW(
 #define INTERNET_OPTION_CANCEL_CACHE_WRITE           182
 #define INTERNET_OPTION_AUTH_SCHEME_SELECTED         183
 #define INTERNET_OPTION_NOCACHE_WRITE_IN_PRIVATE     184
-#define INTERNET_OPTION_ACTIVITY_ID                  185
-#define INTERNET_OPTION_REQUEST_TIMES                186
-
-#define INTERNET_LAST_OPTION_INTERNAL           INTERNET_LAST_OPTION
+#define INTERNET_LAST_OPTION_INTERNAL           INTERNET_OPTION_NOCACHE_WRITE_IN_PRIVATE
 
 #define INTERNET_OPTION_OFFLINE_TIMEOUT INTERNET_OPTION_DISCONNECTED_TIMEOUT
 #define INTERNET_OPTION_LINE_STATE      INTERNET_OPTION_CONNECTED_STATE
@@ -478,24 +475,6 @@ typedef struct _INTERNET_DOWNLOAD_MODE_HANDLE
     PCWSTR pcwszFileName;
     HANDLE *phFile;
 } INTERNET_DOWNLOAD_MODE_HANDLE, *PINTERNET_DOWNLOAD_MODE_HANDLE;
-
-typedef enum _REQUEST_TIMES
-{
-    NameResolutionStart = 0,
-    NameResolutionEnd,
-    ConnectionEstablishmentStart,
-    ConnectionEstablishmentEnd,
-    TLSHandshakeStart,
-    TLSHandshakeEnd,
-    HttpRequestTimeMax = 32
-} REQUEST_TIMES;
-
-typedef struct _HTTP_REQUEST_TIMES
-{
-    ULONG cTimes;
-    ULONGLONG rgTimes[HttpRequestTimeMax];
-} HTTP_REQUEST_TIMES;
-
 #define AUTH_FLAG_RESET                         0x00000000 /* let registry decide */
 
 //
@@ -747,14 +726,14 @@ typedef struct _COOKIE_DLG_INFO {
 
 
 
-#define INTERNET_COOKIE_PERSISTENT_HOST_ONLY       0x00010000
+#define INTERNET_COOKIE_PERSISTENT_HOST_ONLY     0x00010000
 // INTERNET_COOKIE_RESTRICTED_ZONE is the same as INTERNET_FLAG_RESTRICTED_ZONE
-#define INTERNET_COOKIE_RESTRICTED_ZONE            0x00020000
-#define INTERNET_COOKIE_EDGE_COOKIES               0x00040000
+#define INTERNET_COOKIE_RESTRICTED_ZONE          0x00020000
+#define INTERNET_COOKIE_EDGE_COOKIES             0x00040000
 
-#define INTERNET_COOKIE_ALL_COOKIES                0x20000000
-#define INTERNET_COOKIE_NO_CALLBACK                0x40000000
-#define INTERNET_COOKIE_ECTX_3RDPARTY              0x80000000
+#define INTERNET_COOKIE_ALL_COOKIES              0x20000000
+#define INTERNET_COOKIE_NO_CALLBACK              0x40000000
+#define INTERNET_COOKIE_ECTX_3RDPARTY            0x80000000
 
 #define COOKIE_ALLOWED_SET_FLAGS        ( INTERNET_COOKIE_THIRD_PARTY     | \
                                           INTERNET_COOKIE_PROMPT_REQUIRED | \
@@ -772,17 +751,14 @@ typedef struct _COOKIE_DLG_INFO {
                                           INTERNET_COOKIE_HTTPONLY          | \
                                           INTERNET_COOKIE_HOST_ONLY         | \
                                           INTERNET_COOKIE_HOST_ONLY_APPLIED | \
-                                          INTERNET_COOKIE_ECTX_3RDPARTY     | \
-                                          INTERNET_COOKIE_SAME_SITE_STRICT  | \
-                                          INTERNET_COOKIE_SAME_SITE_LAX       \
+                                          INTERNET_COOKIE_ECTX_3RDPARTY       \
                                         )
 
-#define COOKIE_ALLOWED_GET_FLAGS        ( INTERNET_COOKIE_NON_SCRIPT                 | \
-                                          INTERNET_COOKIE_THIRD_PARTY                | \
-                                          INTERNET_COOKIE_SAME_SITE_LEVEL_CROSS_SITE | \
-                                          INTERNET_FLAG_RESTRICTED_ZONE              | \
-                                          INTERNET_COOKIE_ALL_COOKIES                | \
-                                          INTERNET_COOKIE_EDGE_COOKIES                 \
+#define COOKIE_ALLOWED_GET_FLAGS        ( INTERNET_COOKIE_NON_SCRIPT      | \
+                                          INTERNET_COOKIE_THIRD_PARTY     | \
+                                          INTERNET_FLAG_RESTRICTED_ZONE   | \
+                                          INTERNET_COOKIE_ALL_COOKIES     | \
+                                          INTERNET_COOKIE_EDGE_COOKIES      \
                                         )
 //
 // DAV Detection
@@ -1192,12 +1168,12 @@ DWORD UrlCacheGetGlobalCacheSize(
 #define CACHE_CONFIG_DISK_SPACE_VERYLOW_IE                        26214400ULL  //  25 MB
 #define CACHE_CONFIG_DISK_SPACE_LOW_IE                            52428800ULL  //  50 MB
 #define CACHE_CONFIG_DISK_SPACE_BELOWNORMAL_IE                   104857600ULL  // 100 MB
-#define CACHE_CONFIG_DISK_SPACE_NORMAL_IE                        346030080ULL  // 330 MB
+#define CACHE_CONFIG_DISK_SPACE_NORMAL_IE                        262144000ULL  // 250 MB
 
 #define CACHE_CONFIG_DISK_SPACE_VERYLOW_IE_TOTAL                  36700160ULL  //  35 MB
 #define CACHE_CONFIG_DISK_SPACE_LOW_IE_TOTAL                      78643200ULL  //  75 MB
 #define CACHE_CONFIG_DISK_SPACE_BELOWNORMAL_IE_TOTAL             157286400ULL  // 150 MB
-#define CACHE_CONFIG_DISK_SPACE_NORMAL_IE_TOTAL                  519045120ULL  // 495 MB
+#define CACHE_CONFIG_DISK_SPACE_NORMAL_IE_TOTAL                  393216000ULL  // 375 MB
 
 #define CACHE_CONFIG_DISK_SPACE_VERYLOW_APPCONTAINER              15728640ULL  //  15 MB
 #define CACHE_CONFIG_DISK_SPACE_LOW_APPCONTAINER                  26214400ULL  //  25 MB
@@ -1569,11 +1545,6 @@ INTERNETAPI_(DWORD)
 HttpDuplicateDependencyHandle(
     _In_ HTTP_DEPENDENCY_HANDLE hDependencyHandle,
     _Outptr_ HTTP_DEPENDENCY_HANDLE *phDuplicatedDependencyHandle
-);
-
-INTERNETAPI_(DWORD)
-HttpIndicatePageLoadComplete(
-    _In_ HTTP_DEPENDENCY_HANDLE hDependencyHandle
 );
 
 //
@@ -2250,13 +2221,6 @@ InternetConvertUrlFromWireToWideChar(
     _In_ BOOL fEncodePathExtra,
     _In_ DWORD dwCodePageExtra,
     _Outptr_result_z_ PWSTR *ppwszConvertedUrl
-);
-
-STDAPI_(DWORD)
-HttpPreConnect(
-    _In_ HANDLE hRequest,
-    _In_ PCWSTR pwszUrl,
-    _In_ DWORD cConnections
 );
 
 

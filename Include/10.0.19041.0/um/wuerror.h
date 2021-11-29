@@ -4369,4 +4369,229 @@
 //
 #define WU_E_TRUST_PROVIDER_UNKNOWN      _HRESULT_TYPEDEF_(0x8024B304L)
 
+//////////////////////////////////////////////////////////////////////////////
+// RUXIM related errors - 0xB901
+////
+///////
+// RUXIM General errors 0xB901 - 0xB91F
+///////
+//
+// MessageId: WU_E_RUXIM_EXCEPTION
+//
+// MessageText:
+//
+// An unexpected exception occurred during RUXIM processing.
+//
+#define WU_E_RUXIM_EXCEPTION             _HRESULT_TYPEDEF_(0x8024B901L)
+
+//
+// MessageId: WU_E_RUXIM_LOGGINGCVERROR
+//
+// MessageText:
+//
+// An error occurred while processing the correlation vector during RUXIM logging.
+//
+#define WU_E_RUXIM_LOGGINGCVERROR        _HRESULT_TYPEDEF_(0x8024B902L)
+
+//
+// MessageId: WU_E_RUXIM_UNEXPECTEDINTERACTIONRESPONSE
+//
+// MessageText:
+//
+// The RUXIM Interaction Handler returned an unexpected response while processing an interaction campaign.
+//
+#define WU_E_RUXIM_UNEXPECTEDINTERACTIONRESPONSE _HRESULT_TYPEDEF_(0x8024B903L)
+
+//
+// MessageId: WU_E_RUXIM_INTERACTIONALREADYCOMPLETED
+//
+// MessageText:
+//
+// An attempt was made to present a RUXIM interaction campaign that is already completed.
+//
+#define WU_E_RUXIM_INTERACTIONALREADYCOMPLETED _HRESULT_TYPEDEF_(0x8024B904L)
+
+//
+// MessageId: WU_E_RUXIM_STOREDSTATENOTAVAILABLE
+//
+// MessageText:
+//
+// RUXIM was unable to create or retrieve the stored state for an interaction campaign.
+//
+#define WU_E_RUXIM_STOREDSTATENOTAVAILABLE _HRESULT_TYPEDEF_(0x8024B905L)
+
+//
+// MessageId: WU_E_RUXIM_NOSUCHINTERACTIONCAMPAIGN
+//
+// MessageText:
+//
+// RUXIM was unable to retrieve the requested interaction campaign.
+//
+#define WU_E_RUXIM_NOSUCHINTERACTIONCAMPAIGN _HRESULT_TYPEDEF_(0x8024B906L)
+
+//
+// MessageId: WU_E_RUXIM_UNEXPECTED
+//
+// MessageText:
+//
+// An unexpected failure occurred during RUXIM processing.
+//
+#define WU_E_RUXIM_UNEXPECTED            _HRESULT_TYPEDEF_(0x8024B91FL)
+
+///////
+// RUXIM Interaction Campaign Specification errors 0xB920 - 0xB93F
+///////
+//
+// MessageId: WU_E_RUXIM_ICSPEC_INVALIDFORMAT
+//
+// MessageText:
+//
+// The RUXIM interaction campaign specification does not have the expected XML format.
+//
+#define WU_E_RUXIM_ICSPEC_INVALIDFORMAT  _HRESULT_TYPEDEF_(0x8024B920L)
+
+//
+// MessageId: WU_E_RUXIM_ICSPEC_MISSINGCONTROLCUSTOMIZATION
+//
+// MessageText:
+//
+// The RUXIM interaction campaign specification does not have a control customization for one or more controls in the interaction.
+//
+#define WU_E_RUXIM_ICSPEC_MISSINGCONTROLCUSTOMIZATION _HRESULT_TYPEDEF_(0x8024B921L)
+
+//
+// MessageId: WU_E_RUXIM_ICSPEC_NOSUITABLELOCALIZATION
+//
+// MessageText:
+//
+// The RUXIM interaction campaign specification does not have localized resources that match the user's preferred languages.
+//
+#define WU_E_RUXIM_ICSPEC_NOSUITABLELOCALIZATION _HRESULT_TYPEDEF_(0x8024B922L)
+
+//
+// MessageId: WU_E_RUXIM_ICSPEC_COMMANDLINETOOLONG
+//
+// MessageText:
+//
+// The RUXIM interaction campaign specification specifies an immediate action, and the command line set for that immediate action is too long.
+//
+#define WU_E_RUXIM_ICSPEC_COMMANDLINETOOLONG _HRESULT_TYPEDEF_(0x8024B923L)
+
+//
+// MessageId: WU_E_RUXIM_ICSPEC_DIRECTORYPATHTOOLONG
+//
+// MessageText:
+//
+// The RUXIM interaction campaign specification specifies an immediate action, and the current directory set for that immediate action is too long.
+//
+#define WU_E_RUXIM_ICSPEC_DIRECTORYPATHTOOLONG _HRESULT_TYPEDEF_(0x8024B924L)
+
+//
+// MessageId: WU_E_RUXIM_ICSPEC_PARAMETEROUTOFRANGE
+//
+// MessageText:
+//
+// The RUXIM interaction campaign specification includes a parameter that is too large or too small.
+//
+#define WU_E_RUXIM_ICSPEC_PARAMETEROUTOFRANGE _HRESULT_TYPEDEF_(0x8024B925L)
+
+//
+// MessageId: WU_E_RUXIM_ICSPEC_UNEXPECTED
+//
+// MessageText:
+//
+// An unexpected problem occurred while processing an interaction campaign specification.
+//
+#define WU_E_RUXIM_ICSPEC_UNEXPECTED     _HRESULT_TYPEDEF_(0x8024B93FL)
+
+///////
+// Interaction Campaign Organizer errors 0xB940 - 0xB94F
+///////
+//
+// MessageId: WU_E_RUXIM_ICO_NOREMAININGCAMPAIGNS
+//
+// MessageText:
+//
+// There are no more interaction campaigns remaining to evaluate.
+//
+#define WU_E_RUXIM_ICO_NOREMAININGCAMPAIGNS _HRESULT_TYPEDEF_(0x8024B940L)
+
+///////
+// Interaction Campaign Scheduler errors 0xB950 - 0xB95F
+///////
+//
+// MessageId: WU_E_RUXIM_ICS_IHRESULTUNKNOWN
+//
+// MessageText:
+//
+// Interaction Campaign Scheduler launched Interaction Handler to process a campaign, but Interaction Handler did not report its result.
+//
+#define WU_E_RUXIM_ICS_IHRESULTUNKNOWN   _HRESULT_TYPEDEF_(0x8024B950L)
+
+///////
+// Evaluator DLL errors 0xB9C0 - 0xB9FF
+///////
+//
+// MessageId: WU_E_EVALUATOR_UNKNOWNCHECKHANDLERNAME
+//
+// MessageText:
+//
+// The evaluation request includes a check handler name which the Evaluator DLL does not support.
+//
+#define WU_E_EVALUATOR_UNKNOWNCHECKHANDLERNAME _HRESULT_TYPEDEF_(0x8024B9C0L)
+
+//
+// MessageId: WU_E_EVALUATOR_UNKNOWNCHECKNAME
+//
+// MessageText:
+//
+// The evaluation request includes a check name which the Evaluator DLL does not support.
+//
+#define WU_E_EVALUATOR_UNKNOWNCHECKNAME  _HRESULT_TYPEDEF_(0x8024B9C1L)
+
+//
+// MessageId: WU_E_EVALUATOR_UNKNOWNCOMPARISON
+//
+// MessageText:
+//
+// The evaluation request includes a comparison which the Evaluator DLL does not support.
+//
+#define WU_E_EVALUATOR_UNKNOWNCOMPARISON _HRESULT_TYPEDEF_(0x8024B9C2L)
+
+//
+// MessageId: WU_E_EVALUATOR_MISFORMATTEDCHECKNAME
+//
+// MessageText:
+//
+// The evaluation request includes a check node whose check node is not in the format 'checkhandlername:checkname'.
+//
+#define WU_E_EVALUATOR_MISFORMATTEDCHECKNAME _HRESULT_TYPEDEF_(0x8024B9C3L)
+
+//
+// MessageId: WU_E_EVALUATOR_INVALIDCHECKPARAMETERS
+//
+// MessageText:
+//
+// The evaluation request includes a check which requires parameters, and one of those parameters is missing or in an unexpected format.
+//
+#define WU_E_EVALUATOR_INVALIDCHECKPARAMETERS _HRESULT_TYPEDEF_(0x8024B9C4L)
+
+//
+// MessageId: WU_E_EVALUATOR_INVALIDNOT
+//
+// MessageText:
+//
+// The evaluation request includes a 'not' attribute on a check which does not return a Boolean value.
+//
+#define WU_E_EVALUATOR_INVALIDNOT        _HRESULT_TYPEDEF_(0x8024B9C5L)
+
+//
+// MessageId: WU_E_EVALUATOR_UNEXPECTED
+//
+// MessageText:
+//
+// An unexpected error occurred while processing an evaluation request.
+//
+#define WU_E_EVALUATOR_UNEXPECTED        _HRESULT_TYPEDEF_(0x8024B9FFL)
+
 #endif //_WUERROR_

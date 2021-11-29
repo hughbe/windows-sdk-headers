@@ -28,8 +28,8 @@
 extern "C" {
 #endif
 
-#pragma region Desktop Family or OneCore or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 #ifndef WINAPI
 #define WINAPI __stdcall
@@ -94,10 +94,6 @@ typedef NTSTATUS *PNTSTATUS;
 #define BCRYPT_KDF_RAW_SECRET               L"TRUNCATE"
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-#define BCRYPT_KDF_HKDF                     L"HKDF"
-#endif
-
 //
 // DeriveKey KDF BufferTypes
 //
@@ -145,8 +141,6 @@ typedef NTSTATUS *PNTSTATUS;
 //      KDF_GENERIC_PARAMETER = Not used
 // BCRYPT/NCRYPT_TLS1_2_KDF_ALGORITHM
 //      KDF_GENERIC_PARAMETER = Not used
-// BCRYPT/NCRYPT_HKDF_ALGORITHM
-//      KDF_GENERIC_PARAMETER = Not used
 //
 // KDF specific parameters:
 // For BCRYPT/NCRYPT_SP800108_CTR_HMAC_ALGORITHM: 
@@ -167,16 +161,9 @@ typedef NTSTATUS *PNTSTATUS;
 //      KDF_HASH_ALGORITHM is required
 //      KDF_TLS_PRF_LABEL is required
 //      KDF_TLS_PRF_SEED is required
-// For BCRYPT/NCRYPT_HKDF_ALGORITHM
-//      KDF_HKDF_INFO is optional
 //
 #define KDF_GENERIC_PARAMETER 0x11
 #define KDF_KEYBITLENGTH      0x12
-#endif
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-#define KDF_HKDF_SALT         0x13          // This is used only for testing purposes
-#define KDF_HKDF_INFO         0x14
 #endif
 
 
@@ -310,45 +297,6 @@ typedef struct _BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO
 
 #if (NTDDI_VERSION > NTDDI_WINBLUE || (NTDDI_VERSION == NTDDI_WINBLUE && defined(WINBLUE_KBSPRING14)))
 #define BCRYPT_MULTI_OBJECT_LENGTH  L"MultiObjectLength"
-#endif
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-#define BCRYPT_IS_IFX_TPM_WEAK_KEY  L"IsIfxTpmWeakKey"
-
-//
-// Additional properties for the HKDF on BCRYPT_KEY_HANDLE (and
-// BCRYPT_SECRET_HANDLE). Both the hash algorithm property and
-// one of the "Finalize" properties are required for the key
-// (or secret) to be usable.
-//
-// When the available inputs are the input keying material (IKM)
-// and the salt then the "SALT_AND_FINALIZE" path should be used:
-//  - First the function which creates the key (or secret) takes
-//  as input the IKM.
-//  - Then the hash algorithm should be set via the BCRYPT_HKDF_HASH_ALGORITHM
-//  property on BCryptSetProperty.
-//  - Finally the salt is input via the BCRYPT_HKDF_SALT_AND_FINALIZE
-//  property. The salt parameter is optional; thus the property input
-//  is allowed to be NULL.
-//
-// When the available input is the pseudorandom key (PRK) then
-// the "PRK_AND_FINALIZE" path should be used:
-//  - First the function which creates the key (or secret) takes
-//  as input the PRK.
-//  - Then the hash algorithm should be set via the BCRYPT_HKDF_HASH_ALGORITHM
-//  property on BCryptSetProperty.
-//  - Finally the key (or secret) is finalized via the
-//  BCRYPT_HKDF_PRK_AND_FINALIZE property. In this case the input property
-//  must be NULL since the PRK was already passed in.
-//
-// After setting one of the two "Finalize" properties the key
-// (or the secret) is finalized and can be used to derive the
-// HKDF output.
-//
-#define BCRYPT_HKDF_HASH_ALGORITHM      L"HkdfHashAlgorithm"
-#define BCRYPT_HKDF_SALT_AND_FINALIZE   L"HkdfSaltAndFinalize"
-#define BCRYPT_HKDF_PRK_AND_FINALIZE    L"HkdfPrkAndFinalize"
-
 #endif
 
 // BCryptSetProperty strings
@@ -841,10 +789,6 @@ typedef struct _BCRYPT_MULTI_OBJECT_LENGTH_STRUCT
 #define BCRYPT_XTS_AES_ALGORITHM                L"XTS-AES"
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
-#define BCRYPT_HKDF_ALGORITHM                   L"HKDF"
-#endif
-
 //
 // Interfaces
 //
@@ -931,8 +875,6 @@ typedef struct _BCRYPT_MULTI_OBJECT_LENGTH_STRUCT
 
 #define BCRYPT_XTS_AES_ALG_HANDLE               ((BCRYPT_ALG_HANDLE) 0x00000381)
 
-#define BCRYPT_HKDF_ALG_HANDLE                  ((BCRYPT_ALG_HANDLE) 0x00000391)
-
 #endif
 
 //
@@ -949,30 +891,6 @@ typedef struct _BCRYPT_MULTI_OBJECT_LENGTH_STRUCT
 #if (NTDDI_VERSION > NTDDI_WINBLUE || (NTDDI_VERSION == NTDDI_WINBLUE && defined(WINBLUE_KBSPRING14)))
 #define BCRYPT_MULTI_FLAG                       0x00000040
 #endif
-
-//
-// The TLS_CBC_HMAC_VERIFY flag provides a side-channel safe way of verifying TLS data records
-// from the CBC-HMAC cipher suites. See RFC 5246 section 6.2.3.2.
-// This flag is used in BCryptOpenAlgorithmProvider and in BCryptHashData.
-// For BCryptOpenAlgorithmProvider it ensures that you get a provider that supports this feature.
-// For BCryptHashData is changes the functionality.
-// The Input buffer now contains the whole TLS data record, consisting of the plaintext,
-// followed by the MAC value, followed by the padding, followed by the padding_length.
-// The function will compute the HMAC over the data already hashed plus the plaintext,
-// compare it to the MAC value, and verify that the padding is correct.
-// If all works out, it returns a success value; if anything fails it returns an error.
-// What makes this special is that the code path or the memory access pattern used to
-// do this verification does not depend on padding_length to stop attacks on the CBC encryption
-// that was used to decrypt this data.
-// This flag is only useful for TLS implementations, other callers should not use it.
-// This flag is only valid for HMAC-SHA1, HMAC-SHA256, and HMAC-SHA384.
-// This flag implies the BCRYPT_HASH_REUSABLE_FLAG.
-//
-// This flag is available staring in Windows 10 19H1, but we define it for all
-// NTDDI values to allow applications to dynamically test wethere the OS supports the
-// feature, and adjust accordingly.
-//
-#define BCRYPT_TLS_CBC_HMAC_VERIFY_FLAG          0x00000004
 
 //
 // The BUFFERS_LOCKED flag used in BCryptEncrypt/BCryptDecrypt signals that
@@ -1669,10 +1587,10 @@ typedef struct _CRYPT_PROVIDER_REFS
 }
 CRYPT_PROVIDER_REFS, *PCRYPT_PROVIDER_REFS;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#pragma region Desktop Family or OneCore or Games Family
+#pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //////////////////////////////////////////////////////////////////////////////

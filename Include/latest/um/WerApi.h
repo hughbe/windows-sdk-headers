@@ -178,8 +178,8 @@ typedef enum _WER_REPORT_UI
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
-#pragma region Application or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 //
 // The type of the registered files
@@ -191,7 +191,7 @@ typedef enum _WER_REGISTER_FILE_TYPE
     WerRegFileTypeMax
 } WER_REGISTER_FILE_TYPE;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family
@@ -503,7 +503,6 @@ WerReportSubmit(
 //
 typedef enum _WER_DUMP_TYPE
 {
-    WerDumpTypeNone = 0,
     WerDumpTypeMicroDump = 1,
     WerDumpTypeMiniDump = 2,
     WerDumpTypeHeapDump = 3,
@@ -567,36 +566,10 @@ WerReportCloseHandle(
 #define WER_MAX_PARAM_COUNT 10
 
 //
-// Maximum length of the report friendly event name
-//
-#define WER_MAX_FRIENDLY_EVENT_NAME_LENGTH 128
-
-//
-// Maximum length of the report application name
-//
-#define WER_MAX_APPLICATION_NAME_LENGTH 128
-
-//
-// Maximum length of the report description
-//
-#define WER_MAX_DESCRIPTION_LENGTH 512
-
-//
-// Maximum length of the bucket id string
-//
-#define WER_MAX_BUCKET_ID_STRING_LENGTH (MAX_PATH)
-
-//
 // Max length for a UWP local dump subpath
 // including null terminator
 //
 #define WER_MAX_LOCAL_DUMP_SUBPATH_LENGTH 64
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 HRESULT
 WINAPI
@@ -611,12 +584,6 @@ WINAPI
 WerUnregisterFile(
     _In_ PCWSTR pwzFilePath
     );
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 HRESULT
 WINAPI
@@ -671,11 +638,6 @@ WerRegisterAppLocalDump(
 
 STDAPI
 WerUnregisterAppLocalDump();
-
-STDAPI
-WerSetMaxProcessHoldMilliseconds(
-    _In_ DWORD dwMilliseconds
-    );
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -757,8 +719,6 @@ typedef struct _WER_RUNTIME_EXCEPTION_INFORMATION
     EXCEPTION_RECORD exceptionRecord;
     CONTEXT context;
     PCWSTR pwszReportId;
-    BOOL bIsFatal;
-    DWORD dwReserved;
 } WER_RUNTIME_EXCEPTION_INFORMATION, *PWER_RUNTIME_EXCEPTION_INFORMATION;
 
 typedef
@@ -898,58 +858,6 @@ typedef struct _WER_REPORT_METADATA_V2
     WCHAR* FileNames;
 } WER_REPORT_METADATA_V2, *PWER_REPORT_METADATA_V2;
 
-/*++
-
-WER_REPORT_METADATA_V3
-
-Structure Description:
-    This structure includes WER_REPORT_METADATA_V2 along with new fields to hold
-    Friendly Event Name, Application Name, Application Path, Description, BucketIdString
-    and LegacyBucketId.
-
-Members:
-    Signature          - See WER_REPORT_METADATA_V1.Signature for explanation.
-    BucketId           - See WER_REPORT_METADATA_V1.BucketId for explanation.
-    ReportId           - See WER_REPORT_METADATA_V1.ReportId for explanation.
-    CreationTime       - See WER_REPORT_METADATA_V1.CreationTime for explanation.
-    SizeInBytes        - See WER_REPORT_METADATA_V1.SizeInBytes for explanation.
-    CabId              - See WER_REPORT_METADATA_V2.CabId for explanation.
-    ReportStatus       - See WER_REPORT_METADATA_V2.ReportStatus for explanation.
-    ReportIntegratorId - See WER_REPORT_METADATA_V2.ReportIntegrationId for explanation.
-    NumberOfFiles      - See WER_REPORT_METADATA_V2.NumberOfFiles for explanation.
-    SizeOfFileNames    - See WER_REPORT_METADATA_V2.SizeOfFileNames for explanation.
-    FileNames          - See WER_REPORT_METADATA_V2.FileNames for explanation.
-    FriendlyEventName  - Represents friendly event name.  E.g. "Windows Update installation problem".
-    ApplicationName    - Represents application name.  E.g. "Host Process for Windows Services".
-    ApplicationPath    - Represents application path.
-    Description        - Represents failure description.  E.g. "A Windows update did not install
-                         properly. Sending the following information to Microsoft can help improve the software."
-    BucketIdString     - Represents Bucket Id string (possibly truncated).  In user mode it looks like failure hash.
-                         For kernel failures it looks like faulting frame name.
-    LegacyBucketId     - Represents Legacy Bucket Id integer value.  E.g. 2221943892575779112.
- --*/
-
-typedef struct _WER_REPORT_METADATA_V3
-{
-    WER_REPORT_SIGNATURE Signature;
-    GUID BucketId;
-    GUID ReportId;
-    FILETIME CreationTime;
-    ULONGLONG SizeInBytes;
-    WCHAR CabId[MAX_PATH];
-    DWORD ReportStatus;
-    GUID ReportIntegratorId;
-    DWORD NumberOfFiles;
-    DWORD SizeOfFileNames;
-    WCHAR* FileNames;
-    WCHAR FriendlyEventName[WER_MAX_FRIENDLY_EVENT_NAME_LENGTH];
-    WCHAR ApplicationName[WER_MAX_APPLICATION_NAME_LENGTH];
-    WCHAR ApplicationPath[MAX_PATH];
-    WCHAR Description[WER_MAX_DESCRIPTION_LENGTH];
-    WCHAR BucketIdString[WER_MAX_BUCKET_ID_STRING_LENGTH];
-    ULONGLONG LegacyBucketId;
-} WER_REPORT_METADATA_V3, *PWER_REPORT_METADATA_V3;
-
 __control_entrypoint(DllExport)
 HRESULT
 WerStoreOpen(
@@ -984,14 +892,6 @@ WerStoreQueryReportMetadataV2(
     _In_ PCWSTR pszReportKey,
     _Out_ PWER_REPORT_METADATA_V2 pReportMetadata
     );
-
-__control_entrypoint(DllExport)
-HRESULT
-WerStoreQueryReportMetadataV3(
-    _In_ HREPORTSTORE hReportStore,
-    _In_ PCWSTR pszReportKey,
-    _Out_ PWER_REPORT_METADATA_V3 pReportMetadata
-);
 
 __control_entrypoint(DllExport)
 VOID

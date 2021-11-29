@@ -1,3 +1,7 @@
+/* Header file automatically generated from windows.globalization.phonenumberformatting.idl */
+/*
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0206 
+ */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -41,7 +45,6 @@
 #if defined(__cplusplus)
 #if __cplusplus >= 201402
 #define DEPRECATED(x) [[deprecated(x)]]
-#define DEPRECATEDENUMERATOR(x) [[deprecated(x)]]
 #elif defined(_MSC_VER)
 #if _MSC_VER >= 1900
 #define DEPRECATED(x) [[deprecated(x)]]
@@ -72,28 +75,39 @@
 #pragma warning(disable: 4996)
 #endif
 
-// Ensure that the setting of the /ns_prefix command line switch is consistent for all headers.
-// If you get an error from the compiler indicating "warning C4005: 'CHECK_NS_PREFIX_STATE': macro redefinition", this
-// indicates that you have included two different headers with different settings for the /ns_prefix MIDL command line switch
-#if !defined(DISABLE_NS_PREFIX_CHECKS)
-#define CHECK_NS_PREFIX_STATE "always"
-#endif // !defined(DISABLE_NS_PREFIX_CHECKS)
-
-
 #pragma push_macro("MIDL_CONST_ID")
-#undef MIDL_CONST_ID
+#if !defined(_MSC_VER) || (_MSC_VER >= 1910)
+#define MIDL_CONST_ID constexpr const
+#else
 #define MIDL_CONST_ID const __declspec(selectany)
+#endif
 
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
+#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x30000
+#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
+
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x50000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
+
+#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
+
+#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
+#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
+#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -114,10 +128,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberFormatter;
-            } /* PhoneNumberFormatting */
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FWD_DEFINED__
@@ -129,10 +142,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberFormatterStatics;
-            } /* PhoneNumberFormatting */
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatterStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_FWD_DEFINED__
@@ -144,10 +156,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberInfo;
-            } /* PhoneNumberFormatting */
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_FWD_DEFINED__
@@ -159,10 +170,9 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberInfoFactory;
-            } /* PhoneNumberFormatting */
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoFactory
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_FWD_DEFINED__
@@ -174,89 +184,102 @@ namespace ABI {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 interface IPhoneNumberInfoStatics;
-            } /* PhoneNumberFormatting */
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfoStatics
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_FWD_DEFINED__
 
-// Parameterized interface forward declarations (C++)
 
-// Collection interface definitions
 #ifndef ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 namespace ABI {
     namespace Windows {
         namespace Foundation {
             interface IStringable;
-        } /* Foundation */
-    } /* Windows */
-} /* ABI */
+        } /* Windows */
+    } /* Foundation */} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIStringable ABI::Windows::Foundation::IStringable
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 
+
+
+
+
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
+                
                 typedef enum PhoneNumberFormat : int PhoneNumberFormat;
-            } /* PhoneNumberFormatting */
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
+                
                 typedef enum PhoneNumberMatchResult : int PhoneNumberMatchResult;
-            } /* PhoneNumberFormatting */
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
+                
                 typedef enum PhoneNumberParseResult : int PhoneNumberParseResult;
-            } /* PhoneNumberFormatting */
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
+                
                 typedef enum PredictedPhoneNumberKind : int PredictedPhoneNumberKind;
-            } /* PhoneNumberFormatting */
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
+
+
+
+
+
 
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 class PhoneNumberFormatter;
-            } /* PhoneNumberFormatting */
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
+
 
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
                 class PhoneNumberInfo;
-            } /* PhoneNumberFormatting */
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
+
+
+
+
+
 
 /*
  *
@@ -264,12 +287,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
+                /* [v1_enum, contract] */
                 enum PhoneNumberFormat : int
                 {
                     PhoneNumberFormat_E164 = 0,
@@ -277,11 +303,12 @@ namespace ABI {
                     PhoneNumberFormat_National = 2,
                     PhoneNumberFormat_Rfc3966 = 3,
                 };
-            } /* PhoneNumberFormatting */
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -289,12 +316,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
+                /* [v1_enum, contract] */
                 enum PhoneNumberMatchResult : int
                 {
                     PhoneNumberMatchResult_NoMatch = 0,
@@ -302,11 +332,12 @@ namespace ABI {
                     PhoneNumberMatchResult_NationalSignificantNumberMatch = 2,
                     PhoneNumberMatchResult_ExactMatch = 3,
                 };
-            } /* PhoneNumberFormatting */
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -314,12 +345,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
+                /* [v1_enum, contract] */
                 enum PhoneNumberParseResult : int
                 {
                     PhoneNumberParseResult_Valid = 0,
@@ -328,11 +362,12 @@ namespace ABI {
                     PhoneNumberParseResult_TooShort = 3,
                     PhoneNumberParseResult_TooLong = 4,
                 };
-            } /* PhoneNumberFormatting */
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -340,12 +375,15 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
+                /* [v1_enum, contract] */
                 enum PredictedPhoneNumberKind : int
                 {
                     PredictedPhoneNumberKind_FixedLine = 0,
@@ -361,11 +399,12 @@ namespace ABI {
                     PredictedPhoneNumberKind_Voicemail = 10,
                     PredictedPhoneNumberKind_Unknown = 11,
                 };
-            } /* PhoneNumberFormatting */
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -373,7 +412,9 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -384,42 +425,44 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
-                MIDL_INTERFACE("1556b49e-bad4-4b4a-900d-4407adb7c981")
-                IPhoneNumberFormatter : public IInspectable
+                /* [object, uuid("1556B49E-BAD4-4B4A-900D-4407ADB7C981"), exclusiveto, contract] */
+                MIDL_INTERFACE("1556B49E-BAD4-4B4A-900D-4407ADB7C981")
+                IPhoneNumberFormatter : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE Format(
-                        ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo* number,
-                        HSTRING* result
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE Format(
+                        /* [in] */__RPC__in_opt ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo * number,
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE FormatWithOutputFormat(
-                        ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo* number,
-                        ABI::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat numberFormat,
-                        HSTRING* result
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE FormatWithOutputFormat(
+                        /* [in] */__RPC__in_opt ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo * number,
+                        /* [in] */ABI::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat numberFormat,
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE FormatPartialString(
-                        HSTRING number,
-                        HSTRING* result
+                        /* [in] */__RPC__in HSTRING number,
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE FormatString(
-                        HSTRING number,
-                        HSTRING* result
+                        /* [in] */__RPC__in HSTRING number,
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE FormatStringWithLeftToRightMarkers(
-                        HSTRING number,
-                        HSTRING* result
+                        /* [in] */__RPC__in HSTRING number,
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPhoneNumberFormatter = _uuidof(IPhoneNumberFormatter);
-            } /* PhoneNumberFormatting */
+                extern MIDL_CONST_ID IID & IID_IPhoneNumberFormatter=_uuidof(IPhoneNumberFormatter);
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -427,7 +470,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -438,38 +483,40 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
-                MIDL_INTERFACE("5ca6f931-84d9-414b-ab4e-a0552c878602")
-                IPhoneNumberFormatterStatics : public IInspectable
+                /* [object, uuid("5CA6F931-84D9-414B-AB4E-A0552C878602"), exclusiveto, contract] */
+                MIDL_INTERFACE("5CA6F931-84D9-414B-AB4E-A0552C878602")
+                IPhoneNumberFormatterStatics : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE TryCreate(
-                        HSTRING regionCode,
-                        ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter** phoneNumber
+                        /* [in] */__RPC__in HSTRING regionCode,
+                        /* [out] */__RPC__deref_out_opt ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberFormatter * * phoneNumber
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetCountryCodeForRegion(
-                        HSTRING regionCode,
-                        INT32* result
+                        /* [in] */__RPC__in HSTRING regionCode,
+                        /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetNationalDirectDialingPrefixForRegion(
-                        HSTRING regionCode,
-                        boolean stripNonDigit,
-                        HSTRING* result
+                        /* [in] */__RPC__in HSTRING regionCode,
+                        /* [in] */boolean stripNonDigit,
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE WrapWithLeftToRightMarkers(
-                        HSTRING number,
-                        HSTRING* result
+                        /* [in] */__RPC__in HSTRING number,
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPhoneNumberFormatterStatics = _uuidof(IPhoneNumberFormatterStatics);
-            } /* PhoneNumberFormatting */
+                extern MIDL_CONST_ID IID & IID_IPhoneNumberFormatterStatics=_uuidof(IPhoneNumberFormatterStatics);
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -477,7 +524,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -488,46 +537,48 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
-                MIDL_INTERFACE("1c7ce4dd-c8b4-4ea3-9aef-b342e2c5b417")
-                IPhoneNumberInfo : public IInspectable
+                /* [object, uuid("1C7CE4DD-C8B4-4EA3-9AEF-B342E2C5B417"), exclusiveto, contract] */
+                MIDL_INTERFACE("1C7CE4DD-C8B4-4EA3-9AEF-B342E2C5B417")
+                IPhoneNumberInfo : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_CountryCode(
-                        INT32* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CountryCode(
+                        /* [retval, out] */__RPC__out INT32 * value
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_PhoneNumber(
-                        HSTRING* value
+                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PhoneNumber(
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetLengthOfGeographicalAreaCode(
-                        INT32* result
+                        /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetNationalSignificantNumber(
-                        HSTRING* result
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetLengthOfNationalDestinationCode(
-                        INT32* result
+                        /* [retval, out] */__RPC__out INT32 * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE PredictNumberKind(
-                        ABI::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind* result
+                        /* [retval, out] */__RPC__out ABI::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetGeographicRegionCode(
-                        HSTRING* result
+                        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE CheckNumberMatch(
-                        ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo* otherNumber,
-                        ABI::Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult* result
+                        /* [in] */__RPC__in_opt ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo * otherNumber,
+                        /* [retval, out] */__RPC__out ABI::Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult * result
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPhoneNumberInfo = _uuidof(IPhoneNumberInfo);
-            } /* PhoneNumberFormatting */
+                extern MIDL_CONST_ID IID & IID_IPhoneNumberInfo=_uuidof(IPhoneNumberInfo);
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -535,7 +586,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -546,25 +599,27 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
-                MIDL_INTERFACE("8202b964-adaa-4cff-8fcf-17e7516a28ff")
-                IPhoneNumberInfoFactory : public IInspectable
+                /* [object, uuid("8202B964-ADAA-4CFF-8FCF-17E7516A28FF"), exclusiveto, contract] */
+                MIDL_INTERFACE("8202B964-ADAA-4CFF-8FCF-17E7516A28FF")
+                IPhoneNumberInfoFactory : IInspectable
                 {
-                public:
                     virtual HRESULT STDMETHODCALLTYPE Create(
-                        HSTRING number,
-                        ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo** result
+                        /* [in] */__RPC__in HSTRING number,
+                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo * * result
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPhoneNumberInfoFactory = _uuidof(IPhoneNumberInfoFactory);
-            } /* PhoneNumberFormatting */
+                extern MIDL_CONST_ID IID & IID_IPhoneNumberInfoFactory=_uuidof(IPhoneNumberInfoFactory);
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -572,7 +627,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -583,38 +640,41 @@ namespace ABI {
     namespace Windows {
         namespace Globalization {
             namespace PhoneNumberFormatting {
-                MIDL_INTERFACE("5b3f4f6a-86a9-40e9-8649-6d61161928d4")
-                IPhoneNumberInfoStatics : public IInspectable
+                /* [object, uuid("5B3F4F6A-86A9-40E9-8649-6D61161928D4"), exclusiveto, contract] */
+                MIDL_INTERFACE("5B3F4F6A-86A9-40E9-8649-6D61161928D4")
+                IPhoneNumberInfoStatics : IInspectable
                 {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE TryParse(
-                        HSTRING input,
-                        ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo** phoneNumber,
-                        ABI::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult* result
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryParse(
+                        /* [in] */__RPC__in HSTRING input,
+                        /* [out] */__RPC__deref_out_opt ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo * * phoneNumber,
+                        /* [retval, out] */__RPC__out ABI::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult * result
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE TryParseWithRegion(
-                        HSTRING input,
-                        HSTRING regionCode,
-                        ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo** phoneNumber,
-                        ABI::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult* result
+                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE TryParseWithRegion(
+                        /* [in] */__RPC__in HSTRING input,
+                        /* [in] */__RPC__in HSTRING regionCode,
+                        /* [out] */__RPC__deref_out_opt ABI::Windows::Globalization::PhoneNumberFormatting::IPhoneNumberInfo * * phoneNumber,
+                        /* [retval, out] */__RPC__out ABI::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult * result
                         ) = 0;
+                    
                 };
 
-                extern MIDL_CONST_ID IID& IID_IPhoneNumberInfoStatics = _uuidof(IPhoneNumberInfoStatics);
-            } /* PhoneNumberFormatting */
+                extern MIDL_CONST_ID IID & IID_IPhoneNumberInfoStatics=_uuidof(IPhoneNumberInfoStatics);
+                
+            } /* Windows */
         } /* Globalization */
-    } /* Windows */
-} /* ABI */
+    } /* PhoneNumberFormatting */} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
  * Class Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -631,17 +691,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 #ifndef RUNTIMECLASS_Windows_Globalization_PhoneNumberFormatting_PhoneNumberFormatter_DEFINED
 #define RUNTIMECLASS_Windows_Globalization_PhoneNumberFormatting_PhoneNumberFormatter_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Globalization_PhoneNumberFormatting_PhoneNumberFormatter[] = L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+
 /*
  *
  * Class Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -659,11 +722,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 #ifndef RUNTIMECLASS_Windows_Globalization_PhoneNumberFormatting_PhoneNumberInfo_DEFINED
 #define RUNTIMECLASS_Windows_Globalization_PhoneNumberFormatting_PhoneNumberInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Globalization_PhoneNumberFormatting_PhoneNumberInfo[] = L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -697,23 +764,38 @@ typedef interface __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhone
 
 #endif // ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_FWD_DEFINED__
 
-// Parameterized interface forward declarations (C)
-
-// Collection interface definitions
-
 #ifndef ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CFoundation_CIStringable __x_ABI_CWindows_CFoundation_CIStringable;
 
 #endif // ____x_ABI_CWindows_CFoundation_CIStringable_FWD_DEFINED__
 
+
+
+
+
+
 typedef enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberFormat __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberFormat;
+
 
 typedef enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberMatchResult __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberMatchResult;
 
+
 typedef enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberParseResult __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberParseResult;
 
+
 typedef enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPredictedPhoneNumberKind __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPredictedPhoneNumberKind;
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  *
@@ -721,8 +803,11 @@ typedef enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPredictedPh
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberFormat
 {
     PhoneNumberFormat_E164 = 0,
@@ -732,14 +817,18 @@ enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberFormat
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+
 /*
  *
  * Struct Windows.Globalization.PhoneNumberFormatting.PhoneNumberMatchResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberMatchResult
 {
     PhoneNumberMatchResult_NoMatch = 0,
@@ -749,14 +838,18 @@ enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberMatchRes
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+
 /*
  *
  * Struct Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberParseResult
 {
     PhoneNumberParseResult_Valid = 0,
@@ -767,14 +860,18 @@ enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberParseRes
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+
 /*
  *
  * Struct Windows.Globalization.PhoneNumberFormatting.PredictedPhoneNumberKind
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  */
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPredictedPhoneNumberKind
 {
     PredictedPhoneNumberKind_FixedLine = 0,
@@ -792,100 +889,133 @@ enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPredictedPhoneNumbe
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+
 /*
  *
  * Interface Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatter[] = L"Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatter";
+/* [object, uuid("1556B49E-BAD4-4B4A-900D-4407ADB7C981"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* Format)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This,
-        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* number,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* FormatWithOutputFormat)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This,
-        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* number,
-        enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberFormat numberFormat,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* FormatPartialString)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This,
-        HSTRING number,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* FormatString)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This,
-        HSTRING number,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* FormatStringWithLeftToRightMarkers)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter* This,
-        HSTRING number,
-        HSTRING* result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [overload] */HRESULT ( STDMETHODCALLTYPE *Format )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * number,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *FormatWithOutputFormat )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * number,
+        /* [in] */__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberFormat numberFormat,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *FormatPartialString )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This,
+        /* [in] */__RPC__in HSTRING number,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *FormatString )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This,
+        /* [in] */__RPC__in HSTRING number,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *FormatStringWithLeftToRightMarkers )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * This,
+        /* [in] */__RPC__in HSTRING number,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterVtbl;
 
 interface __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_Format(This, number, result) \
-    ((This)->lpVtbl->Format(This, number, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_Format(This,number,result) \
+    ( (This)->lpVtbl->Format(This,number,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FormatWithOutputFormat(This, number, numberFormat, result) \
-    ((This)->lpVtbl->FormatWithOutputFormat(This, number, numberFormat, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FormatWithOutputFormat(This,number,numberFormat,result) \
+    ( (This)->lpVtbl->FormatWithOutputFormat(This,number,numberFormat,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FormatPartialString(This, number, result) \
-    ((This)->lpVtbl->FormatPartialString(This, number, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FormatPartialString(This,number,result) \
+    ( (This)->lpVtbl->FormatPartialString(This,number,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FormatString(This, number, result) \
-    ((This)->lpVtbl->FormatString(This, number, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FormatString(This,number,result) \
+    ( (This)->lpVtbl->FormatString(This,number,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FormatStringWithLeftToRightMarkers(This, number, result) \
-    ((This)->lpVtbl->FormatStringWithLeftToRightMarkers(This, number, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_FormatStringWithLeftToRightMarkers(This,number,result) \
+    ( (This)->lpVtbl->FormatStringWithLeftToRightMarkers(This,number,result) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -893,88 +1023,118 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberFormatterStatics[] = L"Windows.Globalization.PhoneNumberFormatting.IPhoneNumberFormatterStatics";
+/* [object, uuid("5CA6F931-84D9-414B-AB4E-A0552C878602"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* TryCreate)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This,
-        HSTRING regionCode,
-        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter** phoneNumber);
-    HRESULT (STDMETHODCALLTYPE* GetCountryCodeForRegion)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This,
-        HSTRING regionCode,
-        INT32* result);
-    HRESULT (STDMETHODCALLTYPE* GetNationalDirectDialingPrefixForRegion)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This,
-        HSTRING regionCode,
-        boolean stripNonDigit,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* WrapWithLeftToRightMarkers)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics* This,
-        HSTRING number,
-        HSTRING* result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *TryCreate )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This,
+        /* [in] */__RPC__in HSTRING regionCode,
+        /* [out] */__RPC__deref_out_opt __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatter * * phoneNumber
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetCountryCodeForRegion )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This,
+        /* [in] */__RPC__in HSTRING regionCode,
+        /* [retval, out] */__RPC__out INT32 * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetNationalDirectDialingPrefixForRegion )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This,
+        /* [in] */__RPC__in HSTRING regionCode,
+        /* [in] */boolean stripNonDigit,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *WrapWithLeftToRightMarkers )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics * This,
+        /* [in] */__RPC__in HSTRING number,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStaticsVtbl;
 
 interface __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_TryCreate(This, regionCode, phoneNumber) \
-    ((This)->lpVtbl->TryCreate(This, regionCode, phoneNumber))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_TryCreate(This,regionCode,phoneNumber) \
+    ( (This)->lpVtbl->TryCreate(This,regionCode,phoneNumber) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetCountryCodeForRegion(This, regionCode, result) \
-    ((This)->lpVtbl->GetCountryCodeForRegion(This, regionCode, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetCountryCodeForRegion(This,regionCode,result) \
+    ( (This)->lpVtbl->GetCountryCodeForRegion(This,regionCode,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetNationalDirectDialingPrefixForRegion(This, regionCode, stripNonDigit, result) \
-    ((This)->lpVtbl->GetNationalDirectDialingPrefixForRegion(This, regionCode, stripNonDigit, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_GetNationalDirectDialingPrefixForRegion(This,regionCode,stripNonDigit,result) \
+    ( (This)->lpVtbl->GetNationalDirectDialingPrefixForRegion(This,regionCode,stripNonDigit,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_WrapWithLeftToRightMarkers(This, number, result) \
-    ((This)->lpVtbl->WrapWithLeftToRightMarkers(This, number, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_WrapWithLeftToRightMarkers(This,number,result) \
+    ( (This)->lpVtbl->WrapWithLeftToRightMarkers(This,number,result) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberFormatterStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -982,104 +1142,142 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfo[] = L"Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfo";
+/* [object, uuid("1C7CE4DD-C8B4-4EA3-9AEF-B342E2C5B417"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_CountryCode)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        INT32* value);
-    HRESULT (STDMETHODCALLTYPE* get_PhoneNumber)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        HSTRING* value);
-    HRESULT (STDMETHODCALLTYPE* GetLengthOfGeographicalAreaCode)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        INT32* result);
-    HRESULT (STDMETHODCALLTYPE* GetNationalSignificantNumber)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* GetLengthOfNationalDestinationCode)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        INT32* result);
-    HRESULT (STDMETHODCALLTYPE* PredictNumberKind)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPredictedPhoneNumberKind* result);
-    HRESULT (STDMETHODCALLTYPE* GetGeographicRegionCode)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        HSTRING* result);
-    HRESULT (STDMETHODCALLTYPE* CheckNumberMatch)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* This,
-        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo* otherNumber,
-        enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberMatchResult* result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CountryCode )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+        /* [retval, out] */__RPC__out INT32 * value
+        );
+    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PhoneNumber )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetLengthOfGeographicalAreaCode )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+        /* [retval, out] */__RPC__out INT32 * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetNationalSignificantNumber )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetLengthOfNationalDestinationCode )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+        /* [retval, out] */__RPC__out INT32 * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *PredictNumberKind )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPredictedPhoneNumberKind * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *GetGeographicRegionCode )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+        /* [retval, out] */__RPC__deref_out_opt HSTRING * result
+        );
+    HRESULT ( STDMETHODCALLTYPE *CheckNumberMatch )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * This,
+        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * otherNumber,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberMatchResult * result
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoVtbl;
 
 interface __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_get_CountryCode(This, value) \
-    ((This)->lpVtbl->get_CountryCode(This, value))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_get_CountryCode(This,value) \
+    ( (This)->lpVtbl->get_CountryCode(This,value) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_get_PhoneNumber(This, value) \
-    ((This)->lpVtbl->get_PhoneNumber(This, value))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_get_PhoneNumber(This,value) \
+    ( (This)->lpVtbl->get_PhoneNumber(This,value) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetLengthOfGeographicalAreaCode(This, result) \
-    ((This)->lpVtbl->GetLengthOfGeographicalAreaCode(This, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetLengthOfGeographicalAreaCode(This,result) \
+    ( (This)->lpVtbl->GetLengthOfGeographicalAreaCode(This,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetNationalSignificantNumber(This, result) \
-    ((This)->lpVtbl->GetNationalSignificantNumber(This, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetNationalSignificantNumber(This,result) \
+    ( (This)->lpVtbl->GetNationalSignificantNumber(This,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetLengthOfNationalDestinationCode(This, result) \
-    ((This)->lpVtbl->GetLengthOfNationalDestinationCode(This, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetLengthOfNationalDestinationCode(This,result) \
+    ( (This)->lpVtbl->GetLengthOfNationalDestinationCode(This,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_PredictNumberKind(This, result) \
-    ((This)->lpVtbl->PredictNumberKind(This, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_PredictNumberKind(This,result) \
+    ( (This)->lpVtbl->PredictNumberKind(This,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetGeographicRegionCode(This, result) \
-    ((This)->lpVtbl->GetGeographicRegionCode(This, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_GetGeographicRegionCode(This,result) \
+    ( (This)->lpVtbl->GetGeographicRegionCode(This,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_CheckNumberMatch(This, otherNumber, result) \
-    ((This)->lpVtbl->CheckNumberMatch(This, otherNumber, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_CheckNumberMatch(This,otherNumber,result) \
+    ( (This)->lpVtbl->CheckNumberMatch(This,otherNumber,result) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -1087,69 +1285,93 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfoFactory[] = L"Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory";
+/* [object, uuid("8202B964-ADAA-4CFF-8FCF-17E7516A28FF"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactoryVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* Create)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory* This,
-        HSTRING number,
-        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo** result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+HRESULT ( STDMETHODCALLTYPE *Create )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory * This,
+        /* [in] */__RPC__in HSTRING number,
+        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * * result
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactoryVtbl;
 
 interface __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactoryVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactoryVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_Create(This, number, result) \
-    ((This)->lpVtbl->Create(This, number, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_Create(This,number,result) \
+    ( (This)->lpVtbl->Create(This,number,result) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoFactory_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
@@ -1157,84 +1379,111 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
+ *
  * Interface is a part of the implementation of type Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo
+ *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Globalization_PhoneNumberFormatting_IPhoneNumberInfoStatics[] = L"Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoStatics";
+/* [object, uuid("5B3F4F6A-86A9-40E9-8649-6D61161928D4"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStaticsVtbl
 {
     BEGIN_INTERFACE
+    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics * This,
+    /* [in] */ __RPC__in REFIID riid,
+    /* [annotation][iid_is][out] */
+    _COM_Outptr_  void **ppvObject
+    );
 
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* TryParse)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics* This,
-        HSTRING input,
-        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo** phoneNumber,
-        enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberParseResult* result);
-    HRESULT (STDMETHODCALLTYPE* TryParseWithRegion)(__x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics* This,
-        HSTRING input,
-        HSTRING regionCode,
-        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo** phoneNumber,
-        enum __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberParseResult* result);
+ULONG ( STDMETHODCALLTYPE *AddRef )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics * This
+    );
 
+ULONG ( STDMETHODCALLTYPE *Release )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics * This
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetIids )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics * This,
+    /* [out] */ __RPC__out ULONG *iidCount,
+    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics * This,
+    /* [out] */ __RPC__deref_out_opt HSTRING *className
+    );
+
+HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
+    __RPC__in __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics * This,
+    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
+    );
+/* [overload] */HRESULT ( STDMETHODCALLTYPE *TryParse )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics * This,
+        /* [in] */__RPC__in HSTRING input,
+        /* [out] */__RPC__deref_out_opt __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * * phoneNumber,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberParseResult * result
+        );
+    /* [overload] */HRESULT ( STDMETHODCALLTYPE *TryParseWithRegion )(
+        __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics * This,
+        /* [in] */__RPC__in HSTRING input,
+        /* [in] */__RPC__in HSTRING regionCode,
+        /* [out] */__RPC__deref_out_opt __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfo * * phoneNumber,
+        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CPhoneNumberParseResult * result
+        );
     END_INTERFACE
+    
 } __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStaticsVtbl;
 
 interface __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStaticsVtbl* lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStaticsVtbl *lpVtbl;
 };
 
 #ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_QueryInterface(This,riid,ppvObject) \
+( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
+        ( (This)->lpVtbl->AddRef(This) )
 
 #define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_Release(This) \
-    ((This)->lpVtbl->Release(This))
+        ( (This)->lpVtbl->Release(This) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_GetIids(This,iidCount,iids) \
+        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_GetRuntimeClassName(This,className) \
+        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_GetTrustLevel(This,trustLevel) \
+        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_TryParse(This, input, phoneNumber, result) \
-    ((This)->lpVtbl->TryParse(This, input, phoneNumber, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_TryParse(This,input,phoneNumber,result) \
+    ( (This)->lpVtbl->TryParse(This,input,phoneNumber,result) )
 
-#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_TryParseWithRegion(This, input, regionCode, phoneNumber, result) \
-    ((This)->lpVtbl->TryParseWithRegion(This, input, regionCode, phoneNumber, result))
+#define __x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_TryParseWithRegion(This,input,regionCode,phoneNumber,result) \
+    ( (This)->lpVtbl->TryParseWithRegion(This,input,regionCode,phoneNumber,result) )
+
 
 #endif /* COBJMACROS */
+
 
 EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics;
 #endif /* !defined(____x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CIPhoneNumberInfoStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 
 /*
  *
  * Class Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1251,17 +1500,20 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGlobalization_CPhoneNumberFormatting_CI
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 #ifndef RUNTIMECLASS_Windows_Globalization_PhoneNumberFormatting_PhoneNumberFormatter_DEFINED
 #define RUNTIMECLASS_Windows_Globalization_PhoneNumberFormatting_PhoneNumberFormatter_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Globalization_PhoneNumberFormatting_PhoneNumberFormatter[] = L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
+
 /*
  *
  * Class Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
+ *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via the Windows.Globalization.PhoneNumberFormatting.IPhoneNumberInfoFactory interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1279,11 +1531,15 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
 #ifndef RUNTIMECLASS_Windows_Globalization_PhoneNumberFormatting_PhoneNumberInfo_DEFINED
 #define RUNTIMECLASS_Windows_Globalization_PhoneNumberFormatting_PhoneNumberInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Globalization_PhoneNumberFormatting_PhoneNumberInfo[] = L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
+
+
+
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

@@ -69,8 +69,8 @@ interface IRecordInfo;
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family or OneCore Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)")
 
 [
   version(1.0), pointer_default(unique)
@@ -280,7 +280,7 @@ struct tagVARIANT {
                 FLOAT         fltVal;       /* VT_R4                */
                 DOUBLE        dblVal;       /* VT_R8                */
                 VARIANT_BOOL  boolVal;      /* VT_BOOL              */
-                VARIANT_BOOL  /*bool*/__OBSOLETE__VARIANT_BOOL;         /* (obsolete)           */
+                _VARIANT_BOOL bool;         /* (obsolete)           */
                 SCODE         scode;        /* VT_ERROR             */
                 CY            cyVal;        /* VT_CY                */
                 DATE          date;         /* VT_DATE              */
@@ -295,7 +295,7 @@ struct tagVARIANT {
                 FLOAT *       pfltVal;      /* VT_BYREF|VT_R4       */
                 DOUBLE *      pdblVal;      /* VT_BYREF|VT_R8       */
                 VARIANT_BOOL *pboolVal;     /* VT_BYREF|VT_BOOL     */
-                VARIANT_BOOL */*pbool*/__OBSOLETE__VARIANT_PBOOL;        /* (obsolete)           */
+                _VARIANT_BOOL *pbool;       /* (obsolete)           */
                 SCODE *       pscode;       /* VT_BYREF|VT_ERROR    */
                 CY *          pcyVal;       /* VT_BYREF|VT_CY       */
                 DATE *        pdate;        /* VT_BYREF|VT_DATE     */
@@ -748,7 +748,7 @@ typedef struct tagCUSTDATA {
 
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -1053,8 +1053,8 @@ interface ICreateTypeLib2 : ICreateTypeLib
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family or OneCore Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)")
 
 [
     object,
@@ -1247,7 +1247,7 @@ interface ITypeComp : IUnknown
             );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
@@ -1583,8 +1583,8 @@ interface ITypeInfo2 : ITypeInfo
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
-#pragma region Application Family or OneCore Family or Games Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)")
+#pragma region Application Family or OneCore Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)")
 
 [
     object,
@@ -1723,7 +1723,7 @@ interface ITypeLib : IUnknown
             );
 }
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */")
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family or OneCore Family

@@ -750,7 +750,6 @@ STDAPI SetAccessForIEAppContainer(
 #define INET_E_RESERVED_2                            _HRESULT_TYPEDEF_(0x800C001FL)      
 #define INET_E_RESERVED_3                            _HRESULT_TYPEDEF_(0x800C0020L)      
 #define INET_E_RESERVED_4                            _HRESULT_TYPEDEF_(0x800C0021L)      
-#define INET_E_RESERVED_5                            _HRESULT_TYPEDEF_(0x800C0022L)      
 #define INET_E_ERROR_FIRST                           _HRESULT_TYPEDEF_(0x800C0002L)      
 #define INET_E_CODE_DOWNLOAD_DECLINED                _HRESULT_TYPEDEF_(0x800C0100L)      
 #define INET_E_RESULT_DISPATCHED                     _HRESULT_TYPEDEF_(0x800C0200L)      
@@ -1289,8 +1288,8 @@ void __RPC_STUB IBinding_RemoteGetBindResult_Stub(
 #endif
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
-#pragma region Application Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 #ifndef _LPBINDSTATUSCALLBACK_DEFINED
 #define _LPBINDSTATUSCALLBACK_DEFINED
 
@@ -1535,8 +1534,7 @@ enum tagBINDSTATUS
         BINDSTATUS_RESERVED_10	= ( BINDSTATUS_RESERVED_F + 1 ) ,
         BINDSTATUS_RESERVED_11	= ( BINDSTATUS_RESERVED_10 + 1 ) ,
         BINDSTATUS_RESERVED_12	= ( BINDSTATUS_RESERVED_11 + 1 ) ,
-        BINDSTATUS_RESERVED_13	= ( BINDSTATUS_RESERVED_12 + 1 ) ,
-        BINDSTATUS_LAST_PRIVATE	= BINDSTATUS_RESERVED_13
+        BINDSTATUS_LAST_PRIVATE	= BINDSTATUS_RESERVED_12
     } 	BINDSTATUS;
 
 
@@ -1736,7 +1734,7 @@ void __RPC_STUB IBindStatusCallback_RemoteOnDataAvailable_Stub(
 /* [local] */ 
 
 #endif
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
@@ -4980,8 +4978,7 @@ enum tagBINDSTRING
         BINDSTRING_PROXY_USERNAME	= ( BINDSTRING_INITIAL_FILENAME + 1 ) ,
         BINDSTRING_PROXY_PASSWORD	= ( BINDSTRING_PROXY_USERNAME + 1 ) ,
         BINDSTRING_ENTERPRISE_ID	= ( BINDSTRING_PROXY_PASSWORD + 1 ) ,
-        BINDSTRING_DOC_URL	= ( BINDSTRING_ENTERPRISE_ID + 1 ) ,
-        BINDSTRING_SAMESITE_COOKIE_LEVEL	= ( BINDSTRING_DOC_URL + 1 ) 
+        BINDSTRING_DOC_URL	= ( BINDSTRING_ENTERPRISE_ID + 1 ) 
     } 	BINDSTRING;
 
 
@@ -7052,18 +7049,6 @@ enum __MIDL_IInternetSecurityManager_0002
         PUAFOUT_ISLOCKZONEPOLICY	= 0x1
     } 	PUAFOUT;
 
-// Note that for the below function, the semantics of the 'pwszUrl',
-// 'pContext', and 'cbContext' parameters depend on the specific
-// URLACTION_* enum value that is passed for 'dwAction'. For example,
-// when 'dwAction' is URLACTION_HTML_MIXED_CONTENT, 'pwszUrl' will be
-// the target URL of the resource, 'pContext' will be the containing
-// document's IUri* cast to BYTE*, and 'cbContext' will be sizeof(Uri*).
-// When 'dwAction' is URLACTION_CROSS_DOMAIN_DATA, 'pwszUrl' will be
-// the source URL, 'pContext' will be the target PCWSTR cast to BYTE*,
-// and 'cbContext' will be the size of the string including its null
-// terminator. Implementers should use the value of 'dwAction' to
-// correctly interpret the 'pswzUrl', 'pContext' and 'cbContext' for
-// each action type.
 // This is the wrapper function that most clients will use.
 // It figures out the current Policy for the passed in Action,
 // and puts up UI if the current Policy indicates that the user
@@ -7305,7 +7290,6 @@ extern RPC_IF_HANDLE __MIDL_itf_urlmon_0000_0039_v0_0_s_ifspec;
 /* interface IInternetSecurityManagerEx */
 /* [object][unique][helpstring][uuid] */ 
 
-// Please see notes on IInternetSecurityManager::ProcessUrlAction
 // This is the wrapper function that most clients will use.
 // It figures out the current Policy for the passed in Action,
 // and puts up UI if the current Policy indicates that the user
@@ -7504,7 +7488,6 @@ extern RPC_IF_HANDLE __MIDL_itf_urlmon_0000_0040_v0_0_s_ifspec;
 /* [object][unique][helpstring][uuid] */ 
 
 
-// Please see notes on IInternetSecurityManager::ProcessUrlAction
 
 
 EXTERN_C const IID IID_IInternetSecurityManagerEx2;
@@ -8055,7 +8038,6 @@ extern RPC_IF_HANDLE __MIDL_itf_urlmon_0000_0043_v0_0_s_ifspec;
 /* interface IInternetHostSecurityManager */
 /* [unique][helpstring][uuid][object][local] */ 
 
-// Please see notes on IInternetSecurityManager::ProcessUrlAction
 
 EXTERN_C const IID IID_IInternetHostSecurityManager;
 

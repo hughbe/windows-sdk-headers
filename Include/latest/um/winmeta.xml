@@ -1,4 +1,5 @@
-﻿<instrumentationManifest
+
+<instrumentationManifest
     xmlns="http://schemas.microsoft.com/win/2004/08/events"
     xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd"
@@ -176,7 +177,6 @@
                  <xmlType name="win:Utf8" value="35" symbol="WINEVENT_OUT_TYPE_UTF8"/>
                  <xmlType name="win:Pkcs7WithTypeInfo" value="36" symbol="WINEVENT_OUT_TYPE_PKCS7_WITH_TYPE_INFO"/>
                  <xmlType name="win:CodePointer" value="37" symbol="WINEVENT_OUT_TYPE_CODE_POINTER"/>
-                 <xmlType name="win:DateTimeUtc" value="38" symbol="WINEVENT_OUT_TYPE_DATE_TIME_UTC"/>
             </xmlTypes>
             <inTypes>
                 <inType name="win:UnicodeString" value="1" symbol="WINEVENT_TYPE_NULL_TERMINATED_STRING">
@@ -259,7 +259,7 @@
                 <inType name="win:Binary" value="14" symbol="WINEVENT_TYPE_BINARY">
                     <description>Variable size binary data.</description>
                     <outType default="true" xmlType="xs:hexBinary"/>
-                    <outType xmlType="win:IPv6">Always 16 bytes.</outType>
+                    <outType xmlType="win:IPv6"/>
                     <outType xmlType="win:SocketAddress"/>
                     <outType xmlType="win:Pkcs7WithTypeInfo">A PKCS#7 message with TraceLogging type information optionally appended immediately after the PKCS#7 data.</outType>
                 </inType>
@@ -271,20 +271,16 @@
                     <description> A pointer; sized to the current platform (32-bit or 64-bit). XML spec: hex representation of a pointer</description>
                     <outType default="true" xmlType="win:HexInt64"/>
                     <outType xmlType="win:CodePointer">An address that can be decoded into a symbol name.</outType>
-                    <outType xmlType="xs:long">Pointer-sized signed integer, e.g. intptr_t.</outType>
-                    <outType xmlType="xs:unsignedLong">Pointer-sized unsigned integer, e.g. uintptr_t.</outType>
                 </inType>
                 <inType name="win:FILETIME" value="17" symbol="WINEVENT_TYPE_FILETIME">
                     <description> A Windows FILETIME struct. </description>
                     <outType default="true" xmlType="xs:dateTime" />
-                    <outType xmlType="win:DateTimeCultureInsensitive"> DateTime string without any marker related with culture (no Left-To-Right markers)</outType>
-                    <outType xmlType="win:DateTimeUtc"> DateTime string formatted assuming the FILETIME is UTC. </outType>
+                    <outType xmlType="win:DateTimeCultureInsensitive"> DateTime string without any marker related with culture. Ex) Left-To-Right</outType>
                 </inType>
                 <inType name="win:SYSTEMTIME" value="18" symbol="WINEVENT_TYPE_SYSTEMTIME">
                     <description> A Windows SYSTEMTIME struct.</description>
                     <outType default="true" xmlType="xs:dateTime" />
-                    <outType xmlType="win:DateTimeCultureInsensitive"> DateTime string without any marker related with culture (no Left-To-Right markers)</outType>
-                    <outType xmlType="win:DateTimeUtc"> DateTime string formatted assuming the SYSTEMTIME is UTC. </outType>
+                    <outType xmlType="win:DateTimeCultureInsensitive"> DateTime string without any marker related with culture. Ex) Left-To-Right</outType>
                 </inType>
                 <inType name="win:SID" value="19" symbol="WINEVENT_TYPE_SID">
                     <description> A self-relative Windows SID structure. XML spec: S-1-0-0.</description>
@@ -302,27 +298,6 @@
                     <description> A hexidecimal representation of an unsigned 64-bit integer. </description>
                     <outType default="true" xmlType="win:HexInt64"/>
                     <outType xmlType="win:CodePointer">An address that can be decoded into a symbol name.</outType>
-                </inType>
-                <inType name="win:CountedUnicodeString" value="22" symbol="WINEVENT_TYPE_COUNTED_STRING">
-                    <description> A 16-bit bytecount followed by a string of 16-bit characters.  Supported in Windows 2018 Fall Update or later. </description>
-                    <outType default="true" xmlType="xs:string">UTF-16LE string</outType>
-                    <outType xmlType="win:Xml">UTF-16LE XML string</outType>
-                    <outType xmlType="win:Json">UTF-16LE JSON string</outType>
-                </inType>
-                <inType name="win:CountedAnsiString" value="23" symbol="WINEVENT_TYPE_COUNTED_ANSI_STRING">
-                    <description> A 16-bit bytecount followed by a string of 8-bit characters.  Supported in Windows 2018 Fall Update or later. </description>
-                    <outType default="true" xmlType="xs:string">ANSI string</outType>
-                    <outType xmlType="win:Xml">XML string; encoding defaults to UTF-8 but may be overridden by an XML encoding attribute</outType>
-                    <outType xmlType="win:Json">UTF-8 JSON string</outType>
-                    <outType xmlType="win:Utf8">UTF-8 string</outType>
-                </inType>
-                <!-- 24 is reserved (TlgInSTRUCT) -->
-                <inType name="win:CountedBinary" value="25" symbol="WINEVENT_TYPE_COUNTED_BINARY">
-                    <description> A 16-bit bytecount followed by binary data. Supported in Windows 2018 Fall Update or later. </description>
-                    <outType default="true" xmlType="xs:hexBinary"/>
-                    <outType xmlType="win:IPv6">Always 16 bytes.</outType>
-                    <outType xmlType="win:SocketAddress"/>
-                    <outType xmlType="win:Pkcs7WithTypeInfo">A PKCS#7 message with TraceLogging type information optionally appended immediately after the PKCS#7 data.</outType>
                 </inType>
             </inTypes>
         </types>

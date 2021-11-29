@@ -430,15 +430,6 @@ class MSFT_VirtualDiskToPhysicalDisk {
 
 
 [ClassVersion( "1.0" ), Association, Abstract, Description(
-    "Association between VirtualDisk and StorageFaultDomain."
-    )]
-class MSFT_VirtualDiskToStorageFaultDomain {
-    [Key] MSFT_VirtualDisk          REF VirtualDisk;
-    [Key] MSFT_StorageFaultDomain   REF StorageFaultDomain;
-};
-
-
-[ClassVersion( "1.0" ), Association, Abstract, Description(
     "Association between VirtualDisk and VirtualDisk Snapshots / Clones"
     )]
 class MSFT_VirtualDiskToVirtualDisk {

@@ -80,8 +80,7 @@ enum tagUpdateAssessmentStatus
         UpdateAssessmentStatus_NotLatestPausedFeature	= ( UpdateAssessmentStatus_NotLatestDeferredQuality + 1 ) ,
         UpdateAssessmentStatus_NotLatestPausedQuality	= ( UpdateAssessmentStatus_NotLatestPausedFeature + 1 ) ,
         UpdateAssessmentStatus_NotLatestManaged	= ( UpdateAssessmentStatus_NotLatestPausedQuality + 1 ) ,
-        UpdateAssessmentStatus_NotLatestUnknown	= ( UpdateAssessmentStatus_NotLatestManaged + 1 ) ,
-        UpdateAssessmentStatus_NotLatestTargetedVersion	= ( UpdateAssessmentStatus_NotLatestUnknown + 1 ) 
+        UpdateAssessmentStatus_NotLatestUnknown	= ( UpdateAssessmentStatus_NotLatestManaged + 1 ) 
     } 	UpdateAssessmentStatus;
 
 typedef struct tagUpdateAssessment

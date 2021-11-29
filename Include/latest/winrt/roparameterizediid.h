@@ -1,4 +1,6 @@
+ 
 // Copyright (C) Microsoft Corporation. All rights reserved.
+
 
 #if defined(_MSC_VER)
 #pragma once
@@ -16,6 +18,22 @@
 #include <apisetcconv.h>
 #include <rpc.h>
 #include <basetyps.h>
+
+/* APISET_NAME: api-ms-win-core-winrt-roparameterizediid-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_ROPARAMETERIXEDIID_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_ROPARAMETERIXEDIID_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
 
 DECLARE_HANDLE(ROPARAMIIDHANDLE);
 //struct ROPARAMIIDHANDLE__; typedef struct ROPARAMIIDHANDLE__ *ROPARAMIIDHANDLE;
@@ -58,6 +76,7 @@ struct IRoSimpleMetaDataBuilder
         UINT32 numArgs) = 0;
 };
 
+
 struct IRoMetaDataLocator
 {
     STDMETHOD(Locate)(
@@ -70,10 +89,10 @@ struct IRoMetaDataLocator
 STDAPI
 RoGetParameterizedTypeInstanceIID(
     UINT32 nameElementCount,
-    _In_reads_(nameElementCount) PCWSTR* nameElements,
-    _In_ const IRoMetaDataLocator& metaDataLocator,
-    _Out_ GUID* iid,
-    _Outptr_opt_ ROPARAMIIDHANDLE* pExtra
+    _In_reads_(nameElementCount) PCWSTR * nameElements,
+    _In_ const IRoMetaDataLocator &metaDataLocator,
+    _Out_ GUID * iid,
+    _Outptr_opt_ ROPARAMIIDHANDLE * pExtra
     );
 
 
@@ -87,6 +106,7 @@ STDAPI_(PCSTR)
 RoParameterizedTypeExtraGetTypeSignature(
     _In_ ROPARAMIIDHANDLE extra
     );
+
 
 
 #ifdef __cplusplus
@@ -104,6 +124,7 @@ namespace Ro
     template <typename Fn>
     Ro::detail::_Locator<Fn> Locator(const Fn& fn);
 } // namespace Ro
+
 
 namespace Ro { namespace detail 
 {

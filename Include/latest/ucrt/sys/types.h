@@ -7,11 +7,7 @@
 //
 #pragma once
 
-#include <corecrt.h>
 
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 #ifndef _INO_T_DEFINED
     #define _INO_T_DEFINED
@@ -46,6 +42,3 @@ _UCRT_DISABLE_CLANG_WARNINGS
         typedef _off_t off_t;
     #endif
 #endif
-
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS

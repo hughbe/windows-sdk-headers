@@ -1,7 +1,11 @@
+ 
+// begin_1_0
+// begin_1_1
 // Copyright (C) Microsoft Corporation. All rights reserved.
 
 #ifndef _ROERROR_H
 #define _ROERROR_H
+
 
 #if defined(_MSC_VER)
 #pragma once
@@ -21,7 +25,26 @@
 
 #include <sdkddkver.h>
 
+
 #if (NTDDI_VERSION >= NTDDI_WIN8)
+
+/* APISET_NAME: api-ms-win-core-winrt-error-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_RO_ERROR_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINBLUE
+#define _APISET_RO_ERROR_VER 0x0101
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_RO_ERROR_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
 
 #ifdef _OLE32_
 #define WINOLEGLOBAL EXTERN_C 
@@ -29,7 +52,12 @@
 #define WINOLEGLOBAL EXTERN_C DECLSPEC_IMPORT
 #endif // _OLE32_
 
+// end_1_0
+// end_1_1
+// begin_1_0
+
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 typedef enum {
@@ -47,7 +75,7 @@ DEFINE_ENUM_FLAG_OPERATORS(RO_ERROR_REPORTING_FLAGS);
 
 STDAPI
 RoGetErrorReportingFlags(
-    _Out_ UINT32* pflags
+    _Out_ UINT32 * pflags
     );
 
 
@@ -61,12 +89,13 @@ RoSetErrorReportingFlags(
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 STDAPI
 RoResolveRestrictedErrorInfoReference(
     _In_ PCWSTR reference,
-    _Outptr_ IRestrictedErrorInfo** ppRestrictedErrorInfo
+    _Outptr_ IRestrictedErrorInfo ** ppRestrictedErrorInfo
     );
 
     
@@ -74,17 +103,18 @@ RoResolveRestrictedErrorInfoReference(
 #pragma endregion
 
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 STDAPI
 SetRestrictedErrorInfo(
-    _In_opt_ IRestrictedErrorInfo* pRestrictedErrorInfo
+    _In_ IRestrictedErrorInfo * pRestrictedErrorInfo
     );
 
 
 STDAPI
 GetRestrictedErrorInfo(
-    _Outptr_result_maybenull_ IRestrictedErrorInfo** ppRestrictedErrorInfo
+    _Outptr_result_maybenull_ IRestrictedErrorInfo ** ppRestrictedErrorInfo
     );
 
 
@@ -310,6 +340,9 @@ namespace ABI
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
+// end_1_0
+// begin_1_1
+
 // The various versions of RoOriginateError will raise and catch a structured exception with an 
 // exception code of EXCEPTION_RO_ORIGINATEERROR and the following information in the 
 // ExceptionInformation array. The characterCount element is the number of characters in the message, 
@@ -332,14 +365,18 @@ namespace ABI
 // retrieve these values by calling WaitForDebugEvent, keeping in mind that exception records have
 // a different binary layout between 32bit and 64bit processes.
 
+
+#if !defined(_CONTRACT_GEN) || (_APISET_RO_ERROR_VER >= 0x0101)
+
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 STDAPI_(BOOL)
 RoOriginateLanguageException(
     _In_ HRESULT error,
     _In_opt_ HSTRING message,
-    _In_opt_ IUnknown* languageException
+    _In_opt_ IUnknown * languageException
     );
 
 
@@ -351,7 +388,7 @@ RoClearError(
 
 STDAPI
 RoReportUnhandledError(
-    _In_ IRestrictedErrorInfo* pRestrictedErrorInfo
+    _In_ IRestrictedErrorInfo * pRestrictedErrorInfo
     );
 
 
@@ -359,6 +396,7 @@ RoReportUnhandledError(
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 typedef HRESULT (WINAPI *PINSPECT_MEMORY_CALLBACK)(
@@ -373,7 +411,7 @@ RoInspectThreadErrorInfo(
     USHORT machine,
     PINSPECT_MEMORY_CALLBACK readMemoryCallback,
     _In_opt_ PVOID context,
-    _Out_ UINT_PTR* targetErrorInfoAddress
+    _Out_ UINT_PTR * targetErrorInfoAddress
     );
 
 
@@ -383,22 +421,22 @@ RoInspectCapturedStackBackTrace(
     USHORT machine,
     PINSPECT_MEMORY_CALLBACK readMemoryCallback,
     _In_opt_ PVOID context,
-    _Out_ UINT32* frameCount,
-    _Out_ UINT_PTR* targetBackTraceAddress
+    _Out_ UINT32 * frameCount,
+    _Out_ UINT_PTR * targetBackTraceAddress
     );
 
 
 STDAPI
 RoGetMatchingRestrictedErrorInfo(
     _In_ HRESULT hrIn,
-    _COM_Outptr_ IRestrictedErrorInfo** ppRestrictedErrorInfo
+    _COM_Outptr_ IRestrictedErrorInfo ** ppRestrictedErrorInfo
     );
 
 
 STDAPI
 RoReportFailedDelegate(
-    _In_ IUnknown* punkDelegate,
-    _In_ IRestrictedErrorInfo* pRestrictedErrorInfo
+    _In_ IUnknown * punkDelegate,
+    _In_ IRestrictedErrorInfo * pRestrictedErrorInfo
     );
 
 
@@ -411,6 +449,14 @@ IsErrorPropagationEnabled(
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion
 
+#endif // !defined(_CONTRACT_GEN) || (_APISET_RO_ERROR_VER >= 0x0101)
+
+// end_1_1
+// begin_1_0
+// begin_1_1
+
 #endif // #if (NTDDI_VERSION >= NTDDI_WIN8)
 
 #endif /* _ROERROR_H */
+// end_1_0
+// end_1_1

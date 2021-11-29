@@ -266,8 +266,6 @@ extern "C"{
 #endif 
 /* interface __MIDL_itf_ado10_0000_0000 */
 /* [local] */ 
-#pragma warning(push) 
-#pragma warning(disable:4091) 
 #if 0
 typedef /* [uuid][public] */  DECLSPEC_UUID("54D8B4B9-663B-4a9c-95F6-0E749ABD70F1") __int64 ADO_LONGPTR;
 typedef /* [uuid][hidden][public] */  DECLSPEC_UUID("54D8B4B9-663B-4a9c-95F6-0E749ABD70F1") long ADO_LONGPTR;
@@ -9026,7 +9024,6 @@ EXTERN_C const IID IID_Properties;
 #endif /* __ADODB_LIBRARY_DEFINED__ */
 /* interface __MIDL_itf_ado10_0000_0001 */
 /* [local] */ 
-#pragma warning(pop) 
 extern RPC_IF_HANDLE __MIDL_itf_ado10_0000_0001_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_ado10_0000_0001_v0_0_s_ifspec;
 /* Additional Prototypes for ALL interfaces */

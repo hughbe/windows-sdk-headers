@@ -228,13 +228,6 @@ typedef interface IMFMuxStreamSampleManager IMFMuxStreamSampleManager;
 #endif 	/* __IMFMuxStreamSampleManager_FWD_DEFINED__ */
 
 
-#ifndef __IMFSecureBuffer_FWD_DEFINED__
-#define __IMFSecureBuffer_FWD_DEFINED__
-typedef interface IMFSecureBuffer IMFSecureBuffer;
-
-#endif 	/* __IMFSecureBuffer_FWD_DEFINED__ */
-
-
 /* header files for imported files */
 #include "unknwn.h"
 #include "propsys.h"
@@ -253,7 +246,7 @@ extern "C"{
 typedef ULONGLONG QWORD;
 
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 typedef 
 enum _MF_ATTRIBUTE_TYPE
     {
@@ -2199,10 +2192,10 @@ EXTERN_C const IID IID_IMFMediaType;
 #define MF_MEDIATYPE_EQUAL_FORMAT_DATA  0x00000004
 #define MF_MEDIATYPE_EQUAL_FORMAT_USER_DATA  0x00000008
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0007_v0_0_c_ifspec;
@@ -2598,22 +2591,22 @@ typedef /* [public] */ struct __MIDL___MIDL_itf_mfobjects_0000_0008_0002
 
 #endif
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 typedef /* [public] */ struct __MIDL___MIDL_itf_mfobjects_0000_0008_0003
     {
     GUID guidMajorType;
     GUID guidSubtype;
     } 	MFT_REGISTER_TYPE_INFO;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #if !defined( _MFVIDEOFORMAT_ )
 #define _MFVIDEOFORMAT_
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 typedef 
 enum _MFVideoInterlaceMode
     {
@@ -2650,8 +2643,7 @@ enum _MFVideoTransferFunction
         MFVideoTransFunc_26	= 14,
         MFVideoTransFunc_2084	= 15,
         MFVideoTransFunc_HLG	= 16,
-        MFVideoTransFunc_10_rel	= 17,
-        MFVideoTransFunc_Last	= ( MFVideoTransFunc_10_rel + 1 ) ,
+        MFVideoTransFunc_Last	= ( MFVideoTransFunc_HLG + 1 ) ,
         MFVideoTransFunc_ForceDWORD	= 0x7fffffff
     } 	MFVideoTransferFunction;
 
@@ -2730,10 +2722,10 @@ enum _MFNominalRange
         MFNominalRange_ForceDWORD	= 0x7fffffff
     } 	MFNominalRange;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 typedef 
 enum _MFVideoFlags
     {
@@ -2759,10 +2751,10 @@ enum _MFVideoFlags
         MFVideoFlags_ForceQWORD	= 0x7fffffff
     } 	MFVideoFlags;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 typedef struct _MFRatio
     {
     DWORD Numerator;
@@ -2782,14 +2774,14 @@ typedef struct _MFVideoArea
     SIZE Area;
     } 	MFVideoArea;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #if defined(_MSC_VER) && (_MSC_VER >= 1600)
 #pragma warning(push)
 #pragma warning(disable:4820) // Disable C4820: padding after data member
 #endif
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 typedef struct _MFVideoInfo
     {
     DWORD dwWidth;
@@ -2809,13 +2801,13 @@ typedef struct _MFVideoInfo
     unsigned __int64 VideoFlags;
     } 	MFVideoInfo;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #if defined(_MSC_VER) && (_MSC_VER >= 1600)
 #pragma warning(pop)
 #endif
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 typedef struct __MFAYUVSample
     {
     BYTE bCrValue;
@@ -2838,14 +2830,14 @@ typedef union _MFPaletteEntry
     MFAYUVSample AYCbCr;
     } 	MFPaletteEntry;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #if defined(_MSC_VER) && (_MSC_VER >= 1600)
 #pragma warning(push)
 #pragma warning(disable:4820) // Disable C4820: padding after data member
 #endif
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 typedef struct _MFVideoSurfaceInfo
     {
     DWORD Format;
@@ -2887,12 +2879,12 @@ enum _MFStandardVideoFormat
         MFStdVideoFormat_ATSC_HD720p	= ( MFStdVideoFormat_ATSC_HD1080i + 1 ) 
     } 	MFStandardVideoFormat;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #endif
 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0008_v0_0_c_ifspec;
@@ -3278,10 +3270,10 @@ EXTERN_C const IID IID_IMFVideoMediaType;
 /* interface __MIDL_itf_mfobjects_0000_0009 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0009_v0_0_c_ifspec;
@@ -3498,10 +3490,10 @@ EXTERN_C const IID IID_IMFAsyncCallback;
 /* interface __MIDL_itf_mfobjects_0000_0011 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0011_v0_0_c_ifspec;
@@ -3612,10 +3604,10 @@ EXTERN_C const IID IID_IMFAsyncCallbackLogging;
 /* interface __MIDL_itf_mfobjects_0000_0012 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 #define MFASYNC_FAST_IO_PROCESSING_CALLBACK 0x00000001
 #define MFASYNC_SIGNAL_CALLBACK 0x00000002
 #define MFASYNC_BLOCKING_CALLBACK 0x00000004
@@ -4277,10 +4269,10 @@ void __RPC_STUB IMFMediaEventGenerator_RemoteEndGetEvent_Stub(
 /* interface __MIDL_itf_mfobjects_0000_0014 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0014_v0_0_c_ifspec;
@@ -4371,10 +4363,10 @@ EXTERN_C const IID IID_IMFRemoteAsyncCallback;
 /* interface __MIDL_itf_mfobjects_0000_0015 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 typedef 
 enum _MFBYTESTREAM_SEEK_ORIGIN
     {
@@ -4723,10 +4715,10 @@ EXTERN_GUID( MF_BYTESTREAM_DLNA_PROFILE_ID, 0xfc35828d, 0x3cb6, 0x460c, 0xa4, 0x
 EXTERN_GUID( MF_BYTESTREAM_EFFECTIVE_URL, 0x9afa0209, 0x89d1, 0x42af, 0x84, 0x56, 0x1d, 0xe6, 0xb5, 0x62, 0xd6, 0x91);
 EXTERN_GUID( MF_BYTESTREAM_TRANSCODED, 0xb6c5c282, 0x4dc9, 0x4db9, 0xab, 0x48, 0xcf, 0x3b, 0x6d, 0x8b, 0xc5, 0xe0 );
 #endif // (WINVER >= _WIN32_WINNT_WIN7) 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 EXTERN_GUID(CLSID_MFByteStreamProxyClassFactory, 0x770e8e77, 0x4916, 0x441c, 0xa9, 0xa7, 0xb3, 0x42, 0xd0, 0xee, 0xbc, 0x71 );
 
 
@@ -4848,10 +4840,10 @@ enum __MIDL___MIDL_itf_mfobjects_0000_0017_0003
         MF_FILEFLAGS_ALLOW_WRITE_SHARING	= 0x2
     } 	MF_FILE_FLAGS;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0017_v0_0_c_ifspec;
@@ -5597,11 +5589,11 @@ EXTERN_C const IID IID_IMFActivate;
 /* interface __MIDL_itf_mfobjects_0000_0021 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #if (WINVER >= _WIN32_WINNT_WIN7) 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 typedef 
 enum _MF_Plugin_Type
     {
@@ -5946,10 +5938,10 @@ EXTERN_C const IID IID_IMFPluginControl2;
 /* interface __MIDL_itf_mfobjects_0000_0023 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 #pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0023_v0_0_c_ifspec;
@@ -6148,12 +6140,12 @@ enum _MF_STREAM_STATE
         MF_STREAM_STATE_RUNNING	= ( MF_STREAM_STATE_PAUSED + 1 ) 
     } 	MF_STREAM_STATE;
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 #endif // (WINVER >= _WIN32_WINNT_WIN7) 
 #pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#if (WINVER >= _WIN32_WINNT_WIN10_RS2)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0024_v0_0_c_ifspec;
@@ -6513,98 +6505,16 @@ EXTERN_C const IID IID_IMFMuxStreamSampleManager;
 #endif 	/* __IMFMuxStreamSampleManager_INTERFACE_DEFINED__ */
 
 
-#ifndef __IMFSecureBuffer_INTERFACE_DEFINED__
-#define __IMFSecureBuffer_INTERFACE_DEFINED__
-
-/* interface IMFSecureBuffer */
-/* [local][uuid][object] */ 
-
-
-EXTERN_C const IID IID_IMFSecureBuffer;
-
-#if defined(__cplusplus) && !defined(CINTERFACE)
-    
-    MIDL_INTERFACE("C1209904-E584-4752-A2D6-7F21693F8B21")
-    IMFSecureBuffer : public IUnknown
-    {
-    public:
-        virtual HRESULT STDMETHODCALLTYPE GetIdentifier( 
-            /* [annotation][out] */ 
-            _Out_  GUID *pGuidIdentifier) = 0;
-        
-    };
-    
-    
-#else 	/* C style interface */
-
-    typedef struct IMFSecureBufferVtbl
-    {
-        BEGIN_INTERFACE
-        
-        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            IMFSecureBuffer * This,
-            /* [in] */ REFIID riid,
-            /* [annotation][iid_is][out] */ 
-            _COM_Outptr_  void **ppvObject);
-        
-        ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            IMFSecureBuffer * This);
-        
-        ULONG ( STDMETHODCALLTYPE *Release )( 
-            IMFSecureBuffer * This);
-        
-        HRESULT ( STDMETHODCALLTYPE *GetIdentifier )( 
-            IMFSecureBuffer * This,
-            /* [annotation][out] */ 
-            _Out_  GUID *pGuidIdentifier);
-        
-        END_INTERFACE
-    } IMFSecureBufferVtbl;
-
-    interface IMFSecureBuffer
-    {
-        CONST_VTBL struct IMFSecureBufferVtbl *lpVtbl;
-    };
-
-    
-
-#ifdef COBJMACROS
-
-
-#define IMFSecureBuffer_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define IMFSecureBuffer_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define IMFSecureBuffer_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define IMFSecureBuffer_GetIdentifier(This,pGuidIdentifier)	\
-    ( (This)->lpVtbl -> GetIdentifier(This,pGuidIdentifier) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif 	/* C style interface */
-
-
-
-
-#endif 	/* __IMFSecureBuffer_INTERFACE_DEFINED__ */
-
-
-/* interface __MIDL_itf_mfobjects_0000_0028 */
+/* interface __MIDL_itf_mfobjects_0000_0027 */
 /* [local] */ 
 
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS2)
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)
+#endif // (WINVER >=_WIN32_WINNT_WIN10_RS2)
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0028_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0028_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0027_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0027_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

@@ -107,29 +107,19 @@ DEFINE_GUID(HV_GUID_LOOPBACK, 0xe0e16197, 0xdd56, 0x4a10, 0x91, 0x95, 0x5e, 0xe7
 //
 // Parent address. Using this VmId connects to the parent partition of the connector.
 // The parent of a virtual machine is its host.
-// The parent of a hosted silo is the VM's host. (passthru)
+// The parent of a container is the container's host.
+// Connecting from a container running in a virtual machine will connect to the VM
+// hosting the container.
 //
 // Listening on this VmId accepts connection from:
-// Inside silos: silo host partition. 
-// Inside hosted silo: host of the VM.
-// Inside VM: VM host.
-// Physical host: Not supported.
+// (Inside containers): Container host.
+// (Inside VM: Container host/ no container): VM host.
+// (Not inside VM: Container host/ no container): Not supported.
 //
 // a42e7cda-d03f-480c-9cc2-a4de20abb878
 //
 DEFINE_GUID(HV_GUID_PARENT, 0xa42e7cda, 0xd03f, 0x480c, 0x9c, 0xc2, 0xa4, 0xde, 0x20, 0xab, 0xb8, 0x78);
 
-//
-// HV_GUID_SILOHOST:
-//
-// Address of a silo's host partition. 
-//
-// The silo host of a hosted silo is the utility VM.
-// The silo host of a silo on a physical host is the physical host.
-//
-// 36bd0c5c-7276-4223-88ba-7d03b654c568
-//
-DEFINE_GUID(HV_GUID_SILOHOST, 0x36bd0c5c, 0x7276, 0x4223, 0x88, 0xba, 0x7d, 0x03, 0xb6, 0x54, 0xc5, 0x68);
 
 //
 // HV_GUID_VSOCK_TEMPLATE:
@@ -175,7 +165,7 @@ typedef struct _HVSOCKET_ADDRESS_INFO
 {
     GUID SystemId;
     GUID VirtualMachineId;
-    GUID SiloId;
+    ULONG CompartmentId;
     ULONG Flags;
 
 } HVSOCKET_ADDRESS_INFO, *PHVSOCKET_ADDRESS_INFO;

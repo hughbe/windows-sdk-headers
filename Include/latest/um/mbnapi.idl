@@ -412,10 +412,6 @@ cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
         MBN_DATA_CLASS_HSUPA  =     0x00000010,
             [helpstring("LTE data class type")]
         MBN_DATA_CLASS_LTE    =     0x00000020,
-            [helpstring("5G_NSA data class type")]
-        MBN_DATA_CLASS_5G_NSA = 0x00000040,
-            [helpstring("5G_SA data class type")]
-        MBN_DATA_CLASS_5G_SA = 0x00000080,
             [helpstring("1XRTT data class type")]
         MBN_DATA_CLASS_1XRTT  =     0x00010000,
             [helpstring("1XEVDO data class type")]
@@ -604,9 +600,7 @@ cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
             [helpstring("Ready State Device Locked type")]
         MBN_READY_STATE_DEVICE_LOCKED,
             [helpstring("Ready State Device Blocked type")]
-        MBN_READY_STATE_DEVICE_BLOCKED,
-            [helpstring("Ready State ESIM With No Profiles")]
-        MBN_READY_STATE_NO_ESIM_PROFILE
+        MBN_READY_STATE_DEVICE_BLOCKED
     } MBN_READY_STATE;
 
     typedef 

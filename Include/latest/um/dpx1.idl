@@ -29,21 +29,6 @@ interface IEnumDpxContainers;
 interface IEnumDpxFiles;
 interface IEnumDpxContainerDirectoryEntries;
 
-typedef unsigned LOCATIONTYPE;
-
-const unsigned LOCATIONTYPE_UNKNOWN = 0x00000000;
-const unsigned LOCATIONTYPE_NONE = 0x01000000;
-const unsigned LOCATIONTYPE_LOCAL = 0x02000000;
-const unsigned LOCATIONTYPE_CAB = 0x03000000;
-const unsigned LOCATIONTYPE_CMI = 0x04000000;
-const unsigned LOCATIONTYPE__MASK_FLAGS = 0x0000FFFF;
-const unsigned LOCATIONTYPE_RECURSIVE = 0x00000001;
-const unsigned LOCATIONTYPE_ABSOLUTE = 0x00000002;
-const unsigned LOCATIONTYPE_COMPRESSED = 0x00000004;
-const unsigned LOCATIONTYPE_IGNORE = 0x00000008;
-const unsigned LOCATIONTYPE_DUPLICATE = 0x00000010;
-const unsigned LOCATIONTYPE_INTERMEDIATE = 0x00000020;
-const unsigned LOCATIONTYPE__MASK_TYPE = 0xFFFF0000;
 
 typedef enum
 {
@@ -124,8 +109,6 @@ cpp_quote( "#define DPX_CLEANUP_OPTION_NAME L\"postprocess_source_cleanup\"" )
 
 #define DPX_COMPRESSION_ALGORITHM_XPRESS_HUFF L"xpress_huff"
 cpp_quote( "#define DPX_COMPRESSION_ALGORITHM_XPRESS_HUFF L\"xpress_huff\"" )
-#define DPX_COMPRESSION_ALGORITHM_WOF_PROVIDER_FILE L"wof_provider_file"
-cpp_quote( "#define DPX_COMPRESSION_ALGORITHM_WOF_PROVIDER_FILE L\"wof_provider_file\"" )
 
 #define DPX_COMPRESSED_FILE_HEADER_LENGTH 4
 cpp_quote( "#define DPX_COMPRESSED_FILE_HEADER_LENGTH 4" )
@@ -138,16 +121,6 @@ cpp_quote( "#define DPX_XPRESS_HUFF_BLOCK_SIZE (1024 * 1024)" )
 
 #define DPX_OPTION_TELEMETRY_CORRELATION_VECTOR L"Telemetry_correlation_vector"
 cpp_quote("#define DPX_OPTION_TELEMETRY_CORRELATION_VECTOR L\"Telemetry_correlation_vector\"")
-
-#define DPX_OPTION_HASH_TYPE L"cix_hash_type"
-cpp_quote( "#define DPX_OPTION_HASH_TYPE L\"cix_hash_type\"" )
-
-#define DPX_OPTION_HARDLINK_ASSETS L"hardlink_assets"
-cpp_quote("#define DPX_OPTION_HARDLINK_ASSETS L\"hardlink_assets\"")
-
-#define DPX_OPTION_COMPLETE_SELF_COPIES L"complete_self_copies"
-cpp_quote("#define DPX_OPTION_COMPLETE_SELF_COPIES L\"complete_self_copies\"")
-
 
 [ uuid( ddc1b711-0e55-452f-838e-d1505b866e2b ), object, pointer_default( unique ) ]
 interface IDpxJob : IUnknown
@@ -289,56 +262,6 @@ interface IDpxJob : IUnknown
 
 }
 
-cpp_quote("#ifdef __cplusplus")
-
-cpp_quote("enum class DPX_FILE_PROVIDER_QUERY_DISPOSITION")
-cpp_quote("{")
-cpp_quote("    Invalid = 0,")
-cpp_quote("    Success = 1,")
-cpp_quote("    Compressed = 2")
-cpp_quote("};")
-
-cpp_quote("#else")
-
-typedef enum tagDPX_FILE_PROVIDER_QUERY_DISPOSITION
-{
-    DPX_FILE_PROVIDER_QUERY_DISPOSITION_INVALID = 0,
-    DPX_FILE_PROVIDER_QUERY_DISPOSITION_SUCCESS = 1,
-    DPX_FILE_PROVIDER_QUERY_DISPOSITION_COMPRESSED = 2,
-} DPX_FILE_PROVIDER_QUERY_DISPOSITION;
-
-cpp_quote("#endif")
-
-[uuid(e9a288f7-bcfb-4466-95c6-5a388263d8fb), object, pointer_default(unique)]
-interface IFileHashProviderCallback : IUnknown
-{
-    //
-    // Caller retrieves a hash for a given file at the given path.
-    // The input parameters is an Absolute file path and a algorithm type.
-    // The output parameters are the disposition and the value of the hash queried.
-    //
-    HRESULT GetFileHash(
-        [in] LPCWSTR FilePath,
-        [in] ALG_ID algId,
-        [out] DPX_FILE_PROVIDER_QUERY_DISPOSITION* pDisposition,
-        [in] UINT cbHashData,
-        [out, size_is(cbHashData)] BYTE pbHashData[]
-    );
-};
-
-[uuid(e1c292c8-919a-4f1b-b85a-9c542932fc8d), object, pointer_default(unique)]
-interface IDpxJob2 : IDpxJob
-{
-    //
-    // Caller uses this to set the location type on the provider.
-    // The input parameters is the location type and 
-    // a pointer to IFileHashProviderCallback.
-    //
-    HRESULT SetInventoryProvider(
-        [in] LOCATIONTYPE locationType,
-        [in] IFileHashProviderCallback* pProvider
-    );
-};
 
 [ uuid( ddc1b712-0e55-452f-838e-d1505b866e2b ), object, pointer_default(unique) ]
 interface IDpxContainer : IUnknown

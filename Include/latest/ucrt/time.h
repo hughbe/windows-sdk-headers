@@ -6,15 +6,10 @@
 // The C Standard Library <time.h> header.
 //
 #pragma once
-#ifndef _INC_TIME // include guard for 3rd party interop
 #define _INC_TIME
 
 #include <corecrt.h>
 #include <corecrt_wtime.h>
-
-#pragma warning(push)
-#pragma warning(disable: _UCRT_DISABLED_WARNINGS)
-_UCRT_DISABLE_CLANG_WARNINGS
 
 _CRT_BEGIN_C_HEADER
 
@@ -375,7 +370,10 @@ _ACRTIMP int __cdecl _timespec64_get(
             _In_ time_t const* const _Time
             )
         {
+            #pragma warning(push)
+            #pragma warning(disable: 4996)
             return _ctime32(_Time);
+            #pragma warning(pop)
         }
 
         _Check_return_
@@ -392,7 +390,10 @@ _ACRTIMP int __cdecl _timespec64_get(
             _In_ time_t const* const _Time
             )
         {
+            #pragma warning(push)
+            #pragma warning(disable: 4996)
             return _gmtime32(_Time);
+            #pragma warning(pop)
         }
 
         _Check_return_ _CRT_INSECURE_DEPRECATE(localtime_s)
@@ -400,7 +401,10 @@ _ACRTIMP int __cdecl _timespec64_get(
             _In_ time_t const* const _Time
             )
         {
+            #pragma warning(push)
+            #pragma warning(disable: 4996)
             return _localtime32(_Time);
+            #pragma warning(pop)
         }
 
         _Check_return_
@@ -472,7 +476,10 @@ _ACRTIMP int __cdecl _timespec64_get(
             _In_ time_t const* const _Time
             )
         {
+            #pragma warning(push)
+            #pragma warning(disable: 4996)
             return _ctime64(_Time);
+            #pragma warning(pop)
         }
 
         _Check_return_
@@ -488,7 +495,10 @@ _ACRTIMP int __cdecl _timespec64_get(
         static __inline struct tm* __CRTDECL gmtime(
             _In_ time_t const* const _Time)
         {
+            #pragma warning(push)
+            #pragma warning(disable: 4996)
             return _gmtime64(_Time);
+            #pragma warning(pop)
         }
 
         _CRT_INSECURE_DEPRECATE(localtime_s)
@@ -496,7 +506,10 @@ _ACRTIMP int __cdecl _timespec64_get(
             _In_ time_t const* const _Time
             )
         {
+            #pragma warning(push)
+            #pragma warning(disable: 4996)
             return _localtime64(_Time);
+            #pragma warning(pop)
         }
 
         _Check_return_
@@ -572,7 +585,7 @@ _ACRTIMP int __cdecl _timespec64_get(
 // Non-ANSI Names for Compatibility
 //
 //-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-#if defined(_CRT_INTERNAL_NONSTDC_NAMES) && _CRT_INTERNAL_NONSTDC_NAMES
+#if _CRT_INTERNAL_NONSTDC_NAMES
 
     #define CLK_TCK CLOCKS_PER_SEC
 
@@ -585,6 +598,3 @@ _ACRTIMP int __cdecl _timespec64_get(
 
 
 _CRT_END_C_HEADER
-_UCRT_RESTORE_CLANG_WARNINGS
-#pragma warning(pop) // _UCRT_DISABLED_WARNINGS
-#endif // _INC_TIME

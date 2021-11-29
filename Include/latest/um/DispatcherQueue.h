@@ -2,7 +2,7 @@
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
 //
-// DispatcherQueue.h
+// DispatcherQueue.h 
 //
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 //
@@ -48,7 +48,7 @@ struct DispatcherQueueOptions
 //     This is Win32 API to create a DispatcherQueueController instance. 
 //     Passed in options will be required to configure the type of 
 //     instance being created.
-//
+//     
 //     If the options.threadType = DQTYPE_THREAD_DEDICATED then,
 //     DispatcherQueueController will be created on the dedicated thread. As part
 //     of the API we will also create the thread and create this object

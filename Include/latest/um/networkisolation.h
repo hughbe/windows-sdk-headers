@@ -1,3 +1,4 @@
+ 
 /********************************************************************************
 *                                                                               *
 * netiso.h -- ApiSet Contract for api-ms-win-netsec-isolation-l1                *
@@ -16,6 +17,24 @@
 #include <minwindef.h>
 #include <minwinbase.h>
 
+/* APISET_NAME: api-ms-win-net-isolation-l1 */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_NETISO_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WINBLUE
+#define _APISET_NETISO_VER 0x0101
+#elif _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN8
+#define _APISET_NETISO_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
+
 #if NTDDI_VERSION >= NTDDI_WIN8
 
 #ifdef __cplusplus
@@ -23,6 +42,7 @@ extern "C" {
 #endif
 
 #pragma region Desktop Family or Firewall Package
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_PKG_MPSSVC)
 
 #ifndef __NET_ISOLATION_TYPES__
@@ -105,7 +125,7 @@ NetworkIsolationSetupAppContainerBinaries(
     _In_ LPCWSTR packageFolder,
     _In_ LPCWSTR displayName,
     _In_ BOOL bBinariesFullyComputed,
-    _In_reads_(binariesCount) LPCWSTR* binaries,
+    _In_reads_(binariesCount) LPCWSTR * binaries,
     _In_ DWORD binariesCount
     );
 
@@ -116,7 +136,7 @@ NetworkIsolationRegisterForAppContainerChanges(
     _In_ DWORD flags,
     _In_ PAC_CHANGES_CALLBACK_FN callback,
     _In_opt_ PVOID context,
-    _Out_ HANDLE* registrationObject
+    _Out_ HANDLE * registrationObject
     );
 
 
@@ -146,16 +166,16 @@ DWORD
 WINAPI
 NetworkIsolationEnumAppContainers(
     DWORD Flags,
-    _Out_ DWORD* pdwNumPublicAppCs,
-    _Outptr_result_buffer_(*pdwNumPublicAppCs) PINET_FIREWALL_APP_CONTAINER* ppPublicAppCs
+    _Out_ DWORD * pdwNumPublicAppCs,
+    _Outptr_result_buffer_(*pdwNumPublicAppCs) PINET_FIREWALL_APP_CONTAINER * ppPublicAppCs
     );
 
 
 DWORD
 WINAPI
 NetworkIsolationGetAppContainerConfig(
-    _Out_ DWORD* pdwNumPublicAppCs,
-    _Outptr_result_buffer_(*pdwNumPublicAppCs) PSID_AND_ATTRIBUTES* appContainerSids
+    _Out_ DWORD * pdwNumPublicAppCs,
+    _Outptr_result_buffer_(*pdwNumPublicAppCs) PSID_AND_ATTRIBUTES * appContainerSids
     );
 
 
@@ -179,17 +199,22 @@ typedef enum _NETISO_ERROR_TYPE
 } NETISO_ERROR_TYPE;
 #endif //__NET_ISOLATION_DIAG_TYPES__
 
+
+#if !defined(_CONTRACT_GEN) || (_APISET_NETISO_VER >= 0x0101)
+
 DWORD
 NetworkIsolationDiagnoseConnectFailure(
     __in LPCWSTR wszServerName
     );
 
 
+#endif // !defined(_CONTRACT_GEN) || (_APISET_NETISO_VER >= 0x0101)
+
 DWORD
 WINAPI
 NetworkIsolationDiagnoseConnectFailureAndGetInfo(
     _In_ LPCWSTR wszServerName,
-    _Out_ NETISO_ERROR_TYPE* netIsoError
+    _Out_ NETISO_ERROR_TYPE * netIsoError
     );
 
 

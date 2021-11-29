@@ -79,7 +79,8 @@ cpp_quote( "#if !defined( D3D11_NO_HELPERS ) && defined( __cplusplus )" )
 cpp_quote( "}" ) // extern C
 cpp_quote( "struct CD3D11_BLEND_DESC1 : public D3D11_BLEND_DESC1" )
 cpp_quote( "{" )
-cpp_quote( "    CD3D11_BLEND_DESC1() = default;" )
+cpp_quote( "    CD3D11_BLEND_DESC1()" )
+cpp_quote( "    {}" )
 cpp_quote( "    explicit CD3D11_BLEND_DESC1( const D3D11_BLEND_DESC1& o ) :" )
 cpp_quote( "        D3D11_BLEND_DESC1( o )" )
 cpp_quote( "    {}" )
@@ -99,6 +100,7 @@ cpp_quote( "        for (UINT i = 0; i < D3D11_SIMULTANEOUS_RENDER_TARGET_COUNT;
 cpp_quote( "            RenderTarget[ i ] = defaultRenderTargetBlendDesc;" )
 cpp_quote( "    }" )
 cpp_quote( "    ~CD3D11_BLEND_DESC1() {}" )
+cpp_quote( "    operator const D3D11_BLEND_DESC1&() const { return *this; }" )
 cpp_quote( "};" )
 cpp_quote( "extern \"C\"{" )
 cpp_quote( "#endif" )
@@ -130,7 +132,8 @@ cpp_quote( "#if !defined( D3D11_NO_HELPERS ) && defined( __cplusplus )" )
 cpp_quote( "}" ) // extern C
 cpp_quote( "struct CD3D11_RASTERIZER_DESC1 : public D3D11_RASTERIZER_DESC1" )
 cpp_quote( "{" )
-cpp_quote( "    CD3D11_RASTERIZER_DESC1() = default;" )
+cpp_quote( "    CD3D11_RASTERIZER_DESC1()" )
+cpp_quote( "    {}" )
 cpp_quote( "    explicit CD3D11_RASTERIZER_DESC1( const D3D11_RASTERIZER_DESC1& o ) :" )
 cpp_quote( "        D3D11_RASTERIZER_DESC1( o )" )
 cpp_quote( "    {}" )
@@ -174,6 +177,7 @@ cpp_quote( "        AntialiasedLineEnable = antialiasedLineEnable;" )
 cpp_quote( "        ForcedSampleCount = forcedSampleCount;" )
 cpp_quote( "    }" )
 cpp_quote( "    ~CD3D11_RASTERIZER_DESC1() {}" )
+cpp_quote( "    operator const D3D11_RASTERIZER_DESC1&() const { return *this; }" )
 cpp_quote( "};" )
 cpp_quote( "extern \"C\"{" )
 cpp_quote( "#endif" )
@@ -488,7 +492,7 @@ typedef struct D3D11_VIDEO_SAMPLE_DESC
 
 [uuid(A7F026DA-A5F8-4487-A564-15E34357651E), object, local, pointer_default(unique)]
 interface ID3D11VideoContext1
-    : ID3D11VideoContext
+	: ID3D11VideoContext
 {
     HRESULT SubmitDecoderBuffers1(
                 [annotation("_In_")] ID3D11VideoDecoder* pDecoder,
@@ -624,7 +628,6 @@ interface ID3D11VideoProcessorEnumerator1
         [annotation("_In_")] DXGI_COLOR_SPACE_TYPE OutputColorSpace,
         [annotation("_Out_")] BOOL* pSupported);
 };
-
 [ uuid( a04bfb29-08ef-43d6-a49c-a9bdbdcbe686 ), object, local, pointer_default( unique ) ]
 interface ID3D11Device1
     : ID3D11Device

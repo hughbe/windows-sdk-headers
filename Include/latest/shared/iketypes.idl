@@ -716,12 +716,6 @@ cpp_quote("#define IKEEXT_POLICY_FLAG_ENABLE_OPTIONAL_DH (0x00000008)")
 cpp_quote("#define IKEEXT_POLICY_FLAG_MOBIKE_NOT_SUPPORTED (0x00000010)")
 // IKEv2 Site to Site
 cpp_quote("#define IKEEXT_POLICY_FLAG_SITE_TO_SITE (0x00000020)")
-//IKEv2 ePDG VPN Connection
-cpp_quote("#define IKEEXT_POLICY_FLAG_IMS_VPN (0x00000040)")
-//IKEv2 Do not allow IKEv2 Fragmentation
-cpp_quote("#define IKEEXT_POLICY_ENABLE_IKEV2_FRAGMENTATION (0x00000080)")
-//IKEv2 Tunnel Support for Low Power Mode
-cpp_quote("#define IKEEXT_POLICY_SUPPORT_LOW_POWER_MODE (0x00000100)")
 
 // Type used to store the IKE/Authip main mode negotiation policy
 typedef struct IKEEXT_POLICY0_

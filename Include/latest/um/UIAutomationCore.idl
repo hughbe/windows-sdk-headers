@@ -366,7 +366,7 @@ typedef int TEXTATTRIBUTEID;
 typedef int CONTROLTYPEID;
 typedef int LANDMARKTYPEID;
 typedef int METADATAID;
-typedef int HEADINGLEVELID;
+
 
 struct UiaRect
 {
@@ -388,6 +388,7 @@ struct UiaChangeInfo
     VARIANT payload;
     VARIANT extraInfo;
 };
+
 
 [
     uuid(930299ce-9965-4dec-b0f4-a54848d4b667),

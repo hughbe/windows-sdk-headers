@@ -1259,6 +1259,21 @@ cpp_quote("#endif  // NTDDI_VISTA")
 
 [
     object,
+    uuid(6e0f9881-42a8-4f2a-97f8-8af4e026d92d),
+    pointer_default(unique)
+]
+interface IInitializeNetworkFolder : IUnknown
+{
+    HRESULT Initialize(
+        [in, unique] PCIDLIST_ABSOLUTE pidl,
+        [in, unique] PCIDLIST_ABSOLUTE pidlTarget,
+        [in] UINT uDisplayType,                     // RESOURCEDISPLAYTYPE_ values
+        [in, unique, string] LPCWSTR pszResName,    // server or server share name
+        [in, unique, string] LPCWSTR pszProvider);  // network provider name
+}
+
+[
+    object,
     uuid(0DF60D92-6818-46d6-B358-D66170DDE466),
     pointer_default(unique)
 ]
@@ -1282,6 +1297,17 @@ interface IDesktopGadget : IUnknown
 
 
 cpp_quote("#if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)")
+
+[
+    uuid(a5cd92ff-29be-454c-8d04-d82879fb3f1b),
+    object,
+]
+interface IVirtualDesktopManager : IUnknown
+{
+    HRESULT IsWindowOnCurrentVirtualDesktop([in] HWND topLevelWindow, [out] BOOL *onCurrentDesktop);
+    HRESULT GetWindowDesktopId([in] HWND topLevelWindow, [out] GUID* desktopId);
+    HRESULT MoveWindowToDesktop([in] HWND topLevelWindow, [in] REFGUID desktopId);
+}
 
 
 cpp_quote("#endif // NTDDI_WINTHRESHOLD")
@@ -1385,9 +1411,6 @@ library ShellObjects
     
     // CLSID_VirtualDesktopManager
     [ uuid(aa509086-5ca9-4c25-8f95-589d3c07b48a) ] coclass VirtualDesktopManager { interface IVirtualDesktopManager; }
-
-    // CLSID_StorageProviderBanners
-    [uuid(7CCDF9F4-E576-455A-8BC7-F6EC68D6F063)] coclass StorageProviderBanners { interface IStorageProviderBanners; }
 };
 
 // helper APIs to simplify initializing an instance of IShellLibrary and working with file system paths
@@ -1488,26 +1511,6 @@ interface IAccessibilityDockingService : IUnknown
 }
 
 cpp_quote("#endif // NTDDI_WIN8")
-
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)")
-// StorageProviderBanners implements this interface.
-// Interface can obtained by instantiating StorageProviderBanners using CoCreateInstance with CLSID_StorageProviderBanners as an inproc server.
-[
-    object,
-    uuid(5efb46d7-47C0-4b68-acda-ded47c90ec91),
-    pointer_default(unique),
-]
-interface IStorageProviderBanners : IUnknown
-{
-    HRESULT SetBanner([in] LPCWSTR providerIdentity, [in] LPCWSTR subscriptionId, [in] LPCWSTR contentId);
-
-    HRESULT ClearBanner([in] LPCWSTR providerIdentity, [in] LPCWSTR subscriptionId);
-
-    HRESULT ClearAllBanners([in] LPCWSTR providerIdentity);
-
-    HRESULT GetBanner([in] LPCWSTR providerIdentity, [in] LPCWSTR subscriptionId, [out] LPWSTR* contentId);
-}
-cpp_quote("#endif // NTDDI_WIN10_RS4")
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 

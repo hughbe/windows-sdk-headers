@@ -816,69 +816,6 @@
 #define BG_E_BLOCKED_BY_GAME_MODE        0x8020006FL
 
 //
-// MessageId: BG_E_BLOCKED_BY_SYSTEM_POLICY
-//
-// MessageText:
-//
-// The job was paused due to system resource constraints. The job will automatically resume once system conditions change.
-//
-#define BG_E_BLOCKED_BY_SYSTEM_POLICY    0x80200070L
-
-//
-// MessageId: BG_E_NOT_SUPPORTED_WITH_CUSTOM_HTTP_METHOD
-//
-// MessageText:
-//
-// The requested action is not supported by jobs configured with a custom HTTP method.
-//
-#define BG_E_NOT_SUPPORTED_WITH_CUSTOM_HTTP_METHOD 0x80200071L
-
-//
-// MessageId: BG_E_UNSUPPORTED_JOB_CONFIGURATION
-//
-// MessageText:
-//
-// The current job configuration is not compatible with the requested action.
-//
-#define BG_E_UNSUPPORTED_JOB_CONFIGURATION 0x80200072L
-
-//
-// MessageId: BG_E_REMOTE_FILE_CHANGED
-//
-// MessageText:
-//
-// The remote file was changed during the transfer. If this is expected, call Resume on the job to initiate a retry.
-//
-#define BG_E_REMOTE_FILE_CHANGED         0x80200073L
-
-//
-// MessageId: BG_E_SERVER_CERT_VALIDATION_INTERFACE_REQUIRED
-//
-// MessageText:
-//
-// The job is configured to raise a certificate validation callback, but the callback object is not currently available. The job owner must provide a new callback object and then resume the job.
-//
-#define BG_E_SERVER_CERT_VALIDATION_INTERFACE_REQUIRED 0x80200074L
-
-//
-// MessageId: BG_E_READ_ONLY_WHEN_JOB_ACTIVE
-//
-// MessageText:
-//
-// This method should only be called when the job is in a paused state (SUSPENDED/ERROR/TRANSFERRED).
-//
-#define BG_E_READ_ONLY_WHEN_JOB_ACTIVE   0x80200075L
-
-//
-// MessageId: BG_E_ERROR_CONTEXT_SERVER_CERTIFICATE_CALLBACK
-//
-// MessageText:
-//
-// The error occurred while the user-provided server certificate validation callback was being processed.
-//
-#define BG_E_ERROR_CONTEXT_SERVER_CERTIFICATE_CALLBACK 0x80200076L
-
-//
 // MessageId: BG_E_HTTP_ERROR_100
 //
 // MessageText:

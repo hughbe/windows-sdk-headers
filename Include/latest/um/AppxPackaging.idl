@@ -36,16 +36,13 @@ typedef struct APPX_PACKAGE_WRITER_PAYLOAD_STREAM
 {
     // Source of the payload
     IStream* inputStream;
-
+    
     // Name and metadata to use when writing the payload into the appx package
     LPCWSTR fileName;
     LPCWSTR contentType;
     APPX_COMPRESSION_OPTION compressionOption;
 } APPX_PACKAGE_WRITER_PAYLOAD_STREAM;
 
-// If a new footprint file type is added in either of the two
-// enums below, be sure to update the corresponding file name
-// in appxpackagingglobals.hpp c_packageFootprintFiles array.
 typedef [v1_enum] enum APPX_FOOTPRINT_FILE_TYPE
 {
     APPX_FOOTPRINT_FILE_TYPE_MANIFEST = 0,
@@ -126,14 +123,6 @@ typedef [v1_enum] enum APPX_CAPABILITY_CLASS_TYPE
     APPX_CAPABILITY_CLASS_CUSTOM        = 0x00000008
 } APPX_CAPABILITY_CLASS_TYPE;
 
-typedef [v1_enum] enum APPX_PACKAGING_CONTEXT_CHANGE_TYPE
-{
-    APPX_PACKAGING_CONTEXT_CHANGE_TYPE_START = 0,
-    APPX_PACKAGING_CONTEXT_CHANGE_TYPE_CHANGE = 1,
-    APPX_PACKAGING_CONTEXT_CHANGE_TYPE_DETAILS = 2,
-    APPX_PACKAGING_CONTEXT_CHANGE_TYPE_END = 3
-} APPX_PACKAGING_CONTEXT_CHANGE_TYPE;
-
 interface IAppxPackageWriter;
 interface IAppxPackageReader;
 interface IAppxFile;
@@ -156,14 +145,11 @@ interface IAppxBundleFactory;
 interface IAppxBundleWriter;
 interface IAppxBundleWriter2;
 interface IAppxBundleWriter3;
-interface IAppxBundleWriter4;
 interface IAppxBundleReader;
 interface IAppxBundleManifestReader;
 interface IAppxBundleManifestReader2;
 interface IAppxBundleManifestPackageInfoEnumerator;
 interface IAppxBundleManifestPackageInfo;
-interface IAppxBundleManifestPackageInfo2;
-interface IAppxBundleManifestPackageInfo3;
 interface IAppxBundleManifestOptionalBundleInfoEnumerator;
 interface IAppxBundleManifestOptionalBundleInfo;
 interface IAppxManifestQualifiedResourcesEnumerator;
@@ -171,7 +157,6 @@ interface IAppxManifestQualifiedResource;
 interface IAppxManifestTargetDeviceFamily;
 interface IAppxManifestTargetDeviceFamiliesEnumerator;
 interface IAppxManifestPackageDependency2;
-interface IAppxManifestPackageDependency3;
 interface IAppxManifestResourcesEnumerator;
 interface IAppxManifestCapabilitiesEnumerator;
 interface IAppxManifestOptionalPackageInfo;
@@ -183,25 +168,14 @@ interface IAppxSourceContentGroupMapReader;
 interface IAppxContentGroupMapWriter;
 interface IAppxManifestMainPackageDependenciesEnumerator;
 interface IAppxManifestMainPackageDependency;
-interface IAppxPackagingEventSink;
-interface IAppxPackagingEventSinkManager;
-interface IAppxManifestDriverDependency;
-interface IAppxManifestDriverDependenciesEnumerator;
-interface IAppxManifestDriverConstraint;
-interface IAppxManifestDriverConstraintsEnumerator;
-interface IAppxManifestOSPackageDependency;
-interface IAppxManifestOSPackageDependenciesEnumerator;
-interface IAppxManifestHostRuntimeDependency;
-interface IAppxManifestHostRuntimeDependenciesEnumerator;
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 #pragma region Desktop Family
 cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
-interface IAppxEncryptionFactory;
+interface IAppxEncryptionFactory; 
 interface IAppxEncryptedPackageWriter;
 interface IAppxEncryptedBundleWriter;
 interface IAppxEncryptedBundleWriter2;
-interface IAppxEncryptedBundleWriter3;
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 #pragma region Application Family
@@ -304,6 +278,19 @@ interface IAppxPackageReader : IUnknown
     HRESULT
     GetManifest(
         [out, retval]   IAppxManifestReader **  manifestReader
+    );
+}
+
+[
+    object,
+    uuid(37e8d3d5-1aea-4204-9c50-ff715932c249),
+    pointer_default(ref)
+]
+interface IAppxPackageReader2 : IAppxPackageReader
+{
+    HRESULT
+    GetContentGroupMap(
+        [out, retval] IAppxContentGroupMapReader** contentGroupMapReader
     );
 }
 
@@ -655,211 +642,6 @@ interface IAppxManifestReader5 : IUnknown
 
 [
     object,
-    uuid(34DEACA4-D3C0-4E3E-B312-E42625E3807E),
-    pointer_default(ref)
-]
-interface IAppxManifestReader6 : IUnknown
-{
-    HRESULT
-    GetIsNonQualifiedResourcePackage(
-        [out, retval] BOOL* isNonQualifiedResourcePackage
-    );
-}
-
-[
-    object,
-    uuid(8EFE6F27-0CE0-4988-B32D-738EB63DB3B7),
-    pointer_default(ref)
-]
-interface IAppxManifestReader7 : IUnknown
-{
-    HRESULT
-    GetDriverDependencies(
-        [out, retval] IAppxManifestDriverDependenciesEnumerator** driverDependencies
-    );
-
-    HRESULT
-    GetOSPackageDependencies(
-        [out, retval] IAppxManifestOSPackageDependenciesEnumerator** osPackageDependencies
-    );
-
-    HRESULT
-    GetHostRuntimeDependencies(
-        [out, retval] IAppxManifestHostRuntimeDependenciesEnumerator** hostRuntimeDependencies
-    );
-}
-
-[
-    object,
-    uuid(FE039DB2-467f-4755-8404-8F5EB6865B33),
-    pointer_default(ref)
-]
-interface IAppxManifestDriverDependenciesEnumerator : IUnknown
-{
-    HRESULT
-    GetCurrent(
-        [out, retval] IAppxManifestDriverDependency** driverDependency
-    );
-
-    HRESULT
-    GetHasCurrent(
-        [out, retval] BOOL* hasCurrent
-    );
-
-    HRESULT
-    MoveNext(
-        [out, retval] BOOL* hasNext
-    );
-}
-
-[
-    object,
-    uuid(1210CB94-5A92-4602-BE24-79F318AF4AF9),
-    pointer_default(ref)
-]
-interface IAppxManifestDriverDependency : IUnknown
-{
-    HRESULT
-    GetDriverConstraints(
-        [out, retval] IAppxManifestDriverConstraintsEnumerator** driverConstraints
-    );
-}
-
-[
-    object,
-    uuid(D402B2D1-F600-49E0-95E6-975D8DA13D89),
-    pointer_default(ref)
-]
-interface IAppxManifestDriverConstraintsEnumerator : IUnknown
-{
-    HRESULT
-    GetCurrent(
-        [out, retval] IAppxManifestDriverConstraint** driverConstraint
-    );
-
-    HRESULT
-    GetHasCurrent(
-        [out, retval] BOOL* hasCurrent
-    );
-
-    HRESULT
-    MoveNext(
-        [out, retval] BOOL* hasNext
-    );
-}
-
-[
-    object,
-    uuid(C031BEE4-BBCC-48EA-A237-C34045C80A07),
-    pointer_default(ref)
-]
-interface IAppxManifestDriverConstraint : IUnknown
-{
-    HRESULT
-    GetName(
-        [out, string, retval] LPWSTR* name
-    );
-
-    HRESULT
-    GetMinVersion(
-        [out, retval] UINT64* minVersion
-    );
-
-    HRESULT
-    GetMinDate(
-        [out, string, retval] LPWSTR* minDate
-    );
-}
-
-[
-    object,
-    uuid(B84E2FC3-F8EC-4BC1-8AE2-156346F5FFEA),
-    pointer_default(ref)
-]
-interface IAppxManifestOSPackageDependenciesEnumerator : IUnknown
-{
-    HRESULT
-    GetCurrent(
-        [out, retval] IAppxManifestOSPackageDependency** osPackageDependency
-    );
-
-    HRESULT
-    GetHasCurrent(
-        [out, retval] BOOL* hasCurrent
-    );
-
-    HRESULT
-    MoveNext(
-        [out, retval] BOOL* hasNext
-    );
-}
-
-[
-    object,
-    uuid(154995EE-54A6-4F14-AC97-D8CF0519644B),
-    pointer_default(ref)
-]
-interface IAppxManifestOSPackageDependency : IUnknown
-{
-    HRESULT
-    GetName(
-        [out, string, retval] LPWSTR* name
-    );
-
-    HRESULT
-    GetVersion(
-        [out, retval] UINT64* version
-    );
-}
-
-[
-    object,
-    uuid(6427A646-7F49-433E-B1A6-0DA309F6885A),
-    pointer_default(ref)
-]
-interface IAppxManifestHostRuntimeDependenciesEnumerator : IUnknown
-{
-    HRESULT
-        GetCurrent(
-            [out, retval] IAppxManifestHostRuntimeDependency** hostRuntimeDependency
-        );
-
-    HRESULT
-        GetHasCurrent(
-            [out, retval] BOOL* hasCurrent
-        );
-
-    HRESULT
-        MoveNext(
-            [out, retval] BOOL* hasNext
-        );
-}
-
-[
-    object,
-    uuid(3455D234-8414-410D-95C7-7B35255B8391),
-    pointer_default(ref)
-]
-interface IAppxManifestHostRuntimeDependency : IUnknown
-{
-    HRESULT
-    GetName(
-        [out, string, retval] LPWSTR* name
-    );
-
-    HRESULT
-    GetPublisher(
-        [out, string, retval] LPWSTR* publisher
-    );
-
-    HRESULT
-    GetMinVersion(
-        [out, retval] UINT64* minVersion
-    );
-}
-
-[
-    object,
     uuid(2634847D-5B5D-4FE5-A243-002FF95EDC7E),
     pointer_default(ref)
 ]
@@ -1111,19 +893,6 @@ interface IAppxManifestPackageDependency2 : IAppxManifestPackageDependency
 
 [
     object,
-    uuid(1AC56374-6198-4D6B-92E4-749D5AB8A895),
-    pointer_default(ref)
-]
-interface IAppxManifestPackageDependency3 : IUnknown
-{
-    HRESULT
-    GetIsOptional(
-        [out, retval] BOOL * isOptional
-    );
-}
-
-[
-    object,
     uuid(de4dfbbd-881a-48bb-858c-d6f2baeae6ed),
     pointer_default(ref)
 ]
@@ -1350,32 +1119,6 @@ interface IAppxBundleWriter3 : IUnknown
 
 [
     object,
-    uuid(9CD9D523-5009-4C01-9882-DC029FBD47A3),
-    pointer_default(ref)
-]
-interface IAppxBundleWriter4 : IUnknown
-{
-    HRESULT AddPayloadPackage(
-        [in, string]  LPCWSTR   fileName,
-        [in]          IStream*  packageStream,
-        [in]          BOOL      isDefaultApplicablePackage
-    );
-
-    HRESULT AddPackageReference(
-        [in, string]  LPCWSTR   fileName,
-        [in]          IStream*  inputStream,
-        [in]          BOOL      isDefaultApplicablePackage
-    );
-
-    HRESULT AddExternalPackageReference(
-        [in, string]  LPCWSTR   fileName,
-        [in]          IStream*  inputStream,
-        [in]          BOOL      isDefaultApplicablePackage
-    );
-}
-
-[
-    object,
     uuid(DD75B8C0-BA76-43B0-AE0F-68656A1DC5C8),
     pointer_default(ref)
 ]
@@ -1490,50 +1233,6 @@ interface IAppxBundleManifestPackageInfo : IUnknown
 
 [
     object,
-    uuid(44C2ACBC-B2CF-4CCB-BBDB-9C6DA8C3BC9E),
-    pointer_default(ref)
-]
-interface IAppxBundleManifestPackageInfo2 : IUnknown
-{
-    HRESULT GetIsPackageReference(
-        [out, retval] BOOL* isPackageReference
-    );
-
-    HRESULT GetIsNonQualifiedResourcePackage(
-        [out, retval] BOOL* isNonQualifiedResourcePackage
-    );
-
-    HRESULT GetIsDefaultApplicablePackage(
-        [out, retval] BOOL* isDefaultApplicablePackage
-    );
-}
-
-[
-    object,
-    uuid(6BA74B98-BB74-4296-80D0-5F4256A99675),
-    pointer_default(ref)
-]
-interface IAppxBundleManifestPackageInfo3 : IUnknown
-{
-    HRESULT GetTargetDeviceFamilies(
-        [out, retval] IAppxManifestTargetDeviceFamiliesEnumerator** targetDeviceFamilies
-    );
-}
-
-[
-    object,
-    uuid(5DA6F13D-A8A7-4532-857C-1393D659371D),
-    pointer_default(ref)
-]
-interface IAppxBundleManifestPackageInfo4 : IUnknown
-{
-    HRESULT GetIsStub(
-        [out, retval] BOOL* isStub
-    );
-}
-
-[
-    object,
     uuid(9A178793-F97E-46AC-AACA-DD5BA4C177C8),
     pointer_default(ref)
 ]
@@ -1572,104 +1271,104 @@ interface IAppxBundleManifestOptionalBundleInfo : IUnknown
     );
 }
 
-[
-    object,
-    uuid(1a09a2fd-7440-44eb-8c84-848205a6a1cc),
-    pointer_default(ref)
-]
-interface IAppxContentGroupFilesEnumerator : IUnknown
-{
-    HRESULT
-    GetCurrent(
-        [out, retval]   LPWSTR*    file
-    );
+[ 
+    object, 
+    uuid(1a09a2fd-7440-44eb-8c84-848205a6a1cc), 
+    pointer_default(ref) 
+] 
+interface IAppxContentGroupFilesEnumerator : IUnknown 
+{ 
+    HRESULT 
+    GetCurrent( 
+        [out, retval]   LPWSTR*    file 
+    ); 
 
-    HRESULT
-    GetHasCurrent(
-        [out, retval]     BOOL*    hasCurrent
-    );
+    HRESULT 
+    GetHasCurrent( 
+        [out, retval]     BOOL*    hasCurrent 
+    ); 
 
-    HRESULT
-    MoveNext(
-        [out, retval]   BOOL*  hasNext
-    );
+    HRESULT 
+    MoveNext( 
+        [out, retval]   BOOL*  hasNext 
+    ); 
 }
 
-[
-    object,
-    uuid(328f6468-c04f-4e3c-b6fa-6b8d27f3003a),
-    pointer_default(ref)
-]
-interface IAppxContentGroup : IUnknown
+[ 
+    object, 
+    uuid(328f6468-c04f-4e3c-b6fa-6b8d27f3003a), 
+    pointer_default(ref) 
+] 
+interface IAppxContentGroup : IUnknown 
 {
-    HRESULT
+    HRESULT 
     GetName(
-        [out, string, retval]   LPWSTR*    groupName
+        [out, string, retval]   LPWSTR*    groupName 
     );
+    
+    HRESULT 
+    GetFiles( 
+        [out, retval] IAppxContentGroupFilesEnumerator** enumerator 
+    ); 
+} 
 
-    HRESULT
-    GetFiles(
-        [out, retval] IAppxContentGroupFilesEnumerator** enumerator
+[ 
+    object, 
+    uuid(3264e477-16d1-4d63-823e-7d2984696634), 
+    pointer_default(ref) 
+] 
+interface IAppxContentGroupsEnumerator : IUnknown 
+{ 
+    HRESULT 
+    GetCurrent( 
+        [out, retval]   IAppxContentGroup**    stream 
+    ); 
+
+    HRESULT 
+    GetHasCurrent( 
+        [out, retval]     BOOL*    hasCurrent 
+    ); 
+
+    HRESULT 
+    MoveNext( 
+        [out, retval]   BOOL*  hasNext 
+    ); 
+} 
+
+[ 
+    object, 
+    uuid(418726d8-dd99-4f5d-9886-157add20de01), 
+    pointer_default(ref) 
+] 
+interface IAppxContentGroupMapReader : IUnknown 
+{ 
+    HRESULT 
+    GetRequiredGroup( 
+        [out, retval] IAppxContentGroup**    requiredGroup
     );
+    
+    HRESULT 
+    GetAutomaticGroups( 
+        [out, retval] IAppxContentGroupsEnumerator** automaticGroupsEnumerator
+    );  
 }
 
-[
-    object,
-    uuid(3264e477-16d1-4d63-823e-7d2984696634),
-    pointer_default(ref)
-]
-interface IAppxContentGroupsEnumerator : IUnknown
-{
-    HRESULT
-    GetCurrent(
-        [out, retval]   IAppxContentGroup**    stream
-    );
-
-    HRESULT
-    GetHasCurrent(
-        [out, retval]     BOOL*    hasCurrent
-    );
-
-    HRESULT
-    MoveNext(
-        [out, retval]   BOOL*  hasNext
-    );
-}
-
-[
-    object,
-    uuid(418726d8-dd99-4f5d-9886-157add20de01),
-    pointer_default(ref)
-]
-interface IAppxContentGroupMapReader : IUnknown
-{
-    HRESULT
-    GetRequiredGroup(
+[ 
+    object, 
+    uuid(f329791d-540b-4a9f-bc75-3282b7d73193), 
+    pointer_default(ref) 
+] 
+interface IAppxSourceContentGroupMapReader : IUnknown 
+{ 
+    HRESULT 
+    GetRequiredGroup( 
         [out, retval] IAppxContentGroup**    requiredGroup
     );
 
-    HRESULT
-    GetAutomaticGroups(
+    HRESULT 
+    GetAutomaticGroups( 
         [out, retval] IAppxContentGroupsEnumerator** automaticGroupsEnumerator
-    );
-}
-
-[
-    object,
-    uuid(f329791d-540b-4a9f-bc75-3282b7d73193),
-    pointer_default(ref)
-]
-interface IAppxSourceContentGroupMapReader : IUnknown
-{
-    HRESULT
-    GetRequiredGroup(
-        [out, retval] IAppxContentGroup**    requiredGroup
-    );
-
-    HRESULT
-    GetAutomaticGroups(
-        [out, retval] IAppxContentGroupsEnumerator** automaticGroupsEnumerator
-    );
+    );  
 }
 
 [
@@ -1684,42 +1383,13 @@ interface IAppxContentGroupMapWriter : IUnknown
         [in, string] LPCWSTR groupName
     );
 
-    HRESULT
+    HRESULT 
     AddAutomaticFile(
         [in, string]   LPCWSTR      fileName
     );
 
     HRESULT
     Close();
-}
-
-[
-    object,
-    uuid(17239D47-6ADB-45D2-80F6-F9CBC3BF059D),
-    pointer_default(ref)
-]
-interface IAppxPackagingDiagnosticEventSink : IUnknown
-{
-    HRESULT ReportContextChange(
-        [in] APPX_PACKAGING_CONTEXT_CHANGE_TYPE changeType,
-        [in] LONG contextId,
-        [in, string] LPCSTR contextName,
-        [in, string] LPCWSTR contextMessage,
-        [in, string] LPCWSTR detailsMessage);
-
-    HRESULT ReportError(
-        [in, string] LPCWSTR errorMessage);
-}
-
-[
-    object,
-    uuid(369648FA-A7EB-4909-A15D-6954A078F18A),
-    pointer_default(ref)
-]
-interface IAppxPackagingDiagnosticEventSinkManager : IUnknown
-{
-    HRESULT SetSinkForProcess(
-        [in] IAppxPackagingDiagnosticEventSink* sink);
 }
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
@@ -1789,7 +1459,7 @@ interface IAppxEncryptionFactory : IUnknown
         [in]  IStream *                                   outputStream,
         [in]  IStream *                                   manifestStream,
         [in]  const APPX_ENCRYPTED_PACKAGE_SETTINGS *     settings,
-        [in]  const APPX_KEY_INFO *                       keyInfo,
+        [in]  const APPX_KEY_INFO *                       keyInfo,        
         [in]  const APPX_ENCRYPTED_EXEMPTIONS *           exemptedFiles,
         [out, retval]  IAppxEncryptedPackageWriter **     packageWriter
     );
@@ -1804,7 +1474,7 @@ interface IAppxEncryptionFactory : IUnknown
         [in]  IStream *                                   inputStream,
         [in]  IStream *                                   outputStream,
         [in]  const APPX_ENCRYPTED_PACKAGE_SETTINGS *     settings,
-        [in]  const APPX_KEY_INFO *                       keyInfo,
+        [in]  const APPX_KEY_INFO *                       keyInfo,        
         [in]  const APPX_ENCRYPTED_EXEMPTIONS *           exemptedFiles
     );
 
@@ -1818,7 +1488,7 @@ interface IAppxEncryptionFactory : IUnknown
         [in]  IStream *                                   outputStream,
         [in]  UINT64                                      bundleVersion,
         [in]  const APPX_ENCRYPTED_PACKAGE_SETTINGS *     settings,
-        [in]  const APPX_KEY_INFO *                       keyInfo,
+        [in]  const APPX_KEY_INFO *                       keyInfo,        
         [in]  const APPX_ENCRYPTED_EXEMPTIONS *           exemptedFiles,
         [out, retval]  IAppxEncryptedBundleWriter **      bundleWriter
     );
@@ -1842,7 +1512,7 @@ interface IAppxEncryptionFactory2 : IUnknown
         [in]  IStream *                                   manifestStream,
         [in]  IStream *                                   contentGroupMapStream,
         [in]  const APPX_ENCRYPTED_PACKAGE_SETTINGS *     settings,
-        [in]  const APPX_KEY_INFO *                       keyInfo,
+        [in]  const APPX_KEY_INFO *                       keyInfo,        
         [in]  const APPX_ENCRYPTED_EXEMPTIONS *           exemptedFiles,
         [out, retval]  IAppxEncryptedPackageWriter **     packageWriter
     );
@@ -1967,85 +1637,6 @@ interface IAppxEncryptedBundleWriter2 : IUnknown
     );
 }
 
-typedef [v1_enum] enum APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_OPTION
-{
-    APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_OPTION_APPEND_DELTA = 0x00,
-} APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_OPTION;
-
-typedef [v1_enum] enum APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTIONS
-{
-    APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTION_NONE = 0x00,
-    APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTION_SKIP_VALIDATION = 0x01,
-    APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTION_LOCALIZED = 0x02
-} APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTIONS;
-cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTIONS);")
-
-[
-    object,
-    uuid(0D34DEB3-5CAE-4DD3-977C-504932A51D31),
-    pointer_default(ref)
-]
-interface IAppxEncryptedBundleWriter3 : IUnknown
-{
-    HRESULT AddPayloadPackageEncrypted(
-        [in, string]  LPCWSTR   fileName,
-        [in]          IStream*  packageStream,
-        [in]          BOOL      isDefaultApplicablePackage
-    );
-
-    HRESULT AddExternalPackageReference(
-        [in, string]  LPCWSTR   fileName,
-        [in]          IStream*  inputStream,
-        [in]          BOOL      isDefaultApplicablePackage
-    );
-}
-
-[
-    object,
-    uuid(E2ADB6DC-5E71-4416-86B6-86E5F5291A6B),
-    pointer_default(ref)
-]
-interface IAppxPackageEditor : IUnknown
-{
-    HRESULT SetWorkingDirectory(
-        [in, string]  LPCWSTR   workingDirectory
-    );
-
-    HRESULT CreateDeltaPackage(
-        [in]  IStream*   updatedPackageStream,
-        [in]  IStream*   baselinePackageStream,
-        [in]  IStream*   deltaPackageStream
-    );
-
-    HRESULT CreateDeltaPackageUsingBaselineBlockMap(
-        [in]  IStream*   updatedPackageStream,
-        [in]  IStream*   baselineBlockMapStream,
-        [in, string]  LPCWSTR baselinePackageFullName,
-        [in]  IStream*   deltaPackageStream
-    );
-
-    HRESULT UpdatePackage(
-        [in]  IStream*   baselinePackageStream,
-        [in]  IStream*   deltaPackageStream,
-        [in]  APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_OPTION updateOption
-    );
-
-    HRESULT UpdateEncryptedPackage(
-        [in]  IStream*   baselineEncryptedPackageStream,
-        [in]  IStream*   deltaPackageStream,
-        [in]  APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_OPTION updateOption,
-        [in]  const APPX_ENCRYPTED_PACKAGE_SETTINGS2 *    settings,
-        [in]  const APPX_KEY_INFO* keyInfo
-    );
-
-    HRESULT UpdatePackageManifest(
-        [in]  IStream*   packageStream,
-        [in]  IStream*   updatedManifestStream,
-        [in]  BOOL       isPackageEncrypted,
-        [in]  APPX_PACKAGE_EDITOR_UPDATE_PACKAGE_MANIFEST_OPTIONS options
-    );
-}
-
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion
 
@@ -2074,14 +1665,6 @@ coclass AppxBundleFactory
 {
     interface IAppxBundleFactory;
 };
-
-[
-    uuid(50CA0A46-1588-4161-8ED2-EF9E469CED5D)
-]
-coclass AppxPackagingDiagnosticEventSinkManager
-{
-    [default] interface IAppxPackagingDiagnosticEventSinkManager;
-};
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
@@ -2095,14 +1678,6 @@ coclass AppxEncryptionFactory
     interface IAppxEncryptionFactory3;
     interface IAppxEncryptionFactory2;
     [default] interface IAppxEncryptionFactory;
-};
-
-[
-    uuid(F004F2CA-AEBC-4B0D-BF58-E516D5BCC0AB)
-]
-coclass AppxPackageEditor
-{
-    [default] interface IAppxPackageEditor;
 };
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion

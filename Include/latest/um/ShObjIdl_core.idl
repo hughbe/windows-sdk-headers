@@ -28,6 +28,8 @@ cpp_quote("#define SHSTDAPI_(type)   EXTERN_C DECLSPEC_IMPORT type STDAPICALLTYP
 cpp_quote("#endif")
 cpp_quote("#endif // SHSTDAPI")
 
+cpp_quote("")
+cpp_quote("//===========================================================================")
 cpp_quote("//")
 cpp_quote("// IContextMenu interface")
 cpp_quote("//")
@@ -133,6 +135,7 @@ cpp_quote("//   pwReserved -- Reserved (must pass NULL when calling, must ignore
 cpp_quote("//   pszName -- Specifies the string buffer.")
 cpp_quote("//   cchMax -- Specifies the size of the string buffer.")
 cpp_quote("//")
+cpp_quote("//===========================================================================")
 cpp_quote("")
 cpp_quote("// QueryContextMenu uFlags")
 cpp_quote("#define CMF_NORMAL              0x00000000")
@@ -660,22 +663,21 @@ typedef DWORD SHGDNF;
 // IShellFolder::EnumObjects grfFlags bits
 [v1_enum] enum _SHCONTF
 {
-    SHCONTF_CHECKING_FOR_CHILDREN   = 0x00000010,   // hint that client is checking if (what) child items the folder contains - not all details (e.g. short file name) are needed
-    SHCONTF_FOLDERS                 = 0x00000020,   // only want folders enumerated (SFGAO_FOLDER)
-    SHCONTF_NONFOLDERS              = 0x00000040,   // include non folders (items without SFGAO_FOLDER)
-    SHCONTF_INCLUDEHIDDEN           = 0x00000080,   // show items normally hidden (items with SFGAO_HIDDEN)
-    SHCONTF_INIT_ON_FIRST_NEXT      = 0x00000100,   // DEFUNCT - this is always assumed
-    SHCONTF_NETPRINTERSRCH          = 0x00000200,   // hint that client is looking for printers
-    SHCONTF_SHAREABLE               = 0x00000400,   // hint that client is looking sharable resources (local drives or hidden root shares)
-    SHCONTF_STORAGE                 = 0x00000800,   // include all items with accessible storage and their ancestors including hidden items
-    SHCONTF_NAVIGATION_ENUM         = 0x00001000,   // mark child folders to indicate that they should provide a "navigation" enumeration by default
-    SHCONTF_FASTITEMS               = 0x00002000,   // hint that client is only interested in items that can be enumerated quickly
-    SHCONTF_FLATLIST                = 0x00004000,   // enumerate items as flat list even if folder is stacked
-    SHCONTF_ENABLE_ASYNC            = 0x00008000,   // inform enumerator that client is listening for change notifications so enumerator does not need to be complete, items can be reported via change notifications
-    SHCONTF_INCLUDESUPERHIDDEN      = 0x00010000,   // show system items that are hidden
+    SHCONTF_CHECKING_FOR_CHILDREN   = 0x00010,   // hint that client is checking if (what) child items the folder contains - not all details (e.g. short file name) are needed
+    SHCONTF_FOLDERS                 = 0x00020,   // only want folders enumerated (SFGAO_FOLDER)
+    SHCONTF_NONFOLDERS              = 0x00040,   // include non folders (items without SFGAO_FOLDER)
+    SHCONTF_INCLUDEHIDDEN           = 0x00080,   // show items normally hidden (items with SFGAO_HIDDEN)
+    SHCONTF_INIT_ON_FIRST_NEXT      = 0x00100,   // DEFUNCT - this is always assumed
+    SHCONTF_NETPRINTERSRCH          = 0x00200,   // hint that client is looking for printers
+    SHCONTF_SHAREABLE               = 0x00400,   // hint that client is looking sharable resources (local drives or hidden root shares)
+    SHCONTF_STORAGE                 = 0x00800,   // include all items with accessible storage and their ancestors including hidden items
+    SHCONTF_NAVIGATION_ENUM         = 0x01000,   // mark child folders to indicate that they should provide a "navigation" enumeration by default
+    SHCONTF_FASTITEMS               = 0x02000,   // hint that client is only interested in items that can be enumerated quickly
+    SHCONTF_FLATLIST                = 0x04000,   // enumerate items as flat list even if folder is stacked
+    SHCONTF_ENABLE_ASYNC            = 0x08000,   // inform enumerator that client is listening for change notifications so enumerator does not need to be complete, items can be reported via change notifications
+    SHCONTF_INCLUDESUPERHIDDEN      = 0x10000,   // show system items that are hidden
 };
 typedef DWORD SHCONTF;
-
 
 // IShellFolder::CompareIDs lParam flags
 // *these should only be used if the folder supports IShellFolder2*
@@ -766,7 +768,6 @@ typedef [v1_enum] enum SYNC_TRANSFER_STATUS
     STS_HASWARNING             = 0x00000080,  // An error was encountered on the last sync
     STS_EXCLUDED               = 0x00000100,  // The file won't be synced by the sync engine
     STS_INCOMPLETE             = 0x00000200,  // The reported state may be missing states due to indexing delays
-    STS_PLACEHOLDER_IFEMPTY    = 0x00000400,  // If the folder is empty, treat it as a dehydrated item (placeholder)
 } SYNC_TRANSFER_STATUS;
 
 cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(SYNC_TRANSFER_STATUS)")
@@ -1001,7 +1002,6 @@ cpp_quote("#define STR_PARSE_WITH_EXPLICIT_ASSOCAPP L\"ExplicitAssociationApp\""
 // with STR_PARSE_WITH_EXPLICIT_ASSOCAPP.  When absent, the Progid or Application was not bound into the IDList.
 cpp_quote("#define STR_PARSE_EXPLICIT_ASSOCIATION_SUCCESSFUL L\"ExplicitAssociationSuccessful\"")
 
-
 // IShellFolder IBindCtx parameter: "ParseAndCreateItem"
 //
 // The IUnknown for this is accessed through IBindCtx::RegisterObjectParam/GetObjectParam.
@@ -1028,11 +1028,6 @@ cpp_quote("#define STR_PROPERTYBAG_PARAM   L\"SHBindCtxPropertyBag\"")
 // IShellFolder::EnumObjects() when calling IShellItem::BindToHandler(..., BHID_EnumItems, ...).
 // This is stored as a DWORD in the STR_PROPERTYBAG_PARAM property bag.
 cpp_quote("#define STR_ENUM_ITEMS_FLAGS    L\"SHCONTF\"")
-
-// This bind context parameter enables passing the STORAGEITEM_CREATION_FLAGS value to
-// IShellItem::BindToHandler(..., BHID_StorageItem, ...).
-// This is stored as a DWORD in the STR_PROPERTYBAG_PARAM property bag.
-cpp_quote("#define STR_STORAGEITEM_CREATION_FLAGS    L\"SHGETSTORAGEITEM\"")
 
 interface IShellItem;
 
@@ -1855,37 +1850,6 @@ interface IFolderViewSettings : IUnknown
     HRESULT GetGroupSubsetCount([out] UINT *pcVisibleRows);
 }
 
-[
-    object,
-    uuid(6e0f9881-42a8-4f2a-97f8-8af4e026d92d),
-    pointer_default(unique)
-]
-interface IInitializeNetworkFolder : IUnknown
-{
-    HRESULT Initialize(
-        [in, unique] PCIDLIST_ABSOLUTE pidl,
-        [in, unique] PCIDLIST_ABSOLUTE pidlTarget,
-        [in] UINT uDisplayType,                     // RESOURCEDISPLAYTYPE_ values
-        [in, unique, string] LPCWSTR pszResName,    // server or server share name
-        [in, unique, string] LPCWSTR pszProvider);  // network provider name
-}
-
-[
-    object,
-    uuid(CEB38218-C971-47BB-A703-F0BC99CCDB81),
-    pointer_default(unique)
-]
-interface INetworkFolderInternal : IUnknown
-{
-    HRESULT GetResourceDisplayType([out] UINT* displayType);
-    HRESULT GetIDList([out] PIDLIST_ABSOLUTE* idList);
-    HRESULT GetProvider(
-        [in] UINT itemIdCount,
-        [in, size_is(itemIdCount), unique] PCUITEMID_CHILD_ARRAY itemIds,
-        [in] UINT providerMaxLength,
-        [out, size_is(providerMaxLength)] LPWSTR provider);
-}
-
 cpp_quote("#endif  // NTDDI_VISTA")
 
 cpp_quote("#endif  // (_WIN32_IE >= _WIN32_IE_IE70)")
@@ -2156,12 +2120,14 @@ interface IFolderFilter : IUnknown
 }
 //cpp_quote("#endif  // NTDDI_WINXP")
 
+//==========================================================================
 // IInputObjectSite/IInputObject interfaces
 //
 // These interfaces allow us (or ISVs) to install/update external Internet
 // Toolbar for IE and the shell. The frame will simply get the CLSID from
 // registry (to be defined) and CoCreateInstance it.
 //
+//==========================================================================
 
 // A site implements this interface so the object can communicate
 // focus change to it.
@@ -2215,6 +2181,8 @@ interface IInputObject2 : IInputObject
 }
 //cpp_quote("#endif  // NTDDI_VISTA")
 
+//===========================================================================
+//
 // IShellIcon Interface
 //
 // used to get a icon index for a IShellFolder object.
@@ -2248,6 +2216,8 @@ interface IInputObject2 : IInputObject
 //      S_FALSE, if unable to get icon for this object, go through
 //               GetUIObject, IExtractIcon, methods.
 //
+//===========================================================================
+
 [
     uuid(000214E5-0000-0000-C000-000000000046), // IID_IShellIcon
     object,
@@ -5182,25 +5152,6 @@ interface IFileOperation : IUnknown
     HRESULT GetAnyOperationsAborted([out] BOOL *pfAnyOperationsAborted);
 }
 
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)")
-typedef [v1_enum] enum FILE_OPERATION_FLAGS2
-{
-    FOF2_NONE = 0x00000000,
-    FOF2_MERGEFOLDERSONCOLLISION = 0x00000001,
-} FILE_OPERATION_FLAGS2;
-cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(FILE_OPERATION_FLAGS2)")
-
-[
-    uuid(cd8f23c1-8f61-4916-909d-55bdd0918753),
-    object,
-    pointer_default(unique)
-]
-interface IFileOperation2 : IFileOperation
-{
-    HRESULT SetOperationFlags2([in] FILE_OPERATION_FLAGS2 operationFlags2);
-}
-cpp_quote("#endif  // (NTDDI_VERSION >= NTDDI_WIN10_RS4)")
-
 [
     uuid(a6087428-3be3-4d73-b308-7c04a540bf1a),
     object,
@@ -6950,6 +6901,8 @@ interface IPreviewItem : IRelatedItem
 
 cpp_quote("#endif  // NTDDI_VISTA")
 
+// New for Vista, but used by downlevel code
+//cpp_quote("#if (NTDDI_VERSION >= NTDDI_VISTA)")
 [
     uuid(8a87781b-39a7-4a1f-aab3-a39b9c34a7d9),
     object,
@@ -6959,13 +6912,9 @@ interface IDestinationStreamFactory : IUnknown
 {
     HRESULT GetDestinationStream([out] IStream **ppstm);
 }
+//cpp_quote("#endif  // NTDDI_VISTA")
 
 cpp_quote("#if (NTDDI_VERSION >= NTDDI_VISTA)")
-
-// SID_ExecuteCreatingProcess/ICreatingProcess
-// A service implemented by callers of ShellExecute that lets them modify the inputs
-// of CreateProcess before it is called.
-// See SEE_MASK_FLAG_HINST_IS_SITE for details on how to provide this service.
 [
     object,
     uuid(F6EF6140-E26F-4D82-bAC4-E9BA5FD239A8),
@@ -6989,41 +6938,22 @@ interface ICreateProcessInputs : IUnknown
         [in, string, annotation("_In_")] LPCWSTR pszValue);
 }
 
-[ uuid(c2b937a9-3110-4398-8a56-f34c6342d244), local ]
+[
+    object,
+    uuid(c2b937a9-3110-4398-8a56-f34c6342d244),
+    pointer_default(unique),
+    local
+]
 interface ICreatingProcess : IUnknown
 {
     HRESULT OnCreating([in, annotation("_In_")] ICreateProcessInputs *pcpi);
 }
-
+//  SID_ExecuteCreatingProcess
+//      used by callers that wish to modify the process parameters during command execution.
+//      Service object is expected to implement ICreatingProcess.
 cpp_quote("#define SID_ExecuteCreatingProcess __uuidof(ICreatingProcess)")
 
 cpp_quote("#endif  // NTDDI_VISTA")
-
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)") // not yet functional
-
-// SID_LaunchUIContextProvider/ILaunchUIContextProvider
-// A service implemented by callers of ShellExecute or other launching APIs that
-// allows them to specify information that controls the window management user experience
-// of the window created as the result of the launch. This includes
-// the associated window and controlling tabbing behavior.
-// See SEE_MASK_FLAG_HINST_IS_SITE for details on how to provide this service.
-
-[uuid(1791e8f6-21c7-4340-882a-a6a93e3fd73b)]
-interface ILaunchUIContext : IUnknown
-{
-    HRESULT SetAssociatedWindow([in] HWND value);
-    HRESULT SetTabGroupingPreference([in] DWORD /* Windows::UI::ViewManagement::ViewGrouping */ value);
-}
-
-[uuid(0d12c4c8-a3d9-4e24-94c1-0e20c5a956c4)]
-interface ILaunchUIContextProvider : IUnknown
-{
-    HRESULT UpdateContext([in] ILaunchUIContext* context);
-}
-
-cpp_quote("#define SID_LaunchUIContextProvider __uuidof(ILaunchUIContextProvider)")
-
-cpp_quote("#endif  // (NTDDI_VERSION >= NTDDI_WIN10_RS4)")
 
 [v1_enum] enum _NMCII_FLAGS
 {
@@ -7051,7 +6981,7 @@ interface INewMenuClient : IUnknown
     HRESULT SelectAndEditItem(
         [in] PCIDLIST_ABSOLUTE pidlItem,
         [in] NMCSAEI_FLAGS flags);
-}
+};
 
 cpp_quote("#define SID_SNewMenuClient   IID_INewMenuClient")
 
@@ -7082,6 +7012,9 @@ interface IShellItemFilter : IUnknown
 }
 
 cpp_quote("#endif  // (_WIN32_IE >= _WIN32_IE_IE70)")
+
+// New for Vista, but used by downlevel code
+//cpp_quote("#if (NTDDI_VERSION >= NTDDI_VISTA)")
 
 [
     object,
@@ -8010,7 +7943,6 @@ typedef [v1_enum] enum DEFAULT_FOLDER_MENU_RESTRICTIONS
     DFMR_USE_SPECIFIED_HANDLERS                 = 0X0100,   // this flag is specified if a handler clsid is added through SetHandlerClsid
     DFMR_USE_SPECIFIED_VERBS                    = 0X0200,   // only load handlers that support the specified verbs
     DFMR_NO_ASYNC_VERBS                         = 0x0400,   // ignore async verbs
-    DFMR_NO_NATIVECPU_VERBS                     = 0x0800,   // ignore verbs that are registered for the native CPU architecture
 } DEFAULT_FOLDER_MENU_RESTRICTIONS;
 
 cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(DEFAULT_FOLDER_MENU_RESTRICTIONS)")
@@ -8096,21 +8028,6 @@ interface IApplicationActivationManager : IUnknown
 }
 
 cpp_quote("#endif // NTDDI_WIN8")
-
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WINTHRESHOLD)")
-
-[
-    uuid(a5cd92ff-29be-454c-8d04-d82879fb3f1b),
-    object,
-]
-interface IVirtualDesktopManager : IUnknown
-{
-    HRESULT IsWindowOnCurrentVirtualDesktop([in] HWND topLevelWindow, [out] BOOL *onCurrentDesktop);
-    HRESULT GetWindowDesktopId([in] HWND topLevelWindow, [out] GUID* desktopId);
-    HRESULT MoveWindowToDesktop([in] HWND topLevelWindow, [in] REFGUID desktopId);
-}
-
-cpp_quote("#endif // NTDDI_WINTHRESHOLD")
 
 //  NOTE - this typelib is never registered anywhere
 [
@@ -8245,6 +8162,7 @@ library ShellCoreObjects
 
     // CLSID_ApplicationDesignModeSettings
     [ uuid(958a6fb5-dcb2-4faf-aafd-7fb054ad1a3b) ] coclass ApplicationDesignModeSettings { interface IApplicationDesignModeSettings2; }
+
 };
 
 cpp_quote("#if (NTDDI_VERSION >= NTDDI_VISTA)")
@@ -8406,20 +8324,6 @@ interface IAssocHandlerInvoker : IUnknown
 
     HRESULT Invoke();
 }
-
-typedef [v1_enum] enum AHTYPE
-{
-    AHTYPE_UNDEFINED            = 0x0000,   // default
-    AHTYPE_USER_APPLICATION     = 0x0008,   // user created association (e.g. "Find on this PC" via Open With)
-    AHTYPE_ANY_APPLICATION      = 0x0010,   // applications found under HKCR\Applications
-    AHTYPE_MACHINEDEFAULT       = 0x0020,   // association found under HKCR\.ext
-    AHTYPE_PROGID               = 0x0040,   // association with a registered progId
-    AHTYPE_APPLICATION          = 0x0080,   // application found under HKCR\.ext\OpenWithList
-    AHTYPE_CLASS_APPLICATION    = 0X0100,
-    AHTYPE_ANY_PROGID           = 0X0200,   // association with a registered progId for any (*) extension (modern apps)
-} AHTYPE;
-
-cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(AHTYPE)")
 
 // Association handlers
 //
@@ -8964,17 +8868,6 @@ interface IHandlerInfo : IUnknown
 // Used to retrieve an IHandlerInfo instance
 cpp_quote("#define SID_HandlerInfo IID_IHandlerInfo")
 
-[
-    uuid(31cca04c-04d3-4ea9-90de-97b15e87a532),
-    object,
-    pointer_default(unique)
-]
-interface IHandlerInfo2 : IHandlerInfo
-{
-    // Get the AppId of the application that will be launched.
-    HRESULT GetApplicationId([out] LPWSTR *value);
-}
-
 // Clients of shell item activation including callers of ShellExecuteEx() and
 // IContextMenu::InvokeCommand() can implement IHandlerActivationHost
 // to be given a chance to veto or perform some action before the activation of verb handlers.
@@ -8997,7 +8890,6 @@ interface IHandlerActivationHost : IUnknown
     // HRESULT_FROM_WIN32(ERROR_CANCELLED) should be returned. EXECUTE_E_LAUNCH_APPLICATION
     // can be returned to indicate that this verb implementation should be skipped and the next
     // one tried (if there is one). Generally these error codes will propagate out of the sub system activating the handlers.
-    // handlerInfo implements IHandlerInfo2
     HRESULT BeforeCoCreateInstance([in] REFCLSID clsidHandler,
         [in] IShellItemArray *itemsBeingActivated, [in] IHandlerInfo *handlerInfo);
     // The applicationPath will normally be a fully qualified path to an application .exe
@@ -9070,122 +8962,6 @@ interface IContactManagerInterop : IUnknown
 }
 
 cpp_quote("#endif // NTDDI_WINBLUE")
-
-// IShellIconOverlayIdentifier
-//
-// Used to identify a file as a member of the group of files that have this specific
-// icon overlay
-//
-// Users can create new IconOverlayIdentifiers and place them in the following registry
-// location together with the Icon overlay image and their priority.
-// HKEY_LOCAL_MACHINE "Software\\Microsoft\\Windows\\CurrentVersion\\ShellIconOverlayIdentifiers"
-//
-// The shell will enumerate through all IconOverlayIdentifiers at start, and prioritize
-// them according to internal rules, in case the internal rules don't apply, we use their
-// input priority
-//
-// IShellIconOverlayIdentifier:IsMemberOf(LPCWSTR pwszPath, DWORD dwAttrib)
-//      pwszPath        full path of the file
-//      dwAttrib        attribute of this file
-//
-//  returns:
-//      S_OK,    if the file is a member
-//      S_FALSE, if the file is not a member
-//      E_FAIL,  if the operation failed due to bad WIN32_FIND_DATA
-//
-// IShellIconOverlayIdentifier::GetOverlayInfo(LPWSTR pwszIconFile, int * pIndex, DWORD * dwFlags) PURE;
-//      pszIconFile    the path of the icon file
-//      pIndex         Depend on the flags, this could contain the IconIndex
-//      dwFlags        defined below
-//
-// IShellIconOverlayIdentifier::GetPriority(int * pIPriority) PURE;
-//      pIPriority     the priority of this Overlay Identifier
-
-[
-    uuid(0c6c4200-c589-11d0-999a-00c04fd655e1),
-    pointer_default(unique)
-]
-interface IShellIconOverlayIdentifier : IUnknown
-{
-    HRESULT IsMemberOf(
-        [in, string] LPCWSTR pwszPath,
-        [in] DWORD  dwAttrib);
-
-    HRESULT GetOverlayInfo(
-        [out, string, size_is(cchMax)] LPWSTR pwszIconFile,
-        [in]  int   cchMax,
-        [out] int   *pIndex,
-        [out] DWORD *pdwFlags);
-
-    HRESULT GetPriority(
-        [out] int *pPriority);
-}
-cpp_quote("#define ISIOI_ICONFILE   0x00000001") // path is returned through pwszIconFile
-cpp_quote("#define ISIOI_ICONINDEX  0x00000002") // icon index in pwszIconFile is returned through pIndex
-
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)")
-[
-    object,
-    uuid(8d7b2ba7-db05-46a8-823c-d2b6de08ee91),
-    pointer_default(unique),
-]
-interface IBannerNotificationHandler : IUnknown
-{
-    typedef [v1_enum] enum BANNER_NOTIFICATION_EVENT
-    {
-        BNE_Rendered = 0,
-        BNE_Hovered,
-        BNE_Closed,      // Implicit close due to navigation
-        BNE_Dismissed,   // Explicit close by user using dismiss button
-        BNE_Button1Clicked,
-        BNE_Button2Clicked
-    } BANNER_NOTIFICATION_EVENT;
-
-    typedef struct BANNER_NOTIFICATION
-    {
-        BANNER_NOTIFICATION_EVENT event;
-        LPCWSTR providerIdentity;
-        LPCWSTR contentId;
-    } BANNER_NOTIFICATION;
-
-    HRESULT OnBannerEvent([in] BANNER_NOTIFICATION const* notification);
-}
-cpp_quote("#endif // NTDDI_WIN10_RS4")
-
-cpp_quote("#if (NTDDI_VERSION >= NTDDI_VISTA)")
-[v1_enum] enum SORT_ORDER_TYPE
-{
-    SOT_DEFAULT             = 0,
-    SOT_IGNORE_FOLDERNESS   = 1,
-};
-
-[
-    object,
-    uuid(6dfc60fb-f2e9-459b-beb5-288f1a7c7d54),
-    pointer_default(unique),
-]
-interface ISortColumnArray : IUnknown
-{
-    HRESULT GetCount([out] UINT* columnCount);
-    HRESULT GetAt([in] UINT index, [out] SORTCOLUMN* sortcolumn);
-    HRESULT GetSortType([out] enum SORT_ORDER_TYPE* type);
-}
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_VISTA)")
-
-[
-   object,
-   uuid(75BD59AA-F23B-4963-ABA4-0B355752A91B),
-   pointer_default(unique)
-]
-interface IPropertyKeyStore : IUnknown
-{
-    HRESULT GetKeyCount([out] int* keyCount);
-    HRESULT GetKeyAt([in] int index, [out] PROPERTYKEY* pkey);
-    HRESULT AppendKey([in] REFPROPERTYKEY key);
-    HRESULT DeleteKey([in] int index);
-    HRESULT IsKeyInStore([in] REFPROPERTYKEY key); // S_OK means yes, S_FALSE means no.
-    HRESULT RemoveKey([in] REFPROPERTYKEY key);
-}
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 

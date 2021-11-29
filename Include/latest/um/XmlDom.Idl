@@ -122,7 +122,7 @@ interface IXMLDOMNode : IDispatch
 
     // readonly attribute  Node                 lastChild;
     [propget,id(DISPID_DOM_NODE_LASTCHILD),
-     helpstring("last child of the node")]
+     helpstring("first child of the node")]
     HRESULT lastChild(
         [out, retval] IXMLDOMNode ** lastChild);
 
@@ -190,7 +190,7 @@ interface IXMLDOMNode : IDispatch
     [propget, id(DISPID_DOM_NODE_OWNERDOC), 
      helpstring("document that contains the node")]
     HRESULT ownerDocument(
-        [out, retval] IXMLDOMDocument ** XMLDOMDocument);
+        [out, retval] IXMLDOMDocument ** DOMDocument);
 
     // Node                      cloneNode(in boolean deep);
     [id(DISPID_DOM_NODE_CLONENODE),
@@ -450,9 +450,9 @@ interface IXMLDOMDocument : IXMLDOMNode
         [out, retval] VARIANT_BOOL * isSuccessful);
 
     [id(DISPID_XMLDOM_DOCUMENT_SAVE), 
-     helpstring("save the document to a specified destination")] 
+     helpstring("save the document to a specified desination")] 
     HRESULT save( 
-        [in] VARIANT destination);
+        [in] VARIANT desination);
 
     [propget, id(DISPID_XMLDOM_DOCUMENT_VALIDATE), 
      helpstring("indicates whether the parser performs validation")] 

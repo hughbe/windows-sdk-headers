@@ -5,7 +5,7 @@ import "dxgi1_4.idl";
 cpp_quote("#include <winapifamily.h>")
 
 #pragma region App Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
 
 typedef enum DXGI_OUTDUPL_FLAG {
     DXGI_OUTDUPL_COMPOSITED_UI_CAPTURE_ONLY = 1,
@@ -40,7 +40,6 @@ typedef enum DXGI_HDR_METADATA_TYPE
 {
     DXGI_HDR_METADATA_TYPE_NONE = 0,
     DXGI_HDR_METADATA_TYPE_HDR10 = 1,
-    DXGI_HDR_METADATA_TYPE_HDR10PLUS = 2,
 } DXGI_HDR_METADATA_TYPE;
 
 typedef struct DXGI_HDR_METADATA_HDR10
@@ -57,11 +56,6 @@ typedef struct DXGI_HDR_METADATA_HDR10
     UINT16 MaxContentLightLevel;
     UINT16 MaxFrameAverageLightLevel;
 } DXGI_HDR_METADATA_HDR10;
-
-typedef struct DXGI_HDR_METADATA_HDR10PLUS
-{
-    BYTE Data[72];
-} DXGI_HDR_METADATA_HDR10PLUS;
 
 //--------------------------------------------------------------------------------------------------------
 // IDXGISwapChain4 interface
@@ -148,7 +142,7 @@ interface IDXGIFactory5 :
 
 //--------------------------------------------------------------------------------------------------------
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 
 cpp_quote( "DEFINE_GUID(IID_IDXGIOutput5,0x80A07424,0xAB52,0x42EB,0x83,0x3C,0x0C,0x42,0xFD,0x28,0x2D,0x98);" )

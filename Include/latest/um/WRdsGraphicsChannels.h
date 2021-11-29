@@ -82,7 +82,7 @@ extern "C"{
 
 #define	WRdsGraphicsChannels_RTT_Unavailable	( ( ULONG  )-1 )
 
-EXTERN_C __declspec(selectany) const IID IID_IWRdsGraphicsChannelEvents = {0x67f2368c, 0xd674, 0x4fae, {0x66, 0xa5, 0xd2, 0x06, 0x28, 0xa6, 0x40, 0xd2}};
+EXTERN_C __declspec(selectany) const IID IID_IWRdsGraphicsChannelEvents = {0x67f2368c, 0xd674, 0x4fae, {0xa5, 0x66, 0xd2, 0x06, 0x28, 0xa6, 0x40, 0xd2}};
 
 
 extern RPC_IF_HANDLE __MIDL_itf_wrdsgraphicschannels_0000_0000_v0_0_c_ifspec;
@@ -223,7 +223,7 @@ EXTERN_C const IID IID_IWRdsGraphicsChannelEvents;
 /* interface __MIDL_itf_wrdsgraphicschannels_0000_0001 */
 /* [local] */ 
 
-EXTERN_C __declspec(selectany) const IID IID_IWRdsGraphicsChannel = {0x684b7a0b, 0xedff, 0x43ad, {0xd5, 0xa2, 0x4a, 0x8d, 0x53, 0x88, 0xf4, 0x01}};
+EXTERN_C __declspec(selectany) const IID IID_IWRdsGraphicsChannel = {0x684b7a0b, 0xedff, 0x43ad, {0xa2, 0xd5, 0x4a, 0x8d, 0x53, 0x88, 0xf4, 0x01}};
 
 
 extern RPC_IF_HANDLE __MIDL_itf_wrdsgraphicschannels_0000_0001_v0_0_c_ifspec;
@@ -343,7 +343,7 @@ enum __MIDL___MIDL_itf_wrdsgraphicschannels_0000_0002_0001
         WRdsGraphicsChannelType_BestEffortDelivery	= 1
     } 	WRdsGraphicsChannelType;
 
-EXTERN_C __declspec(selectany) const IID IID_IWRdsGraphicsChannelManager = {0x0fd57159, 0xe83e, 0x476a, {0xa8, 0xb9, 0x4a, 0x79, 0x76, 0xe7, 0x1e, 0x18}};
+EXTERN_C __declspec(selectany) const IID IID_IWRdsGraphicsChannelManager = {0x0fd57159, 0xe83e, 0x476a, {0xb9, 0xa8, 0x4a, 0x79, 0x76, 0xe7, 0x1e, 0x18}};
 
 
 extern RPC_IF_HANDLE __MIDL_itf_wrdsgraphicschannels_0000_0002_v0_0_c_ifspec;

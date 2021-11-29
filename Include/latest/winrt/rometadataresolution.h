@@ -8,9 +8,7 @@
 #pragma once
 
 #include <cor.h>
-#include <activation.h>
-#include <hstring.h>
- 
+
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 _Check_return_ extern "C" HRESULT WINAPI RoGetMetaDataFile(
     _In_ const HSTRING name,
@@ -38,15 +36,3 @@ _Check_return_ extern "C" HRESULT WINAPI RoResolveNamespace(
     _Outptr_opt_result_buffer_(*subNamespacesCount) HSTRING **subNamespaces);
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-_Check_return_ STDAPI RoIsApiContractPresent(
-    _In_ PCWSTR name,
-    _In_ UINT16 majorVersion,
-    _In_ UINT16 minorVersion,
-    _Out_ BOOL* present);
-
-_Check_return_ STDAPI RoIsApiContractMajorVersionPresent(
-    _In_ PCWSTR name,
-    _In_ UINT16 majorVersion,
-    _Out_ BOOL* present);
-#endif

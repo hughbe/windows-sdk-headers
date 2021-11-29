@@ -22,27 +22,6 @@
 --*/
 
 //
-// Compression operation for Compress2
-//
-//
-// Process input data.
-// The encoder may choose to buffer the data and postpone flushing output.
-// 
-#define IIS_COMPRESSION_OPERATION_PROCESS   0
-
-//
-// Flush all pending output data buffered in the encoder.
-// Flush is performed when the available input data is depleted.
-// 
-#define IIS_COMPRESSION_OPERATION_FLUSH     1
-
-//
-// Finalize the stream.
-// Finalization happens when the input stream reaches the end.
-// 
-#define IIS_COMPRESSION_OPERATION_FINISH    2
-
-//
 // Initialize compression scheme
 // When used with IIS, InitCompression is called once as soon
 // as compression scheme dll is loaded by IIS compression module
@@ -85,22 +64,7 @@ HRESULT WINAPI Compress(
     IN      LONG            output_buffer_size, // size of output buffer
     OUT     PLONG           input_used,         // amount of input buffer used
     OUT     PLONG           output_used,        // amount of output buffer used
-    IN      INT             compression_level   // compression level
-);
-
-//
-// Compress data with a given compression operation
-//
-HRESULT WINAPI Compress2(
-    IN  OUT PVOID           context,            // compression context
-    IN      CONST BYTE *    input_buffer,       // input buffer
-    IN      LONG            input_buffer_size,  // size of input buffer
-    IN      PBYTE           output_buffer,      // output buffer
-    IN      LONG            output_buffer_size, // size of output buffer
-    OUT     PLONG           input_used,         // amount of input buffer used
-    OUT     PLONG           output_used,        // amount of output buffer used
-    IN      INT             compression_level,  // compression level
-    IN      INT             operation           // compression operation
+    IN      INT             compression_level   // compression level (1...10)
 );
 
 //

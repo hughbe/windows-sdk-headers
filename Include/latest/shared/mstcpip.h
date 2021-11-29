@@ -199,9 +199,6 @@ typedef struct _ASSOCIATE_NAMERES_CONTEXT_INPUT
 #define SIO_QUERY_TRANSPORT_SETTING         _WSAIOW(IOC_VENDOR,20)
 #define SIO_TCP_SET_ICW                     _WSAIOW(IOC_VENDOR,22)
 #define SIO_TCP_SET_ACK_FREQUENCY           _WSAIOW(IOC_VENDOR,23)
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
-#define SIO_SET_PRIORITY_HINT               _WSAIOW(IOC_VENDOR,24)
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS3
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
 #define SIO_TCP_INFO                        _WSAIORW(IOC_VENDOR,39)
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS2
@@ -285,11 +282,10 @@ typedef struct _TCP_ACK_FREQUENCY_PARAMETERS {
 
 } TCP_ACK_FREQUENCY_PARAMETERS, *PTCP_ACK_FREQUENCY_PARAMETERS;
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
 //
 // Output for SIO_TCP_INFO.
 //
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
 typedef struct _TCP_INFO_v0 {
     TCPSTATE State;
     ULONG Mss;
@@ -312,56 +308,6 @@ typedef struct _TCP_INFO_v0 {
     UCHAR SynRetrans;
 } TCP_INFO_v0, *PTCP_INFO_v0;
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS2
-
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-typedef struct _TCP_INFO_v1 {
-    TCPSTATE State;
-    ULONG Mss;
-    ULONG64 ConnectionTimeMs;
-    BOOLEAN TimestampsEnabled;
-    ULONG RttUs;
-    ULONG MinRttUs;
-    ULONG BytesInFlight;
-    ULONG Cwnd;
-    ULONG SndWnd;
-    ULONG RcvWnd;
-    ULONG RcvBuf;
-    ULONG64 BytesOut;
-    ULONG64 BytesIn;
-    ULONG BytesReordered;
-    ULONG BytesRetrans;
-    ULONG FastRetrans;
-    ULONG DupAcksIn;
-    ULONG TimeoutEpisodes;
-    UCHAR SynRetrans;
-
-    //
-    // Info about the limiting factor in send throughput.
-    //
-    // States:
-    // -Rwin: peer's receive window.
-    // -Cwnd: congestion window.
-    // -Snd: app not writing enough data to its socket.
-    //
-    // Per-state statistics:
-    // -Trans: number of transitions into the state.
-    // -Time: time spent in the state in milliseconds.
-    // -Bytes: number of bytes sent while in the state.
-    //
-    // These fields match those in TCP_ESTATS_SND_CONG_ROD.
-    //
-    ULONG SndLimTransRwin;
-    ULONG SndLimTimeRwin;
-    ULONG64 SndLimBytesRwin;
-    ULONG SndLimTransCwnd;
-    ULONG SndLimTimeCwnd;
-    ULONG64 SndLimBytesCwnd;
-    ULONG SndLimTransSnd;
-    ULONG SndLimTimeSnd;
-    ULONG64 SndLimBytesSnd;
-
-} TCP_INFO_v1, *PTCP_INFO_v1;
-#endif // NTDDI_VERSION >= NTDDI_WIN10_RS5
 
 //
 // TCP/UDP port management definitions.
@@ -401,8 +347,8 @@ typedef struct {
 #ifdef _WS2DEF_
 
 #if (NTDDI_VERSION >= NTDDI_VISTA)
-#pragma region Desktop Family or OneCore Family or Games Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #define _SECURE_SOCKET_TYPES_DEFINED_
 
 //
@@ -552,7 +498,7 @@ typedef struct _SOCKET_SECURITY_QUERY_INFO_IPSEC2
 
 #define SIO_QUERY_WFP_ALE_ENDPOINT_HANDLE _WSAIOR(IOC_VENDOR, 205)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
 //
@@ -1754,9 +1700,6 @@ INET_UNCANONICALIZE_SCOPE_ID(
 //
 #ifdef _WS2DEF_
 
-#pragma region Desktop Family or Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
 NTSYSAPI
 PSTR
 NTAPI
@@ -1845,14 +1788,9 @@ RtlIpv4StringToAddressExW (
 #define RtlIpv4StringToAddressEx RtlIpv4StringToAddressExA
 #endif // UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-
 #endif //_WS2DEF_
 
 #ifdef _WS2IPDEF_
-
-#pragma region Desktop Family or Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 NTSYSAPI
 PSTR
@@ -1942,17 +1880,12 @@ RtlIpv6StringToAddressExW (
 #define RtlIpv6AddressToStringEx RtlIpv6AddressToStringExA
 #endif // UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-
 #endif // __WS2IPDEF__
 
 //
 //  Some simple Rtl routines for Ethernet address <-> string literal conversion
 //
 #ifdef _WS2DEF_
-
-#pragma region Desktop Family or Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 union _DL_EUI48;
 typedef union _DL_EUI48 DL_EUI48, *PDL_EUI48;
@@ -1999,8 +1932,6 @@ RtlEthernetStringToAddressW (
 #define RtlEthernetStringToAddress RtlEthernetStringToAddressA
 #endif // UNICODE
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
-
 #endif //_WS2DEF_
 
 #endif // (NTDDI >= NTDDI_VISTA)
@@ -2024,4 +1955,5 @@ RtlEthernetStringToAddressW (
 #endif // GUID_DEFS_ONLY
 
 #endif // !_MSTCPIP_
+
 

@@ -1,3 +1,4 @@
+ 
 /*++
 
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -28,11 +29,29 @@ Revision History:
 #include <minwindef.h>
 #endif
 
+/* APISET_NAME: api-ms-win-security-sddl-l1 */
+/* APISET_TAG: public */
+
+#if !defined(RC_INVOKED)
+
+#ifndef _APISET_SDDL_VER
+#ifdef _APISET_TARGET_VERSION
+#if _APISET_TARGET_VERSION >= _APISET_TARGET_VERSION_WIN7
+#define _APISET_SDDL_VER 0x0100
+#endif
+#endif
+#endif
+
+#endif // !defined(RC_INVOKED)
+
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #pragma region Application Family or OneCore Family
+
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 
 //
@@ -78,6 +97,7 @@ extern "C" {
 #define SDDL_CALLBACK_OBJECT_ACCESS_ALLOWED TEXT("ZA")  // Callback object access allowed
 #define SDDL_ACCESS_FILTER                  TEXT("FL")  // Access Filter
 
+
 //
 // SDDL Resource attribute ace data types
 //
@@ -89,6 +109,7 @@ extern "C" {
 #define SDDL_BLOB                           TEXT("TX")   // Octet String
 #define SDDL_BOOLEAN                        TEXT("TB")   // Boolean
 
+
 //
 // SDDL Ace flags
 //
@@ -97,10 +118,10 @@ extern "C" {
 #define SDDL_NO_PROPAGATE                   TEXT("NP")  // Inherit no propagate
 #define SDDL_INHERIT_ONLY                   TEXT("IO")  // Inherit only
 #define SDDL_INHERITED                      TEXT("ID")  // Inherited
-#define SDDL_CRITICAL                       TEXT("CR")  // Critical
 #define SDDL_TRUST_PROTECTED_FILTER         TEXT("TP")  // Trust Protected Filter
 #define SDDL_AUDIT_SUCCESS                  TEXT("SA")  // Audit success
 #define SDDL_AUDIT_FAILURE                  TEXT("FA")  // Audit failure
+
 
 //
 // SDDL Rights
@@ -133,6 +154,7 @@ extern "C" {
 #define SDDL_NO_WRITE_UP                    TEXT("NW")
 #define SDDL_NO_READ_UP                     TEXT("NR")
 #define SDDL_NO_EXECUTE_UP                  TEXT("NX")
+
 
 //
 // SDDL User alias max size
@@ -258,7 +280,11 @@ extern "C" {
 #define SDDL_ACE_COND_DEVICE_ATTRIBUTE_PREFIX     TEXT("@DEVICE.")
 #define SDDL_ACE_COND_TOKEN_ATTRIBUTE_PREFIX      TEXT("@TOKEN.")
 
+
+
+
 #if !defined(_NTDDK_)
+
 
 #if (_WIN32_WINNT >= 0x0500)
 _Success_(return != FALSE)
@@ -274,7 +300,7 @@ BOOL
 WINAPI
 ConvertSidToStringSidW(
     _In_ PSID Sid,
-    _Outptr_ LPWSTR* StringSid
+    _Outptr_ LPWSTR * StringSid
     );
 
 #ifdef UNICODE
@@ -296,7 +322,7 @@ BOOL
 WINAPI
 ConvertStringSidToSidW(
     _In_ LPCWSTR StringSid,
-    _Outptr_ PSID* Sid
+    _Outptr_ PSID * Sid
     );
 
 #ifdef UNICODE
@@ -321,7 +347,7 @@ WINAPI
 ConvertStringSecurityDescriptorToSecurityDescriptorW(
     _In_ LPCWSTR StringSecurityDescriptor,
     _In_ DWORD StringSDRevision,
-    _Outptr_ PSECURITY_DESCRIPTOR* SecurityDescriptor,
+    _Outptr_ PSECURITY_DESCRIPTOR * SecurityDescriptor,
     _Out_opt_ PULONG SecurityDescriptorSize
     );
 
@@ -349,7 +375,7 @@ ConvertSecurityDescriptorToStringSecurityDescriptorW(
     _In_ PSECURITY_DESCRIPTOR SecurityDescriptor,
     _In_ DWORD RequestedStringSDRevision,
     _In_ SECURITY_INFORMATION SecurityInformation,
-    _Outptr_ LPWSTR* StringSecurityDescriptor,
+    _Outptr_ LPWSTR * StringSecurityDescriptor,
     _Out_opt_ PULONG StringSecurityDescriptorLen
     );
 
