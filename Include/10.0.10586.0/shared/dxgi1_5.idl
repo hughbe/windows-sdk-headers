@@ -1,0 +1,35 @@
+// Copyright (c) Microsoft Corporation.  All Rights Reserved
+
+import "dxgi1_4.idl";
+
+cpp_quote("#include <winapifamily.h>")
+
+#pragma region App Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+
+    
+    
+
+//--------------------------------------------------------------------------------------------------------
+// IDXGIOutput5 interface
+//--------------------------------------------------------------------------------------------------------
+[
+    object,
+    uuid(80A07424-AB52-42EB-833C-0C42FD282D98),
+    local,
+    pointer_default(unique)
+]
+interface IDXGIOutput5 :
+    IDXGIOutput4
+{
+    HRESULT DuplicateOutput1([in, annotation("_In_")] IUnknown *pDevice,
+        [in ] UINT Flags,
+        [in, annotation("_In_")] UINT SupportedFormatsCount,
+        [in, annotation("_In_reads_(SupportedFormatsCount)")] const DXGI_FORMAT* pSupportedFormats,
+        [out, annotation("_COM_Outptr_")] IDXGIOutputDuplication **ppOutputDuplication);
+};
+
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+#pragma endregion
+
+cpp_quote( "DEFINE_GUID(IID_IDXGIOutput5,0x80A07424,0xAB52,0x42EB,0x83,0x3C,0x0C,0x42,0xFD,0x28,0x2D,0x98);" )

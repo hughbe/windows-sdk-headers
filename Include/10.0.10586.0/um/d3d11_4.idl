@@ -1,0 +1,48 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// D3D11.4 IDL
+//
+// Contains interface definitions for the D3D11.4 API.
+//
+// Copyright (C) Microsoft Corporation
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "dxgi1_5.idl";
+import "d3dcommon.idl";
+
+import "d3d11_3.idl"; //
+cpp_quote( "#ifdef __cplusplus" )
+cpp_quote( "}" ) // extern C
+cpp_quote( "#endif" )
+cpp_quote( "#include \"d3d11_3.h\" //") //
+cpp_quote( "#ifdef __cplusplus" )
+cpp_quote( "extern \"C\"{" )
+cpp_quote( "#endif" )
+
+#pragma region App Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Device4
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[ uuid( 8992ab71-02e6-4b8d-ba48-b056dcda42c4 ), object, local, pointer_default( unique ) ]
+interface ID3D11Device4
+    : ID3D11Device3
+{
+    HRESULT RegisterDeviceRemovedEvent(
+        [annotation("_In_")] HANDLE hEvent,
+        [annotation("_Out_")] DWORD* pdwCookie
+        );
+
+    void UnregisterDeviceRemoved( [annotation("_In_")] DWORD dwCookie );
+};
+
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+#pragma endregion
+
+cpp_quote( "DEFINE_GUID(IID_ID3D11Device4,0x8992ab71,0x02e6,0x4b8d,0xba,0x48,0xb0,0x56,0xdc,0xda,0x42,0xc4);" )
