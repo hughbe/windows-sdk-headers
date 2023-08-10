@@ -19,6 +19,8 @@ namespace Windows
     {
         typedef struct DateTime DateTime;
 
+        interface IAsyncAction;
+
         interface IClosable;
 
         typedef struct TimeSpan TimeSpan;
@@ -47,6 +49,10 @@ namespace Windows
             typedef enum ActivitySensorReadingConfidence ActivitySensorReadingConfidence;
 
             typedef enum ActivityType ActivityType;
+
+            typedef enum HumanEngagement HumanEngagement;
+
+            typedef enum HumanPresence HumanPresence;
 
             typedef enum MagnetometerAccuracy MagnetometerAccuracy;
 
@@ -99,6 +105,8 @@ namespace Windows
             interface IActivitySensorStatics;
 
             interface IActivitySensorTriggerDetails;
+
+            interface IAdaptiveDimmingOptions;
 
             interface IAltimeter;
 
@@ -184,6 +192,28 @@ namespace Windows
 
             interface IHingeAngleSensorStatics;
 
+            interface IHumanPresenceFeatures;
+
+            interface IHumanPresenceFeatures2;
+
+            interface IHumanPresenceSensor;
+
+            interface IHumanPresenceSensor2;
+
+            interface IHumanPresenceSensorReading;
+
+            interface IHumanPresenceSensorReadingChangedEventArgs;
+
+            interface IHumanPresenceSensorStatics;
+
+            interface IHumanPresenceSensorStatics2;
+
+            interface IHumanPresenceSettings;
+
+            interface IHumanPresenceSettings2;
+
+            interface IHumanPresenceSettingsStatics;
+
             interface IInclinometer;
 
             interface IInclinometer2;
@@ -231,6 +261,8 @@ namespace Windows
             interface ILightSensorStatics;
 
             interface ILightSensorStatics2;
+
+            interface ILockOnLeaveOptions;
 
             interface IMagnetometer;
 
@@ -324,6 +356,8 @@ namespace Windows
 
             interface ISimpleOrientationSensorStatics2;
 
+            interface IWakeOnApproachOptions;
+
             runtimeclass Accelerometer;
 
             runtimeclass AccelerometerDataThreshold;
@@ -343,6 +377,8 @@ namespace Windows
             runtimeclass ActivitySensorReadingChangedEventArgs;
 
             runtimeclass ActivitySensorTriggerDetails;
+
+            runtimeclass AdaptiveDimmingOptions;
 
             runtimeclass Altimeter;
 
@@ -380,6 +416,16 @@ namespace Windows
 
             runtimeclass HingeAngleSensorReadingChangedEventArgs;
 
+            runtimeclass HumanPresenceFeatures;
+
+            runtimeclass HumanPresenceSensor;
+
+            runtimeclass HumanPresenceSensorReading;
+
+            runtimeclass HumanPresenceSensorReadingChangedEventArgs;
+
+            runtimeclass HumanPresenceSettings;
+
             runtimeclass Inclinometer;
 
             runtimeclass InclinometerDataThreshold;
@@ -395,6 +441,8 @@ namespace Windows
             runtimeclass LightSensorReading;
 
             runtimeclass LightSensorReadingChangedEventArgs;
+
+            runtimeclass LockOnLeaveOptions;
 
             runtimeclass Magnetometer;
 
@@ -437,6 +485,8 @@ namespace Windows
             runtimeclass SimpleOrientationSensor;
 
             runtimeclass SimpleOrientationSensorOrientationChangedEventArgs;
+
+            runtimeclass WakeOnApproachOptions;
         }
     }
 }
@@ -506,6 +556,12 @@ namespace Windows
 
                 interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor*>;
 
+                interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures*>;
+
+                interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor*>;
+
+                interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings*>;
+
                 interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.Inclinometer*>;
 
                 interface Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor*>;
@@ -537,6 +593,8 @@ namespace Windows
                 interface Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Gyrometer*, Windows.Devices.Sensors.GyrometerReadingChangedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HingeAngleSensor*, Windows.Devices.Sensors.HingeAngleSensorReadingChangedEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HumanPresenceSensor*, Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Inclinometer*, Windows.Devices.Sensors.InclinometerReadingChangedEventArgs*>;
 
@@ -589,6 +647,22 @@ namespace Windows
                 Running    = 5,
                 InVehicle  = 6,
                 Biking     = 7
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            enum HumanEngagement
+            {
+                Unknown   = 0,
+                Engaged   = 1,
+                Unengaged = 2
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            enum HumanPresence
+            {
+                Unknown    = 0,
+                Present    = 1,
+                NotPresent = 2
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -843,6 +917,15 @@ namespace Windows
             interface IActivitySensorTriggerDetails : IInspectable
             {
                 HRESULT ReadReports([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReadingChangeReport*>** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.AdaptiveDimmingOptions)]
+            [uuid(D3213CF7-89B5-5732-B2A0-AEFE324F54E6)]
+            interface IAdaptiveDimmingOptions : IInspectable
+            {
+                [propget] HRESULT AllowWhenExternalDisplayConnected([out] [retval] boolean* value);
+                [propput] HRESULT AllowWhenExternalDisplayConnected([in] boolean value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1245,6 +1328,135 @@ namespace Windows
                 HRESULT FromIdAsync([in] HSTRING deviceId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HingeAngleSensor*>** result);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceFeatures)]
+            [uuid(BDB09FDA-3244-557A-BD29-8B004F59F2CC)]
+            interface IHumanPresenceFeatures : IInspectable
+            {
+                [propget] HRESULT SensorId([out] [retval] HSTRING* value);
+                [propget] HRESULT SupportedWakeOrLockDistancesInMillimeters([out] [retval] Windows.Foundation.Collections.IVectorView<UINT32>** value);
+                [propget] HRESULT IsWakeOnApproachSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsLockOnLeaveSupported([out] [retval] boolean* value);
+                [deprecated("Use IsAdaptiveDimmingSupported instead of IsAttentionAwareDimmingSupported.", deprecate, Windows.Foundation.UniversalApiContract, 15.0)] [propget] HRESULT IsAttentionAwareDimmingSupported([out] [retval] boolean* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceFeatures)]
+            [uuid(08A9CDDA-D929-5EC2-81E2-940BAFA089CF)]
+            interface IHumanPresenceFeatures2 : IInspectable
+            {
+                [propget] HRESULT IsAdaptiveDimmingSupported([out] [retval] boolean* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensor)]
+            [uuid(2116788B-E389-5CC3-9A97-CB17BE1008BD)]
+            interface IHumanPresenceSensor : IInspectable
+            {
+                [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
+                [propget] HRESULT MaxDetectableDistanceInMillimeters([out] [retval] Windows.Foundation.IReference<UINT32>** value);
+                [propget] HRESULT MinDetectableDistanceInMillimeters([out] [retval] Windows.Foundation.IReference<UINT32>** value);
+                HRESULT GetCurrentReading([out] [retval] Windows.Devices.Sensors.HumanPresenceSensorReading** result);
+                [eventadd] HRESULT ReadingChanged([in] Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.HumanPresenceSensor*, Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT ReadingChanged([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensor)]
+            [uuid(F8833779-65FE-541A-B9D6-1E474A485E7A)]
+            interface IHumanPresenceSensor2 : IInspectable
+            {
+                [propget] HRESULT IsPresenceSupported([out] [retval] boolean* value);
+                [propget] HRESULT IsEngagementSupported([out] [retval] boolean* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensorReading)]
+            [uuid(83533BF5-A85A-5D50-8BE4-6072D745A3BB)]
+            interface IHumanPresenceSensorReading : IInspectable
+            {
+                [propget] HRESULT Timestamp([out] [retval] Windows.Foundation.DateTime* value);
+                [propget] HRESULT Presence([out] [retval] Windows.Devices.Sensors.HumanPresence* value);
+                [propget] HRESULT Engagement([out] [retval] Windows.Devices.Sensors.HumanEngagement* value);
+                [propget] HRESULT DistanceInMillimeters([out] [retval] Windows.Foundation.IReference<UINT32>** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs)]
+            [uuid(A9DC4583-FD69-5C5E-AB1F-942204EAE2DB)]
+            interface IHumanPresenceSensorReadingChangedEventArgs : IInspectable
+            {
+                [propget] HRESULT Reading([out] [retval] Windows.Devices.Sensors.HumanPresenceSensorReading** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensor)]
+            [uuid(2AE89842-DBA9-56B2-9F27-EAC69D621004)]
+            interface IHumanPresenceSensorStatics : IInspectable
+            {
+                HRESULT GetDeviceSelector([out] [retval] HSTRING* result);
+                HRESULT FromIdAsync([in] HSTRING sensorId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor*>** operation);
+                HRESULT GetDefaultAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSensor*>** operation);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensor)]
+            [uuid(5DE35843-D260-5A87-995E-ACE91326E1C4)]
+            interface IHumanPresenceSensorStatics2 : IInspectable
+            {
+                HRESULT FromId([in] HSTRING sensorId, [out] [retval] Windows.Devices.Sensors.HumanPresenceSensor** result);
+                HRESULT GetDefault([out] [retval] Windows.Devices.Sensors.HumanPresenceSensor** result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSettings)]
+            [uuid(EF4DAF5B-07B7-5EB6-86BB-B7FF49CE44FB)]
+            interface IHumanPresenceSettings : IInspectable
+            {
+                [propget] HRESULT SensorId([out] [retval] HSTRING* value);
+                [propput] HRESULT SensorId([in] HSTRING value);
+                [propget] HRESULT IsWakeOnApproachEnabled([out] [retval] boolean* value);
+                [propput] HRESULT IsWakeOnApproachEnabled([in] boolean value);
+                [propget] HRESULT WakeOnApproachDistanceInMillimeters([out] [retval] Windows.Foundation.IReference<UINT32>** value);
+                [propput] HRESULT WakeOnApproachDistanceInMillimeters([in] Windows.Foundation.IReference<UINT32>* value);
+                [propget] HRESULT IsLockOnLeaveEnabled([out] [retval] boolean* value);
+                [propput] HRESULT IsLockOnLeaveEnabled([in] boolean value);
+                [propget] HRESULT LockOnLeaveDistanceInMillimeters([out] [retval] Windows.Foundation.IReference<UINT32>** value);
+                [propput] HRESULT LockOnLeaveDistanceInMillimeters([in] Windows.Foundation.IReference<UINT32>* value);
+                [propget] HRESULT LockOnLeaveTimeout([out] [retval] Windows.Foundation.TimeSpan* value);
+                [propput] HRESULT LockOnLeaveTimeout([in] Windows.Foundation.TimeSpan value);
+                [deprecated("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.", deprecate, Windows.Foundation.UniversalApiContract, 15.0)] [propget] HRESULT IsAttentionAwareDimmingEnabled([out] [retval] boolean* value);
+                [deprecated("Use IsAdaptiveDimmingEnabled instead of IsAttentionAwareDimmingEnabled.", deprecate, Windows.Foundation.UniversalApiContract, 15.0)] [propput] HRESULT IsAttentionAwareDimmingEnabled([in] boolean value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSettings)]
+            [uuid(A26F705E-8696-5EB4-B9E1-26A508DE1CD4)]
+            interface IHumanPresenceSettings2 : IInspectable
+            {
+                [propget] HRESULT IsAdaptiveDimmingEnabled([out] [retval] boolean* value);
+                [propput] HRESULT IsAdaptiveDimmingEnabled([in] boolean value);
+                [propget] HRESULT WakeOptions([out] [retval] Windows.Devices.Sensors.WakeOnApproachOptions** value);
+                [propget] HRESULT DimmingOptions([out] [retval] Windows.Devices.Sensors.AdaptiveDimmingOptions** value);
+                [propget] HRESULT LockOptions([out] [retval] Windows.Devices.Sensors.LockOnLeaveOptions** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSettings)]
+            [uuid(7F343202-E010-52C4-AF0C-04A8F1E033DA)]
+            interface IHumanPresenceSettingsStatics : IInspectable
+            {
+                HRESULT GetCurrentSettingsAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceSettings*>** operation);
+                HRESULT GetCurrentSettings([out] [retval] Windows.Devices.Sensors.HumanPresenceSettings** result);
+                HRESULT UpdateSettingsAsync([in] Windows.Devices.Sensors.HumanPresenceSettings* settings, [out] [retval] Windows.Foundation.IAsyncAction** operation);
+                HRESULT UpdateSettings([in] Windows.Devices.Sensors.HumanPresenceSettings* settings);
+                HRESULT GetSupportedFeaturesForSensorIdAsync([in] HSTRING sensorId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.HumanPresenceFeatures*>** operation);
+                HRESULT GetSupportedFeaturesForSensorId([in] HSTRING sensorId, [out] [retval] Windows.Devices.Sensors.HumanPresenceFeatures** result);
+                HRESULT GetSupportedLockOnLeaveTimeouts([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan>** result);
+                [eventadd] HRESULT SettingsChanged([in] Windows.Foundation.EventHandler<IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT SettingsChanged([in] EventRegistrationToken token);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Devices.Sensors.Inclinometer)]
             [uuid(2648CA6F-2286-406F-9161-F0C4BD806EBF)]
@@ -1467,6 +1679,15 @@ namespace Windows
             {
                 HRESULT GetDeviceSelector([out] [retval] HSTRING* result);
                 HRESULT FromIdAsync([in] HSTRING deviceId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.LightSensor*>** operation);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.LockOnLeaveOptions)]
+            [uuid(3C6BF8BD-04C1-5829-8D4E-70521755B8BE)]
+            interface ILockOnLeaveOptions : IInspectable
+            {
+                [propget] HRESULT AllowWhenExternalDisplayConnected([out] [retval] boolean* value);
+                [propput] HRESULT AllowWhenExternalDisplayConnected([in] boolean value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1908,6 +2129,17 @@ namespace Windows
                 HRESULT FromIdAsync([in] HSTRING deviceId, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Devices.Sensors.SimpleOrientationSensor*>** result);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.WakeOnApproachOptions)]
+            [uuid(F0B87AE7-7E1F-5EA5-814D-6B7E07DEFC2B)]
+            interface IWakeOnApproachOptions : IInspectable
+            {
+                [propget] HRESULT AllowWhenExternalDisplayConnected([out] [retval] boolean* value);
+                [propput] HRESULT AllowWhenExternalDisplayConnected([in] boolean value);
+                [propget] HRESULT DisableWhenBatterySaverOn([out] [retval] boolean* value);
+                [propput] HRESULT DisableWhenBatterySaverOn([in] boolean value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.Devices.Sensors.IAccelerometerStatics, Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1995,6 +2227,13 @@ namespace Windows
             runtimeclass ActivitySensorTriggerDetails
             {
                 [default] interface Windows.Devices.Sensors.IActivitySensorTriggerDetails;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass AdaptiveDimmingOptions
+            {
+                [default] interface Windows.Devices.Sensors.IAdaptiveDimmingOptions;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2160,6 +2399,49 @@ namespace Windows
                 [default] interface Windows.Devices.Sensors.IHingeAngleSensorReadingChangedEventArgs;
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass HumanPresenceFeatures
+            {
+                [default] interface Windows.Devices.Sensors.IHumanPresenceFeatures;
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)] interface Windows.Devices.Sensors.IHumanPresenceFeatures2;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.Devices.Sensors.IHumanPresenceSensorStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+            [static(Windows.Devices.Sensors.IHumanPresenceSensorStatics2, Windows.Foundation.UniversalApiContract, 15.0)]
+            [threading(both)]
+            runtimeclass HumanPresenceSensor
+            {
+                [default] interface Windows.Devices.Sensors.IHumanPresenceSensor;
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)] interface Windows.Devices.Sensors.IHumanPresenceSensor2;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass HumanPresenceSensorReading
+            {
+                [default] interface Windows.Devices.Sensors.IHumanPresenceSensorReading;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass HumanPresenceSensorReadingChangedEventArgs
+            {
+                [default] interface Windows.Devices.Sensors.IHumanPresenceSensorReadingChangedEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.Devices.Sensors.IHumanPresenceSettingsStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+            [threading(both)]
+            runtimeclass HumanPresenceSettings
+            {
+                [default] interface Windows.Devices.Sensors.IHumanPresenceSettings;
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)] interface Windows.Devices.Sensors.IHumanPresenceSettings2;
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
             [static(Windows.Devices.Sensors.IInclinometerStatics, Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2236,6 +2518,13 @@ namespace Windows
             runtimeclass LightSensorReadingChangedEventArgs
             {
                 [default] interface Windows.Devices.Sensors.ILightSensorReadingChangedEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass LockOnLeaveOptions
+            {
+                [default] interface Windows.Devices.Sensors.ILockOnLeaveOptions;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2427,6 +2716,13 @@ namespace Windows
             runtimeclass SimpleOrientationSensorOrientationChangedEventArgs
             {
                 [default] interface Windows.Devices.Sensors.ISimpleOrientationSensorOrientationChangedEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass WakeOnApproachOptions
+            {
+                [default] interface Windows.Devices.Sensors.IWakeOnApproachOptions;
             }
         }
     }

@@ -1650,11 +1650,11 @@ typedef EXCEPTION_ROUTINE *PEXCEPTION_ROUTINE;
 #define PRODUCT_LITE                                0x000000BD
 #define PRODUCT_IOTENTERPRISES                      0x000000BF
 #define PRODUCT_XBOX_SYSTEMOS                       0x000000C0
-#define PRODUCT_XBOX_NATIVEOS                       0x000000C1
 #define PRODUCT_XBOX_GAMEOS                         0x000000C2
 #define PRODUCT_XBOX_ERAOS                          0x000000C3
 #define PRODUCT_XBOX_DURANGOHOSTOS                  0x000000C4
 #define PRODUCT_XBOX_SCARLETTHOSTOS                 0x000000C5
+#define PRODUCT_XBOX_KEYSTONE                       0x000000C6
 #define PRODUCT_AZURE_SERVER_CLOUDHOST              0x000000C7
 #define PRODUCT_AZURE_SERVER_CLOUDMOS               0x000000C8
 #define PRODUCT_CLOUDEDITIONN                       0x000000CA
@@ -2718,8 +2718,8 @@ typedef struct _KERNEL_CET_CONTEXT {
             WORD   UseWrss : 1;
             WORD   PopShadowStackOne : 1;
             WORD   Unused : 14;
-        };
-    };
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
     WORD   Fill[2];
 } KERNEL_CET_CONTEXT, *PKERNEL_CET_CONTEXT;
 
@@ -3383,6 +3383,9 @@ InterlockedXor16(
 #endif
 
 VOID
+#if defined(_M_ARM64EC)
+__stdcall
+#endif
 __cpuidex (
     int CPUInfo[4],
     int Function,
@@ -4396,7 +4399,10 @@ typedef struct _DISPATCHER_CONTEXT_ARM64EC {
     DWORD64 ImageBase;
     PRUNTIME_FUNCTION FunctionEntry;
     DWORD64 EstablisherFrame;
-    DWORD64 TargetIp;
+    union {
+        DWORD64 TargetIp;
+        DWORD64 TargetPc;
+    } DUMMYUNIONNAME;
     PCONTEXT ContextRecord;
     PEXCEPTION_ROUTINE LanguageHandler;
     PVOID HandlerData;
@@ -4988,6 +4994,17 @@ WriteNoFence64 (
     return;
 }
 
+FORCEINLINE
+VOID
+BarrierAfterRead (
+    VOID
+    )
+
+{
+    __dmb(_ARM_BARRIER_ISH);
+    return;
+}
+
 // end_wdm end_ntndis end_ntosp end_ntminiport
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 // begin_wdm begin_ntndis begin_ntosp begin_ntminiport
@@ -5405,10 +5422,13 @@ typedef struct _SCOPE_TABLE_ARM64 {
 //
 // Temporary workaround for C++ bug: 64-bit bit test intrinsics are
 // not honoring the full 64-bit wide index, so pre-process the index
-// down to a qword base and a bit index 0-63 before calling through 
-// to the true intrinsic.
+// down to a qword base and a bit index 0-63 before calling through
+// to the true intrinsic. This issue was fixed as of compiler build
+// 19.28.29395.7.
 //
+#if defined(_MSC_FULL_VER) && (_MSC_FULL_VER < 192829395 || (_MSC_FULL_VER == 192829395 && _MSC_BUILD < 7))
 #define __ARM64_COMPILER_BITTEST64_WORKAROUND
+#endif
 
 #if !defined(__ARM64_COMPILER_BITTEST64_WORKAROUND)
 #define BitTest64 _bittest64
@@ -5948,6 +5968,17 @@ WriteNoFence64 (
 {
 
     __iso_volatile_store64(Destination, Value);
+    return;
+}
+
+FORCEINLINE
+VOID
+BarrierAfterRead (
+    VOID
+    )
+
+{
+    __dmb(_ARM64_BARRIER_ISH);
     return;
 }
 
@@ -6751,7 +6782,7 @@ typedef struct DECLSPEC_ALIGN(16) DECLSPEC_NOINITALL _ARM64EC_NT_CONTEXT {
             /* +0x4b8 */ DWORD64 AMD64_LastBranchFromRip;
             /* +0x4c0 */ DWORD64 AMD64_LastExceptionToRip;
             /* +0x4c8 */ DWORD64 AMD64_LastExceptionFromRip;
-            /* +0x4d0 */ 
+            /* +0x4d0 */
 
         } DUMMYSTRUCTNAME;
 
@@ -7576,9 +7607,9 @@ InterlockedExchange16 (
 #define InterlockedIncrement16 _InterlockedIncrement16
 #define InterlockedDecrement16 _InterlockedDecrement16
 
-char 
+char
 InterlockedExchangeAdd8 (
-    _Inout_ _Interlocked_operand_ char volatile * _Addend, 
+    _Inout_ _Interlocked_operand_ char volatile * _Addend,
     _In_ char _Value
     );
 
@@ -7970,6 +8001,13 @@ __writefsdword (
 #pragma intrinsic(__writefsbyte)
 #pragma intrinsic(__writefsword)
 #pragma intrinsic(__writefsdword)
+
+VOID
+_ReadWriteBarrier (
+    VOID
+    );
+
+#pragma intrinsic(_ReadWriteBarrier)
 
 #endif // !defined(_M_CEE_PURE)
 
@@ -8555,6 +8593,21 @@ WriteNoFence64 (
     return;
 }
 
+#if !defined(_M_CEE_PURE)
+
+FORCEINLINE
+VOID
+BarrierAfterRead (
+    VOID
+    )
+
+{
+    _ReadWriteBarrier();
+    return;
+}
+
+#endif
+
 #ifdef __cplusplus
 }
 #endif
@@ -8719,6 +8772,16 @@ ReadBooleanNoFence (
 {
 
     return (BOOLEAN)ReadNoFence8((PCHAR)Source);
+}
+
+FORCEINLINE
+BYTE 
+ReadBooleanRaw (
+    _In_ _Interlocked_operand_ BOOLEAN const volatile *Source
+    )
+
+{
+    return (BOOLEAN)ReadRaw8((PCHAR)Source);
 }
 
 FORCEINLINE
@@ -10200,7 +10263,8 @@ typedef struct _SID_AND_ATTRIBUTES_HASH {
 #define SECURITY_BUILTIN_APP_PACKAGE_RID_COUNT      (2L)
 #define SECURITY_APP_PACKAGE_RID_COUNT              (8L)
 #define SECURITY_CAPABILITY_BASE_RID                (0x00000003L)
-#define SECURITY_CAPABILITY_APP_RID                 (0x000000400)
+#define SECURITY_CAPABILITY_APP_RID                 (0x00000400L)
+#define SECURITY_CAPABILITY_APP_SILO_RID            (0x00010000L)
 #define SECURITY_BUILTIN_CAPABILITY_RID_COUNT       (2L)
 #define SECURITY_CAPABILITY_RID_COUNT               (5L)
 #define SECURITY_PARENT_PACKAGE_RID_COUNT           (SECURITY_APP_PACKAGE_RID_COUNT)
@@ -11379,7 +11443,12 @@ typedef struct _SE_ACCESS_REPLY
 #define SE_SESSION_IMPERSONATION_CAPABILITY L"sessionImpersonation"
 #define SE_MUMA_CAPABILITY L"muma"
 #define SE_DEVELOPMENT_MODE_NETWORK_CAPABILITY L"developmentModeNetwork"
+#define SE_LEARNING_MODE_LOGGING_CAPABILITY L"learningModeLogging"
 #define SE_PERMISSIVE_LEARNING_MODE_CAPABILITY L"permissiveLearningMode"
+#define SE_APP_SILO_VOLUME_ROOT_MINIMAL_CAPABILITY L"isolatedWin32-volumeRootMinimal"
+#define SE_APP_SILO_PROFILES_ROOT_MINIMAL_CAPABILITY L"isolatedWin32-profilesRootMinimal"
+#define SE_APP_SILO_USER_PROFILE_MINIMAL_CAPABILITY L"isolatedWin32-userProfileMinimal"
+#define SE_APP_SILO_PRINT_CAPABILITY L"isolatedWin32-print"
 
 // end_ntosifs
 
@@ -11469,6 +11538,10 @@ typedef enum _SECURITY_IMPERSONATION_LEVEL {
                                        TOKEN_QUERY  |\
                                        TOKEN_QUERY_SOURCE )
 
+#define TOKEN_TRUST_ALLOWED_MASK    (TOKEN_TRUST_CONSTRAINT_MASK |\
+                                    TOKEN_DUPLICATE              |\
+                                    TOKEN_IMPERSONATE)
+
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 
 #define TOKEN_ACCESS_PSEUDO_HANDLE_WIN8 (TOKEN_QUERY | TOKEN_QUERY_SOURCE)
@@ -11554,6 +11627,7 @@ typedef enum _TOKEN_INFORMATION_CLASS {
     TokenChildProcessFlags,
     TokenIsLessPrivilegedAppContainer,
     TokenIsSandboxed,
+    TokenIsAppSilo,
     MaxTokenInfoClass  // MaxTokenInfoClass should always be the last enum
 } TOKEN_INFORMATION_CLASS, *PTOKEN_INFORMATION_CLASS;
 
@@ -12108,18 +12182,6 @@ typedef enum _SE_IMAGE_SIGNATURE_TYPE
 } SE_IMAGE_SIGNATURE_TYPE, *PSE_IMAGE_SIGNATURE_TYPE;
 
 
-//
-// Learning Mode Types.
-//
-
-typedef enum _SE_LEARNING_MODE_DATA_TYPE {
-    SeLearningModeInvalidType = 0,
-    SeLearningModeSettings,
-    SeLearningModeMax
-} SE_LEARNING_MODE_DATA_TYPE;
-
-#define SE_LEARNING_MODE_FLAG_PERMISSIVE 0x00000001
-
 typedef struct _SECURITY_CAPABILITIES {
 #ifdef MIDL_PASS
     PISID AppContainerSid;
@@ -12478,6 +12540,9 @@ typedef enum _PROCESS_MITIGATION_POLICY {
     ProcessSideChannelIsolationPolicy,
     ProcessUserShadowStackPolicy,
     ProcessRedirectionTrustPolicy,
+    ProcessUserPointerAuthPolicy,
+	ProcessSEHOPPolicy,
+    ProcessActivationContextTrustPolicy,
     MaxProcessMitigationPolicy
 } PROCESS_MITIGATION_POLICY, *PPROCESS_MITIGATION_POLICY;
 
@@ -12510,6 +12575,16 @@ typedef struct _PROCESS_MITIGATION_DEP_POLICY {
     } DUMMYUNIONNAME;
     BOOLEAN Permanent;
 } PROCESS_MITIGATION_DEP_POLICY, *PPROCESS_MITIGATION_DEP_POLICY;
+
+typedef struct _PROCESS_MITIGATION_SEHOP_POLICY {
+    union {
+        DWORD Flags;
+        struct {
+            DWORD EnableSehop : 1;
+            DWORD ReservedFlags : 31;
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
+} PROCESS_MITIGATION_SEHOP_POLICY, *PPROCESS_MITIGATION_SEHOP_POLICY;
 
 typedef struct _PROCESS_MITIGATION_STRICT_HANDLE_CHECK_POLICY {
     union {
@@ -12698,7 +12773,14 @@ typedef struct _PROCESS_MITIGATION_SIDE_CHANNEL_ISOLATION_POLICY {
 
             DWORD SpeculativeStoreBypassDisable : 1;
 
-            DWORD ReservedFlags : 28;
+            //
+            // Prevent this process' threads from being scheduled on the same
+            // core as threads outside its security domain.
+            //
+
+            DWORD RestrictCoreSharing : 1;
+
+            DWORD ReservedFlags : 27;
 
         } DUMMYSTRUCTNAME;
     } DUMMYUNIONNAME;
@@ -12724,6 +12806,16 @@ typedef struct _PROCESS_MITIGATION_USER_SHADOW_STACK_POLICY {
     } DUMMYUNIONNAME;
 } PROCESS_MITIGATION_USER_SHADOW_STACK_POLICY, *PPROCESS_MITIGATION_USER_SHADOW_STACK_POLICY;
 
+typedef struct _PROCESS_MITIGATION_USER_POINTER_AUTH_POLICY {
+    union {
+        DWORD Flags;
+        struct {
+            DWORD EnablePointerAuthUserIp : 1;
+            DWORD ReservedFlags : 31;
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
+} PROCESS_MITIGATION_USER_POINTER_AUTH_POLICY, *PPROCESS_MITIGATION_USER_POINTER_AUTH_POLICY;
+
 typedef struct _PROCESS_MITIGATION_REDIRECTION_TRUST_POLICY {
     union {
         DWORD Flags;
@@ -12734,6 +12826,16 @@ typedef struct _PROCESS_MITIGATION_REDIRECTION_TRUST_POLICY {
         } DUMMYSTRUCTNAME;
     } DUMMYUNIONNAME;
 } PROCESS_MITIGATION_REDIRECTION_TRUST_POLICY, *PPROCESS_MITIGATION_REDIRECTION_TRUST_POLICY;
+
+typedef struct _PROCESS_MITIGATION_ACTIVATION_CONTEXT_TRUST_POLICY {
+    union {
+        DWORD Flags;
+        struct {
+            DWORD AssemblyManifestRedirectionTrust : 1;
+            DWORD ReservedFlags : 31;
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
+} PROCESS_MITIGATION_ACTIVATION_CONTEXT_TRUST_POLICY, *PPROCESS_MITIGATION_ACTIVATION_CONTEXT_TRUST_POLICY;
 
 //
 //
@@ -13171,10 +13273,11 @@ typedef struct _JOBOBJECT_IO_ATTRIBUTION_INFORMATION {
 #define JOB_OBJECT_UILIMIT_GLOBALATOMS      0x00000020
 #define JOB_OBJECT_UILIMIT_DESKTOP          0x00000040
 #define JOB_OBJECT_UILIMIT_EXITWINDOWS      0x00000080
+#define JOB_OBJECT_UILIMIT_IME              0x00000100
 
-#define JOB_OBJECT_UILIMIT_ALL              0x000000FF
+#define JOB_OBJECT_UILIMIT_ALL              0x000001FF
 
-#define JOB_OBJECT_UI_VALID_FLAGS           0x000000FF
+#define JOB_OBJECT_UI_VALID_FLAGS           0x000001FF
 
 #define JOB_OBJECT_SECURITY_NO_ADMIN            0x00000001
 #define JOB_OBJECT_SECURITY_RESTRICTED_TOKEN    0x00000002
@@ -13250,6 +13353,8 @@ typedef enum _JOBOBJECTINFOCLASS {
     JobObjectReserved23Information = 45,
     JobObjectReserved24Information = 46,
     JobObjectReserved25Information = 47,
+    JobObjectReserved26Information = 48,
+    JobObjectReserved27Information = 49,
     MaxJobObjectInfoClass
 } JOBOBJECTINFOCLASS;
 
@@ -13607,6 +13712,7 @@ typedef struct _SYSTEM_SUPPORTED_PROCESSOR_ARCHITECTURES_INFORMATION {
 #define PF_ERMS_AVAILABLE                           42   
 #define PF_ARM_V82_DP_INSTRUCTIONS_AVAILABLE        43   
 #define PF_ARM_V83_JSCVT_INSTRUCTIONS_AVAILABLE     44   
+#define PF_ARM_V83_LRCPC_INSTRUCTIONS_AVAILABLE     45   
 //
 
 //
@@ -13770,8 +13876,8 @@ typedef struct _XSTATE_CONFIGURATION {
             DWORD OptimizedSave : 1;
             DWORD CompactionEnabled : 1;
             DWORD ExtendedFeatureDisable : 1;
-        };
-    };
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
 
     // List of features
     XSTATE_FEATURE Features[MAXIMUM_XSTATE_FEATURES];
@@ -13975,6 +14081,7 @@ typedef struct _MEM_ADDRESS_REQUIREMENTS {
 #define MEM_EXTENDED_PARAMETER_NONPAGED_HUGE            0x00000010
 #define MEM_EXTENDED_PARAMETER_SOFT_FAULT_PAGES         0x00000020
 #define MEM_EXTENDED_PARAMETER_EC_CODE                  0x00000040
+#define MEM_EXTENDED_PARAMETER_IMAGE_NO_HPAT            0x00000080
 
 //
 // Use the high DWORD64 bit of the MEM_EXTENDED_PARAMETER to indicate
@@ -14302,8 +14409,8 @@ typedef struct DECLSPEC_ALIGN(8) _MEMORY_PARTITION_DEDICATED_MEMORY_INFORMATION 
 #define FILE_RETURNS_CLEANUP_RESULT_INFO    0x00000200  
 #define FILE_SUPPORTS_POSIX_UNLINK_RENAME   0x00000400  
 #define FILE_SUPPORTS_BYPASS_IO             0x00000800  
-
-
+#define FILE_SUPPORTS_STREAM_SNAPSHOTS      0x00001000  
+#define FILE_SUPPORTS_CASE_SENSITIVE_DIRS   0x00002000  
 
 #define FILE_VOLUME_IS_COMPRESSED           0x00008000  
 #define FILE_SUPPORTS_OBJECT_IDS            0x00010000  
@@ -14349,12 +14456,45 @@ typedef struct _FILE_NOTIFY_EXTENDED_INFORMATION {
     LARGE_INTEGER AllocatedLength;
     LARGE_INTEGER FileSize;
     DWORD FileAttributes;
-    DWORD ReparsePointTag;
+    union {
+        DWORD ReparsePointTag;
+        DWORD EaSize;
+    } DUMMYUNIONNAME;
     LARGE_INTEGER FileId;
     LARGE_INTEGER ParentFileId;
     DWORD FileNameLength;
     WCHAR FileName[1];
 } FILE_NOTIFY_EXTENDED_INFORMATION, *PFILE_NOTIFY_EXTENDED_INFORMATION;
+#endif
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_NI)
+#define FILE_NAME_FLAG_HARDLINK      0    // not part of a name pair
+#define FILE_NAME_FLAG_NTFS          0x01 // NTFS name in a name pair
+#define FILE_NAME_FLAG_DOS           0x02 // DOS name in a name pair
+#define FILE_NAME_FLAG_BOTH          0x03 // NTFS+DOS combined name
+#define FILE_NAME_FLAGS_UNSPECIFIED  0x80 // not specified by file system (do not combine with other flags)
+
+typedef struct _FILE_NOTIFY_FULL_INFORMATION {
+    DWORD NextEntryOffset;
+    DWORD Action;
+    LARGE_INTEGER CreationTime;
+    LARGE_INTEGER LastModificationTime;
+    LARGE_INTEGER LastChangeTime;
+    LARGE_INTEGER LastAccessTime;
+    LARGE_INTEGER AllocatedLength;
+    LARGE_INTEGER FileSize;
+    DWORD FileAttributes;
+    union {
+        DWORD ReparsePointTag;
+        DWORD EaSize;
+    } DUMMYUNIONNAME;
+    LARGE_INTEGER FileId;
+    LARGE_INTEGER ParentFileId;
+    WORD   FileNameLength;
+    BYTE  FileNameFlags;
+    BYTE  Reserved;
+    WCHAR FileName[1];
+} FILE_NOTIFY_FULL_INFORMATION, *PFILE_NOTIFY_FULL_INFORMATION;
 #endif
 
 
@@ -15571,6 +15711,14 @@ DEFINE_GUID(GUID_STANDBY_RESET_PERCENT, 0x49cb11a5, 0x56e2, 0x4afb, 0x9d, 0x38, 
 DEFINE_GUID(GUID_HUPR_ADAPTIVE_DISPLAY_TIMEOUT, 0x0A7D6AB6, 0xAC83, 0x4AD1, 0x82, 0x82, 0xEC, 0xA5, 0xB5, 0x83, 0x08, 0xF3);
 
 //
+// Defines a guid to control Human Presence Sensor Adaptive Dim Timeout;
+//
+// {CF8C6097-12B8-4279-BBDD-44601EE5209D}
+//
+
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_DIM_TIMEOUT, 0xCF8C6097, 0x12B8, 0x4279, 0xBB, 0xDD, 0x44, 0x60, 0x1E, 0xE5, 0x20, 0x9D);
+
+//
 // Defines a guid for enabling/disabling standby (S1-S3) states. This does not
 // affect hibernation (S4).
 //
@@ -16343,6 +16491,41 @@ DEFINE_GUID( GUID_PROCESSOR_LATENCY_HINT_MIN_UNPARK, 0x616cdaa5, 0x695e, 0x4545,
 DEFINE_GUID( GUID_PROCESSOR_LATENCY_HINT_MIN_UNPARK_1, 0x616cdaa5, 0x695e, 0x4545, 0x97, 0xad, 0x97, 0xdc, 0x2d, 0x1b, 0xdd, 0x89);
 
 //
+// Specifies the module unparking policy.
+//
+// {b0deaf6b-59c0-4523-8a45-ca7f40244114}
+//
+DEFINE_GUID( GUID_PROCESSOR_MODULE_PARKING_POLICY, 0xb0deaf6b, 0x59c0, 0x4523, 0x8a, 0x45, 0xca, 0x7f, 0x40, 0x24, 0x41, 0x14);
+
+//
+// Specifies the complex llc unparking policy.
+//
+// {b669a5e9-7b1d-4132-baaa-49190abcfeb6}
+//
+DEFINE_GUID(GUID_PROCESSOR_COMPLEX_PARKING_POLICY, 0xb669a5e9, 0x7b1d, 0x4132, 0xba, 0xaa, 0x49, 0x19, 0xa, 0xbc, 0xfe, 0xb6);
+
+//
+// PO topology(module or complex) parking Policies
+//
+
+#define PARKING_TOPOLOGY_POLICY_DISABLED    0
+#define PARKING_TOPOLOGY_POLICY_ROUNDROBIN  1
+#define PARKING_TOPOLOGY_POLICY_SEQUENTIAL  2
+
+//
+// Specifies the Smt unparking policy.
+//
+// {b28a6829-c5f7-444e-8f61-10e24e85c532}
+//
+
+DEFINE_GUID(GUID_PROCESSOR_SMT_UNPARKING_POLICY, 0xb28a6829, 0xc5f7, 0x444e, 0x8f, 0x61, 0x10, 0xe2, 0x4e, 0x85, 0xc5, 0x32);
+
+#define SMT_UNPARKING_POLICY_CORE 0
+#define SMT_UNPARKING_POLICY_CORE_PER_THREAD 1
+#define SMT_UNPARKING_POLICY_LP_ROUNDROBIN 2
+#define SMT_UNPARKING_POLICY_LP_SEQUENTIAL 3
+
+//
 // Specifies whether the core parking engine should distribute processor
 // utility.
 //
@@ -16388,12 +16571,30 @@ DEFINE_GUID( GUID_PROCESSOR_HETERO_DECREASE_THRESHOLD, 0xf8861c27, 0x95e7, 0x475
 
 //
 // Specifies the performance level (in units of Processor Power Efficiency
+// Class 1 processor performance) at which the number of Processor Power
+// Efficiency Class 2 processors is decreased.
+//
+// {f8861c27-95e7-475c-865b-13c0cb3f9d6c}
+//
+DEFINE_GUID( GUID_PROCESSOR_HETERO_DECREASE_THRESHOLD_1, 0xf8861c27, 0x95e7, 0x475c, 0x86, 0x5b, 0x13, 0xc0, 0xcb, 0x3f, 0x9d, 0x6c);
+
+//
+// Specifies the performance level (in units of Processor Power Efficiency
 // Class 0 processor performance) at which the number of Processor Power
 // Efficiency Class 1 processors is increased.
 //
 // {b000397d-9b0b-483d-98c9-692a6060cfbf}
 //
 DEFINE_GUID( GUID_PROCESSOR_HETERO_INCREASE_THRESHOLD, 0xb000397d, 0x9b0b, 0x483d, 0x98, 0xc9, 0x69, 0x2a, 0x60, 0x60, 0xcf, 0xbf);
+
+//
+// Specifies the performance level (in units of Processor Power Efficiency
+// Class 1 processor performance) at which the number of Processor Power
+// Efficiency Class 2 processors is increased.
+//
+// {b000397d-9b0b-483d-98c9-692a6060cfc0}
+//
+DEFINE_GUID( GUID_PROCESSOR_HETERO_INCREASE_THRESHOLD_1, 0xb000397d, 0x9b0b, 0x483d, 0x98, 0xc9, 0x69, 0x2a, 0x60, 0x60, 0xcf, 0xc0);
 
 //
 // Specifies the performance target floor of a Processor Power Efficiency
@@ -16439,6 +16640,37 @@ DEFINE_GUID( GUID_PROCESSOR_SHORT_THREAD_SCHEDULING_POLICY,
 DEFINE_GUID( GUID_PROCESSOR_SHORT_THREAD_RUNTIME_THRESHOLD,
 0xd92998c2, 0x6a48, 0x49ca, 0x85, 0xd4, 0x8c, 0xce, 0xec, 0x29, 0x45, 0x70);
 
+//
+// Specify the upper limit of architecture class for short run threads.
+//
+// {828423EB-8662-4344-90F7-52BF15870F5A}
+//
+DEFINE_GUID( GUID_PROCESSOR_SHORT_THREAD_ARCH_CLASS_UPPER_THRESHOLD,
+0x828423eb, 0x8662, 0x4344, 0x90, 0xf7, 0x52, 0xbf, 0x15, 0x87, 0x0f, 0x5a);
+
+//
+// Specify the lower limit of architecture class for short run threads.
+//
+// {53824D46-87BD-4739-AA1B-AA793FAC36D6}
+//
+DEFINE_GUID( GUID_PROCESSOR_SHORT_THREAD_ARCH_CLASS_LOWER_THRESHOLD,
+0x53824d46, 0x87bd, 0x4739, 0xaa, 0x1b, 0xaa, 0x79, 0x3f, 0xac, 0x36, 0xd6);
+
+//
+// Specify the upper limit of architecture class for long run threads.
+//
+// {BF903D33-9D24-49D3-A468-E65E0325046A}
+//
+DEFINE_GUID( GUID_PROCESSOR_LONG_THREAD_ARCH_CLASS_UPPER_THRESHOLD,
+0xbf903d33, 0x9d24, 0x49d3, 0xa4, 0x68, 0xe6, 0x5e, 0x03, 0x25, 0x04, 0x6a);
+
+//
+// Specify the lower limit of architecture class for long run threads.
+//
+// {43F278BC-0F8A-46D0-8B31-9A23E615D713}
+//
+DEFINE_GUID( GUID_PROCESSOR_LONG_THREAD_ARCH_CLASS_LOWER_THRESHOLD,
+0x43f278bc, 0x0f8a, 0x46d0, 0x8b, 0x31, 0x9a, 0x23, 0xe6, 0x15, 0xd7, 0x13);
 
 //
 // Specifies active vs passive cooling.  Although not directly related to
@@ -16998,7 +17230,7 @@ typedef enum {
     MonitorInvocation,
     FirmwareTableInformationRegistered,
     SetShutdownSelectedTime,
-    SuspendResumeInvocation,
+    SuspendResumeInvocation,                        // Deprecated
     PlmPowerRequestCreate,
     ScreenOff,
     CsDeviceNotification,
@@ -17024,6 +17256,7 @@ typedef enum {
     UpdateBlackBoxRecorder,
     SessionAllowExternalDmaDevices,
     SendSuspendResumeNotification,
+    BlackBoxRecorderDirectAccessBuffer,
     PowerInformationLevelMaximum
 } POWER_INFORMATION_LEVEL;
 
@@ -19642,6 +19875,7 @@ typedef PIMAGE_DYNAMIC_RELOCATION32_V2      PIMAGE_DYNAMIC_RELOCATION_V2;
 #define IMAGE_DYNAMIC_RELOCATION_GUARD_IMPORT_CONTROL_TRANSFER  0x00000003
 #define IMAGE_DYNAMIC_RELOCATION_GUARD_INDIR_CONTROL_TRANSFER   0x00000004
 #define IMAGE_DYNAMIC_RELOCATION_GUARD_SWITCHTABLE_BRANCH       0x00000005
+#define IMAGE_DYNAMIC_RELOCATION_FUNCTION_OVERRIDE              0x00000007
 
 #include "pshpack1.h"
 
@@ -19682,6 +19916,48 @@ typedef struct _IMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION {
     WORD        RegisterNumber     : 4;
 } IMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION;
 typedef IMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION UNALIGNED * PIMAGE_SWITCHTABLE_BRANCH_DYNAMIC_RELOCATION;
+
+typedef struct _IMAGE_FUNCTION_OVERRIDE_HEADER {
+    DWORD FuncOverrideSize;
+ // IMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION  FuncOverrideInfo[ANYSIZE_ARRAY]; // FuncOverrideSize bytes in size
+ // IMAGE_BDD_INFO BDDInfo; // BDD region, size in bytes: DVRTEntrySize - sizeof(IMAGE_FUNCTION_OVERRIDE_HEADER) - FuncOverrideSize
+} IMAGE_FUNCTION_OVERRIDE_HEADER;
+typedef IMAGE_FUNCTION_OVERRIDE_HEADER UNALIGNED * PIMAGE_FUNCTION_OVERRIDE_HEADER;
+
+typedef struct _IMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION {
+    DWORD OriginalRva;          // RVA of original function
+    DWORD BDDOffset;            // Offset into the BDD region
+    DWORD RvaSize;              // Size in bytes taken by RVAs. Must be multiple of sizeof(DWORD).
+    DWORD BaseRelocSize;        // Size in bytes taken by BaseRelocs
+
+    // DWORD RVAs[RvaSize / sizeof(DWORD)];     // Array containing overriding func RVAs. 
+
+    // IMAGE_BASE_RELOCATION  BaseRelocs[ANYSIZE_ARRAY]; // Base relocations (RVA + Size + TO)
+                                                         //  Padded with extra TOs for 4B alignment
+                                                         // BaseRelocSize size in bytes
+} IMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION;
+typedef IMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION * PIMAGE_FUNCTION_OVERRIDE_DYNAMIC_RELOCATION;
+
+typedef struct _IMAGE_BDD_INFO {
+    DWORD         Version;      // decides the semantics of serialized BDD
+    DWORD         BDDSize;
+    // IMAGE_BDD_DYNAMIC_RELOCATION BDDNodes[ANYSIZE_ARRAY]; // BDDSize size in bytes.
+} IMAGE_BDD_INFO;
+typedef IMAGE_BDD_INFO * PIMAGE_BDD_INFO;
+
+typedef struct _IMAGE_BDD_DYNAMIC_RELOCATION {
+    WORD   Left;                // Index of FALSE edge in BDD array
+    WORD   Right;               // Index of TRUE edge in BDD array
+    DWORD  Value;               // Either FeatureNumber or Index into RVAs array
+} IMAGE_BDD_DYNAMIC_RELOCATION;
+typedef IMAGE_BDD_DYNAMIC_RELOCATION * PIMAGE_BDD_DYNAMIC_RELOCATION;
+
+// Function override relocation types in DVRT records.
+
+#define IMAGE_FUNCTION_OVERRIDE_INVALID         0
+#define IMAGE_FUNCTION_OVERRIDE_X64_REL32       1  // 32-bit relative address from byte following reloc
+#define IMAGE_FUNCTION_OVERRIDE_ARM64_BRANCH26  2  // 26 bit offset << 2 & sign ext. for B & BL
+#define IMAGE_FUNCTION_OVERRIDE_ARM64_THUNK     3
 
 #include "poppack.h"                    // Back to 4 byte packing
 
@@ -19734,10 +20010,11 @@ typedef struct _IMAGE_LOAD_CONFIG_DIRECTORY32 {
     DWORD   VolatileMetadataPointer;        // VA
     DWORD   GuardEHContinuationTable;       // VA
     DWORD   GuardEHContinuationCount;
-    DWORD   GuardXFGCheckFunctionPointer;    // VA
+    DWORD   GuardXFGCheckFunctionPointer;   // VA
     DWORD   GuardXFGDispatchFunctionPointer; // VA
     DWORD   GuardXFGTableDispatchFunctionPointer; // VA
     DWORD   CastGuardOsDeterminedFailureMode; // VA
+    DWORD   GuardMemcpyFunctionPointer;     // VA
 } IMAGE_LOAD_CONFIG_DIRECTORY32, *PIMAGE_LOAD_CONFIG_DIRECTORY32;
 
 typedef struct _IMAGE_LOAD_CONFIG_DIRECTORY64 {
@@ -19781,14 +20058,15 @@ typedef struct _IMAGE_LOAD_CONFIG_DIRECTORY64 {
     ULONGLONG  GuardRFVerifyStackPointerFunctionPointer; // VA
     DWORD      HotPatchTableOffset;
     DWORD      Reserved3;
-    ULONGLONG  EnclaveConfigurationPointer;     // VA
-    ULONGLONG  VolatileMetadataPointer;         // VA
-    ULONGLONG  GuardEHContinuationTable;        // VA
+    ULONGLONG  EnclaveConfigurationPointer;    // VA
+    ULONGLONG  VolatileMetadataPointer;        // VA
+    ULONGLONG  GuardEHContinuationTable;       // VA
     ULONGLONG  GuardEHContinuationCount;
-    ULONGLONG  GuardXFGCheckFunctionPointer;    // VA
+    ULONGLONG  GuardXFGCheckFunctionPointer;   // VA
     ULONGLONG  GuardXFGDispatchFunctionPointer; // VA
     ULONGLONG  GuardXFGTableDispatchFunctionPointer; // VA
     ULONGLONG  CastGuardOsDeterminedFailureMode; // VA
+    ULONGLONG  GuardMemcpyFunctionPointer;     // VA
 } IMAGE_LOAD_CONFIG_DIRECTORY64, *PIMAGE_LOAD_CONFIG_DIRECTORY64;
 
 // end_ntoshvp
@@ -19867,6 +20145,8 @@ typedef struct _IMAGE_HOT_PATCH_HASHES {
 // DO_NOT_USE                                          0x00200000 // Was EHCont flag on VB (20H1)
 #define IMAGE_GUARD_EH_CONTINUATION_TABLE_PRESENT      0x00400000 // Module contains EH continuation target information
 #define IMAGE_GUARD_XFG_ENABLED                        0x00800000 // Module was built with xfg
+#define IMAGE_GUARD_CASTGUARD_PRESENT                  0x01000000 // Module has CastGuard instrumentation present
+#define IMAGE_GUARD_MEMCPY_PRESENT                     0x02000000 // Module has Guarded Memcpy instrumentation present
 
 #define IMAGE_GUARD_CF_FUNCTION_TABLE_SIZE_MASK        0xF0000000 // Stride of Guard CF function table encoded in these bits (additional count of bytes per element)
 #define IMAGE_GUARD_CF_FUNCTION_TABLE_SIZE_SHIFT       28         // Shift to right-justify Guard CF function table stride
@@ -19953,7 +20233,7 @@ typedef union IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA {
         DWORD EpilogInHeader : 1;
         DWORD EpilogCount : 5;          // number of epilogs or byte index of the first unwind code for the one only epilog
         DWORD CodeWords : 5;            // number of dwords with unwind codes
-    };
+    } DUMMYSTRUCTNAME;
 } IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA;
 
 typedef struct _IMAGE_ALPHA64_RUNTIME_FUNCTION_ENTRY {
@@ -20111,12 +20391,14 @@ typedef struct _IMAGE_DEBUG_DIRECTORY {
 #define IMAGE_DEBUG_TYPE_OMAP_FROM_SRC          8
 #define IMAGE_DEBUG_TYPE_BORLAND                9
 #define IMAGE_DEBUG_TYPE_RESERVED10             10
+#define IMAGE_DEBUG_TYPE_BBT                    IMAGE_DEBUG_TYPE_RESERVED10
 #define IMAGE_DEBUG_TYPE_CLSID                  11
 #define IMAGE_DEBUG_TYPE_VC_FEATURE             12
 #define IMAGE_DEBUG_TYPE_POGO                   13
 #define IMAGE_DEBUG_TYPE_ILTCG                  14
 #define IMAGE_DEBUG_TYPE_MPX                    15
 #define IMAGE_DEBUG_TYPE_REPRO                  16
+#define IMAGE_DEBUG_TYPE_SPGO                   18
 #define IMAGE_DEBUG_TYPE_EX_DLLCHARACTERISTICS  20
 
 #define IMAGE_DLLCHARACTERISTICS_EX_CET_COMPAT                                  0x01
@@ -21405,6 +21687,42 @@ memcpy_inline (
 #define RtlFillMemory(Destination,Length,Fill) memset((Destination),(Fill),(Length))
 #define RtlZeroMemory(Destination,Length) memset((Destination),0,(Length))
 
+#if !defined(MIDL_PASS)
+
+_Check_return_
+FORCEINLINE
+int
+RtlConstantTimeEqualMemory(
+    _In_reads_bytes_(len) const void* v1,
+    _In_reads_bytes_(len) const void* v2,
+    unsigned long len
+    )
+{
+    char x = 0;
+    unsigned long i = 0;
+
+    // Use volatile to prevent compiler from optimizing read
+    volatile const char* p1 = (volatile const char*) v1;
+    volatile const char* p2 = (volatile const char*) v2;
+
+    for (; i < len; i += 1) {
+
+#if !defined(_M_CEE) && (defined(_M_ARM) || defined(_M_ARM64) || defined(_M_ARM64EC))
+
+        x |= __iso_volatile_load8(&p1[i]) ^ __iso_volatile_load8(&p2[i]);
+
+#else
+
+        x |= p1[i] ^ p2[i];
+
+#endif
+
+    }
+
+    return x == 0;
+}
+
+#endif
 
 #if !defined(MIDL_PASS)
 
@@ -21461,12 +21779,14 @@ RtlSecureZeroMemory(
 #define SEF_AI_USE_EXTRA_PARAMS           0x800
 #define SEF_AVOID_OWNER_RESTRICTION       0x1000
 #define SEF_FORCE_USER_MODE               0x2000
+#define SEF_NORMALIZE_OUTPUT_DESCRIPTOR   0x4000
 
 #define SEF_MACL_VALID_FLAGS              (SEF_MACL_NO_WRITE_UP   | \
                                            SEF_MACL_NO_READ_UP    | \
                                            SEF_MACL_NO_EXECUTE_UP)
 
 // end_wdm
+// end_ntifs
 // begin_ntosifs
 
 typedef struct _MESSAGE_RESOURCE_ENTRY {
@@ -22188,6 +22508,8 @@ typedef struct _IMAGE_POLICY_ENTRY {
 } IMAGE_POLICY_ENTRY;
 typedef const IMAGE_POLICY_ENTRY* PCIMAGE_POLICY_ENTRY;
 
+#ifdef _MSC_EXTENSIONS
+
 #pragma warning(push)
 #pragma warning(disable:4200) // zero-sized array in struct/union
 typedef struct _IMAGE_POLICY_METADATA {
@@ -22213,6 +22535,8 @@ IMAGE_POLICY_METADATA IMAGE_POLICY_METADATA_NAME = {                          \
     }                                                                         \
 };                                                                            \
 __pragma(const_seg(pop))
+
+#endif
 
 #define IMAGE_POLICY_BOOL(_PolicyId_, _Value_)             \
     {ImagePolicyEntryTypeBool, _PolicyId_, (const VOID*)_Value_},
@@ -22300,7 +22624,13 @@ typedef enum _RTL_SYSTEM_GLOBAL_DATA_ID {
     GlobalDataIdKdDebuggerEnabled,
     GlobalDataIdCyclesPerYield,
     GlobalDataIdSafeBootMode,
-    GlobalDataIdLastSystemRITEventTickCount
+    GlobalDataIdLastSystemRITEventTickCount,
+    GlobalDataIdConsoleSharedDataFlags,
+    GlobalDataIdNtSystemRootDrive,
+    GlobalDataIdQpcShift,
+    GlobalDataIdQpcBypassEnabled,
+    GlobalDataIdQpcData,
+    GlobalDataIdQpcBias
 } RTL_SYSTEM_GLOBAL_DATA_ID, *PRTL_SYSTEM_GLOBAL_DATA_ID;
 
 NTSYSAPI
@@ -22333,7 +22663,7 @@ typedef struct _RTL_CRITICAL_SECTION_DEBUG {
     DWORD ContentionCount;
     DWORD Flags;
     WORD   CreatorBackTraceIndexHigh;
-    WORD   SpareWORD  ;
+    WORD   Identifier;
 } RTL_CRITICAL_SECTION_DEBUG, *PRTL_CRITICAL_SECTION_DEBUG, RTL_RESOURCE_DEBUG, *PRTL_RESOURCE_DEBUG;
 
 //
@@ -22707,9 +23037,9 @@ typedef struct _PERFORMANCE_DATA {
 #define DEVICEFAMILYDEVICEFORM_XBOX_ONE_X_DEVKIT        0x00000021
 #define DEVICEFAMILYDEVICEFORM_XBOX_SERIES_X            0x00000022
 #define DEVICEFAMILYDEVICEFORM_XBOX_SERIES_X_DEVKIT     0x00000023
+#define DEVICEFAMILYDEVICEFORM_XBOX_SERIES_S            0x00000024
 
 // This is a range reserved for future Xbox consoles.
-#define DEVICEFAMILYDEVICEFORM_XBOX_RESERVED_00         0x00000024
 #define DEVICEFAMILYDEVICEFORM_XBOX_RESERVED_01         0x00000025
 #define DEVICEFAMILYDEVICEFORM_XBOX_RESERVED_02         0x00000026
 #define DEVICEFAMILYDEVICEFORM_XBOX_RESERVED_03         0x00000027

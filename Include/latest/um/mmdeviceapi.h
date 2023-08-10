@@ -3,14 +3,14 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0626 */
+ /* File created by MIDL compiler version 8.01.0628 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
 
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
-#define __REQUIRED_RPCNDR_H_VERSION__ 500
+#define __REQUIRED_RPCNDR_H_VERSION__ 501
 #endif
 
 /* verify that the <rpcsal.h> version is high enough to compile this file*/
@@ -38,7 +38,7 @@
 #endif
 
 #ifndef DECLSPEC_XFGVIRT
-#if _CONTROL_FLOW_GUARD_XFG
+#if defined(_CONTROL_FLOW_GUARD_XFG)
 #define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
 #else
 #define DECLSPEC_XFGVIRT(base, func)
@@ -287,7 +287,7 @@ EXTERN_C const IID IID_IMMNotificationClient;
             /* [annotation][in] */ 
             _In_  ERole role,
             /* [annotation][in] */ 
-            _In_  LPCWSTR pwstrDefaultDeviceId) = 0;
+            _In_opt_  LPCWSTR pwstrDefaultDeviceId) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE OnPropertyValueChanged( 
             /* [annotation][in] */ 
@@ -347,7 +347,7 @@ EXTERN_C const IID IID_IMMNotificationClient;
             /* [annotation][in] */ 
             _In_  ERole role,
             /* [annotation][in] */ 
-            _In_  LPCWSTR pwstrDefaultDeviceId);
+            _In_opt_  LPCWSTR pwstrDefaultDeviceId);
         
         DECLSPEC_XFGVIRT(IMMNotificationClient, OnPropertyValueChanged)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *OnPropertyValueChanged )( 

@@ -1,145 +1,146 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_ViewManagement_Core_1_H
 #define WINRT_Windows_UI_ViewManagement_Core_1_H
 #include "winrt/impl/Windows.UI.ViewManagement.Core.0.h"
 WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement::Core
 {
     struct __declspec(empty_bases) ICoreFrameworkInputView :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreFrameworkInputView>
     {
         ICoreFrameworkInputView(std::nullptr_t = nullptr) noexcept {}
-        ICoreFrameworkInputView(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreFrameworkInputView(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreFrameworkInputViewAnimationStartingEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreFrameworkInputViewAnimationStartingEventArgs>
     {
         ICoreFrameworkInputViewAnimationStartingEventArgs(std::nullptr_t = nullptr) noexcept {}
-        ICoreFrameworkInputViewAnimationStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreFrameworkInputViewAnimationStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreFrameworkInputViewOcclusionsChangedEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreFrameworkInputViewOcclusionsChangedEventArgs>
     {
         ICoreFrameworkInputViewOcclusionsChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
-        ICoreFrameworkInputViewOcclusionsChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreFrameworkInputViewOcclusionsChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreFrameworkInputViewStatics :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreFrameworkInputViewStatics>
     {
         ICoreFrameworkInputViewStatics(std::nullptr_t = nullptr) noexcept {}
-        ICoreFrameworkInputViewStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreFrameworkInputViewStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputView :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputView>
     {
         ICoreInputView(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputView(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputView(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputView2 :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputView2>
     {
         ICoreInputView2(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputView2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputView2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputView3 :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputView3>
     {
         ICoreInputView3(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputView3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputView3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputView4 :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputView4>
     {
         ICoreInputView4(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputView4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputView4(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputView5 :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputView5>
     {
         ICoreInputView5(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputView5(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputView5(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputViewAnimationStartingEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputViewAnimationStartingEventArgs>
     {
         ICoreInputViewAnimationStartingEventArgs(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputViewAnimationStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputViewAnimationStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputViewHidingEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputViewHidingEventArgs>
     {
         ICoreInputViewHidingEventArgs(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputViewHidingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputViewHidingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputViewOcclusion :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputViewOcclusion>
     {
         ICoreInputViewOcclusion(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputViewOcclusion(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputViewOcclusion(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputViewOcclusionsChangedEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputViewOcclusionsChangedEventArgs>
     {
         ICoreInputViewOcclusionsChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputViewOcclusionsChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputViewOcclusionsChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputViewShowingEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputViewShowingEventArgs>
     {
         ICoreInputViewShowingEventArgs(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputViewShowingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputViewShowingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputViewStatics :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputViewStatics>
     {
         ICoreInputViewStatics(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputViewStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputViewStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputViewStatics2 :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputViewStatics2>
     {
         ICoreInputViewStatics2(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputViewStatics2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputViewStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICoreInputViewTransferringXYFocusEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICoreInputViewTransferringXYFocusEventArgs>
     {
         ICoreInputViewTransferringXYFocusEventArgs(std::nullptr_t = nullptr) noexcept {}
-        ICoreInputViewTransferringXYFocusEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICoreInputViewTransferringXYFocusEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUISettingsController :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUISettingsController>
     {
         IUISettingsController(std::nullptr_t = nullptr) noexcept {}
-        IUISettingsController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUISettingsController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUISettingsControllerStatics :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUISettingsControllerStatics>
     {
         IUISettingsControllerStatics(std::nullptr_t = nullptr) noexcept {}
-        IUISettingsControllerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUISettingsControllerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

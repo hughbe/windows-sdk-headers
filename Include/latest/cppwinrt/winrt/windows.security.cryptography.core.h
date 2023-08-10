@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Security_Cryptography_Core_H
 #define WINRT_Windows_Security_Cryptography_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Security.Cryptography.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -19,1050 +20,1050 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaPkcs1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaPkcs1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaPkcs1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaOaepSha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaOaepSha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaOaepSha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaOaepSha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaOaepSha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaOaepSha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaOaepSha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaOaepSha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaOaepSha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaOaepSha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaOaepSha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaOaepSha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::EcdsaP256Sha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_EcdsaP256Sha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_EcdsaP256Sha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::EcdsaP384Sha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_EcdsaP384Sha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_EcdsaP384Sha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::EcdsaP521Sha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_EcdsaP521Sha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_EcdsaP521Sha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::DsaSha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_DsaSha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_DsaSha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::DsaSha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_DsaSha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_DsaSha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaSignPkcs1Sha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPkcs1Sha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPkcs1Sha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaSignPkcs1Sha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPkcs1Sha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPkcs1Sha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaSignPkcs1Sha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPkcs1Sha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPkcs1Sha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaSignPkcs1Sha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPkcs1Sha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPkcs1Sha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaSignPssSha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPssSha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPssSha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaSignPssSha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPssSha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPssSha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaSignPssSha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPssSha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPssSha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics<D>::RsaSignPssSha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPssSha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics)->get_RsaSignPssSha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics2<D>::EcdsaSha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2)->get_EcdsaSha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2)->get_EcdsaSha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics2<D>::EcdsaSha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2)->get_EcdsaSha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2)->get_EcdsaSha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricAlgorithmNamesStatics2<D>::EcdsaSha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2)->get_EcdsaSha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2)->get_EcdsaSha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::AlgorithmName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->get_AlgorithmName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->get_AlgorithmName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::CreateKeyPair(uint32_t keySize) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::CreateKeyPair(uint32_t keySize) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->CreateKeyPair(keySize, &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->CreateKeyPair(keySize, &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::ImportKeyPair(Windows::Storage::Streams::IBuffer const& keyBlob) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::ImportKeyPair(winrt::Windows::Storage::Streams::IBuffer const& keyBlob) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->ImportDefaultPrivateKeyBlob(*(void**)(&keyBlob), &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->ImportDefaultPrivateKeyBlob(*(void**)(&keyBlob), &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::ImportKeyPair(Windows::Storage::Streams::IBuffer const& keyBlob, Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType const& BlobType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::ImportKeyPair(winrt::Windows::Storage::Streams::IBuffer const& keyBlob, winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType const& BlobType) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->ImportKeyPairWithBlobType(*(void**)(&keyBlob), static_cast<int32_t>(BlobType), &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->ImportKeyPairWithBlobType(*(void**)(&keyBlob), static_cast<int32_t>(BlobType), &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::ImportPublicKey(Windows::Storage::Streams::IBuffer const& keyBlob) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::ImportPublicKey(winrt::Windows::Storage::Streams::IBuffer const& keyBlob) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->ImportDefaultPublicKeyBlob(*(void**)(&keyBlob), &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->ImportDefaultPublicKeyBlob(*(void**)(&keyBlob), &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::ImportPublicKey(Windows::Storage::Streams::IBuffer const& keyBlob, Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& BlobType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider<D>::ImportPublicKey(winrt::Windows::Storage::Streams::IBuffer const& keyBlob, winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& BlobType) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->ImportPublicKeyWithBlobType(*(void**)(&keyBlob), static_cast<int32_t>(BlobType), &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider)->ImportPublicKeyWithBlobType(*(void**)(&keyBlob), static_cast<int32_t>(BlobType), &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider2<D>::CreateKeyPairWithCurveName(param::hstring const& curveName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider2<D>::CreateKeyPairWithCurveName(param::hstring const& curveName) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2)->CreateKeyPairWithCurveName(*(void**)(&curveName), &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2)->CreateKeyPairWithCurveName(*(void**)(&curveName), &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider2<D>::CreateKeyPairWithCurveParameters(array_view<uint8_t const> parameters) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProvider2<D>::CreateKeyPairWithCurveParameters(array_view<uint8_t const> parameters) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2)->CreateKeyPairWithCurveParameters(parameters.size(), get_abi(parameters), &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2)->CreateKeyPairWithCurveParameters(parameters.size(), get_abi(parameters), &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider) consume_Windows_Security_Cryptography_Core_IAsymmetricKeyAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
     {
         void* provider{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
-        return Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider{ provider, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
+        return winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider{ provider, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::Encrypt(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& iv) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::Encrypt(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& iv) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->Encrypt(*(void**)(&key), *(void**)(&data), *(void**)(&iv), &value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->Encrypt(*(void**)(&key), *(void**)(&data), *(void**)(&iv), &value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::Decrypt(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& iv) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::Decrypt(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& iv) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->Decrypt(*(void**)(&key), *(void**)(&data), *(void**)(&iv), &value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->Decrypt(*(void**)(&key), *(void**)(&data), *(void**)(&iv), &value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::EncryptAndAuthenticate(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& nonce, Windows::Storage::Streams::IBuffer const& authenticatedData) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::EncryptAndAuthenticate(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& nonce, winrt::Windows::Storage::Streams::IBuffer const& authenticatedData) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->EncryptAndAuthenticate(*(void**)(&key), *(void**)(&data), *(void**)(&nonce), *(void**)(&authenticatedData), &value));
-        return Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->EncryptAndAuthenticate(*(void**)(&key), *(void**)(&data), *(void**)(&nonce), *(void**)(&authenticatedData), &value));
+        return winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::DecryptAndAuthenticate(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& nonce, Windows::Storage::Streams::IBuffer const& authenticationTag, Windows::Storage::Streams::IBuffer const& authenticatedData) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::DecryptAndAuthenticate(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& nonce, winrt::Windows::Storage::Streams::IBuffer const& authenticationTag, winrt::Windows::Storage::Streams::IBuffer const& authenticatedData) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->DecryptAndAuthenticate(*(void**)(&key), *(void**)(&data), *(void**)(&nonce), *(void**)(&authenticationTag), *(void**)(&authenticatedData), &value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->DecryptAndAuthenticate(*(void**)(&key), *(void**)(&data), *(void**)(&nonce), *(void**)(&authenticationTag), *(void**)(&authenticatedData), &value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::Sign(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::Sign(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->Sign(*(void**)(&key), *(void**)(&data), &value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->Sign(*(void**)(&key), *(void**)(&data), &value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::VerifySignature(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& signature) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::VerifySignature(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& signature) const
     {
         bool isAuthenticated{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->VerifySignature(*(void**)(&key), *(void**)(&data), *(void**)(&signature), &isAuthenticated));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->VerifySignature(*(void**)(&key), *(void**)(&data), *(void**)(&signature), &isAuthenticated));
         return isAuthenticated;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::DeriveKeyMaterial(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Security::Cryptography::Core::KeyDerivationParameters const& parameters, uint32_t desiredKeySize) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics<D>::DeriveKeyMaterial(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters const& parameters, uint32_t desiredKeySize) const
     {
         void* keyMaterial{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->DeriveKeyMaterial(*(void**)(&key), *(void**)(&parameters), desiredKeySize, &keyMaterial));
-        return Windows::Storage::Streams::IBuffer{ keyMaterial, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics)->DeriveKeyMaterial(*(void**)(&key), *(void**)(&parameters), desiredKeySize, &keyMaterial));
+        return winrt::Windows::Storage::Streams::IBuffer{ keyMaterial, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::SignHashedData(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::SignHashedData(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->SignHashedData(*(void**)(&key), *(void**)(&data), &value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->SignHashedData(*(void**)(&key), *(void**)(&data), &value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::VerifySignatureWithHashInput(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& signature) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::VerifySignatureWithHashInput(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& signature) const
     {
         bool isAuthenticated{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->VerifySignatureWithHashInput(*(void**)(&key), *(void**)(&data), *(void**)(&signature), &isAuthenticated));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->VerifySignatureWithHashInput(*(void**)(&key), *(void**)(&data), *(void**)(&signature), &isAuthenticated));
         return isAuthenticated;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::DecryptAsync(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& iv) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::DecryptAsync(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& iv) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->DecryptAsync(*(void**)(&key), *(void**)(&data), *(void**)(&iv), &value));
-        return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->DecryptAsync(*(void**)(&key), *(void**)(&data), *(void**)(&iv), &value));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::SignAsync(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::SignAsync(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->SignAsync(*(void**)(&key), *(void**)(&data), &value));
-        return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->SignAsync(*(void**)(&key), *(void**)(&data), &value));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::SignHashedDataAsync(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>) consume_Windows_Security_Cryptography_Core_ICryptographicEngineStatics2<D>::SignHashedDataAsync(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->SignHashedDataAsync(*(void**)(&key), *(void**)(&data), &value));
-        return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics2)->SignHashedDataAsync(*(void**)(&key), *(void**)(&data), &value));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Security_Cryptography_Core_ICryptographicKey<D>::KeySize() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicKey)->get_KeySize(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicKey)->get_KeySize(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicKey<D>::Export() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicKey<D>::Export() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicKey)->ExportDefaultPrivateKeyBlobType(&value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicKey)->ExportDefaultPrivateKeyBlobType(&value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicKey<D>::Export(Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType const& BlobType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicKey<D>::Export(winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType const& BlobType) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicKey)->ExportPrivateKeyWithBlobType(static_cast<int32_t>(BlobType), &value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicKey)->ExportPrivateKeyWithBlobType(static_cast<int32_t>(BlobType), &value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicKey<D>::ExportPublicKey() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicKey<D>::ExportPublicKey() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicKey)->ExportDefaultPublicKeyBlobType(&value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicKey)->ExportDefaultPublicKeyBlobType(&value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicKey<D>::ExportPublicKey(Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& BlobType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_ICryptographicKey<D>::ExportPublicKey(winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const& BlobType) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ICryptographicKey)->ExportPublicKeyWithBlobType(static_cast<int32_t>(BlobType), &value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ICryptographicKey)->ExportPublicKeyWithBlobType(static_cast<int32_t>(BlobType), &value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP160r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP160r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP160r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP160t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP160t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP160t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP192r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP192r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP192r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP192t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP192t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP192t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP224r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP224r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP224r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP224t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP224t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP224t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP256r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP256r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP256r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP256t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP256t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP256t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP320r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP320r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP320r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP320t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP320t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP320t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP384r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP384r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP384r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP384t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP384t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP384t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP512r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP512r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP512r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::BrainpoolP512t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP512t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_BrainpoolP512t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::Curve25519() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Curve25519(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Curve25519(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::Ec192wapi() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Ec192wapi(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Ec192wapi(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::NistP192() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP192(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP192(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::NistP224() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP224(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP224(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::NistP256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::NistP384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::NistP521() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP521(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NistP521(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::NumsP256t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NumsP256t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NumsP256t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::NumsP384t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NumsP384t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NumsP384t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::NumsP512t1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NumsP512t1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_NumsP512t1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP160k1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP160k1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP160k1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP160r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP160r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP160r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP160r2() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP160r2(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP160r2(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP192k1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP192k1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP192k1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP192r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP192r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP192r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP224k1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP224k1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP224k1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP224r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP224r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP224r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP256k1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP256k1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP256k1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP256r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP256r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP256r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP384r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP384r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP384r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::SecP521r1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP521r1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_SecP521r1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::Wtls7() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Wtls7(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Wtls7(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::Wtls9() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Wtls9(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Wtls9(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::Wtls12() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Wtls12(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_Wtls12(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::X962P192v1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P192v1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P192v1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::X962P192v2() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P192v2(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P192v2(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::X962P192v3() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P192v3(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P192v3(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::X962P239v1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P239v1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P239v1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::X962P239v2() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P239v2(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P239v2(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::X962P239v3() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P239v3(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P239v3(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::X962P256v1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P256v1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_X962P256v1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::AllEccCurveNames() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Security_Cryptography_Core_IEccCurveNamesStatics<D>::AllEccCurveNames() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_AllEccCurveNames(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics)->get_AllEccCurveNames(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IEncryptedAndAuthenticatedData<D>::EncryptedData() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IEncryptedAndAuthenticatedData<D>::EncryptedData() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData)->get_EncryptedData(&value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData)->get_EncryptedData(&value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IEncryptedAndAuthenticatedData<D>::AuthenticationTag() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IEncryptedAndAuthenticatedData<D>::AuthenticationTag() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData)->get_AuthenticationTag(&value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData)->get_AuthenticationTag(&value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IHashAlgorithmNamesStatics<D>::Md5() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Md5(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Md5(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IHashAlgorithmNamesStatics<D>::Sha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Sha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Sha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IHashAlgorithmNamesStatics<D>::Sha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Sha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Sha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IHashAlgorithmNamesStatics<D>::Sha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Sha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Sha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IHashAlgorithmNamesStatics<D>::Sha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Sha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics)->get_Sha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IHashAlgorithmProvider<D>::AlgorithmName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmProvider)->get_AlgorithmName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProvider)->get_AlgorithmName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Security_Cryptography_Core_IHashAlgorithmProvider<D>::HashLength() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmProvider)->get_HashLength(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProvider)->get_HashLength(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IHashAlgorithmProvider<D>::HashData(Windows::Storage::Streams::IBuffer const& data) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IHashAlgorithmProvider<D>::HashData(winrt::Windows::Storage::Streams::IBuffer const& data) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmProvider)->HashData(*(void**)(&data), &value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProvider)->HashData(*(void**)(&data), &value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicHash) consume_Windows_Security_Cryptography_Core_IHashAlgorithmProvider<D>::CreateHash() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicHash) consume_Windows_Security_Cryptography_Core_IHashAlgorithmProvider<D>::CreateHash() const
     {
         void* Value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmProvider)->CreateHash(&Value));
-        return Windows::Security::Cryptography::Core::CryptographicHash{ Value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProvider)->CreateHash(&Value));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicHash{ Value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::HashAlgorithmProvider) consume_Windows_Security_Cryptography_Core_IHashAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider) consume_Windows_Security_Cryptography_Core_IHashAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
     {
         void* provider{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
-        return Windows::Security::Cryptography::Core::HashAlgorithmProvider{ provider, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
+        return winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider{ provider, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Cryptography_Core_IHashComputation<D>::Append(Windows::Storage::Streams::IBuffer const& data) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Cryptography_Core_IHashComputation<D>::Append(winrt::Windows::Storage::Streams::IBuffer const& data) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashComputation)->Append(*(void**)(&data)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashComputation)->Append(*(void**)(&data)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IHashComputation<D>::GetValueAndReset() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IHashComputation<D>::GetValueAndReset() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IHashComputation)->GetValueAndReset(&value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IHashComputation)->GetValueAndReset(&value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Pbkdf2Md5() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Md5(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Md5(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Pbkdf2Sha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Sha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Sha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Pbkdf2Sha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Sha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Sha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Pbkdf2Sha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Sha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Sha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Pbkdf2Sha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Sha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Pbkdf2Sha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp800108CtrHmacMd5() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacMd5(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacMd5(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp800108CtrHmacSha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacSha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacSha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp800108CtrHmacSha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacSha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacSha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp800108CtrHmacSha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacSha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacSha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp800108CtrHmacSha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacSha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp800108CtrHmacSha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp80056aConcatMd5() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatMd5(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatMd5(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp80056aConcatSha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatSha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatSha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp80056aConcatSha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatSha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatSha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp80056aConcatSha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatSha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatSha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics<D>::Sp80056aConcatSha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatSha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics)->get_Sp80056aConcatSha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics2<D>::CapiKdfMd5() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfMd5(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfMd5(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics2<D>::CapiKdfSha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfSha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfSha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics2<D>::CapiKdfSha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfSha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfSha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics2<D>::CapiKdfSha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfSha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfSha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmNamesStatics2<D>::CapiKdfSha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfSha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2)->get_CapiKdfSha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmProvider<D>::AlgorithmName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider)->get_AlgorithmName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider)->get_AlgorithmName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmProvider<D>::CreateKey(Windows::Storage::Streams::IBuffer const& keyMaterial) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmProvider<D>::CreateKey(winrt::Windows::Storage::Streams::IBuffer const& keyMaterial) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider)->CreateKey(*(void**)(&keyMaterial), &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider)->CreateKey(*(void**)(&keyMaterial), &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider) consume_Windows_Security_Cryptography_Core_IKeyDerivationAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
     {
         void* provider{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
-        return Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider{ provider, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
+        return winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider{ provider, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IKeyDerivationParameters<D>::KdfGenericBinary() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Security_Cryptography_Core_IKeyDerivationParameters<D>::KdfGenericBinary() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationParameters)->get_KdfGenericBinary(&value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters)->get_KdfGenericBinary(&value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Cryptography_Core_IKeyDerivationParameters<D>::KdfGenericBinary(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Cryptography_Core_IKeyDerivationParameters<D>::KdfGenericBinary(winrt::Windows::Storage::Streams::IBuffer const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationParameters)->put_KdfGenericBinary(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters)->put_KdfGenericBinary(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Security_Cryptography_Core_IKeyDerivationParameters<D>::IterationCount() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationParameters)->get_IterationCount(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters)->get_IterationCount(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm) consume_Windows_Security_Cryptography_Core_IKeyDerivationParameters2<D>::Capi1KdfTargetAlgorithm() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm) consume_Windows_Security_Cryptography_Core_IKeyDerivationParameters2<D>::Capi1KdfTargetAlgorithm() const
     {
-        Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationParameters2)->get_Capi1KdfTargetAlgorithm(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters2)->get_Capi1KdfTargetAlgorithm(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Cryptography_Core_IKeyDerivationParameters2<D>::Capi1KdfTargetAlgorithm(Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Cryptography_Core_IKeyDerivationParameters2<D>::Capi1KdfTargetAlgorithm(winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationParameters2)->put_Capi1KdfTargetAlgorithm(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters2)->put_Capi1KdfTargetAlgorithm(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::KeyDerivationParameters) consume_Windows_Security_Cryptography_Core_IKeyDerivationParametersStatics<D>::BuildForPbkdf2(Windows::Storage::Streams::IBuffer const& pbkdf2Salt, uint32_t iterationCount) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters) consume_Windows_Security_Cryptography_Core_IKeyDerivationParametersStatics<D>::BuildForPbkdf2(winrt::Windows::Storage::Streams::IBuffer const& pbkdf2Salt, uint32_t iterationCount) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics)->BuildForPbkdf2(*(void**)(&pbkdf2Salt), iterationCount, &value));
-        return Windows::Security::Cryptography::Core::KeyDerivationParameters{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics)->BuildForPbkdf2(*(void**)(&pbkdf2Salt), iterationCount, &value));
+        return winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::KeyDerivationParameters) consume_Windows_Security_Cryptography_Core_IKeyDerivationParametersStatics<D>::BuildForSP800108(Windows::Storage::Streams::IBuffer const& label, Windows::Storage::Streams::IBuffer const& context) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters) consume_Windows_Security_Cryptography_Core_IKeyDerivationParametersStatics<D>::BuildForSP800108(winrt::Windows::Storage::Streams::IBuffer const& label, winrt::Windows::Storage::Streams::IBuffer const& context) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics)->BuildForSP800108(*(void**)(&label), *(void**)(&context), &value));
-        return Windows::Security::Cryptography::Core::KeyDerivationParameters{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics)->BuildForSP800108(*(void**)(&label), *(void**)(&context), &value));
+        return winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::KeyDerivationParameters) consume_Windows_Security_Cryptography_Core_IKeyDerivationParametersStatics<D>::BuildForSP80056a(Windows::Storage::Streams::IBuffer const& algorithmId, Windows::Storage::Streams::IBuffer const& partyUInfo, Windows::Storage::Streams::IBuffer const& partyVInfo, Windows::Storage::Streams::IBuffer const& suppPubInfo, Windows::Storage::Streams::IBuffer const& suppPrivInfo) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters) consume_Windows_Security_Cryptography_Core_IKeyDerivationParametersStatics<D>::BuildForSP80056a(winrt::Windows::Storage::Streams::IBuffer const& algorithmId, winrt::Windows::Storage::Streams::IBuffer const& partyUInfo, winrt::Windows::Storage::Streams::IBuffer const& partyVInfo, winrt::Windows::Storage::Streams::IBuffer const& suppPubInfo, winrt::Windows::Storage::Streams::IBuffer const& suppPrivInfo) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics)->BuildForSP80056a(*(void**)(&algorithmId), *(void**)(&partyUInfo), *(void**)(&partyVInfo), *(void**)(&suppPubInfo), *(void**)(&suppPrivInfo), &value));
-        return Windows::Security::Cryptography::Core::KeyDerivationParameters{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics)->BuildForSP80056a(*(void**)(&algorithmId), *(void**)(&partyUInfo), *(void**)(&partyVInfo), *(void**)(&suppPubInfo), *(void**)(&suppPrivInfo), &value));
+        return winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::KeyDerivationParameters) consume_Windows_Security_Cryptography_Core_IKeyDerivationParametersStatics2<D>::BuildForCapi1Kdf(Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const& capi1KdfTargetAlgorithm) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters) consume_Windows_Security_Cryptography_Core_IKeyDerivationParametersStatics2<D>::BuildForCapi1Kdf(winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const& capi1KdfTargetAlgorithm) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics2)->BuildForCapi1Kdf(static_cast<int32_t>(capi1KdfTargetAlgorithm), &value));
-        return Windows::Security::Cryptography::Core::KeyDerivationParameters{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics2)->BuildForCapi1Kdf(static_cast<int32_t>(capi1KdfTargetAlgorithm), &value));
+        return winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IMacAlgorithmNamesStatics<D>::HmacMd5() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacMd5(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacMd5(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IMacAlgorithmNamesStatics<D>::HmacSha1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacSha1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacSha1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IMacAlgorithmNamesStatics<D>::HmacSha256() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacSha256(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacSha256(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IMacAlgorithmNamesStatics<D>::HmacSha384() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacSha384(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacSha384(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IMacAlgorithmNamesStatics<D>::HmacSha512() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacSha512(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_HmacSha512(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IMacAlgorithmNamesStatics<D>::AesCmac() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_AesCmac(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics)->get_AesCmac(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_IMacAlgorithmProvider<D>::AlgorithmName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmProvider)->get_AlgorithmName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider)->get_AlgorithmName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Security_Cryptography_Core_IMacAlgorithmProvider<D>::MacLength() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmProvider)->get_MacLength(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider)->get_MacLength(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IMacAlgorithmProvider<D>::CreateKey(Windows::Storage::Streams::IBuffer const& keyMaterial) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IMacAlgorithmProvider<D>::CreateKey(winrt::Windows::Storage::Streams::IBuffer const& keyMaterial) const
     {
         void* macKey{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmProvider)->CreateKey(*(void**)(&keyMaterial), &macKey));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ macKey, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider)->CreateKey(*(void**)(&keyMaterial), &macKey));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ macKey, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicHash) consume_Windows_Security_Cryptography_Core_IMacAlgorithmProvider2<D>::CreateHash(Windows::Storage::Streams::IBuffer const& keyMaterial) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicHash) consume_Windows_Security_Cryptography_Core_IMacAlgorithmProvider2<D>::CreateHash(winrt::Windows::Storage::Streams::IBuffer const& keyMaterial) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmProvider2)->CreateHash(*(void**)(&keyMaterial), &value));
-        return Windows::Security::Cryptography::Core::CryptographicHash{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider2)->CreateHash(*(void**)(&keyMaterial), &value));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicHash{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::MacAlgorithmProvider) consume_Windows_Security_Cryptography_Core_IMacAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider) consume_Windows_Security_Cryptography_Core_IMacAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
     {
         void* provider{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IMacAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
-        return Windows::Security::Cryptography::Core::MacAlgorithmProvider{ provider, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
+        return winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider{ provider, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Security::Cryptography::Core::CryptographicKey>) consume_Windows_Security_Cryptography_Core_IPersistedKeyProviderStatics<D>::OpenKeyPairFromCertificateAsync(Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, Windows::Security::Cryptography::Core::CryptographicPadding const& padding) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Cryptography::Core::CryptographicKey>) consume_Windows_Security_Cryptography_Core_IPersistedKeyProviderStatics<D>::OpenKeyPairFromCertificateAsync(winrt::Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, winrt::Windows::Security::Cryptography::Core::CryptographicPadding const& padding) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IPersistedKeyProviderStatics)->OpenKeyPairFromCertificateAsync(*(void**)(&certificate), *(void**)(&hashAlgorithmName), static_cast<int32_t>(padding), &operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Security::Cryptography::Core::CryptographicKey>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IPersistedKeyProviderStatics)->OpenKeyPairFromCertificateAsync(*(void**)(&certificate), *(void**)(&hashAlgorithmName), static_cast<int32_t>(padding), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Cryptography::Core::CryptographicKey>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IPersistedKeyProviderStatics<D>::OpenPublicKeyFromCertificate(Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, Windows::Security::Cryptography::Core::CryptographicPadding const& padding) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_IPersistedKeyProviderStatics<D>::OpenPublicKeyFromCertificate(winrt::Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, winrt::Windows::Security::Cryptography::Core::CryptographicPadding const& padding) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::IPersistedKeyProviderStatics)->OpenPublicKeyFromCertificate(*(void**)(&certificate), *(void**)(&hashAlgorithmName), static_cast<int32_t>(padding), &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::IPersistedKeyProviderStatics)->OpenPublicKeyFromCertificate(*(void**)(&certificate), *(void**)(&hashAlgorithmName), static_cast<int32_t>(padding), &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::DesCbc() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_DesCbc(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_DesCbc(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::DesEcb() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_DesEcb(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_DesEcb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::TripleDesCbc() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_TripleDesCbc(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_TripleDesCbc(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::TripleDesEcb() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_TripleDesEcb(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_TripleDesEcb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::Rc2Cbc() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc2Cbc(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc2Cbc(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::Rc2Ecb() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc2Ecb(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc2Ecb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::AesCbc() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesCbc(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesCbc(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::AesEcb() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesEcb(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesEcb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::AesGcm() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesGcm(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesGcm(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::AesCcm() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesCcm(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesCcm(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::AesCbcPkcs7() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesCbcPkcs7(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesCbcPkcs7(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::AesEcbPkcs7() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesEcbPkcs7(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_AesEcbPkcs7(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::DesCbcPkcs7() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_DesCbcPkcs7(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_DesCbcPkcs7(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::DesEcbPkcs7() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_DesEcbPkcs7(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_DesEcbPkcs7(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::TripleDesCbcPkcs7() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_TripleDesCbcPkcs7(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_TripleDesCbcPkcs7(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::TripleDesEcbPkcs7() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_TripleDesEcbPkcs7(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_TripleDesEcbPkcs7(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::Rc2CbcPkcs7() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc2CbcPkcs7(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc2CbcPkcs7(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::Rc2EcbPkcs7() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc2EcbPkcs7(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc2EcbPkcs7(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricAlgorithmNamesStatics<D>::Rc4() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc4(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics)->get_Rc4(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Cryptography_Core_ISymmetricKeyAlgorithmProvider<D>::AlgorithmName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider)->get_AlgorithmName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider)->get_AlgorithmName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Security_Cryptography_Core_ISymmetricKeyAlgorithmProvider<D>::BlockLength() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider)->get_BlockLength(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider)->get_BlockLength(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_ISymmetricKeyAlgorithmProvider<D>::CreateSymmetricKey(Windows::Storage::Streams::IBuffer const& keyMaterial) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::CryptographicKey) consume_Windows_Security_Cryptography_Core_ISymmetricKeyAlgorithmProvider<D>::CreateSymmetricKey(winrt::Windows::Storage::Streams::IBuffer const& keyMaterial) const
     {
         void* key{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider)->CreateSymmetricKey(*(void**)(&keyMaterial), &key));
-        return Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider)->CreateSymmetricKey(*(void**)(&keyMaterial), &key));
+        return winrt::Windows::Security::Cryptography::Core::CryptographicKey{ key, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider) consume_Windows_Security_Cryptography_Core_ISymmetricKeyAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider) consume_Windows_Security_Cryptography_Core_ISymmetricKeyAlgorithmProviderStatics<D>::OpenAlgorithm(param::hstring const& algorithm) const
     {
         void* provider{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
-        return Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider{ provider, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProviderStatics)->OpenAlgorithm(*(void**)(&algorithm), &provider));
+        return winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider{ provider, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics> : produce_base<D, Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics>
     {
         int32_t __stdcall get_RsaPkcs1(void** value) noexcept final try
         {
@@ -1212,7 +1213,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2> : produce_base<D, Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricAlgorithmNamesStatics2>
     {
         int32_t __stdcall get_EcdsaSha256(void** value) noexcept final try
         {
@@ -1242,7 +1243,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider> : produce_base<D, Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider>
     {
         int32_t __stdcall get_AlgorithmName(void** value) noexcept final try
         {
@@ -1256,7 +1257,7 @@ namespace winrt::impl
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKeyPair(keySize));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKeyPair(keySize));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1264,7 +1265,7 @@ namespace winrt::impl
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().ImportKeyPair(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&keyBlob)));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().ImportKeyPair(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&keyBlob)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1272,7 +1273,7 @@ namespace winrt::impl
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().ImportKeyPair(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&keyBlob), *reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType const*>(&BlobType)));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().ImportKeyPair(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&keyBlob), *reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType const*>(&BlobType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1280,7 +1281,7 @@ namespace winrt::impl
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().ImportPublicKey(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&keyBlob)));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().ImportPublicKey(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&keyBlob)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1288,7 +1289,7 @@ namespace winrt::impl
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().ImportPublicKey(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&keyBlob), *reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const*>(&BlobType)));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().ImportPublicKey(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&keyBlob), *reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const*>(&BlobType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1296,13 +1297,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2> : produce_base<D, Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2>
     {
         int32_t __stdcall CreateKeyPairWithCurveName(void* curveName, void** key) noexcept final try
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKeyPairWithCurveName(*reinterpret_cast<hstring const*>(&curveName)));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKeyPairWithCurveName(*reinterpret_cast<hstring const*>(&curveName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1310,7 +1311,7 @@ namespace winrt::impl
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKeyPairWithCurveParameters(array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(parameters), reinterpret_cast<uint8_t const *>(parameters) + __parametersSize)));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKeyPairWithCurveParameters(array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(parameters), reinterpret_cast<uint8_t const *>(parameters) + __parametersSize)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1318,13 +1319,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProviderStatics> : produce_base<D, Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProviderStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProviderStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProviderStatics>
     {
         int32_t __stdcall OpenAlgorithm(void* algorithm, void** provider) noexcept final try
         {
             clear_abi(provider);
             typename D::abi_guard guard(this->shim());
-            *provider = detach_from<Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
+            *provider = detach_from<winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1332,13 +1333,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::ICryptographicEngineStatics> : produce_base<D, Windows::Security::Cryptography::Core::ICryptographicEngineStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics>
     {
         int32_t __stdcall Encrypt(void* key, void* data, void* iv, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().Encrypt(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&iv)));
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().Encrypt(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&iv)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1346,7 +1347,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().Decrypt(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&iv)));
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().Decrypt(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&iv)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1354,7 +1355,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData>(this->shim().EncryptAndAuthenticate(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&nonce), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&authenticatedData)));
+            *value = detach_from<winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData>(this->shim().EncryptAndAuthenticate(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&nonce), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&authenticatedData)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1362,7 +1363,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().DecryptAndAuthenticate(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&nonce), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&authenticationTag), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&authenticatedData)));
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().DecryptAndAuthenticate(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&nonce), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&authenticationTag), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&authenticatedData)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1370,14 +1371,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().Sign(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data)));
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().Sign(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data)));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall VerifySignature(void* key, void* data, void* signature, bool* isAuthenticated) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *isAuthenticated = detach_from<bool>(this->shim().VerifySignature(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&signature)));
+            *isAuthenticated = detach_from<bool>(this->shim().VerifySignature(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&signature)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1385,7 +1386,7 @@ namespace winrt::impl
         {
             clear_abi(keyMaterial);
             typename D::abi_guard guard(this->shim());
-            *keyMaterial = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().DeriveKeyMaterial(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Security::Cryptography::Core::KeyDerivationParameters const*>(&parameters), desiredKeySize));
+            *keyMaterial = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().DeriveKeyMaterial(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters const*>(&parameters), desiredKeySize));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1393,20 +1394,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::ICryptographicEngineStatics2> : produce_base<D, Windows::Security::Cryptography::Core::ICryptographicEngineStatics2>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics2> : produce_base<D, winrt::Windows::Security::Cryptography::Core::ICryptographicEngineStatics2>
     {
         int32_t __stdcall SignHashedData(void* key, void* data, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().SignHashedData(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data)));
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().SignHashedData(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data)));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall VerifySignatureWithHashInput(void* key, void* data, void* signature, bool* isAuthenticated) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *isAuthenticated = detach_from<bool>(this->shim().VerifySignatureWithHashInput(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&signature)));
+            *isAuthenticated = detach_from<bool>(this->shim().VerifySignatureWithHashInput(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&signature)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1414,7 +1415,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>>(this->shim().DecryptAsync(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&iv)));
+            *value = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>>(this->shim().DecryptAsync(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&iv)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1422,7 +1423,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>>(this->shim().SignAsync(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data)));
+            *value = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>>(this->shim().SignAsync(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1430,7 +1431,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IBuffer>>(this->shim().SignHashedDataAsync(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data)));
+            *value = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>>(this->shim().SignHashedDataAsync(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicKey const*>(&key), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1438,7 +1439,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::ICryptographicKey> : produce_base<D, Windows::Security::Cryptography::Core::ICryptographicKey>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::ICryptographicKey> : produce_base<D, winrt::Windows::Security::Cryptography::Core::ICryptographicKey>
     {
         int32_t __stdcall get_KeySize(uint32_t* value) noexcept final try
         {
@@ -1451,7 +1452,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().Export());
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().Export());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1459,7 +1460,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().Export(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType const*>(&BlobType)));
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().Export(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType const*>(&BlobType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1467,7 +1468,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().ExportPublicKey());
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().ExportPublicKey());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1475,7 +1476,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().ExportPublicKey(*reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const*>(&BlobType)));
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().ExportPublicKey(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType const*>(&BlobType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1483,7 +1484,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IEccCurveNamesStatics> : produce_base<D, Windows::Security::Cryptography::Core::IEccCurveNamesStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IEccCurveNamesStatics>
     {
         int32_t __stdcall get_BrainpoolP160r1(void** value) noexcept final try
         {
@@ -1849,7 +1850,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().AllEccCurveNames());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().AllEccCurveNames());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1857,13 +1858,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData> : produce_base<D, Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData>
     {
         int32_t __stdcall get_EncryptedData(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().EncryptedData());
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().EncryptedData());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1871,7 +1872,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().AuthenticationTag());
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().AuthenticationTag());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1879,7 +1880,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics> : produce_base<D, Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IHashAlgorithmNamesStatics>
     {
         int32_t __stdcall get_Md5(void** value) noexcept final try
         {
@@ -1925,7 +1926,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IHashAlgorithmProvider> : produce_base<D, Windows::Security::Cryptography::Core::IHashAlgorithmProvider>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProvider> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProvider>
     {
         int32_t __stdcall get_AlgorithmName(void** value) noexcept final try
         {
@@ -1946,7 +1947,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().HashData(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data)));
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().HashData(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1954,7 +1955,7 @@ namespace winrt::impl
         {
             clear_abi(Value);
             typename D::abi_guard guard(this->shim());
-            *Value = detach_from<Windows::Security::Cryptography::Core::CryptographicHash>(this->shim().CreateHash());
+            *Value = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicHash>(this->shim().CreateHash());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1962,13 +1963,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IHashAlgorithmProviderStatics> : produce_base<D, Windows::Security::Cryptography::Core::IHashAlgorithmProviderStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProviderStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProviderStatics>
     {
         int32_t __stdcall OpenAlgorithm(void* algorithm, void** provider) noexcept final try
         {
             clear_abi(provider);
             typename D::abi_guard guard(this->shim());
-            *provider = detach_from<Windows::Security::Cryptography::Core::HashAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
+            *provider = detach_from<winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1976,12 +1977,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IHashComputation> : produce_base<D, Windows::Security::Cryptography::Core::IHashComputation>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IHashComputation> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IHashComputation>
     {
         int32_t __stdcall Append(void* data) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Append(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&data));
+            this->shim().Append(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&data));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1989,7 +1990,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().GetValueAndReset());
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().GetValueAndReset());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1997,7 +1998,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics> : produce_base<D, Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics>
     {
         int32_t __stdcall get_Pbkdf2Md5(void** value) noexcept final try
         {
@@ -2123,7 +2124,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2> : produce_base<D, Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmNamesStatics2>
     {
         int32_t __stdcall get_CapiKdfMd5(void** value) noexcept final try
         {
@@ -2169,7 +2170,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider> : produce_base<D, Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider>
     {
         int32_t __stdcall get_AlgorithmName(void** value) noexcept final try
         {
@@ -2183,7 +2184,7 @@ namespace winrt::impl
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKey(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&keyMaterial)));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKey(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&keyMaterial)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2191,13 +2192,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProviderStatics> : produce_base<D, Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProviderStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProviderStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProviderStatics>
     {
         int32_t __stdcall OpenAlgorithm(void* algorithm, void** provider) noexcept final try
         {
             clear_abi(provider);
             typename D::abi_guard guard(this->shim());
-            *provider = detach_from<Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
+            *provider = detach_from<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2205,20 +2206,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IKeyDerivationParameters> : produce_base<D, Windows::Security::Cryptography::Core::IKeyDerivationParameters>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters>
     {
         int32_t __stdcall get_KdfGenericBinary(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().KdfGenericBinary());
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().KdfGenericBinary());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_KdfGenericBinary(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().KdfGenericBinary(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&value));
+            this->shim().KdfGenericBinary(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2233,19 +2234,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IKeyDerivationParameters2> : produce_base<D, Windows::Security::Cryptography::Core::IKeyDerivationParameters2>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters2> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters2>
     {
         int32_t __stdcall get_Capi1KdfTargetAlgorithm(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>(this->shim().Capi1KdfTargetAlgorithm());
+            *value = detach_from<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>(this->shim().Capi1KdfTargetAlgorithm());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Capi1KdfTargetAlgorithm(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Capi1KdfTargetAlgorithm(*reinterpret_cast<Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const*>(&value));
+            this->shim().Capi1KdfTargetAlgorithm(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2253,13 +2254,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics> : produce_base<D, Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics>
     {
         int32_t __stdcall BuildForPbkdf2(void* pbkdf2Salt, uint32_t iterationCount, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Cryptography::Core::KeyDerivationParameters>(this->shim().BuildForPbkdf2(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&pbkdf2Salt), iterationCount));
+            *value = detach_from<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>(this->shim().BuildForPbkdf2(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&pbkdf2Salt), iterationCount));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2267,7 +2268,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Cryptography::Core::KeyDerivationParameters>(this->shim().BuildForSP800108(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&label), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&context)));
+            *value = detach_from<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>(this->shim().BuildForSP800108(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&label), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&context)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2275,7 +2276,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Cryptography::Core::KeyDerivationParameters>(this->shim().BuildForSP80056a(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&algorithmId), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&partyUInfo), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&partyVInfo), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&suppPubInfo), *reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&suppPrivInfo)));
+            *value = detach_from<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>(this->shim().BuildForSP80056a(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&algorithmId), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&partyUInfo), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&partyVInfo), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&suppPubInfo), *reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&suppPrivInfo)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2283,13 +2284,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics2> : produce_base<D, Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics2>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics2> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IKeyDerivationParametersStatics2>
     {
         int32_t __stdcall BuildForCapi1Kdf(int32_t capi1KdfTargetAlgorithm, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Cryptography::Core::KeyDerivationParameters>(this->shim().BuildForCapi1Kdf(*reinterpret_cast<Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const*>(&capi1KdfTargetAlgorithm)));
+            *value = detach_from<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>(this->shim().BuildForCapi1Kdf(*reinterpret_cast<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const*>(&capi1KdfTargetAlgorithm)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2297,7 +2298,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics> : produce_base<D, Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IMacAlgorithmNamesStatics>
     {
         int32_t __stdcall get_HmacMd5(void** value) noexcept final try
         {
@@ -2351,7 +2352,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IMacAlgorithmProvider> : produce_base<D, Windows::Security::Cryptography::Core::IMacAlgorithmProvider>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider>
     {
         int32_t __stdcall get_AlgorithmName(void** value) noexcept final try
         {
@@ -2372,7 +2373,7 @@ namespace winrt::impl
         {
             clear_abi(macKey);
             typename D::abi_guard guard(this->shim());
-            *macKey = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKey(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&keyMaterial)));
+            *macKey = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateKey(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&keyMaterial)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2380,13 +2381,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IMacAlgorithmProvider2> : produce_base<D, Windows::Security::Cryptography::Core::IMacAlgorithmProvider2>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider2> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider2>
     {
         int32_t __stdcall CreateHash(void* keyMaterial, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Cryptography::Core::CryptographicHash>(this->shim().CreateHash(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&keyMaterial)));
+            *value = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicHash>(this->shim().CreateHash(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&keyMaterial)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2394,13 +2395,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IMacAlgorithmProviderStatics> : produce_base<D, Windows::Security::Cryptography::Core::IMacAlgorithmProviderStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProviderStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProviderStatics>
     {
         int32_t __stdcall OpenAlgorithm(void* algorithm, void** provider) noexcept final try
         {
             clear_abi(provider);
             typename D::abi_guard guard(this->shim());
-            *provider = detach_from<Windows::Security::Cryptography::Core::MacAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
+            *provider = detach_from<winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2408,13 +2409,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::IPersistedKeyProviderStatics> : produce_base<D, Windows::Security::Cryptography::Core::IPersistedKeyProviderStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::IPersistedKeyProviderStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::IPersistedKeyProviderStatics>
     {
         int32_t __stdcall OpenKeyPairFromCertificateAsync(void* certificate, void* hashAlgorithmName, int32_t padding, void** operation) noexcept final try
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Security::Cryptography::Core::CryptographicKey>>(this->shim().OpenKeyPairFromCertificateAsync(*reinterpret_cast<Windows::Security::Cryptography::Certificates::Certificate const*>(&certificate), *reinterpret_cast<hstring const*>(&hashAlgorithmName), *reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicPadding const*>(&padding)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Cryptography::Core::CryptographicKey>>(this->shim().OpenKeyPairFromCertificateAsync(*reinterpret_cast<winrt::Windows::Security::Cryptography::Certificates::Certificate const*>(&certificate), *reinterpret_cast<hstring const*>(&hashAlgorithmName), *reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicPadding const*>(&padding)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2422,7 +2423,7 @@ namespace winrt::impl
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().OpenPublicKeyFromCertificate(*reinterpret_cast<Windows::Security::Cryptography::Certificates::Certificate const*>(&certificate), *reinterpret_cast<hstring const*>(&hashAlgorithmName), *reinterpret_cast<Windows::Security::Cryptography::Core::CryptographicPadding const*>(&padding)));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().OpenPublicKeyFromCertificate(*reinterpret_cast<winrt::Windows::Security::Cryptography::Certificates::Certificate const*>(&certificate), *reinterpret_cast<hstring const*>(&hashAlgorithmName), *reinterpret_cast<winrt::Windows::Security::Cryptography::Core::CryptographicPadding const*>(&padding)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2430,7 +2431,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics> : produce_base<D, Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::ISymmetricAlgorithmNamesStatics>
     {
         int32_t __stdcall get_DesCbc(void** value) noexcept final try
         {
@@ -2588,7 +2589,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider> : produce_base<D, Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider> : produce_base<D, winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider>
     {
         int32_t __stdcall get_AlgorithmName(void** value) noexcept final try
         {
@@ -2609,7 +2610,7 @@ namespace winrt::impl
         {
             clear_abi(key);
             typename D::abi_guard guard(this->shim());
-            *key = detach_from<Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateSymmetricKey(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&keyMaterial)));
+            *key = detach_from<winrt::Windows::Security::Cryptography::Core::CryptographicKey>(this->shim().CreateSymmetricKey(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&keyMaterial)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2617,13 +2618,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProviderStatics> : produce_base<D, Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProviderStatics>
+    struct produce<D, winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProviderStatics> : produce_base<D, winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProviderStatics>
     {
         int32_t __stdcall OpenAlgorithm(void* algorithm, void** provider) noexcept final try
         {
             clear_abi(provider);
             typename D::abi_guard guard(this->shim());
-            *provider = detach_from<Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
+            *provider = detach_from<winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider>(this->shim().OpenAlgorithm(*reinterpret_cast<hstring const*>(&algorithm)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2720,51 +2721,51 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
     {
         return impl::call_factory<AsymmetricKeyAlgorithmProvider, IAsymmetricKeyAlgorithmProviderStatics>([&](IAsymmetricKeyAlgorithmProviderStatics const& f) { return f.OpenAlgorithm(algorithm); });
     }
-    inline auto CryptographicEngine::Encrypt(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& iv)
+    inline auto CryptographicEngine::Encrypt(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& iv)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics>([&](ICryptographicEngineStatics const& f) { return f.Encrypt(key, data, iv); });
     }
-    inline auto CryptographicEngine::Decrypt(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& iv)
+    inline auto CryptographicEngine::Decrypt(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& iv)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics>([&](ICryptographicEngineStatics const& f) { return f.Decrypt(key, data, iv); });
     }
-    inline auto CryptographicEngine::EncryptAndAuthenticate(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& nonce, Windows::Storage::Streams::IBuffer const& authenticatedData)
+    inline auto CryptographicEngine::EncryptAndAuthenticate(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& nonce, winrt::Windows::Storage::Streams::IBuffer const& authenticatedData)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics>([&](ICryptographicEngineStatics const& f) { return f.EncryptAndAuthenticate(key, data, nonce, authenticatedData); });
     }
-    inline auto CryptographicEngine::DecryptAndAuthenticate(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& nonce, Windows::Storage::Streams::IBuffer const& authenticationTag, Windows::Storage::Streams::IBuffer const& authenticatedData)
+    inline auto CryptographicEngine::DecryptAndAuthenticate(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& nonce, winrt::Windows::Storage::Streams::IBuffer const& authenticationTag, winrt::Windows::Storage::Streams::IBuffer const& authenticatedData)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics>([&](ICryptographicEngineStatics const& f) { return f.DecryptAndAuthenticate(key, data, nonce, authenticationTag, authenticatedData); });
     }
-    inline auto CryptographicEngine::Sign(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data)
+    inline auto CryptographicEngine::Sign(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics>([&](ICryptographicEngineStatics const& f) { return f.Sign(key, data); });
     }
-    inline auto CryptographicEngine::VerifySignature(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& signature)
+    inline auto CryptographicEngine::VerifySignature(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& signature)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics>([&](ICryptographicEngineStatics const& f) { return f.VerifySignature(key, data, signature); });
     }
-    inline auto CryptographicEngine::DeriveKeyMaterial(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Security::Cryptography::Core::KeyDerivationParameters const& parameters, uint32_t desiredKeySize)
+    inline auto CryptographicEngine::DeriveKeyMaterial(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters const& parameters, uint32_t desiredKeySize)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics>([&](ICryptographicEngineStatics const& f) { return f.DeriveKeyMaterial(key, parameters, desiredKeySize); });
     }
-    inline auto CryptographicEngine::SignHashedData(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data)
+    inline auto CryptographicEngine::SignHashedData(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics2>([&](ICryptographicEngineStatics2 const& f) { return f.SignHashedData(key, data); });
     }
-    inline auto CryptographicEngine::VerifySignatureWithHashInput(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& signature)
+    inline auto CryptographicEngine::VerifySignatureWithHashInput(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& signature)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics2>([&](ICryptographicEngineStatics2 const& f) { return f.VerifySignatureWithHashInput(key, data, signature); });
     }
-    inline auto CryptographicEngine::DecryptAsync(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& iv)
+    inline auto CryptographicEngine::DecryptAsync(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& iv)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics2>([&](ICryptographicEngineStatics2 const& f) { return f.DecryptAsync(key, data, iv); });
     }
-    inline auto CryptographicEngine::SignAsync(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data)
+    inline auto CryptographicEngine::SignAsync(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics2>([&](ICryptographicEngineStatics2 const& f) { return f.SignAsync(key, data); });
     }
-    inline auto CryptographicEngine::SignHashedDataAsync(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data)
+    inline auto CryptographicEngine::SignHashedDataAsync(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data)
     {
         return impl::call_factory<CryptographicEngine, ICryptographicEngineStatics2>([&](ICryptographicEngineStatics2 const& f) { return f.SignHashedDataAsync(key, data); });
     }
@@ -2950,7 +2951,7 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
     }
     inline auto EccCurveNames::AllEccCurveNames()
     {
-        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IEccCurveNamesStatics const&), EccCurveNames, IEccCurveNamesStatics>([](IEccCurveNamesStatics const& f) { return f.AllEccCurveNames(); });
+        return impl::call_factory_cast<winrt::Windows::Foundation::Collections::IVectorView<hstring>(*)(IEccCurveNamesStatics const&), EccCurveNames, IEccCurveNamesStatics>([](IEccCurveNamesStatics const& f) { return f.AllEccCurveNames(); });
     }
     inline auto HashAlgorithmNames::Md5()
     {
@@ -3060,19 +3061,19 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
     {
         return impl::call_factory<KeyDerivationAlgorithmProvider, IKeyDerivationAlgorithmProviderStatics>([&](IKeyDerivationAlgorithmProviderStatics const& f) { return f.OpenAlgorithm(algorithm); });
     }
-    inline auto KeyDerivationParameters::BuildForPbkdf2(Windows::Storage::Streams::IBuffer const& pbkdf2Salt, uint32_t iterationCount)
+    inline auto KeyDerivationParameters::BuildForPbkdf2(winrt::Windows::Storage::Streams::IBuffer const& pbkdf2Salt, uint32_t iterationCount)
     {
         return impl::call_factory<KeyDerivationParameters, IKeyDerivationParametersStatics>([&](IKeyDerivationParametersStatics const& f) { return f.BuildForPbkdf2(pbkdf2Salt, iterationCount); });
     }
-    inline auto KeyDerivationParameters::BuildForSP800108(Windows::Storage::Streams::IBuffer const& label, Windows::Storage::Streams::IBuffer const& context)
+    inline auto KeyDerivationParameters::BuildForSP800108(winrt::Windows::Storage::Streams::IBuffer const& label, winrt::Windows::Storage::Streams::IBuffer const& context)
     {
         return impl::call_factory<KeyDerivationParameters, IKeyDerivationParametersStatics>([&](IKeyDerivationParametersStatics const& f) { return f.BuildForSP800108(label, context); });
     }
-    inline auto KeyDerivationParameters::BuildForSP80056a(Windows::Storage::Streams::IBuffer const& algorithmId, Windows::Storage::Streams::IBuffer const& partyUInfo, Windows::Storage::Streams::IBuffer const& partyVInfo, Windows::Storage::Streams::IBuffer const& suppPubInfo, Windows::Storage::Streams::IBuffer const& suppPrivInfo)
+    inline auto KeyDerivationParameters::BuildForSP80056a(winrt::Windows::Storage::Streams::IBuffer const& algorithmId, winrt::Windows::Storage::Streams::IBuffer const& partyUInfo, winrt::Windows::Storage::Streams::IBuffer const& partyVInfo, winrt::Windows::Storage::Streams::IBuffer const& suppPubInfo, winrt::Windows::Storage::Streams::IBuffer const& suppPrivInfo)
     {
         return impl::call_factory<KeyDerivationParameters, IKeyDerivationParametersStatics>([&](IKeyDerivationParametersStatics const& f) { return f.BuildForSP80056a(algorithmId, partyUInfo, partyVInfo, suppPubInfo, suppPrivInfo); });
     }
-    inline auto KeyDerivationParameters::BuildForCapi1Kdf(Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const& capi1KdfTargetAlgorithm)
+    inline auto KeyDerivationParameters::BuildForCapi1Kdf(winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const& capi1KdfTargetAlgorithm)
     {
         return impl::call_factory<KeyDerivationParameters, IKeyDerivationParametersStatics2>([&](IKeyDerivationParametersStatics2 const& f) { return f.BuildForCapi1Kdf(capi1KdfTargetAlgorithm); });
     }
@@ -3104,11 +3105,11 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
     {
         return impl::call_factory<MacAlgorithmProvider, IMacAlgorithmProviderStatics>([&](IMacAlgorithmProviderStatics const& f) { return f.OpenAlgorithm(algorithm); });
     }
-    inline auto PersistedKeyProvider::OpenKeyPairFromCertificateAsync(Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, Windows::Security::Cryptography::Core::CryptographicPadding const& padding)
+    inline auto PersistedKeyProvider::OpenKeyPairFromCertificateAsync(winrt::Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, winrt::Windows::Security::Cryptography::Core::CryptographicPadding const& padding)
     {
         return impl::call_factory<PersistedKeyProvider, IPersistedKeyProviderStatics>([&](IPersistedKeyProviderStatics const& f) { return f.OpenKeyPairFromCertificateAsync(certificate, hashAlgorithmName, padding); });
     }
-    inline auto PersistedKeyProvider::OpenPublicKeyFromCertificate(Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, Windows::Security::Cryptography::Core::CryptographicPadding const& padding)
+    inline auto PersistedKeyProvider::OpenPublicKeyFromCertificate(winrt::Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, winrt::Windows::Security::Cryptography::Core::CryptographicPadding const& padding)
     {
         return impl::call_factory<PersistedKeyProvider, IPersistedKeyProviderStatics>([&](IPersistedKeyProviderStatics const& f) { return f.OpenPublicKeyFromCertificate(certificate, hashAlgorithmName, padding); });
     }
@@ -3243,6 +3244,8 @@ namespace std
     template<> struct hash<winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

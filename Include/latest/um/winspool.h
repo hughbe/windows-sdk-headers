@@ -510,6 +510,10 @@ typedef LPJOB_INFO_4A LPJOB_INFO_4;
     #define JOB_CONTROL_RELEASE        9
 #endif // (NTDDI_VERSION >= NTDDI_VISTA)
 
+#if (NTDDI_VERSION >= NTDDI_WIN10)
+    #define JOB_CONTROL_SEND_TOAST     10
+#endif // (NTDDI_VERSION >= NTDDI_WIN10)
+
 #define JOB_STATUS_PAUSED               0x00000001
 #define JOB_STATUS_ERROR                0x00000002
 #define JOB_STATUS_DELETING             0x00000004

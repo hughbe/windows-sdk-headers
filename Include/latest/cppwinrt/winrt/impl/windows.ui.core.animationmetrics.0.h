@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Core_AnimationMetrics_0_H
 #define WINRT_Windows_UI_Core_AnimationMetrics_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
@@ -97,43 +98,43 @@ WINRT_EXPORT namespace winrt::Windows::UI::Core::AnimationMetrics
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::Core::AnimationMetrics::IAnimationDescription>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::IOpacityAnimation>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::IPropertyAnimation>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::IScaleAnimation>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::AnimationDescription>{ using type = class_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::OpacityAnimation>{ using type = class_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::PropertyAnimation>{ using type = class_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::ScaleAnimation>{ using type = class_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::TranslationAnimation>{ using type = class_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::AnimationEffect>{ using type = enum_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::AnimationEffectTarget>{ using type = enum_category; };
-    template <> struct category<Windows::UI::Core::AnimationMetrics::PropertyAnimationType>{ using type = enum_category; };
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::AnimationDescription> = L"Windows.UI.Core.AnimationMetrics.AnimationDescription";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::OpacityAnimation> = L"Windows.UI.Core.AnimationMetrics.OpacityAnimation";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::PropertyAnimation> = L"Windows.UI.Core.AnimationMetrics.PropertyAnimation";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::ScaleAnimation> = L"Windows.UI.Core.AnimationMetrics.ScaleAnimation";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::TranslationAnimation> = L"Windows.UI.Core.AnimationMetrics.TranslationAnimation";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::AnimationEffect> = L"Windows.UI.Core.AnimationMetrics.AnimationEffect";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::AnimationEffectTarget> = L"Windows.UI.Core.AnimationMetrics.AnimationEffectTarget";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::PropertyAnimationType> = L"Windows.UI.Core.AnimationMetrics.PropertyAnimationType";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::IAnimationDescription> = L"Windows.UI.Core.AnimationMetrics.IAnimationDescription";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory> = L"Windows.UI.Core.AnimationMetrics.IAnimationDescriptionFactory";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::IOpacityAnimation> = L"Windows.UI.Core.AnimationMetrics.IOpacityAnimation";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::IPropertyAnimation> = L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation";
-    template <> inline constexpr auto& name_v<Windows::UI::Core::AnimationMetrics::IScaleAnimation> = L"Windows.UI.Core.AnimationMetrics.IScaleAnimation";
-    template <> inline constexpr guid guid_v<Windows::UI::Core::AnimationMetrics::IAnimationDescription>{ 0x7D11A549,0xBE3D,0x41DE,{ 0xB0,0x81,0x05,0xC1,0x49,0x96,0x2F,0x9B } }; // 7D11A549-BE3D-41DE-B081-05C149962F9B
-    template <> inline constexpr guid guid_v<Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>{ 0xC6E27ABE,0xC1FB,0x48B5,{ 0x92,0x71,0xEC,0xC7,0x0A,0xC8,0x6E,0xF0 } }; // C6E27ABE-C1FB-48B5-9271-ECC70AC86EF0
-    template <> inline constexpr guid guid_v<Windows::UI::Core::AnimationMetrics::IOpacityAnimation>{ 0x803AABE5,0xEE7E,0x455F,{ 0x84,0xE9,0x25,0x06,0xAF,0xB8,0xD2,0xB4 } }; // 803AABE5-EE7E-455F-84E9-2506AFB8D2B4
-    template <> inline constexpr guid guid_v<Windows::UI::Core::AnimationMetrics::IPropertyAnimation>{ 0x3A01B4DA,0x4D8C,0x411E,{ 0xB6,0x15,0x1A,0xDE,0x68,0x3A,0x99,0x03 } }; // 3A01B4DA-4D8C-411E-B615-1ADE683A9903
-    template <> inline constexpr guid guid_v<Windows::UI::Core::AnimationMetrics::IScaleAnimation>{ 0x023552C7,0x71AB,0x428C,{ 0x9C,0x9F,0xD3,0x17,0x80,0x96,0x49,0x95 } }; // 023552C7-71AB-428C-9C9F-D31780964995
-    template <> struct default_interface<Windows::UI::Core::AnimationMetrics::AnimationDescription>{ using type = Windows::UI::Core::AnimationMetrics::IAnimationDescription; };
-    template <> struct default_interface<Windows::UI::Core::AnimationMetrics::OpacityAnimation>{ using type = Windows::UI::Core::AnimationMetrics::IOpacityAnimation; };
-    template <> struct default_interface<Windows::UI::Core::AnimationMetrics::PropertyAnimation>{ using type = Windows::UI::Core::AnimationMetrics::IPropertyAnimation; };
-    template <> struct default_interface<Windows::UI::Core::AnimationMetrics::ScaleAnimation>{ using type = Windows::UI::Core::AnimationMetrics::IScaleAnimation; };
-    template <> struct default_interface<Windows::UI::Core::AnimationMetrics::TranslationAnimation>{ using type = Windows::UI::Core::AnimationMetrics::IPropertyAnimation; };
-    template <> struct abi<Windows::UI::Core::AnimationMetrics::IAnimationDescription>
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescription>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::IOpacityAnimation>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::IScaleAnimation>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffect>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffectTarget>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimationType>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription> = L"Windows.UI.Core.AnimationMetrics.AnimationDescription";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation> = L"Windows.UI.Core.AnimationMetrics.OpacityAnimation";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation> = L"Windows.UI.Core.AnimationMetrics.PropertyAnimation";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation> = L"Windows.UI.Core.AnimationMetrics.ScaleAnimation";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation> = L"Windows.UI.Core.AnimationMetrics.TranslationAnimation";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffect> = L"Windows.UI.Core.AnimationMetrics.AnimationEffect";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffectTarget> = L"Windows.UI.Core.AnimationMetrics.AnimationEffectTarget";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimationType> = L"Windows.UI.Core.AnimationMetrics.PropertyAnimationType";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescription> = L"Windows.UI.Core.AnimationMetrics.IAnimationDescription";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory> = L"Windows.UI.Core.AnimationMetrics.IAnimationDescriptionFactory";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::IOpacityAnimation> = L"Windows.UI.Core.AnimationMetrics.IOpacityAnimation";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation> = L"Windows.UI.Core.AnimationMetrics.IPropertyAnimation";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Core::AnimationMetrics::IScaleAnimation> = L"Windows.UI.Core.AnimationMetrics.IScaleAnimation";
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescription>{ 0x7D11A549,0xBE3D,0x41DE,{ 0xB0,0x81,0x05,0xC1,0x49,0x96,0x2F,0x9B } }; // 7D11A549-BE3D-41DE-B081-05C149962F9B
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>{ 0xC6E27ABE,0xC1FB,0x48B5,{ 0x92,0x71,0xEC,0xC7,0x0A,0xC8,0x6E,0xF0 } }; // C6E27ABE-C1FB-48B5-9271-ECC70AC86EF0
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Core::AnimationMetrics::IOpacityAnimation>{ 0x803AABE5,0xEE7E,0x455F,{ 0x84,0xE9,0x25,0x06,0xAF,0xB8,0xD2,0xB4 } }; // 803AABE5-EE7E-455F-84E9-2506AFB8D2B4
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>{ 0x3A01B4DA,0x4D8C,0x411E,{ 0xB6,0x15,0x1A,0xDE,0x68,0x3A,0x99,0x03 } }; // 3A01B4DA-4D8C-411E-B615-1ADE683A9903
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Core::AnimationMetrics::IScaleAnimation>{ 0x023552C7,0x71AB,0x428C,{ 0x9C,0x9F,0xD3,0x17,0x80,0x96,0x49,0x95 } }; // 023552C7-71AB-428C-9C9F-D31780964995
+    template <> struct default_interface<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription>{ using type = winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescription; };
+    template <> struct default_interface<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>{ using type = winrt::Windows::UI::Core::AnimationMetrics::IOpacityAnimation; };
+    template <> struct default_interface<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>{ using type = winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation; };
+    template <> struct default_interface<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>{ using type = winrt::Windows::UI::Core::AnimationMetrics::IScaleAnimation; };
+    template <> struct default_interface<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>{ using type = winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation; };
+    template <> struct abi<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescription>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -144,14 +145,14 @@ namespace winrt::impl
             virtual int32_t __stdcall get_ZOrder(int32_t*) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>
+    template <> struct abi<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall CreateInstance(int32_t, int32_t, void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Core::AnimationMetrics::IOpacityAnimation>
+    template <> struct abi<winrt::Windows::UI::Core::AnimationMetrics::IOpacityAnimation>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -159,18 +160,18 @@ namespace winrt::impl
             virtual int32_t __stdcall get_FinalOpacity(float*) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
+    template <> struct abi<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_Type(int32_t*) noexcept = 0;
             virtual int32_t __stdcall get_Delay(int64_t*) noexcept = 0;
             virtual int32_t __stdcall get_Duration(int64_t*) noexcept = 0;
-            virtual int32_t __stdcall get_Control1(Windows::Foundation::Point*) noexcept = 0;
-            virtual int32_t __stdcall get_Control2(Windows::Foundation::Point*) noexcept = 0;
+            virtual int32_t __stdcall get_Control1(winrt::Windows::Foundation::Point*) noexcept = 0;
+            virtual int32_t __stdcall get_Control2(winrt::Windows::Foundation::Point*) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Core::AnimationMetrics::IScaleAnimation>
+    template <> struct abi<winrt::Windows::UI::Core::AnimationMetrics::IScaleAnimation>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -178,64 +179,64 @@ namespace winrt::impl
             virtual int32_t __stdcall get_InitialScaleY(void**) noexcept = 0;
             virtual int32_t __stdcall get_FinalScaleX(float*) noexcept = 0;
             virtual int32_t __stdcall get_FinalScaleY(float*) noexcept = 0;
-            virtual int32_t __stdcall get_NormalizedOrigin(Windows::Foundation::Point*) noexcept = 0;
+            virtual int32_t __stdcall get_NormalizedOrigin(winrt::Windows::Foundation::Point*) noexcept = 0;
         };
     };
     template <typename D>
     struct consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::UI::Core::AnimationMetrics::IPropertyAnimation>) Animations() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) StaggerDelay() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>) Animations() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) StaggerDelay() const;
         [[nodiscard]] WINRT_IMPL_AUTO(float) StaggerDelayFactor() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) DelayLimit() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) DelayLimit() const;
         [[nodiscard]] WINRT_IMPL_AUTO(int32_t) ZOrder() const;
     };
-    template <> struct consume<Windows::UI::Core::AnimationMetrics::IAnimationDescription>
+    template <> struct consume<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescription>
     {
         template <typename D> using type = consume_Windows_UI_Core_AnimationMetrics_IAnimationDescription<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Core_AnimationMetrics_IAnimationDescriptionFactory
     {
-        WINRT_IMPL_AUTO(Windows::UI::Core::AnimationMetrics::AnimationDescription) CreateInstance(Windows::UI::Core::AnimationMetrics::AnimationEffect const& effect, Windows::UI::Core::AnimationMetrics::AnimationEffectTarget const& target) const;
+        WINRT_IMPL_AUTO(winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription) CreateInstance(winrt::Windows::UI::Core::AnimationMetrics::AnimationEffect const& effect, winrt::Windows::UI::Core::AnimationMetrics::AnimationEffectTarget const& target) const;
     };
-    template <> struct consume<Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>
+    template <> struct consume<winrt::Windows::UI::Core::AnimationMetrics::IAnimationDescriptionFactory>
     {
         template <typename D> using type = consume_Windows_UI_Core_AnimationMetrics_IAnimationDescriptionFactory<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Core_AnimationMetrics_IOpacityAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) InitialOpacity() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<float>) InitialOpacity() const;
         [[nodiscard]] WINRT_IMPL_AUTO(float) FinalOpacity() const;
     };
-    template <> struct consume<Windows::UI::Core::AnimationMetrics::IOpacityAnimation>
+    template <> struct consume<winrt::Windows::UI::Core::AnimationMetrics::IOpacityAnimation>
     {
         template <typename D> using type = consume_Windows_UI_Core_AnimationMetrics_IOpacityAnimation<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Core::AnimationMetrics::PropertyAnimationType) Type() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) Delay() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) Duration() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Control1() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) Control2() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimationType) Type() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Delay() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) Duration() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Control1() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) Control2() const;
     };
-    template <> struct consume<Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
+    template <> struct consume<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
     {
         template <typename D> using type = consume_Windows_UI_Core_AnimationMetrics_IPropertyAnimation<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) InitialScaleX() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<float>) InitialScaleY() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<float>) InitialScaleX() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<float>) InitialScaleY() const;
         [[nodiscard]] WINRT_IMPL_AUTO(float) FinalScaleX() const;
         [[nodiscard]] WINRT_IMPL_AUTO(float) FinalScaleY() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Point) NormalizedOrigin() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) NormalizedOrigin() const;
     };
-    template <> struct consume<Windows::UI::Core::AnimationMetrics::IScaleAnimation>
+    template <> struct consume<winrt::Windows::UI::Core::AnimationMetrics::IScaleAnimation>
     {
         template <typename D> using type = consume_Windows_UI_Core_AnimationMetrics_IScaleAnimation<D>;
     };

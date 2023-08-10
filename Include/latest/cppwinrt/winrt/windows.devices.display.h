@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Devices_Display_H
 #define WINRT_Windows_Devices_Display_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Graphics.2.h"
@@ -17,151 +18,151 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Display_IDisplayMonitor<D>::DeviceId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_DeviceId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_DeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Display_IDisplayMonitor<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::DisplayMonitorConnectionKind) consume_Windows_Devices_Display_IDisplayMonitor<D>::ConnectionKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Display::DisplayMonitorConnectionKind) consume_Windows_Devices_Display_IDisplayMonitor<D>::ConnectionKind() const
     {
-        Windows::Devices::Display::DisplayMonitorConnectionKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_ConnectionKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Devices::Display::DisplayMonitorConnectionKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_ConnectionKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind) consume_Windows_Devices_Display_IDisplayMonitor<D>::PhysicalConnector() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind) consume_Windows_Devices_Display_IDisplayMonitor<D>::PhysicalConnector() const
     {
-        Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_PhysicalConnector(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_PhysicalConnector(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Display_IDisplayMonitor<D>::DisplayAdapterDeviceId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_DisplayAdapterDeviceId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_DisplayAdapterDeviceId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::DisplayAdapterId) consume_Windows_Devices_Display_IDisplayMonitor<D>::DisplayAdapterId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::DisplayAdapterId) consume_Windows_Devices_Display_IDisplayMonitor<D>::DisplayAdapterId() const
     {
-        Windows::Graphics::DisplayAdapterId value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_DisplayAdapterId(put_abi(value)));
+        winrt::Windows::Graphics::DisplayAdapterId value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_DisplayAdapterId(put_abi(value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Devices_Display_IDisplayMonitor<D>::DisplayAdapterTargetId() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_DisplayAdapterTargetId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_DisplayAdapterTargetId(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Display::DisplayMonitorUsageKind) consume_Windows_Devices_Display_IDisplayMonitor<D>::UsageKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Display::DisplayMonitorUsageKind) consume_Windows_Devices_Display_IDisplayMonitor<D>::UsageKind() const
     {
-        Windows::Devices::Display::DisplayMonitorUsageKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_UsageKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Devices::Display::DisplayMonitorUsageKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_UsageKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::SizeInt32) consume_Windows_Devices_Display_IDisplayMonitor<D>::NativeResolutionInRawPixels() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::SizeInt32) consume_Windows_Devices_Display_IDisplayMonitor<D>::NativeResolutionInRawPixels() const
     {
-        Windows::Graphics::SizeInt32 value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_NativeResolutionInRawPixels(put_abi(value)));
+        winrt::Windows::Graphics::SizeInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_NativeResolutionInRawPixels(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::Size>) consume_Windows_Devices_Display_IDisplayMonitor<D>::PhysicalSizeInInches() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Size>) consume_Windows_Devices_Display_IDisplayMonitor<D>::PhysicalSizeInInches() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_PhysicalSizeInInches(&value));
-        return Windows::Foundation::IReference<Windows::Foundation::Size>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_PhysicalSizeInInches(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Size>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Devices_Display_IDisplayMonitor<D>::RawDpiX() const
     {
         float value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_RawDpiX(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_RawDpiX(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Devices_Display_IDisplayMonitor<D>::RawDpiY() const
     {
         float value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_RawDpiY(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_RawDpiY(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Devices_Display_IDisplayMonitor<D>::RedPrimary() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) consume_Windows_Devices_Display_IDisplayMonitor<D>::RedPrimary() const
     {
-        Windows::Foundation::Point value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_RedPrimary(put_abi(value)));
+        winrt::Windows::Foundation::Point value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_RedPrimary(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Devices_Display_IDisplayMonitor<D>::GreenPrimary() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) consume_Windows_Devices_Display_IDisplayMonitor<D>::GreenPrimary() const
     {
-        Windows::Foundation::Point value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_GreenPrimary(put_abi(value)));
+        winrt::Windows::Foundation::Point value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_GreenPrimary(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Devices_Display_IDisplayMonitor<D>::BluePrimary() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) consume_Windows_Devices_Display_IDisplayMonitor<D>::BluePrimary() const
     {
-        Windows::Foundation::Point value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_BluePrimary(put_abi(value)));
+        winrt::Windows::Foundation::Point value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_BluePrimary(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Point) consume_Windows_Devices_Display_IDisplayMonitor<D>::WhitePoint() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Point) consume_Windows_Devices_Display_IDisplayMonitor<D>::WhitePoint() const
     {
-        Windows::Foundation::Point value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_WhitePoint(put_abi(value)));
+        winrt::Windows::Foundation::Point value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_WhitePoint(put_abi(value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Devices_Display_IDisplayMonitor<D>::MaxLuminanceInNits() const
     {
         float value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_MaxLuminanceInNits(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_MaxLuminanceInNits(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Devices_Display_IDisplayMonitor<D>::MinLuminanceInNits() const
     {
         float value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_MinLuminanceInNits(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_MinLuminanceInNits(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_Devices_Display_IDisplayMonitor<D>::MaxAverageFullFrameLuminanceInNits() const
     {
         float value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->get_MaxAverageFullFrameLuminanceInNits(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->get_MaxAverageFullFrameLuminanceInNits(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(com_array<uint8_t>) consume_Windows_Devices_Display_IDisplayMonitor<D>::GetDescriptor(Windows::Devices::Display::DisplayMonitorDescriptorKind const& descriptorKind) const
+    template <typename D> WINRT_IMPL_AUTO(com_array<uint8_t>) consume_Windows_Devices_Display_IDisplayMonitor<D>::GetDescriptor(winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind const& descriptorKind) const
     {
         uint32_t result_impl_size{};
         uint8_t* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor)->GetDescriptor(static_cast<int32_t>(descriptorKind), &result_impl_size, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor)->GetDescriptor(static_cast<int32_t>(descriptorKind), &result_impl_size, &result));
         return com_array<uint8_t>{ result, result_impl_size, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Display_IDisplayMonitor2<D>::IsDolbyVisionSupportedInHdrMode() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitor2)->get_IsDolbyVisionSupportedInHdrMode(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitor2)->get_IsDolbyVisionSupportedInHdrMode(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Display_IDisplayMonitorStatics<D>::GetDeviceSelector() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitorStatics)->GetDeviceSelector(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitorStatics)->GetDeviceSelector(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Display::DisplayMonitor>) consume_Windows_Devices_Display_IDisplayMonitorStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Display::DisplayMonitor>) consume_Windows_Devices_Display_IDisplayMonitorStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitorStatics)->FromIdAsync(*(void**)(&deviceId), &operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Devices::Display::DisplayMonitor>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitorStatics)->FromIdAsync(*(void**)(&deviceId), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Display::DisplayMonitor>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Display::DisplayMonitor>) consume_Windows_Devices_Display_IDisplayMonitorStatics<D>::FromInterfaceIdAsync(param::hstring const& deviceInterfaceId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Display::DisplayMonitor>) consume_Windows_Devices_Display_IDisplayMonitorStatics<D>::FromInterfaceIdAsync(param::hstring const& deviceInterfaceId) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Display::IDisplayMonitorStatics)->FromInterfaceIdAsync(*(void**)(&deviceInterfaceId), &operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Devices::Display::DisplayMonitor>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Display::IDisplayMonitorStatics)->FromInterfaceIdAsync(*(void**)(&deviceInterfaceId), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Display::DisplayMonitor>{ operation, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Devices::Display::IDisplayMonitor> : produce_base<D, Windows::Devices::Display::IDisplayMonitor>
+    struct produce<D, winrt::Windows::Devices::Display::IDisplayMonitor> : produce_base<D, winrt::Windows::Devices::Display::IDisplayMonitor>
     {
         int32_t __stdcall get_DeviceId(void** value) noexcept final try
         {
@@ -182,14 +183,14 @@ namespace winrt::impl
         int32_t __stdcall get_ConnectionKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Devices::Display::DisplayMonitorConnectionKind>(this->shim().ConnectionKind());
+            *value = detach_from<winrt::Windows::Devices::Display::DisplayMonitorConnectionKind>(this->shim().ConnectionKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_PhysicalConnector(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind>(this->shim().PhysicalConnector());
+            *value = detach_from<winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind>(this->shim().PhysicalConnector());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -203,9 +204,9 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_DisplayAdapterId(struct struct_Windows_Graphics_DisplayAdapterId* value) noexcept final try
         {
-            zero_abi<Windows::Graphics::DisplayAdapterId>(value);
+            zero_abi<winrt::Windows::Graphics::DisplayAdapterId>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Graphics::DisplayAdapterId>(this->shim().DisplayAdapterId());
+            *value = detach_from<winrt::Windows::Graphics::DisplayAdapterId>(this->shim().DisplayAdapterId());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -219,15 +220,15 @@ namespace winrt::impl
         int32_t __stdcall get_UsageKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Devices::Display::DisplayMonitorUsageKind>(this->shim().UsageKind());
+            *value = detach_from<winrt::Windows::Devices::Display::DisplayMonitorUsageKind>(this->shim().UsageKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_NativeResolutionInRawPixels(struct struct_Windows_Graphics_SizeInt32* value) noexcept final try
         {
-            zero_abi<Windows::Graphics::SizeInt32>(value);
+            zero_abi<winrt::Windows::Graphics::SizeInt32>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Graphics::SizeInt32>(this->shim().NativeResolutionInRawPixels());
+            *value = detach_from<winrt::Windows::Graphics::SizeInt32>(this->shim().NativeResolutionInRawPixels());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -235,7 +236,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Foundation::Size>>(this->shim().PhysicalSizeInInches());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Size>>(this->shim().PhysicalSizeInInches());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -253,35 +254,35 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_RedPrimary(Windows::Foundation::Point* value) noexcept final try
+        int32_t __stdcall get_RedPrimary(winrt::Windows::Foundation::Point* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::Point>(value);
+            zero_abi<winrt::Windows::Foundation::Point>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Point>(this->shim().RedPrimary());
+            *value = detach_from<winrt::Windows::Foundation::Point>(this->shim().RedPrimary());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_GreenPrimary(Windows::Foundation::Point* value) noexcept final try
+        int32_t __stdcall get_GreenPrimary(winrt::Windows::Foundation::Point* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::Point>(value);
+            zero_abi<winrt::Windows::Foundation::Point>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Point>(this->shim().GreenPrimary());
+            *value = detach_from<winrt::Windows::Foundation::Point>(this->shim().GreenPrimary());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_BluePrimary(Windows::Foundation::Point* value) noexcept final try
+        int32_t __stdcall get_BluePrimary(winrt::Windows::Foundation::Point* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::Point>(value);
+            zero_abi<winrt::Windows::Foundation::Point>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Point>(this->shim().BluePrimary());
+            *value = detach_from<winrt::Windows::Foundation::Point>(this->shim().BluePrimary());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_WhitePoint(Windows::Foundation::Point* value) noexcept final try
+        int32_t __stdcall get_WhitePoint(winrt::Windows::Foundation::Point* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::Point>(value);
+            zero_abi<winrt::Windows::Foundation::Point>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Point>(this->shim().WhitePoint());
+            *value = detach_from<winrt::Windows::Foundation::Point>(this->shim().WhitePoint());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -310,7 +311,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            std::tie(*__resultSize, *result) = detach_abi(this->shim().GetDescriptor(*reinterpret_cast<Windows::Devices::Display::DisplayMonitorDescriptorKind const*>(&descriptorKind)));
+            std::tie(*__resultSize, *result) = detach_abi(this->shim().GetDescriptor(*reinterpret_cast<winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind const*>(&descriptorKind)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -318,7 +319,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Devices::Display::IDisplayMonitor2> : produce_base<D, Windows::Devices::Display::IDisplayMonitor2>
+    struct produce<D, winrt::Windows::Devices::Display::IDisplayMonitor2> : produce_base<D, winrt::Windows::Devices::Display::IDisplayMonitor2>
     {
         int32_t __stdcall get_IsDolbyVisionSupportedInHdrMode(bool* value) noexcept final try
         {
@@ -331,7 +332,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Devices::Display::IDisplayMonitorStatics> : produce_base<D, Windows::Devices::Display::IDisplayMonitorStatics>
+    struct produce<D, winrt::Windows::Devices::Display::IDisplayMonitorStatics> : produce_base<D, winrt::Windows::Devices::Display::IDisplayMonitorStatics>
     {
         int32_t __stdcall GetDeviceSelector(void** result) noexcept final try
         {
@@ -345,7 +346,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Devices::Display::DisplayMonitor>>(this->shim().FromIdAsync(*reinterpret_cast<hstring const*>(&deviceId)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Display::DisplayMonitor>>(this->shim().FromIdAsync(*reinterpret_cast<hstring const*>(&deviceId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -353,7 +354,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Devices::Display::DisplayMonitor>>(this->shim().FromInterfaceIdAsync(*reinterpret_cast<hstring const*>(&deviceInterfaceId)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Display::DisplayMonitor>>(this->shim().FromInterfaceIdAsync(*reinterpret_cast<hstring const*>(&deviceInterfaceId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -382,6 +383,8 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Display::IDisplayMonitor2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::IDisplayMonitorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Display::DisplayMonitor> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

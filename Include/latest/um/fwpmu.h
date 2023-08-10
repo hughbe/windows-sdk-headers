@@ -892,6 +892,29 @@ DEFINE_GUID(
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+
+//037f317a-d696-494a-bba5-bffc265e6052
+DEFINE_GUID(
+   FWPM_LAYER_OUTBOUND_NETWORK_CONNECTION_POLICY_V4,
+   0x037f317a,
+   0xd696,
+   0x494a,
+   0xbb, 0xa5, 0xbf, 0xfc, 0x26, 0x5e, 0x60, 0x52
+);
+
+//22a4fdb1-6d7e-48ae-ae77-3742525c3119
+DEFINE_GUID(
+   FWPM_LAYER_OUTBOUND_NETWORK_CONNECTION_POLICY_V6,
+   0x22a4fdb1,
+   0x6d7e,
+   0x48ae,
+   0xae, 0x77, 0x37, 0x42, 0x52, 0x5c, 0x31, 0x19
+);
+
+#endif //  (NTDDI_VERSION >= NTDDI_WIN10_NI)
+
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 // GUIDs for built-in sublayers.
@@ -2921,6 +2944,28 @@ DEFINE_GUID(
     );
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS3)
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+
+//103090d4-8e28-4fd6-9894-d1d67d6b10c9
+DEFINE_GUID(
+    FWPM_CALLOUT_OUTBOUND_NETWORK_CONNECTION_POLICY_LAYER_V4,
+    0x103090d4,
+    0x8e28,
+    0x4fd6,
+    0x98, 0x94, 0xd1, 0xd6, 0x7d, 0x6b, 0x10, 0xc9
+    );
+
+//4ed3446d-8dc7-459b-b09f-c1cb7a8f8689
+DEFINE_GUID(
+    FWPM_CALLOUT_OUTBOUND_NETWORK_CONNECTION_POLICY_LAYER_V6,
+    0x4ed3446d,
+    0x8dc7,
+    0x459b,
+    0xb0, 0x9f, 0xc1, 0xcb, 0x7a, 0x8f, 0x86, 0x89
+    );
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
 
 ///////////////////////////////////////////////////////////////////////////////
 //

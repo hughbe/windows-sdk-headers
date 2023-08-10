@@ -1916,6 +1916,7 @@ typedef enum _POLICY_INFORMATION_CLASS {
     PolicyDnsDomainInformationInt,
     PolicyLocalAccountDomainInformation,
     PolicyMachineAccountInformation,
+    PolicyMachineAccountInformation2,
     PolicyLastEntry
 
 } POLICY_INFORMATION_CLASS, *PPOLICY_INFORMATION_CLASS;
@@ -2303,6 +2304,19 @@ typedef struct _POLICY_MACHINE_ACCT_INFO {
 } POLICY_MACHINE_ACCT_INFO, *PPOLICY_MACHINE_ACCT_INFO;
 
 //
+// The following structure corresponds to the PolicyMachineAccountInformation2
+// information class.  Only valid when the machine is joined to an AD domain.
+// When not joined, will return 0+NULL+GUID_NULL.
+//
+typedef struct _POLICY_MACHINE_ACCT_INFO2 {
+
+    ULONG Rid;
+    PSID Sid;
+    GUID ObjectGuid;
+
+} POLICY_MACHINE_ACCT_INFO2, *PPOLICY_MACHINE_ACCT_INFO2;
+
+//
 // The following data type defines the classes of Policy Information / Policy Domain Information
 // that may be used to request notification
 //
@@ -2460,7 +2474,9 @@ typedef PLSA_TRUST_INFORMATION PTRUSTED_DOMAIN_INFORMATION_BASIC;
 #define TRUST_TYPE_DCE                  0x00000004  // Trust with a DCE realm
 #endif
 
-// Levels 0x5 - 0x000FFFFF reserved for future use
+#define TRUST_TYPE_AAD                  0x00000005 // Trust with Azure AD
+
+// Levels 0x6 - 0x000FFFFF reserved for future use
 // Provider specific trust levels are from 0x00100000 to 0xFFF00000
 
 #define TRUST_ATTRIBUTE_NON_TRANSITIVE                0x00000001  // Disallow transitivity
@@ -2497,16 +2513,17 @@ typedef PLSA_TRUST_INFORMATION PTRUSTED_DOMAIN_INFORMATION_BASIC;
 #define TRUST_ATTRIBUTE_CROSS_ORGANIZATION_NO_TGT_DELEGATION 0x00000200  // do not forward TGT to the other side of the trust which is not part of this enterprise
 #define TRUST_ATTRIBUTE_PIM_TRUST                     0x00000400  // Outgoing trust to a PIM forest.
 #endif
-// Disables authentication target validation for all NTLM pass-through authentication
-// requests using this trust.
-#define TRUST_ATTRIBUTE_DISABLE_AUTH_TARGET_VALIDATION 0x00001000
-
 #if (_WIN32_WINNT >= 0x0603)
 // Forward the TGT to the other side of the trust which is not part of this enterprise
 // This flag has the opposite meaning of TRUST_ATTRIBUTE_CROSS_ORGANIZATION_NO_TGT_DELEGATION which is now deprecated.
 // Note: setting TRUST_ATTRIBUTE_CROSS_ORGANIZATION_ENABLE_TGT_DELEGATION is not recommended from a security standpoint.
 #define TRUST_ATTRIBUTE_CROSS_ORGANIZATION_ENABLE_TGT_DELEGATION 0x00000800
 #endif
+
+// Disables authentication target validation for all NTLM pass-through authentication
+// requests using this trust.
+#define TRUST_ATTRIBUTE_DISABLE_AUTH_TARGET_VALIDATION 0x00001000
+
 // Trust attributes 0x00000040 through 0x00200000 are reserved for future use
 #else
 // Trust attributes 0x00000010 through 0x00200000 are reserved for future use
@@ -2703,6 +2720,7 @@ typedef struct _LSA_FOREST_TRUST_RECORD {
                ForestTrustTopLevelNameEx )] LSA_UNICODE_STRING TopLevelName;
         [case( ForestTrustDomainInfo )] LSA_FOREST_TRUST_DOMAIN_INFO DomainInfo;
         [default] LSA_FOREST_TRUST_BINARY_DATA Data;
+
 #else
         LSA_UNICODE_STRING TopLevelName;
         LSA_FOREST_TRUST_DOMAIN_INFO DomainInfo;
@@ -2773,6 +2791,7 @@ typedef struct _LSA_FOREST_TRUST_INFORMATION2 {
 #endif
 
 } LSA_FOREST_TRUST_INFORMATION2, *PLSA_FOREST_TRUST_INFORMATION2;
+
 
 typedef enum {
 
@@ -3347,7 +3366,7 @@ NTAPI
 LsaRetrievePrivateData(
     _In_ LSA_HANDLE PolicyHandle,
     _In_ PLSA_UNICODE_STRING KeyName,
-    _Out_ PLSA_UNICODE_STRING * PrivateDatant
+    _Out_ PLSA_UNICODE_STRING * PrivateData
     );
 
 
@@ -4309,6 +4328,9 @@ RtlDecryptMemory(
 #define KERB_CHECKSUM_RC4_MD5       -136
 #define KERB_CHECKSUM_MD5_HMAC      -137                // used by netlogon
 #define KERB_CHECKSUM_HMAC_MD5      -138                // used by Kerberos
+#define KERB_CHECKSUM_SHA256        -139
+#define KERB_CHECKSUM_SHA384        -140
+#define KERB_CHECKSUM_SHA512        -141
 
 //
 // used internally by userapi.cxx

@@ -3,14 +3,14 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0626 */
+ /* File created by MIDL compiler version 8.01.0628 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
 
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
-#define __REQUIRED_RPCNDR_H_VERSION__ 500
+#define __REQUIRED_RPCNDR_H_VERSION__ 501
 #endif
 
 /* verify that the <rpcsal.h> version is high enough to compile this file*/
@@ -38,7 +38,7 @@
 #endif
 
 #ifndef DECLSPEC_XFGVIRT
-#if _CONTROL_FLOW_GUARD_XFG
+#if defined(_CONTROL_FLOW_GUARD_XFG)
 #define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
 #else
 #define DECLSPEC_XFGVIRT(base, func)
@@ -117,6 +117,13 @@ typedef interface IAudioClientDuckingControl IAudioClientDuckingControl;
 #endif 	/* __IAudioClientDuckingControl_FWD_DEFINED__ */
 
 
+#ifndef __IAudioViewManagerService_FWD_DEFINED__
+#define __IAudioViewManagerService_FWD_DEFINED__
+typedef interface IAudioViewManagerService IAudioViewManagerService;
+
+#endif 	/* __IAudioViewManagerService_FWD_DEFINED__ */
+
+
 #ifndef __IAudioEffectsChangedNotificationClient_FWD_DEFINED__
 #define __IAudioEffectsChangedNotificationClient_FWD_DEFINED__
 typedef interface IAudioEffectsChangedNotificationClient IAudioEffectsChangedNotificationClient;
@@ -150,6 +157,13 @@ typedef interface IAudioAmbisonicsControl IAudioAmbisonicsControl;
 typedef interface IChannelAudioVolume IChannelAudioVolume;
 
 #endif 	/* __IChannelAudioVolume_FWD_DEFINED__ */
+
+
+#ifndef __IAcousticEchoCancellationControl_FWD_DEFINED__
+#define __IAcousticEchoCancellationControl_FWD_DEFINED__
+typedef interface IAcousticEchoCancellationControl IAcousticEchoCancellationControl;
+
+#endif 	/* __IAcousticEchoCancellationControl_FWD_DEFINED__ */
 
 
 /* header files for imported files */
@@ -1842,7 +1856,91 @@ EXTERN_C const IID IID_IAudioClientDuckingControl;
 #endif 	/* __IAudioClientDuckingControl_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0010 */
+#ifndef __IAudioViewManagerService_INTERFACE_DEFINED__
+#define __IAudioViewManagerService_INTERFACE_DEFINED__
+
+/* interface IAudioViewManagerService */
+/* [local][unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAudioViewManagerService;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("A7A7EF10-1F49-45E0-AD35-612057CC8F74")
+    IAudioViewManagerService : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE SetAudioStreamWindow( 
+            /* [in] */ HWND hwnd) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAudioViewManagerServiceVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IAudioViewManagerService * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IAudioViewManagerService * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IAudioViewManagerService * This);
+        
+        DECLSPEC_XFGVIRT(IAudioViewManagerService, SetAudioStreamWindow)
+        HRESULT ( STDMETHODCALLTYPE *SetAudioStreamWindow )( 
+            IAudioViewManagerService * This,
+            /* [in] */ HWND hwnd);
+        
+        END_INTERFACE
+    } IAudioViewManagerServiceVtbl;
+
+    interface IAudioViewManagerService
+    {
+        CONST_VTBL struct IAudioViewManagerServiceVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAudioViewManagerService_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAudioViewManagerService_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAudioViewManagerService_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAudioViewManagerService_SetAudioStreamWindow(This,hwnd)	\
+    ( (This)->lpVtbl -> SetAudioStreamWindow(This,hwnd) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAudioViewManagerService_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_audioclient_0000_0011 */
 /* [local] */ 
 
 typedef /* [v1_enum] */ 
@@ -1861,8 +1959,8 @@ typedef struct AUDIO_EFFECT
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0010_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0010_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0011_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0011_v0_0_s_ifspec;
 
 #ifndef __IAudioEffectsChangedNotificationClient_INTERFACE_DEFINED__
 #define __IAudioEffectsChangedNotificationClient_INTERFACE_DEFINED__
@@ -2069,14 +2167,14 @@ EXTERN_C const IID IID_IAudioEffectsManager;
 #endif 	/* __IAudioEffectsManager_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0012 */
+/* interface __MIDL_itf_audioclient_0000_0013 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0012_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0012_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0013_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0013_v0_0_s_ifspec;
 
 #ifndef __IAudioStreamVolume_INTERFACE_DEFINED__
 #define __IAudioStreamVolume_INTERFACE_DEFINED__
@@ -2232,7 +2330,7 @@ EXTERN_C const IID IID_IAudioStreamVolume;
 #endif 	/* __IAudioStreamVolume_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0013 */
+/* interface __MIDL_itf_audioclient_0000_0014 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
@@ -2285,8 +2383,8 @@ typedef struct AMBISONICS_PARAMS
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0013_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0013_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0014_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0014_v0_0_s_ifspec;
 
 #ifndef __IAudioAmbisonicsControl_INTERFACE_DEFINED__
 #define __IAudioAmbisonicsControl_INTERFACE_DEFINED__
@@ -2413,7 +2511,7 @@ EXTERN_C const IID IID_IAudioAmbisonicsControl;
 #endif 	/* __IAudioAmbisonicsControl_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0014 */
+/* interface __MIDL_itf_audioclient_0000_0015 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
@@ -2422,8 +2520,8 @@ EXTERN_C const IID IID_IAudioAmbisonicsControl;
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0014_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0014_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0015_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0015_v0_0_s_ifspec;
 
 #ifndef __IChannelAudioVolume_INTERFACE_DEFINED__
 #define __IChannelAudioVolume_INTERFACE_DEFINED__
@@ -2583,7 +2681,7 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 #endif 	/* __IChannelAudioVolume_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioclient_0000_0015 */
+/* interface __MIDL_itf_audioclient_0000_0016 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
@@ -2633,12 +2731,104 @@ EXTERN_C const IID IID_IChannelAudioVolume;
 #define AUDCLNT_S_BUFFER_EMPTY                 AUDCLNT_SUCCESS(0x001)
 #define AUDCLNT_S_THREAD_ALREADY_REGISTERED    AUDCLNT_SUCCESS(0x002)
 #define AUDCLNT_S_POSITION_STALLED             AUDCLNT_SUCCESS(0x003)
+
+
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0016_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0016_v0_0_s_ifspec;
+
+#ifndef __IAcousticEchoCancellationControl_INTERFACE_DEFINED__
+#define __IAcousticEchoCancellationControl_INTERFACE_DEFINED__
+
+/* interface IAcousticEchoCancellationControl */
+/* [local][unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAcousticEchoCancellationControl;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("f4ae25b5-aaa3-437d-b6b3-dbbe2d0e9549")
+    IAcousticEchoCancellationControl : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE SetEchoCancellationRenderEndpoint( 
+            LPCWSTR endpointId) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAcousticEchoCancellationControlVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IAcousticEchoCancellationControl * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IAcousticEchoCancellationControl * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IAcousticEchoCancellationControl * This);
+        
+        DECLSPEC_XFGVIRT(IAcousticEchoCancellationControl, SetEchoCancellationRenderEndpoint)
+        HRESULT ( STDMETHODCALLTYPE *SetEchoCancellationRenderEndpoint )( 
+            IAcousticEchoCancellationControl * This,
+            LPCWSTR endpointId);
+        
+        END_INTERFACE
+    } IAcousticEchoCancellationControlVtbl;
+
+    interface IAcousticEchoCancellationControl
+    {
+        CONST_VTBL struct IAcousticEchoCancellationControlVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAcousticEchoCancellationControl_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAcousticEchoCancellationControl_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAcousticEchoCancellationControl_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAcousticEchoCancellationControl_SetEchoCancellationRenderEndpoint(This,endpointId)	\
+    ( (This)->lpVtbl -> SetEchoCancellationRenderEndpoint(This,endpointId) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAcousticEchoCancellationControl_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_audioclient_0000_0017 */
+/* [local] */ 
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0015_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0015_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0017_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0017_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

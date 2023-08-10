@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Graphics_Effects_0_H
 #define WINRT_Windows_Graphics_Effects_0_H
 WINRT_EXPORT namespace winrt::Windows::Graphics::Effects
@@ -12,13 +13,13 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Effects
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Graphics::Effects::IGraphicsEffect>{ using type = interface_category; };
-    template <> struct category<Windows::Graphics::Effects::IGraphicsEffectSource>{ using type = interface_category; };
-    template <> inline constexpr auto& name_v<Windows::Graphics::Effects::IGraphicsEffect> = L"Windows.Graphics.Effects.IGraphicsEffect";
-    template <> inline constexpr auto& name_v<Windows::Graphics::Effects::IGraphicsEffectSource> = L"Windows.Graphics.Effects.IGraphicsEffectSource";
-    template <> inline constexpr guid guid_v<Windows::Graphics::Effects::IGraphicsEffect>{ 0xCB51C0CE,0x8FE6,0x4636,{ 0xB2,0x02,0x86,0x1F,0xAA,0x07,0xD8,0xF3 } }; // CB51C0CE-8FE6-4636-B202-861FAA07D8F3
-    template <> inline constexpr guid guid_v<Windows::Graphics::Effects::IGraphicsEffectSource>{ 0x2D8F9DDC,0x4339,0x4EB9,{ 0x92,0x16,0xF9,0xDE,0xB7,0x56,0x58,0xA2 } }; // 2D8F9DDC-4339-4EB9-9216-F9DEB75658A2
-    template <> struct abi<Windows::Graphics::Effects::IGraphicsEffect>
+    template <> struct category<winrt::Windows::Graphics::Effects::IGraphicsEffect>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>{ using type = interface_category; };
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Effects::IGraphicsEffect> = L"Windows.Graphics.Effects.IGraphicsEffect";
+    template <> inline constexpr auto& name_v<winrt::Windows::Graphics::Effects::IGraphicsEffectSource> = L"Windows.Graphics.Effects.IGraphicsEffectSource";
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Effects::IGraphicsEffect>{ 0xCB51C0CE,0x8FE6,0x4636,{ 0xB2,0x02,0x86,0x1F,0xAA,0x07,0xD8,0xF3 } }; // CB51C0CE-8FE6-4636-B202-861FAA07D8F3
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>{ 0x2D8F9DDC,0x4339,0x4EB9,{ 0x92,0x16,0xF9,0xDE,0xB7,0x56,0x58,0xA2 } }; // 2D8F9DDC-4339-4EB9-9216-F9DEB75658A2
+    template <> struct abi<winrt::Windows::Graphics::Effects::IGraphicsEffect>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -26,7 +27,7 @@ namespace winrt::impl
             virtual int32_t __stdcall put_Name(void*) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Graphics::Effects::IGraphicsEffectSource>
+    template <> struct abi<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -38,7 +39,7 @@ namespace winrt::impl
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
         WINRT_IMPL_AUTO(void) Name(param::hstring const& name) const;
     };
-    template <> struct consume<Windows::Graphics::Effects::IGraphicsEffect>
+    template <> struct consume<winrt::Windows::Graphics::Effects::IGraphicsEffect>
     {
         template <typename D> using type = consume_Windows_Graphics_Effects_IGraphicsEffect<D>;
     };
@@ -46,7 +47,7 @@ namespace winrt::impl
     struct consume_Windows_Graphics_Effects_IGraphicsEffectSource
     {
     };
-    template <> struct consume<Windows::Graphics::Effects::IGraphicsEffectSource>
+    template <> struct consume<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>
     {
         template <typename D> using type = consume_Windows_Graphics_Effects_IGraphicsEffectSource<D>;
     };

@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Storage_2_H
 #define WINRT_Windows_Storage_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
@@ -13,96 +14,96 @@
 #include "winrt/impl/Windows.Storage.1.h"
 WINRT_EXPORT namespace winrt::Windows::Storage
 {
-    struct ApplicationDataSetVersionHandler : Windows::Foundation::IUnknown
+    struct ApplicationDataSetVersionHandler : winrt::Windows::Foundation::IUnknown
     {
         ApplicationDataSetVersionHandler(std::nullptr_t = nullptr) noexcept {}
-        ApplicationDataSetVersionHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        ApplicationDataSetVersionHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> ApplicationDataSetVersionHandler(L lambda);
         template <typename F> ApplicationDataSetVersionHandler(F* function);
         template <typename O, typename M> ApplicationDataSetVersionHandler(O* object, M method);
         template <typename O, typename M> ApplicationDataSetVersionHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> ApplicationDataSetVersionHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Storage::SetVersionRequest const& setVersionRequest) const;
+        auto operator()(winrt::Windows::Storage::SetVersionRequest const& setVersionRequest) const;
     };
-    struct StreamedFileDataRequestedHandler : Windows::Foundation::IUnknown
+    struct StreamedFileDataRequestedHandler : winrt::Windows::Foundation::IUnknown
     {
         StreamedFileDataRequestedHandler(std::nullptr_t = nullptr) noexcept {}
-        StreamedFileDataRequestedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        StreamedFileDataRequestedHandler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
         template <typename L> StreamedFileDataRequestedHandler(L lambda);
         template <typename F> StreamedFileDataRequestedHandler(F* function);
         template <typename O, typename M> StreamedFileDataRequestedHandler(O* object, M method);
         template <typename O, typename M> StreamedFileDataRequestedHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> StreamedFileDataRequestedHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Storage::StreamedFileDataRequest const& stream) const;
+        auto operator()(winrt::Windows::Storage::StreamedFileDataRequest const& stream) const;
     };
-    struct __declspec(empty_bases) AppDataPaths : Windows::Storage::IAppDataPaths
+    struct __declspec(empty_bases) AppDataPaths : winrt::Windows::Storage::IAppDataPaths
     {
         AppDataPaths(std::nullptr_t) noexcept {}
-        AppDataPaths(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IAppDataPaths(ptr, take_ownership_from_abi) {}
-        static auto GetForUser(Windows::System::User const& user);
+        AppDataPaths(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IAppDataPaths(ptr, take_ownership_from_abi) {}
+        static auto GetForUser(winrt::Windows::System::User const& user);
         static auto GetDefault();
     };
-    struct __declspec(empty_bases) ApplicationData : Windows::Storage::IApplicationData,
-        impl::require<ApplicationData, Windows::Storage::IApplicationData2, Windows::Storage::IApplicationData3, Windows::Foundation::IClosable>
+    struct __declspec(empty_bases) ApplicationData : winrt::Windows::Storage::IApplicationData,
+        impl::require<ApplicationData, winrt::Windows::Storage::IApplicationData2, winrt::Windows::Storage::IApplicationData3, winrt::Windows::Foundation::IClosable>
     {
         ApplicationData(std::nullptr_t) noexcept {}
-        ApplicationData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IApplicationData(ptr, take_ownership_from_abi) {}
+        ApplicationData(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IApplicationData(ptr, take_ownership_from_abi) {}
         [[nodiscard]] static auto Current();
-        static auto GetForUserAsync(Windows::System::User const& user);
+        static auto GetForUserAsync(winrt::Windows::System::User const& user);
     };
-    struct __declspec(empty_bases) ApplicationDataCompositeValue : Windows::Foundation::Collections::IPropertySet
+    struct __declspec(empty_bases) ApplicationDataCompositeValue : winrt::Windows::Foundation::Collections::IPropertySet
     {
         ApplicationDataCompositeValue(std::nullptr_t) noexcept {}
-        ApplicationDataCompositeValue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::Collections::IPropertySet(ptr, take_ownership_from_abi) {}
+        ApplicationDataCompositeValue(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::Collections::IPropertySet(ptr, take_ownership_from_abi) {}
         ApplicationDataCompositeValue();
     };
-    struct __declspec(empty_bases) ApplicationDataContainer : Windows::Storage::IApplicationDataContainer,
-        impl::require<ApplicationDataContainer, Windows::Foundation::IClosable>
+    struct __declspec(empty_bases) ApplicationDataContainer : winrt::Windows::Storage::IApplicationDataContainer,
+        impl::require<ApplicationDataContainer, winrt::Windows::Foundation::IClosable>
     {
         ApplicationDataContainer(std::nullptr_t) noexcept {}
-        ApplicationDataContainer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IApplicationDataContainer(ptr, take_ownership_from_abi) {}
+        ApplicationDataContainer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IApplicationDataContainer(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ApplicationDataContainerSettings : Windows::Foundation::Collections::IPropertySet
+    struct __declspec(empty_bases) ApplicationDataContainerSettings : winrt::Windows::Foundation::Collections::IPropertySet
     {
         ApplicationDataContainerSettings(std::nullptr_t) noexcept {}
-        ApplicationDataContainerSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::Collections::IPropertySet(ptr, take_ownership_from_abi) {}
+        ApplicationDataContainerSettings(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::Collections::IPropertySet(ptr, take_ownership_from_abi) {}
     };
     struct CachedFileManager
     {
         CachedFileManager() = delete;
-        static auto DeferUpdates(Windows::Storage::IStorageFile const& file);
-        static auto CompleteUpdatesAsync(Windows::Storage::IStorageFile const& file);
+        static auto DeferUpdates(winrt::Windows::Storage::IStorageFile const& file);
+        static auto CompleteUpdatesAsync(winrt::Windows::Storage::IStorageFile const& file);
     };
     struct DownloadsFolder
     {
         DownloadsFolder() = delete;
         static auto CreateFileAsync(param::hstring const& desiredName);
         static auto CreateFolderAsync(param::hstring const& desiredName);
-        static auto CreateFileAsync(param::hstring const& desiredName, Windows::Storage::CreationCollisionOption const& option);
-        static auto CreateFolderAsync(param::hstring const& desiredName, Windows::Storage::CreationCollisionOption const& option);
-        static auto CreateFileForUserAsync(Windows::System::User const& user, param::hstring const& desiredName);
-        static auto CreateFolderForUserAsync(Windows::System::User const& user, param::hstring const& desiredName);
-        static auto CreateFileForUserAsync(Windows::System::User const& user, param::hstring const& desiredName, Windows::Storage::CreationCollisionOption const& option);
-        static auto CreateFolderForUserAsync(Windows::System::User const& user, param::hstring const& desiredName, Windows::Storage::CreationCollisionOption const& option);
+        static auto CreateFileAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option);
+        static auto CreateFolderAsync(param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option);
+        static auto CreateFileForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName);
+        static auto CreateFolderForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName);
+        static auto CreateFileForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option);
+        static auto CreateFolderForUserAsync(winrt::Windows::System::User const& user, param::hstring const& desiredName, winrt::Windows::Storage::CreationCollisionOption const& option);
     };
     struct FileIO
     {
         FileIO() = delete;
-        static auto ReadTextAsync(Windows::Storage::IStorageFile const& file);
-        static auto ReadTextAsync(Windows::Storage::IStorageFile const& file, Windows::Storage::Streams::UnicodeEncoding const& encoding);
-        static auto WriteTextAsync(Windows::Storage::IStorageFile const& file, param::hstring const& contents);
-        static auto WriteTextAsync(Windows::Storage::IStorageFile const& file, param::hstring const& contents, Windows::Storage::Streams::UnicodeEncoding const& encoding);
-        static auto AppendTextAsync(Windows::Storage::IStorageFile const& file, param::hstring const& contents);
-        static auto AppendTextAsync(Windows::Storage::IStorageFile const& file, param::hstring const& contents, Windows::Storage::Streams::UnicodeEncoding const& encoding);
-        static auto ReadLinesAsync(Windows::Storage::IStorageFile const& file);
-        static auto ReadLinesAsync(Windows::Storage::IStorageFile const& file, Windows::Storage::Streams::UnicodeEncoding const& encoding);
-        static auto WriteLinesAsync(Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines);
-        static auto WriteLinesAsync(Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines, Windows::Storage::Streams::UnicodeEncoding const& encoding);
-        static auto AppendLinesAsync(Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines);
-        static auto AppendLinesAsync(Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines, Windows::Storage::Streams::UnicodeEncoding const& encoding);
-        static auto ReadBufferAsync(Windows::Storage::IStorageFile const& file);
-        static auto WriteBufferAsync(Windows::Storage::IStorageFile const& file, Windows::Storage::Streams::IBuffer const& buffer);
-        static auto WriteBytesAsync(Windows::Storage::IStorageFile const& file, array_view<uint8_t const> buffer);
+        static auto ReadTextAsync(winrt::Windows::Storage::IStorageFile const& file);
+        static auto ReadTextAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto WriteTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents);
+        static auto WriteTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto AppendTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents);
+        static auto AppendTextAsync(winrt::Windows::Storage::IStorageFile const& file, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto ReadLinesAsync(winrt::Windows::Storage::IStorageFile const& file);
+        static auto ReadLinesAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto WriteLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines);
+        static auto WriteLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto AppendLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines);
+        static auto AppendLinesAsync(winrt::Windows::Storage::IStorageFile const& file, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto ReadBufferAsync(winrt::Windows::Storage::IStorageFile const& file);
+        static auto WriteBufferAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Storage::Streams::IBuffer const& buffer);
+        static auto WriteBytesAsync(winrt::Windows::Storage::IStorageFile const& file, array_view<uint8_t const> buffer);
     };
     struct KnownFolders
     {
@@ -120,162 +121,162 @@ WINRT_EXPORT namespace winrt::Windows::Storage
         [[nodiscard]] static auto Objects3D();
         [[nodiscard]] static auto AppCaptures();
         [[nodiscard]] static auto RecordedCalls();
-        static auto GetFolderForUserAsync(Windows::System::User const& user, Windows::Storage::KnownFolderId const& folderId);
-        static auto RequestAccessAsync(Windows::Storage::KnownFolderId const& folderId);
-        static auto RequestAccessForUserAsync(Windows::System::User const& user, Windows::Storage::KnownFolderId const& folderId);
-        static auto GetFolderAsync(Windows::Storage::KnownFolderId const& folderId);
+        static auto GetFolderForUserAsync(winrt::Windows::System::User const& user, winrt::Windows::Storage::KnownFolderId const& folderId);
+        static auto RequestAccessAsync(winrt::Windows::Storage::KnownFolderId const& folderId);
+        static auto RequestAccessForUserAsync(winrt::Windows::System::User const& user, winrt::Windows::Storage::KnownFolderId const& folderId);
+        static auto GetFolderAsync(winrt::Windows::Storage::KnownFolderId const& folderId);
     };
     struct PathIO
     {
         PathIO() = delete;
         static auto ReadTextAsync(param::hstring const& absolutePath);
-        static auto ReadTextAsync(param::hstring const& absolutePath, Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto ReadTextAsync(param::hstring const& absolutePath, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
         static auto WriteTextAsync(param::hstring const& absolutePath, param::hstring const& contents);
-        static auto WriteTextAsync(param::hstring const& absolutePath, param::hstring const& contents, Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto WriteTextAsync(param::hstring const& absolutePath, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
         static auto AppendTextAsync(param::hstring const& absolutePath, param::hstring const& contents);
-        static auto AppendTextAsync(param::hstring const& absolutePath, param::hstring const& contents, Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto AppendTextAsync(param::hstring const& absolutePath, param::hstring const& contents, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
         static auto ReadLinesAsync(param::hstring const& absolutePath);
-        static auto ReadLinesAsync(param::hstring const& absolutePath, Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto ReadLinesAsync(param::hstring const& absolutePath, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
         static auto WriteLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines);
-        static auto WriteLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines, Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto WriteLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
         static auto AppendLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines);
-        static auto AppendLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines, Windows::Storage::Streams::UnicodeEncoding const& encoding);
+        static auto AppendLinesAsync(param::hstring const& absolutePath, param::async_iterable<hstring> const& lines, winrt::Windows::Storage::Streams::UnicodeEncoding const& encoding);
         static auto ReadBufferAsync(param::hstring const& absolutePath);
-        static auto WriteBufferAsync(param::hstring const& absolutePath, Windows::Storage::Streams::IBuffer const& buffer);
+        static auto WriteBufferAsync(param::hstring const& absolutePath, winrt::Windows::Storage::Streams::IBuffer const& buffer);
         static auto WriteBytesAsync(param::hstring const& absolutePath, array_view<uint8_t const> buffer);
     };
-    struct __declspec(empty_bases) SetVersionDeferral : Windows::Storage::ISetVersionDeferral
+    struct __declspec(empty_bases) SetVersionDeferral : winrt::Windows::Storage::ISetVersionDeferral
     {
         SetVersionDeferral(std::nullptr_t) noexcept {}
-        SetVersionDeferral(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISetVersionDeferral(ptr, take_ownership_from_abi) {}
+        SetVersionDeferral(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISetVersionDeferral(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SetVersionRequest : Windows::Storage::ISetVersionRequest
+    struct __declspec(empty_bases) SetVersionRequest : winrt::Windows::Storage::ISetVersionRequest
     {
         SetVersionRequest(std::nullptr_t) noexcept {}
-        SetVersionRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISetVersionRequest(ptr, take_ownership_from_abi) {}
+        SetVersionRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISetVersionRequest(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) StorageFile : Windows::Storage::IStorageFile,
-        impl::require<StorageFile, Windows::Storage::IStorageItemProperties, Windows::Storage::IStorageItemProperties2, Windows::Storage::IStorageItem2, Windows::Storage::IStorageItemPropertiesWithProvider, Windows::Storage::IStorageFilePropertiesWithAvailability, Windows::Storage::IStorageFile2>
+    struct __declspec(empty_bases) StorageFile : winrt::Windows::Storage::IStorageFile,
+        impl::require<StorageFile, winrt::Windows::Storage::IStorageItemProperties, winrt::Windows::Storage::IStorageItemProperties2, winrt::Windows::Storage::IStorageItem2, winrt::Windows::Storage::IStorageItemPropertiesWithProvider, winrt::Windows::Storage::IStorageFilePropertiesWithAvailability, winrt::Windows::Storage::IStorageFile2>
     {
         StorageFile(std::nullptr_t) noexcept {}
-        StorageFile(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageFile(ptr, take_ownership_from_abi) {}
-        using Windows::Storage::IStorageFile::OpenAsync;
-        using impl::consume_t<StorageFile, Windows::Storage::IStorageFile2>::OpenAsync;
-        using Windows::Storage::IStorageFile::OpenTransactedWriteAsync;
-        using impl::consume_t<StorageFile, Windows::Storage::IStorageFile2>::OpenTransactedWriteAsync;
+        StorageFile(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageFile(ptr, take_ownership_from_abi) {}
+        using winrt::Windows::Storage::IStorageFile::OpenAsync;
+        using impl::consume_t<StorageFile, winrt::Windows::Storage::IStorageFile2>::OpenAsync;
+        using winrt::Windows::Storage::IStorageFile::OpenTransactedWriteAsync;
+        using impl::consume_t<StorageFile, winrt::Windows::Storage::IStorageFile2>::OpenTransactedWriteAsync;
         static auto GetFileFromPathAsync(param::hstring const& path);
-        static auto GetFileFromApplicationUriAsync(Windows::Foundation::Uri const& uri);
-        static auto CreateStreamedFileAsync(param::hstring const& displayNameWithExtension, Windows::Storage::StreamedFileDataRequestedHandler const& dataRequested, Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail);
-        static auto ReplaceWithStreamedFileAsync(Windows::Storage::IStorageFile const& fileToReplace, Windows::Storage::StreamedFileDataRequestedHandler const& dataRequested, Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail);
-        static auto CreateStreamedFileFromUriAsync(param::hstring const& displayNameWithExtension, Windows::Foundation::Uri const& uri, Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail);
-        static auto ReplaceWithStreamedFileFromUriAsync(Windows::Storage::IStorageFile const& fileToReplace, Windows::Foundation::Uri const& uri, Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail);
-        static auto GetFileFromPathForUserAsync(Windows::System::User const& user, param::hstring const& path);
+        static auto GetFileFromApplicationUriAsync(winrt::Windows::Foundation::Uri const& uri);
+        static auto CreateStreamedFileAsync(param::hstring const& displayNameWithExtension, winrt::Windows::Storage::StreamedFileDataRequestedHandler const& dataRequested, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail);
+        static auto ReplaceWithStreamedFileAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace, winrt::Windows::Storage::StreamedFileDataRequestedHandler const& dataRequested, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail);
+        static auto CreateStreamedFileFromUriAsync(param::hstring const& displayNameWithExtension, winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail);
+        static auto ReplaceWithStreamedFileFromUriAsync(winrt::Windows::Storage::IStorageFile const& fileToReplace, winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& thumbnail);
+        static auto GetFileFromPathForUserAsync(winrt::Windows::System::User const& user, param::hstring const& path);
     };
-    struct __declspec(empty_bases) StorageFolder : Windows::Storage::IStorageFolder,
-        impl::require<StorageFolder, Windows::Storage::Search::IStorageFolderQueryOperations, Windows::Storage::IStorageItemProperties, Windows::Storage::IStorageItemProperties2, Windows::Storage::IStorageItem2, Windows::Storage::IStorageFolder2, Windows::Storage::IStorageItemPropertiesWithProvider, Windows::Storage::IStorageFolder3>
+    struct __declspec(empty_bases) StorageFolder : winrt::Windows::Storage::IStorageFolder,
+        impl::require<StorageFolder, winrt::Windows::Storage::Search::IStorageFolderQueryOperations, winrt::Windows::Storage::IStorageItemProperties, winrt::Windows::Storage::IStorageItemProperties2, winrt::Windows::Storage::IStorageItem2, winrt::Windows::Storage::IStorageFolder2, winrt::Windows::Storage::IStorageItemPropertiesWithProvider, winrt::Windows::Storage::IStorageFolder3>
     {
         StorageFolder(std::nullptr_t) noexcept {}
-        StorageFolder(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageFolder(ptr, take_ownership_from_abi) {}
-        using Windows::Storage::IStorageFolder::GetFilesAsync;
-        using impl::consume_t<StorageFolder, Windows::Storage::Search::IStorageFolderQueryOperations>::GetFilesAsync;
-        using Windows::Storage::IStorageFolder::GetFoldersAsync;
-        using impl::consume_t<StorageFolder, Windows::Storage::Search::IStorageFolderQueryOperations>::GetFoldersAsync;
-        using Windows::Storage::IStorageFolder::GetItemsAsync;
-        using impl::consume_t<StorageFolder, Windows::Storage::Search::IStorageFolderQueryOperations>::GetItemsAsync;
+        StorageFolder(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageFolder(ptr, take_ownership_from_abi) {}
+        using winrt::Windows::Storage::IStorageFolder::GetFilesAsync;
+        using impl::consume_t<StorageFolder, winrt::Windows::Storage::Search::IStorageFolderQueryOperations>::GetFilesAsync;
+        using winrt::Windows::Storage::IStorageFolder::GetFoldersAsync;
+        using impl::consume_t<StorageFolder, winrt::Windows::Storage::Search::IStorageFolderQueryOperations>::GetFoldersAsync;
+        using winrt::Windows::Storage::IStorageFolder::GetItemsAsync;
+        using impl::consume_t<StorageFolder, winrt::Windows::Storage::Search::IStorageFolderQueryOperations>::GetItemsAsync;
         static auto GetFolderFromPathAsync(param::hstring const& path);
-        static auto GetFolderFromPathForUserAsync(Windows::System::User const& user, param::hstring const& path);
+        static auto GetFolderFromPathForUserAsync(winrt::Windows::System::User const& user, param::hstring const& path);
     };
-    struct __declspec(empty_bases) StorageLibrary : Windows::Storage::IStorageLibrary,
-        impl::require<StorageLibrary, Windows::Storage::IStorageLibrary2, Windows::Storage::IStorageLibrary3>
+    struct __declspec(empty_bases) StorageLibrary : winrt::Windows::Storage::IStorageLibrary,
+        impl::require<StorageLibrary, winrt::Windows::Storage::IStorageLibrary2, winrt::Windows::Storage::IStorageLibrary3>
     {
         StorageLibrary(std::nullptr_t) noexcept {}
-        StorageLibrary(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibrary(ptr, take_ownership_from_abi) {}
-        static auto GetLibraryAsync(Windows::Storage::KnownLibraryId const& libraryId);
-        static auto GetLibraryForUserAsync(Windows::System::User const& user, Windows::Storage::KnownLibraryId const& libraryId);
+        StorageLibrary(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageLibrary(ptr, take_ownership_from_abi) {}
+        static auto GetLibraryAsync(winrt::Windows::Storage::KnownLibraryId const& libraryId);
+        static auto GetLibraryForUserAsync(winrt::Windows::System::User const& user, winrt::Windows::Storage::KnownLibraryId const& libraryId);
     };
-    struct __declspec(empty_bases) StorageLibraryChange : Windows::Storage::IStorageLibraryChange
+    struct __declspec(empty_bases) StorageLibraryChange : winrt::Windows::Storage::IStorageLibraryChange
     {
         StorageLibraryChange(std::nullptr_t) noexcept {}
-        StorageLibraryChange(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryChange(ptr, take_ownership_from_abi) {}
+        StorageLibraryChange(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageLibraryChange(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) StorageLibraryChangeReader : Windows::Storage::IStorageLibraryChangeReader,
-        impl::require<StorageLibraryChangeReader, Windows::Storage::IStorageLibraryChangeReader2>
+    struct __declspec(empty_bases) StorageLibraryChangeReader : winrt::Windows::Storage::IStorageLibraryChangeReader,
+        impl::require<StorageLibraryChangeReader, winrt::Windows::Storage::IStorageLibraryChangeReader2>
     {
         StorageLibraryChangeReader(std::nullptr_t) noexcept {}
-        StorageLibraryChangeReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryChangeReader(ptr, take_ownership_from_abi) {}
+        StorageLibraryChangeReader(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageLibraryChangeReader(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) StorageLibraryChangeTracker : Windows::Storage::IStorageLibraryChangeTracker,
-        impl::require<StorageLibraryChangeTracker, Windows::Storage::IStorageLibraryChangeTracker2>
+    struct __declspec(empty_bases) StorageLibraryChangeTracker : winrt::Windows::Storage::IStorageLibraryChangeTracker,
+        impl::require<StorageLibraryChangeTracker, winrt::Windows::Storage::IStorageLibraryChangeTracker2>
     {
         StorageLibraryChangeTracker(std::nullptr_t) noexcept {}
-        StorageLibraryChangeTracker(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryChangeTracker(ptr, take_ownership_from_abi) {}
-        using Windows::Storage::IStorageLibraryChangeTracker::Enable;
-        using impl::consume_t<StorageLibraryChangeTracker, Windows::Storage::IStorageLibraryChangeTracker2>::Enable;
+        StorageLibraryChangeTracker(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageLibraryChangeTracker(ptr, take_ownership_from_abi) {}
+        using winrt::Windows::Storage::IStorageLibraryChangeTracker::Enable;
+        using impl::consume_t<StorageLibraryChangeTracker, winrt::Windows::Storage::IStorageLibraryChangeTracker2>::Enable;
     };
-    struct __declspec(empty_bases) StorageLibraryChangeTrackerOptions : Windows::Storage::IStorageLibraryChangeTrackerOptions
+    struct __declspec(empty_bases) StorageLibraryChangeTrackerOptions : winrt::Windows::Storage::IStorageLibraryChangeTrackerOptions
     {
         StorageLibraryChangeTrackerOptions(std::nullptr_t) noexcept {}
-        StorageLibraryChangeTrackerOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryChangeTrackerOptions(ptr, take_ownership_from_abi) {}
+        StorageLibraryChangeTrackerOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageLibraryChangeTrackerOptions(ptr, take_ownership_from_abi) {}
         StorageLibraryChangeTrackerOptions();
     };
-    struct __declspec(empty_bases) StorageLibraryLastChangeId : Windows::Storage::IStorageLibraryLastChangeId
+    struct __declspec(empty_bases) StorageLibraryLastChangeId : winrt::Windows::Storage::IStorageLibraryLastChangeId
     {
         StorageLibraryLastChangeId(std::nullptr_t) noexcept {}
-        StorageLibraryLastChangeId(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageLibraryLastChangeId(ptr, take_ownership_from_abi) {}
+        StorageLibraryLastChangeId(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageLibraryLastChangeId(ptr, take_ownership_from_abi) {}
         [[nodiscard]] static auto Unknown();
     };
-    struct __declspec(empty_bases) StorageProvider : Windows::Storage::IStorageProvider,
-        impl::require<StorageProvider, Windows::Storage::IStorageProvider2>
+    struct __declspec(empty_bases) StorageProvider : winrt::Windows::Storage::IStorageProvider,
+        impl::require<StorageProvider, winrt::Windows::Storage::IStorageProvider2>
     {
         StorageProvider(std::nullptr_t) noexcept {}
-        StorageProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageProvider(ptr, take_ownership_from_abi) {}
+        StorageProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageProvider(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) StorageStreamTransaction : Windows::Storage::IStorageStreamTransaction
+    struct __declspec(empty_bases) StorageStreamTransaction : winrt::Windows::Storage::IStorageStreamTransaction
     {
         StorageStreamTransaction(std::nullptr_t) noexcept {}
-        StorageStreamTransaction(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IStorageStreamTransaction(ptr, take_ownership_from_abi) {}
+        StorageStreamTransaction(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IStorageStreamTransaction(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) StreamedFileDataRequest : Windows::Storage::Streams::IOutputStream,
-        impl::require<StreamedFileDataRequest, Windows::Storage::IStreamedFileDataRequest>
+    struct __declspec(empty_bases) StreamedFileDataRequest : winrt::Windows::Storage::Streams::IOutputStream,
+        impl::require<StreamedFileDataRequest, winrt::Windows::Storage::IStreamedFileDataRequest>
     {
         StreamedFileDataRequest(std::nullptr_t) noexcept {}
-        StreamedFileDataRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::Streams::IOutputStream(ptr, take_ownership_from_abi) {}
+        StreamedFileDataRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::Streams::IOutputStream(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SystemAudioProperties : Windows::Storage::ISystemAudioProperties
+    struct __declspec(empty_bases) SystemAudioProperties : winrt::Windows::Storage::ISystemAudioProperties
     {
         SystemAudioProperties(std::nullptr_t) noexcept {}
-        SystemAudioProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISystemAudioProperties(ptr, take_ownership_from_abi) {}
+        SystemAudioProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISystemAudioProperties(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SystemDataPaths : Windows::Storage::ISystemDataPaths
+    struct __declspec(empty_bases) SystemDataPaths : winrt::Windows::Storage::ISystemDataPaths
     {
         SystemDataPaths(std::nullptr_t) noexcept {}
-        SystemDataPaths(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISystemDataPaths(ptr, take_ownership_from_abi) {}
+        SystemDataPaths(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISystemDataPaths(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
     };
-    struct __declspec(empty_bases) SystemGPSProperties : Windows::Storage::ISystemGPSProperties
+    struct __declspec(empty_bases) SystemGPSProperties : winrt::Windows::Storage::ISystemGPSProperties
     {
         SystemGPSProperties(std::nullptr_t) noexcept {}
-        SystemGPSProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISystemGPSProperties(ptr, take_ownership_from_abi) {}
+        SystemGPSProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISystemGPSProperties(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SystemImageProperties : Windows::Storage::ISystemImageProperties
+    struct __declspec(empty_bases) SystemImageProperties : winrt::Windows::Storage::ISystemImageProperties
     {
         SystemImageProperties(std::nullptr_t) noexcept {}
-        SystemImageProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISystemImageProperties(ptr, take_ownership_from_abi) {}
+        SystemImageProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISystemImageProperties(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SystemMediaProperties : Windows::Storage::ISystemMediaProperties
+    struct __declspec(empty_bases) SystemMediaProperties : winrt::Windows::Storage::ISystemMediaProperties
     {
         SystemMediaProperties(std::nullptr_t) noexcept {}
-        SystemMediaProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISystemMediaProperties(ptr, take_ownership_from_abi) {}
+        SystemMediaProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISystemMediaProperties(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SystemMusicProperties : Windows::Storage::ISystemMusicProperties
+    struct __declspec(empty_bases) SystemMusicProperties : winrt::Windows::Storage::ISystemMusicProperties
     {
         SystemMusicProperties(std::nullptr_t) noexcept {}
-        SystemMusicProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISystemMusicProperties(ptr, take_ownership_from_abi) {}
+        SystemMusicProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISystemMusicProperties(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SystemPhotoProperties : Windows::Storage::ISystemPhotoProperties
+    struct __declspec(empty_bases) SystemPhotoProperties : winrt::Windows::Storage::ISystemPhotoProperties
     {
         SystemPhotoProperties(std::nullptr_t) noexcept {}
-        SystemPhotoProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISystemPhotoProperties(ptr, take_ownership_from_abi) {}
+        SystemPhotoProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISystemPhotoProperties(ptr, take_ownership_from_abi) {}
     };
     struct SystemProperties
     {
@@ -294,16 +295,16 @@ WINRT_EXPORT namespace winrt::Windows::Storage
         [[nodiscard]] static auto Video();
         [[nodiscard]] static auto Image();
     };
-    struct __declspec(empty_bases) SystemVideoProperties : Windows::Storage::ISystemVideoProperties
+    struct __declspec(empty_bases) SystemVideoProperties : winrt::Windows::Storage::ISystemVideoProperties
     {
         SystemVideoProperties(std::nullptr_t) noexcept {}
-        SystemVideoProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::ISystemVideoProperties(ptr, take_ownership_from_abi) {}
+        SystemVideoProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::ISystemVideoProperties(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) UserDataPaths : Windows::Storage::IUserDataPaths
+    struct __declspec(empty_bases) UserDataPaths : winrt::Windows::Storage::IUserDataPaths
     {
         UserDataPaths(std::nullptr_t) noexcept {}
-        UserDataPaths(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Storage::IUserDataPaths(ptr, take_ownership_from_abi) {}
-        static auto GetForUser(Windows::System::User const& user);
+        UserDataPaths(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Storage::IUserDataPaths(ptr, take_ownership_from_abi) {}
+        static auto GetForUser(winrt::Windows::System::User const& user);
         static auto GetDefault();
     };
 }

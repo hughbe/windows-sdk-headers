@@ -293,7 +293,6 @@ typedef struct _SPLCLIENT_INFO_2_V3{
     typedef SPLCLIENT_INFO_2_LONGHORN SPLCLIENT_INFO_2, *PSPLCLIENT_INFO_2, *LPSPLCLIENT_INFO_2;
 #endif
 
-//
 // This structure is similar to that of DOC_INFO_1 defined in winspool.w. The DocName, OutputFile and Datatype need
 // to be at the beginning of the structure to align with DOC_INFO_1. 
 //
@@ -304,14 +303,14 @@ typedef struct _DOC_INFO_INTERNAL{
     BOOL     bLowILJob;
     HANDLE   hTokenLowIL;
 } DOC_INFO_INTERNAL, *PDOC_INFO_INTERNAL, *LPDOC_INFO_INTERNAL;
-#define DOC_INFO_INTERNAL_LEVEL 100
 
+#define DOC_INFO_INTERNAL_LEVEL 100
 
 #if (NTDDI_VERSION >= NTDDI_VISTA)
 
     //
     // This structure is a super set of the information in both a
-    // splclient_info_1 and splclient_info2 it also contains addtional
+    // splclient_info_1 and splclient_info2 it also contains additional
     // information needed by the provider.
     //
     typedef struct _SPLCLIENT_INFO_3_VISTA
@@ -321,9 +320,9 @@ typedef struct _DOC_INFO_INTERNAL{
         DWORD           dwSize;                 // Reserved, here for complitbility with a info 1 structure
         PWSTR           pMachineName;           // Client machine name
         PWSTR           pUserName;              // Client user name
-        DWORD           dwBuildNum;             // Cleint build number
+        DWORD           dwBuildNum;             // Client build number
         DWORD           dwMajorVersion;         // Client machine major version
-        DWORD           dwMinorVersion;         // Cleint machine minor version
+        DWORD           dwMinorVersion;         // Client machine minor version
         WORD            wProcessorArchitecture; // Client machine architecture
         UINT64          hSplPrinter;            // Server side handle to be used for direct calls
     } SPLCLIENT_INFO_3_VISTA;
@@ -331,6 +330,35 @@ typedef struct _DOC_INFO_INTERNAL{
     typedef SPLCLIENT_INFO_3_VISTA SPLCLIENT_INFO_3, *PSPLCLIENT_INFO_3, *LPSPLCLIENT_INFO_3;
 
 #endif // (NTDDI_VERSION >= NTDDI_VISTA)
+
+#if (NTDDI_VERSION >= NTDDI_WIN10)
+
+    //
+    // This structure is a super set of the information in both a
+    // splclient_info_1, splclient_info2 and splclient_info3 and it also contains additional
+    // information needed by the Device Control Defender code.
+    //
+    typedef struct _SPLCLIENT_INFO_INTERNAL
+    {
+        UINT            cbSize;                 // Size in bytes of this structure
+        DWORD           dwFlags;                // Open printer additional flags to the provider
+        DWORD           dwSize;                 // Reserved, here for complitbility with a info 1 structure
+        PWSTR           pMachineName;           // Client machine name
+        PWSTR           pUserName;              // Client user name
+        DWORD           dwBuildNum;             // Client build number
+        DWORD           dwMajorVersion;         // Client machine major version
+        DWORD           dwMinorVersion;         // Client machine minor version
+        WORD            wProcessorArchitecture; // Client machine architecture
+        UINT64          hSplPrinter;            // Server side handle to be used for direct calls
+        DWORD           dwProcessId;            // ProcessId of the App that is calling OpenPrinter
+        DWORD           dwSessionId;            // SessionId of the App session that is calling OpenPrinter
+    } SPLCLIENT_INFO_INTERNAL;
+
+    typedef SPLCLIENT_INFO_INTERNAL* PSPLCLIENT_INFO_INTERNAL, * LPSPLCLIENT_INFO_INTERNAL;
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10)
+
+#define SPLCLIENT_INFO_INTERNAL_LEVEL 100
 
 typedef struct _PRINTPROVIDOR
 {
@@ -1114,6 +1142,19 @@ typedef struct _PRINTPROVIDOR
         _In_reads_bytes_(jobAttributeGroupBufferSize) BYTE* jobAttributeGroupBuffer,
         _Out_ DWORD* ippResponseBufferSize,
         _Outptr_result_bytebuffer_(*ippResponseBufferSize) BYTE** ippResponseBuffer
+        );
+
+    HRESULT (*fpIppCreateJobOnPrinterWithAttributes)
+    (
+        _In_ HANDLE hPrinter,
+        _In_ DWORD jobId,
+        _In_ PCWSTR pdlFormat,
+        _In_ DWORD jobAttributesBufferSize,
+        _In_reads_bytes_(jobAttributesBufferSize) PBYTE jobAttributeGroupBuffer,
+        _In_ DWORD operationAttributesBufferSize,
+        _In_reads_bytes_opt_(operationAttributesBufferSize) PBYTE operationAttributeGroupBuffer,
+        _Out_ PDWORD ippResponseBufferSize,
+        _Outptr_result_bytebuffer_(*ippResponseBufferSize) PBYTE* ippResponseBuffer
         );
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)

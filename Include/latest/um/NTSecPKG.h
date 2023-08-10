@@ -656,6 +656,23 @@ typedef struct _SECPKG_CLIENT_INFO {
 
 } SECPKG_CLIENT_INFO, * PSECPKG_CLIENT_INFO;
 
+typedef struct _SECPKG_CLIENT_INFO_EX {
+    LUID            LogonId;            // Effective Logon Id
+    ULONG           ProcessID;          // Process Id of caller
+    ULONG           ThreadID;           // Thread Id of caller
+    BOOLEAN         HasTcbPrivilege;    // Client has TCB
+    BOOLEAN         Impersonating;      // Client is impersonating
+    BOOLEAN         Restricted;         // Client is restricted
+
+    UCHAR                           ClientFlags;            // Extra flags about the client
+    SECURITY_IMPERSONATION_LEVEL    ImpersonationLevel;     // Impersonation level of client
+
+    HANDLE                          ClientToken;
+
+    LUID                            IdentificationLogonId;
+    HANDLE                          IdentificationToken;
+
+} SECPKG_CLIENT_INFO_EX, * PSECPKG_CLIENT_INFO_EX;
 
 #define SECPKG_CLIENT_PROCESS_TERMINATED    0x01    // The client process has terminated
 #define SECPKG_CLIENT_THREAD_TERMINATED     0x02    // The client thread has terminated
@@ -841,6 +858,7 @@ typedef LSA_CALLBACK_FUNCTION * PLSA_CALLBACK_FUNCTION;
 #define PRIMARY_CRED_ARSO_LOGON                     0x00200000
 #define PRIMARY_CRED_SUPPLEMENTAL                   0x00400000  // The update is only to move supplemental credentials around
                                                                 // all primary credentials fields except the LogonId should be ignored
+#define PRIMARY_CRED_FOR_PASSWORD_CHANGE            0x00800000  // The credential will be used for a password change
 
 #define PRIMARY_CRED_LOGON_PACKAGE_SHIFT            24
 #define PRIMARY_CRED_PACKAGE_MASK                   0xff000000
@@ -1246,6 +1264,11 @@ typedef NTSTATUS
     _Out_ PSECPKG_CLIENT_INFO ClientInfo
     );
 
+typedef NTSTATUS
+(NTAPI LSA_GET_CLIENT_INFO_EX)(
+    _Out_ PSECPKG_CLIENT_INFO_EX ClientInfo,
+    _In_ ULONG StructSize
+    );
 
 typedef HANDLE
 (NTAPI LSA_REGISTER_NOTIFICATION)(
@@ -1638,6 +1661,7 @@ typedef LSA_DUPLICATE_HANDLE * PLSA_DUPLICATE_HANDLE;
 typedef LSA_SAVE_SUPPLEMENTAL_CREDENTIALS * PLSA_SAVE_SUPPLEMENTAL_CREDENTIALS;
 typedef LSA_CREATE_THREAD * PLSA_CREATE_THREAD;
 typedef LSA_GET_CLIENT_INFO * PLSA_GET_CLIENT_INFO;
+typedef LSA_GET_CLIENT_INFO_EX* PLSA_GET_CLIENT_INFO_EX;
 typedef LSA_REGISTER_NOTIFICATION * PLSA_REGISTER_NOTIFICATION;
 typedef LSA_CANCEL_NOTIFICATION * PLSA_CANCEL_NOTIFICATION;
 typedef LSA_MAP_BUFFER * PLSA_MAP_BUFFER;
@@ -1893,6 +1917,7 @@ typedef struct _LSA_SECPKG_FUNCTION_TABLE {
     PLSA_QUERY_CLIENT_REQUEST QueryClientRequest;
     PLSA_GET_APP_MODE_INFO GetAppModeInfo;
     PLSA_SET_APP_MODE_INFO SetAppModeInfo;
+    PLSA_GET_CLIENT_INFO_EX GetClientInfoEx;
 } LSA_SECPKG_FUNCTION_TABLE, *PLSA_SECPKG_FUNCTION_TABLE;
 
 
@@ -2734,6 +2759,14 @@ SEC_ENTRY
 KSecRegisterSecurityProvider(
     _In_ PSECURITY_STRING    ProviderName,
     _In_ PSECPKG_KERNEL_FUNCTION_TABLE Table
+    );
+
+SECURITY_STATUS
+SEC_ENTRY
+KSecLocatePackage(
+    _In_ PUNICODE_STRING PackageName,
+    _Outptr_ PSECPKG_KERNEL_FUNCTION_TABLE * Package,
+    _Out_ PULONG_PTR PackageId
     );
 
 extern SECPKG_KERNEL_FUNCTIONS KspKernelFunctions;

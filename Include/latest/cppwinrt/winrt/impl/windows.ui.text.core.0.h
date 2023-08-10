@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Text_Core_0_H
 #define WINRT_Windows_UI_Text_Core_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
@@ -168,125 +169,125 @@ WINRT_EXPORT namespace winrt::Windows::UI::Text::Core
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextCompositionSegment>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextEditContext>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextEditContext2>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextLayoutBounds>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextLayoutRequest>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextLayoutRequest2>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextSelectionRequest>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextServicesManager>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextServicesManagerStatics>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextServicesStatics>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextTextRequest>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextCompositionSegment>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextEditContext>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextLayoutBounds>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextLayoutRequest>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextSelectionRequest>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextServicesConstants>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextServicesManager>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextTextRequest>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>{ using type = class_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextFormatUpdatingReason>{ using type = enum_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextFormatUpdatingResult>{ using type = enum_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy>{ using type = enum_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextInputScope>{ using type = enum_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextSelectionUpdatingResult>{ using type = enum_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextTextUpdatingResult>{ using type = enum_category; };
-    template <> struct category<Windows::UI::Text::Core::CoreTextRange>{ using type = struct_category<int32_t, int32_t>; };
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs> = L"Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextCompositionSegment> = L"Windows.UI.Text.Core.CoreTextCompositionSegment";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs> = L"Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextEditContext> = L"Windows.UI.Text.Core.CoreTextEditContext";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs> = L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextLayoutBounds> = L"Windows.UI.Text.Core.CoreTextLayoutBounds";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextLayoutRequest> = L"Windows.UI.Text.Core.CoreTextLayoutRequest";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs> = L"Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextSelectionRequest> = L"Windows.UI.Text.Core.CoreTextSelectionRequest";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs> = L"Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs> = L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextServicesConstants> = L"Windows.UI.Text.Core.CoreTextServicesConstants";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextServicesManager> = L"Windows.UI.Text.Core.CoreTextServicesManager";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextTextRequest> = L"Windows.UI.Text.Core.CoreTextTextRequest";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextTextRequestedEventArgs> = L"Windows.UI.Text.Core.CoreTextTextRequestedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs> = L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextFormatUpdatingReason> = L"Windows.UI.Text.Core.CoreTextFormatUpdatingReason";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextFormatUpdatingResult> = L"Windows.UI.Text.Core.CoreTextFormatUpdatingResult";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy> = L"Windows.UI.Text.Core.CoreTextInputPaneDisplayPolicy";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextInputScope> = L"Windows.UI.Text.Core.CoreTextInputScope";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextSelectionUpdatingResult> = L"Windows.UI.Text.Core.CoreTextSelectionUpdatingResult";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextTextUpdatingResult> = L"Windows.UI.Text.Core.CoreTextTextUpdatingResult";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::CoreTextRange> = L"Windows.UI.Text.Core.CoreTextRange";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs> = L"Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextCompositionSegment> = L"Windows.UI.Text.Core.ICoreTextCompositionSegment";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs> = L"Windows.UI.Text.Core.ICoreTextCompositionStartedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextEditContext> = L"Windows.UI.Text.Core.ICoreTextEditContext";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextEditContext2> = L"Windows.UI.Text.Core.ICoreTextEditContext2";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs> = L"Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextLayoutBounds> = L"Windows.UI.Text.Core.ICoreTextLayoutBounds";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextLayoutRequest> = L"Windows.UI.Text.Core.ICoreTextLayoutRequest";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextLayoutRequest2> = L"Windows.UI.Text.Core.ICoreTextLayoutRequest2";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs> = L"Windows.UI.Text.Core.ICoreTextLayoutRequestedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextSelectionRequest> = L"Windows.UI.Text.Core.ICoreTextSelectionRequest";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs> = L"Windows.UI.Text.Core.ICoreTextSelectionRequestedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs> = L"Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextServicesManager> = L"Windows.UI.Text.Core.ICoreTextServicesManager";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextServicesManagerStatics> = L"Windows.UI.Text.Core.ICoreTextServicesManagerStatics";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextServicesStatics> = L"Windows.UI.Text.Core.ICoreTextServicesStatics";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextTextRequest> = L"Windows.UI.Text.Core.ICoreTextTextRequest";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs> = L"Windows.UI.Text.Core.ICoreTextTextRequestedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs> = L"Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs";
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs>{ 0x1F34EBB6,0xB79F,0x4121,{ 0xA5,0xE7,0xFD,0xA9,0xB8,0x61,0x6E,0x30 } }; // 1F34EBB6-B79F-4121-A5E7-FDA9B8616E30
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextCompositionSegment>{ 0x776C6BD9,0x4EAD,0x4DA7,{ 0x8F,0x47,0x3A,0x88,0xB5,0x23,0xCC,0x34 } }; // 776C6BD9-4EAD-4DA7-8F47-3A88B523CC34
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs>{ 0x276B16A9,0x64E7,0x4AB0,{ 0xBC,0x4B,0xA0,0x2D,0x73,0x83,0x5B,0xFB } }; // 276B16A9-64E7-4AB0-BC4B-A02D73835BFB
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextEditContext>{ 0xBF6608AF,0x4041,0x47C3,{ 0xB2,0x63,0xA9,0x18,0xEB,0x5E,0xAE,0xF2 } }; // BF6608AF-4041-47C3-B263-A918EB5EAEF2
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextEditContext2>{ 0xB1867DBB,0x083B,0x49E1,{ 0xB2,0x81,0x2B,0x35,0xD6,0x2B,0xF4,0x66 } }; // B1867DBB-083B-49E1-B281-2B35D62BF466
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs>{ 0x7310BD33,0xB4A8,0x43B1,{ 0xB3,0x7B,0x07,0x24,0xD4,0xAC,0xA7,0xAB } }; // 7310BD33-B4A8-43B1-B37B-0724D4ACA7AB
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextLayoutBounds>{ 0xE972C974,0x4436,0x4917,{ 0x80,0xD0,0xA5,0x25,0xE4,0xCA,0x67,0x80 } }; // E972C974-4436-4917-80D0-A525E4CA6780
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextLayoutRequest>{ 0x2555A8CC,0x51FD,0x4F03,{ 0x98,0xBF,0xAC,0x78,0x17,0x4D,0x68,0xE0 } }; // 2555A8CC-51FD-4F03-98BF-AC78174D68E0
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextLayoutRequest2>{ 0x676DE624,0xCD3D,0x4BCD,{ 0xBF,0x01,0x7F,0x71,0x10,0x95,0x45,0x11 } }; // 676DE624-CD3D-4BCD-BF01-7F7110954511
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs>{ 0xB1DC6AE0,0x9A7B,0x4E9E,{ 0xA5,0x66,0x4A,0x6B,0x5F,0x8A,0xD6,0x76 } }; // B1DC6AE0-9A7B-4E9E-A566-4A6B5F8AD676
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextSelectionRequest>{ 0xF0A70403,0x208B,0x4301,{ 0x88,0x3C,0x74,0xCA,0x74,0x85,0xFD,0x8D } }; // F0A70403-208B-4301-883C-74CA7485FD8D
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs>{ 0x13C6682B,0xF614,0x421A,{ 0x8F,0x4B,0x9E,0xC8,0xA5,0xA3,0x7F,0xCD } }; // 13C6682B-F614-421A-8F4B-9EC8A5A37FCD
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs>{ 0xD445839F,0xFE7F,0x4BD5,{ 0x8A,0x26,0x09,0x22,0xC1,0xB3,0xE6,0x39 } }; // D445839F-FE7F-4BD5-8A26-0922C1B3E639
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextServicesManager>{ 0xC2507D83,0x6E0A,0x4A8A,{ 0xBD,0xF8,0x19,0x48,0x87,0x48,0x54,0xBA } }; // C2507D83-6E0A-4A8A-BDF8-1948874854BA
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextServicesManagerStatics>{ 0x1520A388,0xE2CF,0x4D65,{ 0xAE,0xB9,0xB3,0x2D,0x86,0xFE,0x39,0xB9 } }; // 1520A388-E2CF-4D65-AEB9-B32D86FE39B9
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextServicesStatics>{ 0x91859A46,0xECCF,0x47A4,{ 0x8A,0xE7,0x09,0x8A,0x9C,0x6F,0xBB,0x15 } }; // 91859A46-ECCF-47A4-8AE7-098A9C6FBB15
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextTextRequest>{ 0x50D950A9,0xF51E,0x4CC1,{ 0x8C,0xA1,0xE6,0x34,0x6D,0x1A,0x61,0xBE } }; // 50D950A9-F51E-4CC1-8CA1-E6346D1A61BE
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs>{ 0xF096A2D0,0x41C6,0x4C02,{ 0x8B,0x1A,0xD9,0x53,0xB0,0x0C,0xAB,0xB3 } }; // F096A2D0-41C6-4C02-8B1A-D953B00CABB3
-    template <> inline constexpr guid guid_v<Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs>{ 0xEEA7918D,0xCC2B,0x4F03,{ 0x8F,0xF6,0x02,0xFD,0x21,0x7D,0xB4,0x50 } }; // EEA7918D-CC2B-4F03-8FF6-02FD217DB450
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>{ using type = Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextCompositionSegment>{ using type = Windows::UI::Text::Core::ICoreTextCompositionSegment; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>{ using type = Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextEditContext>{ using type = Windows::UI::Text::Core::ICoreTextEditContext; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>{ using type = Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextLayoutBounds>{ using type = Windows::UI::Text::Core::ICoreTextLayoutBounds; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextLayoutRequest>{ using type = Windows::UI::Text::Core::ICoreTextLayoutRequest; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>{ using type = Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextSelectionRequest>{ using type = Windows::UI::Text::Core::ICoreTextSelectionRequest; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>{ using type = Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>{ using type = Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextServicesManager>{ using type = Windows::UI::Text::Core::ICoreTextServicesManager; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextTextRequest>{ using type = Windows::UI::Text::Core::ICoreTextTextRequest; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>{ using type = Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs; };
-    template <> struct default_interface<Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>{ using type = Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs; };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs>
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextCompositionSegment>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextEditContext>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextEditContext2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextLayoutBounds>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequest>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextServicesManager>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextServicesManagerStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextServicesStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextTextRequest>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextEditContext>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextServicesManager>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextTextRequest>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingReason>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextInputScope>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::UI::Text::Core::CoreTextRange>{ using type = struct_category<int32_t, int32_t>; };
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs> = L"Windows.UI.Text.Core.CoreTextCompositionCompletedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment> = L"Windows.UI.Text.Core.CoreTextCompositionSegment";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs> = L"Windows.UI.Text.Core.CoreTextCompositionStartedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextEditContext> = L"Windows.UI.Text.Core.CoreTextEditContext";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs> = L"Windows.UI.Text.Core.CoreTextFormatUpdatingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds> = L"Windows.UI.Text.Core.CoreTextLayoutBounds";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest> = L"Windows.UI.Text.Core.CoreTextLayoutRequest";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs> = L"Windows.UI.Text.Core.CoreTextLayoutRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest> = L"Windows.UI.Text.Core.CoreTextSelectionRequest";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs> = L"Windows.UI.Text.Core.CoreTextSelectionRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs> = L"Windows.UI.Text.Core.CoreTextSelectionUpdatingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextServicesConstants> = L"Windows.UI.Text.Core.CoreTextServicesConstants";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextServicesManager> = L"Windows.UI.Text.Core.CoreTextServicesManager";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextTextRequest> = L"Windows.UI.Text.Core.CoreTextTextRequest";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs> = L"Windows.UI.Text.Core.CoreTextTextRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs> = L"Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingReason> = L"Windows.UI.Text.Core.CoreTextFormatUpdatingReason";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult> = L"Windows.UI.Text.Core.CoreTextFormatUpdatingResult";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy> = L"Windows.UI.Text.Core.CoreTextInputPaneDisplayPolicy";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextInputScope> = L"Windows.UI.Text.Core.CoreTextInputScope";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult> = L"Windows.UI.Text.Core.CoreTextSelectionUpdatingResult";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult> = L"Windows.UI.Text.Core.CoreTextTextUpdatingResult";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::CoreTextRange> = L"Windows.UI.Text.Core.CoreTextRange";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs> = L"Windows.UI.Text.Core.ICoreTextCompositionCompletedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextCompositionSegment> = L"Windows.UI.Text.Core.ICoreTextCompositionSegment";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs> = L"Windows.UI.Text.Core.ICoreTextCompositionStartedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextEditContext> = L"Windows.UI.Text.Core.ICoreTextEditContext";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextEditContext2> = L"Windows.UI.Text.Core.ICoreTextEditContext2";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs> = L"Windows.UI.Text.Core.ICoreTextFormatUpdatingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextLayoutBounds> = L"Windows.UI.Text.Core.ICoreTextLayoutBounds";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest> = L"Windows.UI.Text.Core.ICoreTextLayoutRequest";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest2> = L"Windows.UI.Text.Core.ICoreTextLayoutRequest2";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs> = L"Windows.UI.Text.Core.ICoreTextLayoutRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequest> = L"Windows.UI.Text.Core.ICoreTextSelectionRequest";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs> = L"Windows.UI.Text.Core.ICoreTextSelectionRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs> = L"Windows.UI.Text.Core.ICoreTextSelectionUpdatingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextServicesManager> = L"Windows.UI.Text.Core.ICoreTextServicesManager";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextServicesManagerStatics> = L"Windows.UI.Text.Core.ICoreTextServicesManagerStatics";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextServicesStatics> = L"Windows.UI.Text.Core.ICoreTextServicesStatics";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextTextRequest> = L"Windows.UI.Text.Core.ICoreTextTextRequest";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs> = L"Windows.UI.Text.Core.ICoreTextTextRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs> = L"Windows.UI.Text.Core.ICoreTextTextUpdatingEventArgs";
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs>{ 0x1F34EBB6,0xB79F,0x4121,{ 0xA5,0xE7,0xFD,0xA9,0xB8,0x61,0x6E,0x30 } }; // 1F34EBB6-B79F-4121-A5E7-FDA9B8616E30
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextCompositionSegment>{ 0x776C6BD9,0x4EAD,0x4DA7,{ 0x8F,0x47,0x3A,0x88,0xB5,0x23,0xCC,0x34 } }; // 776C6BD9-4EAD-4DA7-8F47-3A88B523CC34
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs>{ 0x276B16A9,0x64E7,0x4AB0,{ 0xBC,0x4B,0xA0,0x2D,0x73,0x83,0x5B,0xFB } }; // 276B16A9-64E7-4AB0-BC4B-A02D73835BFB
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextEditContext>{ 0xBF6608AF,0x4041,0x47C3,{ 0xB2,0x63,0xA9,0x18,0xEB,0x5E,0xAE,0xF2 } }; // BF6608AF-4041-47C3-B263-A918EB5EAEF2
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextEditContext2>{ 0xB1867DBB,0x083B,0x49E1,{ 0xB2,0x81,0x2B,0x35,0xD6,0x2B,0xF4,0x66 } }; // B1867DBB-083B-49E1-B281-2B35D62BF466
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs>{ 0x7310BD33,0xB4A8,0x43B1,{ 0xB3,0x7B,0x07,0x24,0xD4,0xAC,0xA7,0xAB } }; // 7310BD33-B4A8-43B1-B37B-0724D4ACA7AB
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextLayoutBounds>{ 0xE972C974,0x4436,0x4917,{ 0x80,0xD0,0xA5,0x25,0xE4,0xCA,0x67,0x80 } }; // E972C974-4436-4917-80D0-A525E4CA6780
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest>{ 0x2555A8CC,0x51FD,0x4F03,{ 0x98,0xBF,0xAC,0x78,0x17,0x4D,0x68,0xE0 } }; // 2555A8CC-51FD-4F03-98BF-AC78174D68E0
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest2>{ 0x676DE624,0xCD3D,0x4BCD,{ 0xBF,0x01,0x7F,0x71,0x10,0x95,0x45,0x11 } }; // 676DE624-CD3D-4BCD-BF01-7F7110954511
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs>{ 0xB1DC6AE0,0x9A7B,0x4E9E,{ 0xA5,0x66,0x4A,0x6B,0x5F,0x8A,0xD6,0x76 } }; // B1DC6AE0-9A7B-4E9E-A566-4A6B5F8AD676
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequest>{ 0xF0A70403,0x208B,0x4301,{ 0x88,0x3C,0x74,0xCA,0x74,0x85,0xFD,0x8D } }; // F0A70403-208B-4301-883C-74CA7485FD8D
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs>{ 0x13C6682B,0xF614,0x421A,{ 0x8F,0x4B,0x9E,0xC8,0xA5,0xA3,0x7F,0xCD } }; // 13C6682B-F614-421A-8F4B-9EC8A5A37FCD
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs>{ 0xD445839F,0xFE7F,0x4BD5,{ 0x8A,0x26,0x09,0x22,0xC1,0xB3,0xE6,0x39 } }; // D445839F-FE7F-4BD5-8A26-0922C1B3E639
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextServicesManager>{ 0xC2507D83,0x6E0A,0x4A8A,{ 0xBD,0xF8,0x19,0x48,0x87,0x48,0x54,0xBA } }; // C2507D83-6E0A-4A8A-BDF8-1948874854BA
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextServicesManagerStatics>{ 0x1520A388,0xE2CF,0x4D65,{ 0xAE,0xB9,0xB3,0x2D,0x86,0xFE,0x39,0xB9 } }; // 1520A388-E2CF-4D65-AEB9-B32D86FE39B9
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextServicesStatics>{ 0x91859A46,0xECCF,0x47A4,{ 0x8A,0xE7,0x09,0x8A,0x9C,0x6F,0xBB,0x15 } }; // 91859A46-ECCF-47A4-8AE7-098A9C6FBB15
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextTextRequest>{ 0x50D950A9,0xF51E,0x4CC1,{ 0x8C,0xA1,0xE6,0x34,0x6D,0x1A,0x61,0xBE } }; // 50D950A9-F51E-4CC1-8CA1-E6346D1A61BE
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs>{ 0xF096A2D0,0x41C6,0x4C02,{ 0x8B,0x1A,0xD9,0x53,0xB0,0x0C,0xAB,0xB3 } }; // F096A2D0-41C6-4C02-8B1A-D953B00CABB3
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs>{ 0xEEA7918D,0xCC2B,0x4F03,{ 0x8F,0xF6,0x02,0xFD,0x21,0x7D,0xB4,0x50 } }; // EEA7918D-CC2B-4F03-8FF6-02FD217DB450
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>{ using type = winrt::Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>{ using type = winrt::Windows::UI::Text::Core::ICoreTextCompositionSegment; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>{ using type = winrt::Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextEditContext>{ using type = winrt::Windows::UI::Text::Core::ICoreTextEditContext; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>{ using type = winrt::Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>{ using type = winrt::Windows::UI::Text::Core::ICoreTextLayoutBounds; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>{ using type = winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>{ using type = winrt::Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>{ using type = winrt::Windows::UI::Text::Core::ICoreTextSelectionRequest; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>{ using type = winrt::Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>{ using type = winrt::Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextServicesManager>{ using type = winrt::Windows::UI::Text::Core::ICoreTextServicesManager; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextTextRequest>{ using type = winrt::Windows::UI::Text::Core::ICoreTextTextRequest; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>{ using type = winrt::Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs; };
+    template <> struct default_interface<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>{ using type = winrt::Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs; };
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -295,7 +296,7 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextCompositionSegment>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextCompositionSegment>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -303,7 +304,7 @@ namespace winrt::impl
             virtual int32_t __stdcall get_Range(struct struct_Windows_UI_Text_Core_CoreTextRange*) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -311,7 +312,7 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextEditContext>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextEditContext>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -348,7 +349,7 @@ namespace winrt::impl
             virtual int32_t __stdcall NotifyLayoutChanged() noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextEditContext2>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextEditContext2>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -356,7 +357,7 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_NotifyFocusLeaveCompleted(winrt::event_token) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -372,17 +373,17 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextLayoutBounds>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextLayoutBounds>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall get_TextBounds(Windows::Foundation::Rect*) noexcept = 0;
-            virtual int32_t __stdcall put_TextBounds(Windows::Foundation::Rect) noexcept = 0;
-            virtual int32_t __stdcall get_ControlBounds(Windows::Foundation::Rect*) noexcept = 0;
-            virtual int32_t __stdcall put_ControlBounds(Windows::Foundation::Rect) noexcept = 0;
+            virtual int32_t __stdcall get_TextBounds(winrt::Windows::Foundation::Rect*) noexcept = 0;
+            virtual int32_t __stdcall put_TextBounds(winrt::Windows::Foundation::Rect) noexcept = 0;
+            virtual int32_t __stdcall get_ControlBounds(winrt::Windows::Foundation::Rect*) noexcept = 0;
+            virtual int32_t __stdcall put_ControlBounds(winrt::Windows::Foundation::Rect) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextLayoutRequest>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -392,21 +393,21 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextLayoutRequest2>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest2>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_LayoutBoundsVisualPixels(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_Request(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextSelectionRequest>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequest>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -416,14 +417,14 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_Request(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -434,7 +435,7 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextServicesManager>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextServicesManager>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -444,21 +445,21 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateEditContext(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextServicesManagerStatics>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextServicesManagerStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall GetForCurrentView(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextServicesStatics>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextServicesStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_HiddenCharacter(char16_t*) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextTextRequest>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextTextRequest>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -469,14 +470,14 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_Request(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs>
+    template <> struct abi<winrt::Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -494,10 +495,10 @@ namespace winrt::impl
     struct consume_Windows_UI_Text_Core_ICoreTextCompositionCompletedEventArgs
     {
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::UI::Text::Core::CoreTextCompositionSegment>) CompositionSegments() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>) CompositionSegments() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextCompositionCompletedEventArgs>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextCompositionCompletedEventArgs<D>;
     };
@@ -505,9 +506,9 @@ namespace winrt::impl
     struct consume_Windows_UI_Text_Core_ICoreTextCompositionSegment
     {
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) PreconversionString() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextRange) Range() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextRange) Range() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextCompositionSegment>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextCompositionSegment>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextCompositionSegment<D>;
     };
@@ -515,9 +516,9 @@ namespace winrt::impl
     struct consume_Windows_UI_Text_Core_ICoreTextCompositionStartedEventArgs
     {
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextCompositionStartedEventArgs>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextCompositionStartedEventArgs<D>;
     };
@@ -526,184 +527,184 @@ namespace winrt::impl
     {
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
         WINRT_IMPL_AUTO(void) Name(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextInputScope) InputScope() const;
-        WINRT_IMPL_AUTO(void) InputScope(Windows::UI::Text::Core::CoreTextInputScope const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextInputScope) InputScope() const;
+        WINRT_IMPL_AUTO(void) InputScope(winrt::Windows::UI::Text::Core::CoreTextInputScope const& value) const;
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsReadOnly() const;
         WINRT_IMPL_AUTO(void) IsReadOnly(bool value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy) InputPaneDisplayPolicy() const;
-        WINRT_IMPL_AUTO(void) InputPaneDisplayPolicy(Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) TextRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextTextRequestedEventArgs> const& handler) const;
-        using TextRequested_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext>::remove_TextRequested>;
-        [[nodiscard]] TextRequested_revoker TextRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextTextRequestedEventArgs> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy) InputPaneDisplayPolicy() const;
+        WINRT_IMPL_AUTO(void) InputPaneDisplayPolicy(winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy const& value) const;
+        WINRT_IMPL_AUTO(winrt::event_token) TextRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs> const& handler) const;
+        using TextRequested_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext>::remove_TextRequested>;
+        [[nodiscard]] TextRequested_revoker TextRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs> const& handler) const;
         WINRT_IMPL_AUTO(void) TextRequested(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) SelectionRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs> const& handler) const;
-        using SelectionRequested_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext>::remove_SelectionRequested>;
-        [[nodiscard]] SelectionRequested_revoker SelectionRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) SelectionRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs> const& handler) const;
+        using SelectionRequested_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext>::remove_SelectionRequested>;
+        [[nodiscard]] SelectionRequested_revoker SelectionRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs> const& handler) const;
         WINRT_IMPL_AUTO(void) SelectionRequested(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) LayoutRequested(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs> const& handler) const;
-        using LayoutRequested_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext>::remove_LayoutRequested>;
-        [[nodiscard]] LayoutRequested_revoker LayoutRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) LayoutRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs> const& handler) const;
+        using LayoutRequested_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext>::remove_LayoutRequested>;
+        [[nodiscard]] LayoutRequested_revoker LayoutRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs> const& handler) const;
         WINRT_IMPL_AUTO(void) LayoutRequested(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) TextUpdating(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs> const& handler) const;
-        using TextUpdating_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext>::remove_TextUpdating>;
-        [[nodiscard]] TextUpdating_revoker TextUpdating(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) TextUpdating(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs> const& handler) const;
+        using TextUpdating_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext>::remove_TextUpdating>;
+        [[nodiscard]] TextUpdating_revoker TextUpdating(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs> const& handler) const;
         WINRT_IMPL_AUTO(void) TextUpdating(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) SelectionUpdating(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs> const& handler) const;
-        using SelectionUpdating_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext>::remove_SelectionUpdating>;
-        [[nodiscard]] SelectionUpdating_revoker SelectionUpdating(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) SelectionUpdating(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs> const& handler) const;
+        using SelectionUpdating_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext>::remove_SelectionUpdating>;
+        [[nodiscard]] SelectionUpdating_revoker SelectionUpdating(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs> const& handler) const;
         WINRT_IMPL_AUTO(void) SelectionUpdating(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) FormatUpdating(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs> const& handler) const;
-        using FormatUpdating_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext>::remove_FormatUpdating>;
-        [[nodiscard]] FormatUpdating_revoker FormatUpdating(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) FormatUpdating(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs> const& handler) const;
+        using FormatUpdating_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext>::remove_FormatUpdating>;
+        [[nodiscard]] FormatUpdating_revoker FormatUpdating(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs> const& handler) const;
         WINRT_IMPL_AUTO(void) FormatUpdating(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) CompositionStarted(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs> const& handler) const;
-        using CompositionStarted_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext>::remove_CompositionStarted>;
-        [[nodiscard]] CompositionStarted_revoker CompositionStarted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) CompositionStarted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs> const& handler) const;
+        using CompositionStarted_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext>::remove_CompositionStarted>;
+        [[nodiscard]] CompositionStarted_revoker CompositionStarted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs> const& handler) const;
         WINRT_IMPL_AUTO(void) CompositionStarted(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) CompositionCompleted(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs> const& handler) const;
-        using CompositionCompleted_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext>::remove_CompositionCompleted>;
-        [[nodiscard]] CompositionCompleted_revoker CompositionCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) CompositionCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs> const& handler) const;
+        using CompositionCompleted_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext>::remove_CompositionCompleted>;
+        [[nodiscard]] CompositionCompleted_revoker CompositionCompleted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs> const& handler) const;
         WINRT_IMPL_AUTO(void) CompositionCompleted(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(winrt::event_token) FocusRemoved(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::Foundation::IInspectable> const& handler) const;
-        using FocusRemoved_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext>::remove_FocusRemoved>;
-        [[nodiscard]] FocusRemoved_revoker FocusRemoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) FocusRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using FocusRemoved_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext>::remove_FocusRemoved>;
+        [[nodiscard]] FocusRemoved_revoker FocusRemoved(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::Foundation::IInspectable> const& handler) const;
         WINRT_IMPL_AUTO(void) FocusRemoved(winrt::event_token const& cookie) const noexcept;
         WINRT_IMPL_AUTO(void) NotifyFocusEnter() const;
         WINRT_IMPL_AUTO(void) NotifyFocusLeave() const;
-        WINRT_IMPL_AUTO(void) NotifyTextChanged(Windows::UI::Text::Core::CoreTextRange const& modifiedRange, int32_t newLength, Windows::UI::Text::Core::CoreTextRange const& newSelection) const;
-        WINRT_IMPL_AUTO(void) NotifySelectionChanged(Windows::UI::Text::Core::CoreTextRange const& selection) const;
+        WINRT_IMPL_AUTO(void) NotifyTextChanged(winrt::Windows::UI::Text::Core::CoreTextRange const& modifiedRange, int32_t newLength, winrt::Windows::UI::Text::Core::CoreTextRange const& newSelection) const;
+        WINRT_IMPL_AUTO(void) NotifySelectionChanged(winrt::Windows::UI::Text::Core::CoreTextRange const& selection) const;
         WINRT_IMPL_AUTO(void) NotifyLayoutChanged() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextEditContext>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextEditContext>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextEditContext<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextEditContext2
     {
-        WINRT_IMPL_AUTO(winrt::event_token) NotifyFocusLeaveCompleted(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::Foundation::IInspectable> const& handler) const;
-        using NotifyFocusLeaveCompleted_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextEditContext2, &impl::abi_t<Windows::UI::Text::Core::ICoreTextEditContext2>::remove_NotifyFocusLeaveCompleted>;
-        [[nodiscard]] NotifyFocusLeaveCompleted_revoker NotifyFocusLeaveCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextEditContext, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) NotifyFocusLeaveCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using NotifyFocusLeaveCompleted_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextEditContext2, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextEditContext2>::remove_NotifyFocusLeaveCompleted>;
+        [[nodiscard]] NotifyFocusLeaveCompleted_revoker NotifyFocusLeaveCompleted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextEditContext, winrt::Windows::Foundation::IInspectable> const& handler) const;
         WINRT_IMPL_AUTO(void) NotifyFocusLeaveCompleted(winrt::event_token const& cookie) const noexcept;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextEditContext2>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextEditContext2>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextEditContext2<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextFormatUpdatingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextRange) Range() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::ViewManagement::UIElementType>) TextColor() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::ViewManagement::UIElementType>) BackgroundColor() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::ViewManagement::UIElementType>) UnderlineColor() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::UI::Text::UnderlineType>) UnderlineType() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextFormatUpdatingReason) Reason() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextFormatUpdatingResult) Result() const;
-        WINRT_IMPL_AUTO(void) Result(Windows::UI::Text::Core::CoreTextFormatUpdatingResult const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextRange) Range() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::ViewManagement::UIElementType>) TextColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::ViewManagement::UIElementType>) BackgroundColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::ViewManagement::UIElementType>) UnderlineColor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::UI::Text::UnderlineType>) UnderlineType() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingReason) Reason() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult) Result() const;
+        WINRT_IMPL_AUTO(void) Result(winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult const& value) const;
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextFormatUpdatingEventArgs>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextFormatUpdatingEventArgs<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextLayoutBounds
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) TextBounds() const;
-        WINRT_IMPL_AUTO(void) TextBounds(Windows::Foundation::Rect const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Rect) ControlBounds() const;
-        WINRT_IMPL_AUTO(void) ControlBounds(Windows::Foundation::Rect const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) TextBounds() const;
+        WINRT_IMPL_AUTO(void) TextBounds(winrt::Windows::Foundation::Rect const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Rect) ControlBounds() const;
+        WINRT_IMPL_AUTO(void) ControlBounds(winrt::Windows::Foundation::Rect const& value) const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextLayoutBounds>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextLayoutBounds>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextLayoutBounds<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextLayoutRequest
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextRange) Range() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextLayoutBounds) LayoutBounds() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextRange) Range() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextLayoutBounds) LayoutBounds() const;
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextLayoutRequest>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextLayoutRequest<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextLayoutRequest2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextLayoutBounds) LayoutBoundsVisualPixels() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextLayoutBounds) LayoutBoundsVisualPixels() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextLayoutRequest2>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequest2>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextLayoutRequest2<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextLayoutRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextLayoutRequest) Request() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextLayoutRequest) Request() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextLayoutRequestedEventArgs>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextLayoutRequestedEventArgs<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextSelectionRequest
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextRange) Selection() const;
-        WINRT_IMPL_AUTO(void) Selection(Windows::UI::Text::Core::CoreTextRange const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextRange) Selection() const;
+        WINRT_IMPL_AUTO(void) Selection(winrt::Windows::UI::Text::Core::CoreTextRange const& value) const;
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextSelectionRequest>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequest>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextSelectionRequest<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextSelectionRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextSelectionRequest) Request() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextSelectionRequest) Request() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextSelectionRequestedEventArgs>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextSelectionRequestedEventArgs<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextSelectionUpdatingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextRange) Selection() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextSelectionUpdatingResult) Result() const;
-        WINRT_IMPL_AUTO(void) Result(Windows::UI::Text::Core::CoreTextSelectionUpdatingResult const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextRange) Selection() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult) Result() const;
+        WINRT_IMPL_AUTO(void) Result(winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult const& value) const;
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextSelectionUpdatingEventArgs>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextSelectionUpdatingEventArgs<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextServicesManager
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Globalization::Language) InputLanguage() const;
-        WINRT_IMPL_AUTO(winrt::event_token) InputLanguageChanged(Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextServicesManager, Windows::Foundation::IInspectable> const& handler) const;
-        using InputLanguageChanged_revoker = impl::event_revoker<Windows::UI::Text::Core::ICoreTextServicesManager, &impl::abi_t<Windows::UI::Text::Core::ICoreTextServicesManager>::remove_InputLanguageChanged>;
-        [[nodiscard]] InputLanguageChanged_revoker InputLanguageChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Text::Core::CoreTextServicesManager, Windows::Foundation::IInspectable> const& handler) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Language) InputLanguage() const;
+        WINRT_IMPL_AUTO(winrt::event_token) InputLanguageChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextServicesManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using InputLanguageChanged_revoker = impl::event_revoker<winrt::Windows::UI::Text::Core::ICoreTextServicesManager, &impl::abi_t<winrt::Windows::UI::Text::Core::ICoreTextServicesManager>::remove_InputLanguageChanged>;
+        [[nodiscard]] InputLanguageChanged_revoker InputLanguageChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Text::Core::CoreTextServicesManager, winrt::Windows::Foundation::IInspectable> const& handler) const;
         WINRT_IMPL_AUTO(void) InputLanguageChanged(winrt::event_token const& cookie) const noexcept;
-        WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextEditContext) CreateEditContext() const;
+        WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextEditContext) CreateEditContext() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextServicesManager>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextServicesManager>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextServicesManager<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextServicesManagerStatics
     {
-        WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextServicesManager) GetForCurrentView() const;
+        WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextServicesManager) GetForCurrentView() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextServicesManagerStatics>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextServicesManagerStatics>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextServicesManagerStatics<D>;
     };
@@ -712,45 +713,45 @@ namespace winrt::impl
     {
         [[nodiscard]] WINRT_IMPL_AUTO(char16_t) HiddenCharacter() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextServicesStatics>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextServicesStatics>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextServicesStatics<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextTextRequest
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextRange) Range() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextRange) Range() const;
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
         WINRT_IMPL_AUTO(void) Text(param::hstring const& value) const;
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextTextRequest>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextTextRequest>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextTextRequest<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextTextRequestedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextTextRequest) Request() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextTextRequest) Request() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextTextRequestedEventArgs>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextTextRequestedEventArgs<D>;
     };
     template <typename D>
     struct consume_Windows_UI_Text_Core_ICoreTextTextUpdatingEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextRange) Range() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextRange) Range() const;
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) Text() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextRange) NewSelection() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Globalization::Language) InputLanguage() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Text::Core::CoreTextTextUpdatingResult) Result() const;
-        WINRT_IMPL_AUTO(void) Result(Windows::UI::Text::Core::CoreTextTextUpdatingResult const& value) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextRange) NewSelection() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Globalization::Language) InputLanguage() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult) Result() const;
+        WINRT_IMPL_AUTO(void) Result(winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult const& value) const;
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsCanceled() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::Deferral) GetDeferral() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) GetDeferral() const;
     };
-    template <> struct consume<Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs>
+    template <> struct consume<winrt::Windows::UI::Text::Core::ICoreTextTextUpdatingEventArgs>
     {
         template <typename D> using type = consume_Windows_UI_Text_Core_ICoreTextTextUpdatingEventArgs<D>;
     };

@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_System_RemoteSystems_H
 #define WINRT_Windows_System_RemoteSystems_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.System.h"
 #include "winrt/impl/Windows.ApplicationModel.AppService.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -21,902 +22,902 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IKnownRemoteSystemCapabilitiesStatics<D>::AppService() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics)->get_AppService(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics)->get_AppService(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IKnownRemoteSystemCapabilitiesStatics<D>::LaunchUri() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics)->get_LaunchUri(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics)->get_LaunchUri(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IKnownRemoteSystemCapabilitiesStatics<D>::RemoteSession() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics)->get_RemoteSession(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics)->get_RemoteSession(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IKnownRemoteSystemCapabilitiesStatics<D>::SpatialEntity() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics)->get_SpatialEntity(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics)->get_SpatialEntity(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystem<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystem<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystem<D>::Kind() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem)->get_Kind(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem)->get_Kind(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemStatus) consume_Windows_System_RemoteSystems_IRemoteSystem<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemStatus) consume_Windows_System_RemoteSystems_IRemoteSystem<D>::Status() const
     {
-        Windows::System::RemoteSystems::RemoteSystemStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_RemoteSystems_IRemoteSystem<D>::IsAvailableByProximity() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem)->get_IsAvailableByProximity(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem)->get_IsAvailableByProximity(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_RemoteSystems_IRemoteSystem2<D>::IsAvailableBySpatialProximity() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem2)->get_IsAvailableBySpatialProximity(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem2)->get_IsAvailableBySpatialProximity(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystem2<D>::GetCapabilitySupportedAsync(param::hstring const& capabilityName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystem2<D>::GetCapabilitySupportedAsync(param::hstring const& capabilityName) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem2)->GetCapabilitySupportedAsync(*(void**)(&capabilityName), &operation));
-        return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem2)->GetCapabilitySupportedAsync(*(void**)(&capabilityName), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystem3<D>::ManufacturerDisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem3)->get_ManufacturerDisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem3)->get_ManufacturerDisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystem3<D>::ModelDisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem3)->get_ModelDisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem3)->get_ModelDisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemPlatform) consume_Windows_System_RemoteSystems_IRemoteSystem4<D>::Platform() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemPlatform) consume_Windows_System_RemoteSystems_IRemoteSystem4<D>::Platform() const
     {
-        Windows::System::RemoteSystems::RemoteSystemPlatform value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem4)->get_Platform(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemPlatform value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem4)->get_Platform(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::System::RemoteSystems::RemoteSystemApp>) consume_Windows_System_RemoteSystems_IRemoteSystem5<D>::Apps() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::System::RemoteSystems::RemoteSystemApp>) consume_Windows_System_RemoteSystems_IRemoteSystem5<D>::Apps() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem5)->get_Apps(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::System::RemoteSystems::RemoteSystemApp>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem5)->get_Apps(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::System::RemoteSystems::RemoteSystemApp>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_System_RemoteSystems_IRemoteSystem6<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::User) consume_Windows_System_RemoteSystems_IRemoteSystem6<D>::User() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystem6)->get_User(&value));
-        return Windows::System::User{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystem6)->get_User(&value));
+        return winrt::Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemAddedEventArgs<D>::RemoteSystem() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemAddedEventArgs<D>::RemoteSystem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs)->get_RemoteSystem(&value));
-        return Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs)->get_RemoteSystem(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemApp<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemApp)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemApp<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemApp)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_RemoteSystems_IRemoteSystemApp<D>::IsAvailableByProximity() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp)->get_IsAvailableByProximity(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemApp)->get_IsAvailableByProximity(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_RemoteSystems_IRemoteSystemApp<D>::IsAvailableBySpatialProximity() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp)->get_IsAvailableBySpatialProximity(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemApp)->get_IsAvailableBySpatialProximity(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, hstring>) consume_Windows_System_RemoteSystems_IRemoteSystemApp<D>::Attributes() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, hstring>) consume_Windows_System_RemoteSystems_IRemoteSystemApp<D>::Attributes() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp)->get_Attributes(&value));
-        return Windows::Foundation::Collections::IMapView<hstring, hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemApp)->get_Attributes(&value));
+        return winrt::Windows::Foundation::Collections::IMapView<hstring, hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_System_RemoteSystems_IRemoteSystemApp2<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::User) consume_Windows_System_RemoteSystems_IRemoteSystemApp2<D>::User() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp2)->get_User(&value));
-        return Windows::System::User{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemApp2)->get_User(&value));
+        return winrt::Windows::System::User{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemApp2<D>::ConnectionToken() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemApp2)->get_ConnectionToken(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemApp2)->get_ConnectionToken(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistration<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::User) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistration<D>::User() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemAppRegistration)->get_User(&value));
-        return Windows::System::User{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistration)->get_User(&value));
+        return winrt::Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, hstring>) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistration<D>::Attributes() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, hstring>) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistration<D>::Attributes() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemAppRegistration)->get_Attributes(&value));
-        return Windows::Foundation::Collections::IMap<hstring, hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistration)->get_Attributes(&value));
+        return winrt::Windows::Foundation::Collections::IMap<hstring, hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistration<D>::SaveAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistration<D>::SaveAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemAppRegistration)->SaveAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistration)->SaveAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemAppRegistration) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistrationStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistrationStatics<D>::GetDefault() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics)->GetDefault(&result));
-        return Windows::System::RemoteSystems::RemoteSystemAppRegistration{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics)->GetDefault(&result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemAppRegistration) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistrationStatics<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration) consume_Windows_System_RemoteSystems_IRemoteSystemAppRegistrationStatics<D>::GetForUser(winrt::Windows::System::User const& user) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics)->GetForUser(*(void**)(&user), &result));
-        return Windows::System::RemoteSystems::RemoteSystemAppRegistration{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics)->GetForUser(*(void**)(&user), &result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemAuthorizationKind) consume_Windows_System_RemoteSystems_IRemoteSystemAuthorizationKindFilter<D>::RemoteSystemAuthorizationKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind) consume_Windows_System_RemoteSystems_IRemoteSystemAuthorizationKindFilter<D>::RemoteSystemAuthorizationKind() const
     {
-        Windows::System::RemoteSystems::RemoteSystemAuthorizationKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter)->get_RemoteSystemAuthorizationKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter)->get_RemoteSystemAuthorizationKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter) consume_Windows_System_RemoteSystems_IRemoteSystemAuthorizationKindFilterFactory<D>::Create(Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& remoteSystemAuthorizationKind) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter) consume_Windows_System_RemoteSystems_IRemoteSystemAuthorizationKindFilterFactory<D>::Create(winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& remoteSystemAuthorizationKind) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilterFactory)->Create(static_cast<int32_t>(remoteSystemAuthorizationKind), &value));
-        return Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilterFactory)->Create(static_cast<int32_t>(remoteSystemAuthorizationKind), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionInfo<D>::IsProximal() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionInfo)->get_IsProximal(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionInfo)->get_IsProximal(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemConnectionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionInfoStatics<D>::TryCreateFromAppServiceConnection(Windows::ApplicationModel::AppService::AppServiceConnection const& connection) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionInfoStatics<D>::TryCreateFromAppServiceConnection(winrt::Windows::ApplicationModel::AppService::AppServiceConnection const& connection) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics)->TryCreateFromAppServiceConnection(*(void**)(&connection), &result));
-        return Windows::System::RemoteSystems::RemoteSystemConnectionInfo{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics)->TryCreateFromAppServiceConnection(*(void**)(&connection), &result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequest<D>::RemoteSystem() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequest<D>::RemoteSystem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequest)->get_RemoteSystem(&value));
-        return Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest)->get_RemoteSystem(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemApp) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequest2<D>::RemoteSystemApp() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemApp) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequest2<D>::RemoteSystemApp() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2)->get_RemoteSystemApp(&value));
-        return Windows::System::RemoteSystems::RemoteSystemApp{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2)->get_RemoteSystemApp(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemApp{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequest3<D>::ConnectionToken() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3)->get_ConnectionToken(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3)->get_ConnectionToken(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemConnectionRequest) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestFactory<D>::Create(Windows::System::RemoteSystems::RemoteSystem const& remoteSystem) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestFactory<D>::Create(winrt::Windows::System::RemoteSystems::RemoteSystem const& remoteSystem) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory)->Create(*(void**)(&remoteSystem), &value));
-        return Windows::System::RemoteSystems::RemoteSystemConnectionRequest{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory)->Create(*(void**)(&remoteSystem), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemConnectionRequest) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics<D>::CreateForApp(Windows::System::RemoteSystems::RemoteSystemApp const& remoteSystemApp) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics<D>::CreateForApp(winrt::Windows::System::RemoteSystems::RemoteSystemApp const& remoteSystemApp) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics)->CreateForApp(*(void**)(&remoteSystemApp), &result));
-        return Windows::System::RemoteSystems::RemoteSystemConnectionRequest{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics)->CreateForApp(*(void**)(&remoteSystemApp), &result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemConnectionRequest) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics2<D>::CreateFromConnectionToken(param::hstring const& connectionToken) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics2<D>::CreateFromConnectionToken(param::hstring const& connectionToken) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2)->CreateFromConnectionToken(*(void**)(&connectionToken), &result));
-        return Windows::System::RemoteSystems::RemoteSystemConnectionRequest{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2)->CreateFromConnectionToken(*(void**)(&connectionToken), &result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemConnectionRequest) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics2<D>::CreateFromConnectionTokenForUser(Windows::System::User const& user, param::hstring const& connectionToken) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest) consume_Windows_System_RemoteSystems_IRemoteSystemConnectionRequestStatics2<D>::CreateFromConnectionTokenForUser(winrt::Windows::System::User const& user, param::hstring const& connectionToken) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2)->CreateFromConnectionTokenForUser(*(void**)(&user), *(void**)(&connectionToken), &result));
-        return Windows::System::RemoteSystems::RemoteSystemConnectionRequest{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2)->CreateFromConnectionTokenForUser(*(void**)(&user), *(void**)(&connectionToken), &result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemDiscoveryType) consume_Windows_System_RemoteSystems_IRemoteSystemDiscoveryTypeFilter<D>::RemoteSystemDiscoveryType() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType) consume_Windows_System_RemoteSystems_IRemoteSystemDiscoveryTypeFilter<D>::RemoteSystemDiscoveryType() const
     {
-        Windows::System::RemoteSystems::RemoteSystemDiscoveryType value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter)->get_RemoteSystemDiscoveryType(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter)->get_RemoteSystemDiscoveryType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter) consume_Windows_System_RemoteSystems_IRemoteSystemDiscoveryTypeFilterFactory<D>::Create(Windows::System::RemoteSystems::RemoteSystemDiscoveryType const& discoveryType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter) consume_Windows_System_RemoteSystems_IRemoteSystemDiscoveryTypeFilterFactory<D>::Create(winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType const& discoveryType) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory)->Create(static_cast<int32_t>(discoveryType), &value));
-        return Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory)->Create(static_cast<int32_t>(discoveryType), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_RemoteSystems_IRemoteSystemKindFilter<D>::RemoteSystemKinds() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_System_RemoteSystems_IRemoteSystemKindFilter<D>::RemoteSystemKinds() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindFilter)->get_RemoteSystemKinds(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindFilter)->get_RemoteSystemKinds(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemKindFilter) consume_Windows_System_RemoteSystems_IRemoteSystemKindFilterFactory<D>::Create(param::iterable<hstring> const& remoteSystemKinds) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemKindFilter) consume_Windows_System_RemoteSystems_IRemoteSystemKindFilterFactory<D>::Create(param::iterable<hstring> const& remoteSystemKinds) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindFilterFactory)->Create(*(void**)(&remoteSystemKinds), &value));
-        return Windows::System::RemoteSystems::RemoteSystemKindFilter{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindFilterFactory)->Create(*(void**)(&remoteSystemKinds), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemKindFilter{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemKindStatics<D>::Phone() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Phone(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Phone(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemKindStatics<D>::Hub() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Hub(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Hub(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemKindStatics<D>::Holographic() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Holographic(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Holographic(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemKindStatics<D>::Desktop() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Desktop(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Desktop(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemKindStatics<D>::Xbox() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Xbox(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics)->get_Xbox(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemKindStatics2<D>::Iot() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindStatics2)->get_Iot(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics2)->get_Iot(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemKindStatics2<D>::Tablet() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindStatics2)->get_Tablet(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics2)->get_Tablet(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemKindStatics2<D>::Laptop() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemKindStatics2)->get_Laptop(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics2)->get_Laptop(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemRemovedEventArgs<D>::RemoteSystemId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemRemovedEventArgs)->get_RemoteSystemId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemRemovedEventArgs)->get_RemoteSystemId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSession)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSession)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSession)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSession)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::ControllerDisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSession)->get_ControllerDisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSession)->get_ControllerDisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::Disconnected(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSession, Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::Disconnected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSession, winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSession)->add_Disconnected(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSession)->add_Disconnected(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::Disconnected_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::Disconnected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSession, Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::Disconnected_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::Disconnected(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSession, winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Disconnected_revoker>(this, Disconnected(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::Disconnected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSession)->remove_Disconnected(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSession)->remove_Disconnected(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::CreateParticipantWatcher() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::CreateParticipantWatcher() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSession)->CreateParticipantWatcher(&result));
-        return Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSession)->CreateParticipantWatcher(&result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::SendInvitationAsync(Windows::System::RemoteSystems::RemoteSystem const& invitee) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSession<D>::SendInvitationAsync(winrt::Windows::System::RemoteSystems::RemoteSystem const& invitee) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSession)->SendInvitationAsync(*(void**)(&invitee), &operation));
-        return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSession)->SendInvitationAsync(*(void**)(&invitee), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemSessionAddedEventArgs<D>::SessionInfo() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemSessionAddedEventArgs<D>::SessionInfo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionAddedEventArgs)->get_SessionInfo(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionInfo{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionAddedEventArgs)->get_SessionInfo(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::JoinRequested(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionController, Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::JoinRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionController, winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionController)->add_JoinRequested(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionController)->add_JoinRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::JoinRequested_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::JoinRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionController, Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::JoinRequested_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::JoinRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionController, winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, JoinRequested_revoker>(this, JoinRequested(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::JoinRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionController)->remove_JoinRequested(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionController)->remove_JoinRequested(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::RemoveParticipantAsync(Windows::System::RemoteSystems::RemoteSystemSessionParticipant const& pParticipant) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::RemoveParticipantAsync(winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant const& pParticipant) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionController)->RemoveParticipantAsync(*(void**)(&pParticipant), &operation));
-        return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionController)->RemoveParticipantAsync(*(void**)(&pParticipant), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::CreateSessionAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionController<D>::CreateSessionAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionController)->CreateSessionAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionController)->CreateSessionAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionController) consume_Windows_System_RemoteSystems_IRemoteSystemSessionControllerFactory<D>::CreateController(param::hstring const& displayName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionController) consume_Windows_System_RemoteSystems_IRemoteSystemSessionControllerFactory<D>::CreateController(param::hstring const& displayName) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionControllerFactory)->CreateController(*(void**)(&displayName), &value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionController{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionControllerFactory)->CreateController(*(void**)(&displayName), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionController{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionController) consume_Windows_System_RemoteSystems_IRemoteSystemSessionControllerFactory<D>::CreateController(param::hstring const& displayName, Windows::System::RemoteSystems::RemoteSystemSessionOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionController) consume_Windows_System_RemoteSystems_IRemoteSystemSessionControllerFactory<D>::CreateController(param::hstring const& displayName, winrt::Windows::System::RemoteSystems::RemoteSystemSessionOptions const& options) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionControllerFactory)->CreateControllerWithSessionOptions(*(void**)(&displayName), *(void**)(&options), &value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionController{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionControllerFactory)->CreateControllerWithSessionOptions(*(void**)(&displayName), *(void**)(&options), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionController{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionCreationStatus) consume_Windows_System_RemoteSystems_IRemoteSystemSessionCreationResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationStatus) consume_Windows_System_RemoteSystems_IRemoteSystemSessionCreationResult<D>::Status() const
     {
-        Windows::System::RemoteSystems::RemoteSystemSessionCreationStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSession) consume_Windows_System_RemoteSystems_IRemoteSystemSessionCreationResult<D>::Session() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSession) consume_Windows_System_RemoteSystems_IRemoteSystemSessionCreationResult<D>::Session() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult)->get_Session(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSession{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult)->get_Session(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSession{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedReason) consume_Windows_System_RemoteSystems_IRemoteSystemSessionDisconnectedEventArgs<D>::Reason() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedReason) consume_Windows_System_RemoteSystems_IRemoteSystemSessionDisconnectedEventArgs<D>::Reason() const
     {
-        Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedReason value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionDisconnectedEventArgs)->get_Reason(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedReason value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionDisconnectedEventArgs)->get_Reason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInfo<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionInfo)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInfo)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInfo<D>::ControllerDisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionInfo)->get_ControllerDisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInfo)->get_ControllerDisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInfo<D>::JoinAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInfo<D>::JoinAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionInfo)->JoinAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInfo)->JoinAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitation<D>::Sender() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitation<D>::Sender() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionInvitation)->get_Sender(&value));
-        return Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitation)->get_Sender(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitation<D>::SessionInfo() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitation<D>::SessionInfo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionInvitation)->get_SessionInfo(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionInfo{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitation)->get_SessionInfo(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationListener<D>::InvitationReceived(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener, Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationListener<D>::InvitationReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener, winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener)->add_InvitationReceived(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener)->add_InvitationReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationListener<D>::InvitationReceived_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationListener<D>::InvitationReceived(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener, Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationListener<D>::InvitationReceived_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationListener<D>::InvitationReceived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener, winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, InvitationReceived_revoker>(this, InvitationReceived(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationListener<D>::InvitationReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener)->remove_InvitationReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener)->remove_InvitationReceived(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionInvitation) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationReceivedEventArgs<D>::Invitation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitation) consume_Windows_System_RemoteSystems_IRemoteSystemSessionInvitationReceivedEventArgs<D>::Invitation() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionInvitationReceivedEventArgs)->get_Invitation(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionInvitation{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationReceivedEventArgs)->get_Invitation(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitation{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionParticipant) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinRequest<D>::Participant() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinRequest<D>::Participant() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequest)->get_Participant(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionParticipant{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequest)->get_Participant(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinRequest<D>::Accept() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequest)->Accept());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequest)->Accept());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinRequestedEventArgs<D>::JoinRequest() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinRequestedEventArgs<D>::JoinRequest() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs)->get_JoinRequest(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs)->get_JoinRequest(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinRequestedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinRequestedEventArgs<D>::GetDeferral() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs)->GetDeferral(&result));
-        return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs)->GetDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinResult<D>::Status() const
     {
-        Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSession) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinResult<D>::Session() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSession) consume_Windows_System_RemoteSystems_IRemoteSystemSessionJoinResult<D>::Session() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult)->get_Session(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSession{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult)->get_Session(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSession{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSession) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::Session() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSession) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::Session() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->get_Session(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSession{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->get_Session(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSession{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::BroadcastValueSetAsync(Windows::Foundation::Collections::ValueSet const& messageData) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::BroadcastValueSetAsync(winrt::Windows::Foundation::Collections::ValueSet const& messageData) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->BroadcastValueSetAsync(*(void**)(&messageData), &operation));
-        return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->BroadcastValueSetAsync(*(void**)(&messageData), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::SendValueSetAsync(Windows::Foundation::Collections::ValueSet const& messageData, Windows::System::RemoteSystems::RemoteSystemSessionParticipant const& participant) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::SendValueSetAsync(winrt::Windows::Foundation::Collections::ValueSet const& messageData, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant const& participant) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->SendValueSetAsync(*(void**)(&messageData), *(void**)(&participant), &operation));
-        return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->SendValueSetAsync(*(void**)(&messageData), *(void**)(&participant), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::SendValueSetToParticipantsAsync(Windows::Foundation::Collections::ValueSet const& messageData, param::async_iterable<Windows::System::RemoteSystems::RemoteSystemSessionParticipant> const& participants) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::SendValueSetToParticipantsAsync(winrt::Windows::Foundation::Collections::ValueSet const& messageData, param::async_iterable<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant> const& participants) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->SendValueSetToParticipantsAsync(*(void**)(&messageData), *(void**)(&participants), &operation));
-        return Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->SendValueSetToParticipantsAsync(*(void**)(&messageData), *(void**)(&participants), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::ValueSetReceived(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel, Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::ValueSetReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel, winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->add_ValueSetReceived(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->add_ValueSetReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::ValueSetReceived_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::ValueSetReceived(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel, Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::ValueSetReceived_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::ValueSetReceived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel, winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, ValueSetReceived_revoker>(this, ValueSetReceived(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannel<D>::ValueSetReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->remove_ValueSetReceived(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel)->remove_ValueSetReceived(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannelFactory<D>::Create(Windows::System::RemoteSystems::RemoteSystemSession const& session, param::hstring const& channelName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannelFactory<D>::Create(winrt::Windows::System::RemoteSystems::RemoteSystemSession const& session, param::hstring const& channelName) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannelFactory)->Create(*(void**)(&session), *(void**)(&channelName), &value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannelFactory)->Create(*(void**)(&session), *(void**)(&channelName), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannelFactory<D>::Create(Windows::System::RemoteSystems::RemoteSystemSession const& session, param::hstring const& channelName, Windows::System::RemoteSystems::RemoteSystemSessionMessageChannelReliability const& reliability) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel) consume_Windows_System_RemoteSystems_IRemoteSystemSessionMessageChannelFactory<D>::Create(winrt::Windows::System::RemoteSystems::RemoteSystemSession const& session, param::hstring const& channelName, winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannelReliability const& reliability) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannelFactory)->CreateWithReliability(*(void**)(&session), *(void**)(&channelName), static_cast<int32_t>(reliability), &value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannelFactory)->CreateWithReliability(*(void**)(&session), *(void**)(&channelName), static_cast<int32_t>(reliability), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_RemoteSystems_IRemoteSystemSessionOptions<D>::IsInviteOnly() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionOptions)->get_IsInviteOnly(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionOptions)->get_IsInviteOnly(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionOptions<D>::IsInviteOnly(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionOptions)->put_IsInviteOnly(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionOptions)->put_IsInviteOnly(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipant<D>::RemoteSystem() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipant<D>::RemoteSystem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipant)->get_RemoteSystem(&value));
-        return Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipant)->get_RemoteSystem(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Networking::HostName>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipant<D>::GetHostNames() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipant<D>::GetHostNames() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipant)->GetHostNames(&result));
-        return Windows::Foundation::Collections::IVectorView<Windows::Networking::HostName>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipant)->GetHostNames(&result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionParticipant) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantAddedEventArgs<D>::Participant() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantAddedEventArgs<D>::Participant() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantAddedEventArgs)->get_Participant(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionParticipant{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantAddedEventArgs)->get_Participant(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionParticipant) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantRemovedEventArgs<D>::Participant() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantRemovedEventArgs<D>::Participant() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantRemovedEventArgs)->get_Participant(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionParticipant{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantRemovedEventArgs)->get_Participant(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Start() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->Start());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->Start());
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Stop() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->Stop());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->Stop());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcherStatus) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcherStatus) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Status() const
     {
-        Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcherStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcherStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Added(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Added(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->add_Added(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->add_Added(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Added_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Added(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Added_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Added(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Added_revoker>(this, Added(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Added(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_Added(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_Added(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Removed(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Removed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->add_Removed(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->add_Removed(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Removed_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Removed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Removed_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Removed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Removed_revoker>(this, Removed(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::Removed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_Removed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_Removed(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::EnumerationCompleted(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->add_EnumerationCompleted(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->add_EnumerationCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::EnumerationCompleted_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::EnumerationCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::EnumerationCompleted_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::EnumerationCompleted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, EnumerationCompleted_revoker>(this, EnumerationCompleted(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionParticipantWatcher<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher)->remove_EnumerationCompleted(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemSessionRemovedEventArgs<D>::SessionInfo() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemSessionRemovedEventArgs<D>::SessionInfo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionRemovedEventArgs)->get_SessionInfo(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionInfo{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionRemovedEventArgs)->get_SessionInfo(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemSessionStatics<D>::CreateWatcher() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemSessionStatics<D>::CreateWatcher() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionStatics)->CreateWatcher(&result));
-        return Windows::System::RemoteSystems::RemoteSystemSessionWatcher{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionStatics)->CreateWatcher(&result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemSessionUpdatedEventArgs<D>::SessionInfo() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo) consume_Windows_System_RemoteSystems_IRemoteSystemSessionUpdatedEventArgs<D>::SessionInfo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionUpdatedEventArgs)->get_SessionInfo(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionInfo{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionUpdatedEventArgs)->get_SessionInfo(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionParticipant) consume_Windows_System_RemoteSystems_IRemoteSystemSessionValueSetReceivedEventArgs<D>::Sender() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant) consume_Windows_System_RemoteSystems_IRemoteSystemSessionValueSetReceivedEventArgs<D>::Sender() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs)->get_Sender(&value));
-        return Windows::System::RemoteSystems::RemoteSystemSessionParticipant{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs)->get_Sender(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::ValueSet) consume_Windows_System_RemoteSystems_IRemoteSystemSessionValueSetReceivedEventArgs<D>::Message() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) consume_Windows_System_RemoteSystems_IRemoteSystemSessionValueSetReceivedEventArgs<D>::Message() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs)->get_Message(&value));
-        return Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs)->get_Message(&value));
+        return winrt::Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Start() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->Start());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->Start());
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Stop() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->Stop());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->Stop());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Status() const
     {
-        Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Added(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionWatcher, Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Added(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->add_Added(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->add_Added(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Added_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Added(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionWatcher, Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Added_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Added(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Added_revoker>(this, Added(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Added(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Added(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Added(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Updated(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionWatcher, Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Updated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->add_Updated(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->add_Updated(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Updated_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Updated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionWatcher, Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Updated_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Updated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Updated_revoker>(this, Updated(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Updated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Updated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Updated(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Removed(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionWatcher, Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Removed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->add_Removed(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->add_Removed(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Removed_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Removed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionWatcher, Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Removed_revoker consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Removed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Removed_revoker>(this, Removed(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemSessionWatcher<D>::Removed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Removed(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher)->remove_Removed(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystem>) consume_Windows_System_RemoteSystems_IRemoteSystemStatics<D>::FindByHostNameAsync(Windows::Networking::HostName const& hostName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystem>) consume_Windows_System_RemoteSystems_IRemoteSystemStatics<D>::FindByHostNameAsync(winrt::Windows::Networking::HostName const& hostName) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatics)->FindByHostNameAsync(*(void**)(&hostName), &operation));
-        return Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystem>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemStatics)->FindByHostNameAsync(*(void**)(&hostName), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystem>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemStatics<D>::CreateWatcher() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemStatics<D>::CreateWatcher() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatics)->CreateWatcher(&result));
-        return Windows::System::RemoteSystems::RemoteSystemWatcher{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemStatics)->CreateWatcher(&result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemWatcher{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemStatics<D>::CreateWatcher(param::iterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemStatics<D>::CreateWatcher(param::iterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatics)->CreateWatcherWithFilters(*(void**)(&filters), &result));
-        return Windows::System::RemoteSystems::RemoteSystemWatcher{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemStatics)->CreateWatcherWithFilters(*(void**)(&filters), &result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemWatcher{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemAccessStatus>) consume_Windows_System_RemoteSystems_IRemoteSystemStatics<D>::RequestAccessAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemAccessStatus>) consume_Windows_System_RemoteSystems_IRemoteSystemStatics<D>::RequestAccessAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatics)->RequestAccessAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemAccessStatus>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemStatics)->RequestAccessAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemAccessStatus>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_RemoteSystems_IRemoteSystemStatics2<D>::IsAuthorizationKindEnabled(Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& kind) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_System_RemoteSystems_IRemoteSystemStatics2<D>::IsAuthorizationKindEnabled(winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& kind) const
     {
         bool result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatics2)->IsAuthorizationKindEnabled(static_cast<int32_t>(kind), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemStatics2)->IsAuthorizationKindEnabled(static_cast<int32_t>(kind), &result));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemStatics3<D>::CreateWatcherForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemStatics3<D>::CreateWatcherForUser(winrt::Windows::System::User const& user) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatics3)->CreateWatcherForUser(*(void**)(&user), &result));
-        return Windows::System::RemoteSystems::RemoteSystemWatcher{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemStatics3)->CreateWatcherForUser(*(void**)(&user), &result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemWatcher{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemStatics3<D>::CreateWatcherForUser(Windows::System::User const& user, param::iterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemWatcher) consume_Windows_System_RemoteSystems_IRemoteSystemStatics3<D>::CreateWatcherForUser(winrt::Windows::System::User const& user, param::iterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatics3)->CreateWatcherWithFiltersForUser(*(void**)(&user), *(void**)(&filters), &result));
-        return Windows::System::RemoteSystems::RemoteSystemWatcher{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemStatics3)->CreateWatcherWithFiltersForUser(*(void**)(&user), *(void**)(&filters), &result));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemWatcher{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemStatusType) consume_Windows_System_RemoteSystems_IRemoteSystemStatusTypeFilter<D>::RemoteSystemStatusType() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemStatusType) consume_Windows_System_RemoteSystems_IRemoteSystemStatusTypeFilter<D>::RemoteSystemStatusType() const
     {
-        Windows::System::RemoteSystems::RemoteSystemStatusType value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter)->get_RemoteSystemStatusType(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemStatusType value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter)->get_RemoteSystemStatusType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter) consume_Windows_System_RemoteSystems_IRemoteSystemStatusTypeFilterFactory<D>::Create(Windows::System::RemoteSystems::RemoteSystemStatusType const& remoteSystemStatusType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter) consume_Windows_System_RemoteSystems_IRemoteSystemStatusTypeFilterFactory<D>::Create(winrt::Windows::System::RemoteSystems::RemoteSystemStatusType const& remoteSystemStatusType) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory)->Create(static_cast<int32_t>(remoteSystemStatusType), &value));
-        return Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory)->Create(static_cast<int32_t>(remoteSystemStatusType), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemUpdatedEventArgs<D>::RemoteSystem() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystem) consume_Windows_System_RemoteSystems_IRemoteSystemUpdatedEventArgs<D>::RemoteSystem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs)->get_RemoteSystem(&value));
-        return Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs)->get_RemoteSystem(&value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystem{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::Start() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher)->Start());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->Start());
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::Stop() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher)->Stop());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->Stop());
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemAdded(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemAddedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemAdded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher)->add_RemoteSystemAdded(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->add_RemoteSystemAdded(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemAdded_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemAdded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemAddedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemAdded_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemAdded(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, RemoteSystemAdded_revoker>(this, RemoteSystemAdded(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemAdded(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemAdded(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemUpdated(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemUpdated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher)->add_RemoteSystemUpdated(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->add_RemoteSystemUpdated(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemUpdated_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemUpdated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemUpdated_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemUpdated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, RemoteSystemUpdated_revoker>(this, RemoteSystemUpdated(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemUpdated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemUpdated(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemUpdated(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemRemoved(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher)->add_RemoteSystemRemoved(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->add_RemoteSystemRemoved(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemRemoved_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemRemoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemRemoved_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemRemoved(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, RemoteSystemRemoved_revoker>(this, RemoteSystemRemoved(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher<D>::RemoteSystemRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemRemoved(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher)->remove_RemoteSystemRemoved(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::EnumerationCompleted(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::EnumerationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher2)->add_EnumerationCompleted(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2)->add_EnumerationCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::EnumerationCompleted_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::EnumerationCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::EnumerationCompleted_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::EnumerationCompleted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, EnumerationCompleted_revoker>(this, EnumerationCompleted(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::EnumerationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher2)->remove_EnumerationCompleted(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2)->remove_EnumerationCompleted(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred(Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher2)->add_ErrorOccurred(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2)->add_ErrorOccurred(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred_revoker consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, ErrorOccurred_revoker>(this, ErrorOccurred(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher2<D>::ErrorOccurred(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher2)->remove_ErrorOccurred(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2)->remove_ErrorOccurred(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher3<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::User) consume_Windows_System_RemoteSystems_IRemoteSystemWatcher3<D>::User() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcher3)->get_User(&value));
-        return Windows::System::User{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher3)->get_User(&value));
+        return winrt::Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemWatcherError) consume_Windows_System_RemoteSystems_IRemoteSystemWatcherErrorOccurredEventArgs<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemWatcherError) consume_Windows_System_RemoteSystems_IRemoteSystemWatcherErrorOccurredEventArgs<D>::Error() const
     {
-        Windows::System::RemoteSystems::RemoteSystemWatcherError value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs)->get_Error(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::System::RemoteSystems::RemoteSystemWatcherError value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs)->get_Error(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::WebAccount) consume_Windows_System_RemoteSystems_IRemoteSystemWebAccountFilter<D>::Account() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::WebAccount) consume_Windows_System_RemoteSystems_IRemoteSystemWebAccountFilter<D>::Account() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter)->get_Account(&value));
-        return Windows::Security::Credentials::WebAccount{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter)->get_Account(&value));
+        return winrt::Windows::Security::Credentials::WebAccount{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::RemoteSystems::RemoteSystemWebAccountFilter) consume_Windows_System_RemoteSystems_IRemoteSystemWebAccountFilterFactory<D>::Create(Windows::Security::Credentials::WebAccount const& account) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter) consume_Windows_System_RemoteSystems_IRemoteSystemWebAccountFilterFactory<D>::Create(winrt::Windows::Security::Credentials::WebAccount const& account) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory)->Create(*(void**)(&account), &value));
-        return Windows::System::RemoteSystems::RemoteSystemWebAccountFilter{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory)->Create(*(void**)(&account), &value));
+        return winrt::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter{ value, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics> : produce_base<D, Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics> : produce_base<D, winrt::Windows::System::RemoteSystems::IKnownRemoteSystemCapabilitiesStatics>
     {
         int32_t __stdcall get_AppService(void** value) noexcept final try
         {
@@ -954,7 +955,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystem> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystem>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystem> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystem>
     {
         int32_t __stdcall get_DisplayName(void** value) noexcept final try
         {
@@ -983,7 +984,7 @@ namespace winrt::impl
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemStatus>(this->shim().Status());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemStatus>(this->shim().Status());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -998,7 +999,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystem2> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystem2>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystem2> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystem2>
     {
         int32_t __stdcall get_IsAvailableBySpatialProximity(bool* value) noexcept final try
         {
@@ -1011,7 +1012,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<bool>>(this->shim().GetCapabilitySupportedAsync(*reinterpret_cast<hstring const*>(&capabilityName)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().GetCapabilitySupportedAsync(*reinterpret_cast<hstring const*>(&capabilityName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1019,7 +1020,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystem3> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystem3>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystem3> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystem3>
     {
         int32_t __stdcall get_ManufacturerDisplayName(void** value) noexcept final try
         {
@@ -1041,12 +1042,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystem4> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystem4>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystem4> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystem4>
     {
         int32_t __stdcall get_Platform(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemPlatform>(this->shim().Platform());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemPlatform>(this->shim().Platform());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1054,13 +1055,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystem5> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystem5>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystem5> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystem5>
     {
         int32_t __stdcall get_Apps(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::System::RemoteSystems::RemoteSystemApp>>(this->shim().Apps());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::System::RemoteSystems::RemoteSystemApp>>(this->shim().Apps());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1068,13 +1069,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystem6> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystem6>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystem6> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystem6>
     {
         int32_t __stdcall get_User(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::User>(this->shim().User());
+            *value = detach_from<winrt::Windows::System::User>(this->shim().User());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1082,13 +1083,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAddedEventArgs>
     {
         int32_t __stdcall get_RemoteSystem(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystem>(this->shim().RemoteSystem());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystem>(this->shim().RemoteSystem());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1096,7 +1097,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemApp> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemApp>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemApp> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemApp>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -1132,7 +1133,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IMapView<hstring, hstring>>(this->shim().Attributes());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMapView<hstring, hstring>>(this->shim().Attributes());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1140,13 +1141,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemApp2> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemApp2>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemApp2> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemApp2>
     {
         int32_t __stdcall get_User(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::User>(this->shim().User());
+            *value = detach_from<winrt::Windows::System::User>(this->shim().User());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1162,13 +1163,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemAppRegistration> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemAppRegistration>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistration> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistration>
     {
         int32_t __stdcall get_User(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::User>(this->shim().User());
+            *value = detach_from<winrt::Windows::System::User>(this->shim().User());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1176,7 +1177,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IMap<hstring, hstring>>(this->shim().Attributes());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMap<hstring, hstring>>(this->shim().Attributes());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1184,7 +1185,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<bool>>(this->shim().SaveAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().SaveAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1192,13 +1193,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAppRegistrationStatics>
     {
         int32_t __stdcall GetDefault(void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemAppRegistration>(this->shim().GetDefault());
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration>(this->shim().GetDefault());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1206,7 +1207,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemAppRegistration>(this->shim().GetForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration>(this->shim().GetForUser(*reinterpret_cast<winrt::Windows::System::User const*>(&user)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1214,12 +1215,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilter>
     {
         int32_t __stdcall get_RemoteSystemAuthorizationKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemAuthorizationKind>(this->shim().RemoteSystemAuthorizationKind());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind>(this->shim().RemoteSystemAuthorizationKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1227,13 +1228,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilterFactory> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilterFactory>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilterFactory> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemAuthorizationKindFilterFactory>
     {
         int32_t __stdcall Create(int32_t remoteSystemAuthorizationKind, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter>(this->shim().Create(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const*>(&remoteSystemAuthorizationKind)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter>(this->shim().Create(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const*>(&remoteSystemAuthorizationKind)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1241,7 +1242,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionInfo> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionInfo>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionInfo> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionInfo>
     {
         int32_t __stdcall get_IsProximal(bool* value) noexcept final try
         {
@@ -1254,13 +1255,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionInfoStatics>
     {
         int32_t __stdcall TryCreateFromAppServiceConnection(void* connection, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemConnectionInfo>(this->shim().TryCreateFromAppServiceConnection(*reinterpret_cast<Windows::ApplicationModel::AppService::AppServiceConnection const*>(&connection)));
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo>(this->shim().TryCreateFromAppServiceConnection(*reinterpret_cast<winrt::Windows::ApplicationModel::AppService::AppServiceConnection const*>(&connection)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1268,13 +1269,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest>
     {
         int32_t __stdcall get_RemoteSystem(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystem>(this->shim().RemoteSystem());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystem>(this->shim().RemoteSystem());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1282,13 +1283,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest2>
     {
         int32_t __stdcall get_RemoteSystemApp(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemApp>(this->shim().RemoteSystemApp());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemApp>(this->shim().RemoteSystemApp());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1296,7 +1297,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequest3>
     {
         int32_t __stdcall get_ConnectionToken(void** value) noexcept final try
         {
@@ -1310,13 +1311,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestFactory>
     {
         int32_t __stdcall Create(void* remoteSystem, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().Create(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystem const*>(&remoteSystem)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().Create(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystem const*>(&remoteSystem)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1324,13 +1325,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics>
     {
         int32_t __stdcall CreateForApp(void* remoteSystemApp, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().CreateForApp(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemApp const*>(&remoteSystemApp)));
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().CreateForApp(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemApp const*>(&remoteSystemApp)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1338,13 +1339,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemConnectionRequestStatics2>
     {
         int32_t __stdcall CreateFromConnectionToken(void* connectionToken, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().CreateFromConnectionToken(*reinterpret_cast<hstring const*>(&connectionToken)));
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().CreateFromConnectionToken(*reinterpret_cast<hstring const*>(&connectionToken)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1352,7 +1353,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().CreateFromConnectionTokenForUser(*reinterpret_cast<Windows::System::User const*>(&user), *reinterpret_cast<hstring const*>(&connectionToken)));
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(this->shim().CreateFromConnectionTokenForUser(*reinterpret_cast<winrt::Windows::System::User const*>(&user), *reinterpret_cast<hstring const*>(&connectionToken)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1360,12 +1361,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilter>
     {
         int32_t __stdcall get_RemoteSystemDiscoveryType(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemDiscoveryType>(this->shim().RemoteSystemDiscoveryType());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType>(this->shim().RemoteSystemDiscoveryType());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1373,13 +1374,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemDiscoveryTypeFilterFactory>
     {
         int32_t __stdcall Create(int32_t discoveryType, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter>(this->shim().Create(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemDiscoveryType const*>(&discoveryType)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter>(this->shim().Create(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType const*>(&discoveryType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1387,23 +1388,23 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemEnumerationCompletedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemEnumerationCompletedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemEnumerationCompletedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemEnumerationCompletedEventArgs>
     {
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemFilter> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemFilter>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemFilter> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>
     {
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemKindFilter> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemKindFilter>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemKindFilter> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemKindFilter>
     {
         int32_t __stdcall get_RemoteSystemKinds(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().RemoteSystemKinds());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().RemoteSystemKinds());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1411,13 +1412,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemKindFilterFactory> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemKindFilterFactory>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemKindFilterFactory> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemKindFilterFactory>
     {
         int32_t __stdcall Create(void* remoteSystemKinds, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemKindFilter>(this->shim().Create(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&remoteSystemKinds)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemKindFilter>(this->shim().Create(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&remoteSystemKinds)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1425,7 +1426,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemKindStatics> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemKindStatics>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics>
     {
         int32_t __stdcall get_Phone(void** value) noexcept final try
         {
@@ -1471,7 +1472,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemKindStatics2> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemKindStatics2>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics2> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemKindStatics2>
     {
         int32_t __stdcall get_Iot(void** value) noexcept final try
         {
@@ -1501,7 +1502,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemRemovedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemRemovedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemRemovedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemRemovedEventArgs>
     {
         int32_t __stdcall get_RemoteSystemId(void** value) noexcept final try
         {
@@ -1515,7 +1516,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSession> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSession>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSession> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSession>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -1545,7 +1546,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Disconnected(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSession, Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Disconnected(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSession, winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1559,7 +1560,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher>(this->shim().CreateParticipantWatcher());
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher>(this->shim().CreateParticipantWatcher());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1567,7 +1568,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<bool>>(this->shim().SendInvitationAsync(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystem const*>(&invitee)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().SendInvitationAsync(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystem const*>(&invitee)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1575,13 +1576,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionAddedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionAddedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionAddedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionAddedEventArgs>
     {
         int32_t __stdcall get_SessionInfo(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionInfo>(this->shim().SessionInfo());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo>(this->shim().SessionInfo());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1589,13 +1590,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionController> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionController>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionController> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionController>
     {
         int32_t __stdcall add_JoinRequested(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().JoinRequested(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionController, Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().JoinRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionController, winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1609,7 +1610,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<bool>>(this->shim().RemoveParticipantAsync(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemSessionParticipant const*>(&pParticipant)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().RemoveParticipantAsync(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant const*>(&pParticipant)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1617,7 +1618,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>>(this->shim().CreateSessionAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>>(this->shim().CreateSessionAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1625,13 +1626,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionControllerFactory> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionControllerFactory>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionControllerFactory> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionControllerFactory>
     {
         int32_t __stdcall CreateController(void* displayName, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionController>(this->shim().CreateController(*reinterpret_cast<hstring const*>(&displayName)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionController>(this->shim().CreateController(*reinterpret_cast<hstring const*>(&displayName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1639,7 +1640,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionController>(this->shim().CreateController(*reinterpret_cast<hstring const*>(&displayName), *reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemSessionOptions const*>(&options)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionController>(this->shim().CreateController(*reinterpret_cast<hstring const*>(&displayName), *reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemSessionOptions const*>(&options)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1647,12 +1648,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionCreationResult>
     {
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionCreationStatus>(this->shim().Status());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationStatus>(this->shim().Status());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1660,7 +1661,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSession>(this->shim().Session());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSession>(this->shim().Session());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1668,12 +1669,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionDisconnectedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionDisconnectedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionDisconnectedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionDisconnectedEventArgs>
     {
         int32_t __stdcall get_Reason(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedReason>(this->shim().Reason());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedReason>(this->shim().Reason());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1681,7 +1682,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionInfo> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionInfo>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInfo> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInfo>
     {
         int32_t __stdcall get_DisplayName(void** value) noexcept final try
         {
@@ -1703,7 +1704,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>>(this->shim().JoinAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>>(this->shim().JoinAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1711,13 +1712,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionInvitation> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionInvitation>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitation> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitation>
     {
         int32_t __stdcall get_Sender(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystem>(this->shim().Sender());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystem>(this->shim().Sender());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1725,7 +1726,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionInfo>(this->shim().SessionInfo());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo>(this->shim().SessionInfo());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1733,13 +1734,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationListener>
     {
         int32_t __stdcall add_InvitationReceived(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().InvitationReceived(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener, Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().InvitationReceived(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener, winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1753,13 +1754,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionInvitationReceivedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionInvitationReceivedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationReceivedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionInvitationReceivedEventArgs>
     {
         int32_t __stdcall get_Invitation(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionInvitation>(this->shim().Invitation());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitation>(this->shim().Invitation());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1767,13 +1768,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequest> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequest>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequest> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequest>
     {
         int32_t __stdcall get_Participant(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(this->shim().Participant());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(this->shim().Participant());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1788,13 +1789,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinRequestedEventArgs>
     {
         int32_t __stdcall get_JoinRequest(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest>(this->shim().JoinRequest());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest>(this->shim().JoinRequest());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1802,7 +1803,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1810,12 +1811,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionJoinResult>
     {
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus>(this->shim().Status());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus>(this->shim().Status());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1823,7 +1824,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSession>(this->shim().Session());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSession>(this->shim().Session());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1831,13 +1832,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannel>
     {
         int32_t __stdcall get_Session(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSession>(this->shim().Session());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSession>(this->shim().Session());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1845,7 +1846,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<bool>>(this->shim().BroadcastValueSetAsync(*reinterpret_cast<Windows::Foundation::Collections::ValueSet const*>(&messageData)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().BroadcastValueSetAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::ValueSet const*>(&messageData)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1853,7 +1854,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<bool>>(this->shim().SendValueSetAsync(*reinterpret_cast<Windows::Foundation::Collections::ValueSet const*>(&messageData), *reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemSessionParticipant const*>(&participant)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().SendValueSetAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::ValueSet const*>(&messageData), *reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant const*>(&participant)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1861,7 +1862,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<bool>>(this->shim().SendValueSetToParticipantsAsync(*reinterpret_cast<Windows::Foundation::Collections::ValueSet const*>(&messageData), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::System::RemoteSystems::RemoteSystemSessionParticipant> const*>(&participants)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().SendValueSetToParticipantsAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::ValueSet const*>(&messageData), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant> const*>(&participants)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1869,7 +1870,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().ValueSetReceived(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel, Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().ValueSetReceived(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel, winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1883,13 +1884,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannelFactory> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannelFactory>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannelFactory> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionMessageChannelFactory>
     {
         int32_t __stdcall Create(void* session, void* channelName, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel>(this->shim().Create(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemSession const*>(&session), *reinterpret_cast<hstring const*>(&channelName)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel>(this->shim().Create(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemSession const*>(&session), *reinterpret_cast<hstring const*>(&channelName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1897,7 +1898,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel>(this->shim().Create(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemSession const*>(&session), *reinterpret_cast<hstring const*>(&channelName), *reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemSessionMessageChannelReliability const*>(&reliability)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel>(this->shim().Create(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemSession const*>(&session), *reinterpret_cast<hstring const*>(&channelName), *reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannelReliability const*>(&reliability)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1905,7 +1906,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionOptions> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionOptions>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionOptions> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionOptions>
     {
         int32_t __stdcall get_IsInviteOnly(bool* value) noexcept final try
         {
@@ -1925,13 +1926,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionParticipant> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionParticipant>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipant> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipant>
     {
         int32_t __stdcall get_RemoteSystem(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystem>(this->shim().RemoteSystem());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystem>(this->shim().RemoteSystem());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1939,7 +1940,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Networking::HostName>>(this->shim().GetHostNames());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Networking::HostName>>(this->shim().GetHostNames());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1947,13 +1948,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionParticipantAddedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionParticipantAddedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantAddedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantAddedEventArgs>
     {
         int32_t __stdcall get_Participant(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(this->shim().Participant());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(this->shim().Participant());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1961,13 +1962,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionParticipantRemovedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionParticipantRemovedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantRemovedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantRemovedEventArgs>
     {
         int32_t __stdcall get_Participant(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(this->shim().Participant());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(this->shim().Participant());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1975,7 +1976,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionParticipantWatcher>
     {
         int32_t __stdcall Start() noexcept final try
         {
@@ -1994,7 +1995,7 @@ namespace winrt::impl
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcherStatus>(this->shim().Status());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcherStatus>(this->shim().Status());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2002,7 +2003,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Added(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Added(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2016,7 +2017,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Removed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Removed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2030,7 +2031,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().EnumerationCompleted(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().EnumerationCompleted(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2044,13 +2045,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionRemovedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionRemovedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionRemovedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionRemovedEventArgs>
     {
         int32_t __stdcall get_SessionInfo(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionInfo>(this->shim().SessionInfo());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo>(this->shim().SessionInfo());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2058,13 +2059,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionStatics> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionStatics>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionStatics> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionStatics>
     {
         int32_t __stdcall CreateWatcher(void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionWatcher>(this->shim().CreateWatcher());
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher>(this->shim().CreateWatcher());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2072,13 +2073,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionUpdatedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionUpdatedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionUpdatedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionUpdatedEventArgs>
     {
         int32_t __stdcall get_SessionInfo(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionInfo>(this->shim().SessionInfo());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo>(this->shim().SessionInfo());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2086,13 +2087,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionValueSetReceivedEventArgs>
     {
         int32_t __stdcall get_Sender(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(this->shim().Sender());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>(this->shim().Sender());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2100,7 +2101,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::ValueSet>(this->shim().Message());
+            *value = detach_from<winrt::Windows::Foundation::Collections::ValueSet>(this->shim().Message());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2108,7 +2109,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemSessionWatcher> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemSessionWatcher>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemSessionWatcher>
     {
         int32_t __stdcall Start() noexcept final try
         {
@@ -2127,7 +2128,7 @@ namespace winrt::impl
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus>(this->shim().Status());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus>(this->shim().Status());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2135,7 +2136,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Added(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionWatcher, Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Added(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2149,7 +2150,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Updated(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionWatcher, Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Updated(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2163,7 +2164,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Removed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemSessionWatcher, Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Removed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2177,13 +2178,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemStatics> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemStatics>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatics> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatics>
     {
         int32_t __stdcall FindByHostNameAsync(void* hostName, void** operation) noexcept final try
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystem>>(this->shim().FindByHostNameAsync(*reinterpret_cast<Windows::Networking::HostName const*>(&hostName)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystem>>(this->shim().FindByHostNameAsync(*reinterpret_cast<winrt::Windows::Networking::HostName const*>(&hostName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2191,7 +2192,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcher());
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcher());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2199,7 +2200,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcher(*reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const*>(&filters)));
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcher(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter> const*>(&filters)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2207,7 +2208,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemAccessStatus>>(this->shim().RequestAccessAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemAccessStatus>>(this->shim().RequestAccessAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2215,12 +2216,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemStatics2> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemStatics2>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatics2> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatics2>
     {
         int32_t __stdcall IsAuthorizationKindEnabled(int32_t kind, bool* result) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<bool>(this->shim().IsAuthorizationKindEnabled(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const*>(&kind)));
+            *result = detach_from<bool>(this->shim().IsAuthorizationKindEnabled(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const*>(&kind)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2228,13 +2229,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemStatics3> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemStatics3>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatics3> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatics3>
     {
         int32_t __stdcall CreateWatcherForUser(void* user, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcherForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcherForUser(*reinterpret_cast<winrt::Windows::System::User const*>(&user)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2242,7 +2243,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcherForUser(*reinterpret_cast<Windows::System::User const*>(&user), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const*>(&filters)));
+            *result = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher>(this->shim().CreateWatcherForUser(*reinterpret_cast<winrt::Windows::System::User const*>(&user), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter> const*>(&filters)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2250,12 +2251,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilter>
     {
         int32_t __stdcall get_RemoteSystemStatusType(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemStatusType>(this->shim().RemoteSystemStatusType());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemStatusType>(this->shim().RemoteSystemStatusType());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2263,13 +2264,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemStatusTypeFilterFactory>
     {
         int32_t __stdcall Create(int32_t remoteSystemStatusType, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter>(this->shim().Create(*reinterpret_cast<Windows::System::RemoteSystems::RemoteSystemStatusType const*>(&remoteSystemStatusType)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter>(this->shim().Create(*reinterpret_cast<winrt::Windows::System::RemoteSystems::RemoteSystemStatusType const*>(&remoteSystemStatusType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2277,13 +2278,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemUpdatedEventArgs>
     {
         int32_t __stdcall get_RemoteSystem(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystem>(this->shim().RemoteSystem());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystem>(this->shim().RemoteSystem());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2291,7 +2292,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemWatcher> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemWatcher>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher>
     {
         int32_t __stdcall Start() noexcept final try
         {
@@ -2311,7 +2312,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().RemoteSystemAdded(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemAddedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().RemoteSystemAdded(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2325,7 +2326,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().RemoteSystemUpdated(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().RemoteSystemUpdated(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2339,7 +2340,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().RemoteSystemRemoved(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().RemoteSystemRemoved(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2353,13 +2354,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemWatcher2> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemWatcher2>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher2>
     {
         int32_t __stdcall add_EnumerationCompleted(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().EnumerationCompleted(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().EnumerationCompleted(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2373,7 +2374,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().ErrorOccurred(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::System::RemoteSystems::RemoteSystemWatcher, Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().ErrorOccurred(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher, winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2387,13 +2388,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemWatcher3> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemWatcher3>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher3> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWatcher3>
     {
         int32_t __stdcall get_User(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::User>(this->shim().User());
+            *value = detach_from<winrt::Windows::System::User>(this->shim().User());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2401,12 +2402,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWatcherErrorOccurredEventArgs>
     {
         int32_t __stdcall get_Error(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemWatcherError>(this->shim().Error());
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemWatcherError>(this->shim().Error());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2414,13 +2415,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilter>
     {
         int32_t __stdcall get_Account(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Credentials::WebAccount>(this->shim().Account());
+            *value = detach_from<winrt::Windows::Security::Credentials::WebAccount>(this->shim().Account());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2428,13 +2429,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory> : produce_base<D, Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory>
+    struct produce<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory> : produce_base<D, winrt::Windows::System::RemoteSystems::IRemoteSystemWebAccountFilterFactory>
     {
         int32_t __stdcall Create(void* account, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::RemoteSystems::RemoteSystemWebAccountFilter>(this->shim().Create(*reinterpret_cast<Windows::Security::Credentials::WebAccount const*>(&account)));
+            *value = detach_from<winrt::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter>(this->shim().Create(*reinterpret_cast<winrt::Windows::Security::Credentials::WebAccount const*>(&account)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2459,55 +2460,55 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteSystems
     {
         return impl::call_factory_cast<hstring(*)(IKnownRemoteSystemCapabilitiesStatics const&), KnownRemoteSystemCapabilities, IKnownRemoteSystemCapabilitiesStatics>([](IKnownRemoteSystemCapabilitiesStatics const& f) { return f.SpatialEntity(); });
     }
-    inline auto RemoteSystem::FindByHostNameAsync(Windows::Networking::HostName const& hostName)
+    inline auto RemoteSystem::FindByHostNameAsync(winrt::Windows::Networking::HostName const& hostName)
     {
         return impl::call_factory<RemoteSystem, IRemoteSystemStatics>([&](IRemoteSystemStatics const& f) { return f.FindByHostNameAsync(hostName); });
     }
     inline auto RemoteSystem::CreateWatcher()
     {
-        return impl::call_factory_cast<Windows::System::RemoteSystems::RemoteSystemWatcher(*)(IRemoteSystemStatics const&), RemoteSystem, IRemoteSystemStatics>([](IRemoteSystemStatics const& f) { return f.CreateWatcher(); });
+        return impl::call_factory_cast<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher(*)(IRemoteSystemStatics const&), RemoteSystem, IRemoteSystemStatics>([](IRemoteSystemStatics const& f) { return f.CreateWatcher(); });
     }
-    inline auto RemoteSystem::CreateWatcher(param::iterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters)
+    inline auto RemoteSystem::CreateWatcher(param::iterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters)
     {
         return impl::call_factory<RemoteSystem, IRemoteSystemStatics>([&](IRemoteSystemStatics const& f) { return f.CreateWatcher(filters); });
     }
     inline auto RemoteSystem::RequestAccessAsync()
     {
-        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::System::RemoteSystems::RemoteSystemAccessStatus>(*)(IRemoteSystemStatics const&), RemoteSystem, IRemoteSystemStatics>([](IRemoteSystemStatics const& f) { return f.RequestAccessAsync(); });
+        return impl::call_factory_cast<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::System::RemoteSystems::RemoteSystemAccessStatus>(*)(IRemoteSystemStatics const&), RemoteSystem, IRemoteSystemStatics>([](IRemoteSystemStatics const& f) { return f.RequestAccessAsync(); });
     }
-    inline auto RemoteSystem::IsAuthorizationKindEnabled(Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& kind)
+    inline auto RemoteSystem::IsAuthorizationKindEnabled(winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& kind)
     {
         return impl::call_factory<RemoteSystem, IRemoteSystemStatics2>([&](IRemoteSystemStatics2 const& f) { return f.IsAuthorizationKindEnabled(kind); });
     }
-    inline auto RemoteSystem::CreateWatcherForUser(Windows::System::User const& user)
+    inline auto RemoteSystem::CreateWatcherForUser(winrt::Windows::System::User const& user)
     {
         return impl::call_factory<RemoteSystem, IRemoteSystemStatics3>([&](IRemoteSystemStatics3 const& f) { return f.CreateWatcherForUser(user); });
     }
-    inline auto RemoteSystem::CreateWatcherForUser(Windows::System::User const& user, param::iterable<Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters)
+    inline auto RemoteSystem::CreateWatcherForUser(winrt::Windows::System::User const& user, param::iterable<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter> const& filters)
     {
         return impl::call_factory<RemoteSystem, IRemoteSystemStatics3>([&](IRemoteSystemStatics3 const& f) { return f.CreateWatcherForUser(user, filters); });
     }
     inline auto RemoteSystemAppRegistration::GetDefault()
     {
-        return impl::call_factory_cast<Windows::System::RemoteSystems::RemoteSystemAppRegistration(*)(IRemoteSystemAppRegistrationStatics const&), RemoteSystemAppRegistration, IRemoteSystemAppRegistrationStatics>([](IRemoteSystemAppRegistrationStatics const& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration(*)(IRemoteSystemAppRegistrationStatics const&), RemoteSystemAppRegistration, IRemoteSystemAppRegistrationStatics>([](IRemoteSystemAppRegistrationStatics const& f) { return f.GetDefault(); });
     }
-    inline auto RemoteSystemAppRegistration::GetForUser(Windows::System::User const& user)
+    inline auto RemoteSystemAppRegistration::GetForUser(winrt::Windows::System::User const& user)
     {
         return impl::call_factory<RemoteSystemAppRegistration, IRemoteSystemAppRegistrationStatics>([&](IRemoteSystemAppRegistrationStatics const& f) { return f.GetForUser(user); });
     }
-    inline RemoteSystemAuthorizationKindFilter::RemoteSystemAuthorizationKindFilter(Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& remoteSystemAuthorizationKind) :
+    inline RemoteSystemAuthorizationKindFilter::RemoteSystemAuthorizationKindFilter(winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind const& remoteSystemAuthorizationKind) :
         RemoteSystemAuthorizationKindFilter(impl::call_factory<RemoteSystemAuthorizationKindFilter, IRemoteSystemAuthorizationKindFilterFactory>([&](IRemoteSystemAuthorizationKindFilterFactory const& f) { return f.Create(remoteSystemAuthorizationKind); }))
     {
     }
-    inline auto RemoteSystemConnectionInfo::TryCreateFromAppServiceConnection(Windows::ApplicationModel::AppService::AppServiceConnection const& connection)
+    inline auto RemoteSystemConnectionInfo::TryCreateFromAppServiceConnection(winrt::Windows::ApplicationModel::AppService::AppServiceConnection const& connection)
     {
         return impl::call_factory<RemoteSystemConnectionInfo, IRemoteSystemConnectionInfoStatics>([&](IRemoteSystemConnectionInfoStatics const& f) { return f.TryCreateFromAppServiceConnection(connection); });
     }
-    inline RemoteSystemConnectionRequest::RemoteSystemConnectionRequest(Windows::System::RemoteSystems::RemoteSystem const& remoteSystem) :
+    inline RemoteSystemConnectionRequest::RemoteSystemConnectionRequest(winrt::Windows::System::RemoteSystems::RemoteSystem const& remoteSystem) :
         RemoteSystemConnectionRequest(impl::call_factory<RemoteSystemConnectionRequest, IRemoteSystemConnectionRequestFactory>([&](IRemoteSystemConnectionRequestFactory const& f) { return f.Create(remoteSystem); }))
     {
     }
-    inline auto RemoteSystemConnectionRequest::CreateForApp(Windows::System::RemoteSystems::RemoteSystemApp const& remoteSystemApp)
+    inline auto RemoteSystemConnectionRequest::CreateForApp(winrt::Windows::System::RemoteSystems::RemoteSystemApp const& remoteSystemApp)
     {
         return impl::call_factory<RemoteSystemConnectionRequest, IRemoteSystemConnectionRequestStatics>([&](IRemoteSystemConnectionRequestStatics const& f) { return f.CreateForApp(remoteSystemApp); });
     }
@@ -2515,11 +2516,11 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteSystems
     {
         return impl::call_factory<RemoteSystemConnectionRequest, IRemoteSystemConnectionRequestStatics2>([&](IRemoteSystemConnectionRequestStatics2 const& f) { return f.CreateFromConnectionToken(connectionToken); });
     }
-    inline auto RemoteSystemConnectionRequest::CreateFromConnectionTokenForUser(Windows::System::User const& user, param::hstring const& connectionToken)
+    inline auto RemoteSystemConnectionRequest::CreateFromConnectionTokenForUser(winrt::Windows::System::User const& user, param::hstring const& connectionToken)
     {
         return impl::call_factory<RemoteSystemConnectionRequest, IRemoteSystemConnectionRequestStatics2>([&](IRemoteSystemConnectionRequestStatics2 const& f) { return f.CreateFromConnectionTokenForUser(user, connectionToken); });
     }
-    inline RemoteSystemDiscoveryTypeFilter::RemoteSystemDiscoveryTypeFilter(Windows::System::RemoteSystems::RemoteSystemDiscoveryType const& discoveryType) :
+    inline RemoteSystemDiscoveryTypeFilter::RemoteSystemDiscoveryTypeFilter(winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType const& discoveryType) :
         RemoteSystemDiscoveryTypeFilter(impl::call_factory<RemoteSystemDiscoveryTypeFilter, IRemoteSystemDiscoveryTypeFilterFactory>([&](IRemoteSystemDiscoveryTypeFilterFactory const& f) { return f.Create(discoveryType); }))
     {
     }
@@ -2561,37 +2562,37 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteSystems
     }
     inline auto RemoteSystemSession::CreateWatcher()
     {
-        return impl::call_factory_cast<Windows::System::RemoteSystems::RemoteSystemSessionWatcher(*)(IRemoteSystemSessionStatics const&), RemoteSystemSession, IRemoteSystemSessionStatics>([](IRemoteSystemSessionStatics const& f) { return f.CreateWatcher(); });
+        return impl::call_factory_cast<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher(*)(IRemoteSystemSessionStatics const&), RemoteSystemSession, IRemoteSystemSessionStatics>([](IRemoteSystemSessionStatics const& f) { return f.CreateWatcher(); });
     }
     inline RemoteSystemSessionController::RemoteSystemSessionController(param::hstring const& displayName) :
         RemoteSystemSessionController(impl::call_factory<RemoteSystemSessionController, IRemoteSystemSessionControllerFactory>([&](IRemoteSystemSessionControllerFactory const& f) { return f.CreateController(displayName); }))
     {
     }
-    inline RemoteSystemSessionController::RemoteSystemSessionController(param::hstring const& displayName, Windows::System::RemoteSystems::RemoteSystemSessionOptions const& options) :
+    inline RemoteSystemSessionController::RemoteSystemSessionController(param::hstring const& displayName, winrt::Windows::System::RemoteSystems::RemoteSystemSessionOptions const& options) :
         RemoteSystemSessionController(impl::call_factory<RemoteSystemSessionController, IRemoteSystemSessionControllerFactory>([&](IRemoteSystemSessionControllerFactory const& f) { return f.CreateController(displayName, options); }))
     {
     }
     inline RemoteSystemSessionInvitationListener::RemoteSystemSessionInvitationListener() :
-        RemoteSystemSessionInvitationListener(impl::call_factory_cast<RemoteSystemSessionInvitationListener(*)(Windows::Foundation::IActivationFactory const&), RemoteSystemSessionInvitationListener>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<RemoteSystemSessionInvitationListener>(); }))
+        RemoteSystemSessionInvitationListener(impl::call_factory_cast<RemoteSystemSessionInvitationListener(*)(winrt::Windows::Foundation::IActivationFactory const&), RemoteSystemSessionInvitationListener>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<RemoteSystemSessionInvitationListener>(); }))
     {
     }
-    inline RemoteSystemSessionMessageChannel::RemoteSystemSessionMessageChannel(Windows::System::RemoteSystems::RemoteSystemSession const& session, param::hstring const& channelName) :
+    inline RemoteSystemSessionMessageChannel::RemoteSystemSessionMessageChannel(winrt::Windows::System::RemoteSystems::RemoteSystemSession const& session, param::hstring const& channelName) :
         RemoteSystemSessionMessageChannel(impl::call_factory<RemoteSystemSessionMessageChannel, IRemoteSystemSessionMessageChannelFactory>([&](IRemoteSystemSessionMessageChannelFactory const& f) { return f.Create(session, channelName); }))
     {
     }
-    inline RemoteSystemSessionMessageChannel::RemoteSystemSessionMessageChannel(Windows::System::RemoteSystems::RemoteSystemSession const& session, param::hstring const& channelName, Windows::System::RemoteSystems::RemoteSystemSessionMessageChannelReliability const& reliability) :
+    inline RemoteSystemSessionMessageChannel::RemoteSystemSessionMessageChannel(winrt::Windows::System::RemoteSystems::RemoteSystemSession const& session, param::hstring const& channelName, winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannelReliability const& reliability) :
         RemoteSystemSessionMessageChannel(impl::call_factory<RemoteSystemSessionMessageChannel, IRemoteSystemSessionMessageChannelFactory>([&](IRemoteSystemSessionMessageChannelFactory const& f) { return f.Create(session, channelName, reliability); }))
     {
     }
     inline RemoteSystemSessionOptions::RemoteSystemSessionOptions() :
-        RemoteSystemSessionOptions(impl::call_factory_cast<RemoteSystemSessionOptions(*)(Windows::Foundation::IActivationFactory const&), RemoteSystemSessionOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<RemoteSystemSessionOptions>(); }))
+        RemoteSystemSessionOptions(impl::call_factory_cast<RemoteSystemSessionOptions(*)(winrt::Windows::Foundation::IActivationFactory const&), RemoteSystemSessionOptions>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<RemoteSystemSessionOptions>(); }))
     {
     }
-    inline RemoteSystemStatusTypeFilter::RemoteSystemStatusTypeFilter(Windows::System::RemoteSystems::RemoteSystemStatusType const& remoteSystemStatusType) :
+    inline RemoteSystemStatusTypeFilter::RemoteSystemStatusTypeFilter(winrt::Windows::System::RemoteSystems::RemoteSystemStatusType const& remoteSystemStatusType) :
         RemoteSystemStatusTypeFilter(impl::call_factory<RemoteSystemStatusTypeFilter, IRemoteSystemStatusTypeFilterFactory>([&](IRemoteSystemStatusTypeFilterFactory const& f) { return f.Create(remoteSystemStatusType); }))
     {
     }
-    inline RemoteSystemWebAccountFilter::RemoteSystemWebAccountFilter(Windows::Security::Credentials::WebAccount const& account) :
+    inline RemoteSystemWebAccountFilter::RemoteSystemWebAccountFilter(winrt::Windows::Security::Credentials::WebAccount const& account) :
         RemoteSystemWebAccountFilter(impl::call_factory<RemoteSystemWebAccountFilter, IRemoteSystemWebAccountFilterFactory>([&](IRemoteSystemWebAccountFilterFactory const& f) { return f.Create(account); }))
     {
     }
@@ -2707,6 +2708,8 @@ namespace std
     template<> struct hash<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

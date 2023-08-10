@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_ApplicationModel_UserDataAccounts_SystemAccess_H
 #define WINRT_Windows_ApplicationModel_UserDataAccounts_SystemAccess_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.ApplicationModel.UserDataAccounts.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -18,478 +19,478 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::AccountName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_AccountName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_AccountName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::AccountName(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_AccountName(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_AccountName(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::DeviceAccountTypeId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_DeviceAccountTypeId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_DeviceAccountTypeId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::DeviceAccountTypeId(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_DeviceAccountTypeId(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_DeviceAccountTypeId(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::ServerType() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::ServerType() const
     {
-        Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_ServerType(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_ServerType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::ServerType(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::ServerType(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_ServerType(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_ServerType(static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::EmailAddress() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_EmailAddress(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_EmailAddress(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::EmailAddress(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_EmailAddress(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_EmailAddress(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::Domain() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_Domain(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_Domain(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::Domain(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_Domain(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_Domain(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::EmailSyncEnabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_EmailSyncEnabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_EmailSyncEnabled(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::EmailSyncEnabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_EmailSyncEnabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_EmailSyncEnabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::ContactsSyncEnabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_ContactsSyncEnabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_ContactsSyncEnabled(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::ContactsSyncEnabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_ContactsSyncEnabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_ContactsSyncEnabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::CalendarSyncEnabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_CalendarSyncEnabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_CalendarSyncEnabled(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::CalendarSyncEnabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_CalendarSyncEnabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_CalendarSyncEnabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::IncomingServerAddress() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_IncomingServerAddress(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_IncomingServerAddress(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::IncomingServerAddress(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_IncomingServerAddress(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_IncomingServerAddress(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::IncomingServerPort() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_IncomingServerPort(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_IncomingServerPort(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::IncomingServerPort(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_IncomingServerPort(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_IncomingServerPort(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::IncomingServerRequiresSsl() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_IncomingServerRequiresSsl(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_IncomingServerRequiresSsl(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::IncomingServerRequiresSsl(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_IncomingServerRequiresSsl(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_IncomingServerRequiresSsl(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::IncomingServerUsername() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_IncomingServerUsername(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_IncomingServerUsername(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::IncomingServerUsername(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_IncomingServerUsername(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_IncomingServerUsername(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::OutgoingServerAddress() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_OutgoingServerAddress(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_OutgoingServerAddress(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::OutgoingServerAddress(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_OutgoingServerAddress(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_OutgoingServerAddress(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::OutgoingServerPort() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_OutgoingServerPort(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_OutgoingServerPort(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::OutgoingServerPort(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_OutgoingServerPort(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_OutgoingServerPort(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::OutgoingServerRequiresSsl() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_OutgoingServerRequiresSsl(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_OutgoingServerRequiresSsl(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::OutgoingServerRequiresSsl(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_OutgoingServerRequiresSsl(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_OutgoingServerRequiresSsl(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::OutgoingServerUsername() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_OutgoingServerUsername(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->get_OutgoingServerUsername(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration<D>::OutgoingServerUsername(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_OutgoingServerUsername(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration)->put_OutgoingServerUsername(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IncomingServerCredential() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::PasswordCredential) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IncomingServerCredential() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IncomingServerCredential(&value));
-        return Windows::Security::Credentials::PasswordCredential{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IncomingServerCredential(&value));
+        return winrt::Windows::Security::Credentials::PasswordCredential{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IncomingServerCredential(Windows::Security::Credentials::PasswordCredential const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IncomingServerCredential(winrt::Windows::Security::Credentials::PasswordCredential const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IncomingServerCredential(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IncomingServerCredential(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Security::Credentials::PasswordCredential) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::OutgoingServerCredential() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Credentials::PasswordCredential) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::OutgoingServerCredential() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_OutgoingServerCredential(&value));
-        return Windows::Security::Credentials::PasswordCredential{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_OutgoingServerCredential(&value));
+        return winrt::Windows::Security::Credentials::PasswordCredential{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::OutgoingServerCredential(Windows::Security::Credentials::PasswordCredential const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::OutgoingServerCredential(winrt::Windows::Security::Credentials::PasswordCredential const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_OutgoingServerCredential(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_OutgoingServerCredential(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::OAuthRefreshToken() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_OAuthRefreshToken(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_OAuthRefreshToken(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::OAuthRefreshToken(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_OAuthRefreshToken(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_OAuthRefreshToken(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsExternallyManaged() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsExternallyManaged(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsExternallyManaged(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsExternallyManaged(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsExternallyManaged(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsExternallyManaged(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AccountIconId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AccountIconId() const
     {
-        Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AccountIconId(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AccountIconId(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AccountIconId(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AccountIconId(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AccountIconId(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AccountIconId(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AuthenticationType() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AuthenticationType() const
     {
-        Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AuthenticationType(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AuthenticationType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AuthenticationType(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AuthenticationType(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AuthenticationType(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AuthenticationType(static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsSsoAuthenticationSupported() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsSsoAuthenticationSupported(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsSsoAuthenticationSupported(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::SsoAccountId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_SsoAccountId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_SsoAccountId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::SsoAccountId(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_SsoAccountId(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_SsoAccountId(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AlwaysDownloadFullMessage() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AlwaysDownloadFullMessage(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AlwaysDownloadFullMessage(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AlwaysDownloadFullMessage(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AlwaysDownloadFullMessage(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AlwaysDownloadFullMessage(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::DoesPolicyAllowMailSync() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_DoesPolicyAllowMailSync(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_DoesPolicyAllowMailSync(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::SyncScheduleKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::SyncScheduleKind() const
     {
-        Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_SyncScheduleKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_SyncScheduleKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::SyncScheduleKind(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::SyncScheduleKind(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_SyncScheduleKind(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_SyncScheduleKind(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::MailAgeFilter() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::MailAgeFilter() const
     {
-        Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_MailAgeFilter(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_MailAgeFilter(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::MailAgeFilter(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::MailAgeFilter(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_MailAgeFilter(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_MailAgeFilter(static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsClientAuthenticationCertificateRequired() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsClientAuthenticationCertificateRequired(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsClientAuthenticationCertificateRequired(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsClientAuthenticationCertificateRequired(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsClientAuthenticationCertificateRequired(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsClientAuthenticationCertificateRequired(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AutoSelectAuthenticationCertificate() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AutoSelectAuthenticationCertificate(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AutoSelectAuthenticationCertificate(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AutoSelectAuthenticationCertificate(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AutoSelectAuthenticationCertificate(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AutoSelectAuthenticationCertificate(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AuthenticationCertificateId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AuthenticationCertificateId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_AuthenticationCertificateId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::AuthenticationCertificateId(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AuthenticationCertificateId(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_AuthenticationCertificateId(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavSyncScheduleKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavSyncScheduleKind() const
     {
-        Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CardDavSyncScheduleKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CardDavSyncScheduleKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavSyncScheduleKind(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavSyncScheduleKind(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CardDavSyncScheduleKind(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CardDavSyncScheduleKind(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavSyncScheduleKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavSyncScheduleKind() const
     {
-        Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CalDavSyncScheduleKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CalDavSyncScheduleKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavSyncScheduleKind(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavSyncScheduleKind(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CalDavSyncScheduleKind(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CalDavSyncScheduleKind(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavServerUrl() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavServerUrl() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CardDavServerUrl(&value));
-        return Windows::Foundation::Uri{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CardDavServerUrl(&value));
+        return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavServerUrl(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavServerUrl(winrt::Windows::Foundation::Uri const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CardDavServerUrl(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CardDavServerUrl(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavRequiresSsl() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CardDavRequiresSsl(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CardDavRequiresSsl(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CardDavRequiresSsl(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CardDavRequiresSsl(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CardDavRequiresSsl(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavServerUrl() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavServerUrl() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CalDavServerUrl(&value));
-        return Windows::Foundation::Uri{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CalDavServerUrl(&value));
+        return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavServerUrl(Windows::Foundation::Uri const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavServerUrl(winrt::Windows::Foundation::Uri const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CalDavServerUrl(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CalDavServerUrl(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavRequiresSsl() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CalDavRequiresSsl(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_CalDavRequiresSsl(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::CalDavRequiresSsl(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CalDavRequiresSsl(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_CalDavRequiresSsl(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::WasModifiedByUser() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_WasModifiedByUser(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_WasModifiedByUser(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::WasModifiedByUser(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_WasModifiedByUser(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_WasModifiedByUser(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::WasIncomingServerCertificateHashConfirmed() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_WasIncomingServerCertificateHashConfirmed(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_WasIncomingServerCertificateHashConfirmed(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::WasIncomingServerCertificateHashConfirmed(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_WasIncomingServerCertificateHashConfirmed(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_WasIncomingServerCertificateHashConfirmed(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IncomingServerCertificateHash() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IncomingServerCertificateHash(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IncomingServerCertificateHash(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IncomingServerCertificateHash(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IncomingServerCertificateHash(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IncomingServerCertificateHash(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsOutgoingServerAuthenticationRequired() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsOutgoingServerAuthenticationRequired(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsOutgoingServerAuthenticationRequired(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsOutgoingServerAuthenticationRequired(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsOutgoingServerAuthenticationRequired(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsOutgoingServerAuthenticationRequired(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsOutgoingServerAuthenticationEnabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsOutgoingServerAuthenticationEnabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsOutgoingServerAuthenticationEnabled(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsOutgoingServerAuthenticationEnabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsOutgoingServerAuthenticationEnabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsOutgoingServerAuthenticationEnabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::WasOutgoingServerCertificateHashConfirmed() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_WasOutgoingServerCertificateHashConfirmed(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_WasOutgoingServerCertificateHashConfirmed(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::WasOutgoingServerCertificateHashConfirmed(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_WasOutgoingServerCertificateHashConfirmed(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_WasOutgoingServerCertificateHashConfirmed(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::OutgoingServerCertificateHash() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_OutgoingServerCertificateHash(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_OutgoingServerCertificateHash(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::OutgoingServerCertificateHash(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_OutgoingServerCertificateHash(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_OutgoingServerCertificateHash(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsSyncScheduleManagedBySystem() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsSyncScheduleManagedBySystem(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->get_IsSyncScheduleManagedBySystem(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IDeviceAccountConfiguration2<D>::IsSyncScheduleManagedBySystem(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsSyncScheduleManagedBySystem(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2)->put_IsSyncScheduleManagedBySystem(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<hstring>>) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics<D>::AddAndShowDeviceAccountsAsync(param::async_iterable<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration> const& accounts) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<hstring>>) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics<D>::AddAndShowDeviceAccountsAsync(param::async_iterable<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration> const& accounts) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics)->AddAndShowDeviceAccountsAsync(*(void**)(&accounts), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<hstring>>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics)->AddAndShowDeviceAccountsAsync(*(void**)(&accounts), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<hstring>>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics2<D>::SuppressLocalAccountWithAccountAsync(param::hstring const& userDataAccountId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics2<D>::SuppressLocalAccountWithAccountAsync(param::hstring const& userDataAccountId) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2)->SuppressLocalAccountWithAccountAsync(*(void**)(&userDataAccountId), &result));
-        return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2)->SuppressLocalAccountWithAccountAsync(*(void**)(&userDataAccountId), &result));
+        return winrt::Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics2<D>::CreateDeviceAccountAsync(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration const& account) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics2<D>::CreateDeviceAccountAsync(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration const& account) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2)->CreateDeviceAccountAsync(*(void**)(&account), &result));
-        return Windows::Foundation::IAsyncOperation<hstring>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2)->CreateDeviceAccountAsync(*(void**)(&account), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<hstring>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics2<D>::DeleteDeviceAccountAsync(param::hstring const& accountId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics2<D>::DeleteDeviceAccountAsync(param::hstring const& accountId) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2)->DeleteDeviceAccountAsync(*(void**)(&accountId), &result));
-        return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2)->DeleteDeviceAccountAsync(*(void**)(&accountId), &result));
+        return winrt::Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics2<D>::GetDeviceAccountConfigurationAsync(param::hstring const& accountId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>) consume_Windows_ApplicationModel_UserDataAccounts_SystemAccess_IUserDataAccountSystemAccessManagerStatics2<D>::GetDeviceAccountConfigurationAsync(param::hstring const& accountId) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2)->GetDeviceAccountConfigurationAsync(*(void**)(&accountId), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2)->GetDeviceAccountConfigurationAsync(*(void**)(&accountId), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>{ result, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration>
     {
         int32_t __stdcall get_AccountName(void** value) noexcept final try
         {
@@ -524,14 +525,14 @@ namespace winrt::impl
         int32_t __stdcall get_ServerType(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType>(this->shim().ServerType());
+            *value = detach_from<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType>(this->shim().ServerType());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_ServerType(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ServerType(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType const*>(&value));
+            this->shim().ServerType(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -727,20 +728,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IDeviceAccountConfiguration2>
     {
         int32_t __stdcall get_IncomingServerCredential(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Credentials::PasswordCredential>(this->shim().IncomingServerCredential());
+            *value = detach_from<winrt::Windows::Security::Credentials::PasswordCredential>(this->shim().IncomingServerCredential());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_IncomingServerCredential(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().IncomingServerCredential(*reinterpret_cast<Windows::Security::Credentials::PasswordCredential const*>(&value));
+            this->shim().IncomingServerCredential(*reinterpret_cast<winrt::Windows::Security::Credentials::PasswordCredential const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -748,14 +749,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Security::Credentials::PasswordCredential>(this->shim().OutgoingServerCredential());
+            *value = detach_from<winrt::Windows::Security::Credentials::PasswordCredential>(this->shim().OutgoingServerCredential());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_OutgoingServerCredential(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().OutgoingServerCredential(*reinterpret_cast<Windows::Security::Credentials::PasswordCredential const*>(&value));
+            this->shim().OutgoingServerCredential(*reinterpret_cast<winrt::Windows::Security::Credentials::PasswordCredential const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -791,28 +792,28 @@ namespace winrt::impl
         int32_t __stdcall get_AccountIconId(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId>(this->shim().AccountIconId());
+            *value = detach_from<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId>(this->shim().AccountIconId());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_AccountIconId(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AccountIconId(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId const*>(&value));
+            this->shim().AccountIconId(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_AuthenticationType(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType>(this->shim().AuthenticationType());
+            *value = detach_from<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType>(this->shim().AuthenticationType());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_AuthenticationType(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AuthenticationType(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType const*>(&value));
+            this->shim().AuthenticationType(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -862,28 +863,28 @@ namespace winrt::impl
         int32_t __stdcall get_SyncScheduleKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(this->shim().SyncScheduleKind());
+            *value = detach_from<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(this->shim().SyncScheduleKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_SyncScheduleKind(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SyncScheduleKind(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const*>(&value));
+            this->shim().SyncScheduleKind(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_MailAgeFilter(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter>(this->shim().MailAgeFilter());
+            *value = detach_from<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter>(this->shim().MailAgeFilter());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_MailAgeFilter(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().MailAgeFilter(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter const*>(&value));
+            this->shim().MailAgeFilter(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -933,28 +934,28 @@ namespace winrt::impl
         int32_t __stdcall get_CardDavSyncScheduleKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(this->shim().CardDavSyncScheduleKind());
+            *value = detach_from<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(this->shim().CardDavSyncScheduleKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_CardDavSyncScheduleKind(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().CardDavSyncScheduleKind(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const*>(&value));
+            this->shim().CardDavSyncScheduleKind(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_CalDavSyncScheduleKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(this->shim().CalDavSyncScheduleKind());
+            *value = detach_from<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>(this->shim().CalDavSyncScheduleKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_CalDavSyncScheduleKind(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().CalDavSyncScheduleKind(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const*>(&value));
+            this->shim().CalDavSyncScheduleKind(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -962,14 +963,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Uri>(this->shim().CardDavServerUrl());
+            *value = detach_from<winrt::Windows::Foundation::Uri>(this->shim().CardDavServerUrl());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_CardDavServerUrl(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().CardDavServerUrl(*reinterpret_cast<Windows::Foundation::Uri const*>(&value));
+            this->shim().CardDavServerUrl(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -991,14 +992,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Uri>(this->shim().CalDavServerUrl());
+            *value = detach_from<winrt::Windows::Foundation::Uri>(this->shim().CalDavServerUrl());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_CalDavServerUrl(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().CalDavServerUrl(*reinterpret_cast<Windows::Foundation::Uri const*>(&value));
+            this->shim().CalDavServerUrl(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1134,13 +1135,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics>
     {
         int32_t __stdcall AddAndShowDeviceAccountsAsync(void* accounts, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<hstring>>>(this->shim().AddAndShowDeviceAccountsAsync(*reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration> const*>(&accounts)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<hstring>>>(this->shim().AddAndShowDeviceAccountsAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration> const*>(&accounts)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1148,13 +1149,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2>
     {
         int32_t __stdcall SuppressLocalAccountWithAccountAsync(void* userDataAccountId, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncAction>(this->shim().SuppressLocalAccountWithAccountAsync(*reinterpret_cast<hstring const*>(&userDataAccountId)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().SuppressLocalAccountWithAccountAsync(*reinterpret_cast<hstring const*>(&userDataAccountId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1162,7 +1163,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<hstring>>(this->shim().CreateDeviceAccountAsync(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration const*>(&account)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<hstring>>(this->shim().CreateDeviceAccountAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration const*>(&account)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1170,7 +1171,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncAction>(this->shim().DeleteDeviceAccountAsync(*reinterpret_cast<hstring const*>(&accountId)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().DeleteDeviceAccountAsync(*reinterpret_cast<hstring const*>(&accountId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1178,7 +1179,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>>(this->shim().GetDeviceAccountConfigurationAsync(*reinterpret_cast<hstring const*>(&accountId)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>>(this->shim().GetDeviceAccountConfigurationAsync(*reinterpret_cast<hstring const*>(&accountId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1188,10 +1189,10 @@ namespace winrt::impl
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 {
     inline DeviceAccountConfiguration::DeviceAccountConfiguration() :
-        DeviceAccountConfiguration(impl::call_factory_cast<DeviceAccountConfiguration(*)(Windows::Foundation::IActivationFactory const&), DeviceAccountConfiguration>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<DeviceAccountConfiguration>(); }))
+        DeviceAccountConfiguration(impl::call_factory_cast<DeviceAccountConfiguration(*)(winrt::Windows::Foundation::IActivationFactory const&), DeviceAccountConfiguration>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<DeviceAccountConfiguration>(); }))
     {
     }
-    inline auto UserDataAccountSystemAccessManager::AddAndShowDeviceAccountsAsync(param::async_iterable<Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration> const& accounts)
+    inline auto UserDataAccountSystemAccessManager::AddAndShowDeviceAccountsAsync(param::async_iterable<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration> const& accounts)
     {
         return impl::call_factory<UserDataAccountSystemAccessManager, IUserDataAccountSystemAccessManagerStatics>([&](IUserDataAccountSystemAccessManagerStatics const& f) { return f.AddAndShowDeviceAccountsAsync(accounts); });
     }
@@ -1199,7 +1200,7 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataAccounts::Syste
     {
         return impl::call_factory<UserDataAccountSystemAccessManager, IUserDataAccountSystemAccessManagerStatics2>([&](IUserDataAccountSystemAccessManagerStatics2 const& f) { return f.SuppressLocalAccountWithAccountAsync(userDataAccountId); });
     }
-    inline auto UserDataAccountSystemAccessManager::CreateDeviceAccountAsync(Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration const& account)
+    inline auto UserDataAccountSystemAccessManager::CreateDeviceAccountAsync(winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration const& account)
     {
         return impl::call_factory<UserDataAccountSystemAccessManager, IUserDataAccountSystemAccessManagerStatics2>([&](IUserDataAccountSystemAccessManagerStatics2 const& f) { return f.CreateDeviceAccountAsync(account); });
     }
@@ -1221,6 +1222,8 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::IUserDataAccountSystemAccessManagerStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

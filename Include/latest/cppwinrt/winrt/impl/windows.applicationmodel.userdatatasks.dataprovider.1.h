@@ -1,96 +1,97 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_ApplicationModel_UserDataTasks_DataProvider_1_H
 #define WINRT_Windows_ApplicationModel_UserDataTasks_DataProvider_1_H
 #include "winrt/impl/Windows.ApplicationModel.UserDataTasks.DataProvider.0.h"
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataTasks::DataProvider
 {
     struct __declspec(empty_bases) IUserDataTaskDataProviderConnection :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskDataProviderConnection>
     {
         IUserDataTaskDataProviderConnection(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskDataProviderConnection(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskDataProviderConnection(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskDataProviderTriggerDetails :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskDataProviderTriggerDetails>
     {
         IUserDataTaskDataProviderTriggerDetails(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskDataProviderTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskDataProviderTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListCompleteTaskRequest :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListCompleteTaskRequest>
     {
         IUserDataTaskListCompleteTaskRequest(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListCompleteTaskRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListCompleteTaskRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListCompleteTaskRequestEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListCompleteTaskRequestEventArgs>
     {
         IUserDataTaskListCompleteTaskRequestEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListCompleteTaskRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListCompleteTaskRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListCreateOrUpdateTaskRequest :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListCreateOrUpdateTaskRequest>
     {
         IUserDataTaskListCreateOrUpdateTaskRequest(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListCreateOrUpdateTaskRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListCreateOrUpdateTaskRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListCreateOrUpdateTaskRequestEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListCreateOrUpdateTaskRequestEventArgs>
     {
         IUserDataTaskListCreateOrUpdateTaskRequestEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListCreateOrUpdateTaskRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListCreateOrUpdateTaskRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListDeleteTaskRequest :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListDeleteTaskRequest>
     {
         IUserDataTaskListDeleteTaskRequest(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListDeleteTaskRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListDeleteTaskRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListDeleteTaskRequestEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListDeleteTaskRequestEventArgs>
     {
         IUserDataTaskListDeleteTaskRequestEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListDeleteTaskRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListDeleteTaskRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListSkipOccurrenceRequest :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListSkipOccurrenceRequest>
     {
         IUserDataTaskListSkipOccurrenceRequest(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListSkipOccurrenceRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListSkipOccurrenceRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListSkipOccurrenceRequestEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListSkipOccurrenceRequestEventArgs>
     {
         IUserDataTaskListSkipOccurrenceRequestEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListSkipOccurrenceRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListSkipOccurrenceRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListSyncManagerSyncRequest :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListSyncManagerSyncRequest>
     {
         IUserDataTaskListSyncManagerSyncRequest(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListSyncManagerSyncRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListSyncManagerSyncRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IUserDataTaskListSyncManagerSyncRequestEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserDataTaskListSyncManagerSyncRequestEventArgs>
     {
         IUserDataTaskListSyncManagerSyncRequestEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IUserDataTaskListSyncManagerSyncRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IUserDataTaskListSyncManagerSyncRequestEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Security_Cryptography_Core_2_H
 #define WINRT_Windows_Security_Cryptography_Core_2_H
 #include "winrt/impl/Windows.Security.Cryptography.Certificates.1.h"
@@ -35,38 +36,38 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
         [[nodiscard]] static auto EcdsaSha384();
         [[nodiscard]] static auto EcdsaSha512();
     };
-    struct __declspec(empty_bases) AsymmetricKeyAlgorithmProvider : Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider,
-        impl::require<AsymmetricKeyAlgorithmProvider, Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2>
+    struct __declspec(empty_bases) AsymmetricKeyAlgorithmProvider : winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider,
+        impl::require<AsymmetricKeyAlgorithmProvider, winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider2>
     {
         AsymmetricKeyAlgorithmProvider(std::nullptr_t) noexcept {}
-        AsymmetricKeyAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider(ptr, take_ownership_from_abi) {}
+        AsymmetricKeyAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Cryptography::Core::IAsymmetricKeyAlgorithmProvider(ptr, take_ownership_from_abi) {}
         static auto OpenAlgorithm(param::hstring const& algorithm);
     };
     struct CryptographicEngine
     {
         CryptographicEngine() = delete;
-        static auto Encrypt(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& iv);
-        static auto Decrypt(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& iv);
-        static auto EncryptAndAuthenticate(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& nonce, Windows::Storage::Streams::IBuffer const& authenticatedData);
-        static auto DecryptAndAuthenticate(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& nonce, Windows::Storage::Streams::IBuffer const& authenticationTag, Windows::Storage::Streams::IBuffer const& authenticatedData);
-        static auto Sign(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data);
-        static auto VerifySignature(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& signature);
-        static auto DeriveKeyMaterial(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Security::Cryptography::Core::KeyDerivationParameters const& parameters, uint32_t desiredKeySize);
-        static auto SignHashedData(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data);
-        static auto VerifySignatureWithHashInput(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& signature);
-        static auto DecryptAsync(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data, Windows::Storage::Streams::IBuffer const& iv);
-        static auto SignAsync(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data);
-        static auto SignHashedDataAsync(Windows::Security::Cryptography::Core::CryptographicKey const& key, Windows::Storage::Streams::IBuffer const& data);
+        static auto Encrypt(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& iv);
+        static auto Decrypt(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& iv);
+        static auto EncryptAndAuthenticate(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& nonce, winrt::Windows::Storage::Streams::IBuffer const& authenticatedData);
+        static auto DecryptAndAuthenticate(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& nonce, winrt::Windows::Storage::Streams::IBuffer const& authenticationTag, winrt::Windows::Storage::Streams::IBuffer const& authenticatedData);
+        static auto Sign(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data);
+        static auto VerifySignature(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& signature);
+        static auto DeriveKeyMaterial(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters const& parameters, uint32_t desiredKeySize);
+        static auto SignHashedData(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data);
+        static auto VerifySignatureWithHashInput(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& signature);
+        static auto DecryptAsync(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data, winrt::Windows::Storage::Streams::IBuffer const& iv);
+        static auto SignAsync(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data);
+        static auto SignHashedDataAsync(winrt::Windows::Security::Cryptography::Core::CryptographicKey const& key, winrt::Windows::Storage::Streams::IBuffer const& data);
     };
-    struct __declspec(empty_bases) CryptographicHash : Windows::Security::Cryptography::Core::IHashComputation
+    struct __declspec(empty_bases) CryptographicHash : winrt::Windows::Security::Cryptography::Core::IHashComputation
     {
         CryptographicHash(std::nullptr_t) noexcept {}
-        CryptographicHash(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Cryptography::Core::IHashComputation(ptr, take_ownership_from_abi) {}
+        CryptographicHash(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Cryptography::Core::IHashComputation(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) CryptographicKey : Windows::Security::Cryptography::Core::ICryptographicKey
+    struct __declspec(empty_bases) CryptographicKey : winrt::Windows::Security::Cryptography::Core::ICryptographicKey
     {
         CryptographicKey(std::nullptr_t) noexcept {}
-        CryptographicKey(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Cryptography::Core::ICryptographicKey(ptr, take_ownership_from_abi) {}
+        CryptographicKey(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Cryptography::Core::ICryptographicKey(ptr, take_ownership_from_abi) {}
     };
     struct EccCurveNames
     {
@@ -118,10 +119,10 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
         [[nodiscard]] static auto X962P256v1();
         [[nodiscard]] static auto AllEccCurveNames();
     };
-    struct __declspec(empty_bases) EncryptedAndAuthenticatedData : Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData
+    struct __declspec(empty_bases) EncryptedAndAuthenticatedData : winrt::Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData
     {
         EncryptedAndAuthenticatedData(std::nullptr_t) noexcept {}
-        EncryptedAndAuthenticatedData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData(ptr, take_ownership_from_abi) {}
+        EncryptedAndAuthenticatedData(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Cryptography::Core::IEncryptedAndAuthenticatedData(ptr, take_ownership_from_abi) {}
     };
     struct HashAlgorithmNames
     {
@@ -132,10 +133,10 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
         [[nodiscard]] static auto Sha384();
         [[nodiscard]] static auto Sha512();
     };
-    struct __declspec(empty_bases) HashAlgorithmProvider : Windows::Security::Cryptography::Core::IHashAlgorithmProvider
+    struct __declspec(empty_bases) HashAlgorithmProvider : winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProvider
     {
         HashAlgorithmProvider(std::nullptr_t) noexcept {}
-        HashAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Cryptography::Core::IHashAlgorithmProvider(ptr, take_ownership_from_abi) {}
+        HashAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Cryptography::Core::IHashAlgorithmProvider(ptr, take_ownership_from_abi) {}
         static auto OpenAlgorithm(param::hstring const& algorithm);
     };
     struct KeyDerivationAlgorithmNames
@@ -162,21 +163,21 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
         [[nodiscard]] static auto CapiKdfSha384();
         [[nodiscard]] static auto CapiKdfSha512();
     };
-    struct __declspec(empty_bases) KeyDerivationAlgorithmProvider : Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider
+    struct __declspec(empty_bases) KeyDerivationAlgorithmProvider : winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider
     {
         KeyDerivationAlgorithmProvider(std::nullptr_t) noexcept {}
-        KeyDerivationAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider(ptr, take_ownership_from_abi) {}
+        KeyDerivationAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Cryptography::Core::IKeyDerivationAlgorithmProvider(ptr, take_ownership_from_abi) {}
         static auto OpenAlgorithm(param::hstring const& algorithm);
     };
-    struct __declspec(empty_bases) KeyDerivationParameters : Windows::Security::Cryptography::Core::IKeyDerivationParameters,
-        impl::require<KeyDerivationParameters, Windows::Security::Cryptography::Core::IKeyDerivationParameters2>
+    struct __declspec(empty_bases) KeyDerivationParameters : winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters,
+        impl::require<KeyDerivationParameters, winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters2>
     {
         KeyDerivationParameters(std::nullptr_t) noexcept {}
-        KeyDerivationParameters(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Cryptography::Core::IKeyDerivationParameters(ptr, take_ownership_from_abi) {}
-        static auto BuildForPbkdf2(Windows::Storage::Streams::IBuffer const& pbkdf2Salt, uint32_t iterationCount);
-        static auto BuildForSP800108(Windows::Storage::Streams::IBuffer const& label, Windows::Storage::Streams::IBuffer const& context);
-        static auto BuildForSP80056a(Windows::Storage::Streams::IBuffer const& algorithmId, Windows::Storage::Streams::IBuffer const& partyUInfo, Windows::Storage::Streams::IBuffer const& partyVInfo, Windows::Storage::Streams::IBuffer const& suppPubInfo, Windows::Storage::Streams::IBuffer const& suppPrivInfo);
-        static auto BuildForCapi1Kdf(Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const& capi1KdfTargetAlgorithm);
+        KeyDerivationParameters(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Cryptography::Core::IKeyDerivationParameters(ptr, take_ownership_from_abi) {}
+        static auto BuildForPbkdf2(winrt::Windows::Storage::Streams::IBuffer const& pbkdf2Salt, uint32_t iterationCount);
+        static auto BuildForSP800108(winrt::Windows::Storage::Streams::IBuffer const& label, winrt::Windows::Storage::Streams::IBuffer const& context);
+        static auto BuildForSP80056a(winrt::Windows::Storage::Streams::IBuffer const& algorithmId, winrt::Windows::Storage::Streams::IBuffer const& partyUInfo, winrt::Windows::Storage::Streams::IBuffer const& partyVInfo, winrt::Windows::Storage::Streams::IBuffer const& suppPubInfo, winrt::Windows::Storage::Streams::IBuffer const& suppPrivInfo);
+        static auto BuildForCapi1Kdf(winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm const& capi1KdfTargetAlgorithm);
     };
     struct MacAlgorithmNames
     {
@@ -188,18 +189,18 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
         [[nodiscard]] static auto HmacSha512();
         [[nodiscard]] static auto AesCmac();
     };
-    struct __declspec(empty_bases) MacAlgorithmProvider : Windows::Security::Cryptography::Core::IMacAlgorithmProvider,
-        impl::require<MacAlgorithmProvider, Windows::Security::Cryptography::Core::IMacAlgorithmProvider2>
+    struct __declspec(empty_bases) MacAlgorithmProvider : winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider,
+        impl::require<MacAlgorithmProvider, winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider2>
     {
         MacAlgorithmProvider(std::nullptr_t) noexcept {}
-        MacAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Cryptography::Core::IMacAlgorithmProvider(ptr, take_ownership_from_abi) {}
+        MacAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Cryptography::Core::IMacAlgorithmProvider(ptr, take_ownership_from_abi) {}
         static auto OpenAlgorithm(param::hstring const& algorithm);
     };
     struct PersistedKeyProvider
     {
         PersistedKeyProvider() = delete;
-        static auto OpenKeyPairFromCertificateAsync(Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, Windows::Security::Cryptography::Core::CryptographicPadding const& padding);
-        static auto OpenPublicKeyFromCertificate(Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, Windows::Security::Cryptography::Core::CryptographicPadding const& padding);
+        static auto OpenKeyPairFromCertificateAsync(winrt::Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, winrt::Windows::Security::Cryptography::Core::CryptographicPadding const& padding);
+        static auto OpenPublicKeyFromCertificate(winrt::Windows::Security::Cryptography::Certificates::Certificate const& certificate, param::hstring const& hashAlgorithmName, winrt::Windows::Security::Cryptography::Core::CryptographicPadding const& padding);
     };
     struct SymmetricAlgorithmNames
     {
@@ -224,10 +225,10 @@ WINRT_EXPORT namespace winrt::Windows::Security::Cryptography::Core
         [[nodiscard]] static auto Rc2EcbPkcs7();
         [[nodiscard]] static auto Rc4();
     };
-    struct __declspec(empty_bases) SymmetricKeyAlgorithmProvider : Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider
+    struct __declspec(empty_bases) SymmetricKeyAlgorithmProvider : winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider
     {
         SymmetricKeyAlgorithmProvider(std::nullptr_t) noexcept {}
-        SymmetricKeyAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider(ptr, take_ownership_from_abi) {}
+        SymmetricKeyAlgorithmProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Cryptography::Core::ISymmetricKeyAlgorithmProvider(ptr, take_ownership_from_abi) {}
         static auto OpenAlgorithm(param::hstring const& algorithm);
     };
 }

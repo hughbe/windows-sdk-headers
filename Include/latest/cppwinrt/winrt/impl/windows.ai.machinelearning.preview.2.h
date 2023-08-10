@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_AI_MachineLearning_Preview_2_H
 #define WINRT_Windows_AI_MachineLearning_Preview_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
@@ -11,58 +12,58 @@
 #include "winrt/impl/Windows.AI.MachineLearning.Preview.1.h"
 WINRT_EXPORT namespace winrt::Windows::AI::MachineLearning::Preview
 {
-    struct __declspec(empty_bases) ImageVariableDescriptorPreview : Windows::AI::MachineLearning::Preview::IImageVariableDescriptorPreview
+    struct __declspec(empty_bases) ImageVariableDescriptorPreview : winrt::Windows::AI::MachineLearning::Preview::IImageVariableDescriptorPreview
     {
         ImageVariableDescriptorPreview(std::nullptr_t) noexcept {}
-        ImageVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::IImageVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
+        ImageVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::IImageVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) InferencingOptionsPreview : Windows::AI::MachineLearning::Preview::IInferencingOptionsPreview
+    struct __declspec(empty_bases) InferencingOptionsPreview : winrt::Windows::AI::MachineLearning::Preview::IInferencingOptionsPreview
     {
         InferencingOptionsPreview(std::nullptr_t) noexcept {}
-        InferencingOptionsPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::IInferencingOptionsPreview(ptr, take_ownership_from_abi) {}
+        InferencingOptionsPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::IInferencingOptionsPreview(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) LearningModelBindingPreview : Windows::AI::MachineLearning::Preview::ILearningModelBindingPreview
+    struct __declspec(empty_bases) LearningModelBindingPreview : winrt::Windows::AI::MachineLearning::Preview::ILearningModelBindingPreview
     {
         LearningModelBindingPreview(std::nullptr_t) noexcept {}
-        LearningModelBindingPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::ILearningModelBindingPreview(ptr, take_ownership_from_abi) {}
-        explicit LearningModelBindingPreview(Windows::AI::MachineLearning::Preview::LearningModelPreview const& model);
+        LearningModelBindingPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::ILearningModelBindingPreview(ptr, take_ownership_from_abi) {}
+        explicit LearningModelBindingPreview(winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview const& model);
     };
-    struct __declspec(empty_bases) LearningModelDescriptionPreview : Windows::AI::MachineLearning::Preview::ILearningModelDescriptionPreview
+    struct __declspec(empty_bases) LearningModelDescriptionPreview : winrt::Windows::AI::MachineLearning::Preview::ILearningModelDescriptionPreview
     {
         LearningModelDescriptionPreview(std::nullptr_t) noexcept {}
-        LearningModelDescriptionPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::ILearningModelDescriptionPreview(ptr, take_ownership_from_abi) {}
+        LearningModelDescriptionPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::ILearningModelDescriptionPreview(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) LearningModelEvaluationResultPreview : Windows::AI::MachineLearning::Preview::ILearningModelEvaluationResultPreview
+    struct __declspec(empty_bases) LearningModelEvaluationResultPreview : winrt::Windows::AI::MachineLearning::Preview::ILearningModelEvaluationResultPreview
     {
         LearningModelEvaluationResultPreview(std::nullptr_t) noexcept {}
-        LearningModelEvaluationResultPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::ILearningModelEvaluationResultPreview(ptr, take_ownership_from_abi) {}
+        LearningModelEvaluationResultPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::ILearningModelEvaluationResultPreview(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) LearningModelPreview : Windows::AI::MachineLearning::Preview::ILearningModelPreview
+    struct __declspec(empty_bases) LearningModelPreview : winrt::Windows::AI::MachineLearning::Preview::ILearningModelPreview
     {
         LearningModelPreview(std::nullptr_t) noexcept {}
-        LearningModelPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::ILearningModelPreview(ptr, take_ownership_from_abi) {}
-        static auto LoadModelFromStorageFileAsync(Windows::Storage::IStorageFile const& modelFile);
-        static auto LoadModelFromStreamAsync(Windows::Storage::Streams::IRandomAccessStreamReference const& modelStream);
+        LearningModelPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::ILearningModelPreview(ptr, take_ownership_from_abi) {}
+        static auto LoadModelFromStorageFileAsync(winrt::Windows::Storage::IStorageFile const& modelFile);
+        static auto LoadModelFromStreamAsync(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& modelStream);
     };
-    struct __declspec(empty_bases) LearningModelVariableDescriptorPreview : Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview
+    struct __declspec(empty_bases) LearningModelVariableDescriptorPreview : winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview
     {
         LearningModelVariableDescriptorPreview(std::nullptr_t) noexcept {}
-        LearningModelVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
+        LearningModelVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MapVariableDescriptorPreview : Windows::AI::MachineLearning::Preview::IMapVariableDescriptorPreview
+    struct __declspec(empty_bases) MapVariableDescriptorPreview : winrt::Windows::AI::MachineLearning::Preview::IMapVariableDescriptorPreview
     {
         MapVariableDescriptorPreview(std::nullptr_t) noexcept {}
-        MapVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::IMapVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
+        MapVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::IMapVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SequenceVariableDescriptorPreview : Windows::AI::MachineLearning::Preview::ISequenceVariableDescriptorPreview
+    struct __declspec(empty_bases) SequenceVariableDescriptorPreview : winrt::Windows::AI::MachineLearning::Preview::ISequenceVariableDescriptorPreview
     {
         SequenceVariableDescriptorPreview(std::nullptr_t) noexcept {}
-        SequenceVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::ISequenceVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
+        SequenceVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::ISequenceVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) TensorVariableDescriptorPreview : Windows::AI::MachineLearning::Preview::ITensorVariableDescriptorPreview
+    struct __declspec(empty_bases) TensorVariableDescriptorPreview : winrt::Windows::AI::MachineLearning::Preview::ITensorVariableDescriptorPreview
     {
         TensorVariableDescriptorPreview(std::nullptr_t) noexcept {}
-        TensorVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::AI::MachineLearning::Preview::ITensorVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
+        TensorVariableDescriptorPreview(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::AI::MachineLearning::Preview::ITensorVariableDescriptorPreview(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

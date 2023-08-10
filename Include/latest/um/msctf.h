@@ -3,14 +3,14 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0626 */
+ /* File created by MIDL compiler version 8.01.0628 */
 /* @@MIDL_FILE_HEADING(  ) */
 
 
 
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
-#define __REQUIRED_RPCNDR_H_VERSION__ 500
+#define __REQUIRED_RPCNDR_H_VERSION__ 501
 #endif
 
 /* verify that the <rpcsal.h> version is high enough to compile this file*/
@@ -38,7 +38,7 @@
 #endif
 
 #ifndef DECLSPEC_XFGVIRT
-#if _CONTROL_FLOW_GUARD_XFG
+#if defined(_CONTROL_FLOW_GUARD_XFG)
 #define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
 #else
 #define DECLSPEC_XFGVIRT(base, func)
@@ -770,6 +770,7 @@ EXTERN_C const GUID GUID_PROP_LANGID;
 EXTERN_C const GUID GUID_PROP_READING;
 EXTERN_C const GUID GUID_PROP_COMPOSING;
 EXTERN_C const GUID GUID_PROP_TKB_ALTERNATES;
+EXTERN_C const GUID GUID_PROP_URL;
 
 #define TKB_ALTERNATES_STANDARD               0x00000001
 #define TKB_ALTERNATES_FOR_AUTOCORRECTION     0x00000002

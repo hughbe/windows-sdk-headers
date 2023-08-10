@@ -96,7 +96,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xf0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -2639,8 +2639,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderin
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Media.Imaging.IBitmapImage ** Default Interface **
@@ -5818,8 +5818,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CXaml_CMedia_CImaging_CIXamlRenderin
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics3 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Xaml.Media.Imaging.IBitmapImageStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.UI.Xaml.Media.Imaging.IBitmapImage ** Default Interface **

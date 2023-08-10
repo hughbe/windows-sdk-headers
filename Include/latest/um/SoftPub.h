@@ -317,6 +317,8 @@ typedef struct CONFIG_CI_PROV_INFO_RESULT_
 #       define CCPI_RESULT_AUDIT 3
     DWORD dwPolicyIndex;
     BOOLEAN fIsExplicitDeny;
+    BYTE *pbCalculatedFileHash;
+    DWORD cbCalculatedFileHash;
 } CONFIG_CI_PROV_INFO_RESULT;
 typedef struct CONFIG_CI_PROV_INFO_
 {

@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Foundation_Metadata_2_H
 #define WINRT_Windows_Foundation_Metadata_2_H
 #include "winrt/impl/Windows.Foundation.Metadata.1.h"

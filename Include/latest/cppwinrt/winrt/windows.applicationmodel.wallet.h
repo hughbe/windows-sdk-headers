@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_ApplicationModel_Wallet_H
 #define WINRT_Windows_ApplicationModel_Wallet_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.Devices.Geolocation.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -17,548 +18,548 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.Wallet.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletBarcodeSymbology) consume_Windows_ApplicationModel_Wallet_IWalletBarcode<D>::Symbology() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology) consume_Windows_ApplicationModel_Wallet_IWalletBarcode<D>::Symbology() const
     {
-        Windows::ApplicationModel::Wallet::WalletBarcodeSymbology value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletBarcode)->get_Symbology(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletBarcode)->get_Symbology(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletBarcode<D>::Value() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletBarcode)->get_Value(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletBarcode)->get_Value(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStreamReference>) consume_Windows_ApplicationModel_Wallet_IWalletBarcode<D>::GetImageAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>) consume_Windows_ApplicationModel_Wallet_IWalletBarcode<D>::GetImageAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletBarcode)->GetImageAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStreamReference>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletBarcode)->GetImageAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletBarcode) consume_Windows_ApplicationModel_Wallet_IWalletBarcodeFactory<D>::CreateWalletBarcode(Windows::ApplicationModel::Wallet::WalletBarcodeSymbology const& symbology, param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletBarcode) consume_Windows_ApplicationModel_Wallet_IWalletBarcodeFactory<D>::CreateWalletBarcode(winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology const& symbology, param::hstring const& value) const
     {
         void* barcode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletBarcodeFactory)->CreateWalletBarcode(static_cast<int32_t>(symbology), *(void**)(&value), &barcode));
-        return Windows::ApplicationModel::Wallet::WalletBarcode{ barcode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletBarcodeFactory)->CreateWalletBarcode(static_cast<int32_t>(symbology), *(void**)(&value), &barcode));
+        return winrt::Windows::ApplicationModel::Wallet::WalletBarcode{ barcode, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletBarcode) consume_Windows_ApplicationModel_Wallet_IWalletBarcodeFactory<D>::CreateCustomWalletBarcode(Windows::Storage::Streams::IRandomAccessStreamReference const& streamToBarcodeImage) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletBarcode) consume_Windows_ApplicationModel_Wallet_IWalletBarcodeFactory<D>::CreateCustomWalletBarcode(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& streamToBarcodeImage) const
     {
         void* barcode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletBarcodeFactory)->CreateCustomWalletBarcode(*(void**)(&streamToBarcodeImage), &barcode));
-        return Windows::ApplicationModel::Wallet::WalletBarcode{ barcode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletBarcodeFactory)->CreateCustomWalletBarcode(*(void**)(&streamToBarcodeImage), &barcode));
+        return winrt::Windows::ApplicationModel::Wallet::WalletBarcode{ barcode, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::DisplayName(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_DisplayName(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_DisplayName(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::IsAcknowledged() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_IsAcknowledged(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_IsAcknowledged(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::IsAcknowledged(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_IsAcknowledged(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_IsAcknowledged(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::IssuerDisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_IssuerDisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_IssuerDisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::IssuerDisplayName(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_IssuerDisplayName(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_IssuerDisplayName(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LastUpdated() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LastUpdated() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_LastUpdated(&value));
-        return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_LastUpdated(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LastUpdated(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LastUpdated(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_LastUpdated(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_LastUpdated(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletItemKind) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletItemKind) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Kind() const
     {
-        Windows::ApplicationModel::Wallet::WalletItemKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_Kind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Wallet::WalletItemKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletBarcode) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Barcode() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletBarcode) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Barcode() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_Barcode(&value));
-        return Windows::ApplicationModel::Wallet::WalletBarcode{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_Barcode(&value));
+        return winrt::Windows::ApplicationModel::Wallet::WalletBarcode{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Barcode(Windows::ApplicationModel::Wallet::WalletBarcode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Barcode(winrt::Windows::ApplicationModel::Wallet::WalletBarcode const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_Barcode(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_Barcode(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::ExpirationDate() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_ExpirationDate(&value));
-        return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::ExpirationDate(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_ExpirationDate(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo159x159() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::ExpirationDate() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_Logo159x159(&value));
-        return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_ExpirationDate(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo159x159(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::ExpirationDate(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_Logo159x159(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_ExpirationDate(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo336x336() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_Logo336x336(&value));
-        return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo336x336(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_Logo336x336(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo99x99() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo159x159() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_Logo99x99(&value));
-        return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_Logo159x159(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo99x99(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo159x159(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_Logo99x99(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_Logo159x159(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo336x336() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_Logo336x336(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo336x336(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_Logo336x336(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo99x99() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_Logo99x99(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Logo99x99(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_Logo99x99(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::DisplayMessage() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_DisplayMessage(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_DisplayMessage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::DisplayMessage(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_DisplayMessage(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_DisplayMessage(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::IsDisplayMessageLaunchable() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_IsDisplayMessageLaunchable(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_IsDisplayMessageLaunchable(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::IsDisplayMessageLaunchable(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_IsDisplayMessageLaunchable(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_IsDisplayMessageLaunchable(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LogoText() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_LogoText(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_LogoText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LogoText(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_LogoText(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_LogoText(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderColor() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderColor() const
     {
-        Windows::UI::Color value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_HeaderColor(put_abi(value)));
+        winrt::Windows::UI::Color value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_HeaderColor(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderColor(winrt::Windows::UI::Color const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_HeaderColor(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_HeaderColor(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyColor() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyColor() const
     {
-        Windows::UI::Color value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_BodyColor(put_abi(value)));
+        winrt::Windows::UI::Color value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_BodyColor(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyColor(winrt::Windows::UI::Color const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_BodyColor(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_BodyColor(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderFontColor() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderFontColor() const
     {
-        Windows::UI::Color value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_HeaderFontColor(put_abi(value)));
+        winrt::Windows::UI::Color value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_HeaderFontColor(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderFontColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderFontColor(winrt::Windows::UI::Color const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_HeaderFontColor(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_HeaderFontColor(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyFontColor() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyFontColor() const
     {
-        Windows::UI::Color value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_BodyFontColor(put_abi(value)));
+        winrt::Windows::UI::Color value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_BodyFontColor(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyFontColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyFontColor(winrt::Windows::UI::Color const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_BodyFontColor(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_BodyFontColor(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderBackgroundImage() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderBackgroundImage() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_HeaderBackgroundImage(&value));
-        return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_HeaderBackgroundImage(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderBackgroundImage(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::HeaderBackgroundImage(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_HeaderBackgroundImage(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_HeaderBackgroundImage(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyBackgroundImage() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_BodyBackgroundImage(&value));
-        return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyBackgroundImage(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_BodyBackgroundImage(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LogoImage() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyBackgroundImage() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_LogoImage(&value));
-        return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_BodyBackgroundImage(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LogoImage(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::BodyBackgroundImage(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_LogoImage(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_BodyBackgroundImage(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::PromotionalImage() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_PromotionalImage(&value));
-        return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::PromotionalImage(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_PromotionalImage(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::RelevantDate() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LogoImage() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_RelevantDate(&value));
-        return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_LogoImage(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::RelevantDate(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::LogoImage(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_RelevantDate(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_LogoImage(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::PromotionalImage() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_PromotionalImage(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::PromotionalImage(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_PromotionalImage(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::RelevantDate() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_RelevantDate(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::RelevantDate(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_RelevantDate(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::RelevantDateDisplayMessage() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_RelevantDateDisplayMessage(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_RelevantDateDisplayMessage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::RelevantDateDisplayMessage(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_RelevantDateDisplayMessage(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_RelevantDateDisplayMessage(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletTransaction>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::TransactionHistory() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletTransaction>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::TransactionHistory() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_TransactionHistory(&value));
-        return Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletTransaction>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_TransactionHistory(&value));
+        return winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletTransaction>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletRelevantLocation>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::RelevantLocations() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::RelevantLocations() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_RelevantLocations(&value));
-        return Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletRelevantLocation>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_RelevantLocations(&value));
+        return winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::IsMoreTransactionHistoryLaunchable() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_IsMoreTransactionHistoryLaunchable(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_IsMoreTransactionHistoryLaunchable(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::IsMoreTransactionHistoryLaunchable(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->put_IsMoreTransactionHistoryLaunchable(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->put_IsMoreTransactionHistoryLaunchable(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletItemCustomProperty>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::DisplayProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::DisplayProperties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_DisplayProperties(&value));
-        return Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletItemCustomProperty>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_DisplayProperties(&value));
+        return winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletVerb>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Verbs() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletVerb>) consume_Windows_ApplicationModel_Wallet_IWalletItem<D>::Verbs() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItem)->get_Verbs(&value));
-        return Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletVerb>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItem)->get_Verbs(&value));
+        return winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletVerb>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::Name(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_Name(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_Name(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::Value() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_Value(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_Value(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::Value(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_Value(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_Value(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::AutoDetectLinks() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_AutoDetectLinks(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_AutoDetectLinks(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::AutoDetectLinks(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_AutoDetectLinks(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_AutoDetectLinks(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletDetailViewPosition) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::DetailViewPosition() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletDetailViewPosition) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::DetailViewPosition() const
     {
-        Windows::ApplicationModel::Wallet::WalletDetailViewPosition value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_DetailViewPosition(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Wallet::WalletDetailViewPosition value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_DetailViewPosition(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::DetailViewPosition(Windows::ApplicationModel::Wallet::WalletDetailViewPosition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::DetailViewPosition(winrt::Windows::ApplicationModel::Wallet::WalletDetailViewPosition const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_DetailViewPosition(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_DetailViewPosition(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletSummaryViewPosition) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::SummaryViewPosition() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::SummaryViewPosition() const
     {
-        Windows::ApplicationModel::Wallet::WalletSummaryViewPosition value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_SummaryViewPosition(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->get_SummaryViewPosition(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::SummaryViewPosition(Windows::ApplicationModel::Wallet::WalletSummaryViewPosition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomProperty<D>::SummaryViewPosition(winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_SummaryViewPosition(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty)->put_SummaryViewPosition(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletItemCustomProperty) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomPropertyFactory<D>::CreateWalletItemCustomProperty(param::hstring const& name, param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty) consume_Windows_ApplicationModel_Wallet_IWalletItemCustomPropertyFactory<D>::CreateWalletItemCustomProperty(param::hstring const& name, param::hstring const& value) const
     {
         void* walletItemCustomProperty{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemCustomPropertyFactory)->CreateWalletItemCustomProperty(*(void**)(&name), *(void**)(&value), &walletItemCustomProperty));
-        return Windows::ApplicationModel::Wallet::WalletItemCustomProperty{ walletItemCustomProperty, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomPropertyFactory)->CreateWalletItemCustomProperty(*(void**)(&name), *(void**)(&value), &walletItemCustomProperty));
+        return winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty{ walletItemCustomProperty, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletItem) consume_Windows_ApplicationModel_Wallet_IWalletItemFactory<D>::CreateWalletItem(Windows::ApplicationModel::Wallet::WalletItemKind const& kind, param::hstring const& displayName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletItem) consume_Windows_ApplicationModel_Wallet_IWalletItemFactory<D>::CreateWalletItem(winrt::Windows::ApplicationModel::Wallet::WalletItemKind const& kind, param::hstring const& displayName) const
     {
         void* walletItem{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemFactory)->CreateWalletItem(static_cast<int32_t>(kind), *(void**)(&displayName), &walletItem));
-        return Windows::ApplicationModel::Wallet::WalletItem{ walletItem, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemFactory)->CreateWalletItem(static_cast<int32_t>(kind), *(void**)(&displayName), &walletItem));
+        return winrt::Windows::ApplicationModel::Wallet::WalletItem{ walletItem, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::AddAsync(param::hstring const& id, Windows::ApplicationModel::Wallet::WalletItem const& item) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::AddAsync(param::hstring const& id, winrt::Windows::ApplicationModel::Wallet::WalletItem const& item) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->AddAsync(*(void**)(&id), *(void**)(&item), &operation));
-        return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->AddAsync(*(void**)(&id), *(void**)(&item), &operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::ClearAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::ClearAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->ClearAsync(&operation));
-        return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->ClearAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItem>) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::GetWalletItemAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItem>) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::GetWalletItemAsync(param::hstring const& id) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->GetWalletItemAsync(*(void**)(&id), &operation));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItem>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->GetWalletItemAsync(*(void**)(&id), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItem>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Wallet::WalletItem>>) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::GetItemsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Wallet::WalletItem>>) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::GetItemsAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->GetItemsAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Wallet::WalletItem>>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->GetItemsAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Wallet::WalletItem>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Wallet::WalletItem>>) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::GetItemsAsync(Windows::ApplicationModel::Wallet::WalletItemKind const& kind) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Wallet::WalletItem>>) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::GetItemsAsync(winrt::Windows::ApplicationModel::Wallet::WalletItemKind const& kind) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->GetItemsWithKindAsync(static_cast<int32_t>(kind), &operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Wallet::WalletItem>>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->GetItemsWithKindAsync(static_cast<int32_t>(kind), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Wallet::WalletItem>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItem>) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::ImportItemAsync(Windows::Storage::Streams::IRandomAccessStreamReference const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItem>) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::ImportItemAsync(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& stream) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->ImportItemAsync(*(void**)(&stream), &operation));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItem>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->ImportItemAsync(*(void**)(&stream), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItem>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::DeleteAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::DeleteAsync(param::hstring const& id) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->DeleteAsync(*(void**)(&id), &operation));
-        return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->DeleteAsync(*(void**)(&id), &operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::ShowAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::ShowAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->ShowAsync(&operation));
-        return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->ShowAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::ShowAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::ShowAsync(param::hstring const& id) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->ShowItemAsync(*(void**)(&id), &operation));
-        return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->ShowItemAsync(*(void**)(&id), &operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::UpdateAsync(Windows::ApplicationModel::Wallet::WalletItem const& item) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Wallet_IWalletItemStore<D>::UpdateAsync(winrt::Windows::ApplicationModel::Wallet::WalletItem const& item) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore)->UpdateAsync(*(void**)(&item), &operation));
-        return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore)->UpdateAsync(*(void**)(&item), &operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Wallet_IWalletItemStore2<D>::ItemsChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Wallet::WalletItemStore, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_Wallet_IWalletItemStore2<D>::ItemsChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Wallet::WalletItemStore, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token cookie{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore2)->add_ItemsChanged(*(void**)(&handler), put_abi(cookie)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore2)->add_ItemsChanged(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
-    template <typename D> typename consume_Windows_ApplicationModel_Wallet_IWalletItemStore2<D>::ItemsChanged_revoker consume_Windows_ApplicationModel_Wallet_IWalletItemStore2<D>::ItemsChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Wallet::WalletItemStore, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_ApplicationModel_Wallet_IWalletItemStore2<D>::ItemsChanged_revoker consume_Windows_ApplicationModel_Wallet_IWalletItemStore2<D>::ItemsChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Wallet::WalletItemStore, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, ItemsChanged_revoker>(this, ItemsChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletItemStore2<D>::ItemsChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletItemStore2)->remove_ItemsChanged(impl::bind_in(cookie)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletItemStore2)->remove_ItemsChanged(impl::bind_in(cookie));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItemStore>) consume_Windows_ApplicationModel_Wallet_IWalletManagerStatics<D>::RequestStoreAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItemStore>) consume_Windows_ApplicationModel_Wallet_IWalletManagerStatics<D>::RequestStoreAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletManagerStatics)->RequestStoreAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItemStore>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletManagerStatics)->RequestStoreAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItemStore>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Geolocation::BasicGeoposition) consume_Windows_ApplicationModel_Wallet_IWalletRelevantLocation<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Geolocation::BasicGeoposition) consume_Windows_ApplicationModel_Wallet_IWalletRelevantLocation<D>::Position() const
     {
-        Windows::Devices::Geolocation::BasicGeoposition value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletRelevantLocation)->get_Position(put_abi(value)));
+        winrt::Windows::Devices::Geolocation::BasicGeoposition value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletRelevantLocation)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletRelevantLocation<D>::Position(Windows::Devices::Geolocation::BasicGeoposition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletRelevantLocation<D>::Position(winrt::Windows::Devices::Geolocation::BasicGeoposition const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletRelevantLocation)->put_Position(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletRelevantLocation)->put_Position(impl::bind_in(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletRelevantLocation<D>::DisplayMessage() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletRelevantLocation)->get_DisplayMessage(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletRelevantLocation)->get_DisplayMessage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletRelevantLocation<D>::DisplayMessage(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletRelevantLocation)->put_DisplayMessage(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletRelevantLocation)->put_DisplayMessage(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::Description() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->get_Description(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->get_Description(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::Description(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->put_Description(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->put_Description(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::DisplayAmount() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->get_DisplayAmount(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->get_DisplayAmount(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::DisplayAmount(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->put_DisplayAmount(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->put_DisplayAmount(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::IgnoreTimeOfDay() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->get_IgnoreTimeOfDay(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->get_IgnoreTimeOfDay(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::IgnoreTimeOfDay(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->put_IgnoreTimeOfDay(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->put_IgnoreTimeOfDay(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::DisplayLocation() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->get_DisplayLocation(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->get_DisplayLocation(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::DisplayLocation(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->put_DisplayLocation(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->put_DisplayLocation(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::TransactionDate() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::TransactionDate() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->get_TransactionDate(&value));
-        return Windows::Foundation::IReference<Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->get_TransactionDate(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::TransactionDate(Windows::Foundation::IReference<Windows::Foundation::DateTime> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::TransactionDate(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->put_TransactionDate(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->put_TransactionDate(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::IsLaunchable() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->get_IsLaunchable(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->get_IsLaunchable(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletTransaction<D>::IsLaunchable(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletTransaction)->put_IsLaunchable(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletTransaction)->put_IsLaunchable(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Wallet_IWalletVerb<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletVerb)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletVerb)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Wallet_IWalletVerb<D>::Name(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletVerb)->put_Name(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletVerb)->put_Name(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Wallet::WalletVerb) consume_Windows_ApplicationModel_Wallet_IWalletVerbFactory<D>::CreateWalletVerb(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Wallet::WalletVerb) consume_Windows_ApplicationModel_Wallet_IWalletVerbFactory<D>::CreateWalletVerb(param::hstring const& name) const
     {
         void* WalletVerb{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Wallet::IWalletVerbFactory)->CreateWalletVerb(*(void**)(&name), &WalletVerb));
-        return Windows::ApplicationModel::Wallet::WalletVerb{ WalletVerb, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Wallet::IWalletVerbFactory)->CreateWalletVerb(*(void**)(&name), &WalletVerb));
+        return winrt::Windows::ApplicationModel::Wallet::WalletVerb{ WalletVerb, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletBarcode> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletBarcode>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletBarcode> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletBarcode>
     {
         int32_t __stdcall get_Symbology(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Wallet::WalletBarcodeSymbology>(this->shim().Symbology());
+            *value = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology>(this->shim().Symbology());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -574,7 +575,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Storage::Streams::IRandomAccessStreamReference>>(this->shim().GetImageAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>>(this->shim().GetImageAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -582,13 +583,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletBarcodeFactory> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletBarcodeFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletBarcodeFactory> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletBarcodeFactory>
     {
         int32_t __stdcall CreateWalletBarcode(int32_t symbology, void* value, void** barcode) noexcept final try
         {
             clear_abi(barcode);
             typename D::abi_guard guard(this->shim());
-            *barcode = detach_from<Windows::ApplicationModel::Wallet::WalletBarcode>(this->shim().CreateWalletBarcode(*reinterpret_cast<Windows::ApplicationModel::Wallet::WalletBarcodeSymbology const*>(&symbology), *reinterpret_cast<hstring const*>(&value)));
+            *barcode = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletBarcode>(this->shim().CreateWalletBarcode(*reinterpret_cast<winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology const*>(&symbology), *reinterpret_cast<hstring const*>(&value)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -596,7 +597,7 @@ namespace winrt::impl
         {
             clear_abi(barcode);
             typename D::abi_guard guard(this->shim());
-            *barcode = detach_from<Windows::ApplicationModel::Wallet::WalletBarcode>(this->shim().CreateCustomWalletBarcode(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&streamToBarcodeImage)));
+            *barcode = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletBarcode>(this->shim().CreateCustomWalletBarcode(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&streamToBarcodeImage)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -604,7 +605,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletItem> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletItem>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletItem> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletItem>
     {
         int32_t __stdcall get_DisplayName(void** value) noexcept final try
         {
@@ -662,21 +663,21 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Foundation::DateTime>>(this->shim().LastUpdated());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(this->shim().LastUpdated());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_LastUpdated(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().LastUpdated(*reinterpret_cast<Windows::Foundation::IReference<Windows::Foundation::DateTime> const*>(&value));
+            this->shim().LastUpdated(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Kind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Wallet::WalletItemKind>(this->shim().Kind());
+            *value = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletItemKind>(this->shim().Kind());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -684,14 +685,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Wallet::WalletBarcode>(this->shim().Barcode());
+            *value = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletBarcode>(this->shim().Barcode());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Barcode(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Barcode(*reinterpret_cast<Windows::ApplicationModel::Wallet::WalletBarcode const*>(&value));
+            this->shim().Barcode(*reinterpret_cast<winrt::Windows::ApplicationModel::Wallet::WalletBarcode const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -699,14 +700,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Foundation::DateTime>>(this->shim().ExpirationDate());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(this->shim().ExpirationDate());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_ExpirationDate(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ExpirationDate(*reinterpret_cast<Windows::Foundation::IReference<Windows::Foundation::DateTime> const*>(&value));
+            this->shim().ExpirationDate(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -714,14 +715,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Logo159x159());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Logo159x159());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Logo159x159(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Logo159x159(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            this->shim().Logo159x159(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -729,14 +730,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Logo336x336());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Logo336x336());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Logo336x336(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Logo336x336(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            this->shim().Logo336x336(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -744,14 +745,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Logo99x99());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Logo99x99());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Logo99x99(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Logo99x99(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            this->shim().Logo99x99(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -801,61 +802,61 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_HeaderColor(struct struct_Windows_UI_Color* value) noexcept final try
         {
-            zero_abi<Windows::UI::Color>(value);
+            zero_abi<winrt::Windows::UI::Color>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Color>(this->shim().HeaderColor());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().HeaderColor());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_HeaderColor(struct struct_Windows_UI_Color value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().HeaderColor(*reinterpret_cast<Windows::UI::Color const*>(&value));
+            this->shim().HeaderColor(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_BodyColor(struct struct_Windows_UI_Color* value) noexcept final try
         {
-            zero_abi<Windows::UI::Color>(value);
+            zero_abi<winrt::Windows::UI::Color>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Color>(this->shim().BodyColor());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().BodyColor());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_BodyColor(struct struct_Windows_UI_Color value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().BodyColor(*reinterpret_cast<Windows::UI::Color const*>(&value));
+            this->shim().BodyColor(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_HeaderFontColor(struct struct_Windows_UI_Color* value) noexcept final try
         {
-            zero_abi<Windows::UI::Color>(value);
+            zero_abi<winrt::Windows::UI::Color>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Color>(this->shim().HeaderFontColor());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().HeaderFontColor());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_HeaderFontColor(struct struct_Windows_UI_Color value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().HeaderFontColor(*reinterpret_cast<Windows::UI::Color const*>(&value));
+            this->shim().HeaderFontColor(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_BodyFontColor(struct struct_Windows_UI_Color* value) noexcept final try
         {
-            zero_abi<Windows::UI::Color>(value);
+            zero_abi<winrt::Windows::UI::Color>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Color>(this->shim().BodyFontColor());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().BodyFontColor());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_BodyFontColor(struct struct_Windows_UI_Color value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().BodyFontColor(*reinterpret_cast<Windows::UI::Color const*>(&value));
+            this->shim().BodyFontColor(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -863,14 +864,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().HeaderBackgroundImage());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().HeaderBackgroundImage());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_HeaderBackgroundImage(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().HeaderBackgroundImage(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            this->shim().HeaderBackgroundImage(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -878,14 +879,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().BodyBackgroundImage());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().BodyBackgroundImage());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_BodyBackgroundImage(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().BodyBackgroundImage(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            this->shim().BodyBackgroundImage(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -893,14 +894,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().LogoImage());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().LogoImage());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_LogoImage(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().LogoImage(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            this->shim().LogoImage(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -908,14 +909,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().PromotionalImage());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().PromotionalImage());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_PromotionalImage(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().PromotionalImage(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            this->shim().PromotionalImage(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -923,14 +924,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Foundation::DateTime>>(this->shim().RelevantDate());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(this->shim().RelevantDate());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_RelevantDate(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().RelevantDate(*reinterpret_cast<Windows::Foundation::IReference<Windows::Foundation::DateTime> const*>(&value));
+            this->shim().RelevantDate(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -953,7 +954,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletTransaction>>(this->shim().TransactionHistory());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletTransaction>>(this->shim().TransactionHistory());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -961,7 +962,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletRelevantLocation>>(this->shim().RelevantLocations());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation>>(this->shim().RelevantLocations());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -983,7 +984,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletItemCustomProperty>>(this->shim().DisplayProperties());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty>>(this->shim().DisplayProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -991,7 +992,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IMap<hstring, Windows::ApplicationModel::Wallet::WalletVerb>>(this->shim().Verbs());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMap<hstring, winrt::Windows::ApplicationModel::Wallet::WalletVerb>>(this->shim().Verbs());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -999,7 +1000,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletItemCustomProperty> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletItemCustomProperty>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomProperty>
     {
         int32_t __stdcall get_Name(void** value) noexcept final try
         {
@@ -1048,28 +1049,28 @@ namespace winrt::impl
         int32_t __stdcall get_DetailViewPosition(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Wallet::WalletDetailViewPosition>(this->shim().DetailViewPosition());
+            *value = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletDetailViewPosition>(this->shim().DetailViewPosition());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_DetailViewPosition(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().DetailViewPosition(*reinterpret_cast<Windows::ApplicationModel::Wallet::WalletDetailViewPosition const*>(&value));
+            this->shim().DetailViewPosition(*reinterpret_cast<winrt::Windows::ApplicationModel::Wallet::WalletDetailViewPosition const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_SummaryViewPosition(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Wallet::WalletSummaryViewPosition>(this->shim().SummaryViewPosition());
+            *value = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition>(this->shim().SummaryViewPosition());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_SummaryViewPosition(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SummaryViewPosition(*reinterpret_cast<Windows::ApplicationModel::Wallet::WalletSummaryViewPosition const*>(&value));
+            this->shim().SummaryViewPosition(*reinterpret_cast<winrt::Windows::ApplicationModel::Wallet::WalletSummaryViewPosition const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1077,13 +1078,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletItemCustomPropertyFactory> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletItemCustomPropertyFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomPropertyFactory> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemCustomPropertyFactory>
     {
         int32_t __stdcall CreateWalletItemCustomProperty(void* name, void* value, void** walletItemCustomProperty) noexcept final try
         {
             clear_abi(walletItemCustomProperty);
             typename D::abi_guard guard(this->shim());
-            *walletItemCustomProperty = detach_from<Windows::ApplicationModel::Wallet::WalletItemCustomProperty>(this->shim().CreateWalletItemCustomProperty(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<hstring const*>(&value)));
+            *walletItemCustomProperty = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletItemCustomProperty>(this->shim().CreateWalletItemCustomProperty(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<hstring const*>(&value)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1091,13 +1092,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletItemFactory> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletItemFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemFactory> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemFactory>
     {
         int32_t __stdcall CreateWalletItem(int32_t kind, void* displayName, void** walletItem) noexcept final try
         {
             clear_abi(walletItem);
             typename D::abi_guard guard(this->shim());
-            *walletItem = detach_from<Windows::ApplicationModel::Wallet::WalletItem>(this->shim().CreateWalletItem(*reinterpret_cast<Windows::ApplicationModel::Wallet::WalletItemKind const*>(&kind), *reinterpret_cast<hstring const*>(&displayName)));
+            *walletItem = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletItem>(this->shim().CreateWalletItem(*reinterpret_cast<winrt::Windows::ApplicationModel::Wallet::WalletItemKind const*>(&kind), *reinterpret_cast<hstring const*>(&displayName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1105,13 +1106,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletItemStore> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletItemStore>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemStore> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemStore>
     {
         int32_t __stdcall AddAsync(void* id, void* item, void** operation) noexcept final try
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncAction>(this->shim().AddAsync(*reinterpret_cast<hstring const*>(&id), *reinterpret_cast<Windows::ApplicationModel::Wallet::WalletItem const*>(&item)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().AddAsync(*reinterpret_cast<hstring const*>(&id), *reinterpret_cast<winrt::Windows::ApplicationModel::Wallet::WalletItem const*>(&item)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1119,7 +1120,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncAction>(this->shim().ClearAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().ClearAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1127,7 +1128,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItem>>(this->shim().GetWalletItemAsync(*reinterpret_cast<hstring const*>(&id)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItem>>(this->shim().GetWalletItemAsync(*reinterpret_cast<hstring const*>(&id)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1135,7 +1136,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Wallet::WalletItem>>>(this->shim().GetItemsAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Wallet::WalletItem>>>(this->shim().GetItemsAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1143,7 +1144,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Wallet::WalletItem>>>(this->shim().GetItemsAsync(*reinterpret_cast<Windows::ApplicationModel::Wallet::WalletItemKind const*>(&kind)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Wallet::WalletItem>>>(this->shim().GetItemsAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::Wallet::WalletItemKind const*>(&kind)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1151,7 +1152,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItem>>(this->shim().ImportItemAsync(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&stream)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItem>>(this->shim().ImportItemAsync(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&stream)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1159,7 +1160,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncAction>(this->shim().DeleteAsync(*reinterpret_cast<hstring const*>(&id)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().DeleteAsync(*reinterpret_cast<hstring const*>(&id)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1167,7 +1168,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncAction>(this->shim().ShowAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().ShowAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1175,7 +1176,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncAction>(this->shim().ShowAsync(*reinterpret_cast<hstring const*>(&id)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().ShowAsync(*reinterpret_cast<hstring const*>(&id)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1183,7 +1184,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncAction>(this->shim().UpdateAsync(*reinterpret_cast<Windows::ApplicationModel::Wallet::WalletItem const*>(&item)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().UpdateAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::Wallet::WalletItem const*>(&item)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1191,13 +1192,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletItemStore2> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletItemStore2>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemStore2> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletItemStore2>
     {
         int32_t __stdcall add_ItemsChanged(void* handler, winrt::event_token* cookie) noexcept final try
         {
             zero_abi<winrt::event_token>(cookie);
             typename D::abi_guard guard(this->shim());
-            *cookie = detach_from<winrt::event_token>(this->shim().ItemsChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::Wallet::WalletItemStore, Windows::Foundation::IInspectable> const*>(&handler)));
+            *cookie = detach_from<winrt::event_token>(this->shim().ItemsChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::Wallet::WalletItemStore, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1211,13 +1212,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletManagerStatics> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletManagerStatics>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletManagerStatics> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletManagerStatics>
     {
         int32_t __stdcall RequestStoreAsync(void** operation) noexcept final try
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItemStore>>(this->shim().RequestStoreAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItemStore>>(this->shim().RequestStoreAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1225,20 +1226,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletRelevantLocation> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletRelevantLocation>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletRelevantLocation> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletRelevantLocation>
     {
         int32_t __stdcall get_Position(struct struct_Windows_Devices_Geolocation_BasicGeoposition* value) noexcept final try
         {
-            zero_abi<Windows::Devices::Geolocation::BasicGeoposition>(value);
+            zero_abi<winrt::Windows::Devices::Geolocation::BasicGeoposition>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Devices::Geolocation::BasicGeoposition>(this->shim().Position());
+            *value = detach_from<winrt::Windows::Devices::Geolocation::BasicGeoposition>(this->shim().Position());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Position(struct struct_Windows_Devices_Geolocation_BasicGeoposition value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Position(*reinterpret_cast<Windows::Devices::Geolocation::BasicGeoposition const*>(&value));
+            this->shim().Position(*reinterpret_cast<winrt::Windows::Devices::Geolocation::BasicGeoposition const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1261,7 +1262,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletTransaction> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletTransaction>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletTransaction> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletTransaction>
     {
         int32_t __stdcall get_Description(void** value) noexcept final try
         {
@@ -1326,14 +1327,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Foundation::DateTime>>(this->shim().TransactionDate());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(this->shim().TransactionDate());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_TransactionDate(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().TransactionDate(*reinterpret_cast<Windows::Foundation::IReference<Windows::Foundation::DateTime> const*>(&value));
+            this->shim().TransactionDate(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1355,7 +1356,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletVerb> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletVerb>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletVerb> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletVerb>
     {
         int32_t __stdcall get_Name(void** value) noexcept final try
         {
@@ -1376,13 +1377,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Wallet::IWalletVerbFactory> : produce_base<D, Windows::ApplicationModel::Wallet::IWalletVerbFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Wallet::IWalletVerbFactory> : produce_base<D, winrt::Windows::ApplicationModel::Wallet::IWalletVerbFactory>
     {
         int32_t __stdcall CreateWalletVerb(void* name, void** WalletVerb) noexcept final try
         {
             clear_abi(WalletVerb);
             typename D::abi_guard guard(this->shim());
-            *WalletVerb = detach_from<Windows::ApplicationModel::Wallet::WalletVerb>(this->shim().CreateWalletVerb(*reinterpret_cast<hstring const*>(&name)));
+            *WalletVerb = detach_from<winrt::Windows::ApplicationModel::Wallet::WalletVerb>(this->shim().CreateWalletVerb(*reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1391,15 +1392,15 @@ namespace winrt::impl
 }
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Wallet
 {
-    inline WalletBarcode::WalletBarcode(Windows::ApplicationModel::Wallet::WalletBarcodeSymbology const& symbology, param::hstring const& value) :
+    inline WalletBarcode::WalletBarcode(winrt::Windows::ApplicationModel::Wallet::WalletBarcodeSymbology const& symbology, param::hstring const& value) :
         WalletBarcode(impl::call_factory<WalletBarcode, IWalletBarcodeFactory>([&](IWalletBarcodeFactory const& f) { return f.CreateWalletBarcode(symbology, value); }))
     {
     }
-    inline WalletBarcode::WalletBarcode(Windows::Storage::Streams::IRandomAccessStreamReference const& streamToBarcodeImage) :
+    inline WalletBarcode::WalletBarcode(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& streamToBarcodeImage) :
         WalletBarcode(impl::call_factory<WalletBarcode, IWalletBarcodeFactory>([&](IWalletBarcodeFactory const& f) { return f.CreateCustomWalletBarcode(streamToBarcodeImage); }))
     {
     }
-    inline WalletItem::WalletItem(Windows::ApplicationModel::Wallet::WalletItemKind const& kind, param::hstring const& displayName) :
+    inline WalletItem::WalletItem(winrt::Windows::ApplicationModel::Wallet::WalletItemKind const& kind, param::hstring const& displayName) :
         WalletItem(impl::call_factory<WalletItem, IWalletItemFactory>([&](IWalletItemFactory const& f) { return f.CreateWalletItem(kind, displayName); }))
     {
     }
@@ -1409,14 +1410,14 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Wallet
     }
     inline auto WalletManager::RequestStoreAsync()
     {
-        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Wallet::WalletItemStore>(*)(IWalletManagerStatics const&), WalletManager, IWalletManagerStatics>([](IWalletManagerStatics const& f) { return f.RequestStoreAsync(); });
+        return impl::call_factory_cast<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Wallet::WalletItemStore>(*)(IWalletManagerStatics const&), WalletManager, IWalletManagerStatics>([](IWalletManagerStatics const& f) { return f.RequestStoreAsync(); });
     }
     inline WalletRelevantLocation::WalletRelevantLocation() :
-        WalletRelevantLocation(impl::call_factory_cast<WalletRelevantLocation(*)(Windows::Foundation::IActivationFactory const&), WalletRelevantLocation>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WalletRelevantLocation>(); }))
+        WalletRelevantLocation(impl::call_factory_cast<WalletRelevantLocation(*)(winrt::Windows::Foundation::IActivationFactory const&), WalletRelevantLocation>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WalletRelevantLocation>(); }))
     {
     }
     inline WalletTransaction::WalletTransaction() :
-        WalletTransaction(impl::call_factory_cast<WalletTransaction(*)(Windows::Foundation::IActivationFactory const&), WalletTransaction>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WalletTransaction>(); }))
+        WalletTransaction(impl::call_factory_cast<WalletTransaction(*)(winrt::Windows::Foundation::IActivationFactory const&), WalletTransaction>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<WalletTransaction>(); }))
     {
     }
     inline WalletVerb::WalletVerb(param::hstring const& name) :
@@ -1448,6 +1449,8 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::Wallet::WalletRelevantLocation> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Wallet::WalletTransaction> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::Wallet::WalletVerb> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

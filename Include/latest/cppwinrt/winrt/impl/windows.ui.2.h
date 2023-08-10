@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_2_H
 #define WINRT_Windows_UI_2_H
 #include "winrt/impl/Windows.UI.1.h"
@@ -35,17 +36,17 @@ WINRT_EXPORT namespace winrt::Windows::UI
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) ColorHelper : Windows::UI::IColorHelper
+    struct __declspec(empty_bases) ColorHelper : winrt::Windows::UI::IColorHelper
     {
         ColorHelper(std::nullptr_t) noexcept {}
-        ColorHelper(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::IColorHelper(ptr, take_ownership_from_abi) {}
+        ColorHelper(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::IColorHelper(ptr, take_ownership_from_abi) {}
         static auto FromArgb(uint8_t a, uint8_t r, uint8_t g, uint8_t b);
-        static auto ToDisplayName(Windows::UI::Color const& color);
+        static auto ToDisplayName(winrt::Windows::UI::Color const& color);
     };
-    struct __declspec(empty_bases) Colors : Windows::UI::IColors
+    struct __declspec(empty_bases) Colors : winrt::Windows::UI::IColors
     {
         Colors(std::nullptr_t) noexcept {}
-        Colors(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::IColors(ptr, take_ownership_from_abi) {}
+        Colors(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::IColors(ptr, take_ownership_from_abi) {}
         [[nodiscard]] static auto AliceBlue();
         [[nodiscard]] static auto AntiqueWhite();
         [[nodiscard]] static auto Aqua();
@@ -188,15 +189,15 @@ WINRT_EXPORT namespace winrt::Windows::UI
         [[nodiscard]] static auto Yellow();
         [[nodiscard]] static auto YellowGreen();
     };
-    struct __declspec(empty_bases) UIContentRoot : Windows::UI::IUIContentRoot
+    struct __declspec(empty_bases) UIContentRoot : winrt::Windows::UI::IUIContentRoot
     {
         UIContentRoot(std::nullptr_t) noexcept {}
-        UIContentRoot(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::IUIContentRoot(ptr, take_ownership_from_abi) {}
+        UIContentRoot(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::IUIContentRoot(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) UIContext : Windows::UI::IUIContext
+    struct __declspec(empty_bases) UIContext : winrt::Windows::UI::IUIContext
     {
         UIContext(std::nullptr_t) noexcept {}
-        UIContext(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::IUIContext(ptr, take_ownership_from_abi) {}
+        UIContext(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::IUIContext(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

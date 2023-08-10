@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Graphics_Display_Core_2_H
 #define WINRT_Windows_Graphics_Display_Core_2_H
 #include "winrt/impl/Windows.Graphics.Display.Core.1.h"
@@ -31,17 +32,17 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Display::Core
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) HdmiDisplayInformation : Windows::Graphics::Display::Core::IHdmiDisplayInformation
+    struct __declspec(empty_bases) HdmiDisplayInformation : winrt::Windows::Graphics::Display::Core::IHdmiDisplayInformation
     {
         HdmiDisplayInformation(std::nullptr_t) noexcept {}
-        HdmiDisplayInformation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Display::Core::IHdmiDisplayInformation(ptr, take_ownership_from_abi) {}
+        HdmiDisplayInformation(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Display::Core::IHdmiDisplayInformation(ptr, take_ownership_from_abi) {}
         static auto GetForCurrentView();
     };
-    struct __declspec(empty_bases) HdmiDisplayMode : Windows::Graphics::Display::Core::IHdmiDisplayMode,
-        impl::require<HdmiDisplayMode, Windows::Graphics::Display::Core::IHdmiDisplayMode2>
+    struct __declspec(empty_bases) HdmiDisplayMode : winrt::Windows::Graphics::Display::Core::IHdmiDisplayMode,
+        impl::require<HdmiDisplayMode, winrt::Windows::Graphics::Display::Core::IHdmiDisplayMode2>
     {
         HdmiDisplayMode(std::nullptr_t) noexcept {}
-        HdmiDisplayMode(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Graphics::Display::Core::IHdmiDisplayMode(ptr, take_ownership_from_abi) {}
+        HdmiDisplayMode(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Graphics::Display::Core::IHdmiDisplayMode(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

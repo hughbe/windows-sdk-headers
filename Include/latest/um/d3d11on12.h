@@ -8,13 +8,13 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0626 */
+ /* File created by MIDL compiler version 8.01.0628 */
 
 
 
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
-#define __REQUIRED_RPCNDR_H_VERSION__ 500
+#define __REQUIRED_RPCNDR_H_VERSION__ 501
 #endif
 
 /* verify that the <rpcsal.h> version is high enough to compile this file*/
@@ -42,7 +42,7 @@
 #endif
 
 #ifndef DECLSPEC_XFGVIRT
-#if _CONTROL_FLOW_GUARD_XFG
+#if defined(_CONTROL_FLOW_GUARD_XFG)
 #define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
 #else
 #define DECLSPEC_XFGVIRT(base, func)
@@ -73,8 +73,8 @@ typedef interface ID3D11On12Device2 ID3D11On12Device2;
 
 
 /* header files for imported files */
-#include "oaidl.h"
-#include "ocidl.h"
+#include "OAIdl.h"
+#include "OCIdl.h"
 #include "d3d11.h"
 #include "d3d12.h"
 

@@ -1,39 +1,40 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_System_Update_2_H
 #define WINRT_Windows_System_Update_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.System.Update.1.h"
 WINRT_EXPORT namespace winrt::Windows::System::Update
 {
-    struct __declspec(empty_bases) SystemUpdateItem : Windows::System::Update::ISystemUpdateItem
+    struct __declspec(empty_bases) SystemUpdateItem : winrt::Windows::System::Update::ISystemUpdateItem
     {
         SystemUpdateItem(std::nullptr_t) noexcept {}
-        SystemUpdateItem(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::Update::ISystemUpdateItem(ptr, take_ownership_from_abi) {}
+        SystemUpdateItem(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::Update::ISystemUpdateItem(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SystemUpdateLastErrorInfo : Windows::System::Update::ISystemUpdateLastErrorInfo
+    struct __declspec(empty_bases) SystemUpdateLastErrorInfo : winrt::Windows::System::Update::ISystemUpdateLastErrorInfo
     {
         SystemUpdateLastErrorInfo(std::nullptr_t) noexcept {}
-        SystemUpdateLastErrorInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::Update::ISystemUpdateLastErrorInfo(ptr, take_ownership_from_abi) {}
+        SystemUpdateLastErrorInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::Update::ISystemUpdateLastErrorInfo(ptr, take_ownership_from_abi) {}
     };
     struct SystemUpdateManager
     {
         SystemUpdateManager() = delete;
         static auto IsSupported();
         [[nodiscard]] static auto State();
-        static auto StateChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
-        using StateChanged_revoker = impl::factory_event_revoker<Windows::System::Update::ISystemUpdateManagerStatics, &impl::abi_t<Windows::System::Update::ISystemUpdateManagerStatics>::remove_StateChanged>;
-        [[nodiscard]] static StateChanged_revoker StateChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        static auto StateChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler);
+        using StateChanged_revoker = impl::factory_event_revoker<winrt::Windows::System::Update::ISystemUpdateManagerStatics, &impl::abi_t<winrt::Windows::System::Update::ISystemUpdateManagerStatics>::remove_StateChanged>;
+        [[nodiscard]] static StateChanged_revoker StateChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler);
         static auto StateChanged(winrt::event_token const& token);
         [[nodiscard]] static auto DownloadProgress();
         [[nodiscard]] static auto InstallProgress();
         [[nodiscard]] static auto UserActiveHoursStart();
         [[nodiscard]] static auto UserActiveHoursEnd();
         [[nodiscard]] static auto UserActiveHoursMax();
-        static auto TrySetUserActiveHours(Windows::Foundation::TimeSpan const& start, Windows::Foundation::TimeSpan const& end);
+        static auto TrySetUserActiveHours(winrt::Windows::Foundation::TimeSpan const& start, winrt::Windows::Foundation::TimeSpan const& end);
         [[nodiscard]] static auto LastUpdateCheckTime();
         [[nodiscard]] static auto LastUpdateInstallTime();
         [[nodiscard]] static auto LastErrorInfo();
@@ -45,7 +46,7 @@ WINRT_EXPORT namespace winrt::Windows::System::Update
         [[nodiscard]] static auto AttentionRequiredReason();
         static auto SetFlightRing(param::hstring const& flightRing);
         static auto GetFlightRing();
-        static auto StartInstall(Windows::System::Update::SystemUpdateStartInstallAction const& action);
+        static auto StartInstall(winrt::Windows::System::Update::SystemUpdateStartInstallAction const& action);
         static auto RebootToCompleteInstall();
         static auto StartCancelUpdates();
     };

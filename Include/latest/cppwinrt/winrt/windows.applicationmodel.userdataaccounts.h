@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_ApplicationModel_UserDataAccounts_H
 #define WINRT_Windows_ApplicationModel_UserDataAccounts_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220110.5"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.220110.5"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.ApplicationModel.Appointments.2.h"
 #include "winrt/impl/Windows.ApplicationModel.Contacts.2.h"
@@ -23,248 +24,248 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::UserDisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_UserDisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_UserDisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::UserDisplayName(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->put_UserDisplayName(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->put_UserDisplayName(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::OtherAppReadAccess() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::OtherAppReadAccess() const
     {
-        Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_OtherAppReadAccess(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_OtherAppReadAccess(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::OtherAppReadAccess(Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::OtherAppReadAccess(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->put_OtherAppReadAccess(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->put_OtherAppReadAccess(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::Icon() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::Icon() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_Icon(&value));
-        return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_Icon(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::DeviceAccountTypeId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_DeviceAccountTypeId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_DeviceAccountTypeId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::PackageFamilyName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_PackageFamilyName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->get_PackageFamilyName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::SaveAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::SaveAsync() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->SaveAsync(&result));
-        return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->SaveAsync(&result));
+        return winrt::Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::DeleteAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::DeleteAsync() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->DeleteAsync(&result));
-        return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->DeleteAsync(&result));
+        return winrt::Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Appointments::AppointmentCalendar>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::FindAppointmentCalendarsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::FindAppointmentCalendarsAsync() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->FindAppointmentCalendarsAsync(&result));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Appointments::AppointmentCalendar>>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->FindAppointmentCalendarsAsync(&result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMailbox>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::FindEmailMailboxesAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Email::EmailMailbox>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::FindEmailMailboxesAsync() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->FindEmailMailboxesAsync(&result));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMailbox>>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->FindEmailMailboxesAsync(&result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Email::EmailMailbox>>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::ContactList>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::FindContactListsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactList>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::FindContactListsAsync() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->FindContactListsAsync(&result));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::ContactList>>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->FindContactListsAsync(&result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactList>>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::ContactAnnotationList>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::FindContactAnnotationListsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount<D>::FindContactAnnotationListsAsync() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->FindContactAnnotationListsAsync(&result));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::ContactAnnotationList>>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount)->FindContactAnnotationListsAsync(&result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>>{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount2<D>::EnterpriseId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2)->get_EnterpriseId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2)->get_EnterpriseId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount2<D>::IsProtectedUnderLock() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2)->get_IsProtectedUnderLock(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2)->get_IsProtectedUnderLock(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount3<D>::ExplictReadAccessPackageFamilyNames() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount3<D>::ExplictReadAccessPackageFamilyNames() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3)->get_ExplictReadAccessPackageFamilyNames(&value));
-        return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3)->get_ExplictReadAccessPackageFamilyNames(&value));
+        return winrt::Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount3<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount3<D>::DisplayName(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3)->put_DisplayName(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3)->put_DisplayName(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::CanShowCreateContactGroup() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->get_CanShowCreateContactGroup(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->get_CanShowCreateContactGroup(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::CanShowCreateContactGroup(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->put_CanShowCreateContactGroup(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->put_CanShowCreateContactGroup(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IPropertySet) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::ProviderProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IPropertySet) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::ProviderProperties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->get_ProviderProperties(&value));
-        return Windows::Foundation::Collections::IPropertySet{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->get_ProviderProperties(&value));
+        return winrt::Windows::Foundation::Collections::IPropertySet{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::UserDataTasks::UserDataTaskList>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::FindUserDataTaskListsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::FindUserDataTaskListsAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->FindUserDataTaskListsAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::UserDataTasks::UserDataTaskList>>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->FindUserDataTaskListsAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::ContactGroup>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::FindContactGroupsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactGroup>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::FindContactGroupsAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->FindContactGroupsAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::ContactGroup>>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->FindContactGroupsAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactGroup>>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::TryShowCreateContactGroupAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::TryShowCreateContactGroupAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->TryShowCreateContactGroupAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->TryShowCreateContactGroupAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::IsProtectedUnderLock(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->put_IsProtectedUnderLock(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->put_IsProtectedUnderLock(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::Icon(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccount4<D>::Icon(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->put_Icon(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4)->put_Icon(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerForUser<D>::RequestStoreAsync(Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerForUser<D>::RequestStoreAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser)->RequestStoreAsync(static_cast<int32_t>(storeAccessType), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser)->RequestStoreAsync(static_cast<int32_t>(storeAccessType), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::User) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerForUser<D>::User() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::User) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerForUser<D>::User() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser)->get_User(&value));
-        return Windows::System::User{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser)->get_User(&value));
+        return winrt::Windows::System::User{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics<D>::RequestStoreAsync(Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics<D>::RequestStoreAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics)->RequestStoreAsync(static_cast<int32_t>(storeAccessType), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics)->RequestStoreAsync(static_cast<int32_t>(storeAccessType), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics<D>::ShowAddAccountAsync(Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds const& contentKinds) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<hstring>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics<D>::ShowAddAccountAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds const& contentKinds) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics)->ShowAddAccountAsync(static_cast<uint32_t>(contentKinds), &result));
-        return Windows::Foundation::IAsyncOperation<hstring>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics)->ShowAddAccountAsync(static_cast<uint32_t>(contentKinds), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<hstring>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics<D>::ShowAccountSettingsAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics<D>::ShowAccountSettingsAsync(param::hstring const& id) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics)->ShowAccountSettingsAsync(*(void**)(&id), &result));
-        return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics)->ShowAccountSettingsAsync(*(void**)(&id), &result));
+        return winrt::Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics<D>::ShowAccountErrorResolverAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics<D>::ShowAccountErrorResolverAsync(param::hstring const& id) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics)->ShowAccountErrorResolverAsync(*(void**)(&id), &result));
-        return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics)->ShowAccountErrorResolverAsync(*(void**)(&id), &result));
+        return winrt::Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics2<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountManagerStatics2<D>::GetForUser(winrt::Windows::System::User const& user) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics2)->GetForUser(*(void**)(&user), &result));
-        return Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics2)->GetForUser(*(void**)(&user), &result));
+        return winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore<D>::FindAccountsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore<D>::FindAccountsAsync() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore)->FindAccountsAsync(&result));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore)->FindAccountsAsync(&result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore<D>::GetAccountAsync(param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore<D>::GetAccountAsync(param::hstring const& id) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore)->GetAccountAsync(*(void**)(&id), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore)->GetAccountAsync(*(void**)(&id), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore<D>::CreateAccountAsync(param::hstring const& userDisplayName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore<D>::CreateAccountAsync(param::hstring const& userDisplayName) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore)->CreateAccountAsync(*(void**)(&userDisplayName), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore)->CreateAccountAsync(*(void**)(&userDisplayName), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2<D>::CreateAccountAsync(param::hstring const& userDisplayName, param::hstring const& packageRelativeAppId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2<D>::CreateAccountAsync(param::hstring const& userDisplayName, param::hstring const& packageRelativeAppId) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2)->CreateAccountWithPackageRelativeAppIdAsync(*(void**)(&userDisplayName), *(void**)(&packageRelativeAppId), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2)->CreateAccountWithPackageRelativeAppIdAsync(*(void**)(&userDisplayName), *(void**)(&packageRelativeAppId), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2<D>::StoreChanged(Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2<D>::StoreChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2)->add_StoreChanged(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2)->add_StoreChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2<D>::StoreChanged_revoker consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2<D>::StoreChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2<D>::StoreChanged_revoker consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2<D>::StoreChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, StoreChanged_revoker>(this, StoreChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore2<D>::StoreChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2)->remove_StoreChanged(impl::bind_in(token)));
+        WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2)->remove_StoreChanged(impl::bind_in(token));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore3<D>::CreateAccountAsync(param::hstring const& userDisplayName, param::hstring const& packageRelativeAppId, param::hstring const& enterpriseId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStore3<D>::CreateAccountAsync(param::hstring const& userDisplayName, param::hstring const& packageRelativeAppId, param::hstring const& enterpriseId) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore3)->CreateAccountWithPackageRelativeAppIdAndEnterpriseIdAsync(*(void**)(&userDisplayName), *(void**)(&packageRelativeAppId), *(void**)(&enterpriseId), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore3)->CreateAccountWithPackageRelativeAppIdAndEnterpriseIdAsync(*(void**)(&userDisplayName), *(void**)(&packageRelativeAppId), *(void**)(&enterpriseId), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStoreChangedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_ApplicationModel_UserDataAccounts_IUserDataAccountStoreChangedEventArgs<D>::GetDeferral() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStoreChangedEventArgs)->GetDeferral(&result));
-        return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStoreChangedEventArgs)->GetDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccount> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccount>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -292,14 +293,14 @@ namespace winrt::impl
         int32_t __stdcall get_OtherAppReadAccess(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess>(this->shim().OtherAppReadAccess());
+            *value = detach_from<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess>(this->shim().OtherAppReadAccess());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_OtherAppReadAccess(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().OtherAppReadAccess(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess const*>(&value));
+            this->shim().OtherAppReadAccess(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -307,7 +308,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Icon());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Icon());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -331,7 +332,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncAction>(this->shim().SaveAsync());
+            *result = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().SaveAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -339,7 +340,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncAction>(this->shim().DeleteAsync());
+            *result = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().DeleteAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -347,7 +348,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Appointments::AppointmentCalendar>>>(this->shim().FindAppointmentCalendarsAsync());
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>>>(this->shim().FindAppointmentCalendarsAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -355,7 +356,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Email::EmailMailbox>>>(this->shim().FindEmailMailboxesAsync());
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Email::EmailMailbox>>>(this->shim().FindEmailMailboxesAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -363,7 +364,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::ContactList>>>(this->shim().FindContactListsAsync());
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactList>>>(this->shim().FindContactListsAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -371,7 +372,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::ContactAnnotationList>>>(this->shim().FindContactAnnotationListsAsync());
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>>>(this->shim().FindContactAnnotationListsAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -379,7 +380,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount2>
     {
         int32_t __stdcall get_EnterpriseId(void** value) noexcept final try
         {
@@ -400,13 +401,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount3>
     {
         int32_t __stdcall get_ExplictReadAccessPackageFamilyNames(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVector<hstring>>(this->shim().ExplictReadAccessPackageFamilyNames());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVector<hstring>>(this->shim().ExplictReadAccessPackageFamilyNames());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -429,7 +430,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccount4>
     {
         int32_t __stdcall get_CanShowCreateContactGroup(bool* value) noexcept final try
         {
@@ -449,7 +450,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IPropertySet>(this->shim().ProviderProperties());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IPropertySet>(this->shim().ProviderProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -457,7 +458,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::UserDataTasks::UserDataTaskList>>>(this->shim().FindUserDataTaskListsAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>>>(this->shim().FindUserDataTaskListsAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -465,7 +466,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Contacts::ContactGroup>>>(this->shim().FindContactGroupsAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Contacts::ContactGroup>>>(this->shim().FindContactGroupsAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -473,7 +474,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<hstring>>(this->shim().TryShowCreateContactGroupAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<hstring>>(this->shim().TryShowCreateContactGroupAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -487,7 +488,7 @@ namespace winrt::impl
         int32_t __stdcall put_Icon(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Icon(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            this->shim().Icon(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -495,13 +496,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerForUser>
     {
         int32_t __stdcall RequestStoreAsync(int32_t storeAccessType, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>>(this->shim().RequestStoreAsync(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const*>(&storeAccessType)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>>(this->shim().RequestStoreAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const*>(&storeAccessType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -509,7 +510,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::User>(this->shim().User());
+            *value = detach_from<winrt::Windows::System::User>(this->shim().User());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -517,13 +518,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics>
     {
         int32_t __stdcall RequestStoreAsync(int32_t storeAccessType, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>>(this->shim().RequestStoreAsync(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const*>(&storeAccessType)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>>(this->shim().RequestStoreAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const*>(&storeAccessType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -531,7 +532,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<hstring>>(this->shim().ShowAddAccountAsync(*reinterpret_cast<Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds const*>(&contentKinds)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<hstring>>(this->shim().ShowAddAccountAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds const*>(&contentKinds)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -539,7 +540,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncAction>(this->shim().ShowAccountSettingsAsync(*reinterpret_cast<hstring const*>(&id)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().ShowAccountSettingsAsync(*reinterpret_cast<hstring const*>(&id)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -547,7 +548,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncAction>(this->shim().ShowAccountErrorResolverAsync(*reinterpret_cast<hstring const*>(&id)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().ShowAccountErrorResolverAsync(*reinterpret_cast<hstring const*>(&id)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -555,13 +556,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics2> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics2>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics2> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountManagerStatics2>
     {
         int32_t __stdcall GetForUser(void* user, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser>(this->shim().GetForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
+            *result = detach_from<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser>(this->shim().GetForUser(*reinterpret_cast<winrt::Windows::System::User const*>(&user)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -569,13 +570,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore>
     {
         int32_t __stdcall FindAccountsAsync(void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>>(this->shim().FindAccountsAsync());
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>>(this->shim().FindAccountsAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -583,7 +584,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>(this->shim().GetAccountAsync(*reinterpret_cast<hstring const*>(&id)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>(this->shim().GetAccountAsync(*reinterpret_cast<hstring const*>(&id)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -591,7 +592,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>(this->shim().CreateAccountAsync(*reinterpret_cast<hstring const*>(&userDisplayName)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>(this->shim().CreateAccountAsync(*reinterpret_cast<hstring const*>(&userDisplayName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -599,13 +600,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore2>
     {
         int32_t __stdcall CreateAccountWithPackageRelativeAppIdAsync(void* userDisplayName, void* packageRelativeAppId, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>(this->shim().CreateAccountAsync(*reinterpret_cast<hstring const*>(&userDisplayName), *reinterpret_cast<hstring const*>(&packageRelativeAppId)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>(this->shim().CreateAccountAsync(*reinterpret_cast<hstring const*>(&userDisplayName), *reinterpret_cast<hstring const*>(&packageRelativeAppId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -613,7 +614,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().StoreChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().StoreChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore, winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -627,13 +628,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore3> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore3>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore3> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStore3>
     {
         int32_t __stdcall CreateAccountWithPackageRelativeAppIdAndEnterpriseIdAsync(void* userDisplayName, void* packageRelativeAppId, void* enterpriseId, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>(this->shim().CreateAccountAsync(*reinterpret_cast<hstring const*>(&userDisplayName), *reinterpret_cast<hstring const*>(&packageRelativeAppId), *reinterpret_cast<hstring const*>(&enterpriseId)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>>(this->shim().CreateAccountAsync(*reinterpret_cast<hstring const*>(&userDisplayName), *reinterpret_cast<hstring const*>(&packageRelativeAppId), *reinterpret_cast<hstring const*>(&enterpriseId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -641,13 +642,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStoreChangedEventArgs> : produce_base<D, Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStoreChangedEventArgs>
+    struct produce<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStoreChangedEventArgs> : produce_base<D, winrt::Windows::ApplicationModel::UserDataAccounts::IUserDataAccountStoreChangedEventArgs>
     {
         int32_t __stdcall GetDeferral(void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -687,11 +688,11 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataAccounts
         left = left ^ right;
         return left;
     }
-    inline auto UserDataAccountManager::RequestStoreAsync(Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType)
+    inline auto UserDataAccountManager::RequestStoreAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType const& storeAccessType)
     {
         return impl::call_factory<UserDataAccountManager, IUserDataAccountManagerStatics>([&](IUserDataAccountManagerStatics const& f) { return f.RequestStoreAsync(storeAccessType); });
     }
-    inline auto UserDataAccountManager::ShowAddAccountAsync(Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds const& contentKinds)
+    inline auto UserDataAccountManager::ShowAddAccountAsync(winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds const& contentKinds)
     {
         return impl::call_factory<UserDataAccountManager, IUserDataAccountManagerStatics>([&](IUserDataAccountManagerStatics const& f) { return f.ShowAddAccountAsync(contentKinds); });
     }
@@ -703,7 +704,7 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserDataAccounts
     {
         return impl::call_factory<UserDataAccountManager, IUserDataAccountManagerStatics>([&](IUserDataAccountManagerStatics const& f) { return f.ShowAccountErrorResolverAsync(id); });
     }
-    inline auto UserDataAccountManager::GetForUser(Windows::System::User const& user)
+    inline auto UserDataAccountManager::GetForUser(winrt::Windows::System::User const& user)
     {
         return impl::call_factory<UserDataAccountManager, IUserDataAccountManagerStatics2>([&](IUserDataAccountManagerStatics2 const& f) { return f.GetForUser(user); });
     }
@@ -727,6 +728,8 @@ namespace std
     template<> struct hash<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs> : winrt::impl::hash_base {};
+#endif
+#ifdef __cpp_lib_format
 #endif
 }
 #endif

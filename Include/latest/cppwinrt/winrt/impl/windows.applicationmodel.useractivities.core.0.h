@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_ApplicationModel_UserActivities_Core_0_H
 #define WINRT_Windows_ApplicationModel_UserActivities_Core_0_H
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserActivities
@@ -22,12 +23,12 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserActivities::Core
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics>{ using type = interface_category; };
-    template <> struct category<Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager>{ using type = class_category; };
-    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager> = L"Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager";
-    template <> inline constexpr auto& name_v<Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics> = L"Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics";
-    template <> inline constexpr guid guid_v<Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics>{ 0xCA3ADB02,0xA4BE,0x4D4D,{ 0xBF,0xA8,0x67,0x95,0xF4,0x26,0x4E,0xFB } }; // CA3ADB02-A4BE-4D4D-BFA8-6795F4264EFB
-    template <> struct abi<Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics>
+    template <> struct category<winrt::Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager>{ using type = class_category; };
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager> = L"Windows.ApplicationModel.UserActivities.Core.CoreUserActivityManager";
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics> = L"Windows.ApplicationModel.UserActivities.Core.ICoreUserActivityManagerStatics";
+    template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics>{ 0xCA3ADB02,0xA4BE,0x4D4D,{ 0xBF,0xA8,0x67,0x95,0xF4,0x26,0x4E,0xFB } }; // CA3ADB02-A4BE-4D4D-BFA8-6795F4264EFB
+    template <> struct abi<winrt::Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -38,10 +39,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_UserActivities_Core_ICoreUserActivityManagerStatics
     {
-        WINRT_IMPL_AUTO(Windows::ApplicationModel::UserActivities::UserActivitySession) CreateUserActivitySessionInBackground(Windows::ApplicationModel::UserActivities::UserActivity const& activity) const;
-        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) DeleteUserActivitySessionsInTimeRangeAsync(Windows::ApplicationModel::UserActivities::UserActivityChannel const& channel, Windows::Foundation::DateTime const& startTime, Windows::Foundation::DateTime const& endTime) const;
+        WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::UserActivities::UserActivitySession) CreateUserActivitySessionInBackground(winrt::Windows::ApplicationModel::UserActivities::UserActivity const& activity) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) DeleteUserActivitySessionsInTimeRangeAsync(winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel const& channel, winrt::Windows::Foundation::DateTime const& startTime, winrt::Windows::Foundation::DateTime const& endTime) const;
     };
-    template <> struct consume<Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics>
+    template <> struct consume<winrt::Windows::ApplicationModel::UserActivities::Core::ICoreUserActivityManagerStatics>
     {
         template <typename D> using type = consume_Windows_ApplicationModel_UserActivities_Core_ICoreUserActivityManagerStatics<D>;
     };

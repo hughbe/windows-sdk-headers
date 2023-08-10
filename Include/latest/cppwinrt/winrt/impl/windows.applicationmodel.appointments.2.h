@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.220110.5
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_ApplicationModel_Appointments_2_H
 #define WINRT_Windows_ApplicationModel_Appointments_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
@@ -11,78 +12,78 @@
 #include "winrt/impl/Windows.ApplicationModel.Appointments.1.h"
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Appointments
 {
-    struct __declspec(empty_bases) Appointment : Windows::ApplicationModel::Appointments::IAppointment,
-        impl::require<Appointment, Windows::ApplicationModel::Appointments::IAppointment2, Windows::ApplicationModel::Appointments::IAppointment3>
+    struct __declspec(empty_bases) Appointment : winrt::Windows::ApplicationModel::Appointments::IAppointment,
+        impl::require<Appointment, winrt::Windows::ApplicationModel::Appointments::IAppointment2, winrt::Windows::ApplicationModel::Appointments::IAppointment3>
     {
         Appointment(std::nullptr_t) noexcept {}
-        Appointment(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointment(ptr, take_ownership_from_abi) {}
+        Appointment(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointment(ptr, take_ownership_from_abi) {}
         Appointment();
     };
-    struct __declspec(empty_bases) AppointmentCalendar : Windows::ApplicationModel::Appointments::IAppointmentCalendar,
-        impl::require<AppointmentCalendar, Windows::ApplicationModel::Appointments::IAppointmentCalendar2, Windows::ApplicationModel::Appointments::IAppointmentCalendar3>
+    struct __declspec(empty_bases) AppointmentCalendar : winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar,
+        impl::require<AppointmentCalendar, winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2, winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar3>
     {
         AppointmentCalendar(std::nullptr_t) noexcept {}
-        AppointmentCalendar(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentCalendar(ptr, take_ownership_from_abi) {}
-        using Windows::ApplicationModel::Appointments::IAppointmentCalendar::DisplayColor;
-        using impl::consume_t<AppointmentCalendar, Windows::ApplicationModel::Appointments::IAppointmentCalendar2>::DisplayColor;
-        using Windows::ApplicationModel::Appointments::IAppointmentCalendar::IsHidden;
-        using impl::consume_t<AppointmentCalendar, Windows::ApplicationModel::Appointments::IAppointmentCalendar2>::IsHidden;
+        AppointmentCalendar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar(ptr, take_ownership_from_abi) {}
+        using winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar::DisplayColor;
+        using impl::consume_t<AppointmentCalendar, winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>::DisplayColor;
+        using winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar::IsHidden;
+        using impl::consume_t<AppointmentCalendar, winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendar2>::IsHidden;
     };
-    struct __declspec(empty_bases) AppointmentCalendarSyncManager : Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager,
-        impl::require<AppointmentCalendarSyncManager, Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>
+    struct __declspec(empty_bases) AppointmentCalendarSyncManager : winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager,
+        impl::require<AppointmentCalendarSyncManager, winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>
     {
         AppointmentCalendarSyncManager(std::nullptr_t) noexcept {}
-        AppointmentCalendarSyncManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager(ptr, take_ownership_from_abi) {}
-        using Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager::LastAttemptedSyncTime;
-        using impl::consume_t<AppointmentCalendarSyncManager, Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>::LastAttemptedSyncTime;
-        using Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager::LastSuccessfulSyncTime;
-        using impl::consume_t<AppointmentCalendarSyncManager, Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>::LastSuccessfulSyncTime;
-        using Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager::Status;
-        using impl::consume_t<AppointmentCalendarSyncManager, Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>::Status;
+        AppointmentCalendarSyncManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager(ptr, take_ownership_from_abi) {}
+        using winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager::LastAttemptedSyncTime;
+        using impl::consume_t<AppointmentCalendarSyncManager, winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>::LastAttemptedSyncTime;
+        using winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager::LastSuccessfulSyncTime;
+        using impl::consume_t<AppointmentCalendarSyncManager, winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>::LastSuccessfulSyncTime;
+        using winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager::Status;
+        using impl::consume_t<AppointmentCalendarSyncManager, winrt::Windows::ApplicationModel::Appointments::IAppointmentCalendarSyncManager2>::Status;
     };
-    struct __declspec(empty_bases) AppointmentConflictResult : Windows::ApplicationModel::Appointments::IAppointmentConflictResult
+    struct __declspec(empty_bases) AppointmentConflictResult : winrt::Windows::ApplicationModel::Appointments::IAppointmentConflictResult
     {
         AppointmentConflictResult(std::nullptr_t) noexcept {}
-        AppointmentConflictResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentConflictResult(ptr, take_ownership_from_abi) {}
+        AppointmentConflictResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentConflictResult(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppointmentException : Windows::ApplicationModel::Appointments::IAppointmentException
+    struct __declspec(empty_bases) AppointmentException : winrt::Windows::ApplicationModel::Appointments::IAppointmentException
     {
         AppointmentException(std::nullptr_t) noexcept {}
-        AppointmentException(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentException(ptr, take_ownership_from_abi) {}
+        AppointmentException(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentException(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppointmentInvitee : Windows::ApplicationModel::Appointments::IAppointmentInvitee
+    struct __declspec(empty_bases) AppointmentInvitee : winrt::Windows::ApplicationModel::Appointments::IAppointmentInvitee
     {
         AppointmentInvitee(std::nullptr_t) noexcept {}
-        AppointmentInvitee(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentInvitee(ptr, take_ownership_from_abi) {}
+        AppointmentInvitee(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentInvitee(ptr, take_ownership_from_abi) {}
         AppointmentInvitee();
     };
     struct AppointmentManager
     {
         AppointmentManager() = delete;
-        static auto ShowAddAppointmentAsync(Windows::ApplicationModel::Appointments::Appointment const& appointment, Windows::Foundation::Rect const& selection);
-        static auto ShowAddAppointmentAsync(Windows::ApplicationModel::Appointments::Appointment const& appointment, Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement);
-        static auto ShowReplaceAppointmentAsync(param::hstring const& appointmentId, Windows::ApplicationModel::Appointments::Appointment const& appointment, Windows::Foundation::Rect const& selection);
-        static auto ShowReplaceAppointmentAsync(param::hstring const& appointmentId, Windows::ApplicationModel::Appointments::Appointment const& appointment, Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement);
-        static auto ShowReplaceAppointmentAsync(param::hstring const& appointmentId, Windows::ApplicationModel::Appointments::Appointment const& appointment, Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement, Windows::Foundation::DateTime const& instanceStartDate);
-        static auto ShowRemoveAppointmentAsync(param::hstring const& appointmentId, Windows::Foundation::Rect const& selection);
-        static auto ShowRemoveAppointmentAsync(param::hstring const& appointmentId, Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement);
-        static auto ShowRemoveAppointmentAsync(param::hstring const& appointmentId, Windows::Foundation::Rect const& selection, Windows::UI::Popups::Placement const& preferredPlacement, Windows::Foundation::DateTime const& instanceStartDate);
-        static auto ShowTimeFrameAsync(Windows::Foundation::DateTime const& timeToShow, Windows::Foundation::TimeSpan const& duration);
+        static auto ShowAddAppointmentAsync(winrt::Windows::ApplicationModel::Appointments::Appointment const& appointment, winrt::Windows::Foundation::Rect const& selection);
+        static auto ShowAddAppointmentAsync(winrt::Windows::ApplicationModel::Appointments::Appointment const& appointment, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement);
+        static auto ShowReplaceAppointmentAsync(param::hstring const& appointmentId, winrt::Windows::ApplicationModel::Appointments::Appointment const& appointment, winrt::Windows::Foundation::Rect const& selection);
+        static auto ShowReplaceAppointmentAsync(param::hstring const& appointmentId, winrt::Windows::ApplicationModel::Appointments::Appointment const& appointment, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement);
+        static auto ShowReplaceAppointmentAsync(param::hstring const& appointmentId, winrt::Windows::ApplicationModel::Appointments::Appointment const& appointment, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement, winrt::Windows::Foundation::DateTime const& instanceStartDate);
+        static auto ShowRemoveAppointmentAsync(param::hstring const& appointmentId, winrt::Windows::Foundation::Rect const& selection);
+        static auto ShowRemoveAppointmentAsync(param::hstring const& appointmentId, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement);
+        static auto ShowRemoveAppointmentAsync(param::hstring const& appointmentId, winrt::Windows::Foundation::Rect const& selection, winrt::Windows::UI::Popups::Placement const& preferredPlacement, winrt::Windows::Foundation::DateTime const& instanceStartDate);
+        static auto ShowTimeFrameAsync(winrt::Windows::Foundation::DateTime const& timeToShow, winrt::Windows::Foundation::TimeSpan const& duration);
         static auto ShowAppointmentDetailsAsync(param::hstring const& appointmentId);
-        static auto ShowAppointmentDetailsAsync(param::hstring const& appointmentId, Windows::Foundation::DateTime const& instanceStartDate);
-        static auto ShowEditNewAppointmentAsync(Windows::ApplicationModel::Appointments::Appointment const& appointment);
-        static auto RequestStoreAsync(Windows::ApplicationModel::Appointments::AppointmentStoreAccessType const& options);
-        static auto GetForUser(Windows::System::User const& user);
+        static auto ShowAppointmentDetailsAsync(param::hstring const& appointmentId, winrt::Windows::Foundation::DateTime const& instanceStartDate);
+        static auto ShowEditNewAppointmentAsync(winrt::Windows::ApplicationModel::Appointments::Appointment const& appointment);
+        static auto RequestStoreAsync(winrt::Windows::ApplicationModel::Appointments::AppointmentStoreAccessType const& options);
+        static auto GetForUser(winrt::Windows::System::User const& user);
     };
-    struct __declspec(empty_bases) AppointmentManagerForUser : Windows::ApplicationModel::Appointments::IAppointmentManagerForUser
+    struct __declspec(empty_bases) AppointmentManagerForUser : winrt::Windows::ApplicationModel::Appointments::IAppointmentManagerForUser
     {
         AppointmentManagerForUser(std::nullptr_t) noexcept {}
-        AppointmentManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentManagerForUser(ptr, take_ownership_from_abi) {}
+        AppointmentManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentManagerForUser(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppointmentOrganizer : Windows::ApplicationModel::Appointments::IAppointmentParticipant
+    struct __declspec(empty_bases) AppointmentOrganizer : winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant
     {
         AppointmentOrganizer(std::nullptr_t) noexcept {}
-        AppointmentOrganizer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentParticipant(ptr, take_ownership_from_abi) {}
+        AppointmentOrganizer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant(ptr, take_ownership_from_abi) {}
         AppointmentOrganizer();
     };
     struct AppointmentProperties
@@ -115,57 +116,57 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Appointments
         [[nodiscard]] static auto RemoteChangeNumber();
         [[nodiscard]] static auto DetailsKind();
     };
-    struct __declspec(empty_bases) AppointmentRecurrence : Windows::ApplicationModel::Appointments::IAppointmentRecurrence,
-        impl::require<AppointmentRecurrence, Windows::ApplicationModel::Appointments::IAppointmentRecurrence2, Windows::ApplicationModel::Appointments::IAppointmentRecurrence3>
+    struct __declspec(empty_bases) AppointmentRecurrence : winrt::Windows::ApplicationModel::Appointments::IAppointmentRecurrence,
+        impl::require<AppointmentRecurrence, winrt::Windows::ApplicationModel::Appointments::IAppointmentRecurrence2, winrt::Windows::ApplicationModel::Appointments::IAppointmentRecurrence3>
     {
         AppointmentRecurrence(std::nullptr_t) noexcept {}
-        AppointmentRecurrence(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentRecurrence(ptr, take_ownership_from_abi) {}
+        AppointmentRecurrence(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentRecurrence(ptr, take_ownership_from_abi) {}
         AppointmentRecurrence();
     };
-    struct __declspec(empty_bases) AppointmentStore : Windows::ApplicationModel::Appointments::IAppointmentStore,
-        impl::require<AppointmentStore, Windows::ApplicationModel::Appointments::IAppointmentStore2, Windows::ApplicationModel::Appointments::IAppointmentStore3>
+    struct __declspec(empty_bases) AppointmentStore : winrt::Windows::ApplicationModel::Appointments::IAppointmentStore,
+        impl::require<AppointmentStore, winrt::Windows::ApplicationModel::Appointments::IAppointmentStore2, winrt::Windows::ApplicationModel::Appointments::IAppointmentStore3>
     {
         AppointmentStore(std::nullptr_t) noexcept {}
-        AppointmentStore(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentStore(ptr, take_ownership_from_abi) {}
-        using Windows::ApplicationModel::Appointments::IAppointmentStore::CreateAppointmentCalendarAsync;
-        using impl::consume_t<AppointmentStore, Windows::ApplicationModel::Appointments::IAppointmentStore2>::CreateAppointmentCalendarAsync;
+        AppointmentStore(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentStore(ptr, take_ownership_from_abi) {}
+        using winrt::Windows::ApplicationModel::Appointments::IAppointmentStore::CreateAppointmentCalendarAsync;
+        using impl::consume_t<AppointmentStore, winrt::Windows::ApplicationModel::Appointments::IAppointmentStore2>::CreateAppointmentCalendarAsync;
     };
-    struct __declspec(empty_bases) AppointmentStoreChange : Windows::ApplicationModel::Appointments::IAppointmentStoreChange,
-        impl::require<AppointmentStoreChange, Windows::ApplicationModel::Appointments::IAppointmentStoreChange2>
+    struct __declspec(empty_bases) AppointmentStoreChange : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChange,
+        impl::require<AppointmentStoreChange, winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChange2>
     {
         AppointmentStoreChange(std::nullptr_t) noexcept {}
-        AppointmentStoreChange(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentStoreChange(ptr, take_ownership_from_abi) {}
+        AppointmentStoreChange(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChange(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppointmentStoreChangeReader : Windows::ApplicationModel::Appointments::IAppointmentStoreChangeReader
+    struct __declspec(empty_bases) AppointmentStoreChangeReader : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangeReader
     {
         AppointmentStoreChangeReader(std::nullptr_t) noexcept {}
-        AppointmentStoreChangeReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentStoreChangeReader(ptr, take_ownership_from_abi) {}
+        AppointmentStoreChangeReader(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangeReader(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppointmentStoreChangeTracker : Windows::ApplicationModel::Appointments::IAppointmentStoreChangeTracker,
-        impl::require<AppointmentStoreChangeTracker, Windows::ApplicationModel::Appointments::IAppointmentStoreChangeTracker2>
+    struct __declspec(empty_bases) AppointmentStoreChangeTracker : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangeTracker,
+        impl::require<AppointmentStoreChangeTracker, winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangeTracker2>
     {
         AppointmentStoreChangeTracker(std::nullptr_t) noexcept {}
-        AppointmentStoreChangeTracker(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentStoreChangeTracker(ptr, take_ownership_from_abi) {}
+        AppointmentStoreChangeTracker(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangeTracker(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppointmentStoreChangedDeferral : Windows::ApplicationModel::Appointments::IAppointmentStoreChangedDeferral
+    struct __declspec(empty_bases) AppointmentStoreChangedDeferral : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangedDeferral
     {
         AppointmentStoreChangedDeferral(std::nullptr_t) noexcept {}
-        AppointmentStoreChangedDeferral(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentStoreChangedDeferral(ptr, take_ownership_from_abi) {}
+        AppointmentStoreChangedDeferral(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangedDeferral(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppointmentStoreChangedEventArgs : Windows::ApplicationModel::Appointments::IAppointmentStoreChangedEventArgs
+    struct __declspec(empty_bases) AppointmentStoreChangedEventArgs : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangedEventArgs
     {
         AppointmentStoreChangedEventArgs(std::nullptr_t) noexcept {}
-        AppointmentStoreChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentStoreChangedEventArgs(ptr, take_ownership_from_abi) {}
+        AppointmentStoreChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AppointmentStoreNotificationTriggerDetails : Windows::ApplicationModel::Appointments::IAppointmentStoreNotificationTriggerDetails
+    struct __declspec(empty_bases) AppointmentStoreNotificationTriggerDetails : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreNotificationTriggerDetails
     {
         AppointmentStoreNotificationTriggerDetails(std::nullptr_t) noexcept {}
-        AppointmentStoreNotificationTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IAppointmentStoreNotificationTriggerDetails(ptr, take_ownership_from_abi) {}
+        AppointmentStoreNotificationTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IAppointmentStoreNotificationTriggerDetails(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) FindAppointmentsOptions : Windows::ApplicationModel::Appointments::IFindAppointmentsOptions
+    struct __declspec(empty_bases) FindAppointmentsOptions : winrt::Windows::ApplicationModel::Appointments::IFindAppointmentsOptions
     {
         FindAppointmentsOptions(std::nullptr_t) noexcept {}
-        FindAppointmentsOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::IFindAppointmentsOptions(ptr, take_ownership_from_abi) {}
+        FindAppointmentsOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::Appointments::IFindAppointmentsOptions(ptr, take_ownership_from_abi) {}
         FindAppointmentsOptions();
     };
 }
