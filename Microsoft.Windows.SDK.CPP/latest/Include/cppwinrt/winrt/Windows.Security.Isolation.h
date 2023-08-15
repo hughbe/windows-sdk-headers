@@ -106,6 +106,10 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment3)->ShareFileWithTelemetryAsync(*(void**)(&filePath), *(void**)(&options), *(void**)(&telemetryParameters), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult>{ operation, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironment4<D>::ChangePriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& Priority) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4)->ChangePriority(static_cast<int32_t>(Priority)));
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateStatus) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentCreateResult<D>::Status() const
     {
         winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateStatus value{};
@@ -123,6 +127,10 @@ namespace winrt::impl
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult)->get_Environment(&value));
         return winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentCreateResult2<D>::ChangeCreationPriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& priority) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2)->ChangeCreationPriority(static_cast<int32_t>(priority)));
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult, winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>) consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentFactory<D>::CreateAsync(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions const& options) const
     {
@@ -674,6 +682,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4> : produce_base<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4>
+    {
+        int32_t __stdcall ChangePriority(int32_t Priority) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ChangePriority(*reinterpret_cast<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const*>(&Priority));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult> : produce_base<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult>
     {
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
@@ -696,6 +717,19 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment>(this->shim().Environment());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2> : produce_base<D, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2>
+    {
+        int32_t __stdcall ChangeCreationPriority(int32_t priority) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ChangeCreationPriority(*reinterpret_cast<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const*>(&priority));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1572,7 +1606,9 @@ namespace std
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile2> : winrt::impl::hash_base {};

@@ -185,10 +185,14 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.UI.Shell.FocusAssist)]
-            [uuid(CDE8728D-DBFD-50FC-9B39-7B3614D4C8F6)]
+            [uuid(A8432DA9-2954-586A-96F3-58CAE161DE71)]
             interface IFocusAssist : IInspectable
             {
                 [propget] HRESULT IsEnabled([out] [retval] boolean* value);
+                HRESULT TryStartFocusAssist([out] [retval] GUID* result);
+                HRESULT TryStartFocusAssistUntil([in] Windows.Foundation.DateTime endTime, [out] [retval] GUID* result);
+                [overload("EndFocusAssist")] HRESULT EndFocusAssist([in] GUID token);
+                [overload("EndFocusAssist")] HRESULT EndFocusAssist2();
                 [eventadd] HRESULT Changed([in] Windows.Foundation.TypedEventHandler<Windows.UI.Shell.FocusAssist*, Windows.UI.Shell.FocusAssistChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
                 [eventremove] HRESULT Changed([in] EventRegistrationToken token);
             }
@@ -202,14 +206,10 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.UI.Shell.FocusAssist)]
-            [uuid(293C0C7E-5CCE-5FD8-ABB3-B5B54423DEAD)]
+            [uuid(C5703163-9DD4-58FA-BADC-212FA87E07ED)]
             interface IFocusAssistStatics : IInspectable
             {
                 HRESULT GetDefault([out] [retval] Windows.UI.Shell.FocusAssist** result);
-                HRESULT TryStartFocusAssist([out] [retval] GUID* result);
-                HRESULT TryStartFocusAssistUntil([in] Windows.Foundation.DateTime endTime, [out] [retval] GUID* result);
-                [overload("EndFocusAssist")] HRESULT EndFocusAssist([in] GUID token);
-                [overload("EndFocusAssist")] HRESULT EndFocusAssist2();
             }
 
             [contract(Windows.UI.Shell.SecurityAppManagerContract, 1.0)]

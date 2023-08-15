@@ -524,11 +524,15 @@ enum DEVICE_ORIENTATION_TYPE
 typedef struct AUDIO_MIC_BOOST_NOTIFICATION
     {
     IMMDevice *endpoint;
+    GUID guidEventContext;
+    DWORD dwSenderProcessId;
     BOOL bMicBoostEnabled;
     float fLevelDB;
     float fLevelMinDB;
     float fLevelMaxDB;
     float fLevelStepDB;
+    BOOL bMuteSupported;
+    BOOL bMute;
     } 	AUDIO_MIC_BOOST_NOTIFICATION;
 
 typedef struct APO_NOTIFICATION

@@ -6,7 +6,6 @@
 #pragma once
 #ifndef WINRT_Windows_UI_Shell_2_H
 #define WINRT_Windows_UI_Shell_2_H
-#include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.UI.Shell.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Shell
 {
@@ -20,10 +19,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Shell
         FocusAssist(std::nullptr_t) noexcept {}
         FocusAssist(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssist(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
-        static auto TryStartFocusAssist();
-        static auto TryStartFocusAssistUntil(winrt::Windows::Foundation::DateTime const& endTime);
-        static auto EndFocusAssist(winrt::guid const& token);
-        static auto EndFocusAssist();
     };
     struct __declspec(empty_bases) FocusAssistChangedEventArgs : winrt::Windows::UI::Shell::IFocusAssistChangedEventArgs
     {

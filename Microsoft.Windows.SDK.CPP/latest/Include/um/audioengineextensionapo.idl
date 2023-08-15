@@ -188,11 +188,15 @@ typedef struct AUDIO_MIC_BOOST_NOTIFICATION
 {
     // Device that the mic boost has changed on.
     IMMDevice* endpoint;
+    GUID guidEventContext;
+    DWORD dwSenderProcessId;
     BOOL bMicBoostEnabled;
     float fLevelDB;
     float fLevelMinDB;
     float fLevelMaxDB;
     float fLevelStepDB;
+    BOOL bMuteSupported;
+    BOOL bMute;
 } AUDIO_MIC_BOOST_NOTIFICATION;
 
 // This structure is used to describe the type of notification that is sent from the OS to the APO using IAudioProcessingObjectNotifications::HandleNotification.

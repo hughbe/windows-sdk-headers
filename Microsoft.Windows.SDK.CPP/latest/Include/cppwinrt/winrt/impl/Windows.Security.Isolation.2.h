@@ -46,7 +46,7 @@ WINRT_EXPORT namespace winrt::Windows::Security::Isolation
         return !(left == right);
     }
     struct __declspec(empty_bases) IsolatedWindowsEnvironment : winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment,
-        impl::require<IsolatedWindowsEnvironment, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment2, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment3>
+        impl::require<IsolatedWindowsEnvironment, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment2, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment3, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4>
     {
         IsolatedWindowsEnvironment(std::nullptr_t) noexcept {}
         IsolatedWindowsEnvironment(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment(ptr, take_ownership_from_abi) {}
@@ -55,7 +55,8 @@ WINRT_EXPORT namespace winrt::Windows::Security::Isolation
         static auto GetById(param::hstring const& environmentId);
         static auto FindByOwnerId(param::hstring const& environmentOwnerId);
     };
-    struct __declspec(empty_bases) IsolatedWindowsEnvironmentCreateResult : winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult
+    struct __declspec(empty_bases) IsolatedWindowsEnvironmentCreateResult : winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult,
+        impl::require<IsolatedWindowsEnvironmentCreateResult, winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2>
     {
         IsolatedWindowsEnvironmentCreateResult(std::nullptr_t) noexcept {}
         IsolatedWindowsEnvironmentCreateResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult(ptr, take_ownership_from_abi) {}

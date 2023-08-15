@@ -119,9 +119,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::UI::Shell::ITaskbarManagerStatics> = L"Windows.UI.Shell.ITaskbarManagerStatics";
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IAdaptiveCard>{ 0x72D0568C,0xA274,0x41CD,{ 0x82,0xA8,0x98,0x9D,0x40,0xB9,0xB0,0x5E } }; // 72D0568C-A274-41CD-82A8-989D40B9B05E
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>{ 0x766D8F08,0xD3FE,0x4347,{ 0xA0,0xBC,0xB9,0xEA,0x9A,0x6D,0xC2,0x8E } }; // 766D8F08-D3FE-4347-A0BC-B9EA9A6DC28E
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IFocusAssist>{ 0xCDE8728D,0xDBFD,0x50FC,{ 0x9B,0x39,0x7B,0x36,0x14,0xD4,0xC8,0xF6 } }; // CDE8728D-DBFD-50FC-9B39-7B3614D4C8F6
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IFocusAssist>{ 0xA8432DA9,0x2954,0x586A,{ 0x96,0xF3,0x58,0xCA,0xE1,0x61,0xDE,0x71 } }; // A8432DA9-2954-586A-96F3-58CAE161DE71
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IFocusAssistChangedEventArgs>{ 0x17F6A388,0x249C,0x51CF,{ 0xB3,0x42,0x0B,0xA2,0xA0,0xF0,0x8D,0xF9 } }; // 17F6A388-249C-51CF-B342-0BA2A0F08DF9
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IFocusAssistStatics>{ 0x293C0C7E,0x5CCE,0x5FD8,{ 0xAB,0xB3,0xB5,0xB5,0x44,0x23,0xDE,0xAD } }; // 293C0C7E-5CCE-5FD8-ABB3-B5B54423DEAD
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IFocusAssistStatics>{ 0xC5703163,0x9DD4,0x58FA,{ 0xBA,0xDC,0x21,0x2F,0xA8,0x7E,0x07,0xED } }; // C5703163-9DD4-58FA-BADC-212FA87E07ED
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::ISecurityAppManager>{ 0x96AC500C,0xAED4,0x561D,{ 0xBD,0xE8,0x95,0x35,0x20,0x34,0x3A,0x2D } }; // 96AC500C-AED4-561D-BDE8-953520343A2D
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IShareWindowCommandEventArgs>{ 0x4578DC09,0xA523,0x5756,{ 0xA9,0x95,0xE4,0xFE,0xB9,0x91,0xFF,0xF0 } }; // 4578DC09-A523-5756-A995-E4FEB991FFF0
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IShareWindowCommandSource>{ 0xCB3B7AE3,0x6B9C,0x561E,{ 0xBC,0xCC,0x61,0xE6,0x8E,0x0A,0xBF,0xEF } }; // CB3B7AE3-6B9C-561E-BCCC-61E68E0ABFEF
@@ -154,6 +154,10 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_IsEnabled(bool*) noexcept = 0;
+            virtual int32_t __stdcall TryStartFocusAssist(winrt::guid*) noexcept = 0;
+            virtual int32_t __stdcall TryStartFocusAssistUntil(int64_t, winrt::guid*) noexcept = 0;
+            virtual int32_t __stdcall EndFocusAssist(winrt::guid) noexcept = 0;
+            virtual int32_t __stdcall EndFocusAssist2() noexcept = 0;
             virtual int32_t __stdcall add_Changed(void*, winrt::event_token*) noexcept = 0;
             virtual int32_t __stdcall remove_Changed(winrt::event_token) noexcept = 0;
         };
@@ -169,10 +173,6 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall GetDefault(void**) noexcept = 0;
-            virtual int32_t __stdcall TryStartFocusAssist(winrt::guid*) noexcept = 0;
-            virtual int32_t __stdcall TryStartFocusAssistUntil(int64_t, winrt::guid*) noexcept = 0;
-            virtual int32_t __stdcall EndFocusAssist(winrt::guid) noexcept = 0;
-            virtual int32_t __stdcall EndFocusAssist2() noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::UI::Shell::ISecurityAppManager>
@@ -263,6 +263,10 @@ namespace winrt::impl
     struct consume_Windows_UI_Shell_IFocusAssist
     {
         [[nodiscard]] WINRT_IMPL_AUTO(bool) IsEnabled() const;
+        WINRT_IMPL_AUTO(winrt::guid) TryStartFocusAssist() const;
+        WINRT_IMPL_AUTO(winrt::guid) TryStartFocusAssistUntil(winrt::Windows::Foundation::DateTime const& endTime) const;
+        WINRT_IMPL_AUTO(void) EndFocusAssist(winrt::guid const& token) const;
+        WINRT_IMPL_AUTO(void) EndFocusAssist() const;
         WINRT_IMPL_AUTO(winrt::event_token) Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::FocusAssist, winrt::Windows::UI::Shell::FocusAssistChangedEventArgs> const& handler) const;
         using Changed_revoker = impl::event_revoker<winrt::Windows::UI::Shell::IFocusAssist, &impl::abi_t<winrt::Windows::UI::Shell::IFocusAssist>::remove_Changed>;
         [[nodiscard]] Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::FocusAssist, winrt::Windows::UI::Shell::FocusAssistChangedEventArgs> const& handler) const;
@@ -284,10 +288,6 @@ namespace winrt::impl
     struct consume_Windows_UI_Shell_IFocusAssistStatics
     {
         WINRT_IMPL_AUTO(winrt::Windows::UI::Shell::FocusAssist) GetDefault() const;
-        WINRT_IMPL_AUTO(winrt::guid) TryStartFocusAssist() const;
-        WINRT_IMPL_AUTO(winrt::guid) TryStartFocusAssistUntil(winrt::Windows::Foundation::DateTime const& endTime) const;
-        WINRT_IMPL_AUTO(void) EndFocusAssist(winrt::guid const& token) const;
-        WINRT_IMPL_AUTO(void) EndFocusAssist() const;
     };
     template <> struct consume<winrt::Windows::UI::Shell::IFocusAssistStatics>
     {

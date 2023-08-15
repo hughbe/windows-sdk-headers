@@ -35,6 +35,26 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssist)->get_IsEnabled(&value));
         return value;
     }
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_UI_Shell_IFocusAssist<D>::TryStartFocusAssist() const
+    {
+        winrt::guid result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssist)->TryStartFocusAssist(put_abi(result)));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_UI_Shell_IFocusAssist<D>::TryStartFocusAssistUntil(winrt::Windows::Foundation::DateTime const& endTime) const
+    {
+        winrt::guid result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssist)->TryStartFocusAssistUntil(impl::bind_in(endTime), put_abi(result)));
+        return result;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Shell_IFocusAssist<D>::EndFocusAssist(winrt::guid const& token) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssist)->EndFocusAssist(impl::bind_in(token)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Shell_IFocusAssist<D>::EndFocusAssist() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssist)->EndFocusAssist2());
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Shell_IFocusAssist<D>::Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Shell::FocusAssist, winrt::Windows::UI::Shell::FocusAssistChangedEventArgs> const& handler) const
     {
         winrt::event_token token{};
@@ -54,26 +74,6 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssistStatics)->GetDefault(&result));
         return winrt::Windows::UI::Shell::FocusAssist{ result, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_UI_Shell_IFocusAssistStatics<D>::TryStartFocusAssist() const
-    {
-        winrt::guid result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssistStatics)->TryStartFocusAssist(put_abi(result)));
-        return result;
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_UI_Shell_IFocusAssistStatics<D>::TryStartFocusAssistUntil(winrt::Windows::Foundation::DateTime const& endTime) const
-    {
-        winrt::guid result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssistStatics)->TryStartFocusAssistUntil(impl::bind_in(endTime), put_abi(result)));
-        return result;
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Shell_IFocusAssistStatics<D>::EndFocusAssist(winrt::guid const& token) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssistStatics)->EndFocusAssist(impl::bind_in(token)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Shell_IFocusAssistStatics<D>::EndFocusAssist() const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IFocusAssistStatics)->EndFocusAssist2());
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_UI_Shell_ISecurityAppManager<D>::Register(winrt::Windows::UI::Shell::SecurityAppKind const& kind, param::hstring const& displayName, winrt::Windows::Foundation::Uri const& detailsUri, bool registerPerUser) const
     {
@@ -246,6 +246,34 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+        int32_t __stdcall TryStartFocusAssist(winrt::guid* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::guid>(this->shim().TryStartFocusAssist());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall TryStartFocusAssistUntil(int64_t endTime, winrt::guid* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::guid>(this->shim().TryStartFocusAssistUntil(*reinterpret_cast<winrt::Windows::Foundation::DateTime const*>(&endTime)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall EndFocusAssist(winrt::guid token) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().EndFocusAssist(*reinterpret_cast<winrt::guid const*>(&token));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall EndFocusAssist2() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().EndFocusAssist();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
         int32_t __stdcall add_Changed(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
@@ -277,34 +305,6 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Windows::UI::Shell::FocusAssist>(this->shim().GetDefault());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall TryStartFocusAssist(winrt::guid* result) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::guid>(this->shim().TryStartFocusAssist());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall TryStartFocusAssistUntil(int64_t endTime, winrt::guid* result) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::guid>(this->shim().TryStartFocusAssistUntil(*reinterpret_cast<winrt::Windows::Foundation::DateTime const*>(&endTime)));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall EndFocusAssist(winrt::guid token) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().EndFocusAssist(*reinterpret_cast<winrt::guid const*>(&token));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall EndFocusAssist2() noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().EndFocusAssist();
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -540,22 +540,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Shell
     inline auto FocusAssist::GetDefault()
     {
         return impl::call_factory_cast<winrt::Windows::UI::Shell::FocusAssist(*)(IFocusAssistStatics const&), FocusAssist, IFocusAssistStatics>([](IFocusAssistStatics const& f) { return f.GetDefault(); });
-    }
-    inline auto FocusAssist::TryStartFocusAssist()
-    {
-        return impl::call_factory_cast<winrt::guid(*)(IFocusAssistStatics const&), FocusAssist, IFocusAssistStatics>([](IFocusAssistStatics const& f) { return f.TryStartFocusAssist(); });
-    }
-    inline auto FocusAssist::TryStartFocusAssistUntil(winrt::Windows::Foundation::DateTime const& endTime)
-    {
-        return impl::call_factory<FocusAssist, IFocusAssistStatics>([&](IFocusAssistStatics const& f) { return f.TryStartFocusAssistUntil(endTime); });
-    }
-    inline auto FocusAssist::EndFocusAssist(winrt::guid const& token)
-    {
-        impl::call_factory<FocusAssist, IFocusAssistStatics>([&](IFocusAssistStatics const& f) { return f.EndFocusAssist(token); });
-    }
-    inline auto FocusAssist::EndFocusAssist()
-    {
-        impl::call_factory_cast<void(*)(IFocusAssistStatics const&), FocusAssist, IFocusAssistStatics>([](IFocusAssistStatics const& f) { return f.EndFocusAssist(); });
     }
     inline SecurityAppManager::SecurityAppManager() :
         SecurityAppManager(impl::call_factory_cast<SecurityAppManager(*)(winrt::Windows::Foundation::IActivationFactory const&), SecurityAppManager>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SecurityAppManager>(); }))

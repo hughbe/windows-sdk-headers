@@ -11,6 +11,7 @@ Author:
     Tushar Sugandhi (TusharSu) 4/10/2019
 
 --*/
+#define WDAG_CLIPBOARD_TAG L"CrossIsolatedEnvironmentContent"
 #pragma once
 
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
@@ -22,8 +23,8 @@ IsProcessInIsolatedWindowsEnvironment(
     );
 
 STDAPI
-IsClipboardContentFromOutsideEnvironment(
-    _Out_ BOOL* isClipboardContentFromOutsideEnvironment
+IsCrossIsolatedEnvironmentClipboardContent(
+    _Out_ BOOL* isCrossIsolatedEnvironmentClipboardContent
 );
 
 #endif /* (NTDDI_VERSION >= NTDDI_WIN10_VB) */

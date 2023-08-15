@@ -37,6 +37,8 @@ namespace Windows
 
             typedef enum IsolatedWindowsEnvironmentCreateStatus IsolatedWindowsEnvironmentCreateStatus;
 
+            typedef enum IsolatedWindowsEnvironmentCreationPriority IsolatedWindowsEnvironmentCreationPriority;
+
             typedef enum IsolatedWindowsEnvironmentHostError IsolatedWindowsEnvironmentHostError;
 
             typedef enum IsolatedWindowsEnvironmentLaunchFileStatus IsolatedWindowsEnvironmentLaunchFileStatus;
@@ -69,7 +71,11 @@ namespace Windows
 
             interface IIsolatedWindowsEnvironment3;
 
+            interface IIsolatedWindowsEnvironment4;
+
             interface IIsolatedWindowsEnvironmentCreateResult;
+
+            interface IIsolatedWindowsEnvironmentCreateResult2;
 
             interface IIsolatedWindowsEnvironmentFactory;
 
@@ -251,6 +257,13 @@ namespace Windows
                 UnknownFailure  = 2
             };
 
+            [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 4.0)]
+            enum IsolatedWindowsEnvironmentCreationPriority
+            {
+                Low    = 0,
+                Normal = 1
+            };
+
             [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 1.0)]
             enum IsolatedWindowsEnvironmentHostError
             {
@@ -411,6 +424,14 @@ namespace Windows
                 [overload("ShareFileAsync")] HRESULT ShareFileWithTelemetryAsync([in] HSTRING filePath, [in] Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions* options, [in] Windows.Security.Isolation.IsolatedWindowsEnvironmentTelemetryParameters* telemetryParameters, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Security.Isolation.IsolatedWindowsEnvironmentShareFileResult*>** operation);
             }
 
+            [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 4.0)]
+            [exclusiveto(Windows.Security.Isolation.IsolatedWindowsEnvironment)]
+            [uuid(11E3701A-DD9E-4F1B-812C-4020F307F93C)]
+            interface IIsolatedWindowsEnvironment4 : IInspectable
+            {
+                HRESULT ChangePriority([in] Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority Priority);
+            }
+
             [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 1.0)]
             [exclusiveto(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult)]
             [uuid(EF9A5E58-DCD7-45C2-9C85-AB642A715E8E)]
@@ -419,6 +440,14 @@ namespace Windows
                 [propget] HRESULT Status([out] [retval] Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus* value);
                 [propget] HRESULT ExtendedError([out] [retval] HRESULT* value);
                 [propget] HRESULT Environment([out] [retval] Windows.Security.Isolation.IsolatedWindowsEnvironment** value);
+            }
+
+            [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 4.0)]
+            [exclusiveto(Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateResult)]
+            [uuid(A547DBC7-61D4-4FB8-AB5C-EDEFA3D388AD)]
+            interface IIsolatedWindowsEnvironmentCreateResult2 : IInspectable
+            {
+                HRESULT ChangeCreationPriority([in] Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority priority);
             }
 
             [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 1.0)]
@@ -654,6 +683,7 @@ namespace Windows
                 [default] interface Windows.Security.Isolation.IIsolatedWindowsEnvironment;
                 [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 2.0)] interface Windows.Security.Isolation.IIsolatedWindowsEnvironment2;
                 [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 3.0)] interface Windows.Security.Isolation.IIsolatedWindowsEnvironment3;
+                [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 4.0)] interface Windows.Security.Isolation.IIsolatedWindowsEnvironment4;
             }
 
             [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 1.0)]
@@ -661,6 +691,7 @@ namespace Windows
             runtimeclass IsolatedWindowsEnvironmentCreateResult
             {
                 [default] interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult;
+                [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 4.0)] interface Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2;
             }
 
             [contract(Windows.Security.Isolation.IsolatedWindowsEnvironmentContract, 1.0)]

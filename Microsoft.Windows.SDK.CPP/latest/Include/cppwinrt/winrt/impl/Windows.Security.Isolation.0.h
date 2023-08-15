@@ -52,6 +52,11 @@ WINRT_EXPORT namespace winrt::Windows::Security::Isolation
         FailureByPolicy = 1,
         UnknownFailure = 2,
     };
+    enum class IsolatedWindowsEnvironmentCreationPriority : int32_t
+    {
+        Low = 0,
+        Normal = 1,
+    };
     enum class IsolatedWindowsEnvironmentHostError : int32_t
     {
         AdminPolicyIsDisabledOrNotPresent = 0,
@@ -136,7 +141,9 @@ WINRT_EXPORT namespace winrt::Windows::Security::Isolation
     struct IIsolatedWindowsEnvironment;
     struct IIsolatedWindowsEnvironment2;
     struct IIsolatedWindowsEnvironment3;
+    struct IIsolatedWindowsEnvironment4;
     struct IIsolatedWindowsEnvironmentCreateResult;
+    struct IIsolatedWindowsEnvironmentCreateResult2;
     struct IIsolatedWindowsEnvironmentFactory;
     struct IIsolatedWindowsEnvironmentFile;
     struct IIsolatedWindowsEnvironmentFile2;
@@ -187,7 +194,9 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment3>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFactory>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile2>{ using type = interface_category; };
@@ -234,6 +243,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentClipboardCopyPasteDirections>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateStatus>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHostError>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileStatus>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationStatus>{ using type = enum_category; };
@@ -271,6 +281,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters> = L"Windows.Security.Isolation.IsolatedWindowsEnvironmentAvailablePrinters";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentClipboardCopyPasteDirections> = L"Windows.Security.Isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateStatus> = L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreateStatus";
+    template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority> = L"Windows.Security.Isolation.IsolatedWindowsEnvironmentCreationPriority";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHostError> = L"Windows.Security.Isolation.IsolatedWindowsEnvironmentHostError";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileStatus> = L"Windows.Security.Isolation.IsolatedWindowsEnvironmentLaunchFileStatus";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationStatus> = L"Windows.Security.Isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus";
@@ -285,7 +296,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment> = L"Windows.Security.Isolation.IIsolatedWindowsEnvironment";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment2> = L"Windows.Security.Isolation.IIsolatedWindowsEnvironment2";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment3> = L"Windows.Security.Isolation.IIsolatedWindowsEnvironment3";
+    template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4> = L"Windows.Security.Isolation.IIsolatedWindowsEnvironment4";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult> = L"Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult";
+    template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2> = L"Windows.Security.Isolation.IIsolatedWindowsEnvironmentCreateResult2";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFactory> = L"Windows.Security.Isolation.IIsolatedWindowsEnvironmentFactory";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile> = L"Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile";
     template <> inline constexpr auto& name_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile2> = L"Windows.Security.Isolation.IIsolatedWindowsEnvironmentFile2";
@@ -313,7 +326,9 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment>{ 0x41D24597,0xC328,0x4467,{ 0xB3,0x7F,0x4D,0xFC,0x6F,0x60,0xB6,0xBC } }; // 41D24597-C328-4467-B37F-4DFC6F60B6BC
     template <> inline constexpr guid guid_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment2>{ 0x2D365F39,0x88BD,0x4AB4,{ 0x93,0xCF,0x7E,0x2B,0xCE,0xF3,0x37,0xC0 } }; // 2D365F39-88BD-4AB4-93CF-7E2BCEF337C0
     template <> inline constexpr guid guid_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment3>{ 0xCB7FC7D2,0xD06E,0x4C26,{ 0x8A,0xDA,0xDA,0xCD,0xAA,0xAD,0x03,0xF5 } }; // CB7FC7D2-D06E-4C26-8ADA-DACDAAAD03F5
+    template <> inline constexpr guid guid_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4>{ 0x11E3701A,0xDD9E,0x4F1B,{ 0x81,0x2C,0x40,0x20,0xF3,0x07,0xF9,0x3C } }; // 11E3701A-DD9E-4F1B-812C-4020F307F93C
     template <> inline constexpr guid guid_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult>{ 0xEF9A5E58,0xDCD7,0x45C2,{ 0x9C,0x85,0xAB,0x64,0x2A,0x71,0x5E,0x8E } }; // EF9A5E58-DCD7-45C2-9C85-AB642A715E8E
+    template <> inline constexpr guid guid_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2>{ 0xA547DBC7,0x61D4,0x4FB8,{ 0xAB,0x5C,0xED,0xEF,0xA3,0xD3,0x88,0xAD } }; // A547DBC7-61D4-4FB8-AB5C-EDEFA3D388AD
     template <> inline constexpr guid guid_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFactory>{ 0x1ACA93E7,0xE804,0x454D,{ 0x84,0x66,0xF9,0x89,0x7C,0x20,0xB0,0xF6 } }; // 1ACA93E7-E804-454D-8466-F9897C20B0F6
     template <> inline constexpr guid guid_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile>{ 0x4D5AE1EF,0x029F,0x4101,{ 0x8C,0x35,0xFE,0x91,0xBF,0x9C,0xD5,0xF0 } }; // 4D5AE1EF-029F-4101-8C35-FE91BF9CD5F0
     template <> inline constexpr guid guid_v<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFile2>{ 0x4EEB8DEC,0xAD5D,0x4B0A,{ 0xB7,0x54,0xF3,0x6C,0x3D,0x46,0xD6,0x84 } }; // 4EEB8DEC-AD5D-4B0A-B754-F36C3D46D684
@@ -388,6 +403,13 @@ namespace winrt::impl
             virtual int32_t __stdcall ShareFileWithTelemetryAsync(void*, void*, void*, void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall ChangePriority(int32_t) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -395,6 +417,13 @@ namespace winrt::impl
             virtual int32_t __stdcall get_Status(int32_t*) noexcept = 0;
             virtual int32_t __stdcall get_ExtendedError(winrt::hresult*) noexcept = 0;
             virtual int32_t __stdcall get_Environment(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall ChangeCreationPriority(int32_t) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentFactory>
@@ -654,6 +683,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Security_Isolation_IIsolatedWindowsEnvironment3<D>;
     };
     template <typename D>
+    struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironment4
+    {
+        WINRT_IMPL_AUTO(void) ChangePriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& Priority) const;
+    };
+    template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironment4>
+    {
+        template <typename D> using type = consume_Windows_Security_Isolation_IIsolatedWindowsEnvironment4<D>;
+    };
+    template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentCreateResult
     {
         [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateStatus) Status() const;
@@ -663,6 +701,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult>
     {
         template <typename D> using type = consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentCreateResult<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentCreateResult2
+    {
+        WINRT_IMPL_AUTO(void) ChangeCreationPriority(winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority const& priority) const;
+    };
+    template <> struct consume<winrt::Windows::Security::Isolation::IIsolatedWindowsEnvironmentCreateResult2>
+    {
+        template <typename D> using type = consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentCreateResult2<D>;
     };
     template <typename D>
     struct consume_Windows_Security_Isolation_IIsolatedWindowsEnvironmentFactory

@@ -375,7 +375,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("f77577a5-7b6e-511c-86be-db43e5d86c81"))
+struct __declspec(uuid("207d6177-8580-59f5-8a70-26c34dddd079"))
 ITypedEventHandler<ABI::Windows::UI::Shell::FocusAssist*, ABI::Windows::UI::Shell::FocusAssistChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::FocusAssist*, ABI::Windows::UI::Shell::IFocusAssist*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::FocusAssistChangedEventArgs*, ABI::Windows::UI::Shell::IFocusAssistChangedEventArgs*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -762,13 +762,24 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("cde8728d-dbfd-50fc-9b39-7b3614d4c8f6")
+                MIDL_INTERFACE("a8432da9-2954-586a-96f3-58cae161de71")
                 IFocusAssist : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
                         boolean* value
                         ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE TryStartFocusAssist(
+                        GUID* result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE TryStartFocusAssistUntil(
+                        ABI::Windows::Foundation::DateTime endTime,
+                        GUID* result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE EndFocusAssist(
+                        GUID token
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE EndFocusAssist2(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE add_Changed(
                         __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssist_Windows__CUI__CShell__CFocusAssistChangedEventArgs* handler,
                         EventRegistrationToken* token
@@ -838,24 +849,13 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("293c0c7e-5cce-5fd8-abb3-b5b54423dead")
+                MIDL_INTERFACE("c5703163-9dd4-58fa-badc-212fa87e07ed")
                 IFocusAssistStatics : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE GetDefault(
                         ABI::Windows::UI::Shell::IFocusAssist** result
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE TryStartFocusAssist(
-                        GUID* result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE TryStartFocusAssistUntil(
-                        ABI::Windows::Foundation::DateTime endTime,
-                        GUID* result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE EndFocusAssist(
-                        GUID token
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE EndFocusAssist2(void) = 0;
                 };
 
                 extern MIDL_CONST_ID IID& IID_IFocusAssistStatics = _uuidof(IFocusAssistStatics);
@@ -1899,6 +1899,14 @@ typedef struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistVtbl
         TrustLevel* trustLevel);
     HRESULT (STDMETHODCALLTYPE* get_IsEnabled)(__x_ABI_CWindows_CUI_CShell_CIFocusAssist* This,
         boolean* value);
+    HRESULT (STDMETHODCALLTYPE* TryStartFocusAssist)(__x_ABI_CWindows_CUI_CShell_CIFocusAssist* This,
+        GUID* result);
+    HRESULT (STDMETHODCALLTYPE* TryStartFocusAssistUntil)(__x_ABI_CWindows_CUI_CShell_CIFocusAssist* This,
+        struct __x_ABI_CWindows_CFoundation_CDateTime endTime,
+        GUID* result);
+    HRESULT (STDMETHODCALLTYPE* EndFocusAssist)(__x_ABI_CWindows_CUI_CShell_CIFocusAssist* This,
+        GUID token);
+    HRESULT (STDMETHODCALLTYPE* EndFocusAssist2)(__x_ABI_CWindows_CUI_CShell_CIFocusAssist* This);
     HRESULT (STDMETHODCALLTYPE* add_Changed)(__x_ABI_CWindows_CUI_CShell_CIFocusAssist* This,
         __FITypedEventHandler_2_Windows__CUI__CShell__CFocusAssist_Windows__CUI__CShell__CFocusAssistChangedEventArgs* handler,
         EventRegistrationToken* token);
@@ -1935,6 +1943,18 @@ interface __x_ABI_CWindows_CUI_CShell_CIFocusAssist
 
 #define __x_ABI_CWindows_CUI_CShell_CIFocusAssist_get_IsEnabled(This, value) \
     ((This)->lpVtbl->get_IsEnabled(This, value))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusAssist_TryStartFocusAssist(This, result) \
+    ((This)->lpVtbl->TryStartFocusAssist(This, result))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusAssist_TryStartFocusAssistUntil(This, endTime, result) \
+    ((This)->lpVtbl->TryStartFocusAssistUntil(This, endTime, result))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusAssist_EndFocusAssist(This, token) \
+    ((This)->lpVtbl->EndFocusAssist(This, token))
+
+#define __x_ABI_CWindows_CUI_CShell_CIFocusAssist_EndFocusAssist2(This) \
+    ((This)->lpVtbl->EndFocusAssist2(This))
 
 #define __x_ABI_CWindows_CUI_CShell_CIFocusAssist_add_Changed(This, handler, token) \
     ((This)->lpVtbl->add_Changed(This, handler, token))
@@ -2043,14 +2063,6 @@ typedef struct __x_ABI_CWindows_CUI_CShell_CIFocusAssistStaticsVtbl
         TrustLevel* trustLevel);
     HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics* This,
         __x_ABI_CWindows_CUI_CShell_CIFocusAssist** result);
-    HRESULT (STDMETHODCALLTYPE* TryStartFocusAssist)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics* This,
-        GUID* result);
-    HRESULT (STDMETHODCALLTYPE* TryStartFocusAssistUntil)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics* This,
-        struct __x_ABI_CWindows_CFoundation_CDateTime endTime,
-        GUID* result);
-    HRESULT (STDMETHODCALLTYPE* EndFocusAssist)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics* This,
-        GUID token);
-    HRESULT (STDMETHODCALLTYPE* EndFocusAssist2)(__x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics* This);
 
     END_INTERFACE
 } __x_ABI_CWindows_CUI_CShell_CIFocusAssistStaticsVtbl;
@@ -2082,18 +2094,6 @@ interface __x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics
 
 #define __x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics_GetDefault(This, result) \
     ((This)->lpVtbl->GetDefault(This, result))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics_TryStartFocusAssist(This, result) \
-    ((This)->lpVtbl->TryStartFocusAssist(This, result))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics_TryStartFocusAssistUntil(This, endTime, result) \
-    ((This)->lpVtbl->TryStartFocusAssistUntil(This, endTime, result))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics_EndFocusAssist(This, token) \
-    ((This)->lpVtbl->EndFocusAssist(This, token))
-
-#define __x_ABI_CWindows_CUI_CShell_CIFocusAssistStatics_EndFocusAssist2(This) \
-    ((This)->lpVtbl->EndFocusAssist2(This))
 
 #endif /* COBJMACROS */
 
