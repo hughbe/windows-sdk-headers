@@ -65,6 +65,15 @@ Abstract:
 //
 #define HVSOCKET_CONNECTED_SUSPEND     0x04
 
+//
+// HVSOCKET_HIGH_VTL:
+// Input:
+// Type: ULONG.
+// Description:
+// Set socket high VTL flag. Non-zero value set on a host socket indicates that the socket will
+// connect to guest VTL 2.
+//
+#define HVSOCKET_HIGH_VTL     0x08
 
 //
 // Well-known GUIDs.

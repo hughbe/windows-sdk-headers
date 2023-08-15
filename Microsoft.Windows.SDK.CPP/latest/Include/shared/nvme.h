@@ -1003,7 +1003,8 @@ typedef struct {
         UCHAR   MultiPCIePorts      : 1;
         UCHAR   MultiControllers    : 1;
         UCHAR   SRIOV               : 1;
-        UCHAR   Reserved            : 5;
+        UCHAR   ANAR                : 1;
+        UCHAR   Reserved            : 4;
     } CMIC;                     // byte 76.     O - Controller Multi-Path I/O and Namespace Sharing Capabilities (CMIC)
 
     UCHAR   MDTS;               // byte 77.     M - Maximum Data Transfer Size (MDTS)

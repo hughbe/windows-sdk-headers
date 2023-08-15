@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Xaml_Printing_2_H
 #define WINRT_Windows_UI_Xaml_Printing_2_H
 #include "winrt/impl/Windows.UI.Xaml.1.h"
@@ -18,7 +19,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Printing
         template <typename O, typename M> AddPagesEventHandler(O* object, M method);
         template <typename O, typename M> AddPagesEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> AddPagesEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Printing::AddPagesEventArgs const& e) const;
+        auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Printing::AddPagesEventArgs const& e) const;
     };
     struct GetPreviewPageEventHandler : Windows::Foundation::IUnknown
     {
@@ -29,7 +30,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Printing
         template <typename O, typename M> GetPreviewPageEventHandler(O* object, M method);
         template <typename O, typename M> GetPreviewPageEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> GetPreviewPageEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Printing::GetPreviewPageEventArgs const& e) const;
+        auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs const& e) const;
     };
     struct PaginateEventHandler : Windows::Foundation::IUnknown
     {
@@ -40,32 +41,32 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Printing
         template <typename O, typename M> PaginateEventHandler(O* object, M method);
         template <typename O, typename M> PaginateEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> PaginateEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Printing::PaginateEventArgs const& e) const;
+        auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Printing::PaginateEventArgs const& e) const;
     };
-    struct __declspec(empty_bases) AddPagesEventArgs : Windows::UI::Xaml::Printing::IAddPagesEventArgs
+    struct __declspec(empty_bases) AddPagesEventArgs : winrt::Windows::UI::Xaml::Printing::IAddPagesEventArgs
     {
         AddPagesEventArgs(std::nullptr_t) noexcept {}
-        AddPagesEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Printing::IAddPagesEventArgs(ptr, take_ownership_from_abi) {}
+        AddPagesEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Printing::IAddPagesEventArgs(ptr, take_ownership_from_abi) {}
         AddPagesEventArgs();
     };
-    struct __declspec(empty_bases) GetPreviewPageEventArgs : Windows::UI::Xaml::Printing::IGetPreviewPageEventArgs
+    struct __declspec(empty_bases) GetPreviewPageEventArgs : winrt::Windows::UI::Xaml::Printing::IGetPreviewPageEventArgs
     {
         GetPreviewPageEventArgs(std::nullptr_t) noexcept {}
-        GetPreviewPageEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Printing::IGetPreviewPageEventArgs(ptr, take_ownership_from_abi) {}
+        GetPreviewPageEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Printing::IGetPreviewPageEventArgs(ptr, take_ownership_from_abi) {}
         GetPreviewPageEventArgs();
     };
-    struct __declspec(empty_bases) PaginateEventArgs : Windows::UI::Xaml::Printing::IPaginateEventArgs
+    struct __declspec(empty_bases) PaginateEventArgs : winrt::Windows::UI::Xaml::Printing::IPaginateEventArgs
     {
         PaginateEventArgs(std::nullptr_t) noexcept {}
-        PaginateEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Printing::IPaginateEventArgs(ptr, take_ownership_from_abi) {}
+        PaginateEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Printing::IPaginateEventArgs(ptr, take_ownership_from_abi) {}
         PaginateEventArgs();
     };
-    struct __declspec(empty_bases) PrintDocument : Windows::UI::Xaml::Printing::IPrintDocument,
-        impl::base<PrintDocument, Windows::UI::Xaml::DependencyObject>,
-        impl::require<PrintDocument, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    struct __declspec(empty_bases) PrintDocument : winrt::Windows::UI::Xaml::Printing::IPrintDocument,
+        impl::base<PrintDocument, winrt::Windows::UI::Xaml::DependencyObject>,
+        impl::require<PrintDocument, winrt::Windows::UI::Xaml::IDependencyObject, winrt::Windows::UI::Xaml::IDependencyObject2>
     {
         PrintDocument(std::nullptr_t) noexcept {}
-        PrintDocument(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Printing::IPrintDocument(ptr, take_ownership_from_abi) {}
+        PrintDocument(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Printing::IPrintDocument(ptr, take_ownership_from_abi) {}
         PrintDocument();
         [[nodiscard]] static auto DocumentSourceProperty();
     };

@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Media_AppBroadcasting_H
 #define WINRT_Windows_Media_AppBroadcasting_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.System.2.h"
@@ -17,108 +18,108 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingMonitor<D>::IsCurrentAppBroadcasting() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingMonitor)->get_IsCurrentAppBroadcasting(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor)->get_IsCurrentAppBroadcasting(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_AppBroadcasting_IAppBroadcastingMonitor<D>::IsCurrentAppBroadcastingChanged(Windows::Foundation::TypedEventHandler<Windows::Media::AppBroadcasting::AppBroadcastingMonitor, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_AppBroadcasting_IAppBroadcastingMonitor<D>::IsCurrentAppBroadcastingChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingMonitor)->add_IsCurrentAppBroadcastingChanged(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor)->add_IsCurrentAppBroadcastingChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_AppBroadcasting_IAppBroadcastingMonitor<D>::IsCurrentAppBroadcastingChanged_revoker consume_Windows_Media_AppBroadcasting_IAppBroadcastingMonitor<D>::IsCurrentAppBroadcastingChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::AppBroadcasting::AppBroadcastingMonitor, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_AppBroadcasting_IAppBroadcastingMonitor<D>::IsCurrentAppBroadcastingChanged_revoker consume_Windows_Media_AppBroadcasting_IAppBroadcastingMonitor<D>::IsCurrentAppBroadcastingChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, IsCurrentAppBroadcastingChanged_revoker>(this, IsCurrentAppBroadcastingChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_AppBroadcasting_IAppBroadcastingMonitor<D>::IsCurrentAppBroadcastingChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingMonitor)->remove_IsCurrentAppBroadcastingChanged(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor)->remove_IsCurrentAppBroadcastingChanged(impl::bind_in(token)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatus<D>::CanStartBroadcast() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatus)->get_CanStartBroadcast(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatus)->get_CanStartBroadcast(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatus<D>::Details() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatus<D>::Details() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatus)->get_Details(&value));
-        return Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatus)->get_Details(&value));
+        return winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatusDetails<D>::IsAnyAppBroadcasting() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsAnyAppBroadcasting(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsAnyAppBroadcasting(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatusDetails<D>::IsCaptureResourceUnavailable() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsCaptureResourceUnavailable(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsCaptureResourceUnavailable(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatusDetails<D>::IsGameStreamInProgress() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsGameStreamInProgress(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsGameStreamInProgress(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatusDetails<D>::IsGpuConstrained() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsGpuConstrained(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsGpuConstrained(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatusDetails<D>::IsAppInactive() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsAppInactive(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsAppInactive(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatusDetails<D>::IsBlockedForApp() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsBlockedForApp(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsBlockedForApp(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatusDetails<D>::IsDisabledByUser() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsDisabledByUser(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsDisabledByUser(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_AppBroadcasting_IAppBroadcastingStatusDetails<D>::IsDisabledBySystem() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsDisabledBySystem(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails)->get_IsDisabledBySystem(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AppBroadcasting::AppBroadcastingStatus) consume_Windows_Media_AppBroadcasting_IAppBroadcastingUI<D>::GetStatus() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus) consume_Windows_Media_AppBroadcasting_IAppBroadcastingUI<D>::GetStatus() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingUI)->GetStatus(&result));
-        return Windows::Media::AppBroadcasting::AppBroadcastingStatus{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUI)->GetStatus(&result));
+        return winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_AppBroadcasting_IAppBroadcastingUI<D>::ShowBroadcastUI() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingUI)->ShowBroadcastUI());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUI)->ShowBroadcastUI());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AppBroadcasting::AppBroadcastingUI) consume_Windows_Media_AppBroadcasting_IAppBroadcastingUIStatics<D>::GetDefault() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI) consume_Windows_Media_AppBroadcasting_IAppBroadcastingUIStatics<D>::GetDefault() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics)->GetDefault(&result));
-        return Windows::Media::AppBroadcasting::AppBroadcastingUI{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics)->GetDefault(&result));
+        return winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::AppBroadcasting::AppBroadcastingUI) consume_Windows_Media_AppBroadcasting_IAppBroadcastingUIStatics<D>::GetForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI) consume_Windows_Media_AppBroadcasting_IAppBroadcastingUIStatics<D>::GetForUser(winrt::Windows::System::User const& user) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics)->GetForUser(*(void**)(&user), &result));
-        return Windows::Media::AppBroadcasting::AppBroadcastingUI{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics)->GetForUser(*(void**)(&user), &result));
+        return winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI{ result, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::AppBroadcasting::IAppBroadcastingMonitor> : produce_base<D, Windows::Media::AppBroadcasting::IAppBroadcastingMonitor>
+    struct produce<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor> : produce_base<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingMonitor>
     {
         int32_t __stdcall get_IsCurrentAppBroadcasting(bool* value) noexcept final try
         {
@@ -131,7 +132,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().IsCurrentAppBroadcastingChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::AppBroadcasting::AppBroadcastingMonitor, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().IsCurrentAppBroadcastingChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -145,7 +146,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::AppBroadcasting::IAppBroadcastingStatus> : produce_base<D, Windows::Media::AppBroadcasting::IAppBroadcastingStatus>
+    struct produce<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatus> : produce_base<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatus>
     {
         int32_t __stdcall get_CanStartBroadcast(bool* value) noexcept final try
         {
@@ -158,7 +159,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>(this->shim().Details());
+            *value = detach_from<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>(this->shim().Details());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -166,7 +167,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails> : produce_base<D, Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails>
+    struct produce<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails> : produce_base<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails>
     {
         int32_t __stdcall get_IsAnyAppBroadcasting(bool* value) noexcept final try
         {
@@ -228,13 +229,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::AppBroadcasting::IAppBroadcastingUI> : produce_base<D, Windows::Media::AppBroadcasting::IAppBroadcastingUI>
+    struct produce<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUI> : produce_base<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUI>
     {
         int32_t __stdcall GetStatus(void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::AppBroadcasting::AppBroadcastingStatus>(this->shim().GetStatus());
+            *result = detach_from<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>(this->shim().GetStatus());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -249,13 +250,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics> : produce_base<D, Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics>
+    struct produce<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics> : produce_base<D, winrt::Windows::Media::AppBroadcasting::IAppBroadcastingUIStatics>
     {
         int32_t __stdcall GetDefault(void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::AppBroadcasting::AppBroadcastingUI>(this->shim().GetDefault());
+            *result = detach_from<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>(this->shim().GetDefault());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -263,7 +264,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::AppBroadcasting::AppBroadcastingUI>(this->shim().GetForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
+            *result = detach_from<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>(this->shim().GetForUser(*reinterpret_cast<winrt::Windows::System::User const*>(&user)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -273,14 +274,14 @@ namespace winrt::impl
 WINRT_EXPORT namespace winrt::Windows::Media::AppBroadcasting
 {
     inline AppBroadcastingMonitor::AppBroadcastingMonitor() :
-        AppBroadcastingMonitor(impl::call_factory_cast<AppBroadcastingMonitor(*)(Windows::Foundation::IActivationFactory const&), AppBroadcastingMonitor>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<AppBroadcastingMonitor>(); }))
+        AppBroadcastingMonitor(impl::call_factory_cast<AppBroadcastingMonitor(*)(winrt::Windows::Foundation::IActivationFactory const&), AppBroadcastingMonitor>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<AppBroadcastingMonitor>(); }))
     {
     }
     inline auto AppBroadcastingUI::GetDefault()
     {
-        return impl::call_factory_cast<Windows::Media::AppBroadcasting::AppBroadcastingUI(*)(IAppBroadcastingUIStatics const&), AppBroadcastingUI, IAppBroadcastingUIStatics>([](IAppBroadcastingUIStatics const& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI(*)(IAppBroadcastingUIStatics const&), AppBroadcastingUI, IAppBroadcastingUIStatics>([](IAppBroadcastingUIStatics const& f) { return f.GetDefault(); });
     }
-    inline auto AppBroadcastingUI::GetForUser(Windows::System::User const& user)
+    inline auto AppBroadcastingUI::GetForUser(winrt::Windows::System::User const& user)
     {
         return impl::call_factory<AppBroadcastingUI, IAppBroadcastingUIStatics>([&](IAppBroadcastingUIStatics const& f) { return f.GetForUser(user); });
     }

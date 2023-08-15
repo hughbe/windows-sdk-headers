@@ -37,7 +37,7 @@ Compiler switches:
 // used with NT5 beta1+ env from build #1700 on.
 
 #ifndef __RPCPROXY_H_VERSION__
-#define __RPCPROXY_H_VERSION__      ( 475 )
+#define __RPCPROXY_H_VERSION__      ( 476 )
 #endif // __RPCPROXY_H_VERSION__
 
 #include <winapifamily.h>
@@ -69,6 +69,32 @@ Compiler switches:
 #define INC_OLE2
 #endif
 
+#ifndef DECLSPEC_SELECTANY
+#if (_MSC_VER >= 1200)
+#define DECLSPEC_SELECTANY __declspec(selectany)
+#else
+#define DECLSPEC_SELECTANY
+#endif
+#endif
+
+#ifndef DECLSPEC_NOINLINE
+#if (_MSC_VER >= 1200)
+#define DECLSPEC_NOINLINE __declspec(noinline)
+#else
+#define DECLSPEC_NOINLINE
+#endif
+#endif
+
+#ifndef RPCPROXY_IID_DECLSPEC_SECTION
+#if (_MSC_VER >= 1100)
+#pragma section("rpcproxy$_iid", read)
+#define RPCPROXY_IID_DECLSPEC_SECTION __declspec(allocate("rpcproxy$_iid"))
+#else
+#define RPCPROXY_IID_DECLSPEC_SECTION
+#endif
+#endif
+
+
 #if defined(WIN32) || defined(_M_AMD64)
 
 //We need to define REFIID, REFCLSID, REFGUID, & REFFMTID here so that the
@@ -94,6 +120,9 @@ typedef struct tagCInterfaceProxyVtbl *  PCInterfaceProxyVtblList;
 typedef const char *                    PCInterfaceName;
 typedef int __stdcall IIDLookupRtn( const IID * pIID, int * pIndex );
 typedef IIDLookupRtn * PIIDLookup;
+
+// Uses a default lookup mechanism
+#define NdrDefaultIIDLookup ((PIIDLookup)-1)
 
 #if _MSC_VER >= 1200
 #pragma warning(push)
@@ -150,6 +179,9 @@ struct \
     void *Vtbl[ n ];                  \
 }
 
+#define IInspectableInterfaceProxyTag ((void *)-1)
+#define IUnknownInterfaceProxyTag ((void *)-2)
+
 #if _MSC_VER >= 1200
 #pragma warning(push)
 #endif
@@ -185,6 +217,9 @@ typedef struct tagCInterfaceStubHeader
     ULONG               DispatchTableCount;
     const PRPC_STUB_FUNCTION *  pDispatchTable;
 } CInterfaceStubHeader;
+
+#define IInspectableNdrStubCall2CommonStubListTag ((const PRPC_STUB_FUNCTION*)-1)
+#define IInspectableNdrStubCall3CommonStubListTag ((const PRPC_STUB_FUNCTION*)-2)
 
 typedef struct tagCInterfaceStubVtbl
 {

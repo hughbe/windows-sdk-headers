@@ -2692,6 +2692,14 @@ KSecRegisterSecurityProvider(
     _In_ PSECPKG_KERNEL_FUNCTION_TABLE Table
     );
 
+SECURITY_STATUS
+SEC_ENTRY
+KSecLocatePackage(
+    _In_ PUNICODE_STRING PackageName,
+    _Outptr_ PSECPKG_KERNEL_FUNCTION_TABLE * Package,
+    _Out_ PULONG_PTR PackageId
+    );
+
 extern SECPKG_KERNEL_FUNCTIONS KspKernelFunctions;
 
 

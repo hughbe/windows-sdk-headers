@@ -1,153 +1,154 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_ApplicationSettings_1_H
 #define WINRT_Windows_UI_ApplicationSettings_1_H
 #include "winrt/impl/Windows.UI.ApplicationSettings.0.h"
 WINRT_EXPORT namespace winrt::Windows::UI::ApplicationSettings
 {
     struct __declspec(empty_bases) IAccountsSettingsPane :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAccountsSettingsPane>
     {
         IAccountsSettingsPane(std::nullptr_t = nullptr) noexcept {}
-        IAccountsSettingsPane(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IAccountsSettingsPane(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IAccountsSettingsPaneCommandsRequestedEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAccountsSettingsPaneCommandsRequestedEventArgs>
     {
         IAccountsSettingsPaneCommandsRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IAccountsSettingsPaneCommandsRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IAccountsSettingsPaneCommandsRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IAccountsSettingsPaneCommandsRequestedEventArgs2 :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAccountsSettingsPaneCommandsRequestedEventArgs2>
     {
         IAccountsSettingsPaneCommandsRequestedEventArgs2(std::nullptr_t = nullptr) noexcept {}
-        IAccountsSettingsPaneCommandsRequestedEventArgs2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IAccountsSettingsPaneCommandsRequestedEventArgs2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IAccountsSettingsPaneEventDeferral :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAccountsSettingsPaneEventDeferral>
     {
         IAccountsSettingsPaneEventDeferral(std::nullptr_t = nullptr) noexcept {}
-        IAccountsSettingsPaneEventDeferral(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IAccountsSettingsPaneEventDeferral(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IAccountsSettingsPaneStatics :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAccountsSettingsPaneStatics>
     {
         IAccountsSettingsPaneStatics(std::nullptr_t = nullptr) noexcept {}
-        IAccountsSettingsPaneStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IAccountsSettingsPaneStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IAccountsSettingsPaneStatics2 :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAccountsSettingsPaneStatics2>,
-        impl::require<Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics2, Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics>
+        impl::require<winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics2, winrt::Windows::UI::ApplicationSettings::IAccountsSettingsPaneStatics>
     {
         IAccountsSettingsPaneStatics2(std::nullptr_t = nullptr) noexcept {}
-        IAccountsSettingsPaneStatics2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IAccountsSettingsPaneStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IAccountsSettingsPaneStatics3 :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAccountsSettingsPaneStatics3>
     {
         IAccountsSettingsPaneStatics3(std::nullptr_t = nullptr) noexcept {}
-        IAccountsSettingsPaneStatics3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IAccountsSettingsPaneStatics3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICredentialCommand :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICredentialCommand>
     {
         ICredentialCommand(std::nullptr_t = nullptr) noexcept {}
-        ICredentialCommand(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICredentialCommand(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICredentialCommandFactory :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICredentialCommandFactory>
     {
         ICredentialCommandFactory(std::nullptr_t = nullptr) noexcept {}
-        ICredentialCommandFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ICredentialCommandFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ISettingsCommandFactory :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISettingsCommandFactory>
     {
         ISettingsCommandFactory(std::nullptr_t = nullptr) noexcept {}
-        ISettingsCommandFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ISettingsCommandFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ISettingsCommandStatics :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISettingsCommandStatics>
     {
         ISettingsCommandStatics(std::nullptr_t = nullptr) noexcept {}
-        ISettingsCommandStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ISettingsCommandStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ISettingsPane :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISettingsPane>
     {
         ISettingsPane(std::nullptr_t = nullptr) noexcept {}
-        ISettingsPane(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ISettingsPane(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ISettingsPaneCommandsRequest :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISettingsPaneCommandsRequest>
     {
         ISettingsPaneCommandsRequest(std::nullptr_t = nullptr) noexcept {}
-        ISettingsPaneCommandsRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ISettingsPaneCommandsRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ISettingsPaneCommandsRequestedEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISettingsPaneCommandsRequestedEventArgs>
     {
         ISettingsPaneCommandsRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
-        ISettingsPaneCommandsRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ISettingsPaneCommandsRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ISettingsPaneStatics :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ISettingsPaneStatics>
     {
         ISettingsPaneStatics(std::nullptr_t = nullptr) noexcept {}
-        ISettingsPaneStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        ISettingsPaneStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IWebAccountCommand :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWebAccountCommand>
     {
         IWebAccountCommand(std::nullptr_t = nullptr) noexcept {}
-        IWebAccountCommand(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IWebAccountCommand(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IWebAccountCommandFactory :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWebAccountCommandFactory>
     {
         IWebAccountCommandFactory(std::nullptr_t = nullptr) noexcept {}
-        IWebAccountCommandFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IWebAccountCommandFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IWebAccountInvokedArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWebAccountInvokedArgs>
     {
         IWebAccountInvokedArgs(std::nullptr_t = nullptr) noexcept {}
-        IWebAccountInvokedArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IWebAccountInvokedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IWebAccountProviderCommand :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWebAccountProviderCommand>
     {
         IWebAccountProviderCommand(std::nullptr_t = nullptr) noexcept {}
-        IWebAccountProviderCommand(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IWebAccountProviderCommand(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IWebAccountProviderCommandFactory :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IWebAccountProviderCommandFactory>
     {
         IWebAccountProviderCommandFactory(std::nullptr_t = nullptr) noexcept {}
-        IWebAccountProviderCommandFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IWebAccountProviderCommandFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

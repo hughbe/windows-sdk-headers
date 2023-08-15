@@ -2524,6 +2524,14 @@ typedef PVOID LSA_HANDLE, *PLSA_HANDLE;
 //
 
 //
+// Various buffer sizes for LSAD wire encryption of Auth Infos
+//
+#define LSAD_AES_CRYPT_SHA512_HASH_SIZE     64
+#define LSAD_AES_KEY_SIZE                   16
+#define LSAD_AES_SALT_SIZE                  16
+#define LSAD_AES_BLOCK_SIZE                 16
+
+//
 // This data type defines the following information classes that may be
 // queried or set.
 //
@@ -2543,6 +2551,8 @@ typedef enum _TRUSTED_INFORMATION_CLASS {
     TrustedDomainInformationEx2Internal,
     TrustedDomainFullInformation2Internal,
     TrustedDomainSupportedEncryptionTypes,
+    TrustedDomainAuthInformationInternalAes,
+    TrustedDomainFullInformationInternalAes,
 } TRUSTED_INFORMATION_CLASS, *PTRUSTED_INFORMATION_CLASS;
 
 //

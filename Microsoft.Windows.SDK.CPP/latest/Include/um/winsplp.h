@@ -974,6 +974,10 @@ typedef struct _PRINTPROVIDOR
         _Out_ LPDWORD     pcchRequiredModelNameSize,
         _Out_ LPDWORD     pdwRank0Matches
         );
+
+    HRESULT (*fpInstallPrinterDriverPackageFromConnection)(
+        _In_  LPCWSTR     pcszConnectionName
+        );
 #endif // (NTDDI_VERSION >= NTDDI_VISTA)
 
 #if (NTDDI_VERSION >= NTDDI_WIN8)

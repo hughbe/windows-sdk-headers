@@ -21,5 +21,10 @@ IsProcessInIsolatedWindowsEnvironment(
     _Out_ BOOL *isProcessInIsolatedWindowsEnvironment
     );
 
+STDAPI
+IsClipboardContentFromOutsideEnvironment(
+    _Out_ BOOL* isClipboardContentFromOutsideEnvironment
+);
+
 #endif /* (NTDDI_VERSION >= NTDDI_WIN10_VB) */
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */

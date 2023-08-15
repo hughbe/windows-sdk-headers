@@ -128,6 +128,17 @@ extern "C" {
  *  Macros for targeted platforms
  ****************************************************************************/
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+#define TARGET_IS_NT1012_OR_LATER                   1
+#else
+#define TARGET_IS_NT1012_OR_LATER                   0
+#endif
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS1)
+#define TARGET_IS_NT102_OR_LATER                   1
+#else
+#define TARGET_IS_NT102_OR_LATER                   0
+#endif
 
 #if (0x0A00 <= _WIN32_WINNT)
 #define TARGET_IS_NT100_OR_LATER                   1

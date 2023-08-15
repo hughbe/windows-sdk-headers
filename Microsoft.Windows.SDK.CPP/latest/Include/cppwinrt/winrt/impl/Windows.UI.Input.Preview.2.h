@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Input_Preview_2_H
 #define WINRT_Windows_UI_Input_Preview_2_H
 #include "winrt/impl/Windows.UI.WindowManagement.1.h"
@@ -12,7 +13,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Preview
     struct InputActivationListenerPreview
     {
         InputActivationListenerPreview() = delete;
-        static auto CreateForApplicationWindow(Windows::UI::WindowManagement::AppWindow const& window);
+        static auto CreateForApplicationWindow(winrt::Windows::UI::WindowManagement::AppWindow const& window);
     };
 }
 #endif

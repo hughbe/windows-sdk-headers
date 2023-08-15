@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_UIAutomation_H
 #define WINRT_Windows_UI_UIAutomation_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/Windows.UI.h"
 #include "winrt/impl/Windows.UI.UIAutomation.2.h"
 namespace winrt::impl
@@ -15,48 +16,48 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_UIAutomation_IAutomationConnection<D>::IsRemoteSystem() const noexcept
     {
         bool value{};
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::UIAutomation::IAutomationConnection)->get_IsRemoteSystem(&value));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::IAutomationConnection)->get_IsRemoteSystem(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_UIAutomation_IAutomationConnection<D>::AppUserModelId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::IAutomationConnection)->get_AppUserModelId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::IAutomationConnection)->get_AppUserModelId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_UIAutomation_IAutomationConnection<D>::ExecutableFileName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::IAutomationConnection)->get_ExecutableFileName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::IAutomationConnection)->get_ExecutableFileName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::UIAutomation::AutomationConnection) consume_Windows_UI_UIAutomation_IAutomationConnectionBoundObject<D>::Connection() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::UIAutomation::AutomationConnection) consume_Windows_UI_UIAutomation_IAutomationConnectionBoundObject<D>::Connection() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::IAutomationConnectionBoundObject)->get_Connection(&value));
-        return Windows::UI::UIAutomation::AutomationConnection{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::IAutomationConnectionBoundObject)->get_Connection(&value));
+        return winrt::Windows::UI::UIAutomation::AutomationConnection{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_UIAutomation_IAutomationElement<D>::IsRemoteSystem() const noexcept
     {
         bool value{};
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::UIAutomation::IAutomationElement)->get_IsRemoteSystem(&value));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::IAutomationElement)->get_IsRemoteSystem(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_UIAutomation_IAutomationElement<D>::AppUserModelId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::IAutomationElement)->get_AppUserModelId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::IAutomationElement)->get_AppUserModelId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_UIAutomation_IAutomationElement<D>::ExecutableFileName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::IAutomationElement)->get_ExecutableFileName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::IAutomationElement)->get_ExecutableFileName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::IAutomationConnection> : produce_base<D, Windows::UI::UIAutomation::IAutomationConnection>
+    struct produce<D, winrt::Windows::UI::UIAutomation::IAutomationConnection> : produce_base<D, winrt::Windows::UI::UIAutomation::IAutomationConnection>
     {
         int32_t __stdcall get_IsRemoteSystem(bool* value) noexcept final
         {
@@ -84,13 +85,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::IAutomationConnectionBoundObject> : produce_base<D, Windows::UI::UIAutomation::IAutomationConnectionBoundObject>
+    struct produce<D, winrt::Windows::UI::UIAutomation::IAutomationConnectionBoundObject> : produce_base<D, winrt::Windows::UI::UIAutomation::IAutomationConnectionBoundObject>
     {
         int32_t __stdcall get_Connection(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::UIAutomation::AutomationConnection>(this->shim().Connection());
+            *value = detach_from<winrt::Windows::UI::UIAutomation::AutomationConnection>(this->shim().Connection());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -98,7 +99,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::IAutomationElement> : produce_base<D, Windows::UI::UIAutomation::IAutomationElement>
+    struct produce<D, winrt::Windows::UI::UIAutomation::IAutomationElement> : produce_base<D, winrt::Windows::UI::UIAutomation::IAutomationElement>
     {
         int32_t __stdcall get_IsRemoteSystem(bool* value) noexcept final
         {
@@ -126,7 +127,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::IAutomationTextRange> : produce_base<D, Windows::UI::UIAutomation::IAutomationTextRange>
+    struct produce<D, winrt::Windows::UI::UIAutomation::IAutomationTextRange> : produce_base<D, winrt::Windows::UI::UIAutomation::IAutomationTextRange>
     {
     };
 #endif

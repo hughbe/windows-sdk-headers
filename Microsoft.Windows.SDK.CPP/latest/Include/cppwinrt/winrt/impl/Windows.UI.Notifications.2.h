@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Notifications_2_H
 #define WINRT_Windows_UI_Notifications_2_H
 #include "winrt/impl/Windows.Data.Xml.Dom.1.h"
@@ -12,18 +13,18 @@
 #include "winrt/impl/Windows.UI.Notifications.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Notifications
 {
-    struct __declspec(empty_bases) AdaptiveNotificationText : Windows::UI::Notifications::IAdaptiveNotificationText,
-        impl::require<AdaptiveNotificationText, Windows::UI::Notifications::IAdaptiveNotificationContent>
+    struct __declspec(empty_bases) AdaptiveNotificationText : winrt::Windows::UI::Notifications::IAdaptiveNotificationText,
+        impl::require<AdaptiveNotificationText, winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>
     {
         AdaptiveNotificationText(std::nullptr_t) noexcept {}
-        AdaptiveNotificationText(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IAdaptiveNotificationText(ptr, take_ownership_from_abi) {}
+        AdaptiveNotificationText(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IAdaptiveNotificationText(ptr, take_ownership_from_abi) {}
         AdaptiveNotificationText();
     };
-    struct __declspec(empty_bases) BadgeNotification : Windows::UI::Notifications::IBadgeNotification
+    struct __declspec(empty_bases) BadgeNotification : winrt::Windows::UI::Notifications::IBadgeNotification
     {
         BadgeNotification(std::nullptr_t) noexcept {}
-        BadgeNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IBadgeNotification(ptr, take_ownership_from_abi) {}
-        explicit BadgeNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
+        BadgeNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IBadgeNotification(ptr, take_ownership_from_abi) {}
+        explicit BadgeNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content);
     };
     struct BadgeUpdateManager
     {
@@ -31,18 +32,18 @@ WINRT_EXPORT namespace winrt::Windows::UI::Notifications
         static auto CreateBadgeUpdaterForApplication();
         static auto CreateBadgeUpdaterForApplication(param::hstring const& applicationId);
         static auto CreateBadgeUpdaterForSecondaryTile(param::hstring const& tileId);
-        static auto GetTemplateContent(Windows::UI::Notifications::BadgeTemplateType const& type);
-        static auto GetForUser(Windows::System::User const& user);
+        static auto GetTemplateContent(winrt::Windows::UI::Notifications::BadgeTemplateType const& type);
+        static auto GetForUser(winrt::Windows::System::User const& user);
     };
-    struct __declspec(empty_bases) BadgeUpdateManagerForUser : Windows::UI::Notifications::IBadgeUpdateManagerForUser
+    struct __declspec(empty_bases) BadgeUpdateManagerForUser : winrt::Windows::UI::Notifications::IBadgeUpdateManagerForUser
     {
         BadgeUpdateManagerForUser(std::nullptr_t) noexcept {}
-        BadgeUpdateManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IBadgeUpdateManagerForUser(ptr, take_ownership_from_abi) {}
+        BadgeUpdateManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IBadgeUpdateManagerForUser(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) BadgeUpdater : Windows::UI::Notifications::IBadgeUpdater
+    struct __declspec(empty_bases) BadgeUpdater : winrt::Windows::UI::Notifications::IBadgeUpdater
     {
         BadgeUpdater(std::nullptr_t) noexcept {}
-        BadgeUpdater(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IBadgeUpdater(ptr, take_ownership_from_abi) {}
+        BadgeUpdater(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IBadgeUpdater(ptr, take_ownership_from_abi) {}
     };
     struct KnownAdaptiveNotificationHints
     {
@@ -82,59 +83,59 @@ WINRT_EXPORT namespace winrt::Windows::UI::Notifications
         KnownNotificationBindings() = delete;
         [[nodiscard]] static auto ToastGeneric();
     };
-    struct __declspec(empty_bases) Notification : Windows::UI::Notifications::INotification
+    struct __declspec(empty_bases) Notification : winrt::Windows::UI::Notifications::INotification
     {
         Notification(std::nullptr_t) noexcept {}
-        Notification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::INotification(ptr, take_ownership_from_abi) {}
+        Notification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::INotification(ptr, take_ownership_from_abi) {}
         Notification();
     };
-    struct __declspec(empty_bases) NotificationBinding : Windows::UI::Notifications::INotificationBinding
+    struct __declspec(empty_bases) NotificationBinding : winrt::Windows::UI::Notifications::INotificationBinding
     {
         NotificationBinding(std::nullptr_t) noexcept {}
-        NotificationBinding(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::INotificationBinding(ptr, take_ownership_from_abi) {}
+        NotificationBinding(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::INotificationBinding(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) NotificationData : Windows::UI::Notifications::INotificationData
+    struct __declspec(empty_bases) NotificationData : winrt::Windows::UI::Notifications::INotificationData
     {
         NotificationData(std::nullptr_t) noexcept {}
-        NotificationData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::INotificationData(ptr, take_ownership_from_abi) {}
+        NotificationData(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::INotificationData(ptr, take_ownership_from_abi) {}
         NotificationData();
-        NotificationData(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues, uint32_t sequenceNumber);
-        explicit NotificationData(param::iterable<Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues);
+        NotificationData(param::iterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues, uint32_t sequenceNumber);
+        explicit NotificationData(param::iterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& initialValues);
     };
-    struct __declspec(empty_bases) NotificationVisual : Windows::UI::Notifications::INotificationVisual
+    struct __declspec(empty_bases) NotificationVisual : winrt::Windows::UI::Notifications::INotificationVisual
     {
         NotificationVisual(std::nullptr_t) noexcept {}
-        NotificationVisual(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::INotificationVisual(ptr, take_ownership_from_abi) {}
+        NotificationVisual(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::INotificationVisual(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ScheduledTileNotification : Windows::UI::Notifications::IScheduledTileNotification
+    struct __declspec(empty_bases) ScheduledTileNotification : winrt::Windows::UI::Notifications::IScheduledTileNotification
     {
         ScheduledTileNotification(std::nullptr_t) noexcept {}
-        ScheduledTileNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IScheduledTileNotification(ptr, take_ownership_from_abi) {}
-        ScheduledTileNotification(Windows::Data::Xml::Dom::XmlDocument const& content, Windows::Foundation::DateTime const& deliveryTime);
+        ScheduledTileNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IScheduledTileNotification(ptr, take_ownership_from_abi) {}
+        ScheduledTileNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content, winrt::Windows::Foundation::DateTime const& deliveryTime);
     };
-    struct __declspec(empty_bases) ScheduledToastNotification : Windows::UI::Notifications::IScheduledToastNotification,
-        impl::require<ScheduledToastNotification, Windows::UI::Notifications::IScheduledToastNotification2, Windows::UI::Notifications::IScheduledToastNotification3, Windows::UI::Notifications::IScheduledToastNotification4>
+    struct __declspec(empty_bases) ScheduledToastNotification : winrt::Windows::UI::Notifications::IScheduledToastNotification,
+        impl::require<ScheduledToastNotification, winrt::Windows::UI::Notifications::IScheduledToastNotification2, winrt::Windows::UI::Notifications::IScheduledToastNotification3, winrt::Windows::UI::Notifications::IScheduledToastNotification4>
     {
         ScheduledToastNotification(std::nullptr_t) noexcept {}
-        ScheduledToastNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IScheduledToastNotification(ptr, take_ownership_from_abi) {}
-        ScheduledToastNotification(Windows::Data::Xml::Dom::XmlDocument const& content, Windows::Foundation::DateTime const& deliveryTime);
-        ScheduledToastNotification(Windows::Data::Xml::Dom::XmlDocument const& content, Windows::Foundation::DateTime const& deliveryTime, Windows::Foundation::TimeSpan const& snoozeInterval, uint32_t maximumSnoozeCount);
+        ScheduledToastNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IScheduledToastNotification(ptr, take_ownership_from_abi) {}
+        ScheduledToastNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content, winrt::Windows::Foundation::DateTime const& deliveryTime);
+        ScheduledToastNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content, winrt::Windows::Foundation::DateTime const& deliveryTime, winrt::Windows::Foundation::TimeSpan const& snoozeInterval, uint32_t maximumSnoozeCount);
     };
-    struct __declspec(empty_bases) ScheduledToastNotificationShowingEventArgs : Windows::UI::Notifications::IScheduledToastNotificationShowingEventArgs
+    struct __declspec(empty_bases) ScheduledToastNotificationShowingEventArgs : winrt::Windows::UI::Notifications::IScheduledToastNotificationShowingEventArgs
     {
         ScheduledToastNotificationShowingEventArgs(std::nullptr_t) noexcept {}
-        ScheduledToastNotificationShowingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IScheduledToastNotificationShowingEventArgs(ptr, take_ownership_from_abi) {}
+        ScheduledToastNotificationShowingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IScheduledToastNotificationShowingEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ShownTileNotification : Windows::UI::Notifications::IShownTileNotification
+    struct __declspec(empty_bases) ShownTileNotification : winrt::Windows::UI::Notifications::IShownTileNotification
     {
         ShownTileNotification(std::nullptr_t) noexcept {}
-        ShownTileNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IShownTileNotification(ptr, take_ownership_from_abi) {}
+        ShownTileNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IShownTileNotification(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) TileFlyoutNotification : Windows::UI::Notifications::ITileFlyoutNotification
+    struct __declspec(empty_bases) TileFlyoutNotification : winrt::Windows::UI::Notifications::ITileFlyoutNotification
     {
         TileFlyoutNotification(std::nullptr_t) noexcept {}
-        TileFlyoutNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::ITileFlyoutNotification(ptr, take_ownership_from_abi) {}
-        explicit TileFlyoutNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
+        TileFlyoutNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::ITileFlyoutNotification(ptr, take_ownership_from_abi) {}
+        explicit TileFlyoutNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content);
     };
     struct TileFlyoutUpdateManager
     {
@@ -142,18 +143,18 @@ WINRT_EXPORT namespace winrt::Windows::UI::Notifications
         static auto CreateTileFlyoutUpdaterForApplication();
         static auto CreateTileFlyoutUpdaterForApplication(param::hstring const& applicationId);
         static auto CreateTileFlyoutUpdaterForSecondaryTile(param::hstring const& tileId);
-        static auto GetTemplateContent(Windows::UI::Notifications::TileFlyoutTemplateType const& type);
+        static auto GetTemplateContent(winrt::Windows::UI::Notifications::TileFlyoutTemplateType const& type);
     };
-    struct __declspec(empty_bases) TileFlyoutUpdater : Windows::UI::Notifications::ITileFlyoutUpdater
+    struct __declspec(empty_bases) TileFlyoutUpdater : winrt::Windows::UI::Notifications::ITileFlyoutUpdater
     {
         TileFlyoutUpdater(std::nullptr_t) noexcept {}
-        TileFlyoutUpdater(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::ITileFlyoutUpdater(ptr, take_ownership_from_abi) {}
+        TileFlyoutUpdater(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::ITileFlyoutUpdater(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) TileNotification : Windows::UI::Notifications::ITileNotification
+    struct __declspec(empty_bases) TileNotification : winrt::Windows::UI::Notifications::ITileNotification
     {
         TileNotification(std::nullptr_t) noexcept {}
-        TileNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::ITileNotification(ptr, take_ownership_from_abi) {}
-        explicit TileNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
+        TileNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::ITileNotification(ptr, take_ownership_from_abi) {}
+        explicit TileNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content);
     };
     struct TileUpdateManager
     {
@@ -161,103 +162,114 @@ WINRT_EXPORT namespace winrt::Windows::UI::Notifications
         static auto CreateTileUpdaterForApplication();
         static auto CreateTileUpdaterForApplication(param::hstring const& applicationId);
         static auto CreateTileUpdaterForSecondaryTile(param::hstring const& tileId);
-        static auto GetTemplateContent(Windows::UI::Notifications::TileTemplateType const& type);
-        static auto GetForUser(Windows::System::User const& user);
+        static auto GetTemplateContent(winrt::Windows::UI::Notifications::TileTemplateType const& type);
+        static auto GetForUser(winrt::Windows::System::User const& user);
     };
-    struct __declspec(empty_bases) TileUpdateManagerForUser : Windows::UI::Notifications::ITileUpdateManagerForUser
+    struct __declspec(empty_bases) TileUpdateManagerForUser : winrt::Windows::UI::Notifications::ITileUpdateManagerForUser
     {
         TileUpdateManagerForUser(std::nullptr_t) noexcept {}
-        TileUpdateManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::ITileUpdateManagerForUser(ptr, take_ownership_from_abi) {}
+        TileUpdateManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::ITileUpdateManagerForUser(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) TileUpdater : Windows::UI::Notifications::ITileUpdater,
-        impl::require<TileUpdater, Windows::UI::Notifications::ITileUpdater2>
+    struct __declspec(empty_bases) TileUpdater : winrt::Windows::UI::Notifications::ITileUpdater,
+        impl::require<TileUpdater, winrt::Windows::UI::Notifications::ITileUpdater2>
     {
         TileUpdater(std::nullptr_t) noexcept {}
-        TileUpdater(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::ITileUpdater(ptr, take_ownership_from_abi) {}
+        TileUpdater(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::ITileUpdater(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ToastActivatedEventArgs : Windows::UI::Notifications::IToastActivatedEventArgs,
-        impl::require<ToastActivatedEventArgs, Windows::UI::Notifications::IToastActivatedEventArgs2>
+    struct __declspec(empty_bases) ToastActivatedEventArgs : winrt::Windows::UI::Notifications::IToastActivatedEventArgs,
+        impl::require<ToastActivatedEventArgs, winrt::Windows::UI::Notifications::IToastActivatedEventArgs2>
     {
         ToastActivatedEventArgs(std::nullptr_t) noexcept {}
-        ToastActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastActivatedEventArgs(ptr, take_ownership_from_abi) {}
+        ToastActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastActivatedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ToastCollection : Windows::UI::Notifications::IToastCollection
+    struct __declspec(empty_bases) ToastCollection : winrt::Windows::UI::Notifications::IToastCollection
     {
         ToastCollection(std::nullptr_t) noexcept {}
-        ToastCollection(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastCollection(ptr, take_ownership_from_abi) {}
-        ToastCollection(param::hstring const& collectionId, param::hstring const& displayName, param::hstring const& launchArgs, Windows::Foundation::Uri const& iconUri);
+        ToastCollection(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastCollection(ptr, take_ownership_from_abi) {}
+        ToastCollection(param::hstring const& collectionId, param::hstring const& displayName, param::hstring const& launchArgs, winrt::Windows::Foundation::Uri const& iconUri);
     };
-    struct __declspec(empty_bases) ToastCollectionManager : Windows::UI::Notifications::IToastCollectionManager
+    struct __declspec(empty_bases) ToastCollectionManager : winrt::Windows::UI::Notifications::IToastCollectionManager
     {
         ToastCollectionManager(std::nullptr_t) noexcept {}
-        ToastCollectionManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastCollectionManager(ptr, take_ownership_from_abi) {}
+        ToastCollectionManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastCollectionManager(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ToastDismissedEventArgs : Windows::UI::Notifications::IToastDismissedEventArgs
+    struct __declspec(empty_bases) ToastDismissedEventArgs : winrt::Windows::UI::Notifications::IToastDismissedEventArgs
     {
         ToastDismissedEventArgs(std::nullptr_t) noexcept {}
-        ToastDismissedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastDismissedEventArgs(ptr, take_ownership_from_abi) {}
+        ToastDismissedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastDismissedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ToastFailedEventArgs : Windows::UI::Notifications::IToastFailedEventArgs
+    struct __declspec(empty_bases) ToastFailedEventArgs : winrt::Windows::UI::Notifications::IToastFailedEventArgs
     {
         ToastFailedEventArgs(std::nullptr_t) noexcept {}
-        ToastFailedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastFailedEventArgs(ptr, take_ownership_from_abi) {}
+        ToastFailedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastFailedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ToastNotification : Windows::UI::Notifications::IToastNotification,
-        impl::require<ToastNotification, Windows::UI::Notifications::IToastNotification2, Windows::UI::Notifications::IToastNotification3, Windows::UI::Notifications::IToastNotification4, Windows::UI::Notifications::IToastNotification6>
+    struct __declspec(empty_bases) ToastNotification : winrt::Windows::UI::Notifications::IToastNotification,
+        impl::require<ToastNotification, winrt::Windows::UI::Notifications::IToastNotification2, winrt::Windows::UI::Notifications::IToastNotification3, winrt::Windows::UI::Notifications::IToastNotification4, winrt::Windows::UI::Notifications::IToastNotification6>
     {
         ToastNotification(std::nullptr_t) noexcept {}
-        ToastNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastNotification(ptr, take_ownership_from_abi) {}
-        explicit ToastNotification(Windows::Data::Xml::Dom::XmlDocument const& content);
+        ToastNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotification(ptr, take_ownership_from_abi) {}
+        explicit ToastNotification(winrt::Windows::Data::Xml::Dom::XmlDocument const& content);
     };
-    struct __declspec(empty_bases) ToastNotificationActionTriggerDetail : Windows::UI::Notifications::IToastNotificationActionTriggerDetail
+    struct __declspec(empty_bases) ToastNotificationActionTriggerDetail : winrt::Windows::UI::Notifications::IToastNotificationActionTriggerDetail
     {
         ToastNotificationActionTriggerDetail(std::nullptr_t) noexcept {}
-        ToastNotificationActionTriggerDetail(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastNotificationActionTriggerDetail(ptr, take_ownership_from_abi) {}
+        ToastNotificationActionTriggerDetail(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotificationActionTriggerDetail(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ToastNotificationHistory : Windows::UI::Notifications::IToastNotificationHistory,
-        impl::require<ToastNotificationHistory, Windows::UI::Notifications::IToastNotificationHistory2>
+    struct __declspec(empty_bases) ToastNotificationFilter : winrt::Windows::UI::Notifications::IToastNotificationFilter
+    {
+        ToastNotificationFilter(std::nullptr_t) noexcept {}
+        ToastNotificationFilter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotificationFilter(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+    };
+    struct __declspec(empty_bases) ToastNotificationFilterChangedEventArgs : winrt::Windows::UI::Notifications::IToastNotificationFilterChangedEventArgs
+    {
+        ToastNotificationFilterChangedEventArgs(std::nullptr_t) noexcept {}
+        ToastNotificationFilterChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotificationFilterChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ToastNotificationHistory : winrt::Windows::UI::Notifications::IToastNotificationHistory,
+        impl::require<ToastNotificationHistory, winrt::Windows::UI::Notifications::IToastNotificationHistory2>
     {
         ToastNotificationHistory(std::nullptr_t) noexcept {}
-        ToastNotificationHistory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastNotificationHistory(ptr, take_ownership_from_abi) {}
+        ToastNotificationHistory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotificationHistory(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ToastNotificationHistoryChangedTriggerDetail : Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail,
-        impl::require<ToastNotificationHistoryChangedTriggerDetail, Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail2>
+    struct __declspec(empty_bases) ToastNotificationHistoryChangedTriggerDetail : winrt::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail,
+        impl::require<ToastNotificationHistoryChangedTriggerDetail, winrt::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail2>
     {
         ToastNotificationHistoryChangedTriggerDetail(std::nullptr_t) noexcept {}
-        ToastNotificationHistoryChangedTriggerDetail(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail(ptr, take_ownership_from_abi) {}
+        ToastNotificationHistoryChangedTriggerDetail(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail(ptr, take_ownership_from_abi) {}
     };
     struct ToastNotificationManager
     {
         ToastNotificationManager() = delete;
         static auto CreateToastNotifier();
         static auto CreateToastNotifier(param::hstring const& applicationId);
-        static auto GetTemplateContent(Windows::UI::Notifications::ToastTemplateType const& type);
+        static auto GetTemplateContent(winrt::Windows::UI::Notifications::ToastTemplateType const& type);
         [[nodiscard]] static auto History();
-        static auto GetForUser(Windows::System::User const& user);
-        static auto ConfigureNotificationMirroring(Windows::UI::Notifications::NotificationMirroring const& value);
+        static auto GetForUser(winrt::Windows::System::User const& user);
+        static auto ConfigureNotificationMirroring(winrt::Windows::UI::Notifications::NotificationMirroring const& value);
         static auto GetDefault();
     };
-    struct __declspec(empty_bases) ToastNotificationManagerForUser : Windows::UI::Notifications::IToastNotificationManagerForUser,
-        impl::require<ToastNotificationManagerForUser, Windows::UI::Notifications::IToastNotificationManagerForUser2>
+    struct __declspec(empty_bases) ToastNotificationManagerForUser : winrt::Windows::UI::Notifications::IToastNotificationManagerForUser,
+        impl::require<ToastNotificationManagerForUser, winrt::Windows::UI::Notifications::IToastNotificationManagerForUser2>
     {
         ToastNotificationManagerForUser(std::nullptr_t) noexcept {}
-        ToastNotificationManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastNotificationManagerForUser(ptr, take_ownership_from_abi) {}
+        ToastNotificationManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotificationManagerForUser(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ToastNotifier : Windows::UI::Notifications::IToastNotifier,
-        impl::require<ToastNotifier, Windows::UI::Notifications::IToastNotifier2, Windows::UI::Notifications::IToastNotifier3>
+    struct __declspec(empty_bases) ToastNotifier : winrt::Windows::UI::Notifications::IToastNotifier,
+        impl::require<ToastNotifier, winrt::Windows::UI::Notifications::IToastNotifier2, winrt::Windows::UI::Notifications::IToastNotifier3>
     {
         ToastNotifier(std::nullptr_t) noexcept {}
-        ToastNotifier(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IToastNotifier(ptr, take_ownership_from_abi) {}
+        ToastNotifier(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotifier(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) UserNotification : Windows::UI::Notifications::IUserNotification
+    struct __declspec(empty_bases) UserNotification : winrt::Windows::UI::Notifications::IUserNotification
     {
         UserNotification(std::nullptr_t) noexcept {}
-        UserNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IUserNotification(ptr, take_ownership_from_abi) {}
+        UserNotification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IUserNotification(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) UserNotificationChangedEventArgs : Windows::UI::Notifications::IUserNotificationChangedEventArgs
+    struct __declspec(empty_bases) UserNotificationChangedEventArgs : winrt::Windows::UI::Notifications::IUserNotificationChangedEventArgs
     {
         UserNotificationChangedEventArgs(std::nullptr_t) noexcept {}
-        UserNotificationChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Notifications::IUserNotificationChangedEventArgs(ptr, take_ownership_from_abi) {}
+        UserNotificationChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IUserNotificationChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

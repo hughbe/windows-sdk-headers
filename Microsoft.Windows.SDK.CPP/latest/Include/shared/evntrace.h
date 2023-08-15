@@ -430,6 +430,7 @@ typedef ULONG64 TRACEHANDLE, *PTRACEHANDLE;
 #define EVENT_TRACE_TYPE_CONFIG_POWER           0x10     // ACPI Configuration
 #define EVENT_TRACE_TYPE_CONFIG_NETINFO         0x11     // Networking Configuration
 #define EVENT_TRACE_TYPE_CONFIG_OPTICALMEDIA    0x12     // Optical Media Configuration
+#define EVENT_TRACE_TYPE_CONFIG_PHYSICALDISK_EX 0x13     // Physical Disk Extended Configuration
 
 #define EVENT_TRACE_TYPE_CONFIG_IRQ             0x15     // IRQ assigned to devices
 #define EVENT_TRACE_TYPE_CONFIG_PNP             0x16     // PnP device info
@@ -1389,6 +1390,18 @@ typedef struct _ETW_PMC_COUNTER_OWNERSHIP_STATUS {
     ETW_PMC_COUNTER_OWNER CounterOwners[ANYSIZE_ARRAY];
 } ETW_PMC_COUNTER_OWNERSHIP_STATUS, *PETW_PMC_COUNTER_OWNERSHIP_STATUS;
 
+typedef struct {
+    ULONG NextEntryOffset;
+    USHORT LoggerId;
+    USHORT Reserved;
+    ULONG ProfileSourceCount;
+    ULONG HookIdCount;
+
+    // These two fields follow as a ULONG blob after the initial header.
+    // ULONG ProfileSources[]; // Count indicated by ProfileSourceCount
+    // USHORT HookIds[]; // Count indicated by HookIdCount
+} ETW_PMC_SESSION_INFO;
+
 //
 // An EVENT_TRACE consists of a fixed header (EVENT_TRACE_HEADER) and
 // optionally a variable portion pointed to by MofData. The datablock
@@ -2282,6 +2295,19 @@ typedef enum _TRACE_QUERY_INFO_CLASS {
     //      Input Format: TRACE_STACK_CACHING_INFO
     //
     TraceUnifiedStackCachingInfo = 26,
+
+    //
+    // TracePmcSessionInformation:
+    //    TraceQueryInformation
+    //      Queries information about enabled PMC counters for all sessions.
+    //
+    //      Output Format: The supplied output buffer will be set to a blob of filled out ETW_PMC_SESSION_INFO.
+    //                     The NextEntryOffset member of each item will be set to the offset from the start of 
+    //                     the current item to the next item, or 0 if there are no more items.
+    //                     The ProfileSourceCount and HookId count members will be set to the number of items that
+    //                     exist in the ProfileSources array and HookIds arrays, respectively.
+    //
+    TracePmcSessionInformation = 27,
 
     MaxTraceSetInfoClass
 } TRACE_QUERY_INFO_CLASS, TRACE_INFO_CLASS;

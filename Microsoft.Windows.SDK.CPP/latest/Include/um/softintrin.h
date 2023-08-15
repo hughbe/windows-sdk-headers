@@ -210,6 +210,8 @@ static __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1
 
 #define _mm_cmp_sd(a,b,i)               __MD128(__MAKEU64_U128(CMPSD64(__D128Q0(a),__D128Q0(b),(i)),__D128Q1(a)))
 #define _mm_cmp_ss(a,b,i)               __MM128(__MAKEU32_U128(CMPSS64(__S128D0(a),__S128D0(b),(i)),__S128D1(a),__S128D2(a),__S128D3(a)))
+#define _mm_cmpr_sd(a,b,i)              __MD128(__MAKEU64_U128(CMPSD64(__D128Q0(a),__D128Q0(b),(i)),__D128Q1(b)))
+#define _mm_cmpr_ss(a,b,i)              __MM128(__MAKEU32_U128(CMPSS64(__S128D0(a),__S128D0(b),(i)),__S128D1(b),__S128D2(b),__S128D3(b)))
 
 #define _mm_cmpeq_pd(a,b)               _mm_cmp_pd((a),(b),_CMP_EQ_OQ)
 #define _mm_cmple_pd(a,b)               _mm_cmp_pd((a),(b),_CMP_LE_OS)
@@ -245,10 +247,10 @@ static __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1
 #define _mm_cmpnle_sd(a,b)              _mm_cmp_sd((a),(b),_CMP_NLE_US)
 #define _mm_cmpnlt_sd(a,b)              _mm_cmp_sd((a),(b),_CMP_NLT_US)
 #define _mm_cmpord_sd(a,b)              _mm_cmp_sd((a),(b),_CMP_ORD_Q)
-#define _mm_cmpge_sd(a,b)               _mm_cmp_sd((b),(a),_CMP_LE_OS)
-#define _mm_cmpgt_sd(a,b)               _mm_cmp_sd((b),(a),_CMP_LT_OS)
-#define _mm_cmpnge_sd(a,b)              _mm_cmp_sd((b),(a),_CMP_NLE_US)
-#define _mm_cmpngt_sd(a,b)              _mm_cmp_sd((b),(a),_CMP_NLT_US)
+#define _mm_cmpge_sd(a,b)               _mm_cmpr_sd((b),(a),_CMP_LE_OS)
+#define _mm_cmpgt_sd(a,b)               _mm_cmpr_sd((b),(a),_CMP_LT_OS)
+#define _mm_cmpnge_sd(a,b)              _mm_cmpr_sd((b),(a),_CMP_NLE_US)
+#define _mm_cmpngt_sd(a,b)              _mm_cmpr_sd((b),(a),_CMP_NLT_US)
 
 #define _mm_cmpeq_ss(a,b)               _mm_cmp_ss((a),(b),_CMP_EQ_OQ)
 #define _mm_cmple_ss(a,b)               _mm_cmp_ss((a),(b),_CMP_LE_OS)
@@ -258,10 +260,10 @@ static __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1
 #define _mm_cmpnle_ss(a,b)              _mm_cmp_ss((a),(b),_CMP_NLE_US)
 #define _mm_cmpnlt_ss(a,b)              _mm_cmp_ss((a),(b),_CMP_NLT_US)
 #define _mm_cmpord_ss(a,b)              _mm_cmp_ss((a),(b),_CMP_ORD_Q)
-#define _mm_cmpge_ss(a,b)               _mm_cmp_ss((b),(a),_CMP_LE_OS)
-#define _mm_cmpgt_ss(a,b)               _mm_cmp_ss((b),(a),_CMP_LT_OS)
-#define _mm_cmpnge_ss(a,b)              _mm_cmp_ss((b),(a),_CMP_NLE_US)
-#define _mm_cmpngt_ss(a,b)              _mm_cmp_ss((b),(a),_CMP_NLT_US)
+#define _mm_cmpge_ss(a,b)               _mm_cmpr_ss((b),(a),_CMP_LE_OS)
+#define _mm_cmpgt_ss(a,b)               _mm_cmpr_ss((b),(a),_CMP_LT_OS)
+#define _mm_cmpnge_ss(a,b)              _mm_cmpr_ss((b),(a),_CMP_NLE_US)
+#define _mm_cmpngt_ss(a,b)              _mm_cmpr_ss((b),(a),_CMP_NLT_US)
 
 #define _mm_cmpestra(a,m,b,n,i)         (0 == (0x041 & PCMPESTRF128(__U128(a), (m), __U128(b), (n), (i))))
 #define _mm_cmpestrc(a,m,b,n,i)         (0 != (0x001 & PCMPESTRF128(__U128(a), (m), __U128(b), (n), (i))))
@@ -418,14 +420,14 @@ static __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1
 
 // MOVDQU MOVUPD MOVUPS
 
-#define _mm_loadu_si128(a)              __MI128(__MAKEU64_U128(*(uint64_t *)(a), ((uint64_t *)a)[1]))
-#define _mm_storeu_si128(a,b)           (void)(*(uint64_t *)(a) = __U128Q0(b), ((uint64_t *)a)[1] = __U128Q1(b))
+#define _mm_loadu_si128(a)              __MI128(__MAKEU64_U128(*(uint64_t *)(a), ((uint64_t *)(a))[1]))
+#define _mm_storeu_si128(a,b)           (void)(*(uint64_t *)(a) = __U128Q0(b), ((uint64_t *)(a))[1] = __U128Q1(b))
 
-#define _mm_loadu_pd(a)                 __MD128(__MAKEU64_U128(*(uint64_t *)(a), ((uint64_t *)a)[1]))
-#define _mm_storeu_pd(a,b)              (void)(*(uint64_t *)(a) = __D128Q0(b), ((uint64_t *)a)[1] = __D128Q1(b))
+#define _mm_loadu_pd(a)                 __MD128(__MAKEU64_U128(*(uint64_t *)(a), ((uint64_t *)(a))[1]))
+#define _mm_storeu_pd(a,b)              (void)(*(uint64_t *)(a) = __D128Q0(b), ((uint64_t *)(a))[1] = __D128Q1(b))
 
-#define _mm_loadu_ps(a)                 __MM128(__MAKEU64_U128(*(uint64_t *)(a), ((uint64_t *)a)[1]))
-#define _mm_storeu_ps(a,b)              (void)(*(uint64_t *)(a) = __S128Q0(b), ((uint64_t *)a)[1] = __S128Q1(b))
+#define _mm_loadu_ps(a)                 __MM128(__MAKEU64_U128(*(uint64_t *)(a), ((uint64_t *)(a))[1]))
+#define _mm_storeu_ps(a,b)              (void)(*(uint64_t *)(a) = __S128Q0(b), ((uint64_t *)(a))[1] = __S128Q1(b))
 
 // MOVHLPS MOVLHPS
 
@@ -655,14 +657,14 @@ static __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1
 #define _mm_cmpeq_epi8(a,b)             __MI128(PCMPEQ128(__U128(a),__U128(b),_WIDEMASK_BYTE,_BITS_PER_BYTE))
 #define _mm_cmpeq_epi16(a,b)            __MI128(PCMPEQ128(__U128(a),__U128(b),_WIDEMASK_WORD,_BITS_PER_WORD))
 #define _mm_cmpeq_epi32(a,b)            __MI128(PCMPEQ128(__U128(a),__U128(b),_WIDEMASK_LONG,_BITS_PER_LONG))
-#define _mm_cmpeq_epi64(a,b)            __MI128(PCMPEQ128(__U128(a),__U128(b),_WIDEMASK_LONG,_BITS_PER_QUAD))
+#define _mm_cmpeq_epi64(a,b)            __MI128(PCMPEQ128(__U128(a),__U128(b),_WIDEMASK_QUAD,_BITS_PER_QUAD))
 
 // PCMPGT[B/W/D]
 
 #define _mm_cmpgt_epi8(a,b)             __MI128(PCMPGT128(__U128(a),__U128(b),_WIDEMASK_BYTE,_BITS_PER_BYTE))
 #define _mm_cmpgt_epi16(a,b)            __MI128(PCMPGT128(__U128(a),__U128(b),_WIDEMASK_WORD,_BITS_PER_WORD))
 #define _mm_cmpgt_epi32(a,b)            __MI128(PCMPGT128(__U128(a),__U128(b),_WIDEMASK_LONG,_BITS_PER_LONG))
-#define _mm_cmpgt_epi64(a,b)            __MI128(PCMPGT128(__U128(a),__U128(b),_WIDEMASK_LONG,_BITS_PER_QUAD))
+#define _mm_cmpgt_epi64(a,b)            __MI128(PCMPGT128(__U128(a),__U128(b),_WIDEMASK_QUAD,_BITS_PER_QUAD))
 
 #define _mm_cmplt_epi8(a,b)             __MI128(PCMPGT128(__U128(b),__U128(a),_WIDEMASK_BYTE,_BITS_PER_BYTE))
 #define _mm_cmplt_epi16(a,b)            __MI128(PCMPGT128(__U128(b),__U128(a),_WIDEMASK_WORD,_BITS_PER_WORD))
@@ -918,8 +920,8 @@ static __forceinline int HasOneBit(const unsigned x) { return (x && !(x & (x - 1
 #define _mm_setr_epi64(b,a)             __MI128(__MAKEU64_U128(__U64(b),__U64(a)))
 #define _mm_setr_epi64x(b,a)            __MI128(__MAKEU64_U128((uint64_t)(b),(uint64_t)(a)))
 
-#define _mm_setr_pd(b,a)                __MD128(__MAKEF64_U128((a),(b)))
-#define _mm_setr_ps(d,c,b,a)            __MM128(__MAKEF32_U128((a),(b),(c),(d)))
+#define _mm_setr_pd(a,b)                __MD128(__MAKEF64_U128((a),(b)))
+#define _mm_setr_ps(a,b,c,d)            __MM128(__MAKEF32_U128((a),(b),(c),(d)))
 
 // None
 
@@ -949,6 +951,7 @@ void __aa64_pause(void)
 #define _mm_lfence()                    __dmb(_ARM64_BARRIER_ISHLD);
 #define _mm_mfence()                    __dmb(_ARM64_BARRIER_ISH);
 #define _mm_sfence()                    __dmb(_ARM64_BARRIER_ISHST);
+#define __faststorefence()              __dmb(_ARM64_BARRIER_ISH);
 
 #define __addgsbyte(a,b)                __addx18byte(a, b)
 #define __addgsword(a,b)                __addx18word(a, b)
@@ -1034,7 +1037,7 @@ unsigned char _subborrow_u8(
    unsigned char* Destination
 )
 {
-    unsigned char Diff = (unsigned char)((Borrow != 0) + Source1 + Source2);
+    unsigned char Diff = (unsigned char)(Source1 - Source2 - (Borrow != 0));
     unsigned char CarryVector = (unsigned char)((Diff & Source2) ^ ((Diff ^ Source2) & ~Source1));
     *Destination = Diff;
     return (unsigned char)(CarryVector >> 7);
@@ -1048,7 +1051,7 @@ unsigned char _subborrow_u16(
    unsigned short* Destination
 )
 {
-    unsigned short Diff = (unsigned short)((Borrow != 0) + Source1 + Source2);
+    unsigned short Diff = (unsigned short)(Source1 - Source2 - (Borrow != 0));
     unsigned short CarryVector = (unsigned short)((Diff & Source2) ^ ((Diff ^ Source2) & ~Source1));
     *Destination = Diff;
     return (unsigned char)(CarryVector >> 15);
@@ -1062,7 +1065,7 @@ unsigned char _subborrow_u32(
    unsigned int* Destination
 )
 {
-    unsigned int Diff = (Borrow != 0) + Source1 + Source2;
+    unsigned int Diff = Source1 - Source2 - (Borrow != 0);
     unsigned int CarryVector = (Diff & Source2) ^ ((Diff ^ Source2) & ~Source1);
     *Destination = Diff;
     return CarryVector >> 31;
@@ -1076,7 +1079,7 @@ unsigned char _subborrow_u64(
    unsigned __int64* Destination
 )
 {
-    unsigned __int64 Diff = (Borrow != 0) + Source1 + Source2;
+    unsigned __int64 Diff = Source1 - Source2 - (Borrow != 0);
     unsigned __int64 CarryVector = (Diff & Source2) ^ ((Diff ^ Source2) & ~Source1);
     *Destination = Diff;
     return CarryVector >> 63;
@@ -1191,6 +1194,12 @@ void __stosq(
         *Destination++ = Data;
     }
 }
+
+#define _udiv64(n,d,r)                  _UDIV64((n),(d),(r))
+#define _div64(n,d,r)                   _SDIV64((n),(d),(r))
+
+#define __emulu(x,y)                    ((uint64_t)(uint32_t)(x) * (uint64_t)(uint32_t)(y))
+#define __emul(x,y)                     ((int64_t)(int32_t)(x) * (int64_t)(int32_t)(y))
 
 #endif
 

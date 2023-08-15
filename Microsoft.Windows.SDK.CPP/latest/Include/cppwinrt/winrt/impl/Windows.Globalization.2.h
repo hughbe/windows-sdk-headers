@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Globalization_2_H
 #define WINRT_Windows_Globalization_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
@@ -17,13 +18,13 @@ WINRT_EXPORT namespace winrt::Windows::Globalization
         static auto PrimaryLanguageOverride(param::hstring const& value);
         [[nodiscard]] static auto Languages();
         [[nodiscard]] static auto ManifestLanguages();
-        static auto GetLanguagesForUser(Windows::System::User const& user);
+        static auto GetLanguagesForUser(winrt::Windows::System::User const& user);
     };
-    struct __declspec(empty_bases) Calendar : Windows::Globalization::ICalendar,
-        impl::require<Calendar, Windows::Globalization::ITimeZoneOnCalendar>
+    struct __declspec(empty_bases) Calendar : winrt::Windows::Globalization::ICalendar,
+        impl::require<Calendar, winrt::Windows::Globalization::ITimeZoneOnCalendar>
     {
         Calendar(std::nullptr_t) noexcept {}
-        Calendar(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::ICalendar(ptr, take_ownership_from_abi) {}
+        Calendar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Globalization::ICalendar(ptr, take_ownership_from_abi) {}
         Calendar();
         explicit Calendar(param::iterable<hstring> const& languages);
         Calendar(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock);
@@ -54,10 +55,10 @@ WINRT_EXPORT namespace winrt::Windows::Globalization
         [[nodiscard]] static auto TwelveHour();
         [[nodiscard]] static auto TwentyFourHour();
     };
-    struct __declspec(empty_bases) CurrencyAmount : Windows::Globalization::ICurrencyAmount
+    struct __declspec(empty_bases) CurrencyAmount : winrt::Windows::Globalization::ICurrencyAmount
     {
         CurrencyAmount(std::nullptr_t) noexcept {}
-        CurrencyAmount(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::ICurrencyAmount(ptr, take_ownership_from_abi) {}
+        CurrencyAmount(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Globalization::ICurrencyAmount(ptr, take_ownership_from_abi) {}
         CurrencyAmount(param::hstring const& amount, param::hstring const& currency);
     };
     struct CurrencyIdentifiers
@@ -226,18 +227,18 @@ WINRT_EXPORT namespace winrt::Windows::Globalization
         [[nodiscard]] static auto STN();
         [[nodiscard]] static auto VES();
     };
-    struct __declspec(empty_bases) GeographicRegion : Windows::Globalization::IGeographicRegion
+    struct __declspec(empty_bases) GeographicRegion : winrt::Windows::Globalization::IGeographicRegion
     {
         GeographicRegion(std::nullptr_t) noexcept {}
-        GeographicRegion(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::IGeographicRegion(ptr, take_ownership_from_abi) {}
+        GeographicRegion(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Globalization::IGeographicRegion(ptr, take_ownership_from_abi) {}
         GeographicRegion();
         explicit GeographicRegion(param::hstring const& geographicRegionCode);
         static auto IsSupported(param::hstring const& geographicRegionCode);
     };
-    struct __declspec(empty_bases) JapanesePhoneme : Windows::Globalization::IJapanesePhoneme
+    struct __declspec(empty_bases) JapanesePhoneme : winrt::Windows::Globalization::IJapanesePhoneme
     {
         JapanesePhoneme(std::nullptr_t) noexcept {}
-        JapanesePhoneme(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::IJapanesePhoneme(ptr, take_ownership_from_abi) {}
+        JapanesePhoneme(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Globalization::IJapanesePhoneme(ptr, take_ownership_from_abi) {}
     };
     struct JapanesePhoneticAnalyzer
     {
@@ -245,11 +246,11 @@ WINRT_EXPORT namespace winrt::Windows::Globalization
         static auto GetWords(param::hstring const& input);
         static auto GetWords(param::hstring const& input, bool monoRuby);
     };
-    struct __declspec(empty_bases) Language : Windows::Globalization::ILanguage,
-        impl::require<Language, Windows::Globalization::ILanguageExtensionSubtags, Windows::Globalization::ILanguage2, Windows::Globalization::ILanguage3>
+    struct __declspec(empty_bases) Language : winrt::Windows::Globalization::ILanguage,
+        impl::require<Language, winrt::Windows::Globalization::ILanguageExtensionSubtags, winrt::Windows::Globalization::ILanguage2, winrt::Windows::Globalization::ILanguage3>
     {
         Language(std::nullptr_t) noexcept {}
-        Language(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Globalization::ILanguage(ptr, take_ownership_from_abi) {}
+        Language(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Globalization::ILanguage(ptr, take_ownership_from_abi) {}
         explicit Language(param::hstring const& languageTag);
         static auto IsWellFormed(param::hstring const& languageTag);
         [[nodiscard]] static auto CurrentInputMethodLanguageTag();

@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Devices_Haptics_H
 #define WINRT_Windows_Devices_Haptics_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -17,206 +18,206 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics<D>::Click() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_Click(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_Click(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics<D>::BuzzContinuous() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_BuzzContinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_BuzzContinuous(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics<D>::RumbleContinuous() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_RumbleContinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_RumbleContinuous(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics<D>::Press() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_Press(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_Press(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics<D>::Release() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_Release(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics)->get_Release(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::BrushContinuous() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_BrushContinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_BrushContinuous(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::ChiselMarkerContinuous() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_ChiselMarkerContinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_ChiselMarkerContinuous(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::EraserContinuous() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_EraserContinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_EraserContinuous(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::Error() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_Error(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_Error(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::GalaxyPenContinuous() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_GalaxyPenContinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_GalaxyPenContinuous(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::Hover() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_Hover(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_Hover(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::InkContinuous() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_InkContinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_InkContinuous(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::MarkerContinuous() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_MarkerContinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_MarkerContinuous(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::PencilContinuous() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_PencilContinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_PencilContinuous(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_IKnownSimpleHapticsControllerWaveformsStatics2<D>::Success() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_Success(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2)->get_Success(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Haptics::SimpleHapticsControllerFeedback>) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SupportedFeedback() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SupportedFeedback() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->get_SupportedFeedback(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Devices::Haptics::SimpleHapticsControllerFeedback>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->get_SupportedFeedback(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::IsIntensitySupported() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->get_IsIntensitySupported(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->get_IsIntensitySupported(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::IsPlayCountSupported() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->get_IsPlayCountSupported(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->get_IsPlayCountSupported(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::IsPlayDurationSupported() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->get_IsPlayDurationSupported(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->get_IsPlayDurationSupported(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::IsReplayPauseIntervalSupported() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->get_IsReplayPauseIntervalSupported(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->get_IsReplayPauseIntervalSupported(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::StopFeedback() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->StopFeedback());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->StopFeedback());
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SendHapticFeedback(Windows::Devices::Haptics::SimpleHapticsControllerFeedback const& feedback) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SendHapticFeedback(winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback const& feedback) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->SendHapticFeedback(*(void**)(&feedback)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->SendHapticFeedback(*(void**)(&feedback)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SendHapticFeedback(Windows::Devices::Haptics::SimpleHapticsControllerFeedback const& feedback, double intensity) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SendHapticFeedback(winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback const& feedback, double intensity) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->SendHapticFeedbackWithIntensity(*(void**)(&feedback), intensity));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->SendHapticFeedbackWithIntensity(*(void**)(&feedback), intensity));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SendHapticFeedbackForDuration(Windows::Devices::Haptics::SimpleHapticsControllerFeedback const& feedback, double intensity, Windows::Foundation::TimeSpan const& playDuration) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SendHapticFeedbackForDuration(winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback const& feedback, double intensity, winrt::Windows::Foundation::TimeSpan const& playDuration) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->SendHapticFeedbackForDuration(*(void**)(&feedback), intensity, impl::bind_in(playDuration)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->SendHapticFeedbackForDuration(*(void**)(&feedback), intensity, impl::bind_in(playDuration)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SendHapticFeedbackForPlayCount(Windows::Devices::Haptics::SimpleHapticsControllerFeedback const& feedback, double intensity, int32_t playCount, Windows::Foundation::TimeSpan const& replayPauseInterval) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Haptics_ISimpleHapticsController<D>::SendHapticFeedbackForPlayCount(winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback const& feedback, double intensity, int32_t playCount, winrt::Windows::Foundation::TimeSpan const& replayPauseInterval) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsController)->SendHapticFeedbackForPlayCount(*(void**)(&feedback), intensity, playCount, impl::bind_in(replayPauseInterval)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsController)->SendHapticFeedbackForPlayCount(*(void**)(&feedback), intensity, playCount, impl::bind_in(replayPauseInterval)));
     }
     template <typename D> WINRT_IMPL_AUTO(uint16_t) consume_Windows_Devices_Haptics_ISimpleHapticsControllerFeedback<D>::Waveform() const
     {
         uint16_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsControllerFeedback)->get_Waveform(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback)->get_Waveform(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Devices_Haptics_ISimpleHapticsControllerFeedback<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Devices_Haptics_ISimpleHapticsControllerFeedback<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::ISimpleHapticsControllerFeedback)->get_Duration(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback)->get_Duration(put_abi(value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Haptics_IVibrationDevice<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IVibrationDevice)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IVibrationDevice)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Devices::Haptics::SimpleHapticsController) consume_Windows_Devices_Haptics_IVibrationDevice<D>::SimpleHapticsController() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Haptics::SimpleHapticsController) consume_Windows_Devices_Haptics_IVibrationDevice<D>::SimpleHapticsController() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IVibrationDevice)->get_SimpleHapticsController(&value));
-        return Windows::Devices::Haptics::SimpleHapticsController{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IVibrationDevice)->get_SimpleHapticsController(&value));
+        return winrt::Windows::Devices::Haptics::SimpleHapticsController{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationAccessStatus>) consume_Windows_Devices_Haptics_IVibrationDeviceStatics<D>::RequestAccessAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationAccessStatus>) consume_Windows_Devices_Haptics_IVibrationDeviceStatics<D>::RequestAccessAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IVibrationDeviceStatics)->RequestAccessAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationAccessStatus>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IVibrationDeviceStatics)->RequestAccessAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationAccessStatus>{ operation, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Haptics_IVibrationDeviceStatics<D>::GetDeviceSelector() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IVibrationDeviceStatics)->GetDeviceSelector(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IVibrationDeviceStatics)->GetDeviceSelector(&result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationDevice>) consume_Windows_Devices_Haptics_IVibrationDeviceStatics<D>::FromIdAsync(param::hstring const& deviceId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationDevice>) consume_Windows_Devices_Haptics_IVibrationDeviceStatics<D>::FromIdAsync(param::hstring const& deviceId) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IVibrationDeviceStatics)->FromIdAsync(*(void**)(&deviceId), &operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationDevice>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IVibrationDeviceStatics)->FromIdAsync(*(void**)(&deviceId), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationDevice>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationDevice>) consume_Windows_Devices_Haptics_IVibrationDeviceStatics<D>::GetDefaultAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationDevice>) consume_Windows_Devices_Haptics_IVibrationDeviceStatics<D>::GetDefaultAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IVibrationDeviceStatics)->GetDefaultAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationDevice>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IVibrationDeviceStatics)->GetDefaultAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationDevice>{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Haptics::VibrationDevice>>) consume_Windows_Devices_Haptics_IVibrationDeviceStatics<D>::FindAllAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Haptics::VibrationDevice>>) consume_Windows_Devices_Haptics_IVibrationDeviceStatics<D>::FindAllAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Devices::Haptics::IVibrationDeviceStatics)->FindAllAsync(&operation));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Haptics::VibrationDevice>>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Haptics::IVibrationDeviceStatics)->FindAllAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Haptics::VibrationDevice>>{ operation, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics> : produce_base<D, Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics>
+    struct produce<D, winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics> : produce_base<D, winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics>
     {
         int32_t __stdcall get_Click(uint16_t* value) noexcept final try
         {
@@ -257,7 +258,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2> : produce_base<D, Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2>
+    struct produce<D, winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2> : produce_base<D, winrt::Windows::Devices::Haptics::IKnownSimpleHapticsControllerWaveformsStatics2>
     {
         int32_t __stdcall get_BrushContinuous(uint16_t* value) noexcept final try
         {
@@ -333,7 +334,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Devices::Haptics::ISimpleHapticsController> : produce_base<D, Windows::Devices::Haptics::ISimpleHapticsController>
+    struct produce<D, winrt::Windows::Devices::Haptics::ISimpleHapticsController> : produce_base<D, winrt::Windows::Devices::Haptics::ISimpleHapticsController>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -347,7 +348,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Devices::Haptics::SimpleHapticsControllerFeedback>>(this->shim().SupportedFeedback());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>>(this->shim().SupportedFeedback());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -389,28 +390,28 @@ namespace winrt::impl
         int32_t __stdcall SendHapticFeedback(void* feedback) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SendHapticFeedback(*reinterpret_cast<Windows::Devices::Haptics::SimpleHapticsControllerFeedback const*>(&feedback));
+            this->shim().SendHapticFeedback(*reinterpret_cast<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback const*>(&feedback));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SendHapticFeedbackWithIntensity(void* feedback, double intensity) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SendHapticFeedback(*reinterpret_cast<Windows::Devices::Haptics::SimpleHapticsControllerFeedback const*>(&feedback), intensity);
+            this->shim().SendHapticFeedback(*reinterpret_cast<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback const*>(&feedback), intensity);
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SendHapticFeedbackForDuration(void* feedback, double intensity, int64_t playDuration) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SendHapticFeedbackForDuration(*reinterpret_cast<Windows::Devices::Haptics::SimpleHapticsControllerFeedback const*>(&feedback), intensity, *reinterpret_cast<Windows::Foundation::TimeSpan const*>(&playDuration));
+            this->shim().SendHapticFeedbackForDuration(*reinterpret_cast<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback const*>(&feedback), intensity, *reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&playDuration));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SendHapticFeedbackForPlayCount(void* feedback, double intensity, int32_t playCount, int64_t replayPauseInterval) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SendHapticFeedbackForPlayCount(*reinterpret_cast<Windows::Devices::Haptics::SimpleHapticsControllerFeedback const*>(&feedback), intensity, playCount, *reinterpret_cast<Windows::Foundation::TimeSpan const*>(&replayPauseInterval));
+            this->shim().SendHapticFeedbackForPlayCount(*reinterpret_cast<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback const*>(&feedback), intensity, playCount, *reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&replayPauseInterval));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -418,7 +419,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Devices::Haptics::ISimpleHapticsControllerFeedback> : produce_base<D, Windows::Devices::Haptics::ISimpleHapticsControllerFeedback>
+    struct produce<D, winrt::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback> : produce_base<D, winrt::Windows::Devices::Haptics::ISimpleHapticsControllerFeedback>
     {
         int32_t __stdcall get_Waveform(uint16_t* value) noexcept final try
         {
@@ -429,9 +430,9 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Duration(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().Duration());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().Duration());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -439,7 +440,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Devices::Haptics::IVibrationDevice> : produce_base<D, Windows::Devices::Haptics::IVibrationDevice>
+    struct produce<D, winrt::Windows::Devices::Haptics::IVibrationDevice> : produce_base<D, winrt::Windows::Devices::Haptics::IVibrationDevice>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -453,7 +454,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Devices::Haptics::SimpleHapticsController>(this->shim().SimpleHapticsController());
+            *value = detach_from<winrt::Windows::Devices::Haptics::SimpleHapticsController>(this->shim().SimpleHapticsController());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -461,13 +462,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Devices::Haptics::IVibrationDeviceStatics> : produce_base<D, Windows::Devices::Haptics::IVibrationDeviceStatics>
+    struct produce<D, winrt::Windows::Devices::Haptics::IVibrationDeviceStatics> : produce_base<D, winrt::Windows::Devices::Haptics::IVibrationDeviceStatics>
     {
         int32_t __stdcall RequestAccessAsync(void** operation) noexcept final try
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationAccessStatus>>(this->shim().RequestAccessAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationAccessStatus>>(this->shim().RequestAccessAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -483,7 +484,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationDevice>>(this->shim().FromIdAsync(*reinterpret_cast<hstring const*>(&deviceId)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationDevice>>(this->shim().FromIdAsync(*reinterpret_cast<hstring const*>(&deviceId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -491,7 +492,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationDevice>>(this->shim().GetDefaultAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationDevice>>(this->shim().GetDefaultAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -499,7 +500,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Haptics::VibrationDevice>>>(this->shim().FindAllAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Haptics::VibrationDevice>>>(this->shim().FindAllAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -570,7 +571,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Haptics
     }
     inline auto VibrationDevice::RequestAccessAsync()
     {
-        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationAccessStatus>(*)(IVibrationDeviceStatics const&), VibrationDevice, IVibrationDeviceStatics>([](IVibrationDeviceStatics const& f) { return f.RequestAccessAsync(); });
+        return impl::call_factory_cast<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationAccessStatus>(*)(IVibrationDeviceStatics const&), VibrationDevice, IVibrationDeviceStatics>([](IVibrationDeviceStatics const& f) { return f.RequestAccessAsync(); });
     }
     inline auto VibrationDevice::GetDeviceSelector()
     {
@@ -582,11 +583,11 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Haptics
     }
     inline auto VibrationDevice::GetDefaultAsync()
     {
-        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Devices::Haptics::VibrationDevice>(*)(IVibrationDeviceStatics const&), VibrationDevice, IVibrationDeviceStatics>([](IVibrationDeviceStatics const& f) { return f.GetDefaultAsync(); });
+        return impl::call_factory_cast<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Haptics::VibrationDevice>(*)(IVibrationDeviceStatics const&), VibrationDevice, IVibrationDeviceStatics>([](IVibrationDeviceStatics const& f) { return f.GetDefaultAsync(); });
     }
     inline auto VibrationDevice::FindAllAsync()
     {
-        return impl::call_factory_cast<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Haptics::VibrationDevice>>(*)(IVibrationDeviceStatics const&), VibrationDevice, IVibrationDeviceStatics>([](IVibrationDeviceStatics const& f) { return f.FindAllAsync(); });
+        return impl::call_factory_cast<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Haptics::VibrationDevice>>(*)(IVibrationDeviceStatics const&), VibrationDevice, IVibrationDeviceStatics>([](IVibrationDeviceStatics const& f) { return f.FindAllAsync(); });
     }
 }
 namespace std

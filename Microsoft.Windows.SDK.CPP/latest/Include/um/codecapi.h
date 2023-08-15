@@ -393,6 +393,7 @@ Abstract:
     #define STATIC_CODECAPI_AVEncChromaEncodeMode           0x8a47ab5a, 0x4798, 0x4c93, 0xb5, 0xa5, 0x55, 0x4f, 0x9a, 0x3b, 0x9f, 0x50
     #define STATIC_CODECAPI_AVEncProgressiveUpdateTime      0x649faf66, 0xafc6, 0x4828, 0x8f, 0xdc, 0x07, 0x71, 0xcd, 0x9a, 0xb1, 0x7d
     #define STATIC_CODECAPI_AVEncChromaUpdateTime           0x4b4fd998, 0x4274, 0x40bb, 0x8e, 0xe4, 0x07, 0x55, 0x3e, 0x7e, 0x2d, 0x3a
+    #define STATIC_CODECAPI_AVEncAACEnableVBR               0xe836bb98, 0xfca3, 0x44b6, 0x9a, 0x39, 0x24, 0x78, 0x6b, 0xe4, 0x1b, 0xe1
 // end of static definitions }
 
 //
@@ -2076,6 +2077,11 @@ DEFINE_CODECAPI_GUID( AVEncProgressiveUpdateTime, "649faf66-afc6-4828-8fdc-0771c
 // in the video frame.
 DEFINE_CODECAPI_GUID( AVEncChromaUpdateTime, "4b4fd998-4274-40bb-8ee4-07553e7e2d3a", 0x4b4fd998, 0x4274, 0x40bb, 0x8e, 0xe4, 0x07, 0x55, 0x3e, 0x7e, 0x2d, 0x3a )
 
+// AVEncAACEnableVBR (BOOL)
+// Indicates whether the AAC encoder should use VBR encoding.
+DEFINE_CODECAPI_GUID( AVEncAACEnableVBR, "e836bb98-fca3-44b6-9a39-24786be41be1", 0xe836bb98, 0xfca3, 0x44b6, 0x9a, 0x39, 0x24, 0x78, 0x6b, 0xe4, 0x1b, 0xe1 )
+
+
 #ifndef UUID_GEN
 // { GUID refs
     #define CODECAPI_AVEncCommonFormatConstraint DEFINE_CODECAPI_GUIDNAMED( AVEncCommonFormatConstraint )
@@ -2408,6 +2414,7 @@ DEFINE_CODECAPI_GUID( AVEncChromaUpdateTime, "4b4fd998-4274-40bb-8ee4-07553e7e2d
     #define CODECAPI_AVEncChromaEncodeMode          DEFINE_CODECAPI_GUIDNAMED( AVEncChromaEncodeMode )
     #define CODECAPI_AVEncProgressiveUpdateTime     DEFINE_CODECAPI_GUIDNAMED( AVEncProgressiveUpdateTime )
     #define CODECAPI_AVEncChromaUpdateTime          DEFINE_CODECAPI_GUIDNAMED( AVEncChromaUpdateTime )
+    #define CODECAPI_AVEncAACEnableVBR              DEFINE_CODECAPI_GUIDNAMED( AVEncAACEnableVBR )
 #endif
 
 

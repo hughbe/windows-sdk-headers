@@ -277,6 +277,17 @@ HcnQueryEndpointProperties(
     _Outptr_opt_ PWSTR* ErrorRecord
     );
 
+/// Query Endpoint stats
+
+HRESULT
+WINAPI
+HcnQueryEndpointStats(
+    _In_ HCN_ENDPOINT Endpoint,
+    _In_ PCWSTR Query,
+    _Outptr_ PWSTR* Stats,
+    _Outptr_opt_ PWSTR* ErrorRecord
+    );
+
 /// Delete an Endpoint
 
 HRESULT
@@ -667,6 +678,12 @@ IsHcnModifyEndpointPresent(
 BOOLEAN
 __stdcall
 IsHcnQueryEndpointPropertiesPresent(
+    VOID
+    );
+
+BOOLEAN
+__stdcall
+IsHcnQueryEndpointStatsPresent(
     VOID
     );
 

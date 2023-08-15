@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Data_Xml_Dom_H
 #define WINRT_Windows_Data_Xml_Dom_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Storage.2.h"
@@ -15,651 +16,651 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatche
 #include "winrt/impl/Windows.Data.Xml.Dom.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdEntity<D>::PublicId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdEntity<D>::PublicId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IDtdEntity)->get_PublicId(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IDtdEntity)->get_PublicId(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdEntity<D>::SystemId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdEntity<D>::SystemId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IDtdEntity)->get_SystemId(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IDtdEntity)->get_SystemId(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdEntity<D>::NotationName() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdEntity<D>::NotationName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IDtdEntity)->get_NotationName(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IDtdEntity)->get_NotationName(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdNotation<D>::PublicId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdNotation<D>::PublicId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IDtdNotation)->get_PublicId(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IDtdNotation)->get_PublicId(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdNotation<D>::SystemId() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IDtdNotation<D>::SystemId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IDtdNotation)->get_SystemId(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IDtdNotation)->get_SystemId(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlAttribute<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlAttribute)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlAttribute)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Xml_Dom_IXmlAttribute<D>::Specified() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlAttribute)->get_Specified(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlAttribute)->get_Specified(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlAttribute<D>::Value() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlAttribute)->get_Value(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlAttribute)->get_Value(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlAttribute<D>::Value(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlAttribute)->put_Value(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlAttribute)->put_Value(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlCharacterData<D>::Data() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlCharacterData)->get_Data(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlCharacterData)->get_Data(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlCharacterData<D>::Data(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlCharacterData)->put_Data(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlCharacterData)->put_Data(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Data_Xml_Dom_IXmlCharacterData<D>::Length() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlCharacterData)->get_Length(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlCharacterData)->get_Length(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlCharacterData<D>::SubstringData(uint32_t offset, uint32_t count) const
     {
         void* data{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlCharacterData)->SubstringData(offset, count, &data));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlCharacterData)->SubstringData(offset, count, &data));
         return hstring{ data, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlCharacterData<D>::AppendData(param::hstring const& data) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlCharacterData)->AppendData(*(void**)(&data)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlCharacterData)->AppendData(*(void**)(&data)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlCharacterData<D>::InsertData(uint32_t offset, param::hstring const& data) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlCharacterData)->InsertData(offset, *(void**)(&data)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlCharacterData)->InsertData(offset, *(void**)(&data)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlCharacterData<D>::DeleteData(uint32_t offset, uint32_t count) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlCharacterData)->DeleteData(offset, count));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlCharacterData)->DeleteData(offset, count));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlCharacterData<D>::ReplaceData(uint32_t offset, uint32_t count, param::hstring const& data) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlCharacterData)->ReplaceData(offset, count, *(void**)(&data)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlCharacterData)->ReplaceData(offset, count, *(void**)(&data)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlDocumentType) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::Doctype() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocumentType) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::Doctype() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->get_Doctype(&value));
-        return Windows::Data::Xml::Dom::XmlDocumentType{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->get_Doctype(&value));
+        return winrt::Windows::Data::Xml::Dom::XmlDocumentType{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlDomImplementation) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::Implementation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDomImplementation) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::Implementation() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->get_Implementation(&value));
-        return Windows::Data::Xml::Dom::XmlDomImplementation{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->get_Implementation(&value));
+        return winrt::Windows::Data::Xml::Dom::XmlDomImplementation{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlElement) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::DocumentElement() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlElement) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::DocumentElement() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->get_DocumentElement(&value));
-        return Windows::Data::Xml::Dom::XmlElement{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->get_DocumentElement(&value));
+        return winrt::Windows::Data::Xml::Dom::XmlElement{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlElement) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateElement(param::hstring const& tagName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlElement) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateElement(param::hstring const& tagName) const
     {
         void* newElement{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateElement(*(void**)(&tagName), &newElement));
-        return Windows::Data::Xml::Dom::XmlElement{ newElement, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateElement(*(void**)(&tagName), &newElement));
+        return winrt::Windows::Data::Xml::Dom::XmlElement{ newElement, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlDocumentFragment) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateDocumentFragment() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocumentFragment) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateDocumentFragment() const
     {
         void* newDocumentFragment{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateDocumentFragment(&newDocumentFragment));
-        return Windows::Data::Xml::Dom::XmlDocumentFragment{ newDocumentFragment, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateDocumentFragment(&newDocumentFragment));
+        return winrt::Windows::Data::Xml::Dom::XmlDocumentFragment{ newDocumentFragment, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlText) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateTextNode(param::hstring const& data) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlText) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateTextNode(param::hstring const& data) const
     {
         void* newTextNode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateTextNode(*(void**)(&data), &newTextNode));
-        return Windows::Data::Xml::Dom::XmlText{ newTextNode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateTextNode(*(void**)(&data), &newTextNode));
+        return winrt::Windows::Data::Xml::Dom::XmlText{ newTextNode, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlComment) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateComment(param::hstring const& data) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlComment) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateComment(param::hstring const& data) const
     {
         void* newComment{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateComment(*(void**)(&data), &newComment));
-        return Windows::Data::Xml::Dom::XmlComment{ newComment, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateComment(*(void**)(&data), &newComment));
+        return winrt::Windows::Data::Xml::Dom::XmlComment{ newComment, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlProcessingInstruction) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateProcessingInstruction(param::hstring const& target, param::hstring const& data) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateProcessingInstruction(param::hstring const& target, param::hstring const& data) const
     {
         void* newProcessingInstruction{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateProcessingInstruction(*(void**)(&target), *(void**)(&data), &newProcessingInstruction));
-        return Windows::Data::Xml::Dom::XmlProcessingInstruction{ newProcessingInstruction, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateProcessingInstruction(*(void**)(&target), *(void**)(&data), &newProcessingInstruction));
+        return winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction{ newProcessingInstruction, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateAttribute(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateAttribute(param::hstring const& name) const
     {
         void* newAttribute{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateAttribute(*(void**)(&name), &newAttribute));
-        return Windows::Data::Xml::Dom::XmlAttribute{ newAttribute, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateAttribute(*(void**)(&name), &newAttribute));
+        return winrt::Windows::Data::Xml::Dom::XmlAttribute{ newAttribute, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlEntityReference) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateEntityReference(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlEntityReference) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateEntityReference(param::hstring const& name) const
     {
         void* newEntityReference{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateEntityReference(*(void**)(&name), &newEntityReference));
-        return Windows::Data::Xml::Dom::XmlEntityReference{ newEntityReference, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateEntityReference(*(void**)(&name), &newEntityReference));
+        return winrt::Windows::Data::Xml::Dom::XmlEntityReference{ newEntityReference, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::GetElementsByTagName(param::hstring const& tagName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::GetElementsByTagName(param::hstring const& tagName) const
     {
         void* elements{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->GetElementsByTagName(*(void**)(&tagName), &elements));
-        return Windows::Data::Xml::Dom::XmlNodeList{ elements, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->GetElementsByTagName(*(void**)(&tagName), &elements));
+        return winrt::Windows::Data::Xml::Dom::XmlNodeList{ elements, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlCDataSection) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateCDataSection(param::hstring const& data) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlCDataSection) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateCDataSection(param::hstring const& data) const
     {
         void* newCDataSection{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateCDataSection(*(void**)(&data), &newCDataSection));
-        return Windows::Data::Xml::Dom::XmlCDataSection{ newCDataSection, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateCDataSection(*(void**)(&data), &newCDataSection));
+        return winrt::Windows::Data::Xml::Dom::XmlCDataSection{ newCDataSection, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::DocumentUri() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->get_DocumentUri(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->get_DocumentUri(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateAttributeNS(Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& qualifiedName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateAttributeNS(winrt::Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& qualifiedName) const
     {
         void* newAttribute{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateAttributeNS(*(void**)(&namespaceUri), *(void**)(&qualifiedName), &newAttribute));
-        return Windows::Data::Xml::Dom::XmlAttribute{ newAttribute, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateAttributeNS(*(void**)(&namespaceUri), *(void**)(&qualifiedName), &newAttribute));
+        return winrt::Windows::Data::Xml::Dom::XmlAttribute{ newAttribute, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlElement) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateElementNS(Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& qualifiedName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlElement) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::CreateElementNS(winrt::Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& qualifiedName) const
     {
         void* newElement{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->CreateElementNS(*(void**)(&namespaceUri), *(void**)(&qualifiedName), &newElement));
-        return Windows::Data::Xml::Dom::XmlElement{ newElement, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->CreateElementNS(*(void**)(&namespaceUri), *(void**)(&qualifiedName), &newElement));
+        return winrt::Windows::Data::Xml::Dom::XmlElement{ newElement, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlElement) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::GetElementById(param::hstring const& elementId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlElement) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::GetElementById(param::hstring const& elementId) const
     {
         void* element{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->GetElementById(*(void**)(&elementId), &element));
-        return Windows::Data::Xml::Dom::XmlElement{ element, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->GetElementById(*(void**)(&elementId), &element));
+        return winrt::Windows::Data::Xml::Dom::XmlElement{ element, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::ImportNode(Windows::Data::Xml::Dom::IXmlNode const& node, bool deep) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlDocument<D>::ImportNode(winrt::Windows::Data::Xml::Dom::IXmlNode const& node, bool deep) const
     {
         void* newNode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocument)->ImportNode(*(void**)(&node), deep, &newNode));
-        return Windows::Data::Xml::Dom::IXmlNode{ newNode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocument)->ImportNode(*(void**)(&node), deep, &newNode));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ newNode, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlDocumentIO<D>::LoadXml(param::hstring const& xml) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentIO)->LoadXml(*(void**)(&xml)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentIO)->LoadXml(*(void**)(&xml)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlDocumentIO<D>::LoadXml(param::hstring const& xml, Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlDocumentIO<D>::LoadXml(param::hstring const& xml, winrt::Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentIO)->LoadXmlWithSettings(*(void**)(&xml), *(void**)(&loadSettings)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentIO)->LoadXmlWithSettings(*(void**)(&xml), *(void**)(&loadSettings)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Data_Xml_Dom_IXmlDocumentIO<D>::SaveToFileAsync(Windows::Storage::IStorageFile const& file) const
-    {
-        void* asyncInfo{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentIO)->SaveToFileAsync(*(void**)(&file), &asyncInfo));
-        return Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlDocumentIO2<D>::LoadXmlFromBuffer(Windows::Storage::Streams::IBuffer const& buffer) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentIO2)->LoadXmlFromBuffer(*(void**)(&buffer)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlDocumentIO2<D>::LoadXmlFromBuffer(Windows::Storage::Streams::IBuffer const& buffer, Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentIO2)->LoadXmlFromBufferWithSettings(*(void**)(&buffer), *(void**)(&loadSettings)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>) consume_Windows_Data_Xml_Dom_IXmlDocumentStatics<D>::LoadFromUriAsync(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Data_Xml_Dom_IXmlDocumentIO<D>::SaveToFileAsync(winrt::Windows::Storage::IStorageFile const& file) const
     {
         void* asyncInfo{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentStatics)->LoadFromUriAsync(*(void**)(&uri), &asyncInfo));
-        return Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>{ asyncInfo, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentIO)->SaveToFileAsync(*(void**)(&file), &asyncInfo));
+        return winrt::Windows::Foundation::IAsyncAction{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>) consume_Windows_Data_Xml_Dom_IXmlDocumentStatics<D>::LoadFromUriAsync(Windows::Foundation::Uri const& uri, Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlDocumentIO2<D>::LoadXmlFromBuffer(winrt::Windows::Storage::Streams::IBuffer const& buffer) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentIO2)->LoadXmlFromBuffer(*(void**)(&buffer)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlDocumentIO2<D>::LoadXmlFromBuffer(winrt::Windows::Storage::Streams::IBuffer const& buffer, winrt::Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentIO2)->LoadXmlFromBufferWithSettings(*(void**)(&buffer), *(void**)(&loadSettings)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>) consume_Windows_Data_Xml_Dom_IXmlDocumentStatics<D>::LoadFromUriAsync(winrt::Windows::Foundation::Uri const& uri) const
     {
         void* asyncInfo{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentStatics)->LoadFromUriWithSettingsAsync(*(void**)(&uri), *(void**)(&loadSettings), &asyncInfo));
-        return Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>{ asyncInfo, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentStatics)->LoadFromUriAsync(*(void**)(&uri), &asyncInfo));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>) consume_Windows_Data_Xml_Dom_IXmlDocumentStatics<D>::LoadFromFileAsync(Windows::Storage::IStorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>) consume_Windows_Data_Xml_Dom_IXmlDocumentStatics<D>::LoadFromUriAsync(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings) const
     {
         void* asyncInfo{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentStatics)->LoadFromFileAsync(*(void**)(&file), &asyncInfo));
-        return Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>{ asyncInfo, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentStatics)->LoadFromUriWithSettingsAsync(*(void**)(&uri), *(void**)(&loadSettings), &asyncInfo));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>{ asyncInfo, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>) consume_Windows_Data_Xml_Dom_IXmlDocumentStatics<D>::LoadFromFileAsync(Windows::Storage::IStorageFile const& file, Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>) consume_Windows_Data_Xml_Dom_IXmlDocumentStatics<D>::LoadFromFileAsync(winrt::Windows::Storage::IStorageFile const& file) const
     {
         void* asyncInfo{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentStatics)->LoadFromFileWithSettingsAsync(*(void**)(&file), *(void**)(&loadSettings), &asyncInfo));
-        return Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>{ asyncInfo, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentStatics)->LoadFromFileAsync(*(void**)(&file), &asyncInfo));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>{ asyncInfo, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>) consume_Windows_Data_Xml_Dom_IXmlDocumentStatics<D>::LoadFromFileAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings) const
+    {
+        void* asyncInfo{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentStatics)->LoadFromFileWithSettingsAsync(*(void**)(&file), *(void**)(&loadSettings), &asyncInfo));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>{ asyncInfo, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlDocumentType<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentType)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentType)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlNamedNodeMap) consume_Windows_Data_Xml_Dom_IXmlDocumentType<D>::Entities() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap) consume_Windows_Data_Xml_Dom_IXmlDocumentType<D>::Entities() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentType)->get_Entities(&value));
-        return Windows::Data::Xml::Dom::XmlNamedNodeMap{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentType)->get_Entities(&value));
+        return winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlNamedNodeMap) consume_Windows_Data_Xml_Dom_IXmlDocumentType<D>::Notations() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap) consume_Windows_Data_Xml_Dom_IXmlDocumentType<D>::Notations() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDocumentType)->get_Notations(&value));
-        return Windows::Data::Xml::Dom::XmlNamedNodeMap{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDocumentType)->get_Notations(&value));
+        return winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Xml_Dom_IXmlDomImplementation<D>::HasFeature(param::hstring const& feature, Windows::Foundation::IInspectable const& version) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Xml_Dom_IXmlDomImplementation<D>::HasFeature(param::hstring const& feature, winrt::Windows::Foundation::IInspectable const& version) const
     {
         bool featureSupported{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlDomImplementation)->HasFeature(*(void**)(&feature), *(void**)(&version), &featureSupported));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlDomImplementation)->HasFeature(*(void**)(&feature), *(void**)(&version), &featureSupported));
         return featureSupported;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlElement<D>::TagName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->get_TagName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->get_TagName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlElement<D>::GetAttribute(param::hstring const& attributeName) const
     {
         void* attributeValue{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->GetAttribute(*(void**)(&attributeName), &attributeValue));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->GetAttribute(*(void**)(&attributeName), &attributeValue));
         return hstring{ attributeValue, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlElement<D>::SetAttribute(param::hstring const& attributeName, param::hstring const& attributeValue) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->SetAttribute(*(void**)(&attributeName), *(void**)(&attributeValue)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->SetAttribute(*(void**)(&attributeName), *(void**)(&attributeValue)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlElement<D>::RemoveAttribute(param::hstring const& attributeName) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->RemoveAttribute(*(void**)(&attributeName)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->RemoveAttribute(*(void**)(&attributeName)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::GetAttributeNode(param::hstring const& attributeName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::GetAttributeNode(param::hstring const& attributeName) const
     {
         void* attributeNode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->GetAttributeNode(*(void**)(&attributeName), &attributeNode));
-        return Windows::Data::Xml::Dom::XmlAttribute{ attributeNode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->GetAttributeNode(*(void**)(&attributeName), &attributeNode));
+        return winrt::Windows::Data::Xml::Dom::XmlAttribute{ attributeNode, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::SetAttributeNode(Windows::Data::Xml::Dom::XmlAttribute const& newAttribute) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::SetAttributeNode(winrt::Windows::Data::Xml::Dom::XmlAttribute const& newAttribute) const
     {
         void* previousAttribute{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->SetAttributeNode(*(void**)(&newAttribute), &previousAttribute));
-        return Windows::Data::Xml::Dom::XmlAttribute{ previousAttribute, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->SetAttributeNode(*(void**)(&newAttribute), &previousAttribute));
+        return winrt::Windows::Data::Xml::Dom::XmlAttribute{ previousAttribute, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::RemoveAttributeNode(Windows::Data::Xml::Dom::XmlAttribute const& attributeNode) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::RemoveAttributeNode(winrt::Windows::Data::Xml::Dom::XmlAttribute const& attributeNode) const
     {
         void* removedAttribute{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->RemoveAttributeNode(*(void**)(&attributeNode), &removedAttribute));
-        return Windows::Data::Xml::Dom::XmlAttribute{ removedAttribute, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->RemoveAttributeNode(*(void**)(&attributeNode), &removedAttribute));
+        return winrt::Windows::Data::Xml::Dom::XmlAttribute{ removedAttribute, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlElement<D>::GetElementsByTagName(param::hstring const& tagName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlElement<D>::GetElementsByTagName(param::hstring const& tagName) const
     {
         void* elements{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->GetElementsByTagName(*(void**)(&tagName), &elements));
-        return Windows::Data::Xml::Dom::XmlNodeList{ elements, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->GetElementsByTagName(*(void**)(&tagName), &elements));
+        return winrt::Windows::Data::Xml::Dom::XmlNodeList{ elements, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlElement<D>::SetAttributeNS(Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& qualifiedName, param::hstring const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlElement<D>::SetAttributeNS(winrt::Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& qualifiedName, param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->SetAttributeNS(*(void**)(&namespaceUri), *(void**)(&qualifiedName), *(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->SetAttributeNS(*(void**)(&namespaceUri), *(void**)(&qualifiedName), *(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlElement<D>::GetAttributeNS(Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& localName) const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlElement<D>::GetAttributeNS(winrt::Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& localName) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->GetAttributeNS(*(void**)(&namespaceUri), *(void**)(&localName), &value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->GetAttributeNS(*(void**)(&namespaceUri), *(void**)(&localName), &value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlElement<D>::RemoveAttributeNS(Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& localName) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlElement<D>::RemoveAttributeNS(winrt::Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& localName) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->RemoveAttributeNS(*(void**)(&namespaceUri), *(void**)(&localName)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->RemoveAttributeNS(*(void**)(&namespaceUri), *(void**)(&localName)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::SetAttributeNodeNS(Windows::Data::Xml::Dom::XmlAttribute const& newAttribute) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::SetAttributeNodeNS(winrt::Windows::Data::Xml::Dom::XmlAttribute const& newAttribute) const
     {
         void* previousAttribute{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->SetAttributeNodeNS(*(void**)(&newAttribute), &previousAttribute));
-        return Windows::Data::Xml::Dom::XmlAttribute{ previousAttribute, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->SetAttributeNodeNS(*(void**)(&newAttribute), &previousAttribute));
+        return winrt::Windows::Data::Xml::Dom::XmlAttribute{ previousAttribute, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::GetAttributeNodeNS(Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& localName) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlAttribute) consume_Windows_Data_Xml_Dom_IXmlElement<D>::GetAttributeNodeNS(winrt::Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& localName) const
     {
         void* previousAttribute{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlElement)->GetAttributeNodeNS(*(void**)(&namespaceUri), *(void**)(&localName), &previousAttribute));
-        return Windows::Data::Xml::Dom::XmlAttribute{ previousAttribute, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlElement)->GetAttributeNodeNS(*(void**)(&namespaceUri), *(void**)(&localName), &previousAttribute));
+        return winrt::Windows::Data::Xml::Dom::XmlAttribute{ previousAttribute, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::MaxElementDepth() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->get_MaxElementDepth(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->get_MaxElementDepth(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::MaxElementDepth(uint32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->put_MaxElementDepth(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->put_MaxElementDepth(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::ProhibitDtd() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->get_ProhibitDtd(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->get_ProhibitDtd(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::ProhibitDtd(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->put_ProhibitDtd(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->put_ProhibitDtd(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::ResolveExternals() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->get_ResolveExternals(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->get_ResolveExternals(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::ResolveExternals(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->put_ResolveExternals(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->put_ResolveExternals(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::ValidateOnParse() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->get_ValidateOnParse(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->get_ValidateOnParse(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::ValidateOnParse(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->put_ValidateOnParse(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->put_ValidateOnParse(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::ElementContentWhiteSpace() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->get_ElementContentWhiteSpace(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->get_ElementContentWhiteSpace(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlLoadSettings<D>::ElementContentWhiteSpace(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlLoadSettings)->put_ElementContentWhiteSpace(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlLoadSettings)->put_ElementContentWhiteSpace(value));
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::Length() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNamedNodeMap)->get_Length(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap)->get_Length(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::Item(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::Item(uint32_t index) const
     {
         void* node{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNamedNodeMap)->Item(index, &node));
-        return Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap)->Item(index, &node));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::GetNamedItem(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::GetNamedItem(param::hstring const& name) const
     {
         void* node{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNamedNodeMap)->GetNamedItem(*(void**)(&name), &node));
-        return Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap)->GetNamedItem(*(void**)(&name), &node));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::SetNamedItem(Windows::Data::Xml::Dom::IXmlNode const& node) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::SetNamedItem(winrt::Windows::Data::Xml::Dom::IXmlNode const& node) const
     {
         void* previousNode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNamedNodeMap)->SetNamedItem(*(void**)(&node), &previousNode));
-        return Windows::Data::Xml::Dom::IXmlNode{ previousNode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap)->SetNamedItem(*(void**)(&node), &previousNode));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ previousNode, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::RemoveNamedItem(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::RemoveNamedItem(param::hstring const& name) const
     {
         void* previousNode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNamedNodeMap)->RemoveNamedItem(*(void**)(&name), &previousNode));
-        return Windows::Data::Xml::Dom::IXmlNode{ previousNode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap)->RemoveNamedItem(*(void**)(&name), &previousNode));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ previousNode, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::GetNamedItemNS(Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::GetNamedItemNS(winrt::Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& name) const
     {
         void* node{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNamedNodeMap)->GetNamedItemNS(*(void**)(&namespaceUri), *(void**)(&name), &node));
-        return Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap)->GetNamedItemNS(*(void**)(&namespaceUri), *(void**)(&name), &node));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::RemoveNamedItemNS(Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::RemoveNamedItemNS(winrt::Windows::Foundation::IInspectable const& namespaceUri, param::hstring const& name) const
     {
         void* previousNode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNamedNodeMap)->RemoveNamedItemNS(*(void**)(&namespaceUri), *(void**)(&name), &previousNode));
-        return Windows::Data::Xml::Dom::IXmlNode{ previousNode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap)->RemoveNamedItemNS(*(void**)(&namespaceUri), *(void**)(&name), &previousNode));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ previousNode, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::SetNamedItemNS(Windows::Data::Xml::Dom::IXmlNode const& node) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNamedNodeMap<D>::SetNamedItemNS(winrt::Windows::Data::Xml::Dom::IXmlNode const& node) const
     {
         void* previousNode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNamedNodeMap)->SetNamedItemNS(*(void**)(&node), &previousNode));
-        return Windows::Data::Xml::Dom::IXmlNode{ previousNode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap)->SetNamedItemNS(*(void**)(&node), &previousNode));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ previousNode, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NodeValue() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NodeValue() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_NodeValue(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_NodeValue(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NodeValue(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NodeValue(winrt::Windows::Foundation::IInspectable const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->put_NodeValue(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->put_NodeValue(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::NodeType) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NodeType() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::NodeType) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NodeType() const
     {
-        Windows::Data::Xml::Dom::NodeType value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_NodeType(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Data::Xml::Dom::NodeType value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_NodeType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NodeName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_NodeName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_NodeName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::ParentNode() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::ParentNode() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_ParentNode(&value));
-        return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_ParentNode(&value));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlNode<D>::ChildNodes() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlNode<D>::ChildNodes() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_ChildNodes(&value));
-        return Windows::Data::Xml::Dom::XmlNodeList{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_ChildNodes(&value));
+        return winrt::Windows::Data::Xml::Dom::XmlNodeList{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::FirstChild() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::FirstChild() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_FirstChild(&value));
-        return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_FirstChild(&value));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::LastChild() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::LastChild() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_LastChild(&value));
-        return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_LastChild(&value));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::PreviousSibling() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::PreviousSibling() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_PreviousSibling(&value));
-        return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_PreviousSibling(&value));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NextSibling() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NextSibling() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_NextSibling(&value));
-        return Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_NextSibling(&value));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlNamedNodeMap) consume_Windows_Data_Xml_Dom_IXmlNode<D>::Attributes() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap) consume_Windows_Data_Xml_Dom_IXmlNode<D>::Attributes() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_Attributes(&value));
-        return Windows::Data::Xml::Dom::XmlNamedNodeMap{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_Attributes(&value));
+        return winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Data_Xml_Dom_IXmlNode<D>::HasChildNodes() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->HasChildNodes(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->HasChildNodes(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlDocument) consume_Windows_Data_Xml_Dom_IXmlNode<D>::OwnerDocument() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlDocument) consume_Windows_Data_Xml_Dom_IXmlNode<D>::OwnerDocument() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_OwnerDocument(&value));
-        return Windows::Data::Xml::Dom::XmlDocument{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_OwnerDocument(&value));
+        return winrt::Windows::Data::Xml::Dom::XmlDocument{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::InsertBefore(Windows::Data::Xml::Dom::IXmlNode const& newChild, Windows::Data::Xml::Dom::IXmlNode const& referenceChild) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::InsertBefore(winrt::Windows::Data::Xml::Dom::IXmlNode const& newChild, winrt::Windows::Data::Xml::Dom::IXmlNode const& referenceChild) const
     {
         void* insertedChild{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->InsertBefore(*(void**)(&newChild), *(void**)(&referenceChild), &insertedChild));
-        return Windows::Data::Xml::Dom::IXmlNode{ insertedChild, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->InsertBefore(*(void**)(&newChild), *(void**)(&referenceChild), &insertedChild));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ insertedChild, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::ReplaceChild(Windows::Data::Xml::Dom::IXmlNode const& newChild, Windows::Data::Xml::Dom::IXmlNode const& referenceChild) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::ReplaceChild(winrt::Windows::Data::Xml::Dom::IXmlNode const& newChild, winrt::Windows::Data::Xml::Dom::IXmlNode const& referenceChild) const
     {
         void* previousChild{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->ReplaceChild(*(void**)(&newChild), *(void**)(&referenceChild), &previousChild));
-        return Windows::Data::Xml::Dom::IXmlNode{ previousChild, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->ReplaceChild(*(void**)(&newChild), *(void**)(&referenceChild), &previousChild));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ previousChild, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::RemoveChild(Windows::Data::Xml::Dom::IXmlNode const& childNode) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::RemoveChild(winrt::Windows::Data::Xml::Dom::IXmlNode const& childNode) const
     {
         void* removedChild{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->RemoveChild(*(void**)(&childNode), &removedChild));
-        return Windows::Data::Xml::Dom::IXmlNode{ removedChild, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->RemoveChild(*(void**)(&childNode), &removedChild));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ removedChild, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::AppendChild(Windows::Data::Xml::Dom::IXmlNode const& newChild) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::AppendChild(winrt::Windows::Data::Xml::Dom::IXmlNode const& newChild) const
     {
         void* appendedChild{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->AppendChild(*(void**)(&newChild), &appendedChild));
-        return Windows::Data::Xml::Dom::IXmlNode{ appendedChild, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->AppendChild(*(void**)(&newChild), &appendedChild));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ appendedChild, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::CloneNode(bool deep) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNode<D>::CloneNode(bool deep) const
     {
         void* newNode{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->CloneNode(deep, &newNode));
-        return Windows::Data::Xml::Dom::IXmlNode{ newNode, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->CloneNode(deep, &newNode));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ newNode, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NamespaceUri() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IXmlNode<D>::NamespaceUri() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_NamespaceUri(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_NamespaceUri(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IXmlNode<D>::LocalName() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IXmlNode<D>::LocalName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_LocalName(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_LocalName(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IXmlNode<D>::Prefix() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_Data_Xml_Dom_IXmlNode<D>::Prefix() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->get_Prefix(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->get_Prefix(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlNode<D>::Normalize() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->Normalize());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->Normalize());
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlNode<D>::Prefix(Windows::Foundation::IInspectable const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlNode<D>::Prefix(winrt::Windows::Foundation::IInspectable const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNode)->put_Prefix(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNode)->put_Prefix(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Data_Xml_Dom_IXmlNodeList<D>::Length() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNodeList)->get_Length(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNodeList)->get_Length(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNodeList<D>::Item(uint32_t index) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNodeList<D>::Item(uint32_t index) const
     {
         void* node{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNodeList)->Item(index, &node));
-        return Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNodeList)->Item(index, &node));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNodeSelector<D>::SelectSingleNode(param::hstring const& xpath) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNodeSelector<D>::SelectSingleNode(param::hstring const& xpath) const
     {
         void* node{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNodeSelector)->SelectSingleNode(*(void**)(&xpath), &node));
-        return Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNodeSelector)->SelectSingleNode(*(void**)(&xpath), &node));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlNodeSelector<D>::SelectNodes(param::hstring const& xpath) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlNodeSelector<D>::SelectNodes(param::hstring const& xpath) const
     {
         void* nodelist{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNodeSelector)->SelectNodes(*(void**)(&xpath), &nodelist));
-        return Windows::Data::Xml::Dom::XmlNodeList{ nodelist, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNodeSelector)->SelectNodes(*(void**)(&xpath), &nodelist));
+        return winrt::Windows::Data::Xml::Dom::XmlNodeList{ nodelist, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNodeSelector<D>::SelectSingleNodeNS(param::hstring const& xpath, Windows::Foundation::IInspectable const& namespaces) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlNode) consume_Windows_Data_Xml_Dom_IXmlNodeSelector<D>::SelectSingleNodeNS(param::hstring const& xpath, winrt::Windows::Foundation::IInspectable const& namespaces) const
     {
         void* node{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNodeSelector)->SelectSingleNodeNS(*(void**)(&xpath), *(void**)(&namespaces), &node));
-        return Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNodeSelector)->SelectSingleNodeNS(*(void**)(&xpath), *(void**)(&namespaces), &node));
+        return winrt::Windows::Data::Xml::Dom::IXmlNode{ node, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlNodeSelector<D>::SelectNodesNS(param::hstring const& xpath, Windows::Foundation::IInspectable const& namespaces) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::XmlNodeList) consume_Windows_Data_Xml_Dom_IXmlNodeSelector<D>::SelectNodesNS(param::hstring const& xpath, winrt::Windows::Foundation::IInspectable const& namespaces) const
     {
         void* nodelist{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNodeSelector)->SelectNodesNS(*(void**)(&xpath), *(void**)(&namespaces), &nodelist));
-        return Windows::Data::Xml::Dom::XmlNodeList{ nodelist, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNodeSelector)->SelectNodesNS(*(void**)(&xpath), *(void**)(&namespaces), &nodelist));
+        return winrt::Windows::Data::Xml::Dom::XmlNodeList{ nodelist, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlNodeSerializer<D>::GetXml() const
     {
         void* outerXml{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNodeSerializer)->GetXml(&outerXml));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer)->GetXml(&outerXml));
         return hstring{ outerXml, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlNodeSerializer<D>::InnerText() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNodeSerializer)->get_InnerText(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer)->get_InnerText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlNodeSerializer<D>::InnerText(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlNodeSerializer)->put_InnerText(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer)->put_InnerText(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlProcessingInstruction<D>::Target() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlProcessingInstruction)->get_Target(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlProcessingInstruction)->get_Target(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Xml_Dom_IXmlProcessingInstruction<D>::Data() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlProcessingInstruction)->get_Data(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlProcessingInstruction)->get_Data(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Data_Xml_Dom_IXmlProcessingInstruction<D>::Data(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlProcessingInstruction)->put_Data(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlProcessingInstruction)->put_Data(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Data::Xml::Dom::IXmlText) consume_Windows_Data_Xml_Dom_IXmlText<D>::SplitText(uint32_t offset) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Data::Xml::Dom::IXmlText) consume_Windows_Data_Xml_Dom_IXmlText<D>::SplitText(uint32_t offset) const
     {
         void* secondPart{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Xml::Dom::IXmlText)->SplitText(offset, &secondPart));
-        return Windows::Data::Xml::Dom::IXmlText{ secondPart, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Xml::Dom::IXmlText)->SplitText(offset, &secondPart));
+        return winrt::Windows::Data::Xml::Dom::IXmlText{ secondPart, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IDtdEntity> : produce_base<D, Windows::Data::Xml::Dom::IDtdEntity>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IDtdEntity> : produce_base<D, winrt::Windows::Data::Xml::Dom::IDtdEntity>
     {
         int32_t __stdcall get_PublicId(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().PublicId());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().PublicId());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -667,7 +668,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().SystemId());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().SystemId());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -675,7 +676,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().NotationName());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().NotationName());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -683,13 +684,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IDtdNotation> : produce_base<D, Windows::Data::Xml::Dom::IDtdNotation>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IDtdNotation> : produce_base<D, winrt::Windows::Data::Xml::Dom::IDtdNotation>
     {
         int32_t __stdcall get_PublicId(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().PublicId());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().PublicId());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -697,7 +698,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().SystemId());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().SystemId());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -705,7 +706,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlAttribute> : produce_base<D, Windows::Data::Xml::Dom::IXmlAttribute>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlAttribute> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlAttribute>
     {
         int32_t __stdcall get_Name(void** value) noexcept final try
         {
@@ -741,12 +742,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlCDataSection> : produce_base<D, Windows::Data::Xml::Dom::IXmlCDataSection>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlCDataSection> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlCDataSection>
     {
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlCharacterData> : produce_base<D, Windows::Data::Xml::Dom::IXmlCharacterData>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlCharacterData> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlCharacterData>
     {
         int32_t __stdcall get_Data(void** value) noexcept final try
         {
@@ -809,19 +810,19 @@ namespace winrt::impl
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlComment> : produce_base<D, Windows::Data::Xml::Dom::IXmlComment>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlComment> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlComment>
     {
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlDocument> : produce_base<D, Windows::Data::Xml::Dom::IXmlDocument>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlDocument> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlDocument>
     {
         int32_t __stdcall get_Doctype(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::XmlDocumentType>(this->shim().Doctype());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::XmlDocumentType>(this->shim().Doctype());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -829,7 +830,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::XmlDomImplementation>(this->shim().Implementation());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>(this->shim().Implementation());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -837,7 +838,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::XmlElement>(this->shim().DocumentElement());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::XmlElement>(this->shim().DocumentElement());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -845,7 +846,7 @@ namespace winrt::impl
         {
             clear_abi(newElement);
             typename D::abi_guard guard(this->shim());
-            *newElement = detach_from<Windows::Data::Xml::Dom::XmlElement>(this->shim().CreateElement(*reinterpret_cast<hstring const*>(&tagName)));
+            *newElement = detach_from<winrt::Windows::Data::Xml::Dom::XmlElement>(this->shim().CreateElement(*reinterpret_cast<hstring const*>(&tagName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -853,7 +854,7 @@ namespace winrt::impl
         {
             clear_abi(newDocumentFragment);
             typename D::abi_guard guard(this->shim());
-            *newDocumentFragment = detach_from<Windows::Data::Xml::Dom::XmlDocumentFragment>(this->shim().CreateDocumentFragment());
+            *newDocumentFragment = detach_from<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>(this->shim().CreateDocumentFragment());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -861,7 +862,7 @@ namespace winrt::impl
         {
             clear_abi(newTextNode);
             typename D::abi_guard guard(this->shim());
-            *newTextNode = detach_from<Windows::Data::Xml::Dom::XmlText>(this->shim().CreateTextNode(*reinterpret_cast<hstring const*>(&data)));
+            *newTextNode = detach_from<winrt::Windows::Data::Xml::Dom::XmlText>(this->shim().CreateTextNode(*reinterpret_cast<hstring const*>(&data)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -869,7 +870,7 @@ namespace winrt::impl
         {
             clear_abi(newComment);
             typename D::abi_guard guard(this->shim());
-            *newComment = detach_from<Windows::Data::Xml::Dom::XmlComment>(this->shim().CreateComment(*reinterpret_cast<hstring const*>(&data)));
+            *newComment = detach_from<winrt::Windows::Data::Xml::Dom::XmlComment>(this->shim().CreateComment(*reinterpret_cast<hstring const*>(&data)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -877,7 +878,7 @@ namespace winrt::impl
         {
             clear_abi(newProcessingInstruction);
             typename D::abi_guard guard(this->shim());
-            *newProcessingInstruction = detach_from<Windows::Data::Xml::Dom::XmlProcessingInstruction>(this->shim().CreateProcessingInstruction(*reinterpret_cast<hstring const*>(&target), *reinterpret_cast<hstring const*>(&data)));
+            *newProcessingInstruction = detach_from<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>(this->shim().CreateProcessingInstruction(*reinterpret_cast<hstring const*>(&target), *reinterpret_cast<hstring const*>(&data)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -885,7 +886,7 @@ namespace winrt::impl
         {
             clear_abi(newAttribute);
             typename D::abi_guard guard(this->shim());
-            *newAttribute = detach_from<Windows::Data::Xml::Dom::XmlAttribute>(this->shim().CreateAttribute(*reinterpret_cast<hstring const*>(&name)));
+            *newAttribute = detach_from<winrt::Windows::Data::Xml::Dom::XmlAttribute>(this->shim().CreateAttribute(*reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -893,7 +894,7 @@ namespace winrt::impl
         {
             clear_abi(newEntityReference);
             typename D::abi_guard guard(this->shim());
-            *newEntityReference = detach_from<Windows::Data::Xml::Dom::XmlEntityReference>(this->shim().CreateEntityReference(*reinterpret_cast<hstring const*>(&name)));
+            *newEntityReference = detach_from<winrt::Windows::Data::Xml::Dom::XmlEntityReference>(this->shim().CreateEntityReference(*reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -901,7 +902,7 @@ namespace winrt::impl
         {
             clear_abi(elements);
             typename D::abi_guard guard(this->shim());
-            *elements = detach_from<Windows::Data::Xml::Dom::XmlNodeList>(this->shim().GetElementsByTagName(*reinterpret_cast<hstring const*>(&tagName)));
+            *elements = detach_from<winrt::Windows::Data::Xml::Dom::XmlNodeList>(this->shim().GetElementsByTagName(*reinterpret_cast<hstring const*>(&tagName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -909,7 +910,7 @@ namespace winrt::impl
         {
             clear_abi(newCDataSection);
             typename D::abi_guard guard(this->shim());
-            *newCDataSection = detach_from<Windows::Data::Xml::Dom::XmlCDataSection>(this->shim().CreateCDataSection(*reinterpret_cast<hstring const*>(&data)));
+            *newCDataSection = detach_from<winrt::Windows::Data::Xml::Dom::XmlCDataSection>(this->shim().CreateCDataSection(*reinterpret_cast<hstring const*>(&data)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -925,7 +926,7 @@ namespace winrt::impl
         {
             clear_abi(newAttribute);
             typename D::abi_guard guard(this->shim());
-            *newAttribute = detach_from<Windows::Data::Xml::Dom::XmlAttribute>(this->shim().CreateAttributeNS(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&qualifiedName)));
+            *newAttribute = detach_from<winrt::Windows::Data::Xml::Dom::XmlAttribute>(this->shim().CreateAttributeNS(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&qualifiedName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -933,7 +934,7 @@ namespace winrt::impl
         {
             clear_abi(newElement);
             typename D::abi_guard guard(this->shim());
-            *newElement = detach_from<Windows::Data::Xml::Dom::XmlElement>(this->shim().CreateElementNS(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&qualifiedName)));
+            *newElement = detach_from<winrt::Windows::Data::Xml::Dom::XmlElement>(this->shim().CreateElementNS(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&qualifiedName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -941,7 +942,7 @@ namespace winrt::impl
         {
             clear_abi(element);
             typename D::abi_guard guard(this->shim());
-            *element = detach_from<Windows::Data::Xml::Dom::XmlElement>(this->shim().GetElementById(*reinterpret_cast<hstring const*>(&elementId)));
+            *element = detach_from<winrt::Windows::Data::Xml::Dom::XmlElement>(this->shim().GetElementById(*reinterpret_cast<hstring const*>(&elementId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -949,7 +950,7 @@ namespace winrt::impl
         {
             clear_abi(newNode);
             typename D::abi_guard guard(this->shim());
-            *newNode = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().ImportNode(*reinterpret_cast<Windows::Data::Xml::Dom::IXmlNode const*>(&node), deep));
+            *newNode = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().ImportNode(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::IXmlNode const*>(&node), deep));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -957,13 +958,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlDocumentFragment> : produce_base<D, Windows::Data::Xml::Dom::IXmlDocumentFragment>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentFragment> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentFragment>
     {
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlDocumentIO> : produce_base<D, Windows::Data::Xml::Dom::IXmlDocumentIO>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentIO> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentIO>
     {
         int32_t __stdcall LoadXml(void* xml) noexcept final try
         {
@@ -975,7 +976,7 @@ namespace winrt::impl
         int32_t __stdcall LoadXmlWithSettings(void* xml, void* loadSettings) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().LoadXml(*reinterpret_cast<hstring const*>(&xml), *reinterpret_cast<Windows::Data::Xml::Dom::XmlLoadSettings const*>(&loadSettings));
+            this->shim().LoadXml(*reinterpret_cast<hstring const*>(&xml), *reinterpret_cast<winrt::Windows::Data::Xml::Dom::XmlLoadSettings const*>(&loadSettings));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -983,7 +984,7 @@ namespace winrt::impl
         {
             clear_abi(asyncInfo);
             typename D::abi_guard guard(this->shim());
-            *asyncInfo = detach_from<Windows::Foundation::IAsyncAction>(this->shim().SaveToFileAsync(*reinterpret_cast<Windows::Storage::IStorageFile const*>(&file)));
+            *asyncInfo = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().SaveToFileAsync(*reinterpret_cast<winrt::Windows::Storage::IStorageFile const*>(&file)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -991,19 +992,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlDocumentIO2> : produce_base<D, Windows::Data::Xml::Dom::IXmlDocumentIO2>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentIO2> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentIO2>
     {
         int32_t __stdcall LoadXmlFromBuffer(void* buffer) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().LoadXmlFromBuffer(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer));
+            this->shim().LoadXmlFromBuffer(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&buffer));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall LoadXmlFromBufferWithSettings(void* buffer, void* loadSettings) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().LoadXmlFromBuffer(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer), *reinterpret_cast<Windows::Data::Xml::Dom::XmlLoadSettings const*>(&loadSettings));
+            this->shim().LoadXmlFromBuffer(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&buffer), *reinterpret_cast<winrt::Windows::Data::Xml::Dom::XmlLoadSettings const*>(&loadSettings));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1011,13 +1012,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlDocumentStatics> : produce_base<D, Windows::Data::Xml::Dom::IXmlDocumentStatics>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentStatics> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentStatics>
     {
         int32_t __stdcall LoadFromUriAsync(void* uri, void** asyncInfo) noexcept final try
         {
             clear_abi(asyncInfo);
             typename D::abi_guard guard(this->shim());
-            *asyncInfo = detach_from<Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>>(this->shim().LoadFromUriAsync(*reinterpret_cast<Windows::Foundation::Uri const*>(&uri)));
+            *asyncInfo = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>>(this->shim().LoadFromUriAsync(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&uri)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1025,7 +1026,7 @@ namespace winrt::impl
         {
             clear_abi(asyncInfo);
             typename D::abi_guard guard(this->shim());
-            *asyncInfo = detach_from<Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>>(this->shim().LoadFromUriAsync(*reinterpret_cast<Windows::Foundation::Uri const*>(&uri), *reinterpret_cast<Windows::Data::Xml::Dom::XmlLoadSettings const*>(&loadSettings)));
+            *asyncInfo = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>>(this->shim().LoadFromUriAsync(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&uri), *reinterpret_cast<winrt::Windows::Data::Xml::Dom::XmlLoadSettings const*>(&loadSettings)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1033,7 +1034,7 @@ namespace winrt::impl
         {
             clear_abi(asyncInfo);
             typename D::abi_guard guard(this->shim());
-            *asyncInfo = detach_from<Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>>(this->shim().LoadFromFileAsync(*reinterpret_cast<Windows::Storage::IStorageFile const*>(&file)));
+            *asyncInfo = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>>(this->shim().LoadFromFileAsync(*reinterpret_cast<winrt::Windows::Storage::IStorageFile const*>(&file)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1041,7 +1042,7 @@ namespace winrt::impl
         {
             clear_abi(asyncInfo);
             typename D::abi_guard guard(this->shim());
-            *asyncInfo = detach_from<Windows::Foundation::IAsyncOperation<Windows::Data::Xml::Dom::XmlDocument>>(this->shim().LoadFromFileAsync(*reinterpret_cast<Windows::Storage::IStorageFile const*>(&file), *reinterpret_cast<Windows::Data::Xml::Dom::XmlLoadSettings const*>(&loadSettings)));
+            *asyncInfo = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Data::Xml::Dom::XmlDocument>>(this->shim().LoadFromFileAsync(*reinterpret_cast<winrt::Windows::Storage::IStorageFile const*>(&file), *reinterpret_cast<winrt::Windows::Data::Xml::Dom::XmlLoadSettings const*>(&loadSettings)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1049,7 +1050,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlDocumentType> : produce_base<D, Windows::Data::Xml::Dom::IXmlDocumentType>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentType> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlDocumentType>
     {
         int32_t __stdcall get_Name(void** value) noexcept final try
         {
@@ -1063,7 +1064,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::XmlNamedNodeMap>(this->shim().Entities());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>(this->shim().Entities());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1071,7 +1072,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::XmlNamedNodeMap>(this->shim().Notations());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>(this->shim().Notations());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1079,12 +1080,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlDomImplementation> : produce_base<D, Windows::Data::Xml::Dom::IXmlDomImplementation>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlDomImplementation> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlDomImplementation>
     {
         int32_t __stdcall HasFeature(void* feature, void* version, bool* featureSupported) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *featureSupported = detach_from<bool>(this->shim().HasFeature(*reinterpret_cast<hstring const*>(&feature), *reinterpret_cast<Windows::Foundation::IInspectable const*>(&version)));
+            *featureSupported = detach_from<bool>(this->shim().HasFeature(*reinterpret_cast<hstring const*>(&feature), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&version)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1092,7 +1093,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlElement> : produce_base<D, Windows::Data::Xml::Dom::IXmlElement>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlElement> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlElement>
     {
         int32_t __stdcall get_TagName(void** value) noexcept final try
         {
@@ -1128,7 +1129,7 @@ namespace winrt::impl
         {
             clear_abi(attributeNode);
             typename D::abi_guard guard(this->shim());
-            *attributeNode = detach_from<Windows::Data::Xml::Dom::XmlAttribute>(this->shim().GetAttributeNode(*reinterpret_cast<hstring const*>(&attributeName)));
+            *attributeNode = detach_from<winrt::Windows::Data::Xml::Dom::XmlAttribute>(this->shim().GetAttributeNode(*reinterpret_cast<hstring const*>(&attributeName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1136,7 +1137,7 @@ namespace winrt::impl
         {
             clear_abi(previousAttribute);
             typename D::abi_guard guard(this->shim());
-            *previousAttribute = detach_from<Windows::Data::Xml::Dom::XmlAttribute>(this->shim().SetAttributeNode(*reinterpret_cast<Windows::Data::Xml::Dom::XmlAttribute const*>(&newAttribute)));
+            *previousAttribute = detach_from<winrt::Windows::Data::Xml::Dom::XmlAttribute>(this->shim().SetAttributeNode(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::XmlAttribute const*>(&newAttribute)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1144,7 +1145,7 @@ namespace winrt::impl
         {
             clear_abi(removedAttribute);
             typename D::abi_guard guard(this->shim());
-            *removedAttribute = detach_from<Windows::Data::Xml::Dom::XmlAttribute>(this->shim().RemoveAttributeNode(*reinterpret_cast<Windows::Data::Xml::Dom::XmlAttribute const*>(&attributeNode)));
+            *removedAttribute = detach_from<winrt::Windows::Data::Xml::Dom::XmlAttribute>(this->shim().RemoveAttributeNode(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::XmlAttribute const*>(&attributeNode)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1152,14 +1153,14 @@ namespace winrt::impl
         {
             clear_abi(elements);
             typename D::abi_guard guard(this->shim());
-            *elements = detach_from<Windows::Data::Xml::Dom::XmlNodeList>(this->shim().GetElementsByTagName(*reinterpret_cast<hstring const*>(&tagName)));
+            *elements = detach_from<winrt::Windows::Data::Xml::Dom::XmlNodeList>(this->shim().GetElementsByTagName(*reinterpret_cast<hstring const*>(&tagName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetAttributeNS(void* namespaceUri, void* qualifiedName, void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetAttributeNS(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&qualifiedName), *reinterpret_cast<hstring const*>(&value));
+            this->shim().SetAttributeNS(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&qualifiedName), *reinterpret_cast<hstring const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1167,14 +1168,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<hstring>(this->shim().GetAttributeNS(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&localName)));
+            *value = detach_from<hstring>(this->shim().GetAttributeNS(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&localName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall RemoveAttributeNS(void* namespaceUri, void* localName) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().RemoveAttributeNS(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&localName));
+            this->shim().RemoveAttributeNS(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&localName));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1182,7 +1183,7 @@ namespace winrt::impl
         {
             clear_abi(previousAttribute);
             typename D::abi_guard guard(this->shim());
-            *previousAttribute = detach_from<Windows::Data::Xml::Dom::XmlAttribute>(this->shim().SetAttributeNodeNS(*reinterpret_cast<Windows::Data::Xml::Dom::XmlAttribute const*>(&newAttribute)));
+            *previousAttribute = detach_from<winrt::Windows::Data::Xml::Dom::XmlAttribute>(this->shim().SetAttributeNodeNS(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::XmlAttribute const*>(&newAttribute)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1190,7 +1191,7 @@ namespace winrt::impl
         {
             clear_abi(previousAttribute);
             typename D::abi_guard guard(this->shim());
-            *previousAttribute = detach_from<Windows::Data::Xml::Dom::XmlAttribute>(this->shim().GetAttributeNodeNS(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&localName)));
+            *previousAttribute = detach_from<winrt::Windows::Data::Xml::Dom::XmlAttribute>(this->shim().GetAttributeNodeNS(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&localName)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1198,13 +1199,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlEntityReference> : produce_base<D, Windows::Data::Xml::Dom::IXmlEntityReference>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlEntityReference> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlEntityReference>
     {
     };
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlLoadSettings> : produce_base<D, Windows::Data::Xml::Dom::IXmlLoadSettings>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlLoadSettings> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlLoadSettings>
     {
         int32_t __stdcall get_MaxElementDepth(uint32_t* value) noexcept final try
         {
@@ -1280,7 +1281,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlNamedNodeMap> : produce_base<D, Windows::Data::Xml::Dom::IXmlNamedNodeMap>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlNamedNodeMap>
     {
         int32_t __stdcall get_Length(uint32_t* value) noexcept final try
         {
@@ -1293,7 +1294,7 @@ namespace winrt::impl
         {
             clear_abi(node);
             typename D::abi_guard guard(this->shim());
-            *node = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().Item(index));
+            *node = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().Item(index));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1301,7 +1302,7 @@ namespace winrt::impl
         {
             clear_abi(node);
             typename D::abi_guard guard(this->shim());
-            *node = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().GetNamedItem(*reinterpret_cast<hstring const*>(&name)));
+            *node = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().GetNamedItem(*reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1309,7 +1310,7 @@ namespace winrt::impl
         {
             clear_abi(previousNode);
             typename D::abi_guard guard(this->shim());
-            *previousNode = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().SetNamedItem(*reinterpret_cast<Windows::Data::Xml::Dom::IXmlNode const*>(&node)));
+            *previousNode = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().SetNamedItem(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::IXmlNode const*>(&node)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1317,7 +1318,7 @@ namespace winrt::impl
         {
             clear_abi(previousNode);
             typename D::abi_guard guard(this->shim());
-            *previousNode = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().RemoveNamedItem(*reinterpret_cast<hstring const*>(&name)));
+            *previousNode = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().RemoveNamedItem(*reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1325,7 +1326,7 @@ namespace winrt::impl
         {
             clear_abi(node);
             typename D::abi_guard guard(this->shim());
-            *node = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().GetNamedItemNS(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&name)));
+            *node = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().GetNamedItemNS(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1333,7 +1334,7 @@ namespace winrt::impl
         {
             clear_abi(previousNode);
             typename D::abi_guard guard(this->shim());
-            *previousNode = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().RemoveNamedItemNS(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&name)));
+            *previousNode = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().RemoveNamedItemNS(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaceUri), *reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1341,34 +1342,34 @@ namespace winrt::impl
         {
             clear_abi(previousNode);
             typename D::abi_guard guard(this->shim());
-            *previousNode = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().SetNamedItemNS(*reinterpret_cast<Windows::Data::Xml::Dom::IXmlNode const*>(&node)));
+            *previousNode = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().SetNamedItemNS(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::IXmlNode const*>(&node)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlNode> : produce_base<D, Windows::Data::Xml::Dom::IXmlNode>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlNode> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlNode>
     {
         int32_t __stdcall get_NodeValue(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().NodeValue());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().NodeValue());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_NodeValue(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().NodeValue(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&value));
+            this->shim().NodeValue(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_NodeType(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::NodeType>(this->shim().NodeType());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::NodeType>(this->shim().NodeType());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1384,7 +1385,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().ParentNode());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().ParentNode());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1392,7 +1393,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::XmlNodeList>(this->shim().ChildNodes());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::XmlNodeList>(this->shim().ChildNodes());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1400,7 +1401,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().FirstChild());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().FirstChild());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1408,7 +1409,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().LastChild());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().LastChild());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1416,7 +1417,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().PreviousSibling());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().PreviousSibling());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1424,7 +1425,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().NextSibling());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().NextSibling());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1432,7 +1433,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::XmlNamedNodeMap>(this->shim().Attributes());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>(this->shim().Attributes());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1447,7 +1448,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Data::Xml::Dom::XmlDocument>(this->shim().OwnerDocument());
+            *value = detach_from<winrt::Windows::Data::Xml::Dom::XmlDocument>(this->shim().OwnerDocument());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1455,7 +1456,7 @@ namespace winrt::impl
         {
             clear_abi(insertedChild);
             typename D::abi_guard guard(this->shim());
-            *insertedChild = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().InsertBefore(*reinterpret_cast<Windows::Data::Xml::Dom::IXmlNode const*>(&newChild), *reinterpret_cast<Windows::Data::Xml::Dom::IXmlNode const*>(&referenceChild)));
+            *insertedChild = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().InsertBefore(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::IXmlNode const*>(&newChild), *reinterpret_cast<winrt::Windows::Data::Xml::Dom::IXmlNode const*>(&referenceChild)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1463,7 +1464,7 @@ namespace winrt::impl
         {
             clear_abi(previousChild);
             typename D::abi_guard guard(this->shim());
-            *previousChild = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().ReplaceChild(*reinterpret_cast<Windows::Data::Xml::Dom::IXmlNode const*>(&newChild), *reinterpret_cast<Windows::Data::Xml::Dom::IXmlNode const*>(&referenceChild)));
+            *previousChild = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().ReplaceChild(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::IXmlNode const*>(&newChild), *reinterpret_cast<winrt::Windows::Data::Xml::Dom::IXmlNode const*>(&referenceChild)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1471,7 +1472,7 @@ namespace winrt::impl
         {
             clear_abi(removedChild);
             typename D::abi_guard guard(this->shim());
-            *removedChild = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().RemoveChild(*reinterpret_cast<Windows::Data::Xml::Dom::IXmlNode const*>(&childNode)));
+            *removedChild = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().RemoveChild(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::IXmlNode const*>(&childNode)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1479,7 +1480,7 @@ namespace winrt::impl
         {
             clear_abi(appendedChild);
             typename D::abi_guard guard(this->shim());
-            *appendedChild = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().AppendChild(*reinterpret_cast<Windows::Data::Xml::Dom::IXmlNode const*>(&newChild)));
+            *appendedChild = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().AppendChild(*reinterpret_cast<winrt::Windows::Data::Xml::Dom::IXmlNode const*>(&newChild)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1487,7 +1488,7 @@ namespace winrt::impl
         {
             clear_abi(newNode);
             typename D::abi_guard guard(this->shim());
-            *newNode = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().CloneNode(deep));
+            *newNode = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().CloneNode(deep));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1495,7 +1496,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().NamespaceUri());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().NamespaceUri());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1503,7 +1504,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().LocalName());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().LocalName());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1511,7 +1512,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().Prefix());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Prefix());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1525,14 +1526,14 @@ namespace winrt::impl
         int32_t __stdcall put_Prefix(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Prefix(*reinterpret_cast<Windows::Foundation::IInspectable const*>(&value));
+            this->shim().Prefix(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlNodeList> : produce_base<D, Windows::Data::Xml::Dom::IXmlNodeList>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlNodeList> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlNodeList>
     {
         int32_t __stdcall get_Length(uint32_t* value) noexcept final try
         {
@@ -1545,20 +1546,20 @@ namespace winrt::impl
         {
             clear_abi(node);
             typename D::abi_guard guard(this->shim());
-            *node = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().Item(index));
+            *node = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().Item(index));
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlNodeSelector> : produce_base<D, Windows::Data::Xml::Dom::IXmlNodeSelector>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlNodeSelector> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>
     {
         int32_t __stdcall SelectSingleNode(void* xpath, void** node) noexcept final try
         {
             clear_abi(node);
             typename D::abi_guard guard(this->shim());
-            *node = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().SelectSingleNode(*reinterpret_cast<hstring const*>(&xpath)));
+            *node = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().SelectSingleNode(*reinterpret_cast<hstring const*>(&xpath)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1566,7 +1567,7 @@ namespace winrt::impl
         {
             clear_abi(nodelist);
             typename D::abi_guard guard(this->shim());
-            *nodelist = detach_from<Windows::Data::Xml::Dom::XmlNodeList>(this->shim().SelectNodes(*reinterpret_cast<hstring const*>(&xpath)));
+            *nodelist = detach_from<winrt::Windows::Data::Xml::Dom::XmlNodeList>(this->shim().SelectNodes(*reinterpret_cast<hstring const*>(&xpath)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1574,7 +1575,7 @@ namespace winrt::impl
         {
             clear_abi(node);
             typename D::abi_guard guard(this->shim());
-            *node = detach_from<Windows::Data::Xml::Dom::IXmlNode>(this->shim().SelectSingleNodeNS(*reinterpret_cast<hstring const*>(&xpath), *reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaces)));
+            *node = detach_from<winrt::Windows::Data::Xml::Dom::IXmlNode>(this->shim().SelectSingleNodeNS(*reinterpret_cast<hstring const*>(&xpath), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaces)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1582,13 +1583,13 @@ namespace winrt::impl
         {
             clear_abi(nodelist);
             typename D::abi_guard guard(this->shim());
-            *nodelist = detach_from<Windows::Data::Xml::Dom::XmlNodeList>(this->shim().SelectNodesNS(*reinterpret_cast<hstring const*>(&xpath), *reinterpret_cast<Windows::Foundation::IInspectable const*>(&namespaces)));
+            *nodelist = detach_from<winrt::Windows::Data::Xml::Dom::XmlNodeList>(this->shim().SelectNodesNS(*reinterpret_cast<hstring const*>(&xpath), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&namespaces)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlNodeSerializer> : produce_base<D, Windows::Data::Xml::Dom::IXmlNodeSerializer>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>
     {
         int32_t __stdcall GetXml(void** outerXml) noexcept final try
         {
@@ -1616,7 +1617,7 @@ namespace winrt::impl
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlProcessingInstruction> : produce_base<D, Windows::Data::Xml::Dom::IXmlProcessingInstruction>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlProcessingInstruction> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlProcessingInstruction>
     {
         int32_t __stdcall get_Target(void** value) noexcept final try
         {
@@ -1644,13 +1645,13 @@ namespace winrt::impl
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Data::Xml::Dom::IXmlText> : produce_base<D, Windows::Data::Xml::Dom::IXmlText>
+    struct produce<D, winrt::Windows::Data::Xml::Dom::IXmlText> : produce_base<D, winrt::Windows::Data::Xml::Dom::IXmlText>
     {
         int32_t __stdcall SplitText(uint32_t offset, void** secondPart) noexcept final try
         {
             clear_abi(secondPart);
             typename D::abi_guard guard(this->shim());
-            *secondPart = detach_from<Windows::Data::Xml::Dom::IXmlText>(this->shim().SplitText(offset));
+            *secondPart = detach_from<winrt::Windows::Data::Xml::Dom::IXmlText>(this->shim().SplitText(offset));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1659,27 +1660,27 @@ namespace winrt::impl
 WINRT_EXPORT namespace winrt::Windows::Data::Xml::Dom
 {
     inline XmlDocument::XmlDocument() :
-        XmlDocument(impl::call_factory_cast<XmlDocument(*)(Windows::Foundation::IActivationFactory const&), XmlDocument>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<XmlDocument>(); }))
+        XmlDocument(impl::call_factory_cast<XmlDocument(*)(winrt::Windows::Foundation::IActivationFactory const&), XmlDocument>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<XmlDocument>(); }))
     {
     }
-    inline auto XmlDocument::LoadFromUriAsync(Windows::Foundation::Uri const& uri)
+    inline auto XmlDocument::LoadFromUriAsync(winrt::Windows::Foundation::Uri const& uri)
     {
         return impl::call_factory<XmlDocument, IXmlDocumentStatics>([&](IXmlDocumentStatics const& f) { return f.LoadFromUriAsync(uri); });
     }
-    inline auto XmlDocument::LoadFromUriAsync(Windows::Foundation::Uri const& uri, Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings)
+    inline auto XmlDocument::LoadFromUriAsync(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings)
     {
         return impl::call_factory<XmlDocument, IXmlDocumentStatics>([&](IXmlDocumentStatics const& f) { return f.LoadFromUriAsync(uri, loadSettings); });
     }
-    inline auto XmlDocument::LoadFromFileAsync(Windows::Storage::IStorageFile const& file)
+    inline auto XmlDocument::LoadFromFileAsync(winrt::Windows::Storage::IStorageFile const& file)
     {
         return impl::call_factory<XmlDocument, IXmlDocumentStatics>([&](IXmlDocumentStatics const& f) { return f.LoadFromFileAsync(file); });
     }
-    inline auto XmlDocument::LoadFromFileAsync(Windows::Storage::IStorageFile const& file, Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings)
+    inline auto XmlDocument::LoadFromFileAsync(winrt::Windows::Storage::IStorageFile const& file, winrt::Windows::Data::Xml::Dom::XmlLoadSettings const& loadSettings)
     {
         return impl::call_factory<XmlDocument, IXmlDocumentStatics>([&](IXmlDocumentStatics const& f) { return f.LoadFromFileAsync(file, loadSettings); });
     }
     inline XmlLoadSettings::XmlLoadSettings() :
-        XmlLoadSettings(impl::call_factory_cast<XmlLoadSettings(*)(Windows::Foundation::IActivationFactory const&), XmlLoadSettings>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<XmlLoadSettings>(); }))
+        XmlLoadSettings(impl::call_factory_cast<XmlLoadSettings(*)(winrt::Windows::Foundation::IActivationFactory const&), XmlLoadSettings>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<XmlLoadSettings>(); }))
     {
     }
 }

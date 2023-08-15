@@ -1,373 +1,374 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Devices_Sensors_2_H
 #define WINRT_Windows_Devices_Sensors_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Devices.Sensors.1.h"
 WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
 {
-    struct __declspec(empty_bases) Accelerometer : Windows::Devices::Sensors::IAccelerometer,
-        impl::require<Accelerometer, Windows::Devices::Sensors::IAccelerometerDeviceId, Windows::Devices::Sensors::IAccelerometer2, Windows::Devices::Sensors::IAccelerometer3, Windows::Devices::Sensors::IAccelerometer4, Windows::Devices::Sensors::IAccelerometer5>
+    struct __declspec(empty_bases) Accelerometer : winrt::Windows::Devices::Sensors::IAccelerometer,
+        impl::require<Accelerometer, winrt::Windows::Devices::Sensors::IAccelerometerDeviceId, winrt::Windows::Devices::Sensors::IAccelerometer2, winrt::Windows::Devices::Sensors::IAccelerometer3, winrt::Windows::Devices::Sensors::IAccelerometer4, winrt::Windows::Devices::Sensors::IAccelerometer5>
     {
         Accelerometer(std::nullptr_t) noexcept {}
-        Accelerometer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IAccelerometer(ptr, take_ownership_from_abi) {}
+        Accelerometer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IAccelerometer(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
-        static auto GetDefault(Windows::Devices::Sensors::AccelerometerReadingType const& readingType);
+        static auto GetDefault(winrt::Windows::Devices::Sensors::AccelerometerReadingType const& readingType);
         static auto FromIdAsync(param::hstring const& deviceId);
-        static auto GetDeviceSelector(Windows::Devices::Sensors::AccelerometerReadingType const& readingType);
+        static auto GetDeviceSelector(winrt::Windows::Devices::Sensors::AccelerometerReadingType const& readingType);
     };
-    struct __declspec(empty_bases) AccelerometerDataThreshold : Windows::Devices::Sensors::IAccelerometerDataThreshold
+    struct __declspec(empty_bases) AccelerometerDataThreshold : winrt::Windows::Devices::Sensors::IAccelerometerDataThreshold
     {
         AccelerometerDataThreshold(std::nullptr_t) noexcept {}
-        AccelerometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IAccelerometerDataThreshold(ptr, take_ownership_from_abi) {}
+        AccelerometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IAccelerometerDataThreshold(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AccelerometerReading : Windows::Devices::Sensors::IAccelerometerReading,
-        impl::require<AccelerometerReading, Windows::Devices::Sensors::IAccelerometerReading2>
+    struct __declspec(empty_bases) AccelerometerReading : winrt::Windows::Devices::Sensors::IAccelerometerReading,
+        impl::require<AccelerometerReading, winrt::Windows::Devices::Sensors::IAccelerometerReading2>
     {
         AccelerometerReading(std::nullptr_t) noexcept {}
-        AccelerometerReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IAccelerometerReading(ptr, take_ownership_from_abi) {}
+        AccelerometerReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IAccelerometerReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AccelerometerReadingChangedEventArgs : Windows::Devices::Sensors::IAccelerometerReadingChangedEventArgs
+    struct __declspec(empty_bases) AccelerometerReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IAccelerometerReadingChangedEventArgs
     {
         AccelerometerReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        AccelerometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IAccelerometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        AccelerometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IAccelerometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AccelerometerShakenEventArgs : Windows::Devices::Sensors::IAccelerometerShakenEventArgs
+    struct __declspec(empty_bases) AccelerometerShakenEventArgs : winrt::Windows::Devices::Sensors::IAccelerometerShakenEventArgs
     {
         AccelerometerShakenEventArgs(std::nullptr_t) noexcept {}
-        AccelerometerShakenEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IAccelerometerShakenEventArgs(ptr, take_ownership_from_abi) {}
+        AccelerometerShakenEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IAccelerometerShakenEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ActivitySensor : Windows::Devices::Sensors::IActivitySensor
+    struct __declspec(empty_bases) ActivitySensor : winrt::Windows::Devices::Sensors::IActivitySensor
     {
         ActivitySensor(std::nullptr_t) noexcept {}
-        ActivitySensor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IActivitySensor(ptr, take_ownership_from_abi) {}
+        ActivitySensor(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IActivitySensor(ptr, take_ownership_from_abi) {}
         static auto GetDefaultAsync();
         static auto GetDeviceSelector();
         static auto FromIdAsync(param::hstring const& deviceId);
-        static auto GetSystemHistoryAsync(Windows::Foundation::DateTime const& fromTime);
-        static auto GetSystemHistoryAsync(Windows::Foundation::DateTime const& fromTime, Windows::Foundation::TimeSpan const& duration);
+        static auto GetSystemHistoryAsync(winrt::Windows::Foundation::DateTime const& fromTime);
+        static auto GetSystemHistoryAsync(winrt::Windows::Foundation::DateTime const& fromTime, winrt::Windows::Foundation::TimeSpan const& duration);
     };
-    struct __declspec(empty_bases) ActivitySensorReading : Windows::Devices::Sensors::IActivitySensorReading
+    struct __declspec(empty_bases) ActivitySensorReading : winrt::Windows::Devices::Sensors::IActivitySensorReading
     {
         ActivitySensorReading(std::nullptr_t) noexcept {}
-        ActivitySensorReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IActivitySensorReading(ptr, take_ownership_from_abi) {}
+        ActivitySensorReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IActivitySensorReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ActivitySensorReadingChangeReport : Windows::Devices::Sensors::IActivitySensorReadingChangeReport
+    struct __declspec(empty_bases) ActivitySensorReadingChangeReport : winrt::Windows::Devices::Sensors::IActivitySensorReadingChangeReport
     {
         ActivitySensorReadingChangeReport(std::nullptr_t) noexcept {}
-        ActivitySensorReadingChangeReport(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IActivitySensorReadingChangeReport(ptr, take_ownership_from_abi) {}
+        ActivitySensorReadingChangeReport(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IActivitySensorReadingChangeReport(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ActivitySensorReadingChangedEventArgs : Windows::Devices::Sensors::IActivitySensorReadingChangedEventArgs
+    struct __declspec(empty_bases) ActivitySensorReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IActivitySensorReadingChangedEventArgs
     {
         ActivitySensorReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        ActivitySensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IActivitySensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        ActivitySensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IActivitySensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ActivitySensorTriggerDetails : Windows::Devices::Sensors::IActivitySensorTriggerDetails
+    struct __declspec(empty_bases) ActivitySensorTriggerDetails : winrt::Windows::Devices::Sensors::IActivitySensorTriggerDetails
     {
         ActivitySensorTriggerDetails(std::nullptr_t) noexcept {}
-        ActivitySensorTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IActivitySensorTriggerDetails(ptr, take_ownership_from_abi) {}
+        ActivitySensorTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IActivitySensorTriggerDetails(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) Altimeter : Windows::Devices::Sensors::IAltimeter,
-        impl::require<Altimeter, Windows::Devices::Sensors::IAltimeter2>
+    struct __declspec(empty_bases) Altimeter : winrt::Windows::Devices::Sensors::IAltimeter,
+        impl::require<Altimeter, winrt::Windows::Devices::Sensors::IAltimeter2>
     {
         Altimeter(std::nullptr_t) noexcept {}
-        Altimeter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IAltimeter(ptr, take_ownership_from_abi) {}
+        Altimeter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IAltimeter(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
     };
-    struct __declspec(empty_bases) AltimeterReading : Windows::Devices::Sensors::IAltimeterReading,
-        impl::require<AltimeterReading, Windows::Devices::Sensors::IAltimeterReading2>
+    struct __declspec(empty_bases) AltimeterReading : winrt::Windows::Devices::Sensors::IAltimeterReading,
+        impl::require<AltimeterReading, winrt::Windows::Devices::Sensors::IAltimeterReading2>
     {
         AltimeterReading(std::nullptr_t) noexcept {}
-        AltimeterReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IAltimeterReading(ptr, take_ownership_from_abi) {}
+        AltimeterReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IAltimeterReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) AltimeterReadingChangedEventArgs : Windows::Devices::Sensors::IAltimeterReadingChangedEventArgs
+    struct __declspec(empty_bases) AltimeterReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IAltimeterReadingChangedEventArgs
     {
         AltimeterReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        AltimeterReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IAltimeterReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        AltimeterReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IAltimeterReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) Barometer : Windows::Devices::Sensors::IBarometer,
-        impl::require<Barometer, Windows::Devices::Sensors::IBarometer2, Windows::Devices::Sensors::IBarometer3>
+    struct __declspec(empty_bases) Barometer : winrt::Windows::Devices::Sensors::IBarometer,
+        impl::require<Barometer, winrt::Windows::Devices::Sensors::IBarometer2, winrt::Windows::Devices::Sensors::IBarometer3>
     {
         Barometer(std::nullptr_t) noexcept {}
-        Barometer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IBarometer(ptr, take_ownership_from_abi) {}
+        Barometer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IBarometer(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto FromIdAsync(param::hstring const& deviceId);
         static auto GetDeviceSelector();
     };
-    struct __declspec(empty_bases) BarometerDataThreshold : Windows::Devices::Sensors::IBarometerDataThreshold
+    struct __declspec(empty_bases) BarometerDataThreshold : winrt::Windows::Devices::Sensors::IBarometerDataThreshold
     {
         BarometerDataThreshold(std::nullptr_t) noexcept {}
-        BarometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IBarometerDataThreshold(ptr, take_ownership_from_abi) {}
+        BarometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IBarometerDataThreshold(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) BarometerReading : Windows::Devices::Sensors::IBarometerReading,
-        impl::require<BarometerReading, Windows::Devices::Sensors::IBarometerReading2>
+    struct __declspec(empty_bases) BarometerReading : winrt::Windows::Devices::Sensors::IBarometerReading,
+        impl::require<BarometerReading, winrt::Windows::Devices::Sensors::IBarometerReading2>
     {
         BarometerReading(std::nullptr_t) noexcept {}
-        BarometerReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IBarometerReading(ptr, take_ownership_from_abi) {}
+        BarometerReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IBarometerReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) BarometerReadingChangedEventArgs : Windows::Devices::Sensors::IBarometerReadingChangedEventArgs
+    struct __declspec(empty_bases) BarometerReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IBarometerReadingChangedEventArgs
     {
         BarometerReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        BarometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IBarometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        BarometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IBarometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) Compass : Windows::Devices::Sensors::ICompass,
-        impl::require<Compass, Windows::Devices::Sensors::ICompassDeviceId, Windows::Devices::Sensors::ICompass2, Windows::Devices::Sensors::ICompass3, Windows::Devices::Sensors::ICompass4>
+    struct __declspec(empty_bases) Compass : winrt::Windows::Devices::Sensors::ICompass,
+        impl::require<Compass, winrt::Windows::Devices::Sensors::ICompassDeviceId, winrt::Windows::Devices::Sensors::ICompass2, winrt::Windows::Devices::Sensors::ICompass3, winrt::Windows::Devices::Sensors::ICompass4>
     {
         Compass(std::nullptr_t) noexcept {}
-        Compass(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ICompass(ptr, take_ownership_from_abi) {}
+        Compass(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ICompass(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto GetDeviceSelector();
         static auto FromIdAsync(param::hstring const& deviceId);
     };
-    struct __declspec(empty_bases) CompassDataThreshold : Windows::Devices::Sensors::ICompassDataThreshold
+    struct __declspec(empty_bases) CompassDataThreshold : winrt::Windows::Devices::Sensors::ICompassDataThreshold
     {
         CompassDataThreshold(std::nullptr_t) noexcept {}
-        CompassDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ICompassDataThreshold(ptr, take_ownership_from_abi) {}
+        CompassDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ICompassDataThreshold(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) CompassReading : Windows::Devices::Sensors::ICompassReading,
-        impl::require<CompassReading, Windows::Devices::Sensors::ICompassReadingHeadingAccuracy, Windows::Devices::Sensors::ICompassReading2>
+    struct __declspec(empty_bases) CompassReading : winrt::Windows::Devices::Sensors::ICompassReading,
+        impl::require<CompassReading, winrt::Windows::Devices::Sensors::ICompassReadingHeadingAccuracy, winrt::Windows::Devices::Sensors::ICompassReading2>
     {
         CompassReading(std::nullptr_t) noexcept {}
-        CompassReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ICompassReading(ptr, take_ownership_from_abi) {}
+        CompassReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ICompassReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) CompassReadingChangedEventArgs : Windows::Devices::Sensors::ICompassReadingChangedEventArgs
+    struct __declspec(empty_bases) CompassReadingChangedEventArgs : winrt::Windows::Devices::Sensors::ICompassReadingChangedEventArgs
     {
         CompassReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        CompassReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ICompassReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        CompassReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ICompassReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) Gyrometer : Windows::Devices::Sensors::IGyrometer,
-        impl::require<Gyrometer, Windows::Devices::Sensors::IGyrometerDeviceId, Windows::Devices::Sensors::IGyrometer2, Windows::Devices::Sensors::IGyrometer3, Windows::Devices::Sensors::IGyrometer4>
+    struct __declspec(empty_bases) Gyrometer : winrt::Windows::Devices::Sensors::IGyrometer,
+        impl::require<Gyrometer, winrt::Windows::Devices::Sensors::IGyrometerDeviceId, winrt::Windows::Devices::Sensors::IGyrometer2, winrt::Windows::Devices::Sensors::IGyrometer3, winrt::Windows::Devices::Sensors::IGyrometer4>
     {
         Gyrometer(std::nullptr_t) noexcept {}
-        Gyrometer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IGyrometer(ptr, take_ownership_from_abi) {}
+        Gyrometer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IGyrometer(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto GetDeviceSelector();
         static auto FromIdAsync(param::hstring const& deviceId);
     };
-    struct __declspec(empty_bases) GyrometerDataThreshold : Windows::Devices::Sensors::IGyrometerDataThreshold
+    struct __declspec(empty_bases) GyrometerDataThreshold : winrt::Windows::Devices::Sensors::IGyrometerDataThreshold
     {
         GyrometerDataThreshold(std::nullptr_t) noexcept {}
-        GyrometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IGyrometerDataThreshold(ptr, take_ownership_from_abi) {}
+        GyrometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IGyrometerDataThreshold(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) GyrometerReading : Windows::Devices::Sensors::IGyrometerReading,
-        impl::require<GyrometerReading, Windows::Devices::Sensors::IGyrometerReading2>
+    struct __declspec(empty_bases) GyrometerReading : winrt::Windows::Devices::Sensors::IGyrometerReading,
+        impl::require<GyrometerReading, winrt::Windows::Devices::Sensors::IGyrometerReading2>
     {
         GyrometerReading(std::nullptr_t) noexcept {}
-        GyrometerReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IGyrometerReading(ptr, take_ownership_from_abi) {}
+        GyrometerReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IGyrometerReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) GyrometerReadingChangedEventArgs : Windows::Devices::Sensors::IGyrometerReadingChangedEventArgs
+    struct __declspec(empty_bases) GyrometerReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IGyrometerReadingChangedEventArgs
     {
         GyrometerReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        GyrometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IGyrometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        GyrometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IGyrometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) HingeAngleReading : Windows::Devices::Sensors::IHingeAngleReading
+    struct __declspec(empty_bases) HingeAngleReading : winrt::Windows::Devices::Sensors::IHingeAngleReading
     {
         HingeAngleReading(std::nullptr_t) noexcept {}
-        HingeAngleReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IHingeAngleReading(ptr, take_ownership_from_abi) {}
+        HingeAngleReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IHingeAngleReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) HingeAngleSensor : Windows::Devices::Sensors::IHingeAngleSensor
+    struct __declspec(empty_bases) HingeAngleSensor : winrt::Windows::Devices::Sensors::IHingeAngleSensor
     {
         HingeAngleSensor(std::nullptr_t) noexcept {}
-        HingeAngleSensor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IHingeAngleSensor(ptr, take_ownership_from_abi) {}
+        HingeAngleSensor(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IHingeAngleSensor(ptr, take_ownership_from_abi) {}
         static auto GetDeviceSelector();
         static auto GetDefaultAsync();
         static auto GetRelatedToAdjacentPanelsAsync(param::hstring const& firstPanelId, param::hstring const& secondPanelId);
         static auto FromIdAsync(param::hstring const& deviceId);
     };
-    struct __declspec(empty_bases) HingeAngleSensorReadingChangedEventArgs : Windows::Devices::Sensors::IHingeAngleSensorReadingChangedEventArgs
+    struct __declspec(empty_bases) HingeAngleSensorReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IHingeAngleSensorReadingChangedEventArgs
     {
         HingeAngleSensorReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        HingeAngleSensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IHingeAngleSensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        HingeAngleSensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IHingeAngleSensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) Inclinometer : Windows::Devices::Sensors::IInclinometer,
-        impl::require<Inclinometer, Windows::Devices::Sensors::IInclinometerDeviceId, Windows::Devices::Sensors::IInclinometer2, Windows::Devices::Sensors::IInclinometer3, Windows::Devices::Sensors::IInclinometer4>
+    struct __declspec(empty_bases) Inclinometer : winrt::Windows::Devices::Sensors::IInclinometer,
+        impl::require<Inclinometer, winrt::Windows::Devices::Sensors::IInclinometerDeviceId, winrt::Windows::Devices::Sensors::IInclinometer2, winrt::Windows::Devices::Sensors::IInclinometer3, winrt::Windows::Devices::Sensors::IInclinometer4>
     {
         Inclinometer(std::nullptr_t) noexcept {}
-        Inclinometer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IInclinometer(ptr, take_ownership_from_abi) {}
+        Inclinometer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IInclinometer(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto GetDefaultForRelativeReadings();
-        static auto GetDefault(Windows::Devices::Sensors::SensorReadingType const& sensorReadingtype);
-        static auto GetDeviceSelector(Windows::Devices::Sensors::SensorReadingType const& readingType);
+        static auto GetDefault(winrt::Windows::Devices::Sensors::SensorReadingType const& sensorReadingtype);
+        static auto GetDeviceSelector(winrt::Windows::Devices::Sensors::SensorReadingType const& readingType);
         static auto FromIdAsync(param::hstring const& deviceId);
     };
-    struct __declspec(empty_bases) InclinometerDataThreshold : Windows::Devices::Sensors::IInclinometerDataThreshold
+    struct __declspec(empty_bases) InclinometerDataThreshold : winrt::Windows::Devices::Sensors::IInclinometerDataThreshold
     {
         InclinometerDataThreshold(std::nullptr_t) noexcept {}
-        InclinometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IInclinometerDataThreshold(ptr, take_ownership_from_abi) {}
+        InclinometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IInclinometerDataThreshold(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) InclinometerReading : Windows::Devices::Sensors::IInclinometerReading,
-        impl::require<InclinometerReading, Windows::Devices::Sensors::IInclinometerReadingYawAccuracy, Windows::Devices::Sensors::IInclinometerReading2>
+    struct __declspec(empty_bases) InclinometerReading : winrt::Windows::Devices::Sensors::IInclinometerReading,
+        impl::require<InclinometerReading, winrt::Windows::Devices::Sensors::IInclinometerReadingYawAccuracy, winrt::Windows::Devices::Sensors::IInclinometerReading2>
     {
         InclinometerReading(std::nullptr_t) noexcept {}
-        InclinometerReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IInclinometerReading(ptr, take_ownership_from_abi) {}
+        InclinometerReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IInclinometerReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) InclinometerReadingChangedEventArgs : Windows::Devices::Sensors::IInclinometerReadingChangedEventArgs
+    struct __declspec(empty_bases) InclinometerReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IInclinometerReadingChangedEventArgs
     {
         InclinometerReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        InclinometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IInclinometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        InclinometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IInclinometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) LightSensor : Windows::Devices::Sensors::ILightSensor,
-        impl::require<LightSensor, Windows::Devices::Sensors::ILightSensorDeviceId, Windows::Devices::Sensors::ILightSensor2, Windows::Devices::Sensors::ILightSensor3>
+    struct __declspec(empty_bases) LightSensor : winrt::Windows::Devices::Sensors::ILightSensor,
+        impl::require<LightSensor, winrt::Windows::Devices::Sensors::ILightSensorDeviceId, winrt::Windows::Devices::Sensors::ILightSensor2, winrt::Windows::Devices::Sensors::ILightSensor3>
     {
         LightSensor(std::nullptr_t) noexcept {}
-        LightSensor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ILightSensor(ptr, take_ownership_from_abi) {}
+        LightSensor(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ILightSensor(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto GetDeviceSelector();
         static auto FromIdAsync(param::hstring const& deviceId);
     };
-    struct __declspec(empty_bases) LightSensorDataThreshold : Windows::Devices::Sensors::ILightSensorDataThreshold
+    struct __declspec(empty_bases) LightSensorDataThreshold : winrt::Windows::Devices::Sensors::ILightSensorDataThreshold
     {
         LightSensorDataThreshold(std::nullptr_t) noexcept {}
-        LightSensorDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ILightSensorDataThreshold(ptr, take_ownership_from_abi) {}
+        LightSensorDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ILightSensorDataThreshold(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) LightSensorReading : Windows::Devices::Sensors::ILightSensorReading,
-        impl::require<LightSensorReading, Windows::Devices::Sensors::ILightSensorReading2>
+    struct __declspec(empty_bases) LightSensorReading : winrt::Windows::Devices::Sensors::ILightSensorReading,
+        impl::require<LightSensorReading, winrt::Windows::Devices::Sensors::ILightSensorReading2>
     {
         LightSensorReading(std::nullptr_t) noexcept {}
-        LightSensorReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ILightSensorReading(ptr, take_ownership_from_abi) {}
+        LightSensorReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ILightSensorReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) LightSensorReadingChangedEventArgs : Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs
+    struct __declspec(empty_bases) LightSensorReadingChangedEventArgs : winrt::Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs
     {
         LightSensorReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        LightSensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        LightSensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) Magnetometer : Windows::Devices::Sensors::IMagnetometer,
-        impl::require<Magnetometer, Windows::Devices::Sensors::IMagnetometerDeviceId, Windows::Devices::Sensors::IMagnetometer2, Windows::Devices::Sensors::IMagnetometer3, Windows::Devices::Sensors::IMagnetometer4>
+    struct __declspec(empty_bases) Magnetometer : winrt::Windows::Devices::Sensors::IMagnetometer,
+        impl::require<Magnetometer, winrt::Windows::Devices::Sensors::IMagnetometerDeviceId, winrt::Windows::Devices::Sensors::IMagnetometer2, winrt::Windows::Devices::Sensors::IMagnetometer3, winrt::Windows::Devices::Sensors::IMagnetometer4>
     {
         Magnetometer(std::nullptr_t) noexcept {}
-        Magnetometer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IMagnetometer(ptr, take_ownership_from_abi) {}
+        Magnetometer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IMagnetometer(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto GetDeviceSelector();
         static auto FromIdAsync(param::hstring const& deviceId);
     };
-    struct __declspec(empty_bases) MagnetometerDataThreshold : Windows::Devices::Sensors::IMagnetometerDataThreshold
+    struct __declspec(empty_bases) MagnetometerDataThreshold : winrt::Windows::Devices::Sensors::IMagnetometerDataThreshold
     {
         MagnetometerDataThreshold(std::nullptr_t) noexcept {}
-        MagnetometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IMagnetometerDataThreshold(ptr, take_ownership_from_abi) {}
+        MagnetometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IMagnetometerDataThreshold(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MagnetometerReading : Windows::Devices::Sensors::IMagnetometerReading,
-        impl::require<MagnetometerReading, Windows::Devices::Sensors::IMagnetometerReading2>
+    struct __declspec(empty_bases) MagnetometerReading : winrt::Windows::Devices::Sensors::IMagnetometerReading,
+        impl::require<MagnetometerReading, winrt::Windows::Devices::Sensors::IMagnetometerReading2>
     {
         MagnetometerReading(std::nullptr_t) noexcept {}
-        MagnetometerReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IMagnetometerReading(ptr, take_ownership_from_abi) {}
+        MagnetometerReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IMagnetometerReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MagnetometerReadingChangedEventArgs : Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs
+    struct __declspec(empty_bases) MagnetometerReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs
     {
         MagnetometerReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        MagnetometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        MagnetometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IMagnetometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) OrientationSensor : Windows::Devices::Sensors::IOrientationSensor,
-        impl::require<OrientationSensor, Windows::Devices::Sensors::IOrientationSensorDeviceId, Windows::Devices::Sensors::IOrientationSensor2, Windows::Devices::Sensors::IOrientationSensor3>
+    struct __declspec(empty_bases) OrientationSensor : winrt::Windows::Devices::Sensors::IOrientationSensor,
+        impl::require<OrientationSensor, winrt::Windows::Devices::Sensors::IOrientationSensorDeviceId, winrt::Windows::Devices::Sensors::IOrientationSensor2, winrt::Windows::Devices::Sensors::IOrientationSensor3>
     {
         OrientationSensor(std::nullptr_t) noexcept {}
-        OrientationSensor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IOrientationSensor(ptr, take_ownership_from_abi) {}
+        OrientationSensor(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IOrientationSensor(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto GetDefaultForRelativeReadings();
-        static auto GetDefault(Windows::Devices::Sensors::SensorReadingType const& sensorReadingtype);
-        static auto GetDefault(Windows::Devices::Sensors::SensorReadingType const& sensorReadingType, Windows::Devices::Sensors::SensorOptimizationGoal const& optimizationGoal);
-        static auto GetDeviceSelector(Windows::Devices::Sensors::SensorReadingType const& readingType);
-        static auto GetDeviceSelector(Windows::Devices::Sensors::SensorReadingType const& readingType, Windows::Devices::Sensors::SensorOptimizationGoal const& optimizationGoal);
+        static auto GetDefault(winrt::Windows::Devices::Sensors::SensorReadingType const& sensorReadingtype);
+        static auto GetDefault(winrt::Windows::Devices::Sensors::SensorReadingType const& sensorReadingType, winrt::Windows::Devices::Sensors::SensorOptimizationGoal const& optimizationGoal);
+        static auto GetDeviceSelector(winrt::Windows::Devices::Sensors::SensorReadingType const& readingType);
+        static auto GetDeviceSelector(winrt::Windows::Devices::Sensors::SensorReadingType const& readingType, winrt::Windows::Devices::Sensors::SensorOptimizationGoal const& optimizationGoal);
         static auto FromIdAsync(param::hstring const& deviceId);
     };
-    struct __declspec(empty_bases) OrientationSensorReading : Windows::Devices::Sensors::IOrientationSensorReading,
-        impl::require<OrientationSensorReading, Windows::Devices::Sensors::IOrientationSensorReadingYawAccuracy, Windows::Devices::Sensors::IOrientationSensorReading2>
+    struct __declspec(empty_bases) OrientationSensorReading : winrt::Windows::Devices::Sensors::IOrientationSensorReading,
+        impl::require<OrientationSensorReading, winrt::Windows::Devices::Sensors::IOrientationSensorReadingYawAccuracy, winrt::Windows::Devices::Sensors::IOrientationSensorReading2>
     {
         OrientationSensorReading(std::nullptr_t) noexcept {}
-        OrientationSensorReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IOrientationSensorReading(ptr, take_ownership_from_abi) {}
+        OrientationSensorReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IOrientationSensorReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) OrientationSensorReadingChangedEventArgs : Windows::Devices::Sensors::IOrientationSensorReadingChangedEventArgs
+    struct __declspec(empty_bases) OrientationSensorReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IOrientationSensorReadingChangedEventArgs
     {
         OrientationSensorReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        OrientationSensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IOrientationSensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        OrientationSensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IOrientationSensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) Pedometer : Windows::Devices::Sensors::IPedometer,
-        impl::require<Pedometer, Windows::Devices::Sensors::IPedometer2>
+    struct __declspec(empty_bases) Pedometer : winrt::Windows::Devices::Sensors::IPedometer,
+        impl::require<Pedometer, winrt::Windows::Devices::Sensors::IPedometer2>
     {
         Pedometer(std::nullptr_t) noexcept {}
-        Pedometer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IPedometer(ptr, take_ownership_from_abi) {}
+        Pedometer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IPedometer(ptr, take_ownership_from_abi) {}
         static auto FromIdAsync(param::hstring const& deviceId);
         static auto GetDefaultAsync();
         static auto GetDeviceSelector();
-        static auto GetSystemHistoryAsync(Windows::Foundation::DateTime const& fromTime);
-        static auto GetSystemHistoryAsync(Windows::Foundation::DateTime const& fromTime, Windows::Foundation::TimeSpan const& duration);
-        static auto GetReadingsFromTriggerDetails(Windows::Devices::Sensors::SensorDataThresholdTriggerDetails const& triggerDetails);
+        static auto GetSystemHistoryAsync(winrt::Windows::Foundation::DateTime const& fromTime);
+        static auto GetSystemHistoryAsync(winrt::Windows::Foundation::DateTime const& fromTime, winrt::Windows::Foundation::TimeSpan const& duration);
+        static auto GetReadingsFromTriggerDetails(winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails const& triggerDetails);
     };
-    struct __declspec(empty_bases) PedometerDataThreshold : Windows::Devices::Sensors::ISensorDataThreshold
+    struct __declspec(empty_bases) PedometerDataThreshold : winrt::Windows::Devices::Sensors::ISensorDataThreshold
     {
         PedometerDataThreshold(std::nullptr_t) noexcept {}
-        PedometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ISensorDataThreshold(ptr, take_ownership_from_abi) {}
-        PedometerDataThreshold(Windows::Devices::Sensors::Pedometer const& sensor, int32_t stepGoal);
+        PedometerDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ISensorDataThreshold(ptr, take_ownership_from_abi) {}
+        PedometerDataThreshold(winrt::Windows::Devices::Sensors::Pedometer const& sensor, int32_t stepGoal);
     };
-    struct __declspec(empty_bases) PedometerReading : Windows::Devices::Sensors::IPedometerReading
+    struct __declspec(empty_bases) PedometerReading : winrt::Windows::Devices::Sensors::IPedometerReading
     {
         PedometerReading(std::nullptr_t) noexcept {}
-        PedometerReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IPedometerReading(ptr, take_ownership_from_abi) {}
+        PedometerReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IPedometerReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PedometerReadingChangedEventArgs : Windows::Devices::Sensors::IPedometerReadingChangedEventArgs
+    struct __declspec(empty_bases) PedometerReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IPedometerReadingChangedEventArgs
     {
         PedometerReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        PedometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IPedometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        PedometerReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IPedometerReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ProximitySensor : Windows::Devices::Sensors::IProximitySensor
+    struct __declspec(empty_bases) ProximitySensor : winrt::Windows::Devices::Sensors::IProximitySensor
     {
         ProximitySensor(std::nullptr_t) noexcept {}
-        ProximitySensor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IProximitySensor(ptr, take_ownership_from_abi) {}
+        ProximitySensor(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IProximitySensor(ptr, take_ownership_from_abi) {}
         static auto GetDeviceSelector();
         static auto FromId(param::hstring const& sensorId);
-        static auto GetReadingsFromTriggerDetails(Windows::Devices::Sensors::SensorDataThresholdTriggerDetails const& triggerDetails);
+        static auto GetReadingsFromTriggerDetails(winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails const& triggerDetails);
     };
-    struct __declspec(empty_bases) ProximitySensorDataThreshold : Windows::Devices::Sensors::ISensorDataThreshold
+    struct __declspec(empty_bases) ProximitySensorDataThreshold : winrt::Windows::Devices::Sensors::ISensorDataThreshold
     {
         ProximitySensorDataThreshold(std::nullptr_t) noexcept {}
-        ProximitySensorDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ISensorDataThreshold(ptr, take_ownership_from_abi) {}
-        explicit ProximitySensorDataThreshold(Windows::Devices::Sensors::ProximitySensor const& sensor);
+        ProximitySensorDataThreshold(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ISensorDataThreshold(ptr, take_ownership_from_abi) {}
+        explicit ProximitySensorDataThreshold(winrt::Windows::Devices::Sensors::ProximitySensor const& sensor);
     };
-    struct __declspec(empty_bases) ProximitySensorDisplayOnOffController : Windows::Foundation::IClosable
+    struct __declspec(empty_bases) ProximitySensorDisplayOnOffController : winrt::Windows::Foundation::IClosable
     {
         ProximitySensorDisplayOnOffController(std::nullptr_t) noexcept {}
-        ProximitySensorDisplayOnOffController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IClosable(ptr, take_ownership_from_abi) {}
+        ProximitySensorDisplayOnOffController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IClosable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ProximitySensorReading : Windows::Devices::Sensors::IProximitySensorReading
+    struct __declspec(empty_bases) ProximitySensorReading : winrt::Windows::Devices::Sensors::IProximitySensorReading
     {
         ProximitySensorReading(std::nullptr_t) noexcept {}
-        ProximitySensorReading(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IProximitySensorReading(ptr, take_ownership_from_abi) {}
+        ProximitySensorReading(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IProximitySensorReading(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ProximitySensorReadingChangedEventArgs : Windows::Devices::Sensors::IProximitySensorReadingChangedEventArgs
+    struct __declspec(empty_bases) ProximitySensorReadingChangedEventArgs : winrt::Windows::Devices::Sensors::IProximitySensorReadingChangedEventArgs
     {
         ProximitySensorReadingChangedEventArgs(std::nullptr_t) noexcept {}
-        ProximitySensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::IProximitySensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
+        ProximitySensorReadingChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::IProximitySensorReadingChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SensorDataThresholdTriggerDetails : Windows::Devices::Sensors::ISensorDataThresholdTriggerDetails
+    struct __declspec(empty_bases) SensorDataThresholdTriggerDetails : winrt::Windows::Devices::Sensors::ISensorDataThresholdTriggerDetails
     {
         SensorDataThresholdTriggerDetails(std::nullptr_t) noexcept {}
-        SensorDataThresholdTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ISensorDataThresholdTriggerDetails(ptr, take_ownership_from_abi) {}
+        SensorDataThresholdTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ISensorDataThresholdTriggerDetails(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SensorQuaternion : Windows::Devices::Sensors::ISensorQuaternion
+    struct __declspec(empty_bases) SensorQuaternion : winrt::Windows::Devices::Sensors::ISensorQuaternion
     {
         SensorQuaternion(std::nullptr_t) noexcept {}
-        SensorQuaternion(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ISensorQuaternion(ptr, take_ownership_from_abi) {}
+        SensorQuaternion(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ISensorQuaternion(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SensorRotationMatrix : Windows::Devices::Sensors::ISensorRotationMatrix
+    struct __declspec(empty_bases) SensorRotationMatrix : winrt::Windows::Devices::Sensors::ISensorRotationMatrix
     {
         SensorRotationMatrix(std::nullptr_t) noexcept {}
-        SensorRotationMatrix(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ISensorRotationMatrix(ptr, take_ownership_from_abi) {}
+        SensorRotationMatrix(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ISensorRotationMatrix(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) SimpleOrientationSensor : Windows::Devices::Sensors::ISimpleOrientationSensor,
-        impl::require<SimpleOrientationSensor, Windows::Devices::Sensors::ISimpleOrientationSensorDeviceId, Windows::Devices::Sensors::ISimpleOrientationSensor2>
+    struct __declspec(empty_bases) SimpleOrientationSensor : winrt::Windows::Devices::Sensors::ISimpleOrientationSensor,
+        impl::require<SimpleOrientationSensor, winrt::Windows::Devices::Sensors::ISimpleOrientationSensorDeviceId, winrt::Windows::Devices::Sensors::ISimpleOrientationSensor2>
     {
         SimpleOrientationSensor(std::nullptr_t) noexcept {}
-        SimpleOrientationSensor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ISimpleOrientationSensor(ptr, take_ownership_from_abi) {}
+        SimpleOrientationSensor(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ISimpleOrientationSensor(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
         static auto GetDeviceSelector();
         static auto FromIdAsync(param::hstring const& deviceId);
     };
-    struct __declspec(empty_bases) SimpleOrientationSensorOrientationChangedEventArgs : Windows::Devices::Sensors::ISimpleOrientationSensorOrientationChangedEventArgs
+    struct __declspec(empty_bases) SimpleOrientationSensorOrientationChangedEventArgs : winrt::Windows::Devices::Sensors::ISimpleOrientationSensorOrientationChangedEventArgs
     {
         SimpleOrientationSensorOrientationChangedEventArgs(std::nullptr_t) noexcept {}
-        SimpleOrientationSensorOrientationChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Sensors::ISimpleOrientationSensorOrientationChangedEventArgs(ptr, take_ownership_from_abi) {}
+        SimpleOrientationSensorOrientationChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Sensors::ISimpleOrientationSensorOrientationChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

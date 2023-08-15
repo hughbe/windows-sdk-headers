@@ -1057,24 +1057,30 @@ ValidLabel SETS "$ValidTarget"
 
 #define eret ERET_FIX
 
-
         ;
-        ; Given the Address the EC code range bitmap to determine if it is EC or X64.
+        ; Given an address, obtains a pointer to the EC code bitmap from the
+        ; specified global (typically located in the .mrdata section) and
+        ; performs a bitmap lookup to determine if the address is EC code.
         ;
-        ; Sets the Zero Flag for X64 targets, clear the Zero Flag for EC targets.
+        ; Sets the Zero Flag for X64 targets, clears the Zero Flag for EC targets.
         ;
         ; T1 T2 are scratch registers provided by the caller.
         ;
 
         MACRO
-        EC_BITMAP_LOOKUP $xAddress, $xT1, $wT1, $xT2
+        EC_BITMAP_LOOKUP $xAddress, $T1, $T2, $BitMapPtr
 
-        ldr    $xT1, [x18, #TePeb]      ; PEB
-        lsr    $xT2, $xAddress, #15     ; each byte of bitmap indexes 8*4K = 2^15 byte span
-        ldr    $xT1, [$xT1, #PeEcCodeBitMap]
-        ldrb   $wT1, [$xT1, $xT2]       ; load the bitmap byte for the 8*4K span
-        ubfx   $xT2, $xAddress, #12, #3 ; index to the 4K page within the 8*4K span
-        lsr    $xT1, $xT1, $xT2
-        tst    $xT1, #1                 ; test the specific page
+        adrp    x$T1, $BitMapPtr            ; load the bitmap pointer
+        ldr     x$T1, [x$T1, $BitMapPtr]
+        lsr     x$T2, $xAddress, #15        ; each byte of bitmap indexes 8*4K = 2^15 byte span
+        ldrb    w$T2, [x$T1, x$T2]          ; load the bitmap byte for the 8*4K span
+                                            ;
+                                            ; * IF THIS INSTRUCTION EVER CHANGES, SO MUST
+                                            ; KiOpPreprocessAccessViolation *
+                                            ;
+        ubfx    x$T1, $xAddress, #12, #3    ; index to the 4K page within the 8*4K span
+        lsr     x$T1, x$T2, x$T1
+        tst     x$T1, #1                    ; test the specific page
 
         MEND
+

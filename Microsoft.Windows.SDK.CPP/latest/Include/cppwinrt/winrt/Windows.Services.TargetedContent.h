@@ -1,406 +1,407 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Services_TargetedContent_H
 #define WINRT_Windows_Services_TargetedContent_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Windows.Services.TargetedContent.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Services_TargetedContent_ITargetedContentAction<D>::InvokeAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Services_TargetedContent_ITargetedContentAction<D>::InvokeAsync() const
     {
         void* asyncAction{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentAction)->InvokeAsync(&asyncAction));
-        return Windows::Foundation::IAsyncAction{ asyncAction, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentAction)->InvokeAsync(&asyncAction));
+        return winrt::Windows::Foundation::IAsyncAction{ asyncAction, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Services_TargetedContent_ITargetedContentAvailabilityChangedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_Services_TargetedContent_ITargetedContentAvailabilityChangedEventArgs<D>::GetDeferral() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentAvailabilityChangedEventArgs)->GetDeferral(&value));
-        return Windows::Foundation::Deferral{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentAvailabilityChangedEventArgs)->GetDeferral(&value));
+        return winrt::Windows::Foundation::Deferral{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Services_TargetedContent_ITargetedContentChangedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_Services_TargetedContent_ITargetedContentChangedEventArgs<D>::GetDeferral() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentChangedEventArgs)->GetDeferral(&value));
-        return Windows::Foundation::Deferral{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentChangedEventArgs)->GetDeferral(&value));
+        return winrt::Windows::Foundation::Deferral{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Services_TargetedContent_ITargetedContentChangedEventArgs<D>::HasPreviousContentExpired() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentChangedEventArgs)->get_HasPreviousContentExpired(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentChangedEventArgs)->get_HasPreviousContentExpired(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentCollection)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentCollection)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::ReportInteraction(Windows::Services::TargetedContent::TargetedContentInteraction const& interaction) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::ReportInteraction(winrt::Windows::Services::TargetedContent::TargetedContentInteraction const& interaction) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentCollection)->ReportInteraction(static_cast<int32_t>(interaction)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentCollection)->ReportInteraction(static_cast<int32_t>(interaction)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::ReportCustomInteraction(param::hstring const& customInteractionName) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentCollection)->ReportCustomInteraction(*(void**)(&customInteractionName)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentCollection)->ReportCustomInteraction(*(void**)(&customInteractionName)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::Path() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentCollection)->get_Path(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentCollection)->get_Path(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::Services::TargetedContent::TargetedContentValue>) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Services::TargetedContent::TargetedContentValue>) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::Properties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentCollection)->get_Properties(&value));
-        return Windows::Foundation::Collections::IMapView<hstring, Windows::Services::TargetedContent::TargetedContentValue>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentCollection)->get_Properties(&value));
+        return winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Services::TargetedContent::TargetedContentValue>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentCollection>) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::Collections() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentCollection>) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::Collections() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentCollection)->get_Collections(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentCollection>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentCollection)->get_Collections(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentCollection>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentItem>) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::Items() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentItem>) consume_Windows_Services_TargetedContent_ITargetedContentCollection<D>::Items() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentCollection)->get_Items(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentItem>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentCollection)->get_Items(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentItem>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_TargetedContent_ITargetedContentContainer<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentContainer)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentContainer)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Services_TargetedContent_ITargetedContentContainer<D>::Timestamp() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) consume_Windows_Services_TargetedContent_ITargetedContentContainer<D>::Timestamp() const
     {
-        Windows::Foundation::DateTime value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentContainer)->get_Timestamp(put_abi(value)));
+        winrt::Windows::Foundation::DateTime value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentContainer)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentAvailability) consume_Windows_Services_TargetedContent_ITargetedContentContainer<D>::Availability() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentAvailability) consume_Windows_Services_TargetedContent_ITargetedContentContainer<D>::Availability() const
     {
-        Windows::Services::TargetedContent::TargetedContentAvailability value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentContainer)->get_Availability(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Services::TargetedContent::TargetedContentAvailability value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentContainer)->get_Availability(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentCollection) consume_Windows_Services_TargetedContent_ITargetedContentContainer<D>::Content() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentCollection) consume_Windows_Services_TargetedContent_ITargetedContentContainer<D>::Content() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentContainer)->get_Content(&value));
-        return Windows::Services::TargetedContent::TargetedContentCollection{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentContainer)->get_Content(&value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentObject) consume_Windows_Services_TargetedContent_ITargetedContentContainer<D>::SelectSingleObject(param::hstring const& path) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentObject) consume_Windows_Services_TargetedContent_ITargetedContentContainer<D>::SelectSingleObject(param::hstring const& path) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentContainer)->SelectSingleObject(*(void**)(&path), &value));
-        return Windows::Services::TargetedContent::TargetedContentObject{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentContainer)->SelectSingleObject(*(void**)(&path), &value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentObject{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::TargetedContent::TargetedContentContainer>) consume_Windows_Services_TargetedContent_ITargetedContentContainerStatics<D>::GetAsync(param::hstring const& contentId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::TargetedContent::TargetedContentContainer>) consume_Windows_Services_TargetedContent_ITargetedContentContainerStatics<D>::GetAsync(param::hstring const& contentId) const
     {
         void* asyncOperation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentContainerStatics)->GetAsync(*(void**)(&contentId), &asyncOperation));
-        return Windows::Foundation::IAsyncOperation<Windows::Services::TargetedContent::TargetedContentContainer>{ asyncOperation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentContainerStatics)->GetAsync(*(void**)(&contentId), &asyncOperation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::TargetedContent::TargetedContentContainer>{ asyncOperation, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Services_TargetedContent_ITargetedContentImage<D>::Height() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentImage)->get_Height(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentImage)->get_Height(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Services_TargetedContent_ITargetedContentImage<D>::Width() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentImage)->get_Width(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentImage)->get_Width(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::Path() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentItem)->get_Path(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentItem)->get_Path(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::ReportInteraction(Windows::Services::TargetedContent::TargetedContentInteraction const& interaction) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::ReportInteraction(winrt::Windows::Services::TargetedContent::TargetedContentInteraction const& interaction) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentItem)->ReportInteraction(static_cast<int32_t>(interaction)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentItem)->ReportInteraction(static_cast<int32_t>(interaction)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::ReportCustomInteraction(param::hstring const& customInteractionName) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentItem)->ReportCustomInteraction(*(void**)(&customInteractionName)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentItem)->ReportCustomInteraction(*(void**)(&customInteractionName)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentItemState) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentItemState) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::State() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentItem)->get_State(&value));
-        return Windows::Services::TargetedContent::TargetedContentItemState{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentItem)->get_State(&value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentItemState{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMapView<hstring, Windows::Services::TargetedContent::TargetedContentValue>) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Services::TargetedContent::TargetedContentValue>) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::Properties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentItem)->get_Properties(&value));
-        return Windows::Foundation::Collections::IMapView<hstring, Windows::Services::TargetedContent::TargetedContentValue>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentItem)->get_Properties(&value));
+        return winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Services::TargetedContent::TargetedContentValue>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentCollection>) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::Collections() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentCollection>) consume_Windows_Services_TargetedContent_ITargetedContentItem<D>::Collections() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentItem)->get_Collections(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentCollection>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentItem)->get_Collections(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentCollection>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Services_TargetedContent_ITargetedContentItemState<D>::ShouldDisplay() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentItemState)->get_ShouldDisplay(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentItemState)->get_ShouldDisplay(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentAppInstallationState) consume_Windows_Services_TargetedContent_ITargetedContentItemState<D>::AppInstallationState() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentAppInstallationState) consume_Windows_Services_TargetedContent_ITargetedContentItemState<D>::AppInstallationState() const
     {
-        Windows::Services::TargetedContent::TargetedContentAppInstallationState value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentItemState)->get_AppInstallationState(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Services::TargetedContent::TargetedContentAppInstallationState value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentItemState)->get_AppInstallationState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentObjectKind) consume_Windows_Services_TargetedContent_ITargetedContentObject<D>::ObjectKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentObjectKind) consume_Windows_Services_TargetedContent_ITargetedContentObject<D>::ObjectKind() const
     {
-        Windows::Services::TargetedContent::TargetedContentObjectKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentObject)->get_ObjectKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Services::TargetedContent::TargetedContentObjectKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentObject)->get_ObjectKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentCollection) consume_Windows_Services_TargetedContent_ITargetedContentObject<D>::Collection() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentCollection) consume_Windows_Services_TargetedContent_ITargetedContentObject<D>::Collection() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentObject)->get_Collection(&value));
-        return Windows::Services::TargetedContent::TargetedContentCollection{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentObject)->get_Collection(&value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentCollection{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentItem) consume_Windows_Services_TargetedContent_ITargetedContentObject<D>::Item() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentItem) consume_Windows_Services_TargetedContent_ITargetedContentObject<D>::Item() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentObject)->get_Item(&value));
-        return Windows::Services::TargetedContent::TargetedContentItem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentObject)->get_Item(&value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentItem{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentValue) consume_Windows_Services_TargetedContent_ITargetedContentObject<D>::Value() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentValue) consume_Windows_Services_TargetedContent_ITargetedContentObject<D>::Value() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentObject)->get_Value(&value));
-        return Windows::Services::TargetedContent::TargetedContentValue{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentObject)->get_Value(&value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentValue{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Services_TargetedContent_ITargetedContentStateChangedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_Services_TargetedContent_ITargetedContentStateChangedEventArgs<D>::GetDeferral() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentStateChangedEventArgs)->GetDeferral(&value));
-        return Windows::Foundation::Deferral{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentStateChangedEventArgs)->GetDeferral(&value));
+        return winrt::Windows::Foundation::Deferral{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscription)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscription)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::TargetedContent::TargetedContentContainer>) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::GetContentContainerAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::TargetedContent::TargetedContentContainer>) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::GetContentContainerAsync() const
     {
         void* asyncOperation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscription)->GetContentContainerAsync(&asyncOperation));
-        return Windows::Foundation::IAsyncOperation<Windows::Services::TargetedContent::TargetedContentContainer>{ asyncOperation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscription)->GetContentContainerAsync(&asyncOperation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::TargetedContent::TargetedContentContainer>{ asyncOperation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::ContentChanged(Windows::Foundation::TypedEventHandler<Windows::Services::TargetedContent::TargetedContentSubscription, Windows::Services::TargetedContent::TargetedContentChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::ContentChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs> const& handler) const
     {
         winrt::event_token cookie{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscription)->add_ContentChanged(*(void**)(&handler), put_abi(cookie)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscription)->add_ContentChanged(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
-    template <typename D> typename consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::ContentChanged_revoker consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::ContentChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::TargetedContent::TargetedContentSubscription, Windows::Services::TargetedContent::TargetedContentChangedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::ContentChanged_revoker consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::ContentChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, ContentChanged_revoker>(this, ContentChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::ContentChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscription)->remove_ContentChanged(impl::bind_in(cookie)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscription)->remove_ContentChanged(impl::bind_in(cookie)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::AvailabilityChanged(Windows::Foundation::TypedEventHandler<Windows::Services::TargetedContent::TargetedContentSubscription, Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::AvailabilityChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs> const& handler) const
     {
         winrt::event_token cookie{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscription)->add_AvailabilityChanged(*(void**)(&handler), put_abi(cookie)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscription)->add_AvailabilityChanged(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
-    template <typename D> typename consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::AvailabilityChanged_revoker consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::AvailabilityChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::TargetedContent::TargetedContentSubscription, Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::AvailabilityChanged_revoker consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::AvailabilityChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, AvailabilityChanged_revoker>(this, AvailabilityChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::AvailabilityChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscription)->remove_AvailabilityChanged(impl::bind_in(cookie)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscription)->remove_AvailabilityChanged(impl::bind_in(cookie)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Services::TargetedContent::TargetedContentSubscription, Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::StateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs> const& handler) const
     {
         winrt::event_token cookie{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscription)->add_StateChanged(*(void**)(&handler), put_abi(cookie)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscription)->add_StateChanged(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
-    template <typename D> typename consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::StateChanged_revoker consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::StateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Services::TargetedContent::TargetedContentSubscription, Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::StateChanged_revoker consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::StateChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentSubscription<D>::StateChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscription)->remove_StateChanged(impl::bind_in(cookie)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscription)->remove_StateChanged(impl::bind_in(cookie)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionOptions<D>::SubscriptionId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->get_SubscriptionId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->get_SubscriptionId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionOptions<D>::AllowPartialContentAvailability() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->get_AllowPartialContentAvailability(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->get_AllowPartialContentAvailability(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionOptions<D>::AllowPartialContentAvailability(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->put_AllowPartialContentAvailability(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->put_AllowPartialContentAvailability(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<hstring, hstring>) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionOptions<D>::CloudQueryParameters() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<hstring, hstring>) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionOptions<D>::CloudQueryParameters() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->get_CloudQueryParameters(&value));
-        return Windows::Foundation::Collections::IMap<hstring, hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->get_CloudQueryParameters(&value));
+        return winrt::Windows::Foundation::Collections::IMap<hstring, hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionOptions<D>::LocalFilters() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionOptions<D>::LocalFilters() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->get_LocalFilters(&value));
-        return Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->get_LocalFilters(&value));
+        return winrt::Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionOptions<D>::Update() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->Update());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions)->Update());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Services::TargetedContent::TargetedContentSubscription>) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionStatics<D>::GetAsync(param::hstring const& subscriptionId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionStatics<D>::GetAsync(param::hstring const& subscriptionId) const
     {
         void* asyncOperation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics)->GetAsync(*(void**)(&subscriptionId), &asyncOperation));
-        return Windows::Foundation::IAsyncOperation<Windows::Services::TargetedContent::TargetedContentSubscription>{ asyncOperation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics)->GetAsync(*(void**)(&subscriptionId), &asyncOperation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>{ asyncOperation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentSubscriptionOptions) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionStatics<D>::GetOptions(param::hstring const& subscriptionId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions) consume_Windows_Services_TargetedContent_ITargetedContentSubscriptionStatics<D>::GetOptions(param::hstring const& subscriptionId) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics)->GetOptions(*(void**)(&subscriptionId), &value));
-        return Windows::Services::TargetedContent::TargetedContentSubscriptionOptions{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics)->GetOptions(*(void**)(&subscriptionId), &value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentValueKind) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::ValueKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentValueKind) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::ValueKind() const
     {
-        Windows::Services::TargetedContent::TargetedContentValueKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_ValueKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Services::TargetedContent::TargetedContentValueKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_ValueKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Path() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Path(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Path(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::String() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_String(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_String(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Uri() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Uri(&value));
-        return Windows::Foundation::Uri{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Uri(&value));
+        return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Number() const
     {
         double value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Number(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Number(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Boolean() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Boolean(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Boolean(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentFile) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::File() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentFile) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::File() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_File(&value));
-        return Windows::Services::TargetedContent::TargetedContentFile{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_File(&value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentFile{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentImage) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::ImageFile() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentImage) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::ImageFile() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_ImageFile(&value));
-        return Windows::Services::TargetedContent::TargetedContentImage{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_ImageFile(&value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentImage{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Services::TargetedContent::TargetedContentAction) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Action() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Services::TargetedContent::TargetedContentAction) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Action() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Action(&value));
-        return Windows::Services::TargetedContent::TargetedContentAction{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Action(&value));
+        return winrt::Windows::Services::TargetedContent::TargetedContentAction{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Strings() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Strings() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Strings(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Strings(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Foundation::Uri>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Uris() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::Uri>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Uris() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Uris(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Foundation::Uri>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Uris(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::Uri>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<double>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Numbers() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<double>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Numbers() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Numbers(&value));
-        return Windows::Foundation::Collections::IVectorView<double>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Numbers(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<double>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<bool>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Booleans() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<bool>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Booleans() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Booleans(&value));
-        return Windows::Foundation::Collections::IVectorView<bool>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Booleans(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<bool>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentFile>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Files() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentFile>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Files() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Files(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentFile>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Files(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentFile>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentImage>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::ImageFiles() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentImage>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::ImageFiles() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_ImageFiles(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentImage>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_ImageFiles(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentImage>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentAction>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Actions() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentAction>) consume_Windows_Services_TargetedContent_ITargetedContentValue<D>::Actions() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Services::TargetedContent::ITargetedContentValue)->get_Actions(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentAction>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Services::TargetedContent::ITargetedContentValue)->get_Actions(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentAction>{ value, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentAction> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentAction>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentAction> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentAction>
     {
         int32_t __stdcall InvokeAsync(void** asyncAction) noexcept final try
         {
             clear_abi(asyncAction);
             typename D::abi_guard guard(this->shim());
-            *asyncAction = detach_from<Windows::Foundation::IAsyncAction>(this->shim().InvokeAsync());
+            *asyncAction = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().InvokeAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -408,13 +409,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentAvailabilityChangedEventArgs> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentAvailabilityChangedEventArgs>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentAvailabilityChangedEventArgs> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentAvailabilityChangedEventArgs>
     {
         int32_t __stdcall GetDeferral(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            *value = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -422,13 +423,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentChangedEventArgs> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentChangedEventArgs>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentChangedEventArgs> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentChangedEventArgs>
     {
         int32_t __stdcall GetDeferral(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            *value = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -443,7 +444,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentCollection> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentCollection>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentCollection> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentCollection>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -456,7 +457,7 @@ namespace winrt::impl
         int32_t __stdcall ReportInteraction(int32_t interaction) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ReportInteraction(*reinterpret_cast<Windows::Services::TargetedContent::TargetedContentInteraction const*>(&interaction));
+            this->shim().ReportInteraction(*reinterpret_cast<winrt::Windows::Services::TargetedContent::TargetedContentInteraction const*>(&interaction));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -479,7 +480,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IMapView<hstring, Windows::Services::TargetedContent::TargetedContentValue>>(this->shim().Properties());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Services::TargetedContent::TargetedContentValue>>(this->shim().Properties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -487,7 +488,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentCollection>>(this->shim().Collections());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentCollection>>(this->shim().Collections());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -495,7 +496,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentItem>>(this->shim().Items());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentItem>>(this->shim().Items());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -503,7 +504,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentContainer> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentContainer>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentContainer> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentContainer>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -515,16 +516,16 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Timestamp(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::DateTime>(value);
+            zero_abi<winrt::Windows::Foundation::DateTime>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::DateTime>(this->shim().Timestamp());
+            *value = detach_from<winrt::Windows::Foundation::DateTime>(this->shim().Timestamp());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Availability(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentAvailability>(this->shim().Availability());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentAvailability>(this->shim().Availability());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -532,7 +533,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentCollection>(this->shim().Content());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentCollection>(this->shim().Content());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -540,7 +541,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentObject>(this->shim().SelectSingleObject(*reinterpret_cast<hstring const*>(&path)));
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentObject>(this->shim().SelectSingleObject(*reinterpret_cast<hstring const*>(&path)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -548,13 +549,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentContainerStatics> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentContainerStatics>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentContainerStatics> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentContainerStatics>
     {
         int32_t __stdcall GetAsync(void* contentId, void** asyncOperation) noexcept final try
         {
             clear_abi(asyncOperation);
             typename D::abi_guard guard(this->shim());
-            *asyncOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Services::TargetedContent::TargetedContentContainer>>(this->shim().GetAsync(*reinterpret_cast<hstring const*>(&contentId)));
+            *asyncOperation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::TargetedContent::TargetedContentContainer>>(this->shim().GetAsync(*reinterpret_cast<hstring const*>(&contentId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -562,7 +563,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentImage> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentImage>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentImage> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentImage>
     {
         int32_t __stdcall get_Height(uint32_t* value) noexcept final try
         {
@@ -582,7 +583,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentItem> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentItem>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentItem> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentItem>
     {
         int32_t __stdcall get_Path(void** value) noexcept final try
         {
@@ -595,7 +596,7 @@ namespace winrt::impl
         int32_t __stdcall ReportInteraction(int32_t interaction) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ReportInteraction(*reinterpret_cast<Windows::Services::TargetedContent::TargetedContentInteraction const*>(&interaction));
+            this->shim().ReportInteraction(*reinterpret_cast<winrt::Windows::Services::TargetedContent::TargetedContentInteraction const*>(&interaction));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -610,7 +611,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentItemState>(this->shim().State());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentItemState>(this->shim().State());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -618,7 +619,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IMapView<hstring, Windows::Services::TargetedContent::TargetedContentValue>>(this->shim().Properties());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Services::TargetedContent::TargetedContentValue>>(this->shim().Properties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -626,7 +627,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentCollection>>(this->shim().Collections());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentCollection>>(this->shim().Collections());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -634,7 +635,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentItemState> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentItemState>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentItemState> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentItemState>
     {
         int32_t __stdcall get_ShouldDisplay(bool* value) noexcept final try
         {
@@ -646,7 +647,7 @@ namespace winrt::impl
         int32_t __stdcall get_AppInstallationState(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentAppInstallationState>(this->shim().AppInstallationState());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentAppInstallationState>(this->shim().AppInstallationState());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -654,12 +655,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentObject> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentObject>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentObject> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentObject>
     {
         int32_t __stdcall get_ObjectKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentObjectKind>(this->shim().ObjectKind());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentObjectKind>(this->shim().ObjectKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -667,7 +668,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentCollection>(this->shim().Collection());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentCollection>(this->shim().Collection());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -675,7 +676,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentItem>(this->shim().Item());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentItem>(this->shim().Item());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -683,7 +684,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentValue>(this->shim().Value());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentValue>(this->shim().Value());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -691,13 +692,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentStateChangedEventArgs> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentStateChangedEventArgs>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentStateChangedEventArgs> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentStateChangedEventArgs>
     {
         int32_t __stdcall GetDeferral(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            *value = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -705,7 +706,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentSubscription> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentSubscription>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentSubscription> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentSubscription>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -719,7 +720,7 @@ namespace winrt::impl
         {
             clear_abi(asyncOperation);
             typename D::abi_guard guard(this->shim());
-            *asyncOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Services::TargetedContent::TargetedContentContainer>>(this->shim().GetContentContainerAsync());
+            *asyncOperation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::TargetedContent::TargetedContentContainer>>(this->shim().GetContentContainerAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -727,7 +728,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(cookie);
             typename D::abi_guard guard(this->shim());
-            *cookie = detach_from<winrt::event_token>(this->shim().ContentChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Services::TargetedContent::TargetedContentSubscription, Windows::Services::TargetedContent::TargetedContentChangedEventArgs> const*>(&handler)));
+            *cookie = detach_from<winrt::event_token>(this->shim().ContentChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -741,7 +742,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(cookie);
             typename D::abi_guard guard(this->shim());
-            *cookie = detach_from<winrt::event_token>(this->shim().AvailabilityChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Services::TargetedContent::TargetedContentSubscription, Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs> const*>(&handler)));
+            *cookie = detach_from<winrt::event_token>(this->shim().AvailabilityChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -755,7 +756,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(cookie);
             typename D::abi_guard guard(this->shim());
-            *cookie = detach_from<winrt::event_token>(this->shim().StateChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Services::TargetedContent::TargetedContentSubscription, Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs> const*>(&handler)));
+            *cookie = detach_from<winrt::event_token>(this->shim().StateChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Services::TargetedContent::TargetedContentSubscription, winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -769,7 +770,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionOptions>
     {
         int32_t __stdcall get_SubscriptionId(void** value) noexcept final try
         {
@@ -797,7 +798,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IMap<hstring, hstring>>(this->shim().CloudQueryParameters());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMap<hstring, hstring>>(this->shim().CloudQueryParameters());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -805,7 +806,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVector<hstring>>(this->shim().LocalFilters());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVector<hstring>>(this->shim().LocalFilters());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -820,13 +821,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentSubscriptionStatics>
     {
         int32_t __stdcall GetAsync(void* subscriptionId, void** asyncOperation) noexcept final try
         {
             clear_abi(asyncOperation);
             typename D::abi_guard guard(this->shim());
-            *asyncOperation = detach_from<Windows::Foundation::IAsyncOperation<Windows::Services::TargetedContent::TargetedContentSubscription>>(this->shim().GetAsync(*reinterpret_cast<hstring const*>(&subscriptionId)));
+            *asyncOperation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>>(this->shim().GetAsync(*reinterpret_cast<hstring const*>(&subscriptionId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -834,7 +835,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>(this->shim().GetOptions(*reinterpret_cast<hstring const*>(&subscriptionId)));
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>(this->shim().GetOptions(*reinterpret_cast<hstring const*>(&subscriptionId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -842,12 +843,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Services::TargetedContent::ITargetedContentValue> : produce_base<D, Windows::Services::TargetedContent::ITargetedContentValue>
+    struct produce<D, winrt::Windows::Services::TargetedContent::ITargetedContentValue> : produce_base<D, winrt::Windows::Services::TargetedContent::ITargetedContentValue>
     {
         int32_t __stdcall get_ValueKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentValueKind>(this->shim().ValueKind());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentValueKind>(this->shim().ValueKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -871,7 +872,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Uri>(this->shim().Uri());
+            *value = detach_from<winrt::Windows::Foundation::Uri>(this->shim().Uri());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -893,7 +894,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentFile>(this->shim().File());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentFile>(this->shim().File());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -901,7 +902,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentImage>(this->shim().ImageFile());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentImage>(this->shim().ImageFile());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -909,7 +910,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Services::TargetedContent::TargetedContentAction>(this->shim().Action());
+            *value = detach_from<winrt::Windows::Services::TargetedContent::TargetedContentAction>(this->shim().Action());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -917,7 +918,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().Strings());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().Strings());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -925,7 +926,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Foundation::Uri>>(this->shim().Uris());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::Uri>>(this->shim().Uris());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -933,7 +934,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<double>>(this->shim().Numbers());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<double>>(this->shim().Numbers());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -941,7 +942,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<bool>>(this->shim().Booleans());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<bool>>(this->shim().Booleans());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -949,7 +950,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentFile>>(this->shim().Files());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentFile>>(this->shim().Files());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -957,7 +958,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentImage>>(this->shim().ImageFiles());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentImage>>(this->shim().ImageFiles());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -965,7 +966,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Services::TargetedContent::TargetedContentAction>>(this->shim().Actions());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Services::TargetedContent::TargetedContentAction>>(this->shim().Actions());
             return 0;
         }
         catch (...) { return to_hresult(); }

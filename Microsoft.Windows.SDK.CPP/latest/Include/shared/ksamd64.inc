@@ -67,6 +67,13 @@ KAPC_RECORD_FLAGS_CHECK_ALERT equ 00001H
 
 
 ;
+;  Apc Callback Data Structure Offset Definitions
+;
+
+AcdContextRecord equ 00008H
+KAPC_CALLBACK_DATA_LENGTH equ 00020H
+
+;
 ;  Bug Check Code Definitions
 ;
 
@@ -484,9 +491,9 @@ PfBucketShift equ 00030H
 PfBuffer equ 00038H
 PfSegment equ 00040H
 PfAffinity equ 00048H
-PfSource equ 00158H
-PfStarted equ 0015AH
-ProfileObjectLength equ 00160H
+PfSource equ 00260H
+PfStarted equ 00262H
+ProfileObjectLength equ 00268H
 
 ;
 ;  Queue Object Structure Offset Definitions
@@ -933,6 +940,7 @@ PcVirtualApicAssist equ 08888H
 PcFeatureBits equ 08B20H
 PcNmiActive equ 08026H
 PcMceActive equ 08027H
+PcCombinedNmiMceActive equ 08026H
 PcSfCode equ 08DE8H
 PcSfVa equ 08DF0H
 PcSfPa equ 08DF8H
@@ -1044,6 +1052,7 @@ PbIdleHalt equ 00007H
 PbCurrentThread equ 00008H
 PbNextThread equ 00010H
 PbIdleThread equ 00018H
+PbSmtIsolationThread equ 08880H
 PbNestingLevel equ 00020H
 PbNumber equ 00024H
 PbRspBase equ 00028H
@@ -1064,8 +1073,8 @@ PbMinorVersion equ 00088H
 PbMajorVersion equ 0008AH
 PbBuildType equ 0008CH
 PbCpuVendor equ 0008DH
-PbCoresPerPhysicalProcessor equ 0008EH
-PbLogicalProcessorsPerCore equ 0008FH
+PbCoresPerPhysicalProcessor equ 000A0H
+PbLogicalProcessorsPerCore equ 000A4H
 PbApicMask equ 000DCH
 PbCFlushSize equ 000E8H
 PbAcpiReserved equ 000E0H

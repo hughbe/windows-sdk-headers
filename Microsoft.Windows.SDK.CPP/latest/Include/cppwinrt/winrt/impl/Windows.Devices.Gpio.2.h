@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Devices_Gpio_2_H
 #define WINRT_Windows_Devices_Gpio_2_H
 #include "winrt/impl/Windows.Devices.Gpio.Provider.2.h"
@@ -13,7 +14,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Gpio
     struct GpioChangeCount
     {
         uint64_t Count;
-        Windows::Foundation::TimeSpan RelativeTime;
+        winrt::Windows::Foundation::TimeSpan RelativeTime;
     };
     inline bool operator==(GpioChangeCount const& left, GpioChangeCount const& right) noexcept
     {
@@ -25,8 +26,8 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Gpio
     }
     struct GpioChangeRecord
     {
-        Windows::Foundation::TimeSpan RelativeTime;
-        Windows::Devices::Gpio::GpioPinEdge Edge;
+        winrt::Windows::Foundation::TimeSpan RelativeTime;
+        winrt::Windows::Devices::Gpio::GpioPinEdge Edge;
     };
     inline bool operator==(GpioChangeRecord const& left, GpioChangeRecord const& right) noexcept
     {
@@ -36,36 +37,36 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Gpio
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) GpioChangeCounter : Windows::Devices::Gpio::IGpioChangeCounter
+    struct __declspec(empty_bases) GpioChangeCounter : winrt::Windows::Devices::Gpio::IGpioChangeCounter
     {
         GpioChangeCounter(std::nullptr_t) noexcept {}
-        GpioChangeCounter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioChangeCounter(ptr, take_ownership_from_abi) {}
-        explicit GpioChangeCounter(Windows::Devices::Gpio::GpioPin const& pin);
+        GpioChangeCounter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Gpio::IGpioChangeCounter(ptr, take_ownership_from_abi) {}
+        explicit GpioChangeCounter(winrt::Windows::Devices::Gpio::GpioPin const& pin);
     };
-    struct __declspec(empty_bases) GpioChangeReader : Windows::Devices::Gpio::IGpioChangeReader
+    struct __declspec(empty_bases) GpioChangeReader : winrt::Windows::Devices::Gpio::IGpioChangeReader
     {
         GpioChangeReader(std::nullptr_t) noexcept {}
-        GpioChangeReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioChangeReader(ptr, take_ownership_from_abi) {}
-        explicit GpioChangeReader(Windows::Devices::Gpio::GpioPin const& pin);
-        GpioChangeReader(Windows::Devices::Gpio::GpioPin const& pin, int32_t minCapacity);
+        GpioChangeReader(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Gpio::IGpioChangeReader(ptr, take_ownership_from_abi) {}
+        explicit GpioChangeReader(winrt::Windows::Devices::Gpio::GpioPin const& pin);
+        GpioChangeReader(winrt::Windows::Devices::Gpio::GpioPin const& pin, int32_t minCapacity);
     };
-    struct __declspec(empty_bases) GpioController : Windows::Devices::Gpio::IGpioController
+    struct __declspec(empty_bases) GpioController : winrt::Windows::Devices::Gpio::IGpioController
     {
         GpioController(std::nullptr_t) noexcept {}
-        GpioController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioController(ptr, take_ownership_from_abi) {}
+        GpioController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Gpio::IGpioController(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
-        static auto GetControllersAsync(Windows::Devices::Gpio::Provider::IGpioProvider const& provider);
+        static auto GetControllersAsync(winrt::Windows::Devices::Gpio::Provider::IGpioProvider const& provider);
         static auto GetDefaultAsync();
     };
-    struct __declspec(empty_bases) GpioPin : Windows::Devices::Gpio::IGpioPin
+    struct __declspec(empty_bases) GpioPin : winrt::Windows::Devices::Gpio::IGpioPin
     {
         GpioPin(std::nullptr_t) noexcept {}
-        GpioPin(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioPin(ptr, take_ownership_from_abi) {}
+        GpioPin(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Gpio::IGpioPin(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) GpioPinValueChangedEventArgs : Windows::Devices::Gpio::IGpioPinValueChangedEventArgs
+    struct __declspec(empty_bases) GpioPinValueChangedEventArgs : winrt::Windows::Devices::Gpio::IGpioPinValueChangedEventArgs
     {
         GpioPinValueChangedEventArgs(std::nullptr_t) noexcept {}
-        GpioPinValueChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::IGpioPinValueChangedEventArgs(ptr, take_ownership_from_abi) {}
+        GpioPinValueChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Gpio::IGpioPinValueChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

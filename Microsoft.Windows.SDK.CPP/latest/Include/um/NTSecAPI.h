@@ -2335,6 +2335,14 @@ typedef PVOID LSA_HANDLE, *PLSA_HANDLE;
 //
 
 //
+// Various buffer sizes for LSAD wire encryption of Auth Infos
+//
+#define LSAD_AES_CRYPT_SHA512_HASH_SIZE     64
+#define LSAD_AES_KEY_SIZE                   16
+#define LSAD_AES_SALT_SIZE                  16
+#define LSAD_AES_BLOCK_SIZE                 16
+
+//
 // This data type defines the following information classes that may be
 // queried or set.
 //
@@ -2354,6 +2362,8 @@ typedef enum _TRUSTED_INFORMATION_CLASS {
     TrustedDomainInformationEx2Internal,
     TrustedDomainFullInformation2Internal,
     TrustedDomainSupportedEncryptionTypes,
+    TrustedDomainAuthInformationInternalAes,
+    TrustedDomainFullInformationInternalAes,
 } TRUSTED_INFORMATION_CLASS, *PTRUSTED_INFORMATION_CLASS;
 
 //
@@ -4210,6 +4220,9 @@ RtlDecryptMemory(
 #define KERB_CHECKSUM_RC4_MD5       -136
 #define KERB_CHECKSUM_MD5_HMAC      -137                // used by netlogon
 #define KERB_CHECKSUM_HMAC_MD5      -138                // used by Kerberos
+#define KERB_CHECKSUM_SHA256        -139
+#define KERB_CHECKSUM_SHA384        -140
+#define KERB_CHECKSUM_SHA512        -141
 
 //
 // used internally by userapi.cxx
@@ -4970,17 +4983,31 @@ typedef struct _KERB_CLOUD_KERBEROS_DEBUG_RESPONSE
     ULONG Data[ANYSIZE_ARRAY];
 } KERB_CLOUD_KERBEROS_DEBUG_RESPONSE, *PKERB_CLOUD_KERBEROS_DEBUG_RESPONSE;
 
-#define KERB_CLOUD_KERBEROS_DEBUG_DATA_VERSION 0
+#define KERB_CLOUD_KERBEROS_DEBUG_DATA_VERSION 1
 
 typedef struct _KERB_CLOUD_KERBEROS_DEBUG_DATA_V0
 {
-    int EnabledByPolicy : 1;
-    int AsRepCallbackPresent : 1;
-    int AsRepCallbackUsed : 1;
-    int CloudReferralTgtAvailable : 1;
-    int SpnOracleConfigured : 1;
-    int KdcProxyPresent : 1;
+    unsigned int EnabledByPolicy : 1;
+    unsigned int AsRepCallbackPresent : 1;
+    unsigned int AsRepCallbackUsed : 1;
+    unsigned int CloudReferralTgtAvailable : 1;
+    unsigned int SpnOracleConfigured : 1;
+    unsigned int KdcProxyPresent : 1;
 } KERB_CLOUD_KERBEROS_DEBUG_DATA_V0, *PKERB_CLOUD_KERBEROS_DEBUG_DATA_V0;
+
+typedef struct _KERB_CLOUD_KERBEROS_DEBUG_DATA
+{
+    unsigned int EnabledByPolicy : 1;
+    unsigned int AsRepCallbackPresent : 1;
+    unsigned int AsRepCallbackUsed : 1;
+    unsigned int CloudReferralTgtAvailable : 1;
+    unsigned int SpnOracleConfigured : 1;
+    unsigned int KdcProxyPresent : 1;
+    unsigned int PublicKeyCredsPresent : 1;
+    unsigned int PasswordKeysPresent : 1;
+    unsigned int PasswordPresent : 1;
+    unsigned int AsRepSourceCred : 8;
+} KERB_CLOUD_KERBEROS_DEBUG_DATA, *PKERB_CLOUD_KERBEROS_DEBUG_DATA;
 
 #endif
 

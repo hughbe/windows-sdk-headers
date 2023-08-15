@@ -83,6 +83,8 @@ namespace Windows
 
             interface IWiFiNetworkReport;
 
+            interface IWiFiOnDemandHotspotConnectTriggerDetails;
+
             interface IWiFiWpsConfigurationResult;
 
             runtimeclass WiFiAdapter;
@@ -92,6 +94,8 @@ namespace Windows
             runtimeclass WiFiConnectionResult;
 
             runtimeclass WiFiNetworkReport;
+
+            runtimeclass WiFiOnDemandHotspotConnectTriggerDetails;
 
             runtimeclass WiFiWpsConfigurationResult;
         }
@@ -300,6 +304,13 @@ namespace Windows
                 [propget] HRESULT AvailableNetworks([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Devices.WiFi.WiFiAvailableNetwork*>** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails)]
+            [uuid(CDD06495-408D-5BD3-BCB9-4D2097613F2D)]
+            interface IWiFiOnDemandHotspotConnectTriggerDetails : IInspectable
+            {
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]
             [exclusiveto(Windows.Devices.WiFi.WiFiWpsConfigurationResult)]
             [uuid(67B49871-17EE-42D1-B14F-5A11F1226FB5)]
@@ -337,6 +348,13 @@ namespace Windows
             runtimeclass WiFiNetworkReport
             {
                 [default] interface Windows.Devices.WiFi.IWiFiNetworkReport;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass WiFiOnDemandHotspotConnectTriggerDetails
+            {
+                [default] interface Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]

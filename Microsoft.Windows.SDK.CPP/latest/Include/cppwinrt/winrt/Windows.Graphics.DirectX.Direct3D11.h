@@ -1,29 +1,30 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Graphics_DirectX_Direct3D11_H
 #define WINRT_Windows_Graphics_DirectX_Direct3D11_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/Windows.Graphics.DirectX.h"
 #include "winrt/impl/Windows.Graphics.DirectX.Direct3D11.2.h"
 namespace winrt::impl
 {
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Graphics_DirectX_Direct3D11_IDirect3DDevice<D>::Trim() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice)->Trim());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice)->Trim());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription) consume_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface<D>::Description() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription) consume_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface<D>::Description() const
     {
-        Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface)->get_Description(put_abi(value)));
+        winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface)->get_Description(put_abi(value)));
         return value;
     }
     template <typename D>
-    struct produce<D, Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice> : produce_base<D, Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>
+    struct produce<D, winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice> : produce_base<D, winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>
     {
         int32_t __stdcall Trim() noexcept final try
         {
@@ -34,13 +35,13 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
     template <typename D>
-    struct produce<D, Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface> : produce_base<D, Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>
+    struct produce<D, winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface> : produce_base<D, winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>
     {
         int32_t __stdcall get_Description(struct struct_Windows_Graphics_DirectX_Direct3D11_Direct3DSurfaceDescription* value) noexcept final try
         {
-            zero_abi<Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>(value);
+            zero_abi<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>(this->shim().Description());
+            *value = detach_from<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>(this->shim().Description());
             return 0;
         }
         catch (...) { return to_hresult(); }

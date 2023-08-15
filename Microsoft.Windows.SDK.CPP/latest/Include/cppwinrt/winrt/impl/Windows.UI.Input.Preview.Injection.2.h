@@ -1,11 +1,12 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Input_Preview_Injection_2_H
 #define WINRT_Windows_UI_Input_Preview_Injection_2_H
-#include "winrt/impl/Windows.Gaming.Input.1.h"
+#include "winrt/impl/Windows.Gaming.Input.2.h"
 #include "winrt/impl/Windows.UI.Input.Preview.Injection.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Input::Preview::Injection
 {
@@ -25,8 +26,8 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Preview::Injection
     struct InjectedInputPointerInfo
     {
         uint32_t PointerId;
-        Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions PointerOptions;
-        Windows::UI::Input::Preview::Injection::InjectedInputPoint PixelLocation;
+        winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions PointerOptions;
+        winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint PixelLocation;
         uint32_t TimeOffsetInMilliseconds;
         uint64_t PerformanceCount;
     };
@@ -53,42 +54,42 @@ WINRT_EXPORT namespace winrt::Windows::UI::Input::Preview::Injection
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) InjectedInputGamepadInfo : Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo
+    struct __declspec(empty_bases) InjectedInputGamepadInfo : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo
     {
         InjectedInputGamepadInfo(std::nullptr_t) noexcept {}
-        InjectedInputGamepadInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo(ptr, take_ownership_from_abi) {}
+        InjectedInputGamepadInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputGamepadInfo(ptr, take_ownership_from_abi) {}
         InjectedInputGamepadInfo();
-        explicit InjectedInputGamepadInfo(Windows::Gaming::Input::GamepadReading const& reading);
+        explicit InjectedInputGamepadInfo(winrt::Windows::Gaming::Input::GamepadReading const& reading);
     };
-    struct __declspec(empty_bases) InjectedInputKeyboardInfo : Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo
+    struct __declspec(empty_bases) InjectedInputKeyboardInfo : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo
     {
         InjectedInputKeyboardInfo(std::nullptr_t) noexcept {}
-        InjectedInputKeyboardInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo(ptr, take_ownership_from_abi) {}
+        InjectedInputKeyboardInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputKeyboardInfo(ptr, take_ownership_from_abi) {}
         InjectedInputKeyboardInfo();
     };
-    struct __declspec(empty_bases) InjectedInputMouseInfo : Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo
+    struct __declspec(empty_bases) InjectedInputMouseInfo : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo
     {
         InjectedInputMouseInfo(std::nullptr_t) noexcept {}
-        InjectedInputMouseInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo(ptr, take_ownership_from_abi) {}
+        InjectedInputMouseInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputMouseInfo(ptr, take_ownership_from_abi) {}
         InjectedInputMouseInfo();
     };
-    struct __declspec(empty_bases) InjectedInputPenInfo : Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo
+    struct __declspec(empty_bases) InjectedInputPenInfo : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo
     {
         InjectedInputPenInfo(std::nullptr_t) noexcept {}
-        InjectedInputPenInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo(ptr, take_ownership_from_abi) {}
+        InjectedInputPenInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputPenInfo(ptr, take_ownership_from_abi) {}
         InjectedInputPenInfo();
     };
-    struct __declspec(empty_bases) InjectedInputTouchInfo : Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo
+    struct __declspec(empty_bases) InjectedInputTouchInfo : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo
     {
         InjectedInputTouchInfo(std::nullptr_t) noexcept {}
-        InjectedInputTouchInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo(ptr, take_ownership_from_abi) {}
+        InjectedInputTouchInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Input::Preview::Injection::IInjectedInputTouchInfo(ptr, take_ownership_from_abi) {}
         InjectedInputTouchInfo();
     };
-    struct __declspec(empty_bases) InputInjector : Windows::UI::Input::Preview::Injection::IInputInjector,
-        impl::require<InputInjector, Windows::UI::Input::Preview::Injection::IInputInjector2>
+    struct __declspec(empty_bases) InputInjector : winrt::Windows::UI::Input::Preview::Injection::IInputInjector,
+        impl::require<InputInjector, winrt::Windows::UI::Input::Preview::Injection::IInputInjector2>
     {
         InputInjector(std::nullptr_t) noexcept {}
-        InputInjector(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Input::Preview::Injection::IInputInjector(ptr, take_ownership_from_abi) {}
+        InputInjector(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Input::Preview::Injection::IInputInjector(ptr, take_ownership_from_abi) {}
         static auto TryCreate();
         static auto TryCreateForAppBroadcastOnly();
     };

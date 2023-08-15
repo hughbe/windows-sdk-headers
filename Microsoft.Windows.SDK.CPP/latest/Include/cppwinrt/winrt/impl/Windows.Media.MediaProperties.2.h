@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Media_MediaProperties_2_H
 #define WINRT_Windows_Media_MediaProperties_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
@@ -11,11 +12,11 @@
 #include "winrt/impl/Windows.Media.MediaProperties.1.h"
 WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
 {
-    struct __declspec(empty_bases) AudioEncodingProperties : Windows::Media::MediaProperties::IAudioEncodingProperties,
-        impl::require<AudioEncodingProperties, Windows::Media::MediaProperties::IAudioEncodingPropertiesWithFormatUserData, Windows::Media::MediaProperties::IAudioEncodingProperties2, Windows::Media::MediaProperties::IAudioEncodingProperties3>
+    struct __declspec(empty_bases) AudioEncodingProperties : winrt::Windows::Media::MediaProperties::IAudioEncodingProperties,
+        impl::require<AudioEncodingProperties, winrt::Windows::Media::MediaProperties::IAudioEncodingPropertiesWithFormatUserData, winrt::Windows::Media::MediaProperties::IAudioEncodingProperties2, winrt::Windows::Media::MediaProperties::IAudioEncodingProperties3>
     {
         AudioEncodingProperties(std::nullptr_t) noexcept {}
-        AudioEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::MediaProperties::IAudioEncodingProperties(ptr, take_ownership_from_abi) {}
+        AudioEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::MediaProperties::IAudioEncodingProperties(ptr, take_ownership_from_abi) {}
         AudioEncodingProperties();
         static auto CreateAac(uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate);
         static auto CreateAacAdts(uint32_t sampleRate, uint32_t channelCount, uint32_t bitrate);
@@ -25,11 +26,11 @@ WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
         static auto CreateAlac(uint32_t sampleRate, uint32_t channelCount, uint32_t bitsPerSample);
         static auto CreateFlac(uint32_t sampleRate, uint32_t channelCount, uint32_t bitsPerSample);
     };
-    struct __declspec(empty_bases) ContainerEncodingProperties : Windows::Media::MediaProperties::IContainerEncodingProperties,
-        impl::require<ContainerEncodingProperties, Windows::Media::MediaProperties::IContainerEncodingProperties2>
+    struct __declspec(empty_bases) ContainerEncodingProperties : winrt::Windows::Media::MediaProperties::IContainerEncodingProperties,
+        impl::require<ContainerEncodingProperties, winrt::Windows::Media::MediaProperties::IContainerEncodingProperties2>
     {
         ContainerEncodingProperties(std::nullptr_t) noexcept {}
-        ContainerEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::MediaProperties::IContainerEncodingProperties(ptr, take_ownership_from_abi) {}
+        ContainerEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::MediaProperties::IContainerEncodingProperties(ptr, take_ownership_from_abi) {}
         ContainerEncodingProperties();
     };
     struct H264ProfileIds
@@ -46,37 +47,37 @@ WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
         [[nodiscard]] static auto StereoHigh();
         [[nodiscard]] static auto MultiviewHigh();
     };
-    struct __declspec(empty_bases) ImageEncodingProperties : Windows::Media::MediaProperties::IImageEncodingProperties,
-        impl::require<ImageEncodingProperties, Windows::Media::MediaProperties::IImageEncodingProperties2>
+    struct __declspec(empty_bases) ImageEncodingProperties : winrt::Windows::Media::MediaProperties::IImageEncodingProperties,
+        impl::require<ImageEncodingProperties, winrt::Windows::Media::MediaProperties::IImageEncodingProperties2>
     {
         ImageEncodingProperties(std::nullptr_t) noexcept {}
-        ImageEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::MediaProperties::IImageEncodingProperties(ptr, take_ownership_from_abi) {}
+        ImageEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::MediaProperties::IImageEncodingProperties(ptr, take_ownership_from_abi) {}
         ImageEncodingProperties();
         static auto CreateJpeg();
         static auto CreatePng();
         static auto CreateJpegXR();
-        static auto CreateUncompressed(Windows::Media::MediaProperties::MediaPixelFormat const& format);
+        static auto CreateUncompressed(winrt::Windows::Media::MediaProperties::MediaPixelFormat const& format);
         static auto CreateBmp();
         static auto CreateHeif();
     };
-    struct __declspec(empty_bases) MediaEncodingProfile : Windows::Media::MediaProperties::IMediaEncodingProfile,
-        impl::require<MediaEncodingProfile, Windows::Media::MediaProperties::IMediaEncodingProfile2, Windows::Media::MediaProperties::IMediaEncodingProfile3>
+    struct __declspec(empty_bases) MediaEncodingProfile : winrt::Windows::Media::MediaProperties::IMediaEncodingProfile,
+        impl::require<MediaEncodingProfile, winrt::Windows::Media::MediaProperties::IMediaEncodingProfile2, winrt::Windows::Media::MediaProperties::IMediaEncodingProfile3>
     {
         MediaEncodingProfile(std::nullptr_t) noexcept {}
-        MediaEncodingProfile(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::MediaProperties::IMediaEncodingProfile(ptr, take_ownership_from_abi) {}
+        MediaEncodingProfile(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::MediaProperties::IMediaEncodingProfile(ptr, take_ownership_from_abi) {}
         MediaEncodingProfile();
-        static auto CreateM4a(Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
-        static auto CreateMp3(Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
-        static auto CreateWma(Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
-        static auto CreateMp4(Windows::Media::MediaProperties::VideoEncodingQuality const& quality);
-        static auto CreateWmv(Windows::Media::MediaProperties::VideoEncodingQuality const& quality);
-        static auto CreateFromFileAsync(Windows::Storage::IStorageFile const& file);
-        static auto CreateFromStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& stream);
-        static auto CreateWav(Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
-        static auto CreateAvi(Windows::Media::MediaProperties::VideoEncodingQuality const& quality);
-        static auto CreateAlac(Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
-        static auto CreateFlac(Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
-        static auto CreateHevc(Windows::Media::MediaProperties::VideoEncodingQuality const& quality);
+        static auto CreateM4a(winrt::Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
+        static auto CreateMp3(winrt::Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
+        static auto CreateWma(winrt::Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
+        static auto CreateMp4(winrt::Windows::Media::MediaProperties::VideoEncodingQuality const& quality);
+        static auto CreateWmv(winrt::Windows::Media::MediaProperties::VideoEncodingQuality const& quality);
+        static auto CreateFromFileAsync(winrt::Windows::Storage::IStorageFile const& file);
+        static auto CreateFromStreamAsync(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream);
+        static auto CreateWav(winrt::Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
+        static auto CreateAvi(winrt::Windows::Media::MediaProperties::VideoEncodingQuality const& quality);
+        static auto CreateAlac(winrt::Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
+        static auto CreateFlac(winrt::Windows::Media::MediaProperties::AudioEncodingQuality const& quality);
+        static auto CreateHevc(winrt::Windows::Media::MediaProperties::VideoEncodingQuality const& quality);
     };
     struct MediaEncodingSubtypes
     {
@@ -134,16 +135,16 @@ WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
         [[nodiscard]] static auto Ssa();
         [[nodiscard]] static auto VobSub();
     };
-    struct __declspec(empty_bases) MediaPropertySet : Windows::Foundation::Collections::IMap<winrt::guid, Windows::Foundation::IInspectable>
+    struct __declspec(empty_bases) MediaPropertySet : winrt::Windows::Foundation::Collections::IMap<winrt::guid, winrt::Windows::Foundation::IInspectable>
     {
         MediaPropertySet(std::nullptr_t) noexcept {}
-        MediaPropertySet(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::Collections::IMap<winrt::guid, Windows::Foundation::IInspectable>(ptr, take_ownership_from_abi) {}
+        MediaPropertySet(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::Collections::IMap<winrt::guid, winrt::Windows::Foundation::IInspectable>(ptr, take_ownership_from_abi) {}
         MediaPropertySet();
     };
-    struct __declspec(empty_bases) MediaRatio : Windows::Media::MediaProperties::IMediaRatio
+    struct __declspec(empty_bases) MediaRatio : winrt::Windows::Media::MediaProperties::IMediaRatio
     {
         MediaRatio(std::nullptr_t) noexcept {}
-        MediaRatio(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::MediaProperties::IMediaRatio(ptr, take_ownership_from_abi) {}
+        MediaRatio(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::MediaProperties::IMediaRatio(ptr, take_ownership_from_abi) {}
     };
     struct Mpeg2ProfileIds
     {
@@ -154,22 +155,22 @@ WINRT_EXPORT namespace winrt::Windows::Media::MediaProperties
         [[nodiscard]] static auto SpatiallyScalable();
         [[nodiscard]] static auto High();
     };
-    struct __declspec(empty_bases) TimedMetadataEncodingProperties : Windows::Media::MediaProperties::IMediaEncodingProperties,
-        impl::require<TimedMetadataEncodingProperties, Windows::Media::MediaProperties::ITimedMetadataEncodingProperties>
+    struct __declspec(empty_bases) TimedMetadataEncodingProperties : winrt::Windows::Media::MediaProperties::IMediaEncodingProperties,
+        impl::require<TimedMetadataEncodingProperties, winrt::Windows::Media::MediaProperties::ITimedMetadataEncodingProperties>
     {
         TimedMetadataEncodingProperties(std::nullptr_t) noexcept {}
-        TimedMetadataEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::MediaProperties::IMediaEncodingProperties(ptr, take_ownership_from_abi) {}
+        TimedMetadataEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::MediaProperties::IMediaEncodingProperties(ptr, take_ownership_from_abi) {}
         TimedMetadataEncodingProperties();
         static auto CreatePgs();
         static auto CreateSrt();
         static auto CreateSsa(array_view<uint8_t const> formatUserData);
         static auto CreateVobSub(array_view<uint8_t const> formatUserData);
     };
-    struct __declspec(empty_bases) VideoEncodingProperties : Windows::Media::MediaProperties::IVideoEncodingProperties,
-        impl::require<VideoEncodingProperties, Windows::Media::MediaProperties::IVideoEncodingProperties2, Windows::Media::MediaProperties::IVideoEncodingProperties3, Windows::Media::MediaProperties::IVideoEncodingProperties4, Windows::Media::MediaProperties::IVideoEncodingProperties5>
+    struct __declspec(empty_bases) VideoEncodingProperties : winrt::Windows::Media::MediaProperties::IVideoEncodingProperties,
+        impl::require<VideoEncodingProperties, winrt::Windows::Media::MediaProperties::IVideoEncodingProperties2, winrt::Windows::Media::MediaProperties::IVideoEncodingProperties3, winrt::Windows::Media::MediaProperties::IVideoEncodingProperties4, winrt::Windows::Media::MediaProperties::IVideoEncodingProperties5>
     {
         VideoEncodingProperties(std::nullptr_t) noexcept {}
-        VideoEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::MediaProperties::IVideoEncodingProperties(ptr, take_ownership_from_abi) {}
+        VideoEncodingProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::MediaProperties::IVideoEncodingProperties(ptr, take_ownership_from_abi) {}
         VideoEncodingProperties();
         static auto CreateH264();
         static auto CreateMpeg2();

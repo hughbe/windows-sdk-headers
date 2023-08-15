@@ -2872,7 +2872,7 @@ _interlockedbittestandreset64 (
 #pragma intrinsic(_bittestandset)
 #pragma intrinsic(_bittestandreset)
 
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
+#if !defined(_M_ARM64EC)
 #pragma intrinsic(_interlockedbittestandset)
 #pragma intrinsic(_interlockedbittestandreset)
 #endif
@@ -2882,7 +2882,7 @@ _interlockedbittestandreset64 (
 #pragma intrinsic(_bittestandset64)
 #pragma intrinsic(_bittestandreset64)
 
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
+#if !defined(_M_ARM64EC)
 #pragma intrinsic(_interlockedbittestandset64)
 #pragma intrinsic(_interlockedbittestandreset64)
 #endif
@@ -3230,7 +3230,7 @@ InterlockedExchangePointer(
     _In_opt_ PVOID Value
     );
 
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
+#if !defined(_M_ARM64EC)
 #pragma intrinsic(_InterlockedIncrement16)
 #pragma intrinsic(_InterlockedDecrement16)
 #pragma intrinsic(_InterlockedCompareExchange16)
@@ -3281,7 +3281,7 @@ InterlockedExchange16 (
     _In_ SHORT ExChange
     );
 
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
+#if !defined(_M_ARM64EC)
 #pragma intrinsic(_InterlockedExchange8)
 #pragma intrinsic(_InterlockedExchange16)
 #endif
@@ -3349,7 +3349,7 @@ InterlockedXor16(
     _In_ SHORT Value
     );
 
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
+#if !defined(_M_ARM64EC)
 #pragma intrinsic (_InterlockedExchangeAdd8)
 #pragma intrinsic (_InterlockedAnd8)
 #pragma intrinsic (_InterlockedOr8)
@@ -4574,17 +4574,6 @@ YieldProcessor (
 #pragma intrinsic(_bittestandset)
 #pragma intrinsic(_bittestandreset)
 
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
-#pragma intrinsic(_interlockedbittestandset)
-#pragma intrinsic(_interlockedbittestandset_acq)
-#pragma intrinsic(_interlockedbittestandset_rel)
-#pragma intrinsic(_interlockedbittestandset_nf)
-#pragma intrinsic(_interlockedbittestandreset)
-#pragma intrinsic(_interlockedbittestandreset_acq)
-#pragma intrinsic(_interlockedbittestandreset_rel)
-#pragma intrinsic(_interlockedbittestandreset_nf)
-#endif
-
 //
 // Define bit scan functions
 //
@@ -4616,46 +4605,6 @@ _InlineBitScanReverse64 (
 }
 
 #define BitScanReverse64 _InlineBitScanReverse64
-
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
-
-//
-// Interlocked intrinsic functions.
-//
-
-#pragma intrinsic(_InterlockedAnd8)
-#pragma intrinsic(_InterlockedOr8)
-#pragma intrinsic(_InterlockedXor8)
-#pragma intrinsic(_InterlockedExchange8)
-#pragma intrinsic(_InterlockedExchangeAdd8)
-
-#pragma intrinsic(_InterlockedAnd16)
-#pragma intrinsic(_InterlockedOr16)
-#pragma intrinsic(_InterlockedXor16)
-#pragma intrinsic(_InterlockedIncrement16)
-#pragma intrinsic(_InterlockedDecrement16)
-#pragma intrinsic(_InterlockedCompareExchange16)
-
-#pragma intrinsic(_InterlockedAnd)
-#pragma intrinsic(_InterlockedOr)
-#pragma intrinsic(_InterlockedXor)
-#pragma intrinsic(_InterlockedIncrement)
-#pragma intrinsic(_InterlockedDecrement)
-#pragma intrinsic(_InterlockedExchange)
-#pragma intrinsic(_InterlockedExchangeAdd)
-#pragma intrinsic(_InterlockedCompareExchange)
-
-#pragma intrinsic(_InterlockedAnd64)
-#pragma intrinsic(_InterlockedOr64)
-#pragma intrinsic(_InterlockedXor64)
-#pragma intrinsic(_InterlockedIncrement64)
-#pragma intrinsic(_InterlockedDecrement64)
-#pragma intrinsic(_InterlockedExchange64)
-#pragma intrinsic(_InterlockedCompareExchange64)
-
-#pragma intrinsic(_InterlockedExchangePointer)
-#pragma intrinsic(_InterlockedCompareExchangePointer)
-#endif
 
 #define InterlockedAnd8 _InterlockedAnd8
 #define InterlockedOr8 _InterlockedOr8
@@ -4695,96 +4644,7 @@ _InlineBitScanReverse64 (
 #define InterlockedExchangePointer _InterlockedExchangePointer
 #define InterlockedCompareExchangePointer _InterlockedCompareExchangePointer
 
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
-#pragma intrinsic(_InterlockedExchange16)
-#endif
 #define InterlockedExchange16 _InterlockedExchange16
-
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
-#pragma intrinsic(_InterlockedAnd8_acq)
-#pragma intrinsic(_InterlockedAnd8_rel)
-#pragma intrinsic(_InterlockedAnd8_nf)
-#pragma intrinsic(_InterlockedOr8_acq)
-#pragma intrinsic(_InterlockedOr8_rel)
-#pragma intrinsic(_InterlockedOr8_nf)
-#pragma intrinsic(_InterlockedXor8_acq)
-#pragma intrinsic(_InterlockedXor8_rel)
-#pragma intrinsic(_InterlockedXor8_nf)
-#pragma intrinsic(_InterlockedExchange8_acq)
-#pragma intrinsic(_InterlockedExchange8_nf)
-
-#pragma intrinsic(_InterlockedAnd16_acq)
-#pragma intrinsic(_InterlockedAnd16_rel)
-#pragma intrinsic(_InterlockedAnd16_nf)
-#pragma intrinsic(_InterlockedOr16_acq)
-#pragma intrinsic(_InterlockedOr16_rel)
-#pragma intrinsic(_InterlockedOr16_nf)
-#pragma intrinsic(_InterlockedXor16_acq)
-#pragma intrinsic(_InterlockedXor16_rel)
-#pragma intrinsic(_InterlockedXor16_nf)
-#pragma intrinsic(_InterlockedIncrement16_acq)
-#pragma intrinsic(_InterlockedIncrement16_rel)
-#pragma intrinsic(_InterlockedIncrement16_nf)
-#pragma intrinsic(_InterlockedDecrement16_acq)
-#pragma intrinsic(_InterlockedDecrement16_rel)
-#pragma intrinsic(_InterlockedDecrement16_nf)
-#pragma intrinsic(_InterlockedExchange16_acq)
-#pragma intrinsic(_InterlockedExchange16_nf)
-#pragma intrinsic(_InterlockedCompareExchange16_acq)
-#pragma intrinsic(_InterlockedCompareExchange16_rel)
-#pragma intrinsic(_InterlockedCompareExchange16_nf)
-
-#pragma intrinsic(_InterlockedAnd_acq)
-#pragma intrinsic(_InterlockedAnd_rel)
-#pragma intrinsic(_InterlockedAnd_nf)
-#pragma intrinsic(_InterlockedOr_acq)
-#pragma intrinsic(_InterlockedOr_rel)
-#pragma intrinsic(_InterlockedOr_nf)
-#pragma intrinsic(_InterlockedXor_acq)
-#pragma intrinsic(_InterlockedXor_rel)
-#pragma intrinsic(_InterlockedXor_nf)
-#pragma intrinsic(_InterlockedIncrement_acq)
-#pragma intrinsic(_InterlockedIncrement_rel)
-#pragma intrinsic(_InterlockedIncrement_nf)
-#pragma intrinsic(_InterlockedDecrement_acq)
-#pragma intrinsic(_InterlockedDecrement_rel)
-#pragma intrinsic(_InterlockedDecrement_nf)
-#pragma intrinsic(_InterlockedExchange_acq)
-#pragma intrinsic(_InterlockedExchange_nf)
-#pragma intrinsic(_InterlockedExchangeAdd_acq)
-#pragma intrinsic(_InterlockedExchangeAdd_rel)
-#pragma intrinsic(_InterlockedExchangeAdd_nf)
-#pragma intrinsic(_InterlockedCompareExchange_acq)
-#pragma intrinsic(_InterlockedCompareExchange_rel)
-#pragma intrinsic(_InterlockedCompareExchange_nf)
-
-#pragma intrinsic(_InterlockedAnd64_acq)
-#pragma intrinsic(_InterlockedAnd64_rel)
-#pragma intrinsic(_InterlockedAnd64_nf)
-#pragma intrinsic(_InterlockedOr64_acq)
-#pragma intrinsic(_InterlockedOr64_rel)
-#pragma intrinsic(_InterlockedOr64_nf)
-#pragma intrinsic(_InterlockedXor64_acq)
-#pragma intrinsic(_InterlockedXor64_rel)
-#pragma intrinsic(_InterlockedXor64_nf)
-#pragma intrinsic(_InterlockedIncrement64_acq)
-#pragma intrinsic(_InterlockedIncrement64_rel)
-#pragma intrinsic(_InterlockedIncrement64_nf)
-#pragma intrinsic(_InterlockedDecrement64_acq)
-#pragma intrinsic(_InterlockedDecrement64_rel)
-#pragma intrinsic(_InterlockedDecrement64_nf)
-#pragma intrinsic(_InterlockedExchange64_acq)
-#pragma intrinsic(_InterlockedExchange64_nf)
-#pragma intrinsic(_InterlockedCompareExchange64_acq)
-#pragma intrinsic(_InterlockedCompareExchange64_rel)
-#pragma intrinsic(_InterlockedCompareExchange64_nf)
-
-#pragma intrinsic(_InterlockedExchangePointer_acq)
-#pragma intrinsic(_InterlockedExchangePointer_nf)
-#pragma intrinsic(_InterlockedCompareExchangePointer_acq)
-#pragma intrinsic(_InterlockedCompareExchangePointer_rel)
-#pragma intrinsic(_InterlockedCompareExchangePointer_nf)
-#endif
 
 #define InterlockedAndAcquire8 _InterlockedAnd8_acq
 #define InterlockedAndRelease8 _InterlockedAnd8_rel
@@ -5612,33 +5472,11 @@ _BitTestAndSet64(__int64 *Base, __int64 Index)
 #pragma intrinsic(_bittestandset)
 #pragma intrinsic(_bittestandreset)
 
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
-#pragma intrinsic(_interlockedbittestandset)
-#pragma intrinsic(_interlockedbittestandset_acq)
-#pragma intrinsic(_interlockedbittestandset_rel)
-#pragma intrinsic(_interlockedbittestandset_nf)
-#pragma intrinsic(_interlockedbittestandreset)
-#pragma intrinsic(_interlockedbittestandreset_acq)
-#pragma intrinsic(_interlockedbittestandreset_rel)
-#pragma intrinsic(_interlockedbittestandreset_nf)
-#endif
-
 #if !defined(__ARM64_COMPILER_BITTEST64_WORKAROUND)
 #pragma intrinsic(_bittest64)
 #pragma intrinsic(_bittestandcomplement64)
 #pragma intrinsic(_bittestandset64)
 #pragma intrinsic(_bittestandreset64)
-#endif
-
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
-#pragma intrinsic(_interlockedbittestandset64)
-#pragma intrinsic(_interlockedbittestandset64_acq)
-#pragma intrinsic(_interlockedbittestandset64_rel)
-#pragma intrinsic(_interlockedbittestandset64_nf)
-#pragma intrinsic(_interlockedbittestandreset64)
-#pragma intrinsic(_interlockedbittestandreset64_acq)
-#pragma intrinsic(_interlockedbittestandreset64_rel)
-#pragma intrinsic(_interlockedbittestandreset64_nf)
 #endif
 
 //
@@ -5654,45 +5492,6 @@ _BitTestAndSet64(__int64 *Base, __int64 Index)
 #pragma intrinsic(_BitScanReverse)
 #pragma intrinsic(_BitScanForward64)
 #pragma intrinsic(_BitScanReverse64)
-
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
-//
-// Interlocked intrinsic functions.
-//
-
-#pragma intrinsic(_InterlockedAnd8)
-#pragma intrinsic(_InterlockedOr8)
-#pragma intrinsic(_InterlockedXor8)
-#pragma intrinsic(_InterlockedExchangeAdd8)
-
-#pragma intrinsic(_InterlockedAnd16)
-#pragma intrinsic(_InterlockedOr16)
-#pragma intrinsic(_InterlockedXor16)
-#pragma intrinsic(_InterlockedIncrement16)
-#pragma intrinsic(_InterlockedDecrement16)
-#pragma intrinsic(_InterlockedCompareExchange16)
-
-#pragma intrinsic(_InterlockedAnd)
-#pragma intrinsic(_InterlockedOr)
-#pragma intrinsic(_InterlockedXor)
-#pragma intrinsic(_InterlockedIncrement)
-#pragma intrinsic(_InterlockedDecrement)
-#pragma intrinsic(_InterlockedExchange)
-#pragma intrinsic(_InterlockedExchangeAdd)
-#pragma intrinsic(_InterlockedCompareExchange)
-
-#pragma intrinsic(_InterlockedAnd64)
-#pragma intrinsic(_InterlockedOr64)
-#pragma intrinsic(_InterlockedXor64)
-#pragma intrinsic(_InterlockedIncrement64)
-#pragma intrinsic(_InterlockedDecrement64)
-#pragma intrinsic(_InterlockedExchange64)
-#pragma intrinsic(_InterlockedCompareExchange64)
-
-#pragma intrinsic(_InterlockedCompareExchange128)
-#pragma intrinsic(_InterlockedExchangePointer)
-#pragma intrinsic(_InterlockedCompareExchangePointer)
-#endif
 
 #define InterlockedAnd8 _InterlockedAnd8
 #define InterlockedOr8 _InterlockedOr8
@@ -5731,97 +5530,8 @@ _BitTestAndSet64(__int64 *Base, __int64 Index)
 #define InterlockedExchangePointer _InterlockedExchangePointer
 #define InterlockedCompareExchangePointer _InterlockedCompareExchangePointer
 
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
-#pragma intrinsic(_InterlockedExchange8)
-#pragma intrinsic(_InterlockedExchange16)
-#endif
 #define InterlockedExchange16 _InterlockedExchange16
 #define InterlockedExchange8 _InterlockedExchange8
-
-#if !defined(ARM64X_INTRINSICS_FUNCTIONS)
-#pragma intrinsic(_InterlockedAnd8_acq)
-#pragma intrinsic(_InterlockedAnd8_rel)
-#pragma intrinsic(_InterlockedAnd8_nf)
-#pragma intrinsic(_InterlockedOr8_acq)
-#pragma intrinsic(_InterlockedOr8_rel)
-#pragma intrinsic(_InterlockedOr8_nf)
-#pragma intrinsic(_InterlockedXor8_acq)
-#pragma intrinsic(_InterlockedXor8_rel)
-#pragma intrinsic(_InterlockedXor8_nf)
-#pragma intrinsic(_InterlockedExchange8_acq)
-#pragma intrinsic(_InterlockedExchange8_nf)
-
-#pragma intrinsic(_InterlockedAnd16_acq)
-#pragma intrinsic(_InterlockedAnd16_rel)
-#pragma intrinsic(_InterlockedAnd16_nf)
-#pragma intrinsic(_InterlockedOr16_acq)
-#pragma intrinsic(_InterlockedOr16_rel)
-#pragma intrinsic(_InterlockedOr16_nf)
-#pragma intrinsic(_InterlockedXor16_acq)
-#pragma intrinsic(_InterlockedXor16_rel)
-#pragma intrinsic(_InterlockedXor16_nf)
-#pragma intrinsic(_InterlockedIncrement16_acq)
-#pragma intrinsic(_InterlockedIncrement16_rel)
-#pragma intrinsic(_InterlockedIncrement16_nf)
-#pragma intrinsic(_InterlockedDecrement16_acq)
-#pragma intrinsic(_InterlockedDecrement16_rel)
-#pragma intrinsic(_InterlockedDecrement16_nf)
-#pragma intrinsic(_InterlockedExchange16_acq)
-#pragma intrinsic(_InterlockedExchange16_nf)
-#pragma intrinsic(_InterlockedCompareExchange16_acq)
-#pragma intrinsic(_InterlockedCompareExchange16_rel)
-#pragma intrinsic(_InterlockedCompareExchange16_nf)
-
-#pragma intrinsic(_InterlockedAnd_acq)
-#pragma intrinsic(_InterlockedAnd_rel)
-#pragma intrinsic(_InterlockedAnd_nf)
-#pragma intrinsic(_InterlockedOr_acq)
-#pragma intrinsic(_InterlockedOr_rel)
-#pragma intrinsic(_InterlockedOr_nf)
-#pragma intrinsic(_InterlockedXor_acq)
-#pragma intrinsic(_InterlockedXor_rel)
-#pragma intrinsic(_InterlockedXor_nf)
-#pragma intrinsic(_InterlockedIncrement_acq)
-#pragma intrinsic(_InterlockedIncrement_rel)
-#pragma intrinsic(_InterlockedIncrement_nf)
-#pragma intrinsic(_InterlockedDecrement_acq)
-#pragma intrinsic(_InterlockedDecrement_rel)
-#pragma intrinsic(_InterlockedDecrement_nf)
-#pragma intrinsic(_InterlockedExchange_acq)
-#pragma intrinsic(_InterlockedExchange_nf)
-#pragma intrinsic(_InterlockedExchangeAdd_acq)
-#pragma intrinsic(_InterlockedExchangeAdd_rel)
-#pragma intrinsic(_InterlockedExchangeAdd_nf)
-#pragma intrinsic(_InterlockedCompareExchange_rel)
-#pragma intrinsic(_InterlockedCompareExchange_nf)
-
-#pragma intrinsic(_InterlockedAnd64_acq)
-#pragma intrinsic(_InterlockedAnd64_rel)
-#pragma intrinsic(_InterlockedAnd64_nf)
-#pragma intrinsic(_InterlockedOr64_acq)
-#pragma intrinsic(_InterlockedOr64_rel)
-#pragma intrinsic(_InterlockedOr64_nf)
-#pragma intrinsic(_InterlockedXor64_acq)
-#pragma intrinsic(_InterlockedXor64_rel)
-#pragma intrinsic(_InterlockedXor64_nf)
-#pragma intrinsic(_InterlockedIncrement64_acq)
-#pragma intrinsic(_InterlockedIncrement64_rel)
-#pragma intrinsic(_InterlockedIncrement64_nf)
-#pragma intrinsic(_InterlockedDecrement64_acq)
-#pragma intrinsic(_InterlockedDecrement64_rel)
-#pragma intrinsic(_InterlockedDecrement64_nf)
-#pragma intrinsic(_InterlockedExchange64_acq)
-#pragma intrinsic(_InterlockedExchange64_nf)
-#pragma intrinsic(_InterlockedCompareExchange64_acq)
-#pragma intrinsic(_InterlockedCompareExchange64_rel)
-#pragma intrinsic(_InterlockedCompareExchange64_nf)
-
-#pragma intrinsic(_InterlockedExchangePointer_acq)
-#pragma intrinsic(_InterlockedExchangePointer_nf)
-#pragma intrinsic(_InterlockedCompareExchangePointer_acq)
-#pragma intrinsic(_InterlockedCompareExchangePointer_rel)
-#pragma intrinsic(_InterlockedCompareExchangePointer_nf)
-#endif
 
 #define InterlockedAndAcquire8 _InterlockedAnd8_acq
 #define InterlockedAndRelease8 _InterlockedAnd8_rel
@@ -9013,6 +8723,16 @@ ReadBooleanNoFence (
 
 FORCEINLINE
 BYTE 
+ReadBooleanRaw (
+    _In_ _Interlocked_operand_ BOOLEAN const volatile *Source
+    )
+
+{
+    return (BOOLEAN)ReadRaw8((PCHAR)Source);
+}
+
+FORCEINLINE
+BYTE 
 ReadUCharRaw (
     _In_ _Interlocked_operand_ BYTE  const volatile *Source
     )
@@ -11669,6 +11389,7 @@ typedef struct _SE_ACCESS_REPLY
 #define SE_SESSION_IMPERSONATION_CAPABILITY L"sessionImpersonation"
 #define SE_MUMA_CAPABILITY L"muma"
 #define SE_DEVELOPMENT_MODE_NETWORK_CAPABILITY L"developmentModeNetwork"
+#define SE_LEARNING_MODE_LOGGING_CAPABILITY L"learningModeLogging"
 #define SE_PERMISSIVE_LEARNING_MODE_CAPABILITY L"permissiveLearningMode"
 
 // end_ntosifs
@@ -12398,18 +12119,6 @@ typedef enum _SE_IMAGE_SIGNATURE_TYPE
 } SE_IMAGE_SIGNATURE_TYPE, *PSE_IMAGE_SIGNATURE_TYPE;
 
 
-//
-// Learning Mode Types.
-//
-
-typedef enum _SE_LEARNING_MODE_DATA_TYPE {
-    SeLearningModeInvalidType = 0,
-    SeLearningModeSettings,
-    SeLearningModeMax
-} SE_LEARNING_MODE_DATA_TYPE;
-
-#define SE_LEARNING_MODE_FLAG_PERMISSIVE 0x00000001
-
 typedef struct _SECURITY_CAPABILITIES {
 #ifdef MIDL_PASS
     PISID AppContainerSid;
@@ -12768,6 +12477,7 @@ typedef enum _PROCESS_MITIGATION_POLICY {
     ProcessSideChannelIsolationPolicy,
     ProcessUserShadowStackPolicy,
     ProcessRedirectionTrustPolicy,
+    ProcessUserPointerAuthPolicy,
     MaxProcessMitigationPolicy
 } PROCESS_MITIGATION_POLICY, *PPROCESS_MITIGATION_POLICY;
 
@@ -13013,6 +12723,16 @@ typedef struct _PROCESS_MITIGATION_USER_SHADOW_STACK_POLICY {
         } DUMMYSTRUCTNAME;
     } DUMMYUNIONNAME;
 } PROCESS_MITIGATION_USER_SHADOW_STACK_POLICY, *PPROCESS_MITIGATION_USER_SHADOW_STACK_POLICY;
+
+typedef struct _PROCESS_MITIGATION_USER_POINTER_AUTH_POLICY {
+    union {
+        DWORD Flags;
+        struct {
+            DWORD EnablePointerAuthUserIp : 1;
+            DWORD ReservedFlags : 31;
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
+} PROCESS_MITIGATION_USER_POINTER_AUTH_POLICY, *PPROCESS_MITIGATION_USER_POINTER_AUTH_POLICY;
 
 typedef struct _PROCESS_MITIGATION_REDIRECTION_TRUST_POLICY {
     union {
@@ -13461,10 +13181,11 @@ typedef struct _JOBOBJECT_IO_ATTRIBUTION_INFORMATION {
 #define JOB_OBJECT_UILIMIT_GLOBALATOMS      0x00000020
 #define JOB_OBJECT_UILIMIT_DESKTOP          0x00000040
 #define JOB_OBJECT_UILIMIT_EXITWINDOWS      0x00000080
+#define JOB_OBJECT_UILIMIT_IME              0x00000100
 
-#define JOB_OBJECT_UILIMIT_ALL              0x000000FF
+#define JOB_OBJECT_UILIMIT_ALL              0x000001FF
 
-#define JOB_OBJECT_UI_VALID_FLAGS           0x000000FF
+#define JOB_OBJECT_UI_VALID_FLAGS           0x000001FF
 
 #define JOB_OBJECT_SECURITY_NO_ADMIN            0x00000001
 #define JOB_OBJECT_SECURITY_RESTRICTED_TOKEN    0x00000002
@@ -14265,6 +13986,7 @@ typedef struct _MEM_ADDRESS_REQUIREMENTS {
 #define MEM_EXTENDED_PARAMETER_NONPAGED_HUGE            0x00000010
 #define MEM_EXTENDED_PARAMETER_SOFT_FAULT_PAGES         0x00000020
 #define MEM_EXTENDED_PARAMETER_EC_CODE                  0x00000040
+#define MEM_EXTENDED_PARAMETER_IMAGE_NO_HPAT            0x00000080
 
 //
 // Use the high DWORD64 bit of the MEM_EXTENDED_PARAMETER to indicate
@@ -14592,8 +14314,8 @@ typedef struct DECLSPEC_ALIGN(8) _MEMORY_PARTITION_DEDICATED_MEMORY_INFORMATION 
 #define FILE_RETURNS_CLEANUP_RESULT_INFO    0x00000200  
 #define FILE_SUPPORTS_POSIX_UNLINK_RENAME   0x00000400  
 #define FILE_SUPPORTS_BYPASS_IO             0x00000800  
-
-
+#define FILE_SUPPORTS_STREAM_SNAPSHOTS      0x00001000  
+#define FILE_SUPPORTS_CASE_SENSITIVE_DIRS   0x00002000  
 
 #define FILE_VOLUME_IS_COMPRESSED           0x00008000  
 #define FILE_SUPPORTS_OBJECT_IDS            0x00010000  
@@ -14639,12 +14361,45 @@ typedef struct _FILE_NOTIFY_EXTENDED_INFORMATION {
     LARGE_INTEGER AllocatedLength;
     LARGE_INTEGER FileSize;
     DWORD FileAttributes;
-    DWORD ReparsePointTag;
+    union {
+        DWORD ReparsePointTag;
+        DWORD EaSize;
+    } DUMMYUNIONNAME;
     LARGE_INTEGER FileId;
     LARGE_INTEGER ParentFileId;
     DWORD FileNameLength;
     WCHAR FileName[1];
 } FILE_NOTIFY_EXTENDED_INFORMATION, *PFILE_NOTIFY_EXTENDED_INFORMATION;
+#endif
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_NI)
+#define FILE_NAME_FLAG_HARDLINK      0    // not part of a name pair
+#define FILE_NAME_FLAG_NTFS          0x01 // NTFS name in a name pair
+#define FILE_NAME_FLAG_DOS           0x02 // DOS name in a name pair
+#define FILE_NAME_FLAG_BOTH          0x03 // NTFS+DOS combined name
+#define FILE_NAME_FLAGS_UNSPECIFIED  0x80 // not specified by file system (do not combine with other flags)
+
+typedef struct _FILE_NOTIFY_FULL_INFORMATION {
+    DWORD NextEntryOffset;
+    DWORD Action;
+    LARGE_INTEGER CreationTime;
+    LARGE_INTEGER LastModificationTime;
+    LARGE_INTEGER LastChangeTime;
+    LARGE_INTEGER LastAccessTime;
+    LARGE_INTEGER AllocatedLength;
+    LARGE_INTEGER FileSize;
+    DWORD FileAttributes;
+    union {
+        DWORD ReparsePointTag;
+        DWORD EaSize;
+    } DUMMYUNIONNAME;
+    LARGE_INTEGER FileId;
+    LARGE_INTEGER ParentFileId;
+    WORD   FileNameLength;
+    BYTE  FileNameFlags;
+    BYTE  Reserved;
+    WCHAR FileName[1];
+} FILE_NOTIFY_FULL_INFORMATION, *PFILE_NOTIFY_FULL_INFORMATION;
 #endif
 
 
@@ -16678,12 +16433,30 @@ DEFINE_GUID( GUID_PROCESSOR_HETERO_DECREASE_THRESHOLD, 0xf8861c27, 0x95e7, 0x475
 
 //
 // Specifies the performance level (in units of Processor Power Efficiency
+// Class 1 processor performance) at which the number of Processor Power
+// Efficiency Class 2 processors is decreased.
+//
+// {f8861c27-95e7-475c-865b-13c0cb3f9d6c}
+//
+DEFINE_GUID( GUID_PROCESSOR_HETERO_DECREASE_THRESHOLD_1, 0xf8861c27, 0x95e7, 0x475c, 0x86, 0x5b, 0x13, 0xc0, 0xcb, 0x3f, 0x9d, 0x6c);
+
+//
+// Specifies the performance level (in units of Processor Power Efficiency
 // Class 0 processor performance) at which the number of Processor Power
 // Efficiency Class 1 processors is increased.
 //
 // {b000397d-9b0b-483d-98c9-692a6060cfbf}
 //
 DEFINE_GUID( GUID_PROCESSOR_HETERO_INCREASE_THRESHOLD, 0xb000397d, 0x9b0b, 0x483d, 0x98, 0xc9, 0x69, 0x2a, 0x60, 0x60, 0xcf, 0xbf);
+
+//
+// Specifies the performance level (in units of Processor Power Efficiency
+// Class 1 processor performance) at which the number of Processor Power
+// Efficiency Class 2 processors is increased.
+//
+// {b000397d-9b0b-483d-98c9-692a6060cfc0}
+//
+DEFINE_GUID( GUID_PROCESSOR_HETERO_INCREASE_THRESHOLD_1, 0xb000397d, 0x9b0b, 0x483d, 0x98, 0xc9, 0x69, 0x2a, 0x60, 0x60, 0xcf, 0xc0);
 
 //
 // Specifies the performance target floor of a Processor Power Efficiency
@@ -17314,6 +17087,7 @@ typedef enum {
     UpdateBlackBoxRecorder,
     SessionAllowExternalDmaDevices,
     SendSuspendResumeNotification,
+    BlackBoxRecorderDirectAccessBuffer,
     PowerInformationLevelMaximum
 } POWER_INFORMATION_LEVEL;
 
@@ -20024,10 +19798,11 @@ typedef struct _IMAGE_LOAD_CONFIG_DIRECTORY32 {
     DWORD   VolatileMetadataPointer;        // VA
     DWORD   GuardEHContinuationTable;       // VA
     DWORD   GuardEHContinuationCount;
-    DWORD   GuardXFGCheckFunctionPointer;    // VA
+    DWORD   GuardXFGCheckFunctionPointer;   // VA
     DWORD   GuardXFGDispatchFunctionPointer; // VA
     DWORD   GuardXFGTableDispatchFunctionPointer; // VA
     DWORD   CastGuardOsDeterminedFailureMode; // VA
+    DWORD   GuardMemcpyFunctionPointer;     // VA
 } IMAGE_LOAD_CONFIG_DIRECTORY32, *PIMAGE_LOAD_CONFIG_DIRECTORY32;
 
 typedef struct _IMAGE_LOAD_CONFIG_DIRECTORY64 {
@@ -20071,14 +19846,15 @@ typedef struct _IMAGE_LOAD_CONFIG_DIRECTORY64 {
     ULONGLONG  GuardRFVerifyStackPointerFunctionPointer; // VA
     DWORD      HotPatchTableOffset;
     DWORD      Reserved3;
-    ULONGLONG  EnclaveConfigurationPointer;     // VA
-    ULONGLONG  VolatileMetadataPointer;         // VA
-    ULONGLONG  GuardEHContinuationTable;        // VA
+    ULONGLONG  EnclaveConfigurationPointer;    // VA
+    ULONGLONG  VolatileMetadataPointer;        // VA
+    ULONGLONG  GuardEHContinuationTable;       // VA
     ULONGLONG  GuardEHContinuationCount;
-    ULONGLONG  GuardXFGCheckFunctionPointer;    // VA
+    ULONGLONG  GuardXFGCheckFunctionPointer;   // VA
     ULONGLONG  GuardXFGDispatchFunctionPointer; // VA
     ULONGLONG  GuardXFGTableDispatchFunctionPointer; // VA
     ULONGLONG  CastGuardOsDeterminedFailureMode; // VA
+    ULONGLONG  GuardMemcpyFunctionPointer;     // VA
 } IMAGE_LOAD_CONFIG_DIRECTORY64, *PIMAGE_LOAD_CONFIG_DIRECTORY64;
 
 // end_ntoshvp
@@ -20157,6 +19933,8 @@ typedef struct _IMAGE_HOT_PATCH_HASHES {
 // DO_NOT_USE                                          0x00200000 // Was EHCont flag on VB (20H1)
 #define IMAGE_GUARD_EH_CONTINUATION_TABLE_PRESENT      0x00400000 // Module contains EH continuation target information
 #define IMAGE_GUARD_XFG_ENABLED                        0x00800000 // Module was built with xfg
+#define IMAGE_GUARD_CASTGUARD_PRESENT                  0x01000000 // Module has CastGuard instrumentation present
+#define IMAGE_GUARD_MEMCPY_PRESENT                     0x02000000 // Module has Guarded Memcpy instrumentation present
 
 #define IMAGE_GUARD_CF_FUNCTION_TABLE_SIZE_MASK        0xF0000000 // Stride of Guard CF function table encoded in these bits (additional count of bytes per element)
 #define IMAGE_GUARD_CF_FUNCTION_TABLE_SIZE_SHIFT       28         // Shift to right-justify Guard CF function table stride
@@ -20401,12 +20179,14 @@ typedef struct _IMAGE_DEBUG_DIRECTORY {
 #define IMAGE_DEBUG_TYPE_OMAP_FROM_SRC          8
 #define IMAGE_DEBUG_TYPE_BORLAND                9
 #define IMAGE_DEBUG_TYPE_RESERVED10             10
+#define IMAGE_DEBUG_TYPE_BBT                    IMAGE_DEBUG_TYPE_RESERVED10
 #define IMAGE_DEBUG_TYPE_CLSID                  11
 #define IMAGE_DEBUG_TYPE_VC_FEATURE             12
 #define IMAGE_DEBUG_TYPE_POGO                   13
 #define IMAGE_DEBUG_TYPE_ILTCG                  14
 #define IMAGE_DEBUG_TYPE_MPX                    15
 #define IMAGE_DEBUG_TYPE_REPRO                  16
+#define IMAGE_DEBUG_TYPE_SPGO                   18
 #define IMAGE_DEBUG_TYPE_EX_DLLCHARACTERISTICS  20
 
 #define IMAGE_DLLCHARACTERISTICS_EX_CET_COMPAT                                  0x01
@@ -22590,7 +22370,13 @@ typedef enum _RTL_SYSTEM_GLOBAL_DATA_ID {
     GlobalDataIdKdDebuggerEnabled,
     GlobalDataIdCyclesPerYield,
     GlobalDataIdSafeBootMode,
-    GlobalDataIdLastSystemRITEventTickCount
+    GlobalDataIdLastSystemRITEventTickCount,
+    GlobalDataIdConsoleSharedDataFlags,
+    GlobalDataIdNtSystemRootDrive,
+    GlobalDataIdQpcShift,
+    GlobalDataIdQpcBypassEnabled,
+    GlobalDataIdQpcData,
+    GlobalDataIdQpcBias
 } RTL_SYSTEM_GLOBAL_DATA_ID, *PRTL_SYSTEM_GLOBAL_DATA_ID;
 
 NTSYSAPI
@@ -22623,7 +22409,7 @@ typedef struct _RTL_CRITICAL_SECTION_DEBUG {
     DWORD ContentionCount;
     DWORD Flags;
     WORD   CreatorBackTraceIndexHigh;
-    WORD   SpareWORD  ;
+    WORD   Identifier;
 } RTL_CRITICAL_SECTION_DEBUG, *PRTL_CRITICAL_SECTION_DEBUG, RTL_RESOURCE_DEBUG, *PRTL_RESOURCE_DEBUG;
 
 //

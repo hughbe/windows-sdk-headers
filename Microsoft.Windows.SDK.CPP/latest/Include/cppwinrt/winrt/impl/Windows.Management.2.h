@@ -1,23 +1,24 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Management_2_H
 #define WINRT_Windows_Management_2_H
 #include "winrt/impl/Windows.Management.1.h"
 WINRT_EXPORT namespace winrt::Windows::Management
 {
-    struct __declspec(empty_bases) MdmAlert : Windows::Management::IMdmAlert
+    struct __declspec(empty_bases) MdmAlert : winrt::Windows::Management::IMdmAlert
     {
         MdmAlert(std::nullptr_t) noexcept {}
-        MdmAlert(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Management::IMdmAlert(ptr, take_ownership_from_abi) {}
+        MdmAlert(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Management::IMdmAlert(ptr, take_ownership_from_abi) {}
         MdmAlert();
     };
-    struct __declspec(empty_bases) MdmSession : Windows::Management::IMdmSession
+    struct __declspec(empty_bases) MdmSession : winrt::Windows::Management::IMdmSession
     {
         MdmSession(std::nullptr_t) noexcept {}
-        MdmSession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Management::IMdmSession(ptr, take_ownership_from_abi) {}
+        MdmSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Management::IMdmSession(ptr, take_ownership_from_abi) {}
     };
     struct MdmSessionManager
     {

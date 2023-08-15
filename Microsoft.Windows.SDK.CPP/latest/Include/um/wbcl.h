@@ -59,6 +59,7 @@ extern "C" {
 #define SIPAEV_EFI_HANDOFF_TABLES (0x80000009)
 #define SIPAEV_EFI_PLATFORM_FIRMWARE_BLOB2 (0x8000000A)
 #define SIPAEV_EFI_HANDOFF_TABLES2 (0x8000000B)
+#define SIPAEV_EFI_VARIABLE_BOOT2 (0x8000000C)
 #define SIPAEV_EFI_HCRTM_EVENT (0x80000010)
 #define SIPAEV_EFI_VARIABLE_AUTHORITY (0x800000E0)
 #define SIPAEV_EFI_SPDM_FIRMWARE_BLOB (0x800000E1)
@@ -553,6 +554,7 @@ extern "C" {
 #define OSDEVICE_TYPE_UDP                           (0x00030000)
 #define OSDEVICE_TYPE_VMBUS                         (0x00040000)
 #define OSDEVICE_TYPE_COMPOSITE                     (0x00050000)
+#define OSDEVICE_TYPE_CIMFS                         (0x00060000)
 
 
 //--------------------------------------------------WBCL header

@@ -1,18 +1,19 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Graphics_H
 #define WINRT_Windows_Graphics_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/impl/Windows.Graphics.2.h"
 namespace winrt::impl
 {
     template <typename D>
-    struct produce<D, Windows::Graphics::IGeometrySource2D> : produce_base<D, Windows::Graphics::IGeometrySource2D>
+    struct produce<D, winrt::Windows::Graphics::IGeometrySource2D> : produce_base<D, winrt::Windows::Graphics::IGeometrySource2D>
     {
     };
 }

@@ -14,6 +14,8 @@
 #include <minwindef.h>
 #include <minwinbase.h>
 #include <ntioring_x.h>
+#include <windef.h>
+#include <winbase.h>
 
 #pragma region Application Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
@@ -236,11 +238,35 @@ BuildIoRingRegisterBuffers(
     UINT_PTR userData
     );
 
+#pragma region api-ms-win-core-ioring-l1-1-1
+
+STDAPI
+BuildIoRingWriteFile(
+    _In_ HIORING ioRing,
+    IORING_HANDLE_REF fileRef,
+    IORING_BUFFER_REF bufferRef,
+    UINT32 numberOfBytesToWrite,
+    UINT64 fileOffset,
+    FILE_WRITE_FLAGS writeFlags,
+    UINT_PTR userData,
+    IORING_SQE_FLAGS sqeFlags
+    );
+
+STDAPI
+BuildIoRingFlushFile(
+    _In_ HIORING ioRing,
+    IORING_HANDLE_REF fileRef,
+    FILE_FLUSH_MODE flushFlags,
+    UINT_PTR userData,
+    IORING_SQE_FLAGS flags
+    );
+#pragma endregion // api-ms-win-core-ioring-l1-1-1
+
 #ifdef __cplusplus
 } //extern "C"
 #endif
 
-#endif //NTDDI_VERSION <= NTDDI_WIN10_CO
+#endif //NTDDI_VERSION >= NTDDI_WIN10_CO
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion // Application Family or OneCore Family
 

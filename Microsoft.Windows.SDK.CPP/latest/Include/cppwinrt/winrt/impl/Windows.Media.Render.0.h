@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Media_Render_0_H
 #define WINRT_Windows_Media_Render_0_H
 WINRT_EXPORT namespace winrt::Windows::Media::Render
@@ -25,7 +26,7 @@ WINRT_EXPORT namespace winrt::Windows::Media::Render
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Media::Render::AudioRenderCategory>{ using type = enum_category; };
-    template <> inline constexpr auto& name_v<Windows::Media::Render::AudioRenderCategory> = L"Windows.Media.Render.AudioRenderCategory";
+    template <> struct category<winrt::Windows::Media::Render::AudioRenderCategory>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<winrt::Windows::Media::Render::AudioRenderCategory> = L"Windows.Media.Render.AudioRenderCategory";
 }
 #endif

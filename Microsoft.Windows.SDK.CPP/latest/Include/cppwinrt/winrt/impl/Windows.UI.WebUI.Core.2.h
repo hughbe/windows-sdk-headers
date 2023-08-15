@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_WebUI_Core_2_H
 #define WINRT_Windows_UI_WebUI_Core_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
@@ -40,47 +41,47 @@ WINRT_EXPORT namespace winrt::Windows::UI::WebUI::Core
         template <typename O, typename M> SizeChangedEventHandler(O* object, M method);
         template <typename O, typename M> SizeChangedEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> SizeChangedEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs const& eventArgs) const;
+        auto operator()(winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs const& eventArgs) const;
     };
-    struct __declspec(empty_bases) WebUICommandBar : Windows::UI::WebUI::Core::IWebUICommandBar
+    struct __declspec(empty_bases) WebUICommandBar : winrt::Windows::UI::WebUI::Core::IWebUICommandBar
     {
         WebUICommandBar(std::nullptr_t) noexcept {}
-        WebUICommandBar(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::WebUI::Core::IWebUICommandBar(ptr, take_ownership_from_abi) {}
+        WebUICommandBar(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::WebUI::Core::IWebUICommandBar(ptr, take_ownership_from_abi) {}
         static auto GetForCurrentView();
     };
-    struct __declspec(empty_bases) WebUICommandBarBitmapIcon : Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon
+    struct __declspec(empty_bases) WebUICommandBarBitmapIcon : winrt::Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon
     {
         WebUICommandBarBitmapIcon(std::nullptr_t) noexcept {}
-        WebUICommandBarBitmapIcon(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon(ptr, take_ownership_from_abi) {}
+        WebUICommandBarBitmapIcon(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::WebUI::Core::IWebUICommandBarBitmapIcon(ptr, take_ownership_from_abi) {}
         WebUICommandBarBitmapIcon();
-        explicit WebUICommandBarBitmapIcon(Windows::Foundation::Uri const& uri);
+        explicit WebUICommandBarBitmapIcon(winrt::Windows::Foundation::Uri const& uri);
     };
-    struct __declspec(empty_bases) WebUICommandBarConfirmationButton : Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton
+    struct __declspec(empty_bases) WebUICommandBarConfirmationButton : winrt::Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton
     {
         WebUICommandBarConfirmationButton(std::nullptr_t) noexcept {}
-        WebUICommandBarConfirmationButton(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton(ptr, take_ownership_from_abi) {}
+        WebUICommandBarConfirmationButton(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::WebUI::Core::IWebUICommandBarConfirmationButton(ptr, take_ownership_from_abi) {}
         WebUICommandBarConfirmationButton();
     };
-    struct __declspec(empty_bases) WebUICommandBarIconButton : Windows::UI::WebUI::Core::IWebUICommandBarIconButton
+    struct __declspec(empty_bases) WebUICommandBarIconButton : winrt::Windows::UI::WebUI::Core::IWebUICommandBarIconButton
     {
         WebUICommandBarIconButton(std::nullptr_t) noexcept {}
-        WebUICommandBarIconButton(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::WebUI::Core::IWebUICommandBarIconButton(ptr, take_ownership_from_abi) {}
+        WebUICommandBarIconButton(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::WebUI::Core::IWebUICommandBarIconButton(ptr, take_ownership_from_abi) {}
         WebUICommandBarIconButton();
     };
-    struct __declspec(empty_bases) WebUICommandBarItemInvokedEventArgs : Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs
+    struct __declspec(empty_bases) WebUICommandBarItemInvokedEventArgs : winrt::Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs
     {
         WebUICommandBarItemInvokedEventArgs(std::nullptr_t) noexcept {}
-        WebUICommandBarItemInvokedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs(ptr, take_ownership_from_abi) {}
+        WebUICommandBarItemInvokedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::WebUI::Core::IWebUICommandBarItemInvokedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) WebUICommandBarSizeChangedEventArgs : Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs
+    struct __declspec(empty_bases) WebUICommandBarSizeChangedEventArgs : winrt::Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs
     {
         WebUICommandBarSizeChangedEventArgs(std::nullptr_t) noexcept {}
-        WebUICommandBarSizeChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs(ptr, take_ownership_from_abi) {}
+        WebUICommandBarSizeChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::WebUI::Core::IWebUICommandBarSizeChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) WebUICommandBarSymbolIcon : Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon
+    struct __declspec(empty_bases) WebUICommandBarSymbolIcon : winrt::Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon
     {
         WebUICommandBarSymbolIcon(std::nullptr_t) noexcept {}
-        WebUICommandBarSymbolIcon(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon(ptr, take_ownership_from_abi) {}
+        WebUICommandBarSymbolIcon(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::WebUI::Core::IWebUICommandBarSymbolIcon(ptr, take_ownership_from_abi) {}
         WebUICommandBarSymbolIcon();
         explicit WebUICommandBarSymbolIcon(param::hstring const& symbol);
     };

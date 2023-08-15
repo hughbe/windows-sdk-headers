@@ -53,6 +53,10 @@ typedef union uint128_t
 
 uint64_t POPCNT64(uint64_t X);
 
+int32_t _SDIV64(int64_t Dividend, int32_t Divisor, int32_t *Remainder);
+
+uint32_t _UDIV64(uint64_t Dividend, uint32_t Divisor, uint32_t *Remainder);
+
 int64_t SMUL128(int64_t X, int64_t Y, int64_t *ResultHiOut);
 
 uint64_t UMUL128(uint64_t X, uint64_t Y, uint64_t *ResultHiOut);

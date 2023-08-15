@@ -1,219 +1,220 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_UIAutomation_Core_H
 #define WINRT_Windows_UI_UIAutomation_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/Windows.UI.UIAutomation.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.UI.UIAutomation.2.h"
 #include "winrt/impl/Windows.UI.UIAutomation.Core.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus) consume_Windows_UI_UIAutomation_Core_IAutomationRemoteOperationResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus) consume_Windows_UI_UIAutomation_Core_IAutomationRemoteOperationResult<D>::Status() const
     {
-        Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_UI_UIAutomation_Core_IAutomationRemoteOperationResult<D>::ExtendedError() const
     {
         winrt::hresult value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->get_ExtendedError(put_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->get_ExtendedError(put_abi(value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_UI_UIAutomation_Core_IAutomationRemoteOperationResult<D>::ErrorLocation() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->get_ErrorLocation(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->get_ErrorLocation(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_UIAutomation_Core_IAutomationRemoteOperationResult<D>::HasOperand(Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId) const
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_UIAutomation_Core_IAutomationRemoteOperationResult<D>::HasOperand(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId) const
     {
         bool result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->HasOperand(impl::bind_in(operandId), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->HasOperand(impl::bind_in(operandId), &result));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_UIAutomation_Core_IAutomationRemoteOperationResult<D>::GetOperand(Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_UI_UIAutomation_Core_IAutomationRemoteOperationResult<D>::GetOperand(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->GetOperand(impl::bind_in(operandId), &result));
-        return Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult)->GetOperand(impl::bind_in(operandId), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_UIAutomation_Core_ICoreAutomationConnectionBoundObjectProvider<D>::IsComThreadingRequired() const noexcept
     {
         bool value{};
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider)->get_IsComThreadingRequired(&value));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider)->get_IsComThreadingRequired(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRegistrarStatics<D>::RegisterAnnotationType(winrt::guid const& guid) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRegistrarStatics<D>::RegisterAnnotationType(winrt::guid const& guid) const
     {
-        Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRegistrarStatics)->RegisterAnnotationType(impl::bind_in(guid), put_abi(result)));
+        winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRegistrarStatics)->RegisterAnnotationType(impl::bind_in(guid), put_abi(result)));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRegistrarStatics<D>::UnregisterAnnotationType(Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration const& registration) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRegistrarStatics<D>::UnregisterAnnotationType(winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration const& registration) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRegistrarStatics)->UnregisterAnnotationType(impl::bind_in(registration)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRegistrarStatics)->UnregisterAnnotationType(impl::bind_in(registration)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation<D>::IsOpcodeSupported(uint32_t opcode) const
     {
         bool result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->IsOpcodeSupported(opcode, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->IsOpcodeSupported(opcode, &result));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation<D>::ImportElement(Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId, Windows::UI::UIAutomation::AutomationElement const& element) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation<D>::ImportElement(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId, winrt::Windows::UI::UIAutomation::AutomationElement const& element) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->ImportElement(impl::bind_in(operandId), *(void**)(&element)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->ImportElement(impl::bind_in(operandId), *(void**)(&element)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation<D>::ImportTextRange(Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId, Windows::UI::UIAutomation::AutomationTextRange const& textRange) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation<D>::ImportTextRange(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId, winrt::Windows::UI::UIAutomation::AutomationTextRange const& textRange) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->ImportTextRange(impl::bind_in(operandId), *(void**)(&textRange)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->ImportTextRange(impl::bind_in(operandId), *(void**)(&textRange)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation<D>::AddToResults(Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation<D>::AddToResults(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->AddToResults(impl::bind_in(operandId)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->AddToResults(impl::bind_in(operandId)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation<D>::Execute(array_view<uint8_t const> bytecodeBuffer) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation<D>::Execute(array_view<uint8_t const> bytecodeBuffer) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->Execute(bytecodeBuffer.size(), get_abi(bytecodeBuffer), &result));
-        return Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation)->Execute(bytecodeBuffer.size(), get_abi(bytecodeBuffer), &result));
+        return winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation2<D>::ImportConnectionBoundObject(Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId, Windows::UI::UIAutomation::AutomationConnectionBoundObject const& connectionBoundObject) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperation2<D>::ImportConnectionBoundObject(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& operandId, winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject const& connectionBoundObject) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation2)->ImportConnectionBoundObject(impl::bind_in(operandId), *(void**)(&connectionBoundObject)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation2)->ImportConnectionBoundObject(impl::bind_in(operandId), *(void**)(&connectionBoundObject)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperationContext<D>::GetOperand(Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& id) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperationContext<D>::GetOperand(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& id) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext)->GetOperand(impl::bind_in(id), &result));
-        return Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext)->GetOperand(impl::bind_in(id), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperationContext<D>::SetOperand(Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& id, Windows::Foundation::IInspectable const& operand) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperationContext<D>::SetOperand(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& id, winrt::Windows::Foundation::IInspectable const& operand) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext)->SetOperand(impl::bind_in(id), *(void**)(&operand)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext)->SetOperand(impl::bind_in(id), *(void**)(&operand)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperationContext<D>::SetOperand(Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& id, Windows::Foundation::IInspectable const& operand, winrt::guid const& operandInterfaceId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperationContext<D>::SetOperand(winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const& id, winrt::Windows::Foundation::IInspectable const& operand, winrt::guid const& operandInterfaceId) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext)->SetOperand2(impl::bind_in(id), *(void**)(&operand), impl::bind_in(operandInterfaceId)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext)->SetOperand2(impl::bind_in(id), *(void**)(&operand), impl::bind_in(operandInterfaceId)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperationExtensionProvider<D>::CallExtension(winrt::guid const& extensionId, Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext const& context, array_view<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const> operandIds) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperationExtensionProvider<D>::CallExtension(winrt::guid const& extensionId, winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext const& context, array_view<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const> operandIds) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider)->CallExtension(impl::bind_in(extensionId), *(void**)(&context), operandIds.size(), get_abi(operandIds)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider)->CallExtension(impl::bind_in(extensionId), *(void**)(&context), operandIds.size(), get_abi(operandIds)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_UI_UIAutomation_Core_ICoreAutomationRemoteOperationExtensionProvider<D>::IsExtensionSupported(winrt::guid const& extensionId) const
     {
         bool result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider)->IsExtensionSupported(impl::bind_in(extensionId), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider)->IsExtensionSupported(impl::bind_in(extensionId), &result));
         return result;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::Start() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->Start());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->Start());
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::Stop() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->Stop());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->Stop());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::UI::UIAutomation::Core::RemoteAutomationWindow>) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::CreateWindowAsync(uint64_t remoteWindowId, uint32_t remoteProcessId, Windows::Foundation::IInspectable const& parentAutomationElement) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::CreateWindowAsync(uint64_t remoteWindowId, uint32_t remoteProcessId, winrt::Windows::Foundation::IInspectable const& parentAutomationElement) const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->CreateWindowAsync(remoteWindowId, remoteProcessId, *(void**)(&parentAutomationElement), &operation));
-        return Windows::Foundation::IAsyncOperation<Windows::UI::UIAutomation::Core::RemoteAutomationWindow>{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->CreateWindowAsync(remoteWindowId, remoteProcessId, *(void**)(&parentAutomationElement), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>{ operation, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::guid) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::SessionId() const
     {
         winrt::guid value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->get_SessionId(put_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->get_SessionId(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::ConnectionRequested(Windows::Foundation::TypedEventHandler<Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::ConnectionRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->add_ConnectionRequested(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->add_ConnectionRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::ConnectionRequested_revoker consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::ConnectionRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::ConnectionRequested_revoker consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::ConnectionRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, ConnectionRequested_revoker>(this, ConnectionRequested(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::ConnectionRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->remove_ConnectionRequested(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->remove_ConnectionRequested(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::Disconnected(Windows::Foundation::TypedEventHandler<Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::Disconnected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->add_Disconnected(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->add_Disconnected(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::Disconnected_revoker consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::Disconnected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::Disconnected_revoker consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::Disconnected(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Disconnected_revoker>(this, Disconnected(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSession<D>::Disconnected(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->remove_Disconnected(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession)->remove_Disconnected(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::UIAutomation::Core::RemoteAutomationClientSession) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSessionFactory<D>::CreateInstance(param::hstring const& name) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSessionFactory<D>::CreateInstance(param::hstring const& name) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSessionFactory)->CreateInstance(*(void**)(&name), &value));
-        return Windows::UI::UIAutomation::Core::RemoteAutomationClientSession{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSessionFactory)->CreateInstance(*(void**)(&name), &value));
+        return winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::UIAutomation::Core::RemoteAutomationClientSession) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSessionFactory<D>::CreateInstance2(param::hstring const& name, winrt::guid const& sessionId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationClientSessionFactory<D>::CreateInstance2(param::hstring const& name, winrt::guid const& sessionId) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationClientSessionFactory)->CreateInstance2(*(void**)(&name), impl::bind_in(sessionId), &value));
-        return Windows::UI::UIAutomation::Core::RemoteAutomationClientSession{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSessionFactory)->CreateInstance2(*(void**)(&name), impl::bind_in(sessionId), &value));
+        return winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationConnectionRequestedEventArgs<D>::LocalPipeName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationConnectionRequestedEventArgs)->get_LocalPipeName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationConnectionRequestedEventArgs)->get_LocalPipeName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationConnectionRequestedEventArgs<D>::RemoteProcessId() const
     {
         uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationConnectionRequestedEventArgs)->get_RemoteProcessId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationConnectionRequestedEventArgs)->get_RemoteProcessId(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationDisconnectedEventArgs<D>::LocalPipeName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationDisconnectedEventArgs)->get_LocalPipeName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationDisconnectedEventArgs)->get_LocalPipeName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationServerStatics<D>::ReportSession(winrt::guid const& sessionId) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationServerStatics)->ReportSession(impl::bind_in(sessionId)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationServerStatics)->ReportSession(impl::bind_in(sessionId)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationWindow<D>::AutomationProvider() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationWindow<D>::AutomationProvider() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationWindow)->get_AutomationProvider(&value));
-        return Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationWindow)->get_AutomationProvider(&value));
+        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationWindow<D>::UnregisterAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_UI_UIAutomation_Core_IRemoteAutomationWindow<D>::UnregisterAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::UIAutomation::Core::IRemoteAutomationWindow)->UnregisterAsync(&operation));
-        return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationWindow)->UnregisterAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult> : produce_base<D, Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::IAutomationRemoteOperationResult>
     {
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus>(this->shim().Status());
+            *value = detach_from<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus>(this->shim().Status());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -235,7 +236,7 @@ namespace winrt::impl
         int32_t __stdcall HasOperand(struct struct_Windows_UI_UIAutomation_Core_AutomationRemoteOperationOperandId operandId, bool* result) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<bool>(this->shim().HasOperand(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId)));
+            *result = detach_from<bool>(this->shim().HasOperand(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -243,14 +244,14 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IInspectable>(this->shim().GetOperand(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId)));
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().GetOperand(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider> : produce_base<D, Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>
     {
         int32_t __stdcall get_IsComThreadingRequired(bool* value) noexcept final
         {
@@ -261,20 +262,20 @@ namespace winrt::impl
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::ICoreAutomationRegistrarStatics> : produce_base<D, Windows::UI::UIAutomation::Core::ICoreAutomationRegistrarStatics>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRegistrarStatics> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRegistrarStatics>
     {
         int32_t __stdcall RegisterAnnotationType(winrt::guid guid, struct struct_Windows_UI_UIAutomation_Core_AutomationAnnotationTypeRegistration* result) noexcept final try
         {
-            zero_abi<Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>(result);
+            zero_abi<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>(this->shim().RegisterAnnotationType(*reinterpret_cast<winrt::guid const*>(&guid)));
+            *result = detach_from<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>(this->shim().RegisterAnnotationType(*reinterpret_cast<winrt::guid const*>(&guid)));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall UnregisterAnnotationType(struct struct_Windows_UI_UIAutomation_Core_AutomationAnnotationTypeRegistration registration) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().UnregisterAnnotationType(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration const*>(&registration));
+            this->shim().UnregisterAnnotationType(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration const*>(&registration));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -282,7 +283,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation> : produce_base<D, Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation>
     {
         int32_t __stdcall IsOpcodeSupported(uint32_t opcode, bool* result) noexcept final try
         {
@@ -294,21 +295,21 @@ namespace winrt::impl
         int32_t __stdcall ImportElement(struct struct_Windows_UI_UIAutomation_Core_AutomationRemoteOperationOperandId operandId, void* element) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ImportElement(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId), *reinterpret_cast<Windows::UI::UIAutomation::AutomationElement const*>(&element));
+            this->shim().ImportElement(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId), *reinterpret_cast<winrt::Windows::UI::UIAutomation::AutomationElement const*>(&element));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall ImportTextRange(struct struct_Windows_UI_UIAutomation_Core_AutomationRemoteOperationOperandId operandId, void* textRange) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ImportTextRange(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId), *reinterpret_cast<Windows::UI::UIAutomation::AutomationTextRange const*>(&textRange));
+            this->shim().ImportTextRange(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId), *reinterpret_cast<winrt::Windows::UI::UIAutomation::AutomationTextRange const*>(&textRange));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall AddToResults(struct struct_Windows_UI_UIAutomation_Core_AutomationRemoteOperationOperandId operandId) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AddToResults(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId));
+            this->shim().AddToResults(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -316,7 +317,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>(this->shim().Execute(array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(bytecodeBuffer), reinterpret_cast<uint8_t const *>(bytecodeBuffer) + __bytecodeBufferSize)));
+            *result = detach_from<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>(this->shim().Execute(array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(bytecodeBuffer), reinterpret_cast<uint8_t const *>(bytecodeBuffer) + __bytecodeBufferSize)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -324,12 +325,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation2> : produce_base<D, Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation2>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation2> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperation2>
     {
         int32_t __stdcall ImportConnectionBoundObject(struct struct_Windows_UI_UIAutomation_Core_AutomationRemoteOperationOperandId operandId, void* connectionBoundObject) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ImportConnectionBoundObject(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId), *reinterpret_cast<Windows::UI::UIAutomation::AutomationConnectionBoundObject const*>(&connectionBoundObject));
+            this->shim().ImportConnectionBoundObject(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&operandId), *reinterpret_cast<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject const*>(&connectionBoundObject));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -337,39 +338,39 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext> : produce_base<D, Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationContext>
     {
         int32_t __stdcall GetOperand(struct struct_Windows_UI_UIAutomation_Core_AutomationRemoteOperationOperandId id, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IInspectable>(this->shim().GetOperand(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&id)));
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().GetOperand(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&id)));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetOperand(struct struct_Windows_UI_UIAutomation_Core_AutomationRemoteOperationOperandId id, void* operand) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetOperand(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&id), *reinterpret_cast<Windows::Foundation::IInspectable const*>(&operand));
+            this->shim().SetOperand(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&id), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&operand));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetOperand2(struct struct_Windows_UI_UIAutomation_Core_AutomationRemoteOperationOperandId id, void* operand, winrt::guid operandInterfaceId) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetOperand(*reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&id), *reinterpret_cast<Windows::Foundation::IInspectable const*>(&operand), *reinterpret_cast<winrt::guid const*>(&operandInterfaceId));
+            this->shim().SetOperand(*reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const*>(&id), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&operand), *reinterpret_cast<winrt::guid const*>(&operandInterfaceId));
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider> : produce_base<D, Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>
     {
         int32_t __stdcall CallExtension(winrt::guid extensionId, void* context, uint32_t __operandIdsSize, struct struct_Windows_UI_UIAutomation_Core_AutomationRemoteOperationOperandId* operandIds) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().CallExtension(*reinterpret_cast<winrt::guid const*>(&extensionId), *reinterpret_cast<Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext const*>(&context), array_view<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const>(reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const *>(operandIds), reinterpret_cast<Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const *>(operandIds) + __operandIdsSize));
+            this->shim().CallExtension(*reinterpret_cast<winrt::guid const*>(&extensionId), *reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext const*>(&context), array_view<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const>(reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const *>(operandIds), reinterpret_cast<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId const *>(operandIds) + __operandIdsSize));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -383,7 +384,7 @@ namespace winrt::impl
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession> : produce_base<D, Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSession>
     {
         int32_t __stdcall Start() noexcept final try
         {
@@ -403,7 +404,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncOperation<Windows::UI::UIAutomation::Core::RemoteAutomationWindow>>(this->shim().CreateWindowAsync(remoteWindowId, remoteProcessId, *reinterpret_cast<Windows::Foundation::IInspectable const*>(&parentAutomationElement)));
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>>(this->shim().CreateWindowAsync(remoteWindowId, remoteProcessId, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&parentAutomationElement)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -418,7 +419,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().ConnectionRequested(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().ConnectionRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -432,7 +433,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Disconnected(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Disconnected(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession, winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -446,13 +447,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::IRemoteAutomationClientSessionFactory> : produce_base<D, Windows::UI::UIAutomation::Core::IRemoteAutomationClientSessionFactory>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSessionFactory> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationClientSessionFactory>
     {
         int32_t __stdcall CreateInstance(void* name, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>(this->shim().CreateInstance(*reinterpret_cast<hstring const*>(&name)));
+            *value = detach_from<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>(this->shim().CreateInstance(*reinterpret_cast<hstring const*>(&name)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -460,7 +461,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>(this->shim().CreateInstance2(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<winrt::guid const*>(&sessionId)));
+            *value = detach_from<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>(this->shim().CreateInstance2(*reinterpret_cast<hstring const*>(&name), *reinterpret_cast<winrt::guid const*>(&sessionId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -468,7 +469,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::IRemoteAutomationConnectionRequestedEventArgs> : produce_base<D, Windows::UI::UIAutomation::Core::IRemoteAutomationConnectionRequestedEventArgs>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationConnectionRequestedEventArgs> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationConnectionRequestedEventArgs>
     {
         int32_t __stdcall get_LocalPipeName(void** value) noexcept final try
         {
@@ -489,7 +490,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::IRemoteAutomationDisconnectedEventArgs> : produce_base<D, Windows::UI::UIAutomation::Core::IRemoteAutomationDisconnectedEventArgs>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationDisconnectedEventArgs> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationDisconnectedEventArgs>
     {
         int32_t __stdcall get_LocalPipeName(void** value) noexcept final try
         {
@@ -503,7 +504,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::IRemoteAutomationServerStatics> : produce_base<D, Windows::UI::UIAutomation::Core::IRemoteAutomationServerStatics>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationServerStatics> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationServerStatics>
     {
         int32_t __stdcall ReportSession(winrt::guid sessionId) noexcept final try
         {
@@ -516,13 +517,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::UIAutomation::Core::IRemoteAutomationWindow> : produce_base<D, Windows::UI::UIAutomation::Core::IRemoteAutomationWindow>
+    struct produce<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationWindow> : produce_base<D, winrt::Windows::UI::UIAutomation::Core::IRemoteAutomationWindow>
     {
         int32_t __stdcall get_AutomationProvider(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IInspectable>(this->shim().AutomationProvider());
+            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().AutomationProvider());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -530,7 +531,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncAction>(this->shim().UnregisterAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().UnregisterAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -543,12 +544,12 @@ WINRT_EXPORT namespace winrt::Windows::UI::UIAutomation::Core
     {
         return impl::call_factory<CoreAutomationRegistrar, ICoreAutomationRegistrarStatics>([&](ICoreAutomationRegistrarStatics const& f) { return f.RegisterAnnotationType(guid); });
     }
-    inline auto CoreAutomationRegistrar::UnregisterAnnotationType(Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration const& registration)
+    inline auto CoreAutomationRegistrar::UnregisterAnnotationType(winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration const& registration)
     {
         impl::call_factory<CoreAutomationRegistrar, ICoreAutomationRegistrarStatics>([&](ICoreAutomationRegistrarStatics const& f) { return f.UnregisterAnnotationType(registration); });
     }
     inline CoreAutomationRemoteOperation::CoreAutomationRemoteOperation() :
-        CoreAutomationRemoteOperation(impl::call_factory_cast<CoreAutomationRemoteOperation(*)(Windows::Foundation::IActivationFactory const&), CoreAutomationRemoteOperation>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<CoreAutomationRemoteOperation>(); }))
+        CoreAutomationRemoteOperation(impl::call_factory_cast<CoreAutomationRemoteOperation(*)(winrt::Windows::Foundation::IActivationFactory const&), CoreAutomationRemoteOperation>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<CoreAutomationRemoteOperation>(); }))
     {
     }
     inline RemoteAutomationClientSession::RemoteAutomationClientSession(param::hstring const& name) :

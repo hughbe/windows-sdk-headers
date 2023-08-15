@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Media_Core_H
 #define WINRT_Windows_Media_Core_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/Windows.Media.h"
 #include "winrt/impl/Windows.ApplicationModel.AppService.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -33,2631 +34,2631 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatche
 #include "winrt/impl/Windows.Media.Core.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Core_IAudioStreamDescriptor<D>::EncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Core_IAudioStreamDescriptor<D>::EncodingProperties() const
     {
         void* encodingProperties{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioStreamDescriptor)->get_EncodingProperties(&encodingProperties));
-        return Windows::Media::MediaProperties::AudioEncodingProperties{ encodingProperties, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioStreamDescriptor)->get_EncodingProperties(&encodingProperties));
+        return winrt::Windows::Media::MediaProperties::AudioEncodingProperties{ encodingProperties, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IAudioStreamDescriptor2<D>::LeadingEncoderPadding(Windows::Foundation::IReference<uint32_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IAudioStreamDescriptor2<D>::LeadingEncoderPadding(winrt::Windows::Foundation::IReference<uint32_t> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioStreamDescriptor2)->put_LeadingEncoderPadding(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioStreamDescriptor2)->put_LeadingEncoderPadding(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Core_IAudioStreamDescriptor2<D>::LeadingEncoderPadding() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioStreamDescriptor2)->get_LeadingEncoderPadding(&value));
-        return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IAudioStreamDescriptor2<D>::TrailingEncoderPadding(Windows::Foundation::IReference<uint32_t> const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioStreamDescriptor2)->put_TrailingEncoderPadding(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Core_IAudioStreamDescriptor2<D>::TrailingEncoderPadding() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Core_IAudioStreamDescriptor2<D>::LeadingEncoderPadding() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioStreamDescriptor2)->get_TrailingEncoderPadding(&value));
-        return Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioStreamDescriptor2)->get_LeadingEncoderPadding(&value));
+        return winrt::Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::AudioStreamDescriptor) consume_Windows_Media_Core_IAudioStreamDescriptor3<D>::Copy() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IAudioStreamDescriptor2<D>::TrailingEncoderPadding(winrt::Windows::Foundation::IReference<uint32_t> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioStreamDescriptor2)->put_TrailingEncoderPadding(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) consume_Windows_Media_Core_IAudioStreamDescriptor2<D>::TrailingEncoderPadding() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioStreamDescriptor2)->get_TrailingEncoderPadding(&value));
+        return winrt::Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::AudioStreamDescriptor) consume_Windows_Media_Core_IAudioStreamDescriptor3<D>::Copy() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioStreamDescriptor3)->Copy(&result));
-        return Windows::Media::Core::AudioStreamDescriptor{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioStreamDescriptor3)->Copy(&result));
+        return winrt::Windows::Media::Core::AudioStreamDescriptor{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::AudioStreamDescriptor) consume_Windows_Media_Core_IAudioStreamDescriptorFactory<D>::Create(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::AudioStreamDescriptor) consume_Windows_Media_Core_IAudioStreamDescriptorFactory<D>::Create(winrt::Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioStreamDescriptorFactory)->Create(*(void**)(&encodingProperties), &result));
-        return Windows::Media::Core::AudioStreamDescriptor{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioStreamDescriptorFactory)->Create(*(void**)(&encodingProperties), &result));
+        return winrt::Windows::Media::Core::AudioStreamDescriptor{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IAudioTrack<D>::OpenFailed(Windows::Foundation::TypedEventHandler<Windows::Media::Core::AudioTrack, Windows::Media::Core::AudioTrackOpenFailedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IAudioTrack<D>::OpenFailed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::AudioTrack, winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrack)->add_OpenFailed(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrack)->add_OpenFailed(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IAudioTrack<D>::OpenFailed_revoker consume_Windows_Media_Core_IAudioTrack<D>::OpenFailed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::AudioTrack, Windows::Media::Core::AudioTrackOpenFailedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IAudioTrack<D>::OpenFailed_revoker consume_Windows_Media_Core_IAudioTrack<D>::OpenFailed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::AudioTrack, winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, OpenFailed_revoker>(this, OpenFailed(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IAudioTrack<D>::OpenFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrack)->remove_OpenFailed(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrack)->remove_OpenFailed(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Core_IAudioTrack<D>::GetEncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::AudioEncodingProperties) consume_Windows_Media_Core_IAudioTrack<D>::GetEncodingProperties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrack)->GetEncodingProperties(&value));
-        return Windows::Media::MediaProperties::AudioEncodingProperties{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrack)->GetEncodingProperties(&value));
+        return winrt::Windows::Media::MediaProperties::AudioEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Playback::MediaPlaybackItem) consume_Windows_Media_Core_IAudioTrack<D>::PlaybackItem() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Playback::MediaPlaybackItem) consume_Windows_Media_Core_IAudioTrack<D>::PlaybackItem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrack)->get_PlaybackItem(&value));
-        return Windows::Media::Playback::MediaPlaybackItem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrack)->get_PlaybackItem(&value));
+        return winrt::Windows::Media::Playback::MediaPlaybackItem{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IAudioTrack<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrack)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrack)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::AudioTrackSupportInfo) consume_Windows_Media_Core_IAudioTrack<D>::SupportInfo() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::AudioTrackSupportInfo) consume_Windows_Media_Core_IAudioTrack<D>::SupportInfo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrack)->get_SupportInfo(&value));
-        return Windows::Media::Core::AudioTrackSupportInfo{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrack)->get_SupportInfo(&value));
+        return winrt::Windows::Media::Core::AudioTrackSupportInfo{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Core_IAudioTrackOpenFailedEventArgs<D>::ExtendedError() const
     {
         winrt::hresult value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrackOpenFailedEventArgs)->get_ExtendedError(put_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrackOpenFailedEventArgs)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaDecoderStatus) consume_Windows_Media_Core_IAudioTrackSupportInfo<D>::DecoderStatus() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaDecoderStatus) consume_Windows_Media_Core_IAudioTrackSupportInfo<D>::DecoderStatus() const
     {
-        Windows::Media::Core::MediaDecoderStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrackSupportInfo)->get_DecoderStatus(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MediaDecoderStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrackSupportInfo)->get_DecoderStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::AudioDecoderDegradation) consume_Windows_Media_Core_IAudioTrackSupportInfo<D>::Degradation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::AudioDecoderDegradation) consume_Windows_Media_Core_IAudioTrackSupportInfo<D>::Degradation() const
     {
-        Windows::Media::Core::AudioDecoderDegradation value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrackSupportInfo)->get_Degradation(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::AudioDecoderDegradation value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrackSupportInfo)->get_Degradation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::AudioDecoderDegradationReason) consume_Windows_Media_Core_IAudioTrackSupportInfo<D>::DegradationReason() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::AudioDecoderDegradationReason) consume_Windows_Media_Core_IAudioTrackSupportInfo<D>::DegradationReason() const
     {
-        Windows::Media::Core::AudioDecoderDegradationReason value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrackSupportInfo)->get_DegradationReason(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::AudioDecoderDegradationReason value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrackSupportInfo)->get_DegradationReason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSourceStatus) consume_Windows_Media_Core_IAudioTrackSupportInfo<D>::MediaSourceStatus() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSourceStatus) consume_Windows_Media_Core_IAudioTrackSupportInfo<D>::MediaSourceStatus() const
     {
-        Windows::Media::Core::MediaSourceStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IAudioTrackSupportInfo)->get_MediaSourceStatus(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MediaSourceStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IAudioTrackSupportInfo)->get_MediaSourceStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IChapterCue<D>::Title(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IChapterCue)->put_Title(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IChapterCue)->put_Title(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IChapterCue<D>::Title() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IChapterCue)->get_Title(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IChapterCue)->get_Title(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::CodecKind) consume_Windows_Media_Core_ICodecInfo<D>::Kind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::CodecKind) consume_Windows_Media_Core_ICodecInfo<D>::Kind() const
     {
-        Windows::Media::Core::CodecKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecInfo)->get_Kind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::CodecKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecInfo)->get_Kind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::CodecCategory) consume_Windows_Media_Core_ICodecInfo<D>::Category() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::CodecCategory) consume_Windows_Media_Core_ICodecInfo<D>::Category() const
     {
-        Windows::Media::Core::CodecCategory value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecInfo)->get_Category(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::CodecCategory value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecInfo)->get_Category(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Media_Core_ICodecInfo<D>::Subtypes() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Media_Core_ICodecInfo<D>::Subtypes() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecInfo)->get_Subtypes(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecInfo)->get_Subtypes(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecInfo<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecInfo)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecInfo)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_ICodecInfo<D>::IsTrusted() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecInfo)->get_IsTrusted(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecInfo)->get_IsTrusted(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Media::Core::CodecInfo>>) consume_Windows_Media_Core_ICodecQuery<D>::FindAllAsync(Windows::Media::Core::CodecKind const& kind, Windows::Media::Core::CodecCategory const& category, param::hstring const& subType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::CodecInfo>>) consume_Windows_Media_Core_ICodecQuery<D>::FindAllAsync(winrt::Windows::Media::Core::CodecKind const& kind, winrt::Windows::Media::Core::CodecCategory const& category, param::hstring const& subType) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecQuery)->FindAllAsync(static_cast<int32_t>(kind), static_cast<int32_t>(category), *(void**)(&subType), &value));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Media::Core::CodecInfo>>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecQuery)->FindAllAsync(static_cast<int32_t>(kind), static_cast<int32_t>(category), *(void**)(&subType), &value));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::CodecInfo>>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatDV25() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDV25(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDV25(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatDV50() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDV50(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDV50(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatDvc() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvc(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvc(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatDvh1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvh1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvh1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatDvhD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvhD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvhD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatDvsd() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvsd(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvsd(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatDvsl() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvsl(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatDvsl(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatH263() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatH263(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatH263(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatH264() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatH264(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatH264(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatH265() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatH265(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatH265(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatH264ES() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatH264ES(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatH264ES(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatHevc() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatHevc(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatHevc(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatHevcES() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatHevcES(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatHevcES(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatM4S2() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatM4S2(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatM4S2(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatMjpg() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMjpg(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMjpg(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatMP43() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMP43(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMP43(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatMP4S() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMP4S(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMP4S(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatMP4V() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMP4V(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMP4V(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatMpeg2() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMpeg2(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMpeg2(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatVP80() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatVP80(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatVP80(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatVP90() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatVP90(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatVP90(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatMpg1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMpg1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMpg1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatMss1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMss1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMss1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatMss2() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMss2(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatMss2(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatWmv1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatWmv1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatWmv1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatWmv2() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatWmv2(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatWmv2(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatWmv3() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatWmv3(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatWmv3(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormatWvc1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatWvc1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormatWvc1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::VideoFormat420O() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormat420O(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_VideoFormat420O(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatAac() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAac(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAac(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatAdts() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAdts(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAdts(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatAlac() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAlac(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAlac(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatAmrNB() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAmrNB(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAmrNB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatAmrWB() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAmrWB(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAmrWB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatAmrWP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAmrWP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatAmrWP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatDolbyAC3() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDolbyAC3(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDolbyAC3(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatDolbyAC3Spdif() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDolbyAC3Spdif(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDolbyAC3Spdif(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatDolbyDDPlus() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDolbyDDPlus(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDolbyDDPlus(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatDrm() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDrm(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDrm(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatDts() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDts(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatDts(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatFlac() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatFlac(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatFlac(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatFloat() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatFloat(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatFloat(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatMP3() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatMP3(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatMP3(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatMPeg() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatMPeg(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatMPeg(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatMsp1() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatMsp1(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatMsp1(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatOpus() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatOpus(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatOpus(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatPcm() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatPcm(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatPcm(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatWmaSpdif() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatWmaSpdif(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatWmaSpdif(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatWMAudioLossless() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatWMAudioLossless(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatWMAudioLossless(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatWMAudioV8() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatWMAudioV8(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatWMAudioV8(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ICodecSubtypesStatics<D>::AudioFormatWMAudioV9() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatWMAudioV9(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ICodecSubtypesStatics)->get_AudioFormatWMAudioV9(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IDataCue<D>::Data(Windows::Storage::Streams::IBuffer const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IDataCue<D>::Data(winrt::Windows::Storage::Streams::IBuffer const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IDataCue)->put_Data(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IDataCue)->put_Data(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IBuffer) consume_Windows_Media_Core_IDataCue<D>::Data() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IBuffer) consume_Windows_Media_Core_IDataCue<D>::Data() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IDataCue)->get_Data(&value));
-        return Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IDataCue)->get_Data(&value));
+        return winrt::Windows::Storage::Streams::IBuffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::PropertySet) consume_Windows_Media_Core_IDataCue2<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::PropertySet) consume_Windows_Media_Core_IDataCue2<D>::Properties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IDataCue2)->get_Properties(&value));
-        return Windows::Foundation::Collections::PropertySet{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IDataCue2)->get_Properties(&value));
+        return winrt::Windows::Foundation::Collections::PropertySet{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::FaceDetectionEffectFrame) consume_Windows_Media_Core_IFaceDetectedEventArgs<D>::ResultFrame() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::FaceDetectionEffectFrame) consume_Windows_Media_Core_IFaceDetectedEventArgs<D>::ResultFrame() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectedEventArgs)->get_ResultFrame(&value));
-        return Windows::Media::Core::FaceDetectionEffectFrame{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectedEventArgs)->get_ResultFrame(&value));
+        return winrt::Windows::Media::Core::FaceDetectionEffectFrame{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IFaceDetectionEffect<D>::Enabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffect)->put_Enabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffect)->put_Enabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IFaceDetectionEffect<D>::Enabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffect)->get_Enabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffect)->get_Enabled(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IFaceDetectionEffect<D>::DesiredDetectionInterval(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IFaceDetectionEffect<D>::DesiredDetectionInterval(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffect)->put_DesiredDetectionInterval(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffect)->put_DesiredDetectionInterval(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IFaceDetectionEffect<D>::DesiredDetectionInterval() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IFaceDetectionEffect<D>::DesiredDetectionInterval() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffect)->get_DesiredDetectionInterval(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffect)->get_DesiredDetectionInterval(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IFaceDetectionEffect<D>::FaceDetected(Windows::Foundation::TypedEventHandler<Windows::Media::Core::FaceDetectionEffect, Windows::Media::Core::FaceDetectedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IFaceDetectionEffect<D>::FaceDetected(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::FaceDetectionEffect, winrt::Windows::Media::Core::FaceDetectedEventArgs> const& handler) const
     {
         winrt::event_token cookie{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffect)->add_FaceDetected(*(void**)(&handler), put_abi(cookie)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffect)->add_FaceDetected(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
-    template <typename D> typename consume_Windows_Media_Core_IFaceDetectionEffect<D>::FaceDetected_revoker consume_Windows_Media_Core_IFaceDetectionEffect<D>::FaceDetected(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::FaceDetectionEffect, Windows::Media::Core::FaceDetectedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IFaceDetectionEffect<D>::FaceDetected_revoker consume_Windows_Media_Core_IFaceDetectionEffect<D>::FaceDetected(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::FaceDetectionEffect, winrt::Windows::Media::Core::FaceDetectedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, FaceDetected_revoker>(this, FaceDetected(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IFaceDetectionEffect<D>::FaceDetected(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffect)->remove_FaceDetected(impl::bind_in(cookie)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffect)->remove_FaceDetected(impl::bind_in(cookie)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IFaceDetectionEffectDefinition<D>::DetectionMode(Windows::Media::Core::FaceDetectionMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IFaceDetectionEffectDefinition<D>::DetectionMode(winrt::Windows::Media::Core::FaceDetectionMode const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffectDefinition)->put_DetectionMode(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffectDefinition)->put_DetectionMode(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::FaceDetectionMode) consume_Windows_Media_Core_IFaceDetectionEffectDefinition<D>::DetectionMode() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::FaceDetectionMode) consume_Windows_Media_Core_IFaceDetectionEffectDefinition<D>::DetectionMode() const
     {
-        Windows::Media::Core::FaceDetectionMode value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffectDefinition)->get_DetectionMode(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::FaceDetectionMode value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffectDefinition)->get_DetectionMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IFaceDetectionEffectDefinition<D>::SynchronousDetectionEnabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffectDefinition)->put_SynchronousDetectionEnabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffectDefinition)->put_SynchronousDetectionEnabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IFaceDetectionEffectDefinition<D>::SynchronousDetectionEnabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffectDefinition)->get_SynchronousDetectionEnabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffectDefinition)->get_SynchronousDetectionEnabled(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::FaceAnalysis::DetectedFace>) consume_Windows_Media_Core_IFaceDetectionEffectFrame<D>::DetectedFaces() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::FaceAnalysis::DetectedFace>) consume_Windows_Media_Core_IFaceDetectionEffectFrame<D>::DetectedFaces() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IFaceDetectionEffectFrame)->get_DetectedFaces(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Media::FaceAnalysis::DetectedFace>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IFaceDetectionEffectFrame)->get_DetectedFaces(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::FaceAnalysis::DetectedFace>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IHighDynamicRangeControl<D>::Enabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IHighDynamicRangeControl)->put_Enabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IHighDynamicRangeControl)->put_Enabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IHighDynamicRangeControl<D>::Enabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IHighDynamicRangeControl)->get_Enabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IHighDynamicRangeControl)->get_Enabled(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Core_IHighDynamicRangeOutput<D>::Certainty() const
     {
         double value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IHighDynamicRangeOutput)->get_Certainty(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IHighDynamicRangeOutput)->get_Certainty(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::Core::FrameController>) consume_Windows_Media_Core_IHighDynamicRangeOutput<D>::FrameControllers() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Devices::Core::FrameController>) consume_Windows_Media_Core_IHighDynamicRangeOutput<D>::FrameControllers() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IHighDynamicRangeOutput)->get_FrameControllers(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::Core::FrameController>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IHighDynamicRangeOutput)->get_FrameControllers(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Devices::Core::FrameController>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextPoint) consume_Windows_Media_Core_IImageCue<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextPoint) consume_Windows_Media_Core_IImageCue<D>::Position() const
     {
-        Windows::Media::Core::TimedTextPoint value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IImageCue)->get_Position(put_abi(value)));
+        winrt::Windows::Media::Core::TimedTextPoint value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IImageCue)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IImageCue<D>::Position(Windows::Media::Core::TimedTextPoint const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IImageCue<D>::Position(winrt::Windows::Media::Core::TimedTextPoint const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IImageCue)->put_Position(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IImageCue)->put_Position(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSize) consume_Windows_Media_Core_IImageCue<D>::Extent() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSize) consume_Windows_Media_Core_IImageCue<D>::Extent() const
     {
-        Windows::Media::Core::TimedTextSize value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IImageCue)->get_Extent(put_abi(value)));
+        winrt::Windows::Media::Core::TimedTextSize value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IImageCue)->get_Extent(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IImageCue<D>::Extent(Windows::Media::Core::TimedTextSize const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IImageCue<D>::Extent(winrt::Windows::Media::Core::TimedTextSize const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IImageCue)->put_Extent(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IImageCue)->put_Extent(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IImageCue<D>::SoftwareBitmap(Windows::Graphics::Imaging::SoftwareBitmap const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IImageCue<D>::SoftwareBitmap(winrt::Windows::Graphics::Imaging::SoftwareBitmap const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IImageCue)->put_SoftwareBitmap(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IImageCue)->put_SoftwareBitmap(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Media_Core_IImageCue<D>::SoftwareBitmap() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IImageCue)->get_SoftwareBitmap(&value));
-        return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSource) consume_Windows_Media_Core_IInitializeMediaStreamSourceRequestedEventArgs<D>::Source() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Media_Core_IImageCue<D>::SoftwareBitmap() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs)->get_Source(&value));
-        return Windows::Media::Core::MediaStreamSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IImageCue)->get_SoftwareBitmap(&value));
+        return winrt::Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStream) consume_Windows_Media_Core_IInitializeMediaStreamSourceRequestedEventArgs<D>::RandomAccessStream() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSource) consume_Windows_Media_Core_IInitializeMediaStreamSourceRequestedEventArgs<D>::Source() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs)->get_RandomAccessStream(&value));
-        return Windows::Storage::Streams::IRandomAccessStream{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs)->get_Source(&value));
+        return winrt::Windows::Media::Core::MediaStreamSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Media_Core_IInitializeMediaStreamSourceRequestedEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStream) consume_Windows_Media_Core_IInitializeMediaStreamSourceRequestedEventArgs<D>::RandomAccessStream() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs)->get_RandomAccessStream(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStream{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_Media_Core_IInitializeMediaStreamSourceRequestedEventArgs<D>::GetDeferral() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs)->GetDeferral(&result));
-        return Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs)->GetDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Media_Core_ILowLightFusionResult<D>::Frame() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Imaging::SoftwareBitmap) consume_Windows_Media_Core_ILowLightFusionResult<D>::Frame() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ILowLightFusionResult)->get_Frame(&value));
-        return Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ILowLightFusionResult)->get_Frame(&value));
+        return winrt::Windows::Graphics::Imaging::SoftwareBitmap{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapPixelFormat>) consume_Windows_Media_Core_ILowLightFusionStatics<D>::SupportedBitmapPixelFormats() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>) consume_Windows_Media_Core_ILowLightFusionStatics<D>::SupportedBitmapPixelFormats() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ILowLightFusionStatics)->get_SupportedBitmapPixelFormats(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapPixelFormat>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ILowLightFusionStatics)->get_SupportedBitmapPixelFormats(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Core_ILowLightFusionStatics<D>::MaxSupportedFrameCount() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ILowLightFusionStatics)->get_MaxSupportedFrameCount(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ILowLightFusionStatics)->get_MaxSupportedFrameCount(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperationWithProgress<Windows::Media::Core::LowLightFusionResult, double>) consume_Windows_Media_Core_ILowLightFusionStatics<D>::FuseAsync(param::async_iterable<Windows::Graphics::Imaging::SoftwareBitmap> const& frameSet) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Media::Core::LowLightFusionResult, double>) consume_Windows_Media_Core_ILowLightFusionStatics<D>::FuseAsync(param::async_iterable<winrt::Windows::Graphics::Imaging::SoftwareBitmap> const& frameSet) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ILowLightFusionStatics)->FuseAsync(*(void**)(&frameSet), &result));
-        return Windows::Foundation::IAsyncOperationWithProgress<Windows::Media::Core::LowLightFusionResult, double>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ILowLightFusionStatics)->FuseAsync(*(void**)(&frameSet), &result));
+        return winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Media::Core::LowLightFusionResult, double>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaBinder<D>::Binding(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaBinder, Windows::Media::Core::MediaBindingEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaBinder<D>::Binding(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaBinder, winrt::Windows::Media::Core::MediaBindingEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBinder)->add_Binding(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBinder)->add_Binding(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaBinder<D>::Binding_revoker consume_Windows_Media_Core_IMediaBinder<D>::Binding(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaBinder, Windows::Media::Core::MediaBindingEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaBinder<D>::Binding_revoker consume_Windows_Media_Core_IMediaBinder<D>::Binding(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaBinder, winrt::Windows::Media::Core::MediaBindingEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Binding_revoker>(this, Binding(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBinder<D>::Binding(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBinder)->remove_Binding(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBinder)->remove_Binding(impl::bind_in(token)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IMediaBinder<D>::Token() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBinder)->get_Token(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBinder)->get_Token(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBinder<D>::Token(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBinder)->put_Token(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBinder)->put_Token(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaBinder<D>::Source() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaBinder<D>::Source() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBinder)->get_Source(&value));
-        return Windows::Media::Core::MediaSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBinder)->get_Source(&value));
+        return winrt::Windows::Media::Core::MediaSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::Canceled(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaBindingEventArgs, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::Canceled(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaBindingEventArgs, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs)->add_Canceled(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs)->add_Canceled(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaBindingEventArgs<D>::Canceled_revoker consume_Windows_Media_Core_IMediaBindingEventArgs<D>::Canceled(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaBindingEventArgs, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaBindingEventArgs<D>::Canceled_revoker consume_Windows_Media_Core_IMediaBindingEventArgs<D>::Canceled(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaBindingEventArgs, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, Canceled_revoker>(this, Canceled(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::Canceled(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs)->remove_Canceled(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs)->remove_Canceled(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaBinder) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::MediaBinder() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaBinder) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::MediaBinder() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs)->get_MediaBinder(&value));
-        return Windows::Media::Core::MediaBinder{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs)->get_MediaBinder(&value));
+        return winrt::Windows::Media::Core::MediaBinder{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Deferral) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Deferral) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::GetDeferral() const
     {
         void* deferral{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs)->GetDeferral(&deferral));
-        return Windows::Foundation::Deferral{ deferral, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs)->GetDeferral(&deferral));
+        return winrt::Windows::Foundation::Deferral{ deferral, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::SetUri(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::SetUri(winrt::Windows::Foundation::Uri const& uri) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs)->SetUri(*(void**)(&uri)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs)->SetUri(*(void**)(&uri)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::SetStream(Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& contentType) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::SetStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& contentType) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs)->SetStream(*(void**)(&stream), *(void**)(&contentType)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs)->SetStream(*(void**)(&stream), *(void**)(&contentType)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::SetStreamReference(Windows::Storage::Streams::IRandomAccessStreamReference const& stream, param::hstring const& contentType) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs<D>::SetStreamReference(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& stream, param::hstring const& contentType) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs)->SetStreamReference(*(void**)(&stream), *(void**)(&contentType)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs)->SetStreamReference(*(void**)(&stream), *(void**)(&contentType)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs2<D>::SetAdaptiveMediaSource(Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const& mediaSource) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs2<D>::SetAdaptiveMediaSource(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const& mediaSource) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs2)->SetAdaptiveMediaSource(*(void**)(&mediaSource)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs2)->SetAdaptiveMediaSource(*(void**)(&mediaSource)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs2<D>::SetStorageFile(Windows::Storage::IStorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs2<D>::SetStorageFile(winrt::Windows::Storage::IStorageFile const& file) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs2)->SetStorageFile(*(void**)(&file)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs2)->SetStorageFile(*(void**)(&file)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs3<D>::SetDownloadOperation(Windows::Networking::BackgroundTransfer::DownloadOperation const& downloadOperation) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaBindingEventArgs3<D>::SetDownloadOperation(winrt::Windows::Networking::BackgroundTransfer::DownloadOperation const& downloadOperation) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaBindingEventArgs3)->SetDownloadOperation(*(void**)(&downloadOperation)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaBindingEventArgs3)->SetDownloadOperation(*(void**)(&downloadOperation)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaCue<D>::StartTime(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaCue<D>::StartTime(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaCue)->put_StartTime(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaCue)->put_StartTime(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaCue<D>::StartTime() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaCue<D>::StartTime() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaCue)->get_StartTime(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaCue)->get_StartTime(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaCue<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaCue<D>::Duration(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaCue)->put_Duration(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaCue)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaCue<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaCue<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaCue)->get_Duration(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaCue)->get_Duration(put_abi(value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaCue<D>::Id(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaCue)->put_Id(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaCue)->put_Id(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IMediaCue<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaCue)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaCue)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::IMediaCue) consume_Windows_Media_Core_IMediaCueEventArgs<D>::Cue() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::IMediaCue) consume_Windows_Media_Core_IMediaCueEventArgs<D>::Cue() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaCueEventArgs)->get_Cue(&value));
-        return Windows::Media::Core::IMediaCue{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaCueEventArgs)->get_Cue(&value));
+        return winrt::Windows::Media::Core::IMediaCue{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaSource2<D>::OpenOperationCompleted(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaSource, Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaSource2<D>::OpenOperationCompleted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSource, winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource2)->add_OpenOperationCompleted(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource2)->add_OpenOperationCompleted(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaSource2<D>::OpenOperationCompleted_revoker consume_Windows_Media_Core_IMediaSource2<D>::OpenOperationCompleted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaSource, Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaSource2<D>::OpenOperationCompleted_revoker consume_Windows_Media_Core_IMediaSource2<D>::OpenOperationCompleted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSource, winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, OpenOperationCompleted_revoker>(this, OpenOperationCompleted(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaSource2<D>::OpenOperationCompleted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource2)->remove_OpenOperationCompleted(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource2)->remove_OpenOperationCompleted(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::ValueSet) consume_Windows_Media_Core_IMediaSource2<D>::CustomProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) consume_Windows_Media_Core_IMediaSource2<D>::CustomProperties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource2)->get_CustomProperties(&value));
-        return Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource2)->get_CustomProperties(&value));
+        return winrt::Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Core_IMediaSource2<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) consume_Windows_Media_Core_IMediaSource2<D>::Duration() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource2)->get_Duration(&value));
-        return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource2)->get_Duration(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IMediaSource2<D>::IsOpen() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource2)->get_IsOpen(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource2)->get_IsOpen(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IObservableVector<Windows::Media::Core::TimedTextSource>) consume_Windows_Media_Core_IMediaSource2<D>::ExternalTimedTextSources() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Media::Core::TimedTextSource>) consume_Windows_Media_Core_IMediaSource2<D>::ExternalTimedTextSources() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource2)->get_ExternalTimedTextSources(&value));
-        return Windows::Foundation::Collections::IObservableVector<Windows::Media::Core::TimedTextSource>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource2)->get_ExternalTimedTextSources(&value));
+        return winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Media::Core::TimedTextSource>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IObservableVector<Windows::Media::Core::TimedMetadataTrack>) consume_Windows_Media_Core_IMediaSource2<D>::ExternalTimedMetadataTracks() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Media::Core::TimedMetadataTrack>) consume_Windows_Media_Core_IMediaSource2<D>::ExternalTimedMetadataTracks() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource2)->get_ExternalTimedMetadataTracks(&value));
-        return Windows::Foundation::Collections::IObservableVector<Windows::Media::Core::TimedMetadataTrack>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource2)->get_ExternalTimedMetadataTracks(&value));
+        return winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Media::Core::TimedMetadataTrack>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaSource3<D>::StateChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaSource, Windows::Media::Core::MediaSourceStateChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaSource3<D>::StateChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSource, winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource3)->add_StateChanged(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource3)->add_StateChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaSource3<D>::StateChanged_revoker consume_Windows_Media_Core_IMediaSource3<D>::StateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaSource, Windows::Media::Core::MediaSourceStateChangedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaSource3<D>::StateChanged_revoker consume_Windows_Media_Core_IMediaSource3<D>::StateChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSource, winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, StateChanged_revoker>(this, StateChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaSource3<D>::StateChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource3)->remove_StateChanged(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource3)->remove_StateChanged(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSourceState) consume_Windows_Media_Core_IMediaSource3<D>::State() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSourceState) consume_Windows_Media_Core_IMediaSource3<D>::State() const
     {
-        Windows::Media::Core::MediaSourceState value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource3)->get_State(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MediaSourceState value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource3)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaSource3<D>::Reset() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource3)->Reset());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource3)->Reset());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Streaming::Adaptive::AdaptiveMediaSource) consume_Windows_Media_Core_IMediaSource4<D>::AdaptiveMediaSource() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource) consume_Windows_Media_Core_IMediaSource4<D>::AdaptiveMediaSource() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource4)->get_AdaptiveMediaSource(&value));
-        return Windows::Media::Streaming::Adaptive::AdaptiveMediaSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource4)->get_AdaptiveMediaSource(&value));
+        return winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSource) consume_Windows_Media_Core_IMediaSource4<D>::MediaStreamSource() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSource) consume_Windows_Media_Core_IMediaSource4<D>::MediaStreamSource() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource4)->get_MediaStreamSource(&value));
-        return Windows::Media::Core::MediaStreamSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource4)->get_MediaStreamSource(&value));
+        return winrt::Windows::Media::Core::MediaStreamSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MseStreamSource) consume_Windows_Media_Core_IMediaSource4<D>::MseStreamSource() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MseStreamSource) consume_Windows_Media_Core_IMediaSource4<D>::MseStreamSource() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource4)->get_MseStreamSource(&value));
-        return Windows::Media::Core::MseStreamSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource4)->get_MseStreamSource(&value));
+        return winrt::Windows::Media::Core::MseStreamSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_Media_Core_IMediaSource4<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_Media_Core_IMediaSource4<D>::Uri() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource4)->get_Uri(&value));
-        return Windows::Foundation::Uri{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource4)->get_Uri(&value));
+        return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_Media_Core_IMediaSource4<D>::OpenAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_Media_Core_IMediaSource4<D>::OpenAsync() const
     {
         void* operation{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource4)->OpenAsync(&operation));
-        return Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource4)->OpenAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Networking::BackgroundTransfer::DownloadOperation) consume_Windows_Media_Core_IMediaSource5<D>::DownloadOperation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::BackgroundTransfer::DownloadOperation) consume_Windows_Media_Core_IMediaSource5<D>::DownloadOperation() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSource5)->get_DownloadOperation(&value));
-        return Windows::Networking::BackgroundTransfer::DownloadOperation{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSource5)->get_DownloadOperation(&value));
+        return winrt::Windows::Networking::BackgroundTransfer::DownloadOperation{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::InitializeMediaStreamSourceRequested(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaSourceAppServiceConnection, Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::InitializeMediaStreamSourceRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSourceAppServiceConnection, winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceAppServiceConnection)->add_InitializeMediaStreamSourceRequested(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceAppServiceConnection)->add_InitializeMediaStreamSourceRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::InitializeMediaStreamSourceRequested_revoker consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::InitializeMediaStreamSourceRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaSourceAppServiceConnection, Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::InitializeMediaStreamSourceRequested_revoker consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::InitializeMediaStreamSourceRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSourceAppServiceConnection, winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, InitializeMediaStreamSourceRequested_revoker>(this, InitializeMediaStreamSourceRequested(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::InitializeMediaStreamSourceRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceAppServiceConnection)->remove_InitializeMediaStreamSourceRequested(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceAppServiceConnection)->remove_InitializeMediaStreamSourceRequested(impl::bind_in(token)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaSourceAppServiceConnection<D>::Start() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceAppServiceConnection)->Start());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceAppServiceConnection)->Start());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSourceAppServiceConnection) consume_Windows_Media_Core_IMediaSourceAppServiceConnectionFactory<D>::Create(Windows::ApplicationModel::AppService::AppServiceConnection const& appServiceConnection) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSourceAppServiceConnection) consume_Windows_Media_Core_IMediaSourceAppServiceConnectionFactory<D>::Create(winrt::Windows::ApplicationModel::AppService::AppServiceConnection const& appServiceConnection) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceAppServiceConnectionFactory)->Create(*(void**)(&appServiceConnection), &result));
-        return Windows::Media::Core::MediaSourceAppServiceConnection{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceAppServiceConnectionFactory)->Create(*(void**)(&appServiceConnection), &result));
+        return winrt::Windows::Media::Core::MediaSourceAppServiceConnection{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Core_IMediaSourceError<D>::ExtendedError() const
     {
         winrt::hresult value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceError)->get_ExtendedError(put_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceError)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSourceError) consume_Windows_Media_Core_IMediaSourceOpenOperationCompletedEventArgs<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSourceError) consume_Windows_Media_Core_IMediaSourceOpenOperationCompletedEventArgs<D>::Error() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceOpenOperationCompletedEventArgs)->get_Error(&value));
-        return Windows::Media::Core::MediaSourceError{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceOpenOperationCompletedEventArgs)->get_Error(&value));
+        return winrt::Windows::Media::Core::MediaSourceError{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSourceState) consume_Windows_Media_Core_IMediaSourceStateChangedEventArgs<D>::OldState() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSourceState) consume_Windows_Media_Core_IMediaSourceStateChangedEventArgs<D>::OldState() const
     {
-        Windows::Media::Core::MediaSourceState value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStateChangedEventArgs)->get_OldState(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MediaSourceState value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStateChangedEventArgs)->get_OldState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSourceState) consume_Windows_Media_Core_IMediaSourceStateChangedEventArgs<D>::NewState() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSourceState) consume_Windows_Media_Core_IMediaSourceStateChangedEventArgs<D>::NewState() const
     {
-        Windows::Media::Core::MediaSourceState value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStateChangedEventArgs)->get_NewState(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MediaSourceState value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStateChangedEventArgs)->get_NewState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromAdaptiveMediaSource(Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const& mediaSource) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromAdaptiveMediaSource(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const& mediaSource) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics)->CreateFromAdaptiveMediaSource(*(void**)(&mediaSource), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics)->CreateFromAdaptiveMediaSource(*(void**)(&mediaSource), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromMediaStreamSource(Windows::Media::Core::MediaStreamSource const& mediaSource) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromMediaStreamSource(winrt::Windows::Media::Core::MediaStreamSource const& mediaSource) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics)->CreateFromMediaStreamSource(*(void**)(&mediaSource), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics)->CreateFromMediaStreamSource(*(void**)(&mediaSource), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromMseStreamSource(Windows::Media::Core::MseStreamSource const& mediaSource) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromMseStreamSource(winrt::Windows::Media::Core::MseStreamSource const& mediaSource) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics)->CreateFromMseStreamSource(*(void**)(&mediaSource), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics)->CreateFromMseStreamSource(*(void**)(&mediaSource), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromIMediaSource(Windows::Media::Core::IMediaSource const& mediaSource) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromIMediaSource(winrt::Windows::Media::Core::IMediaSource const& mediaSource) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics)->CreateFromIMediaSource(*(void**)(&mediaSource), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics)->CreateFromIMediaSource(*(void**)(&mediaSource), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromStorageFile(Windows::Storage::IStorageFile const& file) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromStorageFile(winrt::Windows::Storage::IStorageFile const& file) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics)->CreateFromStorageFile(*(void**)(&file), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics)->CreateFromStorageFile(*(void**)(&file), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromStream(Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& contentType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& contentType) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics)->CreateFromStream(*(void**)(&stream), *(void**)(&contentType), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics)->CreateFromStream(*(void**)(&stream), *(void**)(&contentType), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromStreamReference(Windows::Storage::Streams::IRandomAccessStreamReference const& stream, param::hstring const& contentType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromStreamReference(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& stream, param::hstring const& contentType) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics)->CreateFromStreamReference(*(void**)(&stream), *(void**)(&contentType), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics)->CreateFromStreamReference(*(void**)(&stream), *(void**)(&contentType), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromUri(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics<D>::CreateFromUri(winrt::Windows::Foundation::Uri const& uri) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics)->CreateFromUri(*(void**)(&uri), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics)->CreateFromUri(*(void**)(&uri), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics2<D>::CreateFromMediaBinder(Windows::Media::Core::MediaBinder const& binder) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics2<D>::CreateFromMediaBinder(winrt::Windows::Media::Core::MediaBinder const& binder) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics2)->CreateFromMediaBinder(*(void**)(&binder), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics2)->CreateFromMediaBinder(*(void**)(&binder), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics3<D>::CreateFromMediaFrameSource(Windows::Media::Capture::Frames::MediaFrameSource const& frameSource) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics3<D>::CreateFromMediaFrameSource(winrt::Windows::Media::Capture::Frames::MediaFrameSource const& frameSource) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics3)->CreateFromMediaFrameSource(*(void**)(&frameSource), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics3)->CreateFromMediaFrameSource(*(void**)(&frameSource), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics4<D>::CreateFromDownloadOperation(Windows::Networking::BackgroundTransfer::DownloadOperation const& downloadOperation) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSource) consume_Windows_Media_Core_IMediaSourceStatics4<D>::CreateFromDownloadOperation(winrt::Windows::Networking::BackgroundTransfer::DownloadOperation const& downloadOperation) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaSourceStatics4)->CreateFromDownloadOperation(*(void**)(&downloadOperation), &result));
-        return Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaSourceStatics4)->CreateFromDownloadOperation(*(void**)(&downloadOperation), &result));
+        return winrt::Windows::Media::Core::MediaSource{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IMediaStreamDescriptor<D>::IsSelected() const
     {
         bool selected{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamDescriptor)->get_IsSelected(&selected));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamDescriptor)->get_IsSelected(&selected));
         return selected;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamDescriptor<D>::Name(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamDescriptor)->put_Name(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamDescriptor)->put_Name(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IMediaStreamDescriptor<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamDescriptor)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamDescriptor)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamDescriptor<D>::Language(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamDescriptor)->put_Language(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamDescriptor)->put_Language(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IMediaStreamDescriptor<D>::Language() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamDescriptor)->get_Language(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamDescriptor)->get_Language(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamDescriptor2<D>::Label(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamDescriptor2)->put_Label(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamDescriptor2)->put_Label(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IMediaStreamDescriptor2<D>::Label() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamDescriptor2)->get_Label(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamDescriptor2)->get_Label(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSample<D>::Processed(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSample, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSample<D>::Processed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSample, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->add_Processed(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->add_Processed(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSample<D>::Processed_revoker consume_Windows_Media_Core_IMediaStreamSample<D>::Processed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSample, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSample<D>::Processed_revoker consume_Windows_Media_Core_IMediaStreamSample<D>::Processed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSample, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, Processed_revoker>(this, Processed(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSample<D>::Processed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->remove_Processed(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->remove_Processed(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::Buffer) consume_Windows_Media_Core_IMediaStreamSample<D>::Buffer() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::Buffer) consume_Windows_Media_Core_IMediaStreamSample<D>::Buffer() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->get_Buffer(&value));
-        return Windows::Storage::Streams::Buffer{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->get_Buffer(&value));
+        return winrt::Windows::Storage::Streams::Buffer{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSample<D>::Timestamp() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSample<D>::Timestamp() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->get_Timestamp(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->get_Timestamp(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSamplePropertySet) consume_Windows_Media_Core_IMediaStreamSample<D>::ExtendedProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSamplePropertySet) consume_Windows_Media_Core_IMediaStreamSample<D>::ExtendedProperties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->get_ExtendedProperties(&value));
-        return Windows::Media::Core::MediaStreamSamplePropertySet{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->get_ExtendedProperties(&value));
+        return winrt::Windows::Media::Core::MediaStreamSamplePropertySet{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSampleProtectionProperties) consume_Windows_Media_Core_IMediaStreamSample<D>::Protection() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties) consume_Windows_Media_Core_IMediaStreamSample<D>::Protection() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->get_Protection(&value));
-        return Windows::Media::Core::MediaStreamSampleProtectionProperties{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->get_Protection(&value));
+        return winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSample<D>::DecodeTimestamp(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSample<D>::DecodeTimestamp(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->put_DecodeTimestamp(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->put_DecodeTimestamp(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSample<D>::DecodeTimestamp() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSample<D>::DecodeTimestamp() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->get_DecodeTimestamp(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->get_DecodeTimestamp(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSample<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSample<D>::Duration(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->put_Duration(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSample<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSample<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->get_Duration(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->get_Duration(put_abi(value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSample<D>::KeyFrame(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->put_KeyFrame(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->put_KeyFrame(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IMediaStreamSample<D>::KeyFrame() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->get_KeyFrame(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->get_KeyFrame(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSample<D>::Discontinuous(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->put_Discontinuous(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->put_Discontinuous(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IMediaStreamSample<D>::Discontinuous() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample)->get_Discontinuous(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample)->get_Discontinuous(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface) consume_Windows_Media_Core_IMediaStreamSample2<D>::Direct3D11Surface() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface) consume_Windows_Media_Core_IMediaStreamSample2<D>::Direct3D11Surface() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSample2)->get_Direct3D11Surface(&value));
-        return Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSample2)->get_Direct3D11Surface(&value));
+        return winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSampleProtectionProperties<D>::SetKeyIdentifier(array_view<uint8_t const> value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSampleProtectionProperties)->SetKeyIdentifier(value.size(), get_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSampleProtectionProperties)->SetKeyIdentifier(value.size(), get_abi(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSampleProtectionProperties<D>::GetKeyIdentifier(com_array<uint8_t>& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSampleProtectionProperties)->GetKeyIdentifier(impl::put_size_abi(value), put_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSampleProtectionProperties)->GetKeyIdentifier(impl::put_size_abi(value), put_abi(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSampleProtectionProperties<D>::SetInitializationVector(array_view<uint8_t const> value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSampleProtectionProperties)->SetInitializationVector(value.size(), get_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSampleProtectionProperties)->SetInitializationVector(value.size(), get_abi(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSampleProtectionProperties<D>::GetInitializationVector(com_array<uint8_t>& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSampleProtectionProperties)->GetInitializationVector(impl::put_size_abi(value), put_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSampleProtectionProperties)->GetInitializationVector(impl::put_size_abi(value), put_abi(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSampleProtectionProperties<D>::SetSubSampleMapping(array_view<uint8_t const> value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSampleProtectionProperties)->SetSubSampleMapping(value.size(), get_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSampleProtectionProperties)->SetSubSampleMapping(value.size(), get_abi(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSampleProtectionProperties<D>::GetSubSampleMapping(com_array<uint8_t>& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSampleProtectionProperties)->GetSubSampleMapping(impl::put_size_abi(value), put_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSampleProtectionProperties)->GetSubSampleMapping(impl::put_size_abi(value), put_abi(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSample) consume_Windows_Media_Core_IMediaStreamSampleStatics<D>::CreateFromBuffer(Windows::Storage::Streams::IBuffer const& buffer, Windows::Foundation::TimeSpan const& timestamp) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSample) consume_Windows_Media_Core_IMediaStreamSampleStatics<D>::CreateFromBuffer(winrt::Windows::Storage::Streams::IBuffer const& buffer, winrt::Windows::Foundation::TimeSpan const& timestamp) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSampleStatics)->CreateFromBuffer(*(void**)(&buffer), impl::bind_in(timestamp), &value));
-        return Windows::Media::Core::MediaStreamSample{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSampleStatics)->CreateFromBuffer(*(void**)(&buffer), impl::bind_in(timestamp), &value));
+        return winrt::Windows::Media::Core::MediaStreamSample{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Media::Core::MediaStreamSample>) consume_Windows_Media_Core_IMediaStreamSampleStatics<D>::CreateFromStreamAsync(Windows::Storage::Streams::IInputStream const& stream, uint32_t count, Windows::Foundation::TimeSpan const& timestamp) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Core::MediaStreamSample>) consume_Windows_Media_Core_IMediaStreamSampleStatics<D>::CreateFromStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& stream, uint32_t count, winrt::Windows::Foundation::TimeSpan const& timestamp) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSampleStatics)->CreateFromStreamAsync(*(void**)(&stream), count, impl::bind_in(timestamp), &value));
-        return Windows::Foundation::IAsyncOperation<Windows::Media::Core::MediaStreamSample>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSampleStatics)->CreateFromStreamAsync(*(void**)(&stream), count, impl::bind_in(timestamp), &value));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Core::MediaStreamSample>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSample) consume_Windows_Media_Core_IMediaStreamSampleStatics2<D>::CreateFromDirect3D11Surface(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface, Windows::Foundation::TimeSpan const& timestamp) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSample) consume_Windows_Media_Core_IMediaStreamSampleStatics2<D>::CreateFromDirect3D11Surface(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface, winrt::Windows::Foundation::TimeSpan const& timestamp) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSampleStatics2)->CreateFromDirect3D11Surface(*(void**)(&surface), impl::bind_in(timestamp), &result));
-        return Windows::Media::Core::MediaStreamSample{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSampleStatics2)->CreateFromDirect3D11Surface(*(void**)(&surface), impl::bind_in(timestamp), &result));
+        return winrt::Windows::Media::Core::MediaStreamSample{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceClosedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->add_Closed(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->add_Closed(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::Closed_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::Closed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceClosedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::Closed_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::Closed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Closed_revoker>(this, Closed(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Closed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->remove_Closed(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_Closed(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::Starting(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceStartingEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::Starting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->add_Starting(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->add_Starting(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::Starting_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::Starting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceStartingEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::Starting_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::Starting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Starting_revoker>(this, Starting(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Starting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->remove_Starting(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_Starting(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::Paused(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::Paused(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->add_Paused(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->add_Paused(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::Paused_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::Paused(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::Paused_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::Paused(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, Paused_revoker>(this, Paused(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Paused(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->remove_Paused(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_Paused(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::SampleRequested(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::SampleRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->add_SampleRequested(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->add_SampleRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::SampleRequested_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::SampleRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::SampleRequested_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::SampleRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, SampleRequested_revoker>(this, SampleRequested(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::SampleRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->remove_SampleRequested(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_SampleRequested(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::SwitchStreamsRequested(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource<D>::SwitchStreamsRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->add_SwitchStreamsRequested(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->add_SwitchStreamsRequested(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::SwitchStreamsRequested_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::SwitchStreamsRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource<D>::SwitchStreamsRequested_revoker consume_Windows_Media_Core_IMediaStreamSource<D>::SwitchStreamsRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, SwitchStreamsRequested_revoker>(this, SwitchStreamsRequested(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::SwitchStreamsRequested(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->remove_SwitchStreamsRequested(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->remove_SwitchStreamsRequested(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::NotifyError(Windows::Media::Core::MediaStreamSourceErrorStatus const& errorStatus) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::NotifyError(winrt::Windows::Media::Core::MediaStreamSourceErrorStatus const& errorStatus) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->NotifyError(static_cast<int32_t>(errorStatus)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->NotifyError(static_cast<int32_t>(errorStatus)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::AddStreamDescriptor(Windows::Media::Core::IMediaStreamDescriptor const& descriptor) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::AddStreamDescriptor(winrt::Windows::Media::Core::IMediaStreamDescriptor const& descriptor) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->AddStreamDescriptor(*(void**)(&descriptor)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->AddStreamDescriptor(*(void**)(&descriptor)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::MediaProtectionManager(Windows::Media::Protection::MediaProtectionManager const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::MediaProtectionManager(winrt::Windows::Media::Protection::MediaProtectionManager const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->put_MediaProtectionManager(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->put_MediaProtectionManager(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Protection::MediaProtectionManager) consume_Windows_Media_Core_IMediaStreamSource<D>::MediaProtectionManager() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Protection::MediaProtectionManager) consume_Windows_Media_Core_IMediaStreamSource<D>::MediaProtectionManager() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->get_MediaProtectionManager(&value));
-        return Windows::Media::Protection::MediaProtectionManager{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->get_MediaProtectionManager(&value));
+        return winrt::Windows::Media::Protection::MediaProtectionManager{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Duration(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Duration(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->put_Duration(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->put_Duration(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSource<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSource<D>::Duration() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->get_Duration(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->get_Duration(put_abi(value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::CanSeek(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->put_CanSeek(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->put_CanSeek(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IMediaStreamSource<D>::CanSeek() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->get_CanSeek(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->get_CanSeek(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::BufferTime(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::BufferTime(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->put_BufferTime(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->put_BufferTime(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSource<D>::BufferTime() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSource<D>::BufferTime() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->get_BufferTime(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->get_BufferTime(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::SetBufferedRange(Windows::Foundation::TimeSpan const& startOffset, Windows::Foundation::TimeSpan const& endOffset) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::SetBufferedRange(winrt::Windows::Foundation::TimeSpan const& startOffset, winrt::Windows::Foundation::TimeSpan const& endOffset) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->SetBufferedRange(impl::bind_in(startOffset), impl::bind_in(endOffset)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->SetBufferedRange(impl::bind_in(startOffset), impl::bind_in(endOffset)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::FileProperties::MusicProperties) consume_Windows_Media_Core_IMediaStreamSource<D>::MusicProperties() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->get_MusicProperties(&value));
-        return Windows::Storage::FileProperties::MusicProperties{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::FileProperties::VideoProperties) consume_Windows_Media_Core_IMediaStreamSource<D>::VideoProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::FileProperties::MusicProperties) consume_Windows_Media_Core_IMediaStreamSource<D>::MusicProperties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->get_VideoProperties(&value));
-        return Windows::Storage::FileProperties::VideoProperties{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->get_MusicProperties(&value));
+        return winrt::Windows::Storage::FileProperties::MusicProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Thumbnail(Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->put_Thumbnail(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_Media_Core_IMediaStreamSource<D>::Thumbnail() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::FileProperties::VideoProperties) consume_Windows_Media_Core_IMediaStreamSource<D>::VideoProperties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->get_Thumbnail(&value));
-        return Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->get_VideoProperties(&value));
+        return winrt::Windows::Storage::FileProperties::VideoProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::AddProtectionKey(Windows::Media::Core::IMediaStreamDescriptor const& streamDescriptor, array_view<uint8_t const> keyIdentifier, array_view<uint8_t const> licenseData) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::Thumbnail(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource)->AddProtectionKey(*(void**)(&streamDescriptor), keyIdentifier.size(), get_abi(keyIdentifier), licenseData.size(), get_abi(licenseData)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->put_Thumbnail(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource2<D>::SampleRendered(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Storage::Streams::IRandomAccessStreamReference) consume_Windows_Media_Core_IMediaStreamSource<D>::Thumbnail() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->get_Thumbnail(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource<D>::AddProtectionKey(winrt::Windows::Media::Core::IMediaStreamDescriptor const& streamDescriptor, array_view<uint8_t const> keyIdentifier, array_view<uint8_t const> licenseData) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource)->AddProtectionKey(*(void**)(&streamDescriptor), keyIdentifier.size(), get_abi(keyIdentifier), licenseData.size(), get_abi(licenseData)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMediaStreamSource2<D>::SampleRendered(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource2)->add_SampleRendered(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource2)->add_SampleRendered(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource2<D>::SampleRendered_revoker consume_Windows_Media_Core_IMediaStreamSource2<D>::SampleRendered(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMediaStreamSource2<D>::SampleRendered_revoker consume_Windows_Media_Core_IMediaStreamSource2<D>::SampleRendered(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, SampleRendered_revoker>(this, SampleRendered(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource2<D>::SampleRendered(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource2)->remove_SampleRendered(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource2)->remove_SampleRendered(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource3<D>::MaxSupportedPlaybackRate(Windows::Foundation::IReference<double> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource3<D>::MaxSupportedPlaybackRate(winrt::Windows::Foundation::IReference<double> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource3)->put_MaxSupportedPlaybackRate(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource3)->put_MaxSupportedPlaybackRate(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<double>) consume_Windows_Media_Core_IMediaStreamSource3<D>::MaxSupportedPlaybackRate() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<double>) consume_Windows_Media_Core_IMediaStreamSource3<D>::MaxSupportedPlaybackRate() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource3)->get_MaxSupportedPlaybackRate(&value));
-        return Windows::Foundation::IReference<double>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource3)->get_MaxSupportedPlaybackRate(&value));
+        return winrt::Windows::Foundation::IReference<double>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSource4<D>::IsLive(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource4)->put_IsLive(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource4)->put_IsLive(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IMediaStreamSource4<D>::IsLive() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSource4)->get_IsLive(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSource4)->get_IsLive(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSourceClosedRequest) consume_Windows_Media_Core_IMediaStreamSourceClosedEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSourceClosedRequest) consume_Windows_Media_Core_IMediaStreamSourceClosedEventArgs<D>::Request() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceClosedEventArgs)->get_Request(&value));
-        return Windows::Media::Core::MediaStreamSourceClosedRequest{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceClosedEventArgs)->get_Request(&value));
+        return winrt::Windows::Media::Core::MediaStreamSourceClosedRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSourceClosedReason) consume_Windows_Media_Core_IMediaStreamSourceClosedRequest<D>::Reason() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSourceClosedReason) consume_Windows_Media_Core_IMediaStreamSourceClosedRequest<D>::Reason() const
     {
-        Windows::Media::Core::MediaStreamSourceClosedReason value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceClosedRequest)->get_Reason(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MediaStreamSourceClosedReason value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceClosedRequest)->get_Reason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSource) consume_Windows_Media_Core_IMediaStreamSourceFactory<D>::CreateFromDescriptor(Windows::Media::Core::IMediaStreamDescriptor const& descriptor) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSource) consume_Windows_Media_Core_IMediaStreamSourceFactory<D>::CreateFromDescriptor(winrt::Windows::Media::Core::IMediaStreamDescriptor const& descriptor) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceFactory)->CreateFromDescriptor(*(void**)(&descriptor), &result));
-        return Windows::Media::Core::MediaStreamSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceFactory)->CreateFromDescriptor(*(void**)(&descriptor), &result));
+        return winrt::Windows::Media::Core::MediaStreamSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSource) consume_Windows_Media_Core_IMediaStreamSourceFactory<D>::CreateFromDescriptors(Windows::Media::Core::IMediaStreamDescriptor const& descriptor, Windows::Media::Core::IMediaStreamDescriptor const& descriptor2) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSource) consume_Windows_Media_Core_IMediaStreamSourceFactory<D>::CreateFromDescriptors(winrt::Windows::Media::Core::IMediaStreamDescriptor const& descriptor, winrt::Windows::Media::Core::IMediaStreamDescriptor const& descriptor2) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceFactory)->CreateFromDescriptors(*(void**)(&descriptor), *(void**)(&descriptor2), &result));
-        return Windows::Media::Core::MediaStreamSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceFactory)->CreateFromDescriptors(*(void**)(&descriptor), *(void**)(&descriptor2), &result));
+        return winrt::Windows::Media::Core::MediaStreamSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSourceSampleRenderedEventArgs<D>::SampleLag() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMediaStreamSourceSampleRenderedEventArgs<D>::SampleLag() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSampleRenderedEventArgs)->get_SampleLag(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSampleRenderedEventArgs)->get_SampleLag(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::IMediaStreamDescriptor) consume_Windows_Media_Core_IMediaStreamSourceSampleRequest<D>::StreamDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::IMediaStreamDescriptor) consume_Windows_Media_Core_IMediaStreamSourceSampleRequest<D>::StreamDescriptor() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSampleRequest)->get_StreamDescriptor(&value));
-        return Windows::Media::Core::IMediaStreamDescriptor{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSampleRequest)->get_StreamDescriptor(&value));
+        return winrt::Windows::Media::Core::IMediaStreamDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSourceSampleRequestDeferral) consume_Windows_Media_Core_IMediaStreamSourceSampleRequest<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral) consume_Windows_Media_Core_IMediaStreamSourceSampleRequest<D>::GetDeferral() const
     {
         void* deferral{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSampleRequest)->GetDeferral(&deferral));
-        return Windows::Media::Core::MediaStreamSourceSampleRequestDeferral{ deferral, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSampleRequest)->GetDeferral(&deferral));
+        return winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral{ deferral, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSourceSampleRequest<D>::Sample(Windows::Media::Core::MediaStreamSample const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSourceSampleRequest<D>::Sample(winrt::Windows::Media::Core::MediaStreamSample const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSampleRequest)->put_Sample(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSampleRequest)->put_Sample(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSample) consume_Windows_Media_Core_IMediaStreamSourceSampleRequest<D>::Sample() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSample) consume_Windows_Media_Core_IMediaStreamSourceSampleRequest<D>::Sample() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSampleRequest)->get_Sample(&value));
-        return Windows::Media::Core::MediaStreamSample{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSampleRequest)->get_Sample(&value));
+        return winrt::Windows::Media::Core::MediaStreamSample{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSourceSampleRequest<D>::ReportSampleProgress(uint32_t progress) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSampleRequest)->ReportSampleProgress(progress));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSampleRequest)->ReportSampleProgress(progress));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSourceSampleRequestDeferral<D>::Complete() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSampleRequestDeferral)->Complete());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSampleRequestDeferral)->Complete());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSourceSampleRequest) consume_Windows_Media_Core_IMediaStreamSourceSampleRequestedEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSourceSampleRequest) consume_Windows_Media_Core_IMediaStreamSourceSampleRequestedEventArgs<D>::Request() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSampleRequestedEventArgs)->get_Request(&value));
-        return Windows::Media::Core::MediaStreamSourceSampleRequest{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSampleRequestedEventArgs)->get_Request(&value));
+        return winrt::Windows::Media::Core::MediaStreamSourceSampleRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSourceStartingRequest) consume_Windows_Media_Core_IMediaStreamSourceStartingEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSourceStartingRequest) consume_Windows_Media_Core_IMediaStreamSourceStartingEventArgs<D>::Request() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceStartingEventArgs)->get_Request(&value));
-        return Windows::Media::Core::MediaStreamSourceStartingRequest{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceStartingEventArgs)->get_Request(&value));
+        return winrt::Windows::Media::Core::MediaStreamSourceStartingRequest{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Core_IMediaStreamSourceStartingRequest<D>::StartPosition() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) consume_Windows_Media_Core_IMediaStreamSourceStartingRequest<D>::StartPosition() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceStartingRequest)->get_StartPosition(&value));
-        return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceStartingRequest)->get_StartPosition(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSourceStartingRequestDeferral) consume_Windows_Media_Core_IMediaStreamSourceStartingRequest<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral) consume_Windows_Media_Core_IMediaStreamSourceStartingRequest<D>::GetDeferral() const
     {
         void* deferral{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceStartingRequest)->GetDeferral(&deferral));
-        return Windows::Media::Core::MediaStreamSourceStartingRequestDeferral{ deferral, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceStartingRequest)->GetDeferral(&deferral));
+        return winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral{ deferral, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSourceStartingRequest<D>::SetActualStartPosition(Windows::Foundation::TimeSpan const& position) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSourceStartingRequest<D>::SetActualStartPosition(winrt::Windows::Foundation::TimeSpan const& position) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceStartingRequest)->SetActualStartPosition(impl::bind_in(position)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceStartingRequest)->SetActualStartPosition(impl::bind_in(position)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSourceStartingRequestDeferral<D>::Complete() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceStartingRequestDeferral)->Complete());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceStartingRequestDeferral)->Complete());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::IMediaStreamDescriptor) consume_Windows_Media_Core_IMediaStreamSourceSwitchStreamsRequest<D>::OldStreamDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::IMediaStreamDescriptor) consume_Windows_Media_Core_IMediaStreamSourceSwitchStreamsRequest<D>::OldStreamDescriptor() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest)->get_OldStreamDescriptor(&value));
-        return Windows::Media::Core::IMediaStreamDescriptor{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest)->get_OldStreamDescriptor(&value));
+        return winrt::Windows::Media::Core::IMediaStreamDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::IMediaStreamDescriptor) consume_Windows_Media_Core_IMediaStreamSourceSwitchStreamsRequest<D>::NewStreamDescriptor() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::IMediaStreamDescriptor) consume_Windows_Media_Core_IMediaStreamSourceSwitchStreamsRequest<D>::NewStreamDescriptor() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest)->get_NewStreamDescriptor(&value));
-        return Windows::Media::Core::IMediaStreamDescriptor{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest)->get_NewStreamDescriptor(&value));
+        return winrt::Windows::Media::Core::IMediaStreamDescriptor{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral) consume_Windows_Media_Core_IMediaStreamSourceSwitchStreamsRequest<D>::GetDeferral() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral) consume_Windows_Media_Core_IMediaStreamSourceSwitchStreamsRequest<D>::GetDeferral() const
     {
         void* deferral{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest)->GetDeferral(&deferral));
-        return Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral{ deferral, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest)->GetDeferral(&deferral));
+        return winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral{ deferral, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaStreamSourceSwitchStreamsRequestDeferral<D>::Complete() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestDeferral)->Complete());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestDeferral)->Complete());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest) consume_Windows_Media_Core_IMediaStreamSourceSwitchStreamsRequestedEventArgs<D>::Request() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest) consume_Windows_Media_Core_IMediaStreamSourceSwitchStreamsRequestedEventArgs<D>::Request() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestedEventArgs)->get_Request(&value));
-        return Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestedEventArgs)->get_Request(&value));
+        return winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IMediaTrack<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaTrack)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaTrack)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IMediaTrack<D>::Language() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaTrack)->get_Language(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaTrack)->get_Language(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaTrackKind) consume_Windows_Media_Core_IMediaTrack<D>::TrackKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaTrackKind) consume_Windows_Media_Core_IMediaTrack<D>::TrackKind() const
     {
-        Windows::Media::Core::MediaTrackKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaTrack)->get_TrackKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MediaTrackKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaTrack)->get_TrackKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMediaTrack<D>::Label(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaTrack)->put_Label(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaTrack)->put_Label(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IMediaTrack<D>::Label() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMediaTrack)->get_Label(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMediaTrack)->get_Label(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateStarting(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateStarting(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->add_UpdateStarting(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->add_UpdateStarting(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateStarting_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateStarting(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateStarting_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateStarting(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, UpdateStarting_revoker>(this, UpdateStarting(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateStarting(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->remove_UpdateStarting(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_UpdateStarting(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::Updated(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::Updated(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->add_Updated(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->add_Updated(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::Updated_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::Updated(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::Updated_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::Updated(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, Updated_revoker>(this, Updated(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::Updated(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->remove_Updated(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_Updated(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateEnded(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateEnded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->add_UpdateEnded(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->add_UpdateEnded(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateEnded_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateEnded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateEnded_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateEnded(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, UpdateEnded_revoker>(this, UpdateEnded(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::UpdateEnded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->remove_UpdateEnded(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_UpdateEnded(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::ErrorOccurred(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::ErrorOccurred(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->add_ErrorOccurred(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->add_ErrorOccurred(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::ErrorOccurred_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::ErrorOccurred(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::ErrorOccurred_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::ErrorOccurred(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, ErrorOccurred_revoker>(this, ErrorOccurred(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::ErrorOccurred(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->remove_ErrorOccurred(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_ErrorOccurred(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::Aborted(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBuffer<D>::Aborted(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->add_Aborted(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->add_Aborted(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::Aborted_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::Aborted(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseSourceBuffer<D>::Aborted_revoker consume_Windows_Media_Core_IMseSourceBuffer<D>::Aborted(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, Aborted_revoker>(this, Aborted(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::Aborted(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->remove_Aborted(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->remove_Aborted(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MseAppendMode) consume_Windows_Media_Core_IMseSourceBuffer<D>::Mode() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MseAppendMode) consume_Windows_Media_Core_IMseSourceBuffer<D>::Mode() const
     {
-        Windows::Media::Core::MseAppendMode value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->get_Mode(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MseAppendMode value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->get_Mode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::Mode(Windows::Media::Core::MseAppendMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::Mode(winrt::Windows::Media::Core::MseAppendMode const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->put_Mode(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->put_Mode(static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IMseSourceBuffer<D>::IsUpdating() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->get_IsUpdating(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->get_IsUpdating(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Core::MseTimeRange>) consume_Windows_Media_Core_IMseSourceBuffer<D>::Buffered() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::MseTimeRange>) consume_Windows_Media_Core_IMseSourceBuffer<D>::Buffered() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->get_Buffered(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Media::Core::MseTimeRange>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->get_Buffered(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::MseTimeRange>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMseSourceBuffer<D>::TimestampOffset() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMseSourceBuffer<D>::TimestampOffset() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->get_TimestampOffset(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->get_TimestampOffset(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::TimestampOffset(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::TimestampOffset(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->put_TimestampOffset(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->put_TimestampOffset(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendWindowStart() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendWindowStart() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->get_AppendWindowStart(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->get_AppendWindowStart(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendWindowStart(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendWindowStart(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->put_AppendWindowStart(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->put_AppendWindowStart(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendWindowEnd() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendWindowEnd() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->get_AppendWindowEnd(&value));
-        return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->get_AppendWindowEnd(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendWindowEnd(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendWindowEnd(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->put_AppendWindowEnd(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->put_AppendWindowEnd(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendBuffer(Windows::Storage::Streams::IBuffer const& buffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendBuffer(winrt::Windows::Storage::Streams::IBuffer const& buffer) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->AppendBuffer(*(void**)(&buffer)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->AppendBuffer(*(void**)(&buffer)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendStream(Windows::Storage::Streams::IInputStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendStream(winrt::Windows::Storage::Streams::IInputStream const& stream) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->AppendStream(*(void**)(&stream)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->AppendStream(*(void**)(&stream)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendStream(Windows::Storage::Streams::IInputStream const& stream, uint64_t maxSize) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::AppendStream(winrt::Windows::Storage::Streams::IInputStream const& stream, uint64_t maxSize) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->AppendStreamMaxSize(*(void**)(&stream), maxSize));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->AppendStreamMaxSize(*(void**)(&stream), maxSize));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::Abort() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->Abort());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->Abort());
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::Remove(Windows::Foundation::TimeSpan const& start, Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& end) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBuffer<D>::Remove(winrt::Windows::Foundation::TimeSpan const& start, winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& end) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBuffer)->Remove(impl::bind_in(start), *(void**)(&end)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBuffer)->Remove(impl::bind_in(start), *(void**)(&end)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferAdded(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBufferList, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferAdded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBufferList, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBufferList)->add_SourceBufferAdded(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBufferList)->add_SourceBufferAdded(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferAdded_revoker consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferAdded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBufferList, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferAdded_revoker consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferAdded(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBufferList, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, SourceBufferAdded_revoker>(this, SourceBufferAdded(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferAdded(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBufferList)->remove_SourceBufferAdded(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBufferList)->remove_SourceBufferAdded(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferRemoved(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBufferList, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferRemoved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBufferList, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBufferList)->add_SourceBufferRemoved(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBufferList)->add_SourceBufferRemoved(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferRemoved_revoker consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferRemoved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBufferList, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferRemoved_revoker consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferRemoved(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBufferList, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, SourceBufferRemoved_revoker>(this, SourceBufferRemoved(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseSourceBufferList<D>::SourceBufferRemoved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBufferList)->remove_SourceBufferRemoved(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBufferList)->remove_SourceBufferRemoved(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Core::MseSourceBuffer>) consume_Windows_Media_Core_IMseSourceBufferList<D>::Buffers() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::MseSourceBuffer>) consume_Windows_Media_Core_IMseSourceBufferList<D>::Buffers() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseSourceBufferList)->get_Buffers(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Media::Core::MseSourceBuffer>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseSourceBufferList)->get_Buffers(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::MseSourceBuffer>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseStreamSource<D>::Opened(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseStreamSource, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseStreamSource<D>::Opened(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->add_Opened(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->add_Opened(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseStreamSource<D>::Opened_revoker consume_Windows_Media_Core_IMseStreamSource<D>::Opened(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseStreamSource, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseStreamSource<D>::Opened_revoker consume_Windows_Media_Core_IMseStreamSource<D>::Opened(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, Opened_revoker>(this, Opened(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::Opened(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->remove_Opened(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->remove_Opened(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseStreamSource<D>::Ended(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseStreamSource, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseStreamSource<D>::Ended(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->add_Ended(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->add_Ended(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseStreamSource<D>::Ended_revoker consume_Windows_Media_Core_IMseStreamSource<D>::Ended(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseStreamSource, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseStreamSource<D>::Ended_revoker consume_Windows_Media_Core_IMseStreamSource<D>::Ended(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, Ended_revoker>(this, Ended(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::Ended(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->remove_Ended(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->remove_Ended(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseStreamSource<D>::Closed(Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseStreamSource, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IMseStreamSource<D>::Closed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->add_Closed(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->add_Closed(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IMseStreamSource<D>::Closed_revoker consume_Windows_Media_Core_IMseStreamSource<D>::Closed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseStreamSource, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IMseStreamSource<D>::Closed_revoker consume_Windows_Media_Core_IMseStreamSource<D>::Closed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, Closed_revoker>(this, Closed(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::Closed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->remove_Closed(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->remove_Closed(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MseSourceBufferList) consume_Windows_Media_Core_IMseStreamSource<D>::SourceBuffers() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MseSourceBufferList) consume_Windows_Media_Core_IMseStreamSource<D>::SourceBuffers() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->get_SourceBuffers(&value));
-        return Windows::Media::Core::MseSourceBufferList{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->get_SourceBuffers(&value));
+        return winrt::Windows::Media::Core::MseSourceBufferList{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MseSourceBufferList) consume_Windows_Media_Core_IMseStreamSource<D>::ActiveSourceBuffers() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MseSourceBufferList) consume_Windows_Media_Core_IMseStreamSource<D>::ActiveSourceBuffers() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->get_ActiveSourceBuffers(&value));
-        return Windows::Media::Core::MseSourceBufferList{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->get_ActiveSourceBuffers(&value));
+        return winrt::Windows::Media::Core::MseSourceBufferList{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MseReadyState) consume_Windows_Media_Core_IMseStreamSource<D>::ReadyState() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MseReadyState) consume_Windows_Media_Core_IMseStreamSource<D>::ReadyState() const
     {
-        Windows::Media::Core::MseReadyState value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->get_ReadyState(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MseReadyState value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->get_ReadyState(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Foundation::TimeSpan>) consume_Windows_Media_Core_IMseStreamSource<D>::Duration() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>) consume_Windows_Media_Core_IMseStreamSource<D>::Duration() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->get_Duration(&value));
-        return Windows::Foundation::IReference<Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->get_Duration(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::Duration(Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::Duration(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->put_Duration(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->put_Duration(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MseSourceBuffer) consume_Windows_Media_Core_IMseStreamSource<D>::AddSourceBuffer(param::hstring const& mimeType) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MseSourceBuffer) consume_Windows_Media_Core_IMseStreamSource<D>::AddSourceBuffer(param::hstring const& mimeType) const
     {
         void* buffer{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->AddSourceBuffer(*(void**)(&mimeType), &buffer));
-        return Windows::Media::Core::MseSourceBuffer{ buffer, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->AddSourceBuffer(*(void**)(&mimeType), &buffer));
+        return winrt::Windows::Media::Core::MseSourceBuffer{ buffer, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::RemoveSourceBuffer(Windows::Media::Core::MseSourceBuffer const& buffer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::RemoveSourceBuffer(winrt::Windows::Media::Core::MseSourceBuffer const& buffer) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->RemoveSourceBuffer(*(void**)(&buffer)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->RemoveSourceBuffer(*(void**)(&buffer)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::EndOfStream(Windows::Media::Core::MseEndOfStreamStatus const& status) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource<D>::EndOfStream(winrt::Windows::Media::Core::MseEndOfStreamStatus const& status) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource)->EndOfStream(static_cast<int32_t>(status)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource)->EndOfStream(static_cast<int32_t>(status)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<Windows::Media::Core::MseTimeRange>) consume_Windows_Media_Core_IMseStreamSource2<D>::LiveSeekableRange() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Media::Core::MseTimeRange>) consume_Windows_Media_Core_IMseStreamSource2<D>::LiveSeekableRange() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource2)->get_LiveSeekableRange(&value));
-        return Windows::Foundation::IReference<Windows::Media::Core::MseTimeRange>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource2)->get_LiveSeekableRange(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Media::Core::MseTimeRange>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource2<D>::LiveSeekableRange(Windows::Foundation::IReference<Windows::Media::Core::MseTimeRange> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IMseStreamSource2<D>::LiveSeekableRange(winrt::Windows::Foundation::IReference<winrt::Windows::Media::Core::MseTimeRange> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSource2)->put_LiveSeekableRange(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSource2)->put_LiveSeekableRange(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IMseStreamSourceStatics<D>::IsContentTypeSupported(param::hstring const& contentType) const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IMseStreamSourceStatics)->IsContentTypeSupported(*(void**)(&contentType), &value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IMseStreamSourceStatics)->IsContentTypeSupported(*(void**)(&contentType), &value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::HighDynamicRangeControl) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::HighDynamicRangeAnalyzer() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::HighDynamicRangeControl) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::HighDynamicRangeAnalyzer() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISceneAnalysisEffect)->get_HighDynamicRangeAnalyzer(&value));
-        return Windows::Media::Core::HighDynamicRangeControl{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffect)->get_HighDynamicRangeAnalyzer(&value));
+        return winrt::Windows::Media::Core::HighDynamicRangeControl{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::DesiredAnalysisInterval(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::DesiredAnalysisInterval(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISceneAnalysisEffect)->put_DesiredAnalysisInterval(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffect)->put_DesiredAnalysisInterval(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::TimeSpan) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::DesiredAnalysisInterval() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::TimeSpan) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::DesiredAnalysisInterval() const
     {
-        Windows::Foundation::TimeSpan value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISceneAnalysisEffect)->get_DesiredAnalysisInterval(put_abi(value)));
+        winrt::Windows::Foundation::TimeSpan value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffect)->get_DesiredAnalysisInterval(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::SceneAnalyzed(Windows::Foundation::TypedEventHandler<Windows::Media::Core::SceneAnalysisEffect, Windows::Media::Core::SceneAnalyzedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::SceneAnalyzed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::SceneAnalysisEffect, winrt::Windows::Media::Core::SceneAnalyzedEventArgs> const& handler) const
     {
         winrt::event_token cookie{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISceneAnalysisEffect)->add_SceneAnalyzed(*(void**)(&handler), put_abi(cookie)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffect)->add_SceneAnalyzed(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
-    template <typename D> typename consume_Windows_Media_Core_ISceneAnalysisEffect<D>::SceneAnalyzed_revoker consume_Windows_Media_Core_ISceneAnalysisEffect<D>::SceneAnalyzed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::SceneAnalysisEffect, Windows::Media::Core::SceneAnalyzedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_ISceneAnalysisEffect<D>::SceneAnalyzed_revoker consume_Windows_Media_Core_ISceneAnalysisEffect<D>::SceneAnalyzed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::SceneAnalysisEffect, winrt::Windows::Media::Core::SceneAnalyzedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, SceneAnalyzed_revoker>(this, SceneAnalyzed(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISceneAnalysisEffect<D>::SceneAnalyzed(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::ISceneAnalysisEffect)->remove_SceneAnalyzed(impl::bind_in(cookie)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffect)->remove_SceneAnalyzed(impl::bind_in(cookie)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::CapturedFrameControlValues) consume_Windows_Media_Core_ISceneAnalysisEffectFrame<D>::FrameControlValues() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::CapturedFrameControlValues) consume_Windows_Media_Core_ISceneAnalysisEffectFrame<D>::FrameControlValues() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISceneAnalysisEffectFrame)->get_FrameControlValues(&value));
-        return Windows::Media::Capture::CapturedFrameControlValues{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffectFrame)->get_FrameControlValues(&value));
+        return winrt::Windows::Media::Capture::CapturedFrameControlValues{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::HighDynamicRangeOutput) consume_Windows_Media_Core_ISceneAnalysisEffectFrame<D>::HighDynamicRange() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::HighDynamicRangeOutput) consume_Windows_Media_Core_ISceneAnalysisEffectFrame<D>::HighDynamicRange() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISceneAnalysisEffectFrame)->get_HighDynamicRange(&value));
-        return Windows::Media::Core::HighDynamicRangeOutput{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffectFrame)->get_HighDynamicRange(&value));
+        return winrt::Windows::Media::Core::HighDynamicRangeOutput{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::SceneAnalysisRecommendation) consume_Windows_Media_Core_ISceneAnalysisEffectFrame2<D>::AnalysisRecommendation() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::SceneAnalysisRecommendation) consume_Windows_Media_Core_ISceneAnalysisEffectFrame2<D>::AnalysisRecommendation() const
     {
-        Windows::Media::Core::SceneAnalysisRecommendation value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISceneAnalysisEffectFrame2)->get_AnalysisRecommendation(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::SceneAnalysisRecommendation value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalysisEffectFrame2)->get_AnalysisRecommendation(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::SceneAnalysisEffectFrame) consume_Windows_Media_Core_ISceneAnalyzedEventArgs<D>::ResultFrame() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::SceneAnalysisEffectFrame) consume_Windows_Media_Core_ISceneAnalyzedEventArgs<D>::ResultFrame() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISceneAnalyzedEventArgs)->get_ResultFrame(&value));
-        return Windows::Media::Core::SceneAnalysisEffectFrame{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISceneAnalyzedEventArgs)->get_ResultFrame(&value));
+        return winrt::Windows::Media::Core::SceneAnalysisEffectFrame{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndexChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Core::ISingleSelectMediaTrackList, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndexChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::ISingleSelectMediaTrackList, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISingleSelectMediaTrackList)->add_SelectedIndexChanged(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISingleSelectMediaTrackList)->add_SelectedIndexChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndexChanged_revoker consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndexChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::ISingleSelectMediaTrackList, Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndexChanged_revoker consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndexChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::ISingleSelectMediaTrackList, winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, SelectedIndexChanged_revoker>(this, SelectedIndexChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndexChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::ISingleSelectMediaTrackList)->remove_SelectedIndexChanged(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISingleSelectMediaTrackList)->remove_SelectedIndexChanged(impl::bind_in(token)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndex(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISingleSelectMediaTrackList)->put_SelectedIndex(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISingleSelectMediaTrackList)->put_SelectedIndex(value));
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Core_ISingleSelectMediaTrackList<D>::SelectedIndex() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISingleSelectMediaTrackList)->get_SelectedIndex(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISingleSelectMediaTrackList)->get_SelectedIndex(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ISpeechCue<D>::Text() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISpeechCue)->get_Text(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISpeechCue)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISpeechCue<D>::Text(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISpeechCue)->put_Text(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISpeechCue)->put_Text(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) consume_Windows_Media_Core_ISpeechCue<D>::StartPositionInInput() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Media_Core_ISpeechCue<D>::StartPositionInInput() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISpeechCue)->get_StartPositionInInput(&value));
-        return Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISpeechCue)->get_StartPositionInInput(&value));
+        return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISpeechCue<D>::StartPositionInInput(Windows::Foundation::IReference<int32_t> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISpeechCue<D>::StartPositionInInput(winrt::Windows::Foundation::IReference<int32_t> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISpeechCue)->put_StartPositionInInput(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISpeechCue)->put_StartPositionInInput(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IReference<int32_t>) consume_Windows_Media_Core_ISpeechCue<D>::EndPositionInInput() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISpeechCue)->get_EndPositionInInput(&value));
-        return Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISpeechCue<D>::EndPositionInInput(Windows::Foundation::IReference<int32_t> const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ISpeechCue)->put_EndPositionInInput(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::TimedMetadataEncodingProperties) consume_Windows_Media_Core_ITimedMetadataStreamDescriptor<D>::EncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<int32_t>) consume_Windows_Media_Core_ISpeechCue<D>::EndPositionInInput() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataStreamDescriptor)->get_EncodingProperties(&value));
-        return Windows::Media::MediaProperties::TimedMetadataEncodingProperties{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISpeechCue)->get_EndPositionInInput(&value));
+        return winrt::Windows::Foundation::IReference<int32_t>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedMetadataStreamDescriptor) consume_Windows_Media_Core_ITimedMetadataStreamDescriptor<D>::Copy() const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ISpeechCue<D>::EndPositionInInput(winrt::Windows::Foundation::IReference<int32_t> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ISpeechCue)->put_EndPositionInInput(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties) consume_Windows_Media_Core_ITimedMetadataStreamDescriptor<D>::EncodingProperties() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataStreamDescriptor)->get_EncodingProperties(&value));
+        return winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedMetadataStreamDescriptor) consume_Windows_Media_Core_ITimedMetadataStreamDescriptor<D>::Copy() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataStreamDescriptor)->Copy(&result));
-        return Windows::Media::Core::TimedMetadataStreamDescriptor{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataStreamDescriptor)->Copy(&result));
+        return winrt::Windows::Media::Core::TimedMetadataStreamDescriptor{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedMetadataStreamDescriptor) consume_Windows_Media_Core_ITimedMetadataStreamDescriptorFactory<D>::Create(Windows::Media::MediaProperties::TimedMetadataEncodingProperties const& encodingProperties) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedMetadataStreamDescriptor) consume_Windows_Media_Core_ITimedMetadataStreamDescriptorFactory<D>::Create(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties const& encodingProperties) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataStreamDescriptorFactory)->Create(*(void**)(&encodingProperties), &result));
-        return Windows::Media::Core::TimedMetadataStreamDescriptor{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataStreamDescriptorFactory)->Create(*(void**)(&encodingProperties), &result));
+        return winrt::Windows::Media::Core::TimedMetadataStreamDescriptor{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueEntered(Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedMetadataTrack, Windows::Media::Core::MediaCueEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueEntered(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::MediaCueEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->add_CueEntered(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->add_CueEntered(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueEntered_revoker consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueEntered(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedMetadataTrack, Windows::Media::Core::MediaCueEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueEntered_revoker consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueEntered(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::MediaCueEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, CueEntered_revoker>(this, CueEntered(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueEntered(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->remove_CueEntered(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->remove_CueEntered(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueExited(Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedMetadataTrack, Windows::Media::Core::MediaCueEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueExited(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::MediaCueEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->add_CueExited(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->add_CueExited(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueExited_revoker consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueExited(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedMetadataTrack, Windows::Media::Core::MediaCueEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueExited_revoker consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueExited(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::MediaCueEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, CueExited_revoker>(this, CueExited(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::CueExited(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->remove_CueExited(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->remove_CueExited(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedMetadataTrack<D>::TrackFailed(Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedMetadataTrack, Windows::Media::Core::TimedMetadataTrackFailedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedMetadataTrack<D>::TrackFailed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->add_TrackFailed(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->add_TrackFailed(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_ITimedMetadataTrack<D>::TrackFailed_revoker consume_Windows_Media_Core_ITimedMetadataTrack<D>::TrackFailed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedMetadataTrack, Windows::Media::Core::TimedMetadataTrackFailedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_ITimedMetadataTrack<D>::TrackFailed_revoker consume_Windows_Media_Core_ITimedMetadataTrack<D>::TrackFailed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, TrackFailed_revoker>(this, TrackFailed(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::TrackFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->remove_TrackFailed(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->remove_TrackFailed(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Core::IMediaCue>) consume_Windows_Media_Core_ITimedMetadataTrack<D>::Cues() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::IMediaCue>) consume_Windows_Media_Core_ITimedMetadataTrack<D>::Cues() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->get_Cues(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Media::Core::IMediaCue>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->get_Cues(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::IMediaCue>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Core::IMediaCue>) consume_Windows_Media_Core_ITimedMetadataTrack<D>::ActiveCues() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::IMediaCue>) consume_Windows_Media_Core_ITimedMetadataTrack<D>::ActiveCues() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->get_ActiveCues(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Media::Core::IMediaCue>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->get_ActiveCues(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::IMediaCue>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedMetadataKind) consume_Windows_Media_Core_ITimedMetadataTrack<D>::TimedMetadataKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedMetadataKind) consume_Windows_Media_Core_ITimedMetadataTrack<D>::TimedMetadataKind() const
     {
-        Windows::Media::Core::TimedMetadataKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->get_TimedMetadataKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedMetadataKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->get_TimedMetadataKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ITimedMetadataTrack<D>::DispatchType() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->get_DispatchType(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->get_DispatchType(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::AddCue(Windows::Media::Core::IMediaCue const& cue) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::AddCue(winrt::Windows::Media::Core::IMediaCue const& cue) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->AddCue(*(void**)(&cue)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->AddCue(*(void**)(&cue)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::RemoveCue(Windows::Media::Core::IMediaCue const& cue) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedMetadataTrack<D>::RemoveCue(winrt::Windows::Media::Core::IMediaCue const& cue) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack)->RemoveCue(*(void**)(&cue)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack)->RemoveCue(*(void**)(&cue)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Playback::MediaPlaybackItem) consume_Windows_Media_Core_ITimedMetadataTrack2<D>::PlaybackItem() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Playback::MediaPlaybackItem) consume_Windows_Media_Core_ITimedMetadataTrack2<D>::PlaybackItem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack2)->get_PlaybackItem(&value));
-        return Windows::Media::Playback::MediaPlaybackItem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack2)->get_PlaybackItem(&value));
+        return winrt::Windows::Media::Playback::MediaPlaybackItem{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ITimedMetadataTrack2<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrack2)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrack2)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedMetadataTrackErrorCode) consume_Windows_Media_Core_ITimedMetadataTrackError<D>::ErrorCode() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedMetadataTrackErrorCode) consume_Windows_Media_Core_ITimedMetadataTrackError<D>::ErrorCode() const
     {
-        Windows::Media::Core::TimedMetadataTrackErrorCode value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrackError)->get_ErrorCode(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedMetadataTrackErrorCode value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrackError)->get_ErrorCode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Core_ITimedMetadataTrackError<D>::ExtendedError() const
     {
         winrt::hresult value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrackError)->get_ExtendedError(put_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrackError)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedMetadataTrack) consume_Windows_Media_Core_ITimedMetadataTrackFactory<D>::Create(param::hstring const& id, param::hstring const& language, Windows::Media::Core::TimedMetadataKind const& kind) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedMetadataTrack) consume_Windows_Media_Core_ITimedMetadataTrackFactory<D>::Create(param::hstring const& id, param::hstring const& language, winrt::Windows::Media::Core::TimedMetadataKind const& kind) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrackFactory)->Create(*(void**)(&id), *(void**)(&language), static_cast<int32_t>(kind), &value));
-        return Windows::Media::Core::TimedMetadataTrack{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrackFactory)->Create(*(void**)(&id), *(void**)(&language), static_cast<int32_t>(kind), &value));
+        return winrt::Windows::Media::Core::TimedMetadataTrack{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedMetadataTrackError) consume_Windows_Media_Core_ITimedMetadataTrackFailedEventArgs<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedMetadataTrackError) consume_Windows_Media_Core_ITimedMetadataTrackFailedEventArgs<D>::Error() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrackFailedEventArgs)->get_Error(&value));
-        return Windows::Media::Core::TimedMetadataTrackError{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrackFailedEventArgs)->get_Error(&value));
+        return winrt::Windows::Media::Core::TimedMetadataTrackError{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Core::TimedMetadataTrack>) consume_Windows_Media_Core_ITimedMetadataTrackProvider<D>::TimedMetadataTracks() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::TimedMetadataTrack>) consume_Windows_Media_Core_ITimedMetadataTrackProvider<D>::TimedMetadataTracks() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedMetadataTrackProvider)->get_TimedMetadataTracks(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Media::Core::TimedMetadataTrack>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedMetadataTrackProvider)->get_TimedMetadataTracks(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::TimedMetadataTrack>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextBoutenType) consume_Windows_Media_Core_ITimedTextBouten<D>::Type() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextBoutenType) consume_Windows_Media_Core_ITimedTextBouten<D>::Type() const
     {
-        Windows::Media::Core::TimedTextBoutenType value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextBouten)->get_Type(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextBoutenType value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextBouten)->get_Type(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextBouten<D>::Type(Windows::Media::Core::TimedTextBoutenType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextBouten<D>::Type(winrt::Windows::Media::Core::TimedTextBoutenType const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextBouten)->put_Type(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextBouten)->put_Type(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Media_Core_ITimedTextBouten<D>::Color() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_Media_Core_ITimedTextBouten<D>::Color() const
     {
-        Windows::UI::Color value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextBouten)->get_Color(put_abi(value)));
+        winrt::Windows::UI::Color value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextBouten)->get_Color(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextBouten<D>::Color(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextBouten<D>::Color(winrt::Windows::UI::Color const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextBouten)->put_Color(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextBouten)->put_Color(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextBoutenPosition) consume_Windows_Media_Core_ITimedTextBouten<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextBoutenPosition) consume_Windows_Media_Core_ITimedTextBouten<D>::Position() const
     {
-        Windows::Media::Core::TimedTextBoutenPosition value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextBouten)->get_Position(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextBoutenPosition value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextBouten)->get_Position(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextBouten<D>::Position(Windows::Media::Core::TimedTextBoutenPosition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextBouten<D>::Position(winrt::Windows::Media::Core::TimedTextBoutenPosition const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextBouten)->put_Position(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextBouten)->put_Position(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextRegion) consume_Windows_Media_Core_ITimedTextCue<D>::CueRegion() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextRegion) consume_Windows_Media_Core_ITimedTextCue<D>::CueRegion() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextCue)->get_CueRegion(&value));
-        return Windows::Media::Core::TimedTextRegion{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextCue)->get_CueRegion(&value));
+        return winrt::Windows::Media::Core::TimedTextRegion{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextCue<D>::CueRegion(Windows::Media::Core::TimedTextRegion const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextCue<D>::CueRegion(winrt::Windows::Media::Core::TimedTextRegion const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextCue)->put_CueRegion(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextCue)->put_CueRegion(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextStyle) consume_Windows_Media_Core_ITimedTextCue<D>::CueStyle() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextCue)->get_CueStyle(&value));
-        return Windows::Media::Core::TimedTextStyle{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextCue<D>::CueStyle(Windows::Media::Core::TimedTextStyle const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextCue)->put_CueStyle(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Media::Core::TimedTextLine>) consume_Windows_Media_Core_ITimedTextCue<D>::Lines() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextStyle) consume_Windows_Media_Core_ITimedTextCue<D>::CueStyle() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextCue)->get_Lines(&value));
-        return Windows::Foundation::Collections::IVector<Windows::Media::Core::TimedTextLine>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextCue)->get_CueStyle(&value));
+        return winrt::Windows::Media::Core::TimedTextStyle{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextCue<D>::CueStyle(winrt::Windows::Media::Core::TimedTextStyle const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextCue)->put_CueStyle(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::TimedTextLine>) consume_Windows_Media_Core_ITimedTextCue<D>::Lines() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextCue)->get_Lines(&value));
+        return winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::TimedTextLine>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ITimedTextLine<D>::Text() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextLine)->get_Text(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextLine)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextLine<D>::Text(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextLine)->put_Text(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextLine)->put_Text(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<Windows::Media::Core::TimedTextSubformat>) consume_Windows_Media_Core_ITimedTextLine<D>::Subformats() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::TimedTextSubformat>) consume_Windows_Media_Core_ITimedTextLine<D>::Subformats() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextLine)->get_Subformats(&value));
-        return Windows::Foundation::Collections::IVector<Windows::Media::Core::TimedTextSubformat>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextLine)->get_Subformats(&value));
+        return winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::TimedTextSubformat>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ITimedTextRegion<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::Name(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_Name(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_Name(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextPoint) consume_Windows_Media_Core_ITimedTextRegion<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextPoint) consume_Windows_Media_Core_ITimedTextRegion<D>::Position() const
     {
-        Windows::Media::Core::TimedTextPoint value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_Position(put_abi(value)));
+        winrt::Windows::Media::Core::TimedTextPoint value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_Position(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::Position(Windows::Media::Core::TimedTextPoint const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::Position(winrt::Windows::Media::Core::TimedTextPoint const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_Position(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_Position(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSize) consume_Windows_Media_Core_ITimedTextRegion<D>::Extent() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSize) consume_Windows_Media_Core_ITimedTextRegion<D>::Extent() const
     {
-        Windows::Media::Core::TimedTextSize value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_Extent(put_abi(value)));
+        winrt::Windows::Media::Core::TimedTextSize value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_Extent(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::Extent(Windows::Media::Core::TimedTextSize const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::Extent(winrt::Windows::Media::Core::TimedTextSize const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_Extent(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_Extent(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Media_Core_ITimedTextRegion<D>::Background() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_Media_Core_ITimedTextRegion<D>::Background() const
     {
-        Windows::UI::Color value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_Background(put_abi(value)));
+        winrt::Windows::UI::Color value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_Background(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::Background(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::Background(winrt::Windows::UI::Color const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_Background(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_Background(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextWritingMode) consume_Windows_Media_Core_ITimedTextRegion<D>::WritingMode() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextWritingMode) consume_Windows_Media_Core_ITimedTextRegion<D>::WritingMode() const
     {
-        Windows::Media::Core::TimedTextWritingMode value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_WritingMode(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextWritingMode value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_WritingMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::WritingMode(Windows::Media::Core::TimedTextWritingMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::WritingMode(winrt::Windows::Media::Core::TimedTextWritingMode const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_WritingMode(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_WritingMode(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextDisplayAlignment) consume_Windows_Media_Core_ITimedTextRegion<D>::DisplayAlignment() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextDisplayAlignment) consume_Windows_Media_Core_ITimedTextRegion<D>::DisplayAlignment() const
     {
-        Windows::Media::Core::TimedTextDisplayAlignment value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_DisplayAlignment(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextDisplayAlignment value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_DisplayAlignment(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::DisplayAlignment(Windows::Media::Core::TimedTextDisplayAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::DisplayAlignment(winrt::Windows::Media::Core::TimedTextDisplayAlignment const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_DisplayAlignment(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_DisplayAlignment(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextDouble) consume_Windows_Media_Core_ITimedTextRegion<D>::LineHeight() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextDouble) consume_Windows_Media_Core_ITimedTextRegion<D>::LineHeight() const
     {
-        Windows::Media::Core::TimedTextDouble value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_LineHeight(put_abi(value)));
+        winrt::Windows::Media::Core::TimedTextDouble value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_LineHeight(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::LineHeight(Windows::Media::Core::TimedTextDouble const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::LineHeight(winrt::Windows::Media::Core::TimedTextDouble const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_LineHeight(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_LineHeight(impl::bind_in(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_ITimedTextRegion<D>::IsOverflowClipped() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_IsOverflowClipped(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_IsOverflowClipped(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::IsOverflowClipped(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_IsOverflowClipped(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_IsOverflowClipped(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextPadding) consume_Windows_Media_Core_ITimedTextRegion<D>::Padding() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextPadding) consume_Windows_Media_Core_ITimedTextRegion<D>::Padding() const
     {
-        Windows::Media::Core::TimedTextPadding value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_Padding(put_abi(value)));
+        winrt::Windows::Media::Core::TimedTextPadding value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_Padding(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::Padding(Windows::Media::Core::TimedTextPadding const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::Padding(winrt::Windows::Media::Core::TimedTextPadding const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_Padding(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_Padding(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextWrapping) consume_Windows_Media_Core_ITimedTextRegion<D>::TextWrapping() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextWrapping) consume_Windows_Media_Core_ITimedTextRegion<D>::TextWrapping() const
     {
-        Windows::Media::Core::TimedTextWrapping value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_TextWrapping(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextWrapping value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_TextWrapping(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::TextWrapping(Windows::Media::Core::TimedTextWrapping const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::TextWrapping(winrt::Windows::Media::Core::TimedTextWrapping const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_TextWrapping(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_TextWrapping(static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Core_ITimedTextRegion<D>::ZIndex() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_ZIndex(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_ZIndex(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::ZIndex(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_ZIndex(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_ZIndex(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextScrollMode) consume_Windows_Media_Core_ITimedTextRegion<D>::ScrollMode() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextScrollMode) consume_Windows_Media_Core_ITimedTextRegion<D>::ScrollMode() const
     {
-        Windows::Media::Core::TimedTextScrollMode value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->get_ScrollMode(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextScrollMode value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->get_ScrollMode(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::ScrollMode(Windows::Media::Core::TimedTextScrollMode const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRegion<D>::ScrollMode(winrt::Windows::Media::Core::TimedTextScrollMode const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRegion)->put_ScrollMode(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRegion)->put_ScrollMode(static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ITimedTextRuby<D>::Text() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRuby)->get_Text(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRuby)->get_Text(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRuby<D>::Text(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRuby)->put_Text(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRuby)->put_Text(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextRubyPosition) consume_Windows_Media_Core_ITimedTextRuby<D>::Position() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextRubyPosition) consume_Windows_Media_Core_ITimedTextRuby<D>::Position() const
     {
-        Windows::Media::Core::TimedTextRubyPosition value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRuby)->get_Position(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextRubyPosition value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRuby)->get_Position(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRuby<D>::Position(Windows::Media::Core::TimedTextRubyPosition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRuby<D>::Position(winrt::Windows::Media::Core::TimedTextRubyPosition const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRuby)->put_Position(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRuby)->put_Position(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextRubyAlign) consume_Windows_Media_Core_ITimedTextRuby<D>::Align() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextRubyAlign) consume_Windows_Media_Core_ITimedTextRuby<D>::Align() const
     {
-        Windows::Media::Core::TimedTextRubyAlign value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRuby)->get_Align(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextRubyAlign value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRuby)->get_Align(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRuby<D>::Align(Windows::Media::Core::TimedTextRubyAlign const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRuby<D>::Align(winrt::Windows::Media::Core::TimedTextRubyAlign const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRuby)->put_Align(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRuby)->put_Align(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextRubyReserve) consume_Windows_Media_Core_ITimedTextRuby<D>::Reserve() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextRubyReserve) consume_Windows_Media_Core_ITimedTextRuby<D>::Reserve() const
     {
-        Windows::Media::Core::TimedTextRubyReserve value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRuby)->get_Reserve(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextRubyReserve value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRuby)->get_Reserve(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRuby<D>::Reserve(Windows::Media::Core::TimedTextRubyReserve const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextRuby<D>::Reserve(winrt::Windows::Media::Core::TimedTextRubyReserve const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextRuby)->put_Reserve(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextRuby)->put_Reserve(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedTextSource<D>::Resolved(Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedTextSource, Windows::Media::Core::TimedTextSourceResolveResultEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_ITimedTextSource<D>::Resolved(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedTextSource, winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSource)->add_Resolved(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSource)->add_Resolved(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_ITimedTextSource<D>::Resolved_revoker consume_Windows_Media_Core_ITimedTextSource<D>::Resolved(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedTextSource, Windows::Media::Core::TimedTextSourceResolveResultEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_ITimedTextSource<D>::Resolved_revoker consume_Windows_Media_Core_ITimedTextSource<D>::Resolved(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedTextSource, winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, Resolved_revoker>(this, Resolved(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextSource<D>::Resolved(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSource)->remove_Resolved(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSource)->remove_Resolved(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedMetadataTrackError) consume_Windows_Media_Core_ITimedTextSourceResolveResultEventArgs<D>::Error() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedMetadataTrackError) consume_Windows_Media_Core_ITimedTextSourceResolveResultEventArgs<D>::Error() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceResolveResultEventArgs)->get_Error(&value));
-        return Windows::Media::Core::TimedMetadataTrackError{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceResolveResultEventArgs)->get_Error(&value));
+        return winrt::Windows::Media::Core::TimedMetadataTrackError{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Media::Core::TimedMetadataTrack>) consume_Windows_Media_Core_ITimedTextSourceResolveResultEventArgs<D>::Tracks() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::TimedMetadataTrack>) consume_Windows_Media_Core_ITimedTextSourceResolveResultEventArgs<D>::Tracks() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceResolveResultEventArgs)->get_Tracks(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::Media::Core::TimedMetadataTrack>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceResolveResultEventArgs)->get_Tracks(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::TimedMetadataTrack>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics<D>::CreateFromStream(Windows::Storage::Streams::IRandomAccessStream const& stream) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics<D>::CreateFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceStatics)->CreateFromStream(*(void**)(&stream), &value));
-        return Windows::Media::Core::TimedTextSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceStatics)->CreateFromStream(*(void**)(&stream), &value));
+        return winrt::Windows::Media::Core::TimedTextSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics<D>::CreateFromUri(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics<D>::CreateFromUri(winrt::Windows::Foundation::Uri const& uri) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceStatics)->CreateFromUri(*(void**)(&uri), &value));
-        return Windows::Media::Core::TimedTextSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceStatics)->CreateFromUri(*(void**)(&uri), &value));
+        return winrt::Windows::Media::Core::TimedTextSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics<D>::CreateFromStream(Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& defaultLanguage) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics<D>::CreateFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& defaultLanguage) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceStatics)->CreateFromStreamWithLanguage(*(void**)(&stream), *(void**)(&defaultLanguage), &value));
-        return Windows::Media::Core::TimedTextSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceStatics)->CreateFromStreamWithLanguage(*(void**)(&stream), *(void**)(&defaultLanguage), &value));
+        return winrt::Windows::Media::Core::TimedTextSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics<D>::CreateFromUri(Windows::Foundation::Uri const& uri, param::hstring const& defaultLanguage) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics<D>::CreateFromUri(winrt::Windows::Foundation::Uri const& uri, param::hstring const& defaultLanguage) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceStatics)->CreateFromUriWithLanguage(*(void**)(&uri), *(void**)(&defaultLanguage), &value));
-        return Windows::Media::Core::TimedTextSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceStatics)->CreateFromUriWithLanguage(*(void**)(&uri), *(void**)(&defaultLanguage), &value));
+        return winrt::Windows::Media::Core::TimedTextSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics2<D>::CreateFromStreamWithIndex(Windows::Storage::Streams::IRandomAccessStream const& stream, Windows::Storage::Streams::IRandomAccessStream const& indexStream) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics2<D>::CreateFromStreamWithIndex(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, winrt::Windows::Storage::Streams::IRandomAccessStream const& indexStream) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceStatics2)->CreateFromStreamWithIndex(*(void**)(&stream), *(void**)(&indexStream), &result));
-        return Windows::Media::Core::TimedTextSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceStatics2)->CreateFromStreamWithIndex(*(void**)(&stream), *(void**)(&indexStream), &result));
+        return winrt::Windows::Media::Core::TimedTextSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics2<D>::CreateFromUriWithIndex(Windows::Foundation::Uri const& uri, Windows::Foundation::Uri const& indexUri) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics2<D>::CreateFromUriWithIndex(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Foundation::Uri const& indexUri) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceStatics2)->CreateFromUriWithIndex(*(void**)(&uri), *(void**)(&indexUri), &result));
-        return Windows::Media::Core::TimedTextSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceStatics2)->CreateFromUriWithIndex(*(void**)(&uri), *(void**)(&indexUri), &result));
+        return winrt::Windows::Media::Core::TimedTextSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics2<D>::CreateFromStreamWithIndex(Windows::Storage::Streams::IRandomAccessStream const& stream, Windows::Storage::Streams::IRandomAccessStream const& indexStream, param::hstring const& defaultLanguage) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics2<D>::CreateFromStreamWithIndex(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, winrt::Windows::Storage::Streams::IRandomAccessStream const& indexStream, param::hstring const& defaultLanguage) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceStatics2)->CreateFromStreamWithIndexAndLanguage(*(void**)(&stream), *(void**)(&indexStream), *(void**)(&defaultLanguage), &result));
-        return Windows::Media::Core::TimedTextSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceStatics2)->CreateFromStreamWithIndexAndLanguage(*(void**)(&stream), *(void**)(&indexStream), *(void**)(&defaultLanguage), &result));
+        return winrt::Windows::Media::Core::TimedTextSource{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics2<D>::CreateFromUriWithIndex(Windows::Foundation::Uri const& uri, Windows::Foundation::Uri const& indexUri, param::hstring const& defaultLanguage) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextSource) consume_Windows_Media_Core_ITimedTextSourceStatics2<D>::CreateFromUriWithIndex(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Foundation::Uri const& indexUri, param::hstring const& defaultLanguage) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSourceStatics2)->CreateFromUriWithIndexAndLanguage(*(void**)(&uri), *(void**)(&indexUri), *(void**)(&defaultLanguage), &result));
-        return Windows::Media::Core::TimedTextSource{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSourceStatics2)->CreateFromUriWithIndexAndLanguage(*(void**)(&uri), *(void**)(&indexUri), *(void**)(&defaultLanguage), &result));
+        return winrt::Windows::Media::Core::TimedTextSource{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ITimedTextStyle<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::Name(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_Name(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_Name(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_ITimedTextStyle<D>::FontFamily() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_FontFamily(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_FontFamily(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::FontFamily(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_FontFamily(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_FontFamily(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextDouble) consume_Windows_Media_Core_ITimedTextStyle<D>::FontSize() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextDouble) consume_Windows_Media_Core_ITimedTextStyle<D>::FontSize() const
     {
-        Windows::Media::Core::TimedTextDouble value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_FontSize(put_abi(value)));
+        winrt::Windows::Media::Core::TimedTextDouble value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_FontSize(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::FontSize(Windows::Media::Core::TimedTextDouble const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::FontSize(winrt::Windows::Media::Core::TimedTextDouble const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_FontSize(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_FontSize(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextWeight) consume_Windows_Media_Core_ITimedTextStyle<D>::FontWeight() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextWeight) consume_Windows_Media_Core_ITimedTextStyle<D>::FontWeight() const
     {
-        Windows::Media::Core::TimedTextWeight value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_FontWeight(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextWeight value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_FontWeight(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::FontWeight(Windows::Media::Core::TimedTextWeight const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::FontWeight(winrt::Windows::Media::Core::TimedTextWeight const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_FontWeight(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_FontWeight(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Media_Core_ITimedTextStyle<D>::Foreground() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_Media_Core_ITimedTextStyle<D>::Foreground() const
     {
-        Windows::UI::Color value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_Foreground(put_abi(value)));
+        winrt::Windows::UI::Color value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_Foreground(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::Foreground(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::Foreground(winrt::Windows::UI::Color const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_Foreground(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_Foreground(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Media_Core_ITimedTextStyle<D>::Background() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_Media_Core_ITimedTextStyle<D>::Background() const
     {
-        Windows::UI::Color value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_Background(put_abi(value)));
+        winrt::Windows::UI::Color value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_Background(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::Background(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::Background(winrt::Windows::UI::Color const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_Background(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_Background(impl::bind_in(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_ITimedTextStyle<D>::IsBackgroundAlwaysShown() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_IsBackgroundAlwaysShown(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_IsBackgroundAlwaysShown(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::IsBackgroundAlwaysShown(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_IsBackgroundAlwaysShown(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_IsBackgroundAlwaysShown(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextFlowDirection) consume_Windows_Media_Core_ITimedTextStyle<D>::FlowDirection() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextFlowDirection) consume_Windows_Media_Core_ITimedTextStyle<D>::FlowDirection() const
     {
-        Windows::Media::Core::TimedTextFlowDirection value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_FlowDirection(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextFlowDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_FlowDirection(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::FlowDirection(Windows::Media::Core::TimedTextFlowDirection const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::FlowDirection(winrt::Windows::Media::Core::TimedTextFlowDirection const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_FlowDirection(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_FlowDirection(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextLineAlignment) consume_Windows_Media_Core_ITimedTextStyle<D>::LineAlignment() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextLineAlignment) consume_Windows_Media_Core_ITimedTextStyle<D>::LineAlignment() const
     {
-        Windows::Media::Core::TimedTextLineAlignment value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_LineAlignment(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextLineAlignment value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_LineAlignment(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::LineAlignment(Windows::Media::Core::TimedTextLineAlignment const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::LineAlignment(winrt::Windows::Media::Core::TimedTextLineAlignment const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_LineAlignment(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_LineAlignment(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Color) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineColor() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Color) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineColor() const
     {
-        Windows::UI::Color value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_OutlineColor(put_abi(value)));
+        winrt::Windows::UI::Color value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_OutlineColor(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineColor(Windows::UI::Color const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineColor(winrt::Windows::UI::Color const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_OutlineColor(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_OutlineColor(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextDouble) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineThickness() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextDouble) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineThickness() const
     {
-        Windows::Media::Core::TimedTextDouble value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_OutlineThickness(put_abi(value)));
+        winrt::Windows::Media::Core::TimedTextDouble value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_OutlineThickness(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineThickness(Windows::Media::Core::TimedTextDouble const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineThickness(winrt::Windows::Media::Core::TimedTextDouble const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_OutlineThickness(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_OutlineThickness(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextDouble) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineRadius() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextDouble) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineRadius() const
     {
-        Windows::Media::Core::TimedTextDouble value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->get_OutlineRadius(put_abi(value)));
+        winrt::Windows::Media::Core::TimedTextDouble value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->get_OutlineRadius(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineRadius(Windows::Media::Core::TimedTextDouble const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle<D>::OutlineRadius(winrt::Windows::Media::Core::TimedTextDouble const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle)->put_OutlineRadius(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle)->put_OutlineRadius(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextFontStyle) consume_Windows_Media_Core_ITimedTextStyle2<D>::FontStyle() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextFontStyle) consume_Windows_Media_Core_ITimedTextStyle2<D>::FontStyle() const
     {
-        Windows::Media::Core::TimedTextFontStyle value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle2)->get_FontStyle(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::TimedTextFontStyle value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle2)->get_FontStyle(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle2<D>::FontStyle(Windows::Media::Core::TimedTextFontStyle const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle2<D>::FontStyle(winrt::Windows::Media::Core::TimedTextFontStyle const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle2)->put_FontStyle(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle2)->put_FontStyle(static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_ITimedTextStyle2<D>::IsUnderlineEnabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle2)->get_IsUnderlineEnabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle2)->get_IsUnderlineEnabled(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle2<D>::IsUnderlineEnabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle2)->put_IsUnderlineEnabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle2)->put_IsUnderlineEnabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_ITimedTextStyle2<D>::IsLineThroughEnabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle2)->get_IsLineThroughEnabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle2)->get_IsLineThroughEnabled(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle2<D>::IsLineThroughEnabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle2)->put_IsLineThroughEnabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle2)->put_IsLineThroughEnabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_ITimedTextStyle2<D>::IsOverlineEnabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle2)->get_IsOverlineEnabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle2)->get_IsOverlineEnabled(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle2<D>::IsOverlineEnabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle2)->put_IsOverlineEnabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle2)->put_IsOverlineEnabled(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextRuby) consume_Windows_Media_Core_ITimedTextStyle3<D>::Ruby() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextRuby) consume_Windows_Media_Core_ITimedTextStyle3<D>::Ruby() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle3)->get_Ruby(&value));
-        return Windows::Media::Core::TimedTextRuby{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle3)->get_Ruby(&value));
+        return winrt::Windows::Media::Core::TimedTextRuby{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextBouten) consume_Windows_Media_Core_ITimedTextStyle3<D>::Bouten() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextBouten) consume_Windows_Media_Core_ITimedTextStyle3<D>::Bouten() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle3)->get_Bouten(&value));
-        return Windows::Media::Core::TimedTextBouten{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle3)->get_Bouten(&value));
+        return winrt::Windows::Media::Core::TimedTextBouten{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_ITimedTextStyle3<D>::IsTextCombined() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle3)->get_IsTextCombined(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle3)->get_IsTextCombined(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle3<D>::IsTextCombined(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle3)->put_IsTextCombined(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle3)->put_IsTextCombined(value));
     }
     template <typename D> WINRT_IMPL_AUTO(double) consume_Windows_Media_Core_ITimedTextStyle3<D>::FontAngleInDegrees() const
     {
         double value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle3)->get_FontAngleInDegrees(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle3)->get_FontAngleInDegrees(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextStyle3<D>::FontAngleInDegrees(double value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextStyle3)->put_FontAngleInDegrees(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextStyle3)->put_FontAngleInDegrees(value));
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Core_ITimedTextSubformat<D>::StartIndex() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSubformat)->get_StartIndex(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSubformat)->get_StartIndex(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextSubformat<D>::StartIndex(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSubformat)->put_StartIndex(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSubformat)->put_StartIndex(value));
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Media_Core_ITimedTextSubformat<D>::Length() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSubformat)->get_Length(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSubformat)->get_Length(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextSubformat<D>::Length(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSubformat)->put_Length(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSubformat)->put_Length(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::TimedTextStyle) consume_Windows_Media_Core_ITimedTextSubformat<D>::SubformatStyle() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::TimedTextStyle) consume_Windows_Media_Core_ITimedTextSubformat<D>::SubformatStyle() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSubformat)->get_SubformatStyle(&value));
-        return Windows::Media::Core::TimedTextStyle{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSubformat)->get_SubformatStyle(&value));
+        return winrt::Windows::Media::Core::TimedTextStyle{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextSubformat<D>::SubformatStyle(Windows::Media::Core::TimedTextStyle const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_ITimedTextSubformat<D>::SubformatStyle(winrt::Windows::Media::Core::TimedTextStyle const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::ITimedTextSubformat)->put_SubformatStyle(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::ITimedTextSubformat)->put_SubformatStyle(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IVideoStabilizationEffect<D>::Enabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoStabilizationEffect)->put_Enabled(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStabilizationEffect)->put_Enabled(value));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Media_Core_IVideoStabilizationEffect<D>::Enabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoStabilizationEffect)->get_Enabled(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStabilizationEffect)->get_Enabled(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IVideoStabilizationEffect<D>::EnabledChanged(Windows::Foundation::TypedEventHandler<Windows::Media::Core::VideoStabilizationEffect, Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IVideoStabilizationEffect<D>::EnabledChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::VideoStabilizationEffect, winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs> const& handler) const
     {
         winrt::event_token cookie{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoStabilizationEffect)->add_EnabledChanged(*(void**)(&handler), put_abi(cookie)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStabilizationEffect)->add_EnabledChanged(*(void**)(&handler), put_abi(cookie)));
         return cookie;
     }
-    template <typename D> typename consume_Windows_Media_Core_IVideoStabilizationEffect<D>::EnabledChanged_revoker consume_Windows_Media_Core_IVideoStabilizationEffect<D>::EnabledChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::VideoStabilizationEffect, Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IVideoStabilizationEffect<D>::EnabledChanged_revoker consume_Windows_Media_Core_IVideoStabilizationEffect<D>::EnabledChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::VideoStabilizationEffect, winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, EnabledChanged_revoker>(this, EnabledChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IVideoStabilizationEffect<D>::EnabledChanged(winrt::event_token const& cookie) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IVideoStabilizationEffect)->remove_EnabledChanged(impl::bind_in(cookie)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStabilizationEffect)->remove_EnabledChanged(impl::bind_in(cookie)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Capture::VideoStreamConfiguration) consume_Windows_Media_Core_IVideoStabilizationEffect<D>::GetRecommendedStreamConfiguration(Windows::Media::Devices::VideoDeviceController const& controller, Windows::Media::MediaProperties::VideoEncodingProperties const& desiredProperties) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Capture::VideoStreamConfiguration) consume_Windows_Media_Core_IVideoStabilizationEffect<D>::GetRecommendedStreamConfiguration(winrt::Windows::Media::Devices::VideoDeviceController const& controller, winrt::Windows::Media::MediaProperties::VideoEncodingProperties const& desiredProperties) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoStabilizationEffect)->GetRecommendedStreamConfiguration(*(void**)(&controller), *(void**)(&desiredProperties), &value));
-        return Windows::Media::Capture::VideoStreamConfiguration{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStabilizationEffect)->GetRecommendedStreamConfiguration(*(void**)(&controller), *(void**)(&desiredProperties), &value));
+        return winrt::Windows::Media::Capture::VideoStreamConfiguration{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::VideoStabilizationEffectEnabledChangedReason) consume_Windows_Media_Core_IVideoStabilizationEffectEnabledChangedEventArgs<D>::Reason() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedReason) consume_Windows_Media_Core_IVideoStabilizationEffectEnabledChangedEventArgs<D>::Reason() const
     {
-        Windows::Media::Core::VideoStabilizationEffectEnabledChangedReason value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoStabilizationEffectEnabledChangedEventArgs)->get_Reason(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedReason value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStabilizationEffectEnabledChangedEventArgs)->get_Reason(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::VideoEncodingProperties) consume_Windows_Media_Core_IVideoStreamDescriptor<D>::EncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::VideoEncodingProperties) consume_Windows_Media_Core_IVideoStreamDescriptor<D>::EncodingProperties() const
     {
         void* encodingProperties{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoStreamDescriptor)->get_EncodingProperties(&encodingProperties));
-        return Windows::Media::MediaProperties::VideoEncodingProperties{ encodingProperties, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStreamDescriptor)->get_EncodingProperties(&encodingProperties));
+        return winrt::Windows::Media::MediaProperties::VideoEncodingProperties{ encodingProperties, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::VideoStreamDescriptor) consume_Windows_Media_Core_IVideoStreamDescriptor2<D>::Copy() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::VideoStreamDescriptor) consume_Windows_Media_Core_IVideoStreamDescriptor2<D>::Copy() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoStreamDescriptor2)->Copy(&result));
-        return Windows::Media::Core::VideoStreamDescriptor{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStreamDescriptor2)->Copy(&result));
+        return winrt::Windows::Media::Core::VideoStreamDescriptor{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::VideoStreamDescriptor) consume_Windows_Media_Core_IVideoStreamDescriptorFactory<D>::Create(Windows::Media::MediaProperties::VideoEncodingProperties const& encodingProperties) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::VideoStreamDescriptor) consume_Windows_Media_Core_IVideoStreamDescriptorFactory<D>::Create(winrt::Windows::Media::MediaProperties::VideoEncodingProperties const& encodingProperties) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoStreamDescriptorFactory)->Create(*(void**)(&encodingProperties), &result));
-        return Windows::Media::Core::VideoStreamDescriptor{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoStreamDescriptorFactory)->Create(*(void**)(&encodingProperties), &result));
+        return winrt::Windows::Media::Core::VideoStreamDescriptor{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IVideoTrack<D>::OpenFailed(Windows::Foundation::TypedEventHandler<Windows::Media::Core::VideoTrack, Windows::Media::Core::VideoTrackOpenFailedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Media_Core_IVideoTrack<D>::OpenFailed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::VideoTrack, winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoTrack)->add_OpenFailed(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrack)->add_OpenFailed(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Media_Core_IVideoTrack<D>::OpenFailed_revoker consume_Windows_Media_Core_IVideoTrack<D>::OpenFailed(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Media::Core::VideoTrack, Windows::Media::Core::VideoTrackOpenFailedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Media_Core_IVideoTrack<D>::OpenFailed_revoker consume_Windows_Media_Core_IVideoTrack<D>::OpenFailed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::VideoTrack, winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, OpenFailed_revoker>(this, OpenFailed(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Media_Core_IVideoTrack<D>::OpenFailed(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Media::Core::IVideoTrack)->remove_OpenFailed(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrack)->remove_OpenFailed(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::MediaProperties::VideoEncodingProperties) consume_Windows_Media_Core_IVideoTrack<D>::GetEncodingProperties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::MediaProperties::VideoEncodingProperties) consume_Windows_Media_Core_IVideoTrack<D>::GetEncodingProperties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoTrack)->GetEncodingProperties(&value));
-        return Windows::Media::MediaProperties::VideoEncodingProperties{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrack)->GetEncodingProperties(&value));
+        return winrt::Windows::Media::MediaProperties::VideoEncodingProperties{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Playback::MediaPlaybackItem) consume_Windows_Media_Core_IVideoTrack<D>::PlaybackItem() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Playback::MediaPlaybackItem) consume_Windows_Media_Core_IVideoTrack<D>::PlaybackItem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoTrack)->get_PlaybackItem(&value));
-        return Windows::Media::Playback::MediaPlaybackItem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrack)->get_PlaybackItem(&value));
+        return winrt::Windows::Media::Playback::MediaPlaybackItem{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Media_Core_IVideoTrack<D>::Name() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoTrack)->get_Name(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrack)->get_Name(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::VideoTrackSupportInfo) consume_Windows_Media_Core_IVideoTrack<D>::SupportInfo() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::VideoTrackSupportInfo) consume_Windows_Media_Core_IVideoTrack<D>::SupportInfo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoTrack)->get_SupportInfo(&value));
-        return Windows::Media::Core::VideoTrackSupportInfo{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrack)->get_SupportInfo(&value));
+        return winrt::Windows::Media::Core::VideoTrackSupportInfo{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::hresult) consume_Windows_Media_Core_IVideoTrackOpenFailedEventArgs<D>::ExtendedError() const
     {
         winrt::hresult value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoTrackOpenFailedEventArgs)->get_ExtendedError(put_abi(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrackOpenFailedEventArgs)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaDecoderStatus) consume_Windows_Media_Core_IVideoTrackSupportInfo<D>::DecoderStatus() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaDecoderStatus) consume_Windows_Media_Core_IVideoTrackSupportInfo<D>::DecoderStatus() const
     {
-        Windows::Media::Core::MediaDecoderStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoTrackSupportInfo)->get_DecoderStatus(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MediaDecoderStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrackSupportInfo)->get_DecoderStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Media::Core::MediaSourceStatus) consume_Windows_Media_Core_IVideoTrackSupportInfo<D>::MediaSourceStatus() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Media::Core::MediaSourceStatus) consume_Windows_Media_Core_IVideoTrackSupportInfo<D>::MediaSourceStatus() const
     {
-        Windows::Media::Core::MediaSourceStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Media::Core::IVideoTrackSupportInfo)->get_MediaSourceStatus(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Media::Core::MediaSourceStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Core::IVideoTrackSupportInfo)->get_MediaSourceStatus(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IAudioStreamDescriptor> : produce_base<D, Windows::Media::Core::IAudioStreamDescriptor>
+    struct produce<D, winrt::Windows::Media::Core::IAudioStreamDescriptor> : produce_base<D, winrt::Windows::Media::Core::IAudioStreamDescriptor>
     {
         int32_t __stdcall get_EncodingProperties(void** encodingProperties) noexcept final try
         {
             clear_abi(encodingProperties);
             typename D::abi_guard guard(this->shim());
-            *encodingProperties = detach_from<Windows::Media::MediaProperties::AudioEncodingProperties>(this->shim().EncodingProperties());
+            *encodingProperties = detach_from<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(this->shim().EncodingProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2665,12 +2666,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IAudioStreamDescriptor2> : produce_base<D, Windows::Media::Core::IAudioStreamDescriptor2>
+    struct produce<D, winrt::Windows::Media::Core::IAudioStreamDescriptor2> : produce_base<D, winrt::Windows::Media::Core::IAudioStreamDescriptor2>
     {
         int32_t __stdcall put_LeadingEncoderPadding(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().LeadingEncoderPadding(*reinterpret_cast<Windows::Foundation::IReference<uint32_t> const*>(&value));
+            this->shim().LeadingEncoderPadding(*reinterpret_cast<winrt::Windows::Foundation::IReference<uint32_t> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2678,14 +2679,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<uint32_t>>(this->shim().LeadingEncoderPadding());
+            *value = detach_from<winrt::Windows::Foundation::IReference<uint32_t>>(this->shim().LeadingEncoderPadding());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_TrailingEncoderPadding(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().TrailingEncoderPadding(*reinterpret_cast<Windows::Foundation::IReference<uint32_t> const*>(&value));
+            this->shim().TrailingEncoderPadding(*reinterpret_cast<winrt::Windows::Foundation::IReference<uint32_t> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2693,7 +2694,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<uint32_t>>(this->shim().TrailingEncoderPadding());
+            *value = detach_from<winrt::Windows::Foundation::IReference<uint32_t>>(this->shim().TrailingEncoderPadding());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2701,13 +2702,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IAudioStreamDescriptor3> : produce_base<D, Windows::Media::Core::IAudioStreamDescriptor3>
+    struct produce<D, winrt::Windows::Media::Core::IAudioStreamDescriptor3> : produce_base<D, winrt::Windows::Media::Core::IAudioStreamDescriptor3>
     {
         int32_t __stdcall Copy(void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::AudioStreamDescriptor>(this->shim().Copy());
+            *result = detach_from<winrt::Windows::Media::Core::AudioStreamDescriptor>(this->shim().Copy());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2715,13 +2716,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IAudioStreamDescriptorFactory> : produce_base<D, Windows::Media::Core::IAudioStreamDescriptorFactory>
+    struct produce<D, winrt::Windows::Media::Core::IAudioStreamDescriptorFactory> : produce_base<D, winrt::Windows::Media::Core::IAudioStreamDescriptorFactory>
     {
         int32_t __stdcall Create(void* encodingProperties, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::AudioStreamDescriptor>(this->shim().Create(*reinterpret_cast<Windows::Media::MediaProperties::AudioEncodingProperties const*>(&encodingProperties)));
+            *result = detach_from<winrt::Windows::Media::Core::AudioStreamDescriptor>(this->shim().Create(*reinterpret_cast<winrt::Windows::Media::MediaProperties::AudioEncodingProperties const*>(&encodingProperties)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2729,13 +2730,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IAudioTrack> : produce_base<D, Windows::Media::Core::IAudioTrack>
+    struct produce<D, winrt::Windows::Media::Core::IAudioTrack> : produce_base<D, winrt::Windows::Media::Core::IAudioTrack>
     {
         int32_t __stdcall add_OpenFailed(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().OpenFailed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::AudioTrack, Windows::Media::Core::AudioTrackOpenFailedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().OpenFailed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::AudioTrack, winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2749,7 +2750,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::MediaProperties::AudioEncodingProperties>(this->shim().GetEncodingProperties());
+            *value = detach_from<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>(this->shim().GetEncodingProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2757,7 +2758,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Playback::MediaPlaybackItem>(this->shim().PlaybackItem());
+            *value = detach_from<winrt::Windows::Media::Playback::MediaPlaybackItem>(this->shim().PlaybackItem());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2773,7 +2774,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::AudioTrackSupportInfo>(this->shim().SupportInfo());
+            *value = detach_from<winrt::Windows::Media::Core::AudioTrackSupportInfo>(this->shim().SupportInfo());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2781,7 +2782,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IAudioTrackOpenFailedEventArgs> : produce_base<D, Windows::Media::Core::IAudioTrackOpenFailedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IAudioTrackOpenFailedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IAudioTrackOpenFailedEventArgs>
     {
         int32_t __stdcall get_ExtendedError(winrt::hresult* value) noexcept final try
         {
@@ -2795,33 +2796,33 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IAudioTrackSupportInfo> : produce_base<D, Windows::Media::Core::IAudioTrackSupportInfo>
+    struct produce<D, winrt::Windows::Media::Core::IAudioTrackSupportInfo> : produce_base<D, winrt::Windows::Media::Core::IAudioTrackSupportInfo>
     {
         int32_t __stdcall get_DecoderStatus(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaDecoderStatus>(this->shim().DecoderStatus());
+            *value = detach_from<winrt::Windows::Media::Core::MediaDecoderStatus>(this->shim().DecoderStatus());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Degradation(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::AudioDecoderDegradation>(this->shim().Degradation());
+            *value = detach_from<winrt::Windows::Media::Core::AudioDecoderDegradation>(this->shim().Degradation());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_DegradationReason(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::AudioDecoderDegradationReason>(this->shim().DegradationReason());
+            *value = detach_from<winrt::Windows::Media::Core::AudioDecoderDegradationReason>(this->shim().DegradationReason());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_MediaSourceStatus(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaSourceStatus>(this->shim().MediaSourceStatus());
+            *value = detach_from<winrt::Windows::Media::Core::MediaSourceStatus>(this->shim().MediaSourceStatus());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2829,7 +2830,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IChapterCue> : produce_base<D, Windows::Media::Core::IChapterCue>
+    struct produce<D, winrt::Windows::Media::Core::IChapterCue> : produce_base<D, winrt::Windows::Media::Core::IChapterCue>
     {
         int32_t __stdcall put_Title(void* value) noexcept final try
         {
@@ -2850,19 +2851,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ICodecInfo> : produce_base<D, Windows::Media::Core::ICodecInfo>
+    struct produce<D, winrt::Windows::Media::Core::ICodecInfo> : produce_base<D, winrt::Windows::Media::Core::ICodecInfo>
     {
         int32_t __stdcall get_Kind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::CodecKind>(this->shim().Kind());
+            *value = detach_from<winrt::Windows::Media::Core::CodecKind>(this->shim().Kind());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Category(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::CodecCategory>(this->shim().Category());
+            *value = detach_from<winrt::Windows::Media::Core::CodecCategory>(this->shim().Category());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2870,7 +2871,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().Subtypes());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().Subtypes());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2893,13 +2894,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ICodecQuery> : produce_base<D, Windows::Media::Core::ICodecQuery>
+    struct produce<D, winrt::Windows::Media::Core::ICodecQuery> : produce_base<D, winrt::Windows::Media::Core::ICodecQuery>
     {
         int32_t __stdcall FindAllAsync(int32_t kind, int32_t category, void* subType, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Media::Core::CodecInfo>>>(this->shim().FindAllAsync(*reinterpret_cast<Windows::Media::Core::CodecKind const*>(&kind), *reinterpret_cast<Windows::Media::Core::CodecCategory const*>(&category), *reinterpret_cast<hstring const*>(&subType)));
+            *value = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::CodecInfo>>>(this->shim().FindAllAsync(*reinterpret_cast<winrt::Windows::Media::Core::CodecKind const*>(&kind), *reinterpret_cast<winrt::Windows::Media::Core::CodecCategory const*>(&category), *reinterpret_cast<hstring const*>(&subType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2907,7 +2908,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ICodecSubtypesStatics> : produce_base<D, Windows::Media::Core::ICodecSubtypesStatics>
+    struct produce<D, winrt::Windows::Media::Core::ICodecSubtypesStatics> : produce_base<D, winrt::Windows::Media::Core::ICodecSubtypesStatics>
     {
         int32_t __stdcall get_VideoFormatDV25(void** value) noexcept final try
         {
@@ -3321,12 +3322,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IDataCue> : produce_base<D, Windows::Media::Core::IDataCue>
+    struct produce<D, winrt::Windows::Media::Core::IDataCue> : produce_base<D, winrt::Windows::Media::Core::IDataCue>
     {
         int32_t __stdcall put_Data(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Data(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&value));
+            this->shim().Data(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3334,7 +3335,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IBuffer>(this->shim().Data());
+            *value = detach_from<winrt::Windows::Storage::Streams::IBuffer>(this->shim().Data());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3342,13 +3343,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IDataCue2> : produce_base<D, Windows::Media::Core::IDataCue2>
+    struct produce<D, winrt::Windows::Media::Core::IDataCue2> : produce_base<D, winrt::Windows::Media::Core::IDataCue2>
     {
         int32_t __stdcall get_Properties(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::PropertySet>(this->shim().Properties());
+            *value = detach_from<winrt::Windows::Foundation::Collections::PropertySet>(this->shim().Properties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3356,13 +3357,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IFaceDetectedEventArgs> : produce_base<D, Windows::Media::Core::IFaceDetectedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IFaceDetectedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IFaceDetectedEventArgs>
     {
         int32_t __stdcall get_ResultFrame(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::FaceDetectionEffectFrame>(this->shim().ResultFrame());
+            *value = detach_from<winrt::Windows::Media::Core::FaceDetectionEffectFrame>(this->shim().ResultFrame());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3370,7 +3371,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IFaceDetectionEffect> : produce_base<D, Windows::Media::Core::IFaceDetectionEffect>
+    struct produce<D, winrt::Windows::Media::Core::IFaceDetectionEffect> : produce_base<D, winrt::Windows::Media::Core::IFaceDetectionEffect>
     {
         int32_t __stdcall put_Enabled(bool value) noexcept final try
         {
@@ -3389,15 +3390,15 @@ namespace winrt::impl
         int32_t __stdcall put_DesiredDetectionInterval(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().DesiredDetectionInterval(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().DesiredDetectionInterval(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_DesiredDetectionInterval(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().DesiredDetectionInterval());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().DesiredDetectionInterval());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3405,7 +3406,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(cookie);
             typename D::abi_guard guard(this->shim());
-            *cookie = detach_from<winrt::event_token>(this->shim().FaceDetected(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::FaceDetectionEffect, Windows::Media::Core::FaceDetectedEventArgs> const*>(&handler)));
+            *cookie = detach_from<winrt::event_token>(this->shim().FaceDetected(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::FaceDetectionEffect, winrt::Windows::Media::Core::FaceDetectedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3419,19 +3420,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IFaceDetectionEffectDefinition> : produce_base<D, Windows::Media::Core::IFaceDetectionEffectDefinition>
+    struct produce<D, winrt::Windows::Media::Core::IFaceDetectionEffectDefinition> : produce_base<D, winrt::Windows::Media::Core::IFaceDetectionEffectDefinition>
     {
         int32_t __stdcall put_DetectionMode(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().DetectionMode(*reinterpret_cast<Windows::Media::Core::FaceDetectionMode const*>(&value));
+            this->shim().DetectionMode(*reinterpret_cast<winrt::Windows::Media::Core::FaceDetectionMode const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_DetectionMode(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::FaceDetectionMode>(this->shim().DetectionMode());
+            *value = detach_from<winrt::Windows::Media::Core::FaceDetectionMode>(this->shim().DetectionMode());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3453,13 +3454,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IFaceDetectionEffectFrame> : produce_base<D, Windows::Media::Core::IFaceDetectionEffectFrame>
+    struct produce<D, winrt::Windows::Media::Core::IFaceDetectionEffectFrame> : produce_base<D, winrt::Windows::Media::Core::IFaceDetectionEffectFrame>
     {
         int32_t __stdcall get_DetectedFaces(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::FaceAnalysis::DetectedFace>>(this->shim().DetectedFaces());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::FaceAnalysis::DetectedFace>>(this->shim().DetectedFaces());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3467,7 +3468,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IHighDynamicRangeControl> : produce_base<D, Windows::Media::Core::IHighDynamicRangeControl>
+    struct produce<D, winrt::Windows::Media::Core::IHighDynamicRangeControl> : produce_base<D, winrt::Windows::Media::Core::IHighDynamicRangeControl>
     {
         int32_t __stdcall put_Enabled(bool value) noexcept final try
         {
@@ -3487,7 +3488,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IHighDynamicRangeOutput> : produce_base<D, Windows::Media::Core::IHighDynamicRangeOutput>
+    struct produce<D, winrt::Windows::Media::Core::IHighDynamicRangeOutput> : produce_base<D, winrt::Windows::Media::Core::IHighDynamicRangeOutput>
     {
         int32_t __stdcall get_Certainty(double* value) noexcept final try
         {
@@ -3500,7 +3501,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::Devices::Core::FrameController>>(this->shim().FrameControllers());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Devices::Core::FrameController>>(this->shim().FrameControllers());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3508,42 +3509,42 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IImageCue> : produce_base<D, Windows::Media::Core::IImageCue>
+    struct produce<D, winrt::Windows::Media::Core::IImageCue> : produce_base<D, winrt::Windows::Media::Core::IImageCue>
     {
         int32_t __stdcall get_Position(struct struct_Windows_Media_Core_TimedTextPoint* value) noexcept final try
         {
-            zero_abi<Windows::Media::Core::TimedTextPoint>(value);
+            zero_abi<winrt::Windows::Media::Core::TimedTextPoint>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextPoint>(this->shim().Position());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextPoint>(this->shim().Position());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Position(struct struct_Windows_Media_Core_TimedTextPoint value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Position(*reinterpret_cast<Windows::Media::Core::TimedTextPoint const*>(&value));
+            this->shim().Position(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextPoint const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Extent(struct struct_Windows_Media_Core_TimedTextSize* value) noexcept final try
         {
-            zero_abi<Windows::Media::Core::TimedTextSize>(value);
+            zero_abi<winrt::Windows::Media::Core::TimedTextSize>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextSize>(this->shim().Extent());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextSize>(this->shim().Extent());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Extent(struct struct_Windows_Media_Core_TimedTextSize value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Extent(*reinterpret_cast<Windows::Media::Core::TimedTextSize const*>(&value));
+            this->shim().Extent(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextSize const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_SoftwareBitmap(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SoftwareBitmap(*reinterpret_cast<Windows::Graphics::Imaging::SoftwareBitmap const*>(&value));
+            this->shim().SoftwareBitmap(*reinterpret_cast<winrt::Windows::Graphics::Imaging::SoftwareBitmap const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3551,7 +3552,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Graphics::Imaging::SoftwareBitmap>(this->shim().SoftwareBitmap());
+            *value = detach_from<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(this->shim().SoftwareBitmap());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3559,13 +3560,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs> : produce_base<D, Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IInitializeMediaStreamSourceRequestedEventArgs>
     {
         int32_t __stdcall get_Source(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSource>(this->shim().Source());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSource>(this->shim().Source());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3573,7 +3574,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStream>(this->shim().RandomAccessStream());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStream>(this->shim().RandomAccessStream());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3581,7 +3582,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3589,13 +3590,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ILowLightFusionResult> : produce_base<D, Windows::Media::Core::ILowLightFusionResult>
+    struct produce<D, winrt::Windows::Media::Core::ILowLightFusionResult> : produce_base<D, winrt::Windows::Media::Core::ILowLightFusionResult>
     {
         int32_t __stdcall get_Frame(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Graphics::Imaging::SoftwareBitmap>(this->shim().Frame());
+            *value = detach_from<winrt::Windows::Graphics::Imaging::SoftwareBitmap>(this->shim().Frame());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3603,13 +3604,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ILowLightFusionStatics> : produce_base<D, Windows::Media::Core::ILowLightFusionStatics>
+    struct produce<D, winrt::Windows::Media::Core::ILowLightFusionStatics> : produce_base<D, winrt::Windows::Media::Core::ILowLightFusionStatics>
     {
         int32_t __stdcall get_SupportedBitmapPixelFormats(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapPixelFormat>>(this->shim().SupportedBitmapPixelFormats());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>>(this->shim().SupportedBitmapPixelFormats());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3624,7 +3625,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperationWithProgress<Windows::Media::Core::LowLightFusionResult, double>>(this->shim().FuseAsync(*reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::Graphics::Imaging::SoftwareBitmap> const*>(&frameSet)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperationWithProgress<winrt::Windows::Media::Core::LowLightFusionResult, double>>(this->shim().FuseAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Graphics::Imaging::SoftwareBitmap> const*>(&frameSet)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3632,13 +3633,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaBinder> : produce_base<D, Windows::Media::Core::IMediaBinder>
+    struct produce<D, winrt::Windows::Media::Core::IMediaBinder> : produce_base<D, winrt::Windows::Media::Core::IMediaBinder>
     {
         int32_t __stdcall add_Binding(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Binding(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaBinder, Windows::Media::Core::MediaBindingEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Binding(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaBinder, winrt::Windows::Media::Core::MediaBindingEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3667,7 +3668,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaSource>(this->shim().Source());
+            *value = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().Source());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3675,13 +3676,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaBindingEventArgs> : produce_base<D, Windows::Media::Core::IMediaBindingEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IMediaBindingEventArgs> : produce_base<D, winrt::Windows::Media::Core::IMediaBindingEventArgs>
     {
         int32_t __stdcall add_Canceled(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Canceled(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaBindingEventArgs, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Canceled(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaBindingEventArgs, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3695,7 +3696,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaBinder>(this->shim().MediaBinder());
+            *value = detach_from<winrt::Windows::Media::Core::MediaBinder>(this->shim().MediaBinder());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3703,28 +3704,28 @@ namespace winrt::impl
         {
             clear_abi(deferral);
             typename D::abi_guard guard(this->shim());
-            *deferral = detach_from<Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            *deferral = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetUri(void* uri) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetUri(*reinterpret_cast<Windows::Foundation::Uri const*>(&uri));
+            this->shim().SetUri(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&uri));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetStream(void* stream, void* contentType) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetStream(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<hstring const*>(&contentType));
+            this->shim().SetStream(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<hstring const*>(&contentType));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetStreamReference(void* stream, void* contentType) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetStreamReference(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&stream), *reinterpret_cast<hstring const*>(&contentType));
+            this->shim().SetStreamReference(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&stream), *reinterpret_cast<hstring const*>(&contentType));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3732,19 +3733,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaBindingEventArgs2> : produce_base<D, Windows::Media::Core::IMediaBindingEventArgs2>
+    struct produce<D, winrt::Windows::Media::Core::IMediaBindingEventArgs2> : produce_base<D, winrt::Windows::Media::Core::IMediaBindingEventArgs2>
     {
         int32_t __stdcall SetAdaptiveMediaSource(void* mediaSource) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetAdaptiveMediaSource(*reinterpret_cast<Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const*>(&mediaSource));
+            this->shim().SetAdaptiveMediaSource(*reinterpret_cast<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const*>(&mediaSource));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetStorageFile(void* file) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetStorageFile(*reinterpret_cast<Windows::Storage::IStorageFile const*>(&file));
+            this->shim().SetStorageFile(*reinterpret_cast<winrt::Windows::Storage::IStorageFile const*>(&file));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3752,47 +3753,47 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaBindingEventArgs3> : produce_base<D, Windows::Media::Core::IMediaBindingEventArgs3>
+    struct produce<D, winrt::Windows::Media::Core::IMediaBindingEventArgs3> : produce_base<D, winrt::Windows::Media::Core::IMediaBindingEventArgs3>
     {
         int32_t __stdcall SetDownloadOperation(void* downloadOperation) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetDownloadOperation(*reinterpret_cast<Windows::Networking::BackgroundTransfer::DownloadOperation const*>(&downloadOperation));
+            this->shim().SetDownloadOperation(*reinterpret_cast<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation const*>(&downloadOperation));
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaCue> : produce_base<D, Windows::Media::Core::IMediaCue>
+    struct produce<D, winrt::Windows::Media::Core::IMediaCue> : produce_base<D, winrt::Windows::Media::Core::IMediaCue>
     {
         int32_t __stdcall put_StartTime(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().StartTime(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().StartTime(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_StartTime(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().StartTime());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().StartTime());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Duration(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Duration(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().Duration(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Duration(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().Duration());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().Duration());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3814,31 +3815,31 @@ namespace winrt::impl
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaCueEventArgs> : produce_base<D, Windows::Media::Core::IMediaCueEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IMediaCueEventArgs> : produce_base<D, winrt::Windows::Media::Core::IMediaCueEventArgs>
     {
         int32_t __stdcall get_Cue(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::IMediaCue>(this->shim().Cue());
+            *value = detach_from<winrt::Windows::Media::Core::IMediaCue>(this->shim().Cue());
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSource> : produce_base<D, Windows::Media::Core::IMediaSource>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSource> : produce_base<D, winrt::Windows::Media::Core::IMediaSource>
     {
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSource2> : produce_base<D, Windows::Media::Core::IMediaSource2>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSource2> : produce_base<D, winrt::Windows::Media::Core::IMediaSource2>
     {
         int32_t __stdcall add_OpenOperationCompleted(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().OpenOperationCompleted(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaSource, Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().OpenOperationCompleted(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSource, winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3852,7 +3853,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::ValueSet>(this->shim().CustomProperties());
+            *value = detach_from<winrt::Windows::Foundation::Collections::ValueSet>(this->shim().CustomProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3860,7 +3861,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Foundation::TimeSpan>>(this->shim().Duration());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(this->shim().Duration());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3875,7 +3876,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IObservableVector<Windows::Media::Core::TimedTextSource>>(this->shim().ExternalTimedTextSources());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Media::Core::TimedTextSource>>(this->shim().ExternalTimedTextSources());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3883,7 +3884,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IObservableVector<Windows::Media::Core::TimedMetadataTrack>>(this->shim().ExternalTimedMetadataTracks());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IObservableVector<winrt::Windows::Media::Core::TimedMetadataTrack>>(this->shim().ExternalTimedMetadataTracks());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3891,13 +3892,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSource3> : produce_base<D, Windows::Media::Core::IMediaSource3>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSource3> : produce_base<D, winrt::Windows::Media::Core::IMediaSource3>
     {
         int32_t __stdcall add_StateChanged(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().StateChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaSource, Windows::Media::Core::MediaSourceStateChangedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().StateChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSource, winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3910,7 +3911,7 @@ namespace winrt::impl
         int32_t __stdcall get_State(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaSourceState>(this->shim().State());
+            *value = detach_from<winrt::Windows::Media::Core::MediaSourceState>(this->shim().State());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3925,13 +3926,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSource4> : produce_base<D, Windows::Media::Core::IMediaSource4>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSource4> : produce_base<D, winrt::Windows::Media::Core::IMediaSource4>
     {
         int32_t __stdcall get_AdaptiveMediaSource(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>(this->shim().AdaptiveMediaSource());
+            *value = detach_from<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>(this->shim().AdaptiveMediaSource());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3939,7 +3940,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSource>(this->shim().MediaStreamSource());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSource>(this->shim().MediaStreamSource());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3947,7 +3948,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MseStreamSource>(this->shim().MseStreamSource());
+            *value = detach_from<winrt::Windows::Media::Core::MseStreamSource>(this->shim().MseStreamSource());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3955,7 +3956,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Uri>(this->shim().Uri());
+            *value = detach_from<winrt::Windows::Foundation::Uri>(this->shim().Uri());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3963,7 +3964,7 @@ namespace winrt::impl
         {
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
-            *operation = detach_from<Windows::Foundation::IAsyncAction>(this->shim().OpenAsync());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().OpenAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3971,13 +3972,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSource5> : produce_base<D, Windows::Media::Core::IMediaSource5>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSource5> : produce_base<D, winrt::Windows::Media::Core::IMediaSource5>
     {
         int32_t __stdcall get_DownloadOperation(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Networking::BackgroundTransfer::DownloadOperation>(this->shim().DownloadOperation());
+            *value = detach_from<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>(this->shim().DownloadOperation());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3985,13 +3986,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSourceAppServiceConnection> : produce_base<D, Windows::Media::Core::IMediaSourceAppServiceConnection>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSourceAppServiceConnection> : produce_base<D, winrt::Windows::Media::Core::IMediaSourceAppServiceConnection>
     {
         int32_t __stdcall add_InitializeMediaStreamSourceRequested(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().InitializeMediaStreamSourceRequested(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaSourceAppServiceConnection, Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().InitializeMediaStreamSourceRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaSourceAppServiceConnection, winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4012,13 +4013,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSourceAppServiceConnectionFactory> : produce_base<D, Windows::Media::Core::IMediaSourceAppServiceConnectionFactory>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSourceAppServiceConnectionFactory> : produce_base<D, winrt::Windows::Media::Core::IMediaSourceAppServiceConnectionFactory>
     {
         int32_t __stdcall Create(void* appServiceConnection, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSourceAppServiceConnection>(this->shim().Create(*reinterpret_cast<Windows::ApplicationModel::AppService::AppServiceConnection const*>(&appServiceConnection)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSourceAppServiceConnection>(this->shim().Create(*reinterpret_cast<winrt::Windows::ApplicationModel::AppService::AppServiceConnection const*>(&appServiceConnection)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4026,7 +4027,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSourceError> : produce_base<D, Windows::Media::Core::IMediaSourceError>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSourceError> : produce_base<D, winrt::Windows::Media::Core::IMediaSourceError>
     {
         int32_t __stdcall get_ExtendedError(winrt::hresult* value) noexcept final try
         {
@@ -4040,13 +4041,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSourceOpenOperationCompletedEventArgs> : produce_base<D, Windows::Media::Core::IMediaSourceOpenOperationCompletedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSourceOpenOperationCompletedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IMediaSourceOpenOperationCompletedEventArgs>
     {
         int32_t __stdcall get_Error(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaSourceError>(this->shim().Error());
+            *value = detach_from<winrt::Windows::Media::Core::MediaSourceError>(this->shim().Error());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4054,19 +4055,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSourceStateChangedEventArgs> : produce_base<D, Windows::Media::Core::IMediaSourceStateChangedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSourceStateChangedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IMediaSourceStateChangedEventArgs>
     {
         int32_t __stdcall get_OldState(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaSourceState>(this->shim().OldState());
+            *value = detach_from<winrt::Windows::Media::Core::MediaSourceState>(this->shim().OldState());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_NewState(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaSourceState>(this->shim().NewState());
+            *value = detach_from<winrt::Windows::Media::Core::MediaSourceState>(this->shim().NewState());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4074,13 +4075,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSourceStatics> : produce_base<D, Windows::Media::Core::IMediaSourceStatics>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSourceStatics> : produce_base<D, winrt::Windows::Media::Core::IMediaSourceStatics>
     {
         int32_t __stdcall CreateFromAdaptiveMediaSource(void* mediaSource, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromAdaptiveMediaSource(*reinterpret_cast<Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const*>(&mediaSource)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromAdaptiveMediaSource(*reinterpret_cast<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const*>(&mediaSource)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4088,7 +4089,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromMediaStreamSource(*reinterpret_cast<Windows::Media::Core::MediaStreamSource const*>(&mediaSource)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromMediaStreamSource(*reinterpret_cast<winrt::Windows::Media::Core::MediaStreamSource const*>(&mediaSource)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4096,7 +4097,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromMseStreamSource(*reinterpret_cast<Windows::Media::Core::MseStreamSource const*>(&mediaSource)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromMseStreamSource(*reinterpret_cast<winrt::Windows::Media::Core::MseStreamSource const*>(&mediaSource)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4104,7 +4105,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromIMediaSource(*reinterpret_cast<Windows::Media::Core::IMediaSource const*>(&mediaSource)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromIMediaSource(*reinterpret_cast<winrt::Windows::Media::Core::IMediaSource const*>(&mediaSource)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4112,7 +4113,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromStorageFile(*reinterpret_cast<Windows::Storage::IStorageFile const*>(&file)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromStorageFile(*reinterpret_cast<winrt::Windows::Storage::IStorageFile const*>(&file)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4120,7 +4121,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromStream(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<hstring const*>(&contentType)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromStream(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<hstring const*>(&contentType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4128,7 +4129,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromStreamReference(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&stream), *reinterpret_cast<hstring const*>(&contentType)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromStreamReference(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&stream), *reinterpret_cast<hstring const*>(&contentType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4136,7 +4137,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromUri(*reinterpret_cast<Windows::Foundation::Uri const*>(&uri)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromUri(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&uri)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4144,13 +4145,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSourceStatics2> : produce_base<D, Windows::Media::Core::IMediaSourceStatics2>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSourceStatics2> : produce_base<D, winrt::Windows::Media::Core::IMediaSourceStatics2>
     {
         int32_t __stdcall CreateFromMediaBinder(void* binder, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromMediaBinder(*reinterpret_cast<Windows::Media::Core::MediaBinder const*>(&binder)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromMediaBinder(*reinterpret_cast<winrt::Windows::Media::Core::MediaBinder const*>(&binder)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4158,13 +4159,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSourceStatics3> : produce_base<D, Windows::Media::Core::IMediaSourceStatics3>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSourceStatics3> : produce_base<D, winrt::Windows::Media::Core::IMediaSourceStatics3>
     {
         int32_t __stdcall CreateFromMediaFrameSource(void* frameSource, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromMediaFrameSource(*reinterpret_cast<Windows::Media::Capture::Frames::MediaFrameSource const*>(&frameSource)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromMediaFrameSource(*reinterpret_cast<winrt::Windows::Media::Capture::Frames::MediaFrameSource const*>(&frameSource)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4172,20 +4173,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaSourceStatics4> : produce_base<D, Windows::Media::Core::IMediaSourceStatics4>
+    struct produce<D, winrt::Windows::Media::Core::IMediaSourceStatics4> : produce_base<D, winrt::Windows::Media::Core::IMediaSourceStatics4>
     {
         int32_t __stdcall CreateFromDownloadOperation(void* downloadOperation, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaSource>(this->shim().CreateFromDownloadOperation(*reinterpret_cast<Windows::Networking::BackgroundTransfer::DownloadOperation const*>(&downloadOperation)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaSource>(this->shim().CreateFromDownloadOperation(*reinterpret_cast<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation const*>(&downloadOperation)));
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamDescriptor> : produce_base<D, Windows::Media::Core::IMediaStreamDescriptor>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamDescriptor> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamDescriptor>
     {
         int32_t __stdcall get_IsSelected(bool* selected) noexcept final try
         {
@@ -4226,7 +4227,7 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamDescriptor2> : produce_base<D, Windows::Media::Core::IMediaStreamDescriptor2>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamDescriptor2> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamDescriptor2>
     {
         int32_t __stdcall put_Label(void* value) noexcept final try
         {
@@ -4246,13 +4247,13 @@ namespace winrt::impl
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSample> : produce_base<D, Windows::Media::Core::IMediaStreamSample>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSample> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSample>
     {
         int32_t __stdcall add_Processed(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Processed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSample, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Processed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSample, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4266,15 +4267,15 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::Buffer>(this->shim().Buffer());
+            *value = detach_from<winrt::Windows::Storage::Streams::Buffer>(this->shim().Buffer());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Timestamp(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().Timestamp());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().Timestamp());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4282,7 +4283,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSamplePropertySet>(this->shim().ExtendedProperties());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSamplePropertySet>(this->shim().ExtendedProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4290,37 +4291,37 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSampleProtectionProperties>(this->shim().Protection());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties>(this->shim().Protection());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_DecodeTimestamp(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().DecodeTimestamp(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().DecodeTimestamp(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_DecodeTimestamp(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().DecodeTimestamp());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().DecodeTimestamp());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Duration(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Duration(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().Duration(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Duration(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().Duration());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().Duration());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4356,13 +4357,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSample2> : produce_base<D, Windows::Media::Core::IMediaStreamSample2>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSample2> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSample2>
     {
         int32_t __stdcall get_Direct3D11Surface(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(this->shim().Direct3D11Surface());
+            *value = detach_from<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>(this->shim().Direct3D11Surface());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4370,7 +4371,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSampleProtectionProperties> : produce_base<D, Windows::Media::Core::IMediaStreamSampleProtectionProperties>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSampleProtectionProperties> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSampleProtectionProperties>
     {
         int32_t __stdcall SetKeyIdentifier(uint32_t __valueSize, uint8_t* value) noexcept final try
         {
@@ -4421,13 +4422,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSampleStatics> : produce_base<D, Windows::Media::Core::IMediaStreamSampleStatics>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSampleStatics> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSampleStatics>
     {
         int32_t __stdcall CreateFromBuffer(void* buffer, int64_t timestamp, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSample>(this->shim().CreateFromBuffer(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer), *reinterpret_cast<Windows::Foundation::TimeSpan const*>(&timestamp)));
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSample>(this->shim().CreateFromBuffer(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&buffer), *reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&timestamp)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4435,7 +4436,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IAsyncOperation<Windows::Media::Core::MediaStreamSample>>(this->shim().CreateFromStreamAsync(*reinterpret_cast<Windows::Storage::Streams::IInputStream const*>(&stream), count, *reinterpret_cast<Windows::Foundation::TimeSpan const*>(&timestamp)));
+            *value = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Media::Core::MediaStreamSample>>(this->shim().CreateFromStreamAsync(*reinterpret_cast<winrt::Windows::Storage::Streams::IInputStream const*>(&stream), count, *reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&timestamp)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4443,13 +4444,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSampleStatics2> : produce_base<D, Windows::Media::Core::IMediaStreamSampleStatics2>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSampleStatics2> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSampleStatics2>
     {
         int32_t __stdcall CreateFromDirect3D11Surface(void* surface, int64_t timestamp, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaStreamSample>(this->shim().CreateFromDirect3D11Surface(*reinterpret_cast<Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const*>(&surface), *reinterpret_cast<Windows::Foundation::TimeSpan const*>(&timestamp)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaStreamSample>(this->shim().CreateFromDirect3D11Surface(*reinterpret_cast<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const*>(&surface), *reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&timestamp)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4457,13 +4458,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSource> : produce_base<D, Windows::Media::Core::IMediaStreamSource>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSource> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSource>
     {
         int32_t __stdcall add_Closed(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Closed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceClosedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Closed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4477,7 +4478,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Starting(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceStartingEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Starting(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4491,7 +4492,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Paused(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Paused(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4505,7 +4506,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().SampleRequested(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().SampleRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4519,7 +4520,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().SwitchStreamsRequested(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().SwitchStreamsRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4532,21 +4533,21 @@ namespace winrt::impl
         int32_t __stdcall NotifyError(int32_t errorStatus) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().NotifyError(*reinterpret_cast<Windows::Media::Core::MediaStreamSourceErrorStatus const*>(&errorStatus));
+            this->shim().NotifyError(*reinterpret_cast<winrt::Windows::Media::Core::MediaStreamSourceErrorStatus const*>(&errorStatus));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall AddStreamDescriptor(void* descriptor) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AddStreamDescriptor(*reinterpret_cast<Windows::Media::Core::IMediaStreamDescriptor const*>(&descriptor));
+            this->shim().AddStreamDescriptor(*reinterpret_cast<winrt::Windows::Media::Core::IMediaStreamDescriptor const*>(&descriptor));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_MediaProtectionManager(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().MediaProtectionManager(*reinterpret_cast<Windows::Media::Protection::MediaProtectionManager const*>(&value));
+            this->shim().MediaProtectionManager(*reinterpret_cast<winrt::Windows::Media::Protection::MediaProtectionManager const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4554,22 +4555,22 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Protection::MediaProtectionManager>(this->shim().MediaProtectionManager());
+            *value = detach_from<winrt::Windows::Media::Protection::MediaProtectionManager>(this->shim().MediaProtectionManager());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Duration(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Duration(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().Duration(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Duration(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().Duration());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().Duration());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4590,22 +4591,22 @@ namespace winrt::impl
         int32_t __stdcall put_BufferTime(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().BufferTime(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().BufferTime(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_BufferTime(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().BufferTime());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().BufferTime());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetBufferedRange(int64_t startOffset, int64_t endOffset) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetBufferedRange(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&startOffset), *reinterpret_cast<Windows::Foundation::TimeSpan const*>(&endOffset));
+            this->shim().SetBufferedRange(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&startOffset), *reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&endOffset));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4613,7 +4614,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::FileProperties::MusicProperties>(this->shim().MusicProperties());
+            *value = detach_from<winrt::Windows::Storage::FileProperties::MusicProperties>(this->shim().MusicProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4621,14 +4622,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::FileProperties::VideoProperties>(this->shim().VideoProperties());
+            *value = detach_from<winrt::Windows::Storage::FileProperties::VideoProperties>(this->shim().VideoProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Thumbnail(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Thumbnail(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            this->shim().Thumbnail(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4636,14 +4637,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Thumbnail());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Thumbnail());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall AddProtectionKey(void* streamDescriptor, uint32_t __keyIdentifierSize, uint8_t* keyIdentifier, uint32_t __licenseDataSize, uint8_t* licenseData) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AddProtectionKey(*reinterpret_cast<Windows::Media::Core::IMediaStreamDescriptor const*>(&streamDescriptor), array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(keyIdentifier), reinterpret_cast<uint8_t const *>(keyIdentifier) + __keyIdentifierSize), array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(licenseData), reinterpret_cast<uint8_t const *>(licenseData) + __licenseDataSize));
+            this->shim().AddProtectionKey(*reinterpret_cast<winrt::Windows::Media::Core::IMediaStreamDescriptor const*>(&streamDescriptor), array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(keyIdentifier), reinterpret_cast<uint8_t const *>(keyIdentifier) + __keyIdentifierSize), array_view<uint8_t const>(reinterpret_cast<uint8_t const *>(licenseData), reinterpret_cast<uint8_t const *>(licenseData) + __licenseDataSize));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4651,13 +4652,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSource2> : produce_base<D, Windows::Media::Core::IMediaStreamSource2>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSource2> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSource2>
     {
         int32_t __stdcall add_SampleRendered(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().SampleRendered(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MediaStreamSource, Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().SampleRendered(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MediaStreamSource, winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4671,12 +4672,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSource3> : produce_base<D, Windows::Media::Core::IMediaStreamSource3>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSource3> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSource3>
     {
         int32_t __stdcall put_MaxSupportedPlaybackRate(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().MaxSupportedPlaybackRate(*reinterpret_cast<Windows::Foundation::IReference<double> const*>(&value));
+            this->shim().MaxSupportedPlaybackRate(*reinterpret_cast<winrt::Windows::Foundation::IReference<double> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4684,7 +4685,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<double>>(this->shim().MaxSupportedPlaybackRate());
+            *value = detach_from<winrt::Windows::Foundation::IReference<double>>(this->shim().MaxSupportedPlaybackRate());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4692,7 +4693,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSource4> : produce_base<D, Windows::Media::Core::IMediaStreamSource4>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSource4> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSource4>
     {
         int32_t __stdcall put_IsLive(bool value) noexcept final try
         {
@@ -4712,13 +4713,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceClosedEventArgs> : produce_base<D, Windows::Media::Core::IMediaStreamSourceClosedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceClosedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceClosedEventArgs>
     {
         int32_t __stdcall get_Request(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSourceClosedRequest>(this->shim().Request());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSourceClosedRequest>(this->shim().Request());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4726,12 +4727,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceClosedRequest> : produce_base<D, Windows::Media::Core::IMediaStreamSourceClosedRequest>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceClosedRequest> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceClosedRequest>
     {
         int32_t __stdcall get_Reason(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSourceClosedReason>(this->shim().Reason());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSourceClosedReason>(this->shim().Reason());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4739,13 +4740,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceFactory> : produce_base<D, Windows::Media::Core::IMediaStreamSourceFactory>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceFactory> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceFactory>
     {
         int32_t __stdcall CreateFromDescriptor(void* descriptor, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaStreamSource>(this->shim().CreateFromDescriptor(*reinterpret_cast<Windows::Media::Core::IMediaStreamDescriptor const*>(&descriptor)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaStreamSource>(this->shim().CreateFromDescriptor(*reinterpret_cast<winrt::Windows::Media::Core::IMediaStreamDescriptor const*>(&descriptor)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4753,7 +4754,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::MediaStreamSource>(this->shim().CreateFromDescriptors(*reinterpret_cast<Windows::Media::Core::IMediaStreamDescriptor const*>(&descriptor), *reinterpret_cast<Windows::Media::Core::IMediaStreamDescriptor const*>(&descriptor2)));
+            *result = detach_from<winrt::Windows::Media::Core::MediaStreamSource>(this->shim().CreateFromDescriptors(*reinterpret_cast<winrt::Windows::Media::Core::IMediaStreamDescriptor const*>(&descriptor), *reinterpret_cast<winrt::Windows::Media::Core::IMediaStreamDescriptor const*>(&descriptor2)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4761,13 +4762,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceSampleRenderedEventArgs> : produce_base<D, Windows::Media::Core::IMediaStreamSourceSampleRenderedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceSampleRenderedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceSampleRenderedEventArgs>
     {
         int32_t __stdcall get_SampleLag(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().SampleLag());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().SampleLag());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4775,13 +4776,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceSampleRequest> : produce_base<D, Windows::Media::Core::IMediaStreamSourceSampleRequest>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceSampleRequest> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceSampleRequest>
     {
         int32_t __stdcall get_StreamDescriptor(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::IMediaStreamDescriptor>(this->shim().StreamDescriptor());
+            *value = detach_from<winrt::Windows::Media::Core::IMediaStreamDescriptor>(this->shim().StreamDescriptor());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4789,14 +4790,14 @@ namespace winrt::impl
         {
             clear_abi(deferral);
             typename D::abi_guard guard(this->shim());
-            *deferral = detach_from<Windows::Media::Core::MediaStreamSourceSampleRequestDeferral>(this->shim().GetDeferral());
+            *deferral = detach_from<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Sample(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Sample(*reinterpret_cast<Windows::Media::Core::MediaStreamSample const*>(&value));
+            this->shim().Sample(*reinterpret_cast<winrt::Windows::Media::Core::MediaStreamSample const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4804,7 +4805,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSample>(this->shim().Sample());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSample>(this->shim().Sample());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4819,7 +4820,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceSampleRequestDeferral> : produce_base<D, Windows::Media::Core::IMediaStreamSourceSampleRequestDeferral>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceSampleRequestDeferral> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceSampleRequestDeferral>
     {
         int32_t __stdcall Complete() noexcept final try
         {
@@ -4832,13 +4833,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceSampleRequestedEventArgs> : produce_base<D, Windows::Media::Core::IMediaStreamSourceSampleRequestedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceSampleRequestedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceSampleRequestedEventArgs>
     {
         int32_t __stdcall get_Request(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSourceSampleRequest>(this->shim().Request());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSourceSampleRequest>(this->shim().Request());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4846,13 +4847,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceStartingEventArgs> : produce_base<D, Windows::Media::Core::IMediaStreamSourceStartingEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceStartingEventArgs> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceStartingEventArgs>
     {
         int32_t __stdcall get_Request(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSourceStartingRequest>(this->shim().Request());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSourceStartingRequest>(this->shim().Request());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4860,13 +4861,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceStartingRequest> : produce_base<D, Windows::Media::Core::IMediaStreamSourceStartingRequest>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceStartingRequest> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceStartingRequest>
     {
         int32_t __stdcall get_StartPosition(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Foundation::TimeSpan>>(this->shim().StartPosition());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(this->shim().StartPosition());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4874,14 +4875,14 @@ namespace winrt::impl
         {
             clear_abi(deferral);
             typename D::abi_guard guard(this->shim());
-            *deferral = detach_from<Windows::Media::Core::MediaStreamSourceStartingRequestDeferral>(this->shim().GetDeferral());
+            *deferral = detach_from<winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetActualStartPosition(int64_t position) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetActualStartPosition(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&position));
+            this->shim().SetActualStartPosition(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&position));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4889,7 +4890,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceStartingRequestDeferral> : produce_base<D, Windows::Media::Core::IMediaStreamSourceStartingRequestDeferral>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceStartingRequestDeferral> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceStartingRequestDeferral>
     {
         int32_t __stdcall Complete() noexcept final try
         {
@@ -4902,13 +4903,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest> : produce_base<D, Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequest>
     {
         int32_t __stdcall get_OldStreamDescriptor(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::IMediaStreamDescriptor>(this->shim().OldStreamDescriptor());
+            *value = detach_from<winrt::Windows::Media::Core::IMediaStreamDescriptor>(this->shim().OldStreamDescriptor());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4916,7 +4917,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::IMediaStreamDescriptor>(this->shim().NewStreamDescriptor());
+            *value = detach_from<winrt::Windows::Media::Core::IMediaStreamDescriptor>(this->shim().NewStreamDescriptor());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4924,7 +4925,7 @@ namespace winrt::impl
         {
             clear_abi(deferral);
             typename D::abi_guard guard(this->shim());
-            *deferral = detach_from<Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral>(this->shim().GetDeferral());
+            *deferral = detach_from<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral>(this->shim().GetDeferral());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4932,7 +4933,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestDeferral> : produce_base<D, Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestDeferral>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestDeferral> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestDeferral>
     {
         int32_t __stdcall Complete() noexcept final try
         {
@@ -4945,20 +4946,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestedEventArgs> : produce_base<D, Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IMediaStreamSourceSwitchStreamsRequestedEventArgs>
     {
         int32_t __stdcall get_Request(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest>(this->shim().Request());
+            *value = detach_from<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest>(this->shim().Request());
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMediaTrack> : produce_base<D, Windows::Media::Core::IMediaTrack>
+    struct produce<D, winrt::Windows::Media::Core::IMediaTrack> : produce_base<D, winrt::Windows::Media::Core::IMediaTrack>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -4979,7 +4980,7 @@ namespace winrt::impl
         int32_t __stdcall get_TrackKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaTrackKind>(this->shim().TrackKind());
+            *value = detach_from<winrt::Windows::Media::Core::MediaTrackKind>(this->shim().TrackKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5001,13 +5002,13 @@ namespace winrt::impl
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMseSourceBuffer> : produce_base<D, Windows::Media::Core::IMseSourceBuffer>
+    struct produce<D, winrt::Windows::Media::Core::IMseSourceBuffer> : produce_base<D, winrt::Windows::Media::Core::IMseSourceBuffer>
     {
         int32_t __stdcall add_UpdateStarting(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().UpdateStarting(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().UpdateStarting(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5021,7 +5022,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Updated(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Updated(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5035,7 +5036,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().UpdateEnded(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().UpdateEnded(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5049,7 +5050,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().ErrorOccurred(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().ErrorOccurred(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5063,7 +5064,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Aborted(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBuffer, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Aborted(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBuffer, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5076,14 +5077,14 @@ namespace winrt::impl
         int32_t __stdcall get_Mode(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MseAppendMode>(this->shim().Mode());
+            *value = detach_from<winrt::Windows::Media::Core::MseAppendMode>(this->shim().Mode());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Mode(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Mode(*reinterpret_cast<Windows::Media::Core::MseAppendMode const*>(&value));
+            this->shim().Mode(*reinterpret_cast<winrt::Windows::Media::Core::MseAppendMode const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5098,37 +5099,37 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::Core::MseTimeRange>>(this->shim().Buffered());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::MseTimeRange>>(this->shim().Buffered());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_TimestampOffset(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().TimestampOffset());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().TimestampOffset());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_TimestampOffset(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().TimestampOffset(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().TimestampOffset(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_AppendWindowStart(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().AppendWindowStart());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().AppendWindowStart());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_AppendWindowStart(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AppendWindowStart(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().AppendWindowStart(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5136,35 +5137,35 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Foundation::TimeSpan>>(this->shim().AppendWindowEnd());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(this->shim().AppendWindowEnd());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_AppendWindowEnd(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AppendWindowEnd(*reinterpret_cast<Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const*>(&value));
+            this->shim().AppendWindowEnd(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall AppendBuffer(void* buffer) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AppendBuffer(*reinterpret_cast<Windows::Storage::Streams::IBuffer const*>(&buffer));
+            this->shim().AppendBuffer(*reinterpret_cast<winrt::Windows::Storage::Streams::IBuffer const*>(&buffer));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall AppendStream(void* stream) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AppendStream(*reinterpret_cast<Windows::Storage::Streams::IInputStream const*>(&stream));
+            this->shim().AppendStream(*reinterpret_cast<winrt::Windows::Storage::Streams::IInputStream const*>(&stream));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall AppendStreamMaxSize(void* stream, uint64_t maxSize) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AppendStream(*reinterpret_cast<Windows::Storage::Streams::IInputStream const*>(&stream), maxSize);
+            this->shim().AppendStream(*reinterpret_cast<winrt::Windows::Storage::Streams::IInputStream const*>(&stream), maxSize);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5178,7 +5179,7 @@ namespace winrt::impl
         int32_t __stdcall Remove(int64_t start, void* end) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Remove(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&start), *reinterpret_cast<Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const*>(&end));
+            this->shim().Remove(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&start), *reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const*>(&end));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5186,13 +5187,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMseSourceBufferList> : produce_base<D, Windows::Media::Core::IMseSourceBufferList>
+    struct produce<D, winrt::Windows::Media::Core::IMseSourceBufferList> : produce_base<D, winrt::Windows::Media::Core::IMseSourceBufferList>
     {
         int32_t __stdcall add_SourceBufferAdded(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().SourceBufferAdded(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBufferList, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().SourceBufferAdded(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBufferList, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5206,7 +5207,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().SourceBufferRemoved(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseSourceBufferList, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().SourceBufferRemoved(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseSourceBufferList, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5220,7 +5221,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::Core::MseSourceBuffer>>(this->shim().Buffers());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::MseSourceBuffer>>(this->shim().Buffers());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5228,13 +5229,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMseStreamSource> : produce_base<D, Windows::Media::Core::IMseStreamSource>
+    struct produce<D, winrt::Windows::Media::Core::IMseStreamSource> : produce_base<D, winrt::Windows::Media::Core::IMseStreamSource>
     {
         int32_t __stdcall add_Opened(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Opened(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseStreamSource, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Opened(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5248,7 +5249,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Ended(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseStreamSource, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Ended(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5262,7 +5263,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Closed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::MseStreamSource, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Closed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::MseStreamSource, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5276,7 +5277,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MseSourceBufferList>(this->shim().SourceBuffers());
+            *value = detach_from<winrt::Windows::Media::Core::MseSourceBufferList>(this->shim().SourceBuffers());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5284,14 +5285,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MseSourceBufferList>(this->shim().ActiveSourceBuffers());
+            *value = detach_from<winrt::Windows::Media::Core::MseSourceBufferList>(this->shim().ActiveSourceBuffers());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_ReadyState(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MseReadyState>(this->shim().ReadyState());
+            *value = detach_from<winrt::Windows::Media::Core::MseReadyState>(this->shim().ReadyState());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5299,14 +5300,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Foundation::TimeSpan>>(this->shim().Duration());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(this->shim().Duration());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Duration(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Duration(*reinterpret_cast<Windows::Foundation::IReference<Windows::Foundation::TimeSpan> const*>(&value));
+            this->shim().Duration(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5314,21 +5315,21 @@ namespace winrt::impl
         {
             clear_abi(buffer);
             typename D::abi_guard guard(this->shim());
-            *buffer = detach_from<Windows::Media::Core::MseSourceBuffer>(this->shim().AddSourceBuffer(*reinterpret_cast<hstring const*>(&mimeType)));
+            *buffer = detach_from<winrt::Windows::Media::Core::MseSourceBuffer>(this->shim().AddSourceBuffer(*reinterpret_cast<hstring const*>(&mimeType)));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall RemoveSourceBuffer(void* buffer) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().RemoveSourceBuffer(*reinterpret_cast<Windows::Media::Core::MseSourceBuffer const*>(&buffer));
+            this->shim().RemoveSourceBuffer(*reinterpret_cast<winrt::Windows::Media::Core::MseSourceBuffer const*>(&buffer));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall EndOfStream(int32_t status) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().EndOfStream(*reinterpret_cast<Windows::Media::Core::MseEndOfStreamStatus const*>(&status));
+            this->shim().EndOfStream(*reinterpret_cast<winrt::Windows::Media::Core::MseEndOfStreamStatus const*>(&status));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5336,20 +5337,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMseStreamSource2> : produce_base<D, Windows::Media::Core::IMseStreamSource2>
+    struct produce<D, winrt::Windows::Media::Core::IMseStreamSource2> : produce_base<D, winrt::Windows::Media::Core::IMseStreamSource2>
     {
         int32_t __stdcall get_LiveSeekableRange(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<Windows::Media::Core::MseTimeRange>>(this->shim().LiveSeekableRange());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Media::Core::MseTimeRange>>(this->shim().LiveSeekableRange());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_LiveSeekableRange(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().LiveSeekableRange(*reinterpret_cast<Windows::Foundation::IReference<Windows::Media::Core::MseTimeRange> const*>(&value));
+            this->shim().LiveSeekableRange(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Media::Core::MseTimeRange> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5357,7 +5358,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IMseStreamSourceStatics> : produce_base<D, Windows::Media::Core::IMseStreamSourceStatics>
+    struct produce<D, winrt::Windows::Media::Core::IMseStreamSourceStatics> : produce_base<D, winrt::Windows::Media::Core::IMseStreamSourceStatics>
     {
         int32_t __stdcall IsContentTypeSupported(void* contentType, bool* value) noexcept final try
         {
@@ -5370,28 +5371,28 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ISceneAnalysisEffect> : produce_base<D, Windows::Media::Core::ISceneAnalysisEffect>
+    struct produce<D, winrt::Windows::Media::Core::ISceneAnalysisEffect> : produce_base<D, winrt::Windows::Media::Core::ISceneAnalysisEffect>
     {
         int32_t __stdcall get_HighDynamicRangeAnalyzer(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::HighDynamicRangeControl>(this->shim().HighDynamicRangeAnalyzer());
+            *value = detach_from<winrt::Windows::Media::Core::HighDynamicRangeControl>(this->shim().HighDynamicRangeAnalyzer());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_DesiredAnalysisInterval(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().DesiredAnalysisInterval(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().DesiredAnalysisInterval(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_DesiredAnalysisInterval(int64_t* value) noexcept final try
         {
-            zero_abi<Windows::Foundation::TimeSpan>(value);
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::TimeSpan>(this->shim().DesiredAnalysisInterval());
+            *value = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().DesiredAnalysisInterval());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5399,7 +5400,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(cookie);
             typename D::abi_guard guard(this->shim());
-            *cookie = detach_from<winrt::event_token>(this->shim().SceneAnalyzed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::SceneAnalysisEffect, Windows::Media::Core::SceneAnalyzedEventArgs> const*>(&handler)));
+            *cookie = detach_from<winrt::event_token>(this->shim().SceneAnalyzed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::SceneAnalysisEffect, winrt::Windows::Media::Core::SceneAnalyzedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5413,13 +5414,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ISceneAnalysisEffectFrame> : produce_base<D, Windows::Media::Core::ISceneAnalysisEffectFrame>
+    struct produce<D, winrt::Windows::Media::Core::ISceneAnalysisEffectFrame> : produce_base<D, winrt::Windows::Media::Core::ISceneAnalysisEffectFrame>
     {
         int32_t __stdcall get_FrameControlValues(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Capture::CapturedFrameControlValues>(this->shim().FrameControlValues());
+            *value = detach_from<winrt::Windows::Media::Capture::CapturedFrameControlValues>(this->shim().FrameControlValues());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5427,7 +5428,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::HighDynamicRangeOutput>(this->shim().HighDynamicRange());
+            *value = detach_from<winrt::Windows::Media::Core::HighDynamicRangeOutput>(this->shim().HighDynamicRange());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5435,12 +5436,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ISceneAnalysisEffectFrame2> : produce_base<D, Windows::Media::Core::ISceneAnalysisEffectFrame2>
+    struct produce<D, winrt::Windows::Media::Core::ISceneAnalysisEffectFrame2> : produce_base<D, winrt::Windows::Media::Core::ISceneAnalysisEffectFrame2>
     {
         int32_t __stdcall get_AnalysisRecommendation(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::SceneAnalysisRecommendation>(this->shim().AnalysisRecommendation());
+            *value = detach_from<winrt::Windows::Media::Core::SceneAnalysisRecommendation>(this->shim().AnalysisRecommendation());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5448,26 +5449,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ISceneAnalyzedEventArgs> : produce_base<D, Windows::Media::Core::ISceneAnalyzedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::ISceneAnalyzedEventArgs> : produce_base<D, winrt::Windows::Media::Core::ISceneAnalyzedEventArgs>
     {
         int32_t __stdcall get_ResultFrame(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::SceneAnalysisEffectFrame>(this->shim().ResultFrame());
+            *value = detach_from<winrt::Windows::Media::Core::SceneAnalysisEffectFrame>(this->shim().ResultFrame());
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Media::Core::ISingleSelectMediaTrackList> : produce_base<D, Windows::Media::Core::ISingleSelectMediaTrackList>
+    struct produce<D, winrt::Windows::Media::Core::ISingleSelectMediaTrackList> : produce_base<D, winrt::Windows::Media::Core::ISingleSelectMediaTrackList>
     {
         int32_t __stdcall add_SelectedIndexChanged(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().SelectedIndexChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::ISingleSelectMediaTrackList, Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().SelectedIndexChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::ISingleSelectMediaTrackList, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5494,7 +5495,7 @@ namespace winrt::impl
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ISpeechCue> : produce_base<D, Windows::Media::Core::ISpeechCue>
+    struct produce<D, winrt::Windows::Media::Core::ISpeechCue> : produce_base<D, winrt::Windows::Media::Core::ISpeechCue>
     {
         int32_t __stdcall get_Text(void** value) noexcept final try
         {
@@ -5515,14 +5516,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<int32_t>>(this->shim().StartPositionInInput());
+            *value = detach_from<winrt::Windows::Foundation::IReference<int32_t>>(this->shim().StartPositionInInput());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_StartPositionInInput(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().StartPositionInInput(*reinterpret_cast<Windows::Foundation::IReference<int32_t> const*>(&value));
+            this->shim().StartPositionInInput(*reinterpret_cast<winrt::Windows::Foundation::IReference<int32_t> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5530,14 +5531,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::IReference<int32_t>>(this->shim().EndPositionInInput());
+            *value = detach_from<winrt::Windows::Foundation::IReference<int32_t>>(this->shim().EndPositionInInput());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_EndPositionInInput(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().EndPositionInInput(*reinterpret_cast<Windows::Foundation::IReference<int32_t> const*>(&value));
+            this->shim().EndPositionInInput(*reinterpret_cast<winrt::Windows::Foundation::IReference<int32_t> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5545,13 +5546,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedMetadataStreamDescriptor> : produce_base<D, Windows::Media::Core::ITimedMetadataStreamDescriptor>
+    struct produce<D, winrt::Windows::Media::Core::ITimedMetadataStreamDescriptor> : produce_base<D, winrt::Windows::Media::Core::ITimedMetadataStreamDescriptor>
     {
         int32_t __stdcall get_EncodingProperties(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::MediaProperties::TimedMetadataEncodingProperties>(this->shim().EncodingProperties());
+            *value = detach_from<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties>(this->shim().EncodingProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5559,7 +5560,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::TimedMetadataStreamDescriptor>(this->shim().Copy());
+            *result = detach_from<winrt::Windows::Media::Core::TimedMetadataStreamDescriptor>(this->shim().Copy());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5567,13 +5568,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedMetadataStreamDescriptorFactory> : produce_base<D, Windows::Media::Core::ITimedMetadataStreamDescriptorFactory>
+    struct produce<D, winrt::Windows::Media::Core::ITimedMetadataStreamDescriptorFactory> : produce_base<D, winrt::Windows::Media::Core::ITimedMetadataStreamDescriptorFactory>
     {
         int32_t __stdcall Create(void* encodingProperties, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::TimedMetadataStreamDescriptor>(this->shim().Create(*reinterpret_cast<Windows::Media::MediaProperties::TimedMetadataEncodingProperties const*>(&encodingProperties)));
+            *result = detach_from<winrt::Windows::Media::Core::TimedMetadataStreamDescriptor>(this->shim().Create(*reinterpret_cast<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties const*>(&encodingProperties)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5581,13 +5582,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedMetadataTrack> : produce_base<D, Windows::Media::Core::ITimedMetadataTrack>
+    struct produce<D, winrt::Windows::Media::Core::ITimedMetadataTrack> : produce_base<D, winrt::Windows::Media::Core::ITimedMetadataTrack>
     {
         int32_t __stdcall add_CueEntered(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().CueEntered(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedMetadataTrack, Windows::Media::Core::MediaCueEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().CueEntered(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::MediaCueEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5601,7 +5602,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().CueExited(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedMetadataTrack, Windows::Media::Core::MediaCueEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().CueExited(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::MediaCueEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5615,7 +5616,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().TrackFailed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedMetadataTrack, Windows::Media::Core::TimedMetadataTrackFailedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().TrackFailed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedMetadataTrack, winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5629,7 +5630,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::Core::IMediaCue>>(this->shim().Cues());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::IMediaCue>>(this->shim().Cues());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5637,14 +5638,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::Core::IMediaCue>>(this->shim().ActiveCues());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::IMediaCue>>(this->shim().ActiveCues());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_TimedMetadataKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedMetadataKind>(this->shim().TimedMetadataKind());
+            *value = detach_from<winrt::Windows::Media::Core::TimedMetadataKind>(this->shim().TimedMetadataKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5659,14 +5660,14 @@ namespace winrt::impl
         int32_t __stdcall AddCue(void* cue) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AddCue(*reinterpret_cast<Windows::Media::Core::IMediaCue const*>(&cue));
+            this->shim().AddCue(*reinterpret_cast<winrt::Windows::Media::Core::IMediaCue const*>(&cue));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall RemoveCue(void* cue) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().RemoveCue(*reinterpret_cast<Windows::Media::Core::IMediaCue const*>(&cue));
+            this->shim().RemoveCue(*reinterpret_cast<winrt::Windows::Media::Core::IMediaCue const*>(&cue));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5674,13 +5675,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedMetadataTrack2> : produce_base<D, Windows::Media::Core::ITimedMetadataTrack2>
+    struct produce<D, winrt::Windows::Media::Core::ITimedMetadataTrack2> : produce_base<D, winrt::Windows::Media::Core::ITimedMetadataTrack2>
     {
         int32_t __stdcall get_PlaybackItem(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Playback::MediaPlaybackItem>(this->shim().PlaybackItem());
+            *value = detach_from<winrt::Windows::Media::Playback::MediaPlaybackItem>(this->shim().PlaybackItem());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5696,12 +5697,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedMetadataTrackError> : produce_base<D, Windows::Media::Core::ITimedMetadataTrackError>
+    struct produce<D, winrt::Windows::Media::Core::ITimedMetadataTrackError> : produce_base<D, winrt::Windows::Media::Core::ITimedMetadataTrackError>
     {
         int32_t __stdcall get_ErrorCode(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedMetadataTrackErrorCode>(this->shim().ErrorCode());
+            *value = detach_from<winrt::Windows::Media::Core::TimedMetadataTrackErrorCode>(this->shim().ErrorCode());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5717,13 +5718,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedMetadataTrackFactory> : produce_base<D, Windows::Media::Core::ITimedMetadataTrackFactory>
+    struct produce<D, winrt::Windows::Media::Core::ITimedMetadataTrackFactory> : produce_base<D, winrt::Windows::Media::Core::ITimedMetadataTrackFactory>
     {
         int32_t __stdcall Create(void* id, void* language, int32_t kind, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedMetadataTrack>(this->shim().Create(*reinterpret_cast<hstring const*>(&id), *reinterpret_cast<hstring const*>(&language), *reinterpret_cast<Windows::Media::Core::TimedMetadataKind const*>(&kind)));
+            *value = detach_from<winrt::Windows::Media::Core::TimedMetadataTrack>(this->shim().Create(*reinterpret_cast<hstring const*>(&id), *reinterpret_cast<hstring const*>(&language), *reinterpret_cast<winrt::Windows::Media::Core::TimedMetadataKind const*>(&kind)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5731,74 +5732,74 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedMetadataTrackFailedEventArgs> : produce_base<D, Windows::Media::Core::ITimedMetadataTrackFailedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::ITimedMetadataTrackFailedEventArgs> : produce_base<D, winrt::Windows::Media::Core::ITimedMetadataTrackFailedEventArgs>
     {
         int32_t __stdcall get_Error(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedMetadataTrackError>(this->shim().Error());
+            *value = detach_from<winrt::Windows::Media::Core::TimedMetadataTrackError>(this->shim().Error());
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #endif
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedMetadataTrackProvider> : produce_base<D, Windows::Media::Core::ITimedMetadataTrackProvider>
+    struct produce<D, winrt::Windows::Media::Core::ITimedMetadataTrackProvider> : produce_base<D, winrt::Windows::Media::Core::ITimedMetadataTrackProvider>
     {
         int32_t __stdcall get_TimedMetadataTracks(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::Core::TimedMetadataTrack>>(this->shim().TimedMetadataTracks());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::TimedMetadataTrack>>(this->shim().TimedMetadataTracks());
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextBouten> : produce_base<D, Windows::Media::Core::ITimedTextBouten>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextBouten> : produce_base<D, winrt::Windows::Media::Core::ITimedTextBouten>
     {
         int32_t __stdcall get_Type(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextBoutenType>(this->shim().Type());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextBoutenType>(this->shim().Type());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Type(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Type(*reinterpret_cast<Windows::Media::Core::TimedTextBoutenType const*>(&value));
+            this->shim().Type(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextBoutenType const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Color(struct struct_Windows_UI_Color* value) noexcept final try
         {
-            zero_abi<Windows::UI::Color>(value);
+            zero_abi<winrt::Windows::UI::Color>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Color>(this->shim().Color());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().Color());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Color(struct struct_Windows_UI_Color value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Color(*reinterpret_cast<Windows::UI::Color const*>(&value));
+            this->shim().Color(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Position(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextBoutenPosition>(this->shim().Position());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextBoutenPosition>(this->shim().Position());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Position(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Position(*reinterpret_cast<Windows::Media::Core::TimedTextBoutenPosition const*>(&value));
+            this->shim().Position(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextBoutenPosition const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5806,20 +5807,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextCue> : produce_base<D, Windows::Media::Core::ITimedTextCue>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextCue> : produce_base<D, winrt::Windows::Media::Core::ITimedTextCue>
     {
         int32_t __stdcall get_CueRegion(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextRegion>(this->shim().CueRegion());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextRegion>(this->shim().CueRegion());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_CueRegion(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().CueRegion(*reinterpret_cast<Windows::Media::Core::TimedTextRegion const*>(&value));
+            this->shim().CueRegion(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextRegion const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5827,14 +5828,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextStyle>(this->shim().CueStyle());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextStyle>(this->shim().CueStyle());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_CueStyle(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().CueStyle(*reinterpret_cast<Windows::Media::Core::TimedTextStyle const*>(&value));
+            this->shim().CueStyle(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextStyle const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5842,7 +5843,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVector<Windows::Media::Core::TimedTextLine>>(this->shim().Lines());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::TimedTextLine>>(this->shim().Lines());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5850,7 +5851,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextLine> : produce_base<D, Windows::Media::Core::ITimedTextLine>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextLine> : produce_base<D, winrt::Windows::Media::Core::ITimedTextLine>
     {
         int32_t __stdcall get_Text(void** value) noexcept final try
         {
@@ -5871,7 +5872,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVector<Windows::Media::Core::TimedTextSubformat>>(this->shim().Subformats());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Media::Core::TimedTextSubformat>>(this->shim().Subformats());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5879,7 +5880,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextRegion> : produce_base<D, Windows::Media::Core::ITimedTextRegion>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextRegion> : produce_base<D, winrt::Windows::Media::Core::ITimedTextRegion>
     {
         int32_t __stdcall get_Name(void** value) noexcept final try
         {
@@ -5898,89 +5899,89 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Position(struct struct_Windows_Media_Core_TimedTextPoint* value) noexcept final try
         {
-            zero_abi<Windows::Media::Core::TimedTextPoint>(value);
+            zero_abi<winrt::Windows::Media::Core::TimedTextPoint>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextPoint>(this->shim().Position());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextPoint>(this->shim().Position());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Position(struct struct_Windows_Media_Core_TimedTextPoint value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Position(*reinterpret_cast<Windows::Media::Core::TimedTextPoint const*>(&value));
+            this->shim().Position(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextPoint const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Extent(struct struct_Windows_Media_Core_TimedTextSize* value) noexcept final try
         {
-            zero_abi<Windows::Media::Core::TimedTextSize>(value);
+            zero_abi<winrt::Windows::Media::Core::TimedTextSize>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextSize>(this->shim().Extent());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextSize>(this->shim().Extent());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Extent(struct struct_Windows_Media_Core_TimedTextSize value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Extent(*reinterpret_cast<Windows::Media::Core::TimedTextSize const*>(&value));
+            this->shim().Extent(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextSize const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Background(struct struct_Windows_UI_Color* value) noexcept final try
         {
-            zero_abi<Windows::UI::Color>(value);
+            zero_abi<winrt::Windows::UI::Color>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Color>(this->shim().Background());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().Background());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Background(struct struct_Windows_UI_Color value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Background(*reinterpret_cast<Windows::UI::Color const*>(&value));
+            this->shim().Background(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_WritingMode(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextWritingMode>(this->shim().WritingMode());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextWritingMode>(this->shim().WritingMode());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_WritingMode(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().WritingMode(*reinterpret_cast<Windows::Media::Core::TimedTextWritingMode const*>(&value));
+            this->shim().WritingMode(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextWritingMode const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_DisplayAlignment(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextDisplayAlignment>(this->shim().DisplayAlignment());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextDisplayAlignment>(this->shim().DisplayAlignment());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_DisplayAlignment(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().DisplayAlignment(*reinterpret_cast<Windows::Media::Core::TimedTextDisplayAlignment const*>(&value));
+            this->shim().DisplayAlignment(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextDisplayAlignment const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_LineHeight(struct struct_Windows_Media_Core_TimedTextDouble* value) noexcept final try
         {
-            zero_abi<Windows::Media::Core::TimedTextDouble>(value);
+            zero_abi<winrt::Windows::Media::Core::TimedTextDouble>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextDouble>(this->shim().LineHeight());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextDouble>(this->shim().LineHeight());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_LineHeight(struct struct_Windows_Media_Core_TimedTextDouble value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().LineHeight(*reinterpret_cast<Windows::Media::Core::TimedTextDouble const*>(&value));
+            this->shim().LineHeight(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextDouble const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6000,30 +6001,30 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Padding(struct struct_Windows_Media_Core_TimedTextPadding* value) noexcept final try
         {
-            zero_abi<Windows::Media::Core::TimedTextPadding>(value);
+            zero_abi<winrt::Windows::Media::Core::TimedTextPadding>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextPadding>(this->shim().Padding());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextPadding>(this->shim().Padding());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Padding(struct struct_Windows_Media_Core_TimedTextPadding value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Padding(*reinterpret_cast<Windows::Media::Core::TimedTextPadding const*>(&value));
+            this->shim().Padding(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextPadding const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_TextWrapping(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextWrapping>(this->shim().TextWrapping());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextWrapping>(this->shim().TextWrapping());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_TextWrapping(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().TextWrapping(*reinterpret_cast<Windows::Media::Core::TimedTextWrapping const*>(&value));
+            this->shim().TextWrapping(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextWrapping const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6044,14 +6045,14 @@ namespace winrt::impl
         int32_t __stdcall get_ScrollMode(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextScrollMode>(this->shim().ScrollMode());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextScrollMode>(this->shim().ScrollMode());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_ScrollMode(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ScrollMode(*reinterpret_cast<Windows::Media::Core::TimedTextScrollMode const*>(&value));
+            this->shim().ScrollMode(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextScrollMode const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6059,7 +6060,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextRuby> : produce_base<D, Windows::Media::Core::ITimedTextRuby>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextRuby> : produce_base<D, winrt::Windows::Media::Core::ITimedTextRuby>
     {
         int32_t __stdcall get_Text(void** value) noexcept final try
         {
@@ -6079,42 +6080,42 @@ namespace winrt::impl
         int32_t __stdcall get_Position(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextRubyPosition>(this->shim().Position());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextRubyPosition>(this->shim().Position());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Position(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Position(*reinterpret_cast<Windows::Media::Core::TimedTextRubyPosition const*>(&value));
+            this->shim().Position(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextRubyPosition const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Align(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextRubyAlign>(this->shim().Align());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextRubyAlign>(this->shim().Align());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Align(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Align(*reinterpret_cast<Windows::Media::Core::TimedTextRubyAlign const*>(&value));
+            this->shim().Align(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextRubyAlign const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Reserve(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextRubyReserve>(this->shim().Reserve());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextRubyReserve>(this->shim().Reserve());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Reserve(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Reserve(*reinterpret_cast<Windows::Media::Core::TimedTextRubyReserve const*>(&value));
+            this->shim().Reserve(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextRubyReserve const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6122,13 +6123,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextSource> : produce_base<D, Windows::Media::Core::ITimedTextSource>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextSource> : produce_base<D, winrt::Windows::Media::Core::ITimedTextSource>
     {
         int32_t __stdcall add_Resolved(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Resolved(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::TimedTextSource, Windows::Media::Core::TimedTextSourceResolveResultEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().Resolved(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::TimedTextSource, winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6142,13 +6143,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextSourceResolveResultEventArgs> : produce_base<D, Windows::Media::Core::ITimedTextSourceResolveResultEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextSourceResolveResultEventArgs> : produce_base<D, winrt::Windows::Media::Core::ITimedTextSourceResolveResultEventArgs>
     {
         int32_t __stdcall get_Error(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedMetadataTrackError>(this->shim().Error());
+            *value = detach_from<winrt::Windows::Media::Core::TimedMetadataTrackError>(this->shim().Error());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6156,7 +6157,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Media::Core::TimedMetadataTrack>>(this->shim().Tracks());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Media::Core::TimedMetadataTrack>>(this->shim().Tracks());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6164,13 +6165,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextSourceStatics> : produce_base<D, Windows::Media::Core::ITimedTextSourceStatics>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextSourceStatics> : produce_base<D, winrt::Windows::Media::Core::ITimedTextSourceStatics>
     {
         int32_t __stdcall CreateFromStream(void* stream, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextSource>(this->shim().CreateFromStream(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStream const*>(&stream)));
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextSource>(this->shim().CreateFromStream(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStream const*>(&stream)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6178,7 +6179,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextSource>(this->shim().CreateFromUri(*reinterpret_cast<Windows::Foundation::Uri const*>(&uri)));
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextSource>(this->shim().CreateFromUri(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&uri)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6186,7 +6187,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextSource>(this->shim().CreateFromStream(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<hstring const*>(&defaultLanguage)));
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextSource>(this->shim().CreateFromStream(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<hstring const*>(&defaultLanguage)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6194,7 +6195,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextSource>(this->shim().CreateFromUri(*reinterpret_cast<Windows::Foundation::Uri const*>(&uri), *reinterpret_cast<hstring const*>(&defaultLanguage)));
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextSource>(this->shim().CreateFromUri(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&uri), *reinterpret_cast<hstring const*>(&defaultLanguage)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6202,13 +6203,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextSourceStatics2> : produce_base<D, Windows::Media::Core::ITimedTextSourceStatics2>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextSourceStatics2> : produce_base<D, winrt::Windows::Media::Core::ITimedTextSourceStatics2>
     {
         int32_t __stdcall CreateFromStreamWithIndex(void* stream, void* indexStream, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::TimedTextSource>(this->shim().CreateFromStreamWithIndex(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<Windows::Storage::Streams::IRandomAccessStream const*>(&indexStream)));
+            *result = detach_from<winrt::Windows::Media::Core::TimedTextSource>(this->shim().CreateFromStreamWithIndex(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStream const*>(&indexStream)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6216,7 +6217,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::TimedTextSource>(this->shim().CreateFromUriWithIndex(*reinterpret_cast<Windows::Foundation::Uri const*>(&uri), *reinterpret_cast<Windows::Foundation::Uri const*>(&indexUri)));
+            *result = detach_from<winrt::Windows::Media::Core::TimedTextSource>(this->shim().CreateFromUriWithIndex(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&uri), *reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&indexUri)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6224,7 +6225,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::TimedTextSource>(this->shim().CreateFromStreamWithIndex(*reinterpret_cast<Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<Windows::Storage::Streams::IRandomAccessStream const*>(&indexStream), *reinterpret_cast<hstring const*>(&defaultLanguage)));
+            *result = detach_from<winrt::Windows::Media::Core::TimedTextSource>(this->shim().CreateFromStreamWithIndex(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStream const*>(&stream), *reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStream const*>(&indexStream), *reinterpret_cast<hstring const*>(&defaultLanguage)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6232,7 +6233,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::TimedTextSource>(this->shim().CreateFromUriWithIndex(*reinterpret_cast<Windows::Foundation::Uri const*>(&uri), *reinterpret_cast<Windows::Foundation::Uri const*>(&indexUri), *reinterpret_cast<hstring const*>(&defaultLanguage)));
+            *result = detach_from<winrt::Windows::Media::Core::TimedTextSource>(this->shim().CreateFromUriWithIndex(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&uri), *reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&indexUri), *reinterpret_cast<hstring const*>(&defaultLanguage)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6240,7 +6241,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextStyle> : produce_base<D, Windows::Media::Core::ITimedTextStyle>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextStyle> : produce_base<D, winrt::Windows::Media::Core::ITimedTextStyle>
     {
         int32_t __stdcall get_Name(void** value) noexcept final try
         {
@@ -6274,60 +6275,60 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_FontSize(struct struct_Windows_Media_Core_TimedTextDouble* value) noexcept final try
         {
-            zero_abi<Windows::Media::Core::TimedTextDouble>(value);
+            zero_abi<winrt::Windows::Media::Core::TimedTextDouble>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextDouble>(this->shim().FontSize());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextDouble>(this->shim().FontSize());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_FontSize(struct struct_Windows_Media_Core_TimedTextDouble value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().FontSize(*reinterpret_cast<Windows::Media::Core::TimedTextDouble const*>(&value));
+            this->shim().FontSize(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextDouble const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_FontWeight(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextWeight>(this->shim().FontWeight());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextWeight>(this->shim().FontWeight());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_FontWeight(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().FontWeight(*reinterpret_cast<Windows::Media::Core::TimedTextWeight const*>(&value));
+            this->shim().FontWeight(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextWeight const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Foreground(struct struct_Windows_UI_Color* value) noexcept final try
         {
-            zero_abi<Windows::UI::Color>(value);
+            zero_abi<winrt::Windows::UI::Color>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Color>(this->shim().Foreground());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().Foreground());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Foreground(struct struct_Windows_UI_Color value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Foreground(*reinterpret_cast<Windows::UI::Color const*>(&value));
+            this->shim().Foreground(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_Background(struct struct_Windows_UI_Color* value) noexcept final try
         {
-            zero_abi<Windows::UI::Color>(value);
+            zero_abi<winrt::Windows::UI::Color>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Color>(this->shim().Background());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().Background());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Background(struct struct_Windows_UI_Color value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Background(*reinterpret_cast<Windows::UI::Color const*>(&value));
+            this->shim().Background(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6348,73 +6349,73 @@ namespace winrt::impl
         int32_t __stdcall get_FlowDirection(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextFlowDirection>(this->shim().FlowDirection());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextFlowDirection>(this->shim().FlowDirection());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_FlowDirection(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().FlowDirection(*reinterpret_cast<Windows::Media::Core::TimedTextFlowDirection const*>(&value));
+            this->shim().FlowDirection(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextFlowDirection const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_LineAlignment(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextLineAlignment>(this->shim().LineAlignment());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextLineAlignment>(this->shim().LineAlignment());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_LineAlignment(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().LineAlignment(*reinterpret_cast<Windows::Media::Core::TimedTextLineAlignment const*>(&value));
+            this->shim().LineAlignment(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextLineAlignment const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_OutlineColor(struct struct_Windows_UI_Color* value) noexcept final try
         {
-            zero_abi<Windows::UI::Color>(value);
+            zero_abi<winrt::Windows::UI::Color>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Color>(this->shim().OutlineColor());
+            *value = detach_from<winrt::Windows::UI::Color>(this->shim().OutlineColor());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_OutlineColor(struct struct_Windows_UI_Color value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().OutlineColor(*reinterpret_cast<Windows::UI::Color const*>(&value));
+            this->shim().OutlineColor(*reinterpret_cast<winrt::Windows::UI::Color const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_OutlineThickness(struct struct_Windows_Media_Core_TimedTextDouble* value) noexcept final try
         {
-            zero_abi<Windows::Media::Core::TimedTextDouble>(value);
+            zero_abi<winrt::Windows::Media::Core::TimedTextDouble>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextDouble>(this->shim().OutlineThickness());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextDouble>(this->shim().OutlineThickness());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_OutlineThickness(struct struct_Windows_Media_Core_TimedTextDouble value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().OutlineThickness(*reinterpret_cast<Windows::Media::Core::TimedTextDouble const*>(&value));
+            this->shim().OutlineThickness(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextDouble const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_OutlineRadius(struct struct_Windows_Media_Core_TimedTextDouble* value) noexcept final try
         {
-            zero_abi<Windows::Media::Core::TimedTextDouble>(value);
+            zero_abi<winrt::Windows::Media::Core::TimedTextDouble>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextDouble>(this->shim().OutlineRadius());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextDouble>(this->shim().OutlineRadius());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_OutlineRadius(struct struct_Windows_Media_Core_TimedTextDouble value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().OutlineRadius(*reinterpret_cast<Windows::Media::Core::TimedTextDouble const*>(&value));
+            this->shim().OutlineRadius(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextDouble const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6422,19 +6423,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextStyle2> : produce_base<D, Windows::Media::Core::ITimedTextStyle2>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextStyle2> : produce_base<D, winrt::Windows::Media::Core::ITimedTextStyle2>
     {
         int32_t __stdcall get_FontStyle(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextFontStyle>(this->shim().FontStyle());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextFontStyle>(this->shim().FontStyle());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_FontStyle(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().FontStyle(*reinterpret_cast<Windows::Media::Core::TimedTextFontStyle const*>(&value));
+            this->shim().FontStyle(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextFontStyle const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6484,13 +6485,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextStyle3> : produce_base<D, Windows::Media::Core::ITimedTextStyle3>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextStyle3> : produce_base<D, winrt::Windows::Media::Core::ITimedTextStyle3>
     {
         int32_t __stdcall get_Ruby(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextRuby>(this->shim().Ruby());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextRuby>(this->shim().Ruby());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6498,7 +6499,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextBouten>(this->shim().Bouten());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextBouten>(this->shim().Bouten());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6534,7 +6535,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::ITimedTextSubformat> : produce_base<D, Windows::Media::Core::ITimedTextSubformat>
+    struct produce<D, winrt::Windows::Media::Core::ITimedTextSubformat> : produce_base<D, winrt::Windows::Media::Core::ITimedTextSubformat>
     {
         int32_t __stdcall get_StartIndex(int32_t* value) noexcept final try
         {
@@ -6568,14 +6569,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::TimedTextStyle>(this->shim().SubformatStyle());
+            *value = detach_from<winrt::Windows::Media::Core::TimedTextStyle>(this->shim().SubformatStyle());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_SubformatStyle(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SubformatStyle(*reinterpret_cast<Windows::Media::Core::TimedTextStyle const*>(&value));
+            this->shim().SubformatStyle(*reinterpret_cast<winrt::Windows::Media::Core::TimedTextStyle const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6583,7 +6584,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IVideoStabilizationEffect> : produce_base<D, Windows::Media::Core::IVideoStabilizationEffect>
+    struct produce<D, winrt::Windows::Media::Core::IVideoStabilizationEffect> : produce_base<D, winrt::Windows::Media::Core::IVideoStabilizationEffect>
     {
         int32_t __stdcall put_Enabled(bool value) noexcept final try
         {
@@ -6603,7 +6604,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(cookie);
             typename D::abi_guard guard(this->shim());
-            *cookie = detach_from<winrt::event_token>(this->shim().EnabledChanged(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::VideoStabilizationEffect, Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs> const*>(&handler)));
+            *cookie = detach_from<winrt::event_token>(this->shim().EnabledChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::VideoStabilizationEffect, winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6617,7 +6618,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Capture::VideoStreamConfiguration>(this->shim().GetRecommendedStreamConfiguration(*reinterpret_cast<Windows::Media::Devices::VideoDeviceController const*>(&controller), *reinterpret_cast<Windows::Media::MediaProperties::VideoEncodingProperties const*>(&desiredProperties)));
+            *value = detach_from<winrt::Windows::Media::Capture::VideoStreamConfiguration>(this->shim().GetRecommendedStreamConfiguration(*reinterpret_cast<winrt::Windows::Media::Devices::VideoDeviceController const*>(&controller), *reinterpret_cast<winrt::Windows::Media::MediaProperties::VideoEncodingProperties const*>(&desiredProperties)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6625,12 +6626,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IVideoStabilizationEffectEnabledChangedEventArgs> : produce_base<D, Windows::Media::Core::IVideoStabilizationEffectEnabledChangedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IVideoStabilizationEffectEnabledChangedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IVideoStabilizationEffectEnabledChangedEventArgs>
     {
         int32_t __stdcall get_Reason(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::VideoStabilizationEffectEnabledChangedReason>(this->shim().Reason());
+            *value = detach_from<winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedReason>(this->shim().Reason());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6638,13 +6639,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IVideoStreamDescriptor> : produce_base<D, Windows::Media::Core::IVideoStreamDescriptor>
+    struct produce<D, winrt::Windows::Media::Core::IVideoStreamDescriptor> : produce_base<D, winrt::Windows::Media::Core::IVideoStreamDescriptor>
     {
         int32_t __stdcall get_EncodingProperties(void** encodingProperties) noexcept final try
         {
             clear_abi(encodingProperties);
             typename D::abi_guard guard(this->shim());
-            *encodingProperties = detach_from<Windows::Media::MediaProperties::VideoEncodingProperties>(this->shim().EncodingProperties());
+            *encodingProperties = detach_from<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(this->shim().EncodingProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6652,13 +6653,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IVideoStreamDescriptor2> : produce_base<D, Windows::Media::Core::IVideoStreamDescriptor2>
+    struct produce<D, winrt::Windows::Media::Core::IVideoStreamDescriptor2> : produce_base<D, winrt::Windows::Media::Core::IVideoStreamDescriptor2>
     {
         int32_t __stdcall Copy(void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::VideoStreamDescriptor>(this->shim().Copy());
+            *result = detach_from<winrt::Windows::Media::Core::VideoStreamDescriptor>(this->shim().Copy());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6666,13 +6667,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IVideoStreamDescriptorFactory> : produce_base<D, Windows::Media::Core::IVideoStreamDescriptorFactory>
+    struct produce<D, winrt::Windows::Media::Core::IVideoStreamDescriptorFactory> : produce_base<D, winrt::Windows::Media::Core::IVideoStreamDescriptorFactory>
     {
         int32_t __stdcall Create(void* encodingProperties, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Media::Core::VideoStreamDescriptor>(this->shim().Create(*reinterpret_cast<Windows::Media::MediaProperties::VideoEncodingProperties const*>(&encodingProperties)));
+            *result = detach_from<winrt::Windows::Media::Core::VideoStreamDescriptor>(this->shim().Create(*reinterpret_cast<winrt::Windows::Media::MediaProperties::VideoEncodingProperties const*>(&encodingProperties)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6680,13 +6681,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IVideoTrack> : produce_base<D, Windows::Media::Core::IVideoTrack>
+    struct produce<D, winrt::Windows::Media::Core::IVideoTrack> : produce_base<D, winrt::Windows::Media::Core::IVideoTrack>
     {
         int32_t __stdcall add_OpenFailed(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().OpenFailed(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Media::Core::VideoTrack, Windows::Media::Core::VideoTrackOpenFailedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().OpenFailed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Core::VideoTrack, winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6700,7 +6701,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::MediaProperties::VideoEncodingProperties>(this->shim().GetEncodingProperties());
+            *value = detach_from<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>(this->shim().GetEncodingProperties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6708,7 +6709,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Playback::MediaPlaybackItem>(this->shim().PlaybackItem());
+            *value = detach_from<winrt::Windows::Media::Playback::MediaPlaybackItem>(this->shim().PlaybackItem());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6724,7 +6725,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::VideoTrackSupportInfo>(this->shim().SupportInfo());
+            *value = detach_from<winrt::Windows::Media::Core::VideoTrackSupportInfo>(this->shim().SupportInfo());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6732,7 +6733,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IVideoTrackOpenFailedEventArgs> : produce_base<D, Windows::Media::Core::IVideoTrackOpenFailedEventArgs>
+    struct produce<D, winrt::Windows::Media::Core::IVideoTrackOpenFailedEventArgs> : produce_base<D, winrt::Windows::Media::Core::IVideoTrackOpenFailedEventArgs>
     {
         int32_t __stdcall get_ExtendedError(winrt::hresult* value) noexcept final try
         {
@@ -6746,19 +6747,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Media::Core::IVideoTrackSupportInfo> : produce_base<D, Windows::Media::Core::IVideoTrackSupportInfo>
+    struct produce<D, winrt::Windows::Media::Core::IVideoTrackSupportInfo> : produce_base<D, winrt::Windows::Media::Core::IVideoTrackSupportInfo>
     {
         int32_t __stdcall get_DecoderStatus(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaDecoderStatus>(this->shim().DecoderStatus());
+            *value = detach_from<winrt::Windows::Media::Core::MediaDecoderStatus>(this->shim().DecoderStatus());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_MediaSourceStatus(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Media::Core::MediaSourceStatus>(this->shim().MediaSourceStatus());
+            *value = detach_from<winrt::Windows::Media::Core::MediaSourceStatus>(this->shim().MediaSourceStatus());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6767,16 +6768,16 @@ namespace winrt::impl
 }
 WINRT_EXPORT namespace winrt::Windows::Media::Core
 {
-    inline AudioStreamDescriptor::AudioStreamDescriptor(Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) :
+    inline AudioStreamDescriptor::AudioStreamDescriptor(winrt::Windows::Media::MediaProperties::AudioEncodingProperties const& encodingProperties) :
         AudioStreamDescriptor(impl::call_factory<AudioStreamDescriptor, IAudioStreamDescriptorFactory>([&](IAudioStreamDescriptorFactory const& f) { return f.Create(encodingProperties); }))
     {
     }
     inline ChapterCue::ChapterCue() :
-        ChapterCue(impl::call_factory_cast<ChapterCue(*)(Windows::Foundation::IActivationFactory const&), ChapterCue>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ChapterCue>(); }))
+        ChapterCue(impl::call_factory_cast<ChapterCue(*)(winrt::Windows::Foundation::IActivationFactory const&), ChapterCue>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ChapterCue>(); }))
     {
     }
     inline CodecQuery::CodecQuery() :
-        CodecQuery(impl::call_factory_cast<CodecQuery(*)(Windows::Foundation::IActivationFactory const&), CodecQuery>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<CodecQuery>(); }))
+        CodecQuery(impl::call_factory_cast<CodecQuery(*)(winrt::Windows::Foundation::IActivationFactory const&), CodecQuery>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<CodecQuery>(); }))
     {
     }
     inline auto CodecSubtypes::VideoFormatDV25()
@@ -6984,103 +6985,103 @@ WINRT_EXPORT namespace winrt::Windows::Media::Core
         return impl::call_factory_cast<hstring(*)(ICodecSubtypesStatics const&), CodecSubtypes, ICodecSubtypesStatics>([](ICodecSubtypesStatics const& f) { return f.AudioFormatWMAudioV9(); });
     }
     inline DataCue::DataCue() :
-        DataCue(impl::call_factory_cast<DataCue(*)(Windows::Foundation::IActivationFactory const&), DataCue>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<DataCue>(); }))
+        DataCue(impl::call_factory_cast<DataCue(*)(winrt::Windows::Foundation::IActivationFactory const&), DataCue>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<DataCue>(); }))
     {
     }
     inline FaceDetectionEffectDefinition::FaceDetectionEffectDefinition() :
-        FaceDetectionEffectDefinition(impl::call_factory_cast<FaceDetectionEffectDefinition(*)(Windows::Foundation::IActivationFactory const&), FaceDetectionEffectDefinition>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<FaceDetectionEffectDefinition>(); }))
+        FaceDetectionEffectDefinition(impl::call_factory_cast<FaceDetectionEffectDefinition(*)(winrt::Windows::Foundation::IActivationFactory const&), FaceDetectionEffectDefinition>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<FaceDetectionEffectDefinition>(); }))
     {
     }
     inline ImageCue::ImageCue() :
-        ImageCue(impl::call_factory_cast<ImageCue(*)(Windows::Foundation::IActivationFactory const&), ImageCue>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ImageCue>(); }))
+        ImageCue(impl::call_factory_cast<ImageCue(*)(winrt::Windows::Foundation::IActivationFactory const&), ImageCue>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<ImageCue>(); }))
     {
     }
     inline auto LowLightFusion::SupportedBitmapPixelFormats()
     {
-        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<Windows::Graphics::Imaging::BitmapPixelFormat>(*)(ILowLightFusionStatics const&), LowLightFusion, ILowLightFusionStatics>([](ILowLightFusionStatics const& f) { return f.SupportedBitmapPixelFormats(); });
+        return impl::call_factory_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>(*)(ILowLightFusionStatics const&), LowLightFusion, ILowLightFusionStatics>([](ILowLightFusionStatics const& f) { return f.SupportedBitmapPixelFormats(); });
     }
     inline auto LowLightFusion::MaxSupportedFrameCount()
     {
         return impl::call_factory_cast<int32_t(*)(ILowLightFusionStatics const&), LowLightFusion, ILowLightFusionStatics>([](ILowLightFusionStatics const& f) { return f.MaxSupportedFrameCount(); });
     }
-    inline auto LowLightFusion::FuseAsync(param::async_iterable<Windows::Graphics::Imaging::SoftwareBitmap> const& frameSet)
+    inline auto LowLightFusion::FuseAsync(param::async_iterable<winrt::Windows::Graphics::Imaging::SoftwareBitmap> const& frameSet)
     {
         return impl::call_factory<LowLightFusion, ILowLightFusionStatics>([&](ILowLightFusionStatics const& f) { return f.FuseAsync(frameSet); });
     }
     inline MediaBinder::MediaBinder() :
-        MediaBinder(impl::call_factory_cast<MediaBinder(*)(Windows::Foundation::IActivationFactory const&), MediaBinder>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<MediaBinder>(); }))
+        MediaBinder(impl::call_factory_cast<MediaBinder(*)(winrt::Windows::Foundation::IActivationFactory const&), MediaBinder>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<MediaBinder>(); }))
     {
     }
-    inline auto MediaSource::CreateFromAdaptiveMediaSource(Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const& mediaSource)
+    inline auto MediaSource::CreateFromAdaptiveMediaSource(winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource const& mediaSource)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics>([&](IMediaSourceStatics const& f) { return f.CreateFromAdaptiveMediaSource(mediaSource); });
     }
-    inline auto MediaSource::CreateFromMediaStreamSource(Windows::Media::Core::MediaStreamSource const& mediaSource)
+    inline auto MediaSource::CreateFromMediaStreamSource(winrt::Windows::Media::Core::MediaStreamSource const& mediaSource)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics>([&](IMediaSourceStatics const& f) { return f.CreateFromMediaStreamSource(mediaSource); });
     }
-    inline auto MediaSource::CreateFromMseStreamSource(Windows::Media::Core::MseStreamSource const& mediaSource)
+    inline auto MediaSource::CreateFromMseStreamSource(winrt::Windows::Media::Core::MseStreamSource const& mediaSource)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics>([&](IMediaSourceStatics const& f) { return f.CreateFromMseStreamSource(mediaSource); });
     }
-    inline auto MediaSource::CreateFromIMediaSource(Windows::Media::Core::IMediaSource const& mediaSource)
+    inline auto MediaSource::CreateFromIMediaSource(winrt::Windows::Media::Core::IMediaSource const& mediaSource)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics>([&](IMediaSourceStatics const& f) { return f.CreateFromIMediaSource(mediaSource); });
     }
-    inline auto MediaSource::CreateFromStorageFile(Windows::Storage::IStorageFile const& file)
+    inline auto MediaSource::CreateFromStorageFile(winrt::Windows::Storage::IStorageFile const& file)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics>([&](IMediaSourceStatics const& f) { return f.CreateFromStorageFile(file); });
     }
-    inline auto MediaSource::CreateFromStream(Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& contentType)
+    inline auto MediaSource::CreateFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& contentType)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics>([&](IMediaSourceStatics const& f) { return f.CreateFromStream(stream, contentType); });
     }
-    inline auto MediaSource::CreateFromStreamReference(Windows::Storage::Streams::IRandomAccessStreamReference const& stream, param::hstring const& contentType)
+    inline auto MediaSource::CreateFromStreamReference(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& stream, param::hstring const& contentType)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics>([&](IMediaSourceStatics const& f) { return f.CreateFromStreamReference(stream, contentType); });
     }
-    inline auto MediaSource::CreateFromUri(Windows::Foundation::Uri const& uri)
+    inline auto MediaSource::CreateFromUri(winrt::Windows::Foundation::Uri const& uri)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics>([&](IMediaSourceStatics const& f) { return f.CreateFromUri(uri); });
     }
-    inline auto MediaSource::CreateFromMediaBinder(Windows::Media::Core::MediaBinder const& binder)
+    inline auto MediaSource::CreateFromMediaBinder(winrt::Windows::Media::Core::MediaBinder const& binder)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics2>([&](IMediaSourceStatics2 const& f) { return f.CreateFromMediaBinder(binder); });
     }
-    inline auto MediaSource::CreateFromMediaFrameSource(Windows::Media::Capture::Frames::MediaFrameSource const& frameSource)
+    inline auto MediaSource::CreateFromMediaFrameSource(winrt::Windows::Media::Capture::Frames::MediaFrameSource const& frameSource)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics3>([&](IMediaSourceStatics3 const& f) { return f.CreateFromMediaFrameSource(frameSource); });
     }
-    inline auto MediaSource::CreateFromDownloadOperation(Windows::Networking::BackgroundTransfer::DownloadOperation const& downloadOperation)
+    inline auto MediaSource::CreateFromDownloadOperation(winrt::Windows::Networking::BackgroundTransfer::DownloadOperation const& downloadOperation)
     {
         return impl::call_factory<MediaSource, IMediaSourceStatics4>([&](IMediaSourceStatics4 const& f) { return f.CreateFromDownloadOperation(downloadOperation); });
     }
-    inline MediaSourceAppServiceConnection::MediaSourceAppServiceConnection(Windows::ApplicationModel::AppService::AppServiceConnection const& appServiceConnection) :
+    inline MediaSourceAppServiceConnection::MediaSourceAppServiceConnection(winrt::Windows::ApplicationModel::AppService::AppServiceConnection const& appServiceConnection) :
         MediaSourceAppServiceConnection(impl::call_factory<MediaSourceAppServiceConnection, IMediaSourceAppServiceConnectionFactory>([&](IMediaSourceAppServiceConnectionFactory const& f) { return f.Create(appServiceConnection); }))
     {
     }
-    inline auto MediaStreamSample::CreateFromBuffer(Windows::Storage::Streams::IBuffer const& buffer, Windows::Foundation::TimeSpan const& timestamp)
+    inline auto MediaStreamSample::CreateFromBuffer(winrt::Windows::Storage::Streams::IBuffer const& buffer, winrt::Windows::Foundation::TimeSpan const& timestamp)
     {
         return impl::call_factory<MediaStreamSample, IMediaStreamSampleStatics>([&](IMediaStreamSampleStatics const& f) { return f.CreateFromBuffer(buffer, timestamp); });
     }
-    inline auto MediaStreamSample::CreateFromStreamAsync(Windows::Storage::Streams::IInputStream const& stream, uint32_t count, Windows::Foundation::TimeSpan const& timestamp)
+    inline auto MediaStreamSample::CreateFromStreamAsync(winrt::Windows::Storage::Streams::IInputStream const& stream, uint32_t count, winrt::Windows::Foundation::TimeSpan const& timestamp)
     {
         return impl::call_factory<MediaStreamSample, IMediaStreamSampleStatics>([&](IMediaStreamSampleStatics const& f) { return f.CreateFromStreamAsync(stream, count, timestamp); });
     }
-    inline auto MediaStreamSample::CreateFromDirect3D11Surface(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface, Windows::Foundation::TimeSpan const& timestamp)
+    inline auto MediaStreamSample::CreateFromDirect3D11Surface(winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface, winrt::Windows::Foundation::TimeSpan const& timestamp)
     {
         return impl::call_factory<MediaStreamSample, IMediaStreamSampleStatics2>([&](IMediaStreamSampleStatics2 const& f) { return f.CreateFromDirect3D11Surface(surface, timestamp); });
     }
-    inline MediaStreamSource::MediaStreamSource(Windows::Media::Core::IMediaStreamDescriptor const& descriptor) :
+    inline MediaStreamSource::MediaStreamSource(winrt::Windows::Media::Core::IMediaStreamDescriptor const& descriptor) :
         MediaStreamSource(impl::call_factory<MediaStreamSource, IMediaStreamSourceFactory>([&](IMediaStreamSourceFactory const& f) { return f.CreateFromDescriptor(descriptor); }))
     {
     }
-    inline MediaStreamSource::MediaStreamSource(Windows::Media::Core::IMediaStreamDescriptor const& descriptor, Windows::Media::Core::IMediaStreamDescriptor const& descriptor2) :
+    inline MediaStreamSource::MediaStreamSource(winrt::Windows::Media::Core::IMediaStreamDescriptor const& descriptor, winrt::Windows::Media::Core::IMediaStreamDescriptor const& descriptor2) :
         MediaStreamSource(impl::call_factory<MediaStreamSource, IMediaStreamSourceFactory>([&](IMediaStreamSourceFactory const& f) { return f.CreateFromDescriptors(descriptor, descriptor2); }))
     {
     }
     inline MseStreamSource::MseStreamSource() :
-        MseStreamSource(impl::call_factory_cast<MseStreamSource(*)(Windows::Foundation::IActivationFactory const&), MseStreamSource>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<MseStreamSource>(); }))
+        MseStreamSource(impl::call_factory_cast<MseStreamSource(*)(winrt::Windows::Foundation::IActivationFactory const&), MseStreamSource>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<MseStreamSource>(); }))
     {
     }
     inline auto MseStreamSource::IsContentTypeSupported(param::hstring const& contentType)
@@ -7088,78 +7089,78 @@ WINRT_EXPORT namespace winrt::Windows::Media::Core
         return impl::call_factory<MseStreamSource, IMseStreamSourceStatics>([&](IMseStreamSourceStatics const& f) { return f.IsContentTypeSupported(contentType); });
     }
     inline SceneAnalysisEffectDefinition::SceneAnalysisEffectDefinition() :
-        SceneAnalysisEffectDefinition(impl::call_factory_cast<SceneAnalysisEffectDefinition(*)(Windows::Foundation::IActivationFactory const&), SceneAnalysisEffectDefinition>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SceneAnalysisEffectDefinition>(); }))
+        SceneAnalysisEffectDefinition(impl::call_factory_cast<SceneAnalysisEffectDefinition(*)(winrt::Windows::Foundation::IActivationFactory const&), SceneAnalysisEffectDefinition>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SceneAnalysisEffectDefinition>(); }))
     {
     }
     inline SpeechCue::SpeechCue() :
-        SpeechCue(impl::call_factory_cast<SpeechCue(*)(Windows::Foundation::IActivationFactory const&), SpeechCue>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SpeechCue>(); }))
+        SpeechCue(impl::call_factory_cast<SpeechCue(*)(winrt::Windows::Foundation::IActivationFactory const&), SpeechCue>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SpeechCue>(); }))
     {
     }
-    inline TimedMetadataStreamDescriptor::TimedMetadataStreamDescriptor(Windows::Media::MediaProperties::TimedMetadataEncodingProperties const& encodingProperties) :
+    inline TimedMetadataStreamDescriptor::TimedMetadataStreamDescriptor(winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties const& encodingProperties) :
         TimedMetadataStreamDescriptor(impl::call_factory<TimedMetadataStreamDescriptor, ITimedMetadataStreamDescriptorFactory>([&](ITimedMetadataStreamDescriptorFactory const& f) { return f.Create(encodingProperties); }))
     {
     }
-    inline TimedMetadataTrack::TimedMetadataTrack(param::hstring const& id, param::hstring const& language, Windows::Media::Core::TimedMetadataKind const& kind) :
+    inline TimedMetadataTrack::TimedMetadataTrack(param::hstring const& id, param::hstring const& language, winrt::Windows::Media::Core::TimedMetadataKind const& kind) :
         TimedMetadataTrack(impl::call_factory<TimedMetadataTrack, ITimedMetadataTrackFactory>([&](ITimedMetadataTrackFactory const& f) { return f.Create(id, language, kind); }))
     {
     }
     inline TimedTextCue::TimedTextCue() :
-        TimedTextCue(impl::call_factory_cast<TimedTextCue(*)(Windows::Foundation::IActivationFactory const&), TimedTextCue>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextCue>(); }))
+        TimedTextCue(impl::call_factory_cast<TimedTextCue(*)(winrt::Windows::Foundation::IActivationFactory const&), TimedTextCue>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextCue>(); }))
     {
     }
     inline TimedTextLine::TimedTextLine() :
-        TimedTextLine(impl::call_factory_cast<TimedTextLine(*)(Windows::Foundation::IActivationFactory const&), TimedTextLine>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextLine>(); }))
+        TimedTextLine(impl::call_factory_cast<TimedTextLine(*)(winrt::Windows::Foundation::IActivationFactory const&), TimedTextLine>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextLine>(); }))
     {
     }
     inline TimedTextRegion::TimedTextRegion() :
-        TimedTextRegion(impl::call_factory_cast<TimedTextRegion(*)(Windows::Foundation::IActivationFactory const&), TimedTextRegion>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextRegion>(); }))
+        TimedTextRegion(impl::call_factory_cast<TimedTextRegion(*)(winrt::Windows::Foundation::IActivationFactory const&), TimedTextRegion>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextRegion>(); }))
     {
     }
-    inline auto TimedTextSource::CreateFromStream(Windows::Storage::Streams::IRandomAccessStream const& stream)
+    inline auto TimedTextSource::CreateFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream)
     {
         return impl::call_factory<TimedTextSource, ITimedTextSourceStatics>([&](ITimedTextSourceStatics const& f) { return f.CreateFromStream(stream); });
     }
-    inline auto TimedTextSource::CreateFromUri(Windows::Foundation::Uri const& uri)
+    inline auto TimedTextSource::CreateFromUri(winrt::Windows::Foundation::Uri const& uri)
     {
         return impl::call_factory<TimedTextSource, ITimedTextSourceStatics>([&](ITimedTextSourceStatics const& f) { return f.CreateFromUri(uri); });
     }
-    inline auto TimedTextSource::CreateFromStream(Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& defaultLanguage)
+    inline auto TimedTextSource::CreateFromStream(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, param::hstring const& defaultLanguage)
     {
         return impl::call_factory<TimedTextSource, ITimedTextSourceStatics>([&](ITimedTextSourceStatics const& f) { return f.CreateFromStream(stream, defaultLanguage); });
     }
-    inline auto TimedTextSource::CreateFromUri(Windows::Foundation::Uri const& uri, param::hstring const& defaultLanguage)
+    inline auto TimedTextSource::CreateFromUri(winrt::Windows::Foundation::Uri const& uri, param::hstring const& defaultLanguage)
     {
         return impl::call_factory<TimedTextSource, ITimedTextSourceStatics>([&](ITimedTextSourceStatics const& f) { return f.CreateFromUri(uri, defaultLanguage); });
     }
-    inline auto TimedTextSource::CreateFromStreamWithIndex(Windows::Storage::Streams::IRandomAccessStream const& stream, Windows::Storage::Streams::IRandomAccessStream const& indexStream)
+    inline auto TimedTextSource::CreateFromStreamWithIndex(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, winrt::Windows::Storage::Streams::IRandomAccessStream const& indexStream)
     {
         return impl::call_factory<TimedTextSource, ITimedTextSourceStatics2>([&](ITimedTextSourceStatics2 const& f) { return f.CreateFromStreamWithIndex(stream, indexStream); });
     }
-    inline auto TimedTextSource::CreateFromUriWithIndex(Windows::Foundation::Uri const& uri, Windows::Foundation::Uri const& indexUri)
+    inline auto TimedTextSource::CreateFromUriWithIndex(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Foundation::Uri const& indexUri)
     {
         return impl::call_factory<TimedTextSource, ITimedTextSourceStatics2>([&](ITimedTextSourceStatics2 const& f) { return f.CreateFromUriWithIndex(uri, indexUri); });
     }
-    inline auto TimedTextSource::CreateFromStreamWithIndex(Windows::Storage::Streams::IRandomAccessStream const& stream, Windows::Storage::Streams::IRandomAccessStream const& indexStream, param::hstring const& defaultLanguage)
+    inline auto TimedTextSource::CreateFromStreamWithIndex(winrt::Windows::Storage::Streams::IRandomAccessStream const& stream, winrt::Windows::Storage::Streams::IRandomAccessStream const& indexStream, param::hstring const& defaultLanguage)
     {
         return impl::call_factory<TimedTextSource, ITimedTextSourceStatics2>([&](ITimedTextSourceStatics2 const& f) { return f.CreateFromStreamWithIndex(stream, indexStream, defaultLanguage); });
     }
-    inline auto TimedTextSource::CreateFromUriWithIndex(Windows::Foundation::Uri const& uri, Windows::Foundation::Uri const& indexUri, param::hstring const& defaultLanguage)
+    inline auto TimedTextSource::CreateFromUriWithIndex(winrt::Windows::Foundation::Uri const& uri, winrt::Windows::Foundation::Uri const& indexUri, param::hstring const& defaultLanguage)
     {
         return impl::call_factory<TimedTextSource, ITimedTextSourceStatics2>([&](ITimedTextSourceStatics2 const& f) { return f.CreateFromUriWithIndex(uri, indexUri, defaultLanguage); });
     }
     inline TimedTextStyle::TimedTextStyle() :
-        TimedTextStyle(impl::call_factory_cast<TimedTextStyle(*)(Windows::Foundation::IActivationFactory const&), TimedTextStyle>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextStyle>(); }))
+        TimedTextStyle(impl::call_factory_cast<TimedTextStyle(*)(winrt::Windows::Foundation::IActivationFactory const&), TimedTextStyle>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextStyle>(); }))
     {
     }
     inline TimedTextSubformat::TimedTextSubformat() :
-        TimedTextSubformat(impl::call_factory_cast<TimedTextSubformat(*)(Windows::Foundation::IActivationFactory const&), TimedTextSubformat>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextSubformat>(); }))
+        TimedTextSubformat(impl::call_factory_cast<TimedTextSubformat(*)(winrt::Windows::Foundation::IActivationFactory const&), TimedTextSubformat>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<TimedTextSubformat>(); }))
     {
     }
     inline VideoStabilizationEffectDefinition::VideoStabilizationEffectDefinition() :
-        VideoStabilizationEffectDefinition(impl::call_factory_cast<VideoStabilizationEffectDefinition(*)(Windows::Foundation::IActivationFactory const&), VideoStabilizationEffectDefinition>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<VideoStabilizationEffectDefinition>(); }))
+        VideoStabilizationEffectDefinition(impl::call_factory_cast<VideoStabilizationEffectDefinition(*)(winrt::Windows::Foundation::IActivationFactory const&), VideoStabilizationEffectDefinition>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<VideoStabilizationEffectDefinition>(); }))
     {
     }
-    inline VideoStreamDescriptor::VideoStreamDescriptor(Windows::Media::MediaProperties::VideoEncodingProperties const& encodingProperties) :
+    inline VideoStreamDescriptor::VideoStreamDescriptor(winrt::Windows::Media::MediaProperties::VideoEncodingProperties const& encodingProperties) :
         VideoStreamDescriptor(impl::call_factory<VideoStreamDescriptor, IVideoStreamDescriptorFactory>([&](IVideoStreamDescriptorFactory const& f) { return f.Create(encodingProperties); }))
     {
     }

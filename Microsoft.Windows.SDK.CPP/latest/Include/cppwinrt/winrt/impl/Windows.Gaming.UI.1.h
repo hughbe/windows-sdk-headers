@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Gaming_UI_1_H
 #define WINRT_Windows_Gaming_UI_1_H
 #include "winrt/impl/Windows.ApplicationModel.Activation.0.h"
@@ -10,47 +11,47 @@
 WINRT_EXPORT namespace winrt::Windows::Gaming::UI
 {
     struct __declspec(empty_bases) IGameBarStatics :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IGameBarStatics>
     {
         IGameBarStatics(std::nullptr_t = nullptr) noexcept {}
-        IGameBarStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IGameBarStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IGameChatMessageReceivedEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IGameChatMessageReceivedEventArgs>
     {
         IGameChatMessageReceivedEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IGameChatMessageReceivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IGameChatMessageReceivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IGameChatOverlay :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IGameChatOverlay>
     {
         IGameChatOverlay(std::nullptr_t = nullptr) noexcept {}
-        IGameChatOverlay(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IGameChatOverlay(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IGameChatOverlayMessageSource :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IGameChatOverlayMessageSource>
     {
         IGameChatOverlayMessageSource(std::nullptr_t = nullptr) noexcept {}
-        IGameChatOverlayMessageSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IGameChatOverlayMessageSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IGameChatOverlayStatics :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IGameChatOverlayStatics>
     {
         IGameChatOverlayStatics(std::nullptr_t = nullptr) noexcept {}
-        IGameChatOverlayStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IGameChatOverlayStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IGameUIProviderActivatedEventArgs :
-        Windows::Foundation::IInspectable,
+        winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IGameUIProviderActivatedEventArgs>,
-        impl::require<Windows::Gaming::UI::IGameUIProviderActivatedEventArgs, Windows::ApplicationModel::Activation::IActivatedEventArgs>
+        impl::require<winrt::Windows::Gaming::UI::IGameUIProviderActivatedEventArgs, winrt::Windows::ApplicationModel::Activation::IActivatedEventArgs>
     {
         IGameUIProviderActivatedEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IGameUIProviderActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        IGameUIProviderActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

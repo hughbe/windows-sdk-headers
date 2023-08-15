@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Devices_Bluetooth_Rfcomm_0_H
 #define WINRT_Windows_Devices_Bluetooth_Rfcomm_0_H
 WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth
@@ -59,52 +60,52 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth::Rfcomm
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics>{ using type = interface_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>{ using type = class_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>{ using type = class_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>{ using type = class_category; };
-    template <> struct category<Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>{ using type = class_category; };
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService> = L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult> = L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId> = L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider> = L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService2";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService3";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServicesResult";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceId";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider2";
-    template <> inline constexpr auto& name_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProviderStatics";
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>{ 0xAE81FF1F,0xC5A1,0x4C40,{ 0x8C,0x28,0xF3,0xEF,0xD6,0x90,0x62,0xF3 } }; // AE81FF1F-C5A1-4C40-8C28-F3EFD69062F3
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>{ 0x536CED14,0xEBCD,0x49FE,{ 0xBF,0x9F,0x40,0xEF,0xC6,0x89,0xB2,0x0D } }; // 536CED14-EBCD-49FE-BF9F-40EFC689B20D
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3>{ 0x1C22ACE6,0xDD44,0x4D23,{ 0x86,0x6D,0x8F,0x34,0x86,0xEE,0x64,0x90 } }; // 1C22ACE6-DD44-4D23-866D-8F3486EE6490
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>{ 0xA4A149EF,0x626D,0x41AC,{ 0xB2,0x53,0x87,0xAC,0x5C,0x27,0xE2,0x8A } }; // A4A149EF-626D-41AC-B253-87AC5C27E28A
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2>{ 0xAA8CB1C9,0xE78D,0x4BE4,{ 0x80,0x76,0x0A,0x3D,0x87,0xA0,0xA0,0x5F } }; // AA8CB1C9-E78D-4BE4-8076-0A3D87A0A05F
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult>{ 0x3B48388C,0x7CCF,0x488E,{ 0x96,0x25,0xD2,0x59,0xA5,0x73,0x2D,0x55 } }; // 3B48388C-7CCF-488E-9625-D259A5732D55
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId>{ 0x22629204,0x7E02,0x4017,{ 0x81,0x36,0xDA,0x1B,0x6A,0x1B,0x9B,0xBF } }; // 22629204-7E02-4017-8136-DA1B6A1B9BBF
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics>{ 0x2A179EBA,0xA975,0x46E3,{ 0xB5,0x6B,0x08,0xFF,0xD7,0x83,0xA5,0xFE } }; // 2A179EBA-A975-46E3-B56B-08FFD783A5FE
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>{ 0xEADBFDC4,0xB1F6,0x44FF,{ 0x9F,0x7C,0xE7,0xA8,0x2A,0xB8,0x68,0x21 } }; // EADBFDC4-B1F6-44FF-9F7C-E7A82AB86821
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>{ 0x736BDFC6,0x3C81,0x4D1E,{ 0xBA,0xF2,0xDD,0xBB,0x81,0x28,0x45,0x12 } }; // 736BDFC6-3C81-4D1E-BAF2-DDBB81284512
-    template <> inline constexpr guid guid_v<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics>{ 0x98888303,0x69CA,0x413A,{ 0x84,0xF7,0x43,0x44,0xC7,0x29,0x29,0x97 } }; // 98888303-69CA-413A-84F7-4344C7292997
-    template <> struct default_interface<Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>{ using type = Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService; };
-    template <> struct default_interface<Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>{ using type = Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult; };
-    template <> struct default_interface<Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>{ using type = Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId; };
-    template <> struct default_interface<Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>{ using type = Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider; };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>{ using type = class_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>{ using type = class_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>{ using type = class_category; };
+    template <> struct category<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>{ using type = class_category; };
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService> = L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult> = L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId> = L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceId";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider> = L"Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceService3";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServiceStatics2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommDeviceServicesResult";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceId";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceIdStatics";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProvider2";
+    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics> = L"Windows.Devices.Bluetooth.Rfcomm.IRfcommServiceProviderStatics";
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>{ 0xAE81FF1F,0xC5A1,0x4C40,{ 0x8C,0x28,0xF3,0xEF,0xD6,0x90,0x62,0xF3 } }; // AE81FF1F-C5A1-4C40-8C28-F3EFD69062F3
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>{ 0x536CED14,0xEBCD,0x49FE,{ 0xBF,0x9F,0x40,0xEF,0xC6,0x89,0xB2,0x0D } }; // 536CED14-EBCD-49FE-BF9F-40EFC689B20D
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3>{ 0x1C22ACE6,0xDD44,0x4D23,{ 0x86,0x6D,0x8F,0x34,0x86,0xEE,0x64,0x90 } }; // 1C22ACE6-DD44-4D23-866D-8F3486EE6490
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>{ 0xA4A149EF,0x626D,0x41AC,{ 0xB2,0x53,0x87,0xAC,0x5C,0x27,0xE2,0x8A } }; // A4A149EF-626D-41AC-B253-87AC5C27E28A
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2>{ 0xAA8CB1C9,0xE78D,0x4BE4,{ 0x80,0x76,0x0A,0x3D,0x87,0xA0,0xA0,0x5F } }; // AA8CB1C9-E78D-4BE4-8076-0A3D87A0A05F
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult>{ 0x3B48388C,0x7CCF,0x488E,{ 0x96,0x25,0xD2,0x59,0xA5,0x73,0x2D,0x55 } }; // 3B48388C-7CCF-488E-9625-D259A5732D55
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId>{ 0x22629204,0x7E02,0x4017,{ 0x81,0x36,0xDA,0x1B,0x6A,0x1B,0x9B,0xBF } }; // 22629204-7E02-4017-8136-DA1B6A1B9BBF
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics>{ 0x2A179EBA,0xA975,0x46E3,{ 0xB5,0x6B,0x08,0xFF,0xD7,0x83,0xA5,0xFE } }; // 2A179EBA-A975-46E3-B56B-08FFD783A5FE
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>{ 0xEADBFDC4,0xB1F6,0x44FF,{ 0x9F,0x7C,0xE7,0xA8,0x2A,0xB8,0x68,0x21 } }; // EADBFDC4-B1F6-44FF-9F7C-E7A82AB86821
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>{ 0x736BDFC6,0x3C81,0x4D1E,{ 0xBA,0xF2,0xDD,0xBB,0x81,0x28,0x45,0x12 } }; // 736BDFC6-3C81-4D1E-BAF2-DDBB81284512
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics>{ 0x98888303,0x69CA,0x413A,{ 0x84,0xF7,0x43,0x44,0xC7,0x29,0x29,0x97 } }; // 98888303-69CA-413A-84F7-4344C7292997
+    template <> struct default_interface<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>{ using type = winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService; };
+    template <> struct default_interface<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>{ using type = winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult; };
+    template <> struct default_interface<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>{ using type = winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId; };
+    template <> struct default_interface<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>{ using type = winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider; };
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -117,14 +118,14 @@ namespace winrt::impl
             virtual int32_t __stdcall GetSdpRawAttributesWithCacheModeAsync(int32_t, void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_Device(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -132,7 +133,7 @@ namespace winrt::impl
             virtual int32_t __stdcall RequestAccessAsync(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -140,7 +141,7 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeviceSelector(void*, void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -150,7 +151,7 @@ namespace winrt::impl
             virtual int32_t __stdcall GetDeviceSelectorForBluetoothDeviceAndServiceIdWithCacheMode(void*, void*, int32_t, void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -158,7 +159,7 @@ namespace winrt::impl
             virtual int32_t __stdcall get_Services(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -167,7 +168,7 @@ namespace winrt::impl
             virtual int32_t __stdcall AsString(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -181,7 +182,7 @@ namespace winrt::impl
             virtual int32_t __stdcall get_GenericFileTransfer(void**) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -191,14 +192,14 @@ namespace winrt::impl
             virtual int32_t __stdcall StopAdvertising() noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall StartAdvertisingWithRadioDiscoverability(void*, bool) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics>
+    template <> struct abi<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -208,66 +209,66 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceService
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Networking::HostName) ConnectionHostName() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::HostName) ConnectionHostName() const;
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) ConnectionServiceName() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) ServiceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Networking::Sockets::SocketProtectionLevel) ProtectionLevel() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Networking::Sockets::SocketProtectionLevel) MaxProtectionLevel() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMapView<uint32_t, Windows::Storage::Streams::IBuffer>>) GetSdpRawAttributesAsync() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IMapView<uint32_t, Windows::Storage::Streams::IBuffer>>) GetSdpRawAttributesAsync(Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) ServiceId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Sockets::SocketProtectionLevel) ProtectionLevel() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Networking::Sockets::SocketProtectionLevel) MaxProtectionLevel() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IMapView<uint32_t, winrt::Windows::Storage::Streams::IBuffer>>) GetSdpRawAttributesAsync() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IMapView<uint32_t, winrt::Windows::Storage::Streams::IBuffer>>) GetSdpRawAttributesAsync(winrt::Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceService<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceService2
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothDevice) Device() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::BluetoothDevice) Device() const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceService2<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceService3
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Enumeration::DeviceAccessInformation) DeviceAccessInformation() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Enumeration::DeviceAccessStatus>) RequestAccessAsync() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Enumeration::DeviceAccessInformation) DeviceAccessInformation() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Enumeration::DeviceAccessStatus>) RequestAccessAsync() const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceService3<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceServiceStatics
     {
-        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>) FromIdAsync(param::hstring const& deviceId) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>) FromIdAsync(param::hstring const& deviceId) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelector(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId) const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceServiceStatics<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceServiceStatics2
     {
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelectorForBluetoothDevice(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelectorForBluetoothDevice(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelectorForBluetoothDeviceAndServiceId(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId) const;
-        WINRT_IMPL_AUTO(hstring) GetDeviceSelectorForBluetoothDeviceAndServiceId(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelectorForBluetoothDevice(winrt::Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelectorForBluetoothDevice(winrt::Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, winrt::Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelectorForBluetoothDeviceAndServiceId(winrt::Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId) const;
+        WINRT_IMPL_AUTO(hstring) GetDeviceSelectorForBluetoothDeviceAndServiceId(winrt::Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId, winrt::Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode) const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceServiceStatics2<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceServicesResult
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::BluetoothError) Error() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>) Services() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::BluetoothError) Error() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>) Services() const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommDeviceServicesResult<D>;
     };
@@ -278,53 +279,53 @@ namespace winrt::impl
         WINRT_IMPL_AUTO(uint32_t) AsShortId() const;
         WINRT_IMPL_AUTO(hstring) AsString() const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommServiceId<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommServiceIdStatics
     {
-        WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) FromUuid(winrt::guid const& uuid) const;
-        WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) FromShortId(uint32_t shortId) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) SerialPort() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) ObexObjectPush() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) ObexFileTransfer() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) PhoneBookAccessPce() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) PhoneBookAccessPse() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) GenericFileTransfer() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) FromUuid(winrt::guid const& uuid) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) FromShortId(uint32_t shortId) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) SerialPort() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) ObexObjectPush() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) ObexFileTransfer() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) PhoneBookAccessPce() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) PhoneBookAccessPse() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) GenericFileTransfer() const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceIdStatics>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommServiceIdStatics<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommServiceProvider
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) ServiceId() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::Foundation::Collections::IMap<uint32_t, Windows::Storage::Streams::IBuffer>) SdpRawAttributes() const;
-        WINRT_IMPL_AUTO(void) StartAdvertising(Windows::Networking::Sockets::StreamSocketListener const& listener) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId) ServiceId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<uint32_t, winrt::Windows::Storage::Streams::IBuffer>) SdpRawAttributes() const;
+        WINRT_IMPL_AUTO(void) StartAdvertising(winrt::Windows::Networking::Sockets::StreamSocketListener const& listener) const;
         WINRT_IMPL_AUTO(void) StopAdvertising() const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommServiceProvider<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommServiceProvider2
     {
-        WINRT_IMPL_AUTO(void) StartAdvertising(Windows::Networking::Sockets::StreamSocketListener const& listener, bool radioDiscoverable) const;
+        WINRT_IMPL_AUTO(void) StartAdvertising(winrt::Windows::Networking::Sockets::StreamSocketListener const& listener, bool radioDiscoverable) const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommServiceProvider2<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommServiceProviderStatics
     {
-        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>) CreateAsync(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>) CreateAsync(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId) const;
     };
-    template <> struct consume<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics>
+    template <> struct consume<winrt::Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProviderStatics>
     {
         template <typename D> using type = consume_Windows_Devices_Bluetooth_Rfcomm_IRfcommServiceProviderStatics<D>;
     };

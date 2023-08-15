@@ -17,14 +17,14 @@
 **       changes. The FACILITY values below are carefully selected to allow
 **       for this.
 */
-#if MICROSOFT_PK_NONE
+#if MICROSOFT_PK_WINDOWS
 /*
 ** NOTE: PC and Services error codes should ****NOT**** be added here,
 **       but rather to the files discussed in the comments further down
 **       regarding them.
 **
 */
-#endif /* MICROSOFT_PK_NONE */
+#endif /* MICROSOFT_PK_WINDOWS */
 
 
 
@@ -53,7 +53,7 @@
 **  The range from 8004c700 to 8004dc7f is reserved for PK error codes.
 **  The range from 8004de00 to 8004dfff is reserved for PK error codes.
 */
-#if MICROSOFT_PK_NONE
+#if MICROSOFT_PK_WINDOWS
 /*
 **  There's a range of error codes that is only applicable to the PC and should
 **  not be included here. These errors are in common\include, files:
@@ -70,7 +70,7 @@
 #define DRM_E_NDBRIDGEONLY_BASECODE     0xB000
 #define DRM_E_MSPRSDK_BASECODE          0xB800
 #define DRM_E_MODERN_BASECODE           0xBE00
-#endif /* MICROSOFT_PK_NONE */
+#endif /* MICROSOFT_PK_WINDOWS */
 
 #define DRM_FACILITY_ITF DRM_FACILITY_CORE
 
@@ -2144,16 +2144,6 @@
  *
  */
 #define DRM_E_TEST_ENCRYPT_ERROR         ((DRM_RESULT)0x8004C302L)
-
-/*
- * MessageId: DRM_E_TEST_RC4KEY_FAILED
- *
- * MessageText:
- *
- * RC4 key failed during crypto operations.
- *
- */
-#define DRM_E_TEST_RC4KEY_FAILED         ((DRM_RESULT)0x8004C303L)
 
 /*
  * MessageId: DRM_E_TEST_DECRYPT_ERROR
@@ -5370,6 +5360,16 @@
  */
 #define DRM_E_SECURETIME_SERVER_SECURITY_LEVEL_TOO_LOW ((DRM_RESULT)0x8004DE03L)
 
+/*
+ * MessageId: DRM_E_LICENSESERVERTIME_MUST_REACQUIRE_LICENSE
+ *
+ * MessageText:
+ *
+ * This license was acquired before the LicenseServerTime feature was enabled.  It must be reacquired.
+ *
+ */
+#define DRM_E_LICENSESERVERTIME_MUST_REACQUIRE_LICENSE ((DRM_RESULT)0x8004DE04L)
+
 
 /* ============================================================
 **
@@ -5876,6 +5876,7 @@
 #define DRM_E_DEPRECATED_BAD_CRL_BLOB                                              ((DRM_RESULT)0x8004C101L)
 #define DRM_E_DEPRECATED_TEST_PKCRYPTO_FAILURE                                     ((DRM_RESULT)0x8004C300L)
 #define DRM_E_DEPRECATED_TEST_PKSIGN_VERIFY_ERROR                                  ((DRM_RESULT)0x8004C301L)
+#define DRM_E_DEPRECATED_TEST_RC4KEY_FAILED                                        ((DRM_RESULT)0x8004C303L)
 #define DRM_E_DEPRECATED_TEST_DESKEY_FAILED                                        ((DRM_RESULT)0x8004C305L)
 #define DRM_E_DEPRECATED_TEST_CBC_INVERSEMAC_FAILURE                               ((DRM_RESULT)0x8004C306L)
 #define DRM_E_DEPRECATED_TEST_HMAC_FAILURE                                         ((DRM_RESULT)0x8004C307L)

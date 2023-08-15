@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_System_RemoteDesktop_Input_2_H
 #define WINRT_Windows_System_RemoteDesktop_Input_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
@@ -20,12 +21,12 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Input
         template <typename O, typename M> RemoteTextConnectionDataHandler(weak_ref<O>&& object, M method);
         auto operator()(array_view<uint8_t const> pduData) const;
     };
-    struct __declspec(empty_bases) RemoteTextConnection : Windows::System::RemoteDesktop::Input::IRemoteTextConnection,
-        impl::require<RemoteTextConnection, Windows::Foundation::IClosable>
+    struct __declspec(empty_bases) RemoteTextConnection : winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection,
+        impl::require<RemoteTextConnection, winrt::Windows::Foundation::IClosable>
     {
         RemoteTextConnection(std::nullptr_t) noexcept {}
-        RemoteTextConnection(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::RemoteDesktop::Input::IRemoteTextConnection(ptr, take_ownership_from_abi) {}
-        RemoteTextConnection(winrt::guid const& connectionId, Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler const& pduForwarder);
+        RemoteTextConnection(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection(ptr, take_ownership_from_abi) {}
+        RemoteTextConnection(winrt::guid const& connectionId, winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler const& pduForwarder);
     };
 }
 #endif

@@ -66,6 +66,13 @@
 
 
 //
+// Apc Callback Data Structure Offset Definitions
+//
+
+#define AcdContextRecord 0x8
+#define KAPC_CALLBACK_DATA_LENGTH 0x20
+
+//
 // Bug Check Code Definitions
 //
 
@@ -432,7 +439,7 @@
 #define InServiceCount 0x74
 #define InDispatchCount 0x78
 #define InTrapFrame 0x88
-#define InterruptObjectLength 0x120
+#define InterruptObjectLength 0x118
 
 //
 // Process Object Structure Offset Definitions
@@ -474,9 +481,9 @@
 #define PfBuffer 0x38
 #define PfSegment 0x40
 #define PfAffinity 0x48
-#define PfSource 0x158
-#define PfStarted 0x15a
-#define ProfileObjectLength 0x160
+#define PfSource 0x260
+#define PfStarted 0x262
+#define ProfileObjectLength 0x268
 
 //
 // Queue Object Structure Offset Definitions
@@ -915,7 +922,7 @@
 #define PcSkipTick 0x1898
 #define PcStartCycles 0x18c8
 #define PcSpBase 0x1480
-#define ProcessorControlRegisterLength 0x29fc0
+#define ProcessorControlRegisterLength 0x2a040
 
 //
 // Defines for user shared data
@@ -956,8 +963,8 @@
 #define PbMinorVersion 0x750
 #define PbMajorVersion 0x752
 #define PbBuildType 0x754
-#define PbCoresPerPhysicalProcessor 0x756
-#define PbLogicalProcessorsPerCore 0x757
+#define PbCoresPerPhysicalProcessor 0x770
+#define PbLogicalProcessorsPerCore 0x774
 #define PbPriorityState 0x30
 #define PbLockQueue 0x780
 #define PbPPLookasideList 0x900
@@ -966,7 +973,7 @@
 #define PbPacketBarrier 0xa00
 #define PbDeferredReadyListHead 0xa08
 #define PbLookasideIrpFloat 0xa58
-#define PbRequestMailbox 0x9600
+#define PbRequestMailbox 0x9680
 #define PbMailbox 0xa80
 #define PbDpcGate 0xb80
 #define PbWaitListHead 0xc00
@@ -1252,6 +1259,7 @@
 #define ARM64_TCR_IPASize_MASK 0x0000000700000000
 #define ARM64_TCR_PASize_MASK 0x0000000000070000
 #define ARM64_TCR_TBI0 0x0000002000000000
+#define ARM64_TCR_TBI1 0x0000004000000000
 #define ARM64_ESR_EL1 0x4290
 #define ARM64_ESR_EL2 0x6290
 #define ARM64_FAR_EL1 0x4300
@@ -1911,5 +1919,6 @@
 //
 
 #define AffinityExLength 0x108
+#define KAPC_RECORD_FLAGS_CALLBACK_DATA_CONTEXT_BIT 0x2
 #include "kxarm64.h"
 ;

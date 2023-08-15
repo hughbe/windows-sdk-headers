@@ -1,25 +1,26 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Data_Html_H
 #define WINRT_Windows_Data_Html_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/impl/Windows.Data.Html.2.h"
 namespace winrt::impl
 {
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Data_Html_IHtmlUtilities<D>::ConvertToText(param::hstring const& html) const
     {
         void* text{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Data::Html::IHtmlUtilities)->ConvertToText(*(void**)(&html), &text));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Data::Html::IHtmlUtilities)->ConvertToText(*(void**)(&html), &text));
         return hstring{ text, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Data::Html::IHtmlUtilities> : produce_base<D, Windows::Data::Html::IHtmlUtilities>
+    struct produce<D, winrt::Windows::Data::Html::IHtmlUtilities> : produce_base<D, winrt::Windows::Data::Html::IHtmlUtilities>
     {
         int32_t __stdcall ConvertToText(void* html, void** text) noexcept final try
         {

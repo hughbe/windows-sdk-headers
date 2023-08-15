@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Gaming_Preview_GamesEnumeration_2_H
 #define WINRT_Windows_Gaming_Preview_GamesEnumeration_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
@@ -18,7 +19,7 @@ WINRT_EXPORT namespace winrt::Windows::Gaming::Preview::GamesEnumeration
         template <typename O, typename M> GameListChangedEventHandler(O* object, M method);
         template <typename O, typename M> GameListChangedEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> GameListChangedEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& game) const;
+        auto operator()(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& game) const;
     };
     struct GameListRemovedEventHandler : Windows::Foundation::IUnknown
     {
@@ -36,36 +37,36 @@ WINRT_EXPORT namespace winrt::Windows::Gaming::Preview::GamesEnumeration
         GameList() = delete;
         static auto FindAllAsync();
         static auto FindAllAsync(param::hstring const& packageFamilyName);
-        static auto GameAdded(Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler);
-        using GameAdded_revoker = impl::factory_event_revoker<Windows::Gaming::Preview::GamesEnumeration::IGameListStatics, &impl::abi_t<Windows::Gaming::Preview::GamesEnumeration::IGameListStatics>::remove_GameAdded>;
-        [[nodiscard]] static GameAdded_revoker GameAdded(auto_revoke_t, Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler);
+        static auto GameAdded(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler);
+        using GameAdded_revoker = impl::factory_event_revoker<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics, &impl::abi_t<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics>::remove_GameAdded>;
+        [[nodiscard]] static GameAdded_revoker GameAdded(auto_revoke_t, winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler);
         static auto GameAdded(winrt::event_token const& token);
-        static auto GameRemoved(Windows::Gaming::Preview::GamesEnumeration::GameListRemovedEventHandler const& handler);
-        using GameRemoved_revoker = impl::factory_event_revoker<Windows::Gaming::Preview::GamesEnumeration::IGameListStatics, &impl::abi_t<Windows::Gaming::Preview::GamesEnumeration::IGameListStatics>::remove_GameRemoved>;
-        [[nodiscard]] static GameRemoved_revoker GameRemoved(auto_revoke_t, Windows::Gaming::Preview::GamesEnumeration::GameListRemovedEventHandler const& handler);
+        static auto GameRemoved(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListRemovedEventHandler const& handler);
+        using GameRemoved_revoker = impl::factory_event_revoker<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics, &impl::abi_t<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics>::remove_GameRemoved>;
+        [[nodiscard]] static GameRemoved_revoker GameRemoved(auto_revoke_t, winrt::Windows::Gaming::Preview::GamesEnumeration::GameListRemovedEventHandler const& handler);
         static auto GameRemoved(winrt::event_token const& token);
-        static auto GameUpdated(Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler);
-        using GameUpdated_revoker = impl::factory_event_revoker<Windows::Gaming::Preview::GamesEnumeration::IGameListStatics, &impl::abi_t<Windows::Gaming::Preview::GamesEnumeration::IGameListStatics>::remove_GameUpdated>;
-        [[nodiscard]] static GameUpdated_revoker GameUpdated(auto_revoke_t, Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler);
+        static auto GameUpdated(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler);
+        using GameUpdated_revoker = impl::factory_event_revoker<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics, &impl::abi_t<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListStatics>::remove_GameUpdated>;
+        [[nodiscard]] static GameUpdated_revoker GameUpdated(auto_revoke_t, winrt::Windows::Gaming::Preview::GamesEnumeration::GameListChangedEventHandler const& handler);
         static auto GameUpdated(winrt::event_token const& token);
-        static auto MergeEntriesAsync(Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& left, Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& right);
-        static auto UnmergeEntryAsync(Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& mergedEntry);
+        static auto MergeEntriesAsync(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& left, winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& right);
+        static auto UnmergeEntryAsync(winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry const& mergedEntry);
     };
-    struct __declspec(empty_bases) GameListEntry : Windows::Gaming::Preview::GamesEnumeration::IGameListEntry,
-        impl::require<GameListEntry, Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>
+    struct __declspec(empty_bases) GameListEntry : winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry,
+        impl::require<GameListEntry, winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry2>
     {
         GameListEntry(std::nullptr_t) noexcept {}
-        GameListEntry(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Gaming::Preview::GamesEnumeration::IGameListEntry(ptr, take_ownership_from_abi) {}
+        GameListEntry(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) GameModeConfiguration : Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration
+    struct __declspec(empty_bases) GameModeConfiguration : winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration
     {
         GameModeConfiguration(std::nullptr_t) noexcept {}
-        GameModeConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration(ptr, take_ownership_from_abi) {}
+        GameModeConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeConfiguration(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) GameModeUserConfiguration : Windows::Gaming::Preview::GamesEnumeration::IGameModeUserConfiguration
+    struct __declspec(empty_bases) GameModeUserConfiguration : winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeUserConfiguration
     {
         GameModeUserConfiguration(std::nullptr_t) noexcept {}
-        GameModeUserConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Gaming::Preview::GamesEnumeration::IGameModeUserConfiguration(ptr, take_ownership_from_abi) {}
+        GameModeUserConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Gaming::Preview::GamesEnumeration::IGameModeUserConfiguration(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
     };
 }

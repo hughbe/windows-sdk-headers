@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Composition_Core_0_H
 #define WINRT_Windows_UI_Composition_Core_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
@@ -22,13 +23,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition::Core
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::Composition::Core::ICompositorController>{ using type = interface_category; };
-    template <> struct category<Windows::UI::Composition::Core::CompositorController>{ using type = class_category; };
-    template <> inline constexpr auto& name_v<Windows::UI::Composition::Core::CompositorController> = L"Windows.UI.Composition.Core.CompositorController";
-    template <> inline constexpr auto& name_v<Windows::UI::Composition::Core::ICompositorController> = L"Windows.UI.Composition.Core.ICompositorController";
-    template <> inline constexpr guid guid_v<Windows::UI::Composition::Core::ICompositorController>{ 0x2D75F35A,0x70A7,0x4395,{ 0xBA,0x2D,0xCE,0xF0,0xB1,0x83,0x99,0xF9 } }; // 2D75F35A-70A7-4395-BA2D-CEF0B18399F9
-    template <> struct default_interface<Windows::UI::Composition::Core::CompositorController>{ using type = Windows::UI::Composition::Core::ICompositorController; };
-    template <> struct abi<Windows::UI::Composition::Core::ICompositorController>
+    template <> struct category<winrt::Windows::UI::Composition::Core::ICompositorController>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::UI::Composition::Core::CompositorController>{ using type = class_category; };
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::Core::CompositorController> = L"Windows.UI.Composition.Core.CompositorController";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Composition::Core::ICompositorController> = L"Windows.UI.Composition.Core.ICompositorController";
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Composition::Core::ICompositorController>{ 0x2D75F35A,0x70A7,0x4395,{ 0xBA,0x2D,0xCE,0xF0,0xB1,0x83,0x99,0xF9 } }; // 2D75F35A-70A7-4395-BA2D-CEF0B18399F9
+    template <> struct default_interface<winrt::Windows::UI::Composition::Core::CompositorController>{ using type = winrt::Windows::UI::Composition::Core::ICompositorController; };
+    template <> struct abi<winrt::Windows::UI::Composition::Core::ICompositorController>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -42,15 +43,15 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Composition_Core_ICompositorController
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::UI::Composition::Compositor) Compositor() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Compositor) Compositor() const;
         WINRT_IMPL_AUTO(void) Commit() const;
-        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) EnsurePreviousCommitCompletedAsync() const;
-        WINRT_IMPL_AUTO(winrt::event_token) CommitNeeded(Windows::Foundation::TypedEventHandler<Windows::UI::Composition::Core::CompositorController, Windows::Foundation::IInspectable> const& handler) const;
-        using CommitNeeded_revoker = impl::event_revoker<Windows::UI::Composition::Core::ICompositorController, &impl::abi_t<Windows::UI::Composition::Core::ICompositorController>::remove_CommitNeeded>;
-        [[nodiscard]] CommitNeeded_revoker CommitNeeded(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::UI::Composition::Core::CompositorController, Windows::Foundation::IInspectable> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) EnsurePreviousCommitCompletedAsync() const;
+        WINRT_IMPL_AUTO(winrt::event_token) CommitNeeded(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::Core::CompositorController, winrt::Windows::Foundation::IInspectable> const& handler) const;
+        using CommitNeeded_revoker = impl::event_revoker<winrt::Windows::UI::Composition::Core::ICompositorController, &impl::abi_t<winrt::Windows::UI::Composition::Core::ICompositorController>::remove_CommitNeeded>;
+        [[nodiscard]] CommitNeeded_revoker CommitNeeded(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Composition::Core::CompositorController, winrt::Windows::Foundation::IInspectable> const& handler) const;
         WINRT_IMPL_AUTO(void) CommitNeeded(winrt::event_token const& token) const noexcept;
     };
-    template <> struct consume<Windows::UI::Composition::Core::ICompositorController>
+    template <> struct consume<winrt::Windows::UI::Composition::Core::ICompositorController>
     {
         template <typename D> using type = consume_Windows_UI_Composition_Core_ICompositorController<D>;
     };

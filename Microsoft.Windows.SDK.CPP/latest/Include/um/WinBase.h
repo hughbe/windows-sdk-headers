@@ -154,6 +154,24 @@ extern "C" {
 
 #endif
 
+#if defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
+
+typedef enum FILE_WRITE_FLAGS
+{
+    FILE_WRITE_FLAGS_NONE = 0,
+    FILE_WRITE_FLAGS_WRITE_THROUGH = 0x000000001,
+} FILE_WRITE_FLAGS;
+DEFINE_ENUM_FLAG_OPERATORS(FILE_WRITE_FLAGS)
+
+typedef enum FILE_FLUSH_MODE
+{
+    FILE_FLUSH_ALL,
+    FILE_FLUSH_FILE_DATA_ONLY,
+    FILE_FLUSH_NO_SYNC,
+    FILE_FLUSH_FILE_DATA_SYNC_ONLY,
+} FILE_FLUSH_MODE;
+
+#endif // NTDDI_WIN10_NI
 
 
 #if(_WIN32_WINNT >= 0x0400)
@@ -9089,6 +9107,11 @@ typedef struct _FILE_ID_EXTD_DIR_INFO {
 #define RPI_FLAG_SMB2_SHARECAP_CLUSTER                 0x00000040
 #endif
 
+// Protocol specific SMB2 share flags
+
+#define RPI_SMB2_SHAREFLAG_ENCRYPT_DATA           0x00000001
+#define RPI_SMB2_SHAREFLAG_COMPRESS_DATA          0x00000002
+
 // Protocol specific SMB2 server capability flags.
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
@@ -9141,7 +9164,11 @@ typedef struct _FILE_REMOTE_PROTOCOL_INFO
 
             struct {
                 ULONG Capabilities;
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+                ULONG ShareFlags;
+#else
                 ULONG CachingFlags;
+#endif
             } Share;
 
         } Smb2;

@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Globalization_H
 #define WINRT_Windows_Globalization_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.System.2.h"
@@ -17,2144 +18,2144 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::PrimaryLanguageOverride() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics)->get_PrimaryLanguageOverride(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IApplicationLanguagesStatics)->get_PrimaryLanguageOverride(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::PrimaryLanguageOverride(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics)->put_PrimaryLanguageOverride(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IApplicationLanguagesStatics)->put_PrimaryLanguageOverride(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::Languages() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics)->get_Languages(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IApplicationLanguagesStatics)->get_Languages(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::ManifestLanguages() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IApplicationLanguagesStatics<D>::ManifestLanguages() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics)->get_ManifestLanguages(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IApplicationLanguagesStatics)->get_ManifestLanguages(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IApplicationLanguagesStatics2<D>::GetLanguagesForUser(Windows::System::User const& user) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IApplicationLanguagesStatics2<D>::GetLanguagesForUser(winrt::Windows::System::User const& user) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IApplicationLanguagesStatics2)->GetLanguagesForUser(*(void**)(&user), &value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IApplicationLanguagesStatics2)->GetLanguagesForUser(*(void**)(&user), &value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendar<D>::Clone() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendar<D>::Clone() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->Clone(&value));
-        return Windows::Globalization::Calendar{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->Clone(&value));
+        return winrt::Windows::Globalization::Calendar{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::SetToMin() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SetToMin());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->SetToMin());
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::SetToMax() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SetToMax());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->SetToMax());
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_ICalendar<D>::Languages() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_ICalendar<D>::Languages() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Languages(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Languages(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::NumeralSystem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumeralSystem(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_NumeralSystem(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::NumeralSystem(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_NumeralSystem(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_NumeralSystem(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::GetCalendarSystem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->GetCalendarSystem(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->GetCalendarSystem(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::ChangeCalendarSystem(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->ChangeCalendarSystem(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->ChangeCalendarSystem(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::GetClock() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->GetClock(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->GetClock(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::ChangeClock(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->ChangeClock(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->ChangeClock(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::DateTime) consume_Windows_Globalization_ICalendar<D>::GetDateTime() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) consume_Windows_Globalization_ICalendar<D>::GetDateTime() const
     {
-        Windows::Foundation::DateTime result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->GetDateTime(put_abi(result)));
+        winrt::Windows::Foundation::DateTime result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->GetDateTime(put_abi(result)));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::SetDateTime(Windows::Foundation::DateTime const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::SetDateTime(winrt::Windows::Foundation::DateTime const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SetDateTime(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->SetDateTime(impl::bind_in(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::SetToNow() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SetToNow());
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->SetToNow());
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstEra() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstEra(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_FirstEra(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastEra() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastEra(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_LastEra(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfEras() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfEras(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_NumberOfEras(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Era() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Era(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Era(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Era(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Era(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_Era(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddEras(int32_t eras) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddEras(eras));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddEras(eras));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::EraAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->EraAsFullString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->EraAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::EraAsString(int32_t idealLength) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->EraAsString(idealLength, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->EraAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstYearInThisEra() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstYearInThisEra(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_FirstYearInThisEra(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastYearInThisEra() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastYearInThisEra(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_LastYearInThisEra(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfYearsInThisEra() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfYearsInThisEra(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_NumberOfYearsInThisEra(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Year() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Year(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Year(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Year(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Year(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_Year(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddYears(int32_t years) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddYears(years));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddYears(years));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::YearAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->YearAsString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->YearAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::YearAsTruncatedString(int32_t remainingDigits) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->YearAsTruncatedString(remainingDigits, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->YearAsTruncatedString(remainingDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::YearAsPaddedString(int32_t minDigits) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->YearAsPaddedString(minDigits, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->YearAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstMonthInThisYear() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstMonthInThisYear(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_FirstMonthInThisYear(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastMonthInThisYear() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastMonthInThisYear(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_LastMonthInThisYear(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfMonthsInThisYear() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfMonthsInThisYear(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_NumberOfMonthsInThisYear(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Month() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Month(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Month(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Month(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Month(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_Month(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddMonths(int32_t months) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddMonths(months));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddMonths(months));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsFullString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->MonthAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsString(int32_t idealLength) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsString(idealLength, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->MonthAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsSoloString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsFullSoloString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->MonthAsFullSoloString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsSoloString(int32_t idealLength) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsSoloString(idealLength, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->MonthAsSoloString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsNumericString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsNumericString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->MonthAsNumericString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MonthAsPaddedNumericString(int32_t minDigits) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MonthAsPaddedNumericString(minDigits, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->MonthAsPaddedNumericString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddWeeks(int32_t weeks) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddWeeks(weeks));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddWeeks(weeks));
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstDayInThisMonth() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstDayInThisMonth(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_FirstDayInThisMonth(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastDayInThisMonth() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastDayInThisMonth(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_LastDayInThisMonth(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfDaysInThisMonth() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfDaysInThisMonth(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_NumberOfDaysInThisMonth(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Day() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Day(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Day(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Day(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Day(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_Day(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddDays(int32_t days) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddDays(days));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddDays(days));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayAsString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->DayAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayAsPaddedString(int32_t minDigits) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayAsPaddedString(minDigits, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->DayAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::DayOfWeek) consume_Windows_Globalization_ICalendar<D>::DayOfWeek() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Globalization::DayOfWeek) consume_Windows_Globalization_ICalendar<D>::DayOfWeek() const
     {
-        Windows::Globalization::DayOfWeek value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_DayOfWeek(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Globalization::DayOfWeek value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_DayOfWeek(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayOfWeekAsFullString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->DayOfWeekAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsString(int32_t idealLength) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayOfWeekAsString(idealLength, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->DayOfWeekAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsSoloString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayOfWeekAsFullSoloString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->DayOfWeekAsFullSoloString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::DayOfWeekAsSoloString(int32_t idealLength) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->DayOfWeekAsSoloString(idealLength, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->DayOfWeekAsSoloString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstPeriodInThisDay() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstPeriodInThisDay(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_FirstPeriodInThisDay(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastPeriodInThisDay() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastPeriodInThisDay(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_LastPeriodInThisDay(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfPeriodsInThisDay() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfPeriodsInThisDay(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_NumberOfPeriodsInThisDay(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Period() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Period(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Period(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Period(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Period(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_Period(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddPeriods(int32_t periods) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddPeriods(periods));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddPeriods(periods));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::PeriodAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->PeriodAsFullString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->PeriodAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::PeriodAsString(int32_t idealLength) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->PeriodAsString(idealLength, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->PeriodAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstHourInThisPeriod() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstHourInThisPeriod(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_FirstHourInThisPeriod(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastHourInThisPeriod() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastHourInThisPeriod(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_LastHourInThisPeriod(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfHoursInThisPeriod() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfHoursInThisPeriod(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_NumberOfHoursInThisPeriod(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Hour() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Hour(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Hour(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Hour(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Hour(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_Hour(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddHours(int32_t hours) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddHours(hours));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddHours(hours));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::HourAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->HourAsString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->HourAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::HourAsPaddedString(int32_t minDigits) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->HourAsPaddedString(minDigits, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->HourAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Minute() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Minute(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Minute(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Minute(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Minute(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_Minute(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddMinutes(int32_t minutes) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddMinutes(minutes));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddMinutes(minutes));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MinuteAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MinuteAsString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->MinuteAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::MinuteAsPaddedString(int32_t minDigits) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->MinuteAsPaddedString(minDigits, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->MinuteAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Second() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Second(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Second(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Second(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Second(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_Second(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddSeconds(int32_t seconds) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddSeconds(seconds));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddSeconds(seconds));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::SecondAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SecondAsString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->SecondAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::SecondAsPaddedString(int32_t minDigits) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->SecondAsPaddedString(minDigits, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->SecondAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Nanosecond() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_Nanosecond(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_Nanosecond(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::Nanosecond(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->put_Nanosecond(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->put_Nanosecond(value));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::AddNanoseconds(int32_t nanoseconds) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->AddNanoseconds(nanoseconds));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->AddNanoseconds(nanoseconds));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::NanosecondAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->NanosecondAsString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->NanosecondAsString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::NanosecondAsPaddedString(int32_t minDigits) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->NanosecondAsPaddedString(minDigits, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->NanosecondAsPaddedString(minDigits, &result));
         return hstring{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Compare(Windows::Globalization::Calendar const& other) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::Compare(winrt::Windows::Globalization::Calendar const& other) const
     {
         int32_t result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->Compare(*(void**)(&other), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->Compare(*(void**)(&other), &result));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::CompareDateTime(Windows::Foundation::DateTime const& other) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::CompareDateTime(winrt::Windows::Foundation::DateTime const& other) const
     {
         int32_t result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->CompareDateTime(impl::bind_in(other), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->CompareDateTime(impl::bind_in(other), &result));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::CopyTo(Windows::Globalization::Calendar const& other) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ICalendar<D>::CopyTo(winrt::Windows::Globalization::Calendar const& other) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->CopyTo(*(void**)(&other)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->CopyTo(*(void**)(&other)));
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstMinuteInThisHour() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstMinuteInThisHour(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_FirstMinuteInThisHour(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastMinuteInThisHour() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastMinuteInThisHour(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_LastMinuteInThisHour(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfMinutesInThisHour() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfMinutesInThisHour(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_NumberOfMinutesInThisHour(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::FirstSecondInThisMinute() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_FirstSecondInThisMinute(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_FirstSecondInThisMinute(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::LastSecondInThisMinute() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_LastSecondInThisMinute(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_LastSecondInThisMinute(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_Windows_Globalization_ICalendar<D>::NumberOfSecondsInThisMinute() const
     {
         int32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_NumberOfSecondsInThisMinute(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_NumberOfSecondsInThisMinute(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendar<D>::ResolvedLanguage() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_ResolvedLanguage(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_ResolvedLanguage(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_ICalendar<D>::IsDaylightSavingTime() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendar)->get_IsDaylightSavingTime(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendar)->get_IsDaylightSavingTime(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendarFactory<D>::CreateCalendarDefaultCalendarAndClock(param::iterable<hstring> const& languages) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendarFactory<D>::CreateCalendarDefaultCalendarAndClock(param::iterable<hstring> const& languages) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarFactory)->CreateCalendarDefaultCalendarAndClock(*(void**)(&languages), &result));
-        return Windows::Globalization::Calendar{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarFactory)->CreateCalendarDefaultCalendarAndClock(*(void**)(&languages), &result));
+        return winrt::Windows::Globalization::Calendar{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendarFactory<D>::CreateCalendar(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendarFactory<D>::CreateCalendar(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarFactory)->CreateCalendar(*(void**)(&languages), *(void**)(&calendar), *(void**)(&clock), &result));
-        return Windows::Globalization::Calendar{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarFactory)->CreateCalendar(*(void**)(&languages), *(void**)(&calendar), *(void**)(&clock), &result));
+        return winrt::Windows::Globalization::Calendar{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendarFactory2<D>::CreateCalendarWithTimeZone(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock, param::hstring const& timeZoneId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Globalization::Calendar) consume_Windows_Globalization_ICalendarFactory2<D>::CreateCalendarWithTimeZone(param::iterable<hstring> const& languages, param::hstring const& calendar, param::hstring const& clock, param::hstring const& timeZoneId) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarFactory2)->CreateCalendarWithTimeZone(*(void**)(&languages), *(void**)(&calendar), *(void**)(&clock), *(void**)(&timeZoneId), &result));
-        return Windows::Globalization::Calendar{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarFactory2)->CreateCalendarWithTimeZone(*(void**)(&languages), *(void**)(&calendar), *(void**)(&clock), *(void**)(&timeZoneId), &result));
+        return winrt::Windows::Globalization::Calendar{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Gregorian() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Gregorian(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics)->get_Gregorian(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Hebrew() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Hebrew(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics)->get_Hebrew(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Hijri() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Hijri(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics)->get_Hijri(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Japanese() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Japanese(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics)->get_Japanese(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Julian() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Julian(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics)->get_Julian(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Korean() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Korean(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics)->get_Korean(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Taiwan() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Taiwan(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics)->get_Taiwan(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::Thai() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_Thai(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics)->get_Thai(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics<D>::UmAlQura() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics)->get_UmAlQura(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics)->get_UmAlQura(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics2<D>::Persian() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics2)->get_Persian(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics2)->get_Persian(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::ChineseLunar() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_ChineseLunar(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics3)->get_ChineseLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::JapaneseLunar() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_JapaneseLunar(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics3)->get_JapaneseLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::KoreanLunar() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_KoreanLunar(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics3)->get_KoreanLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::TaiwanLunar() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_TaiwanLunar(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics3)->get_TaiwanLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICalendarIdentifiersStatics3<D>::VietnameseLunar() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICalendarIdentifiersStatics3)->get_VietnameseLunar(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICalendarIdentifiersStatics3)->get_VietnameseLunar(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IClockIdentifiersStatics<D>::TwelveHour() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IClockIdentifiersStatics)->get_TwelveHour(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IClockIdentifiersStatics)->get_TwelveHour(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IClockIdentifiersStatics<D>::TwentyFourHour() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IClockIdentifiersStatics)->get_TwentyFourHour(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IClockIdentifiersStatics)->get_TwentyFourHour(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyAmount<D>::Amount() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyAmount)->get_Amount(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyAmount)->get_Amount(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyAmount<D>::Currency() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyAmount)->get_Currency(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyAmount)->get_Currency(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::CurrencyAmount) consume_Windows_Globalization_ICurrencyAmountFactory<D>::Create(param::hstring const& amount, param::hstring const& currency) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Globalization::CurrencyAmount) consume_Windows_Globalization_ICurrencyAmountFactory<D>::Create(param::hstring const& amount, param::hstring const& currency) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyAmountFactory)->Create(*(void**)(&amount), *(void**)(&currency), &result));
-        return Windows::Globalization::CurrencyAmount{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyAmountFactory)->Create(*(void**)(&amount), *(void**)(&currency), &result));
+        return winrt::Windows::Globalization::CurrencyAmount{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AED() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AED(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_AED(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AFN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AFN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_AFN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ALL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ALL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ALL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AMD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AMD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_AMD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ANG() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ANG(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ANG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AOA() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AOA(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_AOA(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ARS() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ARS(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ARS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AUD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AUD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_AUD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AWG() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AWG(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_AWG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::AZN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_AZN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_AZN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BAM() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BAM(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BAM(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BBD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BBD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BBD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BDT() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BDT(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BDT(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BGN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BGN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BGN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BHD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BHD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BHD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BIF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BIF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BIF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BMD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BMD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BMD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BND() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BND(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BND(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BOB() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BOB(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BOB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BRL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BRL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BRL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BSD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BSD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BSD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BTN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BTN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BTN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BWP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BWP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BWP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BYR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BYR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BYR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::BZD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_BZD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_BZD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CAD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CAD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_CAD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CDF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CDF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_CDF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CHF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CHF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_CHF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CLP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CLP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_CLP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CNY() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CNY(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_CNY(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::COP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_COP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_COP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CRC() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CRC(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_CRC(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CUP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CUP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_CUP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CVE() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CVE(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_CVE(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::CZK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_CZK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_CZK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DJF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_DJF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_DJF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DKK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_DKK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_DKK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DOP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_DOP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_DOP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::DZD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_DZD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_DZD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::EGP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_EGP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_EGP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ERN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ERN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ERN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ETB() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ETB(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ETB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::EUR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_EUR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_EUR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::FJD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_FJD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_FJD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::FKP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_FKP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_FKP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GBP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GBP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_GBP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GEL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GEL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_GEL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GHS() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GHS(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_GHS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GIP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GIP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_GIP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GMD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GMD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_GMD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GNF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GNF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_GNF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GTQ() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GTQ(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_GTQ(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::GYD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_GYD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_GYD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HKD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HKD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_HKD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HNL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HNL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_HNL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HRK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HRK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_HRK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HTG() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HTG(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_HTG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::HUF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_HUF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_HUF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::IDR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_IDR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_IDR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ILS() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ILS(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ILS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::INR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_INR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_INR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::IQD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_IQD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_IQD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::IRR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_IRR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_IRR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ISK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ISK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ISK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::JMD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_JMD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_JMD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::JOD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_JOD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_JOD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::JPY() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_JPY(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_JPY(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KES() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KES(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_KES(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KGS() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KGS(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_KGS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KHR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KHR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_KHR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KMF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KMF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_KMF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KPW() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KPW(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_KPW(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KRW() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KRW(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_KRW(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KWD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KWD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_KWD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KYD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KYD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_KYD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::KZT() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_KZT(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_KZT(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LAK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LAK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_LAK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LBP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LBP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_LBP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LKR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LKR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_LKR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LRD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LRD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_LRD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LSL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LSL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_LSL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LTL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LTL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_LTL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LVL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LVL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_LVL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::LYD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_LYD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_LYD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MAD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MAD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MAD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MDL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MDL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MDL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MGA() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MGA(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MGA(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MKD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MKD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MKD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MMK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MMK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MMK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MNT() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MNT(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MNT(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MOP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MOP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MOP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MRO() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MRO(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MRO(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MUR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MUR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MUR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MVR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MVR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MVR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MWK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MWK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MWK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MXN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MXN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MXN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MYR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MYR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MYR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::MZN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_MZN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_MZN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NAD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NAD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_NAD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NGN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NGN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_NGN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NIO() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NIO(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_NIO(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NOK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NOK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_NOK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NPR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NPR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_NPR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::NZD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_NZD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_NZD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::OMR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_OMR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_OMR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PAB() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PAB(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_PAB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PEN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PEN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_PEN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PGK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PGK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_PGK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PHP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PHP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_PHP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PKR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PKR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_PKR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PLN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PLN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_PLN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::PYG() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_PYG(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_PYG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::QAR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_QAR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_QAR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RON() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_RON(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_RON(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RSD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_RSD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_RSD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RUB() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_RUB(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_RUB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::RWF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_RWF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_RWF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SAR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SAR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SAR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SBD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SBD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SBD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SCR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SCR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SCR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SDG() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SDG(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SDG(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SEK() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SEK(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SEK(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SGD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SGD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SGD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SHP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SHP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SHP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SLL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SLL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SLL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SOS() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SOS(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SOS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SRD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SRD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SRD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::STD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_STD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_STD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SYP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SYP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SYP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::SZL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_SZL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_SZL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::THB() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_THB(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_THB(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TJS() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TJS(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_TJS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TMT() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TMT(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_TMT(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TND() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TND(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_TND(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TOP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TOP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_TOP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TRY() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TRY(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_TRY(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TTD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TTD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_TTD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TWD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TWD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_TWD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::TZS() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_TZS(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_TZS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UAH() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_UAH(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_UAH(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UGX() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_UGX(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_UGX(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::USD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_USD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_USD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UYU() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_UYU(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_UYU(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::UZS() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_UZS(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_UZS(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::VEF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_VEF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_VEF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::VND() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_VND(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_VND(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::VUV() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_VUV(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_VUV(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::WST() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_WST(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_WST(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XAF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XAF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_XAF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XCD() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XCD(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_XCD(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XOF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XOF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_XOF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XPF() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XPF(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_XPF(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::XXX() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_XXX(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_XXX(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::YER() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_YER(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_YER(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ZAR() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ZAR(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ZAR(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ZMW() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ZMW(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ZMW(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics<D>::ZWL() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics)->get_ZWL(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics)->get_ZWL(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics2<D>::BYN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics2)->get_BYN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics2)->get_BYN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::MRU() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics3)->get_MRU(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics3)->get_MRU(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::SSP() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics3)->get_SSP(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics3)->get_SSP(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::STN() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics3)->get_STN(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics3)->get_STN(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ICurrencyIdentifiersStatics3<D>::VES() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ICurrencyIdentifiersStatics3)->get_VES(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ICurrencyIdentifiersStatics3)->get_VES(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::Code() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_Code(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IGeographicRegion)->get_Code(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::CodeTwoLetter() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_CodeTwoLetter(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IGeographicRegion)->get_CodeTwoLetter(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::CodeThreeLetter() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_CodeThreeLetter(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IGeographicRegion)->get_CodeThreeLetter(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::CodeThreeDigit() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_CodeThreeDigit(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IGeographicRegion)->get_CodeThreeDigit(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IGeographicRegion)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IGeographicRegion<D>::NativeName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_NativeName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IGeographicRegion)->get_NativeName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IGeographicRegion<D>::CurrenciesInUse() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_IGeographicRegion<D>::CurrenciesInUse() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegion)->get_CurrenciesInUse(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IGeographicRegion)->get_CurrenciesInUse(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::GeographicRegion) consume_Windows_Globalization_IGeographicRegionFactory<D>::CreateGeographicRegion(param::hstring const& geographicRegionCode) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Globalization::GeographicRegion) consume_Windows_Globalization_IGeographicRegionFactory<D>::CreateGeographicRegion(param::hstring const& geographicRegionCode) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegionFactory)->CreateGeographicRegion(*(void**)(&geographicRegionCode), &result));
-        return Windows::Globalization::GeographicRegion{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IGeographicRegionFactory)->CreateGeographicRegion(*(void**)(&geographicRegionCode), &result));
+        return winrt::Windows::Globalization::GeographicRegion{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_IGeographicRegionStatics<D>::IsSupported(param::hstring const& geographicRegionCode) const
     {
         bool result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IGeographicRegionStatics)->IsSupported(*(void**)(&geographicRegionCode), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IGeographicRegionStatics)->IsSupported(*(void**)(&geographicRegionCode), &result));
         return result;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IJapanesePhoneme<D>::DisplayText() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneme)->get_DisplayText(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IJapanesePhoneme)->get_DisplayText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_IJapanesePhoneme<D>::YomiText() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneme)->get_YomiText(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IJapanesePhoneme)->get_YomiText(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_IJapanesePhoneme<D>::IsPhraseStart() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneme)->get_IsPhraseStart(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IJapanesePhoneme)->get_IsPhraseStart(&value));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>) consume_Windows_Globalization_IJapanesePhoneticAnalyzerStatics<D>::GetWords(param::hstring const& input) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::JapanesePhoneme>) consume_Windows_Globalization_IJapanesePhoneticAnalyzerStatics<D>::GetWords(param::hstring const& input) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneticAnalyzerStatics)->GetWords(*(void**)(&input), &result));
-        return Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IJapanesePhoneticAnalyzerStatics)->GetWords(*(void**)(&input), &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::JapanesePhoneme>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>) consume_Windows_Globalization_IJapanesePhoneticAnalyzerStatics<D>::GetWords(param::hstring const& input, bool monoRuby) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::JapanesePhoneme>) consume_Windows_Globalization_IJapanesePhoneticAnalyzerStatics<D>::GetWords(param::hstring const& input, bool monoRuby) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::IJapanesePhoneticAnalyzerStatics)->GetWordsWithMonoRubyOption(*(void**)(&input), monoRuby, &result));
-        return Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::IJapanesePhoneticAnalyzerStatics)->GetWordsWithMonoRubyOption(*(void**)(&input), monoRuby, &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::JapanesePhoneme>{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage<D>::LanguageTag() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage)->get_LanguageTag(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguage)->get_LanguageTag(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage<D>::DisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage)->get_DisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguage)->get_DisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage<D>::NativeName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage)->get_NativeName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguage)->get_NativeName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage<D>::Script() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage)->get_Script(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguage)->get_Script(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::LanguageLayoutDirection) consume_Windows_Globalization_ILanguage2<D>::LayoutDirection() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Globalization::LanguageLayoutDirection) consume_Windows_Globalization_ILanguage2<D>::LayoutDirection() const
     {
-        Windows::Globalization::LanguageLayoutDirection value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage2)->get_LayoutDirection(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Globalization::LanguageLayoutDirection value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguage2)->get_LayoutDirection(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguage3<D>::AbbreviatedName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguage3)->get_AbbreviatedName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguage3)->get_AbbreviatedName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_ILanguageExtensionSubtags<D>::GetExtensionSubtags(param::hstring const& singleton) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_Globalization_ILanguageExtensionSubtags<D>::GetExtensionSubtags(param::hstring const& singleton) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageExtensionSubtags)->GetExtensionSubtags(*(void**)(&singleton), &value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguageExtensionSubtags)->GetExtensionSubtags(*(void**)(&singleton), &value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Globalization::Language) consume_Windows_Globalization_ILanguageFactory<D>::CreateLanguage(param::hstring const& languageTag) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Globalization::Language) consume_Windows_Globalization_ILanguageFactory<D>::CreateLanguage(param::hstring const& languageTag) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageFactory)->CreateLanguage(*(void**)(&languageTag), &result));
-        return Windows::Globalization::Language{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguageFactory)->CreateLanguage(*(void**)(&languageTag), &result));
+        return winrt::Windows::Globalization::Language{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_ILanguageStatics<D>::IsWellFormed(param::hstring const& languageTag) const
     {
         bool result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageStatics)->IsWellFormed(*(void**)(&languageTag), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguageStatics)->IsWellFormed(*(void**)(&languageTag), &result));
         return result;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ILanguageStatics<D>::CurrentInputMethodLanguageTag() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageStatics)->get_CurrentInputMethodLanguageTag(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguageStatics)->get_CurrentInputMethodLanguageTag(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Globalization_ILanguageStatics2<D>::TrySetInputMethodLanguageTag(param::hstring const& languageTag) const
     {
         bool result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageStatics2)->TrySetInputMethodLanguageTag(*(void**)(&languageTag), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguageStatics2)->TrySetInputMethodLanguageTag(*(void**)(&languageTag), &result));
         return result;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Globalization_ILanguageStatics3<D>::GetMuiCompatibleLanguageListFromLanguageTags(param::iterable<hstring> const& languageTags) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<hstring>) consume_Windows_Globalization_ILanguageStatics3<D>::GetMuiCompatibleLanguageListFromLanguageTags(param::iterable<hstring> const& languageTags) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ILanguageStatics3)->GetMuiCompatibleLanguageListFromLanguageTags(*(void**)(&languageTags), &result));
-        return Windows::Foundation::Collections::IVector<hstring>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ILanguageStatics3)->GetMuiCompatibleLanguageListFromLanguageTags(*(void**)(&languageTags), &result));
+        return winrt::Windows::Foundation::Collections::IVector<hstring>{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Arab() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Arab(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Arab(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::ArabExt() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_ArabExt(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_ArabExt(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Bali() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Bali(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Bali(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Beng() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Beng(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Beng(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Cham() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Cham(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Cham(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Deva() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Deva(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Deva(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::FullWide() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_FullWide(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_FullWide(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Gujr() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Gujr(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Gujr(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Guru() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Guru(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Guru(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::HaniDec() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_HaniDec(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_HaniDec(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Java() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Java(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Java(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Kali() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Kali(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Kali(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Khmr() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Khmr(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Khmr(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Knda() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Knda(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Knda(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Lana() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Lana(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Lana(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::LanaTham() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_LanaTham(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_LanaTham(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Laoo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Laoo(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Laoo(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Latn() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Latn(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Latn(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Lepc() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Lepc(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Lepc(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Limb() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Limb(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Limb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mlym() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mlym(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mlym(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mong() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mong(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mong(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mtei() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mtei(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mtei(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Mymr() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mymr(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Mymr(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::MymrShan() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_MymrShan(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_MymrShan(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Nkoo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Nkoo(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Nkoo(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Olck() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Olck(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Olck(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Orya() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Orya(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Orya(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Saur() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Saur(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Saur(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Sund() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Sund(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Sund(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Talu() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Talu(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Talu(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::TamlDec() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_TamlDec(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_TamlDec(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Telu() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Telu(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Telu(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Thai() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Thai(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Thai(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Tibt() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Tibt(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Tibt(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics<D>::Vaii() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Vaii(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics)->get_Vaii(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::Brah() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_Brah(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_Brah(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::Osma() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_Osma(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_Osma(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathBold() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathBold(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathBold(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathDbl() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathDbl(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathDbl(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathSans() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathSans(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathSans(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathSanb() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathSanb(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathSanb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::MathMono() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathMono(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_MathMono(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthBold() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthBold(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthBold(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthDbl() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthDbl(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthDbl(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthSans() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthSans(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthSans(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthSanb() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthSanb(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthSanb(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_INumeralSystemIdentifiersStatics2<D>::ZmthMono() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthMono(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2)->get_ZmthMono(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ITimeZoneOnCalendar<D>::GetTimeZone() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ITimeZoneOnCalendar)->GetTimeZone(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ITimeZoneOnCalendar)->GetTimeZone(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Globalization_ITimeZoneOnCalendar<D>::ChangeTimeZone(param::hstring const& timeZoneId) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ITimeZoneOnCalendar)->ChangeTimeZone(*(void**)(&timeZoneId)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ITimeZoneOnCalendar)->ChangeTimeZone(*(void**)(&timeZoneId)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ITimeZoneOnCalendar<D>::TimeZoneAsString() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ITimeZoneOnCalendar)->TimeZoneAsFullString(&result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ITimeZoneOnCalendar)->TimeZoneAsFullString(&result));
         return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Globalization_ITimeZoneOnCalendar<D>::TimeZoneAsString(int32_t idealLength) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Globalization::ITimeZoneOnCalendar)->TimeZoneAsString(idealLength, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Globalization::ITimeZoneOnCalendar)->TimeZoneAsString(idealLength, &result));
         return hstring{ result, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::IApplicationLanguagesStatics> : produce_base<D, Windows::Globalization::IApplicationLanguagesStatics>
+    struct produce<D, winrt::Windows::Globalization::IApplicationLanguagesStatics> : produce_base<D, winrt::Windows::Globalization::IApplicationLanguagesStatics>
     {
         int32_t __stdcall get_PrimaryLanguageOverride(void** value) noexcept final try
         {
@@ -2175,7 +2176,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().Languages());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().Languages());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2183,7 +2184,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().ManifestLanguages());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().ManifestLanguages());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2191,13 +2192,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::IApplicationLanguagesStatics2> : produce_base<D, Windows::Globalization::IApplicationLanguagesStatics2>
+    struct produce<D, winrt::Windows::Globalization::IApplicationLanguagesStatics2> : produce_base<D, winrt::Windows::Globalization::IApplicationLanguagesStatics2>
     {
         int32_t __stdcall GetLanguagesForUser(void* user, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().GetLanguagesForUser(*reinterpret_cast<Windows::System::User const*>(&user)));
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().GetLanguagesForUser(*reinterpret_cast<winrt::Windows::System::User const*>(&user)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2205,13 +2206,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICalendar> : produce_base<D, Windows::Globalization::ICalendar>
+    struct produce<D, winrt::Windows::Globalization::ICalendar> : produce_base<D, winrt::Windows::Globalization::ICalendar>
     {
         int32_t __stdcall Clone(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Globalization::Calendar>(this->shim().Clone());
+            *value = detach_from<winrt::Windows::Globalization::Calendar>(this->shim().Clone());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2233,7 +2234,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().Languages());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().Languages());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2284,16 +2285,16 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
         int32_t __stdcall GetDateTime(int64_t* result) noexcept final try
         {
-            zero_abi<Windows::Foundation::DateTime>(result);
+            zero_abi<winrt::Windows::Foundation::DateTime>(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::DateTime>(this->shim().GetDateTime());
+            *result = detach_from<winrt::Windows::Foundation::DateTime>(this->shim().GetDateTime());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall SetDateTime(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetDateTime(*reinterpret_cast<Windows::Foundation::DateTime const*>(&value));
+            this->shim().SetDateTime(*reinterpret_cast<winrt::Windows::Foundation::DateTime const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2586,7 +2587,7 @@ namespace winrt::impl
         int32_t __stdcall get_DayOfWeek(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Globalization::DayOfWeek>(this->shim().DayOfWeek());
+            *value = detach_from<winrt::Windows::Globalization::DayOfWeek>(this->shim().DayOfWeek());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2852,21 +2853,21 @@ namespace winrt::impl
         int32_t __stdcall Compare(void* other, int32_t* result) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<int32_t>(this->shim().Compare(*reinterpret_cast<Windows::Globalization::Calendar const*>(&other)));
+            *result = detach_from<int32_t>(this->shim().Compare(*reinterpret_cast<winrt::Windows::Globalization::Calendar const*>(&other)));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall CompareDateTime(int64_t other, int32_t* result) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<int32_t>(this->shim().CompareDateTime(*reinterpret_cast<Windows::Foundation::DateTime const*>(&other)));
+            *result = detach_from<int32_t>(this->shim().CompareDateTime(*reinterpret_cast<winrt::Windows::Foundation::DateTime const*>(&other)));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall CopyTo(void* other) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().CopyTo(*reinterpret_cast<Windows::Globalization::Calendar const*>(&other));
+            this->shim().CopyTo(*reinterpret_cast<winrt::Windows::Globalization::Calendar const*>(&other));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2931,13 +2932,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICalendarFactory> : produce_base<D, Windows::Globalization::ICalendarFactory>
+    struct produce<D, winrt::Windows::Globalization::ICalendarFactory> : produce_base<D, winrt::Windows::Globalization::ICalendarFactory>
     {
         int32_t __stdcall CreateCalendarDefaultCalendarAndClock(void* languages, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Globalization::Calendar>(this->shim().CreateCalendarDefaultCalendarAndClock(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&languages)));
+            *result = detach_from<winrt::Windows::Globalization::Calendar>(this->shim().CreateCalendarDefaultCalendarAndClock(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&languages)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2945,7 +2946,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Globalization::Calendar>(this->shim().CreateCalendar(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&languages), *reinterpret_cast<hstring const*>(&calendar), *reinterpret_cast<hstring const*>(&clock)));
+            *result = detach_from<winrt::Windows::Globalization::Calendar>(this->shim().CreateCalendar(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&languages), *reinterpret_cast<hstring const*>(&calendar), *reinterpret_cast<hstring const*>(&clock)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2953,13 +2954,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICalendarFactory2> : produce_base<D, Windows::Globalization::ICalendarFactory2>
+    struct produce<D, winrt::Windows::Globalization::ICalendarFactory2> : produce_base<D, winrt::Windows::Globalization::ICalendarFactory2>
     {
         int32_t __stdcall CreateCalendarWithTimeZone(void* languages, void* calendar, void* clock, void* timeZoneId, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Globalization::Calendar>(this->shim().CreateCalendarWithTimeZone(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&languages), *reinterpret_cast<hstring const*>(&calendar), *reinterpret_cast<hstring const*>(&clock), *reinterpret_cast<hstring const*>(&timeZoneId)));
+            *result = detach_from<winrt::Windows::Globalization::Calendar>(this->shim().CreateCalendarWithTimeZone(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&languages), *reinterpret_cast<hstring const*>(&calendar), *reinterpret_cast<hstring const*>(&clock), *reinterpret_cast<hstring const*>(&timeZoneId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2967,7 +2968,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICalendarIdentifiersStatics> : produce_base<D, Windows::Globalization::ICalendarIdentifiersStatics>
+    struct produce<D, winrt::Windows::Globalization::ICalendarIdentifiersStatics> : produce_base<D, winrt::Windows::Globalization::ICalendarIdentifiersStatics>
     {
         int32_t __stdcall get_Gregorian(void** value) noexcept final try
         {
@@ -3045,7 +3046,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICalendarIdentifiersStatics2> : produce_base<D, Windows::Globalization::ICalendarIdentifiersStatics2>
+    struct produce<D, winrt::Windows::Globalization::ICalendarIdentifiersStatics2> : produce_base<D, winrt::Windows::Globalization::ICalendarIdentifiersStatics2>
     {
         int32_t __stdcall get_Persian(void** value) noexcept final try
         {
@@ -3059,7 +3060,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICalendarIdentifiersStatics3> : produce_base<D, Windows::Globalization::ICalendarIdentifiersStatics3>
+    struct produce<D, winrt::Windows::Globalization::ICalendarIdentifiersStatics3> : produce_base<D, winrt::Windows::Globalization::ICalendarIdentifiersStatics3>
     {
         int32_t __stdcall get_ChineseLunar(void** value) noexcept final try
         {
@@ -3105,7 +3106,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::IClockIdentifiersStatics> : produce_base<D, Windows::Globalization::IClockIdentifiersStatics>
+    struct produce<D, winrt::Windows::Globalization::IClockIdentifiersStatics> : produce_base<D, winrt::Windows::Globalization::IClockIdentifiersStatics>
     {
         int32_t __stdcall get_TwelveHour(void** value) noexcept final try
         {
@@ -3127,7 +3128,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICurrencyAmount> : produce_base<D, Windows::Globalization::ICurrencyAmount>
+    struct produce<D, winrt::Windows::Globalization::ICurrencyAmount> : produce_base<D, winrt::Windows::Globalization::ICurrencyAmount>
     {
         int32_t __stdcall get_Amount(void** value) noexcept final try
         {
@@ -3149,13 +3150,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICurrencyAmountFactory> : produce_base<D, Windows::Globalization::ICurrencyAmountFactory>
+    struct produce<D, winrt::Windows::Globalization::ICurrencyAmountFactory> : produce_base<D, winrt::Windows::Globalization::ICurrencyAmountFactory>
     {
         int32_t __stdcall Create(void* amount, void* currency, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Globalization::CurrencyAmount>(this->shim().Create(*reinterpret_cast<hstring const*>(&amount), *reinterpret_cast<hstring const*>(&currency)));
+            *result = detach_from<winrt::Windows::Globalization::CurrencyAmount>(this->shim().Create(*reinterpret_cast<hstring const*>(&amount), *reinterpret_cast<hstring const*>(&currency)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3163,7 +3164,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICurrencyIdentifiersStatics> : produce_base<D, Windows::Globalization::ICurrencyIdentifiersStatics>
+    struct produce<D, winrt::Windows::Globalization::ICurrencyIdentifiersStatics> : produce_base<D, winrt::Windows::Globalization::ICurrencyIdentifiersStatics>
     {
         int32_t __stdcall get_AED(void** value) noexcept final try
         {
@@ -4425,7 +4426,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICurrencyIdentifiersStatics2> : produce_base<D, Windows::Globalization::ICurrencyIdentifiersStatics2>
+    struct produce<D, winrt::Windows::Globalization::ICurrencyIdentifiersStatics2> : produce_base<D, winrt::Windows::Globalization::ICurrencyIdentifiersStatics2>
     {
         int32_t __stdcall get_BYN(void** value) noexcept final try
         {
@@ -4439,7 +4440,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ICurrencyIdentifiersStatics3> : produce_base<D, Windows::Globalization::ICurrencyIdentifiersStatics3>
+    struct produce<D, winrt::Windows::Globalization::ICurrencyIdentifiersStatics3> : produce_base<D, winrt::Windows::Globalization::ICurrencyIdentifiersStatics3>
     {
         int32_t __stdcall get_MRU(void** value) noexcept final try
         {
@@ -4477,7 +4478,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::IGeographicRegion> : produce_base<D, Windows::Globalization::IGeographicRegion>
+    struct produce<D, winrt::Windows::Globalization::IGeographicRegion> : produce_base<D, winrt::Windows::Globalization::IGeographicRegion>
     {
         int32_t __stdcall get_Code(void** value) noexcept final try
         {
@@ -4531,7 +4532,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().CurrenciesInUse());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().CurrenciesInUse());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4539,13 +4540,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::IGeographicRegionFactory> : produce_base<D, Windows::Globalization::IGeographicRegionFactory>
+    struct produce<D, winrt::Windows::Globalization::IGeographicRegionFactory> : produce_base<D, winrt::Windows::Globalization::IGeographicRegionFactory>
     {
         int32_t __stdcall CreateGeographicRegion(void* geographicRegionCode, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Globalization::GeographicRegion>(this->shim().CreateGeographicRegion(*reinterpret_cast<hstring const*>(&geographicRegionCode)));
+            *result = detach_from<winrt::Windows::Globalization::GeographicRegion>(this->shim().CreateGeographicRegion(*reinterpret_cast<hstring const*>(&geographicRegionCode)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4553,7 +4554,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::IGeographicRegionStatics> : produce_base<D, Windows::Globalization::IGeographicRegionStatics>
+    struct produce<D, winrt::Windows::Globalization::IGeographicRegionStatics> : produce_base<D, winrt::Windows::Globalization::IGeographicRegionStatics>
     {
         int32_t __stdcall IsSupported(void* geographicRegionCode, bool* result) noexcept final try
         {
@@ -4566,7 +4567,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::IJapanesePhoneme> : produce_base<D, Windows::Globalization::IJapanesePhoneme>
+    struct produce<D, winrt::Windows::Globalization::IJapanesePhoneme> : produce_base<D, winrt::Windows::Globalization::IJapanesePhoneme>
     {
         int32_t __stdcall get_DisplayText(void** value) noexcept final try
         {
@@ -4595,13 +4596,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::IJapanesePhoneticAnalyzerStatics> : produce_base<D, Windows::Globalization::IJapanesePhoneticAnalyzerStatics>
+    struct produce<D, winrt::Windows::Globalization::IJapanesePhoneticAnalyzerStatics> : produce_base<D, winrt::Windows::Globalization::IJapanesePhoneticAnalyzerStatics>
     {
         int32_t __stdcall GetWords(void* input, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>>(this->shim().GetWords(*reinterpret_cast<hstring const*>(&input)));
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::JapanesePhoneme>>(this->shim().GetWords(*reinterpret_cast<hstring const*>(&input)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4609,7 +4610,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::Collections::IVectorView<Windows::Globalization::JapanesePhoneme>>(this->shim().GetWords(*reinterpret_cast<hstring const*>(&input), monoRuby));
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Globalization::JapanesePhoneme>>(this->shim().GetWords(*reinterpret_cast<hstring const*>(&input), monoRuby));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4617,7 +4618,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ILanguage> : produce_base<D, Windows::Globalization::ILanguage>
+    struct produce<D, winrt::Windows::Globalization::ILanguage> : produce_base<D, winrt::Windows::Globalization::ILanguage>
     {
         int32_t __stdcall get_LanguageTag(void** value) noexcept final try
         {
@@ -4655,12 +4656,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ILanguage2> : produce_base<D, Windows::Globalization::ILanguage2>
+    struct produce<D, winrt::Windows::Globalization::ILanguage2> : produce_base<D, winrt::Windows::Globalization::ILanguage2>
     {
         int32_t __stdcall get_LayoutDirection(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Globalization::LanguageLayoutDirection>(this->shim().LayoutDirection());
+            *value = detach_from<winrt::Windows::Globalization::LanguageLayoutDirection>(this->shim().LayoutDirection());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4668,7 +4669,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ILanguage3> : produce_base<D, Windows::Globalization::ILanguage3>
+    struct produce<D, winrt::Windows::Globalization::ILanguage3> : produce_base<D, winrt::Windows::Globalization::ILanguage3>
     {
         int32_t __stdcall get_AbbreviatedName(void** value) noexcept final try
         {
@@ -4682,13 +4683,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ILanguageExtensionSubtags> : produce_base<D, Windows::Globalization::ILanguageExtensionSubtags>
+    struct produce<D, winrt::Windows::Globalization::ILanguageExtensionSubtags> : produce_base<D, winrt::Windows::Globalization::ILanguageExtensionSubtags>
     {
         int32_t __stdcall GetExtensionSubtags(void* singleton, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().GetExtensionSubtags(*reinterpret_cast<hstring const*>(&singleton)));
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().GetExtensionSubtags(*reinterpret_cast<hstring const*>(&singleton)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4696,13 +4697,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ILanguageFactory> : produce_base<D, Windows::Globalization::ILanguageFactory>
+    struct produce<D, winrt::Windows::Globalization::ILanguageFactory> : produce_base<D, winrt::Windows::Globalization::ILanguageFactory>
     {
         int32_t __stdcall CreateLanguage(void* languageTag, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Globalization::Language>(this->shim().CreateLanguage(*reinterpret_cast<hstring const*>(&languageTag)));
+            *result = detach_from<winrt::Windows::Globalization::Language>(this->shim().CreateLanguage(*reinterpret_cast<hstring const*>(&languageTag)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4710,7 +4711,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ILanguageStatics> : produce_base<D, Windows::Globalization::ILanguageStatics>
+    struct produce<D, winrt::Windows::Globalization::ILanguageStatics> : produce_base<D, winrt::Windows::Globalization::ILanguageStatics>
     {
         int32_t __stdcall IsWellFormed(void* languageTag, bool* result) noexcept final try
         {
@@ -4731,7 +4732,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ILanguageStatics2> : produce_base<D, Windows::Globalization::ILanguageStatics2>
+    struct produce<D, winrt::Windows::Globalization::ILanguageStatics2> : produce_base<D, winrt::Windows::Globalization::ILanguageStatics2>
     {
         int32_t __stdcall TrySetInputMethodLanguageTag(void* languageTag, bool* result) noexcept final try
         {
@@ -4744,13 +4745,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ILanguageStatics3> : produce_base<D, Windows::Globalization::ILanguageStatics3>
+    struct produce<D, winrt::Windows::Globalization::ILanguageStatics3> : produce_base<D, winrt::Windows::Globalization::ILanguageStatics3>
     {
         int32_t __stdcall GetMuiCompatibleLanguageListFromLanguageTags(void* languageTags, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::Collections::IVector<hstring>>(this->shim().GetMuiCompatibleLanguageListFromLanguageTags(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&languageTags)));
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVector<hstring>>(this->shim().GetMuiCompatibleLanguageListFromLanguageTags(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&languageTags)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4758,7 +4759,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::INumeralSystemIdentifiersStatics> : produce_base<D, Windows::Globalization::INumeralSystemIdentifiersStatics>
+    struct produce<D, winrt::Windows::Globalization::INumeralSystemIdentifiersStatics> : produce_base<D, winrt::Windows::Globalization::INumeralSystemIdentifiersStatics>
     {
         int32_t __stdcall get_Arab(void** value) noexcept final try
         {
@@ -5052,7 +5053,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::INumeralSystemIdentifiersStatics2> : produce_base<D, Windows::Globalization::INumeralSystemIdentifiersStatics2>
+    struct produce<D, winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2> : produce_base<D, winrt::Windows::Globalization::INumeralSystemIdentifiersStatics2>
     {
         int32_t __stdcall get_Brah(void** value) noexcept final try
         {
@@ -5154,7 +5155,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Globalization::ITimeZoneOnCalendar> : produce_base<D, Windows::Globalization::ITimeZoneOnCalendar>
+    struct produce<D, winrt::Windows::Globalization::ITimeZoneOnCalendar> : produce_base<D, winrt::Windows::Globalization::ITimeZoneOnCalendar>
     {
         int32_t __stdcall GetTimeZone(void** value) noexcept final try
         {
@@ -5202,18 +5203,18 @@ WINRT_EXPORT namespace winrt::Windows::Globalization
     }
     inline auto ApplicationLanguages::Languages()
     {
-        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IApplicationLanguagesStatics const&), ApplicationLanguages, IApplicationLanguagesStatics>([](IApplicationLanguagesStatics const& f) { return f.Languages(); });
+        return impl::call_factory_cast<winrt::Windows::Foundation::Collections::IVectorView<hstring>(*)(IApplicationLanguagesStatics const&), ApplicationLanguages, IApplicationLanguagesStatics>([](IApplicationLanguagesStatics const& f) { return f.Languages(); });
     }
     inline auto ApplicationLanguages::ManifestLanguages()
     {
-        return impl::call_factory_cast<Windows::Foundation::Collections::IVectorView<hstring>(*)(IApplicationLanguagesStatics const&), ApplicationLanguages, IApplicationLanguagesStatics>([](IApplicationLanguagesStatics const& f) { return f.ManifestLanguages(); });
+        return impl::call_factory_cast<winrt::Windows::Foundation::Collections::IVectorView<hstring>(*)(IApplicationLanguagesStatics const&), ApplicationLanguages, IApplicationLanguagesStatics>([](IApplicationLanguagesStatics const& f) { return f.ManifestLanguages(); });
     }
-    inline auto ApplicationLanguages::GetLanguagesForUser(Windows::System::User const& user)
+    inline auto ApplicationLanguages::GetLanguagesForUser(winrt::Windows::System::User const& user)
     {
         return impl::call_factory<ApplicationLanguages, IApplicationLanguagesStatics2>([&](IApplicationLanguagesStatics2 const& f) { return f.GetLanguagesForUser(user); });
     }
     inline Calendar::Calendar() :
-        Calendar(impl::call_factory_cast<Calendar(*)(Windows::Foundation::IActivationFactory const&), Calendar>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Calendar>(); }))
+        Calendar(impl::call_factory_cast<Calendar(*)(winrt::Windows::Foundation::IActivationFactory const&), Calendar>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Calendar>(); }))
     {
     }
     inline Calendar::Calendar(param::iterable<hstring> const& languages) :
@@ -5949,7 +5950,7 @@ WINRT_EXPORT namespace winrt::Windows::Globalization
         return impl::call_factory_cast<hstring(*)(ICurrencyIdentifiersStatics3 const&), CurrencyIdentifiers, ICurrencyIdentifiersStatics3>([](ICurrencyIdentifiersStatics3 const& f) { return f.VES(); });
     }
     inline GeographicRegion::GeographicRegion() :
-        GeographicRegion(impl::call_factory_cast<GeographicRegion(*)(Windows::Foundation::IActivationFactory const&), GeographicRegion>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GeographicRegion>(); }))
+        GeographicRegion(impl::call_factory_cast<GeographicRegion(*)(winrt::Windows::Foundation::IActivationFactory const&), GeographicRegion>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GeographicRegion>(); }))
     {
     }
     inline GeographicRegion::GeographicRegion(param::hstring const& geographicRegionCode) :

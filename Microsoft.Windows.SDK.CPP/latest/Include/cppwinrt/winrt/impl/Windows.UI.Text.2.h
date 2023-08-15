@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Text_2_H
 #define WINRT_Windows_UI_Text_2_H
 #include "winrt/impl/Windows.UI.Text.1.h"
@@ -20,16 +21,16 @@ WINRT_EXPORT namespace winrt::Windows::UI::Text
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) ContentLinkInfo : Windows::UI::Text::IContentLinkInfo
+    struct __declspec(empty_bases) ContentLinkInfo : winrt::Windows::UI::Text::IContentLinkInfo
     {
         ContentLinkInfo(std::nullptr_t) noexcept {}
-        ContentLinkInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Text::IContentLinkInfo(ptr, take_ownership_from_abi) {}
+        ContentLinkInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Text::IContentLinkInfo(ptr, take_ownership_from_abi) {}
         ContentLinkInfo();
     };
-    struct __declspec(empty_bases) FontWeights : Windows::UI::Text::IFontWeights
+    struct __declspec(empty_bases) FontWeights : winrt::Windows::UI::Text::IFontWeights
     {
         FontWeights(std::nullptr_t) noexcept {}
-        FontWeights(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Text::IFontWeights(ptr, take_ownership_from_abi) {}
+        FontWeights(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Text::IFontWeights(ptr, take_ownership_from_abi) {}
         [[nodiscard]] static auto Black();
         [[nodiscard]] static auto Bold();
         [[nodiscard]] static auto ExtraBlack();
@@ -42,17 +43,17 @@ WINRT_EXPORT namespace winrt::Windows::UI::Text
         [[nodiscard]] static auto SemiLight();
         [[nodiscard]] static auto Thin();
     };
-    struct __declspec(empty_bases) RichEditTextDocument : Windows::UI::Text::ITextDocument,
-        impl::require<RichEditTextDocument, Windows::UI::Text::ITextDocument2, Windows::UI::Text::ITextDocument3, Windows::UI::Text::ITextDocument4>
+    struct __declspec(empty_bases) RichEditTextDocument : winrt::Windows::UI::Text::ITextDocument,
+        impl::require<RichEditTextDocument, winrt::Windows::UI::Text::ITextDocument2, winrt::Windows::UI::Text::ITextDocument3, winrt::Windows::UI::Text::ITextDocument4>
     {
         RichEditTextDocument(std::nullptr_t) noexcept {}
-        RichEditTextDocument(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Text::ITextDocument(ptr, take_ownership_from_abi) {}
+        RichEditTextDocument(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Text::ITextDocument(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) RichEditTextRange : Windows::UI::Text::ITextRange,
-        impl::require<RichEditTextRange, Windows::UI::Text::IRichEditTextRange>
+    struct __declspec(empty_bases) RichEditTextRange : winrt::Windows::UI::Text::ITextRange,
+        impl::require<RichEditTextRange, winrt::Windows::UI::Text::IRichEditTextRange>
     {
         RichEditTextRange(std::nullptr_t) noexcept {}
-        RichEditTextRange(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Text::ITextRange(ptr, take_ownership_from_abi) {}
+        RichEditTextRange(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Text::ITextRange(ptr, take_ownership_from_abi) {}
     };
     struct TextConstants
     {

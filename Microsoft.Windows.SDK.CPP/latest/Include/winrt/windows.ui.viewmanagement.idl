@@ -118,6 +118,8 @@ namespace Windows
 
             typedef enum HandPreference HandPreference;
 
+            typedef enum ScreenCaptureDisabledBehavior ScreenCaptureDisabledBehavior;
+
             typedef enum UIColorType UIColorType;
 
             typedef enum UIElementType UIElementType;
@@ -153,6 +155,8 @@ namespace Windows
             interface IApplicationViewScaling;
 
             interface IApplicationViewScalingStatics;
+
+            interface IApplicationViewScreenCaptureDisabledBehavior;
 
             interface IApplicationViewStatics;
 
@@ -374,6 +378,13 @@ namespace Windows
             {
                 LeftHanded  = 0,
                 RightHanded = 1
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum ScreenCaptureDisabledBehavior
+            {
+                DrawAsBlack        = 0,
+                ExcludeFromCapture = 1
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -602,6 +613,15 @@ namespace Windows
             {
                 [propget] HRESULT DisableLayoutScaling([out] [retval] boolean* value);
                 HRESULT TrySetDisableLayoutScaling([in] boolean disableLayoutScaling, [out] [retval] boolean* success);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.ViewManagement.ApplicationView)]
+            [uuid(07C19B29-7B3B-44D3-B747-2FDC18553680)]
+            interface IApplicationViewScreenCaptureDisabledBehavior : IInspectable
+            {
+                [propget] HRESULT ScreenCaptureDisabledBehavior([out] [retval] Windows.UI.ViewManagement.ScreenCaptureDisabledBehavior* value);
+                [propput] HRESULT ScreenCaptureDisabledBehavior([in] Windows.UI.ViewManagement.ScreenCaptureDisabledBehavior value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1013,6 +1033,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.ViewManagement.IApplicationView4;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IApplicationView7;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IApplicationView9;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.ViewManagement.IApplicationViewScreenCaptureDisabledBehavior;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IApplicationViewWithContext;
             }
 

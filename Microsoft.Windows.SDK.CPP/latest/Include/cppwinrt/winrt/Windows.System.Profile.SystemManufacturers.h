@@ -1,111 +1,112 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_System_Profile_SystemManufacturers_H
 #define WINRT_Windows_System_Profile_SystemManufacturers_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/Windows.System.Profile.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.System.Profile.SystemManufacturers.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_System_Profile_SystemManufacturers_IOemSupportInfo<D>::SupportLink() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_System_Profile_SystemManufacturers_IOemSupportInfo<D>::SupportLink() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::IOemSupportInfo)->get_SupportLink(&value));
-        return Windows::Foundation::Uri{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::IOemSupportInfo)->get_SupportLink(&value));
+        return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_System_Profile_SystemManufacturers_IOemSupportInfo<D>::SupportAppLink() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_System_Profile_SystemManufacturers_IOemSupportInfo<D>::SupportAppLink() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::IOemSupportInfo)->get_SupportAppLink(&value));
-        return Windows::Foundation::Uri{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::IOemSupportInfo)->get_SupportAppLink(&value));
+        return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_IOemSupportInfo<D>::SupportProvider() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::IOemSupportInfo)->get_SupportProvider(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::IOemSupportInfo)->get_SupportProvider(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_ISmbiosInformationStatics<D>::SerialNumber() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISmbiosInformationStatics)->get_SerialNumber(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISmbiosInformationStatics)->get_SerialNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportDeviceInfo<D>::OperatingSystem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_OperatingSystem(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_OperatingSystem(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportDeviceInfo<D>::FriendlyName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_FriendlyName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_FriendlyName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportDeviceInfo<D>::SystemManufacturer() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemManufacturer(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemManufacturer(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportDeviceInfo<D>::SystemProductName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemProductName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemProductName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportDeviceInfo<D>::SystemSku() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemSku(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemSku(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportDeviceInfo<D>::SystemHardwareVersion() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemHardwareVersion(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemHardwareVersion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportDeviceInfo<D>::SystemFirmwareVersion() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemFirmwareVersion(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo)->get_SystemFirmwareVersion(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportInfoStatics<D>::LocalSystemEdition() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics)->get_LocalSystemEdition(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics)->get_LocalSystemEdition(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::Profile::SystemManufacturers::OemSupportInfo) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportInfoStatics<D>::OemSupportInfo() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportInfoStatics<D>::OemSupportInfo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics)->get_OemSupportInfo(&value));
-        return Windows::System::Profile::SystemManufacturers::OemSupportInfo{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics)->get_OemSupportInfo(&value));
+        return winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportInfoStatics2<D>::LocalDeviceInfo() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo) consume_Windows_System_Profile_SystemManufacturers_ISystemSupportInfoStatics2<D>::LocalDeviceInfo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics2)->get_LocalDeviceInfo(&value));
-        return Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics2)->get_LocalDeviceInfo(&value));
+        return winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo{ value, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::Profile::SystemManufacturers::IOemSupportInfo> : produce_base<D, Windows::System::Profile::SystemManufacturers::IOemSupportInfo>
+    struct produce<D, winrt::Windows::System::Profile::SystemManufacturers::IOemSupportInfo> : produce_base<D, winrt::Windows::System::Profile::SystemManufacturers::IOemSupportInfo>
     {
         int32_t __stdcall get_SupportLink(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Uri>(this->shim().SupportLink());
+            *value = detach_from<winrt::Windows::Foundation::Uri>(this->shim().SupportLink());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -113,7 +114,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Uri>(this->shim().SupportAppLink());
+            *value = detach_from<winrt::Windows::Foundation::Uri>(this->shim().SupportAppLink());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -129,7 +130,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::Profile::SystemManufacturers::ISmbiosInformationStatics> : produce_base<D, Windows::System::Profile::SystemManufacturers::ISmbiosInformationStatics>
+    struct produce<D, winrt::Windows::System::Profile::SystemManufacturers::ISmbiosInformationStatics> : produce_base<D, winrt::Windows::System::Profile::SystemManufacturers::ISmbiosInformationStatics>
     {
         int32_t __stdcall get_SerialNumber(void** value) noexcept final try
         {
@@ -143,7 +144,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo> : produce_base<D, Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo>
+    struct produce<D, winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo> : produce_base<D, winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportDeviceInfo>
     {
         int32_t __stdcall get_OperatingSystem(void** value) noexcept final try
         {
@@ -205,7 +206,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics> : produce_base<D, Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics>
+    struct produce<D, winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics> : produce_base<D, winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics>
     {
         int32_t __stdcall get_LocalSystemEdition(void** value) noexcept final try
         {
@@ -219,7 +220,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::Profile::SystemManufacturers::OemSupportInfo>(this->shim().OemSupportInfo());
+            *value = detach_from<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>(this->shim().OemSupportInfo());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -227,13 +228,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics2> : produce_base<D, Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics2>
+    struct produce<D, winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics2> : produce_base<D, winrt::Windows::System::Profile::SystemManufacturers::ISystemSupportInfoStatics2>
     {
         int32_t __stdcall get_LocalDeviceInfo(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>(this->shim().LocalDeviceInfo());
+            *value = detach_from<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>(this->shim().LocalDeviceInfo());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -252,11 +253,11 @@ WINRT_EXPORT namespace winrt::Windows::System::Profile::SystemManufacturers
     }
     inline auto SystemSupportInfo::OemSupportInfo()
     {
-        return impl::call_factory_cast<Windows::System::Profile::SystemManufacturers::OemSupportInfo(*)(ISystemSupportInfoStatics const&), SystemSupportInfo, ISystemSupportInfoStatics>([](ISystemSupportInfoStatics const& f) { return f.OemSupportInfo(); });
+        return impl::call_factory_cast<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo(*)(ISystemSupportInfoStatics const&), SystemSupportInfo, ISystemSupportInfoStatics>([](ISystemSupportInfoStatics const& f) { return f.OemSupportInfo(); });
     }
     inline auto SystemSupportInfo::LocalDeviceInfo()
     {
-        return impl::call_factory_cast<Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo(*)(ISystemSupportInfoStatics2 const&), SystemSupportInfo, ISystemSupportInfoStatics2>([](ISystemSupportInfoStatics2 const& f) { return f.LocalDeviceInfo(); });
+        return impl::call_factory_cast<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo(*)(ISystemSupportInfoStatics2 const&), SystemSupportInfo, ISystemSupportInfoStatics2>([](ISystemSupportInfoStatics2 const& f) { return f.LocalDeviceInfo(); });
     }
 }
 namespace std

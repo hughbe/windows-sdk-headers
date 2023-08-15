@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Xaml_Navigation_2_H
 #define WINRT_Windows_UI_Xaml_Navigation_2_H
 #include "winrt/impl/Windows.UI.Xaml.1.h"
@@ -20,7 +21,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
         template <typename O, typename M> LoadCompletedEventHandler(O* object, M method);
         template <typename O, typename M> LoadCompletedEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> LoadCompletedEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
+        auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
     };
     struct NavigatedEventHandler : Windows::Foundation::IUnknown
     {
@@ -31,7 +32,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
         template <typename O, typename M> NavigatedEventHandler(O* object, M method);
         template <typename O, typename M> NavigatedEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> NavigatedEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
+        auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
     };
     struct NavigatingCancelEventHandler : Windows::Foundation::IUnknown
     {
@@ -42,7 +43,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
         template <typename O, typename M> NavigatingCancelEventHandler(O* object, M method);
         template <typename O, typename M> NavigatingCancelEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> NavigatingCancelEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs const& e) const;
+        auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs const& e) const;
     };
     struct NavigationFailedEventHandler : Windows::Foundation::IUnknown
     {
@@ -53,7 +54,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
         template <typename O, typename M> NavigationFailedEventHandler(O* object, M method);
         template <typename O, typename M> NavigationFailedEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> NavigationFailedEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Navigation::NavigationFailedEventArgs const& e) const;
+        auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs const& e) const;
     };
     struct NavigationStoppedEventHandler : Windows::Foundation::IUnknown
     {
@@ -64,38 +65,38 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Navigation
         template <typename O, typename M> NavigationStoppedEventHandler(O* object, M method);
         template <typename O, typename M> NavigationStoppedEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> NavigationStoppedEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
+        auto operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs const& e) const;
     };
-    struct __declspec(empty_bases) FrameNavigationOptions : Windows::UI::Xaml::Navigation::IFrameNavigationOptions
+    struct __declspec(empty_bases) FrameNavigationOptions : winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions
     {
         FrameNavigationOptions(std::nullptr_t) noexcept {}
-        FrameNavigationOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Navigation::IFrameNavigationOptions(ptr, take_ownership_from_abi) {}
+        FrameNavigationOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Navigation::IFrameNavigationOptions(ptr, take_ownership_from_abi) {}
         FrameNavigationOptions();
     };
-    struct __declspec(empty_bases) NavigatingCancelEventArgs : Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs,
-        impl::require<NavigatingCancelEventArgs, Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2>
+    struct __declspec(empty_bases) NavigatingCancelEventArgs : winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs,
+        impl::require<NavigatingCancelEventArgs, winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs2>
     {
         NavigatingCancelEventArgs(std::nullptr_t) noexcept {}
-        NavigatingCancelEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs(ptr, take_ownership_from_abi) {}
+        NavigatingCancelEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Navigation::INavigatingCancelEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) NavigationEventArgs : Windows::UI::Xaml::Navigation::INavigationEventArgs,
-        impl::require<NavigationEventArgs, Windows::UI::Xaml::Navigation::INavigationEventArgs2>
+    struct __declspec(empty_bases) NavigationEventArgs : winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs,
+        impl::require<NavigationEventArgs, winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs2>
     {
         NavigationEventArgs(std::nullptr_t) noexcept {}
-        NavigationEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Navigation::INavigationEventArgs(ptr, take_ownership_from_abi) {}
+        NavigationEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Navigation::INavigationEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) NavigationFailedEventArgs : Windows::UI::Xaml::Navigation::INavigationFailedEventArgs
+    struct __declspec(empty_bases) NavigationFailedEventArgs : winrt::Windows::UI::Xaml::Navigation::INavigationFailedEventArgs
     {
         NavigationFailedEventArgs(std::nullptr_t) noexcept {}
-        NavigationFailedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Navigation::INavigationFailedEventArgs(ptr, take_ownership_from_abi) {}
+        NavigationFailedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Navigation::INavigationFailedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PageStackEntry : Windows::UI::Xaml::Navigation::IPageStackEntry,
-        impl::base<PageStackEntry, Windows::UI::Xaml::DependencyObject>,
-        impl::require<PageStackEntry, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    struct __declspec(empty_bases) PageStackEntry : winrt::Windows::UI::Xaml::Navigation::IPageStackEntry,
+        impl::base<PageStackEntry, winrt::Windows::UI::Xaml::DependencyObject>,
+        impl::require<PageStackEntry, winrt::Windows::UI::Xaml::IDependencyObject, winrt::Windows::UI::Xaml::IDependencyObject2>
     {
         PageStackEntry(std::nullptr_t) noexcept {}
-        PageStackEntry(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Navigation::IPageStackEntry(ptr, take_ownership_from_abi) {}
-        PageStackEntry(Windows::UI::Xaml::Interop::TypeName const& sourcePageType, Windows::Foundation::IInspectable const& parameter, Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& navigationTransitionInfo);
+        PageStackEntry(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Navigation::IPageStackEntry(ptr, take_ownership_from_abi) {}
+        PageStackEntry(winrt::Windows::UI::Xaml::Interop::TypeName const& sourcePageType, winrt::Windows::Foundation::IInspectable const& parameter, winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& navigationTransitionInfo);
         [[nodiscard]] static auto SourcePageTypeProperty();
     };
 }

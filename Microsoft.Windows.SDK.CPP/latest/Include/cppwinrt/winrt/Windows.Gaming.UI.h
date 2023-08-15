@@ -1,146 +1,147 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Gaming_UI_H
 #define WINRT_Windows_Gaming_UI_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/impl/Windows.ApplicationModel.Activation.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Gaming.UI.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_UI_IGameBarStatics<D>::VisibilityChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_UI_IGameBarStatics<D>::VisibilityChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameBarStatics)->add_VisibilityChanged(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameBarStatics)->add_VisibilityChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Gaming_UI_IGameBarStatics<D>::VisibilityChanged_revoker consume_Windows_Gaming_UI_IGameBarStatics<D>::VisibilityChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Gaming_UI_IGameBarStatics<D>::VisibilityChanged_revoker consume_Windows_Gaming_UI_IGameBarStatics<D>::VisibilityChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, VisibilityChanged_revoker>(this, VisibilityChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameBarStatics<D>::VisibilityChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameBarStatics)->remove_VisibilityChanged(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameBarStatics)->remove_VisibilityChanged(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_UI_IGameBarStatics<D>::IsInputRedirectedChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_UI_IGameBarStatics<D>::IsInputRedirectedChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameBarStatics)->add_IsInputRedirectedChanged(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameBarStatics)->add_IsInputRedirectedChanged(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Gaming_UI_IGameBarStatics<D>::IsInputRedirectedChanged_revoker consume_Windows_Gaming_UI_IGameBarStatics<D>::IsInputRedirectedChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler) const
+    template <typename D> typename consume_Windows_Gaming_UI_IGameBarStatics<D>::IsInputRedirectedChanged_revoker consume_Windows_Gaming_UI_IGameBarStatics<D>::IsInputRedirectedChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler) const
     {
         return impl::make_event_revoker<D, IsInputRedirectedChanged_revoker>(this, IsInputRedirectedChanged(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameBarStatics<D>::IsInputRedirectedChanged(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameBarStatics)->remove_IsInputRedirectedChanged(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameBarStatics)->remove_IsInputRedirectedChanged(impl::bind_in(token)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Gaming_UI_IGameBarStatics<D>::Visible() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameBarStatics)->get_Visible(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameBarStatics)->get_Visible(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_Gaming_UI_IGameBarStatics<D>::IsInputRedirected() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameBarStatics)->get_IsInputRedirected(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameBarStatics)->get_IsInputRedirected(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Gaming_UI_IGameChatMessageReceivedEventArgs<D>::AppId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_AppId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_AppId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Gaming_UI_IGameChatMessageReceivedEventArgs<D>::AppDisplayName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_AppDisplayName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_AppDisplayName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Gaming_UI_IGameChatMessageReceivedEventArgs<D>::SenderName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_SenderName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_SenderName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Gaming_UI_IGameChatMessageReceivedEventArgs<D>::Message() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_Message(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_Message(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Gaming::UI::GameChatMessageOrigin) consume_Windows_Gaming_UI_IGameChatMessageReceivedEventArgs<D>::Origin() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Gaming::UI::GameChatMessageOrigin) consume_Windows_Gaming_UI_IGameChatMessageReceivedEventArgs<D>::Origin() const
     {
-        Windows::Gaming::UI::GameChatMessageOrigin value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_Origin(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Gaming::UI::GameChatMessageOrigin value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatMessageReceivedEventArgs)->get_Origin(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Gaming::UI::GameChatOverlayPosition) consume_Windows_Gaming_UI_IGameChatOverlay<D>::DesiredPosition() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Gaming::UI::GameChatOverlayPosition) consume_Windows_Gaming_UI_IGameChatOverlay<D>::DesiredPosition() const
     {
-        Windows::Gaming::UI::GameChatOverlayPosition value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatOverlay)->get_DesiredPosition(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::Gaming::UI::GameChatOverlayPosition value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatOverlay)->get_DesiredPosition(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameChatOverlay<D>::DesiredPosition(Windows::Gaming::UI::GameChatOverlayPosition const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameChatOverlay<D>::DesiredPosition(winrt::Windows::Gaming::UI::GameChatOverlayPosition const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatOverlay)->put_DesiredPosition(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatOverlay)->put_DesiredPosition(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameChatOverlay<D>::AddMessage(param::hstring const& sender, param::hstring const& message, Windows::Gaming::UI::GameChatMessageOrigin const& origin) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameChatOverlay<D>::AddMessage(param::hstring const& sender, param::hstring const& message, winrt::Windows::Gaming::UI::GameChatMessageOrigin const& origin) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatOverlay)->AddMessage(*(void**)(&sender), *(void**)(&message), static_cast<int32_t>(origin)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatOverlay)->AddMessage(*(void**)(&sender), *(void**)(&message), static_cast<int32_t>(origin)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_UI_IGameChatOverlayMessageSource<D>::MessageReceived(Windows::Foundation::TypedEventHandler<Windows::Gaming::UI::GameChatOverlayMessageSource, Windows::Gaming::UI::GameChatMessageReceivedEventArgs> const& handler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_Gaming_UI_IGameChatOverlayMessageSource<D>::MessageReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource, winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs> const& handler) const
     {
         winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatOverlayMessageSource)->add_MessageReceived(*(void**)(&handler), put_abi(token)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatOverlayMessageSource)->add_MessageReceived(*(void**)(&handler), put_abi(token)));
         return token;
     }
-    template <typename D> typename consume_Windows_Gaming_UI_IGameChatOverlayMessageSource<D>::MessageReceived_revoker consume_Windows_Gaming_UI_IGameChatOverlayMessageSource<D>::MessageReceived(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Gaming::UI::GameChatOverlayMessageSource, Windows::Gaming::UI::GameChatMessageReceivedEventArgs> const& handler) const
+    template <typename D> typename consume_Windows_Gaming_UI_IGameChatOverlayMessageSource<D>::MessageReceived_revoker consume_Windows_Gaming_UI_IGameChatOverlayMessageSource<D>::MessageReceived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource, winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs> const& handler) const
     {
         return impl::make_event_revoker<D, MessageReceived_revoker>(this, MessageReceived(handler));
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameChatOverlayMessageSource<D>::MessageReceived(winrt::event_token const& token) const noexcept
     {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatOverlayMessageSource)->remove_MessageReceived(impl::bind_in(token)));
+        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatOverlayMessageSource)->remove_MessageReceived(impl::bind_in(token)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameChatOverlayMessageSource<D>::SetDelayBeforeClosingAfterMessageReceived(Windows::Foundation::TimeSpan const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameChatOverlayMessageSource<D>::SetDelayBeforeClosingAfterMessageReceived(winrt::Windows::Foundation::TimeSpan const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatOverlayMessageSource)->SetDelayBeforeClosingAfterMessageReceived(impl::bind_in(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatOverlayMessageSource)->SetDelayBeforeClosingAfterMessageReceived(impl::bind_in(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Gaming::UI::GameChatOverlay) consume_Windows_Gaming_UI_IGameChatOverlayStatics<D>::GetDefault() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameChatOverlayStatics)->GetDefault(&value));
-        return Windows::Gaming::UI::GameChatOverlay{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::ValueSet) consume_Windows_Gaming_UI_IGameUIProviderActivatedEventArgs<D>::GameUIArgs() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Gaming::UI::GameChatOverlay) consume_Windows_Gaming_UI_IGameChatOverlayStatics<D>::GetDefault() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameUIProviderActivatedEventArgs)->get_GameUIArgs(&value));
-        return Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameChatOverlayStatics)->GetDefault(&value));
+        return winrt::Windows::Gaming::UI::GameChatOverlay{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameUIProviderActivatedEventArgs<D>::ReportCompleted(Windows::Foundation::Collections::ValueSet const& results) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) consume_Windows_Gaming_UI_IGameUIProviderActivatedEventArgs<D>::GameUIArgs() const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::Gaming::UI::IGameUIProviderActivatedEventArgs)->ReportCompleted(*(void**)(&results)));
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameUIProviderActivatedEventArgs)->get_GameUIArgs(&value));
+        return winrt::Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Gaming_UI_IGameUIProviderActivatedEventArgs<D>::ReportCompleted(winrt::Windows::Foundation::Collections::ValueSet const& results) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Gaming::UI::IGameUIProviderActivatedEventArgs)->ReportCompleted(*(void**)(&results)));
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Gaming::UI::IGameBarStatics> : produce_base<D, Windows::Gaming::UI::IGameBarStatics>
+    struct produce<D, winrt::Windows::Gaming::UI::IGameBarStatics> : produce_base<D, winrt::Windows::Gaming::UI::IGameBarStatics>
     {
         int32_t __stdcall add_VisibilityChanged(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().VisibilityChanged(*reinterpret_cast<Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().VisibilityChanged(*reinterpret_cast<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -154,7 +155,7 @@ namespace winrt::impl
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().IsInputRedirectedChanged(*reinterpret_cast<Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().IsInputRedirectedChanged(*reinterpret_cast<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -182,7 +183,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Gaming::UI::IGameChatMessageReceivedEventArgs> : produce_base<D, Windows::Gaming::UI::IGameChatMessageReceivedEventArgs>
+    struct produce<D, winrt::Windows::Gaming::UI::IGameChatMessageReceivedEventArgs> : produce_base<D, winrt::Windows::Gaming::UI::IGameChatMessageReceivedEventArgs>
     {
         int32_t __stdcall get_AppId(void** value) noexcept final try
         {
@@ -219,7 +220,7 @@ namespace winrt::impl
         int32_t __stdcall get_Origin(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Gaming::UI::GameChatMessageOrigin>(this->shim().Origin());
+            *value = detach_from<winrt::Windows::Gaming::UI::GameChatMessageOrigin>(this->shim().Origin());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -227,26 +228,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Gaming::UI::IGameChatOverlay> : produce_base<D, Windows::Gaming::UI::IGameChatOverlay>
+    struct produce<D, winrt::Windows::Gaming::UI::IGameChatOverlay> : produce_base<D, winrt::Windows::Gaming::UI::IGameChatOverlay>
     {
         int32_t __stdcall get_DesiredPosition(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Gaming::UI::GameChatOverlayPosition>(this->shim().DesiredPosition());
+            *value = detach_from<winrt::Windows::Gaming::UI::GameChatOverlayPosition>(this->shim().DesiredPosition());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_DesiredPosition(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().DesiredPosition(*reinterpret_cast<Windows::Gaming::UI::GameChatOverlayPosition const*>(&value));
+            this->shim().DesiredPosition(*reinterpret_cast<winrt::Windows::Gaming::UI::GameChatOverlayPosition const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall AddMessage(void* sender, void* message, int32_t origin) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AddMessage(*reinterpret_cast<hstring const*>(&sender), *reinterpret_cast<hstring const*>(&message), *reinterpret_cast<Windows::Gaming::UI::GameChatMessageOrigin const*>(&origin));
+            this->shim().AddMessage(*reinterpret_cast<hstring const*>(&sender), *reinterpret_cast<hstring const*>(&message), *reinterpret_cast<winrt::Windows::Gaming::UI::GameChatMessageOrigin const*>(&origin));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -254,13 +255,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Gaming::UI::IGameChatOverlayMessageSource> : produce_base<D, Windows::Gaming::UI::IGameChatOverlayMessageSource>
+    struct produce<D, winrt::Windows::Gaming::UI::IGameChatOverlayMessageSource> : produce_base<D, winrt::Windows::Gaming::UI::IGameChatOverlayMessageSource>
     {
         int32_t __stdcall add_MessageReceived(void* handler, winrt::event_token* token) noexcept final try
         {
             zero_abi<winrt::event_token>(token);
             typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().MessageReceived(*reinterpret_cast<Windows::Foundation::TypedEventHandler<Windows::Gaming::UI::GameChatOverlayMessageSource, Windows::Gaming::UI::GameChatMessageReceivedEventArgs> const*>(&handler)));
+            *token = detach_from<winrt::event_token>(this->shim().MessageReceived(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource, winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs> const*>(&handler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -273,7 +274,7 @@ namespace winrt::impl
         int32_t __stdcall SetDelayBeforeClosingAfterMessageReceived(int64_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetDelayBeforeClosingAfterMessageReceived(*reinterpret_cast<Windows::Foundation::TimeSpan const*>(&value));
+            this->shim().SetDelayBeforeClosingAfterMessageReceived(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -281,13 +282,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Gaming::UI::IGameChatOverlayStatics> : produce_base<D, Windows::Gaming::UI::IGameChatOverlayStatics>
+    struct produce<D, winrt::Windows::Gaming::UI::IGameChatOverlayStatics> : produce_base<D, winrt::Windows::Gaming::UI::IGameChatOverlayStatics>
     {
         int32_t __stdcall GetDefault(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Gaming::UI::GameChatOverlay>(this->shim().GetDefault());
+            *value = detach_from<winrt::Windows::Gaming::UI::GameChatOverlay>(this->shim().GetDefault());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -295,20 +296,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::Gaming::UI::IGameUIProviderActivatedEventArgs> : produce_base<D, Windows::Gaming::UI::IGameUIProviderActivatedEventArgs>
+    struct produce<D, winrt::Windows::Gaming::UI::IGameUIProviderActivatedEventArgs> : produce_base<D, winrt::Windows::Gaming::UI::IGameUIProviderActivatedEventArgs>
     {
         int32_t __stdcall get_GameUIArgs(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::ValueSet>(this->shim().GameUIArgs());
+            *value = detach_from<winrt::Windows::Foundation::Collections::ValueSet>(this->shim().GameUIArgs());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall ReportCompleted(void* results) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ReportCompleted(*reinterpret_cast<Windows::Foundation::Collections::ValueSet const*>(&results));
+            this->shim().ReportCompleted(*reinterpret_cast<winrt::Windows::Foundation::Collections::ValueSet const*>(&results));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -317,26 +318,26 @@ namespace winrt::impl
 }
 WINRT_EXPORT namespace winrt::Windows::Gaming::UI
 {
-    inline auto GameBar::VisibilityChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
+    inline auto GameBar::VisibilityChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler)
     {
         return impl::call_factory<GameBar, IGameBarStatics>([&](IGameBarStatics const& f) { return f.VisibilityChanged(handler); });
     }
-    inline GameBar::VisibilityChanged_revoker GameBar::VisibilityChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
+    inline GameBar::VisibilityChanged_revoker GameBar::VisibilityChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler)
     {
-        auto f = get_activation_factory<GameBar, Windows::Gaming::UI::IGameBarStatics>();
+        auto f = get_activation_factory<GameBar, winrt::Windows::Gaming::UI::IGameBarStatics>();
         return { f, f.VisibilityChanged(handler) };
     }
     inline auto GameBar::VisibilityChanged(winrt::event_token const& token)
     {
         impl::call_factory<GameBar, IGameBarStatics>([&](IGameBarStatics const& f) { return f.VisibilityChanged(token); });
     }
-    inline auto GameBar::IsInputRedirectedChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
+    inline auto GameBar::IsInputRedirectedChanged(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler)
     {
         return impl::call_factory<GameBar, IGameBarStatics>([&](IGameBarStatics const& f) { return f.IsInputRedirectedChanged(handler); });
     }
-    inline GameBar::IsInputRedirectedChanged_revoker GameBar::IsInputRedirectedChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler)
+    inline GameBar::IsInputRedirectedChanged_revoker GameBar::IsInputRedirectedChanged(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler)
     {
-        auto f = get_activation_factory<GameBar, Windows::Gaming::UI::IGameBarStatics>();
+        auto f = get_activation_factory<GameBar, winrt::Windows::Gaming::UI::IGameBarStatics>();
         return { f, f.IsInputRedirectedChanged(handler) };
     }
     inline auto GameBar::IsInputRedirectedChanged(winrt::event_token const& token)
@@ -353,10 +354,10 @@ WINRT_EXPORT namespace winrt::Windows::Gaming::UI
     }
     inline auto GameChatOverlay::GetDefault()
     {
-        return impl::call_factory_cast<Windows::Gaming::UI::GameChatOverlay(*)(IGameChatOverlayStatics const&), GameChatOverlay, IGameChatOverlayStatics>([](IGameChatOverlayStatics const& f) { return f.GetDefault(); });
+        return impl::call_factory_cast<winrt::Windows::Gaming::UI::GameChatOverlay(*)(IGameChatOverlayStatics const&), GameChatOverlay, IGameChatOverlayStatics>([](IGameChatOverlayStatics const& f) { return f.GetDefault(); });
     }
     inline GameChatOverlayMessageSource::GameChatOverlayMessageSource() :
-        GameChatOverlayMessageSource(impl::call_factory_cast<GameChatOverlayMessageSource(*)(Windows::Foundation::IActivationFactory const&), GameChatOverlayMessageSource>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GameChatOverlayMessageSource>(); }))
+        GameChatOverlayMessageSource(impl::call_factory_cast<GameChatOverlayMessageSource(*)(winrt::Windows::Foundation::IActivationFactory const&), GameChatOverlayMessageSource>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<GameChatOverlayMessageSource>(); }))
     {
     }
 }

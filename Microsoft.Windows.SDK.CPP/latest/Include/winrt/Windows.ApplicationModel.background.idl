@@ -628,6 +628,10 @@ namespace Windows
             runtimeclass ToastNotificationHistoryChangedTrigger;
 
             runtimeclass UserNotificationChangedTrigger;
+
+            runtimeclass WiFiOnDemandHotspotConnectTrigger;
+
+            runtimeclass WiFiOnDemandHotspotUpdateMetadataTrigger;
         }
     }
 }
@@ -2424,6 +2428,24 @@ namespace Windows
             [marshaling_behavior(agile)]
             [threading(mta)]
             runtimeclass UserNotificationChangedTrigger
+            {
+                [default] interface Windows.ApplicationModel.Background.IBackgroundTrigger;
+            }
+
+            [activatable(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass WiFiOnDemandHotspotConnectTrigger
+            {
+                [default] interface Windows.ApplicationModel.Background.IBackgroundTrigger;
+            }
+
+            [activatable(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass WiFiOnDemandHotspotUpdateMetadataTrigger
             {
                 [default] interface Windows.ApplicationModel.Background.IBackgroundTrigger;
             }

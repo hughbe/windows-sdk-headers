@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Foundation_Metadata_0_H
 #define WINRT_Windows_Foundation_Metadata_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation::Metadata
@@ -70,28 +71,28 @@ WINRT_EXPORT namespace winrt::Windows::Foundation::Metadata
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::Foundation::Metadata::IApiInformationStatics>{ using type = interface_category; };
-    template <> struct category<Windows::Foundation::Metadata::ApiInformation>{ using type = class_category; };
-    template <> struct category<Windows::Foundation::Metadata::AttributeTargets>{ using type = enum_category; };
-    template <> struct category<Windows::Foundation::Metadata::CompositionType>{ using type = enum_category; };
-    template <> struct category<Windows::Foundation::Metadata::DeprecationType>{ using type = enum_category; };
-    template <> struct category<Windows::Foundation::Metadata::FeatureStage>{ using type = enum_category; };
-    template <> struct category<Windows::Foundation::Metadata::GCPressureAmount>{ using type = enum_category; };
-    template <> struct category<Windows::Foundation::Metadata::MarshalingType>{ using type = enum_category; };
-    template <> struct category<Windows::Foundation::Metadata::Platform>{ using type = enum_category; };
-    template <> struct category<Windows::Foundation::Metadata::ThreadingModel>{ using type = enum_category; };
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::ApiInformation> = L"Windows.Foundation.Metadata.ApiInformation";
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::AttributeTargets> = L"Windows.Foundation.Metadata.AttributeTargets";
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::CompositionType> = L"Windows.Foundation.Metadata.CompositionType";
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::DeprecationType> = L"Windows.Foundation.Metadata.DeprecationType";
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::FeatureStage> = L"Windows.Foundation.Metadata.FeatureStage";
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::GCPressureAmount> = L"Windows.Foundation.Metadata.GCPressureAmount";
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::MarshalingType> = L"Windows.Foundation.Metadata.MarshalingType";
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::Platform> = L"Windows.Foundation.Metadata.Platform";
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::ThreadingModel> = L"Windows.Foundation.Metadata.ThreadingModel";
-    template <> inline constexpr auto& name_v<Windows::Foundation::Metadata::IApiInformationStatics> = L"Windows.Foundation.Metadata.IApiInformationStatics";
-    template <> inline constexpr guid guid_v<Windows::Foundation::Metadata::IApiInformationStatics>{ 0x997439FE,0xF681,0x4A11,{ 0xB4,0x16,0xC1,0x3A,0x47,0xE8,0xBA,0x36 } }; // 997439FE-F681-4A11-B416-C13A47E8BA36
-    template <> struct abi<Windows::Foundation::Metadata::IApiInformationStatics>
+    template <> struct category<winrt::Windows::Foundation::Metadata::IApiInformationStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Foundation::Metadata::ApiInformation>{ using type = class_category; };
+    template <> struct category<winrt::Windows::Foundation::Metadata::AttributeTargets>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Foundation::Metadata::CompositionType>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Foundation::Metadata::DeprecationType>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Foundation::Metadata::FeatureStage>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Foundation::Metadata::GCPressureAmount>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Foundation::Metadata::MarshalingType>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Foundation::Metadata::Platform>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Foundation::Metadata::ThreadingModel>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::ApiInformation> = L"Windows.Foundation.Metadata.ApiInformation";
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::AttributeTargets> = L"Windows.Foundation.Metadata.AttributeTargets";
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::CompositionType> = L"Windows.Foundation.Metadata.CompositionType";
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::DeprecationType> = L"Windows.Foundation.Metadata.DeprecationType";
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::FeatureStage> = L"Windows.Foundation.Metadata.FeatureStage";
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::GCPressureAmount> = L"Windows.Foundation.Metadata.GCPressureAmount";
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::MarshalingType> = L"Windows.Foundation.Metadata.MarshalingType";
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::Platform> = L"Windows.Foundation.Metadata.Platform";
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::ThreadingModel> = L"Windows.Foundation.Metadata.ThreadingModel";
+    template <> inline constexpr auto& name_v<winrt::Windows::Foundation::Metadata::IApiInformationStatics> = L"Windows.Foundation.Metadata.IApiInformationStatics";
+    template <> inline constexpr guid guid_v<winrt::Windows::Foundation::Metadata::IApiInformationStatics>{ 0x997439FE,0xF681,0x4A11,{ 0xB4,0x16,0xC1,0x3A,0x47,0xE8,0xBA,0x36 } }; // 997439FE-F681-4A11-B416-C13A47E8BA36
+    template <> struct abi<winrt::Windows::Foundation::Metadata::IApiInformationStatics>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -121,7 +122,7 @@ namespace winrt::impl
         WINRT_IMPL_AUTO(bool) IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion) const;
         WINRT_IMPL_AUTO(bool) IsApiContractPresent(param::hstring const& contractName, uint16_t majorVersion, uint16_t minorVersion) const;
     };
-    template <> struct consume<Windows::Foundation::Metadata::IApiInformationStatics>
+    template <> struct consume<winrt::Windows::Foundation::Metadata::IApiInformationStatics>
     {
         template <typename D> using type = consume_Windows_Foundation_Metadata_IApiInformationStatics<D>;
     };

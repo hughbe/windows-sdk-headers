@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Xaml_Automation_Text_0_H
 #define WINRT_Windows_UI_Xaml_Automation_Text_0_H
 WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation::Text
@@ -25,9 +26,9 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation::Text
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>{ using type = enum_category; };
-    template <> struct category<Windows::UI::Xaml::Automation::Text::TextUnit>{ using type = enum_category; };
-    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint> = L"Windows.UI.Xaml.Automation.Text.TextPatternRangeEndpoint";
-    template <> inline constexpr auto& name_v<Windows::UI::Xaml::Automation::Text::TextUnit> = L"Windows.UI.Xaml.Automation.Text.TextUnit";
+    template <> struct category<winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::UI::Xaml::Automation::Text::TextUnit>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Xaml::Automation::Text::TextPatternRangeEndpoint> = L"Windows.UI.Xaml.Automation.Text.TextPatternRangeEndpoint";
+    template <> inline constexpr auto& name_v<winrt::Windows::UI::Xaml::Automation::Text::TextUnit> = L"Windows.UI.Xaml.Automation.Text.TextUnit";
 }
 #endif

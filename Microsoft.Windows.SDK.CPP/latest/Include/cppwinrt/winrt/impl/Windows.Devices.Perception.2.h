@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Devices_Perception_2_H
 #define WINRT_Windows_Devices_Perception_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
@@ -69,155 +70,155 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Perception
         [[nodiscard]] static auto Height();
         [[nodiscard]] static auto FrameDuration();
     };
-    struct __declspec(empty_bases) PerceptionColorFrame : Windows::Devices::Perception::IPerceptionColorFrame
+    struct __declspec(empty_bases) PerceptionColorFrame : winrt::Windows::Devices::Perception::IPerceptionColorFrame
     {
         PerceptionColorFrame(std::nullptr_t) noexcept {}
-        PerceptionColorFrame(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionColorFrame(ptr, take_ownership_from_abi) {}
+        PerceptionColorFrame(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionColorFrame(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionColorFrameArrivedEventArgs : Windows::Devices::Perception::IPerceptionColorFrameArrivedEventArgs
+    struct __declspec(empty_bases) PerceptionColorFrameArrivedEventArgs : winrt::Windows::Devices::Perception::IPerceptionColorFrameArrivedEventArgs
     {
         PerceptionColorFrameArrivedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionColorFrameArrivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionColorFrameArrivedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionColorFrameArrivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionColorFrameArrivedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionColorFrameReader : Windows::Devices::Perception::IPerceptionColorFrameReader
+    struct __declspec(empty_bases) PerceptionColorFrameReader : winrt::Windows::Devices::Perception::IPerceptionColorFrameReader
     {
         PerceptionColorFrameReader(std::nullptr_t) noexcept {}
-        PerceptionColorFrameReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionColorFrameReader(ptr, take_ownership_from_abi) {}
+        PerceptionColorFrameReader(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionColorFrameReader(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionColorFrameSource : Windows::Devices::Perception::IPerceptionColorFrameSource,
-        impl::require<PerceptionColorFrameSource, Windows::Devices::Perception::IPerceptionColorFrameSource2>
+    struct __declspec(empty_bases) PerceptionColorFrameSource : winrt::Windows::Devices::Perception::IPerceptionColorFrameSource,
+        impl::require<PerceptionColorFrameSource, winrt::Windows::Devices::Perception::IPerceptionColorFrameSource2>
     {
         PerceptionColorFrameSource(std::nullptr_t) noexcept {}
-        PerceptionColorFrameSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionColorFrameSource(ptr, take_ownership_from_abi) {}
+        PerceptionColorFrameSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionColorFrameSource(ptr, take_ownership_from_abi) {}
         static auto CreateWatcher();
         static auto FindAllAsync();
         static auto FromIdAsync(param::hstring const& id);
         static auto RequestAccessAsync();
     };
-    struct __declspec(empty_bases) PerceptionColorFrameSourceAddedEventArgs : Windows::Devices::Perception::IPerceptionColorFrameSourceAddedEventArgs
+    struct __declspec(empty_bases) PerceptionColorFrameSourceAddedEventArgs : winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceAddedEventArgs
     {
         PerceptionColorFrameSourceAddedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionColorFrameSourceAddedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionColorFrameSourceAddedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionColorFrameSourceAddedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceAddedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionColorFrameSourceRemovedEventArgs : Windows::Devices::Perception::IPerceptionColorFrameSourceRemovedEventArgs
+    struct __declspec(empty_bases) PerceptionColorFrameSourceRemovedEventArgs : winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceRemovedEventArgs
     {
         PerceptionColorFrameSourceRemovedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionColorFrameSourceRemovedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionColorFrameSourceRemovedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionColorFrameSourceRemovedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceRemovedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionColorFrameSourceWatcher : Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher
+    struct __declspec(empty_bases) PerceptionColorFrameSourceWatcher : winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher
     {
         PerceptionColorFrameSourceWatcher(std::nullptr_t) noexcept {}
-        PerceptionColorFrameSourceWatcher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher(ptr, take_ownership_from_abi) {}
+        PerceptionColorFrameSourceWatcher(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionColorFrameSourceWatcher(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionControlSession : Windows::Devices::Perception::IPerceptionControlSession
+    struct __declspec(empty_bases) PerceptionControlSession : winrt::Windows::Devices::Perception::IPerceptionControlSession
     {
         PerceptionControlSession(std::nullptr_t) noexcept {}
-        PerceptionControlSession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionControlSession(ptr, take_ownership_from_abi) {}
+        PerceptionControlSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionControlSession(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionDepthCorrelatedCameraIntrinsics : Windows::Devices::Perception::IPerceptionDepthCorrelatedCameraIntrinsics
+    struct __declspec(empty_bases) PerceptionDepthCorrelatedCameraIntrinsics : winrt::Windows::Devices::Perception::IPerceptionDepthCorrelatedCameraIntrinsics
     {
         PerceptionDepthCorrelatedCameraIntrinsics(std::nullptr_t) noexcept {}
-        PerceptionDepthCorrelatedCameraIntrinsics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionDepthCorrelatedCameraIntrinsics(ptr, take_ownership_from_abi) {}
+        PerceptionDepthCorrelatedCameraIntrinsics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionDepthCorrelatedCameraIntrinsics(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionDepthCorrelatedCoordinateMapper : Windows::Devices::Perception::IPerceptionDepthCorrelatedCoordinateMapper
+    struct __declspec(empty_bases) PerceptionDepthCorrelatedCoordinateMapper : winrt::Windows::Devices::Perception::IPerceptionDepthCorrelatedCoordinateMapper
     {
         PerceptionDepthCorrelatedCoordinateMapper(std::nullptr_t) noexcept {}
-        PerceptionDepthCorrelatedCoordinateMapper(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionDepthCorrelatedCoordinateMapper(ptr, take_ownership_from_abi) {}
+        PerceptionDepthCorrelatedCoordinateMapper(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionDepthCorrelatedCoordinateMapper(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionDepthFrame : Windows::Devices::Perception::IPerceptionDepthFrame
+    struct __declspec(empty_bases) PerceptionDepthFrame : winrt::Windows::Devices::Perception::IPerceptionDepthFrame
     {
         PerceptionDepthFrame(std::nullptr_t) noexcept {}
-        PerceptionDepthFrame(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionDepthFrame(ptr, take_ownership_from_abi) {}
+        PerceptionDepthFrame(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionDepthFrame(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionDepthFrameArrivedEventArgs : Windows::Devices::Perception::IPerceptionDepthFrameArrivedEventArgs
+    struct __declspec(empty_bases) PerceptionDepthFrameArrivedEventArgs : winrt::Windows::Devices::Perception::IPerceptionDepthFrameArrivedEventArgs
     {
         PerceptionDepthFrameArrivedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionDepthFrameArrivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionDepthFrameArrivedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionDepthFrameArrivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionDepthFrameArrivedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionDepthFrameReader : Windows::Devices::Perception::IPerceptionDepthFrameReader
+    struct __declspec(empty_bases) PerceptionDepthFrameReader : winrt::Windows::Devices::Perception::IPerceptionDepthFrameReader
     {
         PerceptionDepthFrameReader(std::nullptr_t) noexcept {}
-        PerceptionDepthFrameReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionDepthFrameReader(ptr, take_ownership_from_abi) {}
+        PerceptionDepthFrameReader(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionDepthFrameReader(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionDepthFrameSource : Windows::Devices::Perception::IPerceptionDepthFrameSource,
-        impl::require<PerceptionDepthFrameSource, Windows::Devices::Perception::IPerceptionDepthFrameSource2>
+    struct __declspec(empty_bases) PerceptionDepthFrameSource : winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource,
+        impl::require<PerceptionDepthFrameSource, winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource2>
     {
         PerceptionDepthFrameSource(std::nullptr_t) noexcept {}
-        PerceptionDepthFrameSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionDepthFrameSource(ptr, take_ownership_from_abi) {}
+        PerceptionDepthFrameSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionDepthFrameSource(ptr, take_ownership_from_abi) {}
         static auto CreateWatcher();
         static auto FindAllAsync();
         static auto FromIdAsync(param::hstring const& id);
         static auto RequestAccessAsync();
     };
-    struct __declspec(empty_bases) PerceptionDepthFrameSourceAddedEventArgs : Windows::Devices::Perception::IPerceptionDepthFrameSourceAddedEventArgs
+    struct __declspec(empty_bases) PerceptionDepthFrameSourceAddedEventArgs : winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceAddedEventArgs
     {
         PerceptionDepthFrameSourceAddedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionDepthFrameSourceAddedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionDepthFrameSourceAddedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionDepthFrameSourceAddedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceAddedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionDepthFrameSourceRemovedEventArgs : Windows::Devices::Perception::IPerceptionDepthFrameSourceRemovedEventArgs
+    struct __declspec(empty_bases) PerceptionDepthFrameSourceRemovedEventArgs : winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceRemovedEventArgs
     {
         PerceptionDepthFrameSourceRemovedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionDepthFrameSourceRemovedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionDepthFrameSourceRemovedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionDepthFrameSourceRemovedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceRemovedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionDepthFrameSourceWatcher : Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher
+    struct __declspec(empty_bases) PerceptionDepthFrameSourceWatcher : winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher
     {
         PerceptionDepthFrameSourceWatcher(std::nullptr_t) noexcept {}
-        PerceptionDepthFrameSourceWatcher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher(ptr, take_ownership_from_abi) {}
+        PerceptionDepthFrameSourceWatcher(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionDepthFrameSourceWatcher(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionFrameSourcePropertiesChangedEventArgs : Windows::Devices::Perception::IPerceptionFrameSourcePropertiesChangedEventArgs
+    struct __declspec(empty_bases) PerceptionFrameSourcePropertiesChangedEventArgs : winrt::Windows::Devices::Perception::IPerceptionFrameSourcePropertiesChangedEventArgs
     {
         PerceptionFrameSourcePropertiesChangedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionFrameSourcePropertiesChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionFrameSourcePropertiesChangedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionFrameSourcePropertiesChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionFrameSourcePropertiesChangedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionFrameSourcePropertyChangeResult : Windows::Devices::Perception::IPerceptionFrameSourcePropertyChangeResult
+    struct __declspec(empty_bases) PerceptionFrameSourcePropertyChangeResult : winrt::Windows::Devices::Perception::IPerceptionFrameSourcePropertyChangeResult
     {
         PerceptionFrameSourcePropertyChangeResult(std::nullptr_t) noexcept {}
-        PerceptionFrameSourcePropertyChangeResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionFrameSourcePropertyChangeResult(ptr, take_ownership_from_abi) {}
+        PerceptionFrameSourcePropertyChangeResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionFrameSourcePropertyChangeResult(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionInfraredFrame : Windows::Devices::Perception::IPerceptionInfraredFrame
+    struct __declspec(empty_bases) PerceptionInfraredFrame : winrt::Windows::Devices::Perception::IPerceptionInfraredFrame
     {
         PerceptionInfraredFrame(std::nullptr_t) noexcept {}
-        PerceptionInfraredFrame(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionInfraredFrame(ptr, take_ownership_from_abi) {}
+        PerceptionInfraredFrame(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionInfraredFrame(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionInfraredFrameArrivedEventArgs : Windows::Devices::Perception::IPerceptionInfraredFrameArrivedEventArgs
+    struct __declspec(empty_bases) PerceptionInfraredFrameArrivedEventArgs : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameArrivedEventArgs
     {
         PerceptionInfraredFrameArrivedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionInfraredFrameArrivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionInfraredFrameArrivedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionInfraredFrameArrivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameArrivedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionInfraredFrameReader : Windows::Devices::Perception::IPerceptionInfraredFrameReader
+    struct __declspec(empty_bases) PerceptionInfraredFrameReader : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameReader
     {
         PerceptionInfraredFrameReader(std::nullptr_t) noexcept {}
-        PerceptionInfraredFrameReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionInfraredFrameReader(ptr, take_ownership_from_abi) {}
+        PerceptionInfraredFrameReader(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameReader(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionInfraredFrameSource : Windows::Devices::Perception::IPerceptionInfraredFrameSource,
-        impl::require<PerceptionInfraredFrameSource, Windows::Devices::Perception::IPerceptionInfraredFrameSource2>
+    struct __declspec(empty_bases) PerceptionInfraredFrameSource : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource,
+        impl::require<PerceptionInfraredFrameSource, winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource2>
     {
         PerceptionInfraredFrameSource(std::nullptr_t) noexcept {}
-        PerceptionInfraredFrameSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionInfraredFrameSource(ptr, take_ownership_from_abi) {}
+        PerceptionInfraredFrameSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSource(ptr, take_ownership_from_abi) {}
         static auto CreateWatcher();
         static auto FindAllAsync();
         static auto FromIdAsync(param::hstring const& id);
         static auto RequestAccessAsync();
     };
-    struct __declspec(empty_bases) PerceptionInfraredFrameSourceAddedEventArgs : Windows::Devices::Perception::IPerceptionInfraredFrameSourceAddedEventArgs
+    struct __declspec(empty_bases) PerceptionInfraredFrameSourceAddedEventArgs : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceAddedEventArgs
     {
         PerceptionInfraredFrameSourceAddedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionInfraredFrameSourceAddedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionInfraredFrameSourceAddedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionInfraredFrameSourceAddedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceAddedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionInfraredFrameSourceRemovedEventArgs : Windows::Devices::Perception::IPerceptionInfraredFrameSourceRemovedEventArgs
+    struct __declspec(empty_bases) PerceptionInfraredFrameSourceRemovedEventArgs : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceRemovedEventArgs
     {
         PerceptionInfraredFrameSourceRemovedEventArgs(std::nullptr_t) noexcept {}
-        PerceptionInfraredFrameSourceRemovedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionInfraredFrameSourceRemovedEventArgs(ptr, take_ownership_from_abi) {}
+        PerceptionInfraredFrameSourceRemovedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceRemovedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionInfraredFrameSourceWatcher : Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher
+    struct __declspec(empty_bases) PerceptionInfraredFrameSourceWatcher : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher
     {
         PerceptionInfraredFrameSourceWatcher(std::nullptr_t) noexcept {}
-        PerceptionInfraredFrameSourceWatcher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher(ptr, take_ownership_from_abi) {}
+        PerceptionInfraredFrameSourceWatcher(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionInfraredFrameSourceWatcher(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PerceptionVideoProfile : Windows::Devices::Perception::IPerceptionVideoProfile
+    struct __declspec(empty_bases) PerceptionVideoProfile : winrt::Windows::Devices::Perception::IPerceptionVideoProfile
     {
         PerceptionVideoProfile(std::nullptr_t) noexcept {}
-        PerceptionVideoProfile(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Perception::IPerceptionVideoProfile(ptr, take_ownership_from_abi) {}
+        PerceptionVideoProfile(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Perception::IPerceptionVideoProfile(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

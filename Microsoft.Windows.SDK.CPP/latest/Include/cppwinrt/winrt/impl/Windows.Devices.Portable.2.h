@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Devices_Portable_2_H
 #define WINRT_Windows_Devices_Portable_2_H
 #include "winrt/impl/Windows.Devices.Portable.1.h"
@@ -11,7 +12,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Portable
     struct ServiceDevice
     {
         ServiceDevice() = delete;
-        static auto GetDeviceSelector(Windows::Devices::Portable::ServiceDeviceType const& serviceType);
+        static auto GetDeviceSelector(winrt::Windows::Devices::Portable::ServiceDeviceType const& serviceType);
         static auto GetDeviceSelectorFromServiceId(winrt::guid const& serviceId);
     };
     struct StorageDevice

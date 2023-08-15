@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_ApplicationModel_ExtendedExecution_Foreground_0_H
 #define WINRT_Windows_ApplicationModel_ExtendedExecution_Foreground_0_H
 WINRT_EXPORT namespace winrt::Windows::Foundation
@@ -37,32 +38,32 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::ExtendedExecution::Fore
 }
 namespace winrt::impl
 {
-    template <> struct category<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs>{ using type = interface_category; };
-    template <> struct category<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>{ using type = interface_category; };
-    template <> struct category<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>{ using type = class_category; };
-    template <> struct category<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession>{ using type = class_category; };
-    template <> struct category<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason>{ using type = enum_category; };
-    template <> struct category<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult>{ using type = enum_category; };
-    template <> struct category<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason>{ using type = enum_category; };
-    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession";
-    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason";
-    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult";
-    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedReason";
-    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundRevokedEventArgs";
-    template <> inline constexpr auto& name_v<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession";
-    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs>{ 0xB07CD940,0x9557,0xAEA4,{ 0x2C,0x99,0xBD,0xD5,0x6D,0x9B,0xE4,0x61 } }; // B07CD940-9557-AEA4-2C99-BDD56D9BE461
-    template <> inline constexpr guid guid_v<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>{ 0xFBF440E1,0x9D10,0x4201,{ 0xB0,0x1E,0xC8,0x32,0x75,0x29,0x6F,0x2E } }; // FBF440E1-9D10-4201-B01E-C83275296F2E
-    template <> struct default_interface<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>{ using type = Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs; };
-    template <> struct default_interface<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession>{ using type = Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession; };
-    template <> struct abi<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs>
+    template <> struct category<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession>{ using type = class_category; };
+    template <> struct category<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason>{ using type = enum_category; };
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundSession";
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundReason";
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundResult";
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.ExtendedExecutionForegroundRevokedReason";
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundRevokedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession> = L"Windows.ApplicationModel.ExtendedExecution.Foreground.IExtendedExecutionForegroundSession";
+    template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs>{ 0xB07CD940,0x9557,0xAEA4,{ 0x2C,0x99,0xBD,0xD5,0x6D,0x9B,0xE4,0x61 } }; // B07CD940-9557-AEA4-2C99-BDD56D9BE461
+    template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>{ 0xFBF440E1,0x9D10,0x4201,{ 0xB0,0x1E,0xC8,0x32,0x75,0x29,0x6F,0x2E } }; // FBF440E1-9D10-4201-B01E-C83275296F2E
+    template <> struct default_interface<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>{ using type = winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs; };
+    template <> struct default_interface<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession>{ using type = winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession; };
+    template <> struct abi<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_Reason(int32_t*) noexcept = 0;
         };
     };
-    template <> struct abi<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>
+    template <> struct abi<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
@@ -78,9 +79,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_ApplicationModel_ExtendedExecution_Foreground_IExtendedExecutionForegroundRevokedEventArgs
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason) Reason() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason) Reason() const;
     };
-    template <> struct consume<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs>
+    template <> struct consume<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundRevokedEventArgs>
     {
         template <typename D> using type = consume_Windows_ApplicationModel_ExtendedExecution_Foreground_IExtendedExecutionForegroundRevokedEventArgs<D>;
     };
@@ -89,15 +90,15 @@ namespace winrt::impl
     {
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) Description() const;
         WINRT_IMPL_AUTO(void) Description(param::hstring const& value) const;
-        WINRT_IMPL_AUTO(winrt::event_token) Revoked(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs> const& handler) const;
-        using Revoked_revoker = impl::event_revoker<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession, &impl::abi_t<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>::remove_Revoked>;
-        [[nodiscard]] Revoked_revoker Revoked(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs> const& handler) const;
+        WINRT_IMPL_AUTO(winrt::event_token) Revoked(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs> const& handler) const;
+        using Revoked_revoker = impl::event_revoker<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession, &impl::abi_t<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>::remove_Revoked>;
+        [[nodiscard]] Revoked_revoker Revoked(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Foundation::IInspectable, winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs> const& handler) const;
         WINRT_IMPL_AUTO(void) Revoked(winrt::event_token const& token) const noexcept;
-        WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult>) RequestExtensionAsync() const;
-        [[nodiscard]] WINRT_IMPL_AUTO(Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason) Reason() const;
-        WINRT_IMPL_AUTO(void) Reason(Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason const& value) const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult>) RequestExtensionAsync() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason) Reason() const;
+        WINRT_IMPL_AUTO(void) Reason(winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason const& value) const;
     };
-    template <> struct consume<Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>
+    template <> struct consume<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::IExtendedExecutionForegroundSession>
     {
         template <typename D> using type = consume_Windows_ApplicationModel_ExtendedExecution_Foreground_IExtendedExecutionForegroundSession<D>;
     };

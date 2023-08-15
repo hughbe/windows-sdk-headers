@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_ApplicationModel_Payments_H
 #define WINRT_Windows_ApplicationModel_Payments_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/Windows.ApplicationModel.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
@@ -17,687 +18,687 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Country() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_Country(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_Country(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Country(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_Country(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_Country(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::AddressLines() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::AddressLines() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_AddressLines(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_AddressLines(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::AddressLines(param::async_vector_view<hstring> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_AddressLines(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_AddressLines(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Region() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_Region(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_Region(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Region(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_Region(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_Region(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::City() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_City(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_City(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::City(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_City(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_City(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::DependentLocality() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_DependentLocality(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_DependentLocality(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::DependentLocality(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_DependentLocality(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_DependentLocality(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::PostalCode() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_PostalCode(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_PostalCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::PostalCode(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_PostalCode(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_PostalCode(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::SortingCode() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_SortingCode(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_SortingCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::SortingCode(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_SortingCode(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_SortingCode(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::LanguageCode() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_LanguageCode(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_LanguageCode(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::LanguageCode(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_LanguageCode(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_LanguageCode(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Organization() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_Organization(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_Organization(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Organization(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_Organization(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_Organization(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Recipient() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_Recipient(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_Recipient(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Recipient(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_Recipient(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_Recipient(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::PhoneNumber() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_PhoneNumber(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_PhoneNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::PhoneNumber(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->put_PhoneNumber(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->put_PhoneNumber(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::ValueSet) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Properties() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::ValueSet) consume_Windows_ApplicationModel_Payments_IPaymentAddress<D>::Properties() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentAddress)->get_Properties(&value));
-        return Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentAddress)->get_Properties(&value));
+        return winrt::Windows::Foundation::Collections::ValueSet{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus) consume_Windows_ApplicationModel_Payments_IPaymentCanMakePaymentResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus) consume_Windows_ApplicationModel_Payments_IPaymentCanMakePaymentResult<D>::Status() const
     {
-        Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult) consume_Windows_ApplicationModel_Payments_IPaymentCanMakePaymentResultFactory<D>::Create(Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus const& value) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult) consume_Windows_ApplicationModel_Payments_IPaymentCanMakePaymentResultFactory<D>::Create(winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus const& value) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResultFactory)->Create(static_cast<int32_t>(value), &result));
-        return Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResultFactory)->Create(static_cast<int32_t>(value), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmount<D>::Currency() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->get_Currency(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->get_Currency(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmount<D>::Currency(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->put_Currency(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->put_Currency(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmount<D>::CurrencySystem() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->get_CurrencySystem(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->get_CurrencySystem(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmount<D>::CurrencySystem(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->put_CurrencySystem(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->put_CurrencySystem(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmount<D>::Value() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->get_Value(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->get_Value(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmount<D>::Value(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->put_Value(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmount)->put_Value(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentCurrencyAmount) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmountFactory<D>::Create(param::hstring const& value, param::hstring const& currency) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmountFactory<D>::Create(param::hstring const& value, param::hstring const& currency) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCurrencyAmountFactory)->Create(*(void**)(&value), *(void**)(&currency), &result));
-        return Windows::ApplicationModel::Payments::PaymentCurrencyAmount{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmountFactory)->Create(*(void**)(&value), *(void**)(&currency), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentCurrencyAmount) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmountFactory<D>::CreateWithCurrencySystem(param::hstring const& value, param::hstring const& currency, param::hstring const& currencySystem) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount) consume_Windows_ApplicationModel_Payments_IPaymentCurrencyAmountFactory<D>::CreateWithCurrencySystem(param::hstring const& value, param::hstring const& currency, param::hstring const& currencySystem) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentCurrencyAmountFactory)->CreateWithCurrencySystem(*(void**)(&value), *(void**)(&currency), *(void**)(&currencySystem), &result));
-        return Windows::ApplicationModel::Payments::PaymentCurrencyAmount{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmountFactory)->CreateWithCurrencySystem(*(void**)(&value), *(void**)(&currency), *(void**)(&currencySystem), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentItem) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::Total() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentItem) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::Total() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetails)->get_Total(&value));
-        return Windows::ApplicationModel::Payments::PaymentItem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetails)->get_Total(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentItem{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::Total(Windows::ApplicationModel::Payments::PaymentItem const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::Total(winrt::Windows::ApplicationModel::Payments::PaymentItem const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetails)->put_Total(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetails)->put_Total(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentItem>) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::DisplayItems() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetails)->get_DisplayItems(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentItem>{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::DisplayItems(param::async_vector_view<Windows::ApplicationModel::Payments::PaymentItem> const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetails)->put_DisplayItems(*(void**)(&value)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentShippingOption>) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::ShippingOptions() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentItem>) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::DisplayItems() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetails)->get_ShippingOptions(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentShippingOption>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetails)->get_DisplayItems(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentItem>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::ShippingOptions(param::async_vector_view<Windows::ApplicationModel::Payments::PaymentShippingOption> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::DisplayItems(param::async_vector_view<winrt::Windows::ApplicationModel::Payments::PaymentItem> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetails)->put_ShippingOptions(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetails)->put_DisplayItems(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentDetailsModifier>) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::Modifiers() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::ShippingOptions() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetails)->get_Modifiers(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentDetailsModifier>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetails)->get_ShippingOptions(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::Modifiers(param::async_vector_view<Windows::ApplicationModel::Payments::PaymentDetailsModifier> const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::ShippingOptions(param::async_vector_view<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption> const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetails)->put_Modifiers(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetails)->put_ShippingOptions(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentDetails) consume_Windows_ApplicationModel_Payments_IPaymentDetailsFactory<D>::Create(Windows::ApplicationModel::Payments::PaymentItem const& total) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::Modifiers() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetails)->get_Modifiers(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentDetails<D>::Modifiers(param::async_vector_view<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetails)->put_Modifiers(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentDetails) consume_Windows_ApplicationModel_Payments_IPaymentDetailsFactory<D>::Create(winrt::Windows::ApplicationModel::Payments::PaymentItem const& total) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetailsFactory)->Create(*(void**)(&total), &result));
-        return Windows::ApplicationModel::Payments::PaymentDetails{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetailsFactory)->Create(*(void**)(&total), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentDetails{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentDetails) consume_Windows_ApplicationModel_Payments_IPaymentDetailsFactory<D>::CreateWithDisplayItems(Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<Windows::ApplicationModel::Payments::PaymentItem> const& displayItems) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentDetails) consume_Windows_ApplicationModel_Payments_IPaymentDetailsFactory<D>::CreateWithDisplayItems(winrt::Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentItem> const& displayItems) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetailsFactory)->CreateWithDisplayItems(*(void**)(&total), *(void**)(&displayItems), &result));
-        return Windows::ApplicationModel::Payments::PaymentDetails{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetailsFactory)->CreateWithDisplayItems(*(void**)(&total), *(void**)(&displayItems), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentDetails{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifier<D>::JsonData() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetailsModifier)->get_JsonData(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifier)->get_JsonData(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifier<D>::SupportedMethodIds() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifier<D>::SupportedMethodIds() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetailsModifier)->get_SupportedMethodIds(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifier)->get_SupportedMethodIds(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentItem) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifier<D>::Total() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentItem) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifier<D>::Total() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetailsModifier)->get_Total(&value));
-        return Windows::ApplicationModel::Payments::PaymentItem{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifier)->get_Total(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentItem{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentItem>) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifier<D>::AdditionalDisplayItems() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentItem>) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifier<D>::AdditionalDisplayItems() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetailsModifier)->get_AdditionalDisplayItems(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentItem>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifier)->get_AdditionalDisplayItems(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentItem>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentDetailsModifier) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifierFactory<D>::Create(param::iterable<hstring> const& supportedMethodIds, Windows::ApplicationModel::Payments::PaymentItem const& total) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifierFactory<D>::Create(param::iterable<hstring> const& supportedMethodIds, winrt::Windows::ApplicationModel::Payments::PaymentItem const& total) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory)->Create(*(void**)(&supportedMethodIds), *(void**)(&total), &result));
-        return Windows::ApplicationModel::Payments::PaymentDetailsModifier{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory)->Create(*(void**)(&supportedMethodIds), *(void**)(&total), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentDetailsModifier) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifierFactory<D>::CreateWithAdditionalDisplayItems(param::iterable<hstring> const& supportedMethodIds, Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<Windows::ApplicationModel::Payments::PaymentItem> const& additionalDisplayItems) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifierFactory<D>::CreateWithAdditionalDisplayItems(param::iterable<hstring> const& supportedMethodIds, winrt::Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentItem> const& additionalDisplayItems) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory)->CreateWithAdditionalDisplayItems(*(void**)(&supportedMethodIds), *(void**)(&total), *(void**)(&additionalDisplayItems), &result));
-        return Windows::ApplicationModel::Payments::PaymentDetailsModifier{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory)->CreateWithAdditionalDisplayItems(*(void**)(&supportedMethodIds), *(void**)(&total), *(void**)(&additionalDisplayItems), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentDetailsModifier) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifierFactory<D>::CreateWithAdditionalDisplayItemsAndJsonData(param::iterable<hstring> const& supportedMethodIds, Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<Windows::ApplicationModel::Payments::PaymentItem> const& additionalDisplayItems, param::hstring const& jsonData) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier) consume_Windows_ApplicationModel_Payments_IPaymentDetailsModifierFactory<D>::CreateWithAdditionalDisplayItemsAndJsonData(param::iterable<hstring> const& supportedMethodIds, winrt::Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentItem> const& additionalDisplayItems, param::hstring const& jsonData) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory)->CreateWithAdditionalDisplayItemsAndJsonData(*(void**)(&supportedMethodIds), *(void**)(&total), *(void**)(&additionalDisplayItems), *(void**)(&jsonData), &result));
-        return Windows::ApplicationModel::Payments::PaymentDetailsModifier{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory)->CreateWithAdditionalDisplayItemsAndJsonData(*(void**)(&supportedMethodIds), *(void**)(&total), *(void**)(&additionalDisplayItems), *(void**)(&jsonData), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentItem<D>::Label() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentItem)->get_Label(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentItem)->get_Label(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentItem<D>::Label(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentItem)->put_Label(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentItem)->put_Label(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentCurrencyAmount) consume_Windows_ApplicationModel_Payments_IPaymentItem<D>::Amount() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount) consume_Windows_ApplicationModel_Payments_IPaymentItem<D>::Amount() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentItem)->get_Amount(&value));
-        return Windows::ApplicationModel::Payments::PaymentCurrencyAmount{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentItem)->get_Amount(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentItem<D>::Amount(Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentItem<D>::Amount(winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentItem)->put_Amount(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentItem)->put_Amount(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Payments_IPaymentItem<D>::Pending() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentItem)->get_Pending(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentItem)->get_Pending(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentItem<D>::Pending(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentItem)->put_Pending(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentItem)->put_Pending(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentItem) consume_Windows_ApplicationModel_Payments_IPaymentItemFactory<D>::Create(param::hstring const& label, Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentItem) consume_Windows_ApplicationModel_Payments_IPaymentItemFactory<D>::Create(param::hstring const& label, winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentItemFactory)->Create(*(void**)(&label), *(void**)(&amount), &result));
-        return Windows::ApplicationModel::Payments::PaymentItem{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentItemFactory)->Create(*(void**)(&label), *(void**)(&amount), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentItem{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<hstring>>) consume_Windows_ApplicationModel_Payments_IPaymentMediator<D>::GetSupportedMethodIdsAsync() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<hstring>>) consume_Windows_ApplicationModel_Payments_IPaymentMediator<D>::GetSupportedMethodIdsAsync() const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMediator)->GetSupportedMethodIdsAsync(&result));
-        return Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<hstring>>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMediator)->GetSupportedMethodIdsAsync(&result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<hstring>>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>) consume_Windows_ApplicationModel_Payments_IPaymentMediator<D>::SubmitPaymentRequestAsync(Windows::ApplicationModel::Payments::PaymentRequest const& paymentRequest) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>) consume_Windows_ApplicationModel_Payments_IPaymentMediator<D>::SubmitPaymentRequestAsync(winrt::Windows::ApplicationModel::Payments::PaymentRequest const& paymentRequest) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMediator)->SubmitPaymentRequestAsync(*(void**)(&paymentRequest), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMediator)->SubmitPaymentRequestAsync(*(void**)(&paymentRequest), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>) consume_Windows_ApplicationModel_Payments_IPaymentMediator<D>::SubmitPaymentRequestAsync(Windows::ApplicationModel::Payments::PaymentRequest const& paymentRequest, Windows::ApplicationModel::Payments::PaymentRequestChangedHandler const& changeHandler) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>) consume_Windows_ApplicationModel_Payments_IPaymentMediator<D>::SubmitPaymentRequestAsync(winrt::Windows::ApplicationModel::Payments::PaymentRequest const& paymentRequest, winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler const& changeHandler) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMediator)->SubmitPaymentRequestWithChangeHandlerAsync(*(void**)(&paymentRequest), *(void**)(&changeHandler), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMediator)->SubmitPaymentRequestWithChangeHandlerAsync(*(void**)(&paymentRequest), *(void**)(&changeHandler), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>) consume_Windows_ApplicationModel_Payments_IPaymentMediator2<D>::CanMakePaymentAsync(Windows::ApplicationModel::Payments::PaymentRequest const& paymentRequest) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>) consume_Windows_ApplicationModel_Payments_IPaymentMediator2<D>::CanMakePaymentAsync(winrt::Windows::ApplicationModel::Payments::PaymentRequest const& paymentRequest) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMediator2)->CanMakePaymentAsync(*(void**)(&paymentRequest), &result));
-        return Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMediator2)->CanMakePaymentAsync(*(void**)(&paymentRequest), &result));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentMerchantInfo<D>::PackageFullName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMerchantInfo)->get_PackageFullName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMerchantInfo)->get_PackageFullName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Uri) consume_Windows_ApplicationModel_Payments_IPaymentMerchantInfo<D>::Uri() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Uri) consume_Windows_ApplicationModel_Payments_IPaymentMerchantInfo<D>::Uri() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMerchantInfo)->get_Uri(&value));
-        return Windows::Foundation::Uri{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMerchantInfo)->get_Uri(&value));
+        return winrt::Windows::Foundation::Uri{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentMerchantInfo) consume_Windows_ApplicationModel_Payments_IPaymentMerchantInfoFactory<D>::Create(Windows::Foundation::Uri const& uri) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo) consume_Windows_ApplicationModel_Payments_IPaymentMerchantInfoFactory<D>::Create(winrt::Windows::Foundation::Uri const& uri) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMerchantInfoFactory)->Create(*(void**)(&uri), &result));
-        return Windows::ApplicationModel::Payments::PaymentMerchantInfo{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMerchantInfoFactory)->Create(*(void**)(&uri), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_ApplicationModel_Payments_IPaymentMethodData<D>::SupportedMethodIds() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<hstring>) consume_Windows_ApplicationModel_Payments_IPaymentMethodData<D>::SupportedMethodIds() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMethodData)->get_SupportedMethodIds(&value));
-        return Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMethodData)->get_SupportedMethodIds(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentMethodData<D>::JsonData() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMethodData)->get_JsonData(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMethodData)->get_JsonData(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentMethodData) consume_Windows_ApplicationModel_Payments_IPaymentMethodDataFactory<D>::Create(param::iterable<hstring> const& supportedMethodIds) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentMethodData) consume_Windows_ApplicationModel_Payments_IPaymentMethodDataFactory<D>::Create(param::iterable<hstring> const& supportedMethodIds) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMethodDataFactory)->Create(*(void**)(&supportedMethodIds), &result));
-        return Windows::ApplicationModel::Payments::PaymentMethodData{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMethodDataFactory)->Create(*(void**)(&supportedMethodIds), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentMethodData{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentMethodData) consume_Windows_ApplicationModel_Payments_IPaymentMethodDataFactory<D>::CreateWithJsonData(param::iterable<hstring> const& supportedMethodIds, param::hstring const& jsonData) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentMethodData) consume_Windows_ApplicationModel_Payments_IPaymentMethodDataFactory<D>::CreateWithJsonData(param::iterable<hstring> const& supportedMethodIds, param::hstring const& jsonData) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentMethodDataFactory)->CreateWithJsonData(*(void**)(&supportedMethodIds), *(void**)(&jsonData), &result));
-        return Windows::ApplicationModel::Payments::PaymentMethodData{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentMethodDataFactory)->CreateWithJsonData(*(void**)(&supportedMethodIds), *(void**)(&jsonData), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentMethodData{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentOptionPresence) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerEmail() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerEmail() const
     {
-        Windows::ApplicationModel::Payments::PaymentOptionPresence value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->get_RequestPayerEmail(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->get_RequestPayerEmail(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerEmail(Windows::ApplicationModel::Payments::PaymentOptionPresence const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerEmail(winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->put_RequestPayerEmail(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->put_RequestPayerEmail(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentOptionPresence) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerName() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerName() const
     {
-        Windows::ApplicationModel::Payments::PaymentOptionPresence value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->get_RequestPayerName(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->get_RequestPayerName(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerName(Windows::ApplicationModel::Payments::PaymentOptionPresence const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerName(winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->put_RequestPayerName(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->put_RequestPayerName(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentOptionPresence) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerPhoneNumber() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerPhoneNumber() const
     {
-        Windows::ApplicationModel::Payments::PaymentOptionPresence value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->get_RequestPayerPhoneNumber(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->get_RequestPayerPhoneNumber(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerPhoneNumber(Windows::ApplicationModel::Payments::PaymentOptionPresence const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestPayerPhoneNumber(winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->put_RequestPayerPhoneNumber(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->put_RequestPayerPhoneNumber(static_cast<int32_t>(value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestShipping() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->get_RequestShipping(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->get_RequestShipping(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::RequestShipping(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->put_RequestShipping(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->put_RequestShipping(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentShippingType) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::ShippingType() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentShippingType) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::ShippingType() const
     {
-        Windows::ApplicationModel::Payments::PaymentShippingType value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->get_ShippingType(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Payments::PaymentShippingType value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->get_ShippingType(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::ShippingType(Windows::ApplicationModel::Payments::PaymentShippingType const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentOptions<D>::ShippingType(winrt::Windows::ApplicationModel::Payments::PaymentShippingType const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentOptions)->put_ShippingType(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentOptions)->put_ShippingType(static_cast<int32_t>(value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentMerchantInfo) consume_Windows_ApplicationModel_Payments_IPaymentRequest<D>::MerchantInfo() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo) consume_Windows_ApplicationModel_Payments_IPaymentRequest<D>::MerchantInfo() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequest)->get_MerchantInfo(&value));
-        return Windows::ApplicationModel::Payments::PaymentMerchantInfo{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequest)->get_MerchantInfo(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentDetails) consume_Windows_ApplicationModel_Payments_IPaymentRequest<D>::Details() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentDetails) consume_Windows_ApplicationModel_Payments_IPaymentRequest<D>::Details() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequest)->get_Details(&value));
-        return Windows::ApplicationModel::Payments::PaymentDetails{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequest)->get_Details(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentDetails{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentMethodData>) consume_Windows_ApplicationModel_Payments_IPaymentRequest<D>::MethodData() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>) consume_Windows_ApplicationModel_Payments_IPaymentRequest<D>::MethodData() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequest)->get_MethodData(&value));
-        return Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentMethodData>{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequest)->get_MethodData(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentOptions) consume_Windows_ApplicationModel_Payments_IPaymentRequest<D>::Options() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentOptions) consume_Windows_ApplicationModel_Payments_IPaymentRequest<D>::Options() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequest)->get_Options(&value));
-        return Windows::ApplicationModel::Payments::PaymentOptions{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequest)->get_Options(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentOptions{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentRequest2<D>::Id() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequest2)->get_Id(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequest2)->get_Id(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentRequestChangeKind) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedArgs<D>::ChangeKind() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentRequestChangeKind) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedArgs<D>::ChangeKind() const
     {
-        Windows::ApplicationModel::Payments::PaymentRequestChangeKind value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs)->get_ChangeKind(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::ApplicationModel::Payments::PaymentRequestChangeKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs)->get_ChangeKind(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentAddress) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedArgs<D>::ShippingAddress() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentAddress) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedArgs<D>::ShippingAddress() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs)->get_ShippingAddress(&value));
-        return Windows::ApplicationModel::Payments::PaymentAddress{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs)->get_ShippingAddress(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentAddress{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedArgs<D>::SelectedShippingOption() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedArgs<D>::SelectedShippingOption() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs)->get_SelectedShippingOption(&value));
-        return Windows::ApplicationModel::Payments::PaymentShippingOption{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs)->get_SelectedShippingOption(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentShippingOption{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedArgs<D>::Acknowledge(Windows::ApplicationModel::Payments::PaymentRequestChangedResult const& changeResult) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedArgs<D>::Acknowledge(winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult const& changeResult) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs)->Acknowledge(*(void**)(&changeResult)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs)->Acknowledge(*(void**)(&changeResult)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResult<D>::ChangeAcceptedByMerchant() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->get_ChangeAcceptedByMerchant(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->get_ChangeAcceptedByMerchant(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResult<D>::ChangeAcceptedByMerchant(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->put_ChangeAcceptedByMerchant(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->put_ChangeAcceptedByMerchant(value));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResult<D>::Message() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->get_Message(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->get_Message(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResult<D>::Message(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->put_Message(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->put_Message(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentDetails) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResult<D>::UpdatedPaymentDetails() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentDetails) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResult<D>::UpdatedPaymentDetails() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->get_UpdatedPaymentDetails(&value));
-        return Windows::ApplicationModel::Payments::PaymentDetails{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->get_UpdatedPaymentDetails(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentDetails{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResult<D>::UpdatedPaymentDetails(Windows::ApplicationModel::Payments::PaymentDetails const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResult<D>::UpdatedPaymentDetails(winrt::Windows::ApplicationModel::Payments::PaymentDetails const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->put_UpdatedPaymentDetails(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult)->put_UpdatedPaymentDetails(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentRequestChangedResult) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResultFactory<D>::Create(bool changeAcceptedByMerchant) const
-    {
-        void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedResultFactory)->Create(changeAcceptedByMerchant, &result));
-        return Windows::ApplicationModel::Payments::PaymentRequestChangedResult{ result, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentRequestChangedResult) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResultFactory<D>::CreateWithPaymentDetails(bool changeAcceptedByMerchant, Windows::ApplicationModel::Payments::PaymentDetails const& updatedPaymentDetails) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResultFactory<D>::Create(bool changeAcceptedByMerchant) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestChangedResultFactory)->CreateWithPaymentDetails(changeAcceptedByMerchant, *(void**)(&updatedPaymentDetails), &result));
-        return Windows::ApplicationModel::Payments::PaymentRequestChangedResult{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResultFactory)->Create(changeAcceptedByMerchant, &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentRequest) consume_Windows_ApplicationModel_Payments_IPaymentRequestFactory<D>::Create(Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult) consume_Windows_ApplicationModel_Payments_IPaymentRequestChangedResultFactory<D>::CreateWithPaymentDetails(bool changeAcceptedByMerchant, winrt::Windows::ApplicationModel::Payments::PaymentDetails const& updatedPaymentDetails) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestFactory)->Create(*(void**)(&details), *(void**)(&methodData), &result));
-        return Windows::ApplicationModel::Payments::PaymentRequest{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResultFactory)->CreateWithPaymentDetails(changeAcceptedByMerchant, *(void**)(&updatedPaymentDetails), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentRequest) consume_Windows_ApplicationModel_Payments_IPaymentRequestFactory<D>::CreateWithMerchantInfo(Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentRequest) consume_Windows_ApplicationModel_Payments_IPaymentRequestFactory<D>::Create(winrt::Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestFactory)->CreateWithMerchantInfo(*(void**)(&details), *(void**)(&methodData), *(void**)(&merchantInfo), &result));
-        return Windows::ApplicationModel::Payments::PaymentRequest{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestFactory)->Create(*(void**)(&details), *(void**)(&methodData), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentRequest{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentRequest) consume_Windows_ApplicationModel_Payments_IPaymentRequestFactory<D>::CreateWithMerchantInfoAndOptions(Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo, Windows::ApplicationModel::Payments::PaymentOptions const& options) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentRequest) consume_Windows_ApplicationModel_Payments_IPaymentRequestFactory<D>::CreateWithMerchantInfo(winrt::Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestFactory)->CreateWithMerchantInfoAndOptions(*(void**)(&details), *(void**)(&methodData), *(void**)(&merchantInfo), *(void**)(&options), &result));
-        return Windows::ApplicationModel::Payments::PaymentRequest{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestFactory)->CreateWithMerchantInfo(*(void**)(&details), *(void**)(&methodData), *(void**)(&merchantInfo), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentRequest{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentRequest) consume_Windows_ApplicationModel_Payments_IPaymentRequestFactory2<D>::CreateWithMerchantInfoOptionsAndId(Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo, Windows::ApplicationModel::Payments::PaymentOptions const& options, param::hstring const& id) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentRequest) consume_Windows_ApplicationModel_Payments_IPaymentRequestFactory<D>::CreateWithMerchantInfoAndOptions(winrt::Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo, winrt::Windows::ApplicationModel::Payments::PaymentOptions const& options) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestFactory2)->CreateWithMerchantInfoOptionsAndId(*(void**)(&details), *(void**)(&methodData), *(void**)(&merchantInfo), *(void**)(&options), *(void**)(&id), &result));
-        return Windows::ApplicationModel::Payments::PaymentRequest{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestFactory)->CreateWithMerchantInfoAndOptions(*(void**)(&details), *(void**)(&methodData), *(void**)(&merchantInfo), *(void**)(&options), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentRequest{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentRequestStatus) consume_Windows_ApplicationModel_Payments_IPaymentRequestSubmitResult<D>::Status() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentRequest) consume_Windows_ApplicationModel_Payments_IPaymentRequestFactory2<D>::CreateWithMerchantInfoOptionsAndId(winrt::Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo, winrt::Windows::ApplicationModel::Payments::PaymentOptions const& options, param::hstring const& id) const
     {
-        Windows::ApplicationModel::Payments::PaymentRequestStatus value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestFactory2)->CreateWithMerchantInfoOptionsAndId(*(void**)(&details), *(void**)(&methodData), *(void**)(&merchantInfo), *(void**)(&options), *(void**)(&id), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentRequest{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentRequestStatus) consume_Windows_ApplicationModel_Payments_IPaymentRequestSubmitResult<D>::Status() const
+    {
+        winrt::Windows::ApplicationModel::Payments::PaymentRequestStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult)->get_Status(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentResponse) consume_Windows_ApplicationModel_Payments_IPaymentRequestSubmitResult<D>::Response() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentResponse) consume_Windows_ApplicationModel_Payments_IPaymentRequestSubmitResult<D>::Response() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult)->get_Response(&value));
-        return Windows::ApplicationModel::Payments::PaymentResponse{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult)->get_Response(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentResponse{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentToken) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::PaymentToken() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentToken) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::PaymentToken() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentResponse)->get_PaymentToken(&value));
-        return Windows::ApplicationModel::Payments::PaymentToken{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentResponse)->get_PaymentToken(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentToken{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::ShippingOption() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::ShippingOption() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentResponse)->get_ShippingOption(&value));
-        return Windows::ApplicationModel::Payments::PaymentShippingOption{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentResponse)->get_ShippingOption(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentShippingOption{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentAddress) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::ShippingAddress() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentAddress) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::ShippingAddress() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentResponse)->get_ShippingAddress(&value));
-        return Windows::ApplicationModel::Payments::PaymentAddress{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentResponse)->get_ShippingAddress(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentAddress{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::PayerEmail() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentResponse)->get_PayerEmail(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentResponse)->get_PayerEmail(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::PayerName() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentResponse)->get_PayerName(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentResponse)->get_PayerName(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::PayerPhoneNumber() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentResponse)->get_PayerPhoneNumber(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentResponse)->get_PayerPhoneNumber(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::CompleteAsync(Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus const& status) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncAction) consume_Windows_ApplicationModel_Payments_IPaymentResponse<D>::CompleteAsync(winrt::Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus const& status) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentResponse)->CompleteAsync(static_cast<int32_t>(status), &result));
-        return Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentResponse)->CompleteAsync(static_cast<int32_t>(status), &result));
+        return winrt::Windows::Foundation::IAsyncAction{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::Label() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOption)->get_Label(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption)->get_Label(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::Label(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOption)->put_Label(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption)->put_Label(*(void**)(&value)));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentCurrencyAmount) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::Amount() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::Amount() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOption)->get_Amount(&value));
-        return Windows::ApplicationModel::Payments::PaymentCurrencyAmount{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption)->get_Amount(&value));
+        return winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::Amount(Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::Amount(winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOption)->put_Amount(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption)->put_Amount(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::Tag() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOption)->get_Tag(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption)->get_Tag(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::Tag(param::hstring const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOption)->put_Tag(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption)->put_Tag(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(bool) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::IsSelected() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOption)->get_IsSelected(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption)->get_IsSelected(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_ApplicationModel_Payments_IPaymentShippingOption<D>::IsSelected(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOption)->put_IsSelected(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption)->put_IsSelected(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentShippingOptionFactory<D>::Create(param::hstring const& label, Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentShippingOptionFactory<D>::Create(param::hstring const& label, winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory)->Create(*(void**)(&label), *(void**)(&amount), &result));
-        return Windows::ApplicationModel::Payments::PaymentShippingOption{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory)->Create(*(void**)(&label), *(void**)(&amount), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentShippingOption{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentShippingOptionFactory<D>::CreateWithSelected(param::hstring const& label, Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount, bool selected) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentShippingOptionFactory<D>::CreateWithSelected(param::hstring const& label, winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount, bool selected) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory)->CreateWithSelected(*(void**)(&label), *(void**)(&amount), selected, &result));
-        return Windows::ApplicationModel::Payments::PaymentShippingOption{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory)->CreateWithSelected(*(void**)(&label), *(void**)(&amount), selected, &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentShippingOption{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentShippingOptionFactory<D>::CreateWithSelectedAndTag(param::hstring const& label, Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount, bool selected, param::hstring const& tag) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentShippingOption) consume_Windows_ApplicationModel_Payments_IPaymentShippingOptionFactory<D>::CreateWithSelectedAndTag(param::hstring const& label, winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount, bool selected, param::hstring const& tag) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory)->CreateWithSelectedAndTag(*(void**)(&label), *(void**)(&amount), selected, *(void**)(&tag), &result));
-        return Windows::ApplicationModel::Payments::PaymentShippingOption{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory)->CreateWithSelectedAndTag(*(void**)(&label), *(void**)(&amount), selected, *(void**)(&tag), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentShippingOption{ result, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentToken<D>::PaymentMethodId() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentToken)->get_PaymentMethodId(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentToken)->get_PaymentMethodId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_Payments_IPaymentToken<D>::JsonDetails() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentToken)->get_JsonDetails(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentToken)->get_JsonDetails(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentToken) consume_Windows_ApplicationModel_Payments_IPaymentTokenFactory<D>::Create(param::hstring const& paymentMethodId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentToken) consume_Windows_ApplicationModel_Payments_IPaymentTokenFactory<D>::Create(param::hstring const& paymentMethodId) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentTokenFactory)->Create(*(void**)(&paymentMethodId), &result));
-        return Windows::ApplicationModel::Payments::PaymentToken{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentTokenFactory)->Create(*(void**)(&paymentMethodId), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentToken{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::ApplicationModel::Payments::PaymentToken) consume_Windows_ApplicationModel_Payments_IPaymentTokenFactory<D>::CreateWithJsonDetails(param::hstring const& paymentMethodId, param::hstring const& jsonDetails) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::ApplicationModel::Payments::PaymentToken) consume_Windows_ApplicationModel_Payments_IPaymentTokenFactory<D>::CreateWithJsonDetails(param::hstring const& paymentMethodId, param::hstring const& jsonDetails) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::ApplicationModel::Payments::IPaymentTokenFactory)->CreateWithJsonDetails(*(void**)(&paymentMethodId), *(void**)(&jsonDetails), &result));
-        return Windows::ApplicationModel::Payments::PaymentToken{ result, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::Payments::IPaymentTokenFactory)->CreateWithJsonDetails(*(void**)(&paymentMethodId), *(void**)(&jsonDetails), &result));
+        return winrt::Windows::ApplicationModel::Payments::PaymentToken{ result, take_ownership_from_abi };
     }
-    template <typename H> struct delegate<Windows::ApplicationModel::Payments::PaymentRequestChangedHandler, H> final : implements_delegate<Windows::ApplicationModel::Payments::PaymentRequestChangedHandler, H>
+    template <typename H> struct delegate<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler, H> final : implements_delegate<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler, H>
     {
-        delegate(H&& handler) : implements_delegate<Windows::ApplicationModel::Payments::PaymentRequestChangedHandler, H>(std::forward<H>(handler)) {}
+        delegate(H&& handler) : implements_delegate<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler, H>(std::forward<H>(handler)) {}
 
         int32_t __stdcall Invoke(void* paymentRequest, void* args) noexcept final try
         {
-            (*this)(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentRequest const*>(&paymentRequest), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentRequestChangedArgs const*>(&args));
+            (*this)(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentRequest const*>(&paymentRequest), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs const*>(&args));
             return 0;
         }
         catch (...) { return to_hresult(); }
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentAddress> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentAddress>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentAddress> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentAddress>
     {
         int32_t __stdcall get_Country(void** value) noexcept final try
         {
@@ -718,14 +719,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().AddressLines());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().AddressLines());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_AddressLines(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AddressLines(*reinterpret_cast<Windows::Foundation::Collections::IVectorView<hstring> const*>(&value));
+            this->shim().AddressLines(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<hstring> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -868,7 +869,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::ValueSet>(this->shim().Properties());
+            *value = detach_from<winrt::Windows::Foundation::Collections::ValueSet>(this->shim().Properties());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -876,12 +877,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResult> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResult>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResult> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResult>
     {
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus>(this->shim().Status());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus>(this->shim().Status());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -889,13 +890,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResultFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResultFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResultFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentCanMakePaymentResultFactory>
     {
         int32_t __stdcall Create(int32_t value, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>(this->shim().Create(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus const*>(&value)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>(this->shim().Create(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus const*>(&value)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -903,7 +904,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentCurrencyAmount> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentCurrencyAmount>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmount> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmount>
     {
         int32_t __stdcall get_Currency(void** value) noexcept final try
         {
@@ -954,13 +955,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentCurrencyAmountFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentCurrencyAmountFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmountFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentCurrencyAmountFactory>
     {
         int32_t __stdcall Create(void* value, void* currency, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(this->shim().Create(*reinterpret_cast<hstring const*>(&value), *reinterpret_cast<hstring const*>(&currency)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(this->shim().Create(*reinterpret_cast<hstring const*>(&value), *reinterpret_cast<hstring const*>(&currency)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -968,7 +969,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(this->shim().CreateWithCurrencySystem(*reinterpret_cast<hstring const*>(&value), *reinterpret_cast<hstring const*>(&currency), *reinterpret_cast<hstring const*>(&currencySystem)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(this->shim().CreateWithCurrencySystem(*reinterpret_cast<hstring const*>(&value), *reinterpret_cast<hstring const*>(&currency), *reinterpret_cast<hstring const*>(&currencySystem)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -976,20 +977,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentDetails> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentDetails>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentDetails> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentDetails>
     {
         int32_t __stdcall get_Total(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentItem>(this->shim().Total());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentItem>(this->shim().Total());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Total(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Total(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentItem const*>(&value));
+            this->shim().Total(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentItem const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -997,14 +998,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentItem>>(this->shim().DisplayItems());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentItem>>(this->shim().DisplayItems());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_DisplayItems(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().DisplayItems(*reinterpret_cast<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentItem> const*>(&value));
+            this->shim().DisplayItems(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentItem> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1012,14 +1013,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentShippingOption>>(this->shim().ShippingOptions());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>>(this->shim().ShippingOptions());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_ShippingOptions(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ShippingOptions(*reinterpret_cast<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentShippingOption> const*>(&value));
+            this->shim().ShippingOptions(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1027,14 +1028,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentDetailsModifier>>(this->shim().Modifiers());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>>(this->shim().Modifiers());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Modifiers(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Modifiers(*reinterpret_cast<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentDetailsModifier> const*>(&value));
+            this->shim().Modifiers(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1042,13 +1043,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentDetailsFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentDetailsFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentDetailsFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentDetailsFactory>
     {
         int32_t __stdcall Create(void* total, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentDetails>(this->shim().Create(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentItem const*>(&total)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentDetails>(this->shim().Create(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentItem const*>(&total)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1056,7 +1057,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentDetails>(this->shim().CreateWithDisplayItems(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentItem const*>(&total), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::ApplicationModel::Payments::PaymentItem> const*>(&displayItems)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentDetails>(this->shim().CreateWithDisplayItems(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentItem const*>(&total), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentItem> const*>(&displayItems)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1064,7 +1065,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentDetailsModifier> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentDetailsModifier>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifier> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifier>
     {
         int32_t __stdcall get_JsonData(void** value) noexcept final try
         {
@@ -1078,7 +1079,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().SupportedMethodIds());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().SupportedMethodIds());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1086,7 +1087,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentItem>(this->shim().Total());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentItem>(this->shim().Total());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1094,7 +1095,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentItem>>(this->shim().AdditionalDisplayItems());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentItem>>(this->shim().AdditionalDisplayItems());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1102,13 +1103,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentDetailsModifierFactory>
     {
         int32_t __stdcall Create(void* supportedMethodIds, void* total, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentDetailsModifier>(this->shim().Create(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentItem const*>(&total)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>(this->shim().Create(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentItem const*>(&total)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1116,7 +1117,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentDetailsModifier>(this->shim().CreateWithAdditionalDisplayItems(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentItem const*>(&total), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::ApplicationModel::Payments::PaymentItem> const*>(&additionalDisplayItems)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>(this->shim().CreateWithAdditionalDisplayItems(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentItem const*>(&total), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentItem> const*>(&additionalDisplayItems)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1124,7 +1125,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentDetailsModifier>(this->shim().CreateWithAdditionalDisplayItemsAndJsonData(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentItem const*>(&total), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::ApplicationModel::Payments::PaymentItem> const*>(&additionalDisplayItems), *reinterpret_cast<hstring const*>(&jsonData)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>(this->shim().CreateWithAdditionalDisplayItemsAndJsonData(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentItem const*>(&total), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentItem> const*>(&additionalDisplayItems), *reinterpret_cast<hstring const*>(&jsonData)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1132,7 +1133,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentItem> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentItem>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentItem> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentItem>
     {
         int32_t __stdcall get_Label(void** value) noexcept final try
         {
@@ -1153,14 +1154,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(this->shim().Amount());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(this->shim().Amount());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Amount(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Amount(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&value));
+            this->shim().Amount(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1182,13 +1183,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentItemFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentItemFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentItemFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentItemFactory>
     {
         int32_t __stdcall Create(void* label, void* amount, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentItem>(this->shim().Create(*reinterpret_cast<hstring const*>(&label), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&amount)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentItem>(this->shim().Create(*reinterpret_cast<hstring const*>(&label), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&amount)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1196,13 +1197,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentMediator> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentMediator>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentMediator> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentMediator>
     {
         int32_t __stdcall GetSupportedMethodIdsAsync(void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<hstring>>>(this->shim().GetSupportedMethodIdsAsync());
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<hstring>>>(this->shim().GetSupportedMethodIdsAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1210,7 +1211,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>>(this->shim().SubmitPaymentRequestAsync(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentRequest const*>(&paymentRequest)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>>(this->shim().SubmitPaymentRequestAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentRequest const*>(&paymentRequest)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1218,7 +1219,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>>(this->shim().SubmitPaymentRequestAsync(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentRequest const*>(&paymentRequest), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentRequestChangedHandler const*>(&changeHandler)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>>(this->shim().SubmitPaymentRequestAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentRequest const*>(&paymentRequest), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedHandler const*>(&changeHandler)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1226,13 +1227,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentMediator2> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentMediator2>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentMediator2> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentMediator2>
     {
         int32_t __stdcall CanMakePaymentAsync(void* paymentRequest, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>>(this->shim().CanMakePaymentAsync(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentRequest const*>(&paymentRequest)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>>(this->shim().CanMakePaymentAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentRequest const*>(&paymentRequest)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1240,7 +1241,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentMerchantInfo> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentMerchantInfo>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentMerchantInfo> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentMerchantInfo>
     {
         int32_t __stdcall get_PackageFullName(void** value) noexcept final try
         {
@@ -1254,7 +1255,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Uri>(this->shim().Uri());
+            *value = detach_from<winrt::Windows::Foundation::Uri>(this->shim().Uri());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1262,13 +1263,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentMerchantInfoFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentMerchantInfoFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentMerchantInfoFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentMerchantInfoFactory>
     {
         int32_t __stdcall Create(void* uri, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentMerchantInfo>(this->shim().Create(*reinterpret_cast<Windows::Foundation::Uri const*>(&uri)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo>(this->shim().Create(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&uri)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1276,13 +1277,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentMethodData> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentMethodData>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentMethodData> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentMethodData>
     {
         int32_t __stdcall get_SupportedMethodIds(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().SupportedMethodIds());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().SupportedMethodIds());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1298,13 +1299,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentMethodDataFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentMethodDataFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentMethodDataFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentMethodDataFactory>
     {
         int32_t __stdcall Create(void* supportedMethodIds, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentMethodData>(this->shim().Create(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>(this->shim().Create(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1312,7 +1313,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentMethodData>(this->shim().CreateWithJsonData(*reinterpret_cast<Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds), *reinterpret_cast<hstring const*>(&jsonData)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>(this->shim().CreateWithJsonData(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<hstring> const*>(&supportedMethodIds), *reinterpret_cast<hstring const*>(&jsonData)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1320,47 +1321,47 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentOptions> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentOptions>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentOptions> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentOptions>
     {
         int32_t __stdcall get_RequestPayerEmail(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentOptionPresence>(this->shim().RequestPayerEmail());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>(this->shim().RequestPayerEmail());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_RequestPayerEmail(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().RequestPayerEmail(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentOptionPresence const*>(&value));
+            this->shim().RequestPayerEmail(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_RequestPayerName(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentOptionPresence>(this->shim().RequestPayerName());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>(this->shim().RequestPayerName());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_RequestPayerName(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().RequestPayerName(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentOptionPresence const*>(&value));
+            this->shim().RequestPayerName(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall get_RequestPayerPhoneNumber(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentOptionPresence>(this->shim().RequestPayerPhoneNumber());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>(this->shim().RequestPayerPhoneNumber());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_RequestPayerPhoneNumber(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().RequestPayerPhoneNumber(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentOptionPresence const*>(&value));
+            this->shim().RequestPayerPhoneNumber(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1381,14 +1382,14 @@ namespace winrt::impl
         int32_t __stdcall get_ShippingType(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentShippingType>(this->shim().ShippingType());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentShippingType>(this->shim().ShippingType());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_ShippingType(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ShippingType(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentShippingType const*>(&value));
+            this->shim().ShippingType(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentShippingType const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1396,13 +1397,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentRequest> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentRequest>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequest> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequest>
     {
         int32_t __stdcall get_MerchantInfo(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentMerchantInfo>(this->shim().MerchantInfo());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo>(this->shim().MerchantInfo());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1410,7 +1411,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentDetails>(this->shim().Details());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentDetails>(this->shim().Details());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1418,7 +1419,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Payments::PaymentMethodData>>(this->shim().MethodData());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>>(this->shim().MethodData());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1426,7 +1427,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentOptions>(this->shim().Options());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentOptions>(this->shim().Options());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1434,7 +1435,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentRequest2> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentRequest2>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequest2> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequest2>
     {
         int32_t __stdcall get_Id(void** value) noexcept final try
         {
@@ -1448,12 +1449,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedArgs>
     {
         int32_t __stdcall get_ChangeKind(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentRequestChangeKind>(this->shim().ChangeKind());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangeKind>(this->shim().ChangeKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1461,7 +1462,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentAddress>(this->shim().ShippingAddress());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentAddress>(this->shim().ShippingAddress());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1469,14 +1470,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().SelectedShippingOption());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().SelectedShippingOption());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall Acknowledge(void* changeResult) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Acknowledge(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentRequestChangedResult const*>(&changeResult));
+            this->shim().Acknowledge(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult const*>(&changeResult));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1484,7 +1485,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentRequestChangedResult> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentRequestChangedResult>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResult>
     {
         int32_t __stdcall get_ChangeAcceptedByMerchant(bool* value) noexcept final try
         {
@@ -1519,14 +1520,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentDetails>(this->shim().UpdatedPaymentDetails());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentDetails>(this->shim().UpdatedPaymentDetails());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_UpdatedPaymentDetails(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().UpdatedPaymentDetails(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentDetails const*>(&value));
+            this->shim().UpdatedPaymentDetails(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentDetails const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1534,13 +1535,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentRequestChangedResultFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentRequestChangedResultFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResultFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestChangedResultFactory>
     {
         int32_t __stdcall Create(bool changeAcceptedByMerchant, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentRequestChangedResult>(this->shim().Create(changeAcceptedByMerchant));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult>(this->shim().Create(changeAcceptedByMerchant));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1548,7 +1549,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentRequestChangedResult>(this->shim().CreateWithPaymentDetails(changeAcceptedByMerchant, *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentDetails const*>(&updatedPaymentDetails)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult>(this->shim().CreateWithPaymentDetails(changeAcceptedByMerchant, *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentDetails const*>(&updatedPaymentDetails)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1556,13 +1557,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentRequestFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentRequestFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestFactory>
     {
         int32_t __stdcall Create(void* details, void* methodData, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentRequest>(this->shim().Create(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentDetails const*>(&details), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::ApplicationModel::Payments::PaymentMethodData> const*>(&methodData)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(this->shim().Create(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentDetails const*>(&details), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const*>(&methodData)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1570,7 +1571,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentRequest>(this->shim().CreateWithMerchantInfo(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentDetails const*>(&details), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::ApplicationModel::Payments::PaymentMethodData> const*>(&methodData), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentMerchantInfo const*>(&merchantInfo)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(this->shim().CreateWithMerchantInfo(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentDetails const*>(&details), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const*>(&methodData), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo const*>(&merchantInfo)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1578,7 +1579,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentRequest>(this->shim().CreateWithMerchantInfoAndOptions(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentDetails const*>(&details), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::ApplicationModel::Payments::PaymentMethodData> const*>(&methodData), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentMerchantInfo const*>(&merchantInfo), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentOptions const*>(&options)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(this->shim().CreateWithMerchantInfoAndOptions(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentDetails const*>(&details), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const*>(&methodData), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo const*>(&merchantInfo), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentOptions const*>(&options)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1586,13 +1587,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentRequestFactory2> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentRequestFactory2>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestFactory2> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestFactory2>
     {
         int32_t __stdcall CreateWithMerchantInfoOptionsAndId(void* details, void* methodData, void* merchantInfo, void* options, void* id, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentRequest>(this->shim().CreateWithMerchantInfoOptionsAndId(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentDetails const*>(&details), *reinterpret_cast<Windows::Foundation::Collections::IIterable<Windows::ApplicationModel::Payments::PaymentMethodData> const*>(&methodData), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentMerchantInfo const*>(&merchantInfo), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentOptions const*>(&options), *reinterpret_cast<hstring const*>(&id)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentRequest>(this->shim().CreateWithMerchantInfoOptionsAndId(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentDetails const*>(&details), *reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const*>(&methodData), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo const*>(&merchantInfo), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentOptions const*>(&options), *reinterpret_cast<hstring const*>(&id)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1600,12 +1601,12 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentRequestSubmitResult>
     {
         int32_t __stdcall get_Status(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentRequestStatus>(this->shim().Status());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentRequestStatus>(this->shim().Status());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1613,7 +1614,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentResponse>(this->shim().Response());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentResponse>(this->shim().Response());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1621,13 +1622,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentResponse> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentResponse>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentResponse> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentResponse>
     {
         int32_t __stdcall get_PaymentToken(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentToken>(this->shim().PaymentToken());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentToken>(this->shim().PaymentToken());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1635,7 +1636,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().ShippingOption());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().ShippingOption());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1643,7 +1644,7 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentAddress>(this->shim().ShippingAddress());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentAddress>(this->shim().ShippingAddress());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1675,7 +1676,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::Foundation::IAsyncAction>(this->shim().CompleteAsync(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus const*>(&status)));
+            *result = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().CompleteAsync(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus const*>(&status)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1683,7 +1684,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentShippingOption> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentShippingOption>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentShippingOption>
     {
         int32_t __stdcall get_Label(void** value) noexcept final try
         {
@@ -1704,14 +1705,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(this->shim().Amount());
+            *value = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>(this->shim().Amount());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_Amount(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().Amount(*reinterpret_cast<Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&value));
+            this->shim().Amount(*reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1748,13 +1749,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentShippingOptionFactory>
     {
         int32_t __stdcall Create(void* label, void* amount, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().Create(*reinterpret_cast<hstring const*>(&label), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&amount)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().Create(*reinterpret_cast<hstring const*>(&label), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&amount)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1762,7 +1763,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().CreateWithSelected(*reinterpret_cast<hstring const*>(&label), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&amount), selected));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().CreateWithSelected(*reinterpret_cast<hstring const*>(&label), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&amount), selected));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1770,7 +1771,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().CreateWithSelectedAndTag(*reinterpret_cast<hstring const*>(&label), *reinterpret_cast<Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&amount), selected, *reinterpret_cast<hstring const*>(&tag)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>(this->shim().CreateWithSelectedAndTag(*reinterpret_cast<hstring const*>(&label), *reinterpret_cast<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const*>(&amount), selected, *reinterpret_cast<hstring const*>(&tag)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1778,7 +1779,7 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentToken> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentToken>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentToken> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentToken>
     {
         int32_t __stdcall get_PaymentMethodId(void** value) noexcept final try
         {
@@ -1800,13 +1801,13 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::ApplicationModel::Payments::IPaymentTokenFactory> : produce_base<D, Windows::ApplicationModel::Payments::IPaymentTokenFactory>
+    struct produce<D, winrt::Windows::ApplicationModel::Payments::IPaymentTokenFactory> : produce_base<D, winrt::Windows::ApplicationModel::Payments::IPaymentTokenFactory>
     {
         int32_t __stdcall Create(void* paymentMethodId, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentToken>(this->shim().Create(*reinterpret_cast<hstring const*>(&paymentMethodId)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentToken>(this->shim().Create(*reinterpret_cast<hstring const*>(&paymentMethodId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1814,7 +1815,7 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<Windows::ApplicationModel::Payments::PaymentToken>(this->shim().CreateWithJsonDetails(*reinterpret_cast<hstring const*>(&paymentMethodId), *reinterpret_cast<hstring const*>(&jsonDetails)));
+            *result = detach_from<winrt::Windows::ApplicationModel::Payments::PaymentToken>(this->shim().CreateWithJsonDetails(*reinterpret_cast<hstring const*>(&paymentMethodId), *reinterpret_cast<hstring const*>(&jsonDetails)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1824,10 +1825,10 @@ namespace winrt::impl
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Payments
 {
     inline PaymentAddress::PaymentAddress() :
-        PaymentAddress(impl::call_factory_cast<PaymentAddress(*)(Windows::Foundation::IActivationFactory const&), PaymentAddress>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentAddress>(); }))
+        PaymentAddress(impl::call_factory_cast<PaymentAddress(*)(winrt::Windows::Foundation::IActivationFactory const&), PaymentAddress>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentAddress>(); }))
     {
     }
-    inline PaymentCanMakePaymentResult::PaymentCanMakePaymentResult(Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus const& value) :
+    inline PaymentCanMakePaymentResult::PaymentCanMakePaymentResult(winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus const& value) :
         PaymentCanMakePaymentResult(impl::call_factory<PaymentCanMakePaymentResult, IPaymentCanMakePaymentResultFactory>([&](IPaymentCanMakePaymentResultFactory const& f) { return f.Create(value); }))
     {
     }
@@ -1840,42 +1841,42 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Payments
     {
     }
     inline PaymentDetails::PaymentDetails() :
-        PaymentDetails(impl::call_factory_cast<PaymentDetails(*)(Windows::Foundation::IActivationFactory const&), PaymentDetails>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentDetails>(); }))
+        PaymentDetails(impl::call_factory_cast<PaymentDetails(*)(winrt::Windows::Foundation::IActivationFactory const&), PaymentDetails>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentDetails>(); }))
     {
     }
-    inline PaymentDetails::PaymentDetails(Windows::ApplicationModel::Payments::PaymentItem const& total) :
+    inline PaymentDetails::PaymentDetails(winrt::Windows::ApplicationModel::Payments::PaymentItem const& total) :
         PaymentDetails(impl::call_factory<PaymentDetails, IPaymentDetailsFactory>([&](IPaymentDetailsFactory const& f) { return f.Create(total); }))
     {
     }
-    inline PaymentDetails::PaymentDetails(Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<Windows::ApplicationModel::Payments::PaymentItem> const& displayItems) :
+    inline PaymentDetails::PaymentDetails(winrt::Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentItem> const& displayItems) :
         PaymentDetails(impl::call_factory<PaymentDetails, IPaymentDetailsFactory>([&](IPaymentDetailsFactory const& f) { return f.CreateWithDisplayItems(total, displayItems); }))
     {
     }
-    inline PaymentDetailsModifier::PaymentDetailsModifier(param::iterable<hstring> const& supportedMethodIds, Windows::ApplicationModel::Payments::PaymentItem const& total) :
+    inline PaymentDetailsModifier::PaymentDetailsModifier(param::iterable<hstring> const& supportedMethodIds, winrt::Windows::ApplicationModel::Payments::PaymentItem const& total) :
         PaymentDetailsModifier(impl::call_factory<PaymentDetailsModifier, IPaymentDetailsModifierFactory>([&](IPaymentDetailsModifierFactory const& f) { return f.Create(supportedMethodIds, total); }))
     {
     }
-    inline PaymentDetailsModifier::PaymentDetailsModifier(param::iterable<hstring> const& supportedMethodIds, Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<Windows::ApplicationModel::Payments::PaymentItem> const& additionalDisplayItems) :
+    inline PaymentDetailsModifier::PaymentDetailsModifier(param::iterable<hstring> const& supportedMethodIds, winrt::Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentItem> const& additionalDisplayItems) :
         PaymentDetailsModifier(impl::call_factory<PaymentDetailsModifier, IPaymentDetailsModifierFactory>([&](IPaymentDetailsModifierFactory const& f) { return f.CreateWithAdditionalDisplayItems(supportedMethodIds, total, additionalDisplayItems); }))
     {
     }
-    inline PaymentDetailsModifier::PaymentDetailsModifier(param::iterable<hstring> const& supportedMethodIds, Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<Windows::ApplicationModel::Payments::PaymentItem> const& additionalDisplayItems, param::hstring const& jsonData) :
+    inline PaymentDetailsModifier::PaymentDetailsModifier(param::iterable<hstring> const& supportedMethodIds, winrt::Windows::ApplicationModel::Payments::PaymentItem const& total, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentItem> const& additionalDisplayItems, param::hstring const& jsonData) :
         PaymentDetailsModifier(impl::call_factory<PaymentDetailsModifier, IPaymentDetailsModifierFactory>([&](IPaymentDetailsModifierFactory const& f) { return f.CreateWithAdditionalDisplayItemsAndJsonData(supportedMethodIds, total, additionalDisplayItems, jsonData); }))
     {
     }
-    inline PaymentItem::PaymentItem(param::hstring const& label, Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount) :
+    inline PaymentItem::PaymentItem(param::hstring const& label, winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount) :
         PaymentItem(impl::call_factory<PaymentItem, IPaymentItemFactory>([&](IPaymentItemFactory const& f) { return f.Create(label, amount); }))
     {
     }
     inline PaymentMediator::PaymentMediator() :
-        PaymentMediator(impl::call_factory_cast<PaymentMediator(*)(Windows::Foundation::IActivationFactory const&), PaymentMediator>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentMediator>(); }))
+        PaymentMediator(impl::call_factory_cast<PaymentMediator(*)(winrt::Windows::Foundation::IActivationFactory const&), PaymentMediator>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentMediator>(); }))
     {
     }
     inline PaymentMerchantInfo::PaymentMerchantInfo() :
-        PaymentMerchantInfo(impl::call_factory_cast<PaymentMerchantInfo(*)(Windows::Foundation::IActivationFactory const&), PaymentMerchantInfo>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentMerchantInfo>(); }))
+        PaymentMerchantInfo(impl::call_factory_cast<PaymentMerchantInfo(*)(winrt::Windows::Foundation::IActivationFactory const&), PaymentMerchantInfo>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentMerchantInfo>(); }))
     {
     }
-    inline PaymentMerchantInfo::PaymentMerchantInfo(Windows::Foundation::Uri const& uri) :
+    inline PaymentMerchantInfo::PaymentMerchantInfo(winrt::Windows::Foundation::Uri const& uri) :
         PaymentMerchantInfo(impl::call_factory<PaymentMerchantInfo, IPaymentMerchantInfoFactory>([&](IPaymentMerchantInfoFactory const& f) { return f.Create(uri); }))
     {
     }
@@ -1888,22 +1889,22 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Payments
     {
     }
     inline PaymentOptions::PaymentOptions() :
-        PaymentOptions(impl::call_factory_cast<PaymentOptions(*)(Windows::Foundation::IActivationFactory const&), PaymentOptions>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentOptions>(); }))
+        PaymentOptions(impl::call_factory_cast<PaymentOptions(*)(winrt::Windows::Foundation::IActivationFactory const&), PaymentOptions>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<PaymentOptions>(); }))
     {
     }
-    inline PaymentRequest::PaymentRequest(Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData) :
+    inline PaymentRequest::PaymentRequest(winrt::Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData) :
         PaymentRequest(impl::call_factory<PaymentRequest, IPaymentRequestFactory>([&](IPaymentRequestFactory const& f) { return f.Create(details, methodData); }))
     {
     }
-    inline PaymentRequest::PaymentRequest(Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo) :
+    inline PaymentRequest::PaymentRequest(winrt::Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo) :
         PaymentRequest(impl::call_factory<PaymentRequest, IPaymentRequestFactory>([&](IPaymentRequestFactory const& f) { return f.CreateWithMerchantInfo(details, methodData, merchantInfo); }))
     {
     }
-    inline PaymentRequest::PaymentRequest(Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo, Windows::ApplicationModel::Payments::PaymentOptions const& options) :
+    inline PaymentRequest::PaymentRequest(winrt::Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo, winrt::Windows::ApplicationModel::Payments::PaymentOptions const& options) :
         PaymentRequest(impl::call_factory<PaymentRequest, IPaymentRequestFactory>([&](IPaymentRequestFactory const& f) { return f.CreateWithMerchantInfoAndOptions(details, methodData, merchantInfo, options); }))
     {
     }
-    inline PaymentRequest::PaymentRequest(Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo, Windows::ApplicationModel::Payments::PaymentOptions const& options, param::hstring const& id) :
+    inline PaymentRequest::PaymentRequest(winrt::Windows::ApplicationModel::Payments::PaymentDetails const& details, param::iterable<winrt::Windows::ApplicationModel::Payments::PaymentMethodData> const& methodData, winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo const& merchantInfo, winrt::Windows::ApplicationModel::Payments::PaymentOptions const& options, param::hstring const& id) :
         PaymentRequest(impl::call_factory<PaymentRequest, IPaymentRequestFactory2>([&](IPaymentRequestFactory2 const& f) { return f.CreateWithMerchantInfoOptionsAndId(details, methodData, merchantInfo, options, id); }))
     {
     }
@@ -1911,19 +1912,19 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Payments
         PaymentRequestChangedResult(impl::call_factory<PaymentRequestChangedResult, IPaymentRequestChangedResultFactory>([&](IPaymentRequestChangedResultFactory const& f) { return f.Create(changeAcceptedByMerchant); }))
     {
     }
-    inline PaymentRequestChangedResult::PaymentRequestChangedResult(bool changeAcceptedByMerchant, Windows::ApplicationModel::Payments::PaymentDetails const& updatedPaymentDetails) :
+    inline PaymentRequestChangedResult::PaymentRequestChangedResult(bool changeAcceptedByMerchant, winrt::Windows::ApplicationModel::Payments::PaymentDetails const& updatedPaymentDetails) :
         PaymentRequestChangedResult(impl::call_factory<PaymentRequestChangedResult, IPaymentRequestChangedResultFactory>([&](IPaymentRequestChangedResultFactory const& f) { return f.CreateWithPaymentDetails(changeAcceptedByMerchant, updatedPaymentDetails); }))
     {
     }
-    inline PaymentShippingOption::PaymentShippingOption(param::hstring const& label, Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount) :
+    inline PaymentShippingOption::PaymentShippingOption(param::hstring const& label, winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount) :
         PaymentShippingOption(impl::call_factory<PaymentShippingOption, IPaymentShippingOptionFactory>([&](IPaymentShippingOptionFactory const& f) { return f.Create(label, amount); }))
     {
     }
-    inline PaymentShippingOption::PaymentShippingOption(param::hstring const& label, Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount, bool selected) :
+    inline PaymentShippingOption::PaymentShippingOption(param::hstring const& label, winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount, bool selected) :
         PaymentShippingOption(impl::call_factory<PaymentShippingOption, IPaymentShippingOptionFactory>([&](IPaymentShippingOptionFactory const& f) { return f.CreateWithSelected(label, amount, selected); }))
     {
     }
-    inline PaymentShippingOption::PaymentShippingOption(param::hstring const& label, Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount, bool selected, param::hstring const& tag) :
+    inline PaymentShippingOption::PaymentShippingOption(param::hstring const& label, winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount const& amount, bool selected, param::hstring const& tag) :
         PaymentShippingOption(impl::call_factory<PaymentShippingOption, IPaymentShippingOptionFactory>([&](IPaymentShippingOptionFactory const& f) { return f.CreateWithSelectedAndTag(label, amount, selected, tag); }))
     {
     }
@@ -1955,7 +1956,7 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Payments
         PaymentRequestChangedHandler([o = std::move(object), method](auto&&... args) { if (auto s = o.get()) { ((*s).*(method))(args...); } })
     {
     }
-    inline auto PaymentRequestChangedHandler::operator()(Windows::ApplicationModel::Payments::PaymentRequest const& paymentRequest, Windows::ApplicationModel::Payments::PaymentRequestChangedArgs const& args) const
+    inline auto PaymentRequestChangedHandler::operator()(winrt::Windows::ApplicationModel::Payments::PaymentRequest const& paymentRequest, winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs const& args) const
     {
         check_hresult((*(impl::abi_t<PaymentRequestChangedHandler>**)this)->Invoke(*(void**)(&paymentRequest), *(void**)(&args)));
     }

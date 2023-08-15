@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Xaml_Media_Media3D_2_H
 #define WINRT_Windows_UI_Xaml_Media_Media3D_2_H
 #include "winrt/impl/Windows.UI.Xaml.1.h"
@@ -36,12 +37,12 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media::Media3D
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) CompositeTransform3D : Windows::UI::Xaml::Media::Media3D::ICompositeTransform3D,
-        impl::base<CompositeTransform3D, Windows::UI::Xaml::Media::Media3D::Transform3D, Windows::UI::Xaml::DependencyObject>,
-        impl::require<CompositeTransform3D, Windows::UI::Xaml::Media::Media3D::ITransform3D, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    struct __declspec(empty_bases) CompositeTransform3D : winrt::Windows::UI::Xaml::Media::Media3D::ICompositeTransform3D,
+        impl::base<CompositeTransform3D, winrt::Windows::UI::Xaml::Media::Media3D::Transform3D, winrt::Windows::UI::Xaml::DependencyObject>,
+        impl::require<CompositeTransform3D, winrt::Windows::UI::Xaml::Media::Media3D::ITransform3D, winrt::Windows::UI::Xaml::IDependencyObject, winrt::Windows::UI::Xaml::IDependencyObject2>
     {
         CompositeTransform3D(std::nullptr_t) noexcept {}
-        CompositeTransform3D(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Media::Media3D::ICompositeTransform3D(ptr, take_ownership_from_abi) {}
+        CompositeTransform3D(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Media::Media3D::ICompositeTransform3D(ptr, take_ownership_from_abi) {}
         CompositeTransform3D();
         [[nodiscard]] static auto CenterXProperty();
         [[nodiscard]] static auto CenterYProperty();
@@ -56,34 +57,34 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Media::Media3D
         [[nodiscard]] static auto TranslateYProperty();
         [[nodiscard]] static auto TranslateZProperty();
     };
-    struct __declspec(empty_bases) Matrix3DHelper : Windows::UI::Xaml::Media::Media3D::IMatrix3DHelper
+    struct __declspec(empty_bases) Matrix3DHelper : winrt::Windows::UI::Xaml::Media::Media3D::IMatrix3DHelper
     {
         Matrix3DHelper(std::nullptr_t) noexcept {}
-        Matrix3DHelper(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Media::Media3D::IMatrix3DHelper(ptr, take_ownership_from_abi) {}
+        Matrix3DHelper(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Media::Media3D::IMatrix3DHelper(ptr, take_ownership_from_abi) {}
         [[nodiscard]] static auto Identity();
-        static auto Multiply(Windows::UI::Xaml::Media::Media3D::Matrix3D const& matrix1, Windows::UI::Xaml::Media::Media3D::Matrix3D const& matrix2);
+        static auto Multiply(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D const& matrix1, winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D const& matrix2);
         static auto FromElements(double m11, double m12, double m13, double m14, double m21, double m22, double m23, double m24, double m31, double m32, double m33, double m34, double offsetX, double offsetY, double offsetZ, double m44);
-        static auto GetHasInverse(Windows::UI::Xaml::Media::Media3D::Matrix3D const& target);
-        static auto GetIsIdentity(Windows::UI::Xaml::Media::Media3D::Matrix3D const& target);
-        static auto Invert(Windows::UI::Xaml::Media::Media3D::Matrix3D const& target);
+        static auto GetHasInverse(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D const& target);
+        static auto GetIsIdentity(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D const& target);
+        static auto Invert(winrt::Windows::UI::Xaml::Media::Media3D::Matrix3D const& target);
     };
-    struct __declspec(empty_bases) PerspectiveTransform3D : Windows::UI::Xaml::Media::Media3D::IPerspectiveTransform3D,
-        impl::base<PerspectiveTransform3D, Windows::UI::Xaml::Media::Media3D::Transform3D, Windows::UI::Xaml::DependencyObject>,
-        impl::require<PerspectiveTransform3D, Windows::UI::Xaml::Media::Media3D::ITransform3D, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    struct __declspec(empty_bases) PerspectiveTransform3D : winrt::Windows::UI::Xaml::Media::Media3D::IPerspectiveTransform3D,
+        impl::base<PerspectiveTransform3D, winrt::Windows::UI::Xaml::Media::Media3D::Transform3D, winrt::Windows::UI::Xaml::DependencyObject>,
+        impl::require<PerspectiveTransform3D, winrt::Windows::UI::Xaml::Media::Media3D::ITransform3D, winrt::Windows::UI::Xaml::IDependencyObject, winrt::Windows::UI::Xaml::IDependencyObject2>
     {
         PerspectiveTransform3D(std::nullptr_t) noexcept {}
-        PerspectiveTransform3D(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Media::Media3D::IPerspectiveTransform3D(ptr, take_ownership_from_abi) {}
+        PerspectiveTransform3D(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Media::Media3D::IPerspectiveTransform3D(ptr, take_ownership_from_abi) {}
         PerspectiveTransform3D();
         [[nodiscard]] static auto DepthProperty();
         [[nodiscard]] static auto OffsetXProperty();
         [[nodiscard]] static auto OffsetYProperty();
     };
-    struct __declspec(empty_bases) Transform3D : Windows::UI::Xaml::Media::Media3D::ITransform3D,
-        impl::base<Transform3D, Windows::UI::Xaml::DependencyObject>,
-        impl::require<Transform3D, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    struct __declspec(empty_bases) Transform3D : winrt::Windows::UI::Xaml::Media::Media3D::ITransform3D,
+        impl::base<Transform3D, winrt::Windows::UI::Xaml::DependencyObject>,
+        impl::require<Transform3D, winrt::Windows::UI::Xaml::IDependencyObject, winrt::Windows::UI::Xaml::IDependencyObject2>
     {
         Transform3D(std::nullptr_t) noexcept {}
-        Transform3D(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Media::Media3D::ITransform3D(ptr, take_ownership_from_abi) {}
+        Transform3D(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Media::Media3D::ITransform3D(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Services_Maps_2_H
 #define WINRT_Windows_Services_Maps_2_H
 #include "winrt/impl/Windows.Devices.Geolocation.1.h"
@@ -10,40 +11,40 @@
 #include "winrt/impl/Windows.Services.Maps.1.h"
 WINRT_EXPORT namespace winrt::Windows::Services::Maps
 {
-    struct __declspec(empty_bases) EnhancedWaypoint : Windows::Services::Maps::IEnhancedWaypoint
+    struct __declspec(empty_bases) EnhancedWaypoint : winrt::Windows::Services::Maps::IEnhancedWaypoint
     {
         EnhancedWaypoint(std::nullptr_t) noexcept {}
-        EnhancedWaypoint(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IEnhancedWaypoint(ptr, take_ownership_from_abi) {}
-        EnhancedWaypoint(Windows::Devices::Geolocation::Geopoint const& point, Windows::Services::Maps::WaypointKind const& kind);
+        EnhancedWaypoint(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IEnhancedWaypoint(ptr, take_ownership_from_abi) {}
+        EnhancedWaypoint(winrt::Windows::Devices::Geolocation::Geopoint const& point, winrt::Windows::Services::Maps::WaypointKind const& kind);
     };
-    struct __declspec(empty_bases) ManeuverWarning : Windows::Services::Maps::IManeuverWarning
+    struct __declspec(empty_bases) ManeuverWarning : winrt::Windows::Services::Maps::IManeuverWarning
     {
         ManeuverWarning(std::nullptr_t) noexcept {}
-        ManeuverWarning(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IManeuverWarning(ptr, take_ownership_from_abi) {}
+        ManeuverWarning(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IManeuverWarning(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MapAddress : Windows::Services::Maps::IMapAddress,
-        impl::require<MapAddress, Windows::Services::Maps::IMapAddress2>
+    struct __declspec(empty_bases) MapAddress : winrt::Windows::Services::Maps::IMapAddress,
+        impl::require<MapAddress, winrt::Windows::Services::Maps::IMapAddress2>
     {
         MapAddress(std::nullptr_t) noexcept {}
-        MapAddress(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IMapAddress(ptr, take_ownership_from_abi) {}
+        MapAddress(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IMapAddress(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MapLocation : Windows::Services::Maps::IMapLocation
+    struct __declspec(empty_bases) MapLocation : winrt::Windows::Services::Maps::IMapLocation
     {
         MapLocation(std::nullptr_t) noexcept {}
-        MapLocation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IMapLocation(ptr, take_ownership_from_abi) {}
+        MapLocation(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IMapLocation(ptr, take_ownership_from_abi) {}
     };
     struct MapLocationFinder
     {
         MapLocationFinder() = delete;
-        static auto FindLocationsAtAsync(Windows::Devices::Geolocation::Geopoint const& queryPoint);
-        static auto FindLocationsAsync(param::hstring const& searchText, Windows::Devices::Geolocation::Geopoint const& referencePoint);
-        static auto FindLocationsAsync(param::hstring const& searchText, Windows::Devices::Geolocation::Geopoint const& referencePoint, uint32_t maxCount);
-        static auto FindLocationsAtAsync(Windows::Devices::Geolocation::Geopoint const& queryPoint, Windows::Services::Maps::MapLocationDesiredAccuracy const& accuracy);
+        static auto FindLocationsAtAsync(winrt::Windows::Devices::Geolocation::Geopoint const& queryPoint);
+        static auto FindLocationsAsync(param::hstring const& searchText, winrt::Windows::Devices::Geolocation::Geopoint const& referencePoint);
+        static auto FindLocationsAsync(param::hstring const& searchText, winrt::Windows::Devices::Geolocation::Geopoint const& referencePoint, uint32_t maxCount);
+        static auto FindLocationsAtAsync(winrt::Windows::Devices::Geolocation::Geopoint const& queryPoint, winrt::Windows::Services::Maps::MapLocationDesiredAccuracy const& accuracy);
     };
-    struct __declspec(empty_bases) MapLocationFinderResult : Windows::Services::Maps::IMapLocationFinderResult
+    struct __declspec(empty_bases) MapLocationFinderResult : winrt::Windows::Services::Maps::IMapLocationFinderResult
     {
         MapLocationFinderResult(std::nullptr_t) noexcept {}
-        MapLocationFinderResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IMapLocationFinderResult(ptr, take_ownership_from_abi) {}
+        MapLocationFinderResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IMapLocationFinderResult(ptr, take_ownership_from_abi) {}
     };
     struct MapManager
     {
@@ -51,53 +52,53 @@ WINRT_EXPORT namespace winrt::Windows::Services::Maps
         static auto ShowDownloadedMapsUI();
         static auto ShowMapsUpdateUI();
     };
-    struct __declspec(empty_bases) MapRoute : Windows::Services::Maps::IMapRoute,
-        impl::require<MapRoute, Windows::Services::Maps::IMapRoute2, Windows::Services::Maps::IMapRoute3, Windows::Services::Maps::IMapRoute4>
+    struct __declspec(empty_bases) MapRoute : winrt::Windows::Services::Maps::IMapRoute,
+        impl::require<MapRoute, winrt::Windows::Services::Maps::IMapRoute2, winrt::Windows::Services::Maps::IMapRoute3, winrt::Windows::Services::Maps::IMapRoute4>
     {
         MapRoute(std::nullptr_t) noexcept {}
-        MapRoute(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IMapRoute(ptr, take_ownership_from_abi) {}
+        MapRoute(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IMapRoute(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MapRouteDrivingOptions : Windows::Services::Maps::IMapRouteDrivingOptions,
-        impl::require<MapRouteDrivingOptions, Windows::Services::Maps::IMapRouteDrivingOptions2>
+    struct __declspec(empty_bases) MapRouteDrivingOptions : winrt::Windows::Services::Maps::IMapRouteDrivingOptions,
+        impl::require<MapRouteDrivingOptions, winrt::Windows::Services::Maps::IMapRouteDrivingOptions2>
     {
         MapRouteDrivingOptions(std::nullptr_t) noexcept {}
-        MapRouteDrivingOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IMapRouteDrivingOptions(ptr, take_ownership_from_abi) {}
+        MapRouteDrivingOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IMapRouteDrivingOptions(ptr, take_ownership_from_abi) {}
         MapRouteDrivingOptions();
     };
     struct MapRouteFinder
     {
         MapRouteFinder() = delete;
-        static auto GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint);
-        static auto GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization);
-        static auto GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions);
-        static auto GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees);
-        static auto GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints);
-        static auto GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization);
-        static auto GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions);
-        static auto GetDrivingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints, Windows::Services::Maps::MapRouteOptimization const& optimization, Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees);
-        static auto GetWalkingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint);
-        static auto GetWalkingRouteFromWaypointsAsync(param::async_iterable<Windows::Devices::Geolocation::Geopoint> const& wayPoints);
-        static auto GetDrivingRouteAsync(Windows::Devices::Geolocation::Geopoint const& startPoint, Windows::Devices::Geolocation::Geopoint const& endPoint, Windows::Services::Maps::MapRouteDrivingOptions const& options);
-        static auto GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<Windows::Services::Maps::EnhancedWaypoint> const& waypoints);
-        static auto GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<Windows::Services::Maps::EnhancedWaypoint> const& waypoints, Windows::Services::Maps::MapRouteDrivingOptions const& options);
+        static auto GetDrivingRouteAsync(winrt::Windows::Devices::Geolocation::Geopoint const& startPoint, winrt::Windows::Devices::Geolocation::Geopoint const& endPoint);
+        static auto GetDrivingRouteAsync(winrt::Windows::Devices::Geolocation::Geopoint const& startPoint, winrt::Windows::Devices::Geolocation::Geopoint const& endPoint, winrt::Windows::Services::Maps::MapRouteOptimization const& optimization);
+        static auto GetDrivingRouteAsync(winrt::Windows::Devices::Geolocation::Geopoint const& startPoint, winrt::Windows::Devices::Geolocation::Geopoint const& endPoint, winrt::Windows::Services::Maps::MapRouteOptimization const& optimization, winrt::Windows::Services::Maps::MapRouteRestrictions const& restrictions);
+        static auto GetDrivingRouteAsync(winrt::Windows::Devices::Geolocation::Geopoint const& startPoint, winrt::Windows::Devices::Geolocation::Geopoint const& endPoint, winrt::Windows::Services::Maps::MapRouteOptimization const& optimization, winrt::Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees);
+        static auto GetDrivingRouteFromWaypointsAsync(param::async_iterable<winrt::Windows::Devices::Geolocation::Geopoint> const& wayPoints);
+        static auto GetDrivingRouteFromWaypointsAsync(param::async_iterable<winrt::Windows::Devices::Geolocation::Geopoint> const& wayPoints, winrt::Windows::Services::Maps::MapRouteOptimization const& optimization);
+        static auto GetDrivingRouteFromWaypointsAsync(param::async_iterable<winrt::Windows::Devices::Geolocation::Geopoint> const& wayPoints, winrt::Windows::Services::Maps::MapRouteOptimization const& optimization, winrt::Windows::Services::Maps::MapRouteRestrictions const& restrictions);
+        static auto GetDrivingRouteFromWaypointsAsync(param::async_iterable<winrt::Windows::Devices::Geolocation::Geopoint> const& wayPoints, winrt::Windows::Services::Maps::MapRouteOptimization const& optimization, winrt::Windows::Services::Maps::MapRouteRestrictions const& restrictions, double headingInDegrees);
+        static auto GetWalkingRouteAsync(winrt::Windows::Devices::Geolocation::Geopoint const& startPoint, winrt::Windows::Devices::Geolocation::Geopoint const& endPoint);
+        static auto GetWalkingRouteFromWaypointsAsync(param::async_iterable<winrt::Windows::Devices::Geolocation::Geopoint> const& wayPoints);
+        static auto GetDrivingRouteAsync(winrt::Windows::Devices::Geolocation::Geopoint const& startPoint, winrt::Windows::Devices::Geolocation::Geopoint const& endPoint, winrt::Windows::Services::Maps::MapRouteDrivingOptions const& options);
+        static auto GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<winrt::Windows::Services::Maps::EnhancedWaypoint> const& waypoints);
+        static auto GetDrivingRouteFromEnhancedWaypointsAsync(param::async_iterable<winrt::Windows::Services::Maps::EnhancedWaypoint> const& waypoints, winrt::Windows::Services::Maps::MapRouteDrivingOptions const& options);
     };
-    struct __declspec(empty_bases) MapRouteFinderResult : Windows::Services::Maps::IMapRouteFinderResult,
-        impl::require<MapRouteFinderResult, Windows::Services::Maps::IMapRouteFinderResult2>
+    struct __declspec(empty_bases) MapRouteFinderResult : winrt::Windows::Services::Maps::IMapRouteFinderResult,
+        impl::require<MapRouteFinderResult, winrt::Windows::Services::Maps::IMapRouteFinderResult2>
     {
         MapRouteFinderResult(std::nullptr_t) noexcept {}
-        MapRouteFinderResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IMapRouteFinderResult(ptr, take_ownership_from_abi) {}
+        MapRouteFinderResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IMapRouteFinderResult(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MapRouteLeg : Windows::Services::Maps::IMapRouteLeg,
-        impl::require<MapRouteLeg, Windows::Services::Maps::IMapRouteLeg2>
+    struct __declspec(empty_bases) MapRouteLeg : winrt::Windows::Services::Maps::IMapRouteLeg,
+        impl::require<MapRouteLeg, winrt::Windows::Services::Maps::IMapRouteLeg2>
     {
         MapRouteLeg(std::nullptr_t) noexcept {}
-        MapRouteLeg(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IMapRouteLeg(ptr, take_ownership_from_abi) {}
+        MapRouteLeg(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IMapRouteLeg(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MapRouteManeuver : Windows::Services::Maps::IMapRouteManeuver,
-        impl::require<MapRouteManeuver, Windows::Services::Maps::IMapRouteManeuver2, Windows::Services::Maps::IMapRouteManeuver3>
+    struct __declspec(empty_bases) MapRouteManeuver : winrt::Windows::Services::Maps::IMapRouteManeuver,
+        impl::require<MapRouteManeuver, winrt::Windows::Services::Maps::IMapRouteManeuver2, winrt::Windows::Services::Maps::IMapRouteManeuver3>
     {
         MapRouteManeuver(std::nullptr_t) noexcept {}
-        MapRouteManeuver(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IMapRouteManeuver(ptr, take_ownership_from_abi) {}
+        MapRouteManeuver(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IMapRouteManeuver(ptr, take_ownership_from_abi) {}
     };
     struct MapService
     {
@@ -106,26 +107,26 @@ WINRT_EXPORT namespace winrt::Windows::Services::Maps
         [[nodiscard]] static auto ServiceToken();
         [[nodiscard]] static auto WorldViewRegionCode();
         [[nodiscard]] static auto DataAttributions();
-        static auto DataUsagePreference(Windows::Services::Maps::MapServiceDataUsagePreference const& value);
+        static auto DataUsagePreference(winrt::Windows::Services::Maps::MapServiceDataUsagePreference const& value);
         [[nodiscard]] static auto DataUsagePreference();
     };
-    struct __declspec(empty_bases) PlaceInfo : Windows::Services::Maps::IPlaceInfo
+    struct __declspec(empty_bases) PlaceInfo : winrt::Windows::Services::Maps::IPlaceInfo
     {
         PlaceInfo(std::nullptr_t) noexcept {}
-        PlaceInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IPlaceInfo(ptr, take_ownership_from_abi) {}
-        static auto Create(Windows::Devices::Geolocation::Geopoint const& referencePoint);
-        static auto Create(Windows::Devices::Geolocation::Geopoint const& referencePoint, Windows::Services::Maps::PlaceInfoCreateOptions const& options);
+        PlaceInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IPlaceInfo(ptr, take_ownership_from_abi) {}
+        static auto Create(winrt::Windows::Devices::Geolocation::Geopoint const& referencePoint);
+        static auto Create(winrt::Windows::Devices::Geolocation::Geopoint const& referencePoint, winrt::Windows::Services::Maps::PlaceInfoCreateOptions const& options);
         static auto CreateFromIdentifier(param::hstring const& identifier);
-        static auto CreateFromIdentifier(param::hstring const& identifier, Windows::Devices::Geolocation::Geopoint const& defaultPoint, Windows::Services::Maps::PlaceInfoCreateOptions const& options);
-        static auto CreateFromMapLocation(Windows::Services::Maps::MapLocation const& location);
+        static auto CreateFromIdentifier(param::hstring const& identifier, winrt::Windows::Devices::Geolocation::Geopoint const& defaultPoint, winrt::Windows::Services::Maps::PlaceInfoCreateOptions const& options);
+        static auto CreateFromMapLocation(winrt::Windows::Services::Maps::MapLocation const& location);
         [[nodiscard]] static auto IsShowSupported();
         static auto CreateFromAddress(param::hstring const& displayAddress);
         static auto CreateFromAddress(param::hstring const& displayAddress, param::hstring const& displayName);
     };
-    struct __declspec(empty_bases) PlaceInfoCreateOptions : Windows::Services::Maps::IPlaceInfoCreateOptions
+    struct __declspec(empty_bases) PlaceInfoCreateOptions : winrt::Windows::Services::Maps::IPlaceInfoCreateOptions
     {
         PlaceInfoCreateOptions(std::nullptr_t) noexcept {}
-        PlaceInfoCreateOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Services::Maps::IPlaceInfoCreateOptions(ptr, take_ownership_from_abi) {}
+        PlaceInfoCreateOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Maps::IPlaceInfoCreateOptions(ptr, take_ownership_from_abi) {}
         PlaceInfoCreateOptions();
     };
 }

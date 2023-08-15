@@ -100,7 +100,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xf0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
@@ -873,6 +873,51 @@ namespace ABI {
 #define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFactory ABI::Windows::UI::Notifications::IToastNotificationFactory
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFactory_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                interface IToastNotificationFilter;
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter ABI::Windows::UI::Notifications::IToastNotificationFilter
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                interface IToastNotificationFilterChangedEventArgs;
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs ABI::Windows::UI::Notifications::IToastNotificationFilterChangedEventArgs
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                interface IToastNotificationFilterStatics;
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics ABI::Windows::UI::Notifications::IToastNotificationFilterStatics
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory_FWD_DEFINED__
@@ -2290,6 +2335,55 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Notifications {
+                class ToastNotificationFilter;
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                class ToastNotificationFilterChangedEventArgs;
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_USE
+#define DEF___FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("02bfef1d-2ead-52d1-9908-6a0e51e1aaa5"))
+ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotificationFilter*, ABI::Windows::UI::Notifications::ToastNotificationFilterChangedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Notifications::ToastNotificationFilter*, ABI::Windows::UI::Notifications::IToastNotificationFilter*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Notifications::ToastNotificationFilterChangedEventArgs*, ABI::Windows::UI::Notifications::IToastNotificationFilterChangedEventArgs*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.UI.Notifications.ToastNotificationFilter, Windows.UI.Notifications.ToastNotificationFilterChangedEventArgs>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::UI::Notifications::ToastNotificationFilter*, ABI::Windows::UI::Notifications::ToastNotificationFilterChangedEventArgs*> __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_t;
+#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
                 class ScheduledToastNotificationShowingEventArgs;
             } /* Notifications */
         } /* UI */
@@ -2563,6 +2657,16 @@ namespace ABI {
         namespace UI {
             namespace Notifications {
                 typedef enum ToastHistoryChangedType : int ToastHistoryChangedType;
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                typedef enum ToastNotificationFilterMode : int ToastNotificationFilterMode;
             } /* Notifications */
         } /* UI */
     } /* Windows */
@@ -3458,6 +3562,31 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Struct Windows.UI.Notifications.ToastNotificationFilterMode
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                enum ToastNotificationFilterMode : int
+                {
+                    ToastNotificationFilterMode_Unknown = 0,
+                    ToastNotificationFilterMode_None = 1,
+                    ToastNotificationFilterMode_Priority = 2,
+                    ToastNotificationFilterMode_AlarmsOnly = 3,
+                };
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -5807,6 +5936,118 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFa
 
 /*
  *
+ * Interface Windows.UI.Notifications.IToastNotificationFilter
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastNotificationFilter
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastNotificationFilter[] = L"Windows.UI.Notifications.IToastNotificationFilter";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                MIDL_INTERFACE("29764ec8-0236-5ea0-be21-56874261b66e")
+                IToastNotificationFilter : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE get_FilterMode(
+                        ABI::Windows::UI::Notifications::ToastNotificationFilterMode* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE add_Changed(
+                        __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs* handler,
+                        EventRegistrationToken* token
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE remove_Changed(
+                        EventRegistrationToken token
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IToastNotificationFilter = _uuidof(IToastNotificationFilter);
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.UI.Notifications.IToastNotificationFilterChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastNotificationFilterChangedEventArgs
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastNotificationFilterChangedEventArgs[] = L"Windows.UI.Notifications.IToastNotificationFilterChangedEventArgs";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                MIDL_INTERFACE("c13a5712-6b2a-510e-be48-8482477bc385")
+                IToastNotificationFilterChangedEventArgs : public IInspectable
+                {
+                public:
+                };
+
+                extern MIDL_CONST_ID IID& IID_IToastNotificationFilterChangedEventArgs = _uuidof(IToastNotificationFilterChangedEventArgs);
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.UI.Notifications.IToastNotificationFilterStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastNotificationFilter
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastNotificationFilterStatics[] = L"Windows.UI.Notifications.IToastNotificationFilterStatics";
+namespace ABI {
+    namespace Windows {
+        namespace UI {
+            namespace Notifications {
+                MIDL_INTERFACE("0cbd774c-41c0-59f0-83b5-8840c0d25465")
+                IToastNotificationFilterStatics : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE GetDefault(
+                        ABI::Windows::UI::Notifications::IToastNotificationFilter** result
+                        ) = 0;
+                };
+
+                extern MIDL_CONST_ID IID& IID_IToastNotificationFilterStatics = _uuidof(IToastNotificationFilterStatics);
+            } /* Notifications */
+        } /* UI */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Interface Windows.UI.Notifications.IToastNotificationHistory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -6498,8 +6739,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.UI.Notifications.IBadgeUpdateManagerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Notifications.IBadgeUpdateManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Notifications.IBadgeUpdateManagerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
@@ -7089,6 +7330,49 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.UI.Notifications.ToastNotificationFilter
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationFilterStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Notifications.IToastNotificationFilter ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_UI_Notifications_ToastNotificationFilter_DEFINED
+#define RUNTIMECLASS_Windows_UI_Notifications_ToastNotificationFilter_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Notifications_ToastNotificationFilter[] = L"Windows.UI.Notifications.ToastNotificationFilter";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Class Windows.UI.Notifications.ToastNotificationFilterChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Notifications.IToastNotificationFilterChangedEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_UI_Notifications_ToastNotificationFilterChangedEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_UI_Notifications_ToastNotificationFilterChangedEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Notifications_ToastNotificationFilterChangedEventArgs[] = L"Windows.UI.Notifications.ToastNotificationFilterChangedEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Class Windows.UI.Notifications.ToastNotificationHistory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -7135,9 +7419,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics4 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics5 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
@@ -7531,6 +7815,24 @@ typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationActionT
 typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFactory __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFactory;
 
 #endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFactory_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter;
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs;
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics;
+
+#endif // ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationHistory_FWD_DEFINED__
@@ -10451,6 +10753,57 @@ interface __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificati
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs;
+
+typedef struct __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs* This,
+        __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* sender,
+        __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs* args);
+
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgsVtbl;
+
+interface __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_Invoke(This, sender, args) \
+    ((This)->lpVtbl->Invoke(This, sender, args))
+
+#endif /* COBJMACROS */
+
+#endif // ____FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 #if !defined(____FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotifier_Windows__CUI__CNotifications__CScheduledToastNotificationShowingEventArgs_INTERFACE_DEFINED__)
@@ -10563,6 +10916,8 @@ typedef enum __x_ABI_CWindows_CUI_CNotifications_CTileTemplateType __x_ABI_CWind
 typedef enum __x_ABI_CWindows_CUI_CNotifications_CToastDismissalReason __x_ABI_CWindows_CUI_CNotifications_CToastDismissalReason;
 
 typedef enum __x_ABI_CWindows_CUI_CNotifications_CToastHistoryChangedType __x_ABI_CWindows_CUI_CNotifications_CToastHistoryChangedType;
+
+typedef enum __x_ABI_CWindows_CUI_CNotifications_CToastNotificationFilterMode __x_ABI_CWindows_CUI_CNotifications_CToastNotificationFilterMode;
 
 typedef enum __x_ABI_CWindows_CUI_CNotifications_CToastNotificationPriority __x_ABI_CWindows_CUI_CNotifications_CToastNotificationPriority;
 
@@ -11210,6 +11565,23 @@ enum __x_ABI_CWindows_CUI_CNotifications_CToastHistoryChangedType
     ToastHistoryChangedType_Added = 3,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Struct Windows.UI.Notifications.ToastNotificationFilterMode
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+enum __x_ABI_CWindows_CUI_CNotifications_CToastNotificationFilterMode
+{
+    ToastNotificationFilterMode_Unknown = 0,
+    ToastNotificationFilterMode_None = 1,
+    ToastNotificationFilterMode_Priority = 2,
+    ToastNotificationFilterMode_AlarmsOnly = 3,
+};
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -15479,6 +15851,219 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFa
 
 /*
  *
+ * Interface Windows.UI.Notifications.IToastNotificationFilter
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastNotificationFilter
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastNotificationFilter[] = L"Windows.UI.Notifications.IToastNotificationFilter";
+typedef struct __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_FilterMode)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* This,
+        enum __x_ABI_CWindows_CUI_CNotifications_CToastNotificationFilterMode* value);
+    HRESULT (STDMETHODCALLTYPE* add_Changed)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* This,
+        __FITypedEventHandler_2_Windows__CUI__CNotifications__CToastNotificationFilter_Windows__CUI__CNotifications__CToastNotificationFilterChangedEventArgs* handler,
+        EventRegistrationToken* token);
+    HRESULT (STDMETHODCALLTYPE* remove_Changed)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter* This,
+        EventRegistrationToken token);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterVtbl;
+
+interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_get_FilterMode(This, value) \
+    ((This)->lpVtbl->get_FilterMode(This, value))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_add_Changed(This, handler, token) \
+    ((This)->lpVtbl->add_Changed(This, handler, token))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_remove_Changed(This, token) \
+    ((This)->lpVtbl->remove_Changed(This, token))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.UI.Notifications.IToastNotificationFilterChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastNotificationFilterChangedEventArgs
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastNotificationFilterChangedEventArgs[] = L"Windows.UI.Notifications.IToastNotificationFilterChangedEventArgs";
+typedef struct __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs* This,
+        TrustLevel* trustLevel);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgsVtbl;
+
+interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterChangedEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.UI.Notifications.IToastNotificationFilterStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.UI.Notifications.ToastNotificationFilter
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Notifications_IToastNotificationFilterStatics[] = L"Windows.UI.Notifications.IToastNotificationFilterStatics";
+typedef struct __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStaticsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics* This,
+        __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilter** result);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStaticsVtbl;
+
+interface __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStaticsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_GetDefault(This, result) \
+    ((This)->lpVtbl->GetDefault(This, result))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics;
+#endif /* !defined(____x_ABI_CWindows_CUI_CNotifications_CIToastNotificationFilterStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Interface Windows.UI.Notifications.IToastNotificationHistory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -16720,8 +17305,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.UI.Notifications.IBadgeUpdateManagerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Notifications.IBadgeUpdateManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Notifications.IBadgeUpdateManagerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Multi Threaded Apartment
  *
@@ -17311,6 +17896,49 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.UI.Notifications.ToastNotificationFilter
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationFilterStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Notifications.IToastNotificationFilter ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_UI_Notifications_ToastNotificationFilter_DEFINED
+#define RUNTIMECLASS_Windows_UI_Notifications_ToastNotificationFilter_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Notifications_ToastNotificationFilter[] = L"Windows.UI.Notifications.ToastNotificationFilter";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Class Windows.UI.Notifications.ToastNotificationFilterChangedEventArgs
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.UI.Notifications.IToastNotificationFilterChangedEventArgs ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_UI_Notifications_ToastNotificationFilterChangedEventArgs_DEFINED
+#define RUNTIMECLASS_Windows_UI_Notifications_ToastNotificationFilterChangedEventArgs_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_UI_Notifications_ToastNotificationFilterChangedEventArgs[] = L"Windows.UI.Notifications.ToastNotificationFilterChangedEventArgs";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Class Windows.UI.Notifications.ToastNotificationHistory
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
@@ -17357,9 +17985,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics4 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics5 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.Notifications.IToastNotificationManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Multi Threaded Apartment
  *

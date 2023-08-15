@@ -1,10 +1,12 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Shell_2_H
 #define WINRT_Windows_UI_Shell_2_H
+#include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.UI.Shell.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Shell
 {
@@ -13,28 +15,43 @@ WINRT_EXPORT namespace winrt::Windows::UI::Shell
         AdaptiveCardBuilder() = delete;
         static auto CreateAdaptiveCardFromJson(param::hstring const& value);
     };
-    struct __declspec(empty_bases) SecurityAppManager : Windows::UI::Shell::ISecurityAppManager
+    struct __declspec(empty_bases) FocusAssist : winrt::Windows::UI::Shell::IFocusAssist
+    {
+        FocusAssist(std::nullptr_t) noexcept {}
+        FocusAssist(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssist(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+        static auto TryStartFocusAssist();
+        static auto TryStartFocusAssistUntil(winrt::Windows::Foundation::DateTime const& endTime);
+        static auto EndFocusAssist(winrt::guid const& token);
+        static auto EndFocusAssist();
+    };
+    struct __declspec(empty_bases) FocusAssistChangedEventArgs : winrt::Windows::UI::Shell::IFocusAssistChangedEventArgs
+    {
+        FocusAssistChangedEventArgs(std::nullptr_t) noexcept {}
+        FocusAssistChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssistChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) SecurityAppManager : winrt::Windows::UI::Shell::ISecurityAppManager
     {
         SecurityAppManager(std::nullptr_t) noexcept {}
-        SecurityAppManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Shell::ISecurityAppManager(ptr, take_ownership_from_abi) {}
+        SecurityAppManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::ISecurityAppManager(ptr, take_ownership_from_abi) {}
         SecurityAppManager();
     };
-    struct __declspec(empty_bases) ShareWindowCommandEventArgs : Windows::UI::Shell::IShareWindowCommandEventArgs
+    struct __declspec(empty_bases) ShareWindowCommandEventArgs : winrt::Windows::UI::Shell::IShareWindowCommandEventArgs
     {
         ShareWindowCommandEventArgs(std::nullptr_t) noexcept {}
-        ShareWindowCommandEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Shell::IShareWindowCommandEventArgs(ptr, take_ownership_from_abi) {}
+        ShareWindowCommandEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IShareWindowCommandEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ShareWindowCommandSource : Windows::UI::Shell::IShareWindowCommandSource
+    struct __declspec(empty_bases) ShareWindowCommandSource : winrt::Windows::UI::Shell::IShareWindowCommandSource
     {
         ShareWindowCommandSource(std::nullptr_t) noexcept {}
-        ShareWindowCommandSource(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Shell::IShareWindowCommandSource(ptr, take_ownership_from_abi) {}
+        ShareWindowCommandSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IShareWindowCommandSource(ptr, take_ownership_from_abi) {}
         static auto GetForCurrentView();
     };
-    struct __declspec(empty_bases) TaskbarManager : Windows::UI::Shell::ITaskbarManager,
-        impl::require<TaskbarManager, Windows::UI::Shell::ITaskbarManager2>
+    struct __declspec(empty_bases) TaskbarManager : winrt::Windows::UI::Shell::ITaskbarManager,
+        impl::require<TaskbarManager, winrt::Windows::UI::Shell::ITaskbarManager2>
     {
         TaskbarManager(std::nullptr_t) noexcept {}
-        TaskbarManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Shell::ITaskbarManager(ptr, take_ownership_from_abi) {}
+        TaskbarManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::ITaskbarManager(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
     };
 }

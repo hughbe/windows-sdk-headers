@@ -1968,6 +1968,27 @@ Notes:
 //
 #define STATUS_FLT_BUFFER_TOO_SMALL      ((NTSTATUS)0x801C0001L)
 
+/*++
+
+ Graphics Facility Warning messages (dxgkrnl.sys)
+
+--*/
+//
+// MessageId: STATUS_GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS
+//
+// MessageText:
+//
+// Link configuration for the display timing is still in progress.
+// 
+// ;/*++
+// ;
+// ; End of Graphics Facility Warning messages.
+// ;
+// ;--*/
+// 
+//
+#define STATUS_GRAPHICS_LINK_CONFIGURATION_IN_PROGRESS ((NTSTATUS)0x801E0000L)
+
 //
 // MessageId: STATUS_FVE_PARTIAL_METADATA
 //
@@ -10484,6 +10505,24 @@ Notes:
 // The volume is opened for exclusive write access, preventing files from being opened for write access.
 //
 #define STATUS_VOLUME_WRITE_ACCESS_DENIED ((NTSTATUS)0xC00004D3L)
+
+//
+// MessageId: STATUS_PATCH_NOT_REGISTERED
+//
+// MessageText:
+//
+// The patch is not currently registered for the corresponding base image.
+//
+#define STATUS_PATCH_NOT_REGISTERED      ((NTSTATUS)0xC00004D4L)
+
+//
+// MessageId: STATUS_NOT_SUPPORTED_WITH_CACHED_HANDLE
+//
+// MessageText:
+//
+// The specified operation is not supported on a file opened for cached IO.
+//
+#define STATUS_NOT_SUPPORTED_WITH_CACHED_HANDLE ((NTSTATUS)0xC00004D5L)
 
 
 //     **** New SYSTEM error codes can be inserted here ****
@@ -19004,6 +19043,15 @@ Notes:
 //
 #define STATUS_FVE_EDRIVE_BAND_ENUMERATION_FAILED ((NTSTATUS)0xC0210041L)
 
+//
+// MessageId: STATUS_FVE_POLICY_ON_RDV_EXCLUSION_LIST
+//
+// MessageText:
+//
+// This removable data drive has been excluded from device encryption by BitLocker Drive Encryption policy.
+//
+#define STATUS_FVE_POLICY_ON_RDV_EXCLUSION_LIST ((NTSTATUS)0xC0210042L)
+
 
 //
 // FWP error codes (fwpkclnt.sys)
@@ -22652,6 +22700,24 @@ Notes:
 #define STATUS_HV_MSR_ACCESS_FAILED      ((NTSTATUS)0xC0350080L)
 
 //
+// MessageId: STATUS_HV_INSUFFICIENT_MEMORY_MIRRORING
+//
+// MessageText:
+//
+// There is not enough memory in the partition's pool to complete the mirroring operation.
+//
+#define STATUS_HV_INSUFFICIENT_MEMORY_MIRRORING ((NTSTATUS)0xC0350081L)
+
+//
+// MessageId: STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING
+//
+// MessageText:
+//
+// There is not enough contiguous memory in the partition's pool to complete the mirroring operation.
+//
+#define STATUS_HV_INSUFFICIENT_CONTIGUOUS_MEMORY_MIRRORING ((NTSTATUS)0xC0350082L)
+
+//
 // MessageId: STATUS_HV_NOT_PRESENT
 //
 // MessageText:
@@ -23047,6 +23113,42 @@ Notes:
 // The specified VTL does not have the permission to access the resource.
 //
 #define STATUS_VID_VTL_ACCESS_DENIED     ((NTSTATUS)0xC037002AL)
+
+//
+// MessageId: STATUS_VID_INSUFFICIENT_RESOURCES_RESERVE
+//
+// MessageText:
+//
+// Failed to allocate backing memory due to insufficient memory resources.
+//
+#define STATUS_VID_INSUFFICIENT_RESOURCES_RESERVE ((NTSTATUS)0xC037002BL)
+
+//
+// MessageId: STATUS_VID_INSUFFICIENT_RESOURCES_PHYSICAL_BUFFER
+//
+// MessageText:
+//
+// Failed to allocate memory for the physical buffer used to back certain internal structures.
+//
+#define STATUS_VID_INSUFFICIENT_RESOURCES_PHYSICAL_BUFFER ((NTSTATUS)0xC037002CL)
+
+//
+// MessageId: STATUS_VID_INSUFFICIENT_RESOURCES_HV_DEPOSIT
+//
+// MessageText:
+//
+// Failed to allocate memory to be deposited in the hypervisor.
+//
+#define STATUS_VID_INSUFFICIENT_RESOURCES_HV_DEPOSIT ((NTSTATUS)0xC037002DL)
+
+//
+// MessageId: STATUS_VID_MEMORY_TYPE_NOT_SUPPORTED
+//
+// MessageText:
+//
+// Memory type not supported for requested operation.
+//
+#define STATUS_VID_MEMORY_TYPE_NOT_SUPPORTED ((NTSTATUS)0xC037002EL)
 
 //
 // Warnings:

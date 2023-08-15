@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_ApplicationModel_CommunicationBlocking_2_H
 #define WINRT_Windows_ApplicationModel_CommunicationBlocking_2_H
 #include "winrt/impl/Windows.Foundation.Collections.1.h"

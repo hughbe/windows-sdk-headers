@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Composition_Effects_H
 #define WINRT_Windows_UI_Composition_Effects_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.201201.7"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.201201.7"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.210707.1"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.210707.1"
 #include "winrt/Windows.UI.Composition.h"
 #include "winrt/impl/Windows.Graphics.Effects.2.h"
 #include "winrt/impl/Windows.UI.Composition.Effects.2.h"
@@ -16,66 +17,66 @@ namespace winrt::impl
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::AmbientAmount() const
     {
         float value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->get_AmbientAmount(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->get_AmbientAmount(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::AmbientAmount(float value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->put_AmbientAmount(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->put_AmbientAmount(value));
     }
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::DiffuseAmount() const
     {
         float value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->get_DiffuseAmount(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->get_DiffuseAmount(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::DiffuseAmount(float value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->put_DiffuseAmount(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->put_DiffuseAmount(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::Graphics::Effects::IGraphicsEffectSource) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::NormalMapSource() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Graphics::Effects::IGraphicsEffectSource) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::NormalMapSource() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->get_NormalMapSource(&value));
-        return Windows::Graphics::Effects::IGraphicsEffectSource{ value, take_ownership_from_abi };
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->get_NormalMapSource(&value));
+        return winrt::Windows::Graphics::Effects::IGraphicsEffectSource{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::NormalMapSource(Windows::Graphics::Effects::IGraphicsEffectSource const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::NormalMapSource(winrt::Windows::Graphics::Effects::IGraphicsEffectSource const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->put_NormalMapSource(*(void**)(&value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->put_NormalMapSource(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::SpecularAmount() const
     {
         float value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->get_SpecularAmount(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->get_SpecularAmount(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::SpecularAmount(float value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->put_SpecularAmount(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->put_SpecularAmount(value));
     }
     template <typename D> WINRT_IMPL_AUTO(float) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::SpecularShine() const
     {
         float value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->get_SpecularShine(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->get_SpecularShine(&value));
         return value;
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Effects_ISceneLightingEffect<D>::SpecularShine(float value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect)->put_SpecularShine(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect)->put_SpecularShine(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel) consume_Windows_UI_Composition_Effects_ISceneLightingEffect2<D>::ReflectanceModel() const
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel) consume_Windows_UI_Composition_Effects_ISceneLightingEffect2<D>::ReflectanceModel() const
     {
-        Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel value{};
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect2)->get_ReflectanceModel(reinterpret_cast<int32_t*>(&value)));
+        winrt::Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect2)->get_ReflectanceModel(reinterpret_cast<int32_t*>(&value)));
         return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Effects_ISceneLightingEffect2<D>::ReflectanceModel(Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel const& value) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Composition_Effects_ISceneLightingEffect2<D>::ReflectanceModel(winrt::Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(Windows::UI::Composition::Effects::ISceneLightingEffect2)->put_ReflectanceModel(static_cast<int32_t>(value)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Composition::Effects::ISceneLightingEffect2)->put_ReflectanceModel(static_cast<int32_t>(value)));
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::Composition::Effects::ISceneLightingEffect> : produce_base<D, Windows::UI::Composition::Effects::ISceneLightingEffect>
+    struct produce<D, winrt::Windows::UI::Composition::Effects::ISceneLightingEffect> : produce_base<D, winrt::Windows::UI::Composition::Effects::ISceneLightingEffect>
     {
         int32_t __stdcall get_AmbientAmount(float* value) noexcept final try
         {
@@ -109,14 +110,14 @@ namespace winrt::impl
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::Graphics::Effects::IGraphicsEffectSource>(this->shim().NormalMapSource());
+            *value = detach_from<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>(this->shim().NormalMapSource());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_NormalMapSource(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().NormalMapSource(*reinterpret_cast<Windows::Graphics::Effects::IGraphicsEffectSource const*>(&value));
+            this->shim().NormalMapSource(*reinterpret_cast<winrt::Windows::Graphics::Effects::IGraphicsEffectSource const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -152,19 +153,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, Windows::UI::Composition::Effects::ISceneLightingEffect2> : produce_base<D, Windows::UI::Composition::Effects::ISceneLightingEffect2>
+    struct produce<D, winrt::Windows::UI::Composition::Effects::ISceneLightingEffect2> : produce_base<D, winrt::Windows::UI::Composition::Effects::ISceneLightingEffect2>
     {
         int32_t __stdcall get_ReflectanceModel(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel>(this->shim().ReflectanceModel());
+            *value = detach_from<winrt::Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel>(this->shim().ReflectanceModel());
             return 0;
         }
         catch (...) { return to_hresult(); }
         int32_t __stdcall put_ReflectanceModel(int32_t value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().ReflectanceModel(*reinterpret_cast<Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel const*>(&value));
+            this->shim().ReflectanceModel(*reinterpret_cast<winrt::Windows::UI::Composition::Effects::SceneLightingEffectReflectanceModel const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -174,7 +175,7 @@ namespace winrt::impl
 WINRT_EXPORT namespace winrt::Windows::UI::Composition::Effects
 {
     inline SceneLightingEffect::SceneLightingEffect() :
-        SceneLightingEffect(impl::call_factory_cast<SceneLightingEffect(*)(Windows::Foundation::IActivationFactory const&), SceneLightingEffect>([](Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SceneLightingEffect>(); }))
+        SceneLightingEffect(impl::call_factory_cast<SceneLightingEffect(*)(winrt::Windows::Foundation::IActivationFactory const&), SceneLightingEffect>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<SceneLightingEffect>(); }))
     {
     }
 }

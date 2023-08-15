@@ -66,6 +66,13 @@
 
 
 //
+// Apc Callback Data Structure Offset Definitions
+//
+
+#define AcdContextRecord 0x4
+#define KAPC_CALLBACK_DATA_LENGTH 0x10
+
+//
 // Bug Check Code Definitions
 //
 
@@ -475,9 +482,9 @@
 #define PfBuffer 0x1c
 #define PfSegment 0x20
 #define PfAffinity 0x24
-#define PfSource 0x34
-#define PfStarted 0x36
-#define ProfileObjectLength 0x38
+#define PfSource 0x40
+#define PfStarted 0x42
+#define ProfileObjectLength 0x44
 
 //
 // Queue Object Structure Offset Definitions
@@ -913,8 +920,8 @@
 #define PbMinorVersion 0x40c
 #define PbMajorVersion 0x40e
 #define PbBuildType 0x410
-#define PbCoresPerPhysicalProcessor 0x412
-#define PbLogicalProcessorsPerCore 0x413
+#define PbCoresPerPhysicalProcessor 0x420
+#define PbLogicalProcessorsPerCore 0x424
 #define PbPriorityState 0x1c
 #define PbLockQueue 0x480
 #define PbPPLookasideList 0x580

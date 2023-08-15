@@ -1,13 +1,14 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Networking_Connectivity_2_H
 #define WINRT_Windows_Networking_Connectivity_2_H
-#include "winrt/impl/Windows.Foundation.1.h"
-#include "winrt/impl/Windows.Foundation.Collections.1.h"
-#include "winrt/impl/Windows.Networking.1.h"
+#include "winrt/impl/Windows.Foundation.2.h"
+#include "winrt/impl/Windows.Foundation.Collections.2.h"
+#include "winrt/impl/Windows.Networking.2.h"
 #include "winrt/impl/Windows.Networking.Connectivity.1.h"
 WINRT_EXPORT namespace winrt::Windows::Networking::Connectivity
 {
@@ -20,12 +21,12 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Connectivity
         template <typename O, typename M> NetworkStatusChangedEventHandler(O* object, M method);
         template <typename O, typename M> NetworkStatusChangedEventHandler(com_ptr<O>&& object, M method);
         template <typename O, typename M> NetworkStatusChangedEventHandler(weak_ref<O>&& object, M method);
-        auto operator()(Windows::Foundation::IInspectable const& sender) const;
+        auto operator()(winrt::Windows::Foundation::IInspectable const& sender) const;
     };
     struct NetworkUsageStates
     {
-        Windows::Networking::Connectivity::TriStates Roaming;
-        Windows::Networking::Connectivity::TriStates Shared;
+        winrt::Windows::Networking::Connectivity::TriStates Roaming;
+        winrt::Windows::Networking::Connectivity::TriStates Shared;
     };
     inline bool operator==(NetworkUsageStates const& left, NetworkUsageStates const& right) noexcept
     {
@@ -35,88 +36,88 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Connectivity
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) AttributedNetworkUsage : Windows::Networking::Connectivity::IAttributedNetworkUsage
+    struct __declspec(empty_bases) AttributedNetworkUsage : winrt::Windows::Networking::Connectivity::IAttributedNetworkUsage
     {
         AttributedNetworkUsage(std::nullptr_t) noexcept {}
-        AttributedNetworkUsage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IAttributedNetworkUsage(ptr, take_ownership_from_abi) {}
+        AttributedNetworkUsage(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IAttributedNetworkUsage(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) CellularApnContext : Windows::Networking::Connectivity::ICellularApnContext,
-        impl::require<CellularApnContext, Windows::Networking::Connectivity::ICellularApnContext2>
+    struct __declspec(empty_bases) CellularApnContext : winrt::Windows::Networking::Connectivity::ICellularApnContext,
+        impl::require<CellularApnContext, winrt::Windows::Networking::Connectivity::ICellularApnContext2>
     {
         CellularApnContext(std::nullptr_t) noexcept {}
-        CellularApnContext(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::ICellularApnContext(ptr, take_ownership_from_abi) {}
+        CellularApnContext(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::ICellularApnContext(ptr, take_ownership_from_abi) {}
         CellularApnContext();
     };
-    struct __declspec(empty_bases) ConnectionCost : Windows::Networking::Connectivity::IConnectionCost,
-        impl::require<ConnectionCost, Windows::Networking::Connectivity::IConnectionCost2>
+    struct __declspec(empty_bases) ConnectionCost : winrt::Windows::Networking::Connectivity::IConnectionCost,
+        impl::require<ConnectionCost, winrt::Windows::Networking::Connectivity::IConnectionCost2>
     {
         ConnectionCost(std::nullptr_t) noexcept {}
-        ConnectionCost(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IConnectionCost(ptr, take_ownership_from_abi) {}
+        ConnectionCost(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IConnectionCost(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ConnectionProfile : Windows::Networking::Connectivity::IConnectionProfile,
-        impl::require<ConnectionProfile, Windows::Networking::Connectivity::IConnectionProfile2, Windows::Networking::Connectivity::IConnectionProfile3, Windows::Networking::Connectivity::IConnectionProfile4, Windows::Networking::Connectivity::IConnectionProfile5>
+    struct __declspec(empty_bases) ConnectionProfile : winrt::Windows::Networking::Connectivity::IConnectionProfile,
+        impl::require<ConnectionProfile, winrt::Windows::Networking::Connectivity::IConnectionProfile2, winrt::Windows::Networking::Connectivity::IConnectionProfile3, winrt::Windows::Networking::Connectivity::IConnectionProfile4, winrt::Windows::Networking::Connectivity::IConnectionProfile5, winrt::Windows::Networking::Connectivity::IConnectionProfile6>
     {
         ConnectionProfile(std::nullptr_t) noexcept {}
-        ConnectionProfile(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IConnectionProfile(ptr, take_ownership_from_abi) {}
+        ConnectionProfile(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IConnectionProfile(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ConnectionProfileFilter : Windows::Networking::Connectivity::IConnectionProfileFilter,
-        impl::require<ConnectionProfileFilter, Windows::Networking::Connectivity::IConnectionProfileFilter2, Windows::Networking::Connectivity::IConnectionProfileFilter3>
+    struct __declspec(empty_bases) ConnectionProfileFilter : winrt::Windows::Networking::Connectivity::IConnectionProfileFilter,
+        impl::require<ConnectionProfileFilter, winrt::Windows::Networking::Connectivity::IConnectionProfileFilter2, winrt::Windows::Networking::Connectivity::IConnectionProfileFilter3>
     {
         ConnectionProfileFilter(std::nullptr_t) noexcept {}
-        ConnectionProfileFilter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IConnectionProfileFilter(ptr, take_ownership_from_abi) {}
+        ConnectionProfileFilter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IConnectionProfileFilter(ptr, take_ownership_from_abi) {}
         ConnectionProfileFilter();
     };
-    struct __declspec(empty_bases) ConnectionSession : Windows::Networking::Connectivity::IConnectionSession
+    struct __declspec(empty_bases) ConnectionSession : winrt::Windows::Networking::Connectivity::IConnectionSession
     {
         ConnectionSession(std::nullptr_t) noexcept {}
-        ConnectionSession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IConnectionSession(ptr, take_ownership_from_abi) {}
+        ConnectionSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IConnectionSession(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ConnectivityInterval : Windows::Networking::Connectivity::IConnectivityInterval
+    struct __declspec(empty_bases) ConnectivityInterval : winrt::Windows::Networking::Connectivity::IConnectivityInterval
     {
         ConnectivityInterval(std::nullptr_t) noexcept {}
-        ConnectivityInterval(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IConnectivityInterval(ptr, take_ownership_from_abi) {}
+        ConnectivityInterval(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IConnectivityInterval(ptr, take_ownership_from_abi) {}
     };
     struct ConnectivityManager
     {
         ConnectivityManager() = delete;
-        static auto AcquireConnectionAsync(Windows::Networking::Connectivity::CellularApnContext const& cellularApnContext);
-        static auto AddHttpRoutePolicy(Windows::Networking::Connectivity::RoutePolicy const& routePolicy);
-        static auto RemoveHttpRoutePolicy(Windows::Networking::Connectivity::RoutePolicy const& routePolicy);
+        static auto AcquireConnectionAsync(winrt::Windows::Networking::Connectivity::CellularApnContext const& cellularApnContext);
+        static auto AddHttpRoutePolicy(winrt::Windows::Networking::Connectivity::RoutePolicy const& routePolicy);
+        static auto RemoveHttpRoutePolicy(winrt::Windows::Networking::Connectivity::RoutePolicy const& routePolicy);
     };
-    struct __declspec(empty_bases) DataPlanStatus : Windows::Networking::Connectivity::IDataPlanStatus
+    struct __declspec(empty_bases) DataPlanStatus : winrt::Windows::Networking::Connectivity::IDataPlanStatus
     {
         DataPlanStatus(std::nullptr_t) noexcept {}
-        DataPlanStatus(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IDataPlanStatus(ptr, take_ownership_from_abi) {}
+        DataPlanStatus(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IDataPlanStatus(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) DataPlanUsage : Windows::Networking::Connectivity::IDataPlanUsage
+    struct __declspec(empty_bases) DataPlanUsage : winrt::Windows::Networking::Connectivity::IDataPlanUsage
     {
         DataPlanUsage(std::nullptr_t) noexcept {}
-        DataPlanUsage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IDataPlanUsage(ptr, take_ownership_from_abi) {}
+        DataPlanUsage(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IDataPlanUsage(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) DataUsage : Windows::Networking::Connectivity::IDataUsage
+    struct __declspec(empty_bases) DataUsage : winrt::Windows::Networking::Connectivity::IDataUsage
     {
         DataUsage(std::nullptr_t) noexcept {}
-        DataUsage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IDataUsage(ptr, take_ownership_from_abi) {}
+        DataUsage(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IDataUsage(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IPInformation : Windows::Networking::Connectivity::IIPInformation
+    struct __declspec(empty_bases) IPInformation : winrt::Windows::Networking::Connectivity::IIPInformation
     {
         IPInformation(std::nullptr_t) noexcept {}
-        IPInformation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IIPInformation(ptr, take_ownership_from_abi) {}
+        IPInformation(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IIPInformation(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) LanIdentifier : Windows::Networking::Connectivity::ILanIdentifier
+    struct __declspec(empty_bases) LanIdentifier : winrt::Windows::Networking::Connectivity::ILanIdentifier
     {
         LanIdentifier(std::nullptr_t) noexcept {}
-        LanIdentifier(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::ILanIdentifier(ptr, take_ownership_from_abi) {}
+        LanIdentifier(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::ILanIdentifier(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) LanIdentifierData : Windows::Networking::Connectivity::ILanIdentifierData
+    struct __declspec(empty_bases) LanIdentifierData : winrt::Windows::Networking::Connectivity::ILanIdentifierData
     {
         LanIdentifierData(std::nullptr_t) noexcept {}
-        LanIdentifierData(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::ILanIdentifierData(ptr, take_ownership_from_abi) {}
+        LanIdentifierData(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::ILanIdentifierData(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) NetworkAdapter : Windows::Networking::Connectivity::INetworkAdapter
+    struct __declspec(empty_bases) NetworkAdapter : winrt::Windows::Networking::Connectivity::INetworkAdapter
     {
         NetworkAdapter(std::nullptr_t) noexcept {}
-        NetworkAdapter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::INetworkAdapter(ptr, take_ownership_from_abi) {}
+        NetworkAdapter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::INetworkAdapter(ptr, take_ownership_from_abi) {}
     };
     struct NetworkInformation
     {
@@ -125,61 +126,61 @@ WINRT_EXPORT namespace winrt::Windows::Networking::Connectivity
         static auto GetInternetConnectionProfile();
         static auto GetLanIdentifiers();
         static auto GetHostNames();
-        static auto GetProxyConfigurationAsync(Windows::Foundation::Uri const& uri);
-        static auto GetSortedEndpointPairs(param::iterable<Windows::Networking::EndpointPair> const& destinationList, Windows::Networking::HostNameSortOptions const& sortOptions);
-        static auto NetworkStatusChanged(Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler);
-        using NetworkStatusChanged_revoker = impl::factory_event_revoker<Windows::Networking::Connectivity::INetworkInformationStatics, &impl::abi_t<Windows::Networking::Connectivity::INetworkInformationStatics>::remove_NetworkStatusChanged>;
-        [[nodiscard]] static NetworkStatusChanged_revoker NetworkStatusChanged(auto_revoke_t, Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler);
+        static auto GetProxyConfigurationAsync(winrt::Windows::Foundation::Uri const& uri);
+        static auto GetSortedEndpointPairs(param::iterable<winrt::Windows::Networking::EndpointPair> const& destinationList, winrt::Windows::Networking::HostNameSortOptions const& sortOptions);
+        static auto NetworkStatusChanged(winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler);
+        using NetworkStatusChanged_revoker = impl::factory_event_revoker<winrt::Windows::Networking::Connectivity::INetworkInformationStatics, &impl::abi_t<winrt::Windows::Networking::Connectivity::INetworkInformationStatics>::remove_NetworkStatusChanged>;
+        [[nodiscard]] static NetworkStatusChanged_revoker NetworkStatusChanged(auto_revoke_t, winrt::Windows::Networking::Connectivity::NetworkStatusChangedEventHandler const& networkStatusHandler);
         static auto NetworkStatusChanged(winrt::event_token const& eventCookie);
-        static auto FindConnectionProfilesAsync(Windows::Networking::Connectivity::ConnectionProfileFilter const& pProfileFilter);
+        static auto FindConnectionProfilesAsync(winrt::Windows::Networking::Connectivity::ConnectionProfileFilter const& pProfileFilter);
     };
-    struct __declspec(empty_bases) NetworkItem : Windows::Networking::Connectivity::INetworkItem
+    struct __declspec(empty_bases) NetworkItem : winrt::Windows::Networking::Connectivity::INetworkItem
     {
         NetworkItem(std::nullptr_t) noexcept {}
-        NetworkItem(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::INetworkItem(ptr, take_ownership_from_abi) {}
+        NetworkItem(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::INetworkItem(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) NetworkSecuritySettings : Windows::Networking::Connectivity::INetworkSecuritySettings
+    struct __declspec(empty_bases) NetworkSecuritySettings : winrt::Windows::Networking::Connectivity::INetworkSecuritySettings
     {
         NetworkSecuritySettings(std::nullptr_t) noexcept {}
-        NetworkSecuritySettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::INetworkSecuritySettings(ptr, take_ownership_from_abi) {}
+        NetworkSecuritySettings(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::INetworkSecuritySettings(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) NetworkStateChangeEventDetails : Windows::Networking::Connectivity::INetworkStateChangeEventDetails,
-        impl::require<NetworkStateChangeEventDetails, Windows::Networking::Connectivity::INetworkStateChangeEventDetails2>
+    struct __declspec(empty_bases) NetworkStateChangeEventDetails : winrt::Windows::Networking::Connectivity::INetworkStateChangeEventDetails,
+        impl::require<NetworkStateChangeEventDetails, winrt::Windows::Networking::Connectivity::INetworkStateChangeEventDetails2>
     {
         NetworkStateChangeEventDetails(std::nullptr_t) noexcept {}
-        NetworkStateChangeEventDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::INetworkStateChangeEventDetails(ptr, take_ownership_from_abi) {}
+        NetworkStateChangeEventDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::INetworkStateChangeEventDetails(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) NetworkUsage : Windows::Networking::Connectivity::INetworkUsage
+    struct __declspec(empty_bases) NetworkUsage : winrt::Windows::Networking::Connectivity::INetworkUsage
     {
         NetworkUsage(std::nullptr_t) noexcept {}
-        NetworkUsage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::INetworkUsage(ptr, take_ownership_from_abi) {}
+        NetworkUsage(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::INetworkUsage(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ProviderNetworkUsage : Windows::Networking::Connectivity::IProviderNetworkUsage
+    struct __declspec(empty_bases) ProviderNetworkUsage : winrt::Windows::Networking::Connectivity::IProviderNetworkUsage
     {
         ProviderNetworkUsage(std::nullptr_t) noexcept {}
-        ProviderNetworkUsage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IProviderNetworkUsage(ptr, take_ownership_from_abi) {}
+        ProviderNetworkUsage(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IProviderNetworkUsage(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ProxyConfiguration : Windows::Networking::Connectivity::IProxyConfiguration
+    struct __declspec(empty_bases) ProxyConfiguration : winrt::Windows::Networking::Connectivity::IProxyConfiguration
     {
         ProxyConfiguration(std::nullptr_t) noexcept {}
-        ProxyConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IProxyConfiguration(ptr, take_ownership_from_abi) {}
+        ProxyConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IProxyConfiguration(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) RoutePolicy : Windows::Networking::Connectivity::IRoutePolicy
+    struct __declspec(empty_bases) RoutePolicy : winrt::Windows::Networking::Connectivity::IRoutePolicy
     {
         RoutePolicy(std::nullptr_t) noexcept {}
-        RoutePolicy(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IRoutePolicy(ptr, take_ownership_from_abi) {}
-        RoutePolicy(Windows::Networking::Connectivity::ConnectionProfile const& connectionProfile, Windows::Networking::HostName const& hostName, Windows::Networking::DomainNameType const& type);
+        RoutePolicy(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IRoutePolicy(ptr, take_ownership_from_abi) {}
+        RoutePolicy(winrt::Windows::Networking::Connectivity::ConnectionProfile const& connectionProfile, winrt::Windows::Networking::HostName const& hostName, winrt::Windows::Networking::DomainNameType const& type);
     };
-    struct __declspec(empty_bases) WlanConnectionProfileDetails : Windows::Networking::Connectivity::IWlanConnectionProfileDetails
+    struct __declspec(empty_bases) WlanConnectionProfileDetails : winrt::Windows::Networking::Connectivity::IWlanConnectionProfileDetails
     {
         WlanConnectionProfileDetails(std::nullptr_t) noexcept {}
-        WlanConnectionProfileDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IWlanConnectionProfileDetails(ptr, take_ownership_from_abi) {}
+        WlanConnectionProfileDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IWlanConnectionProfileDetails(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) WwanConnectionProfileDetails : Windows::Networking::Connectivity::IWwanConnectionProfileDetails,
-        impl::require<WwanConnectionProfileDetails, Windows::Networking::Connectivity::IWwanConnectionProfileDetails2>
+    struct __declspec(empty_bases) WwanConnectionProfileDetails : winrt::Windows::Networking::Connectivity::IWwanConnectionProfileDetails,
+        impl::require<WwanConnectionProfileDetails, winrt::Windows::Networking::Connectivity::IWwanConnectionProfileDetails2>
     {
         WwanConnectionProfileDetails(std::nullptr_t) noexcept {}
-        WwanConnectionProfileDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Connectivity::IWwanConnectionProfileDetails(ptr, take_ownership_from_abi) {}
+        WwanConnectionProfileDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::Connectivity::IWwanConnectionProfileDetails(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

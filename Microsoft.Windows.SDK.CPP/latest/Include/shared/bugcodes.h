@@ -4528,6 +4528,42 @@ Notes:
 #define DAM_WATCHDOG_TIMEOUT             ((ULONG)0x000001EBL)
 
 //
+// MessageId: HANDLE_LIVE_DUMP
+//
+// MessageText:
+//
+//  HANDLE_LIVE_DUMP
+//
+#define HANDLE_LIVE_DUMP                 ((ULONG)0x000001ECL)
+
+//
+// MessageId: HANDLE_ERROR_ON_CRITICAL_THREAD
+//
+// MessageText:
+//
+//  HANDLE_ERROR_ON_CRITICAL_THREAD
+//
+#define HANDLE_ERROR_ON_CRITICAL_THREAD  ((ULONG)0x000001EDL)
+
+//
+// MessageId: MPSDRV_QUERY_USER
+//
+// MessageText:
+//
+//  MPSDRV_QUERY_USER
+//
+#define MPSDRV_QUERY_USER                ((ULONG)0x400001EEL)
+
+//
+// MessageId: VMBUS_LIVEDUMP
+//
+// MessageText:
+//
+//  VMBUS_LIVEDUMP
+//
+#define VMBUS_LIVEDUMP                   ((ULONG)0x400001EFL)
+
+//
 // MessageId: XBOX_VMCTRL_CS_TIMEOUT
 //
 // MessageText:
@@ -4634,6 +4670,15 @@ Notes:
 //  HYPERVISOR_ERROR
 //
 #define HYPERVISOR_ERROR                 ((ULONG)0x00020001L)
+
+//
+// MessageId: XBOX_MANUALLY_INITIATED_CRASH
+//
+// MessageText:
+//
+//  XBOX_MANUALLY_INITIATED_CRASH
+//
+#define XBOX_MANUALLY_INITIATED_CRASH    ((ULONG)0x00030006L)
 
 #define WINLOGON_FATAL_ERROR ((ULONG)0xC000021AL)
 #define MANUALLY_INITIATED_CRASH1 ((ULONG)0xDEADDEAD)

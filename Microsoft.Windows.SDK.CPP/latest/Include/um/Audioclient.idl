@@ -1297,6 +1297,32 @@ interface IAudioClientDuckingControl : IUnknown
     HRESULT SetDuckingOptionsForCurrentStream([in] AUDIO_DUCKING_OPTIONS options);
 }
 
+//-----------------------------------------------------------------------------
+// Description: IAudioViewManagerService interface
+// Use IAudioClient::GetService to obtain this interface.
+//
+[
+    object,
+    uuid(A7A7EF10-1F49-45E0-AD35-612057CC8F74),
+    pointer_default(unique),
+    local
+]
+interface IAudioViewManagerService : IUnknown
+{
+    //-------------------------------------------------------------------------
+    // Description:
+    //
+    //     Associate the audio stream to a given HWND
+    //
+    // Parameters:
+    //
+    //     hwnd - [in] HWND to be associated with the audio stream
+    //
+    // 
+    HRESULT SetAudioStreamWindow([in] HWND hwnd);
+
+};
+
 typedef [v1_enum] enum AUDIO_EFFECT_STATE
 {
     AUDIO_EFFECT_STATE_OFF = 0,

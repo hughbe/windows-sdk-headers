@@ -29,6 +29,8 @@ namespace Windows
 {
     namespace Foundation
     {
+        typedef struct DateTime DateTime;
+
         apicontract UniversalApiContract;
 
         runtimeclass Uri;
@@ -71,6 +73,12 @@ namespace Windows
 
             interface IAdaptiveCardBuilderStatics;
 
+            interface IFocusAssist;
+
+            interface IFocusAssistChangedEventArgs;
+
+            interface IFocusAssistStatics;
+
             interface ISecurityAppManager;
 
             interface IShareWindowCommandEventArgs;
@@ -86,6 +94,10 @@ namespace Windows
             interface ITaskbarManagerStatics;
 
             runtimeclass AdaptiveCardBuilder;
+
+            runtimeclass FocusAssist;
+
+            runtimeclass FocusAssistChangedEventArgs;
 
             runtimeclass SecurityAppManager;
 
@@ -107,6 +119,8 @@ namespace Windows
         {
             declare
             {
+                interface Windows.Foundation.TypedEventHandler<Windows.UI.Shell.FocusAssist*, Windows.UI.Shell.FocusAssistChangedEventArgs*>;
+
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Shell.ShareWindowCommandSource*, Windows.UI.Shell.ShareWindowCommandEventArgs*>;
             }
         }
@@ -167,6 +181,35 @@ namespace Windows
             interface IAdaptiveCardBuilderStatics : IInspectable
             {
                 HRESULT CreateAdaptiveCardFromJson([in] HSTRING value, [out] [retval] Windows.UI.Shell.IAdaptiveCard** result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.UI.Shell.FocusAssist)]
+            [uuid(CDE8728D-DBFD-50FC-9B39-7B3614D4C8F6)]
+            interface IFocusAssist : IInspectable
+            {
+                [propget] HRESULT IsEnabled([out] [retval] boolean* value);
+                [eventadd] HRESULT Changed([in] Windows.Foundation.TypedEventHandler<Windows.UI.Shell.FocusAssist*, Windows.UI.Shell.FocusAssistChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT Changed([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.UI.Shell.FocusAssistChangedEventArgs)]
+            [uuid(17F6A388-249C-51CF-B342-0BA2A0F08DF9)]
+            interface IFocusAssistChangedEventArgs : IInspectable
+            {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.UI.Shell.FocusAssist)]
+            [uuid(293C0C7E-5CCE-5FD8-ABB3-B5B54423DEAD)]
+            interface IFocusAssistStatics : IInspectable
+            {
+                HRESULT GetDefault([out] [retval] Windows.UI.Shell.FocusAssist** result);
+                HRESULT TryStartFocusAssist([out] [retval] GUID* result);
+                HRESULT TryStartFocusAssistUntil([in] Windows.Foundation.DateTime endTime, [out] [retval] GUID* result);
+                [overload("EndFocusAssist")] HRESULT EndFocusAssist([in] GUID token);
+                [overload("EndFocusAssist")] HRESULT EndFocusAssist2();
             }
 
             [contract(Windows.UI.Shell.SecurityAppManagerContract, 1.0)]
@@ -250,6 +293,22 @@ namespace Windows
             [threading(both)]
             runtimeclass AdaptiveCardBuilder
             {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.UI.Shell.IFocusAssistStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+            [threading(both)]
+            runtimeclass FocusAssist
+            {
+                [default] interface Windows.UI.Shell.IFocusAssist;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass FocusAssistChangedEventArgs
+            {
+                [default] interface Windows.UI.Shell.IFocusAssistChangedEventArgs;
             }
 
             [activatable(Windows.UI.Shell.SecurityAppManagerContract, 1.0)]

@@ -92,7 +92,7 @@
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xe0000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xf0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
@@ -204,6 +204,21 @@ namespace ABI {
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport ABI::Windows::Devices::WiFi::IWiFiNetworkReport
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace WiFi {
+                interface IWiFiOnDemandHotspotConnectTriggerDetails;
+            } /* WiFi */
+        } /* Devices */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails ABI::Windows::Devices::WiFi::IWiFiOnDemandHotspotConnectTriggerDetails
+
+#endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_FWD_DEFINED__
@@ -1510,6 +1525,39 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport;
 
 /*
  *
+ * Interface Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_WiFi_IWiFiOnDemandHotspotConnectTriggerDetails[] = L"Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails";
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace WiFi {
+                MIDL_INTERFACE("cdd06495-408d-5bd3-bcb9-4d2097613f2d")
+                IWiFiOnDemandHotspotConnectTriggerDetails : public IInspectable
+                {
+                public:
+                };
+
+                extern MIDL_CONST_ID IID& IID_IWiFiOnDemandHotspotConnectTriggerDetails = _uuidof(IWiFiOnDemandHotspotConnectTriggerDetails);
+            } /* WiFi */
+        } /* Devices */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Interface Windows.Devices.WiFi.IWiFiWpsConfigurationResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
@@ -1629,6 +1677,25 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 
 /*
  *
+ * Class Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiOnDemandHotspotConnectTriggerDetails_DEFINED
+#define RUNTIMECLASS_Windows_Devices_WiFi_WiFiOnDemandHotspotConnectTriggerDetails_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiOnDemandHotspotConnectTriggerDetails[] = L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Class Windows.Devices.WiFi.WiFiWpsConfigurationResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
@@ -1683,6 +1750,12 @@ typedef interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult __x_ABI
 typedef interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport;
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_FWD_DEFINED__
+#define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails;
+
+#endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_FWD_DEFINED__
 #define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_FWD_DEFINED__
@@ -3796,6 +3869,70 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport;
 
 /*
  *
+ * Interface Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_WiFi_IWiFiOnDemandHotspotConnectTriggerDetails[] = L"Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails";
+typedef struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetailsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails* This,
+        TrustLevel* trustLevel);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetailsVtbl;
+
+interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails
+{
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetailsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails;
+#endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiOnDemandHotspotConnectTriggerDetails_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Interface Windows.Devices.WiFi.IWiFiWpsConfigurationResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
@@ -3947,6 +4084,25 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiNetworkReport[] = L"Windows.Devices.WiFi.WiFiNetworkReport";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Class Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Class implements the following interfaces:
+ *    Windows.Devices.WiFi.IWiFiOnDemandHotspotConnectTriggerDetails ** Default Interface **
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiOnDemandHotspotConnectTriggerDetails_DEFINED
+#define RUNTIMECLASS_Windows_Devices_WiFi_WiFiOnDemandHotspotConnectTriggerDetails_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiOnDemandHotspotConnectTriggerDetails[] = L"Windows.Devices.WiFi.WiFiOnDemandHotspotConnectTriggerDetails";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *

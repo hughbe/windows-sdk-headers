@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_UI_Xaml_Markup_2_H
 #define WINRT_Windows_UI_Xaml_Markup_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
@@ -40,57 +41,57 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Markup
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) MarkupExtension : Windows::UI::Xaml::Markup::IMarkupExtension,
-        impl::require<MarkupExtension, Windows::UI::Xaml::Markup::IMarkupExtensionOverrides>
+    struct __declspec(empty_bases) MarkupExtension : winrt::Windows::UI::Xaml::Markup::IMarkupExtension,
+        impl::require<MarkupExtension, winrt::Windows::UI::Xaml::Markup::IMarkupExtensionOverrides>
     {
         MarkupExtension(std::nullptr_t) noexcept {}
-        MarkupExtension(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Markup::IMarkupExtension(ptr, take_ownership_from_abi) {}
+        MarkupExtension(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Markup::IMarkupExtension(ptr, take_ownership_from_abi) {}
         MarkupExtension();
     };
-    struct __declspec(empty_bases) XamlBinaryWriter : Windows::UI::Xaml::Markup::IXamlBinaryWriter
+    struct __declspec(empty_bases) XamlBinaryWriter : winrt::Windows::UI::Xaml::Markup::IXamlBinaryWriter
     {
         XamlBinaryWriter(std::nullptr_t) noexcept {}
-        XamlBinaryWriter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Markup::IXamlBinaryWriter(ptr, take_ownership_from_abi) {}
-        static auto Write(param::vector<Windows::Storage::Streams::IRandomAccessStream> const& inputStreams, param::vector<Windows::Storage::Streams::IRandomAccessStream> const& outputStreams, Windows::UI::Xaml::Markup::IXamlMetadataProvider const& xamlMetadataProvider);
+        XamlBinaryWriter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Markup::IXamlBinaryWriter(ptr, take_ownership_from_abi) {}
+        static auto Write(param::vector<winrt::Windows::Storage::Streams::IRandomAccessStream> const& inputStreams, param::vector<winrt::Windows::Storage::Streams::IRandomAccessStream> const& outputStreams, winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider const& xamlMetadataProvider);
     };
-    struct __declspec(empty_bases) XamlBindingHelper : Windows::UI::Xaml::Markup::IXamlBindingHelper
+    struct __declspec(empty_bases) XamlBindingHelper : winrt::Windows::UI::Xaml::Markup::IXamlBindingHelper
     {
         XamlBindingHelper(std::nullptr_t) noexcept {}
-        XamlBindingHelper(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Markup::IXamlBindingHelper(ptr, take_ownership_from_abi) {}
+        XamlBindingHelper(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Markup::IXamlBindingHelper(ptr, take_ownership_from_abi) {}
         [[nodiscard]] static auto DataTemplateComponentProperty();
-        static auto GetDataTemplateComponent(Windows::UI::Xaml::DependencyObject const& element);
-        static auto SetDataTemplateComponent(Windows::UI::Xaml::DependencyObject const& element, Windows::UI::Xaml::Markup::IDataTemplateComponent const& value);
-        static auto SuspendRendering(Windows::UI::Xaml::UIElement const& target);
-        static auto ResumeRendering(Windows::UI::Xaml::UIElement const& target);
-        static auto ConvertValue(Windows::UI::Xaml::Interop::TypeName const& type, Windows::Foundation::IInspectable const& value);
-        static auto SetPropertyFromString(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, param::hstring const& value);
-        static auto SetPropertyFromBoolean(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, bool value);
-        static auto SetPropertyFromChar16(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, char16_t value);
-        static auto SetPropertyFromDateTime(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, Windows::Foundation::DateTime const& value);
-        static auto SetPropertyFromDouble(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, double value);
-        static auto SetPropertyFromInt32(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, int32_t value);
-        static auto SetPropertyFromUInt32(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, uint32_t value);
-        static auto SetPropertyFromInt64(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, int64_t value);
-        static auto SetPropertyFromUInt64(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, uint64_t value);
-        static auto SetPropertyFromSingle(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, float value);
-        static auto SetPropertyFromPoint(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, Windows::Foundation::Point const& value);
-        static auto SetPropertyFromRect(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, Windows::Foundation::Rect const& value);
-        static auto SetPropertyFromSize(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, Windows::Foundation::Size const& value);
-        static auto SetPropertyFromTimeSpan(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, Windows::Foundation::TimeSpan const& value);
-        static auto SetPropertyFromByte(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, uint8_t value);
-        static auto SetPropertyFromUri(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, Windows::Foundation::Uri const& value);
-        static auto SetPropertyFromObject(Windows::Foundation::IInspectable const& dependencyObject, Windows::UI::Xaml::DependencyProperty const& propertyToSet, Windows::Foundation::IInspectable const& value);
+        static auto GetDataTemplateComponent(winrt::Windows::UI::Xaml::DependencyObject const& element);
+        static auto SetDataTemplateComponent(winrt::Windows::UI::Xaml::DependencyObject const& element, winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent const& value);
+        static auto SuspendRendering(winrt::Windows::UI::Xaml::UIElement const& target);
+        static auto ResumeRendering(winrt::Windows::UI::Xaml::UIElement const& target);
+        static auto ConvertValue(winrt::Windows::UI::Xaml::Interop::TypeName const& type, winrt::Windows::Foundation::IInspectable const& value);
+        static auto SetPropertyFromString(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, param::hstring const& value);
+        static auto SetPropertyFromBoolean(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, bool value);
+        static auto SetPropertyFromChar16(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, char16_t value);
+        static auto SetPropertyFromDateTime(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, winrt::Windows::Foundation::DateTime const& value);
+        static auto SetPropertyFromDouble(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, double value);
+        static auto SetPropertyFromInt32(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, int32_t value);
+        static auto SetPropertyFromUInt32(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, uint32_t value);
+        static auto SetPropertyFromInt64(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, int64_t value);
+        static auto SetPropertyFromUInt64(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, uint64_t value);
+        static auto SetPropertyFromSingle(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, float value);
+        static auto SetPropertyFromPoint(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, winrt::Windows::Foundation::Point const& value);
+        static auto SetPropertyFromRect(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, winrt::Windows::Foundation::Rect const& value);
+        static auto SetPropertyFromSize(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, winrt::Windows::Foundation::Size const& value);
+        static auto SetPropertyFromTimeSpan(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, winrt::Windows::Foundation::TimeSpan const& value);
+        static auto SetPropertyFromByte(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, uint8_t value);
+        static auto SetPropertyFromUri(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, winrt::Windows::Foundation::Uri const& value);
+        static auto SetPropertyFromObject(winrt::Windows::Foundation::IInspectable const& dependencyObject, winrt::Windows::UI::Xaml::DependencyProperty const& propertyToSet, winrt::Windows::Foundation::IInspectable const& value);
     };
-    struct __declspec(empty_bases) XamlMarkupHelper : Windows::UI::Xaml::Markup::IXamlMarkupHelper
+    struct __declspec(empty_bases) XamlMarkupHelper : winrt::Windows::UI::Xaml::Markup::IXamlMarkupHelper
     {
         XamlMarkupHelper(std::nullptr_t) noexcept {}
-        XamlMarkupHelper(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Markup::IXamlMarkupHelper(ptr, take_ownership_from_abi) {}
-        static auto UnloadObject(Windows::UI::Xaml::DependencyObject const& element);
+        XamlMarkupHelper(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Markup::IXamlMarkupHelper(ptr, take_ownership_from_abi) {}
+        static auto UnloadObject(winrt::Windows::UI::Xaml::DependencyObject const& element);
     };
-    struct __declspec(empty_bases) XamlReader : Windows::UI::Xaml::Markup::IXamlReader
+    struct __declspec(empty_bases) XamlReader : winrt::Windows::UI::Xaml::Markup::IXamlReader
     {
         XamlReader(std::nullptr_t) noexcept {}
-        XamlReader(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Markup::IXamlReader(ptr, take_ownership_from_abi) {}
+        XamlReader(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Xaml::Markup::IXamlReader(ptr, take_ownership_from_abi) {}
         static auto Load(param::hstring const& xaml);
         static auto LoadWithInitialTemplateValidation(param::hstring const& xaml);
     };
@@ -101,7 +102,7 @@ WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Markup
         D const& shim() const noexcept { return *static_cast<const D*>(this); }
     public:
         using IMarkupExtensionOverrides = winrt::Windows::UI::Xaml::Markup::IMarkupExtensionOverrides;
-        WINRT_IMPL_AUTO(Windows::Foundation::IInspectable) ProvideValue() const;
+        WINRT_IMPL_AUTO(winrt::Windows::Foundation::IInspectable) ProvideValue() const;
     };
 }
 #endif

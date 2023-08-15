@@ -1,8 +1,9 @@
-// C++/WinRT v2.0.201201.7
+// C++/WinRT v2.0.210707.1
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+#pragma once
 #ifndef WINRT_Windows_Devices_Input_2_H
 #define WINRT_Windows_Devices_Input_2_H
 #include "winrt/impl/Windows.Devices.Input.1.h"
@@ -40,85 +41,85 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Input
     {
         return !(left == right);
     }
-    struct __declspec(empty_bases) KeyboardCapabilities : Windows::Devices::Input::IKeyboardCapabilities
+    struct __declspec(empty_bases) KeyboardCapabilities : winrt::Windows::Devices::Input::IKeyboardCapabilities
     {
         KeyboardCapabilities(std::nullptr_t) noexcept {}
-        KeyboardCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IKeyboardCapabilities(ptr, take_ownership_from_abi) {}
+        KeyboardCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IKeyboardCapabilities(ptr, take_ownership_from_abi) {}
         KeyboardCapabilities();
     };
-    struct __declspec(empty_bases) MouseCapabilities : Windows::Devices::Input::IMouseCapabilities
+    struct __declspec(empty_bases) MouseCapabilities : winrt::Windows::Devices::Input::IMouseCapabilities
     {
         MouseCapabilities(std::nullptr_t) noexcept {}
-        MouseCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IMouseCapabilities(ptr, take_ownership_from_abi) {}
+        MouseCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IMouseCapabilities(ptr, take_ownership_from_abi) {}
         MouseCapabilities();
     };
-    struct __declspec(empty_bases) MouseDevice : Windows::Devices::Input::IMouseDevice
+    struct __declspec(empty_bases) MouseDevice : winrt::Windows::Devices::Input::IMouseDevice
     {
         MouseDevice(std::nullptr_t) noexcept {}
-        MouseDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IMouseDevice(ptr, take_ownership_from_abi) {}
+        MouseDevice(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IMouseDevice(ptr, take_ownership_from_abi) {}
         static auto GetForCurrentView();
     };
-    struct __declspec(empty_bases) MouseEventArgs : Windows::Devices::Input::IMouseEventArgs
+    struct __declspec(empty_bases) MouseEventArgs : winrt::Windows::Devices::Input::IMouseEventArgs
     {
         MouseEventArgs(std::nullptr_t) noexcept {}
-        MouseEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IMouseEventArgs(ptr, take_ownership_from_abi) {}
+        MouseEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IMouseEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PenButtonListener : Windows::Devices::Input::IPenButtonListener
+    struct __declspec(empty_bases) PenButtonListener : winrt::Windows::Devices::Input::IPenButtonListener
     {
         PenButtonListener(std::nullptr_t) noexcept {}
-        PenButtonListener(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IPenButtonListener(ptr, take_ownership_from_abi) {}
+        PenButtonListener(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IPenButtonListener(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
     };
-    struct __declspec(empty_bases) PenDevice : Windows::Devices::Input::IPenDevice,
-        impl::require<PenDevice, Windows::Devices::Input::IPenDevice2>
+    struct __declspec(empty_bases) PenDevice : winrt::Windows::Devices::Input::IPenDevice,
+        impl::require<PenDevice, winrt::Windows::Devices::Input::IPenDevice2>
     {
         PenDevice(std::nullptr_t) noexcept {}
-        PenDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IPenDevice(ptr, take_ownership_from_abi) {}
+        PenDevice(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IPenDevice(ptr, take_ownership_from_abi) {}
         static auto GetFromPointerId(uint32_t pointerId);
     };
-    struct __declspec(empty_bases) PenDockListener : Windows::Devices::Input::IPenDockListener
+    struct __declspec(empty_bases) PenDockListener : winrt::Windows::Devices::Input::IPenDockListener
     {
         PenDockListener(std::nullptr_t) noexcept {}
-        PenDockListener(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IPenDockListener(ptr, take_ownership_from_abi) {}
+        PenDockListener(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IPenDockListener(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
     };
-    struct __declspec(empty_bases) PenDockedEventArgs : Windows::Devices::Input::IPenDockedEventArgs
+    struct __declspec(empty_bases) PenDockedEventArgs : winrt::Windows::Devices::Input::IPenDockedEventArgs
     {
         PenDockedEventArgs(std::nullptr_t) noexcept {}
-        PenDockedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IPenDockedEventArgs(ptr, take_ownership_from_abi) {}
+        PenDockedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IPenDockedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PenTailButtonClickedEventArgs : Windows::Devices::Input::IPenTailButtonClickedEventArgs
+    struct __declspec(empty_bases) PenTailButtonClickedEventArgs : winrt::Windows::Devices::Input::IPenTailButtonClickedEventArgs
     {
         PenTailButtonClickedEventArgs(std::nullptr_t) noexcept {}
-        PenTailButtonClickedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IPenTailButtonClickedEventArgs(ptr, take_ownership_from_abi) {}
+        PenTailButtonClickedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IPenTailButtonClickedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PenTailButtonDoubleClickedEventArgs : Windows::Devices::Input::IPenTailButtonDoubleClickedEventArgs
+    struct __declspec(empty_bases) PenTailButtonDoubleClickedEventArgs : winrt::Windows::Devices::Input::IPenTailButtonDoubleClickedEventArgs
     {
         PenTailButtonDoubleClickedEventArgs(std::nullptr_t) noexcept {}
-        PenTailButtonDoubleClickedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IPenTailButtonDoubleClickedEventArgs(ptr, take_ownership_from_abi) {}
+        PenTailButtonDoubleClickedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IPenTailButtonDoubleClickedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PenTailButtonLongPressedEventArgs : Windows::Devices::Input::IPenTailButtonLongPressedEventArgs
+    struct __declspec(empty_bases) PenTailButtonLongPressedEventArgs : winrt::Windows::Devices::Input::IPenTailButtonLongPressedEventArgs
     {
         PenTailButtonLongPressedEventArgs(std::nullptr_t) noexcept {}
-        PenTailButtonLongPressedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IPenTailButtonLongPressedEventArgs(ptr, take_ownership_from_abi) {}
+        PenTailButtonLongPressedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IPenTailButtonLongPressedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PenUndockedEventArgs : Windows::Devices::Input::IPenUndockedEventArgs
+    struct __declspec(empty_bases) PenUndockedEventArgs : winrt::Windows::Devices::Input::IPenUndockedEventArgs
     {
         PenUndockedEventArgs(std::nullptr_t) noexcept {}
-        PenUndockedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IPenUndockedEventArgs(ptr, take_ownership_from_abi) {}
+        PenUndockedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IPenUndockedEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) PointerDevice : Windows::Devices::Input::IPointerDevice,
-        impl::require<PointerDevice, Windows::Devices::Input::IPointerDevice2>
+    struct __declspec(empty_bases) PointerDevice : winrt::Windows::Devices::Input::IPointerDevice,
+        impl::require<PointerDevice, winrt::Windows::Devices::Input::IPointerDevice2>
     {
         PointerDevice(std::nullptr_t) noexcept {}
-        PointerDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::IPointerDevice(ptr, take_ownership_from_abi) {}
+        PointerDevice(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::IPointerDevice(ptr, take_ownership_from_abi) {}
         static auto GetPointerDevice(uint32_t pointerId);
         static auto GetPointerDevices();
     };
-    struct __declspec(empty_bases) TouchCapabilities : Windows::Devices::Input::ITouchCapabilities
+    struct __declspec(empty_bases) TouchCapabilities : winrt::Windows::Devices::Input::ITouchCapabilities
     {
         TouchCapabilities(std::nullptr_t) noexcept {}
-        TouchCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Input::ITouchCapabilities(ptr, take_ownership_from_abi) {}
+        TouchCapabilities(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::Input::ITouchCapabilities(ptr, take_ownership_from_abi) {}
         TouchCapabilities();
     };
 }
