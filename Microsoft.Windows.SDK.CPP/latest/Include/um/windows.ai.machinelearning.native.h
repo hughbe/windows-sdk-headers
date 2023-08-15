@@ -3,7 +3,7 @@
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
+ /* File created by MIDL compiler version 8.01.0626 */
 /* at Tue Jan 19 03:14:07 2038
  */
 /* @@MIDL_FILE_HEADING(  ) */
@@ -32,6 +32,14 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
+#endif
+
+#ifndef DECLSPEC_XFGVIRT
+#if _CONTROL_FLOW_GUARD_XFG
+#define DECLSPEC_XFGVIRT(base, func) __declspec(xfg_virtual(base, func))
+#else
+#define DECLSPEC_XFGVIRT(base, func)
+#endif
 #endif
 
 /* Forward Declarations */ 
@@ -128,23 +136,28 @@ EXTERN_C const IID IID_ITensorNative;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ITensorNative * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ITensorNative * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ITensorNative * This);
         
+        DECLSPEC_XFGVIRT(ITensorNative, GetBuffer)
         HRESULT ( STDMETHODCALLTYPE *GetBuffer )( 
             ITensorNative * This,
             /* [size_is][size_is][out] */ BYTE **value,
             /* [out] */ UINT32 *capacity);
         
+        DECLSPEC_XFGVIRT(ITensorNative, GetD3D12Resource)
         HRESULT ( STDMETHODCALLTYPE *GetD3D12Resource )( 
             ITensorNative * This,
             /* [out] */ ID3D12Resource **result);
@@ -219,18 +232,22 @@ EXTERN_C const IID IID_ITensorStaticsNative;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ITensorStaticsNative * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ITensorStaticsNative * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ITensorStaticsNative * This);
         
+        DECLSPEC_XFGVIRT(ITensorStaticsNative, CreateFromD3D12Resource)
         HRESULT ( STDMETHODCALLTYPE *CreateFromD3D12Resource )( 
             ITensorStaticsNative * This,
             ID3D12Resource *value,
@@ -303,18 +320,22 @@ EXTERN_C const IID IID_ILearningModelDeviceFactoryNative;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ILearningModelDeviceFactoryNative * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ILearningModelDeviceFactoryNative * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ILearningModelDeviceFactoryNative * This);
         
+        DECLSPEC_XFGVIRT(ILearningModelDeviceFactoryNative, CreateFromD3D12CommandQueue)
         HRESULT ( STDMETHODCALLTYPE *CreateFromD3D12CommandQueue )( 
             ILearningModelDeviceFactoryNative * This,
             ID3D12CommandQueue *value,
@@ -384,18 +405,22 @@ EXTERN_C const IID IID_ILearningModelSessionOptionsNative;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ILearningModelSessionOptionsNative * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ILearningModelSessionOptionsNative * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ILearningModelSessionOptionsNative * This);
         
+        DECLSPEC_XFGVIRT(ILearningModelSessionOptionsNative, SetIntraOpNumThreadsOverride)
         HRESULT ( STDMETHODCALLTYPE *SetIntraOpNumThreadsOverride )( 
             ILearningModelSessionOptionsNative * This,
             UINT32 intraOpNumThreads);
@@ -464,18 +489,22 @@ EXTERN_C const IID IID_ILearningModelSessionOptionsNative1;
     {
         BEGIN_INTERFACE
         
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
             ILearningModelSessionOptionsNative1 * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
             ILearningModelSessionOptionsNative1 * This);
         
+        DECLSPEC_XFGVIRT(IUnknown, Release)
         ULONG ( STDMETHODCALLTYPE *Release )( 
             ILearningModelSessionOptionsNative1 * This);
         
+        DECLSPEC_XFGVIRT(ILearningModelSessionOptionsNative1, SetIntraOpThreadSpinning)
         HRESULT ( STDMETHODCALLTYPE *SetIntraOpThreadSpinning )( 
             ILearningModelSessionOptionsNative1 * This,
             boolean allowSpinning);

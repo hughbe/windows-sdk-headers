@@ -1498,11 +1498,15 @@ typedef struct _KDDEBUGGER_DATA64 {
 
     USHORT OffsetEProcessMmHotPatchContext;
 
-    // Windows 10 Cobalt Addition
+    // Windows 11 Cobalt Addition
 
     ULONG   OffsetKThreadShadowStackLimit;
     ULONG   OffsetKThreadShadowStackBase;
     ULONG64 ShadowStackEnabled;
+
+    // Windows 11 Nickel Addition
+
+    ULONG64 PointerAuthMask;
 
 } KDDEBUGGER_DATA64, *PKDDEBUGGER_DATA64;
 

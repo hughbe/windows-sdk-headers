@@ -189,7 +189,6 @@ typedef struct AUDIO_MIC_BOOST_NOTIFICATION
     // Device that the mic boost has changed on.
     IMMDevice* endpoint;
     GUID guidEventContext;
-    DWORD dwSenderProcessId;
     BOOL bMicBoostEnabled;
     float fLevelDB;
     float fLevelMinDB;

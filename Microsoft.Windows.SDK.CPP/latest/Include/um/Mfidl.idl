@@ -13921,6 +13921,133 @@ cpp_quote("    );")
 
 cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_CO) ")
 
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_NI) ")
+
+// {94DD0C30-28C7-4EFB-9D6B-812300FB0C7F}
+// KSPROPERTYSETID_ANYCAMERACONTROL
+// This represents that a control is contained in a custom property set
+cpp_quote("EXTERN_GUID(KSPROPERTYSETID_ANYCAMERACONTROL, 0x94dd0c30, 0x28c7, 0x4efb, 0x9d, 0x6b, 0x81, 0x23, 0x0, 0xfb, 0xc, 0x7f);")
+
+/// <summary>
+/// This interface represents the callback mechanism for the camera control monitor object. 
+/// A client passes an implmented instance of this interface when creating a monitor
+/// </summary>
+[
+    object,
+    uuid(E8F2540D-558A-4449-8B64-4863467A9FE8),
+    helpstring("IMFCameraControlNotify Interface"),
+    local
+]
+interface IMFCameraControlNotify : IUnknown
+{
+    /// <summary>
+    /// This method represents the notification callback for changes to controls. 
+    /// </summary>
+    /// <param name = "controlSet">
+    /// If provided controlSet GUID is MF_CAMERACONTROL_PROPSET_CUSTOM, then the callback was invoked by a 
+    /// subscription for a change to a control outside the supported Property Sets
+    /// </param>
+    /// <param name = "id">
+    /// This is the id of the control in its set.
+    /// </param>
+    void OnChange(
+        [in, annotation("_In_")] REFGUID controlSet,
+        [in, annotation("_In_")] UINT32 id);
+
+    /// <summary>
+    /// This method notifies client if an unrecoverable error occurs within the monitor.
+    /// After call returns to monitor, it will cleanup and remove reference to IMFCameraControlNotify
+    /// There is not a need to call IMFCameraControlMonitor::Shutdown after receiving an OnError
+    /// </summary>
+    /// <param name = "hrStatus">
+    /// The internal error code. 
+    /// If E_OUTOFMEMORY, then there were not enough resources available for the monitor to function properly
+    /// If MF_INVALID_STATE_ERR, then there has been some corruption of memory states.
+    /// </param>
+    void OnError(
+        [in, annotation("_In_")] HRESULT hrStatus);
+}
+
+/// <summary>
+/// This interface represents the main camera control monitor object.
+/// </summary>
+[
+    object,
+    uuid(4D46F2C9-28BA-4970-8C7B-1F0C9D80AF69),
+    helpstring("IMFCameraControlMonitor Interface"),
+    local
+]
+interface IMFCameraControlMonitor : IUnknown
+{
+    /// <summary>
+    /// This function will start the monitor. The monitor will call OnChange on Subscriptions linked to changed controls
+    /// If called when Monitor is already started or has shutdown, method will return error MF_E_INVALIDREQUEST
+    /// </summary>
+    HRESULT Start(
+    );
+
+    /// <summary>
+    /// This function will stop the monitor. A client can stop the monitor to pause notifications.
+    /// In Stopped state, client can Add/Remove Control Subscriptions.
+    /// If called when Monitor is already stopped or has shutdown, method will return error MF_E_INVALIDREQUEST
+    /// </summary>
+    HRESULT Stop(
+    );
+
+    /// <summary>
+    /// This function will add to the list of controls for which the client wants to be notified
+    /// If the provided controlSet is MF_CAMERACONTROL_PROPSET_CUSTOM, then the monitor's callback will be called for the change of "Any Control"
+    /// If called when Monitor is in Start or Shutdown state, method will return error MF_E_INVALIDREQUEST
+    /// If controlSet is not MF_CAMERACONTROL_PROPSET_CUSTOM, PROPSETID_VIDCAP_VIDEOPROCAMP, PROPSETID_VIDCAP_CAMERACONTROL or
+    /// KSPROPERTYSETID_ExtendedCameraControl then method will return with error E_INVALIDARG
+    /// </summary>
+    HRESULT AddControlSubscription(
+        [in, annotation("_In_")] GUID controlSet,
+        [in, annotation("_In_")] UINT32 id
+    );
+
+    /// <summary>
+    /// This function will remove the subscription for this control from the monitor
+    /// If the provided controlSet is MF_CAMERACONTROL_PROPSET_CUSTOM, then the subscription for "Any Control" change will be removed
+    /// If called when Monitor is in Start or Shutdown state, method will return with error MF_E_INVALIDREQUEST
+    /// If provided control description does not match a current subscription, method will return with error MF_E_NOT_FOUND
+    /// </summary>
+    HRESULT RemoveControlSubscription(
+        [in, annotation("_In_")] GUID controlSet,
+        [in, annotation("_In_")] UINT32 id
+    );
+
+    /// This function will cleanup and shutdown the monitor.
+    /// It is acceptable to call Shutdown even if monitor is not in stop state 
+    /// After Shutdown, a client cannot call on the Monitor to Add/Remove Control Subscriptions or Start/Stop notifications    
+    /// </summary>
+    void Shutdown();
+}
+
+/// <summary>
+/// Allows app to create CameraControlMonitor.
+/// If provided symbolic link name does not match a camera device, then method will return E_INVALIDARG
+/// </summary>
+/// <param name = "symbolicLink">
+/// String symbolic link name of the video capture device that is active.
+/// </param>
+/// <param name = "callback">
+/// Pointer to an object that implements the callback interface.
+/// </param>
+/// <param name = "ppCameraControlMonitor">
+/// Specifies a pointer to a variable where the IMFCameraControlMonitor object
+/// will be stored.
+/// </param>
+cpp_quote("")
+cpp_quote("STDAPI")
+cpp_quote("MFCreateCameraControlMonitor(")
+cpp_quote("    _In_z_ LPCWSTR symbolicLink,")
+cpp_quote("    _In_ IMFCameraControlNotify* callback,")
+cpp_quote("    _COM_Outptr_ IMFCameraControlMonitor ** ppCameraControlMonitor")
+cpp_quote("    );")
+
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI) ")
+
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 
 [

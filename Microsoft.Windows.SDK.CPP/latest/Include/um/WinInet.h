@@ -56,11 +56,9 @@ extern "C" {
 #define URLCACHEAPI_(type) EXTERN_C type STDAPICALLTYPE
 #endif
 
-#ifdef BOOLAPI
-#undef BOOLAPI
-#endif
-
+#ifndef BOOLAPI
 #define BOOLAPI INTERNETAPIX(BOOL, _Success_(return != FALSE))
+#endif
 
 //
 // internet types

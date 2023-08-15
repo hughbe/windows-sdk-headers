@@ -618,7 +618,7 @@ typedef ULONG64 TRACEHANDLE, *PTRACEHANDLE;
 //
 
 #define EVENT_TRACE_CONTROL_INCREMENT_FILE  4       // Causes a session with EVENT_TRACE_FILE_MODE_NEWFILE
-                                                    // to switch to the next file before the automatic 
+                                                    // to switch to the next file before the automatic
                                                     // switching criteria is met
 
 //
@@ -2297,8 +2297,8 @@ typedef enum _TRACE_QUERY_INFO_CLASS {
     //
     // TraceStreamCount:
     // - TraceQueryInformation
-    //      Queries the number of streams that a given session can be expected 
-    //      to emit. This is usually proportional to CPU count, or 1 if no 
+    //      Queries the number of streams that a given session can be expected
+    //      to emit. This is usually proportional to CPU count, or 1 if no
     //      per-processor buffering is enabled.
     //
     //      Output Format: ULONG
@@ -2320,17 +2320,17 @@ typedef enum _TRACE_QUERY_INFO_CLASS {
     //      Queries ownership information for active PMC counters.
     //      Expects NULL SessionHandle.
     //
-    //      Input Format: ETW_PMC_COUNTER_OWNERSHIP_STATUS with ProcessorNumber set to an 
+    //      Input Format: ETW_PMC_COUNTER_OWNERSHIP_STATUS with ProcessorNumber set to an
     //                    appropriate processor index. The input buffer must be of size at least
-    //                    RTL_SIZEOF_THROUGH_FIELD(ETW_PMC_COUNTER_OWNERSHIP_STATUS, NumberOfCounters) + 
-    //                    (sizeof(ETW_PMC_COUNTER_OWNER) * EtwMaxPmcCounters), where EtwMaxPmcCounters 
+    //                    RTL_SIZEOF_THROUGH_FIELD(ETW_PMC_COUNTER_OWNERSHIP_STATUS, NumberOfCounters) +
+    //                    (sizeof(ETW_PMC_COUNTER_OWNER) * EtwMaxPmcCounters), where EtwMaxPmcCounters
     //                    is the result of a TraceQueryInformation(TraceMaxPmcCounterQuery, ...) operation.
     //
     //      Output Format: ETW_PMC_COUNTER_OWNERSHIP_STATUS with CounterOwners filled out. NumberOfCounters is
     //                     set to the number of items in the CounterOwners array.
     //                     If a counter owner's OwnershipType is EtwPmcOwnerTagged, then OwnerTag contains
     //                     a tag provided by the counter owner.
-    //               
+    //
     TracePmcCounterOwners = 25,
 
     //
@@ -2348,7 +2348,7 @@ typedef enum _TRACE_QUERY_INFO_CLASS {
     //      Queries information about enabled PMC counters for all sessions.
     //
     //      Output Format: The supplied output buffer will be set to a blob of filled out ETW_PMC_SESSION_INFO.
-    //                     The NextEntryOffset member of each item will be set to the offset from the start of 
+    //                     The NextEntryOffset member of each item will be set to the offset from the start of
     //                     the current item to the next item, or 0 if there are no more items.
     //                     The ProfileSourceCount and HookId count members will be set to the number of items that
     //                     exist in the ProfileSources array and HookIds arrays, respectively.
@@ -2722,6 +2722,7 @@ typedef enum _ETW_PROCESS_HANDLE_INFO_TYPE {
     EtwQueryPartitionInformation = 1,
     EtwQueryPartitionInformationV2 = 2,
     EtwQueryLastDroppedTimes = 3,
+    EtwQueryLogFileHeader = 4,
     EtwQueryProcessHandleInfoMax
 } ETW_PROCESS_HANDLE_INFO_TYPE;
 

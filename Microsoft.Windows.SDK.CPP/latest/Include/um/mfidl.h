@@ -971,6 +971,20 @@ typedef interface IMFCameraOcclusionStateMonitor IMFCameraOcclusionStateMonitor;
 #endif 	/* __IMFCameraOcclusionStateMonitor_FWD_DEFINED__ */
 
 
+#ifndef __IMFCameraControlNotify_FWD_DEFINED__
+#define __IMFCameraControlNotify_FWD_DEFINED__
+typedef interface IMFCameraControlNotify IMFCameraControlNotify;
+
+#endif 	/* __IMFCameraControlNotify_FWD_DEFINED__ */
+
+
+#ifndef __IMFCameraControlMonitor_FWD_DEFINED__
+#define __IMFCameraControlMonitor_FWD_DEFINED__
+typedef interface IMFCameraControlMonitor IMFCameraControlMonitor;
+
+#endif 	/* __IMFCameraControlMonitor_FWD_DEFINED__ */
+
+
 #ifndef __IMFVideoCaptureSampleAllocator_FWD_DEFINED__
 #define __IMFVideoCaptureSampleAllocator_FWD_DEFINED__
 typedef interface IMFVideoCaptureSampleAllocator IMFVideoCaptureSampleAllocator;
@@ -22927,11 +22941,266 @@ MFCreateCameraOcclusionStateMonitor(
     _COM_Outptr_ IMFCameraOcclusionStateMonitor** occlusionStateMonitor
     );
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_CO) 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI) 
+EXTERN_GUID(KSPROPERTYSETID_ANYCAMERACONTROL, 0x94dd0c30, 0x28c7, 0x4efb, 0x9d, 0x6b, 0x81, 0x23, 0x0, 0xfb, 0xc, 0x7f);
 
 
 extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0132_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0132_v0_0_s_ifspec;
+
+#ifndef __IMFCameraControlNotify_INTERFACE_DEFINED__
+#define __IMFCameraControlNotify_INTERFACE_DEFINED__
+
+/* interface IMFCameraControlNotify */
+/* [local][helpstring][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFCameraControlNotify;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("E8F2540D-558A-4449-8B64-4863467A9FE8")
+    IMFCameraControlNotify : public IUnknown
+    {
+    public:
+        virtual void STDMETHODCALLTYPE OnChange( 
+            /* [annotation][in] */ 
+            _In_  REFGUID controlSet,
+            /* [annotation][in] */ 
+            _In_  UINT32 id) = 0;
+        
+        virtual void STDMETHODCALLTYPE OnError( 
+            /* [annotation][in] */ 
+            _In_  HRESULT hrStatus) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFCameraControlNotifyVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFCameraControlNotify * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFCameraControlNotify * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFCameraControlNotify * This);
+        
+        DECLSPEC_XFGVIRT(IMFCameraControlNotify, OnChange)
+        void ( STDMETHODCALLTYPE *OnChange )( 
+            IMFCameraControlNotify * This,
+            /* [annotation][in] */ 
+            _In_  REFGUID controlSet,
+            /* [annotation][in] */ 
+            _In_  UINT32 id);
+        
+        DECLSPEC_XFGVIRT(IMFCameraControlNotify, OnError)
+        void ( STDMETHODCALLTYPE *OnError )( 
+            IMFCameraControlNotify * This,
+            /* [annotation][in] */ 
+            _In_  HRESULT hrStatus);
+        
+        END_INTERFACE
+    } IMFCameraControlNotifyVtbl;
+
+    interface IMFCameraControlNotify
+    {
+        CONST_VTBL struct IMFCameraControlNotifyVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFCameraControlNotify_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFCameraControlNotify_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFCameraControlNotify_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFCameraControlNotify_OnChange(This,controlSet,id)	\
+    ( (This)->lpVtbl -> OnChange(This,controlSet,id) ) 
+
+#define IMFCameraControlNotify_OnError(This,hrStatus)	\
+    ( (This)->lpVtbl -> OnError(This,hrStatus) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFCameraControlNotify_INTERFACE_DEFINED__ */
+
+
+#ifndef __IMFCameraControlMonitor_INTERFACE_DEFINED__
+#define __IMFCameraControlMonitor_INTERFACE_DEFINED__
+
+/* interface IMFCameraControlMonitor */
+/* [local][helpstring][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFCameraControlMonitor;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("4D46F2C9-28BA-4970-8C7B-1F0C9D80AF69")
+    IMFCameraControlMonitor : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE Start( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE Stop( void) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE AddControlSubscription( 
+            /* [annotation][in] */ 
+            _In_  GUID controlSet,
+            /* [annotation][in] */ 
+            _In_  UINT32 id) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE RemoveControlSubscription( 
+            /* [annotation][in] */ 
+            _In_  GUID controlSet,
+            /* [annotation][in] */ 
+            _In_  UINT32 id) = 0;
+        
+        virtual void STDMETHODCALLTYPE Shutdown( void) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFCameraControlMonitorVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFCameraControlMonitor * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFCameraControlMonitor * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFCameraControlMonitor * This);
+        
+        DECLSPEC_XFGVIRT(IMFCameraControlMonitor, Start)
+        HRESULT ( STDMETHODCALLTYPE *Start )( 
+            IMFCameraControlMonitor * This);
+        
+        DECLSPEC_XFGVIRT(IMFCameraControlMonitor, Stop)
+        HRESULT ( STDMETHODCALLTYPE *Stop )( 
+            IMFCameraControlMonitor * This);
+        
+        DECLSPEC_XFGVIRT(IMFCameraControlMonitor, AddControlSubscription)
+        HRESULT ( STDMETHODCALLTYPE *AddControlSubscription )( 
+            IMFCameraControlMonitor * This,
+            /* [annotation][in] */ 
+            _In_  GUID controlSet,
+            /* [annotation][in] */ 
+            _In_  UINT32 id);
+        
+        DECLSPEC_XFGVIRT(IMFCameraControlMonitor, RemoveControlSubscription)
+        HRESULT ( STDMETHODCALLTYPE *RemoveControlSubscription )( 
+            IMFCameraControlMonitor * This,
+            /* [annotation][in] */ 
+            _In_  GUID controlSet,
+            /* [annotation][in] */ 
+            _In_  UINT32 id);
+        
+        DECLSPEC_XFGVIRT(IMFCameraControlMonitor, Shutdown)
+        void ( STDMETHODCALLTYPE *Shutdown )( 
+            IMFCameraControlMonitor * This);
+        
+        END_INTERFACE
+    } IMFCameraControlMonitorVtbl;
+
+    interface IMFCameraControlMonitor
+    {
+        CONST_VTBL struct IMFCameraControlMonitorVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFCameraControlMonitor_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFCameraControlMonitor_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFCameraControlMonitor_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFCameraControlMonitor_Start(This)	\
+    ( (This)->lpVtbl -> Start(This) ) 
+
+#define IMFCameraControlMonitor_Stop(This)	\
+    ( (This)->lpVtbl -> Stop(This) ) 
+
+#define IMFCameraControlMonitor_AddControlSubscription(This,controlSet,id)	\
+    ( (This)->lpVtbl -> AddControlSubscription(This,controlSet,id) ) 
+
+#define IMFCameraControlMonitor_RemoveControlSubscription(This,controlSet,id)	\
+    ( (This)->lpVtbl -> RemoveControlSubscription(This,controlSet,id) ) 
+
+#define IMFCameraControlMonitor_Shutdown(This)	\
+    ( (This)->lpVtbl -> Shutdown(This) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFCameraControlMonitor_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_mfidl_0000_0134 */
+/* [local] */ 
+
+
+STDAPI
+MFCreateCameraControlMonitor(
+    _In_z_ LPCWSTR symbolicLink,
+    _In_ IMFCameraControlNotify* callback,
+    _COM_Outptr_ IMFCameraControlMonitor ** ppCameraControlMonitor
+    );
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI) 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
+
+
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0134_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0134_v0_0_s_ifspec;
 
 #ifndef __IMFVideoCaptureSampleAllocator_INTERFACE_DEFINED__
 #define __IMFVideoCaptureSampleAllocator_INTERFACE_DEFINED__
@@ -23072,7 +23341,7 @@ EXTERN_C const IID IID_IMFVideoCaptureSampleAllocator;
 #endif 	/* __IMFVideoCaptureSampleAllocator_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0133 */
+/* interface __MIDL_itf_mfidl_0000_0135 */
 /* [local] */ 
 
 typedef 
@@ -23085,8 +23354,8 @@ enum MFSampleAllocatorUsage
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0133_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0133_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0135_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0135_v0_0_s_ifspec;
 
 #ifndef __IMFSampleAllocatorControl_INTERFACE_DEFINED__
 #define __IMFSampleAllocatorControl_INTERFACE_DEFINED__
@@ -23199,14 +23468,14 @@ EXTERN_C const IID IID_IMFSampleAllocatorControl;
 #endif 	/* __IMFSampleAllocatorControl_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfidl_0000_0134 */
+/* interface __MIDL_itf_mfidl_0000_0136 */
 /* [local] */ 
 
 #pragma endregion 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0134_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0134_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0136_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfidl_0000_0136_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

@@ -13266,6 +13266,8 @@ typedef enum _JOBOBJECTINFOCLASS {
     JobObjectReserved23Information = 45,
     JobObjectReserved24Information = 46,
     JobObjectReserved25Information = 47,
+    JobObjectReserved26Information = 48,
+    JobObjectReserved27Information = 49,
     MaxJobObjectInfoClass
 } JOBOBJECTINFOCLASS;
 

@@ -309,6 +309,8 @@ namespace Windows
 
             interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Size>;
 
+            interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.TimeSpan>;
+
             interface Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri*>;
 
             interface Windows.Foundation.Collections.IVectorView<boolean>;

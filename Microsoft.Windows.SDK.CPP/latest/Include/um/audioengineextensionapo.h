@@ -525,7 +525,6 @@ typedef struct AUDIO_MIC_BOOST_NOTIFICATION
     {
     IMMDevice *endpoint;
     GUID guidEventContext;
-    DWORD dwSenderProcessId;
     BOOL bMicBoostEnabled;
     float fLevelDB;
     float fLevelMinDB;

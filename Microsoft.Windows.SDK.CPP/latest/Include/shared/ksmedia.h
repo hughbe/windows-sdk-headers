@@ -7948,6 +7948,9 @@ typedef enum {
     KSPROPERTY_JACK_DESCRIPTION2,
     KSPROPERTY_JACK_SINK_INFO,
     KSPROPERTY_JACK_CONTAINERID
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+    , KSPROPERTY_JACK_DESCRIPTION3
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
 } KSPROPERTY_JACK;
 
 // Enums used in KSPROPERTY_JACK_INFO_STRUCT
@@ -8048,6 +8051,14 @@ typedef struct _tagKSJACK_DESCRIPTION2
   DWORD              JackCapabilities; // Report jack capabilities such as jack presence detection capability 
                                        // or dynamic format changing capability         
 } KSJACK_DESCRIPTION2, *PKSJACK_DESCRIPTION2;
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+typedef struct _tagKSJACK_DESCRIPTION3
+{
+  ULONG              ConfigId; // Driver defined bitmask or enum describing the current configuration, changing this value causes
+                               // audioendpointbuilder to refresh the cache to ensure that the published endpoint matches the current config.
+} KSJACK_DESCRIPTION3, *PKSJACK_DESCRIPTION3;
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
 
 #endif // (NTDDI_VERSION >= NTDDI_WINXPSP1)
 
