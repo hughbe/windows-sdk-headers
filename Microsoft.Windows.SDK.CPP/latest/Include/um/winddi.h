@@ -1823,12 +1823,6 @@ PATHOBJ* APIENTRY CLIPOBJ_ppoGetPath(
     CLIPOBJ* pco
     );
 
-#if (NTDDI_VERSION >= NTDDI_VISTA)
-HANDLE APIENTRY CLIPOBJ_GetRgn(
-    CLIPOBJ* pco
-    );
-#endif
-
 /*
  *   FONTOBJ callbacks
  */

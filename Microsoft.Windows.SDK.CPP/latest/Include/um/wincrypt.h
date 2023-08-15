@@ -18405,6 +18405,16 @@ CryptCreateKeyIdentifierFromCSP(
 #define CERT_CHAIN_MIN_RSA_PUB_KEY_BIT_LENGTH_DISABLE       \
     0xFFFFFFFF
 
+// The following is a REG_DWORD that specifies the minimum RSA public
+// key length in bits needed to trigger telemetry.
+#define CERT_CHAIN_MIN_TELEMETRY_RSA_PUB_KEY_BIT_LENGTH_VALUE_NAME    \
+    L"MinTelemetryRsaPubKeyBitLength"
+#define CERT_CHAIN_MIN_TELEMETRY_RSA_PUB_KEY_BIT_LENGTH_DEFAULT       2047
+
+// The following value disables telemetry for weak RSA public key lengths.
+#define CERT_CHAIN_MIN_TELEMETRY_RSA_PUB_KEY_BIT_LENGTH_DISABLE       \
+    0xFFFFFFFF
+
 // The following is a REG_BINARY containing the 8 byte FILETIME. The weak
 // RSA public key length check is disabled for timestamped files before
 // this time. If not defined or a zero FILETIME, uses the default value. 
@@ -19433,6 +19443,7 @@ typedef struct _CERT_TRUST_STATUS {
 #define CERT_TRUST_HAS_NOT_SUPPORTED_CRITICAL_EXT       0x08000000
 #define CERT_TRUST_HAS_WEAK_SIGNATURE                   0x00100000
 #define CERT_TRUST_HAS_WEAK_HYGIENE                     0x00200000
+#define CERT_TRUST_HAS_MIN_TELEMETRY_RSA                0x00400000
 
 // These can be applied to chains only
 

@@ -3958,6 +3958,14 @@ DEFINE_PROPERTYKEY(PKEY_Devices_AepService_ServiceId, 0xC9C141A9, 0x1B4C, 0x4F17
 DEFINE_PROPERTYKEY(PKEY_Devices_AppPackageFamilyName, 0x51236583, 0x0C4A, 0x4FE8, 0xB8, 0x1F, 0x16, 0x6A, 0xEC, 0x13, 0xF5, 0x10, 100);
 #define INIT_PKEY_Devices_AppPackageFamilyName { { 0x51236583, 0x0C4A, 0x4FE8, 0xB8, 0x1F, 0x16, 0x6A, 0xEC, 0x13, 0xF5, 0x10 }, 100 }
 
+//  Name:     System.Devices.AudioDevice.Microphone.EqCoefficientsDb -- PKEY_Devices_AudioDevice_Microphone_EqCoefficientsDb
+//  Type:     DoubleVector -- VT_VECTOR | VT_R8  (For variants: VT_ARRAY | VT_R8)
+//  FormatID: {8943B373-388C-4395-B557-BC6DBAFFAFDB}, 7
+//
+//  Equalization coefficients for Microphone. Array of 960 DOUBLE frequency-domain gain coefficients to be applied by effect pack processing for microphone equalization, in dB.
+DEFINE_PROPERTYKEY(PKEY_Devices_AudioDevice_Microphone_EqCoefficientsDb, 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB, 7);
+#define INIT_PKEY_Devices_AudioDevice_Microphone_EqCoefficientsDb { { 0x8943B373, 0x388C, 0x4395, 0xB5, 0x57, 0xBC, 0x6D, 0xBA, 0xFF, 0xAF, 0xDB }, 7 }
+
 //  Name:     System.Devices.AudioDevice.Microphone.IsFarField -- PKEY_Devices_AudioDevice_Microphone_IsFarField
 //  Type:     Boolean -- VT_BOOL
 //  FormatID: {8943B373-388C-4395-B557-BC6DBAFFAFDB}, 6

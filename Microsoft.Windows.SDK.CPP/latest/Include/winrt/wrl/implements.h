@@ -2120,7 +2120,7 @@ inline INT_PTR EncodeWeakReferencePointer(Microsoft::WRL::Details::WeakReference
 
 inline Microsoft::WRL::Details::WeakReferenceImpl* DecodeWeakReferencePointer(INT_PTR value)
 {
-    return reinterpret_cast<Microsoft::WRL::Details::WeakReferenceImpl*>(value << 1);
+    return reinterpret_cast<Microsoft::WRL::Details::WeakReferenceImpl*>(static_cast<UINT_PTR>(value) << 1);
 }
 
 #pragma warning(pop) // C6388

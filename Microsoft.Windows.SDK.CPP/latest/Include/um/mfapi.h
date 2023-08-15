@@ -2361,6 +2361,12 @@ DEFINE_GUID(MFAudioFormat_Dolby_AC4_V2_ES,
 DEFINE_GUID(MFAudioFormat_MPEGH,
 0x7c13c441, 0xebf8, 0x4931, 0xb6, 0x78, 0x80, 0x0b, 0x19, 0x24, 0x22, 0x36);
 
+// {19ee97fe-1be0-4255-a876-e99f53a42ae3}
+// This format is used for MPEG-H MHAS elementary bitstreams where each IMFSample may not be aligned with the start of a 
+// MHAS packet.
+DEFINE_GUID(MFAudioFormat_MPEGH_ES,
+0x19ee97fe, 0x1be0, 0x4255, 0xa8, 0x76, 0xe9, 0x9f, 0x53, 0xa4, 0x2a, 0xe3);
+
 DEFINE_GUID(MFAudioFormat_Vorbis,      // {8D2FD10B-5841-4a6b-8905-588FEC1ADED9}
 0x8D2FD10B, 0x5841, 0x4a6b, 0x89, 0x05, 0x58, 0x8F, 0xEC, 0x1A, 0xDE, 0xD9);
 DEFINE_GUID(MFAudioFormat_DTS_RAW, // == MEDIASUBTYPE_DTS defined in ksuuids.h
