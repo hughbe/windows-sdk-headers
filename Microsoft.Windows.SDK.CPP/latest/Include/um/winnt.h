@@ -4991,6 +4991,17 @@ WriteNoFence64 (
     return;
 }
 
+FORCEINLINE
+VOID
+BarrierAfterRead (
+    VOID
+    )
+
+{
+    __dmb(_ARM_BARRIER_ISH);
+    return;
+}
+
 // end_wdm end_ntndis end_ntosp end_ntminiport
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 // begin_wdm begin_ntndis begin_ntosp begin_ntminiport
@@ -5408,7 +5419,7 @@ typedef struct _SCOPE_TABLE_ARM64 {
 //
 // Temporary workaround for C++ bug: 64-bit bit test intrinsics are
 // not honoring the full 64-bit wide index, so pre-process the index
-// down to a qword base and a bit index 0-63 before calling through 
+// down to a qword base and a bit index 0-63 before calling through
 // to the true intrinsic. This issue was fixed as of compiler build
 // 19.28.29395.7.
 //
@@ -5954,6 +5965,17 @@ WriteNoFence64 (
 {
 
     __iso_volatile_store64(Destination, Value);
+    return;
+}
+
+FORCEINLINE
+VOID
+BarrierAfterRead (
+    VOID
+    )
+
+{
+    __dmb(_ARM64_BARRIER_ISH);
     return;
 }
 
@@ -6757,7 +6779,7 @@ typedef struct DECLSPEC_ALIGN(16) DECLSPEC_NOINITALL _ARM64EC_NT_CONTEXT {
             /* +0x4b8 */ DWORD64 AMD64_LastBranchFromRip;
             /* +0x4c0 */ DWORD64 AMD64_LastExceptionToRip;
             /* +0x4c8 */ DWORD64 AMD64_LastExceptionFromRip;
-            /* +0x4d0 */ 
+            /* +0x4d0 */
 
         } DUMMYSTRUCTNAME;
 
@@ -7582,9 +7604,9 @@ InterlockedExchange16 (
 #define InterlockedIncrement16 _InterlockedIncrement16
 #define InterlockedDecrement16 _InterlockedDecrement16
 
-char 
+char
 InterlockedExchangeAdd8 (
-    _Inout_ _Interlocked_operand_ char volatile * _Addend, 
+    _Inout_ _Interlocked_operand_ char volatile * _Addend,
     _In_ char _Value
     );
 
@@ -7976,6 +7998,13 @@ __writefsdword (
 #pragma intrinsic(__writefsbyte)
 #pragma intrinsic(__writefsword)
 #pragma intrinsic(__writefsdword)
+
+VOID
+_ReadWriteBarrier (
+    VOID
+    );
+
+#pragma intrinsic(_ReadWriteBarrier)
 
 #endif // !defined(_M_CEE_PURE)
 
@@ -8560,6 +8589,21 @@ WriteNoFence64 (
     *Destination = Value;
     return;
 }
+
+#if !defined(_M_CEE_PURE)
+
+FORCEINLINE
+VOID
+BarrierAfterRead (
+    VOID
+    )
+
+{
+    _ReadWriteBarrier();
+    return;
+}
+
+#endif
 
 #ifdef __cplusplus
 }
@@ -17167,7 +17211,7 @@ typedef enum {
     MonitorInvocation,
     FirmwareTableInformationRegistered,
     SetShutdownSelectedTime,
-    SuspendResumeInvocation,
+    SuspendResumeInvocation,                        // Deprecated
     PlmPowerRequestCreate,
     ScreenOff,
     CsDeviceNotification,

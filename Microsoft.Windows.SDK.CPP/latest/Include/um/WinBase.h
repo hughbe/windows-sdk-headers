@@ -3855,6 +3855,17 @@ typedef enum _PROC_THREAD_ATTRIBUTE_NUM {
 #define PROCESS_CREATION_MITIGATION_POLICY2_XTENDED_CONTROL_FLOW_GUARD_RESERVED            (0x00000003ui64 << 40)
 
 //
+// Define the ARM64 user-mode per-process instruction pointer authentication
+// mitigation policy options.
+//
+
+#define PROCESS_CREATION_MITIGATION_POLICY2_POINTER_AUTH_USER_IP_MASK                      (0x00000003ui64 << 44)
+#define PROCESS_CREATION_MITIGATION_POLICY2_POINTER_AUTH_USER_IP_DEFER                     (0x00000000ui64 << 44)
+#define PROCESS_CREATION_MITIGATION_POLICY2_POINTER_AUTH_USER_IP_ALWAYS_ON                 (0x00000001ui64 << 44)
+#define PROCESS_CREATION_MITIGATION_POLICY2_POINTER_AUTH_USER_IP_ALWAYS_OFF                (0x00000002ui64 << 44)
+#define PROCESS_CREATION_MITIGATION_POLICY2_POINTER_AUTH_USER_IP_RESERVED                  (0x00000003ui64 << 44)
+
+//
 // Define the CET-related dynamic code validation data APIs out-of-proc mitigation policy options.
 //
 

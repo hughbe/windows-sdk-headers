@@ -3773,6 +3773,42 @@
 #define ERROR_FS_METADATA_INCONSISTENT   510L
 
 //
+// MessageId: ERROR_BLOCK_WEAK_REFERENCE_INVALID
+//
+// MessageText:
+//
+// A file system block being referenced has been modified after containing a weak reference.
+//
+#define ERROR_BLOCK_WEAK_REFERENCE_INVALID 511L
+
+//
+// MessageId: ERROR_BLOCK_SOURCE_WEAK_REFERENCE_INVALID
+//
+// MessageText:
+//
+// The source file system block being referenced has been modified after containing a weak reference.
+//
+#define ERROR_BLOCK_SOURCE_WEAK_REFERENCE_INVALID 512L
+
+//
+// MessageId: ERROR_BLOCK_TARGET_WEAK_REFERENCE_INVALID
+//
+// MessageText:
+//
+// The target file system block being referenced has been modified after containing a weak reference.
+//
+#define ERROR_BLOCK_TARGET_WEAK_REFERENCE_INVALID 513L
+
+//
+// MessageId: ERROR_BLOCK_SHARED
+//
+// MessageText:
+//
+// The target file system block is shared between multiple extents.
+//
+#define ERROR_BLOCK_SHARED               514L
+
+//
 // **** Available SYSTEM error codes ****
 //
 //

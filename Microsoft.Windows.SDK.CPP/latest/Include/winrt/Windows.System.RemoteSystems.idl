@@ -406,10 +406,8 @@ namespace Windows
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
             enum RemoteSystemAuthorizationKind
             {
-                SameUser   = 0,
-                Anonymous  = 1,
-                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
-                SameFamily = 2
+                SameUser  = 0,
+                Anonymous = 1
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]

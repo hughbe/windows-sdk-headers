@@ -3701,7 +3701,7 @@
 ** ------------------------------------------------------------
 */
 
-#define DRM_E_LICGEN_BASECODE			(DRM_E_BASECODE + 0x1900)
+#define DRM_E_LICGEN_BASECODE          (DRM_E_BASECODE + 0x1900)
 
 //
 // MessageId: DRM_E_LICGEN_CANNOT_PERSIST_LICENSE
@@ -5016,7 +5016,7 @@
 //
 // MessageText:
 //
-// The provenance certificate chain stored in the File Integrity Box is invalid or a valid certificate chain could not be established.
+// The provenance certificate chain stored in the manifest is invalid or a valid certificate chain could not be established.
 //
 #define DRM_E_INVALID_PROVENANCE_CERTIFICATE_CHAIN ((DRM_RESULT)0x8004DFB2L)
 
@@ -5120,13 +5120,13 @@
 #define DRM_E_MP4_INVALID_STTS_CONTAINS_ENTRIES ((DRM_RESULT)0x8004DFBDL)
 
 //
-// MessageId: DRM_E_MP4_INVALID_CTTS_CONTAINS_ENTRIES
+// MessageId: DRM_E_C2PA_FTYP_NOT_SET
 //
 // MessageText:
 //
-// The 'ctts' box will never contain entries in purely fragmented Mp4 files.
+// The 'ftyp' box lacks the 'c2pa' compatible_brands attribute.
 //
-#define DRM_E_MP4_INVALID_CTTS_CONTAINS_ENTRIES ((DRM_RESULT)0x8004DFBEL)
+#define DRM_E_C2PA_FTYP_NOT_SET          ((DRM_RESULT)0x8004DFBEL)
 
 //
 // MessageId: DRM_E_MP4_BOX_LARGER_THAN_4GB
@@ -5138,58 +5138,49 @@
 #define DRM_E_MP4_BOX_LARGER_THAN_4GB    ((DRM_RESULT)0x8004DFBFL)
 
 //
-// MessageId: DRM_E_MP4_FIB_BOX_ALREADY_PRESENT
+// MessageId: DRM_E_MP4_C2PA_BOX_ALREADY_PRESENT
 //
 // MessageText:
 //
-// The MP4 file already contains an unexpected File Integrity Box.
+// The MP4 file already contains an unexpected C2PA Box.
 //
-#define DRM_E_MP4_FIB_BOX_ALREADY_PRESENT ((DRM_RESULT)0x8004DFC0L)
+#define DRM_E_MP4_C2PA_BOX_ALREADY_PRESENT ((DRM_RESULT)0x8004DFC0L)
 
 //
-// MessageId: DRM_E_MP4_CIB_BOX_ALREADY_PRESENT
+// MessageId: DRM_E_C2PA_MANIFEST_BOX_NOT_PRESENT
 //
 // MessageText:
 //
-// The MP4 file already contains an unexpected Content Integrity Box.
+// The MP4 file lacks the expected c2pa Manifest Box.
 //
-#define DRM_E_MP4_CIB_BOX_ALREADY_PRESENT ((DRM_RESULT)0x8004DFC1L)
+#define DRM_E_C2PA_MANIFEST_BOX_NOT_PRESENT ((DRM_RESULT)0x8004DFC2L)
 
 //
-// MessageId: DRM_E_MP4_FIB_BOX_NOT_PRESENT
+// MessageId: DRM_E_C2PA_MERKLE_BOX_NOT_PRESENT
 //
 // MessageText:
 //
-// The MP4 file lacks the expected File Integrity Box.
+// The MP4 file lacks the expected c2pa Merkle Box.
 //
-#define DRM_E_MP4_FIB_BOX_NOT_PRESENT    ((DRM_RESULT)0x8004DFC2L)
+#define DRM_E_C2PA_MERKLE_BOX_NOT_PRESENT ((DRM_RESULT)0x8004DFC3L)
 
 //
-// MessageId: DRM_E_MP4_CIB_BOX_NOT_PRESENT
+// MessageId: DRM_E_MP4_INVALID_C2PA_MANIFEST_BOX
 //
 // MessageText:
 //
-// The MP4 file lacks the expected Chunk Integrity Box.
+// The MP4 file contains an invalid c2pa box with type Manifest.
 //
-#define DRM_E_MP4_CIB_BOX_NOT_PRESENT    ((DRM_RESULT)0x8004DFC3L)
+#define DRM_E_MP4_INVALID_C2PA_MANIFEST_BOX ((DRM_RESULT)0x8004DFC4L)
 
 //
-// MessageId: DRM_E_MP4_INVALID_FIB_BOX
+// MessageId: DRM_E_MP4_INVALID_C2PA_MERKLE_BOX
 //
 // MessageText:
 //
-// The MP4 file contains an invalid File Integrity Box
+// The MP4 file contains an invalid c2pa box with type Merkle.
 //
-#define DRM_E_MP4_INVALID_FIB_BOX        ((DRM_RESULT)0x8004DFC4L)
-
-//
-// MessageId: DRM_E_MP4_INVALID_CIB_BOX
-//
-// MessageText:
-//
-// The MP4 file contains an invalid Chunk Integrity Box.
-//
-#define DRM_E_MP4_INVALID_CIB_BOX        ((DRM_RESULT)0x8004DFC5L)
+#define DRM_E_MP4_INVALID_C2PA_MERKLE_BOX ((DRM_RESULT)0x8004DFC5L)
 
 //
 // MessageId: DRM_E_MP4_INVALID_PARSING_TYPE
@@ -5217,6 +5208,15 @@
 // A query was made to the MP4 parser to get track information for a track that does not exist.
 //
 #define DRM_E_MP4_EXCEEDED_NUM_TRACK_IDS ((DRM_RESULT)0x8004DFC8L)
+
+//
+// MessageId: DRM_E_MP4_INVALID_EXCLUSION_RULE
+//
+// MessageText:
+//
+// An Exclusion Rule was passed into the MP4 Parser that was incorrectly formatted.
+//
+#define DRM_E_MP4_INVALID_EXCLUSION_RULE ((DRM_RESULT)0x8004DFC9L)
 
 
 /* ------------------------------------------------------------

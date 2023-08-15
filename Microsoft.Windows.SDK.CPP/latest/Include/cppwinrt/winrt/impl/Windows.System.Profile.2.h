@@ -31,17 +31,6 @@ WINRT_EXPORT namespace winrt::Windows::System::Profile
         AppApplicability() = delete;
         static auto GetUnsupportedAppRequirements(param::iterable<hstring> const& capabilities);
     };
-    struct AppControlPolicy
-    {
-        AppControlPolicy() = delete;
-        [[nodiscard]] static auto IsEnabled();
-        [[nodiscard]] static auto CanDisable();
-        [[nodiscard]] static auto IsDisableSupported();
-        static auto Changed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler);
-        using Changed_revoker = impl::factory_event_revoker<winrt::Windows::System::Profile::IAppControlPolicyStatics, &impl::abi_t<winrt::Windows::System::Profile::IAppControlPolicyStatics>::remove_Changed>;
-        [[nodiscard]] static Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler);
-        static auto Changed(winrt::event_token const& token);
-    };
     struct EducationSettings
     {
         EducationSettings() = delete;
@@ -104,6 +93,15 @@ WINRT_EXPORT namespace winrt::Windows::System::Profile
         SharedModeSettings() = delete;
         [[nodiscard]] static auto IsEnabled();
         [[nodiscard]] static auto ShouldAvoidLocalStorage();
+    };
+    struct SmartAppControlPolicy
+    {
+        SmartAppControlPolicy() = delete;
+        [[nodiscard]] static auto IsEnabled();
+        static auto Changed(winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler);
+        using Changed_revoker = impl::factory_event_revoker<winrt::Windows::System::Profile::ISmartAppControlPolicyStatics, &impl::abi_t<winrt::Windows::System::Profile::ISmartAppControlPolicyStatics>::remove_Changed>;
+        [[nodiscard]] static Changed_revoker Changed(auto_revoke_t, winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable> const& handler);
+        static auto Changed(winrt::event_token const& token);
     };
     struct SystemIdentification
     {

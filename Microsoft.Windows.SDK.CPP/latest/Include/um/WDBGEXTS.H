@@ -1507,6 +1507,7 @@ typedef struct _KDDEBUGGER_DATA64 {
     // Windows 11 Nickel Addition
 
     ULONG64 PointerAuthMask;
+    USHORT  OffsetPrcbExceptionStack;
 
 } KDDEBUGGER_DATA64, *PKDDEBUGGER_DATA64;
 

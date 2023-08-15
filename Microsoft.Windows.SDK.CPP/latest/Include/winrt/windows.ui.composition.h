@@ -8977,12 +8977,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositionObject4;
  *
  * Interface Windows.UI.Composition.ICompositionObject5
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 14.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.UI.Composition.CompositionObject
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CUI_CComposition_CICompositionObject5_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositionObject5_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_ICompositionObject5[] = L"Windows.UI.Composition.ICompositionObject5";
@@ -9009,7 +9009,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositionObject5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositionObject5_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -11179,12 +11179,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositor7;
  *
  * Interface Windows.UI.Composition.ICompositor8
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 14.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.UI.Composition.Compositor
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CUI_CComposition_CICompositor8_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositor8_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_ICompositor8[] = L"Windows.UI.Composition.ICompositor8";
@@ -11209,7 +11209,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositor8;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositor8_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -26809,12 +26809,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositionObject4;
  *
  * Interface Windows.UI.Composition.ICompositionObject5
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 14.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.UI.Composition.CompositionObject
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CUI_CComposition_CICompositionObject5_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositionObject5_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_ICompositionObject5[] = L"Windows.UI.Composition.ICompositionObject5";
@@ -26874,7 +26874,7 @@ interface __x_ABI_CWindows_CUI_CComposition_CICompositionObject5
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositionObject5;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositionObject5_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -30844,12 +30844,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositor7;
  *
  * Interface Windows.UI.Composition.ICompositor8
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 14.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.UI.Composition.Compositor
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CUI_CComposition_CICompositor8_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CUI_CComposition_CICompositor8_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_Composition_ICompositor8[] = L"Windows.UI.Composition.ICompositor8";
@@ -30907,7 +30907,7 @@ interface __x_ABI_CWindows_CUI_CComposition_CICompositor8
 
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CComposition_CICompositor8;
 #endif /* !defined(____x_ABI_CWindows_CUI_CComposition_CICompositor8_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xe0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *

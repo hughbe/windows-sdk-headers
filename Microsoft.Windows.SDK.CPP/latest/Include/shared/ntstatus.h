@@ -11481,6 +11481,42 @@ Notes:
 //
 #define STATUS_SECTION_DIRECT_MAP_ONLY   ((NTSTATUS)0xC0000911L)
 
+//
+// MessageId: STATUS_BLOCK_WEAK_REFERENCE_INVALID
+//
+// MessageText:
+//
+// A file system block has been modified after containing a weak reference.
+//
+#define STATUS_BLOCK_WEAK_REFERENCE_INVALID ((NTSTATUS)0xC0000912L)
+
+//
+// MessageId: STATUS_BLOCK_SOURCE_WEAK_REFERENCE_INVALID
+//
+// MessageText:
+//
+// The source file system block has been modified after containing a weak reference.
+//
+#define STATUS_BLOCK_SOURCE_WEAK_REFERENCE_INVALID ((NTSTATUS)0xC0000913L)
+
+//
+// MessageId: STATUS_BLOCK_TARGET_WEAK_REFERENCE_INVALID
+//
+// MessageText:
+//
+// The target file system block has been modified after containing a weak reference.
+//
+#define STATUS_BLOCK_TARGET_WEAK_REFERENCE_INVALID ((NTSTATUS)0xC0000914L)
+
+//
+// MessageId: STATUS_BLOCK_SHARED
+//
+// MessageText:
+//
+// The target file system block is shared between multiple extents.
+//
+#define STATUS_BLOCK_SHARED              ((NTSTATUS)0xC0000915L)
+
 /*++
 
  MessageId's 0xc08 - 0xc7f (inclusive) are reserved for Verifier errors.

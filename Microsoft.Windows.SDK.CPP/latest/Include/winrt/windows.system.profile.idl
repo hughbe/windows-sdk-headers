@@ -68,8 +68,6 @@ namespace Windows
 
             interface IAppApplicabilityStatics;
 
-            interface IAppControlPolicyStatics;
-
             interface IEducationSettingsStatics;
 
             interface IHardwareIdentificationStatics;
@@ -85,6 +83,8 @@ namespace Windows
             interface ISharedModeSettingsStatics;
 
             interface ISharedModeSettingsStatics2;
+
+            interface ISmartAppControlPolicyStatics;
 
             interface ISystemIdentificationInfo;
 
@@ -102,8 +102,6 @@ namespace Windows
 
             runtimeclass AppApplicability;
 
-            runtimeclass AppControlPolicy;
-
             runtimeclass EducationSettings;
 
             runtimeclass HardwareIdentification;
@@ -117,6 +115,8 @@ namespace Windows
             runtimeclass RetailInfo;
 
             runtimeclass SharedModeSettings;
+
+            runtimeclass SmartAppControlPolicy;
 
             runtimeclass SystemIdentification;
 
@@ -249,18 +249,6 @@ namespace Windows
                 HRESULT GetUnsupportedAppRequirements([in] Windows.Foundation.Collections.IIterable<HSTRING>* capabilities, [out] [retval] Windows.Foundation.Collections.IVectorView<Windows.System.Profile.UnsupportedAppRequirement*>** result);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
-            [exclusiveto(Windows.System.Profile.AppControlPolicy)]
-            [uuid(771333FE-67DF-582D-88B0-0A5A87EC1591)]
-            interface IAppControlPolicyStatics : IInspectable
-            {
-                [propget] HRESULT IsEnabled([out] [retval] boolean* value);
-                [propget] HRESULT CanDisable([out] [retval] boolean* value);
-                [propget] HRESULT IsDisableSupported([out] [retval] boolean* value);
-                [eventadd] HRESULT Changed([in] Windows.Foundation.EventHandler<IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
-                [eventremove] HRESULT Changed([in] EventRegistrationToken token);
-            }
-
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
             [exclusiveto(Windows.System.Profile.EducationSettings)]
             [uuid(FC53F0EF-4D3E-4E13-9B23-505F4D091E92)]
@@ -352,6 +340,16 @@ namespace Windows
                 [propget] HRESULT ShouldAvoidLocalStorage([out] [retval] boolean* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.System.Profile.SmartAppControlPolicy)]
+            [uuid(5FF8C75B-073E-5015-8D98-5FF224180A0B)]
+            interface ISmartAppControlPolicyStatics : IInspectable
+            {
+                [propget] HRESULT IsEnabled([out] [retval] boolean* value);
+                [eventadd] HRESULT Changed([in] Windows.Foundation.EventHandler<IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT Changed([in] EventRegistrationToken token);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 3.0)]
             [exclusiveto(Windows.System.Profile.SystemIdentificationInfo)]
             [uuid(0C659E7D-C3C2-4D33-A2DF-21BC41916EB3)]
@@ -428,14 +426,6 @@ namespace Windows
             {
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
-            [marshaling_behavior(agile)]
-            [static(Windows.System.Profile.IAppControlPolicyStatics, Windows.Foundation.UniversalApiContract, 15.0)]
-            [threading(both)]
-            runtimeclass AppControlPolicy
-            {
-            }
-
             [contract(Windows.Foundation.UniversalApiContract, 4.0)]
             [marshaling_behavior(agile)]
             [static(Windows.System.Profile.IEducationSettingsStatics, Windows.Foundation.UniversalApiContract, 4.0)]
@@ -486,6 +476,14 @@ namespace Windows
             [static(Windows.System.Profile.ISharedModeSettingsStatics, Windows.System.Profile.ProfileSharedModeContract, 1.0)]
             [static(Windows.System.Profile.ISharedModeSettingsStatics2, Windows.System.Profile.ProfileSharedModeContract, 2.0)]
             runtimeclass SharedModeSettings
+            {
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.System.Profile.ISmartAppControlPolicyStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+            [threading(both)]
+            runtimeclass SmartAppControlPolicy
             {
             }
 
