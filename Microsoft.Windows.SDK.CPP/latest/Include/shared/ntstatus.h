@@ -10626,13 +10626,31 @@ Notes:
 #define STATUS_CANT_ATTACH_TO_DEV_VOLUME ((NTSTATUS)0xC00004DFL)
 
 //
+// MessageId: STATUS_MEMORY_DECOMPRESSION_FAILURE
+//
+// MessageText:
+//
+// The data stored in compressed memory falied to be decompressed.
+//
+#define STATUS_MEMORY_DECOMPRESSION_FAILURE ((NTSTATUS)0xC00004E0L)
+
+//
 // MessageId: STATUS_INVALID_CONFIG_VALUE
 //
 // MessageText:
 //
 // The configured value is not valid.
 //
-#define STATUS_INVALID_CONFIG_VALUE      ((NTSTATUS)0xC00004E0L)
+#define STATUS_INVALID_CONFIG_VALUE      ((NTSTATUS)0xC00004E1L)
+
+//
+// MessageId: STATUS_MEMORY_DECOMPRESSION_HW_ERROR
+//
+// MessageText:
+//
+// The data stored in compressed memory falied to be decompressed due to encountering an uncorrectable hardware memory error.
+//
+#define STATUS_MEMORY_DECOMPRESSION_HW_ERROR ((NTSTATUS)0xC00004E2L)
 
 
 //     **** New SYSTEM error codes can be inserted here ****

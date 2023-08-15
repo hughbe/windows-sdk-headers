@@ -3551,14 +3551,17 @@
 #define ERROR_CANT_ATTACH_TO_DEV_VOLUME  478L
 
 //
-// MessageId: ERROR_INVALID_CONFIG_VALUE
+// MessageId: ERROR_MEMORY_DECOMPRESSION_FAILURE
 //
 // MessageText:
 //
-// The configured value is not valid.
+// The data stored in compressed memory falied to be decompressed.
 //
-#define ERROR_INVALID_CONFIG_VALUE       479L
+#define ERROR_MEMORY_DECOMPRESSION_FAILURE 479L
 
+//
+// **** Available SYSTEM error codes ****
+//
 //
 // MessageId: ERROR_PNP_QUERY_REMOVE_DEVICE_TIMEOUT
 //
@@ -3882,6 +3885,24 @@
 // Volume upgrade is disabled until Windows OS downgrade period has expired.
 //
 #define ERROR_VOLUME_UPGRADE_DISABLED_TILL_OS_DOWNGRADE_EXPIRED 518L
+
+//
+// MessageId: ERROR_INVALID_CONFIG_VALUE
+//
+// MessageText:
+//
+// The configured value is not valid.
+//
+#define ERROR_INVALID_CONFIG_VALUE       519L
+
+//
+// MessageId: ERROR_MEMORY_DECOMPRESSION_HW_ERROR
+//
+// MessageText:
+//
+// The data stored in compressed memory falied to be decompressed due to encountering an uncorrectable hardware memory error.
+//
+#define ERROR_MEMORY_DECOMPRESSION_HW_ERROR 520L
 
 //
 // **** Available SYSTEM error codes ****

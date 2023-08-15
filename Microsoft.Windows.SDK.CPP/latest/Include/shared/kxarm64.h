@@ -1084,17 +1084,26 @@ ValidLabel SETS "$ValidTarget"
         ;                 if a boolen result is not required. It can
         ;                 also overlap with xAddress, T1 or T2.
         ;
+        ; SkipBoundsChecking - If set to "SkipBoundsChecking", no EC
+        ;                      Bitmap bounds checks are performed (and
+        ;                      T2 doesn't need to provide the max user-land
+        ;                      address). T2 is still a scratch reg.
+        ;
         ; Zero Flag     - Z=0 for EC code and Z=1 otherwise.
         ;
 
         MACRO
-        EC_BITMAP_LOOKUP $xAddress, $T1, $T2, $xResult
+        EC_BITMAP_LOOKUP $xAddress, $T1, $T2, $xResult, $SkipBoundsChecking
+
+        IF "$SkipBoundsChecking" != "SkipBoundsChecking"
 
         cmp     $xAddress, x$T2             ; Check if the address is above user space range
         bhi     %F1
 
         cmp     $xAddress, #(MM_LOWEST_USER_ADDRESS / 4096), lsl #12 ; Check if address < MM_LOWEST_USER_ADDRESS (64KiB)
         blo     %F1                         ; if so, take the fast path
+
+        ENDIF
 
         lsr     x$T2, $xAddress, #15        ; each byte of bitmap indexes 8*4K = 2^15 byte span
         ldrb    w$T2, [x$T1, x$T2]          ; load the bitmap byte for the 8*4K span

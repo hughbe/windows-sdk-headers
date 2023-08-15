@@ -60,7 +60,7 @@ WINRT_EXPORT namespace winrt::Windows::Services::Store
         StoreConsumableResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Store::IStoreConsumableResult(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) StoreContext : winrt::Windows::Services::Store::IStoreContext,
-        impl::require<StoreContext, winrt::Windows::Services::Store::IStoreContext2, winrt::Windows::Services::Store::IStoreContext3, winrt::Windows::Services::Store::IStoreContext4>
+        impl::require<StoreContext, winrt::Windows::Services::Store::IStoreContext2, winrt::Windows::Services::Store::IStoreContext3, winrt::Windows::Services::Store::IStoreContext4, winrt::Windows::Services::Store::IStoreContext5>
     {
         StoreContext(std::nullptr_t) noexcept {}
         StoreContext(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Store::IStoreContext(ptr, take_ownership_from_abi) {}
@@ -103,7 +103,8 @@ WINRT_EXPORT namespace winrt::Windows::Services::Store
         StorePackageUpdateResult(std::nullptr_t) noexcept {}
         StorePackageUpdateResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Store::IStorePackageUpdateResult(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) StorePrice : winrt::Windows::Services::Store::IStorePrice
+    struct __declspec(empty_bases) StorePrice : winrt::Windows::Services::Store::IStorePrice,
+        impl::require<StorePrice, winrt::Windows::Services::Store::IStorePrice2>
     {
         StorePrice(std::nullptr_t) noexcept {}
         StorePrice(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Services::Store::IStorePrice(ptr, take_ownership_from_abi) {}

@@ -14842,6 +14842,7 @@ typedef union _FILE_SEGMENT_ELEMENT {
 #endif  // (NTDDI_VERSION >= NTDDI_WIN10_RS1)
 
 
+
 //
 // The reparse GUID structure is used by all 3rd party layered drivers to
 // store data in a reparse point. For non-Microsoft tags, The GUID field
@@ -22103,7 +22104,7 @@ volatile void*
 RtlFillDeviceMemory (
     _Out_writes_bytes_all_(Length) volatile void* Destination,
     _In_ size_t Length,
-    _In_ int Fill 
+    _In_ int Fill
     );
 
 #else
@@ -22113,7 +22114,7 @@ volatile void*
 RtlFillDeviceMemory (
     _Out_writes_bytes_all_(Length) volatile void* Destination,
     _In_ size_t Length,
-    _In_ int Fill 
+    _In_ int Fill
     )
 {
     return RtlSetVolatileMemory(Destination, Fill, Length);
@@ -22958,6 +22959,8 @@ typedef enum _IMAGE_POLICY_ID {
     ImagePolicyIdDeviceId,
     ImagePolicyIdCapability,
     ImagePolicyIdScenarioId,
+    ImagePolicyIdCapabilityOverridable,
+    ImagePolicyIdTrustletIdOverridable,
     ImagePolicyIdMaximum
 } IMAGE_POLICY_ID;
 
@@ -24650,10 +24653,15 @@ typedef DWORD TP_VERSION, *PTP_VERSION;
 
 typedef struct _TP_CALLBACK_INSTANCE TP_CALLBACK_INSTANCE, *PTP_CALLBACK_INSTANCE;
 
-typedef VOID (NTAPI *PTP_SIMPLE_CALLBACK)(
+typedef
+VOID
+NTAPI
+TP_SIMPLE_CALLBACK (
     _Inout_     PTP_CALLBACK_INSTANCE Instance,
     _Inout_opt_ PVOID                 Context
     );
+
+typedef TP_SIMPLE_CALLBACK *PTP_SIMPLE_CALLBACK;
 
 typedef struct _TP_POOL TP_POOL, *PTP_POOL; 
 
@@ -24672,10 +24680,16 @@ typedef struct _TP_POOL_STACK_INFORMATION {
 
 typedef struct _TP_CLEANUP_GROUP TP_CLEANUP_GROUP, *PTP_CLEANUP_GROUP; 
 
-typedef VOID (NTAPI *PTP_CLEANUP_GROUP_CANCEL_CALLBACK)(
+typedef
+VOID
+NTAPI
+TP_CLEANUP_GROUP_CANCEL_CALLBACK (
     _Inout_opt_ PVOID ObjectContext,
     _Inout_opt_ PVOID CleanupContext
     );
+
+typedef TP_CLEANUP_GROUP_CANCEL_CALLBACK *PTP_CLEANUP_GROUP_CANCEL_CALLBACK;
+
 
 //
 // Do not manipulate this structure directly!  Allocate space for it
@@ -24880,30 +24894,48 @@ TpDestroyCallbackEnviron(
 
 typedef struct _TP_WORK TP_WORK, *PTP_WORK;
 
-typedef VOID (NTAPI *PTP_WORK_CALLBACK)(
+typedef
+VOID
+NTAPI
+TP_WORK_CALLBACK (
     _Inout_     PTP_CALLBACK_INSTANCE Instance,
     _Inout_opt_ PVOID                 Context,
     _Inout_     PTP_WORK              Work
     );
 
+typedef TP_WORK_CALLBACK *PTP_WORK_CALLBACK;
+
+
 typedef struct _TP_TIMER TP_TIMER, *PTP_TIMER;
 
-typedef VOID (NTAPI *PTP_TIMER_CALLBACK)(
+typedef
+VOID
+NTAPI
+TP_TIMER_CALLBACK (
     _Inout_     PTP_CALLBACK_INSTANCE Instance,
     _Inout_opt_ PVOID                 Context,
     _Inout_     PTP_TIMER             Timer
     );
 
+typedef TP_TIMER_CALLBACK *PTP_TIMER_CALLBACK;
+
+
 typedef DWORD    TP_WAIT_RESULT;
 
 typedef struct _TP_WAIT TP_WAIT, *PTP_WAIT;
 
-typedef VOID (NTAPI *PTP_WAIT_CALLBACK)(
+typedef
+VOID
+NTAPI
+TP_WAIT_CALLBACK (
     _Inout_     PTP_CALLBACK_INSTANCE Instance,
     _Inout_opt_ PVOID                 Context,
     _Inout_     PTP_WAIT              Wait,
     _In_        TP_WAIT_RESULT        WaitResult
     );
+
+typedef TP_WAIT_CALLBACK *PTP_WAIT_CALLBACK;
+
 
 typedef struct _TP_IO TP_IO, *PTP_IO;
 
