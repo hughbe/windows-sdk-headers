@@ -520,13 +520,6 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
         IHumanPresenceSettings2(std::nullptr_t = nullptr) noexcept {}
         IHumanPresenceSettings2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IHumanPresenceSettings3 :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IHumanPresenceSettings3>
-    {
-        IHumanPresenceSettings3(std::nullptr_t = nullptr) noexcept {}
-        IHumanPresenceSettings3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) IHumanPresenceSettingsStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IHumanPresenceSettingsStatics>

@@ -2216,17 +2216,17 @@ DnsRecordListFree(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //
-//  Sets pfParsed to TRUE if a record has been parsed into its corresponding struct format and
-//  FALSE if it has been flat read (i.e. just a data buffer), ullFlags is currently unused and
+//  Sets pfFlat to FALSE if a record has been parsed into its corresponding struct format and
+//  TRUE if it has been flat read (i.e. just a data buffer), ullFlags is currently unused and
 //  exists for forwards compatibility
 //
 
 DNS_STATUS
 WINAPI
-DnsIsParsedRecord(
+DnsIsFlatRecord(
     _In_    PDNS_RECORD    pRecord,
     _In_    ULONG64        ullFlags,
-    _Out_   BOOL           *pfParsed
+    _Out_   BOOL           *pfFlat
     );
 
 //
@@ -2658,6 +2658,8 @@ typedef struct _DNS_QUERY_RAW_REQUEST
 DNS_QUERY_RAW_REQUEST;
 
 #pragma warning(pop)
+
+#define DNS_QUERY_RAW_OPTION_BEST_EFFORT_PARSE          0x0000000000000001
 
 typedef struct DECLSPEC_ALIGN(8) _DNS_QUERY_RAW_CANCEL
 {

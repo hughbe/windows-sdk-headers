@@ -38,8 +38,29 @@ Revision:
 // NVMe definitions based on 2.0 spec
 //
 
+#define NVME_ADMINQ_ID                   0
+
 #define NVME_NQN_MAX_LEN                 256
 #define NVME_NQN_NAME_MAX_LEN            223
+
+#define NVME_CONTROLLER_ID_MIN           0x0000
+#define NVME_CONTROLLER_ID_MAX           0xFFEF
+#define NVME_CONTROLLER_ID_DYN           0xFFFF
+
+//
+// NVMe Controller types reported in
+// CNTRLTYPE field of Identify Controller
+//
+typedef enum _NVME_CONTROLLER_TYPE {
+
+    NvmeCtrlNotReported = 0x00, // Reserved (controller type not reported)
+    NvmeCtrlIO          = 0x01, // I/O controller
+    NvmeCtrlDiscovery   = 0x02, // Discovery controller
+    NvmeCtrlAdmin       = 0x03, // Administrative controller
+    NvmeCtrlReservedMin = 0x04,
+    NvmeCtrlReservedMax = 0xFF
+
+} NVME_CONTROLLER_TYPE;
 
 //
 // NVMe Property Offset defined in
@@ -47,39 +68,39 @@ Revision:
 //
 typedef enum _NVME_PROPERTY_OFFSET {
 
-    NvmePropCAP     = 0x000, // Controller Capabilities
-    NvmePropVS      = 0x008, // Version
-    NvmePropINTMS   = 0x00C, // Interrupt Mask Set
-    NvmePropINTMC   = 0x00F, // Interrupt Mask Clear
-    NvmePropCC      = 0x014, // Controller Configuration
-    NvmePropCSTS    = 0x01C, // Controller Status
-    NvmePropNSSR    = 0x020, // NVM Subsystem Reset
-    NvmePropAQA     = 0x024, // Admin Queue Attributes
-    NvmePropASQ     = 0x028, // Admin Submission Queue Base Address
-    NvmePropACQ     = 0x030, // Admin Completion Queue Base Address
-    NvmePropCMBLOC  = 0x038, // Controller Memory Buffer Location
-    NvmePropCMBSZ   = 0x03C, // Controller Memory Buffer Size
-    NvmePropBPINFO  = 0x040, // Boot Partition Information
-    NvmePropBPRSEL  = 0x044, // Boot Partition Read Select
-    NvmePropBPMBL   = 0x048, // Boot Partition Memory Buffer Location
-    NvmePropCMBMSC  = 0x050, // Controller Memory Buffer Memory Space Control
-    NvmePropCMBSTS  = 0x058, // Controller Memory Buffer Status
-    NvmePropCMBEBS  = 0x05C, // Controller Memory Buffer Elasticity Buffer Size
-    NvmePropCMBSWTP = 0x060, // Controller Memory Buffer Sustained Write Throughput
-    NvmePropNSSD    = 0x064, // NVM Subsystem Shutdown
-    NvmePropCRTO    = 0x068, // Controller Ready Timeouts
-    NvmePropPMRCAP  = 0xE00, // Persistent Memory Capabilities
-    NvmePropPMRCTL  = 0xE04, // Persistent Memory Region Control
-    NvmePropPMRSTS  = 0xE08, // Persistent Memory Region Status
-    NvmePropPMREBS  = 0xE0C, // Persistent Memory Region Elasticity Buffer Size
-    NvmePropPMRSWTP = 0xE10, // Persistent Memory Region Sustained Write Throughput
-    NvmePropPMRMSCL = 0xE14, // Persistent Memory Region Controller Memory Space Control Lower
-    NvmePropPMRMSCU = 0xE18  // Persistent Memory Region Controller Memory Space Control Upper
+    NvmePropCAP     = 0x0000, // Controller Capabilities
+    NvmePropVS      = 0x0008, // Version
+    NvmePropINTMS   = 0x000C, // Interrupt Mask Set
+    NvmePropINTMC   = 0x0010, // Interrupt Mask Clear  # Note: This is incorrect in the spec.
+    NvmePropCC      = 0x0014, // Controller Configuration
+    NvmePropCSTS    = 0x001C, // Controller Status
+    NvmePropNSSR    = 0x0020, // NVM Subsystem Reset
+    NvmePropAQA     = 0x0024, // Admin Queue Attributes
+    NvmePropASQ     = 0x0028, // Admin Submission Queue Base Address
+    NvmePropACQ     = 0x0030, // Admin Completion Queue Base Address
+    NvmePropCMBLOC  = 0x0038, // Controller Memory Buffer Location
+    NvmePropCMBSZ   = 0x003C, // Controller Memory Buffer Size
+    NvmePropBPINFO  = 0x0040, // Boot Partition Information
+    NvmePropBPRSEL  = 0x0044, // Boot Partition Read Select
+    NvmePropBPMBL   = 0x0048, // Boot Partition Memory Buffer Location
+    NvmePropCMBMSC  = 0x0050, // Controller Memory Buffer Memory Space Control
+    NvmePropCMBSTS  = 0x0058, // Controller Memory Buffer Status
+    NvmePropCMBEBS  = 0x005C, // Controller Memory Buffer Elasticity Buffer Size
+    NvmePropCMBSWTP = 0x0060, // Controller Memory Buffer Sustained Write Throughput
+    NvmePropNSSD    = 0x0064, // NVM Subsystem Shutdown
+    NvmePropCRTO    = 0x0068, // Controller Ready Timeouts
+    NvmePropPMRCAP  = 0x0E00, // Persistent Memory Capabilities
+    NvmePropPMRCTL  = 0x0E04, // Persistent Memory Region Control
+    NvmePropPMRSTS  = 0x0E08, // Persistent Memory Region Status
+    NvmePropPMREBS  = 0x0E0C, // Persistent Memory Region Elasticity Buffer Size
+    NvmePropPMRSWTP = 0x0E10, // Persistent Memory Region Sustained Write Throughput
+    NvmePropPMRMSCL = 0x0E14, // Persistent Memory Region Controller Memory Space Control Lower
+    NvmePropPMRMSCU = 0x0E18  // Persistent Memory Region Controller Memory Space Control Upper
 
 } NVME_PROPERTY_OFFSET;
 
 //
-// 3.1.1  Offset 00h: CAP (Controller Capabilities)
+// Offset 0000h: NvmePropCAP (Controller Capabilities)
 //
 typedef enum {
 
@@ -87,6 +108,15 @@ typedef enum {
     NVME_AMS_WEIGHTED_ROUND_ROBIN_URGENT    = 1,
 
 } NVME_AMS_OPTION;
+
+typedef enum {
+
+    NVME_CPS_NOT_REPORTED        = 0,
+    NVME_CPS_CONTROLLER_SCOPE    = 1,
+    NVME_CPS_DOMAIN_SCOPE        = 2,
+    NVME_CPS_SUBSYSTEM_SCOPE     = 3
+
+} NVME_CPS_VALUE;
 
 typedef union {
 
@@ -115,10 +145,18 @@ typedef union {
         ULONGLONG CSS_MultipleIo        : 1;    // Bit 43: One or more IO command sets
         ULONGLONG CSS_AdminOnly         : 1;    // Bit 44: Only Admin command set (no IO command set)
 
-        ULONGLONG Reserved2 : 3;    // RO - bit 45 ~ 47
+        ULONGLONG BPS : 1;          // RO - Boot Partition Support
+        ULONGLONG CPS : 2;          // RO - Controller Power Scope
+
         ULONGLONG MPSMIN    : 4;    // RO - Memory Page Size Minimum (MPSMIN)
         ULONGLONG MPSMAX    : 4;    // RO - Memory Page Size Maximum (MPSMAX)
-        ULONGLONG Reserved3 : 8;    // RO - bit 56 ~ 63
+        ULONGLONG PMRS      : 1;    // RO - Persistent Memory Region Supported (PMRS)
+        ULONGLONG CMBS      : 1;    // RO - Controller Memory Buffer Supported (CMBS)
+        ULONGLONG NSSS      : 1;    // RO - NVM Subsystem Shutdown Supported (NSSS)
+        ULONGLONG CRWMS     : 1;    // RO - Controller Ready With Media Support (CRWMS)
+        ULONGLONG CRIMS     : 1;    // RO - Controller Ready Independent of Media Support (CRIMS)
+
+        ULONGLONG Reserved2 : 3;    // RO - bit 61 ~ 63
 
         //MSB
     } DUMMYSTRUCTNAME;
@@ -128,7 +166,7 @@ typedef union {
 } NVME_CONTROLLER_CAPABILITIES, *PNVME_CONTROLLER_CAPABILITIES;
 
 //
-// 3.1.2  Offset 08h: VS (Version)
+// Offset 0008h: NvmePropVS (Version)
 //
 typedef union {
 
@@ -145,7 +183,7 @@ typedef union {
 } NVME_VERSION, *PNVME_VERSION;
 
 //
-// 3.1.5  Offset 14h: CC (Controller Configuration)
+// Offset 0014h: NvmePropCC (Controller Configuration)
 //
 typedef enum {
 
@@ -175,7 +213,9 @@ typedef union {
         ULONG SHN       : 2;        // RW - Shutdown Notification (SHN)
         ULONG IOSQES    : 4;        // RW - I/O  Submission Queue Entry Size (IOSQES)
         ULONG IOCQES    : 4;        // RW - I/O  Completion Queue Entry Size (IOCQES)
-        ULONG Reserved1 : 8;        // RO
+        ULONG CRIME     : 1;        // RO/RW - Controller Ready Independent of Media Enable (CRIME).
+                                    //         RO/RW depends on CAP.CRMS
+        ULONG Reserved1 : 7;        // RO
         //MSB
     } DUMMYSTRUCTNAME;
 
@@ -184,7 +224,7 @@ typedef union {
 } NVME_CONTROLLER_CONFIGURATION, *PNVME_CONTROLLER_CONFIGURATION;
 
 //
-// 3.1.6  Offset 1Ch: CSTS (Controller Status)
+// Offset 001Ch: NvmePropCSTS (Controller Status)
 //
 typedef enum {
 
@@ -202,8 +242,9 @@ typedef union {
         ULONG SHST      : 2;        // RO - Shutdown Status (SHST)
         ULONG NSSRO     : 1;        // RW1C - NVM Subsystem Reset Occurred (NSSRO)
         ULONG PP        : 1;        // RO - Processing Paused (PP)
+        ULONG ST        : 1;        // RO - Shutdown Type (ST)
 
-        ULONG Reserved0 : 26;       // RO
+        ULONG Reserved0 : 25;       // RO
     } DUMMYSTRUCTNAME;
 
     ULONG AsUlong;
@@ -211,7 +252,7 @@ typedef union {
 } NVME_CONTROLLER_STATUS, *PNVME_CONTROLLER_STATUS;
 
 //
-// 3.1.7  Offset 20h: NSSR (NVM Subsystem Reset)
+// Offset 0020h: NvmePropNSSR (NVM Subsystem Reset)
 //
 typedef struct _NVME_NVM_SUBSYSTEM_RESET {
 
@@ -220,7 +261,7 @@ typedef struct _NVME_NVM_SUBSYSTEM_RESET {
 } NVME_NVM_SUBSYSTEM_RESET, *PNVME_NVM_SUBSYSTEM_RESET;
 
 //
-// 3.1.8  Offset 24h: AQA (Admin Queue Attributes)
+// Offset 0024h: NvmePropAQA (Admin Queue Attributes)
 //
 typedef union {
 
@@ -238,7 +279,7 @@ typedef union {
 } NVME_ADMIN_QUEUE_ATTRIBUTES, *PNVME_ADMIN_QUEUE_ATTRIBUTES;
 
 //
-// 3.1.9  Offset 28h: ASQ (Admin Submission Queue Base Address)
+// Offset 0028h: NvmePropASQ (Admin Submission Queue Base Address)
 //
 typedef union {
 
@@ -254,7 +295,7 @@ typedef union {
 } NVME_ADMIN_SUBMISSION_QUEUE_BASE_ADDRESS, *PNVME_ADMIN_SUBMISSION_QUEUE_BASE_ADDRESS;
 
 //
-// 3.1.10  Offset 30h: ACQ (Admin Completion Queue Base Address)
+// Offset 0030h: NvmePropACQ (Admin Completion Queue Base Address)
 //
 typedef union {
 
@@ -270,7 +311,7 @@ typedef union {
 } NVME_ADMIN_COMPLETION_QUEUE_BASE_ADDRESS, *PNVME_ADMIN_COMPLETION_QUEUE_BASE_ADDRESS;
 
 //
-// 3.1.11 Offset 38h: CMBLOC (Controller Memory Buffer Location)
+// Offset 0038h: NvmePropCMBLOC (Controller Memory Buffer Location)
 //
 typedef union {
 
@@ -287,7 +328,7 @@ typedef union {
 } NVME_CONTROLLER_MEMORY_BUFFER_LOCATION, *PNVME_CONTROLLER_MEMORY_BUFFER_LOCATION;
 
 //
-// 3.1.12 Offset 3Ch: CMBSZ (Controller Memory Buffer Size)
+// Offset 003Ch: NvmePropCMBSZ (Controller Memory Buffer Size)
 //
 typedef enum {
 
@@ -322,7 +363,38 @@ typedef union {
 
 
 //
-// 3.1.13  Offset (1000h + ((2y) * (4 << CAP.DSTRD))): SQyTDBL (Submission Queue y Tail Doorbell)
+// Offset 0064h: NvmePropNSSD (NVM Subsystem Shutdown)
+//
+
+#define NVM_SUBSYSTEM_SHUTDOWN_NORMAL       0x4E726D6C
+#define NVM_SUBSYSTEM_SHUTDOWN_ABRUPT       0x41627074
+
+typedef struct _NVME_NVM_SUBSYSTEM_SHUTDOWN {
+
+    ULONG   NSSC;                  // RW - NVM Subsystem Shutdown Control (NSSRC)
+
+} NVME_NVM_SUBSYSTEM_SHUTDOWN, *PNVME_NVM_SUBSYSTEM_SHUTDOWN;
+
+//
+// Offset 0068h: NvmePropCRTO (Controller Ready Timeouts)
+//
+
+typedef union _NVME_CONTROLLER_READY_TIMEOUTS {
+
+    struct {
+
+        USHORT CRWMT;              // RO: Controller Ready With Media Timeout
+        USHORT CRIMT;              // RO: Controller Ready Independent of Media Timeout
+
+    } DUMMYSTRUCTNAME;
+
+    ULONG   AsUlong;
+
+} NVME_CONTROLLER_READY_TIMEOUTS, *PNVME_CONTROLLER_READY_TIMEOUTS;
+
+
+//
+// Offset (1000h + ((2y) * (4 << CAP.DSTRD))): SQyTDBL (Submission Queue y Tail Doorbell)
 //
 typedef union {
 
@@ -338,7 +410,7 @@ typedef union {
 } NVME_SUBMISSION_QUEUE_TAIL_DOORBELL, *PNVME_SUBMISSION_QUEUE_TAIL_DOORBELL;
 
 //
-// 3.1.14  Offset  (1000h + ((2y + 1) * (4 << CAP.DSTRD))): CQyHDBL (Completion Queue y Head Doorbell)
+// Offset  (1000h + ((2y + 1) * (4 << CAP.DSTRD))): CQyHDBL (Completion Queue y Head Doorbell)
 //
 typedef union {
 
@@ -371,7 +443,12 @@ typedef struct {
     NVME_CONTROLLER_MEMORY_BUFFER_LOCATION      CMBLOC; // Controller Memory Buffer Location (Optional)
     NVME_CONTROLLER_MEMORY_BUFFER_SIZE          CMBSZ;  // Controller Memory Buffer Size (Optional)
 
-    ULONG                           Reserved2[944];     // 40h ~ EFFh
+    ULONG                           Reserved1[9];       // 40h ~ 64h
+
+    NVME_NVM_SUBSYSTEM_SHUTDOWN     NSSD;               // NVM Subsystem Shutdown
+    NVME_CONTROLLER_READY_TIMEOUTS  CRTO;               // Controller Ready Timeouts
+
+    ULONG                           Reserved2[933];     // 6Ch ~ EFFh
     ULONG                           Reserved3[64];      // F00h ~ FFFh, Command Set Specific
 
     ULONG                           Doorbells[0];       // Start of the first Doorbell register. (Admin SQ Tail Doorbell)
@@ -381,13 +458,11 @@ typedef struct {
 
 //
 // Command completion status
-// The "Phase Tag" field and "Status Field" are separated in spec. We define them in the same data structure to ease the memory access from software.
 //
 typedef union {
 
     struct {
         USHORT  P           : 1;        // Phase Tag (P)
-
         USHORT  SC          : 8;        // Status Code (SC)
         USHORT  SCT         : 3;        // Status Code Type (SCT)
         USHORT  CRD         : 2;        // Command Retry Delay (CRD)
@@ -515,6 +590,7 @@ typedef enum {
     NVME_STATUS_TYPE_GENERIC_COMMAND    = 0,
     NVME_STATUS_TYPE_COMMAND_SPECIFIC   = 1,
     NVME_STATUS_TYPE_MEDIA_ERROR        = 2,
+    NVME_STATUS_TYPE_PATH_RELATED       = 3,
     NVME_STATUS_TYPE_VENDOR_SPECIFIC    = 7,
 
 } NVME_STATUS_TYPES;
@@ -555,6 +631,12 @@ typedef enum {
     NVME_STATUS_SANITIZE_FAILED                                 = 0x1C,
     NVME_STATUS_SANITIZE_IN_PROGRESS                            = 0x1D,
     NVME_STATUS_SGL_DATA_BLOCK_GRANULARITY_INVALID              = 0x1E,
+    NVME_STATUS_COMMAND_NOT_SUPPORTED_FOR_QUEUE_IN_CMB          = 0x1F,
+    NVME_STATUS_NAMESPACE_IS_WRITE_PROTECTED                    = 0x20,
+    NVME_STATUS_COMMAND_INTERRUPTED                             = 0x21,
+    NVME_STATUS_TRANSIENT_TRANSPORT_ERROR                       = 0x22,
+    NVME_STATUS_COMMAND_PROHIBITED_BY_LOCKDOWN                  = 0x23,
+    NVME_STATUS_ADMIN_COMMAND_MEDIA_NOT_READY                   = 0x24,
 
     NVME_STATUS_DIRECTIVE_TYPE_INVALID                          = 0x70,
     NVME_STATUS_DIRECTIVE_ID_INVALID                            = 0x71,
@@ -614,6 +696,9 @@ typedef enum {
 
     NVME_STATUS_INVALID_ANA_GROUP_IDENTIFIER                        = 0x24,         // Namespace Management
     NVME_STATUS_ANA_ATTACH_FAILED                                   = 0x25,         // Namespace Attachment
+    NVME_STATUS_INSUFFICIENT_CAPACITY                               = 0x26,         // Capacity Management
+    NVME_STATUS_NAMESPACE_ATTACHMENT_LIMIT_EXCEEDED                 = 0x27,         // Namespace Attachment
+    NVME_STATUS_PROHIBITION_NOT_SUPPORTED                           = 0x28,         // Lockdown
 
     NVME_IO_COMMAND_SET_NOT_SUPPORTED                               = 0x29,         // Namespace Attachment/Management, Get Log Page
     NVME_IO_COMMAND_SET_NOT_ENABLED                                 = 0x2A,         // Namespace Attachment
@@ -638,6 +723,40 @@ typedef enum {
     NVME_STATUS_ZONE_INVALID_STATE_TRANSITION                       = 0xBF,         // Zone Management Send
 
 } NVME_STATUS_COMMAND_SPECIFIC_CODES;
+
+//
+//  Status Code (SC) of NVME_STATUS_TYPE_COMMAND_SPECIFIC, Fabrics Commands
+//
+typedef enum {
+
+    NVME_STATUS_INCOMPATIBLE_FORMAT                                 = 0x80,         // Connect, Disconnect
+    NVME_STATUS_CONTROLLER_BUSY                                     = 0x81,         // Connect, Disconnect
+    NVME_STATUS_CONNECT_INVALID_PARAMETERS                          = 0x82,         // Connect
+    NVME_STATUS_CONNECT_RESTART_DISCOVERY                           = 0x83,         // Connect
+    NVME_STATUS_CONNECT_INVALID_HOST                                = 0x84,         // Connect
+    NVME_STATUS_INVALID_QUEUE_TYPE                                  = 0x85,         // Disconnect
+
+    NVME_STATUS_DISCOVER_RESTART                                    = 0x90,         // Get Log Page
+    NVME_STATUS_AUTHENTICATION_REQUIRED                             = 0x91,         // Queue has not yet been authenticated, in-band authentication is required
+
+} NVME_STATUS_FABRIC_COMMAND_CODES;
+
+//
+//  Status Code (SC) of NVME_STATUS_TYPE_PATH_RELATED
+//
+typedef enum {
+
+    NVME_STATUS_INTERNAL_PATH_ERROR                         = 0x00,
+    NVME_STATUS_ASYMMETRIC_ACCESS_PERSISTENT_LOSS           = 0x01,
+    NVME_STATUS_ASYMMETRIC_ACCESS_INACCESSIBLE              = 0x02,
+    NVME_STATUS_ASYMMETRIC_ACCESS_TRANSITION                = 0x03,
+
+    NVME_STATUS_CONTROLLER_PATHING_ERROR                    = 0x60,
+
+    NVME_STATUS_HOST_PATHING_ERROR                          = 0x70,
+    NVME_STATUS_COMMAND_ABORTED_BY_HOST                     = 0x71,
+
+} NVME_STATUS_PATH_ERROR_CODES;
 
 //
 //  Status Code (SC) of NVME_STATUS_TYPE_MEDIA_ERROR
@@ -1080,9 +1199,11 @@ typedef struct {
         ULONG   PredictableLatencyAggregateLogChanged   : 1;
         ULONG   LbaStatusChanged            : 1;
         ULONG   EnduranceGroupAggregateLogChanged       : 1;
-        ULONG   Reserved2                   : 12;
+        ULONG   NormalNvmSubsystemShutdown  : 1;
+        ULONG   Reserved2                   : 11;
         ULONG   ZoneInformation             : 1;
-        ULONG   Reserved3                   : 4;
+        ULONG   Reserved3                   : 3;
+        ULONG   DiscoveryLogChanged         : 1;
     } OAES;                     // byte 92:95.   M - Optional Asynchronous Events Supported (OAES)
 
    struct {
@@ -1133,24 +1254,28 @@ typedef struct {
     USHORT  CRDT2;              // byte 130:131. O - Command Retry Delay Time 1
     USHORT  CRDT3;              // byte 132:133. O - Command Retry Delay Time 1
 
-    UCHAR   Reserved0_1[106];   // byte 134:239.
-    UCHAR   ReservedForManagement[16];     // byte 240:255.  Refer to the NVMe Management Interface Specification for definition.
+    UCHAR   Reserved1[106];      // byte 134:239.
+    UCHAR   ReservedForManagement[13];     // byte 240:252.  Refer to the NVMe Management Interface Specification for definition.
+    UCHAR   NVMSR;              // byte 253. M - NVM Subsystem Report
+    UCHAR   VWCI;               // byte 254. M - VPD Write Cycle Information
+    UCHAR   MEC;                // byte 255. M - Management Endpoint Capabilities
 
     //
     // byte 256 : 511, Admin Command Set Attributes
     //
     struct {
-        USHORT  SecurityCommands    : 1;
-        USHORT  FormatNVM           : 1;
-        USHORT  FirmwareCommands    : 1;
-        USHORT  NamespaceCommands   : 1;
-        USHORT  DeviceSelfTest      : 1;
-        USHORT  Directives          : 1;
-        USHORT  NVMeMICommands      : 1;
-        USHORT  VirtualizationMgmt  : 1;
-        USHORT  DoorBellBufferConfig: 1;
-        USHORT  GetLBAStatus        : 1;
-        USHORT  Reserved            : 6;
+        USHORT  SecurityCommands       : 1;
+        USHORT  FormatNVM              : 1;
+        USHORT  FirmwareCommands       : 1;
+        USHORT  NamespaceCommands      : 1;
+        USHORT  DeviceSelfTest         : 1;
+        USHORT  Directives             : 1;
+        USHORT  NVMeMICommands         : 1;
+        USHORT  VirtualizationMgmt     : 1;
+        USHORT  DoorBellBufferConfig   : 1;
+        USHORT  GetLBAStatus           : 1;
+        USHORT  CommandFeatureLockdown : 1;
+        USHORT  Reserved               : 5;
     } OACS;                     // byte 256:257. M - Optional Admin Command Support (OACS)
 
     UCHAR   ACL;                // byte 258.    M - Abort Command Limit (ACL)
@@ -1249,7 +1374,13 @@ typedef struct {
 
     ULONG   PELS;               // byte 352:355  O - Persistent Event Log Size (PELS)
     
-    UCHAR   Reserved1[156];     // byte 356:511.
+    USHORT  DomainId;           // byte 356:357  O - Domain Identifier
+
+    UCHAR   Reserved2[10];      // byte 358:367
+
+    UCHAR   MEGCAP[16];         // byte 368:383  O - Max Endurance Group Capacity
+
+    UCHAR   Reserved3[128];     // byte 384:511.
 
     //
     // byte 512 : 703, NVM Command Set Attributes
@@ -1315,10 +1446,9 @@ typedef struct {
         UCHAR   Reserved            : 5;
     } NWPC;                     // byte 531.     M - Namespace Write Protection Capabilities (NWPC)
 
-
     USHORT  ACWU;               // byte 532:533  O - Atomic Compare & Write Unit (ACWU)
 
-    UCHAR   Reserved4[2];       // byte 534:535.
+    USHORT  CopyDescFormats;    // byte 534:535  M - Copy Descriptor Formats Supported
 
     struct {
         ULONG   SGLSupported            : 2;
@@ -1335,13 +1465,38 @@ typedef struct {
 
     ULONG   MNAN;               // byte 540:543. O - Maximum Number of Allowed Namespace (MNAN)
 
-    UCHAR   Reserved6[224];     // byte 544:767.
+    UCHAR   MAXDNA[16];         // byte 544:559. O - Maximum Domain Namespace Attachments (MAXDNA)
+
+    ULONG   MAXCNA;             // byte 560:563. O - Maximum I/O Controller Namespace Attachments (MAXCNA)
+
+    UCHAR   Reserved6[204];     // byte 564:767.
 
     UCHAR   SUBNQN[256];        // byte 768:1023. M - NVM Subsystem NVMe Qualified Name (SUBNQN)
 
     UCHAR   Reserved7[768];     // byte 1024:1791
 
-    UCHAR   Reserved8[256];     // byte 1792:2047. Refer to NVMe over Fabrics Specification
+    //
+    // byte 1792:2047. Fabric specific
+    //
+    ULONG   IOCCSZ;             // byte 1792:1795. M - I/O Queue Command Capsule Supported Size (IOCCSZ)
+
+    ULONG   IORCSZ;             // byte 1796:1799. M - I/O Queue Response Capsule Supported Size (IORCSZ)
+
+    USHORT  ICDOFF;             // byte 1800:1801. M - In Capsule Data Offset (ICDOFF)
+
+    struct {
+        UCHAR   StaticControllerModel : 1;
+        UCHAR   Reserved              : 7;
+    } FCATT;                    // byte 1802. M - Fabrics Controller Attributes (FCATT)
+
+    UCHAR  MSDBD;               // byte 1803. M - Maximum SGL Data Block Descriptors (MSDBD)
+
+    struct {
+        USHORT   IOQueueDeletion : 1;
+        USHORT   Reserved        : 15;
+    } OFCS;                    // byte 1804:1805. M - Optional Fabric Commands Support (OFCS)
+
+    UCHAR   Reserved8[242];    // byte 1806:2047
 
     //
     // byte 2048 : 3071, Power State Descriptors
@@ -5204,8 +5359,16 @@ typedef struct {
     ULONG               NSID;
     ULONG               Reserved0[2];
     ULONGLONG           MPTR;
-    ULONGLONG           PRP1;
-    ULONGLONG           PRP2;
+
+    union {
+
+        struct {
+            ULONGLONG PRP1;
+            ULONGLONG PRP2;
+        };
+
+        ULONGLONG SGL1[2];
+    };
 
     //
     // Command independent fields from CDW10 to CDW15
@@ -5595,6 +5758,8 @@ typedef struct _NVME_SGL_DESC {
 
 } NVME_SGL_DESC, *PNVME_SGL_DESC;
 
+C_ASSERT(sizeof(NVME_SGL_DESC) == 2 * sizeof(ULONGLONG));
+
 //
 // NVMe SGL Data Block descriptor
 //
@@ -5618,6 +5783,8 @@ typedef struct _NVME_SGL_DATABLOCK_DESC {
     } Identifier;
 
 } NVME_SGL_DATABLOCK_DESC, *PNVME_SGL_DATABLOCK_DESC;
+
+C_ASSERT(sizeof(NVME_SGL_DATABLOCK_DESC) == 2 * sizeof(ULONGLONG));
 
 //
 // NVMe SGL Bit Bucket descriptor
@@ -5643,6 +5810,8 @@ typedef struct _NVME_SGL_BITBUCKET_DESC {
 
 } NVME_SGL_BITBUCKET_DESC, *PNVME_SGL_BITBUCKET_DESC;
 
+C_ASSERT(sizeof(NVME_SGL_BITBUCKET_DESC) == 2 * sizeof(ULONGLONG));
+
 //
 // NVMe SGL Segment descriptor
 //
@@ -5666,6 +5835,8 @@ typedef struct _NVME_SGL_SEGMENT_DESC {
     } Identifier;
 
 } NVME_SGL_SEGMENT_DESC, *PNVME_SGL_SEGMENT_DESC;
+
+C_ASSERT(sizeof(NVME_SGL_SEGMENT_DESC) == 2 * sizeof(ULONGLONG));
 
 //
 // NVMe SGL Last Segment descriptor
@@ -5691,6 +5862,8 @@ typedef struct _NVME_SGL_LASTSEG_DESC {
 
 } NVME_SGL_LASTSEG_DESC, *PNVME_SGL_LASTSEG_DESC;
 
+C_ASSERT(sizeof(NVME_SGL_LASTSEG_DESC) == 2 * sizeof(ULONGLONG));
+
 //
 // NVMe SGL Keyed Data Block descriptor
 //
@@ -5715,14 +5888,16 @@ typedef struct _NVME_SGL_KEYDATABLOCK_DESC {
 
 } NVME_SGL_KEYDATABLOCK_DESC, *PNVME_SGL_KEYDATABLOCK_DESC;
 
+C_ASSERT(sizeof(NVME_SGL_KEYDATABLOCK_DESC) == 2 * sizeof(ULONGLONG));
+
 //
 // NVMe SGL Transport Data Block descriptor
 //
 typedef struct _NVME_SGL_TRANSPORTDATA_DESC {
 
-    ULONGLONG Address;
+    ULONGLONG Reserved0;
     ULONG Length;
-    UCHAR Reserved0[3];
+    UCHAR Reserved1[3];
 
     union {
         struct {
@@ -5739,6 +5914,8 @@ typedef struct _NVME_SGL_TRANSPORTDATA_DESC {
 
 } NVME_SGL_TRANSPORTDATA_DESC, *PNVME_SGL_TRANSPORTDATA_DESC;
 
+C_ASSERT(sizeof(NVME_SGL_TRANSPORTDATA_DESC) == 2 * sizeof(ULONGLONG));
+
 ////////////////////////////////////////////////////////////////////////
 //
 // NVMe over Fabrics definitions based on 2.0 spec
@@ -5749,11 +5926,32 @@ typedef struct _NVME_SGL_TRANSPORTDATA_DESC {
 #define NVMEOF_TRANSPORT_SAS_MAX_LEN       256
 
 #define NVMEOF_DISCOVERY_NQN               "nqn.2014-08.org.nvmexpress.discovery"
-#define NVMEOF_DISCOVERY_LOG_VERSION_0     0;
+#define NVMEOF_DISCOVERY_LOG_VERSION_0     0
 
-#define NVMEOF_ADMINQ_MIN_DEPTH            32;
-#define NVMEOF_NUM_AEN_DISC_CTRL           1; // Number of AEN commands for Discovery controller
-#define NVMEOF_NUM_AEN_IO_CTRL             1; // Number of AEN commands for IO controller
+#define NVMEOF_ADMINQ_MIN_DEPTH            32
+#define NVMEOF_ADMINQ_MAX_DEPTH            4096
+
+#define NVMEOF_IOQ_MIN_DEPTH               2
+#define NVMEOF_IOQ_MAX_DEPTH               65536
+
+#define NVMEOF_NUM_AEN_DISC_CTRL           1 // Number of AEN commands for Discovery controller
+#define NVMEOF_NUM_AEN_IO_CTRL             1 // Number of AEN commands for IO controller
+
+#define NVME_FABRICS_COMMAND               0x7F
+
+//
+// Fabrics Command Types
+//
+typedef enum {
+
+    NVME_FABRICS_COMMAND_PROPERTY_SET    = 0x00,
+    NVME_FABRICS_COMMAND_CONNECT         = 0x01,
+    NVME_FABRICS_COMMAND_PROPERTY_GET    = 0x04,
+    NVME_FABRICS_COMMAND_AUTH_SEND       = 0x05,
+    NVME_FABRICS_COMMAND_AUTH_RECV       = 0x06,
+    NVME_FABRICS_COMMAND_DISCONNECT      = 0x08
+
+} NVME_FABRICS_COMMAND_TYPE;
 
 //
 // Transport type (TRTYPE) defined in the
@@ -5819,13 +6017,15 @@ typedef enum _NVMEOF_SECURE_CHANNEL {
 typedef struct _NVMEOF_FABRICS_COMMAND {
 
     UCHAR OPC;          // Opcode (7Fh)
-    UCHAR PSDT;         // PRP or SGL for data transfer
+    UCHAR PSDT;         // PRP or SGL for data transfer (only Bits 7:6 are to be used, rest are reserved)
     USHORT CID;         // Command Identifier
     UCHAR FCTYPE;       // Fabrics Command Type
     UCHAR Reserved[35]; // Byte 5:39
     UCHAR Specific[24]; // Byte 40:63 - Command Type Specific
 
 } NVMEOF_FABRICS_COMMAND, *PNVMEOF_FABRICS_COMMAND;
+
+C_ASSERT(sizeof(NVMEOF_FABRICS_COMMAND) == 64);
 
 //
 // NVMe Fabrics Response Capsule
@@ -5840,13 +6040,15 @@ typedef struct _NVMEOF_FABRICS_RESPONSE {
 
 } NVMEOF_FABRICS_RESPONSE, *PNVMEOF_FABRICS_RESPONSE;
 
+C_ASSERT(sizeof(NVMEOF_FABRICS_RESPONSE) == 16);
+
 //
 // NVMeoF Connect Command
 //
 typedef struct _NVMEOF_CONNECT_COMMAND {
 
     UCHAR OPC; // Opcode (7Fh)
-    UCHAR Reserved0;
+    UCHAR Reserved0; // Maps to PSDT in NVMEOF_FABRICS_COMMAND
     USHORT CID; // Command Identifier
     UCHAR FCTYPE; // Fabrics Command Type, set to 01h
     UCHAR Reserved1[19];
@@ -5940,12 +6142,12 @@ C_ASSERT(sizeof(NVMEOF_CONNECT_RESPONSE) == 16);
 typedef struct _NVMEOF_DISCONNECT_COMMAND {
 
     UCHAR OPC; // Opcode (7Fh)
-    UCHAR Reserved0;
+    UCHAR Reserved0; // Maps to PSDT in NVMEOF_FABRICS_COMMAND
     USHORT CID; // Command Identifier
     UCHAR FCTYPE; // Fabrics Command Type, set to 08h
     UCHAR Reserved1[19]; // Byte 5:23
     NVME_SGL_DATABLOCK_DESC SGL1;
-    USHORT RECFMT; // Format of connect command capsule
+    USHORT RECFMT; // Format of disconnect command capsule
     UCHAR Reserved2[22];
 
 } NVMEOF_DISCONNECT_COMMAND, *PNVMEOF_DISCONNECT_COMMAND;
@@ -5977,7 +6179,7 @@ C_ASSERT(sizeof(NVMEOF_DISCONNECT_RESPONSE) == 16);
 typedef struct _NVMEOF_PROPERTY_GET_COMMAND {
 
     UCHAR OPC; // Opcode (7Fh)
-    UCHAR Reserved0;
+    UCHAR Reserved0; // Maps to PSDT in NVMEOF_FABRICS_COMMAND
     USHORT CID; // Command Identifier
     UCHAR FCTYPE; // Fabrics Command Type, set to 04h
     UCHAR Reserved1[35]; // Byte 5:39
@@ -6028,7 +6230,7 @@ C_ASSERT(sizeof(NVMEOF_PROPERTY_GET_RESPONSE) == 16);
 typedef struct _NVMEOF_PROPERTY_SET_COMMAND {
 
     UCHAR OPC; // Opcode (7Fh)
-    UCHAR Reserved0;
+    UCHAR Reserved0; // Maps to PSDT in NVMEOF_FABRICS_COMMAND
     USHORT CID; // Command Identifier
     UCHAR FCTYPE; // Fabrics Command Type, set to 00h
     UCHAR Reserved1[35]; // Byte 5:39
@@ -6081,7 +6283,7 @@ C_ASSERT(sizeof(NVMEOF_PROPERTY_SET_RESPONSE) == 16);
 typedef struct _NVMEOF_AUTH_RECEIVE_COMMAND {
 
     UCHAR OPC; // Opcode (7Fh)
-    UCHAR Reserved0;
+    UCHAR Reserved0; // Maps to PSDT in NVMEOF_FABRICS_COMMAND
     USHORT CID; // Command Identifier
     UCHAR FCTYPE; // Fabrics Command Type, set to 06h
     UCHAR Reserved1[19]; // Byte 5:23
@@ -6119,7 +6321,7 @@ C_ASSERT(sizeof(NVMEOF_AUTH_RECEIVE_RESPONSE) == 16);
 typedef struct _NVMEOF_AUTH_SEND_COMMAND {
 
     UCHAR OPC; // Opcode (7Fh)
-    UCHAR Reserved0;
+    UCHAR Reserved0; // Maps to PSDT in NVMEOF_FABRICS_COMMAND
     USHORT CID; // Command Identifier
     UCHAR FCTYPE; // Fabrics Command Type, set to 05h
     UCHAR Reserved1[19]; // Byte 5:23

@@ -2169,9 +2169,6 @@ typedef enum
 
 #endif // JET_VERSION >= 0x0A01
 
-#define JET_paramEnableBlockCacheDetach         220 //  Indicates that ESE Block Cache detach is enabled.  This will allow a file cached by the ESE Block Cache to be detached on open.
-
-
 #define JET_paramTraceFlags                     223 // Specific flags to include in IO traces indicating various info
 #define JET_paramMaxValueInvalid                225 //  This is not a valid parameter. It can change from release to release!
 
@@ -6692,6 +6689,16 @@ JetIndexRecordCount(
     _Out_ JET_UINT32 *      pcrec,
     _In_ JET_UINT32         crecMax );
 
+#if ( JET_VERSION >= 0x0A01 )
+
+JET_ERR JET_API
+JetIndexRecordCount2(
+    _In_ JET_SESID              sesid,
+    _In_ JET_TABLEID            tableid,
+    _Out_ JET_UINT64 *          pcrec,
+    _In_ JET_UINT64             crecMax );
+
+#endif // JET_VERSION >= 0x0A01
 
 JET_ERR JET_API
 JetRetrieveKey(

@@ -379,7 +379,7 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTab)]
-            [uuid(9BF935C1-EC5F-5595-8ECB-8703F5F89068)]
+            [uuid(551E776A-7928-4D60-BDD9-672B5A5758EB)]
             interface IWindowTab : IInspectable
             {
                 [propget] HRESULT Tag([out] [retval] IInspectable** value);
@@ -413,7 +413,7 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTabGroup)]
-            [uuid(9E490279-D59B-574D-8DA2-42AA0812BB3A)]
+            [uuid(A9C2C4FE-6CFE-449C-8B57-5756771ABE56)]
             interface IWindowTabGroup : IInspectable
             {
                 [propget] HRESULT Title([out] [retval] HSTRING* value);
@@ -424,14 +424,14 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTabIcon)]
-            [uuid(358FE345-AC8D-5EC4-BC73-C7E1A8D96DC4)]
+            [uuid(F92F398F-3669-4D0C-A183-14DDAE6F6538)]
             interface IWindowTabIcon : IInspectable
             {
             }
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTabIcon)]
-            [uuid(D32F391D-FAC3-51A5-BD6B-B5CD2A8E71CF)]
+            [uuid(2E18D95E-2CBB-4084-AF0C-36EE1C2D54B1)]
             interface IWindowTabIconStatics : IInspectable
             {
                 [overload("CreateFromFontGlyph")] HRESULT CreateFromFontGlyph([in] HSTRING glyph, [in] HSTRING fontFamily, [out] [retval] Windows.UI.Shell.WindowTabIcon** result);
@@ -441,7 +441,7 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTabManager)]
-            [uuid(547BBE72-F443-58B2-ADBA-7B4806980E01)]
+            [uuid(97B3C697-F43A-43E7-B3A2-E889A9835599)]
             interface IWindowTabManager : IInspectable
             {
                 [propget] HRESULT Tabs([out] [retval] Windows.UI.Shell.WindowTabCollection** value);
@@ -458,7 +458,7 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTabManager)]
-            [uuid(49B4F9A6-EC74-5E85-A586-32BFD6FEE1C0)]
+            [uuid(76755668-45F0-4E0B-8172-4E6D9D0F87BD)]
             interface IWindowTabManagerStatics : IInspectable
             {
                 HRESULT GetForWindow([in] Windows.UI.WindowId id, [out] [retval] Windows.UI.Shell.WindowTabManager** result);

@@ -551,6 +551,21 @@ typedef struct _WKSTA_TRANSPORT_INFO_0 {
 #define TRANSPORT_QUALITYOFSERVICE_PARMNUM     201
 #define TRANSPORT_NAME_PARMNUM                 202
 
+//
+// Enumeration for API routine NetWkstarClientSmbDirectModuleControl.
+//
+#define WKSTA_SMBDIRECT_MODULE_CONTROL_ENABLE               0x00
+#define WKSTA_SMBDIRECT_MODULE_CONTROL_DISABLE              0x01
+#define WKSTA_SMBDIRECT_MODULE_CONTROL_DISABLE_AND_UNLINK   0x02
+
+_Success_( return == NO_ERROR )
+NET_API_STATUS
+NetWkstaClientSmbDirectModuleControl(
+    __in LMSTR ServerName,
+    __in DWORD Action
+    );
+
+
 #if _MSC_VER >= 1200
 #pragma warning(pop)
 #endif

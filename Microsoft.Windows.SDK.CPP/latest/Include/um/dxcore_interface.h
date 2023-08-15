@@ -51,7 +51,9 @@ enum class DXCoreAdapterState : uint32_t
     AdapterEngineRunningTimeByProcessMicroseconds = 5,
     AdapterTemperatureCelsius = 6,
     AdapterInUseProcessCount = 7,
-    AdapterInUseProcessSet = 8
+    AdapterInUseProcessSet = 8,
+    AdapterEngineFrequencyHertz = 9,
+    AdapterMemoryFrequencyHertz = 10
 };
 
 enum class DXCoreSegmentGroup : uint32_t
@@ -108,14 +110,20 @@ struct DXCoreAdapterMemoryBudget
 
 struct DXCoreAdapterEngineIndex
 {
-    uint32_t PhysicalAdapterIndex;
-    uint32_t EngineIndex;
+    uint32_t physicalAdapterIndex;
+    uint32_t engineIndex;
 };
 
 struct DXCoreEngineQueryInput
 {
-    DXCoreAdapterEngineIndex AdapterEngineIndex;
-    DWORD ProcessId;
+    DXCoreAdapterEngineIndex adapterEngineIndex;
+    uint32_t processId;
+};
+
+struct DXCoreEngineQueryOutput
+{
+    uint64_t runningTime;
+    bool processQuerySucceeded;
 };
 
 enum class DXCoreMemoryType : uint32_t
@@ -126,33 +134,58 @@ enum class DXCoreMemoryType : uint32_t
 
 struct DXCoreMemoryUsage
 {
-    uint64_t Committed;
-    uint64_t Resident;
+    uint64_t committed;
+    uint64_t resident;
 };
 
 struct DXCoreMemoryQueryInput
 {
-    uint32_t PhysicalAdapterIndex;
-    DXCoreMemoryType MemoryType;
+    uint32_t physicalAdapterIndex;
+    DXCoreMemoryType memoryType;
 };
 
 struct DXCoreProcessMemoryQueryInput
 {
-    uint32_t PhysicalAdapterIndex;
-    DXCoreMemoryType MemoryType;
-    DWORD ProcessId;
+    uint32_t physicalAdapterIndex;
+    DXCoreMemoryType memoryType;
+    uint32_t processId;
+};
+
+struct DXCoreProcessMemoryQueryOutput
+{
+    DXCoreMemoryUsage memoryUsage;
+    bool processQuerySucceeded;
 };
 
 struct DXCoreAdapterProcessSetQueryInput
 {    
-    uint32_t ArraySize;
-    uint32_t* ProcessIds;
+    uint32_t arraySize;
+    _Field_size_(arraySize) uint32_t* processIds;
 };
 
 struct DXCoreAdapterProcessSetQueryOutput
 {
-    uint32_t ProcessesWritten;
-    uint32_t ProcessesTotal;
+    uint32_t processesWritten;
+    uint32_t processesTotal;
+};
+
+struct DXCoreEngineNamePropertyInput
+{
+    DXCoreAdapterEngineIndex adapterEngineIndex;
+    uint32_t engineNameLength;
+    _Field_size_(engineNameLength) wchar_t *engineName;
+};
+
+struct DXCoreEngineNamePropertyOutput
+{
+    uint32_t engineNameLength;
+};
+
+struct DXCoreFrequencyQueryOutput
+{
+    uint64_t frequency;
+    uint64_t maxFrequency;
+    uint64_t maxOverclockedFrequency;
 };
 
 typedef void (STDMETHODCALLTYPE *PFN_DXCORE_NOTIFICATION_CALLBACK)(

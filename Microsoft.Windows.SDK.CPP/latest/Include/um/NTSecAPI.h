@@ -2474,7 +2474,9 @@ typedef PLSA_TRUST_INFORMATION PTRUSTED_DOMAIN_INFORMATION_BASIC;
 #define TRUST_TYPE_DCE                  0x00000004  // Trust with a DCE realm
 #endif
 
-// Levels 0x5 - 0x000FFFFF reserved for future use
+#define TRUST_TYPE_AAD                  0x00000005 // Trust with Azure AD
+
+// Levels 0x6 - 0x000FFFFF reserved for future use
 // Provider specific trust levels are from 0x00100000 to 0xFFF00000
 
 #define TRUST_ATTRIBUTE_NON_TRANSITIVE                0x00000001  // Disallow transitivity

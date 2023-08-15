@@ -18,6 +18,7 @@
            xmlns:uap13="http://schemas.microsoft.com/appx/manifest/uap/windows10/13"
            xmlns:uap15="http://schemas.microsoft.com/appx/manifest/uap/windows10/15"
            xmlns:uap16="http://schemas.microsoft.com/appx/manifest/uap/windows10/16"
+           xmlns:uap17="http://schemas.microsoft.com/appx/manifest/uap/windows10/17"
            xmlns:wincap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/windowscapabilities"
            xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
            xmlns:rescap6="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/6"
@@ -52,6 +53,7 @@
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/13"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/15"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/16"/>
+  <xs:import namespace="http://schemas.microsoft.com/appx/manifest/uap/windows10/17"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/iot/windows10/2"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"/>
   <xs:import namespace="http://schemas.microsoft.com/appx/manifest/desktop/windows10/6"/>
@@ -200,6 +202,7 @@
       <xs:element ref="uap13:AutoUpdate" minOccurs="0"/>
       <xs:element ref="uap15:DependencyTarget" minOccurs="0"/>
       <xs:element ref="uap16:UpdateWhileInUse" minOccurs="0"/>
+      <xs:element ref="uap17:UpdateWhileInUse" minOccurs="0"/>
       <xs:element ref="heap:HeapPolicy" minOccurs="0"/>
       <xs:element ref="deployment2:StageWhileInUse" minOccurs="0"/>
     </xs:all>
@@ -396,6 +399,7 @@
           <xs:attributeGroup ref="uap10:TrustLevelGroup"/>
           <xs:attribute ref="previewsecurity2:RuntimeBehavior" use="optional"/>
           <xs:attribute ref="uap16:BaseNamedObjectsIsolation" use="optional"/>
+          <xs:attribute ref="uap17:BaseNamedObjectsIsolation" use="optional"/>
           <xs:attribute ref="desktop11:AppLifecycleBehavior" use="optional"/>
         </xs:complexType>
         <xs:unique name="ApplicationContentUrisRule_Match">

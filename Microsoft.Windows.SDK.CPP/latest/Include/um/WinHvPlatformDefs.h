@@ -49,6 +49,25 @@ typedef enum WHV_CAPABILITY_CODE
     WHvCapabilityCodeSyntheticProcessorFeaturesBanks = 0x00001008,
     WHvCapabilityCodeProcessorPerfmonFeatures        = 0x00001009,
     WHvCapabilityCodePhysicalAddressWidth            = 0x0000100A,
+
+    // Nested-virtualization related capabilities
+    WHvCapabilityCodeVmxBasic                        = 0x00002000,
+    WHvCapabilityCodeVmxPinbasedCtls                 = 0x00002001,
+    WHvCapabilityCodeVmxProcbasedCtls                = 0x00002002,
+    WHvCapabilityCodeVmxExitCtls                     = 0x00002003,
+    WHvCapabilityCodeVmxEntryCtls                    = 0x00002004,
+    WHvCapabilityCodeVmxMisc                         = 0x00002005,
+    WHvCapabilityCodeVmxCr0Fixed0                    = 0x00002006,
+    WHvCapabilityCodeVmxCr0Fixed1                    = 0x00002007,
+    WHvCapabilityCodeVmxCr4Fixed0                    = 0x00002008,
+    WHvCapabilityCodeVmxCr4Fixed1                    = 0x00002009,
+    WHvCapabilityCodeVmxVmcsEnum                     = 0x0000200A,
+    WHvCapabilityCodeVmxProcbasedCtls2               = 0x0000200B,
+    WHvCapabilityCodeVmxEptVpidCap                   = 0x0000200C,
+    WHvCapabilityCodeVmxTruePinbasedCtls             = 0x0000200D,
+    WHvCapabilityCodeVmxTrueProcbasedCtls            = 0x0000200E,
+    WHvCapabilityCodeVmxTrueExitCtls                 = 0x0000200F,
+    WHvCapabilityCodeVmxTrueEntryCtls                = 0x00002010,
 } WHV_CAPABILITY_CODE;
 
 //
@@ -173,7 +192,7 @@ typedef union WHV_PROCESSOR_FEATURES
         UINT64 IbrsSupport : 1;
         UINT64 StibpSupport : 1;
         UINT64 IbpbSupport : 1;
-        UINT64 Reserved2 : 1;
+        UINT64 UnrestrictedGuestSupport : 1;
         UINT64 SsbdSupport : 1;
         UINT64 FastShortRepMovSupport : 1;
         UINT64 Reserved3 : 1;
@@ -210,7 +229,8 @@ typedef union WHV_PROCESSOR_FEATURES1
         UINT64 TscInvariantSupport : 1;
         UINT64 ClZeroSupport : 1;
         UINT64 RdpruSupport : 1;
-        UINT64 Reserved1 : 2;
+        UINT64 La57Support : 1;
+        UINT64 MbecSupport : 1;
         UINT64 NestedVirtSupport : 1;
         UINT64 PsfdSupport: 1;
         UINT64 CetSsSupport : 1;
@@ -228,7 +248,8 @@ typedef union WHV_PROCESSOR_FEATURES1
         UINT64 FSRepStosb : 1;
         UINT64 FSRepCmpsb : 1;
         UINT64 TsxLdTrkSupport : 1;
-        UINT64 Reserved3 : 2;
+        UINT64 VmxInsOutsExitInfoSupport : 1;
+        UINT64 Reserved3 : 1;
         UINT64 SbdrSsdpNoSupport : 1;
         UINT64 FbsdpNoSupport : 1;
         UINT64 PsdpNoSupport : 1;
@@ -240,8 +261,10 @@ typedef union WHV_PROCESSOR_FEATURES1
         UINT64 NptExecuteOnlySupport : 1;
         UINT64 NptADFlagsSupport : 1;
         UINT64 Npt1GbPageSupport : 1;
-        UINT64 AmdProcessorTopologyNodeIdSupport : 1;
-        UINT64 Reserved4 : 27;
+        UINT64 Reserved4 : 1;
+        UINT64 Reserved5 : 1;
+        UINT64 Reserved6 : 1;
+        UINT64 Reserved7 : 25;
     };
 
     UINT64 AsUINT64;
@@ -407,14 +430,18 @@ typedef union WHV_SYNTHETIC_PROCESSOR_FEATURES
 
         // Synthetic time-unhalted timer MSRs are supported.
         UINT64 SyntheticTimeUnhaltedTimer : 1;
+
+        // SPEC_CTRL MSR behavior when the VP is idle
+        UINT64 IdleSpecCtrl:1;
 #else
         UINT64 ReservedZ31:1;
         UINT64 ReservedZ32:1;
         UINT64 ReservedZ33:1;
         UINT64 ReservedZ34:1;
+        UINT64 ReservedZ35:1;
 #endif
 
-        UINT64 Reserved:29;
+        UINT64 Reserved:28;
     };
 
     UINT64 AsUINT64;
@@ -664,6 +691,7 @@ typedef union WHV_CAPABILITY
     WHV_PROCESSOR_PERFMON_FEATURES ProcessorPerfmonFeatures;
     WHV_SCHEDULER_FEATURES SchedulerFeatures;
     UINT32 PhysicalAddressWidth;
+    UINT64 NestedFeatureRegister;
 } WHV_CAPABILITY;
 
 //
@@ -1102,6 +1130,29 @@ typedef enum WHV_REGISTER_NAME
     WHvX64RegisterUmwaitControl    = 0x00002098,
     WHvX64RegisterXfd              = 0x00002099,
     WHvX64RegisterXfdErr           = 0x0000209A,
+
+    // Feature control and nested capability MSRs
+    WHvX64RegisterMsrIa32MiscEnable         = 0x000020A0,
+    WHvX64RegisterIa32FeatureControl        = 0x000020A1,
+    WHvX64RegisterIa32VmxBasic              = 0x000020A2,
+    WHvX64RegisterIa32VmxPinbasedCtls       = 0x000020A3,
+    WHvX64RegisterIa32VmxProcbasedCtls      = 0x000020A4,
+    WHvX64RegisterIa32VmxExitCtls           = 0x000020A5,
+    WHvX64RegisterIa32VmxEntryCtls          = 0x000020A6,
+    WHvX64RegisterIa32VmxMisc               = 0x000020A7,
+    WHvX64RegisterIa32VmxCr0Fixed0          = 0x000020A8,
+    WHvX64RegisterIa32VmxCr0Fixed1          = 0x000020A9,
+    WHvX64RegisterIa32VmxCr4Fixed0          = 0x000020AA,
+    WHvX64RegisterIa32VmxCr4Fixed1          = 0x000020AB,
+    WHvX64RegisterIa32VmxVmcsEnum           = 0x000020AC,
+    WHvX64RegisterIa32VmxProcbasedCtls2     = 0x000020AD,
+    WHvX64RegisterIa32VmxEptVpidCap         = 0x000020AE,
+    WHvX64RegisterIa32VmxTruePinbasedCtls   = 0x000020AF,
+    WHvX64RegisterIa32VmxTrueProcbasedCtls  = 0x000020B0,
+    WHvX64RegisterIa32VmxTrueExitCtls       = 0x000020B1,
+    WHvX64RegisterIa32VmxTrueEntryCtls      = 0x000020B2,
+    WHvX64RegisterAmdVmHsavePa              = 0x000020B3,
+    WHvX64RegisterAmdVmCr                   = 0x000020B4,
 
     // APIC state (also accessible via WHv(Get/Set)VirtualProcessorInterruptControllerState)
     WHvX64RegisterApicId           = 0x00003002,

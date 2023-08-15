@@ -823,6 +823,15 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="ST_ExtensionCategory_Uap17">
+    <xs:restriction base="xs:string">
+      <!-- Package Extensions -->
+      <xs:enumeration value="windows.packageExtensionHost"/>
+      <xs:enumeration value="windows.packageExtension"/>
+      <!-- Package Extensions -->
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="ST_ExtensionCategory_Com">
     <xs:restriction base="xs:string">
       <xs:enumeration value="windows.comServer"/>

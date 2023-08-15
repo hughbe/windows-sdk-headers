@@ -215,6 +215,7 @@
 #define INFSTR_KEY_DESCRIPTION          TEXT("Description")
 #define INFSTR_KEY_SERVICESIDTYPE       TEXT("ServiceSidType")
 #define INFSTR_KEY_DELAYEDAUTOSTART     TEXT("DelayedAutoStart")
+#define INFSTR_KEY_BOOTFLAGS            TEXT("BootFlags")
 
 //
 // Used for Triggers within a Service section.

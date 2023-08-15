@@ -739,9 +739,10 @@ typedef struct _SCSI_PNP_REQUEST_BLOCK {
 
 #define SRB_FUNCTION_GET_DUMP_INFO          0x2a
 #define SRB_FUNCTION_FREE_DUMP_INFO         0x2b
-#define SRB_FUNCTION_NVMEOF_OPERATION       0x2c
 
 // begin_storport
+
+#define SRB_FUNCTION_NVMEOF_OPERATION       0x2c
 
 //
 // SRB Status
@@ -877,9 +878,11 @@ typedef struct _SCSI_PNP_REQUEST_BLOCK {
 //
 #if defined(_WIN64) || defined(_M_ALPHA)
 #define SRB_ALIGN           DECLSPEC_ALIGN(8)
+#define STOR_ADDRESS_ALIGN  DECLSPEC_ALIGN(8)
 #define POINTER_ALIGN       DECLSPEC_ALIGN(8)
 #else
 #define SRB_ALIGN
+#define STOR_ADDRESS_ALIGN
 #define POINTER_ALIGN
 #endif
 
@@ -893,6 +896,7 @@ typedef enum _SRBEXDATATYPE {
     SrbExDataTypeScsiCdb32,
     SrbExDataTypeScsiCdbVar,
     SrbExDataTypeNvmeCommand,
+    SrbExDataTypeNvmeofOperation,
     SrbExDataTypeWmi = 0x60,
     SrbExDataTypePower,
     SrbExDataTypePnP,
@@ -1071,63 +1075,188 @@ typedef struct SRB_ALIGN _SRBEX_DATA_IO_INFO {
     ULONG Reserved1[2];
 } SRBEX_DATA_IO_INFO, *PSRBEX_DATA_IO_INFO;
 
-// Use in NVMe command requests to provide additional info about the IO.
-#define SRBEX_DATA_NVME_COMMAND_LENGTH ((13 * sizeof(ULONG)) + (3 * sizeof(ULONGLONG)) + (2 * sizeof(USHORT)))
+//
+// Used by SRB_FUNCTION_EXECUTE_NVME
+//
+
+#define SRBEX_DATA_NVME_COMMAND_LENGTH ((4 * sizeof(ULONGLONG)) + (14 * sizeof(ULONG)) + (5 * sizeof(USHORT)) + (2 * sizeof(UCHAR)))
 
 typedef enum {
     SRBEX_DATA_NVME_COMMAND_TYPE_NVM     = 0,
     SRBEX_DATA_NVME_COMMAND_TYPE_ADMIN,
+    SRBEX_DATA_NVME_COMMAND_TYPE_FABRICS
 } SRBEX_DATA_NVME_COMMAND_TYPE, *PSRBEX_DATA_NVME_COMMAND_TYPE;
 
 typedef enum {
     SRBEX_DATA_NVME_COMMAND_FLAG_REQUIRE_DATA_TRANSFER_IN  = 0x1,  // Data is being read in from the device.
     SRBEX_DATA_NVME_COMMAND_FLAG_REQUIRE_DATA_TRANSFER_OUT = 0x2,  // Data is being written out to the device.
     SRBEX_DATA_NVME_COMMAND_FLAG_PRP_SET_ALREADY           = 0x4,
-    SRBEX_DATA_NVME_COMMAND_FLAG_SIGNATURE_ENABLED         = 0x8,
+    SRBEX_DATA_NVME_COMMAND_FLAG_SIGNATURE_ENABLED         = 0x8
 } SRBEX_DATA_NVME_COMMAND_FLAG, *PSRBEX_DATA_NVME_COMMAND_FLAG;
 
+typedef enum {
+    SRBEX_DATA_NVME_RESPONSE_FLAG_SQHD_VALID               = 0x1
+} SRBEX_DATA_NVME_RESPONSE_FLAG, *PSRBEX_DATA_NVME_RESPONSE_FLAG;
+
 typedef struct SRB_ALIGN _SRBEX_DATA_NVME_COMMAND {
+
     _Field_range_(SrbExDataTypeNvmeCommand, SrbExDataTypeNvmeCommand)
     SRBEXDATATYPE Type;
+
     _Field_range_(SRBEX_DATA_NVME_COMMAND_LENGTH, SRBEX_DATA_NVME_COMMAND_LENGTH)
     ULONG Length;
-    ULONG CommandDWORD0;
-    ULONG CommandNSID;
-    ULONG Reserved0[2];
-    ULONGLONG CommandMPTR;
-    ULONGLONG CommandPRP1;
-    ULONGLONG CommandPRP2;
 
-    ULONG CommandCDW10;
-    ULONG CommandCDW11;
-    ULONG CommandCDW12;
-    ULONG CommandCDW13;
-    ULONG CommandCDW14;
-    ULONG CommandCDW15;
-    UCHAR CommandType;          // Defined in SRBEX_DATA_NVME_COMMAND_TYPE
-    UCHAR CommandFlags;         // Defined in SRBEX_DATA_NVME_COMMAND_FLAG
-        
+    union {
+
+        //
+        // Miniport's handle for the NVMe controller
+        //
+        PVOID ControllerHandle;
+        ULONGLONG Reserved0;
+    };
+
+    //
+    // NVMe command fields (Directly maps to Common Command Format in NVMe spec)
+    //
+    union {
+
+        struct {
+
+            ULONG CommandDWORD0;   // NVME_COMMAND_DWORD0 in nvme.h
+            ULONG CommandNSID;
+            ULONG Reserved1[2];
+
+            ULONGLONG CommandMPTR;
+
+            union {
+
+                struct {
+                    ULONGLONG CommandPRP1;
+                    ULONGLONG CommandPRP2;
+                };
+
+                ULONGLONG CommandSGL1[2];
+            };
+
+            ULONG CommandCDW10;
+            ULONG CommandCDW11;
+            ULONG CommandCDW12;
+            ULONG CommandCDW13;
+            ULONG CommandCDW14;
+            ULONG CommandCDW15;
+        };                         // NVME_COMMAND in nvme.h
+
+        struct {
+
+            UCHAR OPC;
+            UCHAR PSDT;
+            USHORT CID;
+            UCHAR FCTYPE;
+            UCHAR Reserved[35];
+            UCHAR Specific[24];
+
+        } FabricsCommand;          // NVMEOF_FABRICS_COMMAND in nvme.h
+
+        struct {
+
+            ULONG OPC       : 8;        // Opcode (OPC)
+            ULONG FUSE      : 2;        // Fused Operation (FUSE)
+            ULONG Reserved  : 4;
+            ULONG PSDT      : 2;        // PRP or SGL for Data Transfer (PSDT)
+            ULONG CID       : 16;       // Command Identifier (CID)
+            UCHAR TypeSpecific[60];
+
+        } Command;                 // To reference command DW0
+
+    };
+
+    //
+    // Additional command and response information
+    //
+    UCHAR CommandType;             // Defined in SRBEX_DATA_NVME_COMMAND_TYPE
+    UCHAR Reserved2;
+    USHORT CommandFlags;           // Defined in SRBEX_DATA_NVME_COMMAND_FLAG
+    USHORT ResponseFlags;          // Defined in SRBEX_DATA_NVME_RESPONSE_FLAG
+
+    //
+    // Command status
+    //
     union {
         struct {
-            USHORT  P           : 1;        // Phase Tag (P)
-    
-            USHORT  SC          : 8;        // Status Code (SC)
-            USHORT  SCT         : 3;        // Status Code Type (SCT)
-            USHORT  Reserved    : 2;
-            USHORT  M           : 1;        // More (M)
-            USHORT  DNR         : 1;        // Do Not Retry (DNR)
+            USHORT  P   : 1;       // Phase Tag (P)
+            USHORT  SC  : 8;       // Status Code (SC)
+            USHORT  SCT : 3;       // Status Code Type (SCT)
+            USHORT  CRD : 2;       // Command Retry Delay (CRD)
+            USHORT  M   : 1;       // More (M)
+            USHORT  DNR : 1;       // Do Not Retry (DNR)
         } DUMMYSTRUCTNAME;
-    
+
         USHORT AsUshort;
 
-    } CommandStatus; // Status field from Completion Queue Entry (NVME_COMMAND_STATUS defined in nvme.h)
-    
-    ULONG QID;                  // User choice of Queue ID, if unspecified it should be 0xFFFFFFFF
-    ULONG CommandTag;           // Unique identifier for the command
+    } CommandStatus;               // NVME_COMMAND_STATUS in nvme.h
 
-    ULONG CQEntryDW0;           // Completion queue entry DW0.
+    ULONG QID;                     // Choice of Queue ID, if unspecified it should be 0xFFFFFFFF
+    ULONG CommandTag;              // Unique identifier for the command
+
+    //
+    // NVMe response fields
+    //
+    union {
+
+        struct {
+
+            ULONG CQEntryDW0;      // Completion queue entry DW0
+            ULONG CQEntryDW1;      // Completion queue entry DW1
+        };
+
+        UCHAR Specific[8];         // Fabrics command specific response
+    };
+
+    USHORT SQHD;                   // SQ Head Pointer in completion queue entry
+
+    //
+    // NVMe command and response fields
+    //
+    USHORT SQID;                   // SQ Identifier
 
 } SRBEX_DATA_NVME_COMMAND, *PSRBEX_DATA_NVME_COMMAND;
+
+
+//
+// Used by SRB_FUNCTION_NVMEOF_OPERATION
+//
+
+#define STOR_NVMEOF_OPERATION_V1             0x0001
+#define SRBEX_DATA_NVMEOF_OPERATION_LENGTH   ((2 * sizeof(USHORT)) + (2 * sizeof(ULONG)))
+
+typedef struct SRB_ALIGN _SRBEX_DATA_NVMEOF_OPERATION {
+
+    _Field_range_(SrbExDataTypeNvmeofOperation, SrbExDataTypeNvmeofOperation)
+    SRBEXDATATYPE Type;
+
+    _Field_range_(SRBEX_DATA_NVMEOF_OPERATION_LENGTH, SRBEX_DATA_NVMEOF_OPERATION_LENGTH)
+    ULONG Length;
+
+    //
+    // Version of this structure
+    //
+    _Field_range_(STOR_NVMEOF_OPERATION_V1, STOR_NVMEOF_OPERATION_V1)
+    USHORT Version;
+
+    USHORT Reserved1;
+
+    //
+    // Operation specific flags
+    //
+    ULONG Flags;
+
+    //
+    // STOR_NVMEOF_FUNCTION_TYPE (defined in storport.w)
+    // Payload if applicable is in data buffer
+    //
+    ULONG FunctionType;
+
+} SRBEX_DATA_NVMEOF_OPERATION, *PSRBEX_DATA_NVMEOF_OPERATION;
 
 
 // SRB signature - "SRBX" in ASCII
@@ -1139,8 +1268,10 @@ typedef struct SRB_ALIGN _SRBEX_DATA_NVME_COMMAND {
 
 typedef struct SRB_ALIGN _STORAGE_REQUEST_BLOCK_HEADER {
     USHORT Length;
+
     _Field_range_(SRB_FUNCTION_STORAGE_REQUEST_BLOCK, SRB_FUNCTION_STORAGE_REQUEST_BLOCK)
     UCHAR Function;
+
     UCHAR SrbStatus;
 } STORAGE_REQUEST_BLOCK_HEADER, *PSTORAGE_REQUEST_BLOCK_HEADER;
 
@@ -1157,8 +1288,10 @@ typedef _Struct_size_bytes_(SrbLength) struct SRB_ALIGN _STORAGE_REQUEST_BLOCK {
     // (e.g. SCSI_REQUEST_BLOCK, SCSI_WMI_REQUEST_BLOCK, etc).
     //
     USHORT Length;
+
     _Field_range_(SRB_FUNCTION_STORAGE_REQUEST_BLOCK, SRB_FUNCTION_STORAGE_REQUEST_BLOCK)
     UCHAR Function;
+
     UCHAR SrbStatus;
 
     // Reserved for internal use
@@ -1181,6 +1314,7 @@ typedef _Struct_size_bytes_(SrbLength) struct SRB_ALIGN _STORAGE_REQUEST_BLOCK {
     ULONG SrbLength;
 
     ULONG SrbFunction;
+
     ULONG SrbFlags;
 
     // Reserved for future use to expand SrbStatus to 32-bit

@@ -72,7 +72,7 @@
   <xs:complexType name="CT_AppExtension">
     <xs:sequence>
       <xs:element name="Properties" minOccurs="0" maxOccurs="1">
-        <!-- Under this node, Edge extension developers can put in custom data to pass to Edge,
+        <!-- Under this node, an extension developers can provide custom data to pass to a Host,
              so we are relaxing schema validations to allow custom data -->
         <xs:complexType>
           <xs:sequence>

@@ -537,7 +537,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("c4b3db8c-61d5-56eb-bd64-3090604a022b"))
+struct __declspec(uuid("cadda39d-4148-5cbe-870b-c1ffaa000f16"))
 IIterator<ABI::Windows::UI::Shell::WindowTab*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -564,7 +564,7 @@ typedef IIterator<ABI::Windows::UI::Shell::WindowTab*> __FIIterator_1_Windows__C
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("d39641f6-4f18-5593-ac27-c0d17c83abcd"))
+struct __declspec(uuid("cf5a6d72-cc50-51b6-b34d-fdd7e59d33eb"))
 IIterable<ABI::Windows::UI::Shell::WindowTab*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -591,7 +591,7 @@ typedef IIterable<ABI::Windows::UI::Shell::WindowTab*> __FIIterable_1_Windows__C
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("068af409-64e7-5117-a8c9-5e5765f00cca"))
+struct __declspec(uuid("a0a0bbd2-9503-516f-b079-d2b3a1842c0f"))
 IVectorView<ABI::Windows::UI::Shell::WindowTab*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -618,7 +618,7 @@ typedef IVectorView<ABI::Windows::UI::Shell::WindowTab*> __FIVectorView_1_Window
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("ecd56176-3d74-5b34-b776-2ea5bd2e423f"))
+struct __declspec(uuid("d2ee7da1-079a-5571-ac1e-e0761baa92e7"))
 IVector<ABI::Windows::UI::Shell::WindowTab*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -752,7 +752,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("f68580d9-d0a9-59ad-8337-34cfd097c2f3"))
+struct __declspec(uuid("963aec04-63d6-5d5f-b18d-785ca3d6850b"))
 ITypedEventHandler<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::WindowTabCloseRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::IWindowTabManager*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabCloseRequestedEventArgs*, ABI::Windows::UI::Shell::IWindowTabCloseRequestedEventArgs*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -791,7 +791,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("efbf5b8d-f854-58f2-a888-5aa6d2f5bf77"))
+struct __declspec(uuid("92487ba4-93a1-5258-83a0-8bc055e89a25"))
 ITypedEventHandler<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::IWindowTabManager*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs*, ABI::Windows::UI::Shell::IWindowTabSwitchRequestedEventArgs*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -830,7 +830,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("d1cbb89a-564d-5048-a433-7858d1f3525c"))
+struct __declspec(uuid("9771fcc2-90a8-5353-8a7f-fc1ce40923cb"))
 ITypedEventHandler<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::IWindowTabManager*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs*, ABI::Windows::UI::Shell::IWindowTabTearOutRequestedEventArgs*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -869,7 +869,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("b9c69284-b932-5bba-9eb2-2bcf2c50091d"))
+struct __declspec(uuid("f07b88f9-f897-5ce5-9d2a-54778447fbdb"))
 ITypedEventHandler<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::IWindowTabManager*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs*, ABI::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -1740,7 +1740,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("9bf935c1-ec5f-5595-8ecb-8703f5f89068")
+                MIDL_INTERFACE("551e776a-7928-4d60-bdd9-672b5a5758eb")
                 IWindowTab : public IInspectable
                 {
                 public:
@@ -1877,7 +1877,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("9e490279-d59b-574d-8da2-42aa0812bb3a")
+                MIDL_INTERFACE("a9c2c4fe-6cfe-449c-8b57-5756771abe56")
                 IWindowTabGroup : public IInspectable
                 {
                 public:
@@ -1922,7 +1922,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("358fe345-ac8d-5ec4-bc73-c7e1a8d96dc4")
+                MIDL_INTERFACE("f92f398f-3669-4d0c-a183-14ddae6f6538")
                 IWindowTabIcon : public IInspectable
                 {
                 public:
@@ -1955,7 +1955,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("d32f391d-fac3-51a5-bd6b-b5cd2a8e71cf")
+                MIDL_INTERFACE("2e18d95e-2cbb-4084-af0c-36ee1c2d54b1")
                 IWindowTabIconStatics : public IInspectable
                 {
                 public:
@@ -2003,7 +2003,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("547bbe72-f443-58b2-adba-7b4806980e01")
+                MIDL_INTERFACE("97b3c697-f43a-43e7-b3a2-e889a9835599")
                 IWindowTabManager : public IInspectable
                 {
                 public:
@@ -2070,7 +2070,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("49b4f9a6-ec74-5e85-a586-32bfd6fee1c0")
+                MIDL_INTERFACE("76755668-45f0-4e0b-8172-4e6d9d0f87bd")
                 IWindowTabManagerStatics : public IInspectable
                 {
                 public:

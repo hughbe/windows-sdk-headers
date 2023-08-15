@@ -177,7 +177,6 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     struct IHumanPresenceSensorStatics2;
     struct IHumanPresenceSettings;
     struct IHumanPresenceSettings2;
-    struct IHumanPresenceSettings3;
     struct IHumanPresenceSettingsStatics;
     struct IInclinometer;
     struct IInclinometer2;
@@ -392,7 +391,6 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettings>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>{ using type = interface_category; };
-    template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IInclinometer>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Devices::Sensors::IInclinometer2>{ using type = interface_category; };
@@ -691,7 +689,6 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2> = L"Windows.Devices.Sensors.IHumanPresenceSensorStatics2";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings> = L"Windows.Devices.Sensors.IHumanPresenceSettings";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2> = L"Windows.Devices.Sensors.IHumanPresenceSettings2";
-    template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3> = L"Windows.Devices.Sensors.IHumanPresenceSettings3";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics> = L"Windows.Devices.Sensors.IHumanPresenceSettingsStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IInclinometer> = L"Windows.Devices.Sensors.IInclinometer";
     template <> inline constexpr auto& name_v<winrt::Windows::Devices::Sensors::IInclinometer2> = L"Windows.Devices.Sensors.IInclinometer2";
@@ -837,8 +834,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics>{ 0x2AE89842,0xDBA9,0x56B2,{ 0x9F,0x27,0xEA,0xC6,0x9D,0x62,0x10,0x04 } }; // 2AE89842-DBA9-56B2-9F27-EAC69D621004
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2>{ 0x5DE35843,0xD260,0x5A87,{ 0x99,0x5E,0xAC,0xE9,0x13,0x26,0xE1,0xC4 } }; // 5DE35843-D260-5A87-995E-ACE91326E1C4
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings>{ 0xEF4DAF5B,0x07B7,0x5EB6,{ 0x86,0xBB,0xB7,0xFF,0x49,0xCE,0x44,0xFB } }; // EF4DAF5B-07B7-5EB6-86BB-B7FF49CE44FB
-    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>{ 0xFC048407,0xEB9C,0x591D,{ 0x81,0x90,0x9C,0xA7,0x11,0x72,0x84,0xA8 } }; // FC048407-EB9C-591D-8190-9CA7117284A8
-    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>{ 0xCF4DEC25,0xDAC9,0x5714,{ 0xAE,0xF6,0x4D,0xB5,0x67,0x25,0x66,0xFC } }; // CF4DEC25-DAC9-5714-AEF6-4DB5672566FC
+    template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>{ 0xA26F705E,0x8696,0x5EB4,{ 0xB9,0xE1,0x26,0xA5,0x08,0xDE,0x1C,0xD4 } }; // A26F705E-8696-5EB4-B9E1-26A508DE1CD4
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics>{ 0x7F343202,0xE010,0x52C4,{ 0xAF,0x0C,0x04,0xA8,0xF1,0xE0,0x33,0xDA } }; // 7F343202-E010-52C4-AF0C-04A8F1E033DA
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IInclinometer>{ 0x2648CA6F,0x2286,0x406F,{ 0x91,0x61,0xF0,0xC4,0xBD,0x80,0x6E,0xBF } }; // 2648CA6F-2286-406F-9161-F0C4BD806EBF
     template <> inline constexpr guid guid_v<winrt::Windows::Devices::Sensors::IInclinometer2>{ 0x029F3393,0x28B2,0x45F8,{ 0xBB,0x16,0x61,0xE8,0x6A,0x7F,0xAE,0x6E } }; // 029F3393-28B2-45F8-BB16-61E86A7FAE6E
@@ -1614,18 +1610,9 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_IsAdaptiveDimmingEnabled(bool*) noexcept = 0;
             virtual int32_t __stdcall put_IsAdaptiveDimmingEnabled(bool) noexcept = 0;
-        };
-    };
-    template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>
-    {
-        struct __declspec(novtable) type : inspectable_abi
-        {
             virtual int32_t __stdcall get_WakeOptions(void**) noexcept = 0;
-            virtual int32_t __stdcall put_WakeOptions(void*) noexcept = 0;
             virtual int32_t __stdcall get_DimmingOptions(void**) noexcept = 0;
-            virtual int32_t __stdcall put_DimmingOptions(void*) noexcept = 0;
             virtual int32_t __stdcall get_LockOptions(void**) noexcept = 0;
-            virtual int32_t __stdcall put_LockOptions(void*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics>
@@ -3053,24 +3040,13 @@ namespace winrt::impl
     {
         [[nodiscard]] auto IsAdaptiveDimmingEnabled() const;
         auto IsAdaptiveDimmingEnabled(bool value) const;
+        [[nodiscard]] auto WakeOptions() const;
+        [[nodiscard]] auto DimmingOptions() const;
+        [[nodiscard]] auto LockOptions() const;
     };
     template <> struct consume<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>
     {
         template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>;
-    };
-    template <typename D>
-    struct consume_Windows_Devices_Sensors_IHumanPresenceSettings3
-    {
-        [[nodiscard]] auto WakeOptions() const;
-        auto WakeOptions(winrt::Windows::Devices::Sensors::WakeOnApproachOptions const& value) const;
-        [[nodiscard]] auto DimmingOptions() const;
-        auto DimmingOptions(winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions const& value) const;
-        [[nodiscard]] auto LockOptions() const;
-        auto LockOptions(winrt::Windows::Devices::Sensors::LockOnLeaveOptions const& value) const;
-    };
-    template <> struct consume<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>
-    {
-        template <typename D> using type = consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>;
     };
     template <typename D>
     struct consume_Windows_Devices_Sensors_IHumanPresenceSettingsStatics

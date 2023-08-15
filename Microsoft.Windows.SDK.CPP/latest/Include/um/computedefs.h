@@ -125,6 +125,7 @@ typedef enum HCS_OPERATION_OPTIONS
 {
     HcsOperationOptionNone = 0x00000000,
     HcsOperationOptionProgressUpdate = 0x00000001,
+    HcsOperationOptionReserved1 = 0x00000002,
 } HCS_OPERATION_OPTIONS;
 
 DEFINE_ENUM_FLAG_OPERATORS(HCS_OPERATION_OPTIONS);

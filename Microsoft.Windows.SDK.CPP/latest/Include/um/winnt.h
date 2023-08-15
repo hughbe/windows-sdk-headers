@@ -10354,6 +10354,8 @@ typedef struct _ATTRIBUTES_AND_SID {
 
 #define SECURITY_VIRTUALACCOUNT_ID_RID_COUNT   (6L)
 
+#define SECURITY_EDGE_CLOUD_INFRASTRUCTURE_SERVICE_ID_BASE_RID (0x00000062L)
+
 //
 // Virtual account logon is not limited to inbox callers.  Reserve base RID 0x6F for application usage.
 //

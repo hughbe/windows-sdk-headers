@@ -1178,35 +1178,23 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->put_IsAdaptiveDimmingEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::WakeOptions() const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::WakeOptions() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->get_WakeOptions(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->get_WakeOptions(&value));
         return winrt::Windows::Devices::Sensors::WakeOnApproachOptions{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::WakeOptions(winrt::Windows::Devices::Sensors::WakeOnApproachOptions const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->put_WakeOptions(*(void**)(&value)));
-    }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::DimmingOptions() const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::DimmingOptions() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->get_DimmingOptions(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->get_DimmingOptions(&value));
         return winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::DimmingOptions(winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->put_DimmingOptions(*(void**)(&value)));
-    }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::LockOptions() const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::LockOptions() const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->get_LockOptions(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->get_LockOptions(&value));
         return winrt::Windows::Devices::Sensors::LockOnLeaveOptions{ value, take_ownership_from_abi };
-    }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::LockOptions(winrt::Windows::Devices::Sensors::LockOnLeaveOptions const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->put_LockOptions(*(void**)(&value)));
     }
     template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettingsStatics<D>::GetCurrentSettingsAsync() const
     {
@@ -4241,24 +4229,11 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
-    struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSettings3> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>
-    {
         int32_t __stdcall get_WakeOptions(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>(this->shim().WakeOptions());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_WakeOptions(void* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().WakeOptions(*reinterpret_cast<winrt::Windows::Devices::Sensors::WakeOnApproachOptions const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4270,25 +4245,11 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall put_DimmingOptions(void* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().DimmingOptions(*reinterpret_cast<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions const*>(&value));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
         int32_t __stdcall get_LockOptions(void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Devices::Sensors::LockOnLeaveOptions>(this->shim().LockOptions());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_LockOptions(void* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().LockOptions(*reinterpret_cast<winrt::Windows::Devices::Sensors::LockOnLeaveOptions const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6497,7 +6458,6 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IInclinometer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IInclinometer2> : winrt::impl::hash_base {};
