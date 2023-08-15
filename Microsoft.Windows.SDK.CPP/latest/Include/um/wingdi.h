@@ -3043,10 +3043,10 @@ typedef enum
       DISPLAYCONFIG_DEVICE_INFO_GET_SDR_WHITE_LEVEL             = 11,
       DISPLAYCONFIG_DEVICE_INFO_GET_MONITOR_SPECIALIZATION      = 12,
       DISPLAYCONFIG_DEVICE_INFO_SET_MONITOR_SPECIALIZATION      = 13,
-      DISPLAYCONFIG_DEVICE_INFO_SET_MUX_TARGET                  = 14,
+      DISPLAYCONFIG_DEVICE_INFO_SET_DISPLAYMUX_TARGET           = 14,
+      DISPLAYCONFIG_DEVICE_INFO_GET_ADVANCED_COLOR_INFO_2       = 15,
       DISPLAYCONFIG_DEVICE_INFO_FORCE_UINT32                = 0xFFFFFFFF
 } DISPLAYCONFIG_DEVICE_INFO_TYPE;
-
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
@@ -3181,6 +3181,48 @@ typedef struct _DISPLAYCONFIG_GET_ADVANCED_COLOR_INFO
     UINT32 bitsPerColorChannel;
 } DISPLAYCONFIG_GET_ADVANCED_COLOR_INFO;
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+
+typedef enum _DISPLAYCONFIG_ADVANCED_COLOR_MODE
+{
+    DISPLAYCONFIG_ADVANCED_COLOR_MODE_SDR,          // RGB888 composition, display-referred color, display-referred luminance
+    DISPLAYCONFIG_ADVANCED_COLOR_MODE_WCG,          // Advanced color (FP16 scRGB composition), scene-referred color, display-referred luminance
+    DISPLAYCONFIG_ADVANCED_COLOR_MODE_HDR,          // Advanced color (FP16 scRGB composition), scene-referred color, scene-referred luminance
+} DISPLAYCONFIG_ADVANCED_COLOR_MODE;
+
+typedef struct _DISPLAYCONFIG_GET_ADVANCED_COLOR_INFO_2
+{
+    DISPLAYCONFIG_DEVICE_INFO_HEADER header;
+    union
+    {
+        struct
+        {
+          UINT32 advancedColorSupported        :1;    // A type of advanced color is supported
+          UINT32 advancedColorActive           :1;    // A type of advanced color is active (see currentColorMode for the specific advanced color mode)
+          UINT32 reserved1                     :1;
+          UINT32 advancedColorLimitedByPolicy  :1;    // System/OS policy is limiting advanced color options (see currentColorMode for the current mode)
+
+          UINT32 highDynamicRangeSupported     :1;    // HDR is supported
+          UINT32 highDynamicRangeUserEnabled   :1;    // HDR is enabled by the user (but may not be active)
+
+          UINT32 wideColorSupported            :1;    // Wide color gamut is supported
+          UINT32 wideColorUserEnabled          :1;    // Wide color gamut is enabled by the user (but may not be active)
+
+          UINT32 reserved                      :24;
+        } DUMMYSTRUCTNAME;
+
+        UINT32 value;
+    } DUMMYUNIONNAME;
+
+    DISPLAYCONFIG_COLOR_ENCODING colorEncoding;
+    UINT32 bitsPerColorChannel;
+
+    DISPLAYCONFIG_ADVANCED_COLOR_MODE activeColorMode; // The active color mode for this monitor
+
+} DISPLAYCONFIG_GET_ADVANCED_COLOR_INFO_2;
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_CU)
+
 typedef struct _DISPLAYCONFIG_SET_ADVANCED_COLOR_STATE
 {
     DISPLAYCONFIG_DEVICE_INFO_HEADER header;
@@ -3195,6 +3237,7 @@ typedef struct _DISPLAYCONFIG_SET_ADVANCED_COLOR_STATE
         UINT32 value;
     }DUMMYUNIONNAME;
 } DISPLAYCONFIG_SET_ADVANCED_COLOR_STATE;
+
 
 typedef struct _DISPLAYCONFIG_SDR_WHITE_LEVEL
 {
@@ -3243,15 +3286,15 @@ typedef struct _DISPLAYCONFIG_SET_MONITOR_SPECIALIZATION
 } DISPLAYCONFIG_SET_MONITOR_SPECIALIZATION;
 
 // Defines the adapter and VidPn target id that a mux can connect to
-typedef struct DISPLAYCONFIG_MUX_TARGET {
+typedef struct _DISPLAYCONFIG_DISPLAYMUX_TARGET {
     LUID adapterLuid;
     UINT targetId;
-} DISPLAYCONFIG_MUX_TARGET;
+} DISPLAYCONFIG_DISPLAYMUX_TARGET;
 
-typedef struct _DISPLAYCONFIG_SWITCH_MUX {
+typedef struct _DISPLAYCONFIG_SET_MUX_TARGET {
     DISPLAYCONFIG_DEVICE_INFO_HEADER header;                //in
     UINT                             errorStage;            //out
-} DISPLAYCONFIG_SET_MUX_TARGET;
+} DISPLAYCONFIG_SET_DISPLAYMUX_TARGET;
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

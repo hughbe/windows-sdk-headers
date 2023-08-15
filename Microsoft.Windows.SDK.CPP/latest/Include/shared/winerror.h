@@ -50628,9 +50628,18 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 //
 // MessageText:
 //
-// The operation failed because BitLocker Drive Encryption cannot suspend protection by policy.
+// The operation failed because BitLocker Drive Encryption cannot suspend protection due to policy.
 //
 #define FVE_E_SUSPEND_PROTECTION_NOT_ALLOWED _HRESULT_TYPEDEF_(0x803100F0L)
+
+//
+// MessageId: FVE_E_CANNOT_PREDICT_PCR7
+//
+// MessageText:
+//
+// BitLocker Drive Encryption cannot predictively seal TPM protector to PCR7.
+//
+#define FVE_E_CANNOT_PREDICT_PCR7        _HRESULT_TYPEDEF_(0x803100F1L)
 
 //
 // =======================================================

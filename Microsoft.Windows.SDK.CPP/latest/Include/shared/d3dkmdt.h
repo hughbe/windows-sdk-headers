@@ -2205,42 +2205,46 @@ typedef struct _D3DKMT_WDDM_3_1_CAPS
 
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
 
-#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2) //RC
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
 
 typedef enum _DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL
 {
+    DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL_UNINITIALIZED = 0,
+
     // Indicates driver has no support for MDM
-    DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL_NONE = 0,
+    DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL_NONE = 1,
 
     // Indicates the driver has development support for MDM,
     // quality not considered good enough for development purposes only
-    DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL_DEVELOPMENT = 1,
+    DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL_DEVELOPMENT = 2,
 
     // Indicates the driver has experimental support for MDM,
     // quality not considered good enough for general customer rollout
-    DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL_EXPERIMENTAL = 2,
+    DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL_EXPERIMENTAL = 3,
 
     // Indicates the driver has full support for MDM,
     // quality considered good enough for general customer rollout
-    DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL_FULL = 3,
+    DXGK_DISPLAYMUX_DRIVER_SUPPORT_LEVEL_FULL = 4,
 } DXGK_DISPLAYMUX_SUPPORT_LEVEL, *PDXGK_DISPLAYMUX_SUPPORT_LEVEL;
 
 typedef enum _DXGK_DISPLAYMUX_RUNTIME_STATUS
 {
+    DXGK_DISPLAYMUX_RUNTIME_STATUS_UNINITIALIZED = 0,
+
     // Indicates the GPU supports MDM and any driver obtained any
     // required information from the system
-    DXGK_DISPLAYMUX_RUNTIME_STATUS_OK = 0,
+    DXGK_DISPLAYMUX_RUNTIME_STATUS_OK = 1,
 
     // Indicates the GPU does not support MDM
-    DXGK_DISPLAYMUX_RUNTIME_STATUS_NO_GPU_SUPPORT = 1,
+    DXGK_DISPLAYMUX_RUNTIME_STATUS_NO_GPU_SUPPORT = 2,
 
     // Indicates the driver could not obtain some non-critical information
     // from the system, MDM can still function but user experience may be impacted
-    DXGK_DISPLAYMUX_RUNTIME_STATUS_NON_CRITICAL_SYSTEM_INFO_MISSING = 2,
+    DXGK_DISPLAYMUX_RUNTIME_STATUS_NON_CRITICAL_SYSTEM_INFO_MISSING = 3,
 
     // Indicates the driver could not obtain some critical information
     // from the system, MDM can function without this
-    DXGK_DISPLAYMUX_RUNTIME_STATUS_CRITICAL_SYSTEM_INFO_MISSING = 3,
+    DXGK_DISPLAYMUX_RUNTIME_STATUS_CRITICAL_SYSTEM_INFO_MISSING = 4,
 } DXGK_DISPLAYMUX_RUNTIME_STATUS, *PDXGK_DISPLAYMUX_RUNTIME_STATUS;
 
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)

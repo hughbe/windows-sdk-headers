@@ -5975,6 +5975,7 @@ interface ID3D12GraphicsCommandList9 : ID3D12GraphicsCommandList8
 };
 
 
+
 //----------------------------------------------------------------------------------------------------------
 // Old types which are still supported by the runtime for app-compat
 

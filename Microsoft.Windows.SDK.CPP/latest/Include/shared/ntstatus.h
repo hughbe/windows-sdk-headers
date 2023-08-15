@@ -19396,7 +19396,7 @@ Notes:
 //
 // MessageText:
 //
-// The operation failed because BitLocker Drive Encryption is configured to not allow suspending protection.
+// The operation failed because BitLocker Drive Encryption cannot suspend protection due to policy.
 //
 #define STATUS_FVE_SUSPEND_PROTECTION_NOT_ALLOWED ((NTSTATUS)0xC0210045L)
 
@@ -26372,7 +26372,7 @@ Notes:
 //
 // MessageText:
 //
-// The requested operation failed. Remote mailslots have been deprecated.
+// The requested operation failed. The Remote Mailslot Protocol has been disabled.
 //
 #define STATUS_REMOTE_MAILSLOTS_DEPRECATED ((NTSTATUS)0xC05D0005L)
 
